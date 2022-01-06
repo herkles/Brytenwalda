@@ -3320,6 +3320,19 @@
 			death = "642.8.5"
 		}
 	}
+	deira01 = {# Aethelwald
+		name = "E_thelwald"
+		dynasty = 1047010
+		religion = "catholic"
+		culture = anglo_saxon
+		father = 205212
+		625.1.1 = {
+			birth = "604.1.1"
+		}
+		685.8.5 = {
+			death = "685.8.5"
+		}
+	}
 	205213 = {# Oswiu
 		name = "Oswiu"
 		dynasty = 1047010
@@ -3335,6 +3348,58 @@
 		}
 		670.2.15 = {
 			death = "670.2.15"
+		}
+	}
+	northumbrian01 = {# Ecgfrith
+		name = "Ecgfrith"
+		dynasty = 1047010
+		religion = "catholic"
+		culture = anglo_saxon
+		father = 205213
+		645.1.1 = {
+			birth = "645.1.1"
+		}
+		685.5.20 = {
+			death = "685.5.20"
+		}
+	}
+	northumbrian02 = {# Aldfrith
+		name = "Aldfrith"
+		dynasty = 1047010
+		religion = "catholic"
+		culture = anglo_saxon
+		father = 205213
+		645.1.1 = {
+			birth = "645.1.1"
+		}
+		685.5.20 = {
+			death = "685.5.20"
+		}
+	}
+	northumbrian03 = {# Osred
+		name = "Osred"
+		dynasty = 1047010
+		religion = "catholic"
+		culture = anglo_saxon
+		father = northumbrian02
+		697.1.1 = {
+			birth = "645.1.1"
+		}
+		716.1.1 = {
+			death = "716.1.1"
+		}
+	}
+	northumbrian04 = {# Osric
+		name = "Osric"
+		dynasty = 1047010
+		religion = "catholic"
+		culture = anglo_saxon
+		father = northumbrian02
+		697.1.1 = {
+			birth = "645.1.1"
+		}
+		729.5.9 = {
+			death = "716.1.1"
 		}
 	}
 	205209 = {# Aethelfrith
@@ -3517,8 +3582,8 @@
 		800.1.1 = {
 			birth = "800.1.1"
 		}
-		844.1.1 = {
-			death = "844.1.1"
+		845.1.1 = {
+			death = "845.1.1"
 		}
 	}
 	205255 = {# E_thelred
@@ -3931,6 +3996,222 @@
 			death = "780.1.1"
 		}
 	}
+	205192 = {# Yffe
+		name = "Yffe"
+		dynasty = 1047009
+		religion = "norse_pagan"
+		culture = anglo_saxon
+		500.1.1 = {
+			birth = "500.1.1"
+		}
+		559.1.1 = {
+			death = "559.1.1"
+		}
+	}
+	205193 = {# Aella
+		name = "E_lla"
+		dynasty = 1047009
+		religion = "norse_pagan"
+		culture = anglo_saxon
+		father = 205192
+		540.1.1 = {
+			birth = "540.1.1"
+		}
+		588.1.1 = {
+			death = "588.1.1"
+		}
+	}
+	205194 = {# Aelfric
+		name = "E_lfric"
+		dynasty = 1047009
+		religion = "norse_pagan"
+		culture = anglo_saxon
+		father = 205192
+		545.1.1 = {
+			birth = "545.1.1"
+		}
+		589.1.1 = {
+			death = "589.1.1"
+		}
+	}
+	205195 = {# Osric
+		name = "Osric"
+		dynasty = 1047009
+		religion = "norse_pagan"
+		culture = anglo_saxon
+		father = 205194
+		565.1.1 = {
+			birth = "565.1.1"
+		}
+		634.1.1 = {
+			death = "634.1.1"
+		}
+	}
+	205196 = {# Oswine
+		name = "Oswine"
+		dynasty = 1047009
+		religion = "catholic"
+		culture = anglo_saxon
+		father = 205195
+		585.1.1 = {
+			birth = "585.1.1"
+		}
+		651.1.1 = {
+			death = "651.1.1"
+		}
+	}
+	205197 = {# Aethelric
+		name = "E_thelric"
+		dynasty = 1047009
+		religion = "norse_pagan"
+		culture = anglo_saxon
+		father = 205193
+		580.1.1 = {
+			birth = "580.1.1"
+		}
+		604.1.1 = {
+			death = "604.1.1"
+		}
+	}
+	205198 = {# Eadwine
+		name = "Eadwine"
+		dynasty = 1047009
+		religion = "catholic"
+		culture = anglo_saxon
+		father = 205193
+		585.1.1 = {
+			birth = "585.1.1"
+		}
+		620.1.1 = {
+			add_spouse = 205034
+		}
+		633.10.12 = {
+			death = "633.10.12"
+		}
+	}
+	205210 = {# Acha
+		name = "Acha"
+		female = yes
+		dynasty = 1047009
+		religion = "norse_pagan"
+		culture = anglo_saxon
+		father = 205193
+		570.1.1 = {
+			birth = "570.1.1"
+		}
+		590.1.1 = {
+			add_spouse = 205209
+		}
+		634.1.1 = {
+			death = "634.1.1"
+		}
+	}
+	205214 = {# Eanflaed
+		name = "EanflE_d"
+		female = yes
+		dynasty = 1047009
+		religion = "catholic"
+		culture = anglo_saxon
+		father = 205198
+		mother = 205034
+		626.4.19 = {
+			birth = "626.4.19"
+		}
+		642.1.1 = {
+			add_spouse = 205213
+		}
+		686.1.1 = {
+			death = "686.1.1"
+		}
+	}
+	northumbrian05 = {# Ecgbert
+		name = "Ecgbert"
+		religion = "catholic"
+		culture = anglo_saxon
+		836.1.1 = {
+			birth = "645.1.1"
+		}
+		873.1.1 = {
+			death = "716.1.1"
+		}
+	}
+	northumbrian05 = {# Ricsige
+		name = "Ricsige"
+		religion = "catholic"
+		culture = anglo_saxon
+		836.1.1 = {
+			birth = "645.1.1"
+		}
+		876.1.1 = {
+			death = "716.1.1"
+		}
+	}
+	northumbrian07 = {# Ecgbert
+		name = "Ecgbert"
+		religion = "catholic"
+		culture = anglo_saxon
+		836.1.1 = {
+			birth = "645.1.1"
+		}
+		873.1.1 = {
+			death = "716.1.1"
+		}
+	}
+	northumbrian08 = {# Æthelthryth 
+		name = "E_thelthryth" #Daughter of Aella
+		female = yes
+		dynasty = 814
+		religion = "catholic"
+		culture = anglo_saxon
+		father = 163103
+		mother = 6890
+		trait = brave
+		trait = honest
+		841.1.1 = {
+			birth = yes
+		}
+		893.1.1 = {
+			death = yes
+		}
+	}
+	northumbrian09 = {# Eadwulf  
+		name = "Eadwulf" # Grandson of Aella
+		dynasty = 814
+		religion = "catholic"
+		culture = anglo_saxon
+		mother = northumbrian08
+		871.1.1 = {
+			birth = yes
+		}
+		913.1.1 = {
+			death = yes
+		}
+	}
+	northumbrian10 = {# Ealdred  
+		name = "Eadwulf" 
+		dynasty = 814
+		religion = "catholic"
+		culture = anglo_saxon
+		father = northumbrian09
+		871.1.1 = {
+			birth = yes
+		}
+		933.1.1 = {
+			death = yes
+		}
+	}	
+	northumbrian11 = {# Ecgbert
+		name = "Ecgbert"
+		religion = "catholic"
+		culture = anglo_saxon
+		846.1.1 = {
+			birth = "846.1.1"
+		}
+		895.1.1 = {
+			death = "895.1.1"
+		}
+	}	
+	
 #######################################
 # Royalty of Kent
 #######################################
@@ -5159,7 +5440,7 @@
 			death = "1185.1.1"
 		}
 	}
-	7396 = {
+	7396 = {# Uhtred
 		name = "Uhtred"
 		dynasty = 745
 		religion = "catholic"
@@ -5176,7 +5457,7 @@
 			death = "1130.1.1"
 		}
 	}
-	161451 = {
+	161451 = {# Adelisa
 		name = "Adelisa"
 		female = yes
 		dynasty = 745
@@ -6479,134 +6760,14 @@
 		death = "835.1.1"
 	}
 }
-205192 = {
-	name = "Yffe"
-	dynasty = 1047009
-	religion = "norse_pagan"
-	culture = anglo_saxon
-	500.1.1 = {
-		birth = "500.1.1"
-	}
-	559.1.1 = {
-		death = "559.1.1"
-	}
-}
-205193 = {
-	name = "E_lla"
-	dynasty = 1047009
-	religion = "norse_pagan"
-	culture = anglo_saxon
-	father = 205192
-	540.1.1 = {
-		birth = "540.1.1"
-	}
-	588.1.1 = {
-		death = "588.1.1"
-	}
-}
-205194 = {
-	name = "E_lfric"
-	dynasty = 1047009
-	religion = "norse_pagan"
-	culture = anglo_saxon
-	father = 205192
-	545.1.1 = {
-		birth = "545.1.1"
-	}
-	589.1.1 = {
-		death = "589.1.1"
-	}
-}
-205195 = {
-	name = "Osric"
-	dynasty = 1047009
-	religion = "norse_pagan"
-	culture = anglo_saxon
-	father = 205194
-	565.1.1 = {
-		birth = "565.1.1"
-	}
-	634.1.1 = {
-		death = "634.1.1"
-	}
-}
-205196 = {
-	name = "Oswine"
-	dynasty = 1047009
-	religion = "catholic"
-	culture = anglo_saxon
-	father = 205195
-	585.1.1 = {
-		birth = "585.1.1"
-	}
-	651.1.1 = {
-		death = "651.1.1"
-	}
-}
-205197 = {
-	name = "E_thelric"
-	dynasty = 1047009
-	religion = "norse_pagan"
-	culture = anglo_saxon
-	father = 205193
-	580.1.1 = {
-		birth = "580.1.1"
-	}
-	604.1.1 = {
-		death = "604.1.1"
-	}
-}
-205198 = {
-	name = "Eadwine"
-	dynasty = 1047009
-	religion = "catholic"
-	culture = anglo_saxon
-	father = 205193
-	585.1.1 = {
-		birth = "585.1.1"
-	}
-	620.1.1 = {
-		add_spouse = 205034
-	}
-	633.10.12 = {
-		death = "633.10.12"
-	}
-}
-205210 = {
-	name = "Acha"
-	female = yes
-	dynasty = 1047009
-	religion = "norse_pagan"
-	culture = anglo_saxon
-	father = 205193
-	570.1.1 = {
-		birth = "570.1.1"
-	}
-	590.1.1 = {
-		add_spouse = 205209
-	}
-	634.1.1 = {
-		death = "634.1.1"
-	}
-}
-205214 = {
-	name = "EanflE_d"
-	female = yes
-	dynasty = 1047009
-	religion = "catholic"
-	culture = anglo_saxon
-	father = 205198
-	mother = 205034
-	626.4.19 = {
-		birth = "626.4.19"
-	}
-	642.1.1 = {
-		add_spouse = 205213
-	}
-	686.1.1 = {
-		death = "686.1.1"
-	}
-}
+
+
+
+
+
+
+
+
 205267 = {
 	name = "Brorda"
 	dynasty = 1047013
