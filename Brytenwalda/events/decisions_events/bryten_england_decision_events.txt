@@ -1,0 +1,57 @@
+﻿namespace = bryten_england
+
+#######################################
+#									  #
+#         Creating Kingdoms  	      #
+#									  #
+#######################################
+
+#######################################
+# Forming England
+#######################################
+bryten_england.0001 = {# I united England
+	type = character_event
+	title = bryten_england.0001.t
+	desc = bryten_england.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:england_kingdom_uniter
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		unite_kingdom_england_decision_effects = yes
+	}
+	
+	option = {# Long live England
+		name = bryten_england.0001.a
+		give_nickname = nick_the_great
+	}
+}
+bryten_england.0002 = {# Someone has united England
+	type = character_event
+	title = bryten_england.0002.t
+	desc = {
+		desc = bryten_england.0002.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:england_kingdom_uniter }
+				}
+				desc = bryten_england.0002.relation_former.desc
+			}
+			desc = bryten_england.0002.former.desc
+		}	
+		desc = bryten_england.0002.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:england_kingdom_uniter
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
