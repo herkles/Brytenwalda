@@ -766,7 +766,6 @@ unite_england_decision = {
 	}
 
 	is_valid = {
-		is_at_war = no
 		custom_description = {# Your Capital must be in England
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
@@ -774,7 +773,7 @@ unite_england_decision = {
 		title:k_england = { is_title_created = no }
 		any_county_in_region = {# Must control a good chunk of England
 			region = custom_england
-			count >= 30
+			count >= 25
 		}
 		custom_description = {
 			text = unite_england_culture_requirement

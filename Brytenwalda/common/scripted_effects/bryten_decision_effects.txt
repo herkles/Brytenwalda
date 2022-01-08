@@ -1,5 +1,4 @@
-﻿
-unite_kingdom_england_decision_effects = {
+﻿unite_kingdom_england_decision_effects = {
 	# Create the title and make it primary
 	create_title_and_vassal_change = {
 		type = created
@@ -25,28 +24,33 @@ unite_kingdom_england_decision_effects = {
 		list = english_kingdoms
 		every_in_de_jure_hierarchy = {
 			limit = {
-				tier = tier_kingdom
+				tier = tier_duchy
 			}
 			set_de_jure_liege_title = title:k_england
 		}
 	}
 
 	hidden_effect = {
-		every_in_list = {
-			list = english_kingdoms
-			limit = {
-				NOT = { this = scope:england_kingdom_uniter.primary_title }
-				scope:england_kingdom_uniter = { completely_controls = prev }
-			}
-
-			#De jure shift all held spanish titles into your primary title
-			every_in_de_jure_hierarchy = {
-				limit = { tier = tier_duchy }
-				set_de_jure_liege_title = scope:england_kingdom_uniter.primary_title
-			}
-
-			#Destroys them all!
-			scope:england_kingdom_uniter = { destroy_title = prev }
+		if = {
+			limit = { has_title = title:k_kent }
+			destroy_title = title:k_kent
 		}
+		if = {
+			limit = { has_title = title:k_northumbria }
+			destroy_title = title:k_northumbria
+		}
+		if = {
+			limit = { has_title = title:k_mercia }
+			destroy_title = title:k_mercia
+		}
+		if = {
+			limit = { has_title = title:k_east_anglia }
+			destroy_title = title:k_east_anglia
+		}
+		if = {
+			limit = { has_title = title:k_wessex }
+			destroy_title = title:k_wessex
+		}
+
 	}
 }
