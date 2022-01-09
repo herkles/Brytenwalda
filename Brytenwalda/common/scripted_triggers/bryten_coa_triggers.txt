@@ -1,0 +1,34 @@
+﻿coa_switch_to_saxon_trigger = {
+	culture = { has_graphical_culture = anglo_saxon_coa_gfx }
+}
+coa_switch_to_saxon_historical_trigger = {# This is the default Saxon England, ie Wessex united
+	not = { 
+		exists = global_var:england_coa_kent
+		exists = global_var:england_coa_merica
+		exists = global_var:england_coa_northumbria
+		exists = global_var:england_coa_east_anglia
+	}
+	culture = { has_graphical_culture = anglo_saxon_coa_gfx }
+}
+coa_switch_to_saxon_mercia_trigger = {# Mercian United Saxon England
+	exists = global_var:england_coa_merica
+	culture = { has_graphical_culture = anglo_saxon_coa_gfx }
+}
+coa_switch_to_saxon_northumbria_trigger = {# Northumbrian United Saxon England
+	exists = global_var:england_coa_northumbria
+	culture = { has_graphical_culture = anglo_saxon_coa_gfx }
+}
+coa_switch_to_saxon_east_anglia_trigger = {# East Anglian United Saxon England
+	exists = global_var:england_coa_east_anglia
+	culture = { has_graphical_culture = anglo_saxon_coa_gfx }
+}
+coa_switch_to_saxon_kent_trigger = {# Kentish United Saxon England
+	exists = global_var:england_coa_kent
+	culture = { has_graphical_culture = anglo_saxon_coa_gfx }
+}
+
+
+
+
+
+

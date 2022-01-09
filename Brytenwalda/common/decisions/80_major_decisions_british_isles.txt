@@ -769,16 +769,16 @@ unite_england_decision = {
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
 		}
-		custom_description = {# Must own a good chunk of England
-			text = owns_majority_england_region_tooltip
-			any_county_in_region = {
-				region = custom_england
-				count >= 28
-				OR = {
-					holder = root
-				}
-			}
-		}
+		# custom_description = {# Must own a good chunk of England
+		# 	text = owns_majority_england_region_tooltip
+		# 	any_county_in_region = {
+		# 		region = custom_england
+		# 		count >= 28
+		# 		OR = {
+		# 			holder = root
+		# 		}
+		# 	}
+		# }
 		custom_description = {# Must be english or Norse
 			text = unite_england_culture_requirement
 			
@@ -815,7 +815,6 @@ unite_england_decision = {
 			}
 			trigger_event = bryten_england.0002
 		}
-
 		#Can only be done once
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
@@ -824,6 +823,36 @@ unite_england_decision = {
 		set_global_variable = {
 			name = unavailable_unique_decisions
 			value = scope:england_kingdom_uniter
+		}
+		hidden_effect = {# adding the variables for unique COAs variants
+			if = {# set unique COA for england united by Mercia
+				limit = { has_primary_title = title:k_mercia }
+				set_global_variable = {
+					name = england_coa_merica
+					value = yes
+				}
+			}
+			if = {# set unique COA for england united by Northumbria
+				limit = { has_primary_title = title:k_northumbria }
+				set_global_variable = {
+					name = england_coa_northumbria
+					value = yes
+				}
+			}
+			if = {# set unique COA for england united by East Anglia
+				limit = { has_primary_title = title:k_east_anglia }
+				set_global_variable = {
+					name = england_coa_east_anglia
+					value = yes
+				}
+			}
+			if = {# set unique COA for england united by kent
+				limit = { has_primary_title = title:k_kent }
+				set_global_variable = {
+					name = england_coa_kent
+					value = yes
+				}
+			}
 		}
 	}
 

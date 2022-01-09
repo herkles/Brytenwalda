@@ -1,4 +1,7 @@
 ﻿unite_kingdom_england_decision_effects = {
+	primary_title = {
+		save_scope_as = england_heptarchy_coa
+   }
 	# Create the title and make it primary
 	create_title_and_vassal_change = {
 		type = created
@@ -10,7 +13,9 @@
 			holder = root
 			change = scope:title_change
 		}
+		set_coa = england_heptarchy_coa
 	}
+
 	resolve_title_and_vassal_change = scope:title_change
 	set_primary_title_to = title:k_england
 
@@ -51,6 +56,5 @@
 			limit = { has_title = title:k_wessex }
 			destroy_title = title:k_wessex
 		}
-
 	}
 }
