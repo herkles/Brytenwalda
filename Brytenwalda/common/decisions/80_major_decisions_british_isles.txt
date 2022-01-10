@@ -771,14 +771,14 @@ unite_england_decision = {
 		}
 		custom_description = {# Must own a good chunk of England
 			text = owns_majority_england_region_tooltip
-			any_county_in_region = {
-				region = custom_england
-				count >= 28
-				OR = {
-					holder = root
-				}
-			}
-		}
+		 	any_county_in_region = {
+		 		region = custom_england
+		 		count >= 28
+		 		OR = {
+		 			holder = root
+		 		}
+		 	}
+		 }
 		custom_description = {# Must be english or Norse
 			text = unite_england_culture_requirement
 			
@@ -825,6 +825,12 @@ unite_england_decision = {
 			value = scope:england_kingdom_uniter
 		}
 		hidden_effect = {# adding the variables for unique COAs variants
+			primary_title = {
+				save_scope_as = england_heptarchy_coa
+			}
+			title:k_england = {
+				set_coa = england_heptarchy_coa
+			}
 			if = {# set unique COA for england united by Mercia
 				limit = { has_primary_title = title:k_mercia }
 				set_global_variable = {

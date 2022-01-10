@@ -29,7 +29,31 @@ coa.10 = {
 		}
 	}
 
-	immediate = {	
+	immediate = {
+		if = {
+			limit = { coa_switch_to_saxon_trigger = yes }
+			if = {# Mercia alternative
+				limit = { coa_switch_to_saxon_mercia_trigger = yes }
+				title:k_england = { set_coa = k_england_mercia } 
+			}
+			else_if = {# Northumbrian alternative
+				limit = { coa_switch_to_saxon_northumbria_trigger = yes }
+				title:k_england = { set_coa = k_england_northumbria } 
+			}
+			else_if = {# East Anglia Alternative
+				limit = { coa_switch_to_saxon_east_anglia_trigger = yes }
+				title:k_england = { set_coa = k_england_east_anglia } 
+			}
+			else_if = {# Kent Alternative
+				limit = { coa_switch_to_saxon_kent_trigger = yes }
+				title:k_england = { set_coa = k_england_kent }
+			}
+			else = {# Default anglo-saxon coa
+				limit = { coa_switch_to_saxon_historical_trigger = yes }
+				title:k_england = { set_coa = k_england } # reset
+			}
+		}
+		
 		if = {
 			limit = { coa_switch_to_norman_trigger = yes }
 			if = {
