@@ -769,16 +769,16 @@ unite_england_decision = {
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
 		}
-		# custom_description = {# Must own a good chunk of England
-		# 	text = owns_majority_england_region_tooltip
-		# 	any_county_in_region = {
-		# 		region = custom_england
-		# 		count >= 28
-		# 		OR = {
-		# 			holder = root
-		# 		}
-		# 	}
-		# }
+		custom_description = {# Must own a good chunk of England
+			text = owns_majority_england_region_tooltip
+			any_county_in_region = {
+				region = custom_england
+				count >= 28
+				OR = {
+					holder = root
+				}
+			}
+		}
 		custom_description = {# Must be english or Norse
 			text = unite_england_culture_requirement
 			

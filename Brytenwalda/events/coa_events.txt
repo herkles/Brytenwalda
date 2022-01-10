@@ -29,28 +29,7 @@ coa.10 = {
 		}
 	}
 
-	immediate = {
-		if = {
-			limit = { coa_switch_to_saxon_mercia_trigger = yes }
-			title:k_england = { set_coa = k_england_mercia } # Mercia alternative
-		}
-		else_if = {
-			limit = { coa_switch_to_saxon_northumbria_trigger = yes }
-			title:k_england = { set_coa = k_england_northumbria } # reset
-		}
-		else_if = {
-			limit = { coa_switch_to_saxon_east_anglia_trigger = yes }
-			title:k_england = { set_coa = k_england_east_anglia } # reset
-		}
-		else_if = {
-			limit = { coa_switch_to_saxon_kent_trigger = yes }
-			title:k_england = { set_coa = k_england_kent } # reset
-		}
-		else = {
-			limit = { coa_switch_to_saxon_historical_trigger = yes }
-			title:k_england = { set_coa = k_england } # reset
-		}
-		
+	immediate = {	
 		if = {
 			limit = { coa_switch_to_norman_trigger = yes }
 			if = {
