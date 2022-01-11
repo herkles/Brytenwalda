@@ -4,6 +4,7 @@
 k_wessex = {# Kings of Wessex
 	519.1.1 = {# Cerdic
 		holder = 205141
+		succession_laws = { saxon_elective_succession_law }
 	}
 	534.1.1 = {# Cynric
 		holder = 205142
@@ -85,6 +86,7 @@ k_wessex = {# Kings of Wessex
 k_mercia = {# Kings of Mercia
 	515.1.1 = {# Icel
 		holder = 205052
+		succession_laws = { saxon_elective_succession_law }
 	}
 	536.1.1 = {# Cnebba
 		holder = 205053
@@ -175,6 +177,7 @@ k_mercia = {# Kings of Mercia
 k_east_anglia = {# Kings of East Anglia
 	550.1.1 = {# Wehha
 		holder = 205000
+		succession_laws = { saxon_elective_succession_law }
 	}
 	571.1.1 = {# Wuffa
 		holder = 205001
@@ -258,6 +261,7 @@ k_east_anglia = {# Kings of East Anglia
 k_deira = {# Kings of Deira
 	559.1.1 = {# Aella
 		holder = 205193 
+		succession_laws = { saxon_elective_succession_law }
 	}
 	589.1.1 = {# Aelfric
 		holder = 205194 
@@ -293,6 +297,7 @@ k_deira = {# Kings of Deira
 k_bernicia = {# Kings of Bernicia
 	500.1.1 = {# Esa
 		holder = 205200 
+		succession_laws = { saxon_elective_succession_law }
 	}
 	520.1.1 = {# Eoppa
 		holder = 205201 
@@ -340,6 +345,7 @@ k_bernicia = {# Kings of Bernicia
 k_northumbria = {# Kings of Northumbria
 	655.1.1 = {# Oswiu
 		holder = 205213 
+		succession_laws = { saxon_elective_succession_law }
 	}
 	670.2.15 = {# Ecgfrith
 		holder = northumbrian01 
@@ -471,6 +477,7 @@ k_northumbria = {# Kings of Northumbria
 k_kent = {# Kings of Kent
 	440.1.1 = {
 		holder = 205026
+		succession_laws = { saxon_elective_succession_law }
 	}
 	460.1.1 = {
 		holder = 205027
@@ -515,7 +522,60 @@ k_kent = {# Kings of Kent
 		holder = 0
 	}
 }
-
+k_essex = {# Kings of Essex
+	527.1.1 = {# Aescwine
+		holder = 194095
+		succession_laws = { saxon_elective_succession_law }
+	}
+	587.1.1 = {# Sledda
+		holder = 194096
+	}
+	604.1.1 = {# Saeberht
+		holder = 194097
+	}
+	616.1.1 = {# Saexred
+		holder = 194098
+	}
+	616.1.1 = {# Saeward
+		holder = 194099
+	}
+	623.1.1 = {# Sigeberht
+		holder = 194100
+	}
+	653.1.1 = {# Sigeberht
+		holder = 194101
+	}
+	660.1.1 = {# Swithhelm
+		holder = 194102
+	}
+	664.1.1 = {# Sighere
+		holder = 194103
+	}
+	683.1.1 = {# Sebbi
+		holder = 205256
+	}
+	694.1.1 = {# Sigeheard
+		holder = 205257
+	}
+	709.1.1 = {# Offa
+		holder = 205259
+	}
+	710.1.1 = {# Saelred
+		holder = 205262
+	}
+	746.1.1 = {# Swithred
+		holder = 205263
+	}
+	758.1.1 = {# Sigeric
+		holder = 205265
+	}
+	798.1.1 = {# Sigered
+		holder = 205266
+	}
+	812.1.1 = {# Subsummed into Wessex
+		holder = 0
+	}
+}
 #######################################
 # Kingdom of England
 #######################################
@@ -526,7 +586,9 @@ k_england = {
 	886.1.1 = {# Alfred The great
 		holder = 7627 
 		succession_laws = { saxon_elective_succession_law }
-		set_capital_county = title:c_hampton
+		effect = {# Winchester is the capital of Anglo-Saxon England
+			set_capital_county = title:c_hampton
+		}
 	}
 	899.10.25 = {# Edward the Eldar
 		holder = 100 
@@ -617,66 +679,58 @@ k_england = {
 d_bedford = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 9 }
-	519.1.1 = {# Cerdic
-		holder = 205141
-		de_jure_liege = k_wessex
+	527.1.1 = {# Aescwine
+		holder = 194095
+		de_jure_liege = k_essex
 	}
-	534.1.1 = {# Cynric
-		holder = 205142
+	587.1.1 = {# Sledda
+		holder = 194096
 	}
-	560.1.1 = {# Ceawlin
-		holder = 205143
+	604.1.1 = {# Saeberht
+		holder = 194097
 	}
-	591.1.1 = {# Ceol
-		holder = 205145
+	616.1.1 = {# Saexred
+		holder = 194098
 	}
-	597.1.1 = {# Ceolwulf
-		holder = 205146
+	616.1.1 = {# Saeward
+		holder = 194099
 	}
-	611.1.1 = {# Cyneglis
-		holder = 205147
+	623.1.1 = {# Sigeberht
+		holder = 194100
 	}
-	643.1.1 = {# Coenwalh
-		holder = 205148
+	653.1.1 = {# Sigeberht
+		holder = 194101
 	}
-	645.1.1 = {# Penda
-		holder = 205057
+	660.1.1 = {# Swithhelm
+		holder = 194102
 	}
-	648.1.1 = {# Coenwalh
-		holder = 205148
+	664.1.1 = {# Sighere
+		holder = 194103
 	}
-	674.1.1 = {# Cenfus 
-		holder = 205154
+	683.1.1 = {# Sebbi
+		holder = 205256
 	}
-	674.6.28 = {# aescwine
-		holder = 205155
+	694.1.1 = {# Sigeheard
+		holder = 205257
 	}
-	676.1.1 = {# Centwine
-		holder = 205102
+	709.1.1 = {# Offa
+		holder = 205259
 	}
-	685.1.1 = {# Caedwalla
-		holder = 205161
+	710.1.1 = {# Saelred
+		holder = 205262
 	}
-	688.1.1 = {# Ine
-		holder = 205164
+	746.1.1 = {# Swithred
+		holder = 205263
 	}
-	726.1.1 = {# aethelheard
-		holder = 205184
+	758.1.1 = {# Sigeric
+		holder = 205265
 	}
-	740.1.1 = {# Cuthred
-		holder = 205106
-	}	
-	756.1.1 = {# Sigeberht
-		holder = 205177
+	798.1.1 = {# Sigered
+		holder = 205266
 	}
-	757.1.1 = {# Cynewulf
-		holder = 205180
-	}
-	786.1.1 = {# Beorhtric
-		holder = 205181
-	}
-	802.1.1 = {# Ecgberht
+	812.1.1 = {# Ecgberht
 		holder = 33354
+		de_jure_liege = k_wessex
 	}
 	839.1.1 = {# Aethelwulf
 		holder = 33355

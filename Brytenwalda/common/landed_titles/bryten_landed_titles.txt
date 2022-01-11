@@ -55,9 +55,17 @@ e_britannia = {
 		color = { 3 144 252 }
 		color2 = { 255 255 255 }
 		
-		capital = c_norfolk
-			
-		
+		capital = c_norfolk	
+
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:anglo_saxon
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
 	}
 	k_mercia = {# Kingdom of Mercia
 		color = { 209 144 4 }
@@ -100,12 +108,27 @@ e_britannia = {
 		ai_primary_priority = {
 			if = {
 				limit = {
-					culture = culture:czech
+					culture = culture:anglo_saxon
 				}
 				add = @correct_culture_primary_score
 			}
 		}
 	}
+	k_essex = {# Kingdom of Essex
+		color = { 180 205 170 }
+		color2 = { 255 255 255 }
+
+		capital = c_middlesex # Londonn
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:anglo_saxon
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+	}
+
 	k_england = {# Kingdom of England
 		color = { 202 26 26 }
 		color2 = { 255 255 255 }
@@ -124,7 +147,10 @@ e_britannia = {
 		ai_primary_priority = {
 			if = {
 				limit = {
-					culture = culture:czech
+					OR = {
+						culture = culture:english
+						culture = culture:anglo_saxon
+					}
 				}
 				add = @correct_culture_primary_score
 			}
