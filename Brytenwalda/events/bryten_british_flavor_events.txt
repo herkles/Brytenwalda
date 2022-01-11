@@ -1,0 +1,324 @@
+﻿# namespace = bryten_british_flavor
+
+# #######################################
+# #									  #
+# #    The English-Scottish Border	  #
+# #									  #
+# #######################################
+
+# #######################################
+# # Council of Chester
+# #######################################
+# bryten_british_flavor.0001 = {# Hold the Council of Chester?
+# 	type = character_event
+# 	title = bryten_british_flavor.0001.t
+# 	desc = bryten_british_flavor.0001.desc
+# 	theme = realm
+# 	left_portrait = {
+# 		character = root
+# 		animation = personality_bold
+# 	}
+
+# 	trigger = {
+# 		is_at_war = no # must not be at war
+# 		title:k_scotland.holder = {# Scotland must not be at war
+# 			is_at_war = no
+# 		}
+# 		NOR = {
+# 			has_truce = title:k_scotland.holder
+# 			is_at_war_with = title:k_scotland.holder
+# 			has_relation_rival = title:k_scotland.holder
+# 		}
+# 		has_title = title:k_england
+# 		NOT = {# can't be both the king of england or scotland
+# 			has_title = title:k_scotland
+# 		}
+# 		OR = {# England must own Lothian
+# 			has_title = title:d_lothian
+# 			any_vassal = {# your vassal holds the duchy of Lothian
+# 				has_title = title:d_lothian
+# 			}
+# 		}
+# 		current_date < 1066.1.1 # After this date wait for the treaty of York
+# 		current_date > 930.1.1 # This shouldn't happen too early
+# 		NOT = {# This event can only happen once
+# 			exists = var:bryten_chester_council
+# 		}
+# 	}
+
+# 	immediate = {
+# 		play_music_cue = "mx_cue_positive_effect"
+# 		set_variable = {
+# 			name = bryten_chester_council
+# 			value = yes
+# 		}
+# 	}
+	
+# 	option = {# Hold the Council
+# 		name = bryten_british_flavor.0001.a
+# 		title:k_scotland.holder = { trigger_event = bryten_british_flavor.0002 }
+# 		stress_impact = {
+# 			gregarious = minor_stress_impact_loss
+# 			zealous = medium_stress_impact_loss
+# 			forgiving = major_stress_impact_loss
+# 			trusting = major_stress_impact_loss
+# 			shy = minor_stress_impact_gain
+# 			cynical = medium_stress_impact_gain
+# 			vengeful = major_stress_impact_gain
+# 			paranoid = major_stress_impact_gain
+# 		}
+# 	}
+# 	option = {# The Council is not needed
+# 		name = bryten_british_flavor.0001.b
+# 		stress_impact = {
+# 			gregarious = minor_stress_impact_loss
+# 			zealous = medium_stress_impact_loss
+# 			forgiving = major_stress_impact_loss
+# 			trusting = major_stress_impact_loss
+# 			shy = minor_stress_impact_gain
+# 			cynical = medium_stress_impact_gain
+# 			vengeful = major_stress_impact_gain
+# 			paranoid = major_stress_impact_gain
+# 		}
+# 	}
+# }
+# bryten_british_flavor.0002 = {# Go to the Council of Chester?
+# 	type = character_event
+# 	title = bryten_british_flavor.0002.t
+# 	desc = bryten_british_flavor.0002.desc
+# 	theme = realm
+# 	left_portrait = {
+# 		character = root
+# 		animation = personality_bold
+# 	}
+
+# 	immediate = {
+# 		play_music_cue = "mx_cue_positive_effect"
+# 	}
+	
+# 	option = {# Go to the Council
+# 		name = bryten_british_flavor.0002.a
+# 		title:k_england.holder = { trigger_event = bryten_british_flavor.0003 }
+# 		stress_impact = {
+# 			gregarious = minor_stress_impact_loss
+# 			zealous = medium_stress_impact_loss
+# 			forgiving = major_stress_impact_loss
+# 			trusting = major_stress_impact_loss
+# 			shy = minor_stress_impact_gain
+# 			cynical = medium_stress_impact_gain
+# 			vengeful = major_stress_impact_gain
+# 			paranoid = major_stress_impact_gain
+# 		}
+
+# 	}
+# 	option = {# Refuse to go to the Council
+# 		name = bryten_british_flavor.0002.b
+# 		add_opinion = {
+# 			target = scope:gyda
+# 			modifier = increased_opinion
+# 			opinion = 25
+# 		}
+# 		reverse_add_opinion = {
+# 			target = scope:gyda
+# 			modifier = increased_opinion
+# 			opinion = 25
+# 		}
+# 		title:k_england.holder = { trigger_event = bryten_british_flavor.0008 }
+# 		stress_impact = {
+# 			gregarious = minor_stress_impact_loss
+# 			zealous = medium_stress_impact_loss
+# 			forgiving = major_stress_impact_loss
+# 			trusting = major_stress_impact_loss
+# 			shy = minor_stress_impact_gain
+# 			cynical = medium_stress_impact_gain
+# 			vengeful = major_stress_impact_gain
+# 			paranoid = major_stress_impact_gain
+# 		}
+# 	}
+# }
+# bryten_british_flavor.0003 = {# The King come
+# 	type = character_event
+# 	title = bryten_british_flavor.0003.t
+# 	desc = bryten_british_flavor.0003.desc
+# 	theme = realm
+# 	left_portrait = {
+# 		character = root
+# 		animation = personality_bold
+# 	}
+
+# 	immediate = {
+# 		play_music_cue = "mx_cue_positive_effect"
+# 	}
+	
+# 	option = {# Welcome the King of Scotland
+# 		name = bryten_british_flavor.0003.a
+# 		add_opinion = {
+# 			target = title:k_scotland.holder
+# 			modifier = love_opinion
+# 			opinion = 50
+# 		}
+# 		reverse_add_opinion = {
+# 			target = title:k_scotland.holder
+# 			modifier = love_opinion
+# 			opinion = 50
+# 		}
+# 	}
+# 	after = {
+# 		trigger_event = bryten_british_flavor.0004
+# 	}
+# }
+# bryten_british_flavor.0004 = {# Giving Lothian to the Scottish
+# 	type = character_event
+# 	title = bryten_british_flavor.0004.t
+# 	desc = bryten_british_flavor.0004.desc
+# 	theme = realm
+# 	left_portrait = {
+# 		character = root
+# 		animation = personality_bold
+# 	}
+
+# 	immediate = {
+# 		play_music_cue = "mx_cue_positive_effect"
+# 	}
+	
+# 	option = {# Hand Over Lothian
+# 		name = bryten_british_flavor.0004.a
+# 		add_truce_both_ways = {
+# 			character = scope:actor
+# 			days = 3650
+# 			name = TRUCE_GRANT_INDEPENDENCE
+# 		}
+# 		add_hook = {
+# 			type = indebted_hook
+# 			target = title:k_scotland.holder
+# 		}
+# 		stress_impact = {
+# 			gregarious = minor_stress_impact_loss
+# 			zealous = medium_stress_impact_loss
+# 			forgiving = major_stress_impact_loss
+# 			trusting = major_stress_impact_loss
+# 			shy = minor_stress_impact_gain
+# 			cynical = medium_stress_impact_gain
+# 			vengeful = major_stress_impact_gain
+# 			paranoid = major_stress_impact_gain
+# 		}
+# 	}
+
+# 	after = {
+# 		title:k_scotland.holder = { trigger_event = bryten_british_flavor.0008 }
+# 	}
+
+# }
+# bryten_british_flavor.0005 = {# We got Lothian!
+# 	type = character_event
+# 	title = bryten_british_flavor.0005.t
+# 	desc = bryten_british_flavor.0005.desc
+# 	theme = realm
+# 	left_portrait = {
+# 		character = root
+# 		animation = personality_bold
+# 	}
+
+# 	immediate = {
+# 		play_music_cue = "mx_cue_positive_effect"
+# 	}
+	
+# 	option = {# We got Lothian!
+# 		name = bryten_british_flavor.0005.a
+		
+# 		stress_impact = {
+# 			gregarious = minor_stress_impact_loss
+# 			zealous = medium_stress_impact_loss
+# 			forgiving = major_stress_impact_loss
+# 			trusting = major_stress_impact_loss
+# 			shy = minor_stress_impact_gain
+# 			cynical = medium_stress_impact_gain
+# 			vengeful = major_stress_impact_gain
+# 			paranoid = major_stress_impact_gain
+# 		}
+
+# 		hidden_effect = {
+# 			title:d_lothian = {
+# 				change_liege = {
+# 					liege = title:k_scotland
+# 				}
+# 				set_de_jure_liege_title = title:k_scotland
+# 			}
+# 			resolve_title_and_vassal_change = title:k_scotland
+# 		}
+
+# 	}
+# 	after = {
+# 		title:k_england.holder = { trigger_event = bryten_british_flavor.0007 }
+# 		title:k_scotland.holder = { trigger_event = bryten_british_flavor.0007 }
+# 	}
+
+# }
+# bryten_british_flavor.0007 = {# The Council is over
+# 	type = character_event
+# 	title = bryten_british_flavor.0007.t
+# 	desc = {
+# 		first_valid = {
+# 			triggered_desc = {
+# 				trigger = {	has_title = title:k_england	}
+# 				desc = bryten_british_flavor.0007.desc.england
+# 			}
+# 		}	
+# 		desc = bryten_british_flavor.0007.desc.scotland	
+# 	}
+# 	theme = realm
+# 	left_portrait = {
+# 		character = root
+# 		animation = personality_bold
+# 	}
+
+# 	immediate = {
+# 		play_music_cue = "mx_cue_positive_effect"
+# 	}
+	
+# 	option = {# Hopefully this secures peace
+# 		name = bryten_british_flavor.0007.a
+# 		limit = { has_title = title:k_england }
+# 	}
+# 	option = {# Good to be home
+# 		name = bryten_british_flavor.0007.b
+# 		limit = { has_title = title:k_scotland }
+# 	}
+# }
+# bryten_british_flavor.0008 = {# The King of Scotland Refused to come
+# 	type = character_event
+# 	title = bryten_british_flavor.0008.t
+# 	desc = bryten_british_flavor.0008.desc
+# 	theme = realm
+# 	left_portrait = {
+# 		character = root
+# 		animation = personality_bold
+# 	}
+
+# 	immediate = {
+# 		play_music_cue = "mx_cue_positive_effect"
+# 	}
+	
+# 	option = {# Then this must be settled by War
+# 		name = bryten_british_flavor.0008.a
+# 	}
+
+# 	after = {
+# 		add_opinion = {
+# 			target = title:k_scotland.holder
+# 			modifier = unfriendly_opinion
+# 			opinion = 50
+# 		}
+# 		reverse_add_opinion = {
+# 			target = title:k_scotland.holder
+# 			modifier = unfriendly_opinion
+# 			opinion = 50
+# 		}
+# 	}
+
+# }
+# #######################################
+# # The Treaty of York
+# #######################################
+
+

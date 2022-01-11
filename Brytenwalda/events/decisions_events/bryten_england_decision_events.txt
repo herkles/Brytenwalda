@@ -82,3 +82,52 @@ bryten_england.0003 = {# Setting the coat of arms
 		}
 	}
 }
+#######################################
+# Forming England
+#######################################
+bryten_england.0004 = {# I restored Kent
+	type = character_event
+	title = bryten_england.0004.t
+	desc = bryten_england.0004.desc
+	theme = realm
+	left_portrait = {
+		character = scope:kent_restorer
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		restore_kingdom_kent_decision_scripted_effect = yes
+	}
+	
+	option = {# Long live England
+		name = bryten_england.0004.a
+		give_nickname = nick_the_restorer
+	}
+}
+bryten_england.0005 = {# Someone has restored Kent
+	type = character_event
+	title = bryten_england.0005.t
+	desc = {
+		desc = bryten_england.0005.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:kent_restorer }
+				}
+				desc = bryten_england.0005.relation_former.desc
+			}
+			desc = bryten_england.0005.former.desc
+		}	
+		desc = bryten_england.0005.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:kent_restorer
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
