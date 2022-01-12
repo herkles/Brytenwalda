@@ -883,6 +883,7 @@ restore_kingdom_kent_decision = {
 
 	is_shown = {
 		has_title = title:d_canterbury
+		root.faith = faith:catholic # Due to it being an important seat, the people won't accept you without you being catholic. 
 		NOR = {# can't form it if you are already a king, nor should the house of wessex be able to do so
 			dynasty = dynasty:house_british_isles_wessex # The House of Wessex should not seek to break up Wessex
 			title:k_england = { is_title_created = yes } # If England is created then you should focus on that
@@ -950,6 +951,104 @@ restore_kingdom_kent_decision = {
 			}
 			set_global_variable = {
 				name = flag_restored_kent
+				value = root
+			}
+		}
+	}
+
+	cost = {
+		gold = 300
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
+# 	   Create the Kingdom of Essex			#
+#############################################
+restore_kingdom_essex_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+	ai_check_interval = 120
+
+	desc = restore_kingdom_essex_decision_desc
+	selection_tooltip = restore_kingdom_essex_decision_tooltip
+
+	is_shown = {
+		has_title = title:d_canterbury
+		root.faith = faith:catholic # Due to it being an important seat, the people won't accept you without you being catholic. 
+		NOR = {# can't form it if you are already a king, nor should the house of wessex be able to do so
+			dynasty = dynasty:house_british_isles_wessex # The House of Wessex should not seek to break up Wessex
+			title:k_england = { is_title_created = yes } # If England is created then you should focus on that
+			highest_held_title_tier >= tier_kingdom # No point in restoring it if you are already a king
+		}
+		OR = {# This is for the Anglo-Saxons or the Norse who come to settle
+			has_culture = culture:anglo_saxon # Powerful Anglo-Saxons might want to recreate it
+			has_culture = culture:norse # the Norse will do so as they want fancy kingdom titles
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_essex
+			}
+		}
+		OR = {
+			has_government = feudal_government
+			has_government = republic_government
+			has_government = clan_government
+		}
+
+	}
+
+	is_valid = {
+		is_independent_ruler = yes
+		prestige_level >= high_prestige_level
+		has_title = title:d_bedford
+		completely_controls = title:d_bedford
+		custom_description = {# Must be english or Norse
+			text = unite_england_culture_requirement
+			
+			trigger_if = {
+				OR = {# This is for the Anglo-Saxons or the Norse who come to settle
+					has_culture = culture:anglo_saxon
+					has_culture = culture:norse
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			restore_kingdom_essex_decision_scripted_effect = yes
+		}
+		save_scope_as = essex_restorer
+		trigger_event = {
+			id = bryten_england.0004
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = bryten_england.0005
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_essex
+			}
+			set_global_variable = {
+				name = flag_restored_essex
 				value = root
 			}
 		}
