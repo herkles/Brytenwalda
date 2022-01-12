@@ -24,7 +24,7 @@ baron_feudal_female_anglo_saxon = {# Hlǽfdíge
 	cultures = { anglo_saxon }
 	top_liege = no
 }
-barony_feudal_anglo_saxon = {# Title
+barony_feudal_anglo_saxon = {# Hundred
 	type = title
 	tier = barony
 	priority = 7
@@ -137,6 +137,277 @@ empire_feudal_anglo_saxon = {# Brytenríce
 }
 # Princelings
 
-
+# Republican Titles
+###########################################################
+# Normann Titles
+###########################################################
+# Barony
+baron_feudal_male_norman = {# Viscounte
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 7
+	governments = { feudal_government tribal_government }
+	cultures = { norman }
+	top_liege = no
+}
+baron_feudal_female_norman = {# Viscontesse
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 7
+	governments = { feudal_government tribal_government }
+	cultures = { norman }
+	top_liege = no
+}
+barony_feudal_norman = {# visconte
+	type = title
+	tier = barony
+	priority = 7
+	governments = { feudal_government }
+	cultures = { norman }
+}
+# County
+county_feudal_norman = {# Counté
+	type = title
+	tier = county
+	priority = 18
+	governments = { feudal_government }
+	cultures = { norman }
+}
+count_feudal_male_norman = {# Cont
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 18
+	governments = { feudal_government }
+	cultures = { norman }
+}
+count_feudal_female_norman = {# Contesse
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 18
+	governments = { feudal_government }
+	cultures = { norman }
+}
+# Duchy
+duchy_feudal_norman = {# Duchesse
+	type = title
+	tier = duchy
+	priority = 28
+	governments = { feudal_government }
+	cultures = { norman }
+}
+duke_feudal_male_norman = {# Duc
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government }
+	cultures = { norman }
+}
+duke_feudal_female_norman = {# Duché
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government }
+	cultures = { norman }
+}
+# Kingdom
+king_feudal_male_norman = {# Roué
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government }
+	cultures = { norman }
+}
+king_feudal_female_norman = {# Ranne
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government }
+	cultures = { norman }
+}
+kingdom_feudal_norman = {# Rouoyaume
+	type = title
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government }
+	cultures = { norman }
+}
+# Empire
+emperor_feudal_male_norman = {# Emperur
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 102
+	governments = { feudal_government tribal_government }
+	cultures = { norman }
+}
+emperor_feudal_female_norman = {# Emperere
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 102
+	governments = { feudal_government tribal_government }
+	cultures = { norman }
+}
+empire_feudal_norman = {# Empire
+	type = title
+	tier = empire
+	priority = 102
+	governments = { feudal_government tribal_government }
+	cultures = { norman }
+}
+# Princelings
 
 # Republican Titles
+###########################################################
+# English Titles
+###########################################################
+# Barony
+baron_feudal_male_english = {# Baroun
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 7
+	governments = { feudal_government tribal_government }
+	cultures = { english }
+	top_liege = no
+}
+baron_feudal_female_english = {# Baronesse
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 7
+	governments = { feudal_government tribal_government }
+	cultures = { english }
+	top_liege = no
+}
+barony_feudal_english = {# Baronie
+	type = title
+	tier = barony
+	priority = 7
+	governments = { feudal_government }
+	cultures = { english }
+}
+# County
+county_feudal_english = {# Erldom
+	type = title
+	tier = county
+	priority = 18
+	governments = { feudal_government }
+	cultures = { english }
+}
+count_feudal_male_english = {# Erl
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 18
+	governments = { feudal_government }
+	cultures = { english }
+}
+count_feudal_female_english = {# Cǒuntesse
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 18
+	governments = { feudal_government }
+	cultures = { english }
+}
+# Duchy
+duchy_feudal_english = {# Duche
+	type = title
+	tier = duchy
+	priority = 28
+	governments = { feudal_government }
+	cultures = { english }
+}
+duke_feudal_male_english = {# Duk
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government }
+	cultures = { english }
+}
+duke_feudal_female_english = {# Duchesse
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government }
+	cultures = { english }
+}
+# Kingdom
+king_feudal_male_english = {# King
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government }
+	cultures = { english }
+}
+king_feudal_female_english = {# Quene
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government }
+	cultures = { english }
+}
+kingdom_feudal_english = {# Kingdom
+	type = title
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government }
+	cultures = { english }
+}
+# Empire
+emperor_feudal_male_english = {# Emperour
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = 102
+	governments = { feudal_government tribal_government }
+	cultures = { english }
+}
+emperor_feudal_female_english = {# Emperice
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = 102
+	governments = { feudal_government tribal_government }
+	cultures = { english }
+}
+empire_feudal_english = {# Empire
+	type = title
+	tier = empire
+	priority = 102
+	governments = { feudal_government tribal_government }
+	cultures = { english }
+}
