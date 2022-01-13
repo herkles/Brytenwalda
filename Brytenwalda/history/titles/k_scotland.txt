@@ -1,3 +1,103 @@
+#######################################
+# Kingdom of Strathclyde
+#######################################
+k_strathclyde = {
+	867.1.1 = { change_development_level = 2 }
+	
+	410.1.1 = {# Ceretic Guletic
+		holder = 166463
+	}
+	450.1.1 = {# Dyfnwal Hen
+		holder = 166461
+	}	
+	480.1.1 = {# Cinuit
+		holder = 166462
+	}
+	490.1.1 = {# Tutagual
+		holder = 166458
+	}
+	508.1.1 = {# Clinoch
+		holder = 166459
+	}
+	535.1.1 = {# Tutagual
+		holder = 166458
+	}
+	573.1.1 = {# Riderch Hael
+		holder = 166457
+	}
+	612.1.1 = {# Neithon
+		holder = 166455
+	}
+	620.1.1 = {# Beli
+		holder = 166454
+	}
+	633.1.1 = {# Eugein map Beli
+		holder = 166453
+	}
+	645.1.1 = {# Guret
+		holder = 166452
+	}
+	682.1.1 = {# Elfin
+		holder = 166451
+	}
+	672.1.1 = {# Bridei
+		holder = 166566
+	}
+	693.1.1 = {# Dumnagual
+		holder = 166450
+	}
+	694.1.1 = {# Beli
+		holder = 166449
+	}
+	722.1.1 = {# Teudebur
+		holder = 166448
+	}
+	754.1.1 = {# Dumnagual
+		holder = 166447
+	}
+	760.1.1 = {# Eugein
+		holder = 166446
+	}
+	780.1.1 = {# Riderch
+		holder = 166445
+	}
+	816.1.1 = {# Dumnagual
+		holder = 166444
+	}
+	851.1.1 = {# Arthgal
+		holder = 163104
+	}
+	872.1.1 = {# Rhun ab Arthgal
+		holder = 166442
+	}
+	878.1.1 = {# Eochaid son of Rhun
+		holder = 166441
+	}
+	889.1.1 = {# Dyfnwal
+		holder = 166440
+	}
+	937.1.1 = {# Owain
+		holder = 166438
+	}
+	941.1.1 = {# Dyfnwal
+		holder = 166439
+	}
+	969.1.1 = {# Rhydderch
+		holder = 166436
+	}
+	972.1.1 = {# Mael Coluim
+		holder = 166434
+	}
+	1015.1.1 = {# Owain Foel
+		holder = 131110
+	}
+	1030.1.1 = {# Strathclyde incorporated into Scotland
+		holder = 0
+	}
+}
+#######################################
+# Kingdom of Scotland
+#######################################
 k_scotland = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 8 }
@@ -293,7 +393,9 @@ k_scotland = {
 		holder = 453500
 	}
 }
-
+#######################################
+# Duchy of Albany
+#######################################
 d_albany = {
 	555.1.1 = {
 		holder = 166542
@@ -1160,7 +1262,9 @@ c_mearns = {
 	}
 
 }
-
+#######################################
+# Duchy of the Isles
+#######################################
 d_the_isles = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 6 }
@@ -1342,115 +1446,104 @@ c_isle_of_man = {
 	}
 
 }
-
+#######################################
+# Duchy of Galloway
+#######################################
 d_galloway = {
-	355.1.1 = {
-		holder = 166466
-	}
-	384.1.1 = {
-		holder = 166465
-	}
-	412.1.1 = {
-		holder = 166464
-	}
-	436.1.1 = {
+	410.1.1 = {# Ceretic Guletic
 		holder = 166463
+		de_jure_liege = k_strathclyde
 	}
-	488.1.1 = {
+	450.1.1 = {# Dyfnwal Hen
+		holder = 166461
+	}	
+	480.1.1 = {# Cinuit
 		holder = 166462
 	}
-	501.1.1 = {
-		holder = 166461
-	}
-	525.1.1 = {
-		holder = 166459
-	}
-	535.1.1 = {
+	490.1.1 = {# Tutagual
 		holder = 166458
 	}
-	562.1.1 = {
+	508.1.1 = {# Clinoch
+		holder = 166459
+	}
+	535.1.1 = {# Tutagual
+		holder = 166458
+	}
+	573.1.1 = {# Riderch Hael
 		holder = 166457
 	}
-	612.1.1 = {
-		holder = 166456
-	}
-	618.1.1 = {
+	612.1.1 = {# Neithon
 		holder = 166455
 	}
-	620.1.1 = {
+	620.1.1 = {# Beli
 		holder = 166454
 	}
-	627.1.1 = {
+	633.1.1 = {# Eugein map Beli
 		holder = 166453
 	}
-	652.1.1 = {
+	645.1.1 = {# Guret
 		holder = 166452
 	}
-	658.1.1 = {
+	682.1.1 = {# Elfin
 		holder = 166451
 	}
-	686.1.1 = {
+	672.1.1 = {# Bridei
+		holder = 166566
+	}
+	693.1.1 = {# Dumnagual
 		holder = 166450
 	}
-	694.1.1 = {
+	694.1.1 = {# Beli
 		holder = 166449
 	}
-	722.1.1 = {
+	722.1.1 = {# Teudebur
 		holder = 166448
 	}
-	752.1.1 = {
-		holder = 159021
-	}
-	754.1.1 = {
+	754.1.1 = {# Dumnagual
 		holder = 166447
 	}
-	760.1.1 = {
+	760.1.1 = {# Eugein
 		holder = 166446
 	}
-	804.1.1 = {
+	780.1.1 = {# Riderch
 		holder = 166445
 	}
-	835.1.1 = {
+	816.1.1 = {# Dumnagual
 		holder = 166444
 	}
-	851.1.1 = {
+	851.1.1 = {# Arthgal
 		holder = 163104
 	}
-	872.1.1 = {
+	872.1.1 = {# Rhun ab Arthgal
 		holder = 166442
 	}
-	878.1.1 = {
+	878.1.1 = {# Eochaid son of Rhun
 		holder = 166441
 	}
-	889.1.1 = {
+	889.1.1 = {# Dyfnwal
 		holder = 166440
 	}
-	916.1.1 = {
-		holder = 166439
-	}
-	934.1.1 = {
+	937.1.1 = {# Owain
 		holder = 166438
 	}
-	935.1.1 = {
-		government = feudal_government	#Ahistorical, just for ease of bookmarks.
-	}
-	937.1.1 = {
+	941.1.1 = {# Dyfnwal
 		holder = 166439
 	}
-	941.1.1 = {
-		holder = 166437
+	969.1.1 = {# Rhydderch
+		holder = 166436
 	}
-	973.1.1 = {
+	972.1.1 = {# Mael Coluim
 		holder = 166434
 	}
-	997.1.1 = {
+	1015.1.1 = {# Owain Foel
 		holder = 131110
 	}
-	1018.1.2 = {
+	1018.1.1 = {# Mael Coluim II
 		holder = 166433
-	}
-	1054.1.1 = {
+	}	
+	1030.1.1 = {# Scotland Incorporates Strathclyde
 		liege = k_scotland
+		de_jure_liege = k_scotland
 	}
 	1067.1.1 = {
 		holder = 131111
@@ -1473,20 +1566,100 @@ d_galloway = {
 	}
 }
 c_galloway = {
-	765.1.1 = {
-		liege = "d_northumberland"
-		holder = 205246
+	410.1.1 = {# Ceretic Guletic
+		holder = 166463
+		liege = "d_galloway"
 		government = tribal_government
 	}
-	849.1.1 = {
-		liege = "d_galloway"
+	450.1.1 = {# Dyfnwal Hen
+		holder = 166461
+	}	
+	480.1.1 = {# Cinuit
+		holder = 166462
 	}
-	849.1.1 = {
+	490.1.1 = {# Tutagual
+		holder = 166458
+	}
+	508.1.1 = {# Clinoch
+		holder = 166459
+	}
+	535.1.1 = {# Tutagual
+		holder = 166458
+	}
+	573.1.1 = {# Riderch Hael
+		holder = 166457
+	}
+	612.1.1 = {# Neithon
+		holder = 166455
+	}
+	620.1.1 = {# Beli
+		holder = 166454
+	}
+	633.1.1 = {# Eugein map Beli
+		holder = 166453
+	}
+	645.1.1 = {# Guret
+		holder = 166452
+	}
+	682.1.1 = {# Elfin
+		holder = 166451
+	}
+	672.1.1 = {# Bridei
+		holder = 166566
+	}
+	693.1.1 = {# Dumnagual
+		holder = 166450
+	}
+	694.1.1 = {# Beli
+		holder = 166449
+	}
+	722.1.1 = {# Teudebur
+		holder = 166448
+	}
+	754.1.1 = {# Dumnagual
+		holder = 166447
+	}
+	760.1.1 = {# Eugein
+		holder = 166446
+	}
+	780.1.1 = {# Riderch
+		holder = 166445
+	}
+	816.1.1 = {# Dumnagual
+		holder = 166444
+	}
+	851.1.1 = {# Arthgal
 		holder = 163104
-	}
-	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	872.1.1 = {# Rhun ab Arthgal
+		holder = 166442
+	}
+	878.1.1 = {# Eochaid son of Rhun
+		holder = 166441
+	}
+	889.1.1 = {# Dyfnwal
+		holder = 166440
+	}
+	937.1.1 = {# Owain
+		holder = 166438
+	}
+	941.1.1 = {# Dyfnwal
+		holder = 166439
+	}
+	969.1.1 = {# Rhydderch
+		holder = 166436
+	}
+	972.1.1 = {# Mael Coluim
+		holder = 166434
+	}
+	1015.1.1 = {# Owain Foel
+		holder = 131110
+	}
+	1018.1.1 = {# Mael Coluim II
+		holder = 166433
+	}
+
 	1066.1.2 = {
 		liege = "d_western_isles"
 	}
@@ -1665,18 +1838,100 @@ c_ayrshire = {
 
 }
 c_annandale = {
-	765.1.1 = {
-		holder = 205050
-		liege = d_northumberland
+	410.1.1 = {# Ceretic Guletic
+		holder = 166463
+		liege = "d_galloway"
+		de_jure_liege = d_galloway
+		government = tribal_government
 	}
-	862.1.1 = {
-		holder = 163103
+	450.1.1 = {# Dyfnwal Hen
+		holder = 166461
+	}	
+	480.1.1 = {# Cinuit
+		holder = 166462
 	}
-	
-	1018.1.2 = {
+	490.1.1 = {# Tutagual
+		holder = 166458
+	}
+	508.1.1 = {# Clinoch
+		holder = 166459
+	}
+	535.1.1 = {# Tutagual
+		holder = 166458
+	}
+	573.1.1 = {# Riderch Hael
+		holder = 166457
+	}
+	612.1.1 = {# Neithon
+		holder = 166455
+	}
+	620.1.1 = {# Beli
+		holder = 166454
+	}
+	633.1.1 = {# Eugein map Beli
+		holder = 166453
+	}
+	645.1.1 = {# Guret
+		holder = 166452
+	}
+	682.1.1 = {# Elfin
+		holder = 166451
+	}
+	672.1.1 = {# Bridei
+		holder = 166566
+	}
+	693.1.1 = {# Dumnagual
+		holder = 166450
+	}
+	694.1.1 = {# Beli
+		holder = 166449
+	}
+	722.1.1 = {# Teudebur
+		holder = 166448
+	}
+	754.1.1 = {# Dumnagual
+		holder = 166447
+	}
+	760.1.1 = {# Eugein
+		holder = 166446
+	}
+	780.1.1 = {# Riderch
+		holder = 166445
+	}
+	816.1.1 = {# Dumnagual
+		holder = 166444
+	}
+	851.1.1 = {# Arthgal
+		holder = 163104
+		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	872.1.1 = {# Rhun ab Arthgal
+		holder = 166442
+	}
+	878.1.1 = {# Eochaid son of Rhun
+		holder = 166441
+	}
+	889.1.1 = {# Dyfnwal
+		holder = 166440
+	}
+	937.1.1 = {# Owain
+		holder = 166438
+	}
+	941.1.1 = {# Dyfnwal
+		holder = 166439
+	}
+	969.1.1 = {# Rhydderch
+		holder = 166436
+	}
+	972.1.1 = {# Mael Coluim
+		holder = 166434
+	}
+	1015.1.1 = {# Owain Foel
+		holder = 131110
+	}
+	1018.1.1 = {# Mael Coluim II
 		holder = 166433
 	}
-	
 	1067.1.1 = {
 		holder = 131111
 	}
@@ -1792,7 +2047,9 @@ c_lennox = {
 		holder = 984 # Malcolm Canmore
 	}
 }
-
+#######################################
+# Duchy of Western Isles
+#######################################
 d_western_isles = {
 	#Dal Riata
 	490.1.1 = {
@@ -2592,7 +2849,9 @@ c_argyll = {
 		holder = 453009 # Colin Og Campbell
 	}
 }
-
+#######################################
+# Duchy of Lothian
+#######################################
 d_lothian = {
 	270.1.1 = {
 		holder = 159007 #Tegid
@@ -2817,28 +3076,112 @@ c_linlithgowshire = {
 		holder = 183528
 		liege = k_scotland
 		government = tribal_government
+		de_jure_liege = d_albany
 	}
-	
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
-	
+	973.1.1 = {
+		de_jure_liege = d_lothian
+	}
 	1058.1.1 = {
 		holder = 984 # Malcolm Canmore
 	}
 }
 c_lanarkshire = {
-	765.1.1 = {
-		holder = 205050
-		liege = d_northumberland
+	410.1.1 = {# Ceretic Guletic
+		holder = 166463
+		liege = "d_galloway"
+		de_jure_liege = d_galloway
 		government = tribal_government
 	}
-	862.1.1 = {
-		holder = 163103
+	450.1.1 = {# Dyfnwal Hen
+		holder = 166461
+	}	
+	480.1.1 = {# Cinuit
+		holder = 166462
 	}
-	935.1.1 = {
+	490.1.1 = {# Tutagual
+		holder = 166458
+	}
+	508.1.1 = {# Clinoch
+		holder = 166459
+	}
+	535.1.1 = {# Tutagual
+		holder = 166458
+	}
+	573.1.1 = {# Riderch Hael
+		holder = 166457
+	}
+	612.1.1 = {# Neithon
+		holder = 166455
+	}
+	620.1.1 = {# Beli
+		holder = 166454
+	}
+	633.1.1 = {# Eugein map Beli
+		holder = 166453
+	}
+	645.1.1 = {# Guret
+		holder = 166452
+	}
+	682.1.1 = {# Elfin
+		holder = 166451
+	}
+	672.1.1 = {# Bridei
+		holder = 166566
+	}
+	693.1.1 = {# Dumnagual
+		holder = 166450
+	}
+	694.1.1 = {# Beli
+		holder = 166449
+	}
+	722.1.1 = {# Teudebur
+		holder = 166448
+	}
+	754.1.1 = {# Dumnagual
+		holder = 166447
+	}
+	760.1.1 = {# Eugein
+		holder = 166446
+	}
+	780.1.1 = {# Riderch
+		holder = 166445
+	}
+	816.1.1 = {# Dumnagual
+		holder = 166444
+	}
+	851.1.1 = {# Arthgal
+		holder = 163104
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	872.1.1 = {# Rhun ab Arthgal
+		holder = 166442
+	}
+	878.1.1 = {# Eochaid son of Rhun
+		holder = 166441
+	}
+	889.1.1 = {# Dyfnwal
+		holder = 166440
+	}
+	937.1.1 = {# Owain
+		holder = 166438
+	}
+	941.1.1 = {# Dyfnwal
+		holder = 166439
+	}
+	969.1.1 = {# Rhydderch
+		holder = 166436
+	}
+	972.1.1 = {# Mael Coluim
+		holder = 166434
+	}
+	973.1.1 = {# Oswiu
+		holder = 0
+		de_jure_liege = d_lothian
+	}
+
 	1066.1.2 = {
 		liege = "d_lothian"
 	}
@@ -2880,7 +3223,9 @@ c_lanarkshire = {
 	}
 
 }
-
+#######################################
+# Duchy of Moray
+#######################################
 d_moray = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 6 }
@@ -3562,4 +3907,3 @@ c_inverness = {
 	
 
 }
-

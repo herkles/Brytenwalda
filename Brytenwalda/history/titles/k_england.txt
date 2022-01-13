@@ -675,7 +675,9 @@ k_england = {
 		holder = 454500 #Edward III
 	}
 }
-
+#######################################
+# Bedford
+#######################################
 d_bedford = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 9 }
@@ -1266,7 +1268,9 @@ c_buckinghamshire = {
 	
 
 }
-
+#######################################
+# Northumberland
+#######################################
 d_northumberland = {
 	500.1.1 = {# Esa
 		holder = 205200 
@@ -1595,14 +1599,103 @@ c_durham = {
 	}
 }
 c_cumberland = {
-	765.1.1 = {
-		holder = 205237
-		liege = d_northumberland
+	410.1.1 = {# Ceretic Guletic
+		holder = 166463
+		liege = "d_galloway"
 		de_jure_liege = d_galloway
+		government = tribal_government
 	}
-	862.1.1 = {
-		holder = 163123
+	450.1.1 = {# Dyfnwal Hen
+		holder = 166461
+	}	
+	480.1.1 = {# Cinuit
+		holder = 166462
 	}
+	490.1.1 = {# Tutagual
+		holder = 166458
+	}
+	508.1.1 = {# Clinoch
+		holder = 166459
+	}
+	535.1.1 = {# Tutagual
+		holder = 166458
+	}
+	573.1.1 = {# Riderch Hael
+		holder = 166457
+	}
+	612.1.1 = {# Neithon
+		holder = 166455
+	}
+	620.1.1 = {# Beli
+		holder = 166454
+	}
+	633.1.1 = {# Eugein map Beli
+		holder = 166453
+	}
+	645.1.1 = {# Guret
+		holder = 166452
+	}
+	682.1.1 = {# Elfin
+		holder = 166451
+	}
+	672.1.1 = {# Bridei
+		holder = 166566
+	}
+	693.1.1 = {# Dumnagual
+		holder = 166450
+	}
+	694.1.1 = {# Beli
+		holder = 166449
+	}
+	722.1.1 = {# Teudebur
+		holder = 166448
+	}
+	754.1.1 = {# Dumnagual
+		holder = 166447
+	}
+	760.1.1 = {# Eugein
+		holder = 166446
+	}
+	780.1.1 = {# Riderch
+		holder = 166445
+	}
+	816.1.1 = {# Dumnagual
+		holder = 166444
+	}
+	851.1.1 = {# Arthgal
+		holder = 163104
+		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	872.1.1 = {# Rhun ab Arthgal
+		holder = 166442
+	}
+	878.1.1 = {# Eochaid son of Rhun
+		holder = 166441
+	}
+	889.1.1 = {# Dyfnwal
+		holder = 166440
+	}
+	937.1.1 = {# Owain
+		holder = 166438
+	}
+	941.1.1 = {# Dyfnwal
+		holder = 166439
+	}
+	969.1.1 = {# Rhydderch
+		holder = 166436
+	}
+	972.1.1 = {# Mael Coluim
+		holder = 166434
+	}
+	1015.1.1 = {# Owain Foel
+		holder = 131110
+	}
+	1018.1.1 = {# Mael Coluim II
+		holder = 166433
+	}
+
+
+
 	1066.1.1 = {
 		holder = 963 # Dolfin of Carlisle
 		liege = "d_galloway"
@@ -1660,7 +1753,9 @@ c_cumberland = {
 	}
 
 }
-
+#######################################
+# Lancaster
+#######################################
 d_lancaster = {
 	450.1.1 = {
 		holder = 159036 #Gwrast the Ragged
@@ -1986,7 +2081,9 @@ c_derby = {
 	}
 
 }
-
+#######################################
+# York
+#######################################
 d_york = {
 	559.1.1 = {# Aella
 		holder = 205193 
@@ -2496,7 +2593,9 @@ c_lincolnshire = {
 		holder = 454023 #Alice de Lacy
 	}
 }
-
+#######################################
+# Norfolk
+#######################################
 d_norfolk = {
 	550.1.1 = {# Wehha
 		holder = 205000
@@ -2813,7 +2912,9 @@ c_cambridgeshire = {
 	
 
 }
-
+#######################################
+# hereford / mercia
+#######################################
 d_hereford = { # Mercia
 	###### Kings of Mercia #####
 	515.1.1 = {# Icel
@@ -3131,7 +3232,9 @@ c_staffordshire = {
 	}
 
 }
-
+#######################################
+# Worcestershire
+#######################################
 c_worcestershire = {
 	758.1.1 = {
 		liege = "d_hereford"
@@ -3440,7 +3543,9 @@ c_hereford = {
 	}
 
 }
-
+#######################################
+# Gloucester
+#######################################
 d_gloucester = {
 	300.1.1 = {
 		holder = 159944 #Gloyw
@@ -3702,7 +3807,9 @@ c_berkshire = {
 	}
 
 }
-
+#######################################
+# Canterbury
+#######################################
 d_canterbury = {
 	440.1.1 = {
 		holder = 205026
@@ -4126,7 +4233,9 @@ c_sussex = {
 	}
 
 }
-
+#######################################
+# Somerset
+#######################################
 d_somerset = {
 	757.1.1 = {
 		holder = 205180
@@ -4396,7 +4505,6 @@ c_somerset = {
 		holder = 454500 #Edward III
 	}
 }
-
 #######################################
 # Cornwall
 #######################################
@@ -4589,6 +4697,8 @@ d_cornwall = {
 	}
 	875.1.1 = {
 		holder =  0 #Cornwall/Dumnonia disestablished
+		de_jure_liege = k_england
+
 	}
 	910.1.1 = {# Hoel
 		holder = 159461 #Hoel
@@ -4691,12 +4801,12 @@ c_devon = {
 	851.1.1 = {
 		holder = bryten_wessex_02 #Odda
 	}
-
 	875.1.1 = {
 		holder =  7627 #Alfred the Great
 	}
 	1002.1.1 = {
 		holder = 259 # Emma of Normandy
+		liege = "k_england"
 	}
 	1052.1.5 = {
 		holder = 101534 # Gyda, Harold Godwinson's mother

@@ -33,7 +33,7 @@ e_britannia = {
 		}
 	}
 	#######################################
-	# Heptarchy
+	# Anglo Saxon Kingdoms
 	#######################################
 	k_wessex = {# Kingdom of Wessex
 		color = { 202 26 26 }
@@ -128,7 +128,6 @@ e_britannia = {
 			}
 		}
 	}
-
 	k_england = {# Kingdom of England
 		color = { 202 26 26 }
 		color2 = { 255 255 255 }
@@ -2194,6 +2193,30 @@ e_britannia = {
 
 		capital = c_cornwall
 	}
+	k_strathclyde = {
+		color = { 50 150 130 }
+		color2 = { 255 255 255 }
+		
+		can_create = {
+			trigger_if = {
+				limit = {
+					is_ai = yes
+				}
+				has_culture_group = culture_group:brythonic_group
+			}
+		}
+		
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:cumbrian
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+
+		capital = c_lennox
+	}
 	#######################################
 	# Gaelic Kingdoms
 	#######################################
@@ -3740,9 +3763,15 @@ e_britannia = {
 
 		capital = c_isle_of_man	#Mann
 	}
+	k_ireland_titular = {# This is the non de jure kingdom to reflect that the high king existed but didn't have much power
+		color = { 124 59 8 }
+
+		capital = c_dublin	# Tara
+	}
 }
+
 ############################################
-# Danelaw
+# Other Kingdoms
 ############################################
 k_danelaw = {
 	color = { 255 60 15 }
