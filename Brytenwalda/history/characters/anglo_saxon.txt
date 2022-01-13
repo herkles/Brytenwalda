@@ -1328,7 +1328,7 @@
 	252377 = {# Aethelflaed
 		name = "E_thelflE_d" #Lady of the Mercians
 		female = yes
-		dynasty = house_british_isles_wessex
+		dynasty_house = house_british_isles_wessex
 		martial = 5
 		diplomacy = 5
 		intrigue = 5
@@ -1347,7 +1347,7 @@
 	252378 = {# Aethelgifu
 		name = "E_thelgifu" #Abbess of Shaftesbury
 		female = yes
-		dynasty = house_british_isles_wessex
+		dynasty_house = house_british_isles_wessex
 		religion = "catholic"
 		culture = "saxon"
 		trait = "education_learning_3"
@@ -1361,7 +1361,7 @@
 	}
 	252379 = {# Aethelweard
 		name = "E_thelweard" #son of Alfred the Great
-		dynasty = house_british_isles_wessex
+		dynasty_house = house_british_isles_wessex
 		religion = "catholic"
 		culture = "saxon"
 		trait = "education_learning_3"
@@ -6019,7 +6019,7 @@
 			birth = yes
 		}
 		845.1.1 = {
-			add_spouse = bryten_wessex_19
+			add_spouse = bryten_wessex_25
 		}
 		879.1.5 = {
 			death = yes
@@ -6033,9 +6033,6 @@
 		dynasty = bryten_dynasty_anglo_saxon_01
 		820.1.1 = {
 			birth = yes
-		}
-		845.1.1 = {
-			add_spouse = bryten_wessex_12
 		}
 		871.1.5 = {
 			death = yes
@@ -6171,6 +6168,7 @@
 		name = "Eadweald" #
 		religion = "catholic"
 		culture = anglo_saxon
+		female = yes
 		820.1.1 = {
 			birth = "815.1.1"
 		}

@@ -4397,113 +4397,203 @@ c_somerset = {
 	}
 }
 
-d_cornwall = {
-	283.1.1 = {
+#######################################
+# Cornwall
+#######################################
+k_cornwall = {
+	283.1.1 = {# Caradoc
 		holder = 159424 #Caradog
-		de_jure_liege = k_cornwall
-
 	}
-	299.1.1 = {
+	299.1.1 = {# Meurig
 		holder = 159425 #Meurig
 	}
-	300.1.1 = {
+	300.1.1 = {# Dynod
 		holder = 159426 #Dynod
 	}
-	360.1.1 = {
+	360.1.1 = {# Conan Meriadoc
 		holder = 159431 #Conan Meriadoc
 	}
-	387.1.1 = {
+	387.1.1 = {# Cadfan ap Cynan
 		holder = 159432 #Cadfan ap Cynan
 	}
-	390.1.1 = {
+	390.1.1 = {# Gwrfawr ap Cadfan
 		holder = 159435 #Gwrfawr ap Cadfan
 	}
-	400.1.1 = {
+	400.1.1 = {# Tudwal ap Gwrfawr
 		holder = 159436 #Tudwal ap Gwrfawr
 	}
-	410.1.1 = {
+	410.1.1 = {# Cynfawr ap Tudwal
 		holder = 159437 #Cynfawr ap Tudwal
 	}
-	435.1.1 = {
+	435.1.1 = {# Custennin ap Cynfawr
 		holder = 159438 #Custennin ap Cynfawr
 	}
-	443.1.1 = {
+	443.1.1 = {# Erbin ap Custennin
 		holder = 159439 #Erbin ap Custennin
 	}
-	480.1.1 = {
+	480.1.1 = {# Geraint Llyngesog ab Erbin
 		holder = 159440 #Geraint Llyngesog ab Erbin
 	}
-	508.1.1 = {
+	508.1.1 = {# Cadwy ap Geraint
 		holder = 159441 #Cadwy ap Geraint
 	}
-	530.1.1 = {
+	530.1.1 = {# Custennin ap Cadwy
 		holder = 159442 #Custennin ap Cadwy
 	}
-	560.1.1 = {
+	560.1.1 = {# Geraint ap Custennin
 		holder = 159443 #Geraint ap Custennin
 	}
-	598.1.1 = {
+	598.1.1 = {# Bledrig ap Custennin
 		holder = 159444 #Bledrig ap Custennin
 	}
-	613.1.1 = {
+	613.1.1 = {# Clement ap Bledric
 		holder = 159445 #Clement ap Bledric
 	}
-	630.1.1 = {
+	630.1.1 = {# Petroc Baladrddellt
 		holder = 159446 #Petroc Baladrddellt
 	}
-	658.1.1 = {
+	658.1.1 = {# Culmin/Cwlfyn
 		holder = 159447 #Culmin/Cwlfyn
 	}
-	682.1.1 = {
+	682.1.1 = {# Dumnarth
 		holder = 159448 #Dumnarth
 	}
-	700.1.1 = {
+	700.1.1 = {# Hoel
 		holder = 159748 # Hoel
 	}
-	710.1.1 = {
+	710.1.1 = {# Gereint
 		holder = 159449 #Gereint
 	}
-	715.1.1 = {
+	715.1.1 = {# Ithael Eiddyn
 		holder = 159450 #Ithael Eiddyn
 	}
-	730.1.1 = {
+	730.1.1 = {# Dyfnwal Boifunall
 		holder = 159451 #Dyfnwal Boifunall
 	}
-	750.1.1 = {
+	750.1.1 = {# Cawrdolli
 		holder = 159452 #Cawrdolli
 	}
-	775.1.1 = {
+	775.1.1 = {# Oswallt
 		holder = 159453 #Oswallt
 	}
-	780.1.1 = {
+	780.1.1 = {# Hernam
 		holder = 159454 #Hernam
 	}
-	810.1.1 = {
+	810.1.1 = {# Hopkin
 		holder = 159455 #Hopkin
 	}
-	830.1.1 = {
+	830.1.1 = {# Mordaf
 		holder = 159456 #Mordaf
 	}
-	850.1.1 = {
+	838.5.1 = {# Battle of Hingston Down
+		holder = 0 # The battle lead to the loss of Cornish Indepedence
+	}
+}
+d_cornwall = {
+	283.1.1 = {# Caradoc
+		holder = 159424 #Caradog
+		de_jure_liege = k_cornwall
+	}
+	299.1.1 = {# Meurig
+		holder = 159425 #Meurig
+	}
+	300.1.1 = {# Dynod
+		holder = 159426 #Dynod
+	}
+	360.1.1 = {# Conan Meriadoc
+		holder = 159431 #Conan Meriadoc
+	}
+	387.1.1 = {# Cadfan ap Cynan
+		holder = 159432 #Cadfan ap Cynan
+	}
+	390.1.1 = {# Gwrfawr ap Cadfan
+		holder = 159435 #Gwrfawr ap Cadfan
+	}
+	400.1.1 = {# Tudwal ap Gwrfawr
+		holder = 159436 #Tudwal ap Gwrfawr
+	}
+	410.1.1 = {# Cynfawr ap Tudwal
+		holder = 159437 #Cynfawr ap Tudwal
+	}
+	435.1.1 = {# Custennin ap Cynfawr
+		holder = 159438 #Custennin ap Cynfawr
+	}
+	443.1.1 = {# Erbin ap Custennin
+		holder = 159439 #Erbin ap Custennin
+	}
+	480.1.1 = {# Geraint Llyngesog ab Erbin
+		holder = 159440 #Geraint Llyngesog ab Erbin
+	}
+	508.1.1 = {# Cadwy ap Geraint
+		holder = 159441 #Cadwy ap Geraint
+	}
+	530.1.1 = {# Custennin ap Cadwy
+		holder = 159442 #Custennin ap Cadwy
+	}
+	560.1.1 = {# Geraint ap Custennin
+		holder = 159443 #Geraint ap Custennin
+	}
+	598.1.1 = {# Bledrig ap Custennin
+		holder = 159444 #Bledrig ap Custennin
+	}
+	613.1.1 = {# Clement ap Bledric
+		holder = 159445 #Clement ap Bledric
+	}
+	630.1.1 = {# Petroc Baladrddellt
+		holder = 159446 #Petroc Baladrddellt
+	}
+	658.1.1 = {# Culmin/Cwlfyn
+		holder = 159447 #Culmin/Cwlfyn
+	}
+	682.1.1 = {# Dumnarth
+		holder = 159448 #Dumnarth
+	}
+	700.1.1 = {# Hoel
+		holder = 159748 # Hoel
+	}
+	710.1.1 = {# Gereint
+		holder = 159449 #Gereint
+	}
+	715.1.1 = {# Ithael Eiddyn
+		holder = 159450 #Ithael Eiddyn
+	}
+	730.1.1 = {# Dyfnwal Boifunall
+		holder = 159451 #Dyfnwal Boifunall
+	}
+	750.1.1 = {# Cawrdolli
+		holder = 159452 #Cawrdolli
+	}
+	775.1.1 = {# Oswallt
+		holder = 159453 #Oswallt
+	}
+	780.1.1 = {# Hernam
+		holder = 159454 #Hernam
+	}
+	810.1.1 = {# Hopkin
+		holder = 159455 #Hopkin
+	}
+	830.1.1 = {# Mordaf
+		holder = 159456 #Mordaf
+	}
+	838.5.1 = {# Battle of Hingston Down
+		de_jure_liege = k_wessex
+	}
+	850.1.1 = {# Fferferdyn
 		holder = 159457 #Fferferdyn
 	}
-	855.1.1 = {
+	855.1.1 = {# Ithel II
 		holder = 159747 #Ithel II
 	}
-	865.1.1 = {
+	865.1.1 = {# Donyarth/Dumnarth/Dyfnarth of Cornwall
 		holder = 159458 # Donyarth/Dumnarth/Dyfnarth of Cornwall
-		de_jure_liege = k_wessex
 	}
 	875.1.1 = {
 		holder =  0 #Cornwall/Dumnonia disestablished
 	}
-	886.1.1 = {
-		de_jure_liege = k_england
-	}
-	910.1.1 = {
+	910.1.1 = {# Hoel
 		holder = 159461 #Hoel
 	}
-	927.1.1 = {
+	927.1.1 = {# Conan
 		holder = 159466 #Conan
 	}
 	940.1.1 = {
