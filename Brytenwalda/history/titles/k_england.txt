@@ -3553,15 +3553,12 @@ c_wiltshire = {
 		holder = 205180
 	}
 	865.1.1 = {
-		liege = "k_england"
-		holder = 33358
+		liege = "k_wessex"
+		holder = bryten_wessex_10
 	}
 	1066.1.5 = {
 		holder = 122 # Harold Godwinson
 	}
-	#1066.10.14 = {
-	#	liege = "d_gloucester"
-	#}
 	1066.10.14 = {
 		holder = 140 #William the Conqueror
 	}
@@ -3659,8 +3656,8 @@ c_berkshire = {
 		holder = 205105
 	}
 	865.1.1 = {
-		liege = "k_england"
-		holder = 33358
+		liege = "k_wessex"
+		holder = bryten_wessex_01
 	}
 	1066.1.5 = {
 		holder = 122 # Harold Godwinson
@@ -3815,8 +3812,18 @@ c_kent = {
 	796.1.1 = {
 		holder = 205050
 	}
-	865.1.1 = {
-		holder = 33358
+	816.1.1 = {
+		liege = "k_wessex"
+		holder = bryten_wessex_19
+	}
+	840.1.1 = {
+		holder = bryten_wessex_20
+	}
+	882.1.1 = {
+		holder = bryten_wessex_23
+	}
+	899.1.1 = {
+		holder = bryten_wessex_24
 	}
 	1066.1.5 = {
 		holder = 130
@@ -4027,7 +4034,7 @@ c_surrey = {
 		holder = 205267
 	}
 	865.1.1 = {
-		liege = "k_england"
+		liege = "k_wessex"
 		holder = 33358
 	}
 	1066.1.1 = {
@@ -4065,8 +4072,8 @@ c_sussex = {
 		holder = 205268
 	}
 	865.1.1 = {
-		liege = "k_england"
-		holder = 33358
+		liege = "k_wessex"
+		holder = bryten_wessex_12
 	}
 	1066.1.1 = {
 		liege = "d_canterbury"
@@ -4306,7 +4313,7 @@ c_dorset = {
 	}
 	865.1.1 = {
 		liege = "d_somerset"
-		holder = 7627
+		holder = bryten_wessex_05
 	}
 	1066.1.5 = {
 		liege = "k_england"
@@ -4352,7 +4359,7 @@ c_somerset = {
 	}
 	865.1.1 = {
 		liege = "d_somerset"
-		holder = 7627
+		holder = bryten_wessex_04
 	}
 	1066.1.5 = {
 		liege = "k_england"
@@ -4585,19 +4592,16 @@ c_devon = {
 	810.1.1 = {
 		holder = 159455 #Hopkin
 	}
+	865.1.1 = {
+		liege = "k_wessex"
+	}
 	830.1.1 = {
 		holder = 159456 #Mordaf
 	}
-	850.1.1 = {
-		holder = 159457 #Fferferdyn
+	851.1.1 = {
+		holder = bryten_wessex_02 #Odda
 	}
-	855.1.1 = {
-		holder = 159747 #Ithel II
-	}
-	865.1.1 = {
-		liege = "k_england"
-		holder = 159458 # Donyarth/Dumnarth/Dyfnarth of Cornwall
-	}
+
 	875.1.1 = {
 		holder =  7627 #Alfred the Great
 	}
