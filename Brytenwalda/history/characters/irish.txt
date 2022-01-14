@@ -1,9 +1,3028 @@
-﻿#######################################################
-# PRE-NORMAN INVASION - (Died on or before 1167.1.1)
-#######################################################
-#	Insular Christianity is applied for almost everyone in this date bracket.
-##	The main exceptions are the Ivarings of Dublin after they naturalise to Irish, who remain Catholic. Diarmait mac Donnchad & his son Murchad (plus his other child & his grandkids) are also Catholic. This is mostly to represent Diarmait's extensive links and dealings with wider Britain, and to encourage the survival of Catholics in Meath & Leinster in 1066.
-##	Plus a bunch of generic pagans in the very old files.
+﻿#######################################
+# High Kings of Ireland
+#######################################
+	160176 = {# Fiatach Finn
+		name = "FI_atach_Finn"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		trait = brave
+		trait = education_martial_3
+		2.1.1 = {
+			birth = "2.1.1"
+		}
+		39.1.1 = {
+			death = "39.1.1"
+		}
+	}
+	160177 = {# Tuathal
+		name = "Tuathal"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		father = 160176
+		20.1.1 = {
+			birth = "20.1.1"
+		}
+		100.1.1 = {
+			death = "100.1.1"
+		}
+	}
+	159331 = {# Fedlimid Rechtmar
+		name = "Fedlimid_Rechtmar" #
+		dynasty = 9217
+		religion = "pagan"
+		culture = "irish"
+		father = 160177
+		100.1.1 = {
+			birth = "100.1.1"
+		}
+		171.7.1 = {
+			death = "171.7.1"
+		}
+	}	
+	83426 = {# Conn Cethatach
+		name = "Conn" #Conn Cétchathach
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "pagan"
+		culture = "irish"
+		father = 159331
+		120.1.1 = {
+			birth = "120.1.1"
+		}
+		201.7.1 = {
+			death = "201.7.1"
+		}
+	}
+	160182 = {# Lugaid
+		name = "Lugaid"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		father = 160181
+		190.1.1 = {
+			birth = "190.1.1"
+		}
+		252.1.1 = {
+			death = "252.1.1"
+		}
+	}		
+	83428 = {# Cormac mac Airt
+		name = "Cormac" #Cormac mac Airt
+		dynasty = 9217
+		martial = 7
+		diplomacy = 9
+		intrigue = 7
+		stewardship = 11
+		religion = "pagan"
+		culture = "irish"
+		father = 83427
+		200.1.1 = {
+			birth = "200.1.1"
+		}
+		277.7.1 = {
+			death = "277.7.1"
+		}
+	}
+	83429 = {# Caipre mac Cormaicc
+		name = "Cairpre" 
+		dynasty = 9217
+		martial = 7
+		diplomacy = 9
+		intrigue = 7
+		stewardship = 11
+		religion = "pagan"
+		culture = "irish"
+		father = 83428
+		249.1.1 = {
+			birth = "249.1.1"
+		}
+		325.7.1 = {
+			death = "325.7.1"
+		}
+	}
+	83430 = {# Fiachu Sraibtine
+		name = "Fiachu" 
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "pagan"
+		culture = "irish"
+		father = 83429
+		290.1.1 = {
+			birth = "290.1.1"
+		}
+		355.7.1 = {
+			death = "355.7.1"
+		}
+	}
+	83431 = {# Muiredach Tírech
+		name = "Muiredach"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "pagan"
+		culture = "irish"
+		father = 83430
+		340.1.1 = {
+			birth = "340.1.1"
+		}
+		415.7.1 = {
+			death = "415.7.1"
+		}
+	}
+	83432 = {# Eochaid Mugmedón
+		name = "Eochaid" 
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "pagan"
+		culture = "irish"
+		father = 83431
+		362.1.1 = {
+			birth = "362.1.1"
+		}
+		420.7.1 = {
+			death = "420.7.1"
+		}
+	}
+	7255 = {# Niall of the Nine Hostages
+		name = "Niall"
+		dynasty = 9217
+		martial = 11
+		diplomacy = 12
+		intrigue = 9
+		stewardship = 12
+		trait = arrogant
+		trait = education_martial_2
+		religion = "pagan"
+		culture = "irish"
+		father = 83432
+		400.1.1 = {
+			birth = "400.1.1"
+		}
+		420.1.1 = {
+			dynasty_house = house_british_isles_neill #Ua Niall Noigiallaigh
+		}
+		450.1.1 = {
+			death = "450.1.1"
+		}
+	}
+	bryten_irish_high_king_01 = {# Loegaire mac Neill
+		name = "LO_egaire"
+		dynasty = 9217
+		father = 7255
+		religion = "pagan"
+		culture = "irish"
+		425.1.1 = {
+			birth = "425.1.1"
+		}
+		459.1.1 = {
+			death = "459.1.1"
+		}
+	}
+	bryten_irish_high_king_2 = {# Lugaid mac Loegairi
+		name = "Lugaid"
+		dynasty_house = house_british_isles_neill
+		father = bryten_irish_high_king_02
+		religion = "pagan"
+		culture = "irish"
+		456.1.1 = {
+			birth = "456.1.1"
+		}
+		504.1.1 = {
+			death = "504.1.1"
+		}
+	}
+	7261 = {# Muirchertach
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7259
+		469.1.1 = {
+			birth = "469.1.1"
+		}
+		534.1.1 = {
+			death = "534.1.1"
+		}
+	}
+	7258 = {# Diarmait
+		name = "Diarmait"
+		dynasty_house = house_british_isles_neill
+		religion = "pagan"
+		culture = "irish"
+		father = 7256
+		505.1.1 = {
+			birth = "505.1.1"
+		}
+		565.1.1 = {
+			death = "565.1.1"
+		}
+	}
+	7263 = {# Domnall
+		name = "Domnall"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7261
+		514.1.1 = {
+			birth = "514.1.1"
+		}
+		566.1.1 = {
+			death = "566.1.1"
+		}
+	}
+	83676 = {# Eochaid
+		name = "Eochaid"
+		father = 83612 #Bressal son of Óengus mac Nad-Froich
+		dynasty_house = house_british_isles_eoganacht_chaisil
+		religion = "insular_celtic"
+		culture = "irish"
+		500.1.1 = {
+			birth = "500.1.1"
+		}
+		576.1.1 = {
+			death = "576.1.1"
+		}
+	}
+	7249 = {# Ainmire
+		name = "Ainmire"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7250
+		500.1.1 = {
+			birth = "500.1.1"
+		}
+		569.1.1 = {
+			death = "569.1.1"
+		}
+	}
+	166364 = {# Baetan
+		name = "Baetan"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 166363
+		536.1.1 = {
+			birth = "536.1.1"
+		}
+		586.1.1 = {
+			death = "586.1.1"
+		}
+	}
+	7248 = { # Aed mac Ainmuirech
+		name = "A_ed"
+		dynasty_house = house_british_isles_neill
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7249
+		530.1.1 = {
+			birth = "530.1.1"
+		}
+		598.1.1 = {
+			death = "598.1.1"
+		}
+	}
+	160254 = {# Aed Slaine
+		name = "A_ed_SlA_ine" #mac Diarmato mac Cerbaill
+		dynasty_house = house_british_isles_neill
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7258
+		550.1.1 = {
+			birth = "550.1.1"
+		}
+		604.1.1 = {
+			death = "604.1.1"
+		}
+	}
+	7265 = {# Aed Uaridnach
+		name = "A_ed"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7263
+		546.1.1 = {
+			birth = "546.1.1"
+		}
+		612.1.1 = {
+			death = "612.1.1"
+		}
+	}	
+	166467 = {# Mael Coba
+		name = "MA_el-Coba"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7248
+		575.1.1 = {
+			birth = "575.1.1"
+		}
+		615.1.1 = {
+			death = "615.1.1"
+		}
+	}
+	7247 = {# Domnall
+		name = "Domnall"
+		dynasty_house = house_british_isles_neill
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7248
+		570.1.1 = {
+			birth = "570.1.1"
+		}
+		642.1.1 = {
+			death = "642.1.1"
+		}
+	}
+	166369 = {# Cellach
+		name = "Cellach"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 166467
+		597.1.1 = {
+			birth = "597.1.1"
+		}
+		658.1.1 = {
+			death = "658.1.1"
+		}
+	}
+	7245 = {# Loingsech
+		name = "Loingsech"
+		dynasty_house = house_british_isles_neill
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7246
+		635.1.1 = {
+			birth = "635.1.1"
+		}
+		704.1.1 = {
+			death = "704.1.1"
+		}
+	}
+	7271 = {# Fergal Maele Duin
+		name = "Fergal"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7269
+		640.1.1 = {
+			birth = "640.1.1"
+		}
+		722.12.11 = {
+			death = "722.12.11"
+		}
+	}
+	7244 = {# Flaithbertach
+		name = "Flaithbertach"
+		dynasty_house = house_british_isles_neill
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7245
+		675.1.1 = {
+			birth = "675.1.1"
+		}
+		765.1.1 = {
+			death = "765.1.1"
+		}
+	}
+	7272 = {# Donmnall
+		name = "Donmnall"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7270
+		690.1.1 = {
+			birth = "690.1.1"
+		}
+		763.11.20 = {
+			death = "763.11.20"
+		}
+	}
+	7273 = {# Niall
+		name = "Niall"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7271
+		718.1.1 = {
+			birth = "718.1.1"
+		}
+		778.1.1 = {
+			death = "778.1.1"
+		}
+	}
+	7274 = {# Donnachad
+		name = "Donnachad"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7272
+		733.1.1 = {
+			birth = "733.1.1"
+		}
+		797.2.6 = {
+			death = "797.2.6"
+		}
+	}
+	7275 = {# Aed
+		name = "A_ed"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7273
+		760.1.1 = {
+			birth = "760.1.1"
+		}
+		819.1.1 = {
+			death = "819.1.1"
+		}
+	}
+	83633 = {# Feidlimid
+		name = "Feidlimid" #High-King of Ireland
+		father = 83632 #Crimthann son of Dub-dá-Crích
+		dynasty_house = house_british_isles_eoganacht_chaisil
+		religion = "insular_celtic"
+		culture = "irish"
+		780.1.1 = {
+			birth = "780.1.1"
+		}
+		840.1.1 = {
+			add_spouse = 83638
+		}
+		847.1.1 = {
+			death = "847.1.1"
+		}
+	}
+	131501 = {# AKA: Mael Sechnaill
+		name = "MA_el_Sechnaill"
+		dynasty_house = house_british_isles_neill
+		martial = 8
+		diplomacy = 4
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = diligent
+		trait = generous
+		trait = education_martial_3
+		father = 7276
+		825.1.2 = {
+			birth = "825.1.2"
+		}
+		845.1.1 = {
+			add_spouse = 131507 #Lann ingen mac Dúnlainge
+		}
+		862.11.22 = {
+			death = "862.11.22"
+		}
+	}
+	944 = {	# AKA: Aed Findliath
+		name = "A_ed"
+		# AKA: aed Findliath
+		dynasty_house = house_british_isles_neill
+		martial = 5
+		diplomacy = 9
+		intrigue = 5
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 945
+		mother = 165011 #Gormflaith ingen Donncadha Midi
+		831.1.2 = {
+			birth = "831.1.2"
+		}
+		848.1.1 = {
+			add_spouse = 165016 #Gormlaith Rapach ingen Muiredach mac Eochada
+		}
+		862.12.10 = {
+			add_spouse = 131507 #Lann ingen mac Dúnlainge
+		}
+		866.12.2 = {
+			remove_spouse = 131507 #Lann ingen mac Dúnlainge
+		}
+		867.1.1 = {
+			add_spouse = 165002 #Máel Muire ingen Cináeda mac Ailpín
+		}
+		879.1.1 = {
+			death = "879.1.1"
+		}
+	}
+	131502 = {# AKA: Flann Sinna
+		name = "Flann_Sinna"
+		dynasty_house = house_british_isles_neill
+		martial = 8
+		diplomacy = 7
+		intrigue = 6
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		trait = diligent
+		father = 131501
+		mother = 131507 #Lann ingen mac Dúnlainge
+		847.1.2 = {
+			birth = "847.1.2"
+		}
+		868.1.1 = {
+			add_spouse = 165000 #Gormlaith ingen Conaing mac Flainn - fl. 870
+		}
+		877.1.1 = {
+			add_spouse = 165001 #Eithne ingen Áed Findliath
+		}
+		880.1.1 = {
+			remove_spouse = 165001 #Eithne ingen Áed Findliath - likely divorced
+		}
+		880.1.2 = {
+			add_spouse = 165002 #Máel Muire ingen Cináeda mac Ailpín
+		}
+		916.5.25 = {
+			death = "916.5.25"
+		}
+	}
+	131511 = {# AKA: Niall Glundub
+		name = "Niall_GlU_ndub"
+		# AKA: Niall Glundub
+		dynasty_house = house_british_isles_neill
+		martial = 8
+		diplomacy = 4
+		intrigue = 6
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 944
+		mother = 165002 #Máel Muire ingen Cináeda mac Ailpín.
+		869.1.2 = {
+			birth = "869.1.2"
+		}
+		909.1.1 = {
+			add_spouse = 131506 #Gormflaith ingen Flann Sinna
+		}
+		919.9.14 = {
+			death = "919.9.14"
+		}
+	}	
+	131503 = {# AKA: Donnchad Donn
+		name = "Donnchad_Donn"
+		dynasty_house = house_british_isles_neill
+		martial = 5
+		diplomacy = 8
+		intrigue = 4
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131502
+		mother = 165000
+		879.1.2 = {
+			birth = "879.1.2"
+		}
+		901.1.1 = {
+			add_spouse = 166055
+		}
+		933.1.1 = {
+			add_spouse = 166098
+		}
+		941.5.1 = {
+			add_spouse = 166060
+		}
+		944.1.1 = {
+			death = "944.1.1"
+		}
+	}
+	165007 = {# AKA: Congalach Cnogba
+		name = "Congalach_Cnogba"
+		# AKA: Congalach Cnogba
+		dynasty_house = house_british_isles_neill
+		martial = 5
+		diplomacy = 8
+		intrigue = 4
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 165006 #Máel Mithig mac Flannacán
+		mother = 165003 #Lígach ingen Flann Sinna
+		901.1.2 = {
+			birth = "901.1.2"
+		}
+		956.1.1 = {
+			death = "956.1.1"
+		}
+	}
+	131513 = {# Domnall ua nail
+		name = "Domnall"
+		dynasty_house = house_british_isles_neill
+		martial = 4
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131512
+		mother = 166058
+		930.1.2 = {
+			birth = "930.1.2"
+		}
+		940.7.1 = {
+			dynasty_house = house_british_isles_neillnoigiallaich #Ua Neill from Niall Glundub
+		}
+		980.1.1 = {
+			death = "980.1.1"
+		}
+	}
+	131505 = {# AKA: Mael Sechnaill Mor
+		name = "MA_el-Sechnaill"
+		dynasty_house = house_british_isles_neill
+		martial = 6
+		diplomacy = 5
+		intrigue = 3
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131504
+		mother = 131520
+		948.1.2 = {
+			birth = "948.1.2"
+		}
+		967.7.1 = {
+			dynasty_house = house_british_isles_mailsechlainn #Ua Maíl Sechlainn
+		}
+		981.5.1 = {
+			add_spouse = 166102
+		}
+		999.1.1 = {
+			remove_spouse = 166102
+		}
+		1000.1.1 = {
+			add_spouse = 166103
+		}
+		1022.9.2 = {
+			death = "1022.9.2"
+		}
+	}
+	900 = {# Brian Boruma
+		name = "Brian"
+		# AKA: Brian Bóruma
+		dynasty = 100009 #Dál gCais
+		martial = 9
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = wrathful
+		trait = brave
+		trait = education_learning_2
+		father = 83330 #Cennétig of Dál gCais
+		mother = 166063 #Bé Binn of Uí Briúin Seóla
+		941.1.1 = {
+			birth = "941.1.1"
+		}
+		962.1.1 = {
+			add_spouse = 166116
+		}
+		978.1.1 = {
+			dynasty_house = house_british_isles_briain #Ua Briain
+		}
+		983.1.1 = {
+			add_spouse = 166123
+		}
+		999.1.1 = {
+			add_spouse = 166102
+		}
+		1002.1.1 = {
+			remove_spouse = 166102
+		} #Divorce
+		1002.2.1 = {
+			add_spouse = 166124
+		}
+		1014.4.23 = {
+			death = "1014.4.23"
+		}
+	}
+	902 = {# Donnchad mac Brian
+		name = "Donnchad"
+		dynasty_house = house_british_isles_briain
+		martial = 8
+		diplomacy = 7
+		intrigue = 6
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 900 #Brian Bóruma
+		mother = 166102 #Gormflaith
+		990.1.1 = {
+			birth = yes
+		}
+		1065.7.1 = {
+			death = "1065.7.1"
+		}
+	}
+	906 = {# Toirrdelbach
+		name = "Toirrdelbach" #High-King of Ireland
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 8
+		intrigue = 7
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_diplomacy_3
+		father = 905  #Tadg mac Briain High-King of Ireland
+		1009.1.1 = {
+			birth = "1009.1.1"
+		}
+		1030.1.2 = {
+			add_spouse = 908
+		}
+		1074.7.1 = {
+			capital = c_thomond
+		}
+		1086.7.14 = {
+			death = "1086.7.14"
+		}
+	}
+	131518 = {# Domnall Ua Lochlainn
+		name = "Domnall"
+		dynasty_house = house_british_isles_lochlainn
+		martial = 9
+		diplomacy = 6
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131517
+		1049.1.1 = {
+			birth = "1049.1.1"
+		}
+		1121.2.9 = {
+			death = "1121.2.9"
+		}
+	}
+	907 = {# Muirchertach
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 4
+		intrigue = 4
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = arbitrary
+		trait = zealous
+		trait = education_intrigue_1
+		father = 906 #Toirrdelbach Ua Briain High-King of Ireland
+		mother = 908
+		1041.1.1 = {
+			birth = "1041.1.1"
+		}
+		1119.3.13 = {
+			death = "1119.3.13"
+		}
+	}
+	83078 = {# Muirchertach
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_neillnoigiallaich
+		martial = 6
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = diligent
+		father = 83077
+		1109.1.1 = {
+			birth = "1109.1.1"
+		}
+		1166.7.1 = {
+			death = "1166.7.1"
+		}
+	}
+	214510 = {# Ruaidrí mac Toirrdelbaig
+		name = "RuaidrI_" #Ruaidrí mac Toirrdelbaig
+		dynasty_house = house_british_isles_conchobair
+		martial = 8
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = generous
+		trait = education_learning_2
+		father = 214520 #Toirrdelbach mac Ruaidrí
+		1123.1.1 = {
+			birth = "1123.1.1"
+		}
+		1198.12.2 = {
+			death = "1198.12.2"
+		}
+	}
+	83083 = {# Brian Ua Néill high-king of Ireland
+		name = "Brian" #Brian Ua Néill high-king of Ireland
+		dynasty_house = house_british_isles_neillnoigiallaich
+		martial = 4
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83081
+		trait = ambitious
+		trait = brave
+		trait = education_diplomacy_3
+		trait = education_intrigue_2
+		trait = education_martial_1
+		trait = arrogant
+		1211.1.1 = {
+			birth = "1211.1.1"
+		}
+		1260.5.26 = {
+			death = "1260.5.26"
+		}
+	}
+
+
+
+
+
+#######################################
+# Connachta Dyanasty
+#######################################
+	83427 = {# Art Óenfher
+		name = "Art" #
+		dynasty = 9217
+		martial = 7
+		diplomacy = 9
+		intrigue = 7
+		stewardship = 7
+		religion = "pagan"
+		culture = "irish"
+		father = 83426
+		165.1.1 = {
+			birth = "165.1.1"
+		}
+		235.7.1 = {
+			death = "235.7.1"
+		}
+	}
+	83435 = {# Ailill
+		name = "Ailill"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83432 #Eochaid Mugmedón
+		394.1.1 = {
+			birth = "394.1.1"
+		}
+		446.7.1 = {
+			death = "446.7.1"
+		}
+	}
+	83433 = {# Brion
+		name = "BriO_n"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "pagan"
+		culture = "irish"
+		father = 83432 #Eochaid Mugmedón
+		390.1.1 = {
+			birth = "390.1.1"
+		}
+		440.7.1 = {
+			death = "440.7.1"
+		}
+	}
+	83434 = {# Fiachra
+		name = "Fiachra"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "pagan"
+		culture = "irish"
+		father = 83432 #Eochaid Mugmedón
+		392.1.1 = {
+			birth = "392.1.1"
+		}
+		445.7.1 = {
+			death = "445.7.1"
+		}
+	}
+
+	83436 = {# DauI__Tenga_Uma
+		name = "DauI__Tenga_Uma"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "pagan"
+		culture = "irish"
+		father = 83433 #Brión mac Echdach
+		430.1.1 = {
+			birth = "430.1.1"
+		}
+		502.7.1 = {
+			death = "502.7.1"
+		}
+	}
+	83437 = {# Eógan Srem
+		name = "EO_gan" 
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83436 #Dauí Tenga Uma
+		470.1.1 = {
+			birth = "470.1.1"
+		}
+		509.7.1 = {
+			death = "509.7.1"
+		}
+	}
+	83438 = {# Fergus
+		name = "Fergus"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83437 #Eógan Srem
+		499.1.1 = {
+			birth = "499.1.1"
+		}
+		520.1.1 = {
+			dynasty = 9218 #Ua Briúin Bréifne
+		}
+		544.7.1 = {
+			death = "544.7.1"
+		}
+	}
+	83439 = {# Muiredach Mál
+		name = "Muiredach" 
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83437 #Eógan Srem
+		502.1.1 = {
+			birth = "502.1.1"
+		}
+		520.1.1 = {
+			dynasty = 9216 #Ua Briúin Aí
+		}
+		549.7.1 = {
+			death = "549.7.1"
+		}
+	}
+	83444 = {# Senach
+		name = "Senach"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83436 #Dauí Tenga Uma
+		472.1.1 = {
+			birth = "472.1.1"
+		}
+		506.7.1 = {
+			death = "506.7.1"
+		}
+	}
+	83445 = {# Aed
+		name = "A_ed"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83444
+		498.1.1 = {
+			birth = "498.1.1"
+		}
+		520.1.1 = {
+			dynasty_house = house_british_isles_gabrain #Ua Briúin Seóla
+		}
+		574.7.1 = {
+			death = "574.7.1"
+		}
+	}
+	83602 = {# Sadb
+		name = "Sadb"
+		female = yes
+		dynasty = 9217
+		father = 83426 #Conn Cétchathach
+		religion = "pagan"
+		culture = "irish"
+		179.1.1 = {
+			birth = "179.1.1"
+		}
+		255.1.1 = {
+			death = "255.1.1"
+		}
+	}
+	83573 = {# Erc
+		name = "Erc"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 11
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83432 #Eochaid Mugmedón
+		405.1.1 = {
+			birth = "405.1.1"
+		}
+		488.7.1 = {
+			death = "488.7.1"
+		}
+	}
+	83574 = {# Fergus Mor
+		name = "Fergus" #Mór
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83573 #Erc son of Eochaid Mugmedón
+		457.1.1 = {
+			birth = "457.1.1"
+		}
+		501.1.1 = {
+			death = "501.1.1"
+		}
+	}
+
+	83575 = {# Domangart Reti
+		name = "Domangart" #Réti
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83574 #Fergus Mór mac Eirc
+		487.1.1 = {
+			birth = "487.1.1"
+		}
+		507.1.1 = {
+			death = "507.1.1"
+		}
+	}
+	83576 = {# Garban
+		name = "GabrA_n"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83575 #Domangart Réti mac Fergusa Mór
+		502.1.1 = {
+			birth = "502.1.1"
+		}
+		560.1.1 = {
+			death = "560.1.1"
+		}
+	}
+	83577 = {# Áedán mac Gabráin
+		name = "A_edA_n" 
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83576 #Gabrán mac Domangairt
+		550.1.1 = {
+			birth = "550.1.1"
+		}
+		570.1.1 = {
+			dynasty_house = house_british_isles_gabrain #Gabrán
+		}
+		606.1.1 = {
+			death = "606.1.1"
+		}
+	}
+	166468 = {# Loarn
+		name = "Loarn"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83573 #Erc son of Eochaid Mugmedón
+		450.1.1 = {
+			birth = yes
+		}
+		480.1.1 = {
+			dynasty = 554 #Mac Loairn
+		}
+		497.1.1 = {
+			death = yes
+		}
+	}
+	166469 = {# Comgall
+		name = "Comgall"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83575 #Domangart Réti mac Fergusa Mór
+		507.1.1 = {
+			birth = yes
+		}
+		540.1.1 = {
+			death = yes
+		}
+	}
+	166470 = {# Conall
+		name = "Conall"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 166469 #Comgall
+		544.1.1 = {
+			birth = yes
+		}
+		574.1.1 = {
+			death = yes
+		}
+	}
+	166471 = {# Connad
+		name = "Connad" #Cerr
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 166470 #Conall
+		568.1.1 = {
+			birth = yes
+		}
+		629.1.1 = {
+			death = yes
+		}
+	}
+	166472 = {# Ferchar
+		name = "Ferchar"
+		dynasty = 9217
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 166470 #Connad
+		604.1.1 = {
+			birth = yes
+		}
+		649.1.1 = {
+			death = yes
+		}
+	}
+#######################################
+# Dal Fiatach Dyanasty
+#######################################
+	160178 = {# Findchad
+		name = "Findchad"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		father = 160177
+		55.1.1 = {
+			birth = "55.1.1"
+		}
+		100.1.1 = {
+			death = "100.1.1"
+		}
+	}
+	160179 = {# Imchad
+		name = "Imchad"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		father = 160178
+		90.1.1 = {
+			birth = "90.1.1"
+		}
+		160.1.1 = {
+			death = "160.1.1"
+		}
+	}
+	160180 = {# Fergus Dubdétach
+		name = "Fergus_DubdE_tach"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		father = 160179
+		130.1.1 = {
+			birth = "130.1.1"
+		}
+		192.1.1 = {
+			death = "192.1.1"
+		}
+	}
+	160181 = {# Óengus Finn
+		name = "O_engus_Finn"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		father = 160180
+		160.1.1 = {
+			birth = "160.1.1"
+		}
+		222.1.1 = {
+			death = "222.1.1"
+		}
+	}
+
+	160183 = {# Miennach
+		name = "Miennach"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		father = 160182
+		230.1.1 = {
+			birth = "230.1.1"
+		}
+		290.1.1 = {
+			death = "290.1.1"
+		}
+	}
+	160184 = {# Dubthach
+		name = "Dubthach"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		father = 160183
+		280.1.1 = {
+			birth = "280.1.1"
+		}
+		360.1.1 = {
+			death = "360.1.1"
+		}
+	}
+	160185 = {# Dallan
+		name = "Dallan"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		father = 160184
+		320.1.1 = {
+			birth = "320.1.1"
+		}
+		392.1.1 = {
+			death = "392.1.1"
+		}
+	}
+	160186 = {# Forgg
+		name = "Forgg"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "pagan"
+		culture = "irish"
+		father = 160185
+		360.1.1 = {
+			birth = "360.1.1"
+		}
+		420.1.1 = {
+			death = "420.1.1"
+		}
+	}
+	160282 = {# Muiredach Muinder
+		name = "Muiredach_Muinderg"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160186
+		400.1.1 = {
+			birth = "400.1.1"
+		}
+		489.1.1 = {
+			death = "489.1.1"
+		}
+	}
+	160187 = {# Cairell Coscrach
+		name = "Cairell_Coscrach"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160282
+		450.1.1 = {
+			birth = "450.1.1"
+		}
+		532.1.1 = {
+			death = "532.1.1"
+		}
+	}
+	160188 = {# Demmán
+		name = "DemmA_n"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160187
+		500.1.1 = {
+			birth = "500.1.1"
+		}
+		572.1.1 = {
+			death = "572.1.1"
+		}
+	}
+	160189 = {# Fiachnae Dubtuinne
+		name = "Fiachnae_Dubtuinne"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160188
+		545.1.1 = {
+			birth = "545.1.1"
+		}
+		590.1.1 = {
+			add_spouse = 160280
+		}
+		627.1.1 = {
+			death = "627.1.1"
+		}
+	}
+	160190 = {# Máel-Cobo
+		name = "MA_el-Cobo"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160189
+		mother = 160280
+		590.1.1 = {
+			birth = "590.1.1"
+		}
+		647.1.1 = {
+			death = "647.1.1"
+		}
+	}
+	160191 = {# Blathmac
+		name = "Blathmac"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160190
+		620.1.1 = {
+			birth = "620.1.1"
+		}
+		670.1.1 = {
+			death = "670.1.1"
+		}
+	}
+	160192 = {# Bécc Bairrche
+		name = "BE_cc_Bairrche"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160191
+		650.1.1 = {
+			birth = "650.1.1"
+		}
+		718.1.1 = {
+			death = "718.1.1"
+		}
+	}
+	160193 = {# Áed Róin
+		name = "A_ed_RO_in"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160192
+		670.1.1 = {
+			birth = "670.1.1"
+		}
+		735.1.1 = {
+			death = "735.1.1"
+		}
+	}
+	160194 = {# Fiachnae
+		name = "Fiachnae"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160193
+		700.1.1 = {
+			birth = "700.1.1"
+		}
+		789.1.1 = {
+			death = "789.1.1"
+		}
+	}
+	160195 = {# Eochaid
+		name = "Eochaid"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160194
+		740.1.1 = {
+			birth = "740.1.1"
+		}
+		810.1.1 = {
+			death = "810.1.1"
+		}
+	}
+	160196 = {# Muiredach
+		name = "Muiredach"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160195
+		780.1.1 = {
+			birth = "780.1.1"
+		}
+		839.1.1 = {
+			death = "839.1.1"
+		}
+	}
+	160197 = {# Indrechtach
+		name = "Indrechtach"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160198
+		780.1.1 = {
+			birth = "780.1.1"
+		}
+		839.1.1 = {
+			death = "839.1.1"
+		}
+	}
+	160198 = {# Tommaltach
+		name = "Tommaltach"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160199
+		740.1.1 = {
+			birth = "740.1.1"
+		}
+		789.1.1 = {
+			death = "789.1.1"
+		}
+	}
+	160199 = {# Cathal
+		name = "Cathal"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160203
+		710.1.1 = {
+			birth = "710.1.1"
+		}
+		755.1.1 = {
+			death = "755.1.1"
+		}
+	}
+	160200 = {# Máel-Mocheirge mac Indrechtaig
+		name = "MA_el-Mocheirge" #Máel-Mocheirge mac Indrechtaig
+		dynasty = 819
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160197
+		830.1.1 = {
+			birth = "830.1.1"
+		}
+		896.1.1 = {
+			death = "896.1.1"
+		}
+	}
+	160201 = {# Cummascach
+		name = "Cummascach"
+		dynasty = 819
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160200
+		860.1.1 = {
+			birth = "860.1.1"
+		}
+		910.1.1 = {
+			death = "910.1.1"
+		}
+	}
+	160202 = {# Cummascach
+		name = "Cummascach"
+		dynasty = 819
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 163114
+		858.1.1 = {
+			birth = "858.1.1"
+		}
+		910.1.1 = {
+			death = "910.1.1"
+		}
+	}
+	160203 = {# Muiredach
+		name = "Muiredach"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160204
+		670.1.1 = {
+			birth = "670.1.1"
+		}
+		740.1.1 = {
+			death = "740.1.1"
+		}
+	}
+	160204 = {# Óengus
+		name = "O_engus"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160190
+		630.1.1 = {
+			birth = "630.1.1"
+		}
+		700.1.1 = {
+			death = "700.1.1"
+		}
+	}
+	160205 = {# Áed
+		name = "A_ed"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160195
+		781.1.1 = {
+			birth = "781.1.1"
+		}
+		839.1.1 = {
+			death = "839.1.1"
+		}
+	}
+	160206 = {# Ainbíth
+		name = "AinbI_th"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160205
+		821.1.1 = {
+			birth = "821.1.1"
+		}
+		882.1.1 = {
+			death = "882.1.1"
+		}
+	}
+	160207 = {# Eochocán
+		name = "EochocA_n"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160205
+		822.1.1 = {
+			birth = "822.1.1"
+		}
+		883.1.1 = {
+			death = "883.1.1"
+		}
+	}
+	160208 = {# Airemón
+		name = "AiremO_n"
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160205
+		823.1.1 = {
+			birth = "823.1.1"
+		}
+		886.1.1 = {
+			death = "886.1.1"
+		}
+	}
+	160209 = {# Matudán
+		name = "MatudA_n" #mac Muiredaig mac Eochada
+		dynasty = 819
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160196
+		824.1.1 = {
+			birth = "824.1.1"
+		}
+		857.1.1 = {
+			death = "857.1.1"
+		}
+	}
+	160210 = {# Fiachnae
+		name = "Fiachnae" #mac Ainbítha
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160206
+		840.1.1 = {
+			birth = "840.1.1"
+		}
+		886.1.1 = {
+			death = "886.1.1"
+		}
+	}
+	160211 = {# Bécc
+		name = "BE_cc" #mac Airemóin
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160208
+		845.1.1 = {
+			birth = "845.1.1"
+		}
+		893.1.1 = {
+			death = "893.1.1"
+		}
+	}
+	160212 = {# Muiredach
+		name = "Muiredach" #mac Eochocáin
+		dynasty = 819
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160207
+		844.1.1 = {
+			birth = "844.1.1"
+		}
+		895.1.1 = {
+			death = "895.1.1"
+		}
+	}
+	7281 = {# Ruaidri
+		name = "Ruaidri"
+		dynasty = 819
+		religion = "catholic"
+		culture = "irish"
+		father = 7282
+		1122.1.1 = {
+			birth = "1122.1.1"
+		}
+		1201.1.1 = {
+			death = "1201.1.1"
+		}
+	}
+	6180 = {# Cú Ulad
+		name = "CU__Uladh"
+		dynasty = 819
+		martial = 5
+		diplomacy = 4
+		intrigue = 6
+		stewardship = 8
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = chaste
+		trait = education_intrigue_1
+		father = 6181
+		1024.1.2 = {
+			birth = "1024.1.2"
+		}
+		1071.1.1 = {
+			death = "1071.1.1"
+		}
+	}
+	6181 = {# Áed
+		name = "A_ed"
+		dynasty = 819
+		martial = 4
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 8
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6182
+		970.1.2 = {
+			birth = "970.1.2"
+		}
+		1025.1.2 = {
+			death = "1025.1.2"
+		}
+	}
+	6182 = {# Domnall
+		name = "Domnall"
+		dynasty = 819
+		martial = 5
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6183
+		941.1.2 = {
+			birth = "941.1.2"
+		}
+		985.1.2 = {
+			death = "985.1.2"
+		}
+	}
+	6183 = {# Domnall
+		name = "Domnall"
+		dynasty = 819
+		martial = 5
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6184
+		911.1.2 = {
+			birth = "911.1.2"
+		}
+		980.1.2 = {
+			death = "980.1.2"
+		}
+	}
+	6184 = {# Colmán
+		name = "ColmA_n"
+		dynasty = 819
+		martial = 8
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6185
+		860.1.2 = {
+			birth = "860.1.2"
+		}
+		912.1.2 = {
+			death = "912.1.2"
+		}
+	}
+	6185 = {# Áed
+		name = "A_ed"
+		dynasty = 819
+		martial = 8
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6186
+		800.1.2 = {
+			birth = "800.1.2"
+		}
+		871.1.2 = {
+			death = "871.1.2"
+		}
+	}
+	6186 = {# Máel Colcu
+		name = "MA_el_Colcu"
+		dynasty = 819
+		martial = 4
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 9
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6187
+		780.1.2 = {
+			birth = "780.1.2"
+		}
+		820.1.2 = {
+			death = "820.1.2"
+		}
+	}
+	6187 = {# Áed
+		name = "A_ed"
+		dynasty = 819
+		martial = 2
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 2
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6188
+		740.1.2 = {
+			birth = "740.1.2"
+		}
+		821.1.2 = {
+			death = "821.1.2"
+		}
+	}
+	6188 = {# Flaithbertach
+		name = "Flaithbertach"
+		dynasty = 819
+		martial = 7
+		diplomacy = 7
+		intrigue = 1
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160204 #6189 before merge
+		690.1.2 = {
+			birth = "690.1.2"
+		}
+		750.1.2 = {
+			death = "750.1.2"
+		}
+	}
+	6185 = {# Áed
+		name = "A_ed"
+		dynasty = 819
+		martial = 8
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6186
+		800.1.2 = {
+			birth = "800.1.2"
+		}
+		871.1.2 = {
+			death = "871.1.2"
+		}
+	}
+	6186 = {# Máel Colcu
+		name = "MA_el_Colcu"
+		dynasty = 819
+		martial = 4
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 9
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6187
+		780.1.2 = {
+			birth = "780.1.2"
+		}
+		820.1.2 = {
+			death = "820.1.2"
+		}
+	}
+	6187 = {# Áed
+		name = "A_ed"
+		dynasty = 819
+		martial = 2
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 2
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6188
+		740.1.2 = {
+			birth = "740.1.2"
+		}
+		821.1.2 = {
+			death = "821.1.2"
+		}
+	}
+	6188 = {# Flaithbertach
+		name = "Flaithbertach"
+		dynasty = 819
+		martial = 7
+		diplomacy = 7
+		intrigue = 1
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160204 #6189 before merge
+		690.1.2 = {
+			birth = "690.1.2"
+		}
+		750.1.2 = {
+			death = "750.1.2"
+		}
+	}
+	7282 = {# Eochaid
+		name = "Eochaid"
+		dynasty = 819
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6205
+		1082.1.1 = {
+			birth = "1082.1.1"
+		}
+		1166.1.1 = {
+			death = "1166.1.1"
+		}
+	}	
+	7283 = {# Nial
+		name = "Nial"
+		dynasty = 819
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6205
+		1071.1.1 = {
+			birth = "1071.1.1"
+		}
+		1127.1.1 = {
+			death = "1127.1.1"
+		}
+	}	
+	7280 = {# Áed
+		name = "A_ed"
+		dynasty = 819
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6205
+		1070.1.1 = {
+			birth = "1070.1.1"
+		}
+		1122.1.1 = {
+			death = "1122.1.1"
+		}
+	}		
+	165016 = {# Gormlaith Rapach ingen Muiredach mac Eochada
+		name = "Gormlaith_Rapach" #Gormlaith Rapach ingen Muiredach mac Eochada
+		dynasty = 819
+		female = yes
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160196
+		825.1.1 = {
+			birth = "825.1.1"
+		}
+		853.1.1 = {
+			death = "853.1.1"
+		}
+	}
+	163114 = {# Cathalán mac Indrechtaig
+		name = "CathalA_n" #Cathalán mac Indrechtaig
+		dynasty = 819
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160197
+		827.1.1 = {
+			birth = "827.1.1"
+		}
+		870.1.1 = {
+			death = "870.1.1"
+		}
+	}
+	6206 = {# Donnchad
+		name = "Donnchad"
+		dynasty = 819
+		martial = 5
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = brave
+		trait = education_stewardship_2
+		father = 6204
+		1053.1.2 = {
+			birth = "1053.1.2"
+		}
+		1114.1.1 = {
+			death = "1114.1.1"
+		}
+	}
+	6205 = {# Dun Sléibe
+		name = "Dun_SlE_ibe"
+		dynasty = 819
+		martial = 6
+		diplomacy = 8
+		intrigue = 7
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = honest
+		trait = calm
+		trait = education_learning_2
+		father = 6204
+		1050.1.2 = {
+			birth = "1050.1.2"
+		}
+		1091.1.1 = {
+			death = "1091.1.1"
+		}
+	}
+	6204 = {# Eochaid
+		name = "Eochaid"
+		dynasty = 819
+		martial = 6
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = cynical
+		trait = education_diplomacy_3
+		father = 6203
+		1014.1.2 = {
+			birth = "1014.1.2"
+		}
+		1062.1.2 = {
+			death = "1062.1.2"
+		}
+	}
+	6203 = {# Niall
+		name = "Niall"
+		dynasty = 819
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6202
+		994.1.2 = {
+			birth = "994.1.2"
+		}
+		1063.1.2 = {
+			death = "1063.1.2"
+		}
+	}
+	6202 = {# Eochaid
+		name = "Eochaid"
+		dynasty = 819
+		martial = 7
+		diplomacy = 8
+		intrigue = 4
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6201
+		960.1.2 = {
+			birth = "960.1.2"
+		}
+		1004.1.2 = {
+			death = "1004.1.2"
+		}
+	}
+	6201 = {# Ardgal
+		name = "Ardgal"
+		dynasty = 819
+		martial = 6
+		diplomacy = 6
+		intrigue = 4
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6200
+		941.1.2 = {
+			birth = "941.1.2"
+		}
+		970.1.2 = {
+			death = "970.1.2"
+		}
+	}
+	6199 = {# Áed
+		name = "A_ed"
+		dynasty = 819
+		martial = 8
+		diplomacy = 8
+		intrigue = 4
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 160207 #6198 before merge
+		870.1.2 = {
+			birth = "870.1.2"
+		}
+		919.1.2 = {
+			death = "919.1.2"
+		}
+	}
+	6200 = {# Matudán
+		name = "MatudA_n"
+		dynasty = 819
+		martial = 5
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6199
+		890.1.2 = {
+			birth = "890.1.2"
+		}
+		950.1.2 = {
+			death = "950.1.2"
+		}
+	}
+#######################################
+# Ua Niall Noigiallaigh Dyanasty
+#######################################
+	131504 = {# AKA: Domnall Donn
+		name = "Domnall_Donn"
+		dynasty_house = house_british_isles_neill
+		martial = 5
+		diplomacy = 4
+		intrigue = 6
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131503
+		mother = 166058
+		920.1.2 = {
+			birth = yes
+		}
+		947.1.1 = {
+			add_spouse = 131520
+		}
+		952.1.1 = {
+			death = "952.1.1"
+		}
+	}
+	7262 = {# Suibne
+		name = "Suibne"
+		dynasty_house = house_british_isles_neill
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7260
+		567.1.1 = {
+			birth = "567.1.1"
+		}
+		600.1.1 = {
+			death = "600.1.1"
+		}
+	}
+
+
+#######################################
+# Ua Maíl Sechlainn Dyanasty
+#######################################
+
+	6115 = {# Domnall abbot of Clonard
+		name = "Domnall" #Domnall abbot of Clonard
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 7
+		intrigue = 8
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131505
+		mother = 166102
+		993.1.2 = {
+			birth = "993.1.2"
+		}
+		1019.7.1 = {
+			death = "1019.7.1"
+		}
+	}
+	6116 = {# Flann
+		name = "Flann"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 5
+		intrigue = 8
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = wrathful
+		trait = education_martial_2
+		father = 6115 #Domnall abbot of Clonard
+		1010.1.2 = {
+			birth = "1010.1.2"
+		}
+		1037.1.2 = {
+			death = "1037.1.2"
+		}
+	}
+	6117 = {# Domnall
+		name = "Domnall"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 4
+		diplomacy = 5
+		intrigue = 8
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = wrathful
+		trait = lazy
+		trait = compassionate
+		trait = education_martial_2
+		father = 6116 #Flann son of abbot Domnall
+		1035.1.2 = {
+			birth = "1035.1.2"
+		}
+		1094.7.1 = {
+			death = "1094.7.1"
+		}
+	}
+	6118 = {# Murchad
+		name = "Murchad"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = wrathful
+		trait = arrogant
+		trait = education_martial_2
+		father = 6116 #Flann son of abbot Domnall
+		1030.1.2 = {
+			birth = "1030.1.2"
+		}
+		1076.7.1 = {
+			death = "1076.7.1"
+		}
+	}
+	6119 = {# Máel Sechlainn Bán
+		name = "MA_el-Sechlainn"
+		# AKA: Máel Sechlainn Bán
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = temperate
+		trait = education_martial_2
+		father = 6120 #Conchobar son of Domnall abbot of Clonard
+		mother = 6121
+		1043.1.2 = {
+			birth = "1043.1.2"
+		}
+		1087.7.1 = {
+			death = "1087.7.1"
+		}
+	}
+	6120 = {# Conchobar
+		name = "Conchobar"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 4
+		diplomacy = 8
+		intrigue = 8
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_learning_2
+		father = 6115 #Domnall abbot of Clonard
+		1014.1.2 = {
+			birth = "1014.1.2"
+		}
+		1040.1.2 = {
+			add_spouse = 6121
+		}
+		1073.1.1 = {
+			death = "1073.1.1"
+		}
+	}
+	6121 = {# Grainne
+		name = "GrA_inne"
+		# AKA: Grainne
+		female = yes
+		martial = 5
+		diplomacy = 8
+		intrigue = 8
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_intrigue_1
+		1017.1.2 = {
+			birth = "1017.1.2"
+		}
+		1067.1.2 = {
+			death = "1067.1.2"
+		}
+	}
+	6122 = {# Murchad
+		name = "Murchad"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 4
+		diplomacy = 5
+		intrigue = 3
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = generous
+		trait = education_martial_2
+		father = 6120 #Conchobar son of Domnall abbot of Clonard
+		mother = 6121
+		1045.1.2 = {
+			birth = "1045.1.2"
+		}
+		1077.1.2 = {
+			death = "1077.1.2"
+		}
+	}
+	7190 = {# Art
+		name = "Art"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 7
+		intrigue = 4
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7194 #Murchad son of Domnall
+		1100.1.1 = {
+			birth = "1100.1.1"
+		}
+		1141.7.1 = {
+			death = "1141.7.1"
+		}
+	}
+	7191 = {# Máel-Sechlainn
+		name = "MA_el-Sechlainn"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 6
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7194 #Murchad son of Domnall
+		1117.1.1 = {
+			birth = "1117.1.1"
+		}
+		1155.7.1 = {
+			death = "1155.7.1"
+		}
+	}
+	7193 = {# Domnall
+		name = "Domnall"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7194 #Now Murchad son of Domnall
+		1101.1.1 = {
+			birth = "1101.1.1"
+		}
+		1137.7.1 = {
+			death = "1137.7.1"
+		}
+	}
+	7194 = {# Murchad
+		name = "Murchad"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 4
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6117 #Domnall son of Flann son of abbot Domnall
+		1082.1.1 = {
+			birth = "1082.1.1"
+		}
+		1153.7.1 = {
+			death = "1153.7.1"
+		}
+	}
+	83142 = {# Conchobar
+		name = "Conchobar"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 4
+		intrigue = 7
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 6119 #Máel Sechlainn Bán
+		1065.1.2 = {
+			birth = "1065.1.2"
+		}
+		1105.7.1 = {
+			death = "1105.7.1"
+		}
+	}
+	83143 = {# Donnchad
+		name = "Donnchad" #King of Mide from 1094 to 1105
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 7
+		diplomacy = 4
+		intrigue = 6
+		stewardship = 3
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6118 #Murchad son of Flann
+		1049.1.2 = {
+			birth = "1049.1.2"
+		}
+		1106.7.1 = {
+			death = "1106.7.1"
+		}
+	}
+	83144 = {# Máel-Sechlainn
+		name = "MA_el-Sechlainn"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 6
+		diplomacy = 7
+		intrigue = 4
+		stewardship = 3
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83143 #Donnchad son of Murchad
+		1075.11.2 = {
+			birth = "1075.11.2"
+		}
+		1125.7.1 = {
+			death = "1125.7.1"
+		}
+	}
+	83145 = {# Muirchertach
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 2
+		diplomacy = 5
+		intrigue = 3
+		stewardship = 8
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6117 #Domnall son of Flann son of abbot Domnall
+		1063.1.1 = {
+			birth = "1063.1.1"
+		}
+		1143.7.1 = {
+			death = "1143.7.1"
+		}
+	}
+	83146 = {# Donnchad
+		name = "Donnchad"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 4
+		diplomacy = 2
+		intrigue = 4
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6117 #Domnall son of Flann son of abbot Domnall
+		1065.1.1 = {
+			birth = "1065.1.1"
+		}
+		1122.7.1 = {
+			death = "1122.7.1"
+		}
+	}
+	83147 = {# Diarmait
+		name = "Diarmait" #King of Mide from 1127 to 1130
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 7
+		diplomacy = 4
+		intrigue = 4
+		stewardship = 2
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6117 #Domnall son of Flann son of abbot Domnall
+		1085.1.1 = {
+			birth = "1085.1.1"
+		}
+		1130.7.1 = {
+			death = "1130.7.1"
+		}
+	}
+	83148 = {# Conchobar
+		name = "Conchobar"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 2
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6117 #Domnall son of Flann son of abbot Domnall
+		1088.1.1 = {
+			birth = "1088.1.1"
+		}
+		1153.7.1 = {
+			death = "1153.7.1"
+		}
+	}
+	83149 = {# Máel-Sechlainn
+		name = "MA_el-Sechlainn"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 4
+		diplomacy = 8
+		intrigue = 4
+		stewardship = 8
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 6117 #Domnall son of Flann son of abbot Domnall
+		1090.1.1 = {
+			birth = "1090.1.1"
+		}
+		1115.7.1 = {
+			death = "1115.7.1"
+		}
+	}
+	83150 = {# Máel-Sechlainn
+		name = "MA_el-Sechlainn"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 3
+		diplomacy = 5
+		intrigue = 2
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83145 #Muirchertach son of Domnall
+		1099.1.1 = {
+			birth = "1099.1.1"
+		}
+		1131.7.1 = {
+			death = "1131.7.1"
+		}
+	}
+	83151 = {# Donnchad
+		name = "Donnchad"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 4
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83145 #Muirchertach son of Domnall
+		1102.1.1 = {
+			birth = "1102.1.1"
+		}
+		1145.7.1 = {
+			death = "1145.7.1"
+		}
+	}
+	83152 = {# Conchobar
+		name = "Conchobar"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 4
+		diplomacy = 2
+		intrigue = 4
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83146 #Donnchad son of Domnall
+		1120.1.1 = {
+			birth = "1120.1.1"
+		}
+		1141.7.1 = {
+			death = "1141.7.1"
+		}
+	}
+	83155 = {# Muirchertach
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 8
+		diplomacy = 4
+		intrigue = 4
+		stewardship = 3
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83153 #Domnall Bregach son of Máel-Sechlainn
+		1143.1.1 = {
+			birth = "1143.1.1"
+		}
+		1163.7.1 = {
+			death = "1163.7.1"
+		}
+	}
+	83156 = {# Donnchad
+		name = "Donnchad"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 6
+		intrigue = 4
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7193 #Domnall son of Murchad
+		1119.1.1 = {
+			birth = "1119.1.1"
+		}
+		1160.7.1 = {
+			death = "1160.7.1"
+		}
+	}
+	83157 = {# Conchobar
+		name = "Conchobar"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 3
+		intrigue = 6
+		stewardship = 7
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 7193 #Domnall son of Murchad
+		1122.1.1 = {
+			birth = "1122.1.1"
+		}
+		1153.7.1 = {
+			death = "1153.7.1"
+		}
+	}
+	166104 = {# Conchobar
+		name = "Conchobar"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 6
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131505
+		mother = 166102
+		982.6.1 = {
+			birth = "982.6.1"
+		}
+		1030.1.1 = {
+			death = "1030.1.1"
+		}
+	}
+	166105 = {# Flann
+		name = "Flann"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 7
+		diplomacy = 6
+		intrigue = 4
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131505
+		mother = 166102
+		985.1.1 = {
+			birth = "985.1.1"
+		}
+		1013.1.1 = {
+			death = "1013.1.1"
+		}
+	}
+	166106 = {# Congalach
+		name = "Congalach"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 4
+		intrigue = 6
+		stewardship = 4
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131505
+		mother = 166102
+		990.1.1 = {
+			birth = "990.1.1"
+		}
+		1017.1.1 = {
+			death = "1017.1.1"
+		}
+	}
+	166107 = {# Murchad Rua
+		name = "Murchad_Rua"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 4
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 6
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131505
+		mother = 166103
+		1001.1.1 = {
+			birth = "1001.1.1"
+		}
+		1049.1.1 = {
+			death = "1049.1.1"
+		}
+	}
+	166108 = {# Muirchertach
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 6
+		diplomacy = 4
+		intrigue = 6
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 131505
+		mother = 166103
+		1005.1.1 = {
+			birth = "1005.1.1"
+		}
+		1049.1.1 = {
+			death = "1049.1.1"
+		}
+	}
+	7192 = {# Diarmait
+		name = "Diarmait"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 4
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 7193 #Domnall son of Murchad
+		1124.1.1 = {
+			birth = "1124.1.1"
+		}
+		1169.7.1 = {
+			death = "1169.7.1"
+		}
+	}
+	83153 = {# Domnall
+		name = "Domnall" #Domnall Bregach king of Mide
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 6
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83149
+		1113.1.1 = {
+			birth = "1113.1.1"
+		}
+		1173.7.1 = {
+			death = "1173.7.1"
+		}
+	}
+	83154 = {# Art
+		name = "Art" #King of Mide
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 7
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83149 #Máel-Sechlainn son of Domnall
+		1114.7.1 = {
+			birth = "1114.7.1"
+		}
+		1184.7.1 = {
+			death = "1184.7.1"
+		}
+	}
+	83158 = {# Magnus
+		name = "Magnus"
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 7193 #Domnall son of Murchad
+		1127.1.1 = {
+			birth = "1127.1.1"
+		}
+		1175.7.1 = {
+			death = "1175.7.1"
+		}
+	}
+	83159 = {# Derbforgaill
+		name = "Derbforgaill"
+		female = yes
+		dynasty_house = house_british_isles_mailsechlainn
+		martial = 5
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 7194 #Murchad son of Domnall
+		1115.1.1 = {
+			birth = "1115.1.1"
+		}
+		1193.7.1 = {
+			death = "1193.7.1"
+		}
+	}
+#######################################
+# Briunseola Dyanasty
+#######################################
+	83447 = {# Cenn Faeled
+		name = "Cenn-FA_elad"
+		dynasty_house = house_british_isles_briuinseola
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 5
+		religion = "insular_celtic"
+		culture = "irish"
+		father = 83446
+		621.1.1 = {
+			birth = "621.1.1"
+		}
+		682.7.1 = {
+			death = "682.7.1"
+		}
+	}
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+
 
 1000 = {
 	name = "A_ed"
@@ -24,7 +3043,6 @@
 		death = "1087.7.1"
 	}
 }
-
 1001 = {
 	name = "Art"
 	dynasty_house = house_british_isles_ruairc
@@ -44,7 +3062,6 @@
 		death = "1046.7.1"
 	}
 }
-
 1002 = {
 	name = "Niall"
 	dynasty_house = house_british_isles_ruairc
@@ -64,7 +3081,6 @@
 		death = "1047.1.1"
 	}
 }
-
 1003 = {
 	name = "TigernA_n"
 	dynasty_house = house_british_isles_ruairc
@@ -83,7 +3099,6 @@
 		death = "1091.7.1"
 	}
 }
-
 1004 = {
 	name = "Domnall"
 	dynasty_house = house_british_isles_ruairc
@@ -104,7 +3119,6 @@
 		death = "1102.7.1"
 	}
 }
-
 1005 = {
 	name = "Ualgarg"
 	dynasty_house = house_british_isles_ruairc
@@ -124,7 +3138,6 @@
 		death = "1085.1.1"
 	}
 }
-
 1010 = {
 	name = "Maoil_Sechluinn"
 	# AKA: Maoil Sechluinn
@@ -147,7 +3160,6 @@
 		death = "1074.1.1"
 	}
 }
-
 1011 = {
 	name = "Nuala"
 	female = yes
@@ -166,7 +3178,6 @@
 		death = "1089.1.1"
 	}
 }
-
 1012 = {
 	name = "An_Dall"
 	# AKA: An Dall
@@ -187,7 +3198,6 @@
 		death = "1105.1.1"
 	}
 }
-
 1015 = {
 	name = "A_edh"
 	# AKA: aedh
@@ -210,7 +3220,6 @@
 		death = "1095.1.1"
 	}
 }
-
 1016 = {
 	name = "SlaI_ne"
 	# AKA: Slaine
@@ -231,7 +3240,6 @@
 		death = "1089.1.1"
 	}
 }
-
 1017 = {
 	name = "A_edh"
 	# AKA: aedh
@@ -252,7 +3260,6 @@
 		death = "1110.1.1"
 	}
 }
-
 1018 = {
 	name = "Flaitbertach"
 	dynasty_house = house_british_isles_flaithbertaig
@@ -271,7 +3278,6 @@
 		death = "1115.1.1"
 	}
 }
-
 1020 = {
 	name = "Domnall"
 	dynasty_house = house_british_isles_gilla_patraic
@@ -294,7 +3300,6 @@
 		death = "1080.7.1"
 	}
 }
-
 1021 = {
 	name = "MA_ire"
 	# AKA: Maire
@@ -314,7 +3319,6 @@
 		death = "1085.7.1"
 	}
 }
-
 1022 = {
 	name = "Donnchad"
 	dynasty_house = house_british_isles_gilla_patraic
@@ -334,7 +3338,6 @@
 		death = "1090.7.1"
 	}
 }
-
 1023 = {
 	name = "Muirchertach"
 	dynasty_house = house_british_isles_gilla_patraic
@@ -355,7 +3358,6 @@
 		death = "1095.7.1"
 	}
 }
-
 1026 = {
 	name = "SlA_ine" #wife of Sihtric Silkbeard
 	female = yes
@@ -376,7 +3378,6 @@
 		death = "1050.7.1"
 	}
 }
-
 1028 = {
 	name = "Maecorce"
 	female = yes
@@ -399,153 +3400,6 @@
 		death = "1050.1.2"
 	}
 }
-
-131501 = {
-	name = "MA_el_Sechnaill"
-	# AKA: Mael Sechnaill
-	dynasty_house = house_british_isles_neill
-	martial = 8
-	diplomacy = 4
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = diligent
-	trait = generous
-	trait = education_martial_3
-	father = 7276
-	825.1.2 = {
-		birth = "825.1.2"
-	}
-	845.1.1 = {
-		add_spouse = 131507 #Lann ingen mac Dúnlainge
-	}
-	862.11.22 = {
-		death = "862.11.22"
-	}
-}
-
-131502 = {
-	name = "Flann_Sinna"
-	# AKA: Flann Sinna
-	dynasty_house = house_british_isles_neill
-	martial = 8
-	diplomacy = 7
-	intrigue = 6
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	trait = diligent
-	father = 131501
-	mother = 131507 #Lann ingen mac Dúnlainge
-	847.1.2 = {
-		birth = "847.1.2"
-	}
-	868.1.1 = {
-		add_spouse = 165000 #Gormlaith ingen Conaing mac Flainn - fl. 870
-	}
-	877.1.1 = {
-		add_spouse = 165001 #Eithne ingen Áed Findliath
-	}
-	880.1.1 = {
-		remove_spouse = 165001 #Eithne ingen Áed Findliath - likely divorced
-	}
-	880.1.2 = {
-		add_spouse = 165002 #Máel Muire ingen Cináeda mac Ailpín
-	}
-	916.5.25 = {
-		death = "916.5.25"
-	}
-}
-
-131503 = {
-	name = "Donnchad_Donn"
-	# AKA: Donnchad Donn
-	dynasty_house = house_british_isles_neill
-	martial = 5
-	diplomacy = 8
-	intrigue = 4
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131502
-	mother = 165000
-	879.1.2 = {
-		birth = "879.1.2"
-	}
-	901.1.1 = {
-		add_spouse = 166055
-	}
-	933.1.1 = {
-		add_spouse = 166098
-	}
-	941.5.1 = {
-		add_spouse = 166060
-	}
-	944.1.1 = {
-		death = "944.1.1"
-	}
-}
-
-131504 = {
-	name = "Domnall_Donn"
-	# AKA: Domnall Donn
-	dynasty_house = house_british_isles_neill
-	martial = 5
-	diplomacy = 4
-	intrigue = 6
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131503
-	mother = 166058
-	920.1.2 = {
-		birth = yes
-	}
-	947.1.1 = {
-		add_spouse = 131520
-	}
-	952.1.1 = {
-		death = "952.1.1"
-	}
-}
-
-131505 = {
-	name = "MA_el-Sechnaill"
-	# AKA: Mael Sechnaill Mor
-	dynasty_house = house_british_isles_neill
-	martial = 6
-	diplomacy = 5
-	intrigue = 3
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131504
-	mother = 131520
-	948.1.2 = {
-		birth = "948.1.2"
-	}
-	967.7.1 = {
-		dynasty_house = house_british_isles_mailsechlainn #Ua Maíl Sechlainn
-	}
-	981.5.1 = {
-		add_spouse = 166102
-	}
-	999.1.1 = {
-		remove_spouse = 166102
-	}
-	1000.1.1 = {
-		add_spouse = 166103
-	}
-	1022.9.2 = {
-		death = "1022.9.2"
-	}
-}
-
 131506 = {
 	name = "Gormflaith"
 	female = yes
@@ -566,7 +3420,6 @@
 		death = "948.1.2"
 	}
 }
-
 131507 = {
 	name = "Lann" #Lann ingen mac Dúnlainge
 	female = yes
@@ -584,30 +3437,6 @@
 	}
 	890.1.1 = {
 		death = "890.1.1"
-	}
-}
-
-131511 = {
-	name = "Niall_GlU_ndub"
-	# AKA: Niall Glundub
-	dynasty_house = house_british_isles_neill
-	martial = 8
-	diplomacy = 4
-	intrigue = 6
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 944
-	mother = 165002 #Máel Muire ingen Cináeda mac Ailpín.
-	869.1.2 = {
-		birth = "869.1.2"
-	}
-	909.1.1 = {
-		add_spouse = 131506 #Gormflaith ingen Flann Sinna
-	}
-	919.9.14 = {
-		death = "919.9.14"
 	}
 }
 
@@ -635,29 +3464,6 @@
 	}
 }
 
-131513 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_neill
-	martial = 4
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131512
-	mother = 166058
-	930.1.2 = {
-		birth = "930.1.2"
-	}
-	940.7.1 = {
-		dynasty_house = house_british_isles_neillnoigiallaich #Ua Neill from Niall Glundub
-	}
-	980.1.1 = {
-		death = "980.1.1"
-	}
-}
-
 131514 = {
 	name = "A_ed"
 	dynasty_house = house_british_isles_neillnoigiallaich
@@ -676,7 +3482,6 @@
 		death = "1004.7.1"
 	}
 }
-
 131515 = {
 	name = "Muirchertach"
 	dynasty_house = house_british_isles_neillnoigiallaich
@@ -696,7 +3501,6 @@
 		death = "977.1.2"
 	}
 }
-
 131516 = {
 	name = "Lochlann"
 	dynasty_house = house_british_isles_neill
@@ -716,7 +3520,6 @@
 		death = "1023.7.1"
 	}
 }
-
 131517 = {
 	name = "Ardgar"
 	dynasty_house = house_british_isles_neill #Ua Neill from Noigiallach
@@ -736,25 +3539,6 @@
 	}
 	1064.7.1 = {
 		death = "1064.7.1"
-	}
-}
-
-131518 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_lochlainn
-	martial = 9
-	diplomacy = 6
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131517
-	1049.1.1 = {
-		birth = "1049.1.1"
-	}
-	1121.2.9 = {
-		death = "1121.2.9"
 	}
 }
 
@@ -799,9 +3583,6 @@
 		death = "968.1.2"
 	}
 }
-
-
-
 20054 = {
 	name = "SeoA_n"
 	# AKA: Seoan
@@ -822,7 +3603,6 @@
 		death = "1089.1.1"
 	}
 }
-
 203556 = {
 	name = "Gunnild"
 	female = yes
@@ -844,7 +3624,6 @@
 		death = "1184.1.2"
 	}
 }
-
 205840 = {
 	name = "Emma"
 	female = yes
@@ -864,7 +3643,6 @@
 		death = "1186.1.2"
 	}
 }
-
 214008 = {
 	name = "Muirchertach"
 	dynasty_house = house_british_isles_lochlainn
@@ -883,7 +3661,6 @@
 		death = "1166.7.1"
 	}
 }
-
 214021 = {
 	name = "MA_el-Sechlainn"
 	dynasty_house = house_british_isles_ruairc
@@ -903,7 +3680,6 @@
 		death = "1162.7.1"
 	}
 }
-
 214023 = {
 	name = "Derbforgaill"
 	female = yes
@@ -922,7 +3698,6 @@
 		death = "1158.1.2"
 	}
 }
-
 214520 = {
 	name = "Toirrdelbach"
 	dynasty_house = house_british_isles_conchobair
@@ -942,7 +3717,6 @@
 		death = "1156.5.20"
 	}
 }
-
 214551 = {
 	name = "Moringen"
 	female = yes
@@ -961,7 +3735,6 @@
 		death = "1151.1.15"
 	}
 }
-
 214590 = {
 	name = "Toirrdelbach"
 	dynasty_house = house_british_isles_briain
@@ -983,7 +3756,6 @@
 		death = "1167.7.1"
 	}
 }
-
 214713 = {
 	name = "Pyfog"
 	female = yes
@@ -1002,7 +3774,6 @@
 		death = "1135.1.2"
 	}
 }
-
 6100 = {
 	name = "Domnall"
 	dynasty_house = house_british_isles_neill
@@ -1021,175 +3792,6 @@
 	}
 	1127.1.1 = {
 		death = "1127.1.1"
-	}
-}
-
-6115 = {
-	name = "Domnall" #Domnall abbot of Clonard
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 7
-	intrigue = 8
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131505
-	mother = 166102
-	993.1.2 = {
-		birth = "993.1.2"
-	}
-	1019.7.1 = {
-		death = "1019.7.1"
-	}
-}
-
-6116 = {
-	name = "Flann"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 5
-	intrigue = 8
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = wrathful
-	trait = education_martial_2
-	father = 6115 #Domnall abbot of Clonard
-	1010.1.2 = {
-		birth = "1010.1.2"
-	}
-	1037.1.2 = {
-		death = "1037.1.2"
-	}
-}
-
-6117 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 4
-	diplomacy = 5
-	intrigue = 8
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = wrathful
-	trait = lazy
-	trait = compassionate
-	trait = education_martial_2
-	father = 6116 #Flann son of abbot Domnall
-	1035.1.2 = {
-		birth = "1035.1.2"
-	}
-	1094.7.1 = {
-		death = "1094.7.1"
-	}
-}
-
-6118 = {
-	name = "Murchad"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = wrathful
-	trait = arrogant
-	trait = education_martial_2
-	father = 6116 #Flann son of abbot Domnall
-	1030.1.2 = {
-		birth = "1030.1.2"
-	}
-	1076.7.1 = {
-		death = "1076.7.1"
-	}
-}
-
-
-6119 = {
-	name = "MA_el-Sechlainn"
-	# AKA: Máel Sechlainn Bán
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = temperate
-	trait = education_martial_2
-	father = 6120 #Conchobar son of Domnall abbot of Clonard
-	mother = 6121
-	1043.1.2 = {
-		birth = "1043.1.2"
-	}
-	1087.7.1 = {
-		death = "1087.7.1"
-	}
-}
-
-6120 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 4
-	diplomacy = 8
-	intrigue = 8
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_learning_2
-	father = 6115 #Domnall abbot of Clonard
-	1014.1.2 = {
-		birth = "1014.1.2"
-	}
-	1040.1.2 = {
-		add_spouse = 6121
-	}
-	1073.1.1 = {
-		death = "1073.1.1"
-	}
-}
-
-
-6121 = {
-	name = "GrA_inne"
-	# AKA: Grainne
-	female = yes
-	martial = 5
-	diplomacy = 8
-	intrigue = 8
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_intrigue_1
-	1017.1.2 = {
-		birth = "1017.1.2"
-	}
-	1067.1.2 = {
-		death = "1067.1.2"
-	}
-}
-
-6122 = {
-	name = "Murchad"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 4
-	diplomacy = 5
-	intrigue = 3
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = generous
-	trait = education_martial_2
-	father = 6120 #Conchobar son of Domnall abbot of Clonard
-	mother = 6121
-	1045.1.2 = {
-		birth = "1045.1.2"
-	}
-	1077.1.2 = {
-		death = "1077.1.2"
 	}
 }
 
@@ -1212,487 +3814,7 @@
 	}
 }
 
-6180 = {
-	name = "CU__Uladh"
-	dynasty = 819
-	martial = 5
-	diplomacy = 4
-	intrigue = 6
-	stewardship = 8
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = chaste
-	trait = education_intrigue_1
-	father = 6181
-	1024.1.2 = {
-		birth = "1024.1.2"
-	}
-	1071.1.1 = {
-		death = "1071.1.1"
-	}
-}
 
-6181 = {
-	name = "A_ed"
-	dynasty = 819
-	martial = 4
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 8
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6182
-	970.1.2 = {
-		birth = "970.1.2"
-	}
-	1025.1.2 = {
-		death = "1025.1.2"
-	}
-}
-
-6182 = {
-	name = "Domnall"
-	dynasty = 819
-	martial = 5
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6183
-	941.1.2 = {
-		birth = "941.1.2"
-	}
-	985.1.2 = {
-		death = "985.1.2"
-	}
-}
-
-6183 = {
-	name = "Domnall"
-	dynasty = 819
-	martial = 5
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6184
-	911.1.2 = {
-		birth = "911.1.2"
-	}
-	980.1.2 = {
-		death = "980.1.2"
-	}
-}
-
-6184 = {
-	name = "ColmA_n"
-	dynasty = 819
-	martial = 8
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6185
-	860.1.2 = {
-		birth = "860.1.2"
-	}
-	912.1.2 = {
-		death = "912.1.2"
-	}
-}
-
-6185 = {
-	name = "A_ed"
-	dynasty = 819
-	martial = 8
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6186
-	800.1.2 = {
-		birth = "800.1.2"
-	}
-	871.1.2 = {
-		death = "871.1.2"
-	}
-}
-
-6186 = {
-	name = "MA_el_Colcu"
-	dynasty = 819
-	martial = 4
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 9
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6187
-	780.1.2 = {
-		birth = "780.1.2"
-	}
-	820.1.2 = {
-		death = "820.1.2"
-	}
-}
-
-6187 = {
-	name = "A_ed"
-	dynasty = 819
-	martial = 2
-	diplomacy = 7
-	intrigue = 5
-	stewardship = 2
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6188
-	740.1.2 = {
-		birth = "740.1.2"
-	}
-	821.1.2 = {
-		death = "821.1.2"
-	}
-}
-
-6188 = {
-	name = "Flaithbertach"
-	dynasty = 819
-	martial = 7
-	diplomacy = 7
-	intrigue = 1
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160204 #6189 before merge
-	690.1.2 = {
-		birth = "690.1.2"
-	}
-	750.1.2 = {
-		death = "750.1.2"
-	}
-}
-
-#6189 = { # Merged with 160204
-#	name = "O_engus"
-#	# AKA: Oengus
-#	dynasty = 819
-#	martial = 4
-#	diplomacy = 7
-#	intrigue = 4
-#	stewardship = 7
-#	religion = "insular_celtic"
-#	culture = "irish"
-#	father = 160190
-#	647.1.2 = {
-#		birth = "647.1.2"
-#	}
-#	677.1.2 = {
-#		death = "677.1.2"
-#	}
-#}
-
-#6190 = { # Merged with 160190
-#	name = "MA_el_Cobo"
-#	# AKA: Mael Cobo
-#	dynasty = 819
-#	martial = 9
-#	diplomacy = 5
-#	intrigue = 4
-#	stewardship = 9
-#	religion = "insular_celtic"
-#	culture = "irish"
-#	603.1.2 = {
-#		birth = "603.1.2"
-#	}
-#	647.1.2 = {
-#		death = "647.1.2"
-#	}
-#}
-
-#6191 = { # Merged with 160191
-#	name = "Blathmac"
-#	dynasty = 819
-#	martial = 6
-#	diplomacy = 9
-#	intrigue = 4
-#	stewardship = 2
-#	religion = "insular_celtic"
-#	culture = "irish"
-#	father = 6190
-#	640.1.2 = {
-#		birth = "640.1.2"
-#	}
-#	670.1.2 = {
-#		death = "670.1.2"
-#	}
-#}
-
-#6193 = { # Merged with 160192
-#	name = "BE_cc_Bairrche"
-#	# AKA: Becc Bairrche
-#	dynasty = 819
-#	martial = 7
-#	diplomacy = 5
-#	intrigue = 4
-#	stewardship = 4
-#	religion = "insular_celtic"
-#	culture = "irish"
-#	father = 6191
-#	665.1.2 = {
-#		birth = "665.1.2"
-#	}
-#	718.1.2 = {
-#		death = "718.1.2"
-#	}
-#}
-
-#6194 = { # Merged with 160193
-#	name = "A_ed_RO_in"
-#	# AKA: aed Roin
-#	dynasty = 819
-#	martial = 4
-#	diplomacy = 4
-#	intrigue = 4
-#	stewardship = 5
-#	religion = "insular_celtic"
-#	culture = "irish"
-#	father = 6193
-#	700.1.2 = {
-#		birth = "700.1.2"
-#	}
-#	735.1.2 = {
-#		death = "735.1.2"
-#	}
-#}
-
-#6195 = { # Merged with 160194
-#	name = "Fiachnae"
-#	dynasty = 819
-#	martial = 4
-#	diplomacy = 4
-#	intrigue = 4
-#	stewardship = 5
-#	religion = "insular_celtic"
-#	culture = "irish"
-#	father = 6194
-#	719.1.2 = {
-#		birth = "719.1.2"
-#	}
-#	789.1.2 = {
-#		death = "789.1.2"
-#	}
-#}
-
-#6196 = { # Merged with 160195
-#	name = "Eochaid"
-#	dynasty = 819
-#	martial = 5
-#	diplomacy = 4
-#	intrigue = 4
-#	stewardship = 5
-#	religion = "insular_celtic"
-#	culture = "irish"
-#	father = 6195
-#	780.1.2 = {
-#		birth = "780.1.2"
-#	}
-#	810.1.2 = {
-#		death = "810.1.2"
-#	}
-#}
-
-#6197 = { # Merged with 160205
-#	name = "A_ed"
-#	# AKA: aed
-#	dynasty = 819
-#	martial = 9
-#	diplomacy = 5
-#	intrigue = 4
-#	stewardship = 6
-#	religion = "insular_celtic"
-#	culture = "irish"
-#	father = 6196
-#	809.1.2 = {
-#		birth = "809.1.2"
-#	}
-#	870.1.2 = {
-#		death = "870.1.2"
-#	}
-#}
-
-#6198 = { Merged with 160207
-#	name = "EochocA_n"
-#	# AKA: Eochocan
-#	dynasty = 819
-#	martial = 4
-#	diplomacy = 5
-#	intrigue = 4
-#	stewardship = 7
-#	religion = "insular_celtic"
-#	culture = "irish"
-#	father = 6197
-#	850.1.2 = {
-#		birth = "850.1.2"
-#	}
-#	883.1.2 = {
-#		death = "883.1.2"
-#	}
-#}
-
-6199 = {
-	name = "A_ed"
-	dynasty = 819
-	martial = 8
-	diplomacy = 8
-	intrigue = 4
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160207 #6198 before merge
-	870.1.2 = {
-		birth = "870.1.2"
-	}
-	919.1.2 = {
-		death = "919.1.2"
-	}
-}
-
-6200 = {
-	name = "MatudA_n"
-	dynasty = 819
-	martial = 5
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6199
-	890.1.2 = {
-		birth = "890.1.2"
-	}
-	950.1.2 = {
-		death = "950.1.2"
-	}
-}
-
-6201 = {
-	name = "Ardgal"
-	dynasty = 819
-	martial = 6
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6200
-	941.1.2 = {
-		birth = "941.1.2"
-	}
-	970.1.2 = {
-		death = "970.1.2"
-	}
-}
-
-6202 = {
-	name = "Eochaid"
-	dynasty = 819
-	martial = 7
-	diplomacy = 8
-	intrigue = 4
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6201
-	960.1.2 = {
-		birth = "960.1.2"
-	}
-	1004.1.2 = {
-		death = "1004.1.2"
-	}
-}
-
-6203 = {
-	name = "Niall"
-	dynasty = 819
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6202
-	994.1.2 = {
-		birth = "994.1.2"
-	}
-	1063.1.2 = {
-		death = "1063.1.2"
-	}
-}
-
-6204 = {
-	name = "Eochaid"
-	dynasty = 819
-	martial = 6
-	diplomacy = 7
-	intrigue = 5
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = cynical
-	trait = education_diplomacy_3
-	father = 6203
-	1014.1.2 = {
-		birth = "1014.1.2"
-	}
-	1062.1.2 = {
-		death = "1062.1.2"
-	}
-}
-
-6205 = {
-	name = "Dun_SlE_ibe"
-	dynasty = 819
-	martial = 6
-	diplomacy = 8
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = honest
-	trait = calm
-	trait = education_learning_2
-	father = 6204
-	1050.1.2 = {
-		birth = "1050.1.2"
-	}
-	1091.1.1 = {
-		death = "1091.1.1"
-	}
-}
-
-6206 = {
-	name = "Donnchad"
-	dynasty = 819
-	martial = 5
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = brave
-	trait = education_stewardship_2
-	father = 6204
-	1053.1.2 = {
-		birth = "1053.1.2"
-	}
-	1114.1.1 = {
-		death = "1114.1.1"
-	}
-}
 
 6207 = {
 	name = "Conchobar"
@@ -1777,77 +3899,7 @@
 }
 
 
-7190 = {
-	name = "Art"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 7
-	intrigue = 4
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7194 #Murchad son of Domnall
-	1100.1.1 = {
-		birth = "1100.1.1"
-	}
-	1141.7.1 = {
-		death = "1141.7.1"
-	}
-}
 
-7191 = {
-	name = "MA_el-Sechlainn"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 6
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7194 #Murchad son of Domnall
-	1117.1.1 = {
-		birth = "1117.1.1"
-	}
-	1155.7.1 = {
-		death = "1155.7.1"
-	}
-}
-
-7193 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7194 #Now Murchad son of Domnall
-	1101.1.1 = {
-		birth = "1101.1.1"
-	}
-	1137.7.1 = {
-		death = "1137.7.1"
-	}
-}
-
-7194 = {
-	name = "Murchad"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 4
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6117 #Domnall son of Flann son of abbot Domnall
-	1082.1.1 = {
-		birth = "1082.1.1"
-	}
-	1153.7.1 = {
-		death = "1153.7.1"
-	}
-}
 
 7197 = {
 	name = "CannanA_n"
@@ -1920,43 +3972,6 @@
 		death = "747.1.1"
 	}
 }
-
-7244 = {
-	name = "Flaithbertach"
-	dynasty_house = house_british_isles_neill
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7245
-	675.1.1 = {
-		birth = "675.1.1"
-	}
-	765.1.1 = {
-		death = "765.1.1"
-	}
-}
-
-7245 = {
-	name = "Loingsech"
-	dynasty_house = house_british_isles_neill
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7246
-	635.1.1 = {
-		birth = "635.1.1"
-	}
-	704.1.1 = {
-		death = "704.1.1"
-	}
-}
-
 7246 = {
 	name = "O_engus"
 	dynasty_house = house_british_isles_neill
@@ -1974,57 +3989,6 @@
 		death = "650.1.1"
 	}
 }
-
-7247 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_neill
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7248
-	570.1.1 = {
-		birth = "570.1.1"
-	}
-	642.1.1 = {
-		death = "642.1.1"
-	}
-}
-
-7248 = { # Aed mac Ainmuirech
-	name = "A_ed"
-	dynasty_house = house_british_isles_neill
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7249
-	530.1.1 = {
-		birth = "530.1.1"
-	}
-	598.1.1 = {
-		death = "598.1.1"
-	}
-}
-
-7249 = {
-	name = "Ainmire"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7250
-	500.1.1 = {
-		birth = "500.1.1"
-	}
-	569.1.1 = {
-		death = "569.1.1"
-	}
-}
-
 7250 = {
 	name = "Senta"
 	dynasty_house = house_british_isles_neill
@@ -2038,7 +4002,6 @@
 		death = "540.1.1"
 	}
 }
-
 7251 = {
 	name = "Fergus"
 	dynasty_house = house_british_isles_neill
@@ -2052,7 +4015,6 @@
 		death = "490.1.1"
 	}
 }
-
 7252 = {
 	name = "Conall_Gulban"
 	dynasty_house = house_british_isles_neill
@@ -2066,7 +4028,6 @@
 		death = "464.1.1"
 	}
 }
-
 7253 = {
 	name = "Flaithbertach"
 	dynasty_house = house_british_isles_neillnoigiallaich
@@ -2090,7 +4051,6 @@
 		death = "1036.7.1"
 	}
 }
-
 7254 = {
 	name = "Conall_Cremthainne"
 	dynasty_house = house_british_isles_neill
@@ -2104,30 +4064,6 @@
 		death = "480.1.1"
 	}
 }
-
-7255 = {
-	name = "Niall"
-	dynasty = 9217
-	martial = 11
-	diplomacy = 12
-	intrigue = 9
-	stewardship = 12
-	trait = arrogant
-	trait = education_martial_2
-	religion = "pagan"
-	culture = "irish"
-	father = 83432
-	400.1.1 = {
-		birth = "400.1.1"
-	}
-	418.1.1 = {
-		dynasty_house = house_british_isles_neill #Ua Niall Noigiallaigh
-	}
-	450.1.1 = {
-		death = "450.1.1"
-	}
-}
-
 7256 = {
 	name = "Fergus"
 	dynasty_house = house_british_isles_neill
@@ -2141,7 +4077,6 @@
 		death = "525.1.1"
 	}
 }
-
 7257 = {
 	name = "EO_gA_n"
 	dynasty_house = house_british_isles_neill
@@ -2155,21 +4090,6 @@
 		death = "465.1.1"
 	}
 }
-
-7258 = {
-	name = "Diarmait"
-	dynasty_house = house_british_isles_neill
-	religion = "pagan"
-	culture = "irish"
-	father = 7256
-	505.1.1 = {
-		birth = "505.1.1"
-	}
-	565.1.1 = {
-		death = "565.1.1"
-	}
-}
-
 7259 = {
 	name = "Muiredach"
 	dynasty_house = house_british_isles_neill
@@ -2183,7 +4103,6 @@
 		death = "489.1.1"
 	}
 }
-
 7260 = {
 	name = "ColmA_n" #Colmán Becc
 	dynasty_house = house_british_isles_neill
@@ -2197,50 +4116,6 @@
 		death = "587.1.1"
 	}
 }
-
-
-7261 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7259
-	469.1.1 = {
-		birth = "469.1.1"
-	}
-	534.1.1 = {
-		death = "534.1.1"
-	}
-}
-
-7262 = {
-	name = "Suibne"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7260
-	567.1.1 = {
-		birth = "567.1.1"
-	}
-	600.1.1 = {
-		death = "600.1.1"
-	}
-}
-
-7263 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7261
-	514.1.1 = {
-		birth = "514.1.1"
-	}
-	566.1.1 = {
-		death = "566.1.1"
-	}
-}
-
 7264 = {
 	name = "Conall"
 	dynasty_house = house_british_isles_neill
@@ -2252,20 +4127,6 @@
 	}
 	635.1.1 = {
 		death = "635.1.1"
-	}
-}
-
-7265 = {
-	name = "A_ed"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7263
-	546.1.1 = {
-		birth = "546.1.1"
-	}
-	612.1.1 = {
-		death = "612.1.1"
 	}
 }
 
@@ -2339,78 +4200,10 @@
 	}
 }
 
-7271 = {
-	name = "Fergal"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7269
-	640.1.1 = {
-		birth = "640.1.1"
-	}
-	722.12.11 = {
-		death = "722.12.11"
-	}
-}
 
-7272 = {
-	name = "Donmnall"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7270
-	690.1.1 = {
-		birth = "690.1.1"
-	}
-	763.11.20 = {
-		death = "763.11.20"
-	}
-}
-
-7273 = {
-	name = "Niall"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7271
-	718.1.1 = {
-		birth = "718.1.1"
-	}
-	778.1.1 = {
-		death = "778.1.1"
-	}
-}
-
-7274 = {
-	name = "Donnachad"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7272
-	733.1.1 = {
-		birth = "733.1.1"
-	}
-	797.2.6 = {
-		death = "797.2.6"
-	}
-}
-
-7275 = {
-	name = "A_ed"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7273
-	760.1.1 = {
-		birth = "760.1.1"
-	}
-	819.1.1 = {
-		death = "819.1.1"
-	}
-}
 
 7276 = {
-	name = "MA_el_Ruanaid"
+	name = "Conchobar"
 	dynasty_house = house_british_isles_neill
 	religion = "insular_celtic"
 	culture = "irish"
@@ -2422,49 +4215,6 @@
 		death = "843.1.1"
 	}
 }
-
-7282 = {
-	name = "Eochaid"
-	dynasty = 819
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6205
-	1082.1.1 = {
-		birth = "1082.1.1"
-	}
-	1166.1.1 = {
-		death = "1166.1.1"
-	}
-}
-
-7283 = {
-	name = "Nial"
-	dynasty = 819
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6205
-	1071.1.1 = {
-		birth = "1071.1.1"
-	}
-	1127.1.1 = {
-		death = "1127.1.1"
-	}
-}
-
-7280 = {
-	name = "A_ed"
-	dynasty = 819
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6205
-	1070.1.1 = {
-		birth = "1070.1.1"
-	}
-	1122.1.1 = {
-		death = "1122.1.1"
-	}
-}
-
 7285 = {
 	name = "Niall"
 	dynasty_house = house_british_isles_lochlainn
@@ -2482,7 +4232,6 @@
 		death = "1119.7.1"
 	}
 }
-
 7286 = {
 	name = "Donnchad"
 	dynasty_house = house_british_isles_ruairc
@@ -2498,7 +4247,6 @@
 		death = "1120.1.1"
 	}
 }
-
 7287 = {
 	name = "Domnall"
 	dynasty_house = house_british_isles_ruairc
@@ -2533,46 +4281,7 @@
 	}
 }
 
-900 = {
-	name = "Brian"
-	# AKA: Brian Bóruma
-	dynasty = 100009 #Dál gCais
-	martial = 9
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = wrathful
-	trait = brave
-	trait = education_learning_2
-	father = 83330 #Cennétig of Dál gCais
-	mother = 166063 #Bé Binn of Uí Briúin Seóla
-	941.1.1 = {
-		birth = "941.1.1"
-	}
-	962.1.1 = {
-		add_spouse = 166116
-	}
-	978.1.1 = {
-		dynasty_house = house_british_isles_briain #Ua Briain
-	}
-	983.1.1 = {
-		add_spouse = 166123
-	}
-	999.1.1 = {
-		add_spouse = 166102
-	}
-	1002.1.1 = {
-		remove_spouse = 166102
-	} #Divorce
-	1002.2.1 = {
-		add_spouse = 166124
-	}
-	1014.4.23 = {
-		death = "1014.4.23"
-	}
-}
+
 
 901 = {
 	name = "Derbforgail"
@@ -2595,25 +4304,7 @@
 	}
 }
 
-902 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_briain
-	martial = 8
-	diplomacy = 7
-	intrigue = 6
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 900 #Brian Bóruma
-	mother = 166102 #Gormflaith
-	990.1.1 = {
-		birth = yes
-	}
-	1065.7.1 = {
-		death = "1065.7.1"
-	}
-}
+
 
 903 = {
 	name = "Murchad"
@@ -2679,52 +4370,9 @@
 	}
 }
 
-906 = {
-	name = "Toirrdelbach" #High-King of Ireland
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 8
-	intrigue = 7
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_diplomacy_3
-	father = 905  #Tadg mac Briain High-King of Ireland
-	1009.1.1 = {
-		birth = "1009.1.1"
-	}
-	1030.1.2 = {
-		add_spouse = 908
-	}
-	1074.7.1 = {
-		capital = c_thomond
-	}
-	1086.7.14 = {
-		death = "1086.7.14"
-	}
-}
 
-907 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 4
-	intrigue = 4
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = arbitrary
-	trait = zealous
-	trait = education_intrigue_1
-	father = 906 #Toirrdelbach Ua Briain High-King of Ireland
-	mother = 908
-	1041.1.1 = {
-		birth = "1041.1.1"
-	}
-	1119.3.13 = {
-		death = "1119.3.13"
-	}
-}
+
+
 
 908 = {
 	name = "Gormflaith"
@@ -3253,38 +4901,7 @@
 	}
 }
 
-944 = {
-	name = "A_ed"
-	# AKA: aed Findliath
-	dynasty_house = house_british_isles_neill
-	martial = 5
-	diplomacy = 9
-	intrigue = 5
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 945
-	mother = 165011 #Gormflaith ingen Donncadha Midi
-	831.1.2 = {
-		birth = "831.1.2"
-	}
-	848.1.1 = {
-		add_spouse = 165016 #Gormlaith Rapach ingen Muiredach mac Eochada
-	}
-	862.12.10 = {
-		add_spouse = 131507 #Lann ingen mac Dúnlainge
-	}
-	866.12.2 = {
-		remove_spouse = 131507 #Lann ingen mac Dúnlainge
-	}
-	867.1.1 = {
-		add_spouse = 165002 #Máel Muire ingen Cináeda mac Ailpín
-	}
-	879.1.1 = {
-		death = "879.1.1"
-	}
-}
+
 
 945 = {
 	name = "Niall"
@@ -4337,24 +5954,7 @@
 	}
 }
 
-83078 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_neillnoigiallaich
-	martial = 6
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = diligent
-	father = 83077
-	1109.1.1 = {
-		birth = "1109.1.1"
-	}
-	1166.7.1 = {
-		death = "1166.7.1"
-	}
-}
+
 
 83107 = {
 	name = "A_ed" #Áed son of Conchobar Mac Lochlainn
@@ -4824,266 +6424,6 @@
 	}
 }
 
-
-83142 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 4
-	intrigue = 7
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 6119 #Máel Sechlainn Bán
-	1065.1.2 = {
-		birth = "1065.1.2"
-	}
-	1105.7.1 = {
-		death = "1105.7.1"
-	}
-}
-
-
-83143 = {
-	name = "Donnchad" #King of Mide from 1094 to 1105
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 7
-	diplomacy = 4
-	intrigue = 6
-	stewardship = 3
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6118 #Murchad son of Flann
-	1049.1.2 = {
-		birth = "1049.1.2"
-	}
-	1106.7.1 = {
-		death = "1106.7.1"
-	}
-}
-
-
-83144 = {
-	name = "MA_el-Sechlainn"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 6
-	diplomacy = 7
-	intrigue = 4
-	stewardship = 3
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83143 #Donnchad son of Murchad
-	1075.11.2 = {
-		birth = "1075.11.2"
-	}
-	1125.7.1 = {
-		death = "1125.7.1"
-	}
-}
-
-
-83145 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 2
-	diplomacy = 5
-	intrigue = 3
-	stewardship = 8
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6117 #Domnall son of Flann son of abbot Domnall
-	1063.1.1 = {
-		birth = "1063.1.1"
-	}
-	1143.7.1 = {
-		death = "1143.7.1"
-	}
-}
-
-
-83146 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 4
-	diplomacy = 2
-	intrigue = 4
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6117 #Domnall son of Flann son of abbot Domnall
-	1065.1.1 = {
-		birth = "1065.1.1"
-	}
-	1122.7.1 = {
-		death = "1122.7.1"
-	}
-}
-
-
-83147 = {
-	name = "Diarmait" #King of Mide from 1127 to 1130
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 7
-	diplomacy = 4
-	intrigue = 4
-	stewardship = 2
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6117 #Domnall son of Flann son of abbot Domnall
-	1085.1.1 = {
-		birth = "1085.1.1"
-	}
-	1130.7.1 = {
-		death = "1130.7.1"
-	}
-}
-
-
-83148 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 2
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6117 #Domnall son of Flann son of abbot Domnall
-	1088.1.1 = {
-		birth = "1088.1.1"
-	}
-	1153.7.1 = {
-		death = "1153.7.1"
-	}
-}
-
-83149 = {
-	name = "MA_el-Sechlainn"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 4
-	diplomacy = 8
-	intrigue = 4
-	stewardship = 8
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 6117 #Domnall son of Flann son of abbot Domnall
-	1090.1.1 = {
-		birth = "1090.1.1"
-	}
-	1115.7.1 = {
-		death = "1115.7.1"
-	}
-}
-
-83150 = {
-	name = "MA_el-Sechlainn"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 3
-	diplomacy = 5
-	intrigue = 2
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83145 #Muirchertach son of Domnall
-	1099.1.1 = {
-		birth = "1099.1.1"
-	}
-	1131.7.1 = {
-		death = "1131.7.1"
-	}
-}
-
-83151 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 4
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83145 #Muirchertach son of Domnall
-	1102.1.1 = {
-		birth = "1102.1.1"
-	}
-	1145.7.1 = {
-		death = "1145.7.1"
-	}
-}
-
-83152 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 4
-	diplomacy = 2
-	intrigue = 4
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83146 #Donnchad son of Domnall
-	1120.1.1 = {
-		birth = "1120.1.1"
-	}
-	1141.7.1 = {
-		death = "1141.7.1"
-	}
-}
-
-83155 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 8
-	diplomacy = 4
-	intrigue = 4
-	stewardship = 3
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83153 #Domnall Bregach son of Máel-Sechlainn
-	1143.1.1 = {
-		birth = "1143.1.1"
-	}
-	1163.7.1 = {
-		death = "1163.7.1"
-	}
-}
-
-83156 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7193 #Domnall son of Murchad
-	1119.1.1 = {
-		birth = "1119.1.1"
-	}
-	1160.7.1 = {
-		death = "1160.7.1"
-	}
-}
-
-
-83157 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 3
-	intrigue = 6
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7193 #Domnall son of Murchad
-	1122.1.1 = {
-		birth = "1122.1.1"
-	}
-	1153.7.1 = {
-		death = "1153.7.1"
-	}
-}
 
 83160 = {
 	name = "E_nna" #Énna Cennsalach king of Leinster founder of the Uí Cheinnselaig
@@ -7420,263 +8760,32 @@
 	}
 }
 
-83426 = {
-	name = "Conn" #Conn Cétchathach
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "pagan"
-	culture = "irish"
-	father = 159331
-	120.1.1 = {
-		birth = "120.1.1"
-	}
-	201.7.1 = {
-		death = "201.7.1"
-	}
-}
 
-83427 = {
-	name = "Art" #Art Óenfher
-	dynasty = 9217
-	martial = 7
-	diplomacy = 9
-	intrigue = 7
-	stewardship = 7
-	religion = "pagan"
-	culture = "irish"
-	father = 83426
-	165.1.1 = {
-		birth = "165.1.1"
-	}
-	235.7.1 = {
-		death = "235.7.1"
-	}
-}
 
-83428 = {
-	name = "Cormac" #Cormac mac Airt
-	dynasty = 9217
-	martial = 7
-	diplomacy = 9
-	intrigue = 7
-	stewardship = 11
-	religion = "pagan"
-	culture = "irish"
-	father = 83427
-	200.1.1 = {
-		birth = "200.1.1"
-	}
-	277.7.1 = {
-		death = "277.7.1"
-	}
-}
 
-83429 = {
-	name = "Cairpre" #Caipre mac Cormaicc
-	dynasty = 9217
-	martial = 7
-	diplomacy = 9
-	intrigue = 7
-	stewardship = 11
-	religion = "pagan"
-	culture = "irish"
-	father = 83428
-	249.1.1 = {
-		birth = "249.1.1"
-	}
-	325.7.1 = {
-		death = "325.7.1"
-	}
-}
 
-83430 = {
-	name = "Fiachu" #Fiachu Sraibtine
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "pagan"
-	culture = "irish"
-	father = 83429
-	290.1.1 = {
-		birth = "290.1.1"
-	}
-	355.7.1 = {
-		death = "355.7.1"
-	}
-}
 
-83431 = {
-	name = "Muiredach" #Muiredach Tírech
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "pagan"
-	culture = "irish"
-	father = 83430
-	340.1.1 = {
-		birth = "340.1.1"
-	}
-	415.7.1 = {
-		death = "415.7.1"
-	}
-}
 
-83432 = {
-	name = "Eochaid" #Eochaid Mugmedón
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "pagan"
-	culture = "irish"
-	father = 83431
-	362.1.1 = {
-		birth = "362.1.1"
-	}
-	420.7.1 = {
-		death = "420.7.1"
-	}
-}
 
-83433 = {
-	name = "BriO_n"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "pagan"
-	culture = "irish"
-	father = 83432 #Eochaid Mugmedón
-	390.1.1 = {
-		birth = "390.1.1"
-	}
-	440.7.1 = {
-		death = "440.7.1"
-	}
-}
 
-83434 = {
-	name = "Fiachra"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "pagan"
-	culture = "irish"
-	father = 83432 #Eochaid Mugmedón
-	392.1.1 = {
-		birth = "392.1.1"
-	}
-	445.7.1 = {
-		death = "445.7.1"
-	}
-}
 
-83435 = {
-	name = "Ailill"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83432 #Eochaid Mugmedón
-	394.1.1 = {
-		birth = "394.1.1"
-	}
-	446.7.1 = {
-		death = "446.7.1"
-	}
-}
 
-83436 = {
-	name = "DauI__Tenga_Uma"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "pagan"
-	culture = "irish"
-	father = 83433 #Brión mac Echdach
-	430.1.1 = {
-		birth = "430.1.1"
-	}
-	502.7.1 = {
-		death = "502.7.1"
-	}
-}
 
-83437 = {
-	name = "EO_gan" #Eógan Srem
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83436 #Dauí Tenga Uma
-	470.1.1 = {
-		birth = "470.1.1"
-	}
-	509.7.1 = {
-		death = "509.7.1"
-	}
-}
 
-83438 = {
-	name = "Fergus"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83437 #Eógan Srem
-	499.1.1 = {
-		birth = "499.1.1"
-	}
-	520.1.1 = {
-		dynasty = 9218 #Ua Briúin Bréifne
-	}
-	544.7.1 = {
-		death = "544.7.1"
-	}
-}
 
-83439 = {
-	name = "Muiredach" #Muiredach Mál
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83437 #Eógan Srem
-	502.1.1 = {
-		birth = "502.1.1"
-	}
-	520.1.1 = {
-		dynasty = 9216 #Ua Briúin Aí
-	}
-	549.7.1 = {
-		death = "549.7.1"
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 83440 = {
 	name = "Fergus"
@@ -7732,44 +8841,8 @@
 	}
 }
 
-83444 = {
-	name = "Senach"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83436 #Dauí Tenga Uma
-	472.1.1 = {
-		birth = "472.1.1"
-	}
-	506.7.1 = {
-		death = "506.7.1"
-	}
-}
 
-83445 = {
-	name = "A_ed"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83444
-	498.1.1 = {
-		birth = "498.1.1"
-	}
-	520.1.1 = {
-		dynasty_house = house_british_isles_gabrain #Ua Briúin Seóla
-	}
-	574.7.1 = {
-		death = "574.7.1"
-	}
-}
+
 
 83446 = {
 	name = "ColgU_"
@@ -7789,23 +8862,7 @@
 	}
 }
 
-83447 = {
-	name = "Cenn-FA_elad"
-	dynasty_house = house_british_isles_briuinseola
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83446
-	621.1.1 = {
-		birth = "621.1.1"
-	}
-	682.7.1 = {
-		death = "682.7.1"
-	}
-}
+
 
 83448 = {
 	name = "Amalgaid"
@@ -8558,26 +9615,7 @@
 		death = "919.1.1"
 	}
 }
-165007 = {
-	name = "Congalach_Cnogba"
-	# AKA: Congalach Cnogba
-	dynasty_house = house_british_isles_neill
-	martial = 5
-	diplomacy = 8
-	intrigue = 4
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 165006 #Máel Mithig mac Flannacán
-	mother = 165003 #Lígach ingen Flann Sinna
-	901.1.2 = {
-		birth = "901.1.2"
-	}
-	956.1.1 = {
-		death = "956.1.1"
-	}
-}
+
 
 165008 = {
 	name = "O_engus" #Óengus mac Flann Sinna
@@ -8748,20 +9786,7 @@
 	}
 }
 
-165016 = {
-	name = "Gormlaith_Rapach" #Gormlaith Rapach ingen Muiredach mac Eochada
-	dynasty = 819
-	female = yes
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160196
-	825.1.1 = {
-		birth = "825.1.1"
-	}
-	853.1.1 = {
-		death = "853.1.1"
-	}
-}
+
 
 165017 = {
 	name = "Domnall_Dabaill" #Domnall Dabaill mac Áed Findliath
@@ -8823,19 +9848,7 @@
 
 
 
-163114 = {
-	name = "CathalA_n" #Cathalán mac Indrechtaig
-	dynasty = 819
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160197
-	827.1.1 = {
-		birth = "827.1.1"
-	}
-	870.1.1 = {
-		death = "870.1.1"
-	}
-}
+
 
 166000 = {
 	name = "Duach"
@@ -10002,105 +11015,7 @@
 
 
 
-166104 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 6
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131505
-	mother = 166102
-	982.6.1 = {
-		birth = "982.6.1"
-	}
-	1030.1.1 = {
-		death = "1030.1.1"
-	}
-}
 
-166105 = {
-	name = "Flann"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 7
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131505
-	mother = 166102
-	985.1.1 = {
-		birth = "985.1.1"
-	}
-	1013.1.1 = {
-		death = "1013.1.1"
-	}
-}
-
-166106 = {
-	name = "Congalach"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 4
-	intrigue = 6
-	stewardship = 4
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131505
-	mother = 166102
-	990.1.1 = {
-		birth = "990.1.1"
-	}
-	1017.1.1 = {
-		death = "1017.1.1"
-	}
-}
-
-166107 = {
-	name = "Murchad_Rua"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 4
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 6
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131505
-	mother = 166103
-	1001.1.1 = {
-		birth = "1001.1.1"
-	}
-	1049.1.1 = {
-		death = "1049.1.1"
-	}
-}
-
-166108 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 6
-	diplomacy = 4
-	intrigue = 6
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 131505
-	mother = 166103
-	1005.1.1 = {
-		birth = "1005.1.1"
-	}
-	1049.1.1 = {
-		death = "1049.1.1"
-	}
-}
 
 166109 = {
 	name = "Tighearnach"
@@ -10569,18 +11484,7 @@
 		death = "445.1.1"
 	}
 }
-159331 = {
-	name = "Fedlimid_Rechtmar" #
-	dynasty = 9217
-	religion = "pagan"
-	culture = "irish"
-	100.1.1 = {
-		birth = "100.1.1"
-	}
-	171.7.1 = {
-		death = "171.7.1"
-	}
-}
+
 
 159332 = {
 	name = "Fiachra_Suighe" #
@@ -10720,22 +11624,7 @@
 }
 
 
-83602 = {
-	name = "Sadb"
-	female = yes
-	dynasty = 9217
-	father = 83426 #Conn Cétchathach
-	religion = "pagan"
-	culture = "irish"
-	179.1.1 = {
-		birth = "179.1.1"
-	}
-	255.1.1 = {
-		death = "255.1.1"
-	}
 
-
-}
 
 83603 = {
 	name = "EO_gan_MO_r"
@@ -11180,22 +12069,7 @@
 
 
 
-83633 = {
-	name = "Feidlimid" #High-King of Ireland
-	father = 83632 #Crimthann son of Dub-dá-Crích
-	dynasty_house = house_british_isles_eoganacht_chaisil
-	religion = "insular_celtic"
-	culture = "irish"
-	780.1.1 = {
-		birth = "780.1.1"
-	}
-	840.1.1 = {
-		add_spouse = 83638
-	}
-	847.1.1 = {
-		death = "847.1.1"
-	}
-}
+
 
 
 83634 = {
@@ -11803,19 +12677,7 @@
 	}
 }
 
-83676 = {
-	name = "Eochaid"
-	father = 83612 #Bressal son of Óengus mac Nad-Froich
-	dynasty_house = house_british_isles_eoganacht_chaisil
-	religion = "insular_celtic"
-	culture = "irish"
-	500.1.1 = {
-		birth = "500.1.1"
-	}
-	576.1.1 = {
-		death = "576.1.1"
-	}
-}
+
 
 83677 = {
 	name = "FurudrA_n"
@@ -13921,19 +14783,7 @@
 	}
 }
 
-166364 = {
-	name = "Baetan"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 166363
-	536.1.1 = {
-		birth = "536.1.1"
-	}
-	586.1.1 = {
-		death = "586.1.1"
-	}
-}
+
 
 166365 = {
 	name = "FA_ilbe"
@@ -13978,33 +14828,8 @@
 	}
 }
 
-166467 = {
-	name = "MA_el-Coba"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7248
-	575.1.1 = {
-		birth = "575.1.1"
-	}
-	615.1.1 = {
-		death = "615.1.1"
-	}
-}
 
-166369 = {
-	name = "Cellach"
-	dynasty_house = house_british_isles_neill
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 166467
-	597.1.1 = {
-		birth = "597.1.1"
-	}
-	658.1.1 = {
-		death = "658.1.1"
-	}
-}
+
 
 166370 = {
 	name = "Conall-CO_el"
@@ -15086,98 +15911,14 @@
 		death = "250.1.1"
 	}
 }
-83573 = {
-	name = "Erc"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 11
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83432 #Eochaid Mugmedón
-	405.1.1 = {
-		birth = "405.1.1"
-	}
-	488.7.1 = {
-		death = "488.7.1"
-	}
-}
 
-83574 = {
-	name = "Fergus" #Mór
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83573 #Erc son of Eochaid Mugmedón
-	457.1.1 = {
-		birth = "457.1.1"
-	}
-	501.1.1 = {
-		death = "501.1.1"
-	}
-}
 
-83575 = {
-	name = "Domangart" #Réti
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83574 #Fergus Mór mac Eirc
-	487.1.1 = {
-		birth = "487.1.1"
-	}
-	507.1.1 = {
-		death = "507.1.1"
-	}
-}
 
-83576 = {
-	name = "GabrA_n"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83575 #Domangart Réti mac Fergusa Mór
-	502.1.1 = {
-		birth = "502.1.1"
-	}
-	560.1.1 = {
-		death = "560.1.1"
-	}
-}
 
-83577 = {
-	name = "A_edA_n" #Áedán mac Gabráin
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83576 #Gabrán mac Domangairt
-	550.1.1 = {
-		birth = "550.1.1"
-	}
-	570.1.1 = {
-		dynasty_house = house_british_isles_gabrain #Gabrán
-	}
-	606.1.1 = {
-		death = "606.1.1"
-	}
-}
+
+
+
+
 
 83578 = {
 	name = "Eochaid" #Eochaid Buide
@@ -15304,98 +16045,15 @@
 		death = "791.1.1"
 	}
 }
-166468 = {
-	name = "Loarn"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83573 #Erc son of Eochaid Mugmedón
-	450.1.1 = {
-		birth = yes
-	}
-	480.1.1 = {
-		dynasty = 554 #Mac Loairn
-	}
-	497.1.1 = {
-		death = yes
-	}
-}
 
-166469 = {
-	name = "Comgall"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 83575 #Domangart Réti mac Fergusa Mór
-	507.1.1 = {
-		birth = yes
-	}
-	540.1.1 = {
-		death = yes
-	}
-}
 
-166470 = {
-	name = "Conall"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 166469 #Comgall
-	544.1.1 = {
-		birth = yes
-	}
-	574.1.1 = {
-		death = yes
-	}
-}
 
-166471 = {
-	name = "Connad" #Cerr
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 166470 #Conall
-	568.1.1 = {
-		birth = yes
-	}
-	629.1.1 = {
-		death = yes
-	}
-}
 
-166472 = {
-	name = "Ferchar"
-	dynasty = 9217
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 166470 #Connad
-	604.1.1 = {
-		birth = yes
-	}
-	649.1.1 = {
-		death = yes
-	}
-}
+
+
+
+
+
 
 166473 = {
 	name = "Conaing"
@@ -16153,641 +16811,16 @@
 		death = yes
 	}
 }
-160176 = {
-	name = "FI_atach_Finn"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	trait = brave
-	trait = education_martial_3
-	2.1.1 = {
-		birth = "2.1.1"
-	}
-	39.1.1 = {
-		death = "39.1.1"
-	}
-}
-160177 = {
-	name = "E_rimO_n"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	father = 160176
-	20.1.1 = {
-		birth = "20.1.1"
-	}
-	70.1.1 = {
-		death = "70.1.1"
-	}
-}
-160178 = {
-	name = "Findchad"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	father = 160177
-	55.1.1 = {
-		birth = "55.1.1"
-	}
-	100.1.1 = {
-		death = "100.1.1"
-	}
-}
-160179 = {
-	name = "Imchad"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	father = 160178
-	90.1.1 = {
-		birth = "90.1.1"
-	}
-	160.1.1 = {
-		death = "160.1.1"
-	}
-}
-160180 = {
-	name = "Fergus_DubdE_tach"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	father = 160179
-	130.1.1 = {
-		birth = "130.1.1"
-	}
-	192.1.1 = {
-		death = "192.1.1"
-	}
-}
-160181 = {
-	name = "O_engus_Finn"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	father = 160180
-	160.1.1 = {
-		birth = "160.1.1"
-	}
-	222.1.1 = {
-		death = "222.1.1"
-	}
-}
-160182 = {
-	name = "Lugaid"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	father = 160181
-	190.1.1 = {
-		birth = "190.1.1"
-	}
-	252.1.1 = {
-		death = "252.1.1"
-	}
-}
-160183 = {
-	name = "Miennach"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	father = 160182
-230.1.1 = {
-		birth = "230.1.1"
-	}
-	290.1.1 = {
-		death = "290.1.1"
-	}
-}
-160184 = {
-	name = "Dubthach"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	father = 160183
-	280.1.1 = {
-		birth = "280.1.1"
-	}
-	360.1.1 = {
-		death = "360.1.1"
-	}
-}
-160185 = {
-	name = "Dallan"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	father = 160184
-320.1.1 = {
-		birth = "320.1.1"
-	}
-	392.1.1 = {
-		death = "392.1.1"
-	}
-}
-160186 = {
-	name = "Forgg"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "pagan"
-	culture = "irish"
-	father = 160185
-	360.1.1 = {
-		birth = "360.1.1"
-	}
-	420.1.1 = {
-		death = "420.1.1"
-	}
-}
-160282 = {
-	name = "Muiredach_Muinderg"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160186
-	400.1.1 = {
-		birth = "400.1.1"
-	}
-	489.1.1 = {
-		death = "489.1.1"
-	}
-}
-160187 = {
-	name = "Cairell_Coscrach"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160282
-	450.1.1 = {
-		birth = "450.1.1"
-	}
-	532.1.1 = {
-		death = "532.1.1"
-	}
-}
-160188 = {
-	name = "DemmA_n"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160187
-	500.1.1 = {
-		birth = "500.1.1"
-	}
-	572.1.1 = {
-		death = "572.1.1"
-	}
-}
-160189 = {
-	name = "Fiachnae_Dubtuinne"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160188
-	545.1.1 = {
-		birth = "545.1.1"
-	}
-	590.1.1 = {
-		add_spouse = 160280
-	}
-	627.1.1 = {
-		death = "627.1.1"
-	}
-}
-160190 = {
-	name = "MA_el-Cobo"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160189
-	mother = 160280
-	590.1.1 = {
-		birth = "590.1.1"
-	}
-	647.1.1 = {
-		death = "647.1.1"
-	}
-}
-160191 = {
-	name = "Blathmac"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160190
-	620.1.1 = {
-		birth = "620.1.1"
-	}
-	670.1.1 = {
-		death = "670.1.1"
-	}
-}
-160192 = {
-	name = "BE_cc_Bairrche"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160191
-	650.1.1 = {
-		birth = "650.1.1"
-	}
-	718.1.1 = {
-		death = "718.1.1"
-	}
-}
-160193 = {
-	name = "A_ed_RO_in"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160192
-	670.1.1 = {
-		birth = "670.1.1"
-	}
-	735.1.1 = {
-		death = "735.1.1"
-	}
-}
-160194 = {
-	name = "Fiachnae"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160193
-	700.1.1 = {
-		birth = "700.1.1"
-	}
-	789.1.1 = {
-		death = "789.1.1"
-	}
-}
-160195 = {
-	name = "Eochaid"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160194
-	740.1.1 = {
-		birth = "740.1.1"
-	}
-	810.1.1 = {
-		death = "810.1.1"
-	}
-}
-160196 = {
-	name = "Muiredach"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160195
-	780.1.1 = {
-		birth = "780.1.1"
-	}
-	839.1.1 = {
-		death = "839.1.1"
-	}
-}
-160197 = {
-	name = "Indrechtach"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160198
-	780.1.1 = {
-		birth = "780.1.1"
-	}
-	839.1.1 = {
-		death = "839.1.1"
-	}
-}
-160198 = {
-	name = "Tommaltach"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160199
-	740.1.1 = {
-		birth = "740.1.1"
-	}
-	789.1.1 = {
-		death = "789.1.1"
-	}
-}
-160199 = {
-	name = "Cathal"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160203
-	710.1.1 = {
-		birth = "710.1.1"
-	}
-	755.1.1 = {
-		death = "755.1.1"
-	}
-}
-160200 = {
-	name = "MA_el-Mocheirge" #Máel-Mocheirge mac Indrechtaig
-	dynasty = 819
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160197
-	830.1.1 = {
-		birth = "830.1.1"
-	}
-	896.1.1 = {
-		death = "896.1.1"
-	}
-}
-160201 = {
-	name = "Cummascach"
-	dynasty = 819
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160200
-	860.1.1 = {
-		birth = "860.1.1"
-	}
-	910.1.1 = {
-		death = "910.1.1"
-	}
-}
-160202 = {
-	name = "Cummascach"
-	dynasty = 819
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 163114
-	858.1.1 = {
-		birth = "858.1.1"
-	}
-	910.1.1 = {
-		death = "910.1.1"
-	}
-}
-160203 = {
-	name = "Muiredach"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160204
-	670.1.1 = {
-		birth = "670.1.1"
-	}
-	740.1.1 = {
-		death = "740.1.1"
-	}
-}
-160204 = {
-	name = "O_engus"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160190
-	630.1.1 = {
-		birth = "630.1.1"
-	}
-	700.1.1 = {
-		death = "700.1.1"
-	}
-}
-160205 = {
-	name = "A_ed"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160195
-	781.1.1 = {
-		birth = "781.1.1"
-	}
-	839.1.1 = {
-		death = "839.1.1"
-	}
-}
-160206 = {
-	name = "AinbI_th"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160205
-	821.1.1 = {
-		birth = "821.1.1"
-	}
-	882.1.1 = {
-		death = "882.1.1"
-	}
-}
-160207 = {
-	name = "EochocA_n"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160205
-	822.1.1 = {
-		birth = "822.1.1"
-	}
-	883.1.1 = {
-		death = "883.1.1"
-	}
-}
-160208 = {
-	name = "AiremO_n"
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160205
-	823.1.1 = {
-		birth = "823.1.1"
-	}
-	886.1.1 = {
-		death = "886.1.1"
-	}
-}
-160209 = {
-	name = "MatudA_n" #mac Muiredaig mac Eochada
-	dynasty = 819
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160196
-	824.1.1 = {
-		birth = "824.1.1"
-	}
-	857.1.1 = {
-		death = "857.1.1"
-	}
-}
-160210 = {
-	name = "Fiachnae" #mac Ainbítha
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160206
-	840.1.1 = {
-		birth = "840.1.1"
-	}
-	886.1.1 = {
-		death = "886.1.1"
-	}
-}
-160211 = {
-	name = "BE_cc" #mac Airemóin
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160208
-	845.1.1 = {
-		birth = "845.1.1"
-	}
-	893.1.1 = {
-		death = "893.1.1"
-	}
-}
-160212 = {
-	name = "Muiredach" #mac Eochocáin
-	dynasty = 819
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 160207
-	844.1.1 = {
-		birth = "844.1.1"
-	}
-	895.1.1 = {
-		death = "895.1.1"
-	}
-}
+
+
+
+
+
+
+
+
+
+
 
 160280 = {
 	name = "Cumne" #
@@ -16974,23 +17007,7 @@
 		death = "634.1.1"
 	}
 }
-160254 = {
-	name = "A_ed_SlA_ine" #mac Diarmato mac Cerbaill
-	dynasty_house = house_british_isles_neill
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "insular_celtic"
-	culture = "irish"
-	father = 7258
-	550.1.1 = {
-		birth = "550.1.1"
-	}
-	604.1.1 = {
-		death = "604.1.1"
-	}
-}
+
 217321 = {
 	name = "Sechnusach"
 	dynasty = 9208
@@ -17337,25 +17354,7 @@
 	}
 }
 
-214510 = {
-	name = "RuaidrI_" #Ruaidrí mac Toirrdelbaig
-	dynasty_house = house_british_isles_conchobair
-	martial = 8
-	diplomacy = 7
-	intrigue = 5
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = generous
-	trait = education_learning_2
-	father = 214520 #Toirrdelbach mac Ruaidrí
-	1123.1.1 = {
-		birth = "1123.1.1"
-	}
-	1198.12.2 = {
-		death = "1198.12.2"
-	}
-}
+
 
 214552 = {
 	name = "Dervorgilla"
@@ -18195,37 +18194,9 @@
 	}
 }
 
-7192 = {
-	name = "Diarmait"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 4
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 7193 #Domnall son of Murchad
-	1124.1.1 = {
-		birth = "1124.1.1"
-	}
-	1169.7.1 = {
-		death = "1169.7.1"
-	}
-}
 
-7281 = {
-	name = "Ruaidri"
-	dynasty = 819
-	religion = "catholic"
-	culture = "irish"
-	father = 7282
-	1122.1.1 = {
-		birth = "1122.1.1"
-	}
-	1201.1.1 = {
-		death = "1201.1.1"
-	}
-}
+
+
 
 83000 = {
 	name = "Donnchadh"
@@ -19031,29 +19002,7 @@
 	}
 }
 
-83083 = {
-	name = "Brian" #Brian Ua Néill high-king of Ireland
-	dynasty_house = house_british_isles_neillnoigiallaich
-	martial = 4
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83081
-	trait = ambitious
-	trait = brave
-	trait = education_diplomacy_3
-	trait = education_intrigue_2
-	trait = education_martial_1
-	trait = arrogant
-	1211.1.1 = {
-		birth = "1211.1.1"
-	}
-	1260.5.26 = {
-		death = "1260.5.26"
-	}
-}
+
 
 83084 = {
 	name = "Ruaidri"
@@ -19604,80 +19553,6 @@
 		death = "1187.7.1"
 	}
 }
-
-83153 = {
-	name = "Domnall" #Domnall Bregach king of Mide
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 6
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83149
-	1113.1.1 = {
-		birth = "1113.1.1"
-	}
-	1173.7.1 = {
-		death = "1173.7.1"
-	}
-}
-
-83154 = {
-	name = "Art" #King of Mide
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 7
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83149 #Máel-Sechlainn son of Domnall
-	1114.7.1 = {
-		birth = "1114.7.1"
-	}
-	1184.7.1 = {
-		death = "1184.7.1"
-	}
-}
-
-83158 = {
-	name = "Magnus"
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 7193 #Domnall son of Murchad
-	1127.1.1 = {
-		birth = "1127.1.1"
-	}
-	1175.7.1 = {
-		death = "1175.7.1"
-	}
-}
-
-83159 = {
-	name = "Derbforgaill"
-	female = yes
-	dynasty_house = house_british_isles_mailsechlainn
-	martial = 5
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 7194 #Murchad son of Domnall
-	1115.1.1 = {
-		birth = "1115.1.1"
-	}
-	1193.7.1 = {
-		death = "1193.7.1"
-	}
-}
-
 83195 = {
 	name = "Domnall"
 	dynasty = 9209
@@ -19696,7 +19571,6 @@
 		death = "1250.7.1"
 	}
 }
-
 83196 = {
 	name = "Muirchertach"
 	dynasty = 9209
@@ -19714,7 +19588,6 @@
 		death = "1282.7.1"
 	}
 }
-
 83197 = {
 	name = "Art"
 	dynasty = 9209
@@ -19732,7 +19605,6 @@
 		death = "1282.7.1"
 	}
 }
-
 83198 = {
 	name = "E_nna"
 	dynasty = 9208
@@ -19751,7 +19623,6 @@
 		death = "1168.7.1"
 	}
 }
-
 83199 = {
 	name = "Conchobar"
 	dynasty = 9208
@@ -19770,7 +19641,6 @@
 		death = "1170.7.1"
 	}
 }
-
 83200 = {
 	name = "Muirchertach"
 	dynasty = 9208
@@ -19792,7 +19662,6 @@
 		death = "1193.7.1"
 	}
 }
-
 83201 = {
 	name = "Muiris"
 	dynasty = 9209
@@ -19810,7 +19679,6 @@
 		death = "1327.7.1"
 	}
 }
-
 83202 = {
 	name = "Domnall"
 	dynasty = 9209
@@ -19828,7 +19696,6 @@
 		death = "1339.7.1"
 	}
 }
-
 83203 = {
 	name = "Domnall"
 	dynasty = 9209
@@ -19846,7 +19713,6 @@
 		death = "1347.7.1"
 	}
 }
-
 83204 = {
 	name = "Domnall"
 	dynasty = 9209
@@ -19864,7 +19730,6 @@
 		death = "1361.7.1"
 	}
 }
-
 83205 = {
 	name = "Diarmait"
 	dynasty = 9209
@@ -19882,7 +19747,6 @@
 		death = "1369.7.1"
 	}
 }
-
 83206 = {
 	name = "Muirchertach"
 	dynasty = 9209
@@ -19900,7 +19764,6 @@
 		death = "1354.1.1"
 	}
 }
-
 83207 = {
 	name = "Art"
 	dynasty = 9209
@@ -19918,7 +19781,6 @@
 		death = "1361.7.1"
 	}
 }
-
 83208 = {
 	name = "Donnchad"
 	dynasty = 9209
@@ -19936,7 +19798,6 @@
 		death = "1375.7.1"
 	}
 }
-
 83209 = {
 	name = "Sadb"
 	female = yes
@@ -19955,7 +19816,6 @@
 		death = "1215.7.1"
 	}
 }
-
 83217 = {
 	name = "Domnall"
 	dynasty_house = house_british_isles_gilla_patraic
@@ -19973,7 +19833,6 @@
 		death = "1176.7.1"
 	}
 }
-
 83226 = {
 	name = "Gilla-PA_traic"
 	dynasty = 9211
@@ -19991,7 +19850,6 @@
 		death = "1175.7.1"
 	}
 }
-
 83227 = {
 	name = "MA_el-Sechnaill"
 	dynasty = 9211
@@ -20009,7 +19867,6 @@
 		death = "1185.7.1"
 	}
 }
-
 83228 = {
 	name = "Domnall"
 	dynasty = 9211
@@ -20027,7 +19884,6 @@
 		death = "1206.7.1"
 	}
 }
-
 83229 = {
 	name = "O_rlaith"
 	female = yes
@@ -20046,7 +19902,6 @@
 		death = "1235.7.1"
 	}
 }
-
 83230 = {
 	name = "Gilla-CrI_st"
 	dynasty = 9212
@@ -20064,7 +19919,6 @@
 		death = "1169.7.1"
 	}
 }
-
 83231 = {
 	name = "DU_ngal"
 	dynasty = 9212
@@ -20082,7 +19936,6 @@
 		death = "1181.7.1"
 	}
 }
-
 83232 = {
 	name = "A_ed"
 	dynasty = 9212
@@ -20100,7 +19953,6 @@
 		death = "1182.3.29"
 	}
 }
-
 83233 = {
 	name = "Aillenn"
 	female = yes
@@ -20119,7 +19971,6 @@
 		death = "1177.7.1"
 	}
 }
-
 83234 = {
 	name = "Inderb"
 	female = yes
@@ -20138,7 +19989,6 @@
 		death = "1189.7.1"
 	}
 }
-
 214555 = {
 	name = "Domnall"
 	dynasty = 9208
@@ -20165,7 +20015,6 @@
 		death = "1175.7.1"
 	}
 }
-
 83258 = {
 	name = "Cathal" #Cathal Odar
 	dynasty_house = house_british_isles_carthaigh
@@ -20183,7 +20032,6 @@
 		death = "1193.7.1"
 	}
 }
-
 83259 = {
 	name = "Tadg"
 	dynasty_house = house_british_isles_carthaigh
@@ -20201,7 +20049,6 @@
 		death = "1172.7.1"
 	}
 }
-
 83260 = {
 	name = "Muiredach"
 	dynasty_house = house_british_isles_carthaigh
@@ -20219,7 +20066,6 @@
 		death = "1181.7.1"
 	}
 }
-
 83261 = {
 	name = "CellachA_n"
 	dynasty_house = house_british_isles_carthaigh
@@ -20237,7 +20083,6 @@
 		death = "1205.7.1"
 	}
 }
-
 83262 = {
 	name = "Muirchertach"
 	dynasty_house = house_british_isles_carthaigh
@@ -20255,7 +20100,6 @@
 		death = "1191.7.1"
 	}
 }
-
 83266 = {
 	name = "Fingen"
 	dynasty_house = house_british_isles_carthaigh
@@ -20273,7 +20117,6 @@
 		death = "1209.7.1"
 	}
 }
-
 83267 = {
 	name = "Cormac" #Cormac Óc Liathánach
 	dynasty_house = house_british_isles_carthaigh
@@ -20291,7 +20134,6 @@
 		death = "1244.7.1"
 	}
 }
-
 83268 = {
 	name = "Domnall" #Domnall Gall
 	dynasty_house = house_british_isles_carthaigh
