@@ -1066,5 +1066,62 @@ restore_kingdom_essex_decision = {
 		base = 100
 	}
 }
+#############################################
+# 	  High Kingdom of Ireland Decisions		#
+#############################################
+strengthen_high_kingship_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	ai_check_interval = 60
+	desc = strengthen_high_kingship_decision_desc
 
+	is_shown = {
+		has_culture_group = culture_group:goidelic_group # Must be a Gael to do this
+		NOT = {# this is a unique decision
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:strengthen_high_kingship_decision
+			}
+		}
+		has_primary_title = title:k_ireland_titular # You must be the High King to do this.
+	}
 
+	is_valid = {
+		is_independent_ruler = yes # You only owe alligance to God!
+		prestige_level >= high_prestige_level # You need to prove your prestige that you are worthy of the title
+		completely_controls_region = custom_roman_hibernia
+		title:k_ireland_titular = { title_held_years >= 30 }
+	}
+
+	effect = {
+		save_scope_as = high_king_ireland
+
+		show_as_tooltip = { strengthen_high_king_decision_effects = yes } 
+		#Events
+		trigger_event = bryten_ireland.0001
+		every_player = {
+			limit = {
+				NOT = { this = scope:high_king_ireland }
+				is_within_diplo_range = { CHARACTER = scope:high_king_ireland }
+			}
+			trigger_event = bryten_ireland.0002
+		}
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:strengthen_high_kingship_decision
+		}
+		set_global_variable = {
+			name = unavailable_unique_decisions
+			value = scope:high_king_ireland
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

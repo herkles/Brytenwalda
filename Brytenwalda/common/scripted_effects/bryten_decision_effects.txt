@@ -125,8 +125,43 @@ restore_kingdom_essex_decision_scripted_effect = {# Restoring The Kingdom of Ess
 	}
 
 }
+#######################################
+#									  #
+#         Irish Effects  	      	  #
+#									  #
+#######################################
+strengthen_high_king_decision_effects = {
+	### Give k_ireland to scope:high_king_ireland.
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+	}
+	title:k_ireland = {
+		change_title_holder = {
+			holder = scope:high_king_ireland
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	### Give the de jure Ireland the list of all the kings.
+	hidden_effect = {
+		title:k_ireland = {
 
-
+			# & title history.
+			copy_title_history = title:k_ireland_titular
+		}
+	}
+	### Destroy k_ireland_titular.
+	destroy_title = title:k_ireland_titular
+	# All claims on k_ireland_titular become claims on k_ireland
+	title:k_ireland_titular = {
+		every_claimant = {
+			custom = strengthen_high_king_decision_effects.all_claimants
+			remove_claim = k_ireland_titular
+			add_unpressed_claim = title:k_ireland
+		}
+	}
+}
 
 
 

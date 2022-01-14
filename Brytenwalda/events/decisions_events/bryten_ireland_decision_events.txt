@@ -1,0 +1,57 @@
+﻿namespace = bryten_ireland
+
+#######################################
+#									  #
+#         High King Decisions 	      #
+#									  #
+#######################################
+
+#######################################
+# Strengthen the High King
+#######################################
+bryten_ireland.0001 = {# I secured Ireland
+	type = character_event
+	title = bryten_ireland.0001.t
+	desc = bryten_ireland.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:high_king_ireland
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		strengthen_high_king_decision_effects = yes
+	}
+	
+	option = {# Long live Ireland
+		name = bryten_ireland.0001.a
+		give_nickname = nick_the_great
+	}
+}
+bryten_ireland.0002 = {# Someone has secured Ireland
+	type = character_event
+	title = bryten_ireland.0002.t
+	desc = {
+		desc = bryten_ireland.0002.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:high_king_ireland }
+				}
+				desc = bryten_ireland.0002.relation_former.desc
+			}
+			desc = bryten_ireland.0002.former.desc
+		}	
+		desc = bryten_ireland.0002.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:high_king_ireland
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
