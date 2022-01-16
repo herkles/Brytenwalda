@@ -1,0 +1,2270 @@
+﻿#######################################
+#									  #
+#      England Special Buildings      #
+#									  #
+#######################################
+holy_site_canterbury_cathedral_01 = {# The original Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	next_building = holy_site_canterbury_cathedral_02
+
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		tax_mult = 0.05
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	province_modifier = {
+		monthly_income = 1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+holy_site_canterbury_cathedral_02 = {# The Gothic Inspired Canterbury Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.05
+		monthly_piety_gain_per_happy_powerful_vassal_add = 0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_winchester_01 = {# Old Minister Church
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	next_building = bryten_building_winchester_02
+
+
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_winchester_02 = {# New Minister Cathedral, built historically in the late 11th century to 12th century, expanded throught the medieval era.
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		domain_tax_different_faith_mult = 0.15
+		levy_reinforcement_rate_same_faith = 0.15
+		monthly_county_control_change_factor = 0.05
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_york_minster_01 = {# The original Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+
+	next_building = bryten_building_york_minister_02
+
+
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_york_minster_02 = {# Rebuilt Cathedral that came about in the 12th century.
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		domain_tax_different_faith_mult = 0.15
+		levy_reinforcement_rate_same_faith = 0.15
+		monthly_county_control_change_factor = 0.05
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_exeter_cathedral_01 = {# Exeter Cathedral built historically in the 12th century, and expanded and renovated throught the middle ages.
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		build_gold_cost = -0.1
+		build_speed = -0.1
+		monthly_piety = 0.3
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_lindisfarne_01 = {# The famous monastary on Lindisfarne.
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.5
+		county_opinion_add = 5
+		holy_order_hire_cost_mult = -0.15
+		knight_effectiveness_mult = 0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.75
+		development_growth = 0.2
+		supply_limit_mult = 1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_durham_cathedral_01 = {# Durham Cathedral - historically built between 1093 and 1133
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.05
+		monthly_piety_gain_per_happy_powerful_vassal_add = 0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_lincoln_cathedral_01 = {# Stow minster the original building during the Anglo-Saxons era.
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+
+	next_building = bryten_building_lincoln_cathedral_02
+
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_lincoln_cathedral_02 = {# The Cathedral of Lincoln built between 1185 and 1311
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_cranes
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		holy_order_hire_cost_mult = -0.15
+		clergy_opinion = 5
+		monthly_county_control_change_factor = 0.05
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_norwich_cathedral_01 = {# Norwhich Cathedral, built in the 12th century
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		men_at_arms_maintenance = -0.025
+		short_reign_duration_mult = -0.1
+		monthly_county_control_change_factor = 0.05
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_st_micheals_mount_01 = {# Saint Micheal's Mount off the coast in Cornwall
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_machicolations
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	county_modifier = {
+		development_growth_factor = 0.3
+		development_growth = 0.3
+		tax_mult = 0.5
+		hostile_raid_time = 0.5
+	}
+	
+	province_modifier = {
+		garrison_size = 1
+		fort_level = 3
+		levy_size = 1
+		defender_holding_advantage = 10
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+#######################################
+#									  #
+#      Scotland Special Buildings     #
+#									  #
+#######################################
+bryten_building_elgin_cathedral_01 = {# The famous Elgin Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_cranes
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		holy_order_hire_cost_mult = -0.15
+		clergy_opinion = 5
+		monthly_county_control_change_factor = 0.05
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_scone_abbey_01 = {# Scone abbey, the royal abbey of the scottish kings.
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_divine_right
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		learning_per_piety_level = 2
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.05
+		monthly_piety_gain_per_happy_powerful_vassal_add = 0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_st_andrews_cathedral_01 = {# Saint Andrews Cathedral in St Andrews built during the 12th and 13th centuries
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_windmills
+				has_innovation = innovation_divine_right
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 1
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+		same_faith_opinion = 5
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_paisley_abbey_01 = {# An important Abbey
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	next_building = bryten_building_paisley_abbey_02
+
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_paisley_abbey_02 = {# An important Abbey
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+	}
+	province_modifier = {
+		monthly_income = 2
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_edinburgh_castle_01 = {# The castle of Edinburgh
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_castle_baileys
+				has_innovation = innovation_knighthood
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	county_modifier = {
+		defender_holding_advantage = 5
+		development_growth_factor = 0.15
+		development_growth = 0.2
+		tax_mult = 0.15
+		county_opinion_add = 5
+		hostile_raid_time = 0.5
+	}
+	
+	province_modifier = {
+		garrison_size = 0.25
+		fort_level = 1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_dunbar_castle_01 = {# An important fortres
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_battlements
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	county_modifier = {
+		defender_holding_advantage = 5
+		development_growth_factor = 0.15
+		development_growth = 0.2
+		tax_mult = 0.15
+		county_opinion_add = 5
+		hostile_raid_time = 0.5
+	}
+	
+	province_modifier = {
+		garrison_size = 0.25
+		fort_level = 1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_iona_abbey_01 = {# The Famous abbey of Iona
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.05
+		learning_per_piety_level = 2
+		clergy_opinion = 5
+		religious_vassal_opinion = 10
+		tyranny_gain_mult = -0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+#######################################
+#									  #
+#      Wales Special Buildings        #
+#									  #
+#######################################
+bryten_building_caernarfon_castle_01 = {# The great castle of Carnarfon Castle
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_machicolations
+				has_innovation = innovation_royal_armory
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_prestige_gain_mult = 0.10
+	}
+	max_garrison = good_building_max_garrison_tier_4
+	province_modifier = {
+		defender_holding_advantage = normal_building_advantage_tier_4
+		fort_level = good_building_fort_level_tier_4
+	}
+	county_modifier = {
+		development_growth = 0.2
+		development_growth_factor = 0.25
+		monthly_county_control_change_add = 1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_st_davids_cathedral_01 = {# St. Davids Cathedral an ancient holy site in Wales
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+
+	next_building = bryten_building_st_davids_cathedral_02
+
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_st_davids_cathedral_02 = {# St. Davids Cathedral - the later updated one
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_windmills
+				has_innovation = innovation_divine_right
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+	}
+	province_modifier = {
+		monthly_income = 2
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_holy_well_01 = {# Holy Well a popular pilgrimage destination in wales, the waters are said to be magical
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+	}
+	province_modifier = {
+		monthly_income = 2
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_ewenny_priory_01 = {# One of the finest fortified religious buildings in Britian
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_knighthood
+				has_innovation = innovation_windmills
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+	}
+	province_modifier = {
+		monthly_income = 2
+		fort_level = 2
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+		hostile_raid_time = 0.5
+		defender_holding_advantage = 5
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+#######################################
+#									  #
+#      Ireland Special Buildings      #
+#									  #
+#######################################
+bryten_building_clonard_abbey_01 = {# An important Irish Monastary
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety_gain_mult = 0.05
+		county_opinion_add = 5
+		monthly_county_control_change_factor = 0.1
+	}
+	province_modifier = {
+		monthly_income = 3
+	}
+	county_modifier = {
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_clonmacnoise_01 = {# Clonmacnoise an important medieval monastary
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.5
+		clergy_opinion = 5
+		tyranny_gain_mult = -0.1
+		monthly_dynasty_prestige_mult = 0.05
+	}
+	province_modifier = {
+		monthly_income = 2
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_kilkenny_cathedral_01 = {# Killkenny Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_cranes
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+	}
+	province_modifier = {
+		monthly_income = 2
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_carrickfergus_castle_01 = {# An important Irish Castle
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_castle_baileys
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_prestige = 0.3
+		prowess_per_piety_level = 2
+	}
+	max_garrison = good_building_max_garrison_tier_3
+	province_modifier = {
+		defender_holding_advantage = normal_building_advantage_tier_3
+		fort_level = good_building_fort_level_tier_3
+	}
+	county_modifier = {
+		development_growth = 0.2
+		development_growth_factor = 0.15
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_st_patrick_cathedral_01 = {# St Patrick's Cathedral in Armagha, the original church
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	next_building = bryten_building_st_patrick_cathedral_02
+
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_st_patrick_cathedral_02 = {# St Patrick's Cathedral in Armagha, the later built church
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_cranes
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+	}
+	province_modifier = {
+		monthly_income = 2
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
