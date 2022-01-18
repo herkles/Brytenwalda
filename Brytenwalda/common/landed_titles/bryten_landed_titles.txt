@@ -165,6 +165,13 @@ e_britannia = {
 			
 			capital = c_northumberland # Bamburgh, Bernicia
 			
+			can_create = {
+				culture = {
+					has_innovation = innovation_burhs
+					has_innovation = innovation_manorialism
+				}
+			}
+
 			cultural_names = {
 				breton = cn_bryneich
 				cornish = cn_bryneich
@@ -184,6 +191,13 @@ e_britannia = {
 			
 			capital = c_norfolk # Norwich
 			
+			can_create = {
+				culture = {
+					has_innovation = innovation_burhs
+					has_innovation = innovation_manorialism
+				}
+			}
+
 			cultural_names = {
 				norse = cn_jarnamoda
 				norwegian = cn_jarnamoda
@@ -196,6 +210,13 @@ e_britannia = {
 			
 			capital = c_hampton # Winchester
 			
+			can_create = {
+				culture = {
+					has_innovation = innovation_burhs
+					has_innovation = innovation_manorialism
+				}
+			}
+
 			cultural_names = {
 				norse = cn_jarnamoda
 				norwegian = cn_jarnamoda
@@ -206,6 +227,13 @@ e_britannia = {
 			color = { 241 100 15 }
 			color2 = { 255 255 255 }
 			
+			can_create = {
+				culture = {
+					has_innovation = innovation_burhs
+					has_innovation = innovation_manorialism
+				}
+			}
+
 			capital = c_kent # Dover
 
 		}
@@ -213,6 +241,13 @@ e_britannia = {
 			color = { 200 30 0 }
 			color2 = { 255 255 255 }
 			
+			can_create = {
+				culture = {
+					has_innovation = innovation_burhs
+					has_innovation = innovation_manorialism
+				}
+			}
+
 			capital = c_staffordshire # Tamworth
 			
 		}
@@ -221,7 +256,20 @@ e_britannia = {
 			color2 = { 255 255 255 }
 			
 			capital = c_lincolnshire # Lindsey
+			can_create = {
+				culture = {
+					has_innovation = innovation_burhs
+					has_innovation = innovation_manorialism
+				}
+			}
 			
+			can_create = {
+				culture = {
+					has_innovation = innovation_burhs
+					has_innovation = innovation_manorialism
+				}
+			}
+
 			cultural_names = {
 				norse = cn_jarnamoda
 				norwegian = cn_jarnamoda
@@ -233,7 +281,22 @@ e_britannia = {
 			color2 = { 255 255 255 }
 			
 			capital = c_middlesex
+			can_create = {
+				culture = {
+					has_innovation = innovation_burhs
+					has_innovation = innovation_manorialism
+				}
+			}
 	
+			can_create = {
+				trigger_if = {
+					limit = {
+						is_ai = yes
+					}
+					has_culture_group = culture_group:brythonic_group
+				}
+			}
+
 			cultural_names = {
 				anglo_saxon = cn_east_seaxe
 				old_saxon = cn_east_seaxe
