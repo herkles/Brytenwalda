@@ -2901,7 +2901,8 @@ c_lothian = {
 	1066.1.1 = { change_development_level = 9 }
 	
 	765.1.1 = {
-		liege = "d_northumberland"
+		liege = "k_northumbria"
+		de_jure_liege = d_brambugh
 		holder = 205250
 	}
 	862.1.1 = {
@@ -2909,6 +2910,7 @@ c_lothian = {
 	}
 	1066.1.1 = {
 		liege = "d_lothian"
+		de_jure_liege = d_lothian
 	}
 	1066.1.1 = {
 		holder = 85018
@@ -2967,7 +2969,8 @@ c_dunbar = {
 	1066.1.1 = { change_development_level = 10 }
 	
 	765.1.1 = {
-		liege = "d_northumberland"
+		liege = "k_northumbria"
+		de_jure_liege = d_brambugh
 		holder = 205249
 	}
 	862.1.1 = {
@@ -2975,6 +2978,7 @@ c_dunbar = {
 	}
 	1066.1.1 = {
 		liege = "d_lothian"
+		de_jure_liege = d_lothian
 	}
 	1066.1.1 = {
 		holder = 85018
@@ -3008,13 +3012,15 @@ c_dunbar = {
 c_teviotdale = {
 	765.1.1 = {
 		holder = 205050
-		liege = d_northumberland
+		liege = "k_northumbria"
+		de_jure_liege = d_brambugh
 	}
 	862.1.1 = {
 		holder = 163103
 	}
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+		de_jure_liege = d_lothian
 	}
 	1066.1.2 = {
 		liege = "d_lothian"

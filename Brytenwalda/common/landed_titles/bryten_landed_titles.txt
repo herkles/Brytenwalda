@@ -177,50 +177,311 @@ e_britannia = {
 				outremer = cn_norroy
 				occitan = cn_norroy
 			}
+		}		
+		d_east_anglia = {# East Anglia
+			color = { 200 90 0 }
+			color2 = { 255 255 255 }
+			
+			capital = c_norfolk # Norwich
+			
+			cultural_names = {
+				norse = cn_jarnamoda
+				norwegian = cn_jarnamoda
+			}
 
-			c_durham = {
-				color = { 255 15 15 }
+		}
+		d_wessex = {# Wessex
+			color = hsv{ 1 0.9 0.9 }
+			color2 = { 255 255 255 }
+			
+			capital = c_hampton # Winchester
+			
+			cultural_names = {
+				norse = cn_jarnamoda
+				norwegian = cn_jarnamoda
+			}
+
+		}
+		d_kent = {# Kent
+			color = { 241 100 15 }
+			color2 = { 255 255 255 }
+			
+			capital = c_kent # Dover
+
+		}
+		d_mercia = {# Mercia
+			color = { 200 30 0 }
+			color2 = { 255 255 255 }
+			
+			capital = c_staffordshire # Tamworth
+			
+		}
+		d_huntingdon = {# Huntingdonshire
+			color = { 255 48 0 }
+			color2 = { 255 255 255 }
+			
+			capital = c_lincolnshire # Lindsey
+			
+			cultural_names = {
+				norse = cn_jarnamoda
+				norwegian = cn_jarnamoda
+			}
+
+		}
+		d_essex = {# Essex
+			color = { 241 15 15 }
+			color2 = { 255 255 255 }
+			
+			capital = c_middlesex
+	
+			cultural_names = {
+				anglo_saxon = cn_east_seaxe
+				old_saxon = cn_east_seaxe
+			}		
+		}	
+		### Default Duchies ###
+		d_bedford = { # Essex
+			color = { 241 15 15 }
+			color2 = { 255 255 255 }
+			
+			capital = c_middlesex
+	
+			cultural_names = {
+				anglo_saxon = cn_east_seaxe
+				old_saxon = cn_east_seaxe
+			}
+
+			c_middlesex = {
+				color = { 230 5 5 }
 				color2 = { 255 255 255 }
-				
+	
 				cultural_names = {
-					anglo_saxon = cn_dunholm
-					old_saxon = cn_dunholm
-					norman = cn_duresm
-					french = cn_duresm
-					outremer = cn_duresm
-					occitan = cn_duresm
+					anglo_saxon = cn_middle_seaxe
+					old_saxon = cn_middle_seaxe
 				}
 				
-				b_durham = {
-					province = 1606
-					
+				b_london = {
+					province = 1527
+
+					color = { 230 5 5 }
+					color2 = { 255 255 255 }
+	
 					cultural_names = {
-						anglo_saxon = cn_dunholm
-						old_saxon = cn_dunholm
-						norman = cn_duresm
-						french = cn_duresm
-						outremer = cn_duresm
-						occitan = cn_duresm
-						norse = cn_ulfreksfjordr
-						norwegian = cn_ulfreksfjordr
+						anglo_saxon = cn_lunden
+						old_saxon = cn_lunden
+						
+						roman = cn_londinium
+						
+						welsh = cn_llundein
+						cornish = cn_llundein
+						breton = cn_llundein
+						cumbrian = cn_llundein
+						pictish = cn_llundein
+						
+						norman = cn_londres
+						scottish = cn_lunnon
+					}
+				}
+				b_southwark = {
+					province = 1526
+	
+					cultural_names = {
+						anglo_saxon = cn_suthweorc
+						old_saxon = cn_suthweorc
 					}
 
-					color = { 255 15 15 }
+					color = { 230 5 5 }
 					color2 = { 255 255 255 }
 				}
-				b_hartlepool = {
-					province = 1607
+				b_woxbrigge = {
+					province = 1528
 
-					color = { 255 15 15 }
+					color = { 230 5 5 }
 					color2 = { 255 255 255 }
 				}
-				b_darlington = {
-					province = 1608
+				b_gore = {
+					province = 1529
 
-					color = { 255 15 15 }
+					color = { 230 5 5 }
+					color2 = { 255 255 255 }
+				}
+				b_brentford = {
+					province = 1530
+
+					color = { 230 5 5 }
 					color2 = { 255 255 255 }
 				}
 			}
+			c_essex = {
+				color = { 220 20 30 }
+				color2 = { 255 255 255 }
+	
+				cultural_names = {
+					anglo_saxon = cn_east_seaxe
+					old_saxon = cn_east_seaxe
+				}
+				
+				b_colchester = {
+					province = 1514
+	
+					cultural_names = {
+						anglo_saxon = cn_colenceaster
+						old_saxon = cn_colenceaster
+					}
+
+					color = { 220 20 30 }
+					color2 = { 255 255 255 }
+				}
+				b_maldon = {
+					province = 1515
+
+					color = { 220 20 30 }
+					color2 = { 255 255 255 }
+				}
+				b_chelmsford = {
+					province = 1516
+
+					color = { 220 20 30 }
+					color2 = { 255 255 255 }
+				}
+				b_dunmow = {
+					province = 1517
+
+					color = { 220 20 30 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_bedford = {
+				color = { 205 20 15 }
+				color2 = { 255 255 255 }
+	
+				cultural_names = {
+					anglo_saxon = cn_bedanford
+					old_saxon = cn_bedanford
+				}
+				
+				b_bedford = {
+					province = 1538
+	
+					cultural_names = {
+						anglo_saxon = cn_bedanford
+						old_saxon = cn_bedanford
+					}
+
+					color = { 205 20 15 }
+					color2 = { 255 255 255 }
+				}
+				b_ampthill = {
+					province = 1539
+
+					color = { 205 20 15 }
+					color2 = { 255 255 255 }
+				}
+				b_luton = {
+					province = 1540
+
+					color = { 205 20 15 }
+					color2 = { 255 255 255 }
+				}
+			}
+
+			c_hertfordshire = {
+				color = { 250 35 35 }
+				color2 = { 255 255 255 }
+	
+				cultural_names = {
+					anglo_saxon = cn_herutford
+					old_saxon = cn_herutford
+				}
+
+				b_berkhamsted = {
+					province = 1531
+
+					color = { 250 35 35 }
+					color2 = { 255 255 255 }
+				}
+				b_saint_albans = {
+					province = 1532
+
+					color = { 250 35 35 }
+					color2 = { 255 255 255 }
+				}
+				b_hertford = {
+					province = 1533
+
+					color = { 250 35 35 }
+					color2 = { 255 255 255 }
+				}
+			}
+
+			c_buckinghamshire = {
+				color = { 200 25 25 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					anglo_saxon = cn_buccingahamm
+					old_saxon = cn_buccingahamm
+				}
+				
+				b_buckingham = {
+					province = 1551
+				
+					cultural_names = {
+						anglo_saxon = cn_buccingahamm
+						old_saxon = cn_buccingahamm
+					}
+
+					color = { 200 25 25 }
+					color2 = { 255 255 255 }
+				}
+				b_aylesbury = {
+					province = 1552
+
+					color = { 200 25 25 }
+					color2 = { 255 255 255 }
+				}
+				b_newport = {
+					province = 1553
+
+					color = { 200 25 25 }
+					color2 = { 255 255 255 }
+				}
+				b_wycombe = {
+					province = 1554
+
+					color = { 200 25 25 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}		
+		d_northumberland = {
+			color = hsv{ 0.98 0.9 0.9 }
+			color2 = { 255 255 255 }
+			
+			cultural_names = {
+				breton = cn_bryneich
+				cornish = cn_bryneich
+				cumbrian = cn_bryneich
+				pictish = cn_bryneich
+				welsh = cn_bryneich
+				
+				norman = cn_norroy
+				french = cn_norroy
+				outremer = cn_norroy
+				occitan = cn_norroy
+			}
+		
+			ai_primary_priority = {
+				if = {
+					limit = {
+						culture = culture:anglo_saxon
+					}
+					add = @better_than_the_alternatives_score
+				}
+			}
+			
+			capital = c_northumberland # Bamburgh, Bernicia
+
 			c_northumberland = {
 				color = { 245 0 0 }
 				color2 = { 255 255 255 }
@@ -283,28 +544,119 @@ e_britannia = {
 					color2 = { 255 255 255 }
 				}
 			}
+			c_durham = {
+				color = { 255 15 15 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					anglo_saxon = cn_dunholm
+					old_saxon = cn_dunholm
+					norman = cn_duresm
+					french = cn_duresm
+					outremer = cn_duresm
+					occitan = cn_duresm
+				}
+				
+				b_durham = {
+					province = 1606
+					
+					cultural_names = {
+						anglo_saxon = cn_dunholm
+						old_saxon = cn_dunholm
+						norman = cn_duresm
+						french = cn_duresm
+						outremer = cn_duresm
+						occitan = cn_duresm
+						norse = cn_ulfreksfjordr
+						norwegian = cn_ulfreksfjordr
+					}
 
+					color = { 255 15 15 }
+					color2 = { 255 255 255 }
+				}
+				b_hartlepool = {
+					province = 1607
+
+					color = { 255 15 15 }
+					color2 = { 255 255 255 }
+				}
+				b_darlington = {
+					province = 1608
+
+					color = { 255 15 15 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_cumberland = {
+				color = { 240 25 25 }
+				color2 = { 255 255 255 }
+					
+				cultural_names = {
+					anglo_saxon = cn_cumbraland
+					old_saxon = cn_cumbraland
+				}
+				
+				ai_primary_priority = {
+					if = {
+						limit = {
+							culture = culture:cumbrian
+						}
+						add = @correct_culture_primary_score
+					}
+				}
+	
+				b_carlisle = {
+					province = 1635
+					
+					cultural_names = {
+						cumbrian = cn_caer_luel
+						welsh = cn_caer_luel
+						pictish = cn_caer_luel
+						breton = cn_caer_luel
+						cornish = cn_caer_luel
+						gaelic = cn_cathair_luail
+						irish = cn_cathair_luail
+						anglo_saxon = cn_carleol
+						old_saxon = cn_carleol
+					}
+
+					color = { 240 25 25 }
+					color2 = { 255 255 255 }
+				}
+				b_whitehaven = {
+					province = 1636
+
+					color = { 240 25 25 }
+					color2 = { 255 255 255 }
+				}
+				b_furness = {
+					province = 1642
+
+					color = { 240 25 25 }
+					color2 = { 255 255 255 }
+				}
+				b_wigton = {
+					province = 8780
+
+					color = { 240 25 25 }
+					color2 = { 255 255 255 }
+				}
+			}
 		}		
-		d_northumbria = {# Northumbria
-			color = { 255 90 15 }
+		d_lancaster = {
+			color = { 255 48 0 }
 			color2 = { 255 255 255 }
 			
-			capital = c_north_riding # York
+			capital = c_lancashire # Lancaster
 			
 			cultural_names = {
-				norse = cn_jorvik
-				norwegian = cn_jorvik
-				swedish = cn_jorvik
-				danish = cn_jorvik
-				
-				anglo_saxon = cn_northumbria
-				
-				breton = cn_deifr
-				cornish = cn_deifr
-				cumbrian = cn_deifr
-				welsh = cn_deifr
-				pictish = cn_deifr
-			}
+				breton = cn_rheged
+				cornish = cn_rheged
+				cumbrian = cn_rheged
+				welsh = cn_rheged
+				pictish = cn_rheged
+			}			
+			
 			c_lancashire = {
 				color = { 250 55 5 }
 				color2 = { 255 255 255 }
@@ -345,6 +697,97 @@ e_britannia = {
 					color2 = { 255 255 255 }
 				}
 			}
+			c_cheshire = {
+				color = { 255 127 15 }
+				color2 = { 255 255 255 }
+			
+				b_chester = {
+					province = 1643
+
+					color = { 255 152 50 }
+					color2 = { 255 255 255 }
+				}
+				b_northwich = {
+					province = 1644
+
+					color = { 255 127 15 }
+					color2 = { 255 255 255 }
+				}
+				b_macclesfield = {
+					province = 1645
+
+					color = { 255 127 15 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_derby = {
+				color = { 255 50 20 }
+				color2 = { 255 255 255 }
+					
+				cultural_names = {
+					norwegian = cn_djuraby
+					danish = cn_djuraby
+					swedish = cn_djuraby
+					norse = cn_djuraby
+				}
+				
+				b_derby = {
+					province = 1621
+
+					color = { 255 89 89 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						norwegian = cn_djuraby
+						danish = cn_djuraby
+						swedish = cn_djuraby
+						norse = cn_djuraby
+					}
+				}
+				b_chesterfield = {
+					province = 1622
+
+					color = { 255 50 20 }
+					color2 = { 255 255 255 }
+				}
+				b_castleton = {
+					province = 1623
+
+					color = { 255 50 20 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}		
+		d_york = {
+			color = { 255 90 15 }
+			color2 = { 255 255 255 }
+			
+			capital = c_north_riding # York
+			
+			cultural_names = {
+				norse = cn_jorvik
+				norwegian = cn_jorvik
+				swedish = cn_jorvik
+				danish = cn_jorvik
+				
+				anglo_saxon = cn_northumbria
+				
+				breton = cn_deifr
+				cornish = cn_deifr
+				cumbrian = cn_deifr
+				welsh = cn_deifr
+				pictish = cn_deifr
+			}
+			
+			ai_primary_priority = {
+				if = {
+					limit = {
+						culture = culture:norse
+					}
+					add = @better_than_the_alternatives_score
+				}
+			}
+			
 			c_north_riding = {
 				color = { 255 95 20 }
 				color2 = { 255 255 255 }
@@ -486,8 +929,47 @@ e_britannia = {
 					color2 = { 255 255 255 }
 				}
 			}
-		}
-		d_east_anglia = {# East Anglia
+			c_lincolnshire = {
+				color = { 232 195 74 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					anglo_saxon = cn_lindsey
+				}
+				
+				b_lincoln = {
+					province = 1583
+
+					color = { 232 195 74 }
+					color2 = { 255 255 255 }
+				}
+				b_stamford = {
+					province = 1584
+
+					color = { 232 195 74 }
+					color2 = { 255 255 255 }
+				}
+				b_boston = {
+					province = 1585
+
+					color = { 232 195 74 }
+					color2 = { 255 255 255 }
+				}
+				b_bolingsbroke = {
+					province = 1586
+
+					color = { 232 195 74 }
+					color2 = { 255 255 255 }
+				}
+				b_grimsby = {
+					province = 1587
+
+					color = { 232 195 74 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}		
+		d_norfolk = { #East Anglia
 			color = { 200 90 0 }
 			color2 = { 255 255 255 }
 			
@@ -566,6 +1048,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 				}
 			}
+
 			c_cambridgeshire = {
 				color = { 205 145 5 }
 				color2 = { 255 255 255 }
@@ -600,37 +1083,247 @@ e_britannia = {
 					}
 				}
 			}
-		}
-		d_wessex = {# Wessex
-			color = hsv{ 1 0.9 0.9 }
+		}		
+		d_hereford = { # Mercia
+			color = { 200 30 0 }
 			color2 = { 255 255 255 }
 			
-			capital = c_hampton # Winchester
+			capital = c_warwickshire # Warwick
 			
-			cultural_names = {
-				norse = cn_jarnamoda
-				norwegian = cn_jarnamoda
+			ai_primary_priority = {
+				if = {
+					limit = {
+						culture = culture:anglo_saxon
+					}
+					add = @better_than_the_alternatives_score
+				}
 			}
-			c_berkshire = {
-				color = { 255 100 25 }
+			
+			c_warwickshire = {
+				color = { 190 30 30 }
+				color2 = { 255 255 255 }
+				
+				b_warwick = {
+					province = 1603
+
+					color = { 190 30 30 }
+					color2 = { 255 255 255 }
+				}
+				b_coventry = {
+					province = 1604
+
+					color = { 190 30 30 }
+					color2 = { 255 255 255 }
+				}
+				b_birmingham = {
+					province = 1605
+
+					color = { 190 30 30 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_leicestershire = {
+				color = { 130 5 25 }
+				color2 = { 255 255 255 }
+			
+				b_leicester = {
+					province = 1615
+
+					color = { 130 5 25 }
+					color2 = { 255 255 255 }
+				}
+				b_melton = {
+					province = 1616
+
+					color = { 130 5 25 }
+					color2 = { 255 255 255 }
+				}
+				b_bosworth = {
+					province = 1617
+
+					color = { 130 5 25 }
+					color2 = { 255 255 255 }
+				}
+				b_rutland = {
+					province = 1613
+	
+					color = { 130 5 25 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_nottinghamshire = {
+				color = { 175 0 30 }
 				color2 = { 255 255 255 }
 
-				b_reading = {
-					province = 1555
+				b_nottingham = {
+					province = 1618
 
-					color = { 255 100 25 }
+					color = { 175 0 30 }
 					color2 = { 255 255 255 }
 				}
-				b_newbury = {
-					province = 1556
+				b_newark = {
+					province = 1619
 
-					color = { 255 100 25 }
+					color = { 175 0 30 }
 					color2 = { 255 255 255 }
 				}
-				b_abingdon = {
-					province = 1557
+				b_retford = {
+					province = 1620
 
-					color = { 255 100 25 }
+					color = { 175 0 30 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_staffordshire = {
+				color = { 210 90 65 }
+				color2 = { 255 255 255 }
+
+				b_stafford = {
+					province = 1627
+
+					color = { 210 90 65 }
+					color2 = { 255 255 255 }
+				}
+				b_wolverhampton = {
+					province = 1628
+
+					color = { 210 90 65 }
+					color2 = { 255 255 255 }
+				}
+				b_stoke_on_trent = {
+					province = 1629
+
+					color = { 210 90 65 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_worcestershire = {
+				color = { 160 20 5 }
+				color2 = { 255 255 255 }
+				
+				b_worcester = {
+					province = 1624
+
+					color = { 160 20 5 }
+					color2 = { 255 255 255 }
+				}
+				b_evesham = {
+					province = 1625
+
+					color = { 160 20 5 }
+					color2 = { 255 255 255 }
+				}
+				b_kidderminster = {
+					province = 1626
+
+					color = { 160 20 5 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_huntingdonshire = {
+				color = { 175 40 55 }
+				color2 = { 255 255 255 }
+
+				b_hurstingstone = {
+					province = 1541
+
+					color = { 175 40 55 }
+					color2 = { 255 255 255 }	
+				}
+				b_norman_cross = {
+					province = 1542
+
+					color = { 175 40 55 }
+					color2 = { 255 255 255 }
+				}
+				b_leightonstone = {
+					province = 1543
+
+					color = { 175 40 55 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_northamptonshire = {
+				color = { 125 5 5 }
+				color2 = { 255 255 255 }
+				
+				b_northampton = {
+					province = 1600
+
+					color = { 125 5 5 }
+					color2 = { 255 255 255 }
+				}
+				b_peterborough = {
+					province = 1601
+
+					color = { 125 5 5 }
+					color2 = { 255 255 255 }
+				}
+				b_kettering = {
+					province = 1602
+
+					color = { 125 5 5 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_shropshire = {
+				color = { 241 70 70 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					welsh = cn_amwythig
+				}
+
+				b_shrewsbury = {
+					province = 1646
+
+					color = { 241 55 25 }
+					color2 = { 255 255 255 }
+				}
+				b_ludlow = {
+					province = 1647
+
+					color = { 241 55 25 }
+					color2 = { 255 255 255 }
+				}
+				b_bishops_castle = { #Clun
+					province = 1648
+
+					color = { 241 55 25 }
+					color2 = { 255 255 255 }
+					
+					cultural_names = {
+						welsh = cn_clun
+					}
+				}
+			}
+		}		
+		d_gloucester = { # Hwicce
+			color = { 241 79 15 }
+			color2 = { 255 255 255 }
+			
+			capital = c_gloucestershire # Gloucester
+			
+			c_gloucestershire = {
+				color = { 245 85 20 }
+				color2 = { 255 255 255 }
+			
+				b_gloucester = {
+					province = 1580
+
+					color = { 245 85 20 }
+					color2 = { 255 255 255 }
+				}
+				b_bristol = {
+					province = 1581
+
+					color = { 245 85 20 }
+					color2 = { 255 255 255 }
+				}
+				b_winchcombe = {
+					province = 1582
+
+					color = { 245 85 20 }
 					color2 = { 255 255 255 }
 				}
 			}
@@ -662,7 +1355,168 @@ e_britannia = {
 					color = { 250 55 15 }
 					color2 = { 255 255 255 }
 				}
-			}			
+			}
+			c_oxfordshire = {
+				color = { 255 115 15 }
+				color2 = { 255 255 255 }
+				
+				b_oxford = {
+					province = 1558
+
+					color = { 255 115 15 }
+					color2 = { 255 255 255 }
+				}
+				b_banbury = {
+					province = 1559
+
+					color = { 255 115 15 }
+					color2 = { 255 255 255 }
+				}
+				b_witney = {
+					province = 1560
+
+					color = { 255 115 15 }
+					color2 = { 255 255 255 }	
+				}
+			}
+			c_berkshire = {
+				color = { 255 100 25 }
+				color2 = { 255 255 255 }
+
+				b_reading = {
+					province = 1555
+
+					color = { 255 100 25 }
+					color2 = { 255 255 255 }
+				}
+				b_newbury = {
+					province = 1556
+
+					color = { 255 100 25 }
+					color2 = { 255 255 255 }
+				}
+				b_abingdon = {
+					province = 1557
+
+					color = { 255 100 25 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}		
+		d_canterbury = { # Kent
+			color = { 241 100 15 }
+			color2 = { 255 255 255 }
+			
+			capital = c_kent # Dover
+			
+			c_kent = {
+				color = { 245 105 20 }
+				color2 = { 255 255 255 }
+				
+				b_dover = {
+					province = 1502
+
+					color = { 245 105 20 }
+					color2 = { 255 255 255 }
+				}
+				b_canterbury = {
+					province = 1503
+
+					color = { 245 105 20 }
+					color2 = { 255 255 255 }
+				}
+				b_rochester = {
+					province = 1504
+
+					color = { 245 105 20 }
+					color2 = { 255 255 255 }
+				}
+				b_tonbridge = {
+					province = 1505
+
+					color = { 245 105 20 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_surrey = {
+				color = { 225 80 20 }
+				color2 = { 255 255 255 }
+				
+				b_chertsey = {
+					province = 1510
+
+					color = { 225 80 20 }
+					color2 = { 255 255 255 }	
+				}
+				b_guildford = {
+					province = 1511
+
+					color = { 225 80 20 }
+					color2 = { 255 255 255 }
+				}
+				b_kingston = {
+					province = 1512
+
+					color = { 225 80 20 }
+					color2 = { 255 255 255 }
+				}
+				b_tandbridge = {
+					province = 1513
+
+					color = { 225 80 20 }
+					color2 = { 255 255 255 }
+				}
+			}
+			c_sussex = {
+				color = { 225 105 10 }
+				color2 = { 255 255 255 }
+				
+				cultural_names = {
+					anglo_saxon = cn_south_seaxe
+					old_saxon = cn_south_seaxe
+				}
+				
+				b_lewes = {
+					province = 1506
+					
+					color = { 225 105 10 }
+					color2 = { 255 255 255 }
+				}
+				b_chichester = {
+					province = 1507
+
+					color = { 225 105 10 }
+					color2 = { 255 255 255 }
+				}
+				b_arun = {
+					province = 1508
+
+					color = { 225 105 10 }
+					color2 = { 255 255 255 }
+				}
+				b_hastings = {
+					province = 1509
+
+					color = { 225 105 10 }
+					color2 = { 255 255 255 }
+				}
+			}
+		}
+		d_somerset = {
+			color = hsv{ 1 0.9 0.9 }
+			color2 = { 255 255 255 }
+			
+			capital = c_hampton # Winchester
+			
+			ai_primary_priority = {
+				if = {
+					limit = {
+						culture = culture:anglo_saxon
+					}
+					add = @better_than_the_alternatives_score
+				}
+			}
+			
 			c_hampton = {
 				color = { 230 15 55 }
 				color2 = { 255 255 255 }
@@ -767,680 +1621,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 				}
 			}
-		}
-		d_kent = {# Kent
-			color = { 241 100 15 }
-			color2 = { 255 255 255 }
-			
-			capital = c_kent # Dover
-			
-			c_kent = {
-				color = { 245 105 20 }
-				color2 = { 255 255 255 }
-				
-				b_dover = {
-					province = 1502
-
-					color = { 245 105 20 }
-					color2 = { 255 255 255 }
-				}
-				b_canterbury = {
-					province = 1503
-
-					color = { 245 105 20 }
-					color2 = { 255 255 255 }
-				}
-				b_rochester = {
-					province = 1504
-
-					color = { 245 105 20 }
-					color2 = { 255 255 255 }
-				}
-				b_tonbridge = {
-					province = 1505
-
-					color = { 245 105 20 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_surrey = {
-				color = { 225 80 20 }
-				color2 = { 255 255 255 }
-				
-				b_chertsey = {
-					province = 1510
-
-					color = { 225 80 20 }
-					color2 = { 255 255 255 }	
-				}
-				b_guildford = {
-					province = 1511
-
-					color = { 225 80 20 }
-					color2 = { 255 255 255 }
-				}
-				b_kingston = {
-					province = 1512
-
-					color = { 225 80 20 }
-					color2 = { 255 255 255 }
-				}
-				b_tandbridge = {
-					province = 1513
-
-					color = { 225 80 20 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_sussex = {
-				color = { 225 105 10 }
-				color2 = { 255 255 255 }
-				
-				cultural_names = {
-					anglo_saxon = cn_south_seaxe
-					old_saxon = cn_south_seaxe
-				}
-				
-				b_lewes = {
-					province = 1506
-					
-					color = { 225 105 10 }
-					color2 = { 255 255 255 }
-				}
-				b_chichester = {
-					province = 1507
-
-					color = { 225 105 10 }
-					color2 = { 255 255 255 }
-				}
-				b_arun = {
-					province = 1508
-
-					color = { 225 105 10 }
-					color2 = { 255 255 255 }
-				}
-				b_hastings = {
-					province = 1509
-
-					color = { 225 105 10 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-		d_mercia = {# Mercia
-			color = { 200 30 0 }
-			color2 = { 255 255 255 }
-			
-			capital = c_staffordshire # Tamworth
-
-			c_cheshire = {
-				color = { 255 127 15 }
-				color2 = { 255 255 255 }
-			
-				b_chester = {
-					province = 1643
-
-					color = { 255 152 50 }
-					color2 = { 255 255 255 }
-				}
-				b_northwich = {
-					province = 1644
-
-					color = { 255 127 15 }
-					color2 = { 255 255 255 }
-				}
-				b_macclesfield = {
-					province = 1645
-
-					color = { 255 127 15 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_derby = {
-				color = { 255 50 20 }
-				color2 = { 255 255 255 }
-					
-				cultural_names = {
-					norwegian = cn_djuraby
-					danish = cn_djuraby
-					swedish = cn_djuraby
-					norse = cn_djuraby
-				}
-				
-				b_derby = {
-					province = 1621
-
-					color = { 255 89 89 }
-					color2 = { 255 255 255 }
-					
-					cultural_names = {
-						norwegian = cn_djuraby
-						danish = cn_djuraby
-						swedish = cn_djuraby
-						norse = cn_djuraby
-					}
-				}
-				b_chesterfield = {
-					province = 1622
-
-					color = { 255 50 20 }
-					color2 = { 255 255 255 }
-				}
-				b_castleton = {
-					province = 1623
-
-					color = { 255 50 20 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_gloucestershire = {
-				color = { 245 85 20 }
-				color2 = { 255 255 255 }
-			
-				b_gloucester = {
-					province = 1580
-
-					color = { 245 85 20 }
-					color2 = { 255 255 255 }
-				}
-				b_bristol = {
-					province = 1581
-
-					color = { 245 85 20 }
-					color2 = { 255 255 255 }
-				}
-				b_winchcombe = {
-					province = 1582
-
-					color = { 245 85 20 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_oxfordshire = {
-				color = { 255 115 15 }
-				color2 = { 255 255 255 }
-				
-				b_oxford = {
-					province = 1558
-
-					color = { 255 115 15 }
-					color2 = { 255 255 255 }
-				}
-				b_banbury = {
-					province = 1559
-
-					color = { 255 115 15 }
-					color2 = { 255 255 255 }
-				}
-				b_witney = {
-					province = 1560
-
-					color = { 255 115 15 }
-					color2 = { 255 255 255 }	
-				}
-			}			
-			c_worcestershire = {
-				color = { 160 20 5 }
-				color2 = { 255 255 255 }
-				
-				b_worcester = {
-					province = 1624
-
-					color = { 160 20 5 }
-					color2 = { 255 255 255 }
-				}
-				b_evesham = {
-					province = 1625
-
-					color = { 160 20 5 }
-					color2 = { 255 255 255 }
-				}
-				b_kidderminster = {
-					province = 1626
-
-					color = { 160 20 5 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_warwickshire = {
-				color = { 190 30 30 }
-				color2 = { 255 255 255 }
-				
-				b_warwick = {
-					province = 1603
-
-					color = { 190 30 30 }
-					color2 = { 255 255 255 }
-				}
-				b_coventry = {
-					province = 1604
-
-					color = { 190 30 30 }
-					color2 = { 255 255 255 }
-				}
-				b_birmingham = {
-					province = 1605
-
-					color = { 190 30 30 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_staffordshire = {
-				color = { 210 90 65 }
-				color2 = { 255 255 255 }
-
-				b_stafford = {
-					province = 1627
-
-					color = { 210 90 65 }
-					color2 = { 255 255 255 }
-				}
-				b_wolverhampton = {
-					province = 1628
-
-					color = { 210 90 65 }
-					color2 = { 255 255 255 }
-				}
-				b_stoke_on_trent = {
-					province = 1629
-
-					color = { 210 90 65 }
-					color2 = { 255 255 255 }
-				}
-			}			
-			c_shropshire = {
-				color = { 241 70 70 }
-				color2 = { 255 255 255 }
-				
-				cultural_names = {
-					welsh = cn_amwythig
-				}
-
-				b_shrewsbury = {
-					province = 1646
-
-					color = { 241 55 25 }
-					color2 = { 255 255 255 }
-				}
-				b_ludlow = {
-					province = 1647
-
-					color = { 241 55 25 }
-					color2 = { 255 255 255 }
-				}
-				b_bishops_castle = { #Clun
-					province = 1648
-
-					color = { 241 55 25 }
-					color2 = { 255 255 255 }
-					
-					cultural_names = {
-						welsh = cn_clun
-					}
-				}
-			}
-		}
-		d_huntingdon = {# Huntingdonshire
-			color = { 255 48 0 }
-			color2 = { 255 255 255 }
-			
-			capital = c_lincolnshire # Lindsey
-			
-			cultural_names = {
-				norse = cn_jarnamoda
-				norwegian = cn_jarnamoda
-			}
-
-			c_buckinghamshire = {
-				color = { 200 25 25 }
-				color2 = { 255 255 255 }
-				
-				cultural_names = {
-					anglo_saxon = cn_buccingahamm
-					old_saxon = cn_buccingahamm
-				}
-				c_huntingdonshire = {
-					color = { 175 40 55 }
-					color2 = { 255 255 255 }
-	
-					b_hurstingstone = {
-						province = 1541
-	
-						color = { 175 40 55 }
-						color2 = { 255 255 255 }	
-					}
-					b_norman_cross = {
-						province = 1542
-	
-						color = { 175 40 55 }
-						color2 = { 255 255 255 }
-					}
-					b_leightonstone = {
-						province = 1543
-	
-						color = { 175 40 55 }
-						color2 = { 255 255 255 }
-					}
-				}				
-				b_buckingham = {
-					province = 1551
-				
-					cultural_names = {
-						anglo_saxon = cn_buccingahamm
-						old_saxon = cn_buccingahamm
-					}
-
-					color = { 200 25 25 }
-					color2 = { 255 255 255 }
-				}
-				b_aylesbury = {
-					province = 1552
-
-					color = { 200 25 25 }
-					color2 = { 255 255 255 }
-				}
-				b_newport = {
-					province = 1553
-
-					color = { 200 25 25 }
-					color2 = { 255 255 255 }
-				}
-				b_wycombe = {
-					province = 1554
-
-					color = { 200 25 25 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_bedford = {
-				color = { 205 20 15 }
-				color2 = { 255 255 255 }
-	
-				cultural_names = {
-					anglo_saxon = cn_bedanford
-					old_saxon = cn_bedanford
-				}
-				
-				b_bedford = {
-					province = 1538
-	
-					cultural_names = {
-						anglo_saxon = cn_bedanford
-						old_saxon = cn_bedanford
-					}
-
-					color = { 205 20 15 }
-					color2 = { 255 255 255 }
-				}
-				b_ampthill = {
-					province = 1539
-
-					color = { 205 20 15 }
-					color2 = { 255 255 255 }
-				}
-				b_luton = {
-					province = 1540
-
-					color = { 205 20 15 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_northamptonshire = {
-				color = { 125 5 5 }
-				color2 = { 255 255 255 }
-				
-				b_northampton = {
-					province = 1600
-
-					color = { 125 5 5 }
-					color2 = { 255 255 255 }
-				}
-				b_peterborough = {
-					province = 1601
-
-					color = { 125 5 5 }
-					color2 = { 255 255 255 }
-				}
-				b_kettering = {
-					province = 1602
-
-					color = { 125 5 5 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_leicestershire = {
-				color = { 130 5 25 }
-				color2 = { 255 255 255 }
-			
-				b_leicester = {
-					province = 1615
-
-					color = { 130 5 25 }
-					color2 = { 255 255 255 }
-				}
-				b_melton = {
-					province = 1616
-
-					color = { 130 5 25 }
-					color2 = { 255 255 255 }
-				}
-				b_bosworth = {
-					province = 1617
-
-					color = { 130 5 25 }
-					color2 = { 255 255 255 }
-				}
-				b_rutland = {
-					province = 1613
-	
-					color = { 130 5 25 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_nottinghamshire = {
-				color = { 175 0 30 }
-				color2 = { 255 255 255 }
-
-				b_nottingham = {
-					province = 1618
-
-					color = { 175 0 30 }
-					color2 = { 255 255 255 }
-				}
-				b_newark = {
-					province = 1619
-
-					color = { 175 0 30 }
-					color2 = { 255 255 255 }
-				}
-				b_retford = {
-					province = 1620
-
-					color = { 175 0 30 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_lincolnshire = {
-				color = { 232 195 74 }
-				color2 = { 255 255 255 }
-				
-				cultural_names = {
-					anglo_saxon = cn_lindsey
-				}
-				
-				b_lincoln = {
-					province = 1583
-
-					color = { 232 195 74 }
-					color2 = { 255 255 255 }
-				}
-				b_stamford = {
-					province = 1584
-
-					color = { 232 195 74 }
-					color2 = { 255 255 255 }
-				}
-				b_boston = {
-					province = 1585
-
-					color = { 232 195 74 }
-					color2 = { 255 255 255 }
-				}
-				b_bolingsbroke = {
-					province = 1586
-
-					color = { 232 195 74 }
-					color2 = { 255 255 255 }
-				}
-				b_grimsby = {
-					province = 1587
-
-					color = { 232 195 74 }
-					color2 = { 255 255 255 }
-				}
-			}
-		}
-		d_essex = {# Essex
-			color = { 241 15 15 }
-			color2 = { 255 255 255 }
-			
-			capital = c_middlesex
-	
-			cultural_names = {
-				anglo_saxon = cn_east_seaxe
-				old_saxon = cn_east_seaxe
-			}
-
-			c_middlesex = {
-				color = { 230 5 5 }
-				color2 = { 255 255 255 }
-	
-				cultural_names = {
-					anglo_saxon = cn_middle_seaxe
-					old_saxon = cn_middle_seaxe
-				}
-				
-				b_london = {
-					province = 1527
-
-					color = { 230 5 5 }
-					color2 = { 255 255 255 }
-	
-					cultural_names = {
-						anglo_saxon = cn_lunden
-						old_saxon = cn_lunden
-						
-						roman = cn_londinium
-						
-						welsh = cn_llundein
-						cornish = cn_llundein
-						breton = cn_llundein
-						cumbrian = cn_llundein
-						pictish = cn_llundein
-						
-						norman = cn_londres
-						scottish = cn_lunnon
-					}
-				}
-				b_southwark = {
-					province = 1526
-	
-					cultural_names = {
-						anglo_saxon = cn_suthweorc
-						old_saxon = cn_suthweorc
-					}
-
-					color = { 230 5 5 }
-					color2 = { 255 255 255 }
-				}
-				b_woxbrigge = {
-					province = 1528
-
-					color = { 230 5 5 }
-					color2 = { 255 255 255 }
-				}
-				b_gore = {
-					province = 1529
-
-					color = { 230 5 5 }
-					color2 = { 255 255 255 }
-				}
-				b_brentford = {
-					province = 1530
-
-					color = { 230 5 5 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_essex = {
-				color = { 220 20 30 }
-				color2 = { 255 255 255 }
-	
-				cultural_names = {
-					anglo_saxon = cn_east_seaxe
-					old_saxon = cn_east_seaxe
-				}
-				
-				b_colchester = {
-					province = 1514
-	
-					cultural_names = {
-						anglo_saxon = cn_colenceaster
-						old_saxon = cn_colenceaster
-					}
-
-					color = { 220 20 30 }
-					color2 = { 255 255 255 }
-				}
-				b_maldon = {
-					province = 1515
-
-					color = { 220 20 30 }
-					color2 = { 255 255 255 }
-				}
-				b_chelmsford = {
-					province = 1516
-
-					color = { 220 20 30 }
-					color2 = { 255 255 255 }
-				}
-				b_dunmow = {
-					province = 1517
-
-					color = { 220 20 30 }
-					color2 = { 255 255 255 }
-				}
-			}
-			c_hertfordshire = {
-				color = { 250 35 35 }
-				color2 = { 255 255 255 }
-	
-				cultural_names = {
-					anglo_saxon = cn_herutford
-					old_saxon = cn_herutford
-				}
-
-				b_berkhamsted = {
-					province = 1531
-
-					color = { 250 35 35 }
-					color2 = { 255 255 255 }
-				}
-				b_saint_albans = {
-					province = 1532
-
-					color = { 250 35 35 }
-					color2 = { 255 255 255 }
-				}
-				b_hertford = {
-					province = 1533
-
-					color = { 250 35 35 }
-					color2 = { 255 255 255 }
-				}
-			}			
-		}
-		# Cornwall 
+		}		
 		d_cornwall = {
 			color = { 181 60 10 }
 			color2 = { 255 255 255 }
@@ -1527,7 +1708,11 @@ e_britannia = {
 					color2 = { 255 255 255 }
 				}
 			}
-		}		
+		}
+
+
+
+
 	}	
 	#######################################
 	# Brythonic Kingdoms
