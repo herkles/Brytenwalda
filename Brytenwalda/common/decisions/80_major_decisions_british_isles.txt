@@ -203,6 +203,7 @@ england_request_laudabiliter_decision = {# Request Laudabiliter
 		OR = {
 			has_title = title:k_england
 			has_title = title:k_scotland
+			has_title = k_strathclyde
 			has_title = title:k_wales
 			has_title = title:k_brittany
 			has_title = title:k_france
@@ -1125,3 +1126,89 @@ strengthen_high_kingship_decision = {
 		base = 100
 	}
 }
+#############################################
+#   Integrate the Kingdom of Strathclyde	#
+#############################################
+
+#############################################
+# 	    Create the Duchy of Lothian			#
+#############################################
+create_duchy_of_lothian = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	ai_check_interval = 60
+	desc = create_duchy_of_lothian_desc
+
+	is_shown = {
+		NOT = {# this is a unique decision
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_duchy_of_lothian_decision
+			}
+		}
+		OR = {# should either be Scotland or Strathclyde that creates it
+			has_primary_title = title:k_scotland
+			has_primary_title = title:k_strathclyde
+		}
+		title:d_lothian = { is_title_created = no } #  Lothian can't already exist  
+		NOT = {# Anglo-Saxon's don't get this decision due to Brambugh being an anglo-saxon title
+			has_culture = culture:anglo_saxon
+		}
+	}
+
+	is_valid = {
+		custom_description = {# Must control Lothian
+			text = create_lothian_land_requirement		
+			trigger_if = {
+				AND = {# Must control Lothian
+					completely_controls = title:c_lothian
+					completely_controls = title:c_dunbar
+					completely_controls = title:c_teviotdale
+					completely_controls = title:c_linlithgowshire
+					completely_controls = title:c_lanarkshire
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		save_scope_as = lothian_duchy_creator
+
+		show_as_tooltip = { create_lothian_duchy_effects = yes } 
+		create_lothian_duchy_effects = yes
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:create_duchy_of_lothian_decision
+		}
+		set_global_variable = {
+			name = unavailable_unique_decisions
+			value = scope:lothian_creator
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
+# 	  High Kingdom of Ireland Decisions		#
+#############################################
+
+
+
+
+
+
+
+
