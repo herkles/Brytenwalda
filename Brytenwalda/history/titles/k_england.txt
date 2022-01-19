@@ -140,7 +140,7 @@ k_mercia = {# Kings of Mercia
 		holder = 205107
 	}
 	821.1.1 = {# Ceolwulf I
-		holder = 205112	
+		holder = Coelwulf	
 	}	
 	823.1.1 = {# Beornwulf
 		holder = 205092
@@ -2889,6 +2889,10 @@ c_leicestershire = {
 	852.1.1 = {
 		holder = 163102
 	}
+	865.1.1 = {
+		holder = 205112
+		liege = "k_mercia"
+	}
 	1066.1.1 = {
 		liege = "k_england"
 	}
@@ -3042,6 +3046,10 @@ c_northamptonshire = {
 	}
 	852.1.1 = {
 		holder = 163102
+	}
+	865.1.1 = {
+		liege = "k_mercia"
+		holder = 205112
 	}
 	1066.1.1 = {
 		liege = "k_england"

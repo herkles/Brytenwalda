@@ -203,7 +203,7 @@ england_request_laudabiliter_decision = {# Request Laudabiliter
 		OR = {
 			has_title = title:k_england
 			has_title = title:k_scotland
-			has_title = k_strathclyde
+			has_title = title:k_strathclyde
 			has_title = title:k_wales
 			has_title = title:k_brittany
 			has_title = title:k_france
@@ -834,28 +834,28 @@ unite_england_decision = {
 			}
 			if = {# set unique COA for england united by Mercia
 				limit = { has_primary_title = title:k_mercia }
-				set_global_variable = {
+				set_variable = {
 					name = england_coa_merica
 					value = yes
 				}
 			}
 			if = {# set unique COA for england united by Northumbria
 				limit = { has_primary_title = title:k_northumbria }
-				set_global_variable = {
+				set_variable = {
 					name = england_coa_northumbria
 					value = yes
 				}
 			}
 			if = {# set unique COA for england united by East Anglia
 				limit = { has_primary_title = title:k_east_anglia }
-				set_global_variable = {
+				set_variable = {
 					name = england_coa_east_anglia
 					value = yes
 				}
 			}
 			if = {# set unique COA for england united by kent
 				limit = { has_primary_title = title:k_kent }
-				set_global_variable = {
+				set_variable = {
 					name = england_coa_kent
 					value = yes
 				}
