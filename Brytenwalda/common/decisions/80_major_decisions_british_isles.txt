@@ -884,8 +884,6 @@ restore_kingdom_kent_decision = {
 	selection_tooltip = restore_kingdom_kent_decision_tooltip
 
 	is_shown = {
-		has_title = title:d_canterbury
-		root.faith = faith:catholic # Due to it being an important seat, the people won't accept you without you being catholic. 
 		NOR = {# can't form it if you are already a king, nor should the house of wessex be able to do so
 			dynasty = dynasty:house_british_isles_wessex # The House of Wessex should not seek to break up Wessex
 			title:k_england = { is_title_created = yes } # If England is created then you should focus on that
@@ -901,19 +899,22 @@ restore_kingdom_kent_decision = {
 				target = flag:flag_restored_kent
 			}
 		}
-		OR = {
-			has_government = feudal_government
-			has_government = republic_government
-			has_government = clan_government
+		custom_description = {# Your Capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
 		}
 
 	}
 
 	is_valid = {
+		custom_description = {# Your Capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
 		is_independent_ruler = yes
 		prestige_level >= high_prestige_level
-		has_title = title:d_canterbury
-		completely_controls = title:d_canterbury
+		root.faith = faith:catholic # Due to it being an important seat, the people won't accept you without you being catholic. 
+		completely_controls = title:d_kent
 		custom_description = {# Must be english or Norse
 			text = unite_england_culture_requirement
 			
@@ -982,8 +983,6 @@ restore_kingdom_essex_decision = {
 	selection_tooltip = restore_kingdom_essex_decision_tooltip
 
 	is_shown = {
-		has_title = title:d_canterbury
-		root.faith = faith:catholic # Due to it being an important seat, the people won't accept you without you being catholic. 
 		NOR = {# can't form it if you are already a king, nor should the house of wessex be able to do so
 			dynasty = dynasty:house_british_isles_wessex # The House of Wessex should not seek to break up Wessex
 			title:k_england = { is_title_created = yes } # If England is created then you should focus on that
@@ -999,19 +998,18 @@ restore_kingdom_essex_decision = {
 				target = flag:flag_restored_essex
 			}
 		}
-		OR = {
-			has_government = feudal_government
-			has_government = republic_government
-			has_government = clan_government
+		custom_description = {# Your Capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
 		}
-
 	}
 
 	is_valid = {
+		root.faith = faith:catholic # Due to it being an important seat, the people won't accept you without you being catholic. 
 		is_independent_ruler = yes
 		prestige_level >= high_prestige_level
-		has_title = title:d_bedford
-		completely_controls = title:d_bedford
+		completely_controls = title:d_essex
+		root.faith = faith:catholic
 		custom_description = {# Must be english or Norse
 			text = unite_england_culture_requirement
 			
