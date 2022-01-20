@@ -1,0 +1,59 @@
+﻿namespace = bryten_scotland
+
+#######################################
+#									  #
+#         Decision Events	  	      #
+#									  #
+#######################################
+
+#######################################
+# Integrating Strathclyde
+#######################################
+bryten_scotland.0001 = {# I intergrated the Kingdom of Strathclyde
+	type = character_event
+	title = bryten_scotland.0001.t
+	desc = bryten_scotland.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:scottish_king_strathclyde
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		integrate_strathclyde_kingdom_effect = yes
+	}
+	
+	option = {# Long Live Scotland
+		name = bryten_scotland.0001.a
+	}
+}
+bryten_scotland.0002 = {# Someone intergrated the Kingdom of Strathclyde
+	type = character_event
+	title = bryten_scotland.0002.t
+	desc = {
+		desc = bryten_scotland.0002.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:scottish_king_strathclyde }
+				}
+				desc = bryten_scotland.0002.relation_former.desc
+			}
+			desc = bryten_scotland.0002.former.desc
+		}	
+		desc = bryten_scotland.0002.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:scottish_king_strathclyde
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+
+
+

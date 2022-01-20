@@ -1129,7 +1129,73 @@ strengthen_high_kingship_decision = {
 #############################################
 #   Integrate the Kingdom of Strathclyde	#
 #############################################
+integrate_strathclyde_kingdom = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	ai_check_interval = 60
+	major = yes
+	desc = integrate_strathclyde_kingdom_desc
 
+	is_shown = {
+		NOT = {# this is a unique decision
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_duchy_of_lothian_decision
+			}
+		}
+		has_primary_title = title:k_scotland # Only can be done as the Kingdom of Scotland
+		NOT = {
+			culture:cumbrian = {
+				has_innovation = innovation_rightful_ownership
+			}
+		}
+	}
+
+	is_valid = {
+		root.culture = {
+			has_innovation = innovation_hereditary_rule
+			has_innovation = innovation_royal_prerogative
+		}		
+		NOT = {
+			culture:cumbrian = {
+				has_innovation = innovation_rightful_ownership
+			}
+		}
+		completely_controls = title:k_strathclyde
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		save_scope_as = scottish_king_strathclyde
+		show_as_tooltip = {
+			integrate_strathclyde_kingdom_effect = yes
+		}
+		trigger_event = {
+			id = bryten_scotland.0001
+		}
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:create_duchy_of_lothian_decision
+		}
+		set_global_variable = {
+			name = unavailable_unique_decisions
+			value = scope:lothian_creator
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
 #############################################
 # 	    Create the Duchy of Lothian			#
 #############################################

@@ -190,3 +190,13 @@ create_lothian_duchy_effects = {
 		title:c_lanarkshire = { set_de_jure_liege_title = title:d_lothian }
 	}
 }
+integrate_strathclyde_kingdom_effect = {
+	##Configure the new de jure setup.
+	title:d_galloway = { set_de_jure_liege_title = title:k_scotland }
+	hidden_effect = {
+		if = {
+			limit = { has_title = title:k_strathclyde }
+			destroy_title = title:k_strathclyde
+		}
+	}
+}

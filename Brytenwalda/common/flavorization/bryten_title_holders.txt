@@ -1,6 +1,4 @@
-﻿
-
-###########################################################
+﻿###########################################################
 # Anglo-Saxon Titles
 ###########################################################
 # Barony
@@ -102,13 +100,6 @@ king_feudal_female_anglo_saxon = {# Cwen
 	governments = { feudal_government }
 	cultures = { anglo_saxon }
 }
-kingdom_feudal_anglo_saxon = {# Ríce
-	type = title
-	tier = kingdom
-	priority = 47
-	governments = { feudal_government }
-	cultures = { anglo_saxon }
-}
 # Empire
 emperor_feudal_male_anglo_saxon = {# Brytenwalda
 	type = character
@@ -128,15 +119,27 @@ emperor_feudal_female_anglo_saxon = {# þeódcwén
 	governments = { feudal_government tribal_government }
 	cultures = { anglo_saxon }
 }
-empire_feudal_anglo_saxon = {# Brytenríce
-	type = title
-	tier = empire
-	priority = 102
-	governments = { feudal_government tribal_government }
-	cultures = { anglo_saxon }
-}
 # Princelings
-
+prince_male_anglo_saxon = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	priority = 130
+	cultures = { anglo_saxon }
+	governments = { feudal_government clan_government tribal_government }
+	top_liege = no
+}
+prince_female_anglo_saxon = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	priority = 130
+	cultures = { anglo_saxon }
+	governments = { feudal_government clan_government tribal_government }
+	top_liege = no
+}
 # Republican Titles
 ###########################################################
 # Normann Titles
@@ -240,13 +243,6 @@ king_feudal_female_norman = {# Ranne
 	governments = { feudal_government }
 	cultures = { norman }
 }
-kingdom_feudal_norman = {# Rouoyaume
-	type = title
-	tier = kingdom
-	priority = 47
-	governments = { feudal_government }
-	cultures = { norman }
-}
 # Empire
 emperor_feudal_male_norman = {# Emperur
 	type = character
@@ -266,15 +262,27 @@ emperor_feudal_female_norman = {# Emperere
 	governments = { feudal_government tribal_government }
 	cultures = { norman }
 }
-empire_feudal_norman = {# Empire
-	type = title
-	tier = empire
-	priority = 102
-	governments = { feudal_government tribal_government }
-	cultures = { norman }
-}
 # Princelings
-
+prince_male_norman = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	priority = 130
+	cultures = { norman }
+	governments = { feudal_government clan_government tribal_government }
+	top_liege = no
+}
+prince_female_norman = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	priority = 130
+	cultures = { norman }
+	governments = { feudal_government clan_government tribal_government }
+	top_liege = no
+}
 # Republican Titles
 ###########################################################
 # English Titles
@@ -378,13 +386,6 @@ king_feudal_female_english = {# Quene
 	governments = { feudal_government }
 	cultures = { english }
 }
-kingdom_feudal_english = {# Kingdom
-	type = title
-	tier = kingdom
-	priority = 47
-	governments = { feudal_government }
-	cultures = { english }
-}
 # Empire
 emperor_feudal_male_english = {# Emperour
 	type = character
@@ -404,10 +405,273 @@ emperor_feudal_female_english = {# Emperice
 	governments = { feudal_government tribal_government }
 	cultures = { english }
 }
-empire_feudal_english = {# Empire
-	type = title
-	tier = empire
-	priority = 102
-	governments = { feudal_government tribal_government }
+# Princelings
+prince_male_norman = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	priority = 130
 	cultures = { english }
+	governments = { feudal_government clan_government tribal_government }
+	top_liege = no
 }
+prince_female_norman = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	priority = 130
+	cultures = { english }
+	governments = { feudal_government clan_government tribal_government }
+	top_liege = no
+}
+###########################################################
+# Irish Titles
+###########################################################
+# Barony
+baron_male_irish = {# Rí Tuaithe
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 7
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+	top_liege = no
+}
+baron_female_irish = {# Rígan Tuaithe
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 7
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+	top_liege = no
+}
+barony_irish = {# Túath
+	type = title
+	tier = barony
+	priority = 7
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+}
+# County
+count_male_irish = {# Ruirí
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 18
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+}
+count_female_irish = {# Ruirígan
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 18
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+}
+county_irish = {# Mór Túath
+	type = title
+	tier = county
+	priority = 18
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+}
+# Duchy
+duchy_irish = {# Rí Cóicid
+	type = title
+	tier = duchy
+	priority = 28
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+}
+duke_male_irish = {# Rígan Cóicid
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+}
+duke_female_irish = {# Cóiced
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 28
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+}
+# Kingdom
+king_male_irish = {# Ardrí
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+}
+king_female_irish = {# Ard Rígan
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government tribal_government }
+	cultures = { irish }
+}
+###########################################################
+# Welsh Titles
+###########################################################
+# Barony
+baron_male_welsh = {# Arglwyd
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 7
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+	top_liege = no
+}
+baron_female_welsh = {# Arglwydes
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 7
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+	top_liege = no
+}
+barony_welsh = {# Maenor
+	type = title
+	tier = barony
+	priority = 7
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+}
+# County
+count_male_welsh = {# Pendeuic
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 18
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+}
+count_female_welsh = {# Pendeuices
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 18
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+}
+county_welsh = {# Cwmwd
+	type = title
+	tier = county
+	priority = 18
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+}
+# Duchy
+duke_male_welsh = {# Tywysog
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 29
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+}
+duke_female_welsh = {# Tywysoges
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 29
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+}
+duchy_welsh = {# Gulat
+	type = title
+	tier = duchy
+	priority = 29
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+}
+# Kingdom
+king_male_welsh = {# Brenhin
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+}
+king_female_welsh = {# brenhines
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	governments = { feudal_government tribal_government }
+	cultures = { welsh }
+}
+# Republican Titles
+baron_republic_male_welsh = {# Maer
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = 7
+	governments = { republic_government }
+	cultures = { welsh }
+	top_liege = no
+}
+baron_republic_female_welsh = {# Maeres
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 7
+	governments = { republic_government }
+	cultures = { welsh }
+	top_liege = no
+}
+barony_republic_welsh = {# Dinas
+	type = title
+	tier = barony
+	priority = 7
+	governments = { republic_government }
+	cultures = { welsh }
+}
+###########################################################
+# Cumbrian Titles
+###########################################################
+
+###########################################################
+# Scottish Titles
+###########################################################
+
+###########################################################
+# Cornish Titles
+###########################################################
+
+
+
+
+
+
