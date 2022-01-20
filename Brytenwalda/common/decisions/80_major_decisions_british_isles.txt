@@ -798,6 +798,7 @@ unite_england_decision = {
 				has_primary_title = title:k_east_anglia
 				has_primary_title = title:k_mercia
 				has_primary_title = title:k_wessex
+				has_primary_title = title:k_essex
 			}
 		}
 	}
@@ -808,13 +809,13 @@ unite_england_decision = {
 		show_as_tooltip = { unite_kingdom_england_decision_effects = yes } 
 
 		#Events
-		trigger_event = bryten_england.0001
+		trigger_event = bryten_decision.0001
 		every_player = {
 			limit = {
 				NOT = { this = scope:england_kingdom_uniter }
 				is_within_diplo_range = { CHARACTER = scope:england_kingdom_uniter }
 			}
-			trigger_event = bryten_england.0002
+			trigger_event = bryten_decision.0002
 		}
 		#Can only be done once
 		add_to_global_variable_list = {
@@ -935,7 +936,7 @@ restore_kingdom_kent_decision = {
 		}
 		save_scope_as = kent_restorer
 		trigger_event = {
-			id = bryten_england.0004
+			id = bryten_decision.0004
 		}
 		#Notify other players.
 		every_player = {
@@ -943,7 +944,7 @@ restore_kingdom_kent_decision = {
 				NOT = { this = root }
 				is_within_diplo_range = { CHARACTER = root }
 			}
-			trigger_event = bryten_england.0005
+			trigger_event = bryten_decision.0005
 		}
 		hidden_effect = {
 			add_to_global_variable_list = {
@@ -1033,7 +1034,7 @@ restore_kingdom_essex_decision = {
 		}
 		save_scope_as = essex_restorer
 		trigger_event = {
-			id = bryten_england.0004
+			id = bryten_decision.0006
 		}
 		#Notify other players.
 		every_player = {
@@ -1041,7 +1042,7 @@ restore_kingdom_essex_decision = {
 				NOT = { this = root }
 				is_within_diplo_range = { CHARACTER = root }
 			}
-			trigger_event = bryten_england.0005
+			trigger_event = bryten_decision.0007
 		}
 		hidden_effect = {
 			add_to_global_variable_list = {
@@ -1099,13 +1100,13 @@ strengthen_high_kingship_decision = {
 
 		show_as_tooltip = { strengthen_high_king_decision_effects = yes } 
 		#Events
-		trigger_event = bryten_ireland.0001
+		trigger_event = bryten_decision.0008
 		every_player = {
 			limit = {
 				NOT = { this = scope:high_king_ireland }
 				is_within_diplo_range = { CHARACTER = scope:high_king_ireland }
 			}
-			trigger_event = bryten_ireland.0002
+			trigger_event = bryten_decision.0009
 		}
 		#Can only be done once
 		add_to_global_variable_list = {
@@ -1175,7 +1176,14 @@ integrate_strathclyde_kingdom = {
 			integrate_strathclyde_kingdom_effect = yes
 		}
 		trigger_event = {
-			id = bryten_scotland.0001
+			id = bryten_decision.0010
+		}
+		every_player = {
+			limit = {
+				NOT = { this = scope:scottish_king_strathclyde }
+				is_within_diplo_range = { CHARACTER = scope:scottish_king_strathclyde }
+			}
+			trigger_event = bryten_decision.0011
 		}
 		#Can only be done once
 		add_to_global_variable_list = {

@@ -29,6 +29,7 @@ unite_kingdom_england_decision_effects = {# Uniting England
 	title:k_mercia = { add_to_list = english_kingdoms }
 	title:k_east_anglia = { add_to_list = english_kingdoms }
 	title:k_wessex = { add_to_list = english_kingdoms }
+	title:k_essex = { add_to_list = english_kingdoms }
 
 	every_in_list = {
 		list = english_kingdoms
@@ -60,6 +61,10 @@ unite_kingdom_england_decision_effects = {# Uniting England
 		if = {
 			limit = { has_title = title:k_wessex }
 			destroy_title = title:k_wessex
+		}
+		if = {
+			limit = { has_title = title:k_essex }
+			destroy_title = title:k_essex
 		}
 	}
 }

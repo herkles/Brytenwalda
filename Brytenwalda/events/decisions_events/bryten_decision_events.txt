@@ -1,0 +1,283 @@
+﻿namespace = bryten_decision
+
+#######################################
+# Forming England
+#######################################
+bryten_decision.0001 = {# I united England
+	type = character_event
+	title = bryten_decision.0001.t
+	desc = bryten_decision.0001.desc
+	theme = realm
+	left_portrait = {
+		character = scope:england_kingdom_uniter
+		animation = personality_bold
+	}
+
+	immediate = {
+		primary_title = {
+			save_scope_as = england_heptarchy_coa
+		}
+		title:k_england = {
+			set_coa = england_heptarchy_coa
+		}
+		play_music_cue = "mx_cue_positive_effect"
+		unite_kingdom_england_decision_effects = yes
+	}
+	
+	option = {# Long live England
+		name = bryten_decision.0001.a
+		give_nickname = nick_the_great
+	}
+}
+bryten_decision.0002 = {# Someone has united England
+	type = character_event
+	title = bryten_decision.0002.t
+	desc = {
+		desc = bryten_decision.0002.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:england_kingdom_uniter }
+				}
+				desc = bryten_decision.0002.relation_former.desc
+			}
+			desc = bryten_decision.0002.former.desc
+		}	
+		desc = bryten_decision.0002.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:england_kingdom_uniter
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+bryten_decision.0003 = {# Setting the coat of arms
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		# Coat of Arms
+		title:k_england = {
+			# Coat of Arms
+			if = {# Mercia 
+				limit = { exists = global_var:england_coa_merica }
+				set_coa = k_england_mercia
+			}
+			else_if = {# East Anglia
+				limit = { exists = global_var:england_coa_east_anglia }
+				set_coa = k_england_east_anglia
+			}
+			else_if = {# Northumbria
+				limit = { exists = global_var:england_coa_northumbria }
+				set_coa = k_england_northumbria
+			}
+			else_if = {# Kent
+				limit = { exists = global_var:england_coa_kent }
+				set_coa = k_england_kent
+			}
+		}
+	}
+}
+#######################################
+# Forming Kent
+#######################################
+bryten_decision.0004 = {# I restored Kent
+	type = character_event
+	title = bryten_decision.0004.t
+	desc = bryten_decision.0004.desc
+	theme = realm
+	left_portrait = {
+		character = scope:kent_restorer
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		restore_kingdom_kent_decision_scripted_effect = yes
+	}
+	
+	option = {# Long live England
+		name = bryten_decision.0004.a
+		give_nickname = nick_the_restorer
+	}
+}
+bryten_decision.0005 = {# Someone has restored Kent
+	type = character_event
+	title = bryten_decision.0005.t
+	desc = {
+		desc = bryten_decision.0005.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:kent_restorer }
+				}
+				desc = bryten_decision.0005.relation_former.desc
+			}
+			desc = bryten_decision.0005.former.desc
+		}	
+		desc = bryten_decision.0005.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:kent_restorer
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+#######################################
+# Forming Essex
+#######################################
+bryten_decision.0006 = {# I restored Essex
+	type = character_event
+	title = bryten_decision.0006.t
+	desc = bryten_decision.0006.desc
+	theme = realm
+	left_portrait = {
+		character = scope:essex_restorer
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		restore_kingdom_essex_decision_scripted_effect = yes
+	}
+	
+	option = {# Long live Essex
+		name = bryten_decision.0006.a
+		give_nickname = nick_the_restorer
+	}
+}
+bryten_decision.0007 = {# Someone has restored Essex
+	type = character_event
+	title = bryten_decision.0007.t
+	desc = {
+		desc = bryten_decision.0005.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:essex_restorer }
+				}
+				desc = bryten_decision.0005.relation_former.desc
+			}
+			desc = bryten_decision.0005.former.desc
+		}	
+		desc = bryten_decision.0005.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:essex_restorer
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+#######################################
+# Strengthen the High King
+#######################################
+bryten_decision.0008 = {# I secured Ireland
+	type = character_event
+	title = bryten_decision.0008.t
+	desc = bryten_decision.0008.desc
+	theme = realm
+	left_portrait = {
+		character = scope:high_king_ireland
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		strengthen_high_king_decision_effects = yes
+	}
+	
+	option = {# Long live Ireland
+		name = bryten_decision.0008.a
+		give_nickname = nick_the_great
+	}
+}
+bryten_decision.0009 = {# Someone has secured Ireland
+	type = character_event
+	title = bryten_decision.0009.t
+	desc = {
+		desc = bryten_decision.0009.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:high_king_ireland }
+				}
+				desc = bryten_decision.0009.relation_former.desc
+			}
+			desc = bryten_decision.0009.former.desc
+		}	
+		desc = bryten_decision.0009.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:high_king_ireland
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+#######################################
+# Integrating Strathclyde
+#######################################
+bryten_decision.0010 = {# I intergrated the Kingdom of Strathclyde
+	type = character_event
+	title = bryten_decision.0010.t
+	desc = bryten_decision.0010.desc
+	theme = realm
+	left_portrait = {
+		character = scope:scottish_king_strathclyde
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		integrate_strathclyde_kingdom_effect = yes
+	}
+	
+	option = {# Long Live Scotland
+		name = bryten_decision.0010.a
+	}
+}
+bryten_decision.0011 = {# Someone intergrated the Kingdom of Strathclyde
+	type = character_event
+	title = bryten_decision.0011.t
+	desc = {
+		desc = bryten_decision.0011.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:scottish_king_strathclyde }
+				}
+				desc = bryten_decision.0011.relation_former.desc
+			}
+			desc = bryten_decision.0011.former.desc
+		}	
+		desc = bryten_decision.0011.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:scottish_king_strathclyde
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+
+
+
+
