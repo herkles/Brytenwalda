@@ -1,0 +1,594 @@
+﻿#############################################
+# 	   Unite the Kingdom of England			#
+#############################################
+unite_england_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	ai_check_interval = 60
+	desc = unite_england_decision_desc
+
+	is_shown = {
+		OR = {# This is for the Anglo-Saxons or the Norse who come to settle
+			has_culture = culture:anglo_saxon
+			has_culture = culture:norse
+		}
+		custom_description = {# Your Capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
+		NOT = {# this is a unique decision
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:unite_england_decision
+			}
+		}
+		highest_held_title_tier < tier_empire # shouldn't be an Empire
+		title:k_england = { is_title_created = no } #  England Can't exist 
+	}
+
+	is_valid = {
+		custom_description = {# Your Capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
+		custom_description = {# Must own a good chunk of England
+			text = owns_majority_england_region_tooltip
+		 	any_county_in_region = {
+		 		region = custom_england
+		 		count >= 28
+		 		OR = {
+		 			holder = root
+		 		}
+		 	}
+		}
+		custom_description = {# Must be english or Norse
+			text = unite_england_culture_requirement
+			
+			trigger_if = {
+				OR = {# This is for the Anglo-Saxons or the Norse who come to settle
+					has_culture = culture:anglo_saxon
+					has_culture = culture:norse
+				}
+			}
+		}
+		custom_description = {# Must be a king of one of the Heptarchy Kingdoms
+   			text = unite_england_decision_primary
+			OR = {
+				has_primary_title = title:k_kent
+				has_primary_title = title:k_northumbria
+				has_primary_title = title:k_east_anglia
+				has_primary_title = title:k_mercia
+				has_primary_title = title:k_wessex
+				has_primary_title = title:k_essex
+			}
+		}
+	}
+
+	effect = {
+		save_scope_as = england_kingdom_uniter
+
+		show_as_tooltip = { unite_kingdom_england_decision_effects = yes } 
+
+		#Events
+		trigger_event = bryten_decision.0001
+		every_player = {
+			limit = {
+				NOT = { this = scope:england_kingdom_uniter }
+				is_within_diplo_range = { CHARACTER = scope:england_kingdom_uniter }
+			}
+			trigger_event = bryten_decision.0002
+		}
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:unite_england_decision
+		}
+		set_global_variable = {
+			name = unavailable_unique_decisions
+			value = scope:england_kingdom_uniter
+		}
+		hidden_effect = {# adding the variables for unique COAs variants
+			primary_title = {
+				save_scope_as = england_heptarchy_coa
+			}
+			title:k_england = {
+				set_coa = england_heptarchy_coa
+			}
+			if = {# set unique COA for england united by Mercia
+				limit = { has_primary_title = title:k_mercia }
+				set_variable = {
+					name = england_coa_merica
+					value = yes
+				}
+			}
+			if = {# set unique COA for england united by Northumbria
+				limit = { has_primary_title = title:k_northumbria }
+				set_variable = {
+					name = england_coa_northumbria
+					value = yes
+				}
+			}
+			if = {# set unique COA for england united by East Anglia
+				limit = { has_primary_title = title:k_east_anglia }
+				set_variable = {
+					name = england_coa_east_anglia
+					value = yes
+				}
+			}
+			if = {# set unique COA for england united by kent
+				limit = { has_primary_title = title:k_kent }
+				set_variable = {
+					name = england_coa_kent
+					value = yes
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
+# 	   Create the Kingdom of Kent			#
+#############################################
+restore_kingdom_kent_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+	ai_check_interval = 120
+
+	desc = restore_kingdom_kent_decision_desc
+	selection_tooltip = restore_kingdom_kent_decision_tooltip
+
+	is_shown = {
+		NOR = {# can't form it if you are already a king, nor should the house of wessex be able to do so
+			dynasty = dynasty:house_british_isles_wessex # The House of Wessex should not seek to break up Wessex
+			title:k_england = { is_title_created = yes } # If England is created then you should focus on that
+			highest_held_title_tier >= tier_kingdom # No point in restoring it if you are already a king
+		}
+		OR = {# This is for the Anglo-Saxons or the Norse who come to settle
+			has_culture = culture:anglo_saxon # Powerful Anglo-Saxons might want to recreate it
+			has_culture = culture:norse # the Norse will do so as they want fancy kingdom titles
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_kent
+			}
+		}
+		custom_description = {# Your Capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
+
+	}
+
+	is_valid = {
+		custom_description = {# Your Capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
+		is_independent_ruler = yes
+		prestige_level >= high_prestige_level
+		root.faith = faith:catholic # Due to it being an important seat, the people won't accept you without you being catholic. 
+		completely_controls = title:d_kent
+		custom_description = {# Must be english or Norse
+			text = unite_england_culture_requirement
+			
+			trigger_if = {
+				OR = {# This is for the Anglo-Saxons or the Norse who come to settle
+					has_culture = culture:anglo_saxon
+					has_culture = culture:norse
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			restore_kingdom_kent_decision_scripted_effect = yes
+		}
+		save_scope_as = kent_restorer
+		trigger_event = {
+			id = bryten_decision.0004
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = bryten_decision.0005
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_kent
+			}
+			set_global_variable = {
+				name = flag_restored_kent
+				value = root
+			}
+		}
+	}
+
+	cost = {
+		gold = 300
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
+# 	   Create the Kingdom of Essex			#
+#############################################
+restore_kingdom_essex_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	major = yes
+	ai_check_interval = 120
+
+	desc = restore_kingdom_essex_decision_desc
+	selection_tooltip = restore_kingdom_essex_decision_tooltip
+
+	is_shown = {
+		NOR = {# can't form it if you are already a king, nor should the house of wessex be able to do so
+			dynasty = dynasty:house_british_isles_wessex # The House of Wessex should not seek to break up Wessex
+			title:k_england = { is_title_created = yes } # If England is created then you should focus on that
+			highest_held_title_tier >= tier_kingdom # No point in restoring it if you are already a king
+		}
+		OR = {# This is for the Anglo-Saxons or the Norse who come to settle
+			has_culture = culture:anglo_saxon # Powerful Anglo-Saxons might want to recreate it
+			has_culture = culture:norse # the Norse will do so as they want fancy kingdom titles
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_essex
+			}
+		}
+		custom_description = {# Your Capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
+	}
+
+	is_valid = {
+		root.faith = faith:catholic # Due to it being an important seat, the people won't accept you without you being catholic. 
+		is_independent_ruler = yes
+		prestige_level >= high_prestige_level
+		completely_controls = title:d_essex
+		root.faith = faith:catholic
+		custom_description = {# Must be english or Norse
+			text = unite_england_culture_requirement
+			
+			trigger_if = {
+				OR = {# This is for the Anglo-Saxons or the Norse who come to settle
+					has_culture = culture:anglo_saxon
+					has_culture = culture:norse
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			restore_kingdom_essex_decision_scripted_effect = yes
+		}
+		save_scope_as = essex_restorer
+		trigger_event = {
+			id = bryten_decision.0006
+		}
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = bryten_decision.0007
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_restored_essex
+			}
+			set_global_variable = {
+				name = flag_restored_essex
+				value = root
+			}
+		}
+	}
+
+	cost = {
+		gold = 300
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
+# 	  High Kingdom of Ireland Decisions		#
+#############################################
+strengthen_high_kingship_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+	ai_check_interval = 60
+	desc = strengthen_high_kingship_decision_desc
+
+	is_shown = {
+		has_culture_group = culture_group:goidelic_group # Must be a Gael to do this
+		NOT = {# this is a unique decision
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:strengthen_high_kingship_decision
+			}
+		}
+		has_primary_title = title:k_ireland_titular # You must be the High King to do this.
+	}
+
+	is_valid = {
+		is_independent_ruler = yes # You only owe alligance to God!
+		prestige_level >= high_prestige_level # You need to prove your prestige that you are worthy of the title
+		completely_controls_region = custom_roman_hibernia
+		title:k_ireland_titular = { title_held_years >= 30 }
+	}
+
+	effect = {
+		save_scope_as = high_king_ireland
+
+		show_as_tooltip = { strengthen_high_king_decision_effects = yes } 
+		#Events
+		trigger_event = bryten_decision.0008
+		every_player = {
+			limit = {
+				NOT = { this = scope:high_king_ireland }
+				is_within_diplo_range = { CHARACTER = scope:high_king_ireland }
+			}
+			trigger_event = bryten_decision.0009
+		}
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:strengthen_high_kingship_decision
+		}
+		set_global_variable = {
+			name = unavailable_unique_decisions
+			value = scope:high_king_ireland
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
+#   Integrate the Kingdom of Strathclyde	#
+#############################################
+integrate_strathclyde_kingdom = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	ai_check_interval = 60
+	major = yes
+	desc = integrate_strathclyde_kingdom_desc
+
+	is_shown = {
+		NOT = {# this is a unique decision
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_duchy_of_lothian_decision
+			}
+		}
+		has_primary_title = title:k_scotland # Only can be done as the Kingdom of Scotland
+		NOT = {
+			culture:cumbrian = {
+				has_innovation = innovation_rightful_ownership
+			}
+		}
+	}
+
+	is_valid = {
+		root.culture = {
+			has_innovation = innovation_hereditary_rule
+			has_innovation = innovation_royal_prerogative
+		}		
+		NOT = {
+			culture:cumbrian = {
+				has_innovation = innovation_rightful_ownership
+			}
+		}
+		completely_controls = title:k_strathclyde
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		save_scope_as = scottish_king_strathclyde
+		show_as_tooltip = {
+			integrate_strathclyde_kingdom_effect = yes
+		}
+		trigger_event = {
+			id = bryten_decision.0010
+		}
+		every_player = {
+			limit = {
+				NOT = { this = scope:scottish_king_strathclyde }
+				is_within_diplo_range = { CHARACTER = scope:scottish_king_strathclyde }
+			}
+			trigger_event = bryten_decision.0011
+		}
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:create_duchy_of_lothian_decision
+		}
+		set_global_variable = {
+			name = unavailable_unique_decisions
+			value = scope:lothian_creator
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
+# 	    Create the Duchy of Lothian			#
+#############################################
+create_duchy_of_lothian = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	ai_check_interval = 60
+	desc = create_duchy_of_lothian_desc
+
+	is_shown = {
+		NOT = {# this is a unique decision
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_duchy_of_lothian_decision
+			}
+		}
+		OR = {# should either be Scotland or Strathclyde that creates it
+			has_primary_title = title:k_scotland
+			has_primary_title = title:k_strathclyde
+		}
+		title:d_lothian = { is_title_created = no } #  Lothian can't already exist  
+		NOT = {# Anglo-Saxon's don't get this decision due to Brambugh being an anglo-saxon title
+			has_culture = culture:anglo_saxon
+		}
+	}
+
+	is_valid = {
+		custom_description = {# Must control Lothian
+			text = create_lothian_land_requirement		
+			trigger_if = {
+				AND = {# Must control Lothian
+					completely_controls = title:c_lothian
+					completely_controls = title:c_dunbar
+					completely_controls = title:c_teviotdale
+					completely_controls = title:c_linlithgowshire
+					completely_controls = title:c_lanarkshire
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		save_scope_as = lothian_duchy_creator
+
+		show_as_tooltip = { create_lothian_duchy_effects = yes } 
+		create_lothian_duchy_effects = yes
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:create_duchy_of_lothian_decision
+		}
+		set_global_variable = {
+			name = unavailable_unique_decisions
+			value = scope:lothian_creator
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
+# 	  Establish Norman Adminstration		#
+#############################################
+establish_norman_adminstration = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	ai_check_interval = 60
+	desc = establish_norman_adminstration_desc
+
+	is_shown = {
+		NOT = {# this is a unique decision
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:establish_norman_adminstrationn_decision
+			}
+		}
+		has_culture = culture:norman
+		game_start_date >= 1066.09.15 # This is to ensure that the historical Normans do their historical norman things to England.
+	}
+
+	is_valid = {
+		custom_description = {# Your Capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
+		has_culture = culture:norman
+		has_primary_title = title:k_england # Must be the king of england.
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		save_scope_as = norman_england_king
+
+		show_as_tooltip = { establish_norman_adminstration_effects = yes } 
+		establish_norman_adminstration_effects = yes
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:establish_norman_adminstrationn_decision
+		}
+		set_global_variable = {
+			name = unavailable_unique_decisions
+			value = scope:norman_england_king
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+

@@ -132,6 +132,103 @@ restore_kingdom_essex_decision_scripted_effect = {# Restoring The Kingdom of Ess
 }
 #######################################
 #									  #
+#       Norman/English Effects  	  #
+#									  #
+#######################################
+establish_norman_adminstration_effects = {# 
+	scope:founder = {
+		# create the duchy
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = title_change
+			add_claim_on_loss = no
+		}
+		title:d_lothian = {
+			change_title_holder = {
+				holder = scope:lothian_creator
+				change = scope:title_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:title_change
+		# The Duchy of Bedford
+		title:c_middlesex = { set_de_jure_liege_title = title:d_bedford }
+		title:c_essex = { set_de_jure_liege_title = title:d_bedford }
+		title:c_bedford = { set_de_jure_liege_title = title:d_bedford }
+		title:c_hertfordshire = { set_de_jure_liege_title = title:d_bedford }
+		title:c_buckinghamshire = { set_de_jure_liege_title = title:d_bedford }
+		# The Duchy of Northumberland
+		title:c_northumberland = { set_de_jure_liege_title = title:d_northumberland }
+		title:c_durham = { set_de_jure_liege_title = title:d_northumberland }
+		# The Duchy of Lancaster
+		title:c_lancashire = { set_de_jure_liege_title = title:d_lancaster }
+		title:c_westmorland = { set_de_jure_liege_title = title:d_lancaster }
+		title:c_cheshire = { set_de_jure_liege_title = title:d_lancaster }
+		title:c_derby = { set_de_jure_liege_title = title:d_lancaster }
+		# The Duchy of Norfolk
+		title:c_norfolk = { set_de_jure_liege_title = title:d_norfolk }
+		title:c_suffolk = { set_de_jure_liege_title = title:d_norfolk }
+		title:c_cambridgeshire = { set_de_jure_liege_title = title:d_norfolk }
+		# The Duchy of hereford
+		title:c_warwickshire = { set_de_jure_liege_title = title:d_hereford }
+		title:c_leicestershire = { set_de_jure_liege_title = title:d_hereford }
+		title:c_nottinghamshire = { set_de_jure_liege_title = title:d_hereford }
+		title:c_staffordshire = { set_de_jure_liege_title = title:d_hereford }
+		title:c_worcestershire = { set_de_jure_liege_title = title:d_hereford }
+		title:c_huntingdonshire = { set_de_jure_liege_title = title:d_hereford }
+		title:c_northamptonshire = { set_de_jure_liege_title = title:d_hereford }
+		title:c_shropshire = { set_de_jure_liege_title = title:d_hereford }
+		# The Duchy of Gloucester
+		title:c_gloucestershire = { set_de_jure_liege_title = title:d_gloucester }
+		title:c_wiltshire = { set_de_jure_liege_title = title:d_gloucester }
+		title:c_oxfordshire = { set_de_jure_liege_title = title:d_gloucester }
+		title:c_berkshire = { set_de_jure_liege_title = title:d_gloucester }
+		# The Duchy of Canterbury
+		title:c_kent = { set_de_jure_liege_title = title:d_canterbury }
+		title:c_surrey = { set_de_jure_liege_title = title:d_canterbury }
+		title:c_sussex = { set_de_jure_liege_title = title:d_canterbury }
+		# The Duchy of Somerset
+		title:c_hampton = { set_de_jure_liege_title = title:d_somerset }
+		title:c_isle_of_wight = { set_de_jure_liege_title = title:d_somerset }
+		title:c_somerset = { set_de_jure_liege_title = title:d_somerset }
+		title:c_dorset = { set_de_jure_liege_title = title:d_somerset }
+		hidden_effect = {
+			if = {
+				limit = { has_title = title:d_brambugh }
+				destroy_title = title:d_brambugh
+			}
+			if = {
+				limit = { has_title = title:d_east_anglia }
+				destroy_title = title:d_east_anglia
+			}
+			if = {
+				limit = { has_title = title:d_wessex }
+				destroy_title = title:d_wessex
+			}
+			if = {
+				limit = { has_title = title:d_kent }
+				destroy_title = title:d_kent
+			}
+			if = {
+				limit = { has_title = title:d_huntingdon }
+				destroy_title = title:d_huntingdon
+			}
+			if = {
+				limit = { has_title = title:d_mercia }
+				destroy_title = title:d_mercia
+			}
+			if = {
+				limit = { has_title = title:k_strathclyde }
+				destroy_title = title:k_strathclyde
+			}
+			if = {
+				limit = { has_title = title:d_essex }
+				destroy_title = title:d_essex
+			}
+		}
+	}
+}
+#######################################
+#									  #
 #         Irish Effects  	      	  #
 #									  #
 #######################################

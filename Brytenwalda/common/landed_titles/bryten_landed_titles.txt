@@ -293,7 +293,13 @@ e_britannia = {
 			color2 = { 255 255 255 }
 			
 			capital = c_middlesex
-	
+
+			can_create = {
+				culture = {
+					has_innovation = innovation_noblesse_oblige
+				}
+			}			
+
 			cultural_names = {
 				anglo_saxon = cn_east_seaxe
 				old_saxon = cn_east_seaxe
@@ -432,7 +438,6 @@ e_britannia = {
 					color2 = { 255 255 255 }
 				}
 			}
-
 			c_hertfordshire = {
 				color = { 250 35 35 }
 				color2 = { 255 255 255 }
@@ -461,7 +466,6 @@ e_britannia = {
 					color2 = { 255 255 255 }
 				}
 			}
-
 			c_buckinghamshire = {
 				color = { 200 25 25 }
 				color2 = { 255 255 255 }
@@ -506,6 +510,13 @@ e_britannia = {
 			color = hsv{ 0.98 0.9 0.9 }
 			color2 = { 255 255 255 }
 			
+			can_create = {
+				culture = {
+					has_innovation = innovation_noblesse_oblige
+				}
+			}
+
+
 			cultural_names = {
 				breton = cn_bryneich
 				cornish = cn_bryneich
@@ -703,7 +714,13 @@ e_britannia = {
 				cumbrian = cn_rheged
 				welsh = cn_rheged
 				pictish = cn_rheged
-			}			
+			}	
+			
+			can_create = {
+				culture = {
+					has_innovation = innovation_noblesse_oblige
+				}
+			}
 			
 			c_lancashire = {
 				color = { 250 55 5 }
@@ -1028,6 +1045,12 @@ e_britannia = {
 				norwegian = cn_jarnamoda
 			}
 
+			can_create = {
+				culture = {
+					has_innovation = innovation_noblesse_oblige
+				}
+			}
+
 			c_norfolk = {
 				color = { 210 100 0 }
 				color2 = { 255 255 255 }
@@ -1035,6 +1058,12 @@ e_britannia = {
 				cultural_names = {
 					norse = cn_jarnamoda
 					norwegian = cn_jarnamoda
+				}
+
+				can_create = {
+					culture = {
+						has_innovation = innovation_noblesse_oblige
+					}
 				}
 
 				b_norwich = {
@@ -1096,7 +1125,6 @@ e_britannia = {
 					color2 = { 255 255 255 }
 				}
 			}
-
 			c_cambridgeshire = {
 				color = { 205 145 5 }
 				color2 = { 255 255 255 }
@@ -1144,6 +1172,12 @@ e_britannia = {
 						culture = culture:anglo_saxon
 					}
 					add = @better_than_the_alternatives_score
+				}
+			}
+
+			can_create = {
+				culture = {
+					has_innovation = innovation_noblesse_oblige
 				}
 			}
 			
@@ -1361,6 +1395,12 @@ e_britannia = {
 			
 			capital = c_gloucestershire # Gloucester
 			
+			can_create = {
+				culture = {
+					has_innovation = innovation_noblesse_oblige
+				}
+			}
+
 			c_gloucestershire = {
 				color = { 245 85 20 }
 				color2 = { 255 255 255 }
@@ -1564,7 +1604,13 @@ e_britannia = {
 			color2 = { 255 255 255 }
 			
 			capital = c_hampton # Winchester
-			
+
+			can_create = {
+				culture = {
+					has_innovation = innovation_noblesse_oblige
+				}
+			}
+
 			ai_primary_priority = {
 				if = {
 					limit = {
@@ -1766,9 +1812,6 @@ e_britannia = {
 				}
 			}
 		}
-
-
-
 
 	}	
 	#######################################
