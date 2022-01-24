@@ -1,9 +1,131 @@
 ﻿namespace = bryten_england
 
 #######################################
-# Pilgrimage to PLACE
+# Norman Conquest Stuff
 #######################################
+bryten_england.0001 = {# William the Conquerer is Coronated in London at Westminister Abbey.
+	type = character_event
+	title = bryten_england.0001.t
+	desc = bryten_england.0001.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
 
+	trigger = {
+		this = character:140
+		has_primary_title = title:k_england
+		is_at_war = no # In case Hardrada is still gunning for the throne, Willy will go and fight him first. 
+	}
+	
+	option = {# Interesting
+		name = bryten_england.0001.coronation
+		title:k_england = {# Willy's capital is now in London
+			set_capital_county = title:c_middlesex
+		}
+	}
+}
+bryten_england.0002 = {# Handing out titles(southern England.
+	type = character_event
+	title = bryten_england.0002.t
+	desc = bryten_england.0002.desc
+	theme = realm
+	left_portrait = {
+		character = scope:norman_england_king
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		establish_norman_adminstration_effects = yes
+	}
+
+	option = {# My loyal vassals deserve their rewards
+		name = bryten_england.0002.titles
+		hidden_effect = {
+			title:c_hereford = {# Earl of Hereford, given to William FitzOsbern
+				change_title_holder = {
+					holder = 6806
+					change = scope:change
+				}
+			}
+			title:c_leicestershire = {# Earl of Leicester Given to Robert de Beaumont
+				change_title_holder = {
+					holder = 204596
+					change = scope:change
+				}
+			}
+			title:c_surrey = {# Earl of Surry, Given to William de Warenne
+				change_title_holder = {
+					holder = 172
+					change = scope:change
+				}
+			}
+			title:c_gloucestershire = {# Earl of Glousctershire, Given to Turstin FitzRolf
+				change_title_holder = {
+					holder = 6806
+					change = scope:change
+				}
+			}
+			title:c_cambridgeshire = {# Earl of Cambridgeshire, Given to Picot of Cambridge
+				change_title_holder = {
+					holder = 41236
+					change = scope:change
+				}
+			}
+			title:c_cheshire = {# Earl of Chester, Given to Gerbod the Fleming
+				change_title_holder = {
+					holder = 167007
+					change = scope:change
+				}
+			}
+			title:c_devon = {# Earl of Devon, Given to Baldwin de Brionne
+				change_title_holder = {
+					holder = 41260
+					change = scope:change
+				}
+			}
+			title:c_sussex = {# Earl of Sussex, Given to Roger II de Montgomerie
+				change_title_holder = {
+					holder = 152
+					change = scope:change
+				}
+			}
+			title:c_kent = {# Earl of Kent, Given to Odo
+				change_title_holder = {
+					holder = 148
+					change = scope:change
+				}
+			}
+			title:c_essex = {# Earl of Essex, Given to Geoffrey de Mandeville
+				change_title_holder = {
+					holder = 129048
+					change = scope:change
+				}
+			}
+			title:c_suffolk = {# Earl of Suffolk, Given to Robert le Blount
+				change_title_holder = {
+					holder = 41236
+					change = scope:change
+				}
+			}
+			title:c_norfolk = {# Earl of place, Given to Radulf 'de Guader' 
+				change_title_holder = {
+					holder = 5652
+					change = scope:change
+				}
+			}
+			title:c_nottinghamshire = {# Earl of place, Given to NAME
+				change_title_holder = {
+					holder = 204596
+					change = scope:change
+				}
+			}
+		}
+	}
+
+}
 #######################################
 # Pilgrimage to PLACE
 #######################################
