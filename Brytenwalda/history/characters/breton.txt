@@ -1,7 +1,7 @@
 ﻿10041 = {
 	name = "Oanez"
 	female = yes
-	dynasty = 311
+	dynasty_house = house_cornouaille
 	martial = 5
 	diplomacy = 6
 	intrigue = 8
@@ -24,7 +24,7 @@
 10042 = {
 	name = "Alan"
 	# AKA: Alan 'Caignart'
-	dynasty = 311
+	dynasty_house = house_cornouaille
 	martial = 6
 	diplomacy = 6
 	intrigue = 8
@@ -48,7 +48,7 @@
 	name = "Judhael"
 	# AKA: Judith
 	female = yes
-	dynasty = 20016
+	dynasty_house = house_nantes
 	martial = 4
 	diplomacy = 6
 	intrigue = 7
@@ -146,7 +146,7 @@
 	name = "Adelindis"
 	# AKA: Adelendis
 	female = yes
-	dynasty = 311
+	dynasty_house = house_cornouaille
 	martial = 6
 	diplomacy = 4
 	intrigue = 7
@@ -169,7 +169,7 @@
 10053 = {
 	name = "GuE_rech"
 	# AKA: Guerech
-	dynasty = 311
+	dynasty_house = house_cornouaille
 	martial = 8
 	diplomacy = 4
 	intrigue = 7
@@ -192,7 +192,7 @@
 10054 = {
 	name = "Bernez"
 	# AKA: Benead
-	dynasty = 311
+	dynasty_house = house_cornouaille
 	martial = 6
 	diplomacy = 4
 	intrigue = 7
@@ -215,7 +215,7 @@
 10055 = {
 	name = "Hodierne"
 	female = yes
-	dynasty = 311
+	dynasty_house = house_cornouaille
 	martial = 6
 	diplomacy = 8
 	intrigue = 4
@@ -237,7 +237,7 @@
 10056 = {
 	name = "Judikael"
 	# AKA: Judikael
-	dynasty = 20016
+	dynasty_house = house_nantes
 	martial = 4
 	diplomacy = 6
 	intrigue = 5
@@ -259,7 +259,7 @@
 
 10057 = {
 	name = "Budic"
-	dynasty = 20016
+	dynasty_house = house_nantes
 	martial = 4
 	diplomacy = 6
 	intrigue = 5
@@ -281,7 +281,7 @@
 10058 = {
 	name = "Guihomarch"
 	# AKA: Guiomarc'h
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 159679
@@ -296,7 +296,7 @@
 10059 = {
 	name = "Morvan"
 	# AKA: Alan or Alan
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 91213 #common father with Morvan
@@ -311,7 +311,7 @@
 10060 = {
 	name = "Guimarc_h"
 	# AKA: Guiomarc'h
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 91244
@@ -326,7 +326,7 @@
 178 = {
 	name = "HoE_l"
 	# AKA: Hoel
-	dynasty = 311
+	dynasty_house = house_cornouaille
 	martial = 8
 	diplomacy = 8
 	intrigue = 8
@@ -350,7 +350,7 @@
 180 = {
 	name = "Alan"
 	# AKA: Alan 'Fergant'
-	dynasty = 311
+	dynasty_house = house_cornouaille
 	martial = 4
 	diplomacy = 7
 	intrigue = 7
@@ -586,7 +586,7 @@
 
 346 = {
 	name = "Edouarzh"
-	dynasty = 317
+	dynasty_house = house_penthievre
 	religion = "catholic"
 	culture = "breton"
 	father = 342
@@ -627,7 +627,7 @@
 350 = {
 	name = "Jafrez" #Jafrez I Boterel
 	# AKA: Jafrez 'Boterel'
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 346 #Éon I de Penthièvre
@@ -658,7 +658,7 @@
 356 = {
 	name = "Alan"
 	# AKA: Alan 'Rufus'
-	dynasty = 317
+	dynasty_house = house_penthievre
 	religion = "catholic"
 	culture = "breton"
 	father = 346
@@ -677,7 +677,7 @@
 
 50001 = {
 	name = "Mazhe"
-	dynasty = 311
+	dynasty_house = house_cornouaille
 	martial = 4
 	diplomacy = 7
 	intrigue = 5
@@ -697,7 +697,7 @@
 50002 = {
 	name = "Alan"
 	# AKA: Alan 'Barbetorte'
-	dynasty = 20016
+	dynasty_house = house_nantes
 	martial = 8
 	diplomacy = 6
 	intrigue = 7
@@ -717,7 +717,7 @@
 
 50003 = {
 	name = "Drogon"
-	dynasty = 20016
+	dynasty_house = house_nantes
 	martial = 4
 	diplomacy = 6
 	intrigue = 2
@@ -736,7 +736,7 @@
 50004 = {
 	name = "HoE_l" # http://en.wikipedia.org/wiki/Ho%C3%ABl_I,_Duke_of_Brittany
 	# AKA: Hoel
-	dynasty = 20016
+	dynasty_house = house_nantes
 	martial = 8
 	diplomacy = 6
 	intrigue = 4
@@ -789,7 +789,7 @@
 
 91159 = {
 	name = "Konan" #Konan III le Gros, duke of Britanny
-	dynasty = 311 #House of Cornouaille
+	dynasty_house = house_cornouaille #House of Cornouaille
 	religion = "catholic"
 	culture = "breton"
 	trait = gluttonous
@@ -811,7 +811,7 @@
 
 91161 = {
 	name = "Jafrez" #Jafrez II de Penthièvre
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205744 #Stefen I de Penthièvre
@@ -827,7 +827,7 @@
 
 91162 = {
 	name = "Rivallon" #Rivallon de Penthièvre
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91161 #Jafrez II de Penthièvre
@@ -843,7 +843,7 @@
 
 91163 = {
 	name = "Stefen" #Stefen II de Penthièvre
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91161 #Jafrez II de Penthièvre
@@ -858,7 +858,7 @@
 
 91164 = {
 	name = "Jafrez" #Jafrez III de Penthièvre
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91162 #Rivallon de Penthièvre
@@ -873,7 +873,7 @@
 
 91165 = {
 	name = "Herri" #Henry II d'Avaugour
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205742 #Alan I de Penthièvre
@@ -888,7 +888,7 @@
 
 91167 = {
 	name = "Mazhe" #Mathias de Nantes
-	dynasty = 20016 #House of Rennes
+	dynasty_house = house_nantes #House of Rennes
 	religion = "catholic"
 	culture = "breton"
 	father = 10057 #Budic
@@ -902,7 +902,7 @@
 
 91168 = {
 	name = "HoE_l" #Hoël III de Bretagne
-	dynasty = 311 #House of Cornouaille
+	dynasty_house = house_cornouaille #House of Cornouaille
 	religion = "catholic"
 	culture = "breton"
 	father = 91159 #Konan III le Gros, duke of Britanny
@@ -912,7 +912,7 @@
 	}
 	1148.9.17 = {
 		trait = bastard
-		add_pressed_claim = d_brittany
+		add_pressed_claim = title:d_brittany
 	} #disinherited by his father
 	1156.1.1 = {
 		death = "1156.1.1"
@@ -921,7 +921,7 @@
 
 91169 = {
 	name = "Alan" #Alan II d'Avaugour
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91165 #Harry II d'Avaugour
@@ -938,7 +938,7 @@
 205740 = {
 	name = "Konstanza" #Constance, duchess of Brittany
 	female = yes
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	trait = gluttonous
@@ -955,7 +955,7 @@
 
 205741 = {
 	name = "Konan" #Konan IV le Petit
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	trait = dwarf
@@ -975,7 +975,7 @@
 
 205744 = {
 	name = "Stefen"
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 346 #Eudes de Penthièvre
@@ -994,7 +994,7 @@
 205750 = {
 	name = "Konstanza" #Constance de Bretagne
 	female = yes
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	father = 205751 #Alan le Noir
 	mother = 205825 #Berthe de Bretagne
 	religion = "catholic"
@@ -1010,7 +1010,7 @@
 
 205751 = {
 	name = "Alan" #de Bretagne
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205744 #Stefen I de Penthièvre
@@ -1112,7 +1112,7 @@
 455580 = {
 	name = "Janed" #Jeanne d'Avaugour
 	female = yes
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91258 #Harry IV d'Avaugour
@@ -1128,7 +1128,7 @@
 
 455581 = {
 	name = "Herri" #I assume he is Henry III d'Avaugour
-	dynasty = 317 #House of Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91169 #Alan II d'Avaugour
@@ -1145,7 +1145,7 @@
 205825 = {
 	name = "Berthildis" #Bertha, duchess of Britanny
 	female = yes
-	dynasty = 311 #House of Cornouaille
+	dynasty_house = house_cornouaille #House of Cornouaille
 	martial = 5
 	diplomacy = 8
 	intrigue = 7
@@ -1214,7 +1214,7 @@
 
 91213 = {
 	name = "Hamon"
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 159679
@@ -1228,7 +1228,7 @@
 
 91214 = {
 	name = "Edouarzh" #Ehuarn
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 10059 #Morvan, viscount of Léon
@@ -1242,7 +1242,7 @@
 
 91215 = {
 	name = "Huiarnviu" #Huiarnviu II
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 10060 #Guimarc'h II
@@ -1256,7 +1256,7 @@
 
 91216 = {
 	name = "Hamon" #Hamon
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 91215 #Huiarnviu II
@@ -1270,7 +1270,7 @@
 
 91217 = {
 	name = "Huiarnviu" #Huiarnviu
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	trait = bastard
@@ -1285,7 +1285,7 @@
 
 91218 = {
 	name = "Guimarc_h" #Guimarc'h de Léon
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205787 #Huiarnviu
@@ -1299,7 +1299,7 @@
 
 91219 = {
 	name = "Huiarnviu" #Huiarnviu III de Léon
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 91218 #Guimarc'h de Léon
@@ -1313,7 +1313,7 @@
 }
 91220 = {
 	name = "Huiarnviu" #Huiarnviu IV de Léon
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 91219 #Huiarnviu III de Léon
@@ -1327,7 +1327,7 @@
 }
 91221 = {
 	name = "Ame" #Ame de Léon
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	female = yes
 	religion = "catholic"
 	culture = "breton"
@@ -1342,7 +1342,7 @@
 }
 91222 = {
 	name = "Ame" #Ame de Léon
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	female = yes
 	religion = "catholic"
 	culture = "breton"
@@ -1359,7 +1359,7 @@
 
 91223 = {
 	name = "Huiarnviu" #Huiarnviu de Léon
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 91220 #Huiarnviu IV de Léon
@@ -1372,7 +1372,7 @@
 }
 91224 = {
 	name = "Huiarnviu" #Huiarnviu de Léon
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 91223 #Huiarnviu IV de Léon
@@ -1387,7 +1387,7 @@
 
 91244 = {
 	name = "Alan"
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 10058 #Guimarc'h I
@@ -1401,7 +1401,7 @@
 
 91245 = {
 	name = "Alfred"
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 10058 #Guimarc'h I
@@ -1605,7 +1605,7 @@
 
 91261 = {
 	name = "Gwilherm" #Guillaume de Bretagne
-	dynasty = 317#Rennes house of Penthièvre
+	dynasty_house = house_penthievre#Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 346 #Eudes de Bretagne
@@ -1620,7 +1620,7 @@
 
 91262 = {
 	name = "Roparzh" #Robert de Bretagne
-	dynasty = 317#Rennes house of Penthièvre
+	dynasty_house = house_penthievre#Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 346 #Eudes de Bretagne
@@ -1635,7 +1635,7 @@
 
 91263 = {
 	name = "Richard" #Richard de Bretagne
-	dynasty = 317#Rennes house of Penthièvre
+	dynasty_house = house_penthievre#Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 346 #Eudes de Bretagne
@@ -1664,7 +1664,7 @@
 
 91265 = {
 	name = "Ribald"
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	trait = legitimized_bastard
@@ -1679,7 +1679,7 @@
 
 91266 = {
 	name = "Bardulf"
-	dynasty = 317 #Rennes house of Penthièvre-Ravensworth
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
 	religion = "catholic"
 	culture = "breton"
 	trait = legitimized_bastard
@@ -1723,7 +1723,7 @@
 
 91269 = {
 	name = "Konan"
-	dynasty = 317#Rennes house of Penthièvre
+	dynasty_house = house_penthievre#Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 350 #Jafrez Boretel
@@ -1738,7 +1738,7 @@
 
 91270 = {
 	name = "Acarias"
-	dynasty = 317 #Rennes house of Penthièvre-Ravensworth
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
 	religion = "catholic"
 	culture = "breton"
 	father = 91266 #Bardulf
@@ -1752,7 +1752,7 @@
 
 91271 = {
 	name = "Scolland"
-	dynasty = 317 #Rennes house of Penthièvre-Ravensworth
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
 	religion = "catholic"
 	culture = "breton"
 	father = 91266 #Bardulf
@@ -1766,7 +1766,7 @@
 
 91272 = {
 	name = "Huiarnviuy"
-	dynasty = 317 #Rennes house of Penthièvre-Ravensworth
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
 	religion = "catholic"
 	culture = "breton"
 	father = 91270 #Acarias
@@ -1780,7 +1780,7 @@
 
 91273 = {
 	name = "Walter"
-	dynasty = 317 #Rennes house of Penthièvre-Ravensworth
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
 	religion = "catholic"
 	culture = "breton"
 	father = 91270 #Acarias
@@ -1794,7 +1794,7 @@
 
 91274 = {
 	name = "Harscoit"
-	dynasty = 317 #Rennes house of Penthièvre-Ravensworth
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
 	religion = "catholic"
 	culture = "breton"
 	father = 91270 #Acarias
@@ -1808,7 +1808,7 @@
 
 91275 = {
 	name = "Herri"
-	dynasty = 317 #Rennes house of Penthièvre-Ravensworth
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
 	religion = "catholic"
 	culture = "breton"
 	father = 91270 #Acarias
@@ -1823,7 +1823,7 @@
 91276 = {
 	name = "Mathilde" #Mathilde de Penthièvre
 	female = yes
-	dynasty = 317#Rennes house of Penthièvre
+	dynasty_house = house_penthievre#Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205744 #Stefen de Bretagne
@@ -1839,7 +1839,7 @@
 91277 = {
 	name = "Tiphaine" #Tiphaine de Penthièvre
 	female = yes
-	dynasty = 317#Rennes house of Penthièvre
+	dynasty_house = house_penthievre#Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205744 #Stefen de Bretagne
@@ -1855,7 +1855,7 @@
 91278 = {
 	name = "Gonnor" #Gonnor de Penthièvre
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205744 #Stefen de Bretagne
@@ -1870,7 +1870,7 @@
 91279 = {
 	name = "Olive"
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205744 #Stefen de Bretagne
@@ -1885,7 +1885,7 @@
 
 91280 = {
 	name = "Stefen" #Stefen de Penthièvre
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91162 #Rivallon de Penthièvre
@@ -1900,7 +1900,7 @@
 91281 = {
 	name = "Elina" #Elina de Penthièvre
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91162 #Rivallon de Penthièvre
@@ -1916,7 +1916,7 @@
 91282 = {
 	name = "Enoguen" #Enoguen de Penthièvre
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205751 #Alan le Noir
@@ -1931,7 +1931,7 @@
 
 91283 = {
 	name = "Roparzh" #Robert Brito
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	trait = bastard
@@ -1946,7 +1946,7 @@
 
 91284 = {
 	name = "Herri" #Harry de Penthièvre
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205743 #Harry de Bretagne
@@ -1961,7 +1961,7 @@
 
 91285 = {
 	name = "Stefen" #Stefen de Penthièvre
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205743 #Harry de Bretagne
@@ -1977,7 +1977,7 @@
 91286 = {
 	name = "JuhaE_l"
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91165 #Harry
@@ -1992,7 +1992,7 @@
 
 91287 = {
 	name = "Herri" #lord of Goello
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91165 #Harry
@@ -2009,7 +2009,7 @@
 91288 = {
 	name = "Mari" #Marie de Penthièvre
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91165 #Harry
@@ -2025,7 +2025,7 @@
 91289 = {
 	name = "Janed" #Jeanne d'Avalgor
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91165 #Harry
@@ -2040,7 +2040,7 @@
 
 91290 = {
 	name = "Jafrez" #Jafrez Borotel
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205742 #Alan, comte de Penthièvre
@@ -2057,7 +2057,7 @@
 91291 = {
 	name = "Hawiz" #Haoys d'Avaugour
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91169 #Alan d'Avaugour
@@ -2074,7 +2074,7 @@
 91292 = {
 	name = "Konstanza"
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91169 #Alan d'Avaugour
@@ -2089,7 +2089,7 @@
 
 91293 = {
 	name = "Yann" #Jean, bishop of Saint-Brieue
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	trait = education_learning_1
@@ -2105,7 +2105,7 @@
 
 91294 = {
 	name = "Gwilherm"
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 455581 #Harry III d'Avaugour
@@ -2120,7 +2120,7 @@
 91295 = {
 	name = "Blanche" #Blanche d'Avaugour
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 455581 #Harry III d'Avaugour
@@ -2137,7 +2137,7 @@
 91296 = {
 	name = "Marc_harit" #Marguerite d'Avaugour
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 455581 #Harry III d'Avaugour
@@ -2153,7 +2153,7 @@
 
 91258 = {
 	name = "Herri" #Harry IV d'Avaugour
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 455581 #Harry III d'Avaugour
@@ -2170,7 +2170,7 @@
 91297 = {
 	name = "Isabelle"
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91258 #Harry IV d'Avaugour
@@ -2187,7 +2187,7 @@
 91298 = {
 	name = "Marc_harit"
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91258 #Harry IV d'Avaugour
@@ -2204,7 +2204,7 @@
 91299 = {
 	name = "Mari"
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91258 #Harry IV d'Avaugour
@@ -2218,7 +2218,7 @@
 
 91300 = {
 	name = "Alan" #Alan, vicomte de Tonquedec
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205747 #Geslin de Penthièvre
@@ -2232,7 +2232,7 @@
 
 91301 = {
 	name = "Herri"
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205747 #Geslin de Penthièvre
@@ -2246,7 +2246,7 @@
 
 91302 = {
 	name = "HoE_l"
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 205747 #Geslin de Penthièvre
@@ -2260,7 +2260,7 @@
 
 91303 = {
 	name = "Roland" #Roland de Tonquedec
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91300 #Alan, viscount of Tonquedec
@@ -2275,7 +2275,7 @@
 
 91304 = {
 	name = "Prigent" #Prigent de Coëtmen
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91303 #Roland de Tonquedec
@@ -2290,7 +2290,7 @@
 
 91306 = {
 	name = "Guy"
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91304 #Prigent de Coëtmen
@@ -2305,7 +2305,7 @@
 91307 = {
 	name = "Janed"
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
 	religion = "catholic"
 	culture = "breton"
 	father = 91306 #Guy
@@ -2319,7 +2319,7 @@
 
 91309 = {
 	name = "Ralph"
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91265 #Ribald
@@ -2333,7 +2333,7 @@
 
 91310 = {
 	name = "Huiarnviu" #Huiarnviu Taillebois
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91265 #Ribald
@@ -2347,7 +2347,7 @@
 
 91311 = {
 	name = "Raynaud" #Raynaud Taillebois
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91265 #Ribald
@@ -2361,7 +2361,7 @@
 
 91312 = {
 	name = "Gwilherm" #William Taillebois
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91265 #Ribald
@@ -2375,7 +2375,7 @@
 
 91313 = {
 	name = "Roparzh"
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91309 #Ralph
@@ -2389,7 +2389,7 @@
 
 91314 = {
 	name = "Walran"
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91313 #Robert
@@ -2403,7 +2403,7 @@
 
 91315 = {
 	name = "Ralph"
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91313 #Robert
@@ -2417,7 +2417,7 @@
 
 91316 = {
 	name = "Randulf"
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91313 #Robert
@@ -2431,7 +2431,7 @@
 
 91317 = {
 	name = "Ralph"
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91316 #Randulf
@@ -2446,7 +2446,7 @@
 91318 = {
 	name = "Berthildis"
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91316 #Randulf
@@ -2460,7 +2460,7 @@
 
 91319 = {
 	name = "Randulf"
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91316 #Randulf
@@ -2475,7 +2475,7 @@
 91320 = {
 	name = "Mari"
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91317 #Ralph
@@ -2490,7 +2490,7 @@
 91321 = {
 	name = "Janed"
 	female = yes
-	dynasty = 317 #Rennes house of Penthièvre-Middleham
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
 	religion = "catholic"
 	culture = "breton"
 	father = 91317 #Ralph
@@ -2504,7 +2504,7 @@
 
 205780 = {
 	name = "Guimarc_h"
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 91215 #Huiarnviu II
@@ -2522,7 +2522,7 @@
 
 205781 = {
 	name = "Guimarc_h"
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205780 #Guimarc'h III
@@ -2540,7 +2540,7 @@
 
 205782 = {
 	name = "Huiarnviu"
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205780 #Guimarc'h III
@@ -2560,7 +2560,7 @@
 	name = "Azenor"
 	#AKA Eléonore or Léonore (?)
 	female = yes
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205780 #Guimarc'h III
@@ -2575,7 +2575,7 @@
 
 205784 = { #who is he?
 	name = "Adam"
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205780
@@ -2591,7 +2591,7 @@
 205785 = { #who is she?
 	name = "Ennougen"
 	female = yes
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205780
@@ -2607,7 +2607,7 @@
 #205786 = { #who is she?
 #	name = "Berthe"
 #	female = yes
-#	dynasty = 20017 #La Marck
+#	dynasty_house = house_leon #La Marck
 #	religion = "catholic"
 #	culture = "breton"
 #	father = 205780
@@ -2622,7 +2622,7 @@
 
 205787 = {
 	name = "Huiarnviu"
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205781
@@ -2638,7 +2638,7 @@
 205788 = {
 	name = "Azenor"
 	female = yes
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205782
@@ -2653,7 +2653,7 @@
 
 205789 = {
 	name = "Huiarnviu"
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205782
@@ -2669,7 +2669,7 @@
 205790 = {
 	name = "Konstanza"
 	female = yes
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205782
@@ -2685,7 +2685,7 @@
 205791 = {
 	name = "Emma"
 	female = yes
-	dynasty = 20017 #La Marck
+	dynasty_house = house_leon #La Marck
 	religion = "catholic"
 	culture = "breton"
 	father = 205830
@@ -2751,7 +2751,7 @@
 		birth = yes
 	}
 	1066.1.5 = {
-		add_pressed_claim = d_normandy
+		add_pressed_claim = title:d_normandy
 	}
 	1066.12.11 = {
 		death = yes
@@ -2776,7 +2776,7 @@
 
 50007 = {
 	name = "Malhuedoc"
-	dynasty = 20016 #Nantes
+	dynasty_house = house_nantes #Nantes
 	religion = "catholic"
 	culture = "breton"
 	father = 50009
@@ -3320,7 +3320,7 @@
 	father = 159645
 	720.1.1 = {
 		birth = "720.1.1"
-		add_pressed_claim = c_rennes
+		add_pressed_claim = title:c_rennes
 	}
 	780.1.1 = {
 		death = "780.1.1"
@@ -3716,7 +3716,7 @@
 	name = "Gradlon"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159667
 	632.1.1 = {
 		birth = "632.1.1"
@@ -3729,7 +3729,7 @@
 	name = "Concar"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159668
 	660.1.1 = {
 		birth = "660.1.1"
@@ -3742,7 +3742,7 @@
 	name = "Iudon"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159669
 	710.1.1 = {
 		birth = "710.1.1"
@@ -3755,7 +3755,7 @@
 	name = "Custentin" #Constantine
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159670
 	740.1.1 = {
 		birth = "740.1.1"
@@ -3768,7 +3768,7 @@
 	name = "Gestin" #Justin
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159671
 	769.1.1 = {
 		birth = "769.1.1"
@@ -3781,7 +3781,7 @@
 	name = "Alfrond"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159672
 	800.1.1 = {
 		birth = "800.1.1"
@@ -3794,7 +3794,7 @@
 	name = "Ulfret"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159673
 	840.1.1 = {
 		birth = "840.1.1"
@@ -3807,7 +3807,7 @@
 	name = "Diles"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159674
 	880.1.1 = {
 		birth = "880.1.1"
@@ -3820,7 +3820,7 @@
 	name = "Budic"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159675
 	910.1.1 = {
 		birth = "910.1.1"
@@ -3833,7 +3833,7 @@
 	name = "Budic"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159676
 	940.1.1 = {
 		birth = "940.1.1"
@@ -3846,7 +3846,7 @@
 	name = "Budic"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159677
 	957.1.1 = {
 		birth = "957.1.1"
@@ -3911,7 +3911,7 @@
 	name = "Even" # Eugene
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 20017 # de Leon
+	dynasty_house = house_leon # de Leon
 	father = 159680
 	957.1.1 = {
 		birth = "957.1.1"
@@ -3993,7 +3993,7 @@
 	father = 159684
 	750.1.1 = {
 		birth = "750.1.1"
-		add_pressed_claim = c_nantes
+		add_pressed_claim = title:c_nantes
 	}
 	799.1.1 = {
 		death = "799.1.1"
@@ -4178,7 +4178,7 @@
 	female = yes
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159673
 	865.1.1 = {
 		birth = "865.1.1"
@@ -4191,7 +4191,7 @@
 	name = "Argant"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159671
 	791.1.1 = {
 		birth = "791.1.1"
@@ -4204,7 +4204,7 @@
 	name = "Iudhael"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159672
 	825.1.1 = {
 		birth = "825.1.1"
@@ -4217,7 +4217,7 @@
 	name = "Rivod"
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159672
 	826.1.1 = {
 		birth = "826.1.1"
@@ -4230,7 +4230,7 @@
 	name = "Louenan" #Louvenan, Lowenen
 	religion = "catholic"
 	culture = "breton"
-	dynasty = 311 # de Cornouaille
+	dynasty_house = house_cornouaille # de Cornouaille
 	father = 159673
 	850.1.1 = {
 		birth = "850.1.1"

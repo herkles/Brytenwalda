@@ -1138,7 +1138,7 @@
 			birth = "1050.1.1"
 		}
 		1057.8.30 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1066.1.6 = {
 			trait = hunter_1
@@ -1174,7 +1174,7 @@
 			birth = "1045.1.1"
 		}
 		1057.8.30 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 	
 		1093.11.16 = {
@@ -1229,7 +1229,7 @@
 			birth = "1047.5.8"
 		}
 		1057.8.30 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1066.1.6 = {
 			employer = 122
@@ -1516,24 +1516,6 @@
 				}
 			}
 		}
-		1066.9.14 = {
-			effect = {
-				spawn_army = {
-					name = event_troop_default_name
-					levies = 700
-					location = 1527
-					origin = 1527
-					inheritable = no
-				}
-				spawn_army = {
-					name = event_troop_default_name
-					levies = 700
-					location = 1527
-					origin = 1527
-					inheritable = no
-				}
-			}
-		}
 		1066.10.14 = {
 			death = {
 				death_reason = death_battle
@@ -1570,9 +1552,9 @@
 			effect = {
 				set_relation_nemesis = character:122	#King Harold siezed his titles!
 			}
-			add_pressed_claim = k_england
-			add_pressed_claim = d_northumberland
-			add_pressed_claim = d_york
+			add_pressed_claim = title:k_england
+			add_pressed_claim = title:d_northumberland
+			add_pressed_claim = title:d_york
 		}
 		1066.9.25 = {
 			death = "1066.9.25"
@@ -1831,7 +1813,7 @@
 			birth = "1047.1.1"
 		}
 		1066.1.1 = {
-			add_pressed_claim = d_lancaster
+			add_pressed_claim = title:d_lancaster
 		}
 		1091.1.1 = {
 			death = "1091.1.1"
@@ -6963,8 +6945,8 @@
 		}
 		1066.1.1 = {
 			employer = 140
-			add_pressed_claim = d_northumberland
-			add_pressed_claim = c_northumberland
+			add_pressed_claim = title:d_northumberland
+			add_pressed_claim = title:c_northumberland
 		}
 		1067.1.1 = {
 			death = "1067.1.1"

@@ -369,12 +369,6 @@
 		920.1.1 = {
 			birth = "920.1.1"
 		}
-		942.1.1 = {
-			add_pressed_claim = c_gwynedd
-		}
-		950.1.1 = {
-			remove_claim = c_gwynedd
-		}	
 		979.1.1 = {
 			death = "979.1.1"
 		}
@@ -443,7 +437,7 @@
 		father = 138472 #Gruffydd ap Iago
 		1033.1.1 = {
 			birth = "1033.1.1"
-			add_pressed_claim = d_gwynedd
+			add_pressed_claim = title:d_gwynedd
 		}
 		1074.1.1 = {
 			death = "1074.1.1"
@@ -459,7 +453,7 @@
 			birth = "1050.1.1"
 		}
 		1074.1.1 = {
-			add_pressed_claim = d_gwynedd
+			add_pressed_claim = title:d_gwynedd
 		}
 		1081.1.1 = {
 			death = "1081.1.1"
@@ -833,8 +827,8 @@
 		mother = 1029 #Ragnhild erv Olav
 		1055.1.1 = {
 			birth = "1055.1.1"
-			add_pressed_claim = d_gwynedd
-			add_pressed_claim = c_dublin
+			add_pressed_claim = title:d_gwynedd
+			add_pressed_claim = title:c_dublin
 		}
 		1095.1.1 = {
 			add_spouse = 214814 #Angharad ferch Owain
@@ -979,7 +973,7 @@
 
 		820.1.1 = {
 			birth = "820.1.1"
-			remove_claim = d_the_isles
+			remove_claim = title:d_the_isles
 			give_nickname = "nick_the_great"
 			capital = c_anglesey
 		}
@@ -2436,8 +2430,8 @@
 	father = 40502
 	mother = 123
 	1053.1.2 = {
-		add_pressed_claim = d_gwynedd
-		add_pressed_claim = d_powys
+		add_pressed_claim = title:d_gwynedd
+		add_pressed_claim = title:d_powys
 		birth = "1053.1.2"
 	}
 	1066.1.1 = {
@@ -2461,8 +2455,8 @@
 	father = 40502
 	mother = 123
 	1054.1.2 = {
-		add_pressed_claim = d_gwynedd
-		add_pressed_claim = d_powys
+		add_pressed_claim = title:d_gwynedd
+		add_pressed_claim = title:d_powys
 		birth = "1054.1.2"
 	}
 	1063.1.2 = {
@@ -4300,7 +4294,6 @@
 	father = 159087
 	790.1.1 = {
 		birth = "790.1.1"
-		add_pressed_claim = c_powys
 	}
 	878.1.1 = {
 		death = "878.1.1"
@@ -4314,7 +4307,6 @@
 	father = 159091
 	820.1.1 = {
 		birth = "820.1.1"
-		add_pressed_claim = c_powys
 	}
 	900.1.1 = {
 		death = "900.1.1"
@@ -4328,7 +4320,6 @@
 	father = 159092
 	850.1.1 = {
 		birth = "850.1.1"
-		add_pressed_claim = c_powys
 	}
 	930.1.1 = {
 		death = "930.1.1"
@@ -5576,7 +5567,6 @@
 	father = 159365
 	810.1.1 = {
 		birth = "810.1.1"
-		add_pressed_claim = c_gwent
 	}
 	885.1.1 = {
 		death = "885.1.1"
@@ -5590,7 +5580,6 @@
 	father = 159366
 	850.1.1 = {
 		birth = "850.1.1"
-		add_pressed_claim = c_gwent
 	}
 	920.1.1 = {
 		death = "920.1.1"
@@ -8400,7 +8389,6 @@
 	father = 159366
 	848.1.1 = {
 		birth = yes
-		add_pressed_claim = c_gwent
 	}
 	910.1.1={
 		death = yes

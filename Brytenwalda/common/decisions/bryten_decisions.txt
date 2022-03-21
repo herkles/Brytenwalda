@@ -12,7 +12,7 @@ unite_england_decision = {
 			has_culture = culture:anglo_saxon
 			has_culture = culture:norse
 		}
-		custom_description = {# Your Capital must be in England
+		custom_tooltip = {
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
 		}
@@ -27,11 +27,11 @@ unite_england_decision = {
 	}
 
 	is_valid = {
-		custom_description = {# Your Capital must be in England
+		custom_tooltip = {
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
 		}
-		custom_description = {# Must own a good chunk of England
+		custom_tooltip = {
 			text = owns_majority_england_region_tooltip
 		 	any_county_in_region = {
 		 		region = custom_england
@@ -41,18 +41,12 @@ unite_england_decision = {
 		 		}
 		 	}
 		}
-		custom_description = {# Must be english or Norse
+		custom_tooltip = {
 			text = unite_england_culture_requirement
-			
-			trigger_if = {
-				OR = {# This is for the Anglo-Saxons or the Norse who come to settle
-					has_culture = culture:anglo_saxon
-					has_culture = culture:norse
-				}
-			}
+			culture = { has_cultural_pillar = heritage_west_germanic }
 		}
-		custom_description = {# Must be a king of one of the Heptarchy Kingdoms
-   			text = unite_england_decision_primary
+		custom_tooltip = {
+			text = unite_england_decision_primary
 			OR = {
 				has_primary_title = title:k_kent
 				has_primary_title = title:k_northumbria
@@ -160,7 +154,7 @@ restore_kingdom_kent_decision = {
 				target = flag:flag_restored_kent
 			}
 		}
-		custom_description = {# Your Capital must be in England
+		custom_tooltip = {
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
 		}
@@ -168,7 +162,7 @@ restore_kingdom_kent_decision = {
 	}
 
 	is_valid = {
-		custom_description = {# Your Capital must be in England
+		custom_tooltip = {
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
 		}
@@ -176,15 +170,9 @@ restore_kingdom_kent_decision = {
 		prestige_level >= high_prestige_level
 		root.faith = faith:catholic # Due to it being an important seat, the people won't accept you without you being catholic. 
 		completely_controls = title:d_kent
-		custom_description = {# Must be english or Norse
+		custom_tooltip = {
 			text = unite_england_culture_requirement
-			
-			trigger_if = {
-				OR = {# This is for the Anglo-Saxons or the Norse who come to settle
-					has_culture = culture:anglo_saxon
-					has_culture = culture:norse
-				}
-			}
+			culture = { has_cultural_pillar = heritage_west_germanic }
 		}
 	}
 
@@ -259,7 +247,7 @@ restore_kingdom_essex_decision = {
 				target = flag:flag_restored_essex
 			}
 		}
-		custom_description = {# Your Capital must be in England
+		custom_tooltip = {
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
 		}
@@ -271,15 +259,9 @@ restore_kingdom_essex_decision = {
 		prestige_level >= high_prestige_level
 		completely_controls = title:d_essex
 		root.faith = faith:catholic
-		custom_description = {# Must be english or Norse
+		custom_tooltip = {
 			text = unite_england_culture_requirement
-			
-			trigger_if = {
-				OR = {# This is for the Anglo-Saxons or the Norse who come to settle
-					has_culture = culture:anglo_saxon
-					has_culture = culture:norse
-				}
-			}
+			culture = { has_cultural_pillar = heritage_west_germanic }
 		}
 	}
 
@@ -337,7 +319,7 @@ strengthen_high_kingship_decision = {
 	desc = strengthen_high_kingship_decision_desc
 
 	is_shown = {
-		has_culture_group = culture_group:goidelic_group # Must be a Gael to do this
+		culture = { has_cultural_pillar = heritage_goidelic }# Must be a Gael to do this
 		NOT = {# this is a unique decision
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -489,17 +471,16 @@ create_duchy_of_lothian = {
 	}
 
 	is_valid = {
-		custom_description = {# Must control Lothian
+		custom_tooltip = {
 			text = create_lothian_land_requirement		
-			trigger_if = {
-				AND = {# Must control Lothian
-					completely_controls = title:c_lothian
-					completely_controls = title:c_dunbar
-					completely_controls = title:c_teviotdale
-					completely_controls = title:c_linlithgowshire
-					completely_controls = title:c_lanarkshire
-				}
+			AND = {# Must control Lothian
+				completely_controls = title:c_lothian
+				completely_controls = title:c_dunbar
+				completely_controls = title:c_teviotdale
+				completely_controls = title:c_linlithgowshire
+				completely_controls = title:c_lanarkshire
 			}
+
 		}
 	}
 
@@ -553,7 +534,7 @@ establish_norman_adminstration = {
 	}
 
 	is_valid = {
-		custom_description = {# Your Capital must be in England
+		custom_tooltip = {
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
 		}

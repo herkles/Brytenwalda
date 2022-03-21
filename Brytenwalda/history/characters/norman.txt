@@ -43,7 +43,7 @@
 			}
 		}
 		1066.1.5 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1066.9.12 = {
 			effect = {
@@ -51,8 +51,8 @@
 				spawn_army = {
 					name = event_troop_default_name
 					levies = 1000
-					location = 2174
-					origin = 2325
+					location = province:2174
+					origin = province:2325
 				}
 				
 				# Troops that goes away
@@ -61,32 +61,62 @@
 					levies = 800
 					men_at_arms = {
 						type = armored_footmen
+						stacks = 4
+					}
+					men_at_arms = {
+						type = onager
 						stacks = 2
 					}
-					location = 2174
-					origin = 2325
-					inheritable = no
-				}
-				spawn_army = {
-					name = event_troop_default_name
-					levies = 800‬
-					location = 2174
-					origin = 2325
+					location = province:2174
+					origin = province:2325
 					inheritable = no
 				}
 				spawn_army = {
 					name = event_troop_default_name
 					levies = 800
-					location = 2174
-					origin = 2325
+					men_at_arms = {
+						type = bowmen
+						stacks = 4
+					}
+					men_at_arms = {
+						type = onager
+						stacks = 2
+					}
+					location = province:2174
+					origin = province:2325
 					inheritable = no
 				}
 				spawn_army = {
 					name = event_troop_default_name
 					levies = 800
-					location = 2174
-					origin = 2325
+					men_at_arms = {
+						type = armored_footmen
+						stacks = 4
+					}
+					men_at_arms = {
+						type = onager
+						stacks = 2
+					}
+					location = province:2174
+					origin = province:2325
 					inheritable = no
+					war_keep_on_attacker_victory = no
+				}
+				spawn_army = {
+					name = event_troop_default_name
+					levies = 800
+					men_at_arms = {
+						type = light_footmen
+						stacks = 4
+					}
+					men_at_arms = {
+						type = pikemen_unit
+						stacks = 4
+					}
+					location = province:2174
+					origin = province:2325
+					inheritable = no
+					war_keep_on_attacker_victory = no
 				}
 			}
 		}
@@ -143,7 +173,7 @@
 			}	
 		}
 		1087.9.9 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1100.8.3 = {
 			death = "1100.8.3"
@@ -172,7 +202,7 @@
 			birth = yes
 		}
 		1087.9.9 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1100.11.11 = {
 			add_spouse = 202995
@@ -207,7 +237,7 @@
 			birth = "1102.2.7"
 		}
 		1135.12.2 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1167.9.10 = {
 			death = "1167.9.10"
@@ -250,7 +280,7 @@
 			birth = yes
 		}
 		1087.9.9 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1074.1.1 = {
 			death = yes
@@ -283,7 +313,7 @@
 		1065.1.1 = {
 			give_nickname = nick_the_curthose
 		}
-		1087.9.9 = { add_pressed_claim = k_england }
+		1087.9.9 = { add_pressed_claim = title:k_england }
 		1096.1.1 = {
 			trait = faith_warrior
 		}
@@ -311,7 +341,7 @@
 			birth = "1055.1.1"
 		}
 		1087.9.9 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1081.1.1 = {
 			death = "1081.1.1"
@@ -334,7 +364,7 @@
 			birth = yes
 		}
 		1087.9.9 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1090.8.13 = {
 			death = yes
@@ -358,7 +388,7 @@
 			birth = "1057.1.1"
 		}
 		1087.9.9 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1126.7.30 = {
 			death = "1126.7.30"
@@ -479,7 +509,7 @@
 			birth = yes
 		}
 		1087.9.9 = {
-			add_pressed_claim = k_england
+			add_pressed_claim = title:k_england
 		}
 		1137.3.8 = {
 			death = yes
@@ -2749,7 +2779,7 @@
 		birth = "1063.1.1"
 	}
 	1136.1.1 = {
-		add_pressed_claim = c_bari
+		add_pressed_claim = title:c_bari
 	}
 	1142.1.1 = {
 		death = "1142.1.1"
@@ -3480,7 +3510,7 @@
 		birth = "1090.1.1"
 	}
 	1142.1.1 = {
-		add_pressed_claim = c_bari
+		add_pressed_claim = title:c_bari
 	}
 	1153.5.1 = {
 		death = "1153.5.1"
@@ -6349,7 +6379,7 @@
 		add_spouse = 72125
 	}
 	1154.1.1 = {
-		add_pressed_claim = c_tarragona
+		add_pressed_claim = title:c_tarragona
 	}
 	1159.1.1 = {
 		death = "1159.1.1"

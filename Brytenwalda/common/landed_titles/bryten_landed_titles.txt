@@ -15,18 +15,18 @@ e_britannia = {
 	capital = c_middlesex
 	
 	cultural_names = {
-		pictish = cn_pictavia
-		irish = cn_alba
-		gaelic = cn_alba
+		name_list_pictish = cn_pictavia
+		name_list_irish  = cn_alba
+		name_list_gaelic = cn_alba
 	}
 	
 	ai_primary_priority = {
 		if = {
 			limit = {
 				OR = {
-					culture_group = culture_group:west_germanic_group
-					culture_group = culture_group:goidelic_group
-					culture_group = culture_group:brythonic_group
+					has_cultural_pillar = heritage_west_germanic
+					has_cultural_pillar = heritage_goidelic
+					has_cultural_pillar = heritage_brythonic
 				}
 			}
 			add = @correct_culture_primary_score
@@ -138,12 +138,12 @@ e_britannia = {
 		capital = c_middlesex # London
 		
 		cultural_names = {
-			norman = cn_anglieterre
-			english = cn_engelond
-			anglo_saxon = cn_englaland
-			pictish = cn_pictavia
-			irish = cn_alba
-			gaelic = cn_alba
+			name_list_norman = cn_anglieterre
+			name_list_english = cn_engelond
+			name_list_anglo_saxon = cn_englaland
+			name_list_pictish = cn_pictavia
+			name_list_irish  = cn_alba
+			name_list_gaelic = cn_alba
 		}
 
 		ai_primary_priority = {
@@ -173,16 +173,16 @@ e_britannia = {
 			}
 
 			cultural_names = {
-				breton = cn_bryneich
-				cornish = cn_bryneich
-				cumbrian = cn_bryneich
-				pictish = cn_bryneich
-				welsh = cn_bryneich
+				name_list_breton = cn_bryneich
+				name_list_cornish = cn_bryneich
+				name_list_cumbrian = cn_bryneich
+				name_list_pictish = cn_bryneich
+				name_list_welsh = cn_bryneich
 				
-				norman = cn_norroy
-				french = cn_norroy
-				outremer = cn_norroy
-				occitan = cn_norroy
+				name_list_norman = cn_norroy
+				name_list_french = cn_norroy
+				name_list_outremer = cn_norroy
+				name_list_occitan = cn_norroy
 			}
 		}		
 		d_east_anglia = {# East Anglia
@@ -199,8 +199,8 @@ e_britannia = {
 			}
 
 			cultural_names = {
-				norse = cn_jarnamoda
-				norwegian = cn_jarnamoda
+				name_list_norse = cn_jarnamoda
+				name_list_norwegian = cn_jarnamoda
 			}
 
 		}
@@ -218,8 +218,8 @@ e_britannia = {
 			}
 
 			cultural_names = {
-				norse = cn_jarnamoda
-				norwegian = cn_jarnamoda
+				name_list_norse = cn_jarnamoda
+				name_list_norwegian = cn_jarnamoda
 			}
 
 		}
@@ -265,8 +265,8 @@ e_britannia = {
 			}
 
 			cultural_names = {
-				norse = cn_jarnamoda
-				norwegian = cn_jarnamoda
+				name_list_norse = cn_jarnamoda
+				name_list_norwegian = cn_jarnamoda
 			}
 
 		}
@@ -283,8 +283,8 @@ e_britannia = {
 			}
 
 			cultural_names = {
-				anglo_saxon = cn_east_seaxe
-				old_saxon = cn_east_seaxe
+				name_list_anglo_saxon = cn_east_seaxe
+				name_list_old_saxon = cn_east_seaxe
 			}		
 		}	
 		### Default Duchies ###
@@ -301,8 +301,8 @@ e_britannia = {
 			}			
 
 			cultural_names = {
-				anglo_saxon = cn_east_seaxe
-				old_saxon = cn_east_seaxe
+				name_list_anglo_saxon = cn_east_seaxe
+				name_list_old_saxon = cn_east_seaxe
 			}
 
 			c_middlesex = {
@@ -310,8 +310,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 	
 				cultural_names = {
-					anglo_saxon = cn_middle_seaxe
-					old_saxon = cn_middle_seaxe
+					name_list_anglo_saxon = cn_middle_seaxe
+					name_list_old_saxon = cn_middle_seaxe
 				}
 				
 				b_london = {
@@ -321,27 +321,27 @@ e_britannia = {
 					color2 = { 255 255 255 }
 	
 					cultural_names = {
-						anglo_saxon = cn_lunden
-						old_saxon = cn_lunden
+						name_list_anglo_saxon = cn_lunden
+						name_list_old_saxon = cn_lunden
 						
-						roman = cn_londinium
+						name_list_roman = cn_londinium
 						
-						welsh = cn_llundein
-						cornish = cn_llundein
-						breton = cn_llundein
-						cumbrian = cn_llundein
-						pictish = cn_llundein
+						name_list_welsh = cn_llundein
+						name_list_cornish = cn_llundein
+						name_list_breton = cn_llundein
+						name_list_cumbrian = cn_llundein
+						name_list_pictish = cn_llundein
 						
-						norman = cn_londres
-						scottish = cn_lunnon
+						name_list_norman = cn_londres
+						name_list_scottish = cn_lunnon
 					}
 				}
 				b_southwark = {
 					province = 1526
 	
 					cultural_names = {
-						anglo_saxon = cn_suthweorc
-						old_saxon = cn_suthweorc
+						name_list_anglo_saxon = cn_suthweorc
+						name_list_old_saxon = cn_suthweorc
 					}
 
 					color = { 230 5 5 }
@@ -371,16 +371,16 @@ e_britannia = {
 				color2 = { 255 255 255 }
 	
 				cultural_names = {
-					anglo_saxon = cn_east_seaxe
-					old_saxon = cn_east_seaxe
+					name_list_anglo_saxon = cn_east_seaxe
+					name_list_old_saxon = cn_east_seaxe
 				}
 				
 				b_colchester = {
 					province = 1514
 	
 					cultural_names = {
-						anglo_saxon = cn_colenceaster
-						old_saxon = cn_colenceaster
+						name_list_anglo_saxon = cn_colenceaster
+						name_list_old_saxon = cn_colenceaster
 					}
 
 					color = { 220 20 30 }
@@ -410,16 +410,16 @@ e_britannia = {
 				color2 = { 255 255 255 }
 	
 				cultural_names = {
-					anglo_saxon = cn_bedanford
-					old_saxon = cn_bedanford
+					name_list_anglo_saxon = cn_bedanford
+					name_list_old_saxon = cn_bedanford
 				}
 				
 				b_bedford = {
 					province = 1538
 	
 					cultural_names = {
-						anglo_saxon = cn_bedanford
-						old_saxon = cn_bedanford
+						name_list_anglo_saxon = cn_bedanford
+						name_list_old_saxon = cn_bedanford
 					}
 
 					color = { 205 20 15 }
@@ -443,8 +443,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 	
 				cultural_names = {
-					anglo_saxon = cn_herutford
-					old_saxon = cn_herutford
+					name_list_anglo_saxon = cn_herutford
+					name_list_old_saxon = cn_herutford
 				}
 
 				b_berkhamsted = {
@@ -471,16 +471,16 @@ e_britannia = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					anglo_saxon = cn_buccingahamm
-					old_saxon = cn_buccingahamm
+					name_list_anglo_saxon = cn_buccingahamm
+					name_list_old_saxon = cn_buccingahamm
 				}
 				
 				b_buckingham = {
 					province = 1551
 				
 					cultural_names = {
-						anglo_saxon = cn_buccingahamm
-						old_saxon = cn_buccingahamm
+						name_list_anglo_saxon = cn_buccingahamm
+						name_list_old_saxon = cn_buccingahamm
 					}
 
 					color = { 200 25 25 }
@@ -518,16 +518,16 @@ e_britannia = {
 
 
 			cultural_names = {
-				breton = cn_bryneich
-				cornish = cn_bryneich
-				cumbrian = cn_bryneich
-				pictish = cn_bryneich
-				welsh = cn_bryneich
+				name_list_breton = cn_bryneich
+				name_list_cornish = cn_bryneich
+				name_list_cumbrian = cn_bryneich
+				name_list_pictish = cn_bryneich
+				name_list_welsh = cn_bryneich
 				
-				norman = cn_norroy
-				french = cn_norroy
-				outremer = cn_norroy
-				occitan = cn_norroy
+				name_list_norman = cn_norroy
+				name_list_french = cn_norroy
+				name_list_outremer = cn_norroy
+				name_list_occitan = cn_norroy
 			}
 		
 			ai_primary_priority = {
@@ -546,12 +546,12 @@ e_britannia = {
 				color2 = { 255 255 255 }
 							
 				cultural_names = {
-					anglo_saxon = cn_bernicia
-					breton = cn_bryneich
-					cornish = cn_bryneich
-					cumbrian = cn_bryneich
-					pictish = cn_bryneich
-					welsh = cn_bryneich
+					name_list_anglo_saxon = cn_bernicia
+					name_list_breton = cn_bryneich
+					name_list_cornish = cn_bryneich
+					name_list_cumbrian = cn_bryneich
+					name_list_pictish = cn_bryneich
+					name_list_welsh = cn_bryneich
 				}
 				
 				b_bamburgh = {
@@ -561,19 +561,19 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						anglo_saxon = cn_bebbanburg
-						old_saxon = cn_bebbanburg
+						name_list_anglo_saxon = cn_bebbanburg
+						name_list_old_saxon = cn_bebbanburg
 						
-						norwegian = cn_bamborg
-						danish = cn_bamborg
-						swedish = cn_bamborg
-						norse = cn_bamborg
+						name_list_norwegian = cn_bamborg
+						name_list_danish = cn_bamborg
+						name_list_swedish = cn_bamborg
+						name_list_norse = cn_bamborg
 						
-						welsh = cn_din_guarie
-						cumbrian = cn_din_guarie
-						pictish = cn_din_guarie
-						cornish = cn_din_guarie
-						breton = cn_din_guarie
+						name_list_welsh = cn_din_guarie
+						name_list_cumbrian = cn_din_guarie
+						name_list_pictish = cn_din_guarie
+						name_list_cornish = cn_din_guarie
+						name_list_breton = cn_din_guarie
 					}
 				}
 				b_rothbury = {
@@ -589,11 +589,11 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						welsh = cn_medcaut
-						cumbrian = cn_medcaut
-						pictish = cn_medcaut
-						cornish = cn_medcaut
-						breton = cn_medcaut
+						name_list_welsh = cn_medcaut
+						name_list_cumbrian = cn_medcaut
+						name_list_pictish = cn_medcaut
+						name_list_cornish = cn_medcaut
+						name_list_breton = cn_medcaut
 					}
 				}
 				b_hexham = {
@@ -608,26 +608,26 @@ e_britannia = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					anglo_saxon = cn_dunholm
-					old_saxon = cn_dunholm
-					norman = cn_duresm
-					french = cn_duresm
-					outremer = cn_duresm
-					occitan = cn_duresm
+					name_list_anglo_saxon = cn_dunholm
+					name_list_old_saxon = cn_dunholm
+					name_list_norman = cn_duresm
+					name_list_french = cn_duresm
+					name_list_outremer = cn_duresm
+					name_list_occitan = cn_duresm
 				}
 				
 				b_durham = {
 					province = 1606
 					
 					cultural_names = {
-						anglo_saxon = cn_dunholm
-						old_saxon = cn_dunholm
-						norman = cn_duresm
-						french = cn_duresm
-						outremer = cn_duresm
-						occitan = cn_duresm
-						norse = cn_ulfreksfjordr
-						norwegian = cn_ulfreksfjordr
+						name_list_anglo_saxon = cn_dunholm
+						name_list_old_saxon = cn_dunholm
+						name_list_norman = cn_duresm
+						name_list_french = cn_duresm
+						name_list_outremer = cn_duresm
+						name_list_occitan = cn_duresm
+						name_list_norse = cn_ulfreksfjordr
+						name_list_norwegian = cn_ulfreksfjordr
 					}
 
 					color = { 255 15 15 }
@@ -651,8 +651,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 					
 				cultural_names = {
-					anglo_saxon = cn_cumbraland
-					old_saxon = cn_cumbraland
+					name_list_anglo_saxon = cn_cumbraland
+					name_list_old_saxon = cn_cumbraland
 				}
 				
 				ai_primary_priority = {
@@ -668,15 +668,15 @@ e_britannia = {
 					province = 1635
 					
 					cultural_names = {
-						cumbrian = cn_caer_luel
-						welsh = cn_caer_luel
-						pictish = cn_caer_luel
-						breton = cn_caer_luel
-						cornish = cn_caer_luel
-						gaelic = cn_cathair_luail
-						irish = cn_cathair_luail
-						anglo_saxon = cn_carleol
-						old_saxon = cn_carleol
+						name_list_cumbrian = cn_caer_luel
+						name_list_welsh = cn_caer_luel
+						name_list_pictish = cn_caer_luel
+						name_list_breton = cn_caer_luel
+						name_list_cornish = cn_caer_luel
+						name_list_gaelic = cn_cathair_luail
+						name_list_irish  = cn_cathair_luail
+						name_list_anglo_saxon = cn_carleol
+						name_list_old_saxon = cn_carleol
 					}
 
 					color = { 240 25 25 }
@@ -709,11 +709,11 @@ e_britannia = {
 			capital = c_lancashire # Lancaster
 			
 			cultural_names = {
-				breton = cn_rheged
-				cornish = cn_rheged
-				cumbrian = cn_rheged
-				welsh = cn_rheged
-				pictish = cn_rheged
+				name_list_breton = cn_rheged
+				name_list_cornish = cn_rheged
+				name_list_cumbrian = cn_rheged
+				name_list_welsh = cn_rheged
+				name_list_pictish = cn_rheged
 			}	
 			
 			can_create = {
@@ -790,10 +790,10 @@ e_britannia = {
 				color2 = { 255 255 255 }
 					
 				cultural_names = {
-					norwegian = cn_djuraby
-					danish = cn_djuraby
-					swedish = cn_djuraby
-					norse = cn_djuraby
+					name_list_norwegian = cn_djuraby
+					name_list_danish = cn_djuraby
+					name_list_swedish = cn_djuraby
+					name_list_norse = cn_djuraby
 				}
 				
 				b_derby = {
@@ -803,10 +803,10 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norwegian = cn_djuraby
-						danish = cn_djuraby
-						swedish = cn_djuraby
-						norse = cn_djuraby
+						name_list_norwegian = cn_djuraby
+						name_list_danish = cn_djuraby
+						name_list_swedish = cn_djuraby
+						name_list_norse = cn_djuraby
 					}
 				}
 				b_chesterfield = {
@@ -830,18 +830,18 @@ e_britannia = {
 			capital = c_north_riding # York
 			
 			cultural_names = {
-				norse = cn_jorvik
-				norwegian = cn_jorvik
-				swedish = cn_jorvik
-				danish = cn_jorvik
+				name_list_norse = cn_jorvik
+				name_list_norwegian = cn_jorvik
+				name_list_swedish = cn_jorvik
+				name_list_danish = cn_jorvik
 				
-				anglo_saxon = cn_northumbria
+				name_list_anglo_saxon = cn_northumbria
 				
-				breton = cn_deifr
-				cornish = cn_deifr
-				cumbrian = cn_deifr
-				welsh = cn_deifr
-				pictish = cn_deifr
+				name_list_breton = cn_deifr
+				name_list_cornish = cn_deifr
+				name_list_cumbrian = cn_deifr
+				name_list_welsh = cn_deifr
+				name_list_pictish = cn_deifr
 			}
 			
 			ai_primary_priority = {
@@ -858,11 +858,11 @@ e_britannia = {
 				color2 = { 255 255 255 }
 					
 				cultural_names = {				
-					breton = cn_efrog
-					cornish = cn_efrog
-					cumbrian = cn_efrog
-					welsh = cn_efrog
-					pictish = cn_efrog
+					name_list_breton = cn_efrog
+					name_list_cornish = cn_efrog
+					name_list_cumbrian = cn_efrog
+					name_list_welsh = cn_efrog
+					name_list_pictish = cn_efrog
 				}
 				
 				b_york = {
@@ -872,18 +872,18 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norse = cn_jorvik
-						norwegian = cn_jorvik
-						swedish = cn_jorvik
-						danish = cn_jorvik
+						name_list_norse = cn_jorvik
+						name_list_norwegian = cn_jorvik
+						name_list_swedish = cn_jorvik
+						name_list_danish = cn_jorvik
 						
-						anglo_saxon = cn_eoforwic
+						name_list_anglo_saxon = cn_eoforwic
 				
-						breton = cn_efrog
-						cornish = cn_efrog
-						cumbrian = cn_efrog
-						welsh = cn_efrog
-						pictish = cn_efrog
+						name_list_breton = cn_efrog
+						name_list_cornish = cn_efrog
+						name_list_cumbrian = cn_efrog
+						name_list_welsh = cn_efrog
+						name_list_pictish = cn_efrog
 					}
 				}
 				b_scarborough = {
@@ -917,7 +917,7 @@ e_britannia = {
 
 				b_pockington = {
 					cultural_names = {
-						anglo_saxon = cn_poclintun
+						name_list_anglo_saxon = cn_poclintun
 					}
 					province = 1588
 
@@ -941,22 +941,22 @@ e_britannia = {
 				color = { 255 120 35 }
 				color2 = { 255 255 255 }
 				cultural_names = {
-					welsh = cn_elmet
-					cumbrian = cn_elmet
-					cornish = cn_elmet
-					breton = cn_elmet
-					pictish = cn_elmet
+					name_list_welsh = cn_elmet
+					name_list_cumbrian = cn_elmet
+					name_list_cornish = cn_elmet
+					name_list_breton = cn_elmet
+					name_list_pictish = cn_elmet
 				}
 
 				b_leeds = {
 					cultural_names = {
-						welsh = cn_ladenses
-						cumbrian = cn_ladenses
-						cornish = cn_ladenses
-						breton = cn_ladenses
-						pictish = cn_ladenses
+						name_list_welsh = cn_ladenses
+						name_list_cumbrian = cn_ladenses
+						name_list_cornish = cn_ladenses
+						name_list_breton = cn_ladenses
+						name_list_pictish = cn_ladenses
 						
-						anglo_saxon = cn_leodis
+						name_list_anglo_saxon = cn_leodis
 					}
 					province = 1591
 
@@ -999,7 +999,7 @@ e_britannia = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					anglo_saxon = cn_lindsey
+					name_list_anglo_saxon = cn_lindsey
 				}
 				
 				b_lincoln = {
@@ -1041,8 +1041,8 @@ e_britannia = {
 			capital = c_norfolk # Norwich
 			
 			cultural_names = {
-				norse = cn_jarnamoda
-				norwegian = cn_jarnamoda
+				name_list_norse = cn_jarnamoda
+				name_list_norwegian = cn_jarnamoda
 			}
 
 			can_create = {
@@ -1056,8 +1056,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norse = cn_jarnamoda
-					norwegian = cn_jarnamoda
+					name_list_norse = cn_jarnamoda
+					name_list_norwegian = cn_jarnamoda
 				}
 
 				can_create = {
@@ -1073,8 +1073,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_jarnamoda
-						norwegian = cn_jarnamoda
+						name_list_norse = cn_jarnamoda
+						name_list_norwegian = cn_jarnamoda
 					}
 				}
 				b_thetford = {
@@ -1154,8 +1154,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_linn
-						norwegian = cn_linn
+						name_list_norse = cn_linn
+						name_list_norwegian = cn_linn
 					}
 				}
 			}
@@ -1237,13 +1237,13 @@ e_britannia = {
 				color = { 175 0 30 }
 				color2 = { 255 255 255 }
 				cultural_names = {
-					anglo_saxon = cn_snottinghamshire
+					name_list_anglo_saxon = cn_snottinghamshire
 				}
 
 				b_nottingham = {
 					province = 1618
 					cultural_names = {
-						anglo_saxon = cn_snottingham
+						name_list_anglo_saxon = cn_snottingham
 					}
 					color = { 175 0 30 }
 					color2 = { 255 255 255 }
@@ -1272,7 +1272,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						anglo_saxon = cn_tamworth
+						name_list_anglo_saxon = cn_tamworth
 					}
 				}
 				b_wolverhampton = {
@@ -1362,7 +1362,7 @@ e_britannia = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					welsh = cn_amwythig
+					name_list_welsh = cn_amwythig
 				}
 
 				b_shrewsbury = {
@@ -1384,7 +1384,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						welsh = cn_clun
+						name_list_welsh = cn_clun
 					}
 				}
 			}
@@ -1569,8 +1569,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-					anglo_saxon = cn_south_seaxe
-					old_saxon = cn_south_seaxe
+					name_list_anglo_saxon = cn_south_seaxe
+					name_list_old_saxon = cn_south_seaxe
 				}
 				
 				b_lewes = {
@@ -1828,7 +1828,7 @@ e_britannia = {
 				limit = {
 					is_ai = yes
 				}
-				has_culture_group = culture_group:brythonic_group
+				culture = { has_cultural_pillar = heritage_brythonic }
 			}
 		}
 		
@@ -1862,8 +1862,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norman = cn_cardiganshire
-					english = cn_cardiganshire
+					name_list_norman = cn_cardiganshire
+					name_list_english = cn_cardiganshire
 				}
 
 				b_cardigan = {	#Aberteifi
@@ -1873,8 +1873,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norman = cn_cardigan
-						english = cn_cardigan
+						name_list_norman = cn_cardigan
+						name_list_english = cn_cardigan
 					}
 				}
 
@@ -1891,8 +1891,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norman = cn_merionethshire
-					english = cn_merionethshire
+					name_list_norman = cn_merionethshire
+					name_list_english = cn_merionethshire
 				}
 
 				b_dolgellau = {	#Harlech
@@ -1915,8 +1915,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 		
 				cultural_names = {
-					norman = cn_caernarvonshire
-					english = cn_caernarvonshire
+					name_list_norman = cn_caernarvonshire
+					name_list_english = cn_caernarvonshire
 				}
 				
 				b_caernarfon = {
@@ -1946,8 +1946,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norman = cn_anglesey
-					english = cn_anglesey
+					name_list_norman = cn_anglesey
+					name_list_english = cn_anglesey
 				}
 
 				b_yns_mon = {
@@ -1964,8 +1964,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norman = cn_holyhead
-						english = cn_holyhead
+						name_list_norman = cn_holyhead
+						name_list_english = cn_holyhead
 					}
 				}
 			}
@@ -1975,8 +1975,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norman = cn_denbighshire
-					english = cn_denbighshire
+					name_list_norman = cn_denbighshire
+					name_list_english = cn_denbighshire
 				}
 				
 				b_denbigh = {	#Dinbych
@@ -1986,8 +1986,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norman = cn_denbigh
-						english = cn_denbigh
+						name_list_norman = cn_denbigh
+						name_list_english = cn_denbigh
 					}
 				}
 
@@ -1998,8 +1998,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norman = cn_wrexham
-						english = cn_wrexham
+						name_list_norman = cn_wrexham
+						name_list_english = cn_wrexham
 					}
 				}
 
@@ -2010,8 +2010,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norman = cn_ruthin
-						english = cn_ruthin
+						name_list_norman = cn_ruthin
+						name_list_english = cn_ruthin
 					}
 				}
 			}
@@ -2028,8 +2028,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norman = cn_montgomeryshire
-					english = cn_montgomeryshire
+					name_list_norman = cn_montgomeryshire
+					name_list_english = cn_montgomeryshire
 				}
 				
 				b_welshpool = {	#Mathrafal
@@ -2040,8 +2040,8 @@ e_britannia = {
 					
 					cultural_names = {
 						#Technically a different town: Welshpool is Y Trallwng, whereas b_welshpool is currently Mathrafal, historic seat of the Princes of Powys.
-						norman = cn_welshpool
-						english = cn_welshpool
+						name_list_norman = cn_welshpool
+						name_list_english = cn_welshpool
 					}
 				}
 
@@ -2052,9 +2052,9 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						#Technically a different settlement, as Newtown wouldn't be founded till the 1300s, but b_newtown is currently Machynlleth, which was a more important Welsh site previously.
-						norman = cn_newtown
-						english = cn_newtown
+						#Technically a different settlement, as Newtown wouldn't be founded till the 1300s, but b_newtown is currently Machynlleth, which was a more important name_list_welsh site previously.
+						name_list_norman = cn_newtown
+						name_list_english = cn_newtown
 					}
 				}
 			}
@@ -2064,16 +2064,16 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norman = cn_radnorshire
-					english = cn_radnorshire
+					name_list_norman = cn_radnorshire
+					name_list_english = cn_radnorshire
 				}
 
 				b_llandrindod = {
 					province = 1661
 
 					cultural_names = {
-						norman = cn_llandrindod_wells
-						english = cn_llandrindod_wells
+						name_list_norman = cn_llandrindod_wells
+						name_list_english = cn_llandrindod_wells
 					}
 
 					color = { 95 30 30 }
@@ -2084,8 +2084,8 @@ e_britannia = {
 					province = 1662
 
 					 cultural_names = {
-						norman = cn_rhayader
-						english = cn_rhayader
+						name_list_norman = cn_rhayader
+						name_list_english = cn_rhayader
 					}
 
 					color = { 95 30 30 }
@@ -2098,17 +2098,17 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					#This name is actually Anglo-Saxon, but the original Welsh name, Ergyng, is long dead by 867. Arcenefelde is the archaic term for the area after the conquest, and the name used by/to refer to the Welsh-speaking portions of the county, with Herefordshire referring to the Anglo-Saxons/English.
-					welsh = cn_arcenefelde
-					cumbrian = cn_arcenefelde
+					#This name is actually Anglo-Saxon, but the original name_list_welsh name, Ergyng, is long dead by 867. Arcenefelde is the archaic term for the area after the conquest, and the name used by/to refer to the Welsh-speaking portions of the county, with Herefordshire referring to the Anglo-Saxons/English.
+					name_list_welsh = cn_arcenefelde
+					name_list_cumbrian = cn_arcenefelde
 				}
 				
 				b_hereford = {
 					province = 1632
 
 					cultural_names = {
-						welsh = cn_hennffordd
-						cumbrian = cn_hennffordd
+						name_list_welsh = cn_hennffordd
+						name_list_cumbrian = cn_hennffordd
 					}
 
 					color = { 110 45 35 }
@@ -2142,8 +2142,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norman = cn_carmarthenshire
-					english = cn_carmarthenshire
+					name_list_norman = cn_carmarthenshire
+					name_list_english = cn_carmarthenshire
 				}
 			
 				b_carmarthen = {	#Caerfyrddin
@@ -2153,8 +2153,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norman = cn_carmarthen
-						english = cn_carmarthen
+						name_list_norman = cn_carmarthen
+						name_list_english = cn_carmarthen
 					}
 				}
 
@@ -2165,8 +2165,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norman = cn_llandovery
-						english = cn_llandovery
+						name_list_norman = cn_llandovery
+						name_list_english = cn_llandovery
 					}
 				}
 			}
@@ -2176,8 +2176,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norman = cn_pembrokeshire
-					english = cn_pembrokeshire
+					name_list_norman = cn_pembrokeshire
+					name_list_english = cn_pembrokeshire
 				}
 
 				b_pembroke = {	#Penfro
@@ -2187,8 +2187,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norman = cn_pembroke
-						english = cn_pembroke
+						name_list_norman = cn_pembroke
+						name_list_english = cn_pembroke
 					}
 				}
 
@@ -2199,8 +2199,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norman = cn_st_davids
-						english = cn_st_davids
+						name_list_norman = cn_st_davids
+						name_list_english = cn_st_davids
 					}
 				}
 
@@ -2214,8 +2214,8 @@ e_britannia = {
 					
 					cultural_names = {
 						#Pre-Anglicisation name of Fishguard.
-						norman = cn_fiscard
-						english = cn_fiscard
+						name_list_norman = cn_fiscard
+						name_list_english = cn_fiscard
 					}
 				}
 			}
@@ -2225,8 +2225,8 @@ e_britannia = {
 				color2 = { 255 0 0 }
 
 				cultural_names = {
-					norman = cn_glamorgan
-					english = cn_glamorgan
+					name_list_norman = cn_glamorgan
+					name_list_english = cn_glamorgan
 				}
 
 				b_cardiff = {	#Caerdydd
@@ -2236,8 +2236,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norman = cn_cardiff
-						english = cn_cardiff
+						name_list_norman = cn_cardiff
+						name_list_english = cn_cardiff
 					}
 				}
 
@@ -2248,8 +2248,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norman = cn_swansea
-						english = cn_swansea
+						name_list_norman = cn_swansea
+						name_list_english = cn_swansea
 					}
 				}
 
@@ -2260,8 +2260,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norman = cn_caerphilly
-						english = cn_caerphilly
+						name_list_norman = cn_caerphilly
+						name_list_english = cn_caerphilly
 					}
 				}
 			}
@@ -2271,8 +2271,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norman = cn_monmouthshire
-					english = cn_monmouthshire
+					name_list_norman = cn_monmouthshire
+					name_list_english = cn_monmouthshire
 				}
 
 				b_casnewydd = {	#Caerllion
@@ -2282,8 +2282,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norman = cn_caerleon
-						english = cn_caerleon
+						name_list_norman = cn_caerleon
+						name_list_english = cn_caerleon
 					}
 				}
 
@@ -2294,8 +2294,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norman = cn_monmouth
-						english = cn_monmouth
+						name_list_norman = cn_monmouth
+						name_list_english = cn_monmouth
 					}
 				}
 			}
@@ -2305,8 +2305,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norman = cn_brecknockshire
-					english = cn_brecknockshire
+					name_list_norman = cn_brecknockshire
+					name_list_english = cn_brecknockshire
 				}
 
 				b_brecon = {	#Aberhonddu
@@ -2317,8 +2317,8 @@ e_britannia = {
 
 					cultural_names = {
 						#Brecon is the modern form.
-						norman = cn_brecknock
-						english = cn_brecknock
+						name_list_norman = cn_brecknock
+						name_list_english = cn_brecknock
 					}
 				}
 				
@@ -2328,7 +2328,7 @@ e_britannia = {
 					color = { 215 150 115 }
 					color2 = { 255 255 255 }
 
-					#Talgarth is actually the modern & historic name in both English & Welsh, albeit accented in Old Welsh.
+					#Talgarth is actually the modern & historic name in both name_list_english & Welsh, albeit accented in Old Welsh.
 				}
 			}
 		}
@@ -2342,7 +2342,7 @@ e_britannia = {
 				limit = {
 					is_ai = yes
 				}
-				has_culture_group = culture_group:brythonic_group
+				culture = { has_cultural_pillar = heritage_brythonic }
 			}
 		}
 		
@@ -2376,7 +2376,7 @@ e_britannia = {
 				limit = {
 					is_ai = yes
 				}
-				has_culture_group = culture_group:brythonic_group
+				culture = { has_cultural_pillar = heritage_brythonic }
 			}
 		}
 		
@@ -2392,7 +2392,7 @@ e_britannia = {
 		capital = c_lennox
 	}
 	#######################################
-	# Gaelic Kingdoms
+	# name_list_gaelic Kingdoms
 	#######################################
 	k_scotland = {
 		color = { 230 140 0 }
@@ -2401,9 +2401,9 @@ e_britannia = {
 		capital = c_gowrie #Gowrie
 		
 		cultural_names = {
-			irish = cn_alba
-			gaelic = cn_alba
-			pictish = cn_pictland
+			name_list_irish  = cn_alba
+			name_list_gaelic = cn_alba
+			name_list_pictish = cn_pictland
 		}
 		
 		ai_primary_priority = {
@@ -2419,7 +2419,7 @@ e_britannia = {
 			}
 			if = {
 				limit = {
-					culture = culture:irish
+					culture = culture:name_list_irish 
 				}
 				add = @better_than_the_alternatives_score
 			}
@@ -2430,13 +2430,13 @@ e_britannia = {
 			color2 = { 255 255 255 }
 		
 			cultural_names = {
-				irish = cn_circinn
-				gaelic = cn_circinn
-				pictish = cn_circinn
-				welsh = cn_circinn
-				cumbrian = cn_circinn
-				cornish = cn_circinn
-				breton = cn_circinn
+				name_list_irish  = cn_circinn
+				name_list_gaelic = cn_circinn
+				name_list_pictish = cn_circinn
+				name_list_welsh = cn_circinn
+				name_list_cumbrian = cn_circinn
+				name_list_cornish = cn_circinn
+				name_list_breton = cn_circinn
 			}
 			
 			capital = c_gowrie # Perth/St Johnston
@@ -2584,8 +2584,8 @@ e_britannia = {
 			capital = c_isle_of_man # Isle of Man
 
 			cultural_names = {
-				norse = cn_mon
-				norwegian = cn_mon
+				name_list_norse = cn_mon
+				name_list_norwegian = cn_mon
 			}
 			
 			c_isle_of_man = {
@@ -2593,8 +2593,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norse = cn_mon
-					norwegian = cn_mon
+					name_list_norse = cn_mon
+					name_list_norwegian = cn_mon
 				}
 				
 				b_castletown = {
@@ -2604,8 +2604,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_holmatun
-						norwegian = cn_holmatun
+						name_list_norse = cn_holmatun
+						name_list_norwegian = cn_holmatun
 					}
 				}
 				b_ramsey = {
@@ -2615,8 +2615,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_hramsa
-						norwegian = cn_hramsa
+						name_list_norse = cn_hramsa
+						name_list_norwegian = cn_hramsa
 					}
 				}
 			}
@@ -2628,10 +2628,10 @@ e_britannia = {
 			capital = c_lennox # Lennox
 			
 			cultural_names = {
-				gaelic = cn_galloway
-				irish = cn_galloway
-				norse = cn_galvei
-				norwegian = cn_galvei
+				name_list_gaelic = cn_galloway
+				name_list_irish  = cn_galloway
+				name_list_norse = cn_galvei
+				name_list_norwegian = cn_galvei
 			}
 			
 			ai_primary_priority = {
@@ -2665,11 +2665,11 @@ e_britannia = {
 				}
 				
 				cultural_names = {
-					pictish 	= cn_alt_clut
-					breton = cn_alt_clut
-					cornish = cn_alt_clut
-					cumbrian = cn_alt_clut
-					welsh = cn_alt_clut
+					name_list_pictish = cn_alt_clut
+					name_list_breton = cn_alt_clut
+					name_list_cornish = cn_alt_clut
+					name_list_cumbrian = cn_alt_clut
+					name_list_welsh = cn_alt_clut
 				}
 
 				b_dumbarton = {
@@ -2679,11 +2679,11 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						pictish 	= cn_alclud
-						breton = 	cn_alclud
-						cornish = 	cn_alclud
-						cumbrian = 	cn_alclud
-						welsh = 	cn_alclud
+						name_list_pictish = cn_alclud
+						name_list_breton = cn_alclud
+						name_list_cornish = cn_alclud
+						name_list_cumbrian = cn_alclud
+						name_list_welsh = cn_alclud
 					}
 				}
 				b_glasgow = {
@@ -2701,13 +2701,13 @@ e_britannia = {
 			}
 			c_galloway = {			
 				cultural_names = {
-					pictish 	= cn_galwyddel
-					cumbrian 	= cn_galwyddel
-					welsh 		= cn_galwyddel
-					breton 		= cn_galwyddel
-					cornish 	= cn_galwyddel
-					norse 		= cn_galvei
-					norwegian 	= cn_galvei
+					name_list_pictish = cn_galwyddel
+					name_list_cumbrian = cn_galwyddel
+					name_list_welsh = cn_galwyddel
+					name_list_breton = cn_galwyddel
+					name_list_cornish = cn_galwyddel
+					name_list_norse = cn_galvei
+					name_list_norwegian = cn_galvei
 				}
 				color = { 230 120 65 }
 				color2 = { 255 255 255 }
@@ -2753,11 +2753,11 @@ e_britannia = {
 				color2 = { 255 255 255 }
 			
 				cultural_names = {
-					pictish 	= cn_aeron
-					cumbrian 	= cn_aeron
-					welsh 		= cn_aeron
-					breton 		= cn_aeron
-					cornish 	= cn_aeron
+					name_list_pictish = cn_aeron
+					name_list_cumbrian = cn_aeron
+					name_list_welsh = cn_aeron
+					name_list_breton = cn_aeron
+					name_list_cornish = cn_aeron
 				}
 				
 				b_kyle = {
@@ -2806,8 +2806,8 @@ e_britannia = {
 			definite_form = yes
 
 			cultural_names = {
-				norse = cn_sudreyjar
-				norwegian = cn_sudreyjar
+				name_list_norse = cn_sudreyjar
+				name_list_norwegian = cn_sudreyjar
 			}
 			
 			c_inner_hebrides = {
@@ -2815,8 +2815,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norse = cn_innri_sudreyjar
-					norwegian = cn_innri_sudreyjar
+					name_list_norse = cn_innri_sudreyjar
+					name_list_norwegian = cn_innri_sudreyjar
 				}
 
 				b_islay = {
@@ -2826,8 +2826,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_il
-						norwegian = cn_il
+						name_list_norse = cn_il
+						name_list_norwegian = cn_il
 					}
 				}
 				b_arran = {
@@ -2837,8 +2837,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_hereyjar
-						norwegian = cn_hereyjar
+						name_list_norse = cn_hereyjar
+						name_list_norwegian = cn_hereyjar
 					}
 				}
 				b_mull = {
@@ -2848,8 +2848,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_myl
-						norwegian = cn_myl
+						name_list_norse = cn_myl
+						name_list_norwegian = cn_myl
 					}
 				}
 			}
@@ -2858,8 +2858,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norse = cn_ytri_sudreyjar
-					norwegian = cn_ytri_sudreyjar
+					name_list_norse = cn_ytri_sudreyjar
+					name_list_norwegian = cn_ytri_sudreyjar
 				}
 
 				b_skye = {
@@ -2869,8 +2869,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_skid
-						norwegian = cn_skid
+						name_list_norse = cn_skid
+						name_list_norwegian = cn_skid
 					}
 				}
 				b_lewis = {
@@ -2880,8 +2880,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_ljodhus
-						norwegian = cn_ljodhus
+						name_list_norse = cn_ljodhus
+						name_list_norwegian = cn_ljodhus
 					}
 				}
 				b_the_uists = {
@@ -2891,8 +2891,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_vist
-						norwegian = cn_vist
+						name_list_norse = cn_vist
+						name_list_norwegian = cn_vist
 					}
 				}
 			}
@@ -2901,8 +2901,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norse = cn_argjall
-					norwegian = cn_argjall
+					name_list_norse = cn_argjall
+					name_list_norwegian = cn_argjall
 				}
 				
 				b_kilmarten = {
@@ -2912,8 +2912,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_kjarbarey
-						norwegian = cn_kjarbarey
+						name_list_norse = cn_kjarbarey
+						name_list_norwegian = cn_kjarbarey
 					}
 				}
 				b_glencoe = {
@@ -2923,8 +2923,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_dysjarstadr
-						norwegian = cn_dysjarstadr
+						name_list_norse = cn_dysjarstadr
+						name_list_norwegian = cn_dysjarstadr
 					}
 				}
 				b_lomond = {
@@ -2934,8 +2934,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_lokolofni
-						norwegian = cn_lokolofni
+						name_list_norse = cn_lokolofni
+						name_list_norwegian = cn_lokolofni
 					}
 				}
 				b_ardnamurchon = {
@@ -2945,8 +2945,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_mylarsund
-						norwegian = cn_mylarsund
+						name_list_norse = cn_mylarsund
+						name_list_norwegian = cn_mylarsund
 					}
 				}
 			}
@@ -2958,10 +2958,10 @@ e_britannia = {
 			capital = c_lothian # Edinburgh
 			
 			cultural_names = {
-				breton = cn_gododdin
-				cornish = cn_gododdin
-				cumbrian = cn_gododdin
-				welsh = cn_gododdin
+				name_list_breton = cn_gododdin
+				name_list_cornish = cn_gododdin
+				name_list_cumbrian = cn_gododdin
+				name_list_welsh = cn_gododdin
 			}
 			
 			c_lothian = {
@@ -3087,8 +3087,8 @@ e_britannia = {
 			capital = c_moray # Elgin
 
 			cultural_names = {
-				norse = cn_katanes
-				norwegian = cn_katanes
+				name_list_norse = cn_katanes
+				name_list_norwegian = cn_katanes
 			}
 			
 			c_moray = {
@@ -3119,8 +3119,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norse = cn_ros
-					norwegian = cn_ros
+					name_list_norse = cn_ros
+					name_list_norwegian = cn_ros
 				}
 				
 				b_dingwall = {
@@ -3177,8 +3177,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norse = cn_sudrland
-					norwegian = cn_sudrland
+					name_list_norse = cn_sudrland
+					name_list_norwegian = cn_sudrland
 				}
 				
 				b_dornoch = {
@@ -3188,8 +3188,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_hjalmundalr
-						norwegian = cn_hjalmundalr
+						name_list_norse = cn_hjalmundalr
+						name_list_norwegian = cn_hjalmundalr
 					}
 				}
 				b_durness = {
@@ -3199,8 +3199,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_dyrnes
-						norwegian = cn_dyrnes
+						name_list_norse = cn_dyrnes
+						name_list_norwegian = cn_dyrnes
 					}
 				}
 				b_assynt = {
@@ -3216,8 +3216,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norse = cn_c_katanes
-					norwegian = cn_c_katanes
+					name_list_norse = cn_c_katanes
+					name_list_norwegian = cn_c_katanes
 				}
 				
 				b_thurso = {
@@ -3227,8 +3227,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_thorsa
-						norwegian = cn_thorsa
+						name_list_norse = cn_thorsa
+						name_list_norwegian = cn_thorsa
 					}
 				}
 				b_wick = {
@@ -3238,8 +3238,8 @@ e_britannia = {
 					color2 = { 255 255 255 }
 
 					cultural_names = {
-						norse = cn_vik
-						norwegian = cn_vik
+						name_list_norse = cn_vik
+						name_list_norwegian = cn_vik
 					}
 				}
 			}
@@ -3294,7 +3294,7 @@ e_britannia = {
 		ai_primary_priority = {
 			if = {
 				limit = {
-					culture = culture:irish
+					culture = culture:name_list_irish 
 				}
 				add = @correct_culture_primary_score
 			}
@@ -3317,10 +3317,10 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norse = cn_dyflinn
-					norwegian = cn_dyflinn
-					irish = cn_dubhlinn
-					welsh = cn_dulyn
+					name_list_norse = cn_dyflinn
+					name_list_norwegian = cn_dyflinn
+					name_list_irish  = cn_dubhlinn
+					name_list_welsh = cn_dulyn
 				}
 				
 				b_dublin = {
@@ -3330,10 +3330,10 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norse = cn_dyflinn
-						norwegian = cn_dyflinn
-						irish = cn_dubhlinn
-						welsh = cn_dulyn
+						name_list_norse = cn_dyflinn
+						name_list_norwegian = cn_dyflinn
+						name_list_irish  = cn_dubhlinn
+						name_list_welsh = cn_dulyn
 					}
 				}
 				b_wicklow = {
@@ -3343,7 +3343,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_cill_mhantain
+						name_list_irish  = cn_cill_mhantain
 					}
 				}
 				b_kildare = { #Historical note: monastery
@@ -3353,7 +3353,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_cill_dara
+						name_list_irish  = cn_cill_dara
 					}
 				}
 				b_trim = { #historical note: monastery/important church
@@ -3363,7 +3363,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_baile_atha_troim
+						name_list_irish  = cn_baile_atha_troim
 					}
 				}
 				b_drogheda = {
@@ -3373,7 +3373,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_droichead_atha
+						name_list_irish  = cn_droichead_atha
 					}
 				}
 			}
@@ -3421,11 +3421,11 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norwegian = cn_strangfjordr
-						swedish = cn_strangfjord
-						danish = cn_strangfjord
-						norse = cn_strangfjordr
-						irish = cn_dun_padraig
+						name_list_norwegian = cn_strangfjordr
+						name_list_swedish = cn_strangfjord
+						name_list_danish = cn_strangfjord
+						name_list_norse = cn_strangfjordr
+						name_list_irish  = cn_dun_padraig
 					}
 				}
 				b_slemish = {
@@ -3441,7 +3441,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_carraig_fhearghais
+						name_list_irish  = cn_carraig_fhearghais
 					}
 				}
 				b_bangor = {
@@ -3462,11 +3462,11 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norwegian = cn_kerlingfrjordr
-						swedish = cn_kerlingfjord
-						danish = cn_kerlingfjord
-						norse = cn_kerlingfrjordr
-						irish = cn_dun_dealgan
+						name_list_norwegian = cn_kerlingfrjordr
+						name_list_swedish = cn_kerlingfjord
+						name_list_danish = cn_kerlingfjord
+						name_list_norse = cn_kerlingfrjordr
+						name_list_irish  = cn_dun_dealgan
 					}
 				}
 				b_armagh = {
@@ -3476,7 +3476,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_ard_mhacha
+						name_list_irish  = cn_ard_mhacha
 					}
 				}
 				b_ardee = {
@@ -3486,7 +3486,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_baile_atha_fhirdhia
+						name_list_irish  = cn_baile_atha_fhirdhia
 					}
 				}
 				b_clogher = {
@@ -3507,8 +3507,8 @@ e_britannia = {
 				color2 = { 255 255 255 }
 
 				cultural_names = {
-					norse = cn_ulfkelsfjordr
-					norwegian = cn_ulfkelsfjordr
+					name_list_norse = cn_ulfkelsfjordr
+					name_list_norwegian = cn_ulfkelsfjordr
 				}
 				
 				b_donegal = {
@@ -3518,7 +3518,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_dun_na_ngall
+						name_list_irish  = cn_dun_na_ngall
 					}
 				}
 				b_raphoe = { #historical note: monastery
@@ -3528,7 +3528,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_rath_bhoth
+						name_list_irish  = cn_rath_bhoth
 					}
 				}
 				b_fahan = {
@@ -3538,7 +3538,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_fathain
+						name_list_irish  = cn_fathain
 					}
 				}
 				b_derry = {
@@ -3548,9 +3548,9 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_daire_coluimb_chille
-						norse = cn_ulfkelsfjordr
-						norwegian = cn_ulfkelsfjordr
+						name_list_irish  = cn_daire_coluimb_chille
+						name_list_norse = cn_ulfkelsfjordr
+						name_list_norwegian = cn_ulfkelsfjordr
 					}
 				}
 			}
@@ -3567,7 +3567,7 @@ e_britannia = {
 				color2 = { 255 255 255 }
 				
 				cultural_names = {
-						irish = cn_ui_maine
+						name_list_irish  = cn_ui_maine
 				}
 			
 				b_galway = {
@@ -3577,7 +3577,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_dun_bhun_na_gaillimhe
+						name_list_irish  = cn_dun_bhun_na_gaillimhe
 					}
 				}
 				b_athenry = {
@@ -3641,7 +3641,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_droim_ath_thiar
+						name_list_irish  = cn_droim_ath_thiar
 					}
 				}
 				b_belcoo = {
@@ -3657,7 +3657,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_an_longphort
+						name_list_irish  = cn_an_longphort
 					}
 				}
 				b_cavan = {
@@ -3667,7 +3667,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_an_cabhan
+						name_list_irish  = cn_an_cabhan
 					}
 				}
 				b_adragh = {
@@ -3696,11 +3696,11 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norwegian = cn_veisafjordr
-						swedish = cn_veisafjord
-						danish = cn_veisafjord
-						norse = cn_veisafjordr
-						irish = cn_loch_garman
+						name_list_norwegian = cn_veisafjordr
+						name_list_swedish = cn_veisafjord
+						name_list_danish = cn_veisafjord
+						name_list_norse = cn_veisafjordr
+						name_list_irish  = cn_loch_garman
 					}
 				}
 				b_enniscorthy = {
@@ -3710,7 +3710,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_inis_corthaidh
+						name_list_irish  = cn_inis_corthaidh
 					}
 				}
 				b_ferns = {
@@ -3720,7 +3720,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_fearna_mor_maedhog
+						name_list_irish  = cn_fearna_mor_maedhog
 					}
 				}
 				b_carlow = {
@@ -3730,7 +3730,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_ceatharlach
+						name_list_irish  = cn_ceatharlach
 					}
 				}
 			}
@@ -3745,7 +3745,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_gabhran
+						name_list_irish  = cn_gabhran
 					}
 				}
 				b_kilkenny = { #Historical note: major monastic centre
@@ -3755,7 +3755,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_cill_chainnigh
+						name_list_irish  = cn_cill_chainnigh
 					}
 				}
 				b_athy = {
@@ -3790,11 +3790,11 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norwegian = cn_hlymrek
-						danish = cn_lymrek
-						swedish = cn_lymrek
-						norse = cn_hlymrek
-						irish = cn_luimneach
+						name_list_norwegian = cn_hlymrek
+						name_list_danish = cn_lymrek
+						name_list_swedish = cn_lymrek
+						name_list_norse = cn_hlymrek
+						name_list_irish  = cn_luimneach
 					}
 				}
 				b_nenagh = {
@@ -3804,7 +3804,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_aonach_urmhumhan
+						name_list_irish  = cn_aonach_urmhumhan
 					}
 				}
 				b_roscrea = { #Historical note: important trading town
@@ -3814,7 +3814,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_ros_cre
+						name_list_irish  = cn_ros_cre
 					}
 				}
 				b_kilmallock = {
@@ -3836,7 +3836,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_inis
+						name_list_irish  = cn_inis
 					}
 				}
 				b_kincora = {
@@ -3859,11 +3859,11 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						norwegian = cn_vedrafjord
-						swedish = cn_vedrafjord
-						danish = cn_vedrafjord
-						norse = cn_vedrafjordr
-						irish = cn_port_lairge
+						name_list_norwegian = cn_vedrafjord
+						name_list_swedish = cn_vedrafjord
+						name_list_danish = cn_vedrafjord
+						name_list_norse = cn_vedrafjordr
+						name_list_irish  = cn_port_lairge
 					}
 				}
 				b_emly = { #Historical note: monastery
@@ -3873,7 +3873,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_imleach_iubhair
+						name_list_irish  = cn_imleach_iubhair
 					}
 				}
 				b_clonmel = {
@@ -3883,7 +3883,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_cluain_meala
+						name_list_irish  = cn_cluain_meala
 					}
 				}
 			}
@@ -3904,7 +3904,7 @@ e_britannia = {
 					color2 = { 255 255 255 }
 					
 					cultural_names = {
-						irish = cn_corcaigh
+						name_list_irish  = cn_corcaigh
 					}
 				}
 				b_kinsale = {
@@ -3946,7 +3946,7 @@ k_danelaw = {
 	ai_primary_priority = {
 		if = {
 			limit = {
-				culture_group = culture_group:north_germanic_group
+				has_cultural_pillar = heritage_north_germanic
 			}
 			add = @correct_culture_primary_score
 			add = @better_than_the_alternatives_score
@@ -3962,7 +3962,7 @@ k_daneland = {
 	ai_primary_priority = {
 		if = {
 			limit = {
-				culture_group = culture_group:north_germanic_group
+				has_cultural_pillar = heritage_north_germanic
 			}
 			add = @correct_culture_primary_score
 			add = @better_than_the_alternatives_score

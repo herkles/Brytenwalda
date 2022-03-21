@@ -12,16 +12,16 @@ reclaim_britannia_decision = {
 
 	is_shown = {
 		OR = {
-			has_culture_group = culture_group:goidelic_group
-			has_culture_group = culture_group:brythonic_group
+			culture = { has_cultural_pillar = heritage_goidelic }
+			culture = { has_cultural_pillar = heritage_brythonic }
 		}
 
 		is_landed = yes
 		any_sub_realm_county = {
 			title_province = {  geographical_region = world_europe_west_britannia }
 			NOR = {
-				culture_group = culture_group:goidelic_group
-				culture_group = culture_group:brythonic_group
+				culture = { has_cultural_pillar = heritage_goidelic }
+				culture = { has_cultural_pillar = heritage_brythonic }
 			}
 		}
 		NOT = {
@@ -44,8 +44,8 @@ reclaim_britannia_decision = {
 					any_vassal = {
 						is_powerful_vassal = yes
 						NOR = {
-							culture_group = culture_group:goidelic_group
-							culture_group = culture_group:brythonic_group
+							culture = { has_cultural_pillar = heritage_goidelic }
+							culture = { has_cultural_pillar = heritage_brythonic }
 						}
 					}
 				}
@@ -53,8 +53,8 @@ reclaim_britannia_decision = {
 					count <= 1
 					is_powerful_vassal = yes
 					NOR = {
-						culture_group = culture_group:goidelic_group
-						culture_group = culture_group:brythonic_group
+						culture = { has_cultural_pillar = heritage_goidelic }
+						culture = { has_cultural_pillar = heritage_brythonic }
 					}
 				}
 			}
@@ -81,9 +81,9 @@ reclaim_britannia_decision = {
 			limit = {
 				NOT = { this = root }
 				OR = {
-					has_culture_group = culture_group:west_germanic_group
-					has_culture_group = culture_group:goidelic_group
-					has_culture_group = culture_group:brythonic_group
+					culture = { has_cultural_pillar = heritage_west_germanic }
+					culture = { has_cultural_pillar = heritage_goidelic }
+					culture = { has_cultural_pillar = heritage_brythonic }
 					has_culture = culture:norman
 				}
 			}
@@ -112,7 +112,7 @@ embrace_english_culture_decision = {
 
 	is_shown = {
 		is_landed = yes
-		has_culture_group = culture_group:frankish_group
+		culture = { has_cultural_pillar = heritage_frankish }
 		OR = {	
 			title:k_england = {
 				any_in_de_jure_hierarchy = {
@@ -136,9 +136,6 @@ embrace_english_culture_decision = {
 				geographical_region = custom_england
 			}
 		}
-		culture = {
-			has_innovation = innovation_noblesse_oblige
-		}
 		has_title = title:k_england
 	}
 
@@ -160,7 +157,14 @@ embrace_english_culture_decision = {
 	}
 	
 	ai_potential = {
-		always = yes
+		is_landed = yes
+		culture = { has_cultural_pillar = heritage_frankish }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:embrace_english_culture_decision
+			}
+		}
 	}
 
 	ai_will_do = {
@@ -170,7 +174,7 @@ embrace_english_culture_decision = {
 #############################################
 # General British Decisions					#
 #############################################
-england_request_laudabiliter_decision = {# Request Laudabiliter
+england_request_laudabiliter_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_misc.dds"
 
 	desc = england_request_laudabiliter_decision_desc
@@ -194,9 +198,9 @@ england_request_laudabiliter_decision = {# Request Laudabiliter
 		}
 		highest_held_title_tier >= 4 # Kings and Emperors only.
 		OR = {
-			has_culture_group = culture_group:frankish_group
-			has_culture_group = culture_group:west_germanic_group
-			has_culture_group = culture_group:north_germanic_group
+			culture = { has_cultural_pillar = heritage_frankish }
+			culture = { has_cultural_pillar = heritage_west_germanic }
+			culture = { has_cultural_pillar = heritage_north_germanic }
 		}
 		# The ruler picking the decision should not already control Ireland.
 		NOT = {
@@ -206,7 +210,6 @@ england_request_laudabiliter_decision = {# Request Laudabiliter
 		OR = {
 			has_title = title:k_england
 			has_title = title:k_scotland
-			has_title = title:k_strathclyde
 			has_title = title:k_wales
 			has_title = title:k_brittany
 			has_title = title:k_france
@@ -214,6 +217,15 @@ england_request_laudabiliter_decision = {# Request Laudabiliter
 			has_title = title:e_france
 		}
 		has_government = feudal_government
+		any_county_in_region = {
+			region = custom_roman_hibernia
+			OR = {
+				NOT = { faith = faith:catholic }
+				holder = {
+					NOT = { faith = faith:catholic }
+				}
+			}
+		}
 	}
 	
 	is_valid = {
@@ -558,7 +570,14 @@ negotiate_the_danelaw_integrate_duchies_decision = {
 	}
 	
 	ai_potential = {
-		always = yes
+		primary_title.tier >= tier_kingdom
+		# First off, k_england must currently be partitioned.
+		exists = global_var:partition_active_danelaw
+		# Then, you must be the holder of either k_england or k_danelaw.
+		OR = {
+			has_title = title:k_england
+			has_title = title:k_danelaw
+		}
 	}
 
 	ai_will_do = {
@@ -670,7 +689,7 @@ restore_dumnonia_decision = {
 		}
 		OR = {	#Must be a culture at least traditionally interlinked with Cornwall.
 			dynasty = dynasty:1029001	#The Cornish royal house is at it again.
-			culture_group = culture_group:brythonic_group
+			culture = { has_cultural_pillar = heritage_brythonic }
 		}
 		NOT = {	#You can only do it once.
 			is_target_in_global_variable_list = {
@@ -692,7 +711,7 @@ restore_dumnonia_decision = {
 		has_title = title:d_cornwall
 		completely_controls = title:d_cornwall
 		any_realm_province = { #You must have some realm support for your claims.
-			culture_group = culture_group:brythonic_group
+			culture = { has_cultural_pillar = heritage_brythonic }
 		}
 	}
 
@@ -740,8 +759,3 @@ restore_dumnonia_decision = {
 		base = 100
 	}
 }
-
-
-
-
-
