@@ -1,0 +1,35 @@
+﻿language_anglic = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_anglic
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_anglic }
+			multiply = 10
+		}
+	}
+	
+	color = english
+}
+
+language_english = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_english
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_english }
+			multiply = 10
+		}
+	}
+	
+	color = english
+}

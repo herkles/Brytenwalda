@@ -1,10 +1,13 @@
 #k_ireland
-##d_meath ###################################
+##d_meath ################################### 
 ###c_dublin
 28 = {	#DUBLIN
 	culture = irish
 	religion = catholic
 	holding = tribal_holding
+	850.1.1 = {
+		culture = norse_gael
+	}
 	988.1.1 = {
 		holding = castle_holding
 	}
@@ -18,6 +21,16 @@
 		holding = city_holding
 	}
 }
+
+
+32 = {	#DROGHEDA
+	holding = none
+	910.1.1 = {
+		holding = city_holding
+	}
+}
+
+# C_Kildare
 30 = {	#KILDARE
 	holding = church_holding
 }
@@ -29,13 +42,6 @@
 		special_building = bryten_building_clonard_abbey_01
 	}	
 }
-32 = {	#DROGHEDA
-	holding = none
-	910.1.1 = {
-		holding = city_holding
-	}
-}
-
 ###c_athlone
 34 = {	#ATHLONE
 	culture = irish
