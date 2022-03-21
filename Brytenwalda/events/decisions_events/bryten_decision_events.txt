@@ -55,33 +55,6 @@ bryten_decision.0002 = {# Someone has united England
 		name = name_i_see
 	}
 }
-bryten_decision.0003 = {# Setting the coat of arms
-	type = character_event
-	hidden = yes
-
-	immediate = {
-		# Coat of Arms
-		title:k_england = {
-			# Coat of Arms
-			if = {# Mercia 
-				limit = { exists = global_var:england_coa_merica }
-				set_coa = k_england_mercia
-			}
-			else_if = {# East Anglia
-				limit = { exists = global_var:england_coa_east_anglia }
-				set_coa = k_england_east_anglia
-			}
-			else_if = {# Northumbria
-				limit = { exists = global_var:england_coa_northumbria }
-				set_coa = k_england_northumbria
-			}
-			else_if = {# Kent
-				limit = { exists = global_var:england_coa_kent }
-				set_coa = k_england_kent
-			}
-		}
-	}
-}
 #######################################
 # Forming Kent
 #######################################

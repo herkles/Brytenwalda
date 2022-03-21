@@ -582,8 +582,12 @@ k_essex = {# Kings of Essex
 k_england = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
-	set_capital_county = title:c_hampton
 
+	700.1.1 = { # Winchester was effectively the capital for some time, so let's have it at game start in 867.
+		effect = {
+			set_capital_county = title:c_hampton
+		}
+	}
 	886.1.1 = {# Alfred The great
 		holder = 7627 
 		succession_laws = { saxon_elective_succession_law }
@@ -636,44 +640,44 @@ k_england = {
 	1042.6.8 = {# Edward the Confessor
 		holder = 114 
 	}
-	1066.1.5 = {
+	1066.1.5 = {# Harold Godwinson
 		holder = 122 # Harold Godwinson
 	}
-	1066.10.14 = {
+	1066.10.14 = {# William the Conqueror
 		holder = 140 # William the Conqueror
-		effect = { # Should technically be the capital after William wins, but London was already quite important, so we'll have it be the capital at game start 1066.
+		effect = {
 			set_capital_county = title:c_middlesex
 		}
 	}
-	1087.9.9 = {
+	1087.9.9 = {# William II Rufus
 		holder = 146 #William II Rufus
 	}
-	1100.8.3 = {
-		holder = 202992 #Henry I
+	1100.8.3 = {# Henry I
+		holder = 202992 # Henry I
 	}
-	1135.12.2 = {
+	1135.12.2 = {# Stephen
 		holder = 205851 #Stephen
 	}
-	1154.10.25 = {
-		holder = 204500 #Henry II
+	1154.10.25 = {# Henry II
+		holder = 204500 # Henry II
 	}
-	1189.7.6 = {
-		holder = 204510 #Richard I Lionheart
+	1189.7.6 = {# Richard I Lionheart
+		holder = 204510 # Richard I Lionheart
 	}
-	1199.4.6 = {
-		holder = 204514 #John
+	1199.4.6 = {# John
+		holder = 204514 # John
 	}
-	1216.10.28 = {
-		holder = 454522 #Henry III
+	1216.10.28 = {# Henry III
+		holder = 454522 # Henry III
 	}
-	1272.11.16 = {
-		holder = 454520 #Edward I Longshanks
+	1272.11.16 = {# Edward I Longshanks
+		holder = 454520 # Edward I Longshanks
 	}
-	1307.7.8 = {
-		holder = 454510 #Edward II of England
+	1307.7.8 = {# Edward II of England
+		holder = 454510 # Edward II of England
 	}
-	1327.2.1 = {
-		holder = 454500 #Edward III
+	1327.2.1 = {# Edward III
+		holder = 454500 # Edward III
 	}
 }
 #######################################

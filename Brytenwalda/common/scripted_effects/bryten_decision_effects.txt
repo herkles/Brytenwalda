@@ -145,7 +145,7 @@ establish_norman_adminstration_effects = {#
 		}
 		title:d_lothian = {
 			change_title_holder = {
-				holder = scope:lothian_creator
+				holder = scope:norman_england_king
 				change = scope:title_change
 			}
 		}
@@ -259,7 +259,7 @@ strengthen_high_king_decision_effects = {
 	title:k_ireland_titular = {
 		every_claimant = {
 			custom = strengthen_high_king_decision_effects.all_claimants
-			remove_claim = k_ireland_titular
+			remove_claim = title:k_ireland_titular
 			add_unpressed_claim = title:k_ireland
 		}
 	}
@@ -279,7 +279,7 @@ create_lothian_duchy_effects = {
 		}
 		title:d_lothian = {
 			change_title_holder = {
-				holder = scope:lothian_creator
+				holder = scope:lothian_duchy_creator
 				change = scope:title_change
 			}
 		}

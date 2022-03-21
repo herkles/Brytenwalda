@@ -6791,24 +6791,30 @@
 			death = "1095.1.20"
 		}
 	}
-	90028 = {# Hereward
+	90028 = { # Hereward the Wake
 		name = "Hereward"
-		dynasty = 20049
-		martial = 11
-		diplomacy = 9
-		intrigue = 8
-		stewardship = 6
+		dynasty = 2004006 #Descendant of Oslac
+		martial = 11 #A gifted military commander
+		diplomacy = 2 #...but not exactly a diplomat
+		prowess = 10 #Capable duelist
 		religion = "catholic"
 		culture = anglo_saxon
 		trait = education_martial_3
-		trait = deceitful
-		trait = arrogant
 		trait = ambitious
+		trait = vengeful #killed a bunch of Normans who killed his brother
+		trait = wrathful #see above
+		trait = blademaster_2 # noted duelist
+		trait = forder #defended the fenlands
+		trait = adventurer
+
 		1044.1.2 = {
 			birth = "1044.1.2"
 		}
-		1066.1.2 = {
-			add_spouse = 90029
+		1060.1.2 = {
+			add_spouse = 90160 #Turdifa
+			employer = 364 #Baldwin of Flanders
+			add_pressed_claim = title:c_cambridgeshire
+			give_nickname = nick_the_wake
 		}
 		1094.1.2 = {
 			death = "1094.1.2"
@@ -6919,7 +6925,7 @@
 	}
 	40420 = {# Harold
 		name = "Harold"
-		dynasty = 380
+		dynasty_house = house_vexin_amiens
 		martial = 8
 		diplomacy = 5
 		intrigue = 6

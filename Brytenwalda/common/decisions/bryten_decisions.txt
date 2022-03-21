@@ -116,6 +116,7 @@ unite_england_decision = {
 					value = yes
 				}
 			}
+			
 		}
 	}
 
@@ -151,7 +152,7 @@ restore_kingdom_kent_decision = {
 		NOT = {	#You can only do it once.
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:flag_restored_kent
+				target = flag:restore_kingdom_kent
 			}
 		}
 		custom_tooltip = {
@@ -199,11 +200,7 @@ restore_kingdom_kent_decision = {
 		hidden_effect = {
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:flag_restored_kent
-			}
-			set_global_variable = {
-				name = flag_restored_kent
-				value = root
+				target = flag:restore_kingdom_kent
 			}
 		}
 	}
@@ -244,7 +241,7 @@ restore_kingdom_essex_decision = {
 		NOT = {	#You can only do it once.
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:flag_restored_essex
+				target = flag:restore_kingdom_essex
 			}
 		}
 		custom_tooltip = {
@@ -288,11 +285,7 @@ restore_kingdom_essex_decision = {
 		hidden_effect = {
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:flag_restored_essex
-			}
-			set_global_variable = {
-				name = flag_restored_essex
-				value = root
+				target = flag:restore_kingdom_essex
 			}
 		}
 	}
@@ -381,7 +374,7 @@ integrate_strathclyde_kingdom = {
 		NOT = {# this is a unique decision
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:create_duchy_of_lothian_decision
+				target = flag:integrate_strathclyde_kingdom
 			}
 		}
 		has_primary_title = title:k_scotland # Only can be done as the Kingdom of Scotland
@@ -396,12 +389,8 @@ integrate_strathclyde_kingdom = {
 		root.culture = {
 			has_innovation = innovation_hereditary_rule
 			has_innovation = innovation_royal_prerogative
-		}		
-		NOT = {
-			culture:cumbrian = {
-				has_innovation = innovation_rightful_ownership
-			}
 		}
+		NOT = { culture:cumbrian = { has_innovation = innovation_rightful_ownership	} }
 		completely_controls = title:k_strathclyde
 	}
 
@@ -427,13 +416,11 @@ integrate_strathclyde_kingdom = {
 			trigger_event = bryten_decision.0011
 		}
 		#Can only be done once
-		add_to_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:create_duchy_of_lothian_decision
-		}
-		set_global_variable = {
-			name = unavailable_unique_decisions
-			value = scope:lothian_creator
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:integrate_strathclyde_kingdom
+			}
 		}
 	}
 
@@ -457,7 +444,7 @@ create_duchy_of_lothian = {
 		NOT = {# this is a unique decision
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
-				target = flag:create_duchy_of_lothian_decision
+				target = flag:create_duchy_of_lothian
 			}
 		}
 		OR = {# should either be Scotland or Strathclyde that creates it
@@ -496,14 +483,13 @@ create_duchy_of_lothian = {
 		show_as_tooltip = { create_lothian_duchy_effects = yes } 
 		create_lothian_duchy_effects = yes
 		#Can only be done once
-		add_to_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:create_duchy_of_lothian_decision
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_duchy_of_lothian
+			}
 		}
-		set_global_variable = {
-			name = unavailable_unique_decisions
-			value = scope:lothian_creator
-		}
+
 	}
 
 	ai_potential = {
