@@ -27,25 +27,28 @@ unite_england_decision = {
 	}
 
 	is_valid = {
-		custom_tooltip = {
+		custom_tooltip = {# Capital Must be in England
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
 		}
-		custom_tooltip = {
+		custom_tooltip = {# Must own the majority of England
 			text = owns_majority_england_region_tooltip
 		 	any_county_in_region = {
 		 		region = custom_england
 		 		count >= 28
 		 		OR = {
 		 			holder = root
+					 holder = {
+						any_liege_or_above = { this = root }
+					}
 		 		}
 		 	}
 		}
-		custom_tooltip = {
+		custom_tooltip = {# Must be of West Germanic heritage
 			text = unite_england_culture_requirement
 			culture = { has_cultural_pillar = heritage_west_germanic }
 		}
-		custom_tooltip = {
+		custom_tooltip = {# Must have an English Kingdom as primary title
 			text = unite_england_decision_primary
 			OR = {
 				has_primary_title = title:k_kent

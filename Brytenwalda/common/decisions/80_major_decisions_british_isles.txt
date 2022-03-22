@@ -102,7 +102,7 @@ reclaim_britannia_decision = {
 #############################################
 # Cultural Mixing Decisions					#
 #############################################
-embrace_english_culture_decision = {
+embrace_english_culture_decision = {# For the King of england
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	major = yes
 
@@ -137,6 +137,18 @@ embrace_english_culture_decision = {
 			}
 		}
 		has_title = title:k_england
+		current_date >= 1200.1.1
+		OR = {# either 1 duke is english or the majority of England is English
+			any_county_in_region = {# 
+				region = custom_england
+				count >= 28
+				culture = culture:english
+			}
+			any_vassal = {# At least one duke should start the trend.
+				primary_title.tier = tier_duchy
+			 	has_culture = culture:english
+		 	}
+		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -152,8 +164,7 @@ embrace_english_culture_decision = {
 		show_as_tooltip = {
 			embrace_english_culture_effect = yes
 		}
-
-		trigger_event = british_isles.2001
+		trigger_event = bryten_england.103
 	}
 	
 	ai_potential = {

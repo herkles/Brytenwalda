@@ -27,6 +27,294 @@ bryten_england.0001 = {# William the Conquerer is Coronated in London at Westmin
 	}
 }
 #######################################
-# Pilgrimage to PLACE
+# Embrace English culture
 #######################################
+bryten_england.100 = {# English culture forming
+	type = character_event
+	title = bryten_england.100.t
+	desc = bryten_england.100.desc
+	theme = culture_change
+	left_portrait = {
+		character = scope:embracer
+		animation = personality_bold
+	}
+
+	immediate = {
+		culture:english = {
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:norman
+			get_all_innovations_from = culture:anglo_saxon
+		}
+		set_global_variable = {
+			name = bryten_english_created
+			value = yes
+		}
+	}
+
+	trigger = {
+		not = {	exists = global_var:bryten_english_created } # Fire Only Once
+		has_title = title:k_england
+		any_county_in_region = {# To ensure that you actually rule over england
+			region = custom_england
+			count >= 28
+			OR = {
+				holder = root
+				holder = {
+					any_liege_or_above = { this = root }
+				}
+			}
+		}
+		culture = { has_cultural_pillar = heritage_frankish }
+		any_county_in_region = {# 
+			region = custom_england
+			culture = { has_cultural_pillar = heritage_west_germanic }
+		}
+		current_date >= 1150.1.1
+	}
+
+	option = {# Interesting
+		name = bryten_england.100.culture
+		random_county_in_region = {
+			region = custom_england
+			limit = { 
+				culture = { has_cultural_pillar = heritage_west_germanic }
+				NOT = {	culture = culture:english }
+			}
+			set_county_culture = culture:english
+			save_scope_as = bryten_english_county
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				any_vassal_or_below = {
+					has_title = scope:bryten_english_county
+					NOT = {	has_title = title:k_england	}
+				}
+			}
+			trigger_event = {
+				id = bryten_england.101
+			}
+		}
+	}
+
+}
+bryten_england.101 = {# English culture spreading - County Ruler is informed
+	type = character_event
+	title = bryten_england.101.t
+	desc = bryten_england.101.desc
+	theme = culture_change
+
+	option = {# Interesting
+		name = bryten_england.101.culture
+	}
+
+}
+bryten_england.102 = {# Cities are adopting English Culture
+	type = character_event
+	title = bryten_england.102.t
+	desc = bryten_england.102.desc
+	theme = culture_change
+
+
+	immediate = {
+		if = {# Winchester
+			limit = { has_title = title:c_hampton }
+			title:c_hampton = {
+				save_scope_as = bryten_english_winchester
+			}
+			set_global_variable = {
+				name = bryten_english_created_winchester
+				value = yes
+			}
+		}
+		if = {# York
+			limit = { has_title = title:c_north_riding }
+			title:c_north_riding = {
+				save_scope_as = bryten_english_york
+			}
+			set_global_variable = {
+				name = bryten_english_created_york
+				value = yes
+			}
+		}
+		if = {# London
+			limit = { has_title = title:c_middlesex }
+			title:c_middlesex = {
+				save_scope_as = bryten_english_london
+			}
+			set_global_variable = {
+				name = bryten_english_created_london
+				value = yes
+			}
+		}		
+		if = {# Oxford
+			limit = { has_title = title:c_oxfordshire }
+			title:c_oxfordshire = {
+				save_scope_as = bryten_english_oxford
+			}
+			set_global_variable = {
+				name = bryten_english_created_oxford
+				value = yes
+			}
+		}
+		if = {# Lincoln
+			limit = { has_title = title:c_lincolnshire }
+			title:c_lincolnshire = {
+				save_scope_as = bryten_english_lincoln
+			}
+			set_global_variable = {
+				name = bryten_english_created_lincoln
+				value = yes
+			}
+		}
+		if = {# Bristol
+			limit = { has_title = title:c_gloucestershire }
+			title:c_gloucestershire = {
+				save_scope_as = bryten_english_bristol
+			}
+			set_global_variable = {
+				name = bryten_english_created_bristol
+				value = yes
+			}
+		}
+		if = {# Norwich
+			limit = { has_title = title:c_norfolk }
+			title:c_norfolk = {
+				save_scope_as = bryten_english_norwich
+			}
+			save_scope_as = bryten_english_norwich
+			set_global_variable = {
+				name = bryten_english_created_norwich
+				value = yes
+			}
+		}
+	}
+
+	trigger = {
+		OR = {# must own an important English city
+			has_title = title:c_hampton # Winchester
+			has_title = title:c_north_riding # York
+			has_title = title:c_middlesex # London
+			has_title = title:c_oxfordshire # Oxford
+			has_title = title:c_lincolnshire # Lincoln
+			has_title = title:c_gloucestershire # bristol and Glouscster
+			has_title = title:c_norfolk # Norwich
+		}
+		AND = {
+			not = {	exists = global_var:bryten_english_created_winchester }
+			not = {	exists = global_var:bryten_english_created_york }
+			not = {	exists = global_var:bryten_english_created_london }
+			not = {	exists = global_var:bryten_english_created_oxford }
+			not = {	exists = global_var:bryten_english_created_lincoln }
+			not = {	exists = global_var:bryten_english_created_bristol }
+			not = {	exists = global_var:bryten_english_created_norwich }
+		}
+		culture = { has_cultural_pillar = heritage_frankish }
+		current_date >= 1150.1.1
+	}
+
+	option = {# Winchester
+		name = bryten_england.102.city
+		trigger = {	has_title = title:c_hampton	}
+		scope:bryten_english_winchester = {	set_county_culture = culture:english }
+	}
+	option = {# York
+		name = bryten_england.102.city
+		trigger = {	has_title = title:c_north_riding	}
+		scope:bryten_english_york = {	set_county_culture = culture:english }
+	}
+	option = {# London
+		name = bryten_england.102.city
+		trigger = {	has_title = title:c_middlesex	}
+		scope:bryten_english_london = {	set_county_culture = culture:english }
+	}	
+	option = {# Oxford
+		name = bryten_england.102.city
+		trigger = {	has_title = title:c_oxfordshire	}
+		scope:bryten_english_oxford = {	set_county_culture = culture:english }
+	}
+	option = {# Lincoln
+		name = bryten_england.102.city
+		trigger = {	has_title = title:c_lincolnshire	}
+		scope:bryten_english_lincoln = {	set_county_culture = culture:english }
+	}
+	option = {# Glouscster
+		name = bryten_england.102.city
+		trigger = {	has_title = title:c_gloucestershire	}
+		scope:bryten_english_bristol = {	set_county_culture = culture:english }
+	}
+	option = {# Norwich
+		name = bryten_england.102.city
+		trigger = {	has_title = title:c_norfolk	}
+		scope:bryten_english_norwich = {	set_county_culture = culture:english }
+	}
+}
+bryten_england.103 = {# The king has embraced English Culture
+	type = character_event
+	title = bryten_england.103.t
+	desc = bryten_england.103.desc
+	theme = culture_change
+	left_portrait = {
+		character = scope:embracer
+		animation = personality_bold
+	}
+
+	immediate = {
+		save_scope_as = embracer
+		culture = { save_scope_as = embracer_former_culture }
+	}
+
+	option = {
+		name = bryten_england.103.a
+		embrace_english_culture_effect = yes
+		hidden_effect = { # Moved here from embrace_english_culture_decision
+			# Send event to other players
+			every_player = {
+				limit = {
+					NOT = { this = root }
+					OR = {
+						primary_title = {
+							OR = {
+								de_jure_liege = title:e_britannia
+								de_jure_liege.de_jure_liege = title:e_britannia
+								de_jure_liege.de_jure_liege.de_jure_liege = title:e_britannia
+							}
+						}
+						culture = { has_cultural_pillar = heritage_north_germanic }
+						culture = { has_cultural_pillar = heritage_central_germanic }
+						culture = { has_cultural_pillar = heritage_west_germanic }
+						culture = { has_cultural_pillar = heritage_goidelic }
+						culture = { has_cultural_pillar = heritage_brythonic }
+					}
+				}
+				trigger_event = bryten_england.104
+			}
+		}
+	}
+}
+bryten_england.104 = {# Players informed
+	type = character_event
+	title = bryten_england.103.t
+	desc = bryten_england.104.desc
+	theme = culture_change
+	left_portrait = {
+		character = scope:embracer
+		animation = personality_bold
+	}
+
+	option = { # Not norman
+		name = bryten_england.103.a
+		trigger = {
+			NOT = { has_culture = scope:embracer.culture }
+		}
+	}
+	option = { # Also norman
+		name = bryten_england.104.b
+		trigger = {
+			has_culture = scope:embracer.culture
+		}
+	}
+}
 
