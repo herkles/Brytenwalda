@@ -1,7 +1,7 @@
 ﻿#############################################
-# 	   Unite the Kingdom of England			#
+# Anglo-Saxon England Decisions
 #############################################
-unite_england_decision = {
+unite_england_decision = {# Unite England
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	major = yes
 	ai_check_interval = 60
@@ -131,10 +131,7 @@ unite_england_decision = {
 		base = 100
 	}
 }
-#############################################
-# 	   Create the Kingdom of Kent			#
-#############################################
-restore_kingdom_kent_decision = {
+restore_kingdom_kent_decision = {# Restore the Kingdom of Kent
 	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
 	major = yes
 	ai_check_interval = 120
@@ -220,10 +217,7 @@ restore_kingdom_kent_decision = {
 		base = 100
 	}
 }
-#############################################
-# 	   Create the Kingdom of Essex			#
-#############################################
-restore_kingdom_essex_decision = {
+restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
 	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
 	major = yes
 	ai_check_interval = 120
@@ -306,7 +300,131 @@ restore_kingdom_essex_decision = {
 	}
 }
 #############################################
-# 	  High Kingdom of Ireland Decisions		#
+# Norman England Decisions
+#############################################
+establish_norman_adminstration = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	ai_check_interval = 60
+	desc = establish_norman_adminstration_desc
+
+	is_shown = {
+		NOT = {# this is a unique decision
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:establish_norman_adminstrationn_decision
+			}
+		}
+		has_culture = culture:norman
+		game_start_date >= 1066.09.15 # This is to ensure that the historical Normans do their historical norman things to England.
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
+		has_culture = culture:norman
+		has_primary_title = title:k_england # Must be the king of england.
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		save_scope_as = norman_england_king
+
+		show_as_tooltip = { establish_norman_adminstration_effects = yes } 
+		#Can only be done once
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:establish_norman_adminstrationn_decision
+		}
+		set_global_variable = {
+			name = unavailable_unique_decisions
+			value = scope:norman_england_king
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
+# General England Decisions
+#############################################
+bryten_pilgrimage_durham = {
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	ai_check_interval = 64
+	cooldown = { days = 7300 }
+	desc = bryten_pilgrimage_durham_desc
+	
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		religion = religion:christianity_religion
+		NOT = { has_character_flag = bryten_pilgrimage_durham }
+		OR = {
+			title:c_durham = {
+				squared_distance = {
+					target = root.capital_province
+					value <= squared_distance_small
+				}
+			}
+			AND = {
+				is_target_in_global_variable_list = {
+					name = unavailable_unique_decisions
+					target = flag:bryten_durham_st_cuthbert_remains_transfered
+				}
+				capital_province = { geographical_region = custom_england }			
+			}
+		}
+	}
+	
+	is_valid = {
+		gold >= medium_gold_value
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		add_character_flag = bryten_pilgrimage_durham
+		custom_tooltip = bryten_pilgrimage_durham_tooltip
+		trigger_event = {
+			id = aachen.0020
+		}
+	}
+
+	cost = { 
+		gold = { value = medium_gold_value } # Will depend
+	}	
+
+	ai_potential = {
+		short_term_gold > standard_activity_cost
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 5
+			has_trait = zealous
+		}
+		modifier = {
+			add = -15
+			has_trait = cynical
+		}
+	}
+}
+#############################################
+# Irish Decisions
 #############################################
 strengthen_high_kingship_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
@@ -365,9 +483,9 @@ strengthen_high_kingship_decision = {
 	}
 }
 #############################################
-#   Integrate the Kingdom of Strathclyde	#
+# Scottish Decisions
 #############################################
-integrate_strathclyde_kingdom = {
+integrate_strathclyde_kingdom = {# Integrate the Kingdom of Strathclyde
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	ai_check_interval = 60
 	major = yes
@@ -435,10 +553,7 @@ integrate_strathclyde_kingdom = {
 		base = 100
 	}
 }
-#############################################
-# 	    Create the Duchy of Lothian			#
-#############################################
-create_duchy_of_lothian = {
+create_duchy_of_lothian = {# Create the Duchy of Lothian
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	ai_check_interval = 60
 	desc = create_duchy_of_lothian_desc
@@ -504,60 +619,5 @@ create_duchy_of_lothian = {
 	}
 }
 #############################################
-# 	  Establish Norman Adminstration		#
+# Welsh Decisions
 #############################################
-establish_norman_adminstration = {
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
-	ai_check_interval = 60
-	desc = establish_norman_adminstration_desc
-
-	is_shown = {
-		NOT = {# this is a unique decision
-			is_target_in_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:establish_norman_adminstrationn_decision
-			}
-		}
-		has_culture = culture:norman
-		game_start_date >= 1066.09.15 # This is to ensure that the historical Normans do their historical norman things to England.
-	}
-
-	is_valid = {
-		custom_tooltip = {
-			text = capital_in_england_region_tooltip
-			capital_province = { geographical_region = custom_england }
-		}
-		has_culture = culture:norman
-		has_primary_title = title:k_england # Must be the king of england.
-	}
-
-	is_valid_showing_failures_only = {
-		is_imprisoned = no
-		is_available_adult = yes
-		is_at_war = no
-	}
-
-	effect = {
-		save_scope_as = norman_england_king
-
-		show_as_tooltip = { establish_norman_adminstration_effects = yes } 
-		#Can only be done once
-		add_to_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:establish_norman_adminstrationn_decision
-		}
-		set_global_variable = {
-			name = unavailable_unique_decisions
-			value = scope:norman_england_king
-		}
-	}
-
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 100
-	}
-}
-
