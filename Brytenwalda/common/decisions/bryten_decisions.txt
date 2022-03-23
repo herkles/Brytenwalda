@@ -359,6 +359,60 @@ establish_norman_adminstration = {
 #############################################
 # General England Decisions
 #############################################
+bryten_build_saint_edmunds = {
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	ai_check_interval = 64
+	cooldown = { days = 7300 }
+	desc = bryten_build_saint_edmunds_desc
+	
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		religion = religion:christianity_religion
+		NOT = { has_character_flag = bryten_bury_saint_edmunds }
+		exists = global_var:bryten_saint_edmund_cult
+		capital_province = { geographical_region = custom_england } # English Kings can go to Bury Saint Edmunds
+	}
+	
+	is_valid = {
+		culture = {
+			has_innovation = innovation_manorialism
+		}
+		gold >= medium_gold_value
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		custom_tooltip = bryten_build_saint_edmund_tooltip
+		trigger_event = { id = bryten_england.128 }
+	}
+
+	cost = { 
+		gold = { value = medium_gold_value } # Will depend
+	}	
+
+	ai_potential = {
+		short_term_gold > standard_activity_cost
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 5
+			has_trait = zealous
+		}
+		modifier = {
+			add = -15
+			has_trait = cynical
+		}
+	}
+}
+#############################################
+# Pilgrimages Decisions
+#############################################
 bryten_pilgrimage_durham = {
 	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
 	ai_check_interval = 64
@@ -394,6 +448,55 @@ bryten_pilgrimage_durham = {
 		add_character_flag = bryten_pilgrimage_durham
 		custom_tooltip = bryten_pilgrimage_durham_tooltip
 		trigger_event = { id = bryten_england.150 }
+	}
+
+	cost = { 
+		gold = { value = medium_gold_value } # Will depend
+	}	
+
+	ai_potential = {
+		short_term_gold > standard_activity_cost
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 5
+			has_trait = zealous
+		}
+		modifier = {
+			add = -15
+			has_trait = cynical
+		}
+	}
+}
+bryten_pilgrimage_edmund = {
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	ai_check_interval = 64
+	cooldown = { days = 7300 }
+	desc = bryten_pilgrimage_edmund_desc
+	
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		religion = religion:christianity_religion
+		NOT = { has_character_flag = bryten_pilgrimage_edmund }
+		exists = global_var:bryten_bury_saint_edmunds
+		capital_province = { geographical_region = custom_england } # English Kings can go to Bury Saint Edmunds
+	}
+	
+	is_valid = {
+		gold >= medium_gold_value
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		add_character_flag = bryten_pilgrimage_edmund
+		custom_tooltip = bryten_pilgrimage_edmund_tooltip
+		trigger_event = { id = bryten_england.130 }
 	}
 
 	cost = { 

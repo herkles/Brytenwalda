@@ -318,6 +318,316 @@ bryten_england.104 = {# Players informed
 		}
 	}
 }
+
+#######################################
+# Pilgrimage to Bury St. Edmunds
+#######################################
+bryten_england.125 = {# The martydom of Edmund. 
+	type = character_event
+	title = bryten_england.125.t
+	desc = bryten_england.125.desc
+	theme = friendly
+	left_portrait = {
+		character = scope:edumund
+		animation = happiness
+	}
+
+	trigger = {
+		has_title = title:k_east_anglia
+		not = {	exists = global_var:bryten_monks_take_cuthbert } # Fire Only Once
+		this = character:163111
+	}
+
+	immediate = {
+		character:163064 = { save_scope_as = edumund }
+		set_global_variable = {
+			name = bryten_monks_take_cuthbert
+			value = yes
+		}
+	}
+	
+	option = { # Ok
+		name = bryten_england.125.edmund
+		scope:edumund = {
+			death = natural
+		}
+	}
+
+	after = {
+		every_ruler = {# Let other English Kings know of his death
+			if = {
+				limit = {
+					OR = {
+						has_primary_title = title:k_kent
+						has_primary_title = title:k_northumbria
+						has_primary_title = title:k_mercia
+						has_primary_title = title:k_wessex
+						has_primary_title = title:k_essex
+					}
+				}
+				trigger_event = {
+					id = bryten_england.126
+					days = { 10 20 }
+				}
+			}
+		}
+	}
+		
+}
+bryten_england.126 = {# The martydom of Edmund - other kings of England are informed
+	type = character_event
+	title = bryten_england.125.t
+	desc = bryten_england.125.desc
+	theme = friendly
+	
+	option = { # Ok
+		name = bryten_england.126.edmund
+	}
+		
+}
+bryten_england.127 = {# The cult of St. Edmund the Martyr 
+	type = character_event
+	title = bryten_england.127.t
+	desc = bryten_england.127.desc
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	trigger = {
+		OR = {# Have to own territory in East Anglia
+			has_title = title:k_east_anglia
+			has_title = title:d_east_anglia
+			has_title = title:d_norfolk
+			has_title = title:c_norfolk
+			has_title = title:c_suffolk
+			has_title = title:c_cambridgeshire
+		}
+		religion = religion:christianity_religion # Got to be a Christian
+		not = {	exists = global_var:bryten_saint_edmund_cult } # Fire Only Once
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = bryten_saint_edmund_cult
+			value = yes
+		}
+	}
+	
+	option = { # interesting
+		name = bryten_england.127.cult
+	}
+		
+}
+bryten_england.128 = {# The abbey at Bury St. Edmunds. 
+	type = character_event
+	title = bryten_england.128.t
+	desc = bryten_england.128.desc
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		title:b_beodericsworth = {
+			save_scope_as = bury_saint_edmunds_title
+		}
+		set_global_variable = {
+			name = bryten_bury_saint_edmunds
+			value = yes
+		}
+	}
+
+	option = { # Ok
+		name = bryten_england.128.abbey
+		custom_tooltip = bryten_pilgrimage_durham_available_tooltip
+		title:b_beodericsworth = {
+			set_title_name = b_bury_st_edmunds
+		}
+	}
+		
+}
+# Pilgrimage to Durham it self
+bryten_england.130 = {# Make preparations to begin the pilgrimage
+	type = character_event
+	title = bryten_england.130.t
+	desc = bryten_england.130.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	right_portrait = root
+	
+	immediate = {
+		# Stop characters from planning multiple activities at once
+		add_character_flag = planning_an_activity
+	}
+	
+	option = { # Ok
+		name = bryten_england.130.pilgrimage
+		title:b_beodericsworth.title_province = {	
+			spawn_activity = {
+				owner = root
+				type = activity_edmund_pilgrimage
+			}	
+		}
+	}
+}
+bryten_england.131 = {# Pilgrimage begins
+	type = character_event
+	title = bryten_england.131.t
+	desc = bryten_england.131.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	
+	option = { # Ok
+		name = bryten_england.131.pilgrimage
+
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_england.132
+			days = { 10 20 }
+		}
+	}
+
+}
+bryten_england.132 = {# Arrive in Bury Saint Edmunds
+	type = character_event
+	title = bryten_england.132.t
+	desc = bryten_england.132.desc
+	theme = friendly
+	
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_england.132.arrival
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_england.133
+			days = { 4 12 }
+		}
+	}
+
+}
+bryten_england.133 = {# Meditating in the abbey
+	type = character_event
+	title = bryten_england.133.t
+	desc = bryten_england.133.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_england.133.abbey
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_england.134
+			days = { 3 6 }
+		}
+	}
+}
+bryten_england.134 = {# Visiting the Edmund.
+	type = character_event
+	title = bryten_england.134.t
+	desc = bryten_england.134.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_england.134.edmund
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_england.135
+			days = { 4 12 }
+		}
+	}
+}
+bryten_england.135 = {# Preparing to return home
+	type = character_event
+	title = bryten_england.135.t
+	desc = bryten_england.135.desc
+	theme = friendly
+	override_background = { event_background = alley_day }
+	
+	right_portrait = root
+	
+	option = { # Ok
+		name = bryten_england.135.home
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_england.136
+			days = { 10 25 }
+		}
+	}
+
+}
+bryten_england.136 = {# Return home
+	type = character_event
+	title = bryten_england.136.t
+	desc = bryten_england.136.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	option = { # Ok
+		name = bryten_england.136.home
+		add_piety = medium_piety_gain
+		pilgrimage_additional_reward_effect = yes
+		add_trait = pilgrim
+	}
+	
+	after = {
+		trigger_event = {
+			id = bryten_england.137
+			days = 1
+		}
+	}	
+}
+bryten_england.137 = {# Misc Cleanup file
+	hidden = yes	
+	immediate = {
+		remove_character_flag = bryten_pilgrimage_edmund
+		scope:activity = {
+			complete_activity = yes
+		}
+	}
+}
 #######################################
 # Pilgrimage to Durham
 #######################################
