@@ -370,6 +370,7 @@ bryten_pilgrimage_durham = {
 		is_landed = yes
 		religion = religion:christianity_religion
 		NOT = { has_character_flag = bryten_pilgrimage_durham }
+		exists = global_var:bryten_monks_cuthbert_durham
 		OR = {
 			title:c_durham = {
 				squared_distance = {
@@ -377,13 +378,7 @@ bryten_pilgrimage_durham = {
 					value <= squared_distance_small
 				}
 			}
-			AND = {
-				is_target_in_global_variable_list = {
-					name = unavailable_unique_decisions
-					target = flag:bryten_durham_st_cuthbert_remains_transfered
-				}
-				capital_province = { geographical_region = custom_england }			
-			}
+			capital_province = { geographical_region = custom_england } # English Kings can go to Durham
 		}
 	}
 	
@@ -398,9 +393,7 @@ bryten_pilgrimage_durham = {
 	effect = {
 		add_character_flag = bryten_pilgrimage_durham
 		custom_tooltip = bryten_pilgrimage_durham_tooltip
-		trigger_event = {
-			id = aachen.0020
-		}
+		trigger_event = { id = bryten_england.150 }
 	}
 
 	cost = { 

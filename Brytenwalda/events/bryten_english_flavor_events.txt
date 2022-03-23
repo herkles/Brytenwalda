@@ -26,6 +26,7 @@ bryten_england.0001 = {# William the Conquerer is Coronated in London at Westmin
 		}
 	}
 }
+
 #######################################
 # Embrace English culture
 #######################################
@@ -320,6 +321,147 @@ bryten_england.104 = {# Players informed
 #######################################
 # Pilgrimage to Durham
 #######################################
+bryten_england.140 = {# The Monks of Lindisfarne move the body of St. Cuthbert. 
+	type = character_event
+	title = bryten_england.140.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { religion = religion:germanic_religion }
+				desc = bryten_england.140.desc.pagan
+			}
+			triggered_desc = {
+				trigger = { religion = religion:christianity_religion }
+				desc = bryten_england.140.desc.christian
+			}
+		}
+	}
+
+
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	trigger = {
+		has_title = title:c_northumberland
+		not = {	exists = global_var:bryten_monks_take_cuthbert } # Fire Only Once
+		current_date <= 900.1.1 # The monks left in the 9th century
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = bryten_monks_take_cuthbert
+			value = yes
+		}
+	}
+	
+	option = { # Ok
+		name = bryten_england.140.pagan
+	}
+	option = { # Ok
+		name = bryten_england.140.christian
+
+	}
+		
+}
+bryten_england.141 = {# The Monks bring his body to Durham
+	type = character_event
+	title = bryten_england.141.t
+	desc = bryten_england.141.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	trigger = {
+		has_title = title:c_durham
+		exists = global_var:bryten_monks_take_cuthbert # The monks have to take the body
+		not = {	exists = global_var:bryten_monks_cuthbert_durham } # Fire Only Once
+		current_date <= 900.1.1 # The monks get there seven years later.
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = bryten_monks_cuthbert_durham
+			value = yes
+		}
+	}
+	
+	option = { # Ok
+		name = bryten_england.141.durham
+	}
+		
+}
+bryten_england.142 = {# Building the tomb for St. Cuthbert. 
+	type = character_event
+	title = bryten_england.142.t
+	desc = bryten_england.142.desc
+	theme = friendly
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	trigger = {
+		has_title = title:c_durham
+		exists = global_var:bryten_monks_cuthbert_durham # The monks have to take the body
+		not = {	exists = global_var:bryten_cuthbert_tomb } # Fire Only Once
+		any_realm_province = {
+			has_building = bryten_building_durham_cathedral_01
+		}
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = bryten_cuthbert_tomb
+			value = yes
+		}
+	}
+	
+	option = { # Ok
+		name = bryten_england.142.tomb
+		custom_tooltip = bryten_pilgrimage_durham_available_tooltip
+	}
+		
+}
+bryten_england.143 = {# St. Cuthbert's Gospel of John.
+	type = character_event
+	title = bryten_england.143.t
+	desc = bryten_england.143.desc
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	trigger = {
+		has_title = title:c_durham
+		not = {	exists = global_var:bryten_cuthbert_gospel } # Fire Only Once
+		any_realm_province = {
+			has_building = bryten_building_durham_cathedral_02
+		}
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = bryten_cuthbert_gospel
+			value = yes
+		}
+	}
+
+	
+	option = { # Ok
+		name = bryten_england.143.gospel
+		add_piety = medium_piety_gain
+	}
+		
+}
+# Pilgrimage to Durham it self
 bryten_england.150 = {# Make preparations to begin the pilgrimage
 	type = character_event
 	title = bryten_england.150.t
@@ -367,6 +509,7 @@ bryten_england.151 = {# Pilgrimage begins
 		name = bryten_england.151.pilgrimage
 
 	}
+
 	after = {
 		trigger_event = {
 			id = bryten_england.152
@@ -460,7 +603,7 @@ bryten_england.155 = {# Visiting the Tomb of St. Cuthbert.
 	}
 	
 	option = { # Ok
-		name = bryten_england.153.cuthbert
+		name = bryten_england.155.cuthbert
 	}
 
 	after = {
