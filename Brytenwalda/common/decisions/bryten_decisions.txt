@@ -302,7 +302,7 @@ restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
 #############################################
 # Norman England Decisions
 #############################################
-establish_norman_adminstration = {
+establish_norman_adminstration = {# Establish Norman Adminstration
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
 	ai_check_interval = 60
 	desc = establish_norman_adminstration_desc
@@ -359,7 +359,7 @@ establish_norman_adminstration = {
 #############################################
 # General England Decisions
 #############################################
-bryten_build_saint_edmunds = {
+bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
 	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
 	ai_check_interval = 64
 	cooldown = { days = 7300 }
@@ -386,7 +386,7 @@ bryten_build_saint_edmunds = {
 	}
 
 	effect = {
-		custom_tooltip = bryten_build_saint_edmund_tooltip
+		custom_tooltip = bryten_build_saint_edmunds_tooltip
 		trigger_event = { id = bryten_england.128 }
 	}
 
@@ -413,7 +413,7 @@ bryten_build_saint_edmunds = {
 #############################################
 # Pilgrimages Decisions
 #############################################
-bryten_pilgrimage_durham = {
+bryten_pilgrimage_durham = {# Pilgrimage to Durham
 	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
 	ai_check_interval = 64
 	cooldown = { days = 7300 }
@@ -470,7 +470,7 @@ bryten_pilgrimage_durham = {
 		}
 	}
 }
-bryten_pilgrimage_edmund = {
+bryten_pilgrimage_edmund = {# Pilgrimage to Bury Saint Edmunds
 	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
 	ai_check_interval = 64
 	cooldown = { days = 7300 }
@@ -497,6 +497,72 @@ bryten_pilgrimage_edmund = {
 		add_character_flag = bryten_pilgrimage_edmund
 		custom_tooltip = bryten_pilgrimage_edmund_tooltip
 		trigger_event = { id = bryten_england.130 }
+	}
+
+	cost = { 
+		gold = { value = medium_gold_value } # Will depend
+	}	
+
+	ai_potential = {
+		short_term_gold > standard_activity_cost
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 5
+			has_trait = zealous
+		}
+		modifier = {
+			add = -15
+			has_trait = cynical
+		}
+	}
+}
+bryten_pilgrimage_david = {# Pilgrimage to St. Davids
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	ai_check_interval = 64
+	cooldown = { days = 7300 }
+	desc = bryten_pilgrimage_david_desc
+	
+	is_shown = {
+		is_ruler = yes
+		is_landed = yes
+		religion = religion:christianity_religion
+		NOT = { has_character_flag = bryten_pilgrimage_david }
+		OR = {
+			title:c_pembrokeshire = {
+				squared_distance = {
+					target = root.capital_province
+					value <= squared_distance_small
+				}
+			}
+			AND = {
+				exists = global_var:bryten_papal_bull_davids
+				capital_province = {
+					OR = {
+						geographical_region = world_europe_west_britannia
+						geographical_region = world_europe_west_francia
+						geographical_region = ghw_region_scandinavia
+						geographical_region = world_europe_west_germania
+					}
+				}			
+			}
+		}
+	}
+	
+	is_valid = {
+		gold >= medium_gold_value
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		add_character_flag = bryten_pilgrimage_david
+		custom_tooltip = bryten_pilgrimage_edmund_tooltip
+		trigger_event = { id = bryten_wales.100 }
 	}
 
 	cost = { 

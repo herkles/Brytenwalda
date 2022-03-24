@@ -37,3 +37,27 @@ activity_edmund_pilgrimage = {# pilgrimage to Bury Saint Edmunds
 		}	
 	}
 }
+activity_davids_pilgrimage = {# pilgrimage to Saint Davids
+	solo = yes
+	color = { 0.80 0.80 0.18 1 } # Yellow
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+	}
+	on_activate = {
+		activity_owner = {
+			trigger_event = bryten_wales.101
+		}
+	}
+	on_complete = {
+		activity_owner = {
+			remove_character_flag = planning_an_activity
+		}	
+	}
+}
+
+
+
+
+
+
