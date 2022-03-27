@@ -40,7 +40,7 @@
 	950.1.1 = {
 		culture = gaelic
 	}
-	1130.1.1 = {
+	1153.1.1 = {
 		culture = scottish
 	}
 }
@@ -73,7 +73,7 @@
 	935.1.1 = {
 		holding = castle_holding
 	}
-	1130.1.1 = {
+	1153.1.1 = {
 		culture = scottish
 	}
 }
@@ -236,7 +236,7 @@
 	culture = cumbrian
 	religion = catholic
 	holding = castle_holding	
-	1100.11.11 = {
+	1153.1.1 = {
 		culture = scottish
 	}
 }
@@ -324,14 +324,11 @@
 ##d_lothian ###################################
 ###c_lothian
 1727 = {	#Edinburgh
-	culture = northumbrian
+	culture = anglo_saxon
 	religion = catholic
 	holding = castle_holding
 	800.1.1 = {
 		special_building_slot = bryten_building_edinburgh_castle_01
-	}
-	1000.1.1 = {
-		culture = scottish
 	}
 	1066.1.1 = {
 		buildings = {
@@ -341,6 +338,7 @@
 		}
 	}
 	1153.1.1 = {
+		culture = scottish
 		special_building = bryten_building_edinburgh_castle_01
 	}
 }
@@ -356,17 +354,17 @@
 
 ###c_dunbar
 1676 = {	#Dunbar
-	culture = northumbrian
+	culture = anglo_saxon
 	religion = catholic
 	holding = castle_holding
 	800.1.1 = {
 		special_building_slot = bryten_building_dunbar_castle_01
 	}
-	1000.1.1 = {
-		culture = scottish
-	}
 	1070.1.1 = {
 		special_building = bryten_building_dunbar_castle_01
+	}
+	1153.1.1 = {
+		culture = scottish
 	}
 }
 1675 = {	#Berwick
@@ -375,10 +373,10 @@
 
 ###c_teviotdale
 1677 = {	#Kelso
-	culture = northumbrian
+	culture = anglo_saxon
 	religion = catholic
 	holding = castle_holding
-	1000.1.1 = {
+	1153.1.1 = {
 		culture = scottish
 	}
 }
@@ -398,7 +396,7 @@
 	935.1.1 = {
 		holding = castle_holding
 	}
-	1000.1.1 = {
+	1153.1.1 = {
 		culture = scottish
 	}
 }
@@ -418,7 +416,7 @@
 	culture = cumbrian
 	religion = catholic
 	holding = castle_holding
-	1000.1.1 = {
+	1153.1.1 = {
 		culture = scottish
 	}
 }

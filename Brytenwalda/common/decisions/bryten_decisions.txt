@@ -335,7 +335,7 @@ establish_norman_adminstration = {# Establish Norman Adminstration
 
 	effect = {
 		save_scope_as = norman_england_king
-
+		trigger_event = { id = bryten_england.002 }
 		show_as_tooltip = { establish_norman_adminstration_effects = yes } 
 		#Can only be done once
 		add_to_global_variable_list = {
