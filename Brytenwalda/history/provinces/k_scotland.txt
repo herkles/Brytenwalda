@@ -324,11 +324,14 @@
 ##d_lothian ###################################
 ###c_lothian
 1727 = {	#Edinburgh
-	culture = anglo_saxon
+	culture = northumbrian
 	religion = catholic
 	holding = castle_holding
 	800.1.1 = {
 		special_building_slot = bryten_building_edinburgh_castle_01
+	}
+	959.1.1 = {
+		culture = anglo_saxon
 	}
 	1066.1.1 = {
 		buildings = {
@@ -354,11 +357,14 @@
 
 ###c_dunbar
 1676 = {	#Dunbar
-	culture = anglo_saxon
+	culture = northumbrian
 	religion = catholic
 	holding = castle_holding
 	800.1.1 = {
 		special_building_slot = bryten_building_dunbar_castle_01
+	}
+	959.1.1 = {
+		culture = anglo_saxon
 	}
 	1070.1.1 = {
 		special_building = bryten_building_dunbar_castle_01
@@ -373,9 +379,12 @@
 
 ###c_teviotdale
 1677 = {	#Kelso
-	culture = anglo_saxon
+	culture = northumbrian
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1153.1.1 = {
 		culture = scottish
 	}

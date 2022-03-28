@@ -2,7 +2,7 @@
 ##d_bedford ###################################
 ###c_middlesex
 1527 = {# Edmonton / London
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
 	769.1.1 = {
@@ -12,6 +12,9 @@
 		buildings = {
 			curtain_walls_01
 		}
+	}
+	959.1.1 = {
+		culture = anglo_saxon
 	}
 	1066.1.1 = {
 		buildings = {
@@ -40,9 +43,12 @@
 
 ###c_essex
 1514 = {# Colchester
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -63,9 +69,12 @@
 
 ###c_bedford
 1538 = {# Bedford
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -85,9 +94,12 @@
 
 ###c_hertfordshire
 1531 = {# Berkhamsted
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -104,9 +116,12 @@
 
 ###c_buckinghamshire
 1551 = {# Buckingham
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -130,16 +145,15 @@
 ##d_northumberland ###################################
 ###c_northumberland
 1609 = {# Bamburgh
-	culture = anglo_saxon
+	culture = northumbrian
 	religion = catholic
 	holding = castle_holding
 	122.1.1 = {
 		special_building = hadrians_wall_01
 	}
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
-
 	1100.11.11 = {
 		culture = english
 	}
@@ -165,13 +179,13 @@
 
 ###c_durham
 1606 = {#  1606 - Durham
-	culture = anglo_saxon
+	culture = northumbrian
 	religion = catholic
 	holding = castle_holding
 	634.1.1 = {
 		special_building_slot = bryten_building_durham_cathedral_01
 	}
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 		special_building = bryten_building_durham_cathedral_01
 	}
@@ -224,10 +238,10 @@
 ##d_lancaster ###################################
 ###c_lancashire
 1639 = {# Lancaster
-	culture = anglo_saxon
+	culture = northumbrian
 	religion = catholic
 	holding = castle_holding
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1100.11.11 = {
@@ -243,10 +257,10 @@
 
 ###c_westmorland
 1637 = {# Kendal
-	culture = anglo_saxon
+	culture = northumbrian
 	religion = catholic
 	holding = castle_holding
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1100.11.11 = {
@@ -259,11 +273,14 @@
 
 ###c_cheshire
 1643 = {# Chester
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
 	767.1.1 = {
 		special_building = offas_dyke_01
+	}
+	959.1.1 = {
+		culture = anglo_saxon
 	}
 	1100.11.11 = {
 		culture = english
@@ -281,9 +298,12 @@
 
 ###c_derby
 1621 = {# Derby
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -302,14 +322,14 @@
 ##d_york ###################################
 ###c_north_riding
 1595 = {#  York
-	culture = anglo_saxon
+	culture = northumbrian
 	religion = catholic
 	holding = castle_holding
 	672.1.1 = {
 		special_building_slot = bryten_building_york_minster_01
 		special_building = bryten_building_york_minster_01
 	}
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1066.1.1 = {
@@ -342,10 +362,10 @@
 
 ###c_east_riding
 1588 = {# Pocklington
-	culture = anglo_saxon
+	culture = northumbrian
 	religion = catholic
 	holding = castle_holding
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1100.11.11 = {
@@ -364,10 +384,10 @@
 
 ###c_west_riding
 1591 = {# Leeds
-	culture = anglo_saxon
+	culture = northumbrian
 	religion = catholic
 	holding = castle_holding
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1100.11.11 = {
@@ -392,7 +412,7 @@
 
 ###c_lincolnshire
 1583 = {# Lincoln
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
 	867.1.1 = {
@@ -402,7 +422,7 @@
 		special_building_slot = bryten_building_lincoln_cathedral_01
 		special_building = bryten_building_lincoln_cathedral_01
 	}
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1066.1.1 = {
@@ -440,13 +460,13 @@
 ##d_norfolk ###################################
 ###c_norfolk
 1522 = {# Norwich
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
 	800.1.1 = {
 		special_building_slot = bryten_building_norwich_cathedral_01
 	}
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}	
 	1066.1.1 = {
@@ -479,10 +499,10 @@
 
 ###c_suffolk
 1518 = {# Ipswich
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1100.11.11 = {
@@ -502,10 +522,10 @@
 
 ###c_cambridgeshire
 1534 = {# Cambridge
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1100.11.11 = {
@@ -526,9 +546,12 @@
 ##d_hereford ###################################
 ###c_warwickshire
 1603 = {# Warwick
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english 
 	}
@@ -543,10 +566,10 @@
 
 ###c_leicestershire
 1615 = {# Leicester
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1100.11.11 = {
@@ -566,10 +589,10 @@
 
 ###c_nottinghamshire
 1618 = {# Nottingham
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1100.11.11 = {
@@ -588,9 +611,12 @@
 
 ###c_staffordshire
 1627 = {# Stafford
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -605,9 +631,12 @@
 
 ###c_worcestershire
 1624 = {# Worcester
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -622,10 +651,10 @@
 
 ###c_huntingdonshire
 1541 = {# Hustingstone
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1100.11.11 = {
@@ -641,10 +670,10 @@
 
 ###c_northamptonshire
 1600 = {# Northampton
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
-	998.1.1 = {
+	900.1.1 = {
 		culture = anglo_norse
 	}
 	1100.11.11 = {
@@ -689,11 +718,14 @@
 ##d_gloucester ###################################
 ###c_gloucestershire
 1580 = {# Gloucester
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
 	767.1.1 = {
 		special_building = offas_dyke_01
+	}
+	959.1.1 = {
+		culture = anglo_saxon
 	}
 	1100.11.11 = {
 		culture = english
@@ -710,11 +742,14 @@
 }
 ###c_wiltshire
 1561 = {# Salisbury
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
 	2.1.1 = {
 		special_building = stonehenge_01
+	}
+	959.1.1 = {
+		culture = anglo_saxon
 	}
 	1100.11.11 = {
 		culture = english
@@ -736,9 +771,12 @@
 
 ###c_oxfordshire
 1558 = {# Oxford
-	culture = anglo_saxon
+	culture = mercian
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -752,9 +790,12 @@
 
 ###c_berkshire
 1555 = {# Reading
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -772,9 +813,12 @@
 ##d_canterbury ###################################
 ###c_kent
 1502 = {# Dover
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1066.1.1 = {
 		buildings = {
 			common_tradeport_02
@@ -804,9 +848,12 @@
 
 ###c_surrey
 1510 = {# Chertsey
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -823,9 +870,12 @@
 
 ###c_sussex
 1506 = {# Lewes
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -843,7 +893,7 @@
 ##d_somerset ###################################
 ###c_hampton
 1544 = {# Winchester
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
 	662.1.1 = {
@@ -854,6 +904,9 @@
 		buildings = {
 			common_tradeport_01
 		}
+	}
+	959.1.1 = {
+		culture = anglo_saxon
 	}
 	1066.1.1 = {
 		buildings = {
@@ -882,9 +935,12 @@
 
 ###c_isle_of_wight
 1549 = {# Carisbrooke
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -892,9 +948,12 @@
 
 ###c_dorset
 1565 = {# Wareham
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
@@ -914,9 +973,12 @@
 
 ###c_somerset
 1576 = {# Bath
-	culture = anglo_saxon
+	culture = west_saxon
 	religion = catholic
 	holding = castle_holding
+	959.1.1 = {
+		culture = anglo_saxon
+	}
 	1100.11.11 = {
 		culture = english
 	}
