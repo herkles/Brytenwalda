@@ -4384,7 +4384,7 @@
 		dynasty = 814
 		religion = "catholic"
 		culture = northumbrian
-		father = northumbrian09
+		mother = northumbrian08
 		871.1.1 = {
 			birth = yes
 		}
@@ -6721,6 +6721,53 @@
 		}
 	}
 #
+
+
+#######################################
+# House of Cornwall
+#######################################
+	159465 = {# Alured
+		name = "E_lfrE_d" #Alured
+		religion = "catholic"
+		culture = anglo_saxon
+		dynasty_house = house_british_isles_cornwall #of Cornwall
+		father = 159464
+		970.1.1 = {
+			birth = "970.1.1"
+		}
+		1020.1.1 = {
+			death = "1020.1.1"
+		}
+	}
+	159470 = {# Godwyn
+		name = "Godwine"  #Godwyn
+		religion = "catholic"
+		culture = anglo_saxon
+		dynasty_house = house_british_isles_cornwall #of Cornwall
+		father = 159465
+		1014.1.1 = {
+			birth = "1014.1.1"
+		}
+		1066.1.1 = {
+			employer = 122
+		}
+		1070.1.1 = {
+			death = "1070.1.1"
+		}
+	}
+	159471 = {# Hereberht
+		name = "Hereberht"
+		religion = "catholic"
+		culture = anglo_saxon
+		dynasty_house = house_british_isles_cornwall
+		father = 159470
+		1050.1.1 = {
+			birth = "1050.1.1"
+		}
+		1100.1.1 = {
+			death = "1100.1.1"
+		}
+	}
 #######################################
 # Other Characters
 #######################################

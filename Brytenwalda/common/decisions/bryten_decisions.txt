@@ -138,7 +138,6 @@ restore_kingdom_kent_decision = {# Restore the Kingdom of Kent
 
 	is_shown = {
 		NOR = {# can't form it if you are already a king, nor should the house of wessex be able to do so
-			dynasty = dynasty:house_british_isles_wessex # The House of Wessex should not seek to break up Wessex
 			title:k_england = { is_title_created = yes } # If England is created then you should focus on that
 			highest_held_title_tier >= tier_kingdom # No point in restoring it if you are already a king
 		}
@@ -221,7 +220,6 @@ restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
 
 	is_shown = {
 		NOR = {# can't form it if you are already a king, nor should the house of wessex be able to do so
-			dynasty = dynasty:house_british_isles_wessex # The House of Wessex should not seek to break up Wessex
 			title:k_england = { is_title_created = yes } # If England is created then you should focus on that
 			highest_held_title_tier >= tier_kingdom # No point in restoring it if you are already a king
 		}

@@ -549,8 +549,11 @@ bryten_england.016 = {# Consildating Control / replacing the Northern Lords
 bryten_england.024 = {# titular title version 2 so that the history list can be brought over. 
 	hidden = yes	
 	immediate = {
-		title:k_england_anglo_saxon_titular = {
-			copy_title_history = title:k_england 
+		if = {
+			limit = { this = character:140 }
+			title:k_england_anglo_saxon_titular = {
+				copy_title_history = title:k_england 
+			}
 		}
 	}
 }

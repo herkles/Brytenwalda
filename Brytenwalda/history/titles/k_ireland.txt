@@ -234,9 +234,6 @@ c_dublin = {# Kings of Dublin
 	881.1.1 = {# Sichfrith mac Imair
 		holder = 40609 
 	}
-	902.1.1 = {# Dublin was abadoned by the norse till Sihtric came to power
-		holder = 0 
-	}
 	917.1.1 = {# Sihtric ua Imair
 		liege = 0
 		holder = bryten_ivaring_03 
@@ -247,6 +244,9 @@ c_dublin = {# Kings of Dublin
 	}
 	934.1.1 = {# Olaf Guthfrithson
 		holder = bryten_ivaring_01 
+	}
+	935.1.1 = {
+		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	941.1.1 = {# Blacaire mac Gofrith
 		holder = bryten_ivaring_05 
@@ -282,30 +282,6 @@ c_dublin = {# Kings of Dublin
 	1052.1.1 = {# Muchad mac Diarmata
 		holder = 924 
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	935.1.1 = {
-		government = feudal_government	#Ahistorical, just for ease of bookmarks.
-	}
-	950.1.1 = {
-		liege = 0
-		holder = 5790 # Olaf Cuaran
-	}
-
 	1070.7.1 = {
 		holder = 83190 #Domnall son of Murchad of Leinster
 	}
@@ -1795,7 +1771,7 @@ c_ossory = {
 		holder = 83223 #Conchobar son of Cerball
 	}
 	1123.12.1 = {
-		holder = 83193 #Murchad son of Donnchad
+		holder = 906 #Murchad son of Donnchad
 	}
 	1126.1.1 = {
 		holder = 83223 #Conchobar son of Cerball
@@ -1878,7 +1854,7 @@ d_munster = {
 		holder = 902 #Donnchad mac Briain
 	}
 	1063.7.1 = {
-		holder = 83355 #Murchad son of Donnchad
+		holder = 906 #Murchad son of Donnchad
 	}
 	1068.7.1 = {
 		holder = 906 #High-King Toirrdelbach mac Taidg
@@ -2032,7 +2008,7 @@ c_thomond = {
 		holder = 902 #Donnchad mac Briain
 	}
 	1063.7.1 = {
-		holder = 83355 #Murchad son of Donnchad
+		holder = 906 #Murchad son of Donnchad
 	}
 	1068.7.1 = {
 		holder = 906 #High-King Toirrdelbach mac Taidg
@@ -2234,7 +2210,7 @@ c_ennis = {
 		holder = 902 #Donnchad mac Briain
 	}
 	1063.7.1 = {
-		holder = 83355 #Murchad son of Donnchad
+		holder = 906 #Murchad son of Donnchad
 	}
 	1068.7.1 = {
 		holder = 906 #High-King Toirrdelbach mac Taidg
