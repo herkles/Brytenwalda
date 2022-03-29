@@ -130,6 +130,106 @@ restore_kingdom_essex_decision_scripted_effect = {# Restoring The Kingdom of Ess
 	}
 
 }
+unify_anglo_saxon_culture_effect = {# Unifying Anglo Saxon
+	# Scopes saves for localization
+	root = { save_scope_as = unifier }
+	# Prestige Bonus
+	add_prestige = medium_prestige_gain
+
+	#Convert your, and your whole family's, culture
+	set_culture = culture:anglo_saxon
+	if = {
+		limit = { any_spouse = { is_landed = no } }
+		every_spouse = {
+			limit = {
+				is_landed = no
+			}
+			set_culture = culture:anglo_saxon
+		}
+	}
+	if = {
+		limit = {
+			any_close_family_member = {
+				is_landed = no
+				NOT = { is_spouse_of = root }
+			}
+		}
+		every_close_family_member = {
+			limit = {
+				is_landed = no
+				NOT = { is_spouse_of = root }
+			}
+			custom = all_unlanded_family_members
+			set_culture = culture:anglo_saxon
+		}
+	}
+
+	#Convert appropriate vassals, and their family
+	if = {
+		limit = {
+			any_vassal_or_below = {
+				is_ai = yes
+				OR = {
+					culture = culture:mercian
+					culture = culture:northumbrian
+					culture = culture:west_saxon
+				}
+				primary_title = {
+					OR = {
+						de_jure_liege = title:k_england
+						de_jure_liege.de_jure_liege = title:k_england
+						de_jure_liege.de_jure_liege.de_jure_liege = title:k_england
+					}
+				}
+			}
+		}
+		every_vassal_or_below = {
+			custom = embrace_english_culture_vassals_custom
+			limit = {
+				is_ai = yes
+				OR = {
+					culture = culture:mercian
+					culture = culture:northumbrian
+					culture = culture:west_saxon
+				}
+				primary_title = {
+					OR = {
+						de_jure_liege = title:k_england
+						de_jure_liege.de_jure_liege = title:k_england
+						de_jure_liege.de_jure_liege.de_jure_liege = title:k_england
+					}
+				}
+			}
+			set_culture = culture:anglo_saxon
+		}
+	}
+
+	#Flip Counties
+	every_county_in_region = {
+		region = custom_england
+		custom = unify_anglo_saxon_culture_counties_custom
+		limit = {
+			target_is_de_facto_liege_or_above = root.primary_title
+			OR = {
+				culture = culture:mercian
+				culture = culture:northumbrian
+				culture = culture:west_saxon
+			}
+			NOT = { culture = culture:anglo_norse }
+
+		}
+		set_county_culture = culture:anglo_saxon
+	}
+	culture:anglo_saxon = {
+		custom_tooltip = decision_unify_anglo_saxon_culture_get_innovations
+		hidden_effect = {
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:mercian
+			get_all_innovations_from = culture:northumbrian
+			get_all_innovations_from = culture:west_saxon
+		}
+	}
+}
 #######################################
 #									  #
 #       Norman/English Effects  	  #

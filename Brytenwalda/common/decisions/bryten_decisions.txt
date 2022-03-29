@@ -8,10 +8,7 @@ unite_england_decision = {# Unite England
 	desc = unite_england_decision_desc
 
 	is_shown = {
-		OR = {# This is for the Anglo-Saxons or the Norse who come to settle
-			has_culture = culture:anglo_saxon
-			has_culture = culture:norse
-		}
+		culture = { has_cultural_pillar = heritage_west_germanic }
 		custom_tooltip = {
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england }
@@ -145,10 +142,7 @@ restore_kingdom_kent_decision = {# Restore the Kingdom of Kent
 			title:k_england = { is_title_created = yes } # If England is created then you should focus on that
 			highest_held_title_tier >= tier_kingdom # No point in restoring it if you are already a king
 		}
-		OR = {# This is for the Anglo-Saxons or the Norse who come to settle
-			has_culture = culture:anglo_saxon # Powerful Anglo-Saxons might want to recreate it
-			has_culture = culture:norse # the Norse will do so as they want fancy kingdom titles
-		}
+		culture = { has_cultural_pillar = heritage_west_germanic }
 		NOT = {	#You can only do it once.
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -231,10 +225,7 @@ restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
 			title:k_england = { is_title_created = yes } # If England is created then you should focus on that
 			highest_held_title_tier >= tier_kingdom # No point in restoring it if you are already a king
 		}
-		OR = {# This is for the Anglo-Saxons or the Norse who come to settle
-			has_culture = culture:anglo_saxon # Powerful Anglo-Saxons might want to recreate it
-			has_culture = culture:norse # the Norse will do so as they want fancy kingdom titles
-		}
+		culture = { has_cultural_pillar = heritage_west_germanic }
 		NOT = {	#You can only do it once.
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions

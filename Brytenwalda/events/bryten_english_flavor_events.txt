@@ -557,6 +557,97 @@ bryten_england.024 = {# titular title version 2 so that the history list can be 
 #######################################
 # Embrace English culture
 #######################################
+bryten_england.30 = {# Anglo-Saxon Culture forming
+	type = character_event
+	title = bryten_england.30.t
+	desc = bryten_england.30.desc
+	theme = culture_change
+	left_portrait = {
+		character = scope:unifier
+		animation = personality_bold
+	}
+
+	trigger = {
+		not = {	exists = global_var:bryten_anglo_saxon_created } # Fire Only Once
+		has_title = title:k_england
+		any_county_in_region = {# To ensure that you actually rule over england
+			region = custom_england
+			count >= 28
+			OR = {
+				holder = root
+				holder = {
+					any_liege_or_above = { this = root }
+				}
+			}
+		}
+		OR = {
+			culture = culture:mercian
+			culture = culture:northumbrian
+			culture = culture:west_saxon
+		}
+		culture = {
+			AND = {
+				has_innovation = innovation_chronicle_writing
+				has_innovation = innovation_baliffs
+			}
+		}
+	}
+
+	immediate = {
+		save_scope_as = embracer
+		culture = { save_scope_as = embracer_former_culture }
+		set_global_variable = {
+			name = bryten_anglo_saxon_created
+			value = yes
+		}
+	}
+
+	option = {
+		name = bryten_england.30.a
+		embrace_english_culture_effect = yes
+		hidden_effect = { # Moved here from embrace_english_culture_decision
+			# Send event to other players
+			every_player = {
+				limit = {
+					NOT = { this = root }
+					OR = {
+						primary_title = {
+							OR = {
+								de_jure_liege = title:e_britannia
+								de_jure_liege.de_jure_liege = title:e_britannia
+								de_jure_liege.de_jure_liege.de_jure_liege = title:e_britannia
+							}
+						}
+						culture = { has_cultural_pillar = heritage_north_germanic }
+						culture = { has_cultural_pillar = heritage_central_germanic }
+						culture = { has_cultural_pillar = heritage_west_germanic }
+						culture = { has_cultural_pillar = heritage_goidelic }
+						culture = { has_cultural_pillar = heritage_brythonic }
+					}
+				}
+				trigger_event = bryten_england.31
+			}
+		}
+	}
+}
+bryten_england.31 = {# Players informed
+	type = character_event
+	title = bryten_england.31.t
+	desc = bryten_england.31.desc
+	theme = culture_change
+	left_portrait = {
+		character = scope:embracer
+		animation = personality_bold
+	}
+
+	option = { # Not norman
+		name = bryten_england.31.a
+	}
+}
+
+#######################################
+# Embrace English culture
+#######################################
 bryten_england.100 = {# English culture forming
 	type = character_event
 	title = bryten_england.100.t
