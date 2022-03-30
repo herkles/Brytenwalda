@@ -92,7 +92,7 @@
   bryten_england.020.coronation:1 "AAAA"
 
 #######################################
-# Anglo Saxon England
+# Anglo Saxon Unification
 #######################################
   bryten_england.30.t:0 "The Unification of the Anglo-Saxons"
   bryten_england.30.desc:0 "For far too long, the anglo-saxon people have clung to their own regional identities, be it West Saxon, Mercian, or Northumbrian. However, things are changing and now people are calling themselves Angelcynn. "
@@ -105,27 +105,60 @@
   decision_unify_anglo_saxon_culture_get_innovations:1 "The Anglo-Saxon [culture|E] gains all Mercian, West Saxon, and Northumbrian [innovations|E]"
 
 #######################################
+# Anglo Norse Culture Forming
+#######################################
+  bryten_england.032.t:0 "The Anglo-Norse"
+  bryten_england.032.desc:0 "People have flocked to your new lands on the isle of Britian. This has brought them into contact with the various people that already live in your new kingdom.Our children are born here, surrounded by Saxons, and while we may have trade and ties with Scandinvia, Britania will be our home. n\nAnd, as we make some of the local customs our own, so too the legacy of our culture spreads throughout the Saxon lands, giving birth to a new Anglo-Norse identity."
+  bryten_england.032.a:1 "Interesting"
+
+  bryten_england.033.t:0 "The Anglo-Norse"
+  bryten_england.033.desc:0 "The [ROOT.Char.Custom2('RelationDescriptor', SCOPE.sC('embracer'))] [embracer.GetName], [embracer.GetHerHis] vassals, and [embracer.GetHerHis] whole family has heeded the call of Albion and embraced English culture."
+  bryten_england.033.a:1 "It was only a matter of time."
+
+#######################################
+# Englisk Culture forming
+#######################################
+  bryten_england.035.t:0 "Englisk Culture Spreading"
+  bryten_england.035.desc:0 "The cultural concept of Engliskness seems to be spreading, and the people of one of my cities has adopted this cultural evolution."
+  bryten_england.035.city:1 "Interesting"
+
+  bryten_england.036.t:0 "Englisk Culture Forming"
+  bryten_england.036.desc:0 "After ruling England for some time it seems that we have started to impact the culture of the people. The people have started to write in a new language that is much more closer to French then to Anglic that they used before. It seems that we are about to see the evolution of culture in England."
+  bryten_england.036.culture:1 "How interesting."
+
+  bryten_england.037.t:0 "Englisk Culture Spreading"
+  bryten_england.03.desc:0 "After ruling England for some time it seems that we have started to impact the culture of the people. The people have started to write in a new language that is much more closer to French then to Anglic that they used before. It seems that we are about to see the evolution of culture in England."
+  bryten_england.037.culture:1 "How Spreading"
+
+  bryten_england.038.t:0 "[embracer_former_culture.GetNameNoTooltip|U] no More"
+  bryten_england.038.desc:0 "The time when we [embracer.GetCulture.GetCollectiveNounNoTooltip] considered France our homeland has long since passed. Our children are born here, surrounded by Saxons, and to them, Normandy will only ever be a blurred line beyond the misty shores of Britannia.\n\nAnd, as we make some of the local customs our own, so too the legacy of our culture spreads throughout the Saxon lands, giving birth to a new English identity."
+  bryten_england.038.a:0 "Long live the Englisk!"
+
+  bryten_england.039.desc:0 "The [ROOT.Char.Custom2('RelationDescriptor', SCOPE.sC('embracer'))] [embracer.GetName], [embracer.GetHerHis] vassals, and [embracer.GetHerHis] whole family has heeded the call of Albion and embraced English culture."
+  bryten_england.039.a:0 "It was only a matter of time."
+
+#######################################
 # English Culture forming
 #######################################
-  bryten_england.100.t:0 "English Culture Forming"
-  bryten_england.100.desc:0 "After ruling England for some time it seems that we have started to impact the culture of the people. The people have started to write in a new language that is much more closer to French then to Anglic that they used before. It seems that we are about to see the evolution of culture in England."
-  bryten_england.100.culture:1 "How interesting."
+  bryten_england.041.t:0 "English Culture Spreading"
+  bryten_england.041.desc:0 "The cultural concept of Englishness seems to be spreading, and the people of one of my cities has adopted this cultural evolution."
+  bryten_england.041.city:1 "Interesting"
 
-  bryten_england.101.t:0 "English Culture Forming"
-  bryten_england.101.desc:0 "After ruling England for some time it seems that we have started to impact the culture of the people. The people have started to write in a new language that is much more closer to French then to Anglic that they used before. It seems that we are about to see the evolution of culture in England."
-  bryten_england.101.culture:1 "How Interesting"
+  bryten_england.042.t:0 "English Culture Forming"
+  bryten_england.042.desc:0 "After ruling England for some time it seems that we have started to impact the culture of the people. The people have started to write in a new language that is much more closer to French then to Anglic that they used before. It seems that we are about to see the evolution of culture in England."
+  bryten_england.042.culture:1 "How interesting."
 
-  bryten_england.102.t:0 "English Culture Spreading"
-  bryten_england.102.desc:0 "The cultural concept of Englishness seems to be spreading, and the people of one of my cities has adopted this cultural evolution."
-  bryten_england.102.city:1 "Interesting"
+  bryten_england.043.t:0 "English Culture Forming"
+  bryten_england.043.desc:0 "After ruling England for some time it seems that we have started to impact the culture of the people. The people have started to write in a new language that is much more closer to French then to Anglic that they used before. It seems that we are about to see the evolution of culture in England."
+  bryten_england.043.culture:1 "How Interesting"
 
-  bryten_england.103.t:0 "[embracer_former_culture.GetNameNoTooltip|U] no More"
-  bryten_england.103.desc:0 "The time when we [embracer.GetCulture.GetCollectiveNounNoTooltip] considered France our homeland has long since passed. Our children are born here, surrounded by Saxons, and to them, Normandy will only ever be a blurred line beyond the misty shores of Britannia.\n\nAnd, as we make some of the local customs our own, so too the legacy of our culture spreads throughout the Saxon lands, giving birth to a new English identity."
-  bryten_england.103.a:0 "Long live the English!"
+  bryten_england.044.t:0 "[embracer_former_culture.GetNameNoTooltip|U] no More"
+  bryten_england.044.desc:0 "The time when we [embracer.GetCulture.GetCollectiveNounNoTooltip] considered France our homeland has long since passed. Our children are born here, surrounded by Saxons, and to them, Normandy will only ever be a blurred line beyond the misty shores of Britannia.\n\nAnd, as we make some of the local customs our own, so too the legacy of our culture spreads throughout the Saxon lands, giving birth to a new English identity."
+  bryten_england.044.a:0 "Long live the English!"
 
-  bryten_england.104.desc:0 "The [ROOT.Char.Custom2('RelationDescriptor', SCOPE.sC('embracer'))] [embracer.GetName], [embracer.GetHerHis] vassals, and [embracer.GetHerHis] whole family has heeded the call of Albion and embraced English culture."
-  bryten_england.104.a:0 "It was only a matter of time."
-  bryten_england.104.b:0 "Traitors!"
+  bryten_england.045.desc:0 "The [ROOT.Char.Custom2('RelationDescriptor', SCOPE.sC('embracer'))] [embracer.GetName], [embracer.GetHerHis] vassals, and [embracer.GetHerHis] whole family has heeded the call of Albion and embraced English culture."
+  bryten_england.045.a:0 "It was only a matter of time."
+  bryten_england.045.b:0 "Traitors!"
 
 #######################################
 # Durham Pilgrimage

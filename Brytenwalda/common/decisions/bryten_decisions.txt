@@ -289,6 +289,143 @@ restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
 	}
 }
 #############################################
+# Anglo-Norse England Decisions
+#############################################
+promote_norse_settlement_decision = {# Promote Norse Settlement
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+
+	ai_check_interval = 36
+
+	desc = promote_norse_settlement_decision_desc
+
+	is_shown = {
+		is_landed = yes
+		highest_held_title_tier >= tier_kingdom
+		culture = { has_cultural_pillar = heritage_north_germanic }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:norse_settlement_culture_decision
+			}
+		}
+	}
+
+	is_valid = {
+		highest_held_title_tier >= tier_kingdom # Got to be a kingdom
+		primary_title.title_held_years >= 30 # Need to rule for a number of years in England
+		prestige_level >= 2 # Should be prestigious
+		custom_description = {# capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	effect = {
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:norse_settlement_culture_decision
+		}
+		show_as_tooltip = { embrace_anglo_norse_culture_effect = yes }
+		trigger_event = bryten_england.032
+	}
+	
+	ai_potential = {
+		is_landed = yes
+		culture = { has_cultural_pillar = heritage_north_germanic }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:norse_settlement_culture_decision
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+embrace_englisk_culture_decision = {# For the King of england
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+
+	ai_check_interval = 36
+
+	desc = embrace_englisk_culture_decision_desc
+
+	is_shown = {
+		is_landed = yes
+		culture = { has_cultural_pillar = heritage_frankish }
+		OR = {	
+			title:k_england = {
+				any_in_de_jure_hierarchy = {
+					root.primary_title = this
+				}
+			}
+			root.primary_title = title:e_britannia
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:embrace_englisk_culture_decision
+			}
+		}
+	}
+
+	is_valid = {
+		custom_description = {
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
+		has_title = title:k_england
+		OR = {# either 1 duke is english or the majority of England is engelsk
+			any_county_in_region = {# 
+				region = custom_england
+				count >= 28
+				culture = culture:engelsk
+			}
+			any_vassal = {# At least one duke should start the trend.
+				primary_title.tier = tier_duchy
+			 	has_culture = culture:engelsk
+		 	}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	effect = {
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:embrace_englisk_culture_decision
+		}
+		show_as_tooltip = { embrace_engelsk_culture_effect = yes }
+		trigger_event = bryten_england.038
+	}
+	
+	ai_potential = {
+		is_landed = yes
+		culture = { has_cultural_pillar = heritage_frankish }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:embrace_english_culture_decision
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
 # Norman England Decisions
 #############################################
 establish_norman_adminstration = {# Establish Norman Adminstration
