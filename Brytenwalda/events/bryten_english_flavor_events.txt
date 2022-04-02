@@ -234,34 +234,35 @@ bryten_england.004 = {# Anglo-Saxon revolt.
 				target_title = title:k_england
 			}
 		}
-		scope:recipient = {# Other Anglo-Saxon lords join the Revolt
-			every_character_war = {
-				limit = {
-					using_cb = refused_liege_demand_war
-					casus_belli = {
-						primary_attacker = scope:recipient
-						primary_defender = scope:actor
-					}
-				}
-				hidden_effect = {
-					set_called_to = root
-				}
-				add_attacker = root
+		random_character_war = {
+			limit = {
+				primary_attacker = scope:defender_vassal
 			}
-			scope:recipient = {
-				add_opinion = {
-					target = root
-					modifier = helped_me_agaisnt_tyrant_opinion
+			save_scope_as = anglo_saxon_revolt
+		}
+		hidden_effect = {
+			character:140 = {
+				every_vassal = {
+					limit = {
+						OR = {
+							culture = culture:anglo_saxon
+							culture = culture:anglo_norse
+						}
+					}
+					scope:anglo_saxon_revolt = { add_attacker = character:140 }
 				}
 			}
 		}
+
 	}
 
 	after = {
 		character:140 = {
 			trigger_event = { id = bryten_england.005 }
 		}
-		trigger_event = { id = bryten_england.006 }
+		scope:anglo_saxon_revolter = {
+			trigger_event = { id = bryten_england.006 }
+		}
 	}
 
 }
@@ -291,11 +292,6 @@ bryten_england.006 = {# Danish support revolter asks
 		animation = personality_bold
 	}
 
-	trigger = {
-		this = character:140
-		has_primary_title = title:k_england
-		is_at_war = no # In case Hardrada is still gunning for the throne, Willy will go and fight him first. 
-	}
 		
 	immediate = {
 		random_ruler = {
@@ -309,9 +305,7 @@ bryten_england.006 = {# Danish support revolter asks
 	}
 	option = {# Ask the Danish
 		name = bryten_england.006.ask
-		scope:danish_king = {
-			trigger_event = { id = bryten_england.007 }
-		}
+		scope:danish_king = { trigger_event = { id = bryten_england.007 } }
 	}
 }
 bryten_england.007 = {# Danish support revolter asks - Danish view
@@ -326,66 +320,42 @@ bryten_england.007 = {# Danish support revolter asks - Danish view
 
 	option = {# Join the Revolter
 		name = bryten_england.007.join
-		show_as_tooltip = {
-			if = {
-				limit = {
-					scope:anglo_saxon_revolter = { is_attacker_in_war = scope:petition_war }
-				}
-				scope:petition_war = { add_attacker = scope:petition_liege }
-			}
-			else = {
-				scope:anglo_saxon_revolter = { add_defender = scope:petition_liege }
-			}
-		}
+		scope:anglo_saxon_revolt = { add_attacker = character:140 }
 		hidden_effect = {
-			trigger_event = { id = bryten_england.008 }
+			set_global_variable = {
+				name = bryten_anglo_revolt_danish_accept
+				value = yes
+			}
+			character:140 = { trigger_event = { id = bryten_england.009 } }
+			scope:anglo_saxon_revolter = { trigger_event = { id = bryten_england.008 } }
 		}
 	}
 	option = {# I have my own ambitions
 		name = bryten_england.007.not_join
-
 	}
 }
-bryten_england.008 = {# The Danish join the conflict - Normans
+bryten_england.008 = {# The Danish join the conflict - anglo-saxon
 	type = character_event
 	title = bryten_england.008.t
 	desc = bryten_england.008.desc
 	theme = realm
-	left_portrait = {
-		character = root
-		animation = personality_bold
-	}
 
 	option = {# Join the war
-		name = bryten_england.008.coronation
-
+		name = bryten_england.008.join
 	}
 }
-bryten_england.009 = {# Danegeld to defeat Eadgar - William
+bryten_england.009 = {# The Danish join the conflict - Normans
 	type = character_event
 	title = bryten_england.009.t
 	desc = bryten_england.009.desc
 	theme = realm
-	left_portrait = {
-		character = root
-		animation = personality_bold
-	}
 
-	trigger = {
-		this = character:140
-		has_primary_title = title:k_england
-		is_at_war = no # In case Hardrada is still gunning for the throne, Willy will go and fight him first. 
-	}
-	
-	option = {# Offer the Danegeld
-		name = bryten_england.009.bribe
-		trigger_event = bryten_england.010
-	}
-	option = {# We can beat them
-		name = bryten_england.009.fight
+	option = {# Join the war
+		name = bryten_england.009.join
+
 	}
 }
-bryten_england.010 = {# The Norman Danegeld.
+bryten_england.010 = {# Danegeld to defeat Eadgar - William
 	type = character_event
 	title = bryten_england.010.t
 	desc = bryten_england.010.desc
@@ -395,16 +365,32 @@ bryten_england.010 = {# The Norman Danegeld.
 		animation = personality_bold
 	}
 
-	option = {# Take the Payment
-		name = bryten_england.010.yes
-		trigger_event = bryten_england.011
+	trigger = {
+		is_at_war_with = scope:danish_king
+		not = {	exists = global_var:bryten_norman_conquest_danegeld } # Fire Only Once
+
 	}
-	option = {# Why stop now?
-		name = bryten_england.010.no
-		trigger_event = bryten_england.012
+
+	immediate = {
+		set_global_variable = {
+			name = bryten_norman_conquest_danegeld
+			value = yes
+		}
+	}
+	
+	option = {# Offer the Danegeld
+		name = bryten_england.010.bribe
+		hidden_effect = {
+			scope:danish_king = { trigger_event = { id = bryten_england.008 } }
+		}
+		
+		trigger_event = bryten_england.010
+	}
+	option = {# We can beat them
+		name = bryten_england.010.fight
 	}
 }
-bryten_england.011 = {# The Danes Accept
+bryten_england.011 = {# The Norman Danegeld.
 	type = character_event
 	title = bryten_england.011.t
 	desc = bryten_england.011.desc
@@ -413,13 +399,53 @@ bryten_england.011 = {# The Danes Accept
 		character = root
 		animation = personality_bold
 	}
+
+	option = {# Take the Payment
+		name = bryten_england.011.yes
+		hidden_effect = {
+			character:140 = { trigger_event = { id = bryten_england.013 } }
+			scope:anglo_saxon_revolter = { trigger_event = { id = bryten_england.012 } }
+		}
+	}
+	option = {# Why stop now?
+		name = bryten_england.011.no
+		hidden_effect = {
+			character:140 = { trigger_event = { id = bryten_england.014 } }
+		}
+	}
+}
+bryten_england.012 = {# The Danes Accept - Revolter
+	type = character_event
+	title = bryten_england.012.t
+	desc = bryten_england.012.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Damn him
+		name = bryten_england.012.truce
+		add_opinion = {
+			target = scope:danish_king
+			modifier = hate_opinion
+			opinion = -50
+		}
+	}
+}
+bryten_england.013 = {# The Danes Accept - William
+	type = character_event
+	title = bryten_england.013.t
+	desc = bryten_england.013.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
 	
 	option = {# Good
-		name = bryten_england.011.truce
+		name = bryten_england.013.truce
 		hidden_effect = {
-			scope:danish_king = {
-				add_gold = medium_gold_value
-			}
 			pay_short_term_gold = {
 				target = scope:danish_king
 				gold = root.medium_gold_value
@@ -434,10 +460,10 @@ bryten_england.011 = {# The Danes Accept
 		}
 	}
 }
-bryten_england.012 = {# The Danes refuse
+bryten_england.014 = {# The Danes refuse
 	type = character_event
-	title = bryten_england.012.t
-	desc = bryten_england.012.desc
+	title = bryten_england.014.t
+	desc = bryten_england.014.desc
 	theme = realm
 	left_portrait = {
 		character = root
@@ -445,14 +471,14 @@ bryten_england.012 = {# The Danes refuse
 	}
 	
 	option = {# Interesting
-		name = bryten_england.012.coronation
+		name = bryten_england.014.war
 
 	}
 }
-bryten_england.013 = {# The flight of the Anglo-Saxons
+bryten_england.015 = {# The flight of the Anglo-Saxons
 	type = character_event
-	title = bryten_england.013.t
-	desc = bryten_england.013.desc
+	title = bryten_england.015.t
+	desc = bryten_england.015.desc
 	theme = realm
 	left_portrait = {
 		character = root
@@ -468,22 +494,74 @@ bryten_england.013 = {# The flight of the Anglo-Saxons
 	}
 	
 	immediate = {
+		random_ruler = {
+			limit = {
+				capital_province = { geographical_region = ghw_region_crimea }
+			}
+			save_scope_as = horse_lord
+		}
+		random_ruler = {
+			limit = { has_title = title:k_scotland }
+			save_scope_as = scottish_king
+		}
 		set_global_variable = {
 			name = bryten_anglo_saxons_flee_england
 			value = yes
 		}
-
-		
 	}
 
 	option = {# watch them run.
-		name = bryten_england.013.coronation
+		name = bryten_england.015.flight
+	}
+
+	after = {
+		scope:horse_lord = { trigger_event = bryten_england.016 }
+		scope:scottish_king = { trigger_event = bryten_england.017 }
+	}
+
+}
+bryten_england.016 = {# The Anglo-Saxons arrive in the Steppes
+	type = character_event
+	title = bryten_england.016.t
+	desc = bryten_england.016.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+	
+	}
+
+	option = {# I shall be a good Host
+		name = bryten_england.016.host
+	}
+	option = {# Such men could be useful
+		name = bryten_england.016.land
+	}
+
+
+}
+bryten_england.017 = {# The Saxons Come to Scotland
+	type = character_event
+	title = bryten_england.017.t
+	desc = bryten_england.017.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {# Welcome to Scotland
+		name = bryten_england.017.saxons
+
 	}
 }
-bryten_england.015 = {# William and the normans loses the throne to either Sweyn or Edgar.
+bryten_england.018 = {# William and the normans loses the throne to Edgar or another revolter.
 	type = character_event
-	title = bryten_england.015.t
-	desc = bryten_england.015.desc
+	title = bryten_england.018.t
+	desc = bryten_england.018.desc
 	theme = realm
 	left_portrait = {
 		character = root
@@ -491,7 +569,7 @@ bryten_england.015 = {# William and the normans loses the throne to either Sweyn
 	}
 
 	trigger = {
-		NOT = { dynasty = dynasty:752	} # The Normans can't be in charge of England
+		NOT = { dynasty = dynasty:752 } # The Normans can't be in charge of England
 		has_primary_title = title:k_england
 		is_at_war = no # In case the rebellion is still going on 
 		not = {	exists = global_var:bryten_norman_consilidate_power } # Don't fire after the Normans consilidate power.
@@ -504,20 +582,37 @@ bryten_england.015 = {# William and the normans loses the throne to either Sweyn
 			copy_title_history = title:k_england_norman_titular
 		}
 		set_global_variable = {
-			name = bryten_monks_take_cuthbert
+			name = bryten_anglo_revolt_crowned
 			value = yes
 		}
 	}
 	
 	option = {# Interesting
-		name = bryten_england.015.coronation
+		name = bryten_england.018.coronation
 		add_prestige = medium_prestige_gain
+		hidden_effect = {
+			if = { limit = { exists = global_var:bryten_anglo_revolt_danish_accept } }
+			scope:danish_king = {
+				create_alliance = {
+					target = scope:anglo_saxon_revolter
+					allied_through_owner = scope:danish_king
+					allied_through_target = scope:anglo_saxon_revolter
+				}
+			}
+			scope:anglo_saxon_revolter = {
+				pay_short_term_gold = {
+					target = scope:danish_king
+					gold = root.medium_gold_value
+				}
+			}
+
+		}
 	}
 }
-bryten_england.016 = {# Consildating Control / replacing the Northern Lords
+bryten_england.019 = {# Consildating Control / replacing the Northern Lords
 	type = character_event
-	title = bryten_england.016.t
-	desc = bryten_england.016.desc
+	title = bryten_england.019.t
+	desc = bryten_england.019.desc
 	theme = realm
 	left_portrait = {
 		character = root
@@ -528,12 +623,12 @@ bryten_england.016 = {# Consildating Control / replacing the Northern Lords
 		this = character:140
 		has_primary_title = title:k_england
 		is_at_war = no # In case Hardrada is still gunning for the throne, Willy will go and fight him first. 
+		not = {	exists = global_var:bryten_anglo_revolt_crowned } # Don't fire if the anglo-saxon revolter wins the conflict
 		not = {	exists = global_var:bryten_norman_consilidate_power } # Don't fire after the Normans consilidate power.
 		exists = global_var:bryten_norman_conquest_anglo_saxon_revolt # the revolt must have happened 
 	}
 
 	immediate = {
-
 		set_global_variable = {
 			name = bryten_norman_consilidate_power
 			value = yes
@@ -541,9 +636,7 @@ bryten_england.016 = {# Consildating Control / replacing the Northern Lords
 	}
 	
 	option = {# hand out the titles to the normans
-		name = bryten_england.016.coronation
-		hidden_effect = {
-		}
+		name = bryten_england.019.control
 	}
 }
 bryten_england.024 = {# titular title version 2 so that the history list can be brought over. 
@@ -557,6 +650,14 @@ bryten_england.024 = {# titular title version 2 so that the history list can be 
 		}
 	}
 }
+#######################################
+# Harald Hardrada's Conquest
+#######################################
+
+#######################################
+# King Harold Godwinson Wins
+#######################################
+
 #######################################
 # Anglo-Saxon Culture Forming
 #######################################
