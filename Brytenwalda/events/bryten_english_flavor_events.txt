@@ -494,6 +494,18 @@ bryten_england.015 = {# The flight of the Anglo-Saxons
 	}
 	
 	immediate = {
+		random_courtier_or_guest = {# The english Exile to the Steppes
+			limit = {
+				OR = {
+					culture = culture:anglo_norse
+					culture = culture:anglo_saxon
+				}
+				NOT = { this = character:85018 } # Gospatric goes to scotland
+			}
+			save_scope_as = english_exile_steppe
+		}
+		character:85018 = { save_scope_as = gospatric }
+
 		random_ruler = {
 			limit = {
 				capital_province = { geographical_region = ghw_region_crimea }
@@ -512,6 +524,26 @@ bryten_england.015 = {# The flight of the Anglo-Saxons
 
 	option = {# watch them run.
 		name = bryten_england.015.flight
+		hidden_effect = {
+			scope:horse_lord = {
+				capital_province = { save_scope_as = steppe_capital }
+			}
+			scope:scottish_king = {
+				capital_province = { save_scope_as = scottish_capital }
+			}
+			remove_courtier_or_guest = {# Send the English Exile to the Steppes
+				character = scope:english_exile_steppe
+				new_location = scope:steppe_capital
+			}
+			remove_courtier_or_guest = {# Send the Saxon revolter to the Kingdom of Scotland
+				character = scope:anglo_saxon_revolter
+				new_location = scope:scottish_capital
+			}
+			remove_courtier_or_guest = {# Send gospatric to the Kingdom of Scotland
+				character = scope:gospatric
+				new_location = scope:scottish_capital
+			}
+		}
 	}
 
 	after = {
@@ -531,14 +563,44 @@ bryten_england.016 = {# The Anglo-Saxons arrive in the Steppes
 	}
 
 	immediate = {
-	
+
+		random_held_title = {
+			limit = {
+				tier = tier_county
+				NOT = { this = root.capital_county }
+			}
+			save_scope_as = title_to_grant
+		}
+
 	}
 
 	option = {# I shall be a good Host
 		name = bryten_england.016.host
+		add_prestige = medium_prestige_gain
+		scope:english_exile_steppe = {
+			add_opinion = {
+				target = root
+				modifier = friendliness_opinion
+				opinion = 10
+			}
+		}
 	}
 	option = {# Such men could be useful
 		name = bryten_england.016.land
+		scope:title_to_grant = {
+			change_title_holder = {
+				holder = scope:english_exile_steppe
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		scope:english_exile_steppe = {
+			add_opinion = {
+				target = root
+				modifier = friendliness_opinion
+				opinion = 30
+			}
+		}
 	}
 
 
@@ -555,7 +617,35 @@ bryten_england.017 = {# The Saxons Come to Scotland
 
 	option = {# Welcome to Scotland
 		name = bryten_england.017.saxons
+		title:c_lothian = {
+			change_title_holder = {
+				holder = scope:gospatric
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		scope:gospatric = {
+			add_opinion = {
+				target = root
+				modifier = friendliness_opinion
+				opinion = 30
+			}
+		}
 
+		title:c_dunbar = {
+			change_title_holder = {
+				holder = scope:gospatric
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		scope:gospatric = {
+			add_opinion = {
+				target = root
+				modifier = friendliness_opinion
+				opinion = 30
+			}
+		}
 	}
 }
 bryten_england.018 = {# William and the normans loses the throne to Edgar or another revolter.
