@@ -751,6 +751,25 @@ bryten_england.024 = {# titular title version 2 so that the history list can be 
 #######################################
 # Anglo-Saxon Culture Forming
 #######################################
+bryten_england.029 = {# Anglo-Saxon Secured - Stops Englisk from forming 
+	hidden = yes	
+
+	trigger = {
+		not = { exists = global_var:bryten_scots_language_english }
+		not = { exists = global_var:bryten_engelsk_created }
+		not = { exists = global_var:bryten_anglo_saxon_secured }
+		current_date >= 1150.1.1
+		has_title = title:k_england
+		has_culture = culture:anglo_saxon
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = bryten_anglo_saxon_secured
+			value = yes
+		}
+	}
+}
 bryten_england.30 = {# Anglo-Saxon Culture forming
 	type = character_event
 	title = bryten_england.30.t

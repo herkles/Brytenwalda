@@ -1,0 +1,26 @@
+﻿namespace = bryten_scotland
+
+#######################################
+# Scottish Language
+#######################################
+bryten_scotland.001 = {# The language of Scotland 
+	hidden = yes	
+
+	trigger = {
+		exists = global_var:bryten_english_created
+		not = { exists = global_var:bryten_scots_language_english }
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = bryten_scots_language_english
+			value = yes
+		}
+		culture:scots = { set_culture_pillar = language_english	}
+	}
+}
+
+
+
+
+
