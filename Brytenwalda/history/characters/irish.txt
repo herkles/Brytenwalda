@@ -2268,7 +2268,6 @@
 #######################################
 # Ua Maíl Sechlainn Dyanasty
 #######################################
-
 	6115 = {# Domnall abbot of Clonard
 		name = "Domnall" #Domnall abbot of Clonard
 		dynasty_house = house_british_isles_mailsechlainn
@@ -2936,6 +2935,2710 @@
 			death = "682.7.1"
 		}
 	}
+#
+#######################################
+# Ruairc House
+#######################################
+	1000 = {
+		name = "A_ed"
+		dynasty_house = house_british_isles_ruairc
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = brave
+		trait = education_martial_3
+		father = 1001
+		1040.1.1 = {
+			birth = "1040.1.1"
+		}
+		1087.7.1 = {
+			death = "1087.7.1"
+		}
+	}
+	1001 = {
+		name = "Art"
+		dynasty_house = house_british_isles_ruairc
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = arrogant
+		trait = education_martial_2
+		father = 83537
+		990.1.1 = {
+			birth = "990.1.1"
+		}
+		1046.7.1 = {
+			death = "1046.7.1"
+		}
+	}
+	1002 = {
+		name = "Niall"
+		dynasty_house = house_british_isles_ruairc
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = wrathful
+		trait = education_martial_2
+		father = 1001
+		1010.1.1 = {
+			birth = "1010.1.1"
+		}
+		1047.1.1 = {
+			death = "1047.1.1"
+		}
+	}
+	1003 = {
+		name = "TigernA_n"
+		dynasty_house = house_british_isles_ruairc
+		martial = 7
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 1005 #Ualgarg mac Néill
+		1046.1.1 = {
+			birth = "1046.1.1"
+		}
+		1091.7.1 = {
+			death = "1091.7.1"
+		}
+	}
+	1004 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 1003 #Tigernán mac Ualgairg
+		1065.1.1 = {
+			birth = "1065.1.1"
+		}
+		1081.1.1 = {
+			add_trait = education_martial_2
+		}
+		1102.7.1 = {
+			death = "1102.7.1"
+		}
+	}
+	1005 = {
+		name = "Ualgarg"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = arrogant
+		trait = education_martial_2
+		father = 1002
+		1029.1.2 = {
+			birth = "1029.1.2"
+		}
+		1085.1.1 = {
+			death = "1085.1.1"
+		}
+	}
+	214021 = {
+		name = "MA_el-Sechlainn"
+		dynasty_house = house_british_isles_ruairc
+		martial = 4
+		diplomacy = 4
+		intrigue = 7
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 214022 #Tigearnan Mór Ua Ruairc
+		mother = 83159
+		1134.1.1 = {
+			birth = "1134.1.1"
+		}
+		1162.7.1 = {
+			death = "1162.7.1"
+		}
+	}
+	7286 = {
+		name = "Donnchad"
+		dynasty_house = house_british_isles_ruairc
+		religion = "catholic"
+		culture = "irish"
+		trait = brave
+		trait = education_martial_3
+		father = 7287 #Domnall mac Ualgairg
+		1066.1.1 = {
+			birth = "1066.1.1"
+		}
+		1120.1.1 = {
+			death = "1120.1.1"
+		}
+	}
+	7287 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_ruairc
+		martial = 3
+		diplomacy = 4
+		intrigue = 4
+		stewardship = 5
+		trait = clubfooted
+		trait = hunchbacked
+		religion = "catholic"
+		culture = "irish"
+		father = 1005 #Ualgarg mac Néill
+		1048.1.1 = {
+			birth = "1048.1.1"
+		}
+		1108.7.1 = {
+			death = "1108.7.1"
+		}
+	}
+	83536 = {
+		name = "Fergal"
+		dynasty = 9218
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		father = 83535 #Art mac Ruairc
+		923.1.1 = {
+			birth = "923.1.1"
+		}
+		956.1.1 = {
+			dynasty_house = house_british_isles_ruairc #Ua Ruairc
+		}
+		967.7.1 = {
+			death = "967.7.1"
+		}
+	}
+	83537 = {
+		name = "A_ed"
+		dynasty_house = house_british_isles_ruairc
+		martial = 7
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		father = 83536 #Fergal mac Airt
+		957.1.1 = {
+			birth = "957.1.1"
+		}
+		1015.7.1 = {
+			death = "1015.7.1"
+		}
+	}
+	83538 = {
+		name = "Sihtric"
+		dynasty_house = house_british_isles_ruairc
+		martial = 4
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 214022 #Tigearnan Mór Ua Ruairc
+		mother = 83159
+		1136.1.1 = {
+			birth = "1136.1.1"
+		}
+		1165.7.1 = {
+			death = "1165.7.1"
+		}
+	}
+	83548 = {
+		name = "Fergal"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 1004 #Domnall mac Tigernáin
+		1097.1.1 = {
+			birth = "1097.1.1"
+		}
+		1157.7.1 = {
+			death = "1157.7.1"
+		}
+	}
+	83549 = {
+		name = "Gilla-Braite"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 1004 #Domnall mac Tigernáin
+		1099.1.1 = {
+			birth = "1099.1.1"
+		}
+		1125.7.1 = {
+			death = "1125.7.1"
+		}
+	}
+	214020 = {
+		name = "A_ed"
+		dynasty_house = house_british_isles_ruairc
+		martial = 4
+		diplomacy = 3
+		intrigue = 3
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = clubfooted
+		trait = education_martial_2
+		father = 214021 #Máél-Sechlain mac Tigernan Móir Ua Ruairc
+		1162.1.1 = {
+			birth = "1162.1.1"
+		}
+		1185.1.2 = {
+			add_spouse = 214029
+		}
+		1187.7.1 = {
+			death = "1187.7.1"
+		}
+	}
+	214022 = {
+		name = "TigernA_n" #Tigernan Mór Ua Ruairc
+		dynasty_house = house_british_isles_ruairc
+		martial = 8
+		diplomacy = 9
+		intrigue = 8
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = diligent
+		trait = education_martial_3
+		father = 214024 #Áed mac Domnaill
+		1107.1.1 = {
+			birth = "1107.1.1"
+		}
+		1172.1.1 = {
+			death = "1172.1.1"
+		}
+	}
+	214024 = {
+		name = "A_ed"
+		dynasty_house = house_british_isles_ruairc
+		martial = 4
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 7287 #Domnall mac Ualgairg
+		1064.1.1 = {
+			birth = "1064.1.1"
+		}
+		1122.7.1 = {
+			death = "1122.7.1"
+		}
+	}
+	214025 = {
+		name = "Cathal"
+		# AKA: Cathal Liath
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 4
+		intrigue = 2
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = just
+		trait = education_martial_1
+		father = 214022 #Tigearnan Mór Ua Ruairc
+		1142.1.1 = {
+			birth = "1142.1.1"
+		}
+		1160.1.1 = {
+			add_spouse = 214026
+		}
+		1180.7.1 = {
+			death = "1180.7.1"
+		}
+	}
+	214027 = {
+		name = "Ualgarg"
+		dynasty_house = house_british_isles_ruairc
+		martial = 7
+		diplomacy = 4
+		intrigue = 7
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = diligent
+		trait = generous
+		trait = education_diplomacy_3
+		father = 214025 #Cathal Liath
+		mother = 214026
+		1166.1.1 = {
+			birth = "1166.1.1"
+		}
+		1231.7.1 = {
+			death = "1231.7.1"
+		}
+	}
+	214028 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_ruairc
+		martial = 7
+		diplomacy = 4
+		intrigue = 2
+		stewardship = 3
+		religion = "catholic"
+		culture = "irish"
+		trait = lustful
+		trait = gluttonous
+		trait = education_martial_2
+		father = 214025 #Cathal Liath
+		mother = 214026
+		1168.1.1 = {
+			birth = "1168.1.1"
+		}
+		1218.1.2 = {
+			death = "1218.1.2"
+		}
+	}
+	454160 = {
+		name = "Ualgarg" #Ualgarg mac Domnaill Charraigh
+		dynasty_house = house_british_isles_ruairc
+		martial = 7
+		diplomacy = 7
+		intrigue = 8
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = greedy
+		trait = arbitrary
+		trait = education_martial_3
+		father = 454161
+		1295.1.1 = {
+			birth = "1295.1.1"
+		}
+		1317.1.1 = {
+			add_spouse = 454164
+		}
+		1346.7.1 = {
+			death = "1346.7.1"
+		}
+	}
+	454161 = {
+		name = "Domnall" #AKA: Domnall Carrach
+		dynasty_house = house_british_isles_ruairc
+		martial = 7
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 83562
+		1255.1.1 = {
+			birth = "1255.1.1"
+		}
+		1311.7.1 = {
+			death = "1311.7.1"
+		}
+	}
+	454162 = {
+		name = "Flaithbertach" #Flaithbertach mac Domnaill Charraigh
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = greedy
+		trait = just
+		trait = education_martial_2
+		father = 454161
+		1308.1.1 = {
+			birth = "1308.1.1"
+		}
+		1353.7.1 = {
+			death = "1353.7.1"
+		}
+	}
+	454163 = {
+		name = "Cathal" #Cathal in Toísech
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = humble
+		trait = lustful
+		trait = education_martial_2
+		father = 454161
+		1311.1.1 = {
+			birth = "1311.1.1"
+		}
+		1361.1.1 = {
+			death = "1361.1.1"
+		}
+	}
+	454165 = {
+		name = "TigernA_n" #Tigernán Mór mac Ualgairg
+		dynasty_house = house_british_isles_ruairc
+		martial = 7
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 454160
+		mother = 454164
+		1336.1.1 = {
+			birth = "1336.1.1"
+		}
+		1418.7.1 = {
+			death = "1418.7.1"
+		}
+	}
+	83539 = {
+		name = "A_ed" #Áed Manach 'the monk'
+		dynasty_house = house_british_isles_ruairc
+		martial = 4
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = education_learning_1
+		father = 214022 #Tigearnan Mór Ua Ruairc
+		mother = 83159
+		1138.1.1 = {
+			birth = "1138.1.1"
+		}
+		1171.7.1 = {
+			death = "1171.7.1"
+		}
+	}
+	83540 = {
+		name = "A_ed"
+		dynasty_house = house_british_isles_ruairc
+		martial = 4
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 214027 #Ualgarg son of Cathal Liath
+		1202.1.1 = {
+			birth = "1202.1.1"
+		}
+		1259.7.1 = {
+			death = "1259.7.1"
+		}
+	}
+	83541 = {
+		name = "Sihtric" #Sihtric King of Bréifne
+		dynasty_house = house_british_isles_ruairc
+		martial = 4
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 214027 #Ualgarg son of Cathal Liath
+		1204.1.1 = {
+			birth = "1204.1.1"
+		}
+		1257.7.1 = {
+			death = "1257.7.1"
+		}
+	}
+	83542 = {
+		name = "TigernA_n"
+		dynasty_house = house_british_isles_ruairc
+		martial = 4
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83540 #Áed son of Ualgarg son of Cathal Liath
+		1237.1.1 = {
+			birth = "1237.1.1"
+		}
+		1274.7.1 = {
+			death = "1274.7.1"
+		}
+	}
+	83543 = {
+		name = "TigernA_n"
+		dynasty_house = house_british_isles_ruairc
+		martial = 6
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 214028 #Domnall son of Cathal Liath
+		1195.1.1 = {
+			birth = "1195.1.1"
+		}
+		1218.7.1 = {
+			death = "1218.7.1"
+		}
+	}
+	83544 = {
+		name = "Conchobar"
+		dynasty_house = house_british_isles_ruairc
+		martial = 6
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83543 #Tigernán son of Domnall son of Cathal Liath
+		1215.1.1 = {
+			birth = "1215.1.1"
+		}
+		1257.7.1 = {
+			death = "1257.7.1"
+		}
+	}
+	83545 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_ruairc
+		martial = 7
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83544 #Conchobar son of Tigernán Ua Ruairc
+		1234.1.1 = {
+			birth = "1234.1.1"
+		}
+		1260.7.1 = {
+			death = "1260.7.1"
+		}
+	}
+	83546 = {
+		name = "Cathal"
+		dynasty_house = house_british_isles_ruairc
+		martial = 6
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83544 #Conchobar son of Tigernán Ua Ruairc
+		1236.1.1 = {
+			birth = "1236.1.1"
+		}
+		1258.7.1 = {
+			death = "1258.7.1"
+		}
+	}
+	83547 = {
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_ruairc
+		martial = 6
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83544 #Conchobar son of Tigernán Ua Ruairc
+		1238.1.1 = {
+			birth = "1238.1.1"
+		}
+		1260.7.1 = {
+			death = "1260.7.1"
+		}
+	}
+	83550 = {
+		name = "A_ed"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83549 #Gilla-Braite mac Domnaill maic Tigernáin
+		1117.1.1 = {
+			birth = "1117.1.1"
+		}
+		1176.7.1 = {
+			death = "1176.7.1"
+		}
+	}
+	83551 = {
+		name = "Donnchad"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83550 #Áed son of Gilla-Braite
+		1156.1.1 = {
+			birth = "1156.1.1"
+		}
+		1201.7.1 = {
+			death = "1201.7.1"
+		}
+	}
+	83552 = {
+		name = "Cathal" #Cathal Riabach
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83551 #Donnchad son of Áed son of Gilla-Braite
+		1198.1.1 = {
+			birth = "1198.1.1"
+		}
+		1236.7.1 = {
+			death = "1236.7.1"
+		}
+	}
+	83553 = {
+		name = "Art"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83552 #Cathal Riabach son of Donnchad
+		1218.1.1 = {
+			birth = "1218.1.1"
+		}
+		1275.7.1 = {
+			death = "1275.7.1"
+		}
+	}
+	83554 = {
+		name = "AmlaI_b"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83553 #Art son of Cathal Riabach son of Donnchad
+		1245.1.1 = {
+			birth = "1245.1.1"
+		}
+		1307.7.1 = {
+			death = "1307.7.1"
+		}
+	}
+	83555 = {
+		name = "AmlaI_b"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83548 #Fergal son of Domnall son Tigernán
+		1140.1.1 = {
+			birth = "1140.1.1"
+		}
+		1184.7.1 = {
+			death = "1184.7.1"
+		}
+	}
+	83556 = {
+		name = "Tadg"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83548 #Fergal son of Domnall son Tigernán
+		1142.1.1 = {
+			birth = "1142.1.1"
+		}
+		1175.7.1 = {
+			death = "1175.7.1"
+		}
+	}
+	83557 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83548 #Fergal son of Domnall son Tigernán
+		1144.1.1 = {
+			birth = "1144.1.1"
+		}
+		1182.7.1 = {
+			death = "1182.7.1"
+		}
+	}
+	83558 = {
+		name = "Congalach"
+		dynasty_house = house_british_isles_ruairc
+		martial = 4
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83548 #Fergal son of Domnall son Tigernán
+		1146.1.1 = {
+			birth = "1146.1.1"
+		}
+		1207.7.1 = {
+			death = "1207.7.1"
+		}
+	}
+	83559 = {
+		name = "Niall"
+		dynasty_house = house_british_isles_ruairc
+		martial = 6
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83558 #Congalach son of Fergal
+		1187.1.1 = {
+			birth = "1187.1.1"
+		}
+		1228.7.1 = {
+			death = "1228.7.1"
+		}
+	}
+	83560 = {
+		name = "Domnall" #Domnall Gilla-in-Imme
+		dynasty_house = house_british_isles_ruairc
+		martial = 4
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83559 #Niall son of Congalach son of Fergal
+		1211.1.1 = {
+			birth = "1211.1.1"
+		}
+		1276.7.1 = {
+			death = "1276.7.1"
+		}
+	}
+	83561 = {
+		name = "Art"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83557 #Domnall son of Fergal
+		1181.1.1 = {
+			birth = "1181.1.1"
+		}
+		1210.7.1 = {
+			death = "1210.7.1"
+		}
+	}
+	83562 = {
+		name = "AmlaI_b"
+		dynasty_house = house_british_isles_ruairc
+		martial = 7
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 8
+		religion = "catholic"
+		culture = "irish"
+		trait = lustful
+		trait = education_martial_2
+		father = 83561 #Art son of Domnall son of Fergal
+		1202.1.1 = {
+			birth = "1202.1.1"
+		}
+		1258.7.1 = {
+			death = "1258.7.1"
+		}
+	}
+	83563 = {
+		name = "Art_MO_r"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83561 #Art son of Domnall son of Fergal
+		1204.1.1 = {
+			birth = "1204.1.1"
+		}
+		1230.7.1 = {
+			death = "1230.7.1"
+		}
+	}
+
+	83564 = {
+		name = "Art_Becc"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83561 #Art son of Domnall son of Fergal
+		1207.1.1 = {
+			birth = "1207.1.1"
+		}
+		1260.7.1 = {
+			death = "1260.7.1"
+		}
+	}
+	83565 = {
+		name = "Lochlann"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83562 #Amlaíb mac Airt
+		1244.7.1 = {
+			birth = "1244.7.1"
+		}
+		1260.1.1 = {
+			death = "1260.1.1"
+		}
+	}
+	83568 = {
+		name = "Domnall" #Domnall Óc
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83562 #Amlaíb mac Airt
+		1248.7.1 = {
+			birth = "1248.7.1"
+		}
+		1274.1.1 = {
+			death = "1274.1.1"
+		}
+	}
+	83569 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 454160 #Ualgarg mac Domnaill
+		mother = 454164
+		1318.1.1 = {
+			birth = "1318.1.1"
+		}
+		1340.7.1 = {
+			death = "1340.7.1"
+		}
+	}
+	83570 = {
+		name = "A_ed" #Aodh or Áed Bán
+		dynasty_house = house_british_isles_ruairc
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 454160 #Ualgarg mac Domnaill
+		mother = 454164
+		1320.1.1 = {
+			birth = "1320.1.1"
+		}
+		1352.7.1 = {
+			death = "1352.7.1"
+		}
+	}
+	83571 = {
+		name = "Tadg" #Tadg na gCáer
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 454160 #Ualgarg mac Domnaill
+		mother = 454164
+		1322.1.1 = {
+			birth = "1322.1.1"
+		}
+		1376.7.1 = {
+			death = "1376.7.1"
+		}
+	}
+	83572 = {
+		name = "Fergal"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 7
+		intrigue = 4
+		stewardship = 3
+		religion = "catholic"
+		culture = "irish"
+		father = 454160 #Ualgarg mac Domnaill
+		mother = 454164
+		1328.1.1 = {
+			birth = "1328.1.1"
+		}
+		1350.7.1 = {
+			death = "1350.7.1"
+		}
+	}
+	83567 = {
+		name = "MA_el-Sechlainn"
+		dynasty_house = house_british_isles_ruairc
+		martial = 5
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83562 #Amlaíb mac Airt
+		1246.7.1 = {
+			birth = "1246.7.1"
+		}
+		1274.1.1 = {
+			death = "1274.1.1"
+		}
+	}
+	83566 = {
+		name = "Conchobar" #Conchobar Buide
+		dynasty_house = house_british_isles_ruairc
+		martial = 7
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83562 #Amlaíb mac Airt
+		1245.7.1 = {
+			birth = "1245.7.1"
+		}
+		1273.7.1 = {
+			death = "1273.7.1"
+		}
+	}
+#
+#######################################
+# Ua Faelain Dyanasty
+#######################################
+	1010 = {
+		name = "Maoil_Sechluinn"
+		# AKA: Maoil Sechluinn
+		dynasty = 101676
+		martial = 4
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = arrogant
+		trait = education_martial_2
+		1024.1.1 = {
+			birth = "1024.1.1"
+		}
+		1049.1.2 = {
+			add_spouse = 1011
+		}
+		1074.1.1 = {
+			death = "1074.1.1"
+		}
+	}
+	1012 = {
+		name = "An_Dall"
+		# AKA: An Dall
+		dynasty = 101676
+		martial = 4
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = education_stewardship_2
+		father = 1010
+		mother = 1011
+		1055.1.1 = {
+			birth = "1055.1.1"
+		}
+		1105.1.1 = {
+			death = "1105.1.1"
+		}
+	}
+#
+#######################################
+# House Flaithbertaig
+#######################################
+	1018 = {
+		name = "Flaitbertach"
+		dynasty_house = house_british_isles_flaithbertaig
+		martial = 6
+		diplomacy = 7
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 1015
+		mother = 1016
+		1065.1.1 = {
+			birth = "1065.1.1"
+		}
+		1115.1.1 = {
+			death = "1115.1.1"
+		}
+	}
+	1015 = {
+		name = "A_edh"
+		# AKA: aedh
+		dynasty_house = house_british_isles_flaithbertaig
+		martial = 6
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 131102
+		trait = generous
+		trait = education_martial_2
+		1045.1.1 = {
+			birth = "1045.1.1"
+		}
+		1059.1.2 = {
+			add_spouse = 1016
+		}
+		1095.1.1 = {
+			death = "1095.1.1"
+		}
+	}
+	1017 = {
+		name = "A_edh"
+		# AKA: aedh
+		dynasty_house = house_british_isles_flaithbertaig
+		martial = 5
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 1015
+		mother = 1016
+		1060.1.1 = {
+			birth = "1060.1.1"
+		}
+		1110.1.1 = {
+			death = "1110.1.1"
+		}
+	}
+#
+#######################################
+# House Gilla Patraic
+#######################################
+	1020 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 8
+		diplomacy = 6
+		intrigue = 8
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = greedy
+		trait = education_martial_3
+		father = 83213
+		1030.1.1 = {
+			birth = "1030.1.1"
+		}
+		1048.1.1 = {
+			add_spouse = 1021
+		}
+		1080.7.1 = {
+			death = "1080.7.1"
+		}
+	}
+	1022 = {
+		name = "Donnchad"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 7
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 1020
+		mother = 1021
+		1050.1.1 = {
+			birth = "1050.1.1"
+		}
+		1090.7.1 = {
+			death = "1090.7.1"
+		}
+	}
+	1023 = {
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 8
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = gluttonous
+		trait = education_martial_2
+		father = 1020
+		mother = 1021
+		1055.1.1 = {
+			birth = "1055.1.1"
+		}
+		1095.7.1 = {
+			death = "1095.7.1"
+		}
+	}
+	83210 = {
+		name = "Gilla-PA_traic"
+		dynasty_house = house_british_isles_dalbirn
+		martial = 4
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 9
+		religion = "catholic"
+		culture = "irish"
+		father = 166053
+		955.1.1 = {
+			birth = "955.1.1"
+		}
+		976.7.1 = {
+			dynasty_house = house_british_isles_gilla_patraic
+		}
+		996.7.1 = {
+			death = "996.7.1"
+		}
+	}
+	83211 = {
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 5
+		diplomacy = 7
+		intrigue = 4
+		stewardship = 3
+		religion = "catholic"
+		culture = "irish"
+		father = 83210
+		986.1.1 = {
+			birth = "986.1.1"
+		}
+		1041.7.1 = {
+			death = "1041.7.1"
+		}
+	}
+	83212 = {
+		name = "Donnchad"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 5
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		father = 83210
+		990.1.1 = {
+			birth = "990.1.1"
+		}
+		1039.7.1 = {
+			death = "1039.7.1"
+		}
+	}
+	83213 = {
+		name = "Gilla-PA_traic"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83212
+		1013.1.1 = {
+			birth = "1013.1.1"
+		}
+		1055.7.1 = {
+			death = "1055.7.1"
+		}
+	}
+	83214 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 4
+		diplomacy = 7
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 1022
+		1071.1.1 = {
+			birth = "1071.1.1"
+		}
+		1113.7.1 = {
+			death = "1113.7.1"
+		}
+	}
+	83215 = {
+		name = "Gilla-PA_traic"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 7
+		diplomacy = 4
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83214
+		1091.1.1 = {
+			birth = "1091.1.1"
+		}
+		1146.7.1 = {
+			death = "1146.7.1"
+		}
+	}
+	83216 = {
+		name = "Cerball"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 4
+		diplomacy = 8
+		intrigue = 4
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83214
+		1097.1.1 = {
+			birth = "1097.1.1"
+		}
+		1163.7.1 = {
+			death = "1163.7.1"
+		}
+	}
+	83218 = {
+		name = "Donnchad"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 5
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83215
+		1125.1.1 = {
+			birth = "1125.1.1"
+		}
+		1162.7.1 = {
+			death = "1162.7.1"
+		}
+	}
+	83219 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 8
+		diplomacy = 3
+		intrigue = 4
+		stewardship = 3
+		religion = "catholic"
+		culture = "irish"
+		father = 83218
+		1142.1.1 = {
+			birth = "1142.1.1"
+		}
+		1165.7.1 = {
+			death = "1165.7.1"
+		}
+	}
+	83220 = {
+		name = "Gilla-PA_traic" #Gilla-Pátraic Ruad
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 2
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 8
+		religion = "catholic"
+		culture = "irish"
+		father = 83211 #parentage speculative
+		1038.1.1 = {
+			birth = "1038.1.1"
+		}
+		1103.7.1 = {
+			death = "1103.7.1"
+		}
+	}
+	83221 = {
+		name = "Donnchad" #Donnchad Balc
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 7
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83220
+		1062.1.1 = {
+			birth = "1062.1.1"
+		}
+		1123.7.1 = {
+			death = "1123.7.1"
+		}
+	}
+	83222 = {
+		name = "Cerball"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 7
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83220
+		1064.1.1 = {
+			birth = "1064.1.1"
+		}
+		1113.7.1 = {
+			death = "1113.7.1"
+		}
+	}
+	83223 = {
+		name = "Conchobar"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 5
+		diplomacy = 7
+		intrigue = 4
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83222
+		1085.1.1 = {
+			birth = "1085.1.1"
+		}
+		1126.7.1 = {
+			death = "1126.7.1"
+		}
+	}
+	83224 = {
+		name = "Goll-GabrA_in"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 4
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 3
+		religion = "catholic"
+		culture = "irish"
+		father = 83222
+		1088.1.1 = {
+			birth = "1088.1.1"
+		}
+		1120.7.1 = {
+			death = "1120.7.1"
+		}
+	}
+	83225 = {
+		name = "Donnchad" #Donnchad Dub
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 4
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83222 #Speculative
+		1090.1.1 = {
+			birth = "1090.1.1"
+		}
+		1122.7.1 = {
+			death = "1122.7.1"
+		}
+	}
+	83217 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_gilla_patraic
+		martial = 4
+		diplomacy = 7
+		intrigue = 4
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 83216
+		1123.1.1 = {
+			birth = "1123.1.1"
+		}
+		1176.7.1 = {
+			death = "1176.7.1"
+		}
+	}
+#
+#######################################
+# House Brian
+#######################################
+	1026 = {
+		name = "SlA_ine" #wife of Sihtric Silkbeard
+		female = yes
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 8
+		intrigue = 7
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = education_intrigue_1
+		father = 900 #Brian Bóruma
+		mother = 166123 #Eachraidh
+		984.1.1 = {
+			birth = "984.1.1"
+		}
+		1050.7.1 = {
+			death = "1050.7.1"
+		}
+	}
+	214590 = {
+		name = "Toirrdelbach"
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = education_intrigue_1
+		father = 913 #Diarmait son of Toirrdelbach
+		1100.1.1 = {
+			birth = "1100.1.1"
+		}
+		1135.1.1 = {
+			add_spouse = 332038
+		}
+		1167.7.1 = {
+			death = "1167.7.1"
+		}
+	}
+	6207 = {
+		name = "Conchobar"
+		dynasty_house = house_british_isles_briain
+		martial = 8
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		disallow_random_traits = yes
+		trait = lazy
+		trait = brave
+		trait = honest
+		trait = lisping
+		trait = education_diplomacy_3
+		father = 902
+		1020.1.2 = {
+			birth = "1020.1.2"
+		}
+		1070.1.2 = {
+			death = "1070.1.2"
+		}
+	}
+	6210 = {
+		name = "Malachy"
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 4
+		intrigue = 4
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = humble
+		trait = zealous
+		trait = education_martial_2
+		father = 6207
+		1044.1.2 = {
+			birth = "1044.1.2"
+		}
+		1094.1.2 = {
+			death = "1094.1.2"
+		}
+	}
+	6212 = {
+		name = "Donal"
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 6210
+		1065.1.2 = {
+			birth = "1065.1.2"
+		}
+		1115.1.2 = {
+			death = "1115.1.2"
+		}
+	}
+	7288 = {
+		name = "Conchobar"
+		dynasty_house = house_british_isles_briain
+		religion = "catholic"
+		culture = "irish"
+		father = 913 #Diarmait son of Toirrdelbach
+		1102.1.1 = {
+			birth = "1102.1.1"
+		}
+		1142.7.1 = {
+			death = "1142.7.1"
+		}
+	}
+	903 = {
+		name = "Murchad"
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = calm
+		trait = temperate
+		trait = education_intrigue_2
+		father = 900
+		mother = 166116
+		965.1.1 = {
+			birth = "965.1.1"
+		}
+		1014.4.23 = {
+			death = "1014.4.23"
+		}
+	}
+	905 = {
+		name = "Tadg"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = diligent
+		trait = education_intrigue_1
+		father = 900 #Brian Bóruma
+		mother = 166123 #Eachraidh
+		985.1.1 = {
+			birth = "985.1.1"
+		}
+		1023.7.1 = {
+			death = "1023.7.1"
+		}
+	}
+	912 = {
+		name = "Tadg"
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 6
+		intrigue = 7
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = wrathful
+		trait = education_intrigue_2
+		father = 906 #Toirrdelbach Ua Briain High-King of Ireland
+		mother = 908
+		1049.1.1 = {
+			birth = "1049.1.1"
+		}
+		1086.8.1 = {
+			death = "1086.8.1"
+		}
+	}
+	913 = {
+		name = "Diarmait"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 4
+		intrigue = 4
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 906 #Toirrdelbach Ua Briain High-King of Ireland
+		mother = 908
+		1047.1.1 = {
+			birth = "1047.1.1"
+		}
+		1118.7.1 = {
+			death = "1118.7.1"
+		}
+	}
+	83250 = {
+		name = "Domnall" #Domnall Ua Briain son of High King Muirchertach
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 8
+		intrigue = 4
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = zealous
+		father = 907
+		1082.1.1 = {
+			birth = "1082.1.1"
+		}
+		1135.7.1 = {
+			death = "1135.7.1"
+		}
+	}
+	83334 = {
+		name = "Tadg" #Tadg Gláe
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 4
+		intrigue = 4
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 913 #Diarmait son of Toirrdelbach
+		1104.1.1 = {
+			birth = "1104.1.1"
+		}
+		1154.7.1 = {
+			death = "1154.7.1"
+		}
+	}
+	83335 = {
+		name = "Donnchad" #bishop of Killaloe
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 4
+		intrigue = 4
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = education_learning_3
+		father = 913 #Diarmait son of Toirrdelbach
+		1106.1.1 = {
+			birth = "1106.1.1"
+		}
+		1164.7.1 = {
+			death = "1164.7.1"
+		}
+	}
+	83352 = {
+		name = "Domnall" #Domnall Bán
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 7
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 900 #Brian Bóruma
+		mother = 166124 #Dub Chobhlaigh
+		1004.1.1 = {
+			birth = "1004.1.1"
+		}
+		1052.1.1 = {
+			death = "1052.1.1"
+		}
+	}
+	83353 = {
+		name = "Diarmait"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83352 #Domnall Bán son of Brian Bóruma
+		1023.1.1 = {
+			birth = "1023.1.1"
+		}
+		1051.7.1 = {
+			death = "1051.7.1"
+		}
+	}
+	83354 = {
+		name = "Tadg"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 6
+		intrigue = 3
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83353
+		1050.1.1 = {
+			birth = "1050.1.1"
+		}
+		1101.7.1 = {
+			death = "1101.7.1"
+		}
+	}
+	83357 = {
+		name = "Brian"
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 6
+		intrigue = 4
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		disallow_random_traits = yes
+		trait = arrogant
+		trait = generous
+		trait = impatient
+		trait = education_martial_2
+		father = 83355 #Murchad son of Donnchad son of Brian Bóruma
+		1048.1.1 = {
+			birth = "1048.1.1"
+		}
+		1118.12.1 = {
+			death = "1118.12.1"
+		}
+	}
+	83355 = {
+		name = "Murchad"
+		dna = 83355_petty_king_murchad
+		dynasty_house = house_british_isles_briain
+		martial = 8
+		diplomacy = 6
+		intrigue = 8
+		stewardship = 6
+		learning = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = temperate
+		trait = wrathful
+		trait = impatient
+		trait = education_martial_3
+		sexuality = heterosexual
+		father = 902 #Donnchad son Brian Bóruma
+		1027.1.1 = {
+			birth = "1027.1.1"
+			effect = {
+				add_character_flag = has_scripted_appearance
+			}	
+		}
+		1068.7.1 = {
+			death = "1068.7.1"
+		}
+	}
+	83356 = {
+		name = "LorcA_n"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 902 #Donnchad son Brian Bóruma
+		1029.1.1 = {
+			birth = "1029.1.1"
+		}
+		1078.7.1 = {
+			death = "1078.7.1"
+		}
+	}
+	83358 = {
+		name = "Conchobar" #King of Tulach Óc
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 83356 #Lorcán son of Donnchad
+		1047.1.1 = {
+			birth = "1047.1.1"
+		}
+		1078.7.1 = {
+			death = "1078.7.1"
+		}
+	}
+	83359 = {
+		name = "CennE_tig" #King of Tulach Óc
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 83356 #Lorcán son of Donnchad
+		1049.1.1 = {
+			birth = "1049.1.1"
+		}
+		1084.7.1 = {
+			death = "1084.7.1"
+		}
+	}
+	83360 = {
+		name = "Domnall" #King of the Isles
+		dynasty_house = house_british_isles_briain
+		martial = 8
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 912 #Tadg son of Toirrdelbach
+		1070.1.1 = {
+			birth = "1070.1.1"
+		}
+		1115.7.1 = {
+			death = "1115.7.1"
+		}
+	}
+	83361 = {
+		name = "Amlaib"
+		dynasty_house = house_british_isles_briain
+		martial = 5
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 912 #Tadg son of Toirrdelbach
+		1072.1.1 = {
+			birth = "1072.1.1"
+		}
+		1096.7.1 = {
+			death = "1096.7.1"
+		}
+	}
+	83362 = {
+		name = "Diarmait"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 4
+		intrigue = 4
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83334 #Tadg Gláe
+		1126.1.1 = {
+			birth = "1126.1.1"
+		}
+		1175.7.1 = {
+			death = "1175.7.1"
+		}
+	}
+	166117 = {
+		name = "Flann"
+		dynasty_house = house_british_isles_briain
+		martial = 5
+		diplomacy = 4
+		intrigue = 6
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 900
+		mother = 166116
+		975.1.1 = {
+			birth = "975.1.1"
+		}
+		1014.4.23 = {
+			death = "1014.4.23"
+		}
+	}
+	166118 = {
+		name = "Conchobar"
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 4
+		intrigue = 4
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 900
+		mother = 166116
+		980.1.1 = {
+			birth = "980.1.1"
+		}
+		1014.4.23 = {
+			death = "1014.4.23"
+		}
+	}
+	166119 = {
+		name = "Sadb"
+		female = yes
+		dynasty_house = house_british_isles_briain
+		religion = "catholic"
+		culture = "irish"
+		trait = beauty_good_1
+		father = 900
+		mother = 166116
+		970.1.1 = {
+			birth = "970.1.1"
+		}
+		1048.1.1 = {
+			death = "1048.1.1"
+		}
+	}
+	166125 = {
+		name = "Dub_Essa"
+		female = yes
+		dynasty_house = house_british_isles_briain
+		religion = "catholic"
+		culture = "irish"
+		father = 900
+		mother = 166124
+		1006.1.1 = {
+			birth = "1006.1.1"
+		}
+		1052.1.1 = {
+			death = "1052.1.1"
+		}
+	}
+	166126 = {
+		name = "BE_binn"
+		female = yes
+		dynasty_house = house_british_isles_briain
+		religion = "catholic"
+		culture = "irish"
+		disallow_random_traits = yes
+		trait = patient
+		trait = cynical
+		trait = brave
+		trait = education_intrigue_3
+		father = 900
+		mother = 166123
+		989.1.1 = {
+			birth = "989.1.1"
+		}
+		1073.1.1 = {
+			death = "1073.1.1"
+		}
+	}
+	166127 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_neillnoigiallaich
+		martial = 5
+		diplomacy = 4
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 7253
+		mother = 166126
+		1008.1.1 = {
+			birth = "1008.1.1"
+		}
+		1027.1.1 = {
+			death = "1027.1.1"
+		}
+	}
+	166128 = {
+		name = "Blanaid" #Supposed wife of Malcolm II by author Morgan Llywelyn
+		female = yes
+		dynasty_house = house_british_isles_briain
+		religion = "catholic"
+		culture = "irish"
+		trait = beauty_good_1
+		father = 900
+		mother = 166116
+		962.9.1 = {
+			birth = "962.9.1"
+		}
+		1000.1.1 = {
+			death = "1000.1.1"
+		}
+	}
+	214580 = {
+		name = "Domnall" #AKA Domnall Mór
+		dynasty_house = house_british_isles_briain
+		martial = 5
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = calm
+		trait = education_intrigue_2
+		father = 214590
+		mother = 332038
+		1137.1.1 = {
+			birth = "1137.1.1"
+		}
+		1155.1.1 = {
+			add_spouse = 214554
+		}
+		1194.7.1 = {
+			death = "1194.7.1"
+		}
+	}
+	214581 = {
+		name = "Muirchertach" #AKA: Muirchertach Finn mac Domnaill
+		dynasty_house = house_british_isles_briain
+		martial = 5
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 8
+		religion = "catholic"
+		culture = "irish"
+		trait = lazy
+		trait = education_learning_3
+		father = 214580
+		mother = 214554
+		1157.1.1 = {
+			birth = "1157.1.1"
+		}
+		1241.7.1 = {
+			death = "1241.7.1"
+		}
+	}
+	214582 = {
+		name = "Conchobar" #AKA: Conchobar Ruad mac Domnaill
+		dynasty_house = house_british_isles_briain
+		martial = 5
+		diplomacy = 5
+		intrigue = 8
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = honest
+		trait = education_intrigue_1
+		father = 214580
+		mother = 214554
+		1159.1.1 = {
+			birth = "1159.1.1"
+		}
+		1203.7.1 = {
+			death = "1203.7.1"
+		}
+	}
+	214583 = {
+		name = "Donnchad" #AKA: Donnchad Cairprech mac Domnaill
+		dynasty_house = house_british_isles_briain
+		martial = 8
+		diplomacy = 8
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = education_learning_2
+		father = 214580
+		mother = 214554
+		1161.1.1 = {
+			birth = "1161.1.1"
+		}
+		1242.7.1 = {
+			death = "1242.7.1"
+		}
+	}
+	214584 = {
+		name = "Domnall" #AKA: Domnall Connachtach mac Domnaill
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 4
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = cynical
+		trait = brave
+		trait = education_learning_2
+		father = 214580
+		mother = 214554
+		1163.1.1 = {
+			birth = "1163.1.1"
+		}
+		1213.7.1 = {
+			death = "1213.7.1"
+		}
+	}
+	214585 = {
+		name = "Muirchertach" #AKA: Muirchertach Dall mac Domnaill
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 8
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = generous
+		trait = education_martial_3
+		father = 214580
+		mother = 214554
+		1165.1.1 = {
+			birth = "1165.1.1"
+		}
+		1215.7.1 = {
+			death = "1215.7.1"
+		}
+	}
+	214589 = {
+		name = "ConstantI_n" #Bishop of Killaloe
+		dynasty_house = house_british_isles_briain
+		martial = 3
+		diplomacy = 6
+		intrigue = 8
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		trait = lisping
+		trait = education_learning_3
+		father = 214590
+		1140.1.1 = {
+			birth = "1140.1.1"
+		}
+		1194.7.1 = {
+			death = "1194.7.1"
+		}
+	}
+	454140 = {
+		name = "Toirrdelbach"
+		dynasty_house = house_british_isles_briain
+		martial = 5
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = brave
+		trait = arrogant
+		trait = education_martial_2
+		father = 83341 #Tadg of Cáeluisce
+		1250.1.1 = {
+			birth = "1250.1.1"
+		}
+		1306.8.1 = {
+			death = "1306.8.1"
+		}
+	}
+	454142 = {
+		name = "Mathgamain"
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 6
+		intrigue = 4
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = honest
+		trait = wrathful
+		trait = education_martial_2
+		father = 454205
+		mother = 454141
+		1313.1.1 = {
+			birth = "1313.1.1"
+		}
+		1369.7.1 = {
+			death = "1369.7.1"
+		}
+	}
+	454143 = {
+		name = "Toirrdelbach"
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 6
+		intrigue = 4
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = humble
+		trait = greedy
+		trait = education_martial_2
+		father = 454205
+		mother = 454141
+		1320.1.1 = {
+			birth = "1320.1.1"
+		}
+		1398.7.1 = {
+			death = "1398.7.1"
+		}
+	}
+	454144 = {
+		name = "Tadg"
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 6
+		intrigue = 4
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = education_martial_2
+		father = 454205
+		mother = 454141
+		1330.1.1 = {
+			birth = "1330.1.1"
+		}
+		1380.7.1 = {
+			death = "1380.7.1"
+		}
+	}
+	454145 = {
+		name = "Diarmait"
+		dynasty_house = house_british_isles_briain
+		martial = 5
+		diplomacy = 5
+		intrigue = 9
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = chaste
+		trait = education_martial_2
+		father = 454140 #Toirrdelbach mac Taidg
+		1287.1.1 = {
+			birth = "1287.1.1"
+		}
+		1364.7.1 = {
+			death = "1364.7.1"
+		}
+	}
+
+	454146 = {
+		name = "Conchobar"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = deceitful
+		trait = arrogant
+		trait = education_martial_2
+		father = 454140 #Toirrdelbach mac Taidg
+		1289.1.1 = {
+			birth = "1289.1.1"
+		}
+		1328.7.1 = {
+			death = "1328.7.1"
+		}
+	}
+	454205 = {
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		trait = generous
+		trait = brave
+		trait = stuttering
+		trait = education_martial_2
+		father = 454140 #Toirrdelbach mac Taidg
+		1285.1.1 = {
+			birth = "1285.1.1"
+		}
+		1309.1.2 = {
+			add_spouse = 454141
+		}
+		1343.7.1 = {
+			death = "1343.7.1"
+		}
+	}
+	83336 = {
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 214590
+		1138.1.1 = {
+			birth = "1138.1.1"
+		}
+		1168.7.1 = {
+			death = "1168.7.1"
+		}
+	}
+	83337 = {
+		name = "Brian"
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 5
+		intrigue = 2
+		stewardship = 4
+		religion = "catholic"
+		culture = "irish"
+		father = 214590
+		1142.1.1 = {
+			birth = "1142.1.1"
+		}
+		1168.7.1 = {
+			death = "1168.7.1"
+		}
+	}
+	83338 = {
+		name = "Toirrdelbach"
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 3
+		religion = "catholic"
+		culture = "irish"
+		father = 214583 #Donnchad Cairprech mac Domnaill
+		1189.1.1 = {
+			birth = "1189.1.1"
+		}
+		1243.7.1 = {
+			death = "1243.7.1"
+		}
+	}
+	83339 = {
+		name = "Muirchertach"
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 3
+		religion = "catholic"
+		culture = "irish"
+		father = 214583 #Donnchad Cairprech mac Domnaill
+		1192.1.1 = {
+			birth = "1192.1.1"
+		}
+		1241.7.1 = {
+			death = "1241.7.1"
+		}
+	}
+	83340 = {
+		name = "Conchobar" #Conchobar na Siudaine
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 214583 #Donnchad Cairprech mac Domnaill
+		1195.1.1 = {
+			birth = "1195.1.1"
+		}
+		1268.5.22 = {
+			death = "1268.5.22"
+		}
+	}
+	83341 = {
+		name = "Tadg" #Tadg of Cáeluisce
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83340 #Conchobar na Siudaine
+		1235.1.1 = {
+			birth = "1235.1.1"
+		}
+		1259.5.22 = {
+			death = "1259.5.22"
+		}
+	}
+	83342 = {
+		name = "SeoA_n"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83340 #Conchobar na Siudaine
+		1238.1.1 = {
+			birth = "1238.1.1"
+		}
+		1268.7.1 = {
+			death = "1268.7.1"
+		}
+	}
+	83343 = {
+		name = "Brian" #Brian Ruad
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83340 #Conchobar na Siudaine
+		1240.1.1 = {
+			birth = "1240.1.1"
+		}
+		1277.5.11 = {
+			death = "1277.5.11"
+		}
+	}
+	83344 = {
+		name = "Donnchad"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 6
+		intrigue = 4
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		father = 83343 #Brian Ruad mac Conchobair
+		1259.1.1 = {
+			birth = "1259.1.1"
+		}
+		1284.7.1 = {
+			death = "1284.7.1"
+		}
+	}
+	83345 = {
+		name = "Domnall"
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		father = 83343 #Brian Ruad mac Conchobair
+		1261.1.1 = {
+			birth = "1261.1.1"
+		}
+		1312.7.1 = {
+			death = "1312.7.1"
+		}
+	}
+	83346 = {
+		name = "Toirrdelbach" #Toirrdelbach Óc
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 5
+		intrigue = 4
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83343 #Brian Ruad mac Conchobair
+		1263.1.1 = {
+			birth = "1263.1.1"
+		}
+		1305.7.1 = {
+			death = "1305.7.1"
+		}
+	}
+	83347 = {
+		name = "Diarmait" #Diarmait Cléirech
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 6
+		intrigue = 4
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		father = 83344 #Donnchad mac Briain Ruaid
+		1278.1.1 = {
+			birth = "1278.1.1"
+		}
+		1313.7.1 = {
+			death = "1313.7.1"
+		}
+	}
+	83348 = {
+		name = "Donnchad"
+		dynasty_house = house_british_isles_briain
+		martial = 5
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		father = 83345 #Domnall mac Briain Ruaid
+		1282.1.1 = {
+			birth = "1282.1.1"
+		}
+		1317.7.1 = {
+			death = "1317.7.1"
+		}
+	}
+	83349 = {
+		name = "Brian" #Brian Bán
+		dynasty_house = house_british_isles_briain
+		martial = 8
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 8
+		religion = "catholic"
+		culture = "irish"
+		father = 83345 #Domnall mac Briain Ruaid
+		1286.1.1 = {
+			birth = "1286.1.1"
+		}
+		1350.7.1 = {
+			death = "1350.7.1"
+		}
+	}
+	83350 = {
+		name = "Murchad"
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 83349 #Brian Bán
+		1312.1.1 = {
+			birth = "1312.1.1"
+		}
+		1383.7.1 = {
+			death = "1383.7.1"
+		}
+	}
+	83351 = {
+		name = "Donnchad"
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 7
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = "irish"
+		father = 454140 #Toirrdelbach mac Taidg
+		1282.1.1 = {
+			birth = "1282.1.1"
+		}
+		1311.7.1 = {
+			death = "1311.7.1"
+		}
+	}
+	454131 = {  	
+		name = "Margaret"
+		female = yes
+		dynasty_house = house_british_isles_briain
+		martial = 4
+		diplomacy = 8
+		intrigue = 4
+		stewardship = 2
+		religion = "catholic"
+		culture = "irish"
+		trait = generous
+		trait = education_stewardship_1
+		father = 454146
+		1320.1.1 = {
+			birth = "1320.1.1"
+		}
+		1370.1.1 = {
+			death = "1370.1.1"
+		}
+	}
+	6208 = {
+		name = "Murchaid"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 4
+		intrigue = 7
+		stewardship = 7
+		religion = "catholic"
+		culture = "irish"
+		trait = education_intrigue_2
+		father = 6207
+		1043.1.2 = {
+			birth = "1043.1.2"
+		}
+		1093.1.2 = {
+			death = "1093.1.2"
+		}
+	}
+	901 = {
+		name = "Derbforgail"
+		female = yes
+		dynasty_house = house_british_isles_briain
+		martial = 6
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = ill
+		trait = education_diplomacy_3
+		father = 902
+		1005.1.2 = {
+			birth = yes
+		}
+		1050.1.2 = {
+			death = "1050.1.2"
+		}
+	}
+	904 = {
+		name = "Toirrdelbach"
+		dynasty_house = house_british_isles_briain
+		martial = 7
+		diplomacy = 8
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "irish"
+		trait = lazy
+		trait = education_martial_3
+		father = 903
+		996.1.2 = {
+			birth = "996.1.2"
+		}
+		1014.4.23 = {
+			death = "1014.4.23"
+		}
+	}
+#
 #######################################
 # NAME Dyanasty
 #######################################
@@ -2944,144 +5647,67 @@
 # NAME Dyanasty
 #######################################
 
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
+
+#######################################
+# NAME Dyanasty
+#######################################
 
 
-1000 = {
-	name = "A_ed"
-	dynasty_house = house_british_isles_ruairc
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = brave
-	trait = education_martial_3
-	father = 1001
-	1040.1.1 = {
-		birth = "1040.1.1"
-	}
-	1087.7.1 = {
-		death = "1087.7.1"
-	}
-}
-1001 = {
-	name = "Art"
-	dynasty_house = house_british_isles_ruairc
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = arrogant
-	trait = education_martial_2
-	father = 83537
-	990.1.1 = {
-		birth = "990.1.1"
-	}
-	1046.7.1 = {
-		death = "1046.7.1"
-	}
-}
-1002 = {
-	name = "Niall"
-	dynasty_house = house_british_isles_ruairc
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = wrathful
-	trait = education_martial_2
-	father = 1001
-	1010.1.1 = {
-		birth = "1010.1.1"
-	}
-	1047.1.1 = {
-		death = "1047.1.1"
-	}
-}
-1003 = {
-	name = "TigernA_n"
-	dynasty_house = house_british_isles_ruairc
-	martial = 7
-	diplomacy = 7
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 1005 #Ualgarg mac Néill
-	1046.1.1 = {
-		birth = "1046.1.1"
-	}
-	1091.7.1 = {
-		death = "1091.7.1"
-	}
-}
-1004 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 1003 #Tigernán mac Ualgairg
-	1065.1.1 = {
-		birth = "1065.1.1"
-	}
-	1081.1.1 = {
-		add_trait = education_martial_2
-	}
-	1102.7.1 = {
-		death = "1102.7.1"
-	}
-}
-1005 = {
-	name = "Ualgarg"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = arrogant
-	trait = education_martial_2
-	father = 1002
-	1029.1.2 = {
-		birth = "1029.1.2"
-	}
-	1085.1.1 = {
-		death = "1085.1.1"
-	}
-}
-1010 = {
-	name = "Maoil_Sechluinn"
-	# AKA: Maoil Sechluinn
-	dynasty = 101676
-	martial = 4
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = arrogant
-	trait = education_martial_2
-	1024.1.1 = {
-		birth = "1024.1.1"
-	}
-	1049.1.2 = {
-		add_spouse = 1011
-	}
-	1074.1.1 = {
-		death = "1074.1.1"
-	}
-}
 1011 = {
 	name = "Nuala"
 	female = yes
@@ -3098,48 +5724,6 @@
 	}
 	1089.1.1 = {
 		death = "1089.1.1"
-	}
-}
-1012 = {
-	name = "An_Dall"
-	# AKA: An Dall
-	dynasty = 101676
-	martial = 4
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = education_stewardship_2
-	father = 1010
-	mother = 1011
-	1055.1.1 = {
-		birth = "1055.1.1"
-	}
-	1105.1.1 = {
-		death = "1105.1.1"
-	}
-}
-1015 = {
-	name = "A_edh"
-	# AKA: aedh
-	dynasty_house = house_british_isles_flaithbertaig
-	martial = 6
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = generous
-	trait = education_martial_2
-	1045.1.1 = {
-		birth = "1045.1.1"
-	}
-	1059.1.2 = {
-		add_spouse = 1016
-	}
-	1095.1.1 = {
-		death = "1095.1.1"
 	}
 }
 1016 = {
@@ -3162,66 +5746,6 @@
 		death = "1089.1.1"
 	}
 }
-1017 = {
-	name = "A_edh"
-	# AKA: aedh
-	dynasty_house = house_british_isles_flaithbertaig
-	martial = 5
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 1015
-	mother = 1016
-	1060.1.1 = {
-		birth = "1060.1.1"
-	}
-	1110.1.1 = {
-		death = "1110.1.1"
-	}
-}
-1018 = {
-	name = "Flaitbertach"
-	dynasty_house = house_british_isles_flaithbertaig
-	martial = 6
-	diplomacy = 7
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 1015
-	mother = 1016
-	1065.1.1 = {
-		birth = "1065.1.1"
-	}
-	1115.1.1 = {
-		death = "1115.1.1"
-	}
-}
-1020 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 8
-	diplomacy = 6
-	intrigue = 8
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = greedy
-	trait = education_martial_3
-	father = 83213
-	1030.1.1 = {
-		birth = "1030.1.1"
-	}
-	1048.1.1 = {
-		add_spouse = 1021
-	}
-	1080.7.1 = {
-		death = "1080.7.1"
-	}
-}
 1021 = {
 	name = "MA_ire"
 	# AKA: Maire
@@ -3239,65 +5763,6 @@
 	}
 	1085.7.1 = {
 		death = "1085.7.1"
-	}
-}
-1022 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 7
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 1020
-	mother = 1021
-	1050.1.1 = {
-		birth = "1050.1.1"
-	}
-	1090.7.1 = {
-		death = "1090.7.1"
-	}
-}
-1023 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 8
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = gluttonous
-	trait = education_martial_2
-	father = 1020
-	mother = 1021
-	1055.1.1 = {
-		birth = "1055.1.1"
-	}
-	1095.7.1 = {
-		death = "1095.7.1"
-	}
-}
-1026 = {
-	name = "SlA_ine" #wife of Sihtric Silkbeard
-	female = yes
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 8
-	intrigue = 7
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = education_intrigue_1
-	father = 900 #Brian Bóruma
-	mother = 166123 #Eachraidh
-	984.1.1 = {
-		birth = "984.1.1"
-	}
-	1050.7.1 = {
-		death = "1050.7.1"
 	}
 }
 1028 = {
@@ -3501,6 +5966,8 @@
 		death = "968.1.2"
 	}
 }
+
+
 20054 = {
 	name = "SeoA_n"
 	# AKA: Seoan
@@ -3579,25 +6046,7 @@
 		death = "1166.7.1"
 	}
 }
-214021 = {
-	name = "MA_el-Sechlainn"
-	dynasty_house = house_british_isles_ruairc
-	martial = 4
-	diplomacy = 4
-	intrigue = 7
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 214022 #Tigearnan Mór Ua Ruairc
-	mother = 83159
-	1134.1.1 = {
-		birth = "1134.1.1"
-	}
-	1162.7.1 = {
-		death = "1162.7.1"
-	}
-}
+
 214023 = {
 	name = "Derbforgaill"
 	female = yes
@@ -3653,27 +6102,7 @@
 		death = "1151.1.15"
 	}
 }
-214590 = {
-	name = "Toirrdelbach"
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = education_intrigue_1
-	father = 913 #Diarmait son of Toirrdelbach
-	1100.1.1 = {
-		birth = "1100.1.1"
-	}
-	1135.1.1 = {
-		add_spouse = 332038
-	}
-	1167.7.1 = {
-		death = "1167.7.1"
-	}
-}
+
 214713 = {
 	name = "Pyfog"
 	female = yes
@@ -3712,6 +6141,7 @@
 		death = "1127.1.1"
 	}
 }
+
 6166 = {
 	name = "Donnchad"
 	dynasty = 9208
@@ -3730,84 +6160,22 @@
 		death = "1115.7.1"
 	}
 }
-6207 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_briain
-	martial = 8
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	disallow_random_traits = yes
-	trait = lazy
-	trait = brave
-	trait = honest
-	trait = lisping
-	trait = education_diplomacy_3
-	father = 902
-	1020.1.2 = {
-		birth = "1020.1.2"
-	}
-	1070.1.2 = {
-		death = "1070.1.2"
-	}
-}
-6208 = {
-	name = "Murchaid"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 4
-	intrigue = 7
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = education_intrigue_2
-	father = 6207
-	1043.1.2 = {
-		birth = "1043.1.2"
-	}
-	1093.1.2 = {
-		death = "1093.1.2"
-	}
-}
-6210 = {
-	name = "Malachy"
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 4
-	intrigue = 4
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = humble
-	trait = zealous
-	trait = education_martial_2
-	father = 6207
-	1044.1.2 = {
-		birth = "1044.1.2"
-	}
-	1094.1.2 = {
-		death = "1094.1.2"
-	}
-}
-6212 = {
-	name = "Donal"
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 6210
-	1065.1.2 = {
-		birth = "1065.1.2"
-	}
-	1115.1.2 = {
-		death = "1115.1.2"
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 7197 = {
 	name = "CannanA_n"
 	dynasty_house = house_british_isles_neill
@@ -3876,6 +6244,8 @@
 		death = "747.1.1"
 	}
 }
+
+
 7246 = {
 	name = "O_engus"
 	dynasty_house = house_british_isles_neill
@@ -3893,6 +6263,7 @@
 		death = "650.1.1"
 	}
 }
+
 7250 = {
 	name = "Senta"
 	dynasty_house = house_british_isles_neill
@@ -4006,7 +6377,9 @@
 	489.1.1 = {
 		death = "489.1.1"
 	}
+
 }
+
 7260 = {
 	name = "ColmA_n" #Colmán Becc
 	dynasty_house = house_british_isles_neill
@@ -4020,6 +6393,9 @@
 		death = "587.1.1"
 	}
 }
+
+
+
 7264 = {
 	name = "Conall"
 	dynasty_house = house_british_isles_neill
@@ -4033,6 +6409,7 @@
 		death = "635.1.1"
 	}
 }
+
 7266 = {
 	name = "Airmetach"
 	dynasty_house = house_british_isles_neill
@@ -4098,8 +6475,11 @@
 		death = "715.1.1"
 	}
 }
+
+
+
 7276 = {
-	name = "Conchobar"
+	name = "MA_el_Ruanaid"
 	dynasty_house = house_british_isles_neill
 	religion = "catholic"
 	culture = "irish"
@@ -4111,6 +6491,9 @@
 		death = "843.1.1"
 	}
 }
+
+
+
 7285 = {
 	name = "Niall"
 	dynasty_house = house_british_isles_lochlainn
@@ -4128,133 +6511,17 @@
 		death = "1119.7.1"
 	}
 }
-7286 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_ruairc
-	religion = "catholic"
-	culture = "irish"
-	trait = brave
-	trait = education_martial_3
-	father = 7287 #Domnall mac Ualgairg
-	1066.1.1 = {
-		birth = "1066.1.1"
-	}
-	1120.1.1 = {
-		death = "1120.1.1"
-	}
-}
-7287 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_ruairc
-	martial = 3
-	diplomacy = 4
-	intrigue = 4
-	stewardship = 5
-	trait = clubfooted
-	trait = hunchbacked
-	religion = "catholic"
-	culture = "irish"
-	father = 1005 #Ualgarg mac Néill
-	1048.1.1 = {
-		birth = "1048.1.1"
-	}
-	1108.7.1 = {
-		death = "1108.7.1"
-	}
-}
-7288 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_briain
-	religion = "catholic"
-	culture = "irish"
-	father = 913 #Diarmait son of Toirrdelbach
-	1102.1.1 = {
-		birth = "1102.1.1"
-	}
-	1142.7.1 = {
-		death = "1142.7.1"
-	}
-}
-901 = {
-	name = "Derbforgail"
-	female = yes
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = ill
-	trait = education_diplomacy_3
-	father = 902
-	1005.1.2 = {
-		birth = yes
-	}
-	1050.1.2 = {
-		death = "1050.1.2"
-	}
-}
-903 = {
-	name = "Murchad"
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 7
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = calm
-	trait = temperate
-	trait = education_intrigue_2
-	father = 900
-	mother = 166116
-	965.1.1 = {
-		birth = "965.1.1"
-	}
-	1014.4.23 = {
-		death = "1014.4.23"
-	}
-}
-904 = {
-	name = "Toirrdelbach"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 8
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = lazy
-	trait = education_martial_3
-	father = 903
-	996.1.2 = {
-		birth = "996.1.2"
-	}
-	1014.4.23 = {
-		death = "1014.4.23"
-	}
-}
-905 = {
-	name = "Tadg"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = diligent
-	trait = education_intrigue_1
-	father = 900 #Brian Bóruma
-	mother = 166123 #Eachraidh
-	985.1.1 = {
-		birth = "985.1.1"
-	}
-	1023.7.1 = {
-		death = "1023.7.1"
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
 908 = {
 	name = "Gormflaith"
 	female = yes
@@ -4275,7 +6542,7 @@
 }
 909 = {
 	name = "Tadg" #Tadg in Eich Gil
-	dynasty_house = house_british_isles_conchobair
+	dynasty = 9216
 	martial = 5
 	diplomacy = 5
 	intrigue = 8
@@ -4335,45 +6602,8 @@
 		death = "1118.7.1"
 	}
 }
-912 = {
-	name = "Tadg"
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 6
-	intrigue = 7
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = wrathful
-	trait = education_intrigue_2
-	father = 906 #Toirrdelbach Ua Briain High-King of Ireland
-	mother = 908
-	1049.1.1 = {
-		birth = "1049.1.1"
-	}
-	1086.8.1 = {
-		death = "1086.8.1"
-	}
-}
-913 = {
-	name = "Diarmait"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 4
-	intrigue = 4
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 906 #Toirrdelbach Ua Briain High-King of Ireland
-	mother = 908
-	1047.1.1 = {
-		birth = "1047.1.1"
-	}
-	1118.7.1 = {
-		death = "1118.7.1"
-	}
-}
+
+
 914 = {
 	name = "DerbA_il"
 	# AKA: Derbail
@@ -4392,6 +6622,7 @@
 		death = "1070.1.2"
 	}
 }
+
 916 = {
 	name = "DU_nlaing"
 	# AKA: Dunlaing
@@ -4410,6 +6641,7 @@
 		death = "1014.1.2"
 	}
 }
+
 917 = {
 	name = "Augaire"
 	dynasty = 694
@@ -4428,6 +6660,7 @@
 		death = "1024.1.2"
 	}
 }
+
 918 = {
 	name = "Donnchad"
 	dynasty = 694
@@ -4448,6 +6681,7 @@
 		death = "1036.1.2"
 	}
 }
+
 919 = {
 	name = "Murchaid"
 	dynasty = 694
@@ -4468,6 +6702,7 @@
 		death = "1042.1.2"
 	}
 }
+
 920 = {
 	name = "Donnchad"
 	dynasty = 9208
@@ -4509,6 +6744,7 @@
 		death = "1072.2.7"
 	}
 }
+
 923 = {
 	name = "E_nna"
 	dynasty = 9208
@@ -4554,6 +6790,7 @@
 		death = "1070.7.1"
 	}
 }
+
 925 = {
 	name = "Tailltiu"
 	female = yes
@@ -5743,6 +7980,7 @@
 		death = "1130.7.1"
 	}
 }
+
 83107 = {
 	name = "A_ed" #Áed son of Conchobar Mac Lochlainn
 	dynasty_house = house_british_isles_lochlainn
@@ -6179,6 +8417,12 @@
 		death = "957.7.1"
 	}
 }
+
+
+
+
+
+
 83160 = {
 	name = "E_nna" #Énna Cennsalach king of Leinster founder of the Uí Cheinnselaig
 	dynasty = 9208
@@ -6781,264 +9025,21 @@
 		death = "1133.7.1"
 	}
 }
-83210 = {
-	name = "Gilla-PA_traic"
-	dynasty_house = house_british_isles_dalbirn
-	martial = 4
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 9
-	religion = "catholic"
-	culture = "irish"
-	father = 166053
-	955.1.1 = {
-		birth = "955.1.1"
-	}
-	976.7.1 = {
-		dynasty_house = house_british_isles_gilla_patraic
-	}
-	996.7.1 = {
-		death = "996.7.1"
-	}
-}
-83211 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 5
-	diplomacy = 7
-	intrigue = 4
-	stewardship = 3
-	religion = "catholic"
-	culture = "irish"
-	father = 83210
-	986.1.1 = {
-		birth = "986.1.1"
-	}
-	1041.7.1 = {
-		death = "1041.7.1"
-	}
-}
-83212 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 5
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	father = 83210
-	990.1.1 = {
-		birth = "990.1.1"
-	}
-	1039.7.1 = {
-		death = "1039.7.1"
-	}
-}
-83213 = {
-	name = "Gilla-PA_traic"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83212
-	1013.1.1 = {
-		birth = "1013.1.1"
-	}
-	1055.7.1 = {
-		death = "1055.7.1"
-	}
-}
-83214 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 4
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 1022
-	1071.1.1 = {
-		birth = "1071.1.1"
-	}
-	1113.7.1 = {
-		death = "1113.7.1"
-	}
-}
-83215 = {
-	name = "Gilla-PA_traic"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 7
-	diplomacy = 4
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83214
-	1091.1.1 = {
-		birth = "1091.1.1"
-	}
-	1146.7.1 = {
-		death = "1146.7.1"
-	}
-}
-83216 = {
-	name = "Cerball"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 4
-	diplomacy = 8
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83214
-	1097.1.1 = {
-		birth = "1097.1.1"
-	}
-	1163.7.1 = {
-		death = "1163.7.1"
-	}
-}
-83218 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 5
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83215
-	1125.1.1 = {
-		birth = "1125.1.1"
-	}
-	1162.7.1 = {
-		death = "1162.7.1"
-	}
-}
-83219 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 8
-	diplomacy = 3
-	intrigue = 4
-	stewardship = 3
-	religion = "catholic"
-	culture = "irish"
-	father = 83218
-	1142.1.1 = {
-		birth = "1142.1.1"
-	}
-	1165.7.1 = {
-		death = "1165.7.1"
-	}
-}
-83220 = {
-	name = "Gilla-PA_traic" #Gilla-Pátraic Ruad
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 2
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 8
-	religion = "catholic"
-	culture = "irish"
-	father = 83211 #parentage speculative
-	1038.1.1 = {
-		birth = "1038.1.1"
-	}
-	1103.7.1 = {
-		death = "1103.7.1"
-	}
-}
-83221 = {
-	name = "Donnchad" #Donnchad Balc
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 7
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83220
-	1062.1.1 = {
-		birth = "1062.1.1"
-	}
-	1123.7.1 = {
-		death = "1123.7.1"
-	}
-}
-83222 = {
-	name = "Cerball"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 7
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83220
-	1064.1.1 = {
-		birth = "1064.1.1"
-	}
-	1113.7.1 = {
-		death = "1113.7.1"
-	}
-}
-83223 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 5
-	diplomacy = 7
-	intrigue = 4
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83222
-	1085.1.1 = {
-		birth = "1085.1.1"
-	}
-	1126.7.1 = {
-		death = "1126.7.1"
-	}
-}
-83224 = {
-	name = "Goll-GabrA_in"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 4
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 3
-	religion = "catholic"
-	culture = "irish"
-	father = 83222
-	1088.1.1 = {
-		birth = "1088.1.1"
-	}
-	1120.7.1 = {
-		death = "1120.7.1"
-	}
-}
-83225 = {
-	name = "Donnchad" #Donnchad Dub
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 4
-	diplomacy = 7
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83222 #Speculative
-	1090.1.1 = {
-		birth = "1090.1.1"
-	}
-	1122.7.1 = {
-		death = "1122.7.1"
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 83235 = {
 	name = "Domnall"
 	dynasty = 9211
@@ -7088,24 +9089,7 @@
 		death = "1119.7.1"
 	}
 }
-83250 = {
-	name = "Domnall" #Domnall Ua Briain son of High King Muirchertach
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 8
-	intrigue = 4
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = zealous
-	father = 907
-	1082.1.1 = {
-		birth = "1082.1.1"
-	}
-	1135.7.1 = {
-		death = "1135.7.1"
-	}
-}
+
 83251 = {
 	name = "Carthach"
 	dynasty_house = house_british_isles_eoganacht_chaisil
@@ -7352,247 +9336,19 @@
 		death = "1010.7.1"
 	}
 }
-83334 = {
-	name = "Tadg" #Tadg Gláe
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 4
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 913 #Diarmait son of Toirrdelbach
-	1104.1.1 = {
-		birth = "1104.1.1"
-	}
-	1154.7.1 = {
-		death = "1154.7.1"
-	}
-}
-83335 = {
-	name = "Donnchad" #bishop of Killaloe
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 4
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = education_learning_3
-	father = 913 #Diarmait son of Toirrdelbach
-	1106.1.1 = {
-		birth = "1106.1.1"
-	}
-	1164.7.1 = {
-		death = "1164.7.1"
-	}
-}
-83352 = {
-	name = "Domnall" #Domnall Bán
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 7
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 900 #Brian Bóruma
-	mother = 166124 #Dub Chobhlaigh
-	1004.1.1 = {
-		birth = "1004.1.1"
-	}
-	1052.1.1 = {
-		death = "1052.1.1"
-	}
-}
-83353 = {
-	name = "Diarmait"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83352 #Domnall Bán son of Brian Bóruma
-	1023.1.1 = {
-		birth = "1023.1.1"
-	}
-	1051.7.1 = {
-		death = "1051.7.1"
-	}
-}
-83354 = {
-	name = "Tadg"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 6
-	intrigue = 3
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83353
-	1050.1.1 = {
-		birth = "1050.1.1"
-	}
-	1101.7.1 = {
-		death = "1101.7.1"
-	}
-}
-83357 = {
-	name = "Brian"
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	disallow_random_traits = yes
-	trait = arrogant
-	trait = generous
-	trait = impatient
-	trait = education_martial_2
-	father = 83355 #Murchad son of Donnchad son of Brian Bóruma
-	1048.1.1 = {
-		birth = "1048.1.1"
-	}
-	1118.12.1 = {
-		death = "1118.12.1"
-	}
-}
-83355 = {
-	name = "Murchad"
-	dna = 83355_petty_king_murchad
-	dynasty_house = house_british_isles_briain
-	martial = 8
-	diplomacy = 6
-	intrigue = 8
-	stewardship = 6
-	learning = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = temperate
-	trait = wrathful
-	trait = impatient
-	trait = education_martial_3
-	sexuality = heterosexual
-	father = 902 #Donnchad son Brian Bóruma
-	1027.1.1 = {
-		birth = "1027.1.1"
-		effect = {
-			add_character_flag = has_scripted_appearance
-		}	
-	}
-	1068.7.1 = {
-		death = "1068.7.1"
-	}
-}
-83356 = {
-	name = "LorcA_n"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 902 #Donnchad son Brian Bóruma
-	1029.1.1 = {
-		birth = "1029.1.1"
-	}
-	1078.7.1 = {
-		death = "1078.7.1"
-	}
-}
-83358 = {
-	name = "Conchobar" #King of Tulach Óc
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 83356 #Lorcán son of Donnchad
-	1047.1.1 = {
-		birth = "1047.1.1"
-	}
-	1078.7.1 = {
-		death = "1078.7.1"
-	}
-}
-83359 = {
-	name = "CennE_tig" #King of Tulach Óc
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 83356 #Lorcán son of Donnchad
-	1049.1.1 = {
-		birth = "1049.1.1"
-	}
-	1084.7.1 = {
-		death = "1084.7.1"
-	}
-}
-83360 = {
-	name = "Domnall" #King of the Isles
-	dynasty_house = house_british_isles_briain
-	martial = 8
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 912 #Tadg son of Toirrdelbach
-	1070.1.1 = {
-		birth = "1070.1.1"
-	}
-	1115.7.1 = {
-		death = "1115.7.1"
-	}
-}
-83361 = {
-	name = "Amlaib"
-	dynasty_house = house_british_isles_briain
-	martial = 5
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 912 #Tadg son of Toirrdelbach
-	1072.1.1 = {
-		birth = "1072.1.1"
-	}
-	1096.7.1 = {
-		death = "1096.7.1"
-	}
-}
-83362 = {
-	name = "Diarmait"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 4
-	intrigue = 4
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83334 #Tadg Gláe
-	1126.1.1 = {
-		birth = "1126.1.1"
-	}
-	1175.7.1 = {
-		death = "1175.7.1"
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 83368 = {
 	name = "CU_-Muman"
 	dynasty = 9215
@@ -7661,6 +9417,7 @@
 		death = "925.7.1"
 	}
 }
+
 83384 = {
 	name = "A_ed"
 	dynasty = 9216
@@ -7678,6 +9435,7 @@
 		death = "888.7.1"
 	}
 }
+
 83385 = {
 	name = "Tadg"
 	dynasty = 9216
@@ -7695,6 +9453,7 @@
 		death = "900.7.1"
 	}
 }
+
 83386 = {
 	name = "Cathal"
 	dynasty = 9216
@@ -7712,6 +9471,7 @@
 		death = "973.11.1"
 	}
 }
+
 83387 = {
 	name = "Tadg"
 	dynasty = 9216
@@ -7732,6 +9492,7 @@
 		death = "956.7.1"
 	}
 }
+
 83388 = {
 	name = "Conchobar"
 	dynasty = 9216
@@ -8247,6 +10008,7 @@
 		death = "872.7.1"
 	}
 }
+
 83418 = {
 	name = "Muiredach"
 	dynasty = 9216
@@ -8264,6 +10026,7 @@
 		death = "912.7.1"
 	}
 }
+
 83419 = {
 	name = "Fothad"
 	dynasty = 9216
@@ -8383,6 +10146,7 @@
 		death = "786.7.1"
 	}
 }
+
 83440 = {
 	name = "Fergus"
 	dynasty = 9216
@@ -8434,6 +10198,8 @@
 		death = "602.7.1"
 	}
 }
+
+
 83446 = {
 	name = "ColgU_"
 	dynasty_house = house_british_isles_briuinseola
@@ -8451,6 +10217,7 @@
 		death = "635.7.1"
 	}
 }
+
 83448 = {
 	name = "Amalgaid"
 	dynasty_house = house_british_isles_briuinseola
@@ -8587,6 +10354,7 @@
 		death = "912.7.1"
 	}
 }
+
 83456 = {
 	name = "EimI_n"
 	dynasty_house = house_british_isles_briuinseola
@@ -8604,6 +10372,7 @@
 		death = "943.7.1"
 	}
 }
+
 83457 = {
 	name = "Tadg"
 	dynasty_house = house_british_isles_conchobair
@@ -8881,95 +10650,16 @@
 		death = "955.7.1"
 	}
 }
-83536 = {
-	name = "Fergal"
-	dynasty = 9218
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	father = 83535 #Art mac Ruairc
-	923.1.1 = {
-		birth = "923.1.1"
-	}
-	956.1.1 = {
-		dynasty_house = house_british_isles_ruairc #Ua Ruairc
-	}
-	967.7.1 = {
-		death = "967.7.1"
-	}
-}
-83537 = {
-	name = "A_ed"
-	dynasty_house = house_british_isles_ruairc
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	father = 83536 #Fergal mac Airt
-	957.1.1 = {
-		birth = "957.1.1"
-	}
-	1015.7.1 = {
-		death = "1015.7.1"
-	}
-}
-83538 = {
-	name = "Sihtric"
-	dynasty_house = house_british_isles_ruairc
-	martial = 4
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 214022 #Tigearnan Mór Ua Ruairc
-	mother = 83159
-	1136.1.1 = {
-		birth = "1136.1.1"
-	}
-	1165.7.1 = {
-		death = "1165.7.1"
-	}
-}
-83548 = {
-	name = "Fergal"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 1004 #Domnall mac Tigernáin
-	1097.1.1 = {
-		birth = "1097.1.1"
-	}
-	1157.7.1 = {
-		death = "1157.7.1"
-	}
-}
-83549 = {
-	name = "Gilla-Braite"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 1004 #Domnall mac Tigernáin
-	1099.1.1 = {
-		birth = "1099.1.1"
-	}
-	1125.7.1 = {
-		death = "1125.7.1"
-	}
-}
+
+
+
+
+
+
+
+
+
+
 83594 = {
 	name = "Diarmait"
 	dynasty_house = house_british_isles_neill
@@ -9100,9 +10790,9 @@
 		death = "923.1.1"
 	}
 }
+
 165004 = {
 	name = "FlannacA_n" #mac Conaing
-	# AKA: Flannacán, King of Brega
 	dynasty_house = house_british_isles_neill
 	martial = 5
 	diplomacy = 8
@@ -9123,6 +10813,7 @@
 		death = "896.1.1"
 	}
 }
+
 165005 = {
 	name = "MA_el_Finnia"
 	# AKA: Máel Finnia
@@ -9142,6 +10833,7 @@
 		death = "903.1.1"
 	}
 }
+
 165006 = {
 	name = "MA_el_Mithig"
 	# AKA: Máel Mithig
@@ -9165,6 +10857,7 @@
 		death = "919.1.1"
 	}
 }
+
 165008 = {
 	name = "O_engus" #Óengus mac Flann Sinna
 	dynasty_house = house_british_isles_neill
@@ -9327,6 +11020,7 @@
 		death = "868.1.1"
 	}
 }
+
 165017 = {
 	name = "Domnall_Dabaill" #Domnall Dabaill mac Áed Findliath
 	dynasty_house = house_british_isles_neill
@@ -9382,6 +11076,13 @@
 		death = "867.1.1"
 	}
 }
+
+
+
+
+
+
+
 166000 = {
 	name = "Duach"
 	dynasty = 1040000
@@ -9804,6 +11505,7 @@
 		death = "940.1.1"
 	}
 }
+
 166030 = {
 	name = "Diarmait"
 	dynasty_house = house_british_isles_dalbirn
@@ -10510,6 +12212,12 @@
 		death = "1030.1.1"
 	}
 }
+
+
+
+
+
+
 166109 = {
 	name = "Tighearnach"
 	dynasty = 14116
@@ -10621,60 +12329,9 @@
 		death = "982.1.1"
 	}
 }
-166117 = {
-	name = "Flann"
-	dynasty_house = house_british_isles_briain
-	martial = 5
-	diplomacy = 4
-	intrigue = 6
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 900
-	mother = 166116
-	975.1.1 = {
-		birth = "975.1.1"
-	}
-	1014.4.23 = {
-		death = "1014.4.23"
-	}
-}
-166118 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 4
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 900
-	mother = 166116
-	980.1.1 = {
-		birth = "980.1.1"
-	}
-	1014.4.23 = {
-		death = "1014.4.23"
-	}
-}
-166119 = {
-	name = "Sadb"
-	female = yes
-	dynasty_house = house_british_isles_briain
-	religion = "catholic"
-	culture = "irish"
-	trait = beauty_good_1
-	father = 900
-	mother = 166116
-	970.1.1 = {
-		birth = "970.1.1"
-	}
-	1048.1.1 = {
-		death = "1048.1.1"
-	}
-}
+
+
+
 166120 = {
 	name = "MA_el-Muad"
 	dynasty = 9228
@@ -10747,75 +12404,11 @@
 		death = "1009.1.1"
 	}
 }
-166125 = {
-	name = "Dub_Essa"
-	female = yes
-	dynasty_house = house_british_isles_briain
-	religion = "catholic"
-	culture = "irish"
-	father = 900
-	mother = 166124
-	1006.1.1 = {
-		birth = "1006.1.1"
-	}
-	1052.1.1 = {
-		death = "1052.1.1"
-	}
-}
-166126 = {
-	name = "BE_binn"
-	female = yes
-	dynasty_house = house_british_isles_briain
-	religion = "catholic"
-	culture = "irish"
-	disallow_random_traits = yes
-	trait = patient
-	trait = cynical
-	trait = brave
-	trait = education_intrigue_3
-	father = 900
-	mother = 166123
-	989.1.1 = {
-		birth = "989.1.1"
-	}
-	1073.1.1 = {
-		death = "1073.1.1"
-	}
-}
-166127 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_neillnoigiallaich
-	martial = 5
-	diplomacy = 4
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 7253
-	mother = 166126
-	1008.1.1 = {
-		birth = "1008.1.1"
-	}
-	1027.1.1 = {
-		death = "1027.1.1"
-	}
-}
-166128 = {
-	name = "Blanaid" #Supposed wife of Malcolm II by author Morgan Llywelyn
-	female = yes
-	dynasty_house = house_british_isles_briain
-	religion = "catholic"
-	culture = "irish"
-	trait = beauty_good_1
-	father = 900
-	mother = 166116
-	962.9.1 = {
-		birth = "962.9.1"
-	}
-	1000.1.1 = {
-		death = "1000.1.1"
-	}
-}
+
+
+
+
+
 166129 = {
 	name = "Fedlimid"
 	dynasty_house = house_british_isles_neill
@@ -10832,6 +12425,7 @@
 		death = "540.1.1"
 	}
 }
+
 166130 = {
 	name = "Eithne"
 	female = yes
@@ -11056,9 +12650,8 @@
 		death = "341.7.1"
 	}
 }
-83600 = {
+83600 = { #Debated existence, and probably part of the Clanna Dergthened "dynasty"
 	name = "EO_gan_Taidlech" #AKA Mug Nuadat
-	dynasty_house = house_british_isles_eoganachta
 	religion = "pagan"
 	culture = "irish"
 	140.1.1 = {
@@ -11068,9 +12661,8 @@
 		death = "200.1.1"
 	}
 }
-83601 = {
+83601 = { #Probably part of the Clanna Dergthened "dynasty"
 	name = "Ailill_O_lomm"
-	dynasty_house = house_british_isles_eoganachta
 	father = 83600
 	religion = "pagan"
 	culture = "irish"
@@ -11084,11 +12676,12 @@
 		death = "240.1.1"
 	}
 }
+
 83603 = {
 	name = "EO_gan_MO_r"
 	father = 83601
 	mother = 83602
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003 
 	religion = "pagan"
 	culture = "irish"
 	197.1.1 = {
@@ -11101,7 +12694,7 @@
 83604 = {
 	name = "Fiachu_Mullethan"
 	father = 83603
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003 
 	religion = "pagan"
 	culture = "irish"
 	220.1.1 = {
@@ -11114,7 +12707,7 @@
 83605 = {
 	name = "Aillil_Fland_Becc"
 	father = 83604
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003 
 	religion = "pagan"
 	culture = "irish"
 	250.1.1 = {
@@ -11127,7 +12720,7 @@
 83606 = {
 	name = "Luigthech"
 	father = 83605
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003 
 	religion = "pagan"
 	culture = "irish"
 	300.1.1 = {
@@ -11140,7 +12733,7 @@
 83607 = {
 	name = "Conall_Corc"
 	father = 83606
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003 
 	religion = "pagan"
 	culture = "irish"
 	340.1.1 = {
@@ -11153,7 +12746,7 @@
 83608 = {
 	name = "Nad-Froich"
 	father = 83607
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003 
 	religion = "pagan"
 	culture = "irish"
 	380.1.1 = {
@@ -11166,7 +12759,7 @@
 83609 = {
 	name = "O_engus"
 	father = 83608
-	dynasty_house = house_british_isles_eoganachta
+	dynasty= 100003 
 	religion = "catholic"
 	culture = "irish"
 	445.1.1 = {
@@ -11484,6 +13077,7 @@
 		death = "812.1.1"
 	}
 }
+
 83634 = {
 	name = "GnA_thnat"
 	father = 83633 #Feidlimid son of Crimthann
@@ -11969,6 +13563,7 @@
 		death = "912.1.1"
 	}
 }
+
 83671 = {
 	name = "LA_egaire"
 	father = 83669
@@ -12043,6 +13638,7 @@
 		death = "902.1.1"
 	}
 }
+
 83677 = {
 	name = "FurudrA_n"
 	father = 83676
@@ -12254,7 +13850,7 @@
 83693 = {
 	name = "Mac-Cass"
 	father = 83607 #Conall Corc
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003
 	religion = "pagan"
 	culture = "irish"
 	384.1.1 = {
@@ -12267,7 +13863,7 @@
 83694 = {
 	name = "Echu"
 	father = 83693
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003
 	religion = "pagan"
 	culture = "irish"
 	430.1.1 = {
@@ -12751,6 +14347,7 @@
 		death = "936.1.1"
 	}
 }
+
 83733 = {
 	name = "Dub-dA_-Bairenn"
 	father = 83732
@@ -12780,7 +14377,7 @@
 83735 = {
 	name = "Ailill"
 	father = 83608 #Nad Froich
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003
 	religion = "pagan"
 	culture = "irish"
 	440.1.1 = {
@@ -12793,7 +14390,7 @@
 83736 = {
 	name = "Crimthann"
 	father = 83735 #Ailill son of Nad Froich
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003
 	religion = "catholic"
 	culture = "irish"
 	460.1.1 = {
@@ -12806,7 +14403,7 @@
 83737 = {
 	name = "E_ndae"
 	father = 83736
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003
 	religion = "catholic"
 	culture = "irish"
 	480.1.1 = {
@@ -13358,7 +14955,7 @@
 83778 = {
 	name = "Coirpe_Luachra"
 	father = 83607 #Conall Corcc
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003
 	religion = "pagan"
 	culture = "irish"
 	400.1.1 = {
@@ -13371,7 +14968,7 @@
 83779 = {
 	name = "Maithne"
 	father = 83778
-	dynasty_house = house_british_isles_eoganachta
+	dynasty = 100003
 	religion = "pagan"
 	culture = "irish"
 	430.1.1 = {
@@ -13567,8 +15164,8 @@
 		death = "874.1.1"
 	}
 }
-# Bishops/Abbots of Iona and Cenel Conail fixes
 
+# Bishops/Abbots of Iona and Cenel Conail fixes
 166334 = {
 	name = "Brenan"
 	dynasty_house = house_british_isles_neill
@@ -13582,6 +15179,7 @@
 		death = "550.1.1"
 	}
 }
+
 166335 = {
 	name = "BaithE_ne"
 	dynasty_house = house_british_isles_neill
@@ -13600,6 +15198,7 @@
 		give_nickname = nick_the_wise
 	}
 }
+
 166336 = {
 	name = "Feradach"
 	dynasty_house = house_british_isles_neill
@@ -13613,6 +15212,7 @@
 		death = "595.1.1"
 	}
 }
+
 166337 = {
 	name = "LasrE_n"
 	dynasty_house = house_british_isles_neill
@@ -13900,6 +15500,7 @@
 		death = "609.1.1"
 	}
 }
+
 166358 = {
 	name = "Mael-Tuile"
 	dynasty_house = house_british_isles_neill
@@ -13913,6 +15514,7 @@
 		death = "632.1.1"
 	}
 }
+
 166359 = {
 	name = "Bresal"
 	dynasty_house = house_british_isles_neill
@@ -13926,6 +15528,7 @@
 		death = "644.1.1"
 	}
 }
+
 166360 = {
 	name = "Dungal"
 	dynasty_house = house_british_isles_neill
@@ -13952,6 +15555,7 @@
 		death = "502.1.1"
 	}
 }
+
 166362 = {
 	name = "Dungal"
 	dynasty_house = house_british_isles_neill
@@ -13978,6 +15582,7 @@
 		death = "563.1.1"
 	}
 }
+
 166365 = {
 	name = "FA_ilbe"
 	dynasty_house = house_british_isles_neill
@@ -14018,6 +15623,7 @@
 		death = "604.1.1"
 	}
 }
+
 166370 = {
 	name = "Conall-CO_el"
 	dynasty_house = house_british_isles_neill
@@ -14231,6 +15837,7 @@
 		death = "865.1.1"
 	}
 }
+
 166387 = {
 	name = "Feradach"
 	religion = "catholic"
@@ -14715,6 +16322,7 @@
 		death = "1121.1.1"
 	}
 }
+
 184118 = {
 	name = "Conchobar"
 	dynasty = 9204
@@ -15052,6 +16660,11 @@
 		death = "250.1.1"
 	}
 }
+
+
+
+
+
 83578 = {
 	name = "Eochaid" #Eochaid Buide
 	dynasty_house = house_british_isles_gabrain
@@ -15171,7 +16784,11 @@
 		death = "791.1.1"
 	}
 }
+
+
+
 166473 = {
+
 	name = "Conaing"
 	dynasty_house = house_british_isles_gabrain
 	martial = 7
@@ -15835,6 +17452,8 @@
 		death = yes
 	}
 }
+
+
 166512 = {
 	name = "EO_ganA_n"
 	dynasty_house = house_british_isles_gabrain
@@ -15852,6 +17471,7 @@
 		death = yes
 	}
 }
+
 166572 = {
 	name = "Dargart"
 	dynasty = 1040013
@@ -15886,6 +17506,14 @@
 		death = yes
 	}
 }
+
+
+
+
+
+
+
+
 160280 = {
 	name = "Cumne" #
 	female = yes
@@ -15969,6 +17597,7 @@
 		death = "778.1.1"
 	}
 }
+
 160248 = {
 	name = "Conaing" #mac Amalgado
 	dynasty_house = house_british_isles_neill
@@ -16098,11 +17727,14 @@
 		death = yes
 	}
 }
+
+
+
+
 #######################################################
 # POST-NORMAN INVASION - (Died after 1167.1.1)
 #######################################################
 #	Catholicism is applied for almost everyone in this date bracket.
-
 214007 = {
 	name = "Muirchertach"
 	dynasty_house = house_british_isles_lochlainn
@@ -16140,88 +17772,11 @@
 		death = "1241.7.1"
 	}
 }
-214020 = {
-	name = "A_ed"
-	dynasty_house = house_british_isles_ruairc
-	martial = 4
-	diplomacy = 3
-	intrigue = 3
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = clubfooted
-	trait = education_martial_2
-	father = 214021 #Máél-Sechlain mac Tigernan Móir Ua Ruairc
-	1162.1.1 = {
-		birth = "1162.1.1"
-	}
-	1185.1.2 = {
-		add_spouse = 214029
-	}
-	1187.7.1 = {
-		death = "1187.7.1"
-	}
-}
-214022 = {
-	name = "TigernA_n" #Tigernan Mór Ua Ruairc
-	dynasty_house = house_british_isles_ruairc
-	martial = 8
-	diplomacy = 9
-	intrigue = 8
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = diligent
-	trait = education_martial_3
-	father = 214024 #Áed mac Domnaill
-	1107.1.1 = {
-		birth = "1107.1.1"
-	}
-	1172.1.1 = {
-		death = "1172.1.1"
-	}
-}
-214024 = {
-	name = "A_ed"
-	dynasty_house = house_british_isles_ruairc
-	martial = 4
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 7287 #Domnall mac Ualgairg
-	1064.1.1 = {
-		birth = "1064.1.1"
-	}
-	1122.7.1 = {
-		death = "1122.7.1"
-	}
-}
-214025 = {
-	name = "Cathal"
-	# AKA: Cathal Liath
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 4
-	intrigue = 2
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = just
-	trait = education_martial_1
-	father = 214022 #Tigearnan Mór Ua Ruairc
-	1142.1.1 = {
-		birth = "1142.1.1"
-	}
-	1160.1.1 = {
-		add_spouse = 214026
-	}
-	1180.7.1 = {
-		death = "1180.7.1"
-	}
-}
+
+
+
+
+
 214026 = {
 	name = "DerbA_il"
 	# AKA: Derbail
@@ -16242,48 +17797,8 @@
 		death = "1194.1.2"
 	}
 }
-214027 = {
-	name = "Ualgarg"
-	dynasty_house = house_british_isles_ruairc
-	martial = 7
-	diplomacy = 4
-	intrigue = 7
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = diligent
-	trait = generous
-	trait = education_diplomacy_3
-	father = 214025 #Cathal Liath
-	mother = 214026
-	1166.1.1 = {
-		birth = "1166.1.1"
-	}
-	1231.7.1 = {
-		death = "1231.7.1"
-	}
-}
-214028 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_ruairc
-	martial = 7
-	diplomacy = 4
-	intrigue = 2
-	stewardship = 3
-	religion = "catholic"
-	culture = "irish"
-	trait = lustful
-	trait = gluttonous
-	trait = education_martial_2
-	father = 214025 #Cathal Liath
-	mother = 214026
-	1168.1.1 = {
-		birth = "1168.1.1"
-	}
-	1218.1.2 = {
-		death = "1218.1.2"
-	}
-}
+
+
 214029 = {
 	name = "U_na"
 	# AKA: una
@@ -16401,6 +17916,7 @@
 		death = "1202.7.1"
 	}
 }
+
 214552 = {
 	name = "Dervorgilla"
 	female = yes
@@ -16462,148 +17978,13 @@
 		death = "1189.1.2"
 	}
 }
-214580 = {
-	name = "Domnall" #AKA Domnall Mór
-	dynasty_house = house_british_isles_briain
-	martial = 5
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = calm
-	trait = education_intrigue_2
-	father = 214590
-	mother = 332038
-	1137.1.1 = {
-		birth = "1137.1.1"
-	}
-	1155.1.1 = {
-		add_spouse = 214554
-	}
-	1194.7.1 = {
-		death = "1194.7.1"
-	}
-}
-214581 = {
-	name = "Muirchertach" #AKA: Muirchertach Finn mac Domnaill
-	dynasty_house = house_british_isles_briain
-	martial = 5
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 8
-	religion = "catholic"
-	culture = "irish"
-	trait = lazy
-	trait = education_learning_3
-	father = 214580
-	mother = 214554
-	1157.1.1 = {
-		birth = "1157.1.1"
-	}
-	1241.7.1 = {
-		death = "1241.7.1"
-	}
-}
-214582 = {
-	name = "Conchobar" #AKA: Conchobar Ruad mac Domnaill
-	dynasty_house = house_british_isles_briain
-	martial = 5
-	diplomacy = 5
-	intrigue = 8
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = honest
-	trait = education_intrigue_1
-	father = 214580
-	mother = 214554
-	1159.1.1 = {
-		birth = "1159.1.1"
-	}
-	1203.7.1 = {
-		death = "1203.7.1"
-	}
-}
-214583 = {
-	name = "Donnchad" #AKA: Donnchad Cairprech mac Domnaill
-	dynasty_house = house_british_isles_briain
-	martial = 8
-	diplomacy = 8
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = education_learning_2
-	father = 214580
-	mother = 214554
-	1161.1.1 = {
-		birth = "1161.1.1"
-	}
-	1242.7.1 = {
-		death = "1242.7.1"
-	}
-}
-214584 = {
-	name = "Domnall" #AKA: Domnall Connachtach mac Domnaill
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = cynical
-	trait = brave
-	trait = education_learning_2
-	father = 214580
-	mother = 214554
-	1163.1.1 = {
-		birth = "1163.1.1"
-	}
-	1213.7.1 = {
-		death = "1213.7.1"
-	}
-}
-214585 = {
-	name = "Muirchertach" #AKA: Muirchertach Dall mac Domnaill
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 8
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	trait = generous
-	trait = education_martial_3
-	father = 214580
-	mother = 214554
-	1165.1.1 = {
-		birth = "1165.1.1"
-	}
-	1215.7.1 = {
-		death = "1215.7.1"
-	}
-}
-214589 = {
-	name = "ConstantI_n" #Bishop of Killaloe
-	dynasty_house = house_british_isles_briain
-	martial = 3
-	diplomacy = 6
-	intrigue = 8
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = lisping
-	trait = education_learning_3
-	father = 214590
-	1140.1.1 = {
-		birth = "1140.1.1"
-	}
-	1194.7.1 = {
-		death = "1194.7.1"
-	}
-}
+
+
+
+
+
+
+
 214600 = {
 	name = "Domnall"
 	# AKA: Domnal Mór na Corra
@@ -16880,26 +18261,7 @@
 		death = "1092.1.2"
 	}
 }
-454140 = {
-	name = "Toirrdelbach"
-	dynasty_house = house_british_isles_briain
-	martial = 5
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = brave
-	trait = arrogant
-	trait = education_martial_2
-	father = 83341 #Tadg of Cáeluisce
-	1250.1.1 = {
-		birth = "1250.1.1"
-	}
-	1306.8.1 = {
-		death = "1306.8.1"
-	}
-}
+
 454141 = {
 	name = "Edaouoin"
 	female = yes
@@ -16918,187 +18280,14 @@
 		death = "1344.1.1"
 	}
 }
-454142 = {
-	name = "Mathgamain"
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = honest
-	trait = wrathful
-	trait = education_martial_2
-	father = 454205
-	mother = 454141
-	1313.1.1 = {
-		birth = "1313.1.1"
-	}
-	1369.7.1 = {
-		death = "1369.7.1"
-	}
-}
-454143 = {
-	name = "Toirrdelbach"
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = humble
-	trait = greedy
-	trait = education_martial_2
-	father = 454205
-	mother = 454141
-	1320.1.1 = {
-		birth = "1320.1.1"
-	}
-	1398.7.1 = {
-		death = "1398.7.1"
-	}
-}
-454144 = {
-	name = "Tadg"
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 454205
-	mother = 454141
-	1330.1.1 = {
-		birth = "1330.1.1"
-	}
-	1380.7.1 = {
-		death = "1380.7.1"
-	}
-}
-454145 = {
-	name = "Diarmait"
-	dynasty_house = house_british_isles_briain
-	martial = 5
-	diplomacy = 5
-	intrigue = 9
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = chaste
-	trait = education_martial_2
-	father = 454140 #Toirrdelbach mac Taidg
-	1287.1.1 = {
-		birth = "1287.1.1"
-	}
-	1364.7.1 = {
-		death = "1364.7.1"
-	}
-}
-454146 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = deceitful
-	trait = arrogant
-	trait = education_martial_2
-	father = 454140 #Toirrdelbach mac Taidg
-	1289.1.1 = {
-		birth = "1289.1.1"
-	}
-	1328.7.1 = {
-		death = "1328.7.1"
-	}
-}
-454160 = {
-	name = "Ualgarg" #Ualgarg mac Domnaill Charraigh
-	dynasty_house = house_british_isles_ruairc
-	martial = 7
-	diplomacy = 7
-	intrigue = 8
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = greedy
-	trait = arbitrary
-	trait = education_martial_3
-	father = 454161
-	1295.1.1 = {
-		birth = "1295.1.1"
-	}
-	1317.1.1 = {
-		add_spouse = 454164
-	}
-	1346.7.1 = {
-		death = "1346.7.1"
-	}
-}
-454161 = {
-	name = "Domnall" #AKA: Domnall Carrach
-	dynasty_house = house_british_isles_ruairc
-	martial = 7
-	diplomacy = 7
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = education_martial_2
-	father = 83562
-	1255.1.1 = {
-		birth = "1255.1.1"
-	}
-	1311.7.1 = {
-		death = "1311.7.1"
-	}
-}
-454162 = {
-	name = "Flaithbertach" #Flaithbertach mac Domnaill Charraigh
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = greedy
-	trait = just
-	trait = education_martial_2
-	father = 454161
-	1308.1.1 = {
-		birth = "1308.1.1"
-	}
-	1353.7.1 = {
-		death = "1353.7.1"
-	}
-}
-454163 = {
-	name = "Cathal" #Cathal in Toísech
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	trait = humble
-	trait = lustful
-	trait = education_martial_2
-	father = 454161
-	1311.1.1 = {
-		birth = "1311.1.1"
-	}
-	1361.1.1 = {
-		death = "1361.1.1"
-	}
-}
+
+
+
+
+
+
+
+
 454164 = {
 	name = "CatrI_ona"
 	# AKA: Catriona
@@ -17119,24 +18308,7 @@
 		death = "1357.1.1"
 	}
 }
-454165 = {
-	name = "TigernA_n" #Tigernán Mór mac Ualgairg
-	dynasty_house = house_british_isles_ruairc
-	martial = 7
-	diplomacy = 7
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 454160
-	mother = 454164
-	1336.1.1 = {
-		birth = "1336.1.1"
-	}
-	1418.7.1 = {
-		death = "1418.7.1"
-	}
-}
+
 454202 = {
 	name = "Ailbe"
 	female = yes
@@ -17174,30 +18346,9 @@
 		death = "1369.1.1"
 	}
 }
-454205 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	trait = generous
-	trait = brave
-	trait = stuttering
-	trait = education_martial_2
-	father = 454140 #Toirrdelbach mac Taidg
-	1285.1.1 = {
-		birth = "1285.1.1"
-	}
-	1309.1.2 = {
-		add_spouse = 454141
-	}
-	1343.7.1 = {
-		death = "1343.7.1"
-	}
-}
+
+
+
 83000 = {
 	name = "Donnchadh"
 	dynasty = 9200
@@ -17617,7 +18768,6 @@
 		death = "1258.7.1"
 	}
 }	
-
 83059 = {
 	name = "Domnall"
 	dynasty = 4043
@@ -17635,7 +18785,6 @@
 		death = "1281.7.1"
 	}
 }	
-
 83060 = {
 	name = "Ruaidri"
 	dynasty_house = house_british_isles_canannain
@@ -17693,8 +18842,6 @@
 		death = "1303.7.1"
 	}
 }	
-
-
 83063 = {
 	name = "Conchobar"
 	dynasty = 4043
@@ -17712,7 +18859,6 @@
 		death = "1342.7.1"
 	}
 }	
-
 83064 = {
 	name = "Feidlimid"
 	dynasty = 4043
@@ -17730,7 +18876,6 @@
 		death = "1356.7.1"
 	}
 }		
-
 83065 = {
 	name = "Niall"
 	dynasty = 4043
@@ -17748,7 +18893,6 @@
 		death = "1348.7.1"
 	}
 }		
-
 83066 = {
 	name = "Donnchad"
 	dynasty = 4043
@@ -17766,7 +18910,6 @@
 		death = "1346.7.1"
 	}
 }		
-
 83067 = {
 	name = "Art"
 	dynasty = 4043
@@ -17784,7 +18927,6 @@
 		death = "1333.7.1"
 	}
 }		
-
 83068 = {
 	name = "Magnus"
 	dynasty = 4043
@@ -17802,7 +18944,6 @@
 		death = "1363.7.1"
 	}
 }		
-
 83069 = {
 	name = "A_engus"
 	dynasty = 4043
@@ -17820,7 +18961,6 @@
 		death = "1352.7.1"
 	}
 }	
-
 83070 = {
 	name = "SeaA_n"
 	dynasty = 4043
@@ -17838,7 +18978,6 @@
 		death = "1380.7.1"
 	}
 }		
-
 83071 = {
 	name = "Toirrdelbach"
 	dynasty = 4043
@@ -17969,6 +19108,7 @@
 		death = "1234.7.1"
 	}
 }
+
 83084 = {
 	name = "Ruaidri"
 	dynasty_house = house_british_isles_neillnoigiallaich
@@ -18489,6 +19629,10 @@
 		death = "1187.7.1"
 	}
 }
+
+
+
+
 83195 = {
 	name = "Domnall"
 	dynasty = 9209
@@ -18752,23 +19896,7 @@
 		death = "1215.7.1"
 	}
 }
-83217 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_gilla_patraic
-	martial = 4
-	diplomacy = 7
-	intrigue = 4
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83216
-	1123.1.1 = {
-		birth = "1123.1.1"
-	}
-	1176.7.1 = {
-		death = "1176.7.1"
-	}
-}
+
 83226 = {
 	name = "Gilla-PA_traic"
 	dynasty = 9211
@@ -19002,6 +20130,7 @@
 		death = "1181.7.1"
 	}
 }
+
 83261 = {
 	name = "CellachA_n"
 	dynasty_house = house_british_isles_carthaigh
@@ -19019,6 +20148,7 @@
 		death = "1205.7.1"
 	}
 }
+
 83262 = {
 	name = "Muirchertach"
 	dynasty_house = house_british_isles_carthaigh
@@ -19568,298 +20698,24 @@
 		death = "1414.7.1"
 	}
 }
-83336 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 214590
-	1138.1.1 = {
-		birth = "1138.1.1"
-	}
-	1168.7.1 = {
-		death = "1168.7.1"
-	}
-}
-83337 = {
-	name = "Brian"
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 5
-	intrigue = 2
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 214590
-	1142.1.1 = {
-		birth = "1142.1.1"
-	}
-	1168.7.1 = {
-		death = "1168.7.1"
-	}
-}
-83338 = {
-	name = "Toirrdelbach"
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 3
-	religion = "catholic"
-	culture = "irish"
-	father = 214583 #Donnchad Cairprech mac Domnaill
-	1189.1.1 = {
-		birth = "1189.1.1"
-	}
-	1243.7.1 = {
-		death = "1243.7.1"
-	}
-}
-83339 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 3
-	religion = "catholic"
-	culture = "irish"
-	father = 214583 #Donnchad Cairprech mac Domnaill
-	1192.1.1 = {
-		birth = "1192.1.1"
-	}
-	1241.7.1 = {
-		death = "1241.7.1"
-	}
-}
-83340 = {
-	name = "Conchobar" #Conchobar na Siudaine
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 214583 #Donnchad Cairprech mac Domnaill
-	1195.1.1 = {
-		birth = "1195.1.1"
-	}
-	1268.5.22 = {
-		death = "1268.5.22"
-	}
-}
-83341 = {
-	name = "Tadg" #Tadg of Cáeluisce
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83340 #Conchobar na Siudaine
-	1235.1.1 = {
-		birth = "1235.1.1"
-	}
-	1259.5.22 = {
-		death = "1259.5.22"
-	}
-}
-83342 = {
-	name = "SeoA_n"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83340 #Conchobar na Siudaine
-	1238.1.1 = {
-		birth = "1238.1.1"
-	}
-	1268.7.1 = {
-		death = "1268.7.1"
-	}
-}
-83343 = {
-	name = "Brian" #Brian Ruad
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83340 #Conchobar na Siudaine
-	1240.1.1 = {
-		birth = "1240.1.1"
-	}
-	1277.5.11 = {
-		death = "1277.5.11"
-	}
-}
-83344 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	father = 83343 #Brian Ruad mac Conchobair
-	1259.1.1 = {
-		birth = "1259.1.1"
-	}
-	1284.7.1 = {
-		death = "1284.7.1"
-	}
-}
-83345 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	father = 83343 #Brian Ruad mac Conchobair
-	1261.1.1 = {
-		birth = "1261.1.1"
-	}
-	1312.7.1 = {
-		death = "1312.7.1"
-	}
-}
-83346 = {
-	name = "Toirrdelbach" #Toirrdelbach Óc
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83343 #Brian Ruad mac Conchobair
-	1263.1.1 = {
-		birth = "1263.1.1"
-	}
-	1305.7.1 = {
-		death = "1305.7.1"
-	}
-}
-83347 = {
-	name = "Diarmait" #Diarmait Cléirech
-	dynasty_house = house_british_isles_briain
-	martial = 7
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 7
-	religion = "catholic"
-	culture = "irish"
-	father = 83344 #Donnchad mac Briain Ruaid
-	1278.1.1 = {
-		birth = "1278.1.1"
-	}
-	1313.7.1 = {
-		death = "1313.7.1"
-	}
-}
-83348 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_briain
-	martial = 5
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83345 #Domnall mac Briain Ruaid
-	1282.1.1 = {
-		birth = "1282.1.1"
-	}
-	1317.7.1 = {
-		death = "1317.7.1"
-	}
-}
-83349 = {
-	name = "Brian" #Brian Bán
-	dynasty_house = house_british_isles_briain
-	martial = 8
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 8
-	religion = "catholic"
-	culture = "irish"
-	father = 83345 #Domnall mac Briain Ruaid
-	1286.1.1 = {
-		birth = "1286.1.1"
-	}
-	1350.7.1 = {
-		death = "1350.7.1"
-	}
-}
-83350 = {
-	name = "Murchad"
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 7
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83349 #Brian Bán
-	1312.1.1 = {
-		birth = "1312.1.1"
-	}
-	1383.7.1 = {
-		death = "1383.7.1"
-	}
-}
-83351 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_briain
-	martial = 6
-	diplomacy = 7
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 454140 #Toirrdelbach mac Taidg
-	1282.1.1 = {
-		birth = "1282.1.1"
-	}
-	1311.7.1 = {
-		death = "1311.7.1"
-	}
-}
-454131 = {  	
-	name = "Margaret"
-	female = yes
-	dynasty_house = house_british_isles_briain
-	martial = 4
-	diplomacy = 8
-	intrigue = 4
-	stewardship = 2
-	religion = "catholic"
-	culture = "irish"
-	trait = generous
-	trait = education_stewardship_1
-	father = 454146
-	1320.1.1 = {
-		birth = "1320.1.1"
-	}
-	1370.1.1 = {
-		death = "1370.1.1"
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 83460 = {
 	name = "Domnall" #Domnall Mór
 	dynasty_house = house_british_isles_conchobair
@@ -19963,6 +20819,7 @@
 		death = "1222.7.1"
 	}
 }
+
 83466 = {
 	name = "MA_el-I_osa" #Máel-Íosa co-arb of Roscommon
 	dynasty_house = house_british_isles_conchobair
@@ -20470,6 +21327,7 @@
 		death = "1250.7.1"
 	}
 }
+
 83495 = {
 	name = "Domnall" #Domnall Irruis
 	dynasty_house = house_british_isles_conchobair
@@ -20487,6 +21345,7 @@
 		death = "1273.7.1"
 	}
 }
+
 83496 = {
 	name = "Matha" #Matha abbot of Boyle
 	dynasty_house = house_british_isles_conchobair
@@ -20964,558 +21823,37 @@
 		death = "1384.7.1"
 	}
 }
-83539 = {
-	name = "A_ed" #Áed Manach 'the monk'
-	dynasty_house = house_british_isles_ruairc
-	martial = 4
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	trait = education_learning_1
-	father = 214022 #Tigearnan Mór Ua Ruairc
-	mother = 83159
-	1138.1.1 = {
-		birth = "1138.1.1"
-	}
-	1171.7.1 = {
-		death = "1171.7.1"
-	}
-}
-83540 = {
-	name = "A_ed"
-	dynasty_house = house_british_isles_ruairc
-	martial = 4
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 214027 #Ualgarg son of Cathal Liath
-	1202.1.1 = {
-		birth = "1202.1.1"
-	}
-	1259.7.1 = {
-		death = "1259.7.1"
-	}
-}
-83541 = {
-	name = "Sihtric" #Sihtric King of Bréifne
-	dynasty_house = house_british_isles_ruairc
-	martial = 4
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 214027 #Ualgarg son of Cathal Liath
-	1204.1.1 = {
-		birth = "1204.1.1"
-	}
-	1257.7.1 = {
-		death = "1257.7.1"
-	}
-}
-83542 = {
-	name = "TigernA_n"
-	dynasty_house = house_british_isles_ruairc
-	martial = 4
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83540 #Áed son of Ualgarg son of Cathal Liath
-	1237.1.1 = {
-		birth = "1237.1.1"
-	}
-	1274.7.1 = {
-		death = "1274.7.1"
-	}
-}
-83543 = {
-	name = "TigernA_n"
-	dynasty_house = house_british_isles_ruairc
-	martial = 6
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 214028 #Domnall son of Cathal Liath
-	1195.1.1 = {
-		birth = "1195.1.1"
-	}
-	1218.7.1 = {
-		death = "1218.7.1"
-	}
-}
-83544 = {
-	name = "Conchobar"
-	dynasty_house = house_british_isles_ruairc
-	martial = 6
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83543 #Tigernán son of Domnall son of Cathal Liath
-	1215.1.1 = {
-		birth = "1215.1.1"
-	}
-	1257.7.1 = {
-		death = "1257.7.1"
-	}
-}
-83545 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_ruairc
-	martial = 7
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83544 #Conchobar son of Tigernán Ua Ruairc
-	1234.1.1 = {
-		birth = "1234.1.1"
-	}
-	1260.7.1 = {
-		death = "1260.7.1"
-	}
-}
-83546 = {
-	name = "Cathal"
-	dynasty_house = house_british_isles_ruairc
-	martial = 6
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83544 #Conchobar son of Tigernán Ua Ruairc
-	1236.1.1 = {
-		birth = "1236.1.1"
-	}
-	1258.7.1 = {
-		death = "1258.7.1"
-	}
-}
-83547 = {
-	name = "Muirchertach"
-	dynasty_house = house_british_isles_ruairc
-	martial = 6
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83544 #Conchobar son of Tigernán Ua Ruairc
-	1238.1.1 = {
-		birth = "1238.1.1"
-	}
-	1260.7.1 = {
-		death = "1260.7.1"
-	}
-}
-83550 = {
-	name = "A_ed"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83549 #Gilla-Braite mac Domnaill maic Tigernáin
-	1117.1.1 = {
-		birth = "1117.1.1"
-	}
-	1176.7.1 = {
-		death = "1176.7.1"
-	}
-}
-83551 = {
-	name = "Donnchad"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83550 #Áed son of Gilla-Braite
-	1156.1.1 = {
-		birth = "1156.1.1"
-	}
-	1201.7.1 = {
-		death = "1201.7.1"
-	}
-}
-83552 = {
-	name = "Cathal" #Cathal Riabach
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83551 #Donnchad son of Áed son of Gilla-Braite
-	1198.1.1 = {
-		birth = "1198.1.1"
-	}
-	1236.7.1 = {
-		death = "1236.7.1"
-	}
-}
-83553 = {
-	name = "Art"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83552 #Cathal Riabach son of Donnchad
-	1218.1.1 = {
-		birth = "1218.1.1"
-	}
-	1275.7.1 = {
-		death = "1275.7.1"
-	}
-}
-83554 = {
-	name = "AmlaI_b"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83553 #Art son of Cathal Riabach son of Donnchad
-	1245.1.1 = {
-		birth = "1245.1.1"
-	}
-	1307.7.1 = {
-		death = "1307.7.1"
-	}
-}
-83555 = {
-	name = "AmlaI_b"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83548 #Fergal son of Domnall son Tigernán
-	1140.1.1 = {
-		birth = "1140.1.1"
-	}
-	1184.7.1 = {
-		death = "1184.7.1"
-	}
-}
-83556 = {
-	name = "Tadg"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83548 #Fergal son of Domnall son Tigernán
-	1142.1.1 = {
-		birth = "1142.1.1"
-	}
-	1175.7.1 = {
-		death = "1175.7.1"
-	}
-}
-83557 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83548 #Fergal son of Domnall son Tigernán
-	1144.1.1 = {
-		birth = "1144.1.1"
-	}
-	1182.7.1 = {
-		death = "1182.7.1"
-	}
-}
-83558 = {
-	name = "Congalach"
-	dynasty_house = house_british_isles_ruairc
-	martial = 4
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83548 #Fergal son of Domnall son Tigernán
-	1146.1.1 = {
-		birth = "1146.1.1"
-	}
-	1207.7.1 = {
-		death = "1207.7.1"
-	}
-}
-83559 = {
-	name = "Niall"
-	dynasty_house = house_british_isles_ruairc
-	martial = 6
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83558 #Congalach son of Fergal
-	1187.1.1 = {
-		birth = "1187.1.1"
-	}
-	1228.7.1 = {
-		death = "1228.7.1"
-	}
-}
-83560 = {
-	name = "Domnall" #Domnall Gilla-in-Imme
-	dynasty_house = house_british_isles_ruairc
-	martial = 4
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 83559 #Niall son of Congalach son of Fergal
-	1211.1.1 = {
-		birth = "1211.1.1"
-	}
-	1276.7.1 = {
-		death = "1276.7.1"
-	}
-}
-83561 = {
-	name = "Art"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83557 #Domnall son of Fergal
-	1181.1.1 = {
-		birth = "1181.1.1"
-	}
-	1210.7.1 = {
-		death = "1210.7.1"
-	}
-}
-83562 = {
-	name = "AmlaI_b"
-	dynasty_house = house_british_isles_ruairc
-	martial = 7
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 8
-	religion = "catholic"
-	culture = "irish"
-	trait = lustful
-	trait = education_martial_2
-	father = 83561 #Art son of Domnall son of Fergal
-	1202.1.1 = {
-		birth = "1202.1.1"
-	}
-	1258.7.1 = {
-		death = "1258.7.1"
-	}
-}
-83563 = {
-	name = "Art_MO_r"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83561 #Art son of Domnall son of Fergal
-	1204.1.1 = {
-		birth = "1204.1.1"
-	}
-	1230.7.1 = {
-		death = "1230.7.1"
-	}
-}
-83564 = {
-	name = "Art_Becc"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 4
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83561 #Art son of Domnall son of Fergal
-	1207.1.1 = {
-		birth = "1207.1.1"
-	}
-	1260.7.1 = {
-		death = "1260.7.1"
-	}
-}
-83565 = {
-	name = "Lochlann"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83562 #Amlaíb mac Airt
-	1244.7.1 = {
-		birth = "1244.7.1"
-	}
-	1260.1.1 = {
-		death = "1260.1.1"
-	}
-}
-83566 = {
-	name = "Conchobar" #Conchobar Buide
-	dynasty_house = house_british_isles_ruairc
-	martial = 7
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83562 #Amlaíb mac Airt
-	1245.7.1 = {
-		birth = "1245.7.1"
-	}
-	1273.7.1 = {
-		death = "1273.7.1"
-	}
-}
-83567 = {
-	name = "MA_el-Sechlainn"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 4
-	intrigue = 5
-	stewardship = 4
-	religion = "catholic"
-	culture = "irish"
-	father = 83562 #Amlaíb mac Airt
-	1246.7.1 = {
-		birth = "1246.7.1"
-	}
-	1274.1.1 = {
-		death = "1274.1.1"
-	}
-}
-83568 = {
-	name = "Domnall" #Domnall Óc
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 83562 #Amlaíb mac Airt
-	1248.7.1 = {
-		birth = "1248.7.1"
-	}
-	1274.1.1 = {
-		death = "1274.1.1"
-	}
-}
-83569 = {
-	name = "Domnall"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "irish"
-	father = 454160 #Ualgarg mac Domnaill
-	mother = 454164
-	1318.1.1 = {
-		birth = "1318.1.1"
-	}
-	1340.7.1 = {
-		death = "1340.7.1"
-	}
-}
-83570 = {
-	name = "A_ed" #Aodh or Áed Bán
-	dynasty_house = house_british_isles_ruairc
-	martial = 6
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 454160 #Ualgarg mac Domnaill
-	mother = 454164
-	1320.1.1 = {
-		birth = "1320.1.1"
-	}
-	1352.7.1 = {
-		death = "1352.7.1"
-	}
-}
-83571 = {
-	name = "Tadg" #Tadg na gCáer
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = "irish"
-	father = 454160 #Ualgarg mac Domnaill
-	mother = 454164
-	1322.1.1 = {
-		birth = "1322.1.1"
-	}
-	1376.7.1 = {
-		death = "1376.7.1"
-	}
-}
-83572 = {
-	name = "Fergal"
-	dynasty_house = house_british_isles_ruairc
-	martial = 5
-	diplomacy = 7
-	intrigue = 4
-	stewardship = 3
-	religion = "catholic"
-	culture = "irish"
-	father = 454160 #Ualgarg mac Domnaill
-	mother = 454164
-	1328.1.1 = {
-		birth = "1328.1.1"
-	}
-	1350.7.1 = {
-		death = "1350.7.1"
-	}
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 166079 = {
 	name = "Muirgius"
 	dynasty = 9216
@@ -21545,6 +21883,7 @@
 		death = "1196.1.1"
 	}
 }
+
 166081 = {
 	name = "Tomaltach"
 	dynasty = 9216
@@ -21681,6 +22020,7 @@
 		death = "1336.1.1"
 	}
 }
+
 166091 = {
 	name = "Conchobar"
 	dynasty = 692

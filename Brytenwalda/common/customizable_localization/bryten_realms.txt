@@ -3523,50 +3523,6 @@ DynastDuchyIrish = {
 	}
 }
 
-DynastyCountyMaleIrish = {
-	type = character
-	text = {
-		trigger = {
-			is_ruler = yes
-			root.top_liege = {
-				culture = {
-					has_cultural_pillar = heritage_west_germanic
-				}
-				OR = {
-					has_primary_title = title:e_britannia
-					has_primary_title = title:k_england
-					has_primary_title = title:k_scotland
-				}
-			}
-		}
-		localization_key = earl_male_holder_irish
-	}
-	text = {
-		trigger = {
-			root.top_liege = {
-				culture = {
-					has_cultural_pillar = heritage_west_germanic
-				}
-				OR = {
-					has_primary_title = title:e_britannia
-					has_primary_title = title:k_england
-					has_primary_title = title:k_scotland
-				}
-			}
-		}
-		localization_key = earl_male_non_holder_irish
-	}
-	text = {
-		trigger = {
-			is_ruler = yes
-		}
-		localization_key = count_male_holder_irish
-	}
-	text = {
-		localization_key = count_male_non_holder_irish
-		fallback = yes
-	}
-}
 CountMaleIrish = {
 	type = character
 	text = {
@@ -3702,13 +3658,5 @@ KingMaleGoid = {
 		fallback = yes
 	}
 }
-
-
-
-
-
-
-
-
 
 
