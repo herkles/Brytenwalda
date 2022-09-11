@@ -428,60 +428,7 @@ embrace_englisk_culture_decision = {# For the King of england
 #############################################
 # Norman England Decisions
 #############################################
-establish_norman_adminstration = {# Establish Norman Adminstration
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
-	ai_check_interval = 60
-	desc = establish_norman_adminstration_desc
 
-	is_shown = {
-		NOT = {# this is a unique decision
-			is_target_in_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:establish_norman_adminstrationn_decision
-			}
-		}
-		has_culture = culture:norman
-		game_start_date >= 1066.09.15 # This is to ensure that the historical Normans do their historical norman things to England.
-	}
-
-	is_valid = {
-		custom_tooltip = {
-			text = capital_in_england_region_tooltip
-			capital_province = { geographical_region = custom_england }
-		}
-		has_culture = culture:norman
-		has_primary_title = title:k_england # Must be the king of england.
-	}
-
-	is_valid_showing_failures_only = {
-		is_imprisoned = no
-		is_available_adult = yes
-		is_at_war = no
-	}
-
-	effect = {
-		save_scope_as = norman_england_king
-		trigger_event = { id = bryten_england.002 }
-		show_as_tooltip = { establish_norman_adminstration_effects = yes } 
-		#Can only be done once
-		add_to_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:establish_norman_adminstrationn_decision
-		}
-		set_global_variable = {
-			name = unavailable_unique_decisions
-			value = scope:norman_england_king
-		}
-	}
-
-	ai_potential = {
-		always = yes
-	}
-
-	ai_will_do = {
-		base = 100
-	}
-}
 #############################################
 # General England Decisions
 #############################################
