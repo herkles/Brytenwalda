@@ -83,6 +83,20 @@ bryten_events_five_yearly_pulse = {
 # Historical Pulse
 #######################################
 bryten_events_historical_pulse = {# for Historical Events
+	events = {
+		#######################################
+		# Norse Conquest Events		
+		#######################################
+		1000 = bryten_england.010	# Northumbria defeats the Vikings		
+		1000 = bryten_england.011	# The Vikings defeat Northumbria		
+
+
+		#######################################
+		# Norman Conquest Events		
+		#######################################
+		1000 = bryten_england.001	# William the Conquerer is crowned as King of England	
+	}
+
 	random_events = {
 		chance_of_no_event = {
 			value = 20
@@ -103,11 +117,7 @@ bryten_events_historical_pulse = {# for Historical Events
 		100 = bryten_england.141	# The Monks bring his body to Durham	
 		100 = bryten_england.142	# Building the tomb for St. Cuthbert.	
 		100 = bryten_england.143	# St. Cuthbert's Gospel of John.	
-
-		#######################################
-		# Norman Conquest Events		
-		#######################################
-		1000 = bryten_england.001	# William the Conquerer is crowned as King of England		
+	
 
 		#######################################
 		# The Evolution of English Culture
@@ -121,3 +131,5 @@ bryten_events_historical_pulse = {# for Historical Events
 		100 = bryten_scotland.001	# Scotland adopts English
 	}
 }
+
+
