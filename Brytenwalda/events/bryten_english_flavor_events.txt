@@ -15,8 +15,10 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 
 	trigger = {
 		this = character:140
-		has_primary_title = title:k_england
+		has_title = title:k_england
 		is_at_war = no # In case Hardrada is still gunning for the throne, Willy will go and fight him first. 
+		NOT = { has_global_variable = william_is_king }
+
 	}
 	
 	immediate = {
@@ -26,6 +28,10 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 		}
 		save_scope_as = norman_england_king
 		establish_norman_adminstration_effects = yes
+		set_global_variable = {
+			name = william_is_king
+			value = yes
+		}
 	}
 
 	option = {# Interesting
@@ -48,12 +54,17 @@ bryten_england.010 = {# Northumbria is victorious
 	}
 
 	trigger = {
-		has_primary_title = title:k_northumbria
-		is_at_war = no # Got to be victorious  
+		has_title = title:k_northumbria
+		is_at_war = no # Got to be victorious 
+		NOT = { has_global_variable = northumbria_saxon_king }
+
 	}
 	
 	immediate = {
-		save_scope_as = northumbria_saxon_king
+		set_global_variable = {
+			name = northumbria_saxon_king
+			value = yes
+		}
 	}
 
 	option = {# Good Riddence
@@ -144,15 +155,16 @@ bryten_england.011 = {# Jorvik is victorious
 	}
 
 	trigger = {
-		has_primary_title = title:d_york
+		has_title = title:d_york
 		is_at_war = no # Vikings can't be raiding and fighting others 
+		NOT = { has_global_variable = northumbria_norse_king }
 	}
 	
 	immediate = {
-		title:k_northumbria = {
-			save_scope_as = title_to_grant
+		set_global_variable = {
+			name = northumbria_norse_king
+			value = yes
 		}
-		save_scope_as = northumbria_norse_king
 	}
 
 	option = {# I am now king
