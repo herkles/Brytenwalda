@@ -154,17 +154,21 @@ bryten_england.011 = {# Jorvik is victorious
 		animation = personality_bold
 	}
 
-	trigger = {
-		has_title = title:d_york
-		is_at_war = no # Vikings can't be raiding and fighting others 
-		NOT = { has_global_variable = northumbria_norse_king }
-	}
+    trigger = {
+        scope:attacker = { has_title = title:d_york }
+        scope:attacker = { is_at_war = no } # Vikings can't be raiding and fighting others 
+        NOT = { has_global_variable = northumbria_norse_king }
+    }
 	
 	immediate = {
-		set_global_variable = {
-			name = northumbria_norse_king
-			value = yes
+		title:k_northumbria = {
+			save_scope_as = title_to_grant
 		}
+		save_scope_as = northumbria_norse_king
+		set_global_variable = {
+            name = northumbria_norse_king
+            value = yes
+        }
 	}
 
 	option = {# I am now king
