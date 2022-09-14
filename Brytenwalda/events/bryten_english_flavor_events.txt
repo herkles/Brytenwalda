@@ -14,9 +14,9 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 	}
 
 	trigger = {
-		this = character:140
+		has_culture = culture:norman
 		has_title = title:k_england
-		is_at_war = no # In case Hardrada is still gunning for the throne, Willy will go and fight him first. 
+		is_at_war = no # Willy has to secure his throne first.
 		NOT = { has_global_variable = william_is_king }
 
 	}
@@ -54,8 +54,8 @@ bryten_england.010 = {# Northumbria is victorious
 	}
 
 	trigger = {
-		has_title = title:k_northumbria
-		is_at_war = no # Got to be victorious 
+		scope:defender = { has_title = title:k_northumbria }
+		scope:defender = { is_at_war = no } # Got to be victorious 
 		NOT = { has_global_variable = northumbria_saxon_king }
 
 	}
@@ -155,8 +155,8 @@ bryten_england.011 = {# Jorvik is victorious
 	}
 
     trigger = {
-        scope:attacker = { has_title = title:d_york }
-        scope:attacker = { is_at_war = no } # Vikings can't be raiding and fighting others 
+        has_title = title:d_york 
+        is_at_war = no # Vikings can't be raiding and fighting others 
         NOT = { has_global_variable = northumbria_norse_king }
     }
 	

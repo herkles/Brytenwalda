@@ -122,15 +122,24 @@ bryten_events_historical_pulse = {# for Historical Events
 # Wars Won 
 #######################################
 on_war_won_attacker = {
-	events = {
-		bryten_england.001 # William becomes king of England
-		bryten_england.011 # Norse defeat the Northumbrians	
-	}
+    on_actions = {
+        bryten_war_won
+    }
 }
 on_war_won_defender = {
-	events = {
-		bryten_england.010 # Northumbrians defeat the Vikings	
-	}
+    on_actions = {
+        bryten_war_won
+    }
+}
+
+bryten_war_won = {
+    effect = {
+		scope:defender = { trigger_event = bryten_england.010 } # Northumbrians defeat the Norse
+        scope:attacker = { trigger_event = bryten_england.011 } # Norse defeat the Northumbrians
+    }
+    events = {
+        bryten_england.001 # William becomes king of England
+    }
 }
 
 
