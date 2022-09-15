@@ -14,7 +14,7 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 	}
 
 	trigger = {
-		has_culture = culture:norman
+		this = character:140
 		has_title = title:k_england
 		is_at_war = no # Willy has to secure his throne first.
 		NOT = { has_global_variable = william_is_king }
@@ -57,7 +57,7 @@ bryten_england.010 = {# Northumbria is victorious
 		scope:defender = { has_title = title:k_northumbria }
 		scope:defender = { is_at_war = no } # Got to be victorious 
 		NOT = { has_global_variable = northumbria_saxon_king }
-
+		game_start_date = 867.1.1
 	}
 	
 	immediate = {
@@ -155,9 +155,10 @@ bryten_england.011 = {# Jorvik is victorious
 	}
 
     trigger = {
-        has_title = title:d_york 
-        is_at_war = no # Vikings can't be raiding and fighting others 
+        scope:attacker = { has_title = title:d_york }
+        scope:attacker = { is_at_war = no } # Vikings can't be raiding and fighting others 
         NOT = { has_global_variable = northumbria_norse_king }
+		game_start_date = 867.1.1
     }
 	
 	immediate = {
@@ -187,7 +188,6 @@ bryten_england.011 = {# Jorvik is victorious
 		resolve_title_and_vassal_change = scope:change
 	}
 }
-
 
 #######################################
 # Anglo-Saxon Culture Forming

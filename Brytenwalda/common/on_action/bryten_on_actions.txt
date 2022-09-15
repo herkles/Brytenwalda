@@ -134,12 +134,25 @@ on_war_won_defender = {
 
 bryten_war_won = {
     effect = {
-		scope:defender = { trigger_event = bryten_england.010 } # Northumbrians defeat the Norse
-        scope:attacker = { trigger_event = bryten_england.011 } # Norse defeat the Northumbrians
-    }
-    events = {
-        bryten_england.001 # William becomes king of England
-    }
+		scope:defender = {# Northumbrians defeat the Norse
+			if = {
+				limit = { scope:winner = {culture = culture:northumbrian}  }
+				trigger_event = bryten_england.010 
+			}
+		}
+		scope:attacker = {# Norse defeat the Northumbrians
+			if = {
+				limit = { scope:winner = {culture = culture:norse} }
+				trigger_event = bryten_england.011 
+			}
+		} 
+		scope:attacker = {# William becomes king of England
+			if = {
+				limit = { this = character:140 }
+				trigger_event = bryten_england.001
+			} 
+		}
+	}
 }
 
 
