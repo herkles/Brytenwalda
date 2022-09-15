@@ -950,11 +950,7 @@ custom_netherlands = {
 		d_holland d_frisia d_utrecht d_gelre
 	}
 }
-custom_england = {
-	duchies = {
-		d_northumberland d_lancaster d_york d_norfolk d_bedford d_hereford d_gloucester d_canterbury d_somerset
-	}
-}
+
 custom_wales = {
 	duchies = {
 		d_gwynedd d_powys d_deheubarth d_cornwall
@@ -1532,25 +1528,35 @@ custom_polabia = {
 	}
 }
 
+#######################################
 # Brytenwalda Regions 
-
-custom_southern_england = {# Norman regions
+#######################################
+custom_england = {# For Norman England
+	duchies = {
+		d_northumberland d_lancaster d_york d_norfolk d_bedford d_hereford d_gloucester d_canterbury d_somerset
+	}
+}
+custom_england_saxon = {# For Saxon England
+	duchies = {
+		d_east_anglia d_wessex d_kent d_canterbury d_mercia d_huntingdon d_essex d_brambugh d_york
+	}
+}
+custom_southern_england = {# Norman Southern England
 	duchies = {
 		d_norfolk d_bedford d_gloucester d_canterbury d_somerset d_cornwall
 	}
 }
-custom_northern_england = {# Norman Regions
+custom_northern_england = {# Norman Northern England
 	duchies = {
 		d_northumberland d_york d_lancaster d_hereford d_norfolk d_bedford
 	}
 }
-
-custom_southern_england_saxon = {# Saxon regions
+custom_southern_england_saxon = {# Saxon Southern England
 	duchies = {
 		d_east_anglia d_wessex d_kent d_canterbury d_mercia d_huntingdon d_essex
 	}
 }
-custom_northern_england_saxon = {# Saxon Regions
+custom_northern_england_saxon = {# Saxon Northern England
 	duchies = {
 		d_brambugh d_york
 	}

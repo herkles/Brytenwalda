@@ -415,7 +415,10 @@ embrace_engelsk_culture_effect = {# embracing engelsk
 #######################################
 establish_norman_adminstration_effects = {# Establishing the Norman Adminstration
 	scope:norman_england_king = {
-		# create the duchy
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = change
+		}
 		# The Duchy of Bedford
 		title:c_middlesex = { set_de_jure_liege_title = title:d_bedford }
 		title:c_essex = { set_de_jure_liege_title = title:d_bedford }
@@ -522,6 +525,8 @@ establish_norman_adminstration_effects = {# Establishing the Norman Adminstratio
 				}
 				destroy_title = title:d_essex
 			}
+			resolve_title_and_vassal_change = scope:change
+
 		}
 	}
 }
