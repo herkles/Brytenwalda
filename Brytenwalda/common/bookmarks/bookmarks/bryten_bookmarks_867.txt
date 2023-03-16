@@ -1,0 +1,198 @@
+﻿bm_867_bryten_1 = {# The Heptarchy
+	start_date = 867.1.1
+	is_playable = yes
+	group = bm_group_867
+	
+	
+	character = {# King Aella
+		name = "bookmark_bryten_867_king_aelle"
+		dynasty = 814
+		dynasty_splendor_level = 1
+		type = male
+		birth = 824.1.1
+		title = k_northumbria
+		government = feudal_government
+		culture = northumbrian
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = 163103
+		position = { 900 477 }
+
+		animation = personality_zealous
+
+		character = {# Aelfgar Aellason
+			name = "bookmark_bryten_867_king_aelle_alt_aelfgar"
+			relation = "BOOKMARK_RELATION_SON"
+			dynasty = 814 
+			type = male
+			birth = 843.1.1
+			culture = northumbrian
+			religion = catholic
+			history_id = 6875
+
+			animation = personality_compassionate
+		}
+	}
+	character = {# King Burghred of Mercia
+		name = "bookmark_bryten_867_burghred_mercia"
+		dynasty = 813
+		dynasty_splendor_level = 1
+		type = male
+		birth = 830.1.1
+		title = k_mercia
+		government = feudal_government
+		culture = mercian
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 163102
+		position = { 1000 677 }
+
+		animation = stress
+	}	
+	character = {# King Aethelred of Wessex
+		name = "bookmark_bryten_867_aethelred_wessex"
+		dynasty_house = house_british_isles_wessex
+		dynasty_splendor_level = 1
+		type = male
+		birth = 840.1.1
+		title = k_wessex
+		government = feudal_government
+		religion = catholic
+		culture = west_saxon
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 33358
+		position = { 800 825 }
+
+		animation = personality_irrational
+
+		character = {# Alfred, the future Alfred the great
+			name = "bookmark_bryten_867_aethelred_wessex_alt_alfred"
+			relation = "BOOKMARK_RELATION_BROTHER"
+			dynasty_house = house_british_isles_wessex
+			birth = 849.1.1
+			culture = west_saxon
+			religion = catholic
+			history_id = 7627
+
+			animation = rage
+		}
+	}
+	character = {# King Edmund of East Anglia
+		name = "bookmark_bryten_867_edmund_east_anglia"
+		dynasty = 626
+		dynasty_splendor_level = 1
+		type = male
+		birth = 840.1.1
+		title = k_east_anglia
+		government = feudal_government
+		religion = catholic
+		culture = mercian
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = 163064
+		position = { 1227 777 }
+
+		animation = laugh 
+	}
+
+}
+bm_867_bryten_2 = {# The Celtic Lands
+	start_date = 867.1.1
+	is_playable = yes
+	group = bm_group_867
+
+	character = {# High King of Ireland
+		name = "bookmark_bryten_867_high_king_ireland"
+		dynasty_house = house_british_isles_neill
+		dynasty_splendor_level = 1
+		type = male
+		birth = 841.4.25
+		title = k_ireland_titular
+		government = tribal_government
+		culture = irish
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 944
+		position = { 350 500 }
+
+		animation = personality_bold
+
+		
+		character = {# Flann Sinna
+			name = "bookmark_bryten_867_high_king_ireland_alt_flann_sinna"
+			relation = "BOOKMARK_RELATION_COUSIN"
+			dynasty_house = house_british_isles_neill
+			type = male
+			birth = 847.1.2
+			culture = irish
+			religion = catholic
+			history_id = 131502
+
+			animation = personality_content
+		}	
+	}	
+	character = {# King of Alba
+		name = "bookmark_bryten_867_alba_king"
+		dynasty_house = house_british_isles_ailpin
+		dynasty_splendor_level = 1
+		type = male
+		birth = 841.1.2 
+		title = k_scotland
+		government = tribal_government
+		culture = gaelic
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 6016
+		position = { 887 350 }
+
+		animation = personality_rational
+
+	}
+	character = {# King of Strathclyde
+		name = "bookmark_bryten_867_strathclyyde_king"
+		dynasty = 816
+		dynasty_splendor_level = 1
+		type = male
+		birth = 804.1.1
+		title = k_strathclyde
+		government = feudal_government
+		culture = cumbrian
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 163104
+		position = { 700 477 }
+
+		animation = personality_bold
+	}	
+	character = {# Dumnarth of Cornwall
+		name = "bookmark_bryten_867_cornwall_count"
+		dynasty_house = house_british_isles_cerneu 
+		dynasty_splendor_level = 1
+		type = male
+		birth = 830.1.1
+		title = c_cornwall
+		government = feudal_government
+		culture = cornish
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = 159458
+		position = { 500 825 }
+
+		animation = personality_rational
+	}
+	character = {# Rhodri the Great
+		name = "bookmark_bryten_867_rhodri_mwar"
+		dynasty_house = house_british_isles_aberffraw 
+		dynasty_splendor_level = 1
+		type = male
+		birth = 820.1.1
+		title = d_gwynedd
+		government = feudal_government
+		culture = welsh
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 81831
+		position = { 800 700 }
+
+		animation = personality_bold
+	}
+}
