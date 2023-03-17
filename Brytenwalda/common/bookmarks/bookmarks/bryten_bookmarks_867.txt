@@ -196,3 +196,140 @@ bm_867_bryten_2 = {# The Celtic Lands
 		animation = personality_bold
 	}
 }
+bm_1066_bryten_1 = {# The Norman Conquest
+	start_date = 1066.12.25
+	is_playable = yes
+	group = bm_group_1066
+
+	character = {# King William of England
+		name = "bookmark_bryten_1066_king_william"
+		dynasty = 752
+		dynasty_splendor_level = 3
+		type = male
+		birth = 1027.1.15
+		title = k_england
+		government = feudal_government
+		culture = norman
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 140
+		position = { 620 720 }
+
+		animation = personality_callous
+
+		character = {# Count Robert Curthose
+			name = "bookmark_bryten_1066_alt_robert"
+			relation = "BOOKMARK_RELATION_SON"
+			dynasty = 752
+			type = male
+			birth = 1054.1.1
+			title = c_maine
+			government = feudal_government
+			culture = norman
+			religion = catholic
+			history_id = 142
+		}		
+		character = {# William Rufus
+			name = "bookmark_bryten_1066_alt_william"
+			relation = "BOOKMARK_RELATION_SON"
+			dynasty = 752
+			type = male
+			birth = 1056.1.1
+			culture = norman
+			religion = catholic
+			history_id = 146
+		}
+
+	}	
+	character = {# Svend the Dane
+		name = "bookmark_bryten_1066_denmark" # King Svend of Denmark ID:101515
+		dynasty = 487
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 101515
+		birth = 1019.1.1
+		title = k_denmark
+		government = feudal_government
+		culture = danish
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		position = { 1200 490 }
+		
+		animation = personality_greedy
+
+		character = {# Harald III (son)
+			name = "bookmark_bryten_1066_alt_harald"
+			relation = "BOOKMARK_RELATION_SON"
+			dynasty = 487
+			type = male
+			birth = 1041.1.1
+			religion = catholic
+			culture = danish
+			history_id = 101517
+			animation = personality_content
+		}
+		character = {# Knud IV (son)
+			name = "bookmark_bryten_1066_alt_knud"
+			relation = "BOOKMARK_RELATION_SON"
+			dynasty = 487
+			type = male
+			birth = 1043.1.1
+			religion = catholic
+			culture = danish
+			history_id = 101519
+			animation = personality_callous
+		}
+	}
+	character = {# Robert de Beaumont
+		name = "bookmark_bryten_1066_robert_beaumont" # 
+		dynasty = 5061
+		dynasty_splendor_level = 1
+		type = male
+		history_id = 204596
+		birth = 1050.1.1
+		title = c_leicestershire
+		government = feudal_government
+		culture = norman
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 320 520 }
+		
+		animation = personality_greedy
+
+		character = {# Henri de Beaumont
+			name = "bookmark_bryten_1066_alt_henri"
+			relation = "BOOKMARK_RELATION_BROTHER"
+			dynasty = 5061
+			type = male
+			birth = 1052.1.1 
+			religion = catholic
+			culture = norman
+			history_id = 204717
+			animation = personality_content
+		}		
+	}
+	character = {# Morcar
+		name = "bookmark_bryten_1066_Morcar" # 
+		dynasty = 5061
+		dynasty_splendor_level = 1
+		type = male
+		history_id = 5660
+		birth = 1046.1.1
+		title = d_york
+		government = feudal_government
+		culture = anglo_saxon
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		position = { 620 350 }
+		
+		animation = personality_greedy
+	
+	}	
+	
+}
+
+
+
+
+
+
