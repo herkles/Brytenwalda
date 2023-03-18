@@ -4,9 +4,6 @@
 #									  #
 #######################################
 unite_kingdom_england_decision_effects = {# Uniting England
-	primary_title = {
-		save_scope_as = england_heptarchy_coa
-   	}
 	# Create the title and make it primary
 	create_title_and_vassal_change = {
 		type = created
@@ -18,11 +15,35 @@ unite_kingdom_england_decision_effects = {# Uniting England
 			holder = root
 			change = scope:title_change
 		}
-		set_coa = england_heptarchy_coa
 	}
+
+	if = {
+		limit = { scope:spain_uniter.primary_title = title:k_mercia }
+		primary_title = { set_coa = k_england_mercia }
+	}
+	else_if = {
+		limit = { scope:spain_uniter.primary_title = title:k_northumbria }
+		primary_title = { set_coa = k_england_northumbria }
+	}
+	else_if = {
+		limit = { scope:spain_uniter.primary_title = title:k_east_anglia }
+		primary_title = { set_coa = k_england_east_anglia }
+	}
+	else_if = {
+		limit = { scope:spain_uniter.primary_title = title:k_kent }
+		primary_title = { set_coa = k_england_kent }
+	}
+	else_if = {
+		limit = { scope:spain_uniter.primary_title = title:k_wessex }
+		primary_title = { set_coa = k_england }
+	}
+
 
 	resolve_title_and_vassal_change = scope:title_change
 	set_primary_title_to = title:k_england
+
+
+
 
 	title:k_kent = { add_to_list = english_kingdoms }
 	title:k_northumbria = { add_to_list = english_kingdoms }

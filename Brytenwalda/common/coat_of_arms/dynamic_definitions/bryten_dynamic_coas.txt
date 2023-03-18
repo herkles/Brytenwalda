@@ -1,0 +1,48 @@
+﻿#######################################
+# England Coat of Arms
+#######################################
+k_england = {
+	item = {# French England
+		trigger = {
+			coa_switch_to_norman_trigger = yes
+			coa_england_switches_to_france_coa_trigger = yes
+		}
+		coat_of_arms = k_england_france
+	}
+	item = {# Norman England
+		trigger = {
+			coa_switch_to_norman_trigger = yes
+		}
+		coat_of_arms = k_england_norman
+	}
+	item = {# mercia
+		trigger = {
+			coa_switch_to_saxon_mercia_trigger = yes
+		}
+		coat_of_arms = k_england_mercia
+	}
+	item = {# Northumbria
+		trigger = {
+			coa_switch_to_saxon_northumbria_trigger = yes
+		}
+		coat_of_arms = k_england_northumbria
+	}
+	item = {# East Anglia
+		trigger = {
+			coa_switch_to_saxon_east_anglia_trigger = yes
+		}
+		coat_of_arms = k_england_east_anglia
+	}
+	item = {# Kent
+		trigger = {
+			coa_switch_to_saxon_kent_trigger = yes
+		}
+		coat_of_arms = k_england_kent
+	}
+	item = {# Wessex England
+		trigger = {
+			coa_switch_to_saxon_historical_trigger = yes
+		}
+		coat_of_arms = k_england
+	}
+}

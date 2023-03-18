@@ -55,8 +55,6 @@ bryten_england.010 = {# Northumbria is victorious
 	}
 
 	trigger = {
-		scope:defender = { has_title = title:k_northumbria }
-		scope:defender = { is_at_war = no } # Got to be victorious 
 		NOT = { has_global_variable = northumbria_saxon_king }
 		game_start_date = 867.1.1
 	}
@@ -145,51 +143,6 @@ bryten_england.010 = {# Northumbria is victorious
 		}
 	}
 }
-bryten_england.011 = {# Jorvik is victorious
-	type = character_event
-	title = bryten_england.011.t
-	desc = bryten_england.011.desc
-	theme = realm
-	left_portrait = {
-		character = root
-		animation = personality_bold
-	}
-
-    trigger = {
-        scope:attacker = { has_title = title:d_york }
-        scope:attacker = { is_at_war = no } # Vikings can't be raiding and fighting others 
-        NOT = { has_global_variable = northumbria_norse_king }
-		game_start_date = 867.1.1
-    }
-	
-	immediate = {
-		title:k_northumbria = {
-			save_scope_as = title_to_grant
-		}
-		save_scope_as = northumbria_norse_king
-		set_global_variable = {
-            name = northumbria_norse_king
-            value = yes
-        }
-	}
-
-	option = {# I am now king
-		name = bryten_england.011.victory
-		add_prestige = medium_prestige_gain
-		create_title_and_vassal_change = {
-			type = granted
-			save_scope_as = change
-		}
-		scope:title_to_grant = {
-			change_title_holder = {
-				holder = scope:northumbria_norse_king
-				change = scope:change
-			}
-		}
-		resolve_title_and_vassal_change = scope:change
-	}
-}
-
 #######################################
 # Anglo-Saxon Culture Forming
 #######################################

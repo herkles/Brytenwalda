@@ -1,32 +1,48 @@
-﻿coa_switch_to_saxon_trigger = {
-	scope:culture = { has_coa_gfx = anglo_saxon_coa_gfx }
-}
-coa_switch_to_saxon_historical_trigger = {# This is the default Saxon England, ie Wessex united
+﻿coa_switch_to_saxon_historical_trigger = {# This is the default Saxon England, ie Wessex united
 	not = { 
 		exists = global_var:england_coa_kent
 		exists = global_var:england_coa_merica
 		exists = global_var:england_coa_northumbria
 		exists = global_var:england_coa_east_anglia
 	}
-	scope:culture = { has_coa_gfx = anglo_saxon_coa_gfx }
+	holder.culture = { has_coa_gfx = anglo_saxon_coa_gfx }
 }
 coa_switch_to_saxon_mercia_trigger = {# Mercian United Saxon England
 	exists = global_var:england_coa_merica
-	scope:culture = { has_coa_gfx = anglo_saxon_coa_gfx }
+	holder.culture = { has_coa_gfx = anglo_saxon_coa_gfx }
 }
 coa_switch_to_saxon_northumbria_trigger = {# Northumbrian United Saxon England
 	exists = global_var:england_coa_northumbria
-	scope:culture = { has_coa_gfx = anglo_saxon_coa_gfx }
+	holder.culture = { has_coa_gfx = anglo_saxon_coa_gfx }
 }
 coa_switch_to_saxon_east_anglia_trigger = {# East Anglian United Saxon England
 	exists = global_var:england_coa_east_anglia
-	scope:culture = { has_coa_gfx = anglo_saxon_coa_gfx }
+	holder.culture = { has_coa_gfx = anglo_saxon_coa_gfx }
 }
 coa_switch_to_saxon_kent_trigger = {# Kentish United Saxon England
 	exists = global_var:england_coa_kent
-	scope:culture = { has_coa_gfx = anglo_saxon_coa_gfx }
+	holder.culture = { has_coa_gfx = anglo_saxon_coa_gfx }
 }
-
+coa_england_switches_to_france_coa_trigger = {
+	holder = {
+		OR = {
+			has_title 		= title:k_france
+			has_claim_on 	= title:k_france
+			has_title 		= title:e_france
+			has_claim_on 	= title:e_france
+		}
+	}
+}
+coa_switch_to_norman_trigger = {
+	holder.culture = {
+		OR = {
+			has_coa_gfx = english_coa_gfx
+			has_coa_gfx = frankish_group_coa_gfx
+			has_coa_gfx = latin_group_coa_gfx
+			has_coa_gfx = iberian_group_coa_gfx
+		}
+	}
+}
 
 
 

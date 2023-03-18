@@ -60,9 +60,38 @@ unite_england_decision = {# Unite England
 
 	effect = {
 		save_scope_as = england_kingdom_uniter
-
 		show_as_tooltip = { unite_kingdom_england_decision_effects = yes } 
-
+		hidden_effect = {# adding the variables for unique COAs variants
+			if = {# set unique COA for england united by Mercia
+				limit = { has_primary_title = title:k_mercia }
+				set_global_variable = {
+					name = england_coa_merica
+					value = yes
+				}
+			}
+			if = {# set unique COA for england united by Northumbria
+				limit = { has_primary_title = title:k_northumbria }
+				set_global_variable = {
+					name = england_coa_northumbria
+					value = yes
+				}
+			}
+			if = {# set unique COA for england united by East Anglia
+				limit = { has_primary_title = title:k_east_anglia }
+				set_global_variable = {
+					name = england_coa_east_anglia
+					value = yes
+				}
+			}
+			if = {# set unique COA for england united by kent
+				limit = { has_primary_title = title:k_kent }
+				set_global_variable = {
+					name = england_coa_kent
+					value = yes
+				}
+			}
+			
+		}
 		#Events
 		trigger_event = bryten_decision.0001
 		every_player = {
@@ -81,43 +110,7 @@ unite_england_decision = {# Unite England
 			name = unavailable_unique_decisions
 			value = scope:england_kingdom_uniter
 		}
-		hidden_effect = {# adding the variables for unique COAs variants
-			primary_title = {
-				save_scope_as = england_heptarchy_coa
-			}
-			title:k_england = {
-				set_coa = england_heptarchy_coa
-			}
-			if = {# set unique COA for england united by Mercia
-				limit = { has_primary_title = title:k_mercia }
-				set_variable = {
-					name = england_coa_merica
-					value = yes
-				}
-			}
-			if = {# set unique COA for england united by Northumbria
-				limit = { has_primary_title = title:k_northumbria }
-				set_variable = {
-					name = england_coa_northumbria
-					value = yes
-				}
-			}
-			if = {# set unique COA for england united by East Anglia
-				limit = { has_primary_title = title:k_east_anglia }
-				set_variable = {
-					name = england_coa_east_anglia
-					value = yes
-				}
-			}
-			if = {# set unique COA for england united by kent
-				limit = { has_primary_title = title:k_kent }
-				set_variable = {
-					name = england_coa_kent
-					value = yes
-				}
-			}
-			
-		}
+
 	}
 
 	ai_potential = {
