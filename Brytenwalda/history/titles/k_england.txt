@@ -717,8 +717,8 @@ c_northumberland = {
 	
 	765.1.1 = {
 		holder = 205237
-		liege = d_northumberland
-		de_jure_liege = d_brambugh
+		liege = d_york
+		de_jure_liege = d_york
 	}
 	862.1.1 = {
 		holder = 163103
@@ -795,7 +795,7 @@ c_northumberland = {
 c_durham = {
 	765.1.1 = {
 		liege = "d_brambugh"
-		de_jure_liege = d_brambugh
+		de_jure_liege = d_york
 		holder = 194104
 	}
 	862.1.1 = {
@@ -1081,7 +1081,7 @@ c_north_riding = {
 	
 	#Earls of Richmond used for this title
 	765.1.1 = {
-		liege = "d_northumberland"
+		liege = "d_york"
 		de_jure_liege = d_york
 		holder = 205244
 	}
@@ -1155,7 +1155,7 @@ c_north_riding = {
 c_east_riding = {
 	#Earls of Richmond used for this title
 	765.1.1 = {
-		liege = "d_northumberland"
+		liege = "d_york"
 		de_jure_liege = d_york
 
 		holder = 205244
@@ -1230,7 +1230,7 @@ c_east_riding = {
 c_west_riding = {
 	#Earls of Richmond used for this title
 	765.1.1 = {
-		liege = "d_northumberland"
+		liege = "d_york"
 		de_jure_liege = d_york
 
 		holder = 205244
@@ -2390,7 +2390,7 @@ c_derby = {
 	}
 	852.1.1 = {
 		holder = 163102
-		de_jure_liege = d_mercia
+		de_jure_liege = d_five_burhs
 	}
 	1066.1.1 = {
 		liege = "d_mercia"
@@ -2455,6 +2455,10 @@ c_gloucestershire = {
 		holder = 163102
 		de_jure_liege = d_mercia
 	}
+	927.1.1 = {
+		de_jure_liege = d_wessex
+		liege = "k_england"
+	}	
 	1066.1.1 = {
 		liege = "d_mercia"
 	}
@@ -2525,6 +2529,10 @@ c_oxfordshire = {
 		holder = 163102
 		de_jure_liege = d_mercia
 	}
+	927.1.1 = {
+		de_jure_liege = d_wessex
+		liege = "k_england"
+	}	
 	1066.1.5 = {
 		holder = 122 # Harold Godwinson
 	}
@@ -2869,9 +2877,9 @@ c_hereford = {
 
 }
 #######################################
-# Earldom of Huntingdonshire
+# Earldom of The Five Burhs
 #######################################
-d_huntingdon = {
+d_five_burhs = {
 	867.1.1 = {
 		de_jure_liege = k_mercia
 	}
@@ -2901,8 +2909,8 @@ c_leicestershire = {
 		holder = 205072
 	}
 	852.1.1 = {
-		liege = "d_huntingdon"
-		de_jure_liege = d_huntingdon
+		liege = "d_five_burhs"
+		de_jure_liege = d_five_burhs
 	}
 	852.1.1 = {
 		holder = 163102
@@ -2956,7 +2964,7 @@ c_nottinghamshire = {
 	}
 	852.1.1 = {
 		liege = "k_mercia"
-		de_jure_liege = d_huntingdon
+		de_jure_liege = d_five_burhs
 	}
 	879.1.1 = {
 		holder = 306021 #Æthelwulf Mucel
@@ -3001,12 +3009,16 @@ c_huntingdonshire = {
 		holder = 205072
 	}
 	852.1.1 = {
-		liege = "d_huntingdon"
-		de_jure_liege = d_huntingdon
+		liege = "k_mercia"
+		de_jure_liege = d_five_burhs
 	}
 	852.1.1 = {
 		holder = 163102
 	}
+	927.1.1 = {
+		de_jure_liege = d_east_anglia
+		liege = "k_england"
+	}	
 	1066.1.1 = {
 		liege = "k_england"
 	}
@@ -3061,8 +3073,8 @@ c_northamptonshire = {
 		holder = 205072
 	}
 	852.1.1 = {
-		liege = "d_huntingdon"
-		de_jure_liege = d_huntingdon
+		liege = "d_five_burhs"
+		de_jure_liege = d_five_burhs
 	}
 	852.1.1 = {
 		holder = 163102
@@ -3122,7 +3134,7 @@ c_northamptonshire = {
 }
 c_bedford = {
 	745.1.1 = {
-		liege = "d_huntingdon"
+		liege = "k_mercia"
 		holder = 205104
 	}
 	767.1.1 = {
@@ -3130,8 +3142,12 @@ c_bedford = {
 	}
 	852.1.1 = {
 		holder = 163102
-		de_jure_liege = d_huntingdon
+		de_jure_liege = d_five_burhs
 	}
+	927.1.1 = {
+		de_jure_liege = d_east_anglia
+		liege = "k_england"
+	}	
 	1066.1.1 = {
 		liege = "k_england"
 	}
@@ -3188,7 +3204,11 @@ c_bedford = {
 c_buckinghamshire = {
 	865.1.1 = {
 		holder = 163102 
-		de_jure_liege = d_huntingdon
+		de_jure_liege = k_mercia
+	}
+	852.1.1 = {
+		liege = "k_mercia"
+		de_jure_liege = d_five_burhs
 	}
 	871.4.24 = {
 		holder = 7627 # Alfred the Great
@@ -3199,6 +3219,10 @@ c_buckinghamshire = {
 	924.8.3 = {
 		holder = 33350 # Aethelstan the Glorious
 	}
+	927.1.1 = {
+		de_jure_liege = d_east_anglia
+		liege = "k_england"
+	}	
 	939.10.28 = {
 		holder = 102 # Edmund the Magnificent
 	}
@@ -3288,7 +3312,7 @@ c_lincolnshire = {
 	}
 	852.1.1 = {
 		liege = "k_mercia"
-		de_jure_liege = d_huntingdon
+		de_jure_liege = d_five_burhs
 	}
 	879.1.1 = {
 		holder = 306021 #Æthelwulf Mucel
@@ -3390,6 +3414,9 @@ c_middlesex = {
 		holder = 33358 # Aethelraed
 		de_jure_liege = d_essex
 	}
+	867.1.1 = {
+		de_jure_liege = k_wessex
+	}
 	871.4.24 = {
 		holder = 7627 # Alfred the Great
 	}
@@ -3398,6 +3425,10 @@ c_middlesex = {
 	}
 	924.8.3 = {
 		holder = 33350 # Aethelstan the Glorious
+	}
+	927.1.1 = {
+		de_jure_liege = d_east_anglia
+		liege = "k_england"
 	}
 	939.10.28 = {
 		holder = 102 # Edmund the Magnificent
@@ -3476,6 +3507,9 @@ c_middlesex = {
 	}
 }
 b_southwark = {	#Fictional, to allow character placement.
+	867.1.1 = {
+		de_jure_liege = k_wessex
+	}
 	1055.1.1 = { holder = anglo_saxon.1001 }
 }
 c_essex = {
@@ -3487,6 +3521,10 @@ c_essex = {
 		de_jure_liege = d_essex
 		holder = 33358
 	}
+	927.1.1 = {
+		de_jure_liege = d_east_anglia
+		liege = "k_england"
+	}	
 	1066.1.1 = {
 		liege = "d_east_anglia"
 	}
@@ -3563,6 +3601,9 @@ c_hertfordshire = {
 		holder = 33358 # Aethelraed
 		de_jure_liege = d_essex
 	}
+	867.1.1 = {
+		de_jure_liege = k_wessex
+	}
 	871.4.24 = {
 		holder = 7627 # Alfred the Great
 	}
@@ -3572,6 +3613,10 @@ c_hertfordshire = {
 	924.8.3 = {
 		holder = 33350 # Aethelstan the Glorious
 	}
+	927.1.1 = {
+		de_jure_liege = d_east_anglia
+		liege = "k_england"
+	}	
 	939.10.28 = {
 		holder = 102 # Edmund the Magnificent
 	}
