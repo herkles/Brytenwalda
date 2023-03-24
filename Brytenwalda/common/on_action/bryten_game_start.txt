@@ -1,0 +1,59 @@
+﻿#######################################
+# Game Start Stuff
+#######################################
+on_game_start_after_lobby = {
+	on_actions = {
+		bryten_setup_after_game_start_on_actions
+	}
+}
+
+bryten_setup_after_game_start_on_actions = {
+	effect = {
+		character:140 = {# Norman is King in the Norman Conquest Bookmark
+			if = { limit = { game_start_date <= 1066.12.25 } }
+			trigger_event = bryten_england.001
+		}
+
+		if = {# Anglo-Saxons like the Scandivians more due to ties.
+			limit = { current_date = 1066.1.1 }
+			culture:anglo_saxon = {
+				change_cultural_acceptance = {
+					target = culture:swedish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:norwegian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:danish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:anglo_norse
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+		}
+		if = {# Normans Don't like the Anglo Cultures
+			limit = { current_date = 1066.12.25 }
+			culture:norman = {
+				change_cultural_acceptance = {
+					target = culture:anglo_saxon
+					value = -75
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:anglo_norse
+					value = -75
+					desc = cultural_acceptance_historical_relations
+				}
+
+			}
+		}		
+	}
+}

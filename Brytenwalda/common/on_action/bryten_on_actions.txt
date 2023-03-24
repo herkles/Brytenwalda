@@ -139,12 +139,6 @@ bryten_war_won = {
 				limit = { scope:winner = {culture = culture:northumbrian}  }
 				trigger_event = bryten_england.010 
 			}
-		}
-		scope:attacker = {# Norse defeat the Northumbrians
-			if = {
-				limit = { scope:winner = {culture = culture:norse} }
-				trigger_event = bryten_england.011 
-			}
 		} 
 		scope:attacker = {# William becomes king of England
 			if = {

@@ -440,48 +440,85 @@ establish_norman_adminstration_effects = {# Establishing the Norman Adminstratio
 			type = conquest
 			save_scope_as = change
 		}
-		# The Duchy of Bedford
-		title:c_middlesex = { set_de_jure_liege_title = title:d_bedford }
-		title:c_essex = { set_de_jure_liege_title = title:d_bedford }
-		title:c_bedford = { set_de_jure_liege_title = title:d_bedford }
-		title:c_hertfordshire = { set_de_jure_liege_title = title:d_bedford }
-		title:c_buckinghamshire = { set_de_jure_liege_title = title:d_bedford }
-		# The Duchy of Northumberland
-		title:c_northumberland = { set_de_jure_liege_title = title:d_northumberland }
-		title:c_durham = { set_de_jure_liege_title = title:d_northumberland }
-		# The Duchy of Lancaster
-		title:c_lancashire = { set_de_jure_liege_title = title:d_lancaster }
-		title:c_westmorland = { set_de_jure_liege_title = title:d_lancaster }
-		title:c_cheshire = { set_de_jure_liege_title = title:d_lancaster }
-		title:c_derby = { set_de_jure_liege_title = title:d_lancaster }
-		# The Duchy of Norfolk
-		title:c_norfolk = { set_de_jure_liege_title = title:d_norfolk }
-		title:c_suffolk = { set_de_jure_liege_title = title:d_norfolk }
-		title:c_cambridgeshire = { set_de_jure_liege_title = title:d_norfolk }
-		# The Duchy of hereford
-		title:c_warwickshire = { set_de_jure_liege_title = title:d_hereford }
-		title:c_leicestershire = { set_de_jure_liege_title = title:d_hereford }
-		title:c_nottinghamshire = { set_de_jure_liege_title = title:d_hereford }
-		title:c_staffordshire = { set_de_jure_liege_title = title:d_hereford }
-		title:c_worcestershire = { set_de_jure_liege_title = title:d_hereford }
-		title:c_huntingdonshire = { set_de_jure_liege_title = title:d_hereford }
-		title:c_northamptonshire = { set_de_jure_liege_title = title:d_hereford }
-		title:c_shropshire = { set_de_jure_liege_title = title:d_hereford }
-		# The Duchy of Gloucester
-		title:c_gloucestershire = { set_de_jure_liege_title = title:d_gloucester }
-		title:c_wiltshire = { set_de_jure_liege_title = title:d_gloucester }
-		title:c_oxfordshire = { set_de_jure_liege_title = title:d_gloucester }
-		title:c_berkshire = { set_de_jure_liege_title = title:d_gloucester }
-		# The Duchy of Canterbury
-		title:c_kent = { set_de_jure_liege_title = title:d_canterbury }
-		title:c_surrey = { set_de_jure_liege_title = title:d_canterbury }
-		title:c_sussex = { set_de_jure_liege_title = title:d_canterbury }
-		# The Duchy of Somerset
-		title:c_hampton = { set_de_jure_liege_title = title:d_somerset }
-		title:c_isle_of_wight = { set_de_jure_liege_title = title:d_somerset }
-		title:c_somerset = { set_de_jure_liege_title = title:d_somerset }
-		title:c_dorset = { set_de_jure_liege_title = title:d_somerset }
 		hidden_effect = {
+			add_realm_law_skip_effects = partition_succession_law
+			if = {
+				limit = {
+					exists = cp:councillor_chancellor
+					has_culture = culture:anglo_saxon
+				}
+				fire_councillor = cp:councillor_chancellor
+			}
+			if = {
+				limit = {
+					exists = cp:councillor_steward
+					has_culture = culture:anglo_saxon
+				}
+				fire_councillor = cp:councillor_steward
+			}
+			if = {
+				limit = {
+					exists = cp:councillor_marshal
+					has_culture = culture:anglo_saxon
+				}
+				fire_councillor = cp:councillor_marshal
+			}
+			if = {
+				limit = {
+					exists = cp:councillor_spymaster
+					has_culture = culture:anglo_saxon
+				}
+				fire_councillor = cp:councillor_spymaster
+			}
+			if = {
+				limit = {
+					exists = cp:councillor_court_chaplain
+					has_culture = culture:anglo_saxon
+				}
+				fire_councillor = cp:councillor_court_chaplain
+			}			
+
+			# The Duchy of Bedford
+			title:c_middlesex = { set_de_jure_liege_title = title:d_bedford }
+			title:c_essex = { set_de_jure_liege_title = title:d_bedford }
+			title:c_bedford = { set_de_jure_liege_title = title:d_bedford }
+			title:c_hertfordshire = { set_de_jure_liege_title = title:d_bedford }
+			title:c_buckinghamshire = { set_de_jure_liege_title = title:d_bedford }
+			# The Duchy of Northumberland
+			title:c_northumberland = { set_de_jure_liege_title = title:d_northumberland }
+			title:c_durham = { set_de_jure_liege_title = title:d_northumberland }
+			# The Duchy of Lancaster
+			title:c_lancashire = { set_de_jure_liege_title = title:d_lancaster }
+			title:c_westmorland = { set_de_jure_liege_title = title:d_lancaster }
+			title:c_cheshire = { set_de_jure_liege_title = title:d_lancaster }
+			title:c_derby = { set_de_jure_liege_title = title:d_lancaster }
+			# The Duchy of Norfolk
+			title:c_norfolk = { set_de_jure_liege_title = title:d_norfolk }
+			title:c_suffolk = { set_de_jure_liege_title = title:d_norfolk }
+			title:c_cambridgeshire = { set_de_jure_liege_title = title:d_norfolk }
+			# The Duchy of hereford
+			title:c_warwickshire = { set_de_jure_liege_title = title:d_hereford }
+			title:c_leicestershire = { set_de_jure_liege_title = title:d_hereford }
+			title:c_nottinghamshire = { set_de_jure_liege_title = title:d_hereford }
+			title:c_staffordshire = { set_de_jure_liege_title = title:d_hereford }
+			title:c_worcestershire = { set_de_jure_liege_title = title:d_hereford }
+			title:c_huntingdonshire = { set_de_jure_liege_title = title:d_hereford }
+			title:c_northamptonshire = { set_de_jure_liege_title = title:d_hereford }
+			title:c_shropshire = { set_de_jure_liege_title = title:d_hereford }
+			# The Duchy of Gloucester
+			title:c_gloucestershire = { set_de_jure_liege_title = title:d_gloucester }
+			title:c_wiltshire = { set_de_jure_liege_title = title:d_gloucester }
+			title:c_oxfordshire = { set_de_jure_liege_title = title:d_gloucester }
+			title:c_berkshire = { set_de_jure_liege_title = title:d_gloucester }
+			# The Duchy of Canterbury
+			title:c_kent = { set_de_jure_liege_title = title:d_canterbury }
+			title:c_surrey = { set_de_jure_liege_title = title:d_canterbury }
+			title:c_sussex = { set_de_jure_liege_title = title:d_canterbury }
+			# The Duchy of Somerset
+			title:c_hampton = { set_de_jure_liege_title = title:d_somerset }
+			title:c_isle_of_wight = { set_de_jure_liege_title = title:d_somerset }
+			title:c_somerset = { set_de_jure_liege_title = title:d_somerset }
+			title:c_dorset = { set_de_jure_liege_title = title:d_somerset }
 			if = {
 				limit = { 
 					AND = {
@@ -522,11 +559,11 @@ establish_norman_adminstration_effects = {# Establishing the Norman Adminstratio
 				limit = {
 					AND = {
 						is_ai = yes
-						has_title = title:d_huntingdon 
+						has_title = title:d_five_burhs 
 					}					
 					
 				}
-				destroy_title = title:d_huntingdon
+				destroy_title = title:d_five_burhs
 			}
 			if = {
 				limit = {

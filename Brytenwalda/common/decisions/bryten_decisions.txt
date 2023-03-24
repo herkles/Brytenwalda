@@ -295,6 +295,10 @@ promote_norse_settlement_decision = {# Promote Norse Settlement
 	is_shown = {
 		is_landed = yes
 		highest_held_title_tier >= tier_kingdom
+		custom_description = {# capital must be in England
+			text = capital_in_england_region_tooltip
+			capital_province = { geographical_region = custom_england }
+		}
 		culture = { has_cultural_pillar = heritage_north_germanic }
 		NOT = {
 			is_target_in_global_variable_list = {
@@ -353,7 +357,8 @@ embrace_englisk_culture_decision = {# For the King of england
 
 	is_shown = {
 		is_landed = yes
-		culture = { has_cultural_pillar = heritage_frankish }
+		current_date >= 1200.1.1
+		culture = { has_cultural_pillar = heritage_north_germanic }
 		OR = {	
 			title:k_england = {
 				any_in_de_jure_hierarchy = {
