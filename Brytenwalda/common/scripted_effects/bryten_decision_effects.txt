@@ -325,107 +325,11 @@ embrace_anglo_norse_culture_effect = {# embracing Anglo-Norse
 		}
 	}
 
-	culture:english = {
+	culture:anglo_norse = {
 		custom_tooltip = decision_embrace_anglo_norse_culture_get_innovations
 		hidden_effect = {
 			get_all_innovations_from = culture:norse
 			get_all_innovations_from = culture:northumbrian
-		}
-	}
-}
-embrace_engelsk_culture_effect = {# embracing engelsk
-	# Scopes saves for localization
-	root = {
-		save_scope_as = embracer
-	}
-
-	# Prestige Bonus
-	add_prestige = medium_prestige_gain
-
-	#Convert your, and your whole family's, culture
-	set_culture = culture:engelsk
-	if = {
-		limit = { any_spouse = { is_landed = no } }
-		every_spouse = {
-			limit = {
-				is_landed = no
-			}
-			set_culture = culture:engelsk
-		}
-	}
-	if = {
-		limit = {
-			any_close_family_member = {
-				is_landed = no
-				NOT = { is_spouse_of = root }
-			}
-		}
-		every_close_family_member = {
-			limit = {
-				is_landed = no
-				NOT = { is_spouse_of = root }
-			}
-			custom = all_unlanded_family_members
-			set_culture = culture:engelsk
-		}
-	}
-
-	#Convert appropriate vassals, and their family
-	if = {
-		limit = {
-			any_vassal_or_below = {
-				is_ai = yes
-				OR = {
-					culture = culture:anglo_norse
-					culture = { has_cultural_pillar = heritage_north_germanic }
-				}
-				primary_title = {
-					OR = {
-						de_jure_liege = title:k_england
-						de_jure_liege.de_jure_liege = title:k_england
-						de_jure_liege.de_jure_liege.de_jure_liege = title:k_england
-					}
-				}
-			}
-		}
-		every_vassal_or_below = {
-			custom = embrace_engelsk_culture_vassals_custom
-			limit = {
-				is_ai = yes
-				OR = {
-					culture = culture:anglo_norse
-					culture = { has_cultural_pillar = heritage_north_germanic }
-				}
-				primary_title = {
-					OR = {
-						de_jure_liege = title:k_england
-						de_jure_liege.de_jure_liege = title:k_england
-						de_jure_liege.de_jure_liege.de_jure_liege = title:k_england
-					}
-				}
-			}
-			set_culture = culture:engelsk
-		}
-	}
-
-	#Flip Counties
-	every_county_in_region = {
-		region = custom_england
-		custom = embrace_english_culture_counties_custom
-		limit = {
-			target_is_de_facto_liege_or_above = root.primary_title
-		}
-		random = {
-			chance = 40
-			set_county_culture = culture:engelsk
-		}
-	}
-
-	culture:engelsk = {# gets it twice just in case you got any innovations since it was created
-		custom_tooltip = decision_embrace_engelsk_culture_get_innovations
-		hidden_effect = {
-			get_all_innovations_from = culture:anglo_norse
-			get_all_innovations_from = culture:anglo_saxon
 		}
 	}
 }
@@ -442,41 +346,8 @@ establish_norman_adminstration_effects = {# Establishing the Norman Adminstratio
 		}
 		hidden_effect = {
 			add_realm_law_skip_effects = partition_succession_law
-			if = {
-				limit = {
-					exists = cp:councillor_chancellor
-					has_culture = culture:anglo_saxon
-				}
-				fire_councillor = cp:councillor_chancellor
-			}
-			if = {
-				limit = {
-					exists = cp:councillor_steward
-					has_culture = culture:anglo_saxon
-				}
-				fire_councillor = cp:councillor_steward
-			}
-			if = {
-				limit = {
-					exists = cp:councillor_marshal
-					has_culture = culture:anglo_saxon
-				}
-				fire_councillor = cp:councillor_marshal
-			}
-			if = {
-				limit = {
-					exists = cp:councillor_spymaster
-					has_culture = culture:anglo_saxon
-				}
-				fire_councillor = cp:councillor_spymaster
-			}
-			if = {
-				limit = {
-					exists = cp:councillor_court_chaplain
-					has_culture = culture:anglo_saxon
-				}
-				fire_councillor = cp:councillor_court_chaplain
-			}			
+
+	
 
 			# The Duchy of Bedford
 			title:c_middlesex = { set_de_jure_liege_title = title:d_bedford }

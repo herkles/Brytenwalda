@@ -25,7 +25,6 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 		title:k_england = {# Willy's capital is now in London
 			set_capital_county = title:c_middlesex
 		}
-		set_realm_capital = title:c_middlesex
 		save_scope_as = norman_england_king
 		establish_norman_adminstration_effects = yes
 		set_global_variable = {
@@ -36,12 +35,13 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 
 	option = {# Interesting
 		name = bryten_england.001.coronation
-		add_prestige = medium_prestige_gain
+		custom_tooltip = bryten_william_is_king_tooltip
+		if = {# William doesn't need more prestige when he is king. 
+			limit = { game_start_date = 1066.9.15 }
+			add_prestige = medium_prestige_gain
+		}
 	}
 }
-
-
-
 #######################################
 # Norse Invansion Events
 #######################################
@@ -147,12 +147,11 @@ bryten_england.010 = {# Northumbria is victorious
 #######################################
 # Anglo-Saxon Culture Forming
 #######################################
-bryten_england.029 = {# Anglo-Saxon Secured - Stops Englisk from forming 
+bryten_england.029 = {# Anglo-Saxon Secured  
 	hidden = yes	
 
 	trigger = {
 		not = { exists = global_var:bryten_scots_language_english }
-		not = { exists = global_var:bryten_engelsk_created }
 		not = { exists = global_var:bryten_anglo_saxon_secured }
 		current_date >= 1150.1.1
 		has_title = title:k_england
@@ -213,7 +212,7 @@ bryten_england.30 = {# Anglo-Saxon Culture forming
 
 	option = {
 		name = bryten_england.30.a
-		embrace_english_culture_effect = yes
+		unify_anglo_saxon_culture_effect = yes
 		hidden_effect = { # Moved here from embrace_english_culture_decision
 			# Send event to other players
 			every_player = {
@@ -311,272 +310,6 @@ bryten_england.033 = {# Players informed
 
 	option = {# Interesting
 		name = bryten_england.033.a
-	}
-}
-#######################################
-# engelsk culture Forming
-#######################################
-bryten_england.034 = {# engelsk Culture Forming 
-	hidden = yes
-	
-	trigger = {
-		not = {	exists = global_var:bryten_engelsk_created } # Fire Only Once
-		has_title = title:k_england
-		any_county_in_region = {# To ensure that you actually rule over england
-			region = custom_england
-			count >= 28
-			OR = {
-				holder = root
-				holder = {
-					any_liege_or_above = { this = root }
-				}
-			}
-		}
-		OR = {# Must be a nordic based culture ruling england
-			culture = { has_cultural_pillar = heritage_north_germanic }
-			culture = culture:anglo_norse
-		}
-		any_county_in_region = {# 
-			region = custom_england
-			culture = { has_cultural_pillar = heritage_west_germanic }
-		}
-		current_date >= 1100.1.1
-	}
-	
-	immediate = {
-		culture:engelsk = {
-			reset_culture_creation_date = yes
-			get_all_innovations_from = culture:anglo_norse
-			get_all_innovations_from = culture:anglo_saxon
-		}
-		set_global_variable = {
-			name = bryten_engelsk_created
-			value = yes
-		}
-	}
-}
-bryten_england.035 = {# Cities are adopting engelsk Culture
-	type = character_event
-	title = bryten_england.035.t
-	desc = bryten_england.035.desc
-	theme = culture_change
-
-	immediate = {
-		if = {# Winchester
-			limit = { has_title = title:c_hampton }
-			title:c_hampton = {
-				save_scope_as = bryten_engelsk_winchester
-			}
-			set_global_variable = {
-				name = bryten_engelsk_created_winchester
-				value = yes
-			}
-		}
-		if = {# York
-			limit = { has_title = title:c_north_riding }
-			title:c_north_riding = {
-				save_scope_as = bryten_engelsk_york
-			}
-			set_global_variable = {
-				name = bryten_engelsk_created_york
-				value = yes
-			}
-		}
-		if = {# London
-			limit = { has_title = title:c_middlesex }
-			title:c_middlesex = {
-				save_scope_as = bryten_engelsk_london
-			}
-			set_global_variable = {
-				name = bryten_engelsk_created_london
-				value = yes
-			}
-		}		
-		if = {# Oxford
-			limit = { has_title = title:c_oxfordshire }
-			title:c_oxfordshire = {
-				save_scope_as = bryten_engelsk_oxford
-			}
-			set_global_variable = {
-				name = bryten_engelsk_created_oxford
-				value = yes
-			}
-		}
-		if = {# Lincoln
-			limit = { has_title = title:c_lincolnshire }
-			title:c_lincolnshire = {
-				save_scope_as = bryten_engelsk_lincoln
-			}
-			set_global_variable = {
-				name = bryten_engelsk_created_lincoln
-				value = yes
-			}
-		}
-		if = {# Bristol
-			limit = { has_title = title:c_gloucestershire }
-			title:c_gloucestershire = {
-				save_scope_as = bryten_engelsk_bristol
-			}
-			set_global_variable = {
-				name = bryten_engelsk_created_bristol
-				value = yes
-			}
-		}
-		if = {# Norwich
-			limit = { has_title = title:c_norfolk }
-			title:c_norfolk = {
-				save_scope_as = bryten_engelsk_norwich
-			}
-			save_scope_as = bryten_engelsk_norwich
-			set_global_variable = {
-				name = bryten_engelsk_created_norwich
-				value = yes
-			}
-		}
-	}
-
-	trigger = {
-		OR = {# must own an important English city
-			has_title = title:c_hampton # Winchester
-			has_title = title:c_north_riding # York
-			has_title = title:c_middlesex # London
-			has_title = title:c_oxfordshire # Oxford
-			has_title = title:c_lincolnshire # Lincoln
-			has_title = title:c_gloucestershire # bristol and Glouscster
-			has_title = title:c_norfolk # Norwich
-		}
-		AND = {
-			not = {	exists = global_var:bryten_engelsk_created_winchester }
-			not = {	exists = global_var:bryten_engelsk_created_york }
-			not = {	exists = global_var:bryten_engelsk_created_london }
-			not = {	exists = global_var:bryten_engelsk_created_oxford }
-			not = {	exists = global_var:bryten_engelsk_created_lincoln }
-			not = {	exists = global_var:bryten_engelsk_created_bristol }
-			not = {	exists = global_var:bryten_engelsk_created_norwich }
-		}
-		OR = {# Must be a nordic based culture ruling england
-			culture = { has_cultural_pillar = heritage_north_germanic }
-			culture = culture:anglo_norse
-		}
-		exists = global_var:bryten_engelsk_created
-		current_date >= 1150.1.1
-	}
-
-	option = {# Winchester
-		name = bryten_england.035.city
-		if = {# Winchester
-			limit = {
-				exists = global_var:bryten_engelsk_created_winchester
-				has_title = title:c_hampton
-				NOT = {scope:bryten_engelsk_winchester = { has_culture = culture:engelsk } }
-			}
-			scope:bryten_engelsk_winchester = {	set_county_culture = culture:engelsk }
-		}
-		if = {# York
-			limit = {
-				exists = global_var:bryten_engelsk_created_york
-				has_title = title:c_north_riding
-				NOT = {scope:bryten_engelsk_york = { has_culture = culture:engelsk } }
-			}
-			scope:bryten_engelsk_york = {	set_county_culture = culture:engelsk }
-		}
-		if = {# London
-			limit = {
-				exists = global_var:bryten_engelsk_created_london
-				has_title = title:c_middlesex
-				NOT = {scope:bryten_engelsk_london = { has_culture = culture:engelsk } }
-			}
-			scope:bryten_engelsk_london = {	set_county_culture = culture:engelsk }
-		}
-		if = {# Oxford
-			limit = {
-				exists = global_var:bryten_engelsk_created_oxford
-				has_title = title:c_oxfordshire
-				NOT = {scope:bryten_engelsk_oxford = { has_culture = culture:engelsk } }
-			}
-			scope:bryten_engelsk_oxford = {	set_county_culture = culture:engelsk }
-		}
-		if = {# Lincoln
-			limit = {
-				exists = global_var:bryten_engelsk_created_lincoln
-				has_title = title:c_lincolnshire
-				NOT = {scope:bryten_engelsk_lincoln = { has_culture = culture:engelsk } }
-			}
-			scope:bryten_engelsk_lincoln = {	set_county_culture = culture:engelsk }
-		}
-		if = {# Glouscster
-			limit = {
-				exists = global_var:bryten_engelsk_created_bristol
-				has_title = title:c_gloucestershire
-				NOT = {scope:bryten_engelsk_bristol = { has_culture = culture:engelsk } }
-			}
-			scope:bryten_engelsk_bristol = {	set_county_culture = culture:engelsk }
-		}
-		if = {# Norwich
-			limit = {
-				exists = global_var:bryten_engelsk_created_norwich
-				has_title = title:c_norfolk
-				NOT = {scope:bryten_engelsk_winchester = { has_culture = culture:engelsk } }
-			}
-			scope:bryten_engelsk_norwich = {	set_county_culture = culture:engelsk }
-		}
-	}
-}
-bryten_england.038 = {# The king has embraced engelsk Culture
-	type = character_event
-	title = bryten_england.038.t
-	desc = bryten_england.038.desc
-	theme = culture_change
-	left_portrait = {
-		character = scope:embracer
-		animation = personality_bold
-	}
-
-	immediate = {
-		save_scope_as = embracer
-		culture = { save_scope_as = embracer_former_culture }
-	}
-
-	option = {
-		name = bryten_england.038.a
-		embrace_english_culture_effect = yes
-		hidden_effect = { # Moved here from embrace_english_culture_decision
-			# Send event to other players
-			every_player = {
-				limit = {
-					NOT = { this = root }
-					OR = {
-						primary_title = {
-							OR = {
-								de_jure_liege = title:e_britannia
-								de_jure_liege.de_jure_liege = title:e_britannia
-								de_jure_liege.de_jure_liege.de_jure_liege = title:e_britannia
-							}
-						}
-						culture = { has_cultural_pillar = heritage_north_germanic }
-						culture = { has_cultural_pillar = heritage_central_germanic }
-						culture = { has_cultural_pillar = heritage_west_germanic }
-						culture = { has_cultural_pillar = heritage_goidelic }
-						culture = { has_cultural_pillar = heritage_brythonic }
-					}
-				}
-				trigger_event = bryten_england.039
-			}
-		}
-	}
-}
-bryten_england.039 = {# Players informed
-	type = character_event
-	title = bryten_england.038.t
-	desc = bryten_england.039.desc
-	theme = culture_change
-	left_portrait = {
-		character = scope:embracer
-		animation = personality_bold
-	}
-
-	option = { # Not norman
-		name = bryten_england.039.a
 	}
 }
 #######################################
@@ -847,9 +580,6 @@ bryten_england.045 = {# Players informed
 		}
 	}
 }
-
-
-
 #######################################
 # Pilgrimage to Bury St. Edmunds
 #######################################

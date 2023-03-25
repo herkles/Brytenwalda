@@ -71,7 +71,6 @@ yearly_global_pulse = {
 				NOT = { has_global_variable = scottish_culture_creation }
 				OR = {
 					exists = global_var:bryten_english_created # English has to be created first
-					exists = global_var:bryten_engelsk_created # Englisk has to be created first
 					exists = global_var:bryten_anglo_saxon_secured # Anglo-Saxon has to be created
 				}
 				current_date >= 1150.1.1

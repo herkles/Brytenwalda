@@ -3,6 +3,7 @@
 #############################################
 mercian = {# Mercian
 	trigger = {
+		not = {	exists = global_var:bryten_anglo_saxon_created } # don't get recreated after Anglo-Saxon is formed
 		OR = {
 			capital_county = {
 				title:d_hereford = {
@@ -20,6 +21,7 @@ mercian = {# Mercian
 }
 northumbrian = {# Northumbrian
 	trigger = {
+		not = {	exists = global_var:bryten_anglo_saxon_created } # don't get recreated after Anglo-Saxon is formed
 		OR = {
 			capital_county = {
 				title:d_northumberland = {
