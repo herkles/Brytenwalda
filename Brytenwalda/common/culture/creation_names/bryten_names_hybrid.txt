@@ -63,7 +63,21 @@ engelsk = {# Engelsk
 	}
 	hybrid = yes
 }
-
+anglo_norse = {# Anglo-Norse
+	trigger = {
+		OR = {
+			AND = {
+				scope:culture = { has_cultural_pillar = heritage_west_germanic }
+				scope:other_culture = { has_cultural_pillar = heritage_north_germanic }
+			}
+			AND = {
+				scope:culture = { has_cultural_pillar = heritage_north_germanic }
+				scope:other_culture = { has_cultural_pillar = heritage_west_germanic }
+			}
+		}
+	}
+	hybrid = yes
+}
 ulster_scots = {# Ulster Scots
 	trigger = {
 		OR = {
