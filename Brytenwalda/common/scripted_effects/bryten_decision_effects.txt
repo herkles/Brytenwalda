@@ -232,6 +232,7 @@ unify_anglo_saxon_culture_effect = {# Unifying Anglo Saxon
 		limit = {
 			target_is_de_facto_liege_or_above = root.primary_title
 			OR = {
+				culture = culture:east_anglian
 				culture = culture:mercian
 				culture = culture:northumbrian
 				culture = culture:west_saxon
@@ -248,6 +249,7 @@ unify_anglo_saxon_culture_effect = {# Unifying Anglo Saxon
 			get_all_innovations_from = culture:mercian
 			get_all_innovations_from = culture:northumbrian
 			get_all_innovations_from = culture:west_saxon
+			get_all_innovations_from = culture:east_anglian
 		}
 	}
 }
@@ -349,47 +351,52 @@ establish_norman_adminstration_effects = {# Establishing the Norman Adminstratio
 
 	
 
-			# The Duchy of Bedford
-			title:c_middlesex = { set_de_jure_liege_title = title:d_bedford }
-			title:c_essex = { set_de_jure_liege_title = title:d_bedford }
-			title:c_bedford = { set_de_jure_liege_title = title:d_bedford }
-			title:c_hertfordshire = { set_de_jure_liege_title = title:d_bedford }
-			title:c_buckinghamshire = { set_de_jure_liege_title = title:d_bedford }
-			# The Duchy of Northumberland
-			title:c_northumberland = { set_de_jure_liege_title = title:d_northumberland }
-			title:c_durham = { set_de_jure_liege_title = title:d_northumberland }
+			# The Duchy of York
 			# The Duchy of Lancaster
 			title:c_lancashire = { set_de_jure_liege_title = title:d_lancaster }
 			title:c_westmorland = { set_de_jure_liege_title = title:d_lancaster }
 			title:c_cheshire = { set_de_jure_liege_title = title:d_lancaster }
 			title:c_derby = { set_de_jure_liege_title = title:d_lancaster }
-			# The Duchy of Norfolk
-			title:c_norfolk = { set_de_jure_liege_title = title:d_norfolk }
-			title:c_suffolk = { set_de_jure_liege_title = title:d_norfolk }
-			title:c_cambridgeshire = { set_de_jure_liege_title = title:d_norfolk }
-			# The Duchy of hereford
-			title:c_warwickshire = { set_de_jure_liege_title = title:d_hereford }
-			title:c_leicestershire = { set_de_jure_liege_title = title:d_hereford }
-			title:c_nottinghamshire = { set_de_jure_liege_title = title:d_hereford }
 			title:c_staffordshire = { set_de_jure_liege_title = title:d_hereford }
-			title:c_worcestershire = { set_de_jure_liege_title = title:d_hereford }
-			title:c_huntingdonshire = { set_de_jure_liege_title = title:d_hereford }
-			title:c_northamptonshire = { set_de_jure_liege_title = title:d_hereford }
-			title:c_shropshire = { set_de_jure_liege_title = title:d_hereford }
 			# The Duchy of Gloucester
 			title:c_gloucestershire = { set_de_jure_liege_title = title:d_gloucester }
 			title:c_wiltshire = { set_de_jure_liege_title = title:d_gloucester }
 			title:c_oxfordshire = { set_de_jure_liege_title = title:d_gloucester }
-			title:c_berkshire = { set_de_jure_liege_title = title:d_gloucester }
-			# The Duchy of Canterbury
+			title:c_berkshire = { set_de_jure_liege_title = title:d_gloucester }			
+			# The Duchy of Hereford
+			title:c_hereford = { set_de_jure_liege_title = title:d_hereford }
+			title:c_shropshire = { set_de_jure_liege_title = title:d_hereford }
+			title:c_warwickshire = { set_de_jure_liege_title = title:d_hereford }
+			title:c_worcestershire = { set_de_jure_liege_title = title:d_hereford }
+			# The Duchy of Bedford
+			title:c_bedford = { set_de_jure_liege_title = title:d_bedford }
+			title:c_huntingdonshire = { set_de_jure_liege_title = title:d_bedford }
+			# The Duchy of Buckingham
+			title:c_buckinghamshire = { set_de_jure_liege_title = title:d_buckingham }
+			title:c_middlesex = { set_de_jure_liege_title = title:d_buckingham }
+			title:c_essex = { set_de_jure_liege_title = title:d_buckingham }
+			title:c_hertfordshire = { set_de_jure_liege_title = title:d_buckingham }
+			# The Duchy of Northumberland
+			title:c_northumberland = { set_de_jure_liege_title = title:d_northumberland }
+			title:c_durham = { set_de_jure_liege_title = title:d_northumberland }
+			# The Duchy of Norfolk
+			title:c_norfolk = { set_de_jure_liege_title = title:d_norfolk }
+			title:c_suffolk = { set_de_jure_liege_title = title:d_norfolk }
+			title:c_cambridgeshire = { set_de_jure_liege_title = title:d_norfolk }
+			# The Duchy of Surrey
 			title:c_kent = { set_de_jure_liege_title = title:d_canterbury }
 			title:c_surrey = { set_de_jure_liege_title = title:d_canterbury }
 			title:c_sussex = { set_de_jure_liege_title = title:d_canterbury }
-			# The Duchy of Somerset
+			# The Duchy of Sommerset
 			title:c_hampton = { set_de_jure_liege_title = title:d_somerset }
 			title:c_isle_of_wight = { set_de_jure_liege_title = title:d_somerset }
 			title:c_somerset = { set_de_jure_liege_title = title:d_somerset }
 			title:c_dorset = { set_de_jure_liege_title = title:d_somerset }
+			# The Duchy of Lincolnshire
+			title:c_lincolnshire = { set_de_jure_liege_title = title:d_lincoln }
+			title:c_leicestershire = { set_de_jure_liege_title = title:d_lincoln }
+			title:c_nottinghamshire = { set_de_jure_liege_title = title:d_lincoln }
+			title:c_northamptonshire = { set_de_jure_liege_title = title:d_lincoln }
 			if = {
 				limit = { 
 					AND = {
