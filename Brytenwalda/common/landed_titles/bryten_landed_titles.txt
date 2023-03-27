@@ -8,7 +8,7 @@
 #         The British Kingdoms	      #
 #									  #
 #######################################
-e_britannia = {
+e_britannia = {	
 	color = { 172 22 22 }
 	capital = c_middlesex
 	
@@ -297,9 +297,46 @@ e_britannia = {
 			}		
 		}	
 		### Norman Duchies after the conquest ###
-		d_bedford = {# Essex
-			color = { 241 15 15 }
+		d_warwick = {# Warwick
+			color = { 180 55 87 }
 			
+			capital = c_warwickshire # Bamburgh, Bernicia
+			
+			can_create = {
+				culture = {
+					has_innovation = innovation_noblesse_oblige
+				}
+			}
+
+		}
+		d_buckingham = {# Buckingham
+			color = { 126 25 27 }
+			
+			capital = c_buckinghamshire # Bamburgh, Bernicia
+			
+			can_create = {
+				culture = {
+					has_innovation = innovation_noblesse_oblige
+				}
+			}
+
+		}
+		d_lincoln = {# Lincoln
+			color = { 164 90 82 }
+			
+			capital = c_lincolnshire # Bamburgh, Bernicia
+			
+			can_create = {
+				culture = {
+					has_innovation = innovation_noblesse_oblige
+				}
+			}
+
+		}		
+
+		d_bedford = { # Essex
+			color = { 210 31 60 }
+
 			capital = c_middlesex
 
 			can_create = {
@@ -324,133 +361,186 @@ e_britannia = {
                 name_list_danish = cn_essex_danish # Austseaxe
 			}
 
-			c_bedford = {
-				color = { 205 20 15 }	
-	
+			c_middlesex = {
+				color = { 230 5 5 }
+
 				cultural_names = {
-                    name_list_anglo_saxon = cn_bedford_county_anglo_saxon # Beadanfordscīr
-                    name_list_scottish = cn_bedford_county_scottish # Bedfordshire
-                    name_list_english = cn_bedford_county_english # Bedfordshire
-                    name_list_norman = cn_bedford_norman # Bedefort
-
-                    name_list_gaelic = cn_bedford_gaelic # Átha Bede
-                    name_list_pictish = cn_bedford_pictish # Átha Bede
-                    name_list_irish = cn_bedford_irish # Átha Bede
-
-                    name_list_cornish = cn_bedford_cornish # Rhydwely
-                    name_list_welsh = cn_bedford_welsh # Rhydwely
-                    name_list_cumbrian = cn_bedford_cumbrian # Rhydwely
-
-                    name_list_swedish = cn_bedford_swedish # Beadanford
-                    name_list_norwegian = cn_bedford_norwegian # Beadanford
-                    name_list_norse = cn_bedford_norse # Beadanford
-                    name_list_danish = cn_bedford_danish # Beadanford					
+					name_list_anglo_saxon = cn_middle_seaxe
+					name_list_old_saxon = cn_middle_seaxe
 				}
-				
+
+				b_london = {
+					province = 1527
+
+					color = { 230 5 5 }
+
+					cultural_names = {
+						name_list_anglo_saxon = cn_lunden
+						name_list_old_saxon = cn_lunden
+
+						name_list_roman = cn_londinium
+
+						name_list_welsh = cn_llundein
+						name_list_cornish = cn_llundein
+						name_list_breton = cn_llundein
+						name_list_cumbrian = cn_llundein
+						name_list_pictish = cn_llundein
+
+						name_list_norman = cn_londres
+						name_list_scottish = cn_lunnon
+					}
+				}
+				b_southwark = {
+					province = 1526
+
+					cultural_names = {
+						name_list_anglo_saxon = cn_suthweorc
+						name_list_old_saxon = cn_suthweorc
+					}
+
+					color = { 230 5 5 }
+				}
+				b_woxbrigge = {
+					province = 1528
+
+					color = { 230 5 5 }
+				}
+				b_gore = {
+					province = 1529
+
+					color = { 230 5 5 }
+				}
+				b_brentford = {
+					province = 1530
+
+					color = { 230 5 5 }
+				}
+			}
+			c_essex = {
+				color = { 220 20 30 }
+
+				cultural_names = {
+					name_list_anglo_saxon = cn_east_seaxe
+					name_list_old_saxon = cn_east_seaxe
+				}
+
+				b_colchester = {
+					province = 1514
+
+					cultural_names = {
+						name_list_anglo_saxon = cn_colenceaster
+						name_list_old_saxon = cn_colenceaster
+					}
+
+					color = { 220 20 30 }
+				}
+				b_maldon = {
+					province = 1515
+
+					color = { 220 20 30 }
+				}
+				b_chelmsford = {
+					province = 1516
+
+					color = { 220 20 30 }
+				}
+				b_dunmow = {
+					province = 1517
+
+					color = { 220 20 30 }
+				}
+			}
+			c_bedford = {
+				color = { 205 20 15 }
+
+				cultural_names = {
+					name_list_anglo_saxon = cn_bedanford
+					name_list_old_saxon = cn_bedanford
+				}
+
 				b_bedford = {
 					province = 1538
-	
-					cultural_names = {
-                        name_list_anglo_saxon = cn_bedford_anglo_saxon # Beadanford
-                        name_list_scottish = cn_bedford_scottish # Bedford
-                        name_list_english = cn_bedford_english # Bedford
-						name_list_norman = cn_bedford_norman # Bedefort
-	
-						name_list_gaelic = cn_bedford_gaelic # Átha Bede
-						name_list_pictish = cn_bedford_pictish # Átha Bede
-						name_list_irish = cn_bedford_irish # Átha Bede
-	
-						name_list_cornish = cn_bedford_cornish # Rhydwely
-						name_list_welsh = cn_bedford_welsh # Rhydwely
-						name_list_cumbrian = cn_bedford_cumbrian # Rhydwely
 
-						name_list_swedish = cn_bedford_swedish # Beadanford
-						name_list_norwegian = cn_bedford_norwegian # Beadanford
-						name_list_norse = cn_bedford_norse # Beadanford
-						name_list_danish = cn_bedford_danish # Beadanford						
+					cultural_names = {
+						name_list_anglo_saxon = cn_bedanford
+						name_list_old_saxon = cn_bedanford
 					}
 
 					color = { 205 20 15 }
-					
 				}
 				b_ampthill = {
 					province = 1539
-					color = { 205 20 15 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_ampthill_england_anglo_saxon # Æmethyll
-                        name_list_scottish = cn_ampthill_england_scottish # Ametehul
-                        name_list_english = cn_ampthill_england_english # Ametehul
-                        name_list_norman = cn_ampthill_england_norman # Ammetelle
 
-                        name_list_swedish = cn_ampthill_england_swedish # Aemethyll
-                        name_list_norwegian = cn_ampthill_england_norwegian # Aemethyll
-                        name_list_norse = cn_ampthill_england_norse # Aemethyll
-                        name_list_danish = cn_ampthill_england_danish # Aemethyll						
-					}
+					color = { 205 20 15 }
 				}
 				b_luton = {
 					province = 1540
+
 					color = { 205 20 15 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_luton_anglo_saxon # Loitone # Or Lintone, Lygetun
-                        name_list_scottish = cn_luton_scottish # Luton
-                        name_list_english = cn_luton_english # Luton
-                        name_list_norman = cn_luton_norman # Loitone # Or Lintone
-		
-                        name_list_cornish = cn_luton_cornish # Din Lleu
-                        name_list_welsh = cn_luton_welsh # Din Lleu
-                        name_list_cumbrian = cn_luton_cumbrian # Din Lleu
-
-                        name_list_swedish = cn_luton_swedish # Luntun
-                        name_list_norwegian = cn_luton_norwegian # Luntun
-                        name_list_norse = cn_luton_norse # Luntun
-                        name_list_danish = cn_luton_danish # Luntun						
-					}					
-					
 				}
 			}
-			c_huntingdonshire = {
-				color = { 175 40 55 }
+			c_hertfordshire = {
+				color = { 250 35 35 }
+
 				cultural_names = {
-
-                    name_list_cornish = cn_huntingdon_cornish # Pen-hela
-                    name_list_welsh = cn_huntingdon_welsh # Pen-hela
-                    name_list_cumbrian = cn_huntingdon_cumbrian # Pen-hela
-				}				
-
-				b_hurstingstone = {
-					province = 1541
-					color = { 175 40 55 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_hurstingstone_anglo_saxon # Hyrstingestan
-                        name_list_norman = cn_hurstingstone_norman # Herstingestan
-
-					}						
+					name_list_anglo_saxon = cn_herutford
+					name_list_old_saxon = cn_herutford
 				}
-				b_norman_cross = {
-					province = 1542
-					color = { 175 40 55 }					
-				}
-				b_leightonstone = {
-					province = 1543
-					color = { 175 40 55 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_leightonstone_anglo_saxon # Leactunestan
-                        name_list_scottish = cn_leightonstone_scottish # Leghtonston
-                        name_list_english = cn_leightonstone_english # Leghtonston
-						name_list_norman = cn_leightonstone_norman # Lectunestane
 
-					}					
+				b_berkhamsted = {
+					province = 1531
+
+					color = { 250 35 35 }
+				}
+				b_saint_albans = {
+					province = 1532
+
+					color = { 250 35 35 }
+				}
+				b_hertford = {
+					province = 1533
+
+					color = { 250 35 35 }
 				}
 			}
+			c_buckinghamshire = {
+				color = { 200 25 25 }
 
+				cultural_names = {
+					name_list_anglo_saxon = cn_buccingahamm
+					name_list_old_saxon = cn_buccingahamm
+				}
 
-		}		
-		d_northumberland = {# Northumberland
-			color = hsv{ 0.98 0.9 0.9 }			
+				b_buckingham = {
+					province = 1551
+
+					cultural_names = {
+						name_list_anglo_saxon = cn_buccingahamm
+						name_list_old_saxon = cn_buccingahamm
+					}
+
+					color = { 200 25 25 }
+				}
+				b_aylesbury = {
+					province = 1552
+
+					color = { 200 25 25 }
+				}
+				b_newport = {
+					province = 1553
+
+					color = { 200 25 25 }
+				}
+				b_wycombe = {
+					province = 1554
+
+					color = { 200 25 25 }
+				}
+			}
+		}
+		d_northumberland = {
+			color = { 238 75 43 }
+
 			can_create = {
 				culture = {
 					has_innovation = innovation_noblesse_oblige
@@ -486,202 +576,113 @@ e_britannia = {
 					add = @better_than_the_alternatives_score
 				}
 			}
-			
+
 			capital = c_northumberland # Bamburgh, Bernicia
 
 			c_northumberland = {
-				color = { 245 0 0 }	
+				color = { 245 0 0 }
 
 				cultural_names = {
-					name_list_anglo_saxon = cn_northumberland_anglo_saxon # Norþymbraland # Or Norþhymbraland
-					name_list_scottish = cn_northumberland_scottish # Norþumbrelond
-					name_list_english = cn_northumberland_english # Norþumbrelond
-					name_list_norman = cn_northumberland_norman # Nord-Humbrelande
-	
-					name_list_pictish = cn_northumberland_pictish # Norðhymbraland
-					name_list_irish = cn_northumberland_irish # Nortumbarlann
-					name_list_gaelic = cn_northumberland_gaelic # Norðhymbraland
-	
-					name_list_cornish = cn_northumberland_cornish # Bryneich
-					name_list_welsh = cn_northumberland_welsh # Bryneich
-					name_list_cumbrian = cn_northumberland_cumbrian # Bryneich
-
-					name_list_norse = cn_northumberland_norse # Norðimbraland
-					name_list_danish = cn_northumberland_danish # Norðhymbraland
-					name_list_norwegian = cn_northumberland_norwegian # Norðhymbraland
-					name_list_swedish = cn_northumberland_swedish # Norðhymbraland
-	
+					name_list_anglo_saxon = cn_bernicia
+					name_list_breton = cn_bryneich
+					name_list_cornish = cn_bryneich
+					name_list_cumbrian = cn_bryneich
+					name_list_pictish = cn_bryneich
+					name_list_welsh = cn_bryneich
 				}
-				
+
 				b_bamburgh = {
 					province = 1609
+
 					color = { 245 0 0 }
-					
+
 					cultural_names = {
-                        name_list_anglo_saxon = cn_bamburgh_anglo_saxon # Bebbanburh
-                        name_list_norman = cn_bamburgh_norman # Bebbanburc
-						
-                        name_list_welsh = cn_bamburgh_welsh # Din Gwardi
-                        name_list_cornish = cn_bamburgh_cornish # Din Gwardi
-                        name_list_cumbrian = cn_bamburgh_cumbrian # Din Gwardi
+						name_list_anglo_saxon = cn_bebbanburg
+						name_list_old_saxon = cn_bebbanburg
 
-                        name_list_norse = cn_bamburgh_norse # Bamborg # Or Bebbanborg
-                        name_list_danish = cn_bamburgh_danish # Bebbanburgh # Or Bamborg
-                        name_list_swedish = cn_bamburgh_swedish # Bebbanborg # Or Bamborg
-                        name_list_norwegian = cn_bamburgh_norwegian # Bebbanborg # Or Bamborg
+						name_list_norwegian = cn_bamborg
+						name_list_danish = cn_bamborg
+						name_list_swedish = cn_bamborg
+						name_list_norse = cn_bamborg
 
+						name_list_welsh = cn_din_guarie
+						name_list_cumbrian = cn_din_guarie
+						name_list_pictish = cn_din_guarie
+						name_list_cornish = cn_din_guarie
+						name_list_breton = cn_din_guarie
 					}
 				}
 				b_rothbury = {
 					province = 1612
-					color = { 245 0 0 }
-			
-					cultural_names = {
-                        name_list_anglo_saxon = cn_rothbury_anglo_saxon # Hroþaburh
-                        name_list_scottish = cn_rothbury_scottish # Routhebury
-                        name_list_english = cn_rothbury_english # Routhebury
-                        name_list_norman = cn_rothbury_norman # Routheberie		
 
-                        name_list_swedish = cn_rothbury_swedish # Rotborg
-                        name_list_norwegian = cn_rothbury_norwegian # Rotborg
-                        name_list_norse = cn_rothbury_norse # Rotborg
-                        name_list_danish = cn_rothbury_danish # Rotborg						
-					}										
+					color = { 245 0 0 }
 				}
 				b_lindisfarne = {
 					province = 1610
+
 					color = { 245 0 0 }
 
 					cultural_names = {
-                        name_list_anglo_saxon = cn_lindisfarne_anglo_saxon # Lindisfarena
-                        name_list_scottish = cn_lindisfarne_scottish # Lyndeseye
-                        name_list_english = cn_lindisfarne_english # Lyndeseye
-		
-                        name_list_pictish = cn_lindisfarne_pictish # Medcaut
-                        name_list_irish = cn_lindisfarne_irish # Medcaut
-                        name_list_gaelic = cn_lindisfarne_gaelic # Medcaut
-		
-                        name_list_cornish = cn_lindisfarne_cornish # Medcaut
-                        name_list_welsh = cn_lindisfarne_welsh # Medcaut
-                        name_list_cumbrian = cn_lindisfarne_cumbrian # Medcaut
-
-                        name_list_swedish = cn_lindisfarne_swedish # Lindisfarena
-                        name_list_norwegian = cn_lindisfarne_norwegian # Lindisfarena
-                        name_list_norse = cn_lindisfarne_norse # Lindisfarena
-                        name_list_danish = cn_lindisfarne_danish # Lindisfarena						
-					}							
-
+						name_list_welsh = cn_medcaut
+						name_list_cumbrian = cn_medcaut
+						name_list_pictish = cn_medcaut
+						name_list_cornish = cn_medcaut
+						name_list_breton = cn_medcaut
+					}
 				}
 				b_hexham = {
 					province = 1611
+
 					color = { 245 0 0 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_hexham_anglo_saxon # Hagustaldesham
-                        name_list_scottish = cn_hexham_scottish # Hextildesham
-						name_list_english = cn_hexham_english # Hextildesham
-                        name_list_norman = cn_hexham_norman # Hestoldesham
-				
-                        name_list_cornish = cn_hexham_cornish # Caergor
-                        name_list_welsh = cn_hexham_welsh # Caergor
-                        name_list_cumbrian = cn_hexham_cumbrian # Caergor
-
-                        name_list_swedish = cn_hexham_swedish # Hagustaldesee
-                        name_list_norwegian = cn_hexham_norwegian # Hagustaldesee
-                        name_list_norse = cn_hexham_norse # Hagustaldesee
-                        name_list_danish = cn_hexham_danish # Hagustaldesee						
-					}					
 				}
 			}
 			c_durham = {
 				color = { 255 15 15 }
 
 				cultural_names = {
-					name_list_anglo_saxon = cn_hexham_anglo_saxon # Hagustaldesham
-                    name_list_scottish = cn_durham_scottish # Duram
-					name_list_english = cn_durham_english # Duram
-                    name_list_norman = cn_durham_norman # Duresme # Or Duresm
-		
-                    name_list_cornish = cn_durham_cornish # Caerweir
-                    name_list_welsh = cn_durham_welsh # Caerweir
-                    name_list_cumbrian = cn_durham_cumbrian # Caerweir
-
-                    name_list_swedish = cn_durham_swedish # Dunholm
-                    name_list_norse = cn_durham_norse # Dúnholmr
-                    name_list_norwegian = cn_durham_norwegian # Dunholm
-                    name_list_danish = cn_durham_danish # Dunholm
+					name_list_anglo_saxon = cn_dunholm
+					name_list_old_saxon = cn_dunholm
+					name_list_norman = cn_duresm
+					name_list_french = cn_duresm
+					name_list_outremer = cn_duresm
+					name_list_occitan = cn_duresm
 				}
-				
+
 				b_durham = {
 					province = 1606
-					color = { 255 15 15 }
-					
-					cultural_names = {
-						name_list_anglo_saxon = cn_hexham_anglo_saxon # Hagustaldesham
-						name_list_scottish = cn_durham_scottish # Duram
-						name_list_english = cn_durham_english # Duram
-						name_list_norman = cn_durham_norman # Duresme # Or Duresm
-		
-						name_list_cornish = cn_durham_cornish # Caerweir
-						name_list_welsh = cn_durham_welsh # Caerweir
-						name_list_cumbrian = cn_durham_cumbrian # Caerweir
 
-						name_list_swedish = cn_durham_swedish # Dunholm
-						name_list_norse = cn_durham_norse # Dúnholmr
-						name_list_norwegian = cn_durham_norwegian # Dunholm
-						name_list_danish = cn_durham_danish # Dunholm						
+					cultural_names = {
+						name_list_anglo_saxon = cn_dunholm
+						name_list_old_saxon = cn_dunholm
+						name_list_norman = cn_duresm
+						name_list_french = cn_duresm
+						name_list_outremer = cn_duresm
+						name_list_occitan = cn_duresm
+						name_list_norse = cn_ulfreksfjordr
+						name_list_norwegian = cn_ulfreksfjordr
 					}
 
+					color = { 255 15 15 }
 				}
 				b_hartlepool = {
 					province = 1607
+
 					color = { 255 15 15 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_hartlepool_anglo_saxon # Heorotea # Or Heortepol
-                        name_list_scottish = cn_hartlepool_scottish # Herterpol
-                        name_list_english = cn_hartlepool_english # Herterpol
-                        name_list_norman = cn_hartlepool_norman # Herterpol
-		
-                        name_list_cornish = cn_hartlepool_cornish # Pwllgeirw
-                        name_list_welsh = cn_hartlepool_welsh # Pwllgeirw
-                        name_list_cumbrian = cn_hartlepool_cumbrian # Pwllgeirw
-
-                        name_list_swedish = cn_hartlepool_swedish # Herterpol
-                        name_list_danish = cn_hartlepool_danish # Herterpol
-                        name_list_norse = cn_hartlepool_norse # Hjartapollr
-                        name_list_norwegian = cn_hartlepool_norwegian # Herterpol
-					}					
-					
 				}
 				b_darlington = {
 					province = 1608
+
 					color = { 255 15 15 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_darlington_anglo_saxon # Dearþingtun
-                        name_list_scottish = cn_darlington_scottish # Dearnington
-                        name_list_english = cn_darlington_english # Dearnington
-                        name_list_norman = cn_darlington_norman # Derlintone
-
-                        name_list_swedish = cn_darlington_swedish # Dearthingtun
-                        name_list_norwegian = cn_darlington_norwegian # Dearthingtun
-                        name_list_norse = cn_darlington_norse # Dearthingtun
-                        name_list_danish = cn_darlington_danish # Dearthingtun						
-					}
-					
 				}
 			}
 			c_cumberland = {
 				color = { 240 25 25 }
-				
+
 				cultural_names = {
-                    name_list_anglo_saxon = cn_cumberland_anglo_saxon # Cumbraland
-                    name_list_scottish = cn_cumberland_scottish # Cumberlond
-                    name_list_english = cn_cumberland_english # Cumberlond
-                    name_list_norman = cn_cumberland_norman # Cumbrie
+					name_list_anglo_saxon = cn_cumbraland
+					name_list_old_saxon = cn_cumbraland
 				}
-				
+
 				ai_primary_priority = {
 					if = {
 						limit = {
@@ -690,71 +691,47 @@ e_britannia = {
 						add = @correct_culture_primary_score
 					}
 				}
-	
+
 				b_carlisle = {
 					province = 1635
-					cultural_names = {
-                        name_list_anglo_saxon = cn_carlisle_anglo_saxon # Cearlelig # Or Carleol, Luel
-                        name_list_scottish = cn_carlisle_scottish # Carlile
-                        name_list_english = cn_carlisle_english # Carlile
-						name_list_norman = cn_carlisle_norman # Carleel
 
-                        name_list_pictish = cn_carlisle_pictish # Caer Luel
-                        name_list_irish = cn_carlisle_irish # Cair Luail
-                        name_list_gaelic = cn_carlisle_gaelic # Cair Luail
-		
-                        name_list_cornish = cn_carlisle_cornish # Cair Ligualid # Or Caer Luel
-                        name_list_welsh = cn_carlisle_welsh # Cair Luilid
-                        name_list_cumbrian = cn_carlisle_cumbrian # Cair Ligualid # Or Caer Luel
+					cultural_names = {
+						name_list_cumbrian = cn_caer_luel
+						name_list_welsh = cn_caer_luel
+						name_list_pictish = cn_caer_luel
+						name_list_breton = cn_caer_luel
+						name_list_cornish = cn_caer_luel
+						name_list_gaelic = cn_cathair_luail
+						name_list_irish = cn_cathair_luail
+						name_list_anglo_saxon = cn_carleol
+						name_list_old_saxon = cn_carleol
 					}
 
 					color = { 240 25 25 }
-					
 				}
 				b_whitehaven = {
 					province = 1636
+
 					color = { 240 25 25 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_whiteheaven_anglo_saxon # Hwitheafodhæfen
-                        name_list_scottish = cn_whiteheaven_scottish # Whithofthaven
-                        name_list_english = cn_whiteheaven_english # Whithofthaven
-                        name_list_norman = cn_whiteheaven_norman # Witofthaven
-
-                        name_list_swedish = cn_whiteheaven_swedish # Hvítahöfn
-                        name_list_norwegian = cn_whiteheaven_norwegian # Hvítahöfn
-                        name_list_norse = cn_whiteheaven_norse # Hvítahöfn
-                        name_list_danish = cn_whiteheaven_danish # Hvítahöfn						
-					}					
 				}
 				b_furness = {
 					province = 1642
+
 					color = { 240 25 25 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_furness_anglo_saxon # Fuþarnes # Or Futhernæssa
-                        name_list_scottish = cn_furness_scottish # Fuþernes
-                        name_list_english = cn_furness_english # Fuþernes
-                        name_list_norman = cn_furness_norman # Futhernesse
-
-                        name_list_danish = cn_furness_danish # Fuþþernessa
-                        name_list_norse = cn_furness_norse # Fuðarnes
-                        name_list_norwegian = cn_furness_norwegian # Fuþþernessa
-						name_list_swedish = cn_furness_swedish # Fuþþernessa
-
-					}						
-					
 				}
 				b_wigton = {
 					province = 8780
+
 					color = { 240 25 25 }
 				}
 			}
-		}		
-		d_lancaster = {# Lancaster
-			color = { 255 48 0 }	
+		}
+		d_lancaster = {
+			color = { 174 34 34 }
+
+
 			capital = c_lancashire # Lancaster
-	
+
 			cultural_names = {
                 name_list_anglo_saxon = cn_lancaster_england_anglo_saxon # Lonceaster # Or Luneceaster
                 name_list_scottish = cn_lancaster_england_scottish # Loncastre
@@ -780,1114 +757,98 @@ e_britannia = {
 					has_innovation = innovation_noblesse_oblige
 				}
 			}
-			
+
 			c_lancashire = {
 				color = { 250 55 5 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_lancashire_anglo_saxon # Lonceasterscīr
-					name_list_scottish = cn_lancaster_england_scottish # Loncastre
-					name_list_english = cn_lancaster_england_english # Loncastre
-                    name_list_norman = cn_lancaster_england_norman # Loncastre
-	
-                    name_list_irish = cn_lancashire_irish # Argoed
-                    name_list_gaelic = cn_lancashire_gaelic # Argoed
-                    name_list_pictish = cn_lancashire_pictish # Argoed
-	
-                    name_list_cornish = cn_lancashire_cornish # Argoed
-                    name_list_welsh = cn_lancashire_welsh # Argoed
-                    name_list_cumbrian = cn_lancashire_cumbrian # Argoed
 
-					name_list_swedish = cn_lancaster_england_swedish # Lonceaster
-					name_list_norwegian = cn_lancaster_england_norwegian # Lonceaster
-					name_list_norse = cn_lancaster_england_norse # Lonceaster
-					name_list_danish = cn_lancaster_england_danish # Lonceaster					
-				}					
-			
 				b_lancaster = {
 					province = 1639
+
 					color = { 250 55 5 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_lancaster_england_anglo_saxon # Lonceaster # Or Luneceaster
-                        name_list_scottish = cn_lancaster_england_scottish # Loncastre
-                        name_list_english = cn_lancaster_england_english # Loncastre
-                        name_list_norman = cn_lancaster_england_norman # Loncastre
-
-                        name_list_cornish = cn_lancaster_england_cornish # Gaerhirfryn # Or Cair Hirfryn
-                        name_list_welsh = cn_lancaster_england_welsh # Gaerhirfryn # Or Cair Hirfryn
-                        name_list_cumbrian = cn_lancaster_england_cumbrian # Gaerhirfryn # Or Cair Hirfryn
-
-						name_list_swedish = cn_lancaster_england_swedish # Lonceaster
-						name_list_norwegian = cn_lancaster_england_norwegian # Lonceaster
-						name_list_norse = cn_lancaster_england_norse # Lonceaster
-						name_list_danish = cn_lancaster_england_danish # Lonceaster						
-					}					
-					
 				}
 				b_salford = {
 					province = 1640
-					color = { 250 55 5 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_salford_anglo_saxon # Sealhford # Or Sealhforda
-                        name_list_scottish = cn_salford_scottish # Sauford
-                        name_list_english = cn_salford_english # Sauford
-                        name_list_norman = cn_salford_norman # Salfort
-		
-                        name_list_cornish = cn_salford_cornish # Manceinion # Or Cair Mauiguid
-                        name_list_welsh = cn_salford_welsh # Manceinion # Or Cair Mauiguid
-                        name_list_cumbrian = cn_salford_cumbrian # Manceinion # Or Cair Mauiguid
-					}					
+					color = { 250 55 5 }
 				}
 				b_west_derby = {
 					province = 1641
+
 					color = { 250 55 5 }
-										
 				}
 			}
 			c_westmorland = {
 				color = { 210 35 10 }
-		
-				cultural_names = {
-                    name_list_anglo_saxon = cn_westmorland_england_anglo_saxon # Westmoringaland
-                    name_list_scottish = cn_westmorland_england_scottish # Westmerlond
-                    name_list_english = cn_westmorland_england_english # Westmerlond
-	
-					name_list_gaelic = cn_westmorland_england_gaelic # Dunoting
-                    name_list_irish = cn_westmorland_england_irish # Dunoting
-                    name_list_pictish = cn_westmorland_england_pictish # Dunoting
 
-                    name_list_cornish = cn_westmorland_england_cornish # Dunoting
-                    name_list_welsh = cn_westmorland_england_welsh # Dunoting
-                    name_list_cumbrian = cn_westmorland_england_cumbrian # Dunoting
-
-                    name_list_swedish = cn_westmorland_england_swedish # Vestmoringaland
-                    name_list_norwegian = cn_westmorland_england_norwegian # Vestmoringaland
-                    name_list_norse = cn_westmorland_england_norse # Vestmoringaland
-                    name_list_danish = cn_westmorland_england_danish # Vestmoringaland					
-				}							
-			
 				b_kendal = {
 					province = 1637
+
 					color = { 210 35 10 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_kendal_anglo_saxon # Ciricby # Or Circaby
-                        name_list_scottish = cn_kendal_scottish # Kirkabikendale
-                        name_list_english = cn_kendal_english # Kirkabikendale
-						name_list_norman = cn_kendal_norman # Cherchbi
-
-                        name_list_cornish = cn_kendal_cornish # Caintafon
-                        name_list_welsh = cn_kendal_welsh # Caintafon
-                        name_list_cumbrian = cn_kendal_cumbrian # Caintafon
-
-                        name_list_norse = cn_kendal_norse # Kirkjubýr
-                        name_list_danish = cn_kendal_danish # Kirkjubýr
-                        name_list_norwegian = cn_kendal_norwegian # Kirkjubýr
-                        name_list_swedish = cn_kendal_swedish # Kirkjubýr
-					}						
-
 				}
 				b_appleby = {
 					province = 1638
+
 					color = { 210 35 10 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_appleby_anglo_saxon # Æppelbyþ
-                        name_list_norman = cn_appleby_norman # Aplebi
-
-                        name_list_cornish = cn_appleby_cornish # Trefafel
-                        name_list_welsh = cn_appleby_welsh # Trefafel
-                        name_list_cumbrian = cn_appleby_cumbrian # Trefafel
-
-                        name_list_danish = cn_appleby_danish # Æbleby
-                        name_list_norwegian = cn_appleby_norwegian # Epleby
-                        name_list_norse = cn_appleby_norse # Eplabýr
-                        name_list_swedish = cn_appleby_swedish # Äppleby
-					}
-					
 				}
 			}
 			c_cheshire = {
 				color = { 255 127 15 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_cheshire_anglo_saxon # Ceasterscīr # Or Legaceaster
-					name_list_scottish = cn_cheshire_scottish # Chestreshire
-                    name_list_english = cn_cheshire_english # Chestreshire
-                    name_list_norman = cn_chester_norman # Cestre
 
-                    name_list_irish = cn_chester_irish # Gaerlleon
-                    name_list_pictish = cn_chester_pictish # Gaerlleon
-                    name_list_gaelic = cn_chester_gaelic # Gaerlleon
-
-                    name_list_cornish = cn_cheshire_cornish # Dyfrdwy
-                    name_list_welsh = cn_cheshire_welsh # Dyfrdwy
-                    name_list_cumbrian = cn_cheshire_cumbrian # Dyfrdwy
-
-                    name_list_danish = cn_chester_danish # Legeceaster
-                    name_list_norwegian = cn_chester_norwegian # Legeceaster
-                    name_list_norse = cn_chester_norse # Legeceaster
-                    name_list_swedish = cn_chester_swedish # Legeceaster
-				}				
-			
 				b_chester = {
 					province = 1643
+
 					color = { 255 152 50 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_chester_anglo_saxon # Legaceaster
-                        name_list_scottish = cn_chester_scottish # Chestre
-                        name_list_english = cn_chester_english # Chestre
-						name_list_norman = cn_chester_norman # Cestre
-	
-                        name_list_irish = cn_chester_irish # Gaerlleon
-						name_list_pictish = cn_chester_pictish # Gaerlleon
-						name_list_gaelic = cn_chester_gaelic # Gaerlleon
-	
-                        name_list_cornish = cn_chester_cornish # Karleon-Veur
-                        name_list_welsh = cn_chester_welsh # Karleon-Veur
-                        name_list_cumbrian = cn_chester_cumbrian # Karleon-Veur
-	
-						name_list_danish = cn_chester_danish # Legeceaster
-						name_list_norwegian = cn_chester_norwegian # Legeceaster
-						name_list_norse = cn_chester_norse # Legeceaster
-						name_list_swedish = cn_chester_swedish # Legeceaster
-					}
-
-					
 				}
 				b_northwich = {
 					province = 1644
+
 					color = { 255 127 15 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_northwich_anglo_saxon # Norþuuīc
-                        name_list_norman = cn_northwich_norman # Norwich
-	
-                        name_list_irish = cn_northwich_irish # Yr Heledd Ddu
-                        name_list_pictish = cn_northwich_pictish # Yr Heledd Ddu
-                        name_list_gaelic = cn_northwich_gaelic # Yr Heledd Ddu
-	
-                        name_list_cornish = cn_northwich_cornish # Yr Heledd Ddu
-                        name_list_welsh = cn_northwich_welsh # Yr Heledd Ddu
-                        name_list_cumbrian = cn_northwich_cumbrian # Yr Heledd Ddu
-	
-                        name_list_danish = cn_northwich_danish # Norðrvík
-                        name_list_norwegian = cn_northwich_norwegian # Norðrvík
-                        name_list_norse = cn_northwich_norse # Norðrvík
-                        name_list_swedish = cn_northwich_swedish # Norðrvík
-					}
-
-					
 				}
 				b_macclesfield = {
 					province = 1645
+
 					color = { 255 127 15 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_macclesfield_anglo_saxon # Maccelesfeld
-                        name_list_scottish = cn_macclesfield_scottish # Maclesfield
-                        name_list_english = cn_macclesfield_english # Maclesfield
-                        name_list_norman = cn_macclesfield_norman # Maclesfeld
-	
-                        name_list_cornish = cn_macclesfield_cornish # Maesfihal
-                        name_list_welsh = cn_macclesfield_welsh # Maesfihal
-                        name_list_cumbrian = cn_macclesfield_cumbrian # Maesfihal
-	
-                        name_list_norse = cn_macclesfield_norse # Maclesfeld
-                        name_list_norwegian = cn_macclesfield_norwegian # Maclesfeld
-                        name_list_danish = cn_macclesfield_danish # Maclesfeld
-                        name_list_swedish = cn_macclesfield_swedish # Maclesfeld
-					}					
 				}
 			}
 			c_derby = {
 				color = { 255 50 20 }
 
 				cultural_names = {
-                    name_list_anglo_saxon = cn_derby_county_anglo_saxon # Norþweorþig
-                    name_list_scottish = cn_derby_county_scottish # Northworthing # Or Derbyshire
-                    name_list_english = cn_derby_county_english # Northworthing # Or Derbyshire
-                    name_list_norman = cn_derby_norman # Derbie
+					name_list_norwegian = cn_djuraby
+					name_list_danish = cn_djuraby
+					name_list_swedish = cn_djuraby
+					name_list_norse = cn_djuraby
+				}
 
-                    name_list_cornish = cn_derby_cornish # Caerdderwennydd
-                    name_list_welsh = cn_derby_welsh # Caerdderwennydd
-                    name_list_cumbrian = cn_derby_cumbrian # Caerdderwennydd
-
-                    name_list_norse = cn_derby_norse # Djúrabýr
-                    name_list_norwegian = cn_derby_norwegian # Djúrabý
-                    name_list_danish = cn_derby_danish # Djúrabý
-                    name_list_swedish = cn_derby_swedish # Djúrabý
-				}				
-				
 				b_derby = {
 					province = 1621
+
 					color = { 255 89 89 }
+
 					cultural_names = {
-                        name_list_anglo_saxon = cn_derby_anglo_saxon # Deoraby
-                        name_list_scottish = cn_derby_scottish # Darbye
-                        name_list_english = cn_derby_english # Darbye
-						name_list_norman = cn_derby_norman # Derbie
-	
-						name_list_cornish = cn_derby_cornish # Caerdderwennydd
-						name_list_welsh = cn_derby_welsh # Caerdderwennydd
-						name_list_cumbrian = cn_derby_cumbrian # Caerdderwennydd
-	
-						name_list_norse = cn_derby_norse # Djúrabýr
-						name_list_norwegian = cn_derby_norwegian # Djúrabý
-						name_list_danish = cn_derby_danish # Djúrabý
-						name_list_swedish = cn_derby_swedish # Djúrabý
+						name_list_norwegian = cn_djuraby
+						name_list_danish = cn_djuraby
+						name_list_swedish = cn_djuraby
+						name_list_norse = cn_djuraby
 					}
 				}
 				b_chesterfield = {
 					province = 1622
+
 					color = { 255 50 20 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_chesterfield_anglo_saxon # Ceasterfeld
-                        name_list_scottish = cn_chesterfield_scottish # Cestrefield
-                        name_list_english = cn_chesterfield_english # Cestrefield
-                        name_list_norman = cn_chesterfield_norman # Cestrefeld
-	
-                        name_list_cornish = cn_chesterfield_cornish # Caerfaes
-                        name_list_welsh = cn_chesterfield_welsh # Caerfaes
-                        name_list_cumbrian = cn_chesterfield_cumbrian # Caerfaes
-					}					
 				}
 				b_castleton = {
 					province = 1623
+
 					color = { 255 50 20 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_castleton_anglo_saxon # Casteltun
-                        name_list_scottish = cn_castleton_scottish # Castelton
-                        name_list_english = cn_castleton_english # Castelton
-                        name_list_norman = cn_castleton_norman # Pechesers # Or Casteltone
-	
-                        name_list_cornish = cn_castleton_cornish # Castell-din
-                        name_list_welsh = cn_castleton_welsh # Castell-din
-                        name_list_cumbrian = cn_castleton_cumbrian # Castell-din
-	
-                        name_list_norse = cn_castleton_norse # Péacland
-                        name_list_norwegian = cn_castleton_norwegian # Péacland
-                        name_list_danish = cn_castleton_danish # Péacland
-                        name_list_swedish = cn_castleton_swedish # Péacland
-					}	
-					
 				}
 			}
-			c_staffordshire = {
-				color = { 210 90 65 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_staffordshire_anglo_saxon # Stæffordscīr # Or Tomsæte? though is that the same thing?
- 
-                    name_list_cumbrian = cn_stafford_cumbrian # Rhydgei
-					name_list_welsh = cn_stafford_welsh # Rhydgei
-                    name_list_cornish = cn_stafford_cornish # Rhydgei
-
-                    name_list_norse = cn_staffordshire_norse # Stæffordscir
-                    name_list_danish = cn_staffordshire_danish # Stæffordscir
-                    name_list_swedish = cn_staffordshire_swedish # Stæffordscir
-                    name_list_norwegian = cn_staffordshire_norwegian # Stæffordscir
-				}					
-
-				b_stafford = {
-					province = 1627
-					color = { 210 90 65 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_tamworth_anglo_saxon # Stæþford
-	 
-						name_list_cumbrian = cn_stafford_cumbrian # Rhydgei
-						name_list_welsh = cn_stafford_welsh # Rhydgei
-						name_list_cornish = cn_stafford_cornish # Rhydgei
-	
-                        name_list_norse = cn_stafford_norse # Stæfford
-                        name_list_danish = cn_stafford_danish # Stæfford
-                        name_list_swedish = cn_stafford_swedish # Stæfford
-                        name_list_norwegian = cn_stafford_norwegian # Stæfford
-					}					
-
-				}
-				b_wolverhampton = {
-					province = 1628
-					color = { 210 90 65 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_wolverhampton_anglo_saxon # Heantun
-	 
-                        name_list_norse = cn_wolverhampton_norse # Heantun
-                        name_list_danish = cn_wolverhampton_danish # Heantun
-                        name_list_swedish = cn_wolverhampton_swedish # Heantun
-                        name_list_norwegian = cn_wolverhampton_norwegian # Heantun
-					}
-	
-				}
-				b_stoke_on_trent = {
-					province = 1629
-					color = { 210 90 65 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_burslem_anglo_saxon # Burhwardeslyme
-						name_list_scottish = cn_burslem_scottish # Borewardeslyme
-                        name_list_english = cn_burslem_english # Borewardeslyme
-                        name_list_norman = cn_burslem_norman # Bacardeslim
-					}
-
-				}
-			}			
 		}
-		d_buckingham = {
-			color = hsv{ 0.98 0.9 0.9 }			
-			can_create = {
-				culture = {
-					has_innovation = innovation_noblesse_oblige
-				}
-			}
+		d_york = {
+			color = { 136 8 8 }
 
-			ai_primary_priority = {
-				if = {
-					limit = {
-						culture = culture:anglo_saxon
-					}
-					add = @better_than_the_alternatives_score
-				}
-			}
-			
-			capital = c_buckinghamshire # Bamburgh, Bernicia
-
-			c_middlesex = {
-				color = { 230 5 5 }
-	
-				cultural_names = {
-                    name_list_anglo_saxon = cn_middlesex_anglo_saxon # Middelseaxe
-                    name_list_scottish = cn_middlesex_scottish # Middelsex
-                    name_list_english = cn_middlesex_english # Middelsex
-                    name_list_norman = cn_middlesex_norman # Milissesse
-	
-                    name_list_gaelic = cn_middlesex_gaelic # Saxain Láir
-                    name_list_pictish = cn_middlesex_pictish # Caer Llundain
-                    name_list_irish = cn_middlesex_irish # Saxain Láir
-	
-                    name_list_cornish = cn_middlesex_cornish # Caer Lundein
-                    name_list_cumbrian = cn_middlesex_cumbrian # Caer Llundain
-                    name_list_welsh = cn_middlesex_welsh # Caer Llundain
-
-                    name_list_swedish = cn_middlesex_swedish # Miðseaxe
-                    name_list_norwegian = cn_middlesex_norwegian # Miðseaxe
-                    name_list_norse = cn_middlesex_norse # Miðseaxe
-                    name_list_danish = cn_middlesex_danish # Miðseaxe
-				}
-				
-				b_london = {
-					province = 1527
-					color = { 230 5 5 }
-	
-					cultural_names = {
-                        name_list_anglo_saxon = cn_london_england_anglo_saxon # Lunden # Or Lundunuuīc?
-                        name_list_scottish = cn_london_england_scottish # Lunnon
-                        name_list_norman = cn_london_england_norman # Londres
-		
-                        name_list_gaelic = cn_london_england_gaelic # Lunnainn # Or Cair Lunnainn
-                        name_list_pictish = cn_london_england_pictish # Llundein
-                        name_list_irish = cn_london_england_irish # Lunnainn # Or Cair Lunnainn
-		
-                        name_list_cornish = cn_london_england_cornish # Llundein # Or Lundein
-                        name_list_cumbrian = cn_london_england_cumbrian # Llundain # Or Llundein
-                        name_list_welsh = cn_london_england_welsh # Llundain # Or Llundein. Or Cair Londein
-	
-                        name_list_swedish = cn_london_england_swedish # Lundúnir
-                        name_list_norwegian = cn_london_england_norwegian # Lundúnir
-                        name_list_norse = cn_london_england_norse # Lundúnaborg # Lundúnaborg/Lundúnir
-                        name_list_danish = cn_london_england_danish # Lundúnir
-					}
-				}
-				b_southwark = {
-					province = 1526
-	
-					cultural_names = {
-                        name_list_anglo_saxon = cn_southwark_anglo_saxon # Suþriganaweorc # Or Suthweorc
-                        name_list_scottish = cn_southwark_scottish # Suthewark
-                        name_list_english = cn_southwark_english # Suthewark
-                        name_list_norman = cn_southwark_norman # Sudwerce
-		
-                        name_list_welsh = cn_southwark_welsh # Degwaith
-                        name_list_cumbrian = cn_southwark_cumbrian # Degwaith
-                        name_list_cornish = cn_southwark_cornish # Degwaith
-	
-                        name_list_norse = cn_southwark_norse # Suðvirki
-                        name_list_norwegian = cn_southwark_norwegian # Suthriganaweorc
-                        name_list_swedish = cn_southwark_swedish # Suthriganaweorc
-                        name_list_danish = cn_southwark_danish # Suthriganaweorc
-					}
-
-					color = { 230 5 5 }
-				}
-				b_woxbrigge = {
-					province = 1528
-					color = { 230 5 5 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_woxbrigge_anglo_saxon # Wixanbrycg
-                        name_list_scottish = cn_woxbrigge_scottish # Wixebrug
-                        name_list_english = cn_woxbrigge_english # Wixebrug
-                        name_list_norman = cn_woxbrigge_norman # Wixebrige
-					}
-
-				}
-				b_gore = {
-					province = 1529
-					color = { 230 5 5 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_gorey_anglo_saxon # Gara
-                        name_list_norman = cn_gorey_norman # Gare
-
-                        name_list_gaelic = cn_gorey_gaelic # Guaire
-                        name_list_pictish = cn_gorey_pictish # Guaire
-                        name_list_irish = cn_gorey_irish # Guaire
-					}
-				}
-				b_brentford = {
-					province = 1530
-					color = { 230 5 5 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_brentford_anglo_saxon # Brægentford
-                        name_list_scottish = cn_brentford_scottish # Braynford
-                        name_list_english = cn_brentford_english # Braynford
-                        name_list_norman = cn_brentford_norman # Breinford
-
-                        name_list_gaelic = cn_brentford_gaelic # Átha Brent
-                        name_list_pictish = cn_brentford_pictish # Átha Brent
-                        name_list_irish = cn_brentford_irish # Átha Brent
-                       
-						name_list_welsh = cn_brentford_welsh # Breguntford
-                        name_list_cumbrian = cn_brentford_cumbrian # Breguntford
-                        name_list_cornish = cn_brentford_cornish # Breguntford
-
-                        name_list_norse = cn_brentford_norse # Brentfurða
-                        name_list_norwegian = cn_brentford_norwegian # Brentfurda
-						name_list_danish = cn_brentford_danish # Brentfurda
-                        name_list_swedish = cn_brentford_swedish # Brentfurda						
-					}
-				}
-			}
-			c_essex = {
-				color = { 220 20 30 }
-	
-				cultural_names = {
-                    name_list_anglo_saxon = cn_essex_anglo_saxon # Ēastseaxe
-                    name_list_scottish = cn_essex_scottish # Estsex
-                    name_list_english = cn_essex_english # Estsex
-                    name_list_norman = cn_essex_norman # Essesse
-
-                    name_list_gaelic = cn_essex_gaelic # Saxain Thoir
-                    name_list_pictish = cn_essex_pictish # Saxain Thoir
-                    name_list_irish = cn_essex_irish # Saxain Thoir
-
-					name_list_swedish = cn_essex_swedish # Austseaxe
-                    name_list_norwegian = cn_essex_norwegian # Austseaxe
-                    name_list_norse = cn_essex_norse # Austseaxe
-                    name_list_danish = cn_essex_danish # Austseaxe
-				}
-				
-				b_colchester = {
-					province = 1514
-					color = { 220 20 30 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_colchester_anglo_saxon # Colneceaster
-                        name_list_scottish = cn_colchester_scottish # Colchestre
-                        name_list_english = cn_colchester_english # Colchestre
-                        name_list_norman = cn_colchester_norman # Colecestre # Or Colechêtre
-	
-                        name_list_gaelic = cn_colchester_gaelic # Caer Colun
-                        name_list_pictish = cn_colchester_pictish # Caer Colun
-                        name_list_irish = cn_colchester_irish # Caer Colun
-                        
-						name_list_cornish = cn_colchester_cornish # Caer Colun
-                        name_list_welsh = cn_colchester_welsh # Cair Collon
-						name_list_cumbrian = cn_colchester_cumbrian # Caer Colun
-
-                        name_list_swedish = cn_colchester_swedish # Colneceastre
-                        name_list_norwegian = cn_colchester_norwegian # Colneceastre
-                        name_list_norse = cn_colchester_norse # Colneceastre
-                        name_list_danish = cn_colchester_danish # Colneceastre						
-					}
-
-				}
-				b_maldon = {
-					province = 1515
-					color = { 220 20 30 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_maldon_anglo_saxon # Mældun
-                        name_list_scottish = cn_maldon_scottish # Maldon
-                        name_list_english = cn_maldon_english # Maldon
-                        name_list_norman = cn_maldon_norman # Maldune
-	
-                        name_list_cornish = cn_maldon_cornish # Din Crwys
-                        name_list_welsh = cn_maldon_welsh # Din Crwys
-						name_list_cumbrian = cn_maldon_cumbrian # Din Crwys
-
-                        name_list_swedish = cn_maldon_swedish # Maeldun
-                        name_list_norwegian = cn_maldon_norwegian # Maeldun
-                        name_list_norse = cn_maldon_norse # Maeldun
-                        name_list_danish = cn_maldon_danish # Maeldun						
-					}
-				}
-				b_chelmsford = {
-					province = 1516
-					color = { 220 20 30 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_chelmsford_anglo_saxon # Ceolmeresford
-                        name_list_scottish = cn_chelmsford_scottish # Chelmeresford
-                        name_list_english = cn_chelmsford_english # Chelmeresford
-                        name_list_norman = cn_chelmsford_norman # Celmeresfort
-	
-						name_list_gaelic = cn_chelmsford_gaelic # Átha Chelmer
-						name_list_pictish = cn_chelmsford_pictish # Átha Chelmer
-                        name_list_irish = cn_chelmsford_irish # Átha Chelmer
-					}
-					
-				}
-				b_dunmow = {
-					province = 1517
-					color = { 220 20 30 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_great_dunmow_anglo_saxon # Dunemowe
-                        name_list_norman = cn_great_dunmow_norman # Dommawe
-	
-                        name_list_cornish = cn_great_dunmow_cornish # Dolfryn
-                        name_list_welsh = cn_great_dunmow_welsh # Dolfryn
-                        name_list_cumbrian = cn_great_dunmow_cumbrian # Dolfryn
-
-						name_list_swedish = cn_great_dunmow_swedish # Dunemowe
-                        name_list_norwegian = cn_great_dunmow_norwegian # Dunemowe
-                        name_list_norse = cn_great_dunmow_norse # Dunemowe
-                        name_list_danish = cn_great_dunmow_danish # Dunemowe
-					}
-					
-				}
-			}
-			c_hertfordshire = {
-				color = { 250 35 35 }	
-				cultural_names = {
-                    name_list_anglo_saxon = cn_hertfordshire_anglo_saxon # Heortfordscīr
-                    name_list_scottish = cn_hertfordshire_scottish # Hertfordshire
-                    name_list_english = cn_hertfordshire_english # Hertfordshire
-                    name_list_norman = cn_hertford_norman # Hertfort
-
-                    name_list_gaelic = cn_hertford_gaelic # Átha Carria
-                    name_list_pictish = cn_hertford_pictish # Átha Carria
-                    name_list_irish = cn_hertford_irish # Átha Carria
-
-                    name_list_cornish = cn_hertfordshire_cornish # Hertford
-                    name_list_welsh = cn_hertfordshire_welsh # Hertford
-                    name_list_cumbrian = cn_hertfordshire_cumbrian # Hertford
-
-                    name_list_swedish = cn_hertford_swedish # Heortford
-                    name_list_norwegian = cn_hertford_norwegian # Heortford
-                    name_list_norse = cn_hertford_norse # Heortford
-                    name_list_danish = cn_hertford_danish # Heortford					
-				}
-
-				b_berkhamsted = {
-					province = 1531
-					color = { 250 35 35 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_berkhamsted_anglo_saxon # Beorhðanstede # Or Beorchamstæd
-                        name_list_scottish = cn_berkhamsted_scottish # Barkhamstede
-                        name_list_english = cn_berkhamsted_english # Barkhamstede
-                        name_list_norman = cn_berkhamsted_norman # Berchehamstede # Or Berkhampsede
-		
-                        name_list_cornish = cn_berkhamsted_cornish # Tyfryn
-                        name_list_welsh = cn_berkhamsted_welsh # Tyfryn
-                        name_list_cumbrian = cn_berkhamsted_cumbrian # Tyfryn
-
-                        name_list_swedish = cn_berkhamsted_swedish # Beorhoanstadde
-                        name_list_norwegian = cn_berkhamsted_norwegian # Beorhoanstadde
-                        name_list_norse = cn_berkhamsted_norse # Beorhoanstadde
-                        name_list_danish = cn_berkhamsted_danish # Beorhoanstadde						
-					}					
-				}
-				b_saint_albans = {
-					province = 1532
-					color = { 250 35 35 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_st_albans_anglo_saxon # Sancte Albanes
-                        name_list_scottish = cn_st_albans_scottish # Saint Albones
-                        name_list_english = cn_st_albans_english # Saint Albones
-                        name_list_norman = cn_st_albans_norman # Seint Alban
-	
-                        name_list_gaelic = cn_st_albans_gaelic # Naomh Albans
-                        name_list_pictish = cn_st_albans_pictish # Verlamion
-                        name_list_irish = cn_st_albans_irish # Naomh Albans
-	
-                        name_list_cornish = cn_st_albans_cornish # Verlamion
-                        name_list_welsh = cn_st_albans_welsh # Cair Mencipit
-                        name_list_cumbrian = cn_st_albans_cumbrian # Verlamion
-
-                        name_list_swedish = cn_st_albans_swedish # Wæclingacaester
-                        name_list_norwegian = cn_st_albans_norwegian # Wæclingacaester
-                        name_list_norse = cn_st_albans_norse # Wæclingacaester
-                        name_list_danish = cn_st_albans_danish # Wæclingacaester						
-					}	
-
-				}
-				b_hertford = {
-					province = 1533
-					color = { 250 35 35 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_hertford_anglo_saxon # Heortford
-                        name_list_scottish = cn_hertford_scottish # Hertford
-                        name_list_english = cn_hertford_english # Hertford
-                        name_list_norman = cn_hertford_norman # Hertfort
-	
-                        name_list_gaelic = cn_hertford_gaelic # Átha Carria
-                        name_list_pictish = cn_hertford_pictish # Átha Carria
-                        name_list_irish = cn_hertford_irish # Átha Carria
-	
-                        name_list_cornish = cn_hertford_cornish # Rhydgeirw
-                        name_list_welsh = cn_hertford_welsh # Rhydgeirw
-                        name_list_cumbrian = cn_hertford_cumbrian # Rhydgeirw
-
-                        name_list_swedish = cn_hertford_swedish # Heortford
-                        name_list_norwegian = cn_hertford_norwegian # Heortford
-                        name_list_norse = cn_hertford_norse # Heortford
-                        name_list_danish = cn_hertford_danish # Heortford						
-					}
-
-				}
-			}
-			c_buckinghamshire = {
-				color = { 200 25 25 }
-
-				cultural_names = {
-					name_list_anglo_saxon = cn_buckinghamshire_anglo_saxon # Buccingahāmscīr
-					name_list_scottish = cn_buckinghamshire_scottish # Buckinghamshire
-					name_list_english = cn_buckinghamshire_english # Buckinghamshire
-					name_list_norman = cn_buckingham_norman # Bochingeham
-	
-					name_list_cornish = cn_buckinghamshire_cornish # Buckingham
-					name_list_welsh = cn_buckinghamshire_welsh # Buckingham
-					name_list_cumbrian = cn_buckinghamshire_cumbrian # Buckingham
-
-					name_list_swedish = cn_buckingham_swedish # Buccingaham
-					name_list_norwegian = cn_buckingham_norwegian # Buccingaham
-					name_list_norse = cn_buckingham_norse # Buccingaham
-					name_list_danish = cn_buckingham_danish # Buccingaham						
-				}
-				
-				b_buckingham = {
-					province = 1551
-				
-					cultural_names = {
-                        name_list_anglo_saxon = cn_buckingham_anglo_saxon # Buccingaham
-                        name_list_scottish = cn_buckingham_scottish # Bokingham
-                        name_list_english = cn_buckingham_english # Bokingham
-                        name_list_norman = cn_buckingham_norman # Bochingeham
-		
-                        name_list_cornish = cn_buckingham_cornish # Caer-ar-Ws
-                        name_list_welsh = cn_buckingham_welsh # Caer-ar-Ws
-                        name_list_cumbrian = cn_buckingham_cumbrian # Caer-ar-Ws
-
-						name_list_swedish = cn_buckingham_swedish # Buccingaham
-						name_list_norwegian = cn_buckingham_norwegian # Buccingaham
-						name_list_norse = cn_buckingham_norse # Buccingaham
-						name_list_danish = cn_buckingham_danish # Buccingaham						
-						
-					}
-
-					color = { 200 25 25 }
-					
-				}
-				b_aylesbury = {
-					province = 1552
-					color = { 200 25 25 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_aylesbury_anglo_saxon # Æghelesburg # Or Æglesburh
-                        name_list_scottish = cn_aylesbury_scottish # Aylesbury
-                        name_list_english = cn_aylesbury_english # Aylesbury
-                        name_list_norman = cn_aylesbury_norman # Eilesberie
-		
-                        name_list_cornish = cn_aylesbury_cornish # Burch-Eryr
-                        name_list_welsh = cn_aylesbury_welsh # Burch-Eryr
-                        name_list_cumbrian = cn_aylesbury_cumbrian # Burch-Eryr
-
-                        name_list_swedish = cn_aylesbury_swedish # Æglesburgh
-                        name_list_danish = cn_aylesbury_danish # Æglesburgh						
-						name_list_norwegian = cn_aylesbury_norwegian # Æglesborg
-                        name_list_norse = cn_aylesbury_norse # Æglesborg
-					}
-
-				}
-				b_newport = {
-					province = 1553
-					color = { 200 25 25 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_newport_anglo_saxon # Niweport
-                        name_list_scottish = cn_newport_scottish # Neweport
-                        name_list_english = cn_newport_english # Neweport
-                        name_list_norman = cn_newport_norman # Newport
-		
-						name_list_pictish = cn_newport_pictish # Casnewydd
-                        name_list_irish = cn_newport_irish # Casnewydd
-                        name_list_gaelic = cn_newport_gaelic # Casnewydd
-
-                        name_list_cornish = cn_newport_cornish # Kasowydhz
-                        name_list_welsh = cn_newport_welsh # Kasowydhz
-                        name_list_cumbrian = cn_newport_cumbrian # Kasowydhz
-
-                        name_list_danish = cn_newport_danish # Ny Port
-						name_list_swedish = cn_newport_swedish # Ny Port
-                        name_list_norse = cn_newport_norse # Ny Hofn
-                        name_list_norwegian = cn_newport_norwegian # Ny Port
-					}
-
-				}
-				b_wycombe = {
-					province = 1554
-					color = { 200 25 25 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_wycombe_anglo_saxon # Uuīcumun
-                        name_list_scottish = cn_wycombe_scottish # Wycumbe
-                        name_list_english = cn_wycombe_english # Wycumbe
-                        name_list_norman = cn_wycombe_norman # Wicumbe
-
-						name_list_swedish = cn_wycombe_swedish # Wicumun
-                        name_list_norwegian = cn_wycombe_norwegian # Wicumun
-                        name_list_norse = cn_wycombe_norse # Wicumun
-                        name_list_danish = cn_wycombe_danish # Wicumun
-					}
-				}
-			}
-			
-		}
-		d_lincoln = {
-			color = { 181 60 10 }		
-			capital = c_lincolnshire
-
-
-			can_create = {
-				culture = {
-					has_innovation = innovation_noblesse_oblige
-				}
-			}
-			
-			c_lincolnshire = {
-				color = { 232 195 74 }
-				
-				cultural_names = {
-                    name_list_anglo_saxon = cn_lincolnshire_anglo_saxon # Lincolnscīr
-                    name_list_norman = cn_lincoln_norman # Lincole
-
-                    name_list_cornish = cn_lincoln_cornish # Caerlinnwys # Or Cair Loit Coit
-                    name_list_welsh = cn_lincoln_welsh # Caerlinnwys # Or Cair Loit Coit
-                    name_list_cumbrian = cn_lincoln_cumbrian # Caerlinnwys # Or Cair Loit Coit
-
-                    name_list_norse = cn_lincolnshire_norse # Linnsey
-                    name_list_danish = cn_lincolnshire_danish # Linnsey
-                    name_list_norwegian = cn_lincolnshire_norwegian # Linnsey
-                    name_list_swedish = cn_lincolnshire_swedish # Linnsey
-				}	
-				
-				b_lincoln = {
-					province = 1583
-					color = { 232 195 74 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_lincoln_anglo_saxon # Lincylene
-						name_list_english = cn_lincoln_english # Lincolne
-						name_list_scottish = cn_lincoln_scottish # Lincolne
-                        name_list_norman = cn_lincoln_norman # Lincole
-	
-                        name_list_cornish = cn_lincoln_cornish # Caerlinnwys # Or Cair Loit Coit
-                        name_list_welsh = cn_lincoln_welsh # Caerlinnwys # Or Cair Loit Coit
-                        name_list_cumbrian = cn_lincoln_cumbrian # Caerlinnwys # Or Cair Loit Coit
-	
-                        name_list_norse = cn_lincoln_norse # Linnkolni
-                        name_list_danish = cn_lincoln_danish # Lincylene
-                        name_list_norwegian = cn_lincoln_norwegian # Lincylene
-                        name_list_swedish = cn_lincoln_swedish # Lincylene
-					}
-
-				}
-				b_stamford = {
-					province = 1584
-					color = { 232 195 74 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_stamford_england_anglo_saxon # Steanforda # Or Steanford, Stanford
-                        name_list_norman = cn_stamford_england_norman # Stanfort
-	
-                        name_list_cornish = cn_stamford_england_cornish # Caerddin Fawr
-                        name_list_welsh = cn_stamford_england_welsh # Caerddin Fawr
-                        name_list_cumbrian = cn_stamford_england_cumbrian # Caerddin Fawr
-	
-                        name_list_norse = cn_stamford_england_norse # Steinfurða
-                        name_list_danish = cn_stamford_england_danish # Stanfurda
-                        name_list_norwegian = cn_stamford_england_norwegian # Stanfurda
-                        name_list_swedish = cn_stamford_england_swedish # Stanfurda
-					}
-
-				}
-				b_boston = {
-					province = 1585
-					color = { 232 195 74 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_boston_anglo_saxon # Botulfestan
-                        name_list_norman = cn_boston_norman # Botuluestan
-	
-                        name_list_cornish = cn_boston_cornish # Bostyn
-                        name_list_welsh = cn_boston_welsh # Bostyn
-                        name_list_cumbrian = cn_boston_cumbrian # Bostyn
-	
-                        name_list_norse = cn_boston_norse # Bótulfsteinn
-                        name_list_danish = cn_boston_danish # Botulfstun
-                        name_list_norwegian = cn_boston_norwegian # Botulfstun
-                        name_list_swedish = cn_boston_swedish # Botulvston
-					}
-					
-				}
-				b_bolingsbroke = {
-					province = 1586
-					color = { 232 195 74 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_bolingbroke_anglo_saxon # Bulingaburh
-						name_list_english = cn_bolingbroke_english # Bulingbroc
-                        name_list_scottish = cn_bolingbroke_scottish # Bulingbroc
-                        name_list_norman = cn_bolingbroke_norman # Bolinbroc
-	
-                        name_list_norse = cn_bolingbroke_norse # Bollingaborg
-                        name_list_danish = cn_bolingbroke_danish # Bollingaborg
-                        name_list_norwegian = cn_bolingbroke_norwegian # Bollingaborg
-                        name_list_swedish = cn_bolingbroke_swedish # Bollingaborg
-					}
-					
-				}
-				b_grimsby = {
-					province = 1587
-					color = { 232 195 74 }			
-				}
-			}
-			c_leicestershire = {
-				color = { 130 5 25 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_leicestershire_anglo_saxon # Lægreceastrescīr
-                    name_list_norman = cn_leicester_norman # Leichêtre # Or Ledecestre
-
-                    name_list_gaelic = cn_leicester_gaelic # Caer Lerion
-                    name_list_pictish = cn_leicester_pictish # Caer Lerion
-                    name_list_irish = cn_leicester_irish # Caer Lerion
-
-                    name_list_cornish = cn_leicestershire_cornish # Gaerlŷr
-                    name_list_welsh = cn_leicestershire_welsh # Gaerlŷr
-                    name_list_cumbrian = cn_leicestershire_cumbrian # Gaerlŷr
-
-                    name_list_norse = cn_leicester_norse # Ligeraceaster
-                    name_list_danish = cn_leicester_danish # Ligeraceaster
-                    name_list_norwegian = cn_leicester_norwegian # Ligeraceaster
-                    name_list_swedish = cn_leicester_swedish # Ligeraceaster
-				}				
-			
-				b_leicester = {
-					province = 1615
-					color = { 130 5 25 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_leicester_anglo_saxon # Lægreceaster # Or Ligereceaster, Ligeraceaster
-						name_list_norman = cn_leicester_norman # Leichêtre # Or Ledecestre
-	
-						name_list_gaelic = cn_leicester_gaelic # Caer Lerion
-						name_list_pictish = cn_leicester_pictish # Caer Lerion
-						name_list_irish = cn_leicester_irish # Caer Lerion
-	
-                        name_list_cornish = cn_leicester_cornish # Cair Lerion
-                        name_list_welsh = cn_leicester_welsh # Cair Lerion
-                        name_list_cumbrian = cn_leicester_cumbrian # Cair Lerion
-	
-						name_list_norse = cn_leicester_norse # Ligeraceaster
-						name_list_danish = cn_leicester_danish # Ligeraceaster
-						name_list_norwegian = cn_leicester_norwegian # Ligeraceaster
-						name_list_swedish = cn_leicester_swedish # Ligeraceaster
-					}					
-
-				}
-				b_melton = {
-					province = 1616
-					color = { 130 5 25 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_melton_anglo_saxon # Middeltun
-						name_list_english = cn_melton_mowbray_english # Melton Mowbray
-                        name_list_scottish = cn_melton_mowbray_scottish # Melton Mowbray
-                        name_list_norman = cn_melton_mowbray_norman # Medeltone
-	
-                        name_list_norse = cn_melton_mowbray_norse # Meltun
-                        name_list_danish = cn_melton_mowbray_danish # Meltun
-                        name_list_norwegian = cn_melton_mowbray_norwegian # Meltun
-                        name_list_swedish = cn_melton_mowbray_swedish # Meltun
-					}					
-					
-				}
-				b_bosworth = {
-					province = 1617
-					color = { 130 5 25 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_bosworth_anglo_saxon # Baresworð
-                        name_list_english = cn_bosworth_english # Boresworth
-                        name_list_scottish = cn_bosworth_scottish # Boresworth
-                        name_list_norman = cn_bosworth_norman # Baresworde
-					}					
-					
-				}
-				b_rutland = {
-					province = 1613
-					color = { 130 5 25 }
-					
-				}
-			}
-			c_nottinghamshire = {
-				color = { 175 0 30 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_nottinghamshire_anglo_saxon # Snotingahamscīr
-
-					name_list_gaelic = cn_nottingham_gaelic # Tigguo Cobauc
-                    name_list_irish = cn_nottingham_irish # Tigguo Cobauc
-                    name_list_pictish = cn_nottingham_pictish # Y Ty Ogofog
-
-					name_list_cumbrian = cn_nottingham_cumbrian # Y Ty Ogofog
-					name_list_welsh = cn_nottingham_welsh # Y Ty Ogofog
-                    name_list_cornish = cn_nottingham_cornish # Tigguo Cobauc
-
-                    name_list_norse = cn_nottingham_norse # Snotingaheimr
-                    name_list_danish = cn_nottingham_danish # Snotingaham
-                    name_list_norwegian = cn_nottingham_norwegian # Snotingaham
-                    name_list_swedish = cn_nottingham_swedish # Snotingaham
-				}
-				b_nottingham = {
-					province = 1618
-					color = { 175 0 30 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_nottingham_anglo_saxon # Snotingaham
-	
-						name_list_gaelic = cn_nottingham_gaelic # Tigguo Cobauc
-						name_list_irish = cn_nottingham_irish # Tigguo Cobauc
-						name_list_pictish = cn_nottingham_pictish # Y Ty Ogofog
-	
-						name_list_cumbrian = cn_nottingham_cumbrian # Y Ty Ogofog
-						name_list_welsh = cn_nottingham_welsh # Y Ty Ogofog
-						name_list_cornish = cn_nottingham_cornish # Tigguo Cobauc
-	
-						name_list_norse = cn_nottingham_norse # Snotingaheimr
-						name_list_danish = cn_nottingham_danish # Snotingaham
-						name_list_norwegian = cn_nottingham_norwegian # Snotingaham
-						name_list_swedish = cn_nottingham_swedish # Snotingaham
-					}					
-					
-				}
-				b_newark = {
-					province = 1619
-					color = { 175 0 30 }
-				
-					cultural_names = {
-                        name_list_anglo_saxon = cn_sherwood_anglo_saxon # Scirwuda
-						name_list_scottish = cn_sherwood_scottish # Sherwode
-                        name_list_english = cn_sherwood_english # Sherwode
-
-                        name_list_norse = cn_sherwood_norse # Skírisskógur
-                        name_list_norwegian = cn_sherwood_norwegian # Skírisskógur
-					}					
-
-				}
-				b_retford = {
-					province = 1620
-					color = { 175 0 30 }			
-				}
-			}
-			c_northamptonshire = {
-				color = { 125 5 5 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_northampton_anglo_saxon # Norþhāmtūn
-                    name_list_norman = cn_northampton_norman # Norhamtoune # Or Norhamtune
-
-                    name_list_swedish = cn_northampton_swedish # Norðhamtun
-                    name_list_norwegian = cn_northampton_norwegian # Norðhamtun
-                    name_list_norse = cn_northampton_norse # Norðhamtun
-                    name_list_danish = cn_northampton_danish # Norðhamtun
-				}				
-				
-				b_northampton = {
-					province = 1600
-					color = { 125 5 5 }
-					cultural_names = {
-						name_list_anglo_saxon = cn_northampton_anglo_saxon # Norþhāmtūn
-						name_list_norman = cn_northampton_norman # Norhamtoune # Or Norhamtune
-	
-						name_list_swedish = cn_northampton_swedish # Norðhamtun
-						name_list_norwegian = cn_northampton_norwegian # Norðhamtun
-						name_list_norse = cn_northampton_norse # Norðhamtun
-						name_list_danish = cn_northampton_danish # Norðhamtun
-					}
-					
-				}
-				b_peterborough = {
-					province = 1601
-					color = { 125 5 5 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_peterborough_anglo_saxon # Medeshamstede
-						name_list_english = cn_peterborough_english # Peterburgh
-                        name_list_scottish = cn_peterborough_scottish # Peterburgh
-
-						name_list_cumbrian = cn_peterborough_cumbrian # Trebedr
-                        name_list_cornish = cn_peterborough_cornish # Trebedr
-                        name_list_welsh = cn_peterborough_welsh # Trebedr
-
-						name_list_pictish = cn_peterborough_pictish # Trebedr
-                        name_list_irish = cn_peterborough_irish # Trebedr
-                        name_list_gaelic = cn_peterborough_gaelic # Trebedr
-
-                        name_list_swedish = cn_peterborough_swedish # Medelhamstede
-                        name_list_norwegian = cn_peterborough_norwegian # Medelhamstede
-                        name_list_norse = cn_peterborough_norse # Medelhamstede
-                        name_list_danish = cn_peterborough_danish # Medelhamstede
-					}					
-				}
-				b_kettering = {
-					province = 1602
-					color = { 125 5 5 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_kettering_anglo_saxon # Cytringas
-                        name_list_english = cn_kettering_english # Ketering
-                        name_list_scottish = cn_kettering_scottish # Ketering
-                        name_list_norman = cn_kettering_norman # Cateringe
-
-                        name_list_cumbrian = cn_kettering_cumbrian # Brogydrin
-                        name_list_welsh = cn_kettering_welsh # Brogydrin
-                        name_list_cornish = cn_kettering_cornish # Brogydrin
-
-                        name_list_swedish = cn_kettering_swedish # Kyteringas
-                        name_list_norwegian = cn_kettering_norwegian # Kyteringas
-                        name_list_norse = cn_kettering_norse # Kyteringas
-                        name_list_danish = cn_kettering_danish # Kyteringas
-					}					
-				}
-			}
-		}	
-		d_york = {# York
-			color = { 255 90 15 }			
 			capital = c_north_riding # York
-			
+
 			cultural_names = {
                 name_list_anglo_saxon = cn_york_duchy_anglo_saxon # Dere # Or Deira
                 name_list_scottish = cn_york_duchy_scottish # Deira
@@ -1907,7 +868,7 @@ e_britannia = {
                 name_list_danish = cn_york_danish # Jórvík # Or Jorvík
                 name_list_swedish = cn_york_swedish # Jórvík # Or Jorvík
 			}
-						
+
 			ai_primary_priority = {
 				if = {
 					limit = {
@@ -1916,281 +877,167 @@ e_britannia = {
 					add = @better_than_the_alternatives_score
 				}
 			}
-			
+
 			c_north_riding = {
 				color = { 255 95 20 }
 
 				cultural_names = {
-                    name_list_anglo_saxon = cn_riding_north_anglo_saxon # Norþriðing # Or Norþdere?
-                    name_list_scottish = cn_riding_north_scottish # Norþriþing
-                    name_list_english = cn_riding_north_english # Norþriþing
-                    name_list_norman = cn_york_norman # Évèroui # Or Everwic
-	
-                    name_list_pictish = cn_york_pictish # Efrog
-                    name_list_irish = cn_york_irish # Ebrauc
-                    name_list_gaelic = cn_york_gaelic # Ebrauc
-	
-                    name_list_cornish = cn_york_cornish # Ebrauc # Or Cair Ebrauc
-                    name_list_welsh = cn_york_welsh # Ebrauc # Or Cair Ebrauc
-                    name_list_cumbrian = cn_york_cumbrian # Efrog
-	
-                    name_list_norse = cn_riding_north_norse # Norðr Þriðjungr
-                    name_list_danish = cn_riding_north_danish # Norðr Þriðjungr
-                    name_list_norwegian = cn_riding_north_norwegian # Norðr Þriðjungr
-                    name_list_swedish = cn_riding_north_swedish # Norðr Þriðjungr
-				}				
-				
+					name_list_breton = cn_efrog
+					name_list_cornish = cn_efrog
+					name_list_cumbrian = cn_efrog
+					name_list_welsh = cn_efrog
+					name_list_pictish = cn_efrog
+				}
+
 				b_york = {
 					province = 1595
 
 					color = { 255 95 20 }
 
 					cultural_names = {
-                        name_list_anglo_saxon = cn_york_anglo_saxon # Eoforuuīc
-                        name_list_scottish = cn_york_scottish # Yorke
-                        name_list_english = cn_york_english # Yorke
-                        name_list_norman = cn_york_norman # Évèroui # Or Everwic
-		
-						name_list_pictish = cn_york_pictish # Efrog
-						name_list_irish = cn_york_irish # Ebrauc
-						name_list_gaelic = cn_york_gaelic # Ebrauc
-		
-						name_list_cornish = cn_york_cornish # Ebrauc # Or Cair Ebrauc
-						name_list_welsh = cn_york_welsh # Ebrauc # Or Cair Ebrauc
-						name_list_cumbrian = cn_york_cumbrian # Efrog
-		
-                        name_list_norse = cn_york_norse # Jórvík # Or Jorvík
-                        name_list_danish = cn_york_danish # Jórvík # Or Jorvík
-                        name_list_norwegian = cn_york_norwegian # Jórvík # Or Jorvík
-                        name_list_swedish = cn_york_swedish # Jórvík # Or Jorvík
-					}					
+						name_list_norse = cn_jorvik
+						name_list_norwegian = cn_jorvik
+						name_list_swedish = cn_jorvik
+						name_list_danish = cn_jorvik
+
+						name_list_anglo_saxon = cn_eoforwic
+
+						name_list_breton = cn_efrog
+						name_list_cornish = cn_efrog
+						name_list_cumbrian = cn_efrog
+						name_list_welsh = cn_efrog
+						name_list_pictish = cn_efrog
+					}
 				}
 				b_scarborough = {
 					province = 1596
+
 					color = { 255 95 20 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_scarborough_england_anglo_saxon # Sceardesburh
-                        name_list_scottish = cn_scarborough_england_scottish # Scharburgh
-                        name_list_english = cn_scarborough_england_english # Scharburgh
-                        name_list_norman = cn_scarborough_england_norman # Scardeburc # Or Escardebourg
-
-                        name_list_cornish = cn_scarborough_england_cornish # Caerddwrhelig
-                        name_list_welsh = cn_scarborough_england_welsh # Caerddwrhelig
-                        name_list_cumbrian = cn_scarborough_england_cumbrian # Caerddwrhelig
-		
-                        name_list_norse = cn_scarborough_england_norse # Skarðaborg
-                        name_list_danish = cn_scarborough_england_danish # Jórvík # Or Jorvík
-                        name_list_norwegian = cn_scarborough_england_norwegian # Skarðaborg
-                        name_list_swedish = cn_scarborough_england_swedish # Jórvík # Or Jorvík
-					}
-					
 				}
 				b_whitby = {
 					province = 1597
+
 					color = { 255 95 20 }
 				}
 				b_richmond = {
 					province = 1598
+
 					color = { 255 95 20 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_richmond_england_anglo_saxon # Sceon
-                        name_list_scottish = cn_richmond_england_scottish # Shene
-                        name_list_english = cn_richmond_england_english # Shene
-                        name_list_norman = cn_richmond_england_norman # Richemont
-
-                        name_list_cornish = cn_richmond_england_cornish # Catraeth # Or Cair Caratauc
-                        name_list_welsh = cn_richmond_england_welsh # Catraeth # Or Cair Caratauc
-                        name_list_cumbrian = cn_richmond_england_cumbrian # Catraeth # Or Cair Caratauc
-		
-                        name_list_norse = cn_richmond_england_norse # Gillingar
-                        name_list_danish = cn_richmond_england_danish # Ghellinges
-                        name_list_norwegian = cn_richmond_england_norwegian # Ghellinges
-                        name_list_swedish = cn_richmond_england_swedish # Ghellinges
-					}					
 				}
 				b_yarlestre = {
 					province = 1500
+
 					color = { 255 95 20 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_yarlestre_anglo_saxon # Eorlestreow
-                        name_list_scottish = cn_yarlestre_scottish # Yarlestre
-                        name_list_english = cn_yarlestre_english # Yarlestre
-                        name_list_norman = cn_yarlestre_norman # Gerlestre
-
-                        name_list_norse = cn_yarlestre_norse # Jarlstré
-                        name_list_danish = cn_yarlestre_danish # Jarlstré
-                        name_list_norwegian = cn_yarlestre_norwegian # Jarlstré
-                        name_list_swedish = cn_yarlestre_swedish # Jarlstré
-					}
-					
 				}
 			}
 			c_east_riding = {
 				color = { 255 139 15 }
 
-				cultural_names = {
-                    name_list_anglo_saxon = cn_riding_east_anglo_saxon # Eastþriðing
-                    name_list_scottish = cn_riding_east_scottish # Estriþing
-                    name_list_english = cn_riding_east_english # Estriþing
-
-                    name_list_norse = cn_riding_east_norse # Austr Þriðjungr
-                    name_list_danish = cn_riding_east_danish # Ostjorvig
-                    name_list_norwegian = cn_riding_east_norwegian # Ostjorvik
-                    name_list_swedish = cn_riding_east_swedish # Ostrajorvik
-				}				
-
 				b_pockington = {
-					province = 1588
-					color = { 255 160 59 }
-
 					cultural_names = {
-                        name_list_anglo_saxon = cn_pocklington_anglo_saxon # Pocelingatun
-                        name_list_scottish = cn_pocklington_scottish # Pocklington
-                        name_list_english = cn_pocklington_english # Pocklington
-						name_list_norman = cn_pocklington_norman # Poclinton
+						name_list_anglo_saxon = cn_poclintun
+					}
+					province = 1588
 
-                        name_list_norse = cn_pocklington_norse # Poklingatún
-                        name_list_danish = cn_pocklington_danish # Poklingatún
-                        name_list_norwegian = cn_pocklington_norwegian # Poklingatún
-                        name_list_swedish = cn_pocklington_swedish # Poklingatún
-					}	
-					
+					color = { 255 160 59 }
 				}
 				b_cottingham = {
 					province = 1589
-					color = { 255 139 15 }				
- 					
+
+					color = { 255 139 15 }
 				}
 				b_bridlington = {
 					province = 1590
-					color = { 255 139 15 }			
+
+					color = { 255 139 15 }
 				}
 			}
 			c_west_riding = {
 				color = { 255 120 35 }
-	
 				cultural_names = {
-                    name_list_anglo_saxon = cn_riding_west_anglo_saxon # Westþriðing
-                    name_list_scottish = cn_riding_west_scottish # Westriþing
-                    name_list_english = cn_riding_west_english # Westriþing
-
-					name_list_gaelic = cn_riding_west_gaelic # Elmet
-                    name_list_irish = cn_riding_west_irish # Elmet
-                    name_list_pictish = cn_riding_west_pictish # Elmet
-
-                    name_list_cornish = cn_riding_west_cornish # Elmet
-                    name_list_welsh = cn_riding_west_welsh # Elmet
-                    name_list_cumbrian = cn_riding_west_cumbrian # Elmet
-
-                    name_list_norse = cn_riding_west_norse # Vestr Þriðjungr
-                    name_list_danish = cn_riding_west_danish # Vesturjorvig
-                    name_list_norwegian = cn_riding_west_norwegian # Vestjorvik
-                    name_list_swedish = cn_riding_west_swedish # Västerjorvik
-				}					
+					name_list_welsh = cn_elmet
+					name_list_cumbrian = cn_elmet
+					name_list_cornish = cn_elmet
+					name_list_breton = cn_elmet
+					name_list_pictish = cn_elmet
+				}
 
 				b_leeds = {
-					province = 1591
-					color = { 255 120 35 }
-
 					cultural_names = {
-                        name_list_anglo_saxon = cn_leeds_anglo_saxon # Loidis # Or Leodes
-                        name_list_scottish = cn_leeds_scottish # Ledes
-                        name_list_english = cn_leeds_english # Ledes
-						name_list_norman = cn_leeds_norman # Ledes
+						name_list_welsh = cn_ladenses
+						name_list_cumbrian = cn_ladenses
+						name_list_cornish = cn_ladenses
+						name_list_breton = cn_ladenses
+						name_list_pictish = cn_ladenses
 
-                        name_list_gaelic = cn_leeds_gaelic # Loidis
-                        name_list_irish = cn_leeds_irish # Ladenses
-                        name_list_pictish = cn_leeds_pictish # Ladenses
-	
-                        name_list_cornish = cn_leeds_cornish # Ladenses
-                        name_list_welsh = cn_leeds_welsh # Caerloedd
-                        name_list_cumbrian = cn_leeds_cumbrian # Ladenses
-	
-                        name_list_norse = cn_leeds_norse # Lýðs
-                        name_list_danish = cn_leeds_danish # Loidis
-                        name_list_norwegian = cn_leeds_norwegian # Loidis
-                        name_list_swedish = cn_leeds_swedish # Loidis
-					}						
-					
+						name_list_anglo_saxon = cn_leodis
+					}
+					province = 1591
+
+					color = { 255 120 35 }
 				}
 				b_doncaster = {
 					province = 1592
-					color = { 255 120 35 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_doncaster_anglo_saxon # Doneceaster
-                        name_list_cornish = cn_doncaster_cornish # Cair Daun
-                        name_list_welsh = cn_doncaster_welsh # Cair Daun
-                        name_list_cumbrian = cn_doncaster_cumbrian # Cair Daun
-					}					
+					color = { 255 120 35 }
 				}
 				b_halifax = {
 					province = 1593
-					color = { 255 120 35 }				
 
+					color = { 255 120 35 }
 				}
 				b_sheffield = {
 					province = 1594
+
 					color = { 255 120 35 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_sheffield_anglo_saxon # Sceafeld
-	
-                        name_list_cornish = cn_sheffield_cornish # Maesfin
-                        name_list_welsh = cn_sheffield_welsh # Maesfin
-                        name_list_cumbrian = cn_sheffield_cumbrian # Maesfin
-
-					}	
-					
 				}
 				b_bolton = {
 					province = 1499
-					color = { 255 120 35 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_bolton_anglo_saxon # Boþltun
-                        name_list_english = cn_bolton_english # Boelton
-                        name_list_scottish = cn_bolton_scottish # Boelton
-                        name_list_norman = cn_bolton_norman # Bodelton
-	
-                        name_list_cornish = cn_bolton_cornish # Trefannedd
-                        name_list_welsh = cn_bolton_welsh # Trefannedd
-                        name_list_cumbrian = cn_bolton_cumbrian # Trefannedd
-	
-                        name_list_norse = cn_bolton_norse # Bólatún
-                        name_list_danish = cn_bolton_danish # Botheltun
-                        name_list_norwegian = cn_bolton_norwegian # Botheltun
-                        name_list_swedish = cn_bolton_swedish # Botheltun
-					}
 
+					color = { 255 120 35 }
 				}
 				b_ripon = {
 					province = 1599
-					color = { 255 120 35 }
-				
-					cultural_names = {
-                        name_list_anglo_saxon = cn_ripon_anglo_saxon # Rypum
-                        name_list_norman = cn_ripon_norman # Ripum
-	
-                        name_list_cornish = cn_bolton_cornish # Trefannedd
-                        name_list_welsh = cn_bolton_welsh # Trefannedd
-                        name_list_cumbrian = cn_bolton_cumbrian # Trefannedd
-	
-                        name_list_norse = cn_ripon_norse # Rípum
-                        name_list_danish = cn_ripon_danish # Inhrypum
-                        name_list_norwegian = cn_ripon_norwegian # Inhrypum
-                        name_list_swedish = cn_ripon_swedish # Inhrypum
-					}					
 
+					color = { 255 120 35 }
 				}
 			}
+			c_lincolnshire = {
+				color = { 232 195 74 }
 
-		}		
+				cultural_names = {
+					name_list_anglo_saxon = cn_lindsey
+				}
+
+				b_lincoln = {
+					province = 1583
+
+					color = { 232 195 74 }
+				}
+				b_stamford = {
+					province = 1584
+
+					color = { 232 195 74 }
+				}
+				b_boston = {
+					province = 1585
+
+					color = { 232 195 74 }
+				}
+				b_bolingsbroke = {
+					province = 1586
+
+					color = { 232 195 74 }
+				}
+				b_grimsby = {
+					province = 1587
+
+					color = { 232 195 74 }
+				}
+			}
+		}
 		d_norfolk = { #East Anglia
-			color = { 200 90 0 }
+			color = { 255 64 64  }
 
 			cultural_names = {
                 name_list_anglo_saxon = cn_england_east_anglo_saxon # Eastengle
@@ -2216,245 +1063,97 @@ e_britannia = {
 
 			c_norfolk = {
 				color = { 210 100 0 }
-				can_create = {
-					culture = {
-						has_innovation = innovation_noblesse_oblige
-					}
-				}
 
 				cultural_names = {
-                    name_list_anglo_saxon = cn_norfolk_england_anglo_saxon # Norþfolc
-                    name_list_english = cn_norfolk_england_english # Norþfolk
-                    name_list_scottish = cn_norfolk_england_scottish # Norþfolk
-                    name_list_norman = cn_norfolk_england_norman # Norfouc
-
-                    name_list_cornish = cn_norfolk_england_cornish # Gogleddwyr
-                    name_list_welsh = cn_norfolk_england_welsh # Gogleddwyr
-                    name_list_cumbrian = cn_norfolk_england_cumbrian # Gogleddwyr
-
-                    name_list_norse = cn_norfolk_england_norse # Norðfolc
-                    name_list_danish = cn_norfolk_england_danish # Norðfolc
-                    name_list_norwegian = cn_norfolk_england_norwegian # Norðfolc
-                    name_list_swedish = cn_norfolk_england_swedish # Norðfolc
+					name_list_norse = cn_jarnamoda
+					name_list_norwegian = cn_jarnamoda
 				}
-
 
 				b_norwich = {
 					province = 1522
+
 					color = { 210 100 0 }
 
 					cultural_names = {
-                        name_list_anglo_saxon = cn_norwich_england_anglo_saxon # Norþuuīc
-                        name_list_english = cn_norwich_england_english # Norwiche
-                        name_list_scottish = cn_norwich_england_scottish # Norwiche
-                        name_list_norman = cn_norwich_england_norman # Norwic
-	
-                        name_list_cornish = cn_norwich_england_cornish # Caerwent Iceniaid
-                        name_list_welsh = cn_norwich_england_welsh # Caerwent Iceniaid
-                        name_list_cumbrian = cn_norwich_england_cumbrian # Caerwent Iceniaid
-	
-                        name_list_norse = cn_norwich_england_norse # Norðrvík
-                        name_list_danish = cn_norwich_england_danish # Norðrvík
-                        name_list_norwegian = cn_norwich_england_norwegian # Norðrvík
-                        name_list_swedish = cn_norwich_england_swedish # Norðrvík
-					}					
-
+						name_list_norse = cn_jarnamoda
+						name_list_norwegian = cn_jarnamoda
+					}
 				}
 				b_thetford = {
 					province = 1523
-					color = { 210 100 0 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_thetford_anglo_saxon # Þeodford # Or Þiutforda
-                        name_list_english = cn_thetford_english # Þedeford
-                        name_list_scottish = cn_thetford_scottish # Þedeford
-                        name_list_norman = cn_thetford_norman # Tetford
-	
-                        name_list_cornish = cn_thetford_cornish # Rhydwerin
-                        name_list_welsh = cn_thetford_welsh # Rhydwerin
-                        name_list_cumbrian = cn_thetford_cumbrian # Rhydwerin
-	
-                        name_list_norse = cn_thetford_norse # Þjóðfjorð
-                        name_list_danish = cn_thetford_danish # Tjodfjord
-                        name_list_norwegian = cn_thetford_norwegian # Tjodfjord
-                        name_list_swedish = cn_thetford_swedish # Tjodfjord
-					}	
 
+					color = { 210 100 0 }
 				}
 				b_walsingham = {
 					province = 1524
+
 					color = { 210 100 0 }
-					
 				}
 				b_lynn = {
 					province = 1525
+
 					color = { 210 100 0 }
-					
 				}
 			}
 			c_suffolk = {
 				color = { 215 125 10 }
 
-				cultural_names = {
-                    name_list_anglo_saxon = cn_suffolk_anglo_saxon # Sūþfolc
-                    name_list_english = cn_suffolk_english # Souþfolk
-                    name_list_scottish = cn_suffolk_scottish # Souþfolk
-                    name_list_norman = cn_suffolk_norman # Suffouc
-
-                    name_list_cornish = cn_suffolk_cornish # Deheuwyr
-                    name_list_welsh = cn_suffolk_welsh # Deheuwyr
-                    name_list_cumbrian = cn_suffolk_cumbrian # Deheuwyr
-
-                    name_list_norse = cn_suffolk_norse # Suðfolc
-                    name_list_danish = cn_suffolk_danish # Suðfolc
-                    name_list_norwegian = cn_suffolk_norwegian # Suðfolc
-                    name_list_swedish = cn_suffolk_swedish # Suðfolc
-				}	
-			
 				b_ipswich = {
 					province = 1518
+
 					color = { 215 125 10 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_ipswich_anglo_saxon # Gipesuuīc
-                        name_list_english = cn_ipswich_english # Ipeswiche
-                        name_list_scottish = cn_ipswich_scottish # Ipeswiche
-                        name_list_norman = cn_ipswich_norman # Gepeswic
-	
-                        name_list_cornish = cn_ipswich_cornish # Gwicopa
-                        name_list_welsh = cn_ipswich_welsh # Gwicopa
-                        name_list_cumbrian = cn_ipswich_cumbrian # Gwicopa
-	
-                        name_list_norse = cn_ipswich_norse # Gipeswic
-                        name_list_danish = cn_ipswich_danish # Gipeswic
-                        name_list_norwegian = cn_ipswich_norwegian # Gipeswic
-                        name_list_swedish = cn_ipswich_swedish # Gipeswic
-					}					
-
 				}
 				b_sudbury = {
 					province = 1519
-					color = { 215 125 10 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_sudbury_anglo_saxon # Suþburh
-                        name_list_english = cn_sudbury_english # Suþbery
-                        name_list_scottish = cn_sudbury_scottish # Suþbery
-                        name_list_norman = cn_sudbury_norman # Sudberie
-	
-                        name_list_norse = cn_sudbury_norse # Suðrborg
-                        name_list_danish = cn_sudbury_danish # Sydborg
-                        name_list_norwegian = cn_sudbury_norwegian # Sorborg
-                        name_list_swedish = cn_sudbury_swedish # Sodraborg
-					}			
-			
+					color = { 215 125 10 }
 				}
 				b_blything = {
 					province = 1520
+
 					color = { 215 125 10 }
-					
 				}
 				b_beodericsworth = {
 					province = 1521
-					color = { 215 125 10 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_bury_st_edmunds_anglo_saxon # Beodericesworð
-                        name_list_english = cn_bury_st_edmunds_english # Saint Edmundsbury # Or Beodericsworth
-                        name_list_scottish = cn_bury_st_edmunds_scottish # Saint Edmundsbury # Or Beodericsworth
-                        name_list_norman = cn_bury_st_edmunds_norman # Berie Seint Edmund
-	
-                        name_list_norse = cn_bury_st_edmunds_norse # Edmundsborg
-                        name_list_danish = cn_bury_st_edmunds_danish # Edmundsborg
-                        name_list_norwegian = cn_bury_st_edmunds_norwegian # Edmundsborg
-                        name_list_swedish = cn_bury_st_edmunds_swedish # Edmundsborg
-					}					
-					
+					color = { 215 125 10 }
 				}
 			}
 			c_cambridgeshire = {
 				color = { 205 145 5 }
-				
-				cultural_names = {
-                    name_list_anglo_saxon = cn_cambridgeshire_anglo_saxon # Grantabrycgscīr
-                    name_list_norman = cn_cambridge_norman # Cantebruge # Or Grentebrige
 
-                    name_list_cornish = cn_cambridgeshire_cornish # Swydd Gaergrawnt
-                    name_list_welsh = cn_cambridgeshire_welsh # Swydd Gaergrawnt
-                    name_list_cumbrian = cn_cambridgeshire_cumbrian # Swydd Gaergrawnt
-
-                    name_list_norse = cn_cambridge_norse # Kambryggja
-                    name_list_danish = cn_cambridge_danish # Grantabrycge
-                    name_list_norwegian = cn_cambridge_norwegian # Grantabrycge
-                    name_list_swedish = cn_cambridge_swedish # Grantabrycge
-				}	
 				b_cambridge = {
 					province = 1534
+
 					color = { 205 145 5 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_cambridge_anglo_saxon # Grantanbrycg
-						name_list_norman = cn_cambridge_norman # Cantebruge # Or Grentebrige
-	
-                        name_list_cornish = cn_cambridge_cornish # Cair Grant
-                        name_list_welsh = cn_cambridge_welsh # Cair Grant
-                        name_list_cumbrian = cn_cambridge_cumbrian # Cair Grant
-	
-						name_list_norse = cn_cambridge_norse # Kambryggja
-						name_list_danish = cn_cambridge_danish # Grantabrycge
-						name_list_norwegian = cn_cambridge_norwegian # Grantabrycge
-						name_list_swedish = cn_cambridge_swedish # Grantabrycge
-					}					
-
 				}
 				b_radfield = {
 					province = 1535
-					color = { 205 145 5 }					
-					
+
+					color = { 205 145 5 }
 				}
 				b_papworth = {
 					province = 1536
-					color = { 205 145 5 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_papworth_anglo_saxon # Pappaworþ
-						name_list_scottish = cn_papworth_scottish # Papeworthe
-                        name_list_english = cn_papworth_english # Papeworthe
-                        name_list_norman = cn_papworth_norman # Papeworde
-					}
-					
+					color = { 205 145 5 }
 				}
 				b_ely = {
 					province = 1537
+
 					color = { 205 145 5 }
 
 					cultural_names = {
-                        name_list_anglo_saxon = cn_ely_england_anglo_saxon # Elig
-                        name_list_norman = cn_ely_england_norman # Elyg
-	
-                        name_list_cornish = cn_ely_england_cornish # Eli
-                        name_list_welsh = cn_ely_england_welsh # Eli
-                        name_list_cumbrian = cn_ely_england_cumbrian # Eli
-	
-                        name_list_norse = cn_ely_england_norse # Élig
-                        name_list_danish = cn_ely_england_danish # Élig
-                        name_list_norwegian = cn_ely_england_norwegian # Élig
-                        name_list_swedish = cn_ely_england_swedish # Élig
-					}					
-
+						name_list_norse = cn_linn
+						name_list_norwegian = cn_linn
+					}
 				}
 			}
-		}		
-		d_hereford = {# Hereford
-			color = { 200 30 0 }
+		}
+		d_hereford = { # Mercia
+			color = { 220 20 60 }
+
 			capital = c_warwickshire # Warwick
 
-			cultural_names = {
-                name_list_cornish = cn_mercia_cornish # Gogledd Lloegr
-                name_list_welsh = cn_mercia_welsh # Gogledd Lloegr
-                name_list_cumbrian = cn_mercia_cumbrian # Gogledd Lloegr
-			}			
-			
 			ai_primary_priority = {
 				if = {
 					limit = {
@@ -2464,186 +1163,175 @@ e_britannia = {
 				}
 			}
 
-			can_create = {
-				culture = {
-					has_innovation = innovation_noblesse_oblige
-				}
-			}
-
 			c_warwickshire = {
 				color = { 190 30 30 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_warwickshire_anglo_saxon # Wæringuuīscīr
-                    name_list_norman = cn_warwick_norman # Varouic # Or Warewic
 
-                    name_list_cornish = cn_warwick_cornish # Wyrog
-                    name_list_welsh = cn_warwick_welsh # Wyrog
-                    name_list_cumbrian = cn_warwick_cumbrian # Wyrog
-
-                    name_list_norse = cn_warwick_norse # Wæring
-                    name_list_danish = cn_warwick_danish # Wæring
-                    name_list_norwegian = cn_warwick_norwegian # Wæring
-                    name_list_swedish = cn_warwick_swedish # Wæring
-				}					
-				
 				b_warwick = {
 					province = 1603
-					color = { 190 30 30 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_warwick_anglo_saxon # Uuæringuuīc
-						name_list_norman = cn_warwick_norman # Varouic # Or Warewic
-	
-						name_list_cornish = cn_warwick_cornish # Wyrog
-						name_list_welsh = cn_warwick_welsh # Wyrog
-						name_list_cumbrian = cn_warwick_cumbrian # Wyrog
-	
-						name_list_norse = cn_warwick_norse # Wæring
-						name_list_danish = cn_warwick_danish # Wæring
-						name_list_norwegian = cn_warwick_norwegian # Wæring
-						name_list_swedish = cn_warwick_swedish # Wæring
-					}						
-					
+					color = { 190 30 30 }
 				}
 				b_coventry = {
 					province = 1604
-					color = { 190 30 30 }		
+
+					color = { 190 30 30 }
 				}
 				b_birmingham = {
 					province = 1605
-					color = { 190 30 30 }					
+
+					color = { 190 30 30 }
+				}
+			}
+			c_leicestershire = {
+				color = { 130 5 25 }
+
+				b_leicester = {
+					province = 1615
+
+					color = { 130 5 25 }
+				}
+				b_melton = {
+					province = 1616
+
+					color = { 130 5 25 }
+				}
+				b_bosworth = {
+					province = 1617
+
+					color = { 130 5 25 }
+				}
+				b_rutland = {
+					province = 1613
+
+					color = { 130 5 25 }
+				}
+			}
+			c_nottinghamshire = {
+				color = { 175 0 30 }
+
+				b_nottingham = {
+					province = 1618
+
+					color = { 175 0 30 }
+				}
+				b_newark = {
+					province = 1619
+
+					color = { 175 0 30 }
+				}
+				b_retford = {
+					province = 1620
+
+					color = { 175 0 30 }
+				}
+			}
+			c_staffordshire = {
+				color = { 210 90 65 }
+
+				b_stafford = {
+					province = 1627
+
+					color = { 210 90 65 }
+				}
+				b_wolverhampton = {
+					province = 1628
+
+					color = { 210 90 65 }
+				}
+				b_stoke_on_trent = {
+					province = 1629
+
+					color = { 210 90 65 }
 				}
 			}
 			c_worcestershire = {
 				color = { 160 20 5 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_worcestershire_anglo_saxon # Wigreceastrescīr
 
-                    name_list_welsh = cn_worcester_welsh # Gaerwrangon # Or Caerwrangon, Cair Guoranegon
-                    name_list_cumbrian = cn_worcester_cumbrian # Gaerwrangon # Or Caerwrangon, Cair Guoranegon
-                    name_list_cornish = cn_worcester_cornish # Gaerwrangon # Or Caerwrangon, Cair Guoranegon
-
-                    name_list_swedish = cn_worcester_swedish # Wigreceaster
-                    name_list_norwegian = cn_worcester_norwegian # Wigreceaster
-                    name_list_norse = cn_worcester_norse # Wigreceaster
-                    name_list_danish = cn_worcester_danish # Wigreceaster
-				}				
-				
 				b_worcester = {
 					province = 1624
+
 					color = { 160 20 5 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_worcester_anglo_saxon # Weogornaceaster
-						name_list_norman = cn_worcester_norman # Wirecestre
-
-						name_list_welsh = cn_worcester_welsh # Gaerwrangon # Or Caerwrangon, Cair Guoranegon
-						name_list_cumbrian = cn_worcester_cumbrian # Gaerwrangon # Or Caerwrangon, Cair Guoranegon
-						name_list_cornish = cn_worcester_cornish # Gaerwrangon # Or Caerwrangon, Cair Guoranegon
-	
-						name_list_swedish = cn_worcester_swedish # Wigreceaster
-						name_list_norwegian = cn_worcester_norwegian # Wigreceaster
-						name_list_norse = cn_worcester_norse # Wigreceaster
-						name_list_danish = cn_worcester_danish # Wigreceaster
-					}
-
 				}
 				b_evesham = {
 					province = 1625
+
 					color = { 160 20 5 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_evesham_anglo_saxon # Eofeshamm
-
-                        name_list_cornish = cn_evesham_cornish # Trefafon
-                        name_list_welsh = cn_evesham_welsh # Trefafon
-                        name_list_cumbrian = cn_evesham_cumbrian # Trefafon
-	
-                        name_list_swedish = cn_evesham_swedish # Eofeshamme
-                        name_list_norwegian = cn_evesham_norwegian # Eofeshamme
-                        name_list_norse = cn_evesham_norse # Eofeshamme
-                        name_list_danish = cn_evesham_danish # Eofeshamme
-					}
-
 				}
 				b_kidderminster = {
 					province = 1626
+
 					color = { 160 20 5 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_kidderminster_anglo_saxon # Cydelamynster
-                        name_list_scottish = cn_kidderminster_scottish # Kideleministre
-                        name_list_english = cn_kidderminster_english # Kideleministre
-						name_list_norman = cn_kidderminster_norman # Chideminstre # Or Chedeminstre
+				}
+			}
+			c_huntingdonshire = {
+				color = { 175 40 55 }
 
-                        name_list_cornish = cn_kidderminster_cornish # Llangydr
-                        name_list_welsh = cn_kidderminster_welsh # Llangydr
-                        name_list_cumbrian = cn_kidderminster_cumbrian # Llangydr
-	
-                        name_list_swedish = cn_kidderminster_swedish # Chedemynster
-                        name_list_norwegian = cn_kidderminster_norwegian # Chedemynster
-                        name_list_norse = cn_kidderminster_norse # Chedemynster
-                        name_list_danish = cn_kidderminster_danish # Chedemynster
-					}
+				b_hurstingstone = {
+					province = 1541
 
+					color = { 175 40 55 }
+				}
+				b_norman_cross = {
+					province = 1542
+
+					color = { 175 40 55 }
+				}
+				b_leightonstone = {
+					province = 1543
+
+					color = { 175 40 55 }
+				}
+			}
+			c_northamptonshire = {
+				color = { 125 5 5 }
+
+				b_northampton = {
+					province = 1600
+
+					color = { 125 5 5 }
+				}
+				b_peterborough = {
+					province = 1601
+
+					color = { 125 5 5 }
+				}
+				b_kettering = {
+					province = 1602
+
+					color = { 125 5 5 }
 				}
 			}
 			c_shropshire = {
 				color = { 241 70 70 }
+
 				cultural_names = {
-                    name_list_anglo_saxon = cn_shropshire_anglo_saxon # Scrobbesbyrigscīr
-                    name_list_norman = cn_shrewsbury_norman # Sciropesberie
-
-                    name_list_cumbrian = cn_shropshire_cumbrian # Pengwern
-                    name_list_welsh = cn_shropshire_welsh # Pengwern
-                    name_list_cornish = cn_shropshire_cornish # Pengwern
-
-                    name_list_pictish = cn_shropshire_pictish # Pengwern
-                    name_list_irish = cn_shropshire_irish # Pengwern
-                    name_list_gaelic = cn_shropshire_gaelic # Pengwern
-
-                    name_list_swedish = cn_shropshire_swedish # Scrobbesborg
-                    name_list_norse = cn_shropshire_norse # Scrobbesborg
-                    name_list_danish = cn_shropshire_danish # Scrobbesborg
-                    name_list_norwegian = cn_shrewsbury_norwegian # Scrobbesborg
-				}				
+					name_list_welsh = cn_amwythig
+				}
 
 				b_shrewsbury = {
 					province = 1646
+
 					color = { 241 55 25 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_shrewsbury_anglo_saxon # Scrobbesbyrig # Or Scrobbesburh
-						name_list_scottish = cn_shrewsbury_scottish # Schrobesbury
-                        name_list_english = cn_shrewsbury_english # Schrobesbury
-                        name_list_norman = cn_shrewsbury_norman # Sciropesberie
-	
-                        name_list_cumbrian = cn_shrewsbury_cumbrian # Amwythig
-                        name_list_welsh = cn_shrewsbury_welsh # Amwythig
-						name_list_cornish = cn_shropshire_cornish # Pengwern
-	
-                        name_list_pictish = cn_shrewsbury_pictish # Amwythig
-                        name_list_irish = cn_shrewsbury_irish # Amwythig
-                        name_list_gaelic = cn_shrewsbury_gaelic # Amwythig
-	
-                        name_list_swedish = cn_shrewsbury_swedish # Scrobbesburgh
-                        name_list_norse = cn_shrewsbury_norse # Scrobbesborg
-                        name_list_danish = cn_shrewsbury_danish # Scrobbesburgh
-						name_list_norwegian = cn_shrewsbury_norwegian # Scrobbesborg
-					}	
-					
 				}
 				b_ludlow = {
 					province = 1647
-					color = { 241 55 25 }				
+
+					color = { 241 55 25 }
 				}
 				b_bishops_castle = { #Clun
 					province = 1648
+
 					color = { 241 55 25 }
+
+					cultural_names = {
+						name_list_welsh = cn_clun
+					}
 				}
 			}
-		}		
-		d_gloucester = {# Hwicce
-			color = { 241 79 15 }				
+		}
+		d_gloucester = { # Hwicce
+			color = { 164 0 0 }
+
 			capital = c_gloucestershire # Gloucester
 
 			cultural_names = {
@@ -2674,326 +1362,89 @@ e_britannia = {
 
 			c_gloucestershire = {
 				color = { 245 85 20 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_gloucestershire_anglo_saxon # Gleawcesterscīr
-                    name_list_norman = cn_gloucester_norman # Glouchêtre # Or Glocestre
-	
-					name_list_cumbrian = cn_gloucester_cumbrian # Gaerloyw
-					name_list_welsh = cn_gloucester_welsh # Cair Glout
-					name_list_cumbrian = cn_gloucester_cornish # Gaerloyw
-	
-					name_list_gaelic = cn_gloucester_gaelic # Caer Gloui
-					name_list_irish = cn_gloucester_irish # Caer Gloui
-					name_list_pictish = cn_gloucester_pictish # Gaerloyw
-	
-					name_list_swedish = cn_gloucester_swedish # Gleawceaster
-					name_list_norse = cn_gloucester_norse # Gleawceaster
-					name_list_danish = cn_gloucester_danish # Gleawceaster
-					name_list_norwegian = cn_gloucester_norwegian # Gleawceaster
-				}					
-			
+
 				b_gloucester = {
 					province = 1580
+
 					color = { 245 85 20 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_gloucester_anglo_saxon # Gleawceaster
-                        name_list_english = cn_gloucester_english # Gloucestre
-						name_list_norman = cn_gloucester_norman # Glouchêtre # Or Glocestre
-		
-						name_list_cumbrian = cn_gloucester_cumbrian # Gaerloyw
-						name_list_welsh = cn_gloucester_welsh # Cair Glout
-						name_list_cumbrian = cn_gloucester_cumbrian # Gaerloyw
-		
-						name_list_gaelic = cn_gloucester_gaelic # Caer Gloui
-						name_list_irish = cn_gloucester_irish # Caer Gloui
-						name_list_pictish = cn_gloucester_pictish # Gaerloyw
-		
-						name_list_swedish = cn_gloucester_swedish # Gleawceaster
-						name_list_norse = cn_gloucester_norse # Gleawceaster
-						name_list_danish = cn_gloucester_danish # Gleawceaster
-						name_list_norwegian = cn_gloucester_norwegian # Gleawceaster
-					}	
-
-					
 				}
 				b_bristol = {
 					province = 1581
+
 					color = { 245 85 20 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_bristol_anglo_saxon # Bricgstōuu
-                        name_list_english = cn_bristol_english # Bristowe
-						name_list_scottish = cn_bristol_scottish # Bristowe
-						name_list_norman = cn_bristol_norman # Glouchêtre # Or Glocestre
-		
-                        name_list_cumbrian = cn_bristol_cumbrian # Cair Britoc
-                        name_list_welsh = cn_bristol_welsh # Cair Britoc
-                        name_list_cornish = cn_bristol_cornish # Cair Britoc
-		
-                        name_list_pictish = cn_bristol_pictish # Briostó
-                        name_list_irish = cn_bristol_irish # Briostó
-                        name_list_gaelic = cn_bristol_gaelic # Briostó
-		
-                        name_list_swedish = cn_bristol_swedish # Brycgstow
-                        name_list_norwegian = cn_bristol_norwegian # Brycgstow
-                        name_list_norse = cn_bristol_norse # Brycgstow
-                        name_list_danish = cn_bristol_danish # Brycgstow
-					}
 				}
 				b_winchcombe = {
 					province = 1582
-					color = { 245 85 20 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_winchcombe_anglo_saxon # Wincelcumbe
-                        name_list_norman = cn_winchcombe_norman # Wicecombe
-		
-                        name_list_cumbrian = cn_winchcombe_cumbrian # Trefesgob
-                        name_list_welsh = cn_winchcombe_welsh # Trefesgob
-                        name_list_cornish = cn_winchcombe_cornish # Trefesgob
-					}
+					color = { 245 85 20 }
 				}
 			}
 			c_wiltshire = {
 				color = { 250 55 15 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_wiltshire_anglo_saxon # Uuīltunscīr # Or Wiltūnscīr
-                    name_list_norman = cn_wilton_norman # Wiltune
 
-                    name_list_cumbrian = cn_wiltshire_cumbrian # Caradog
-                    name_list_welsh = cn_wiltshire_welsh # Caradog
-                    name_list_cornish = cn_wiltshire_cornish # Caradog
-
-					name_list_swedish = cn_wiltshire_swedish # Viltunskíri
-                    name_list_norwegian = cn_wiltshire_norwegian # Viltunskíri
-                    name_list_norse = cn_wiltshire_norse # Viltunskíri
-                    name_list_danish = cn_wiltshire_danish # Viltunskíri					
-				}				
-			
 				b_salisbury = {
 					province = 1561
+
 					color = { 250 55 15 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_salisbury_england_anglo_saxon # Searoburg # Or Searoburh
-						name_list_scottish = cn_salisbury_england_scottish # Sarisberie
-                        name_list_english = cn_salisbury_england_english # Sarisberie
-                        name_list_norman = cn_salisbury_england_norman # Salesbire # Or Sarisberie
-
-                        name_list_cumbrian = cn_salisbury_england_cumbrian # Caersallog
-                        name_list_welsh = cn_salisbury_england_welsh # Caergradawc
-                        name_list_cornish = cn_salisbury_england_cornish # Caergradawc
-
-                        name_list_pictish = cn_salisbury_england_pictish # Caersallog
-                        name_list_gaelic = cn_salisbury_england_gaelic # Caersallog
-                        name_list_irish = cn_salisbury_england_irish # Caersallog
-
-                        name_list_swedish = cn_salisbury_england_swedish # Searesburgh
-                        name_list_norse = cn_salisbury_england_norse # Searesborg
-                        name_list_norwegian = cn_salisbury_england_norwegian # Searesborg
-                        name_list_danish = cn_salisbury_england_danish # Searesburgh
-					}
-		
 				}
 				b_wilton = {
 					province = 1562
+
 					color = { 250 55 15 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_wilton_anglo_saxon # Uuīltun
-                        name_list_norman = cn_wilton_norman # Wiltune
-
-                        name_list_cumbrian = cn_wilton_cumbrian # Caerwallawg
-                        name_list_welsh = cn_wilton_welsh # Caerwallawg
-                        name_list_cornish = cn_wilton_cornish # Caerwallawg
-
-                        name_list_pictish = cn_wilton_pictish # Caer Gradawc
-                        name_list_gaelic = cn_wilton_gaelic # Caer Gradawc
-                        name_list_irish = cn_wilton_irish # Caer Gradawc
-
-					}
-	
 				}
 				b_ramsbury = {
 					province = 1563
+
 					color = { 250 55 15 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_ramsbury_anglo_saxon # Hræmnesburh
-                        name_list_norman = cn_ramsbury_norman # Ramesberie
-
-                        name_list_cumbrian = cn_ramsbury_cumbrian # Llangwned
-                        name_list_welsh = cn_ramsbury_welsh # Llangwned
-                        name_list_cornish = cn_ramsbury_cornish # Llangwned
-
-                        name_list_norse = cn_ramsbury_norse # Ramsborg
-                        name_list_norwegian = cn_ramsbury_norwegian # Ramnborg
-                        name_list_swedish = cn_ramsbury_swedish # Ramnborg
-                        name_list_danish = cn_ramsbury_danish # Ramsburgh
-
-					}				
-					
 				}
 				b_malmesbury = {
 					province = 1564
+
 					color = { 250 55 15 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_malmesbury_anglo_saxon # Maldumesburh
-                        name_list_norman = cn_malmesbury_norman # Malmesberie
-
-                        name_list_cumbrian = cn_malmesbury_cumbrian # Caerfaldon
-                        name_list_welsh = cn_malmesbury_welsh # Caerfaldon
-                        name_list_cornish = cn_malmesbury_cornish # Caerfaldon
-
-                        name_list_norse = cn_malmesbury_norse # Malmesborg
-                        name_list_norwegian = cn_malmesbury_norwegian # Malmesborg
-                        name_list_danish = cn_malmesbury_danish # Malmesburgh
-                        name_list_swedish = cn_malmesbury_swedish # Malmesburgh
-					}
-
 				}
 			}
 			c_oxfordshire = {
 				color = { 255 115 15 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_oxfordshire_anglo_saxon # Oxnafordscīr
-                    name_list_norman = cn_oxford_norman # Oxenefort
 
-                    name_list_cumbrian = cn_oxfordshire_cumbrian # Rydychen
-                    name_list_welsh = cn_oxfordshire_welsh # Rydychen
-                    name_list_cornish = cn_oxfordshire_cornish # Rydychen
-
-					name_list_gaelic = cn_oxfordshire_gaelic # Sheer Aah yn Ollee
-                    name_list_pictish = cn_oxfordshire_pictish # Sheer Aah yn Ollee
-                    name_list_irish = cn_oxfordshire_irish # Sheer Aah yn Ollee
-
-                    name_list_norse = cn_oxford_norse # Øxnafurða
-                    name_list_norwegian = cn_oxford_norwegian # Oxnaford
-                    name_list_danish = cn_oxford_danish # Oxnaford
-                    name_list_swedish = cn_oxford_swedish # Oxnaford
-				}				
-				
 				b_oxford = {
 					province = 1558
-					color = { 255 115 15 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_oxford_anglo_saxon # Oxenaford
-						name_list_norman = cn_oxford_norman # Oxenefort
-	
-                        name_list_cumbrian = cn_oxford_cumbrian # Rhydychen
-                        name_list_welsh = cn_oxford_welsh # Rhydychen
-                        name_list_cornish = cn_oxford_cornish # Rhydychen
-	
-                        name_list_gaelic = cn_oxford_gaelic # Rhydychen
-                        name_list_irish = cn_oxford_irish # Rhydychen
-                        name_list_pictish = cn_oxford_pictish # Rhydychen
-	
-						name_list_norse = cn_oxford_norse # Øxnafurða
-						name_list_norwegian = cn_oxford_norwegian # Oxnaford
-						name_list_danish = cn_oxford_danish # Oxnaford
-						name_list_swedish = cn_oxford_swedish # Oxnaford
-					}						
-					
+					color = { 255 115 15 }
 				}
 				b_banbury = {
 					province = 1559
+
 					color = { 255 115 15 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_banbury_anglo_saxon # Banesburh
-                        name_list_norman = cn_banbury_norman # Banesberie
-	
-                        name_list_cumbrian = cn_banbury_cumbrian # Bwrch-Ban
-                        name_list_welsh = cn_banbury_welsh # Bwrch-Ban
-                        name_list_cornish = cn_banbury_cornish # Bwrch-Ban
-
-                        name_list_norse = cn_banbury_norse # Banesborg
-                        name_list_norwegian = cn_banbury_norwegian # Banesborg
-                        name_list_danish = cn_banbury_danish # Banesburgh
-                        name_list_swedish = cn_banbury_swedish # Banesburgh
-					}					
-					
 				}
 				b_witney = {
 					province = 1560
-					color = { 255 115 15 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_witney_anglo_saxon # Wyttanige
-                        name_list_norman = cn_witney_norman # Witenie
 
-                        name_list_norse = cn_witney_norse # Wyttannige
-                        name_list_norwegian = cn_witney_norwegian # Wyttannige
-                        name_list_danish = cn_witney_danish # Wyttannige
-                        name_list_swedish = cn_witney_swedish # Wyttannige
-					}
+					color = { 255 115 15 }
 				}
 			}
 			c_berkshire = {
 				color = { 255 100 25 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_berkshire_anglo_saxon # Bearrocscīr # Or Bearrucscīr, or maybe simply Bearroc
-
-                    name_list_gaelic = cn_berkshire_gaelic # Bearroc
-                    name_list_pictish = cn_berkshire_pictish # Bearroc
-                    name_list_irish = cn_berkshire_irish # Bearroc
-
-                    name_list_cumbrian = cn_berkshire_cumbrian # Bearroc
-                    name_list_welsh = cn_berkshire_welsh # Bearroc
-                    name_list_cornish = cn_berkshire_cornish # Bearroc
-				}				
 
 				b_reading = {
 					province = 1555
+
 					color = { 255 100 25 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_reading_england_anglo_saxon # Rēadingas
-						name_list_english = cn_reading_england_english # Redinge
-                        name_list_scottish = cn_reading_england_scottish # Redinge
-                        name_list_norman = cn_reading_england_norman # Rédingue # Org Redinges
-
-                        name_list_cumbrian = cn_reading_england_cumbrian # Rhydafon
-                        name_list_welsh = cn_reading_england_welsh # Rhydafon
-                        name_list_cornish = cn_reading_england_cornish # Rhydafon
-
-                        name_list_swedish = cn_reading_england_swedish # Readingum
-                        name_list_norwegian = cn_reading_england_norwegian # Readingum
-                        name_list_norse = cn_reading_england_norse # Readingum
-                        name_list_danish = cn_reading_england_danish # Readingum						
-					}					
-					
 				}
 				b_newbury = {
 					province = 1556
+
 					color = { 255 100 25 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_newbury_anglo_saxon # Ulfretūn # Or Niweburh
-                        name_list_norman = cn_newbury_norman # Neuberie
-					}						
 				}
 				b_abingdon = {
 					province = 1557
+
 					color = { 255 100 25 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_abingdon_anglo_saxon # Æbbandūn
-                        name_list_norman = cn_abingdon_norman # Abendone
-
-                        name_list_welsh = cn_abingdon_welsh # Abaty-ar-Dafwys
-                        name_list_cumbrian = cn_abingdon_cumbrian # Abaty-ar-Dafwys
-                        name_list_cornish = cn_abingdon_cornish # Abaty-ar-Dafwys
-
-                        name_list_swedish = cn_abingdon_swedish # Æbbandün
-                        name_list_norwegian = cn_abingdon_norwegian # Æbbandün
-                        name_list_norse = cn_abingdon_norse # Æbbandün
-                        name_list_danish = cn_abingdon_danish # Æbbandün
-					}	
-					
 				}
 			}
-		}		
-		d_canterbury = {# Kent
-			color = { 241 100 15 }			
+		}
+		d_canterbury = { # Kent
+			color = { 207 16 32 }
+
 			capital = c_kent # Dover
 
 			cultural_names = {
@@ -3012,285 +1463,88 @@ e_britannia = {
                 name_list_norwegian = cn_kent_norwegian # Cent
                 name_list_norse = cn_kent_norse # Cent
                 name_list_danish = cn_kent_danish # Cent
-			}				
-			
+			}
+
 			c_kent = {
 				color = { 245 105 20 }
-				cultural_names = {
-					name_list_anglo_saxon = cn_kent_anglo_saxon # Cent
-					name_list_norman = cn_kent_norman # Caint
-	
-					name_list_welsh = cn_kent_welsh # Ceint
-					name_list_cumbrian = cn_kent_cumbrian # Ceint
-					name_list_cornish = cn_kent_cornish # Ceint
-	
-					name_list_irish = cn_kent_irish # Ceint
-					name_list_gaelic = cn_kent_gaelic # Ceint
-					name_list_pictish = cn_kent_pictish # Ceint
-	
-					name_list_swedish = cn_kent_swedish # Cent
-					name_list_norwegian = cn_kent_norwegian # Cent
-					name_list_norse = cn_kent_norse # Cent
-					name_list_danish = cn_kent_danish # Cent
-				}				
-				
+
 				b_dover = {
 					province = 1502
-					color = { 245 105 20 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_dover_anglo_saxon # Dofras
-						name_list_scottish = cn_dover_scottish # Dovere
-                        name_list_english = cn_dover_english # Dovere
-                        name_list_norman = cn_dover_norman # Dovre
-		
-                        name_list_welsh = cn_dover_welsh # Dofr
-                        name_list_cumbrian = cn_dover_cumbrian # Dofr
-                        name_list_cornish = cn_dover_cornish # Dofr
-		
-                        name_list_norse = cn_dover_norse # Dofrar
-                        name_list_norwegian = cn_dover_norwegian # Dofrar
-					}
-					
+					color = { 245 105 20 }
 				}
 				b_canterbury = {
 					province = 1503
+
 					color = { 245 105 20 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_canterbury_anglo_saxon # Doruuitceaster # Or Cantwaraburh
-                        name_list_scottish = cn_canterbury_scottish # Caunterbury
-                        name_list_english = cn_canterbury_english # Caunterbury
-                        name_list_norman = cn_canterbury_norman # Cantorbéry # Or Cantorbiéthe, Cantorberie
-		
-                        name_list_cornish = cn_canterbury_cornish # Caergaint
-                        name_list_welsh = cn_canterbury_welsh # Cair Ceint
-                        name_list_cumbrian = cn_canterbury_cumbrian # Caergaint
-		
-                        name_list_pictish = cn_canterbury_pictish # Caergaint
-                        name_list_irish = cn_canterbury_irish # Caergaint
-                        name_list_gaelic = cn_canterbury_gaelic # Caergaint
-
-                        name_list_norse = cn_canterbury_norse # Cantawaraborg
-                        name_list_norwegian = cn_canterbury_norwegian # Cantawaraborg
-						name_list_swedish = cn_canterbury_swedish # Cantawaraburgh
-                        name_list_danish = cn_canterbury_danish # Cantawaraburgh
-					}
-					
 				}
 				b_rochester = {
 					province = 1504
-					color = { 245 105 20 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_rochester_anglo_saxon # Hrofesceaster
-                        name_list_scottish = cn_rochester_scottish # Rouchestre
-                        name_list_english = cn_rochester_english # Rouchestre
-                        name_list_norman = cn_rochester_norman # Rochêtre # Or Rovescestre
-		
-                        name_list_cumbrian = cn_rochester_cumbrian # Caerbont
-                        name_list_welsh = cn_rochester_welsh # Caerbont
-                        name_list_cornish = cn_rochester_cornish # Caerbont
-		
-                        name_list_norse = cn_rochester_norse # Hrofescester
-                        name_list_norwegian = cn_rochester_norwegian # Hrofescester
-                        name_list_swedish = cn_rochester_swedish # Hrofescester
-                        name_list_danish = cn_rochester_danish # Hrofescester
-					}					
-					
+					color = { 245 105 20 }
 				}
 				b_tonbridge = {
 					province = 1505
-					color = { 245 105 20 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_tonbridge_anglo_saxon # Tunbrycg
-						name_list_scottish = cn_tonbridge_scottish # Tonbridge
-                        name_list_english = cn_tonbridge_english # Tonbridge
-                        name_list_norman = cn_tonbridge_norman # Tonebrige
-		
-                        name_list_cumbrian = cn_tonbridge_cumbrian # Pont-y-Din
-                        name_list_welsh = cn_tonbridge_welsh # Pont-y-Din
-                        name_list_cornish = cn_tonbridge_cornish # Pont-y-Din
-      
-						name_list_swedish = cn_tonbridge_swedish # Tunnabrycg
-                        name_list_norwegian = cn_tonbridge_norwegian # Tunnabrycg
-                        name_list_norse = cn_tonbridge_norse # Tunnabrycg
-                        name_list_danish = cn_tonbridge_danish # Tunnabrycg
-					}
-					
+					color = { 245 105 20 }
 				}
 			}
 			c_surrey = {
 				color = { 225 80 20 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_surrey_anglo_saxon # Sūþrīge
-                    name_list_scottish = cn_surrey_scottish # Souþeray
-                    name_list_english = cn_surrey_english # Souþeray
-	
-                    name_list_cumbrian = cn_surrey_cumbrian # Deheufro
-                    name_list_welsh = cn_surrey_welsh # Deheufro
-                    name_list_cornish = cn_surrey_cornish # Deheufro
-  
-                    name_list_swedish = cn_surrey_swedish # Suðríki
-                    name_list_norwegian = cn_surrey_norwegian # Suðríki
-                    name_list_norse = cn_surrey_norse # Suðríki
-                    name_list_danish = cn_surrey_danish # Suðríki
-				}				
-				
+
 				b_chertsey = {
 					province = 1510
-					color = { 225 80 20 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_chertsey_england_anglo_saxon # Ceortesege
-                        name_list_norman = cn_chertsey_england_norman # Certesi
-		
-                        name_list_cumbrian = cn_chertsey_england_cumbrian # Ynys Ceredig
-                        name_list_welsh = cn_chertsey_england_welsh # Ynys Ceredig
-                        name_list_cornish = cn_chertsey_england_cornish # Ynys Ceredig
-	  
-                        name_list_swedish = cn_chertsey_england_swedish # Cerotesege
-                        name_list_norwegian = cn_chertsey_england_norwegian # Cerotesege
-                        name_list_norse = cn_chertsey_england_norse # Cerotesege
-                        name_list_danish = cn_chertsey_england_danish # Cerotesege
-					}
-						
+					color = { 225 80 20 }
 				}
 				b_guildford = {
 					province = 1511
-					color = { 225 80 20 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_guildford_anglo_saxon # Gyldeford
-						name_list_english = cn_guildford_english # Gildeford
-                        name_list_scottish = cn_guildford_scottish # Gildeford
-                        name_list_norman = cn_guildford_norman # Gildefort
-		
-                        name_list_cumbrian = cn_guildford_cumbrian # Rhydaur
-                        name_list_welsh = cn_guildford_welsh # Rhydaur
-                        name_list_cornish = cn_guildford_cornish # Rhydaur
-	  
-                        name_list_swedish = cn_guildford_swedish # Geldeford
-                        name_list_norwegian = cn_guildford_norwegian # Geldeford
-                        name_list_norse = cn_guildford_norse # Geldeford
-                        name_list_danish = cn_guildford_danish # Geldeford
-					}
-					
+					color = { 225 80 20 }
 				}
 				b_kingston = {
 					province = 1512
+
 					color = { 225 80 20 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_kingston_anglo_saxon # Cyningestun
-                        name_list_scottish = cn_kingston_scottish # Kyngeston
-                        name_list_english = cn_kingston_english # Kyngeston
-                        name_list_norman = cn_kingston_norman # Chingestone
-					}					
-
 				}
 				b_tandbridge = {
 					province = 1513
-					color = { 225 80 20 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_tandbirdge_anglo_saxon # Tenhrycg
-                        name_list_norman = cn_tandbirdge_norman # Tenrige
-					}
-					
+					color = { 225 80 20 }
 				}
 			}
 			c_sussex = {
 				color = { 225 105 10 }
+
 				cultural_names = {
-                    name_list_anglo_saxon = cn_sussex_anglo_saxon # Sūþseaxe
-                    name_list_english = cn_sussex_english # Souþsex
-                    name_list_scottish = cn_sussex_scottish # Souþsex
-	
-                    name_list_cornish = cn_sussex_cornish # Rhegin
-                    name_list_welsh = cn_sussex_welsh # Rhegin
-                    name_list_cumbrian = cn_sussex_cumbrian # Rhegin
-  
-                    name_list_swedish = cn_sussex_swedish # Suðseaxe
-                    name_list_norwegian = cn_sussex_norwegian # Suðseaxe
-                    name_list_norse = cn_sussex_norse # Suðseaxe
-                    name_list_danish = cn_sussex_danish # Suðseaxe
-				}				
-				
+					name_list_anglo_saxon = cn_south_seaxe
+					name_list_old_saxon = cn_south_seaxe
+				}
+
 				b_lewes = {
-					province = 1506				
+					province = 1506
+
 					color = { 225 105 10 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_lewes_anglo_saxon # Læwes
-		
-                        name_list_cumbrian = cn_lewes_cumbrian # Llefryn # Or Leos
-                        name_list_welsh = cn_lewes_welsh # Llefryn # Or Leos
-                        name_list_cornish = cn_lewes_cornish # Llefryn # Or Leos
-					}
-
 				}
 				b_chichester = {
 					province = 1507
+
 					color = { 225 105 10 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_chichester_anglo_saxon # Cisseceaster
-                        name_list_english = cn_chichester_english # Chicestre
-                        name_list_scottish = cn_chichester_scottish # Chicestre
-						name_list_norman = cn_chichester_norman # Cicestre
-
-                        name_list_welsh = cn_chichester_welsh # Caerfuddai
-                        name_list_cumbrian = cn_chichester_cumbrian # Caerfuddai
-                        name_list_cornish = cn_chichester_cornish # Caerfuddai
-	  
-                        name_list_swedish = cn_chichester_swedish # Cissceaster
-                        name_list_norwegian = cn_chichester_norwegian # Cissceaster
-                        name_list_norse = cn_chichester_norse # Cissceaster
-                        name_list_danish = cn_chichester_danish # Cissceaster
-					}					
-
 				}
 				b_arun = {
 					province = 1508
+
 					color = { 225 105 10 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_arundel_anglo_saxon # Harhunedell
-                        name_list_english = cn_arundel_english # Aron
-                        name_list_scottish = cn_arundel_scottish # Aron
-                        name_list_norman = cn_arundel_norman # Harun
-
-                        name_list_welsh = cn_arundel_welsh # Dôlarnw
-                        name_list_cumbrian = cn_arundel_cumbrian # Dôlarnw
-                        name_list_cornish = cn_arundel_cornish # Dôlarnw
-					}
-
 				}
 				b_hastings = {
 					province = 1509
+
 					color = { 225 105 10 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_hastings_anglo_saxon # Hæstingas
-
-                        name_list_welsh = cn_arundel_welsh # Dôlarnw
-                        name_list_cumbrian = cn_arundel_cumbrian # Dôlarnw
-                        name_list_cornish = cn_arundel_cornish # Dôlarnw
-
-                        name_list_swedish = cn_hastings_swedish # Hæstingaceaster
-                        name_list_norwegian = cn_hastings_norwegian # Hæstingaceaster
-                        name_list_norse = cn_hastings_norse # Hæstingaceaster
-                        name_list_danish = cn_hastings_danish # Hæstingaceaster
-					}
-
-
 				}
 			}
 		}
-		d_somerset = {# Somerset
-			color = hsv{ 1 0.9 0.9 }			
+		d_somerset = {
+			color = { 155 17 30 }
 			capital = c_hampton # Winchester
 
 			cultural_names = {
@@ -3323,323 +1577,99 @@ e_britannia = {
 					add = @better_than_the_alternatives_score
 				}
 			}
-			
+
 			c_hampton = {
 				color = { 230 15 55 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_hampshire_anglo_saxon # Suþhamtunscīr # Or Hāmtūnescīr, Hamtunscīr
-                    name_list_scottish = cn_hampshire_scottish # Southamptonshire
-                    name_list_english = cn_hampshire_english # Southamptonshire
-					name_list_norman = cn_hampshire_norman # Hanteschire
 
-                    name_list_cornish = cn_hampshire_cornish # Caer Gwynntguic
-                    name_list_welsh = cn_hampshire_welsh # Caer Gwynntguic
-                    name_list_cumbrian = cn_hampshire_cumbrian # Caer Gwynntguic
-	
-                    name_list_swedish = cn_hampshire_swedish # Hamtun
-                    name_list_norwegian = cn_hampshire_norwegian # Hamtun
-                    name_list_norse = cn_hampshire_norse # Hamtun
-                    name_list_danish = cn_hampshire_danish # Hamtun
-				}				
-				
 				b_winchester = {
 					province = 1544
+
 					color = { 230 15 55 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_winchester_anglo_saxon # Uuīntanceaster
-                        name_list_english = cn_winchester_english # Winchestre
-                        name_list_scottish = cn_winchester_scottish # Winchestre
-                        name_list_norman = cn_winchester_norman # Ouînchêtre # Or Wincestre
-	
-                        name_list_welsh = cn_winchester_welsh # Caerwynt # Or Caer Guent
-                        name_list_cumbrian = cn_winchester_cumbrian # Caerwynt # Or Caer Guent
-                        name_list_cornish = cn_winchester_cornish # Caerwynt # Or Caer Guen
-
-                        name_list_swedish = cn_winchester_swedish # Wintanceaster
-                        name_list_norwegian = cn_winchester_norwegian # Wintanceaster
-                        name_list_norse = cn_winchester_norse # Wintanceaster
-                        name_list_danish = cn_winchester_danish # Wintanceaster
-					}
-					
 				}
 				b_southampton = {
 					province = 1545
-					color = { 230 15 55 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_southampton_anglo_saxon # Hamuuīc
-                        name_list_norman = cn_southampton_norman # Hantonne # Or Hantone
-	
-                        name_list_welsh = cn_southampton_welsh # Llongborth
-                        name_list_cumbrian = cn_southampton_cumbrian # Llongborth
-                        name_list_cornish = cn_southampton_cornish # Llongborth
-						
-                        name_list_swedish = cn_southampton_swedish # Hamvik
-                        name_list_norwegian = cn_southampton_norwegian # Hamvik
-                        name_list_norse = cn_southampton_norse # Hamvik
-                        name_list_danish = cn_southampton_danish # Hamvik
-					}
-					
+					color = { 230 15 55 }
 				}
 				b_portsmouth = {
 					province = 1546
+
 					color = { 230 15 55 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_portsmouth_anglo_saxon # Portesmuða
-                        name_list_norman = cn_portsmouth_norman # Porchémue # Or Portesmude
-	
-                        name_list_swedish = cn_portsmouth_swedish # Portesmuða
-                        name_list_norwegian = cn_portsmouth_norwegian # Portesmuða
-                        name_list_norse = cn_portsmouth_norse # Portesmuða
-                        name_list_danish = cn_portsmouth_danish # Portesmuða
-					}
-
 				}
 				b_basingstoke = {
 					province = 1547
+
 					color = { 230 15 55 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_basingstoke_anglo_saxon # Basingastoc
-                        name_list_norman = cn_basingstoke_norman # Basingestoches
-
-                        name_list_swedish = cn_basingstoke_swedish # Embasinga Stocæ
-                        name_list_norwegian = cn_basingstoke_norwegian # Embasinga Stocæ
-                        name_list_norse = cn_basingstoke_norse # Embasinga Stocæ
-                        name_list_danish = cn_basingstoke_danish # Embasinga Stocæ
-					}
-	
 				}
 				b_christchurch = {
 					province = 1548
-					color = { 230 15 55 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_christchurch_anglo_saxon # Tweoneam
-						name_list_scottish = cn_christchurch_scottish # Christecerce
-                        name_list_english = cn_christchurch_english # Christecerce
-                        name_list_norman = cn_christchurch_norman # Thuinam
-	
-                        name_list_gaelic = cn_christchurch_gaelic # Ardeaglais Chríost
-                        name_list_pictish = cn_christchurch_pictish # Ardeaglais Chríost
-                        name_list_irish = cn_christchurch_irish # Ardeaglais Chríost
-						
-                        name_list_swedish = cn_christchurch_swedish # Tweoxneam
-                        name_list_norwegian = cn_christchurch_norwegian # Tweoxneam
-                        name_list_norse = cn_christchurch_norse # Tweoxneam
-                        name_list_danish = cn_christchurch_danish # Tweoxneam
-					}						
+					color = { 230 15 55 }
 				}
 			}
 			c_isle_of_wight = {
-				color = { 250 10 90 }	
+				color = { 250 10 90 }
 
 				b_carisbrooke = {
 					province = 1549
+
 					color = { 250 10 90 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_carisbrooke_anglo_saxon # Wihtgarasburh
-                        name_list_norman = cn_carisbrooke_norman # Carebroc
-	
-                        name_list_welsh = cn_carisbrooke_welsh # Din Wyth
-                        name_list_cumbrian = cn_carisbrooke_cumbrian # Din Wyth
-                        name_list_cornish = cn_carisbrooke_cornish # Din Wyth
-						
-					}					
 				}
 			}
 			c_dorset = {
 				color = { 185 0 75 }
-				cultural_names = {
-                    name_list_anglo_saxon = cn_dorset_anglo_saxon # Dorsæte # Or Dorsætescīr
-					name_list_scottish = cn_dorset_scottish # Dorsete
-                    name_list_english = cn_dorset_english # Dorsete
 
-                    name_list_welsh = cn_dorchester_welsh # Caerddwrn
-                    name_list_cumbrian = cn_dorchester_cumbrian # Caer Durnac
-                    name_list_cornish = cn_dorchester_cornish # Caer Durnac
-					
-                    name_list_irish = cn_dorchester_irish # Caer Durnac
-                    name_list_gaelic = cn_dorchester_gaelic # Caer Durnac
-                    name_list_pictish = cn_dorchester_pictish # Caer Durnac
-
-                    name_list_swedish = cn_dorset_swedish # Dornsæte
-                    name_list_norwegian = cn_dorset_norwegian # Dornsæte
-                    name_list_norse = cn_dorset_norse # Dornsæte
-                    name_list_danish = cn_dorset_danish # Dornsæte					
-				}				
-				
 				b_wareham = {
 					province = 1565
-					color = { 185 0 75 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_wareham_anglo_saxon # Werham
-                        name_list_norman = cn_wareham_norman # Warham
-	
-                        name_list_welsh = cn_wareham_welsh # Trefgawell
-                        name_list_cumbrian = cn_wareham_cumbrian # Trefgawell
-                        name_list_cornish = cn_wareham_cornish # Trefgawell
-						
-                        name_list_swedish = cn_wareham_swedish # Werham
-                        name_list_norwegian = cn_wareham_norwegian # Werham
-                        name_list_norse = cn_wareham_norse # Werham
-                        name_list_danish = cn_wareham_danish # Werham					
-					}					
+					color = { 185 0 75 }
 				}
 				b_poole = {
 					province = 1566
-					color = { 185 0 75 }	
 
-					cultural_names = {
-                        name_list_norman = cn_poole_norman # Poles
-						name_list_scottish = cn_poole_scottish # Pole
-                        name_list_english = cn_poole_english # Pole
-                        name_list_norman = cn_poole_norman # Poles				
-					}					
-
+					color = { 185 0 75 }
 				}
 				b_shaftesbury = {
 					province = 1567
+
 					color = { 185 0 75 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_wareham_anglo_saxon # Werham
-                        name_list_norman = cn_shaftesbury_norman # Sceptesberie
-	
-                        name_list_welsh = cn_shaftesbury_welsh # Caer Palladur
-                        name_list_cornish = cn_shaftesbury_cornish # Caer Palladur
-                        name_list_cumbrian = cn_shaftesbury_cumbrian # Caer Palladur
-						
-                        name_list_pictish = cn_shaftesbury_pictish # Caer Palladur
-                        name_list_gaelic = cn_shaftesbury_gaelic # Caer Palladur
-                        name_list_irish = cn_shaftesbury_irish # Caer Palladur
-
-                        name_list_norwegian = cn_shaftesbury_norwegian # Scaepterborg
-                        name_list_norse = cn_shaftesbury_norse # Scaepterborg
-                        name_list_swedish = cn_shaftesbury_swedish # Scaepterburgh
-                        name_list_danish = cn_shaftesbury_danish # Scaepterburgh
-					}					
-
 				}
 				b_lyme = {
 					province = 1568
+
 					color = { 185 0 75 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_lyme_anglo_saxon # Lim
-                        name_list_norman = cn_lyme_norman # Lime
-	
-                        name_list_welsh = cn_lyme_welsh # Llifri
-                        name_list_cumbrian = cn_lyme_cumbrian # Llifri
-                        name_list_cornish = cn_lyme_cornish # Llifri
-					}					
 				}
 			}
 			c_somerset = {
 				color = { 156 0 83 }
-				
-				cultural_names = {
-                    name_list_anglo_saxon = cn_somerset_anglo_saxon # Sumorsæte
-					name_list_english = cn_somerset_english # Somersete
-                    name_list_scottish = cn_somerset_scottish # Somersete
-
-                    name_list_welsh = cn_somerset_welsh # Glastenning
-                    name_list_cumbrian = cn_somerset_cumbrian # Glastenning
-                    name_list_cornish = cn_somerset_cornish # Glastenning
-
-                    name_list_pictish = cn_somerset_pictish # Glastenning
-                    name_list_gaelic = cn_somerset_gaelic # Glastenning
-                    name_list_irish = cn_somerset_irish # Glastenning
-
-                    name_list_swedish = cn_somerset_swedish # Sumorsæte
-                    name_list_norwegian = cn_somerset_norwegian # Sumorsæte
-                    name_list_norse = cn_somerset_norse # Sumorsæte
-                    name_list_danish = cn_somerset_danish # Sumorsæte
-				}
 
 				b_bath = {
 					province = 1576
-					color = { 241 30 75 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_bath_anglo_saxon # Baðanceaster # Or Baþum
-                        name_list_english = cn_bath_english # Baþe
-                        name_list_scottish = cn_bath_scottish # Baþe
-                        name_list_norman = cn_bath_norman # Bathe
-	
-                        name_list_welsh = cn_bath_welsh # Cair Baddon
-                        name_list_cumbrian = cn_bath_cumbrian # Cair Baddon
-                        name_list_cornish = cn_bath_cornish # Cair Baddon
-	
-                        name_list_gaelic = cn_bath_gaelic # Caer Faddon
-                        name_list_pictish = cn_bath_pictish # Caer Faddon
-                        name_list_irish = cn_bath_irish # Caer Faddon
-	
-                        name_list_swedish = cn_bath_swedish # Baðum
-                        name_list_norwegian = cn_bath_norwegian # Baðum
-                        name_list_norse = cn_bath_norse # Baðum
-                        name_list_danish = cn_bath_danish # Baðum
-					}					
-					
+					color = { 241 30 75 }
 				}
 				b_winterstoke = {
 					province = 1577
+
 					color = { 241 30 75 }
 				}
 				b_ilchester = {
 					province = 1578
+
 					color = { 241 30 75 }
-					cultural_names = {
-                        name_list_anglo_saxon = cn_ilchester_anglo_saxon # Giflceaster
-                        name_list_norman = cn_ilchester_norman # Givelecestre
-	
-                        name_list_welsh = cn_ilchester_welsh # Caerifl
-                        name_list_cumbrian = cn_ilchester_cumbrian # Caerifl
-                        name_list_cornish = cn_ilchester_cornish # Caerifl
-	
-                        name_list_swedish = cn_ilchester_swedish # Ilceaster
-                        name_list_norwegian = cn_ilchester_norwegian # Ilceaster
-                        name_list_norse = cn_ilchester_norse # Ilceaster
-                        name_list_danish = cn_ilchester_danish # Ilceaster
-					}					
 				}
 				b_taunton = {
 					province = 1579
+
 					color = { 241 30 75 }
-					cultural_names = {
-                        name_list_welsh = cn_taunton_welsh # Crwctan
-                        name_list_cumbrian = cn_taunton_cumbrian # Crwctan
-                        name_list_cornish = cn_taunton_cornish # Crwctan
-					}					
 				}
 			}
-		}		
-		d_cornwall = {# Cornwall
-			color = { 181 60 10 }		
+		}
+		d_cornwall = {
+			color = { 181 60 10 }
+
 			capital = c_devon
 
-			cultural_names = {
-                name_list_anglo_saxon = cn_cornwall_anglo_saxon # Cornweall # Or Cornwēalas?
-				name_list_english = cn_cornwall_english # Cornewayle
-                name_list_scottish = cn_cornwall_scottish # Cornewayle
-                name_list_norman = cn_cornwall_norman # Cornouailles
-
-                name_list_welsh = cn_cornwall_welsh # Cernyw
-                name_list_cumbrian = cn_cornwall_cumbrian # Cernyw
-                name_list_cornish = cn_cornwall_cornish # Cernyw
-
-				name_list_pictish = cn_cornwall_pictish # Cernyw
-                name_list_gaelic = cn_cornwall_gaelic # A’ Chòrn
-                name_list_irish = cn_cornwall_irish # A’ Chòrn
-
-                name_list_swedish = cn_cornwall_swedish # Cornweal
-                name_list_norwegian = cn_cornwall_norwegian # Cornweal
-                name_list_norse = cn_cornwall_norse # Cornweal
-                name_list_danish = cn_cornwall_danish # Cornweal
-			}
-			
 			ai_primary_priority = {
 				if = {
 					limit = {
@@ -3648,22 +1678,10 @@ e_britannia = {
 					add = @correct_culture_primary_score
 				}
 			}
-			
+
 			c_devon = {
 				color = { 170 60 10 }
-				
-				cultural_names = {
-                    name_list_anglo_saxon = cn_devon_anglo_saxon # Defena # Or Defenascīr
-	
-                    name_list_welsh = cn_devon_welsh # Dyfnaint
-                    name_list_cumbrian = cn_devon_cumbrian # Dyfnaint
-                    name_list_cornish = cn_devon_cornish # Dewnens
-	
-                    name_list_swedish = cn_devon_swedish # Defena
-                    name_list_norwegian = cn_devon_norwegian # Defena
-                    name_list_norse = cn_devon_norse # Defena
-                    name_list_danish = cn_devon_danish # Defena
-				}				
+
 				ai_primary_priority = {
 					if = {
 						limit = {
@@ -3672,83 +1690,31 @@ e_britannia = {
 						add = @better_than_the_alternatives_score
 					}
 				}
-				
+
 				b_exeter = {
 					province = 1569
-					color = { 170 60 10 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_exeter_anglo_saxon # Exanceaster
-                        name_list_norman = cn_exeter_norman # Execestre
-		
-                        name_list_welsh = cn_exeter_welsh # Cair Wisc
-                        name_list_cumbrian = cn_exeter_cumbrian # Cair Wisc
-                        name_list_cornish = cn_exeter_cornish # Cair Wisc
-		
-                        name_list_swedish = cn_exeter_swedish # Escanceaster
-                        name_list_norwegian = cn_exeter_norwegian # Escanceaster
-                        name_list_norse = cn_exeter_norse # Escanceaster
-                        name_list_danish = cn_exeter_danish # Escanceaster
-					}		
 
+					color = { 170 60 10 }
 				}
 				b_totnes = {
 					province = 1570
-					color = { 170 60 10 }
 
-					cultural_names = {
-                        name_list_anglo_saxon = cn_totnes_anglo_saxon # Tottanæs
-						name_list_scottish = cn_totnes_scottish # Toteneys
-                        name_list_english = cn_totnes_english # Toteneys
-                        name_list_norman = cn_totnes_norman # Toteneis
-		
-                        name_list_welsh = cn_totnes_welsh # Craig Brwt
-                        name_list_cumbrian = cn_totnes_cumbrian # Craig Brwt
-                        name_list_cornish = cn_totnes_cornish # Craig Brwt
-					}						
-					
+					color = { 170 60 10 }
 				}
 				b_okehampton = {
 					province = 1571
-					color = { 170 60 10 }	
+
+					color = { 170 60 10 }
 				}
 				b_barnstaple = {
 					province = 1572
+
 					color = { 170 60 10 }
-
-					cultural_names = {
-                        name_list_anglo_saxon = cn_barnstaple_anglo_saxon # Bardanstapol # Or Beardanstapol
-                        name_list_norman = cn_barnstaple_norman # Barnestaple
-		
-                        name_list_welsh = cn_barnstaple_welsh # Barstabl
-                        name_list_cumbrian = cn_barnstaple_cumbrian # Barstabl
-                        name_list_cornish = cn_barnstaple_cornish # Barstabl
-					}					
-
 				}
 			}
 			c_cornwall = {
 				color = { 150 55 5 }
-				
-				cultural_names = {
-					name_list_anglo_saxon = cn_cornwall_anglo_saxon # Cornweall # Or Cornwēalas?
-					name_list_english = cn_cornwall_english # Cornewayle
-					name_list_scottish = cn_cornwall_scottish # Cornewayle
-					name_list_norman = cn_cornwall_norman # Cornouailles
 
-					name_list_welsh = cn_cornwall_welsh # Cernyw
-					name_list_cumbrian = cn_cornwall_cumbrian # Cernyw
-					name_list_cornish = cn_cornwall_cornish # Cernyw
-
-					name_list_pictish = cn_cornwall_pictish # Cernyw
-					name_list_gaelic = cn_cornwall_gaelic # A’ Chòrn
-					name_list_irish = cn_cornwall_irish # A’ Chòrn
-
-					name_list_swedish = cn_cornwall_swedish # Cornweal
-					name_list_norwegian = cn_cornwall_norwegian # Cornweal
-					name_list_norse = cn_cornwall_norse # Cornweal
-					name_list_danish = cn_cornwall_danish # Cornweal
-				}				
 				ai_primary_priority = {
 					if = {
 						limit = {
@@ -3757,60 +1723,25 @@ e_britannia = {
 						add = @correct_culture_primary_score
 					}
 				}
-				
+
+
 				b_launceston = {
 					province = 1573
+
 					color = { 150 55 5 }
-					
-					cultural_names = {
-                        name_list_anglo_saxon = cn_launceston_anglo_saxon # Dūnhēafod
-                        name_list_norman = cn_launceston_norman # Dunhevet
-	
-                        name_list_welsh = cn_launceston_welsh # Lann Stevan
-                        name_list_cornish = cn_launceston_cornish # Lann Stevan
-						name_list_cumbrian = cn_launceston_cumbrian # Lannstefan # Or Lannstevan
-	
-                        name_list_swedish = cn_launceston_swedish # Dünhaefod
-                        name_list_norwegian = cn_launceston_norwegian # Dünhaefod
-                        name_list_norse = cn_launceston_norse # Dünhaefod
-                        name_list_danish = cn_launceston_danish # Dünhaefod
-					}
-
-
 				}
 				b_tintagel = {
 					province = 1574
+
 					color = { 150 55 5 }
-
-					cultural_names = {
-                        name_list_norman = cn_tintagel_norman # Tintagol
-	
-                        name_list_welsh = cn_tintagel_welsh # Dintagell
-                        name_list_cumbrian = cn_tintagel_cumbrian # Dintagell
-                        name_list_cornish = cn_tintagel_cornish # Dintagell
-
-					}					
 				}
 				b_helston = {
 					province = 1575
+
 					color = { 150 55 5 }
-
-
-					cultural_names = {
-						name_list_anglo_saxon = cn_helston_anglo_saxon # Henlistun
-                        name_list_norman = cn_helston_norman # Henlistone
-	
-                        name_list_welsh = cn_helston_welsh # Hellys # Or Henlys
-                        name_list_cumbrian = cn_helston_cumbrian # Hellys # Or Henlys
-                        name_list_cornish = cn_helston_cornish # Hellys # Or Henlys
-
-					}
-
-					
 				}
 			}
 		}
-
 	}	
 	#######################################
 	# Brythonic Kingdoms
@@ -3866,7 +1797,7 @@ e_britannia = {
 		}
 		
 		d_gwynedd = {
-			color = { 100 0 0 }
+			color = { 250 214 165 }
 			cultural_names = {
                 name_list_anglo_saxon = cn_gwynedd_anglo_saxon # Norþwēalas
 				name_list_scottish = cn_gwynedd_scottish # Norþ Wales
@@ -4087,7 +2018,7 @@ e_britannia = {
 			}
 		}		
 		d_powys = {
-			color = { 115 30 30 }		
+			color = { 101 67 33 }		
 			capital = c_maldwyn # Maldwyn / Mathrafal near Welshpool
 
 			cultural_names = {
@@ -4242,7 +2173,7 @@ e_britannia = {
 			}
 		}		
 		d_deheubarth = {
-			color = { 240 167 91 }
+			color = { 61 43 31 }
 			capital = c_carmarthenshire # Dyfed		
 			
 			c_carmarthenshire = {# Sir Gaerfyrddin
@@ -4968,7 +2899,7 @@ e_britannia = {
 			}
 		}
 		d_the_isles = {
-			color = { 180 90 0 }
+			color = { 255 244 79 }
 			capital = c_isle_of_man # Isle of Man
 
 			cultural_names = {
@@ -5056,7 +2987,7 @@ e_britannia = {
 			}
 		}
 		d_galloway = {
-			color = { 230 120 65 }			
+			color = { 255 225 53 }			
 			capital = c_lennox # Lennox
 
 			cultural_names = {
@@ -5339,7 +3270,7 @@ e_britannia = {
 			}
 		}
 		d_western_isles = {
-			color = { 225 120 30 }	
+			color = { 244 202 22 }	
 			
 			capital = c_inner_hebrides #Islay
 
@@ -5616,7 +3547,7 @@ e_britannia = {
 			}
 		}
 		d_lothian = {
-			color = { 195 130 25 }			
+			color = { 223 255 0 }			
 			capital = c_lothian # Edinburgh
 			
 			cultural_names = {
@@ -6024,7 +3955,7 @@ e_britannia = {
 			}
 		}
 		d_moray = {
-			color = { 255 180 60 }	
+			color = { 255 215 0 }	
 			capital = c_moray # Elgin
 
 			cultural_names = {
