@@ -2,6 +2,17 @@
 ##########################################
 # Province and character Modifers
 ##########################################
-
+silvatici_bandits = {# Silvatici Bandits
+	icon = outdoors_negative
+	#county_opinion_add = -10
+	tax_mult = -0.2
+	development_growth_factor = small_development_growth_loss
+}
+castle_building_norman = {# Castle Building
+	icon = martial_positive
+	castle_holding_build_speed = 0.1
+	castle_holding_build_gold_cost = -0.1
+	additional_fort_level = 1
+}
 
 

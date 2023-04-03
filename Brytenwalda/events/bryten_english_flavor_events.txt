@@ -18,15 +18,14 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 		has_title = title:k_england
 		is_at_war = no # Willy has to secure his throne first.
 		NOT = { has_global_variable = william_is_king }
-
 	}
 	
 	immediate = {
 		title:k_england = {# Willy's capital is now in London
 			set_capital_county = title:c_middlesex
+			clear_title_laws = yes
 		}
 		save_scope_as = norman_england_king
-		establish_norman_adminstration_effects = yes
 		set_global_variable = {
 			name = william_is_king
 			value = yes
@@ -45,6 +44,17 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 		trigger_event = {# rewarding William's loyal men
 			id = bryten_england.002
 			days = { 10 20 }
+		}
+		if = {# This is for the Norman Conquest specifically since he might not fight in Haestings in the fate of england start.
+			limit = { game_start_date = 1066.12.25 }
+			trigger_event = {# rewarding William's loyal men
+				id = bryten_england.003
+				days = { 30 60 }
+			}
+		}
+		trigger_event = {# Resistance to William's rule
+			id = bryten_england.004
+			days = { 40 80 }
 		}
 	}
 
@@ -322,6 +332,1097 @@ bryten_england.002 = {# William rewarding his men with land in England.
 				}
 			}
 		}
+	}
+}
+bryten_england.003 = {# The Ermenfried Penitential 
+	type = character_event
+	title = bryten_england.003.t
+	desc = bryten_england.003.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		character:140 = {
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					any_county_province = {	has_holding = no }
+				}
+				save_scope_as = norman_church_province
+			}
+		}
+	}
+	
+	option = {# I must make penance
+		name = bryten_england.003.penance
+		remove_short_term_gold = hold_court_holding_cost_cheaper_value
+		scope:norman_church_province = {
+			begin_create_holding = {
+				type = church_holding
+				refund_cost = { gold = hold_court_holding_cost_cheaper_value }
+			}
+		}
+
+	}
+}
+bryten_england.004 = {# Resistance to William's Control 
+	type = character_event
+	title = bryten_england.004.t
+	desc = bryten_england.004.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	# immediate = {
+	# 	set_global_variable = {
+	# 		name = resistance_to_norman_rule
+	# 		value = yes
+	# 	}
+	# }
+
+	option = {# Interesting
+		name = bryten_england.004.rebels
+		every_county_in_region = {
+			region = custom_england_saxon
+			limit = { target_is_de_facto_liege_or_above = root.primary_title }
+			change_county_control = -10	
+		}
+	}
+}
+bryten_england.005 = {# Rise of The Silvatici 
+	type = character_event
+	title = bryten_england.005.t
+	desc = bryten_england.005.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		has_title = title:k_england
+		is_at_war = no # Willy has to secure his throne first.
+		has_global_variable = william_is_king # Needs William to be king
+		NOT = { has_global_variable = silvatici_bandits_rise_up }
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = silvatici_bandits_rise_up
+			value = yes
+		}
+		random_realm_province = {
+			limit = {
+				terrain = forest
+				province_owner = { culture = norman }
+			}
+			save_scope_as = silvatici_province
+		}		
+	}
+	
+	option = {# Interesting
+		name = bryten_england.005.bandits
+		scope:silvatici_province = {
+			add_province_modifier = {
+				modifier = silvatici_bandits
+				days = 360
+			}
+		}
+	}
+}
+bryten_england.006 = {# The Silvatici rise up - helps Eadric the 'Wild' 
+	type = character_event
+	title = bryten_england.006.t
+	desc = bryten_england.006.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		this = character:90027
+		is_at_war = yes 
+		is_at_war_with = character:140
+		has_global_variable = silvatici_bandits_rise_up # this is to happen after the conquest
+		NOT = { has_global_variable = eadric_wilde_merry_men }
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = eadric_wilde_merry_men
+			value = yes
+		}
+	}
+	
+	option = {# Interesting
+		name = bryten_england.006.bandits
+		spawn_army = {
+			name = silvatici_bowmen
+			location = capital_province
+			inheritable = no
+			men_at_arms = {
+				type = bowmen
+				stacks = 1
+			}
+		}
+
+
+	}
+}
+bryten_england.007 = {# Building Castles 
+	type = character_event
+	title = bryten_england.007.t
+	desc = bryten_england.007.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		this = character:140
+		has_title = title:k_england
+		is_at_war = no # Willy has to secure his throne first.
+		has_global_variable = william_is_king # Needs William to be king
+		NOT = { has_global_variable = castle_building_norman }
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = castle_building_norman
+			value = yes
+		}
+		every_realm_county = {
+			limit = { holder = culture:norman }
+			save_scope_as = norman_county_castles
+		}
+	}
+	
+	option = {# Interesting
+		name = bryten_england.007.castles
+		scope:norman_county_castles = {
+			add_county_modifier = {
+				modifier = castle_building_norman
+				years = 1
+			}
+		}
+	}
+}
+bryten_england.008 = {# The Exeter Rebellion 
+	type = character_event
+	title = bryten_england.008.t
+	desc = bryten_england.008.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		has_title = title:c_devon # Holds Exeter
+		NOT = { culture = culture:norman } # normans won't rebel
+		is_at_war = no # Willy has to secure his throne first.
+		has_global_variable = william_is_king # Needs William to be king
+		NOT = { has_global_variable = exeter_rebelion_debate }
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+	}
+
+	immediate = {
+		character:140 = { save_scope_as = norman_king }
+		set_global_variable = {
+			name = exeter_rebelion_debate
+			value = yes
+		}
+	}
+	
+	option = {# Rebel
+		name = bryten_england.008.rebel
+		start_war = {
+			cb = claim_cb
+			target = character:140
+			claimant = character:111
+			target_title = title:k_england
+		}		
+		hidden_effect = {
+			scope:norman_king = {
+				trigger_event = {
+					id = bryten_england.009
+					days = { 5 10 }
+				}
+			}
+		}
+
+	}
+	option = {# Don't Rebel
+		name = bryten_england.008.loyal
+	}
+
+}
+bryten_england.009 = {# The Exeter Rebellion 
+	type = character_event
+	title = bryten_england.009.t
+	desc = bryten_england.009.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {# Interesting
+		name = bryten_england.009.rebels
+	}
+}
+bryten_england.010 = {# The Godwinson Raids 
+	type = character_event
+	title = bryten_england.010.t
+	desc = bryten_england.010.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		this = character:140
+		has_title = title:k_england # Holds Exeter
+		NOT = { has_global_variable = godwin_raids }
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+		has_global_variable = exeter_rebelion_debate # Should happen after the debate
+	}
+
+	immediate = {
+		character:111 = { save_scope_as = godwin_raider }
+		set_global_variable = {
+			name = godwin_raids
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = bryten_england.010.pirates
+		scope:godwin_raider = {
+			start_war = {
+				cb = claim_cb
+				target = character:140
+				claimant = character:111
+				target_title = title:k_england
+			}
+		}
+
+	}
+}
+bryten_england.011 = {# An Envoy from the English  
+	type = character_event
+	title = bryten_england.011.t
+	desc = bryten_england.011.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		this = character:101515
+		has_title = title:k_england # Holds Exeter
+		has_global_variable = godwin_raids # Should happen after the debate
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+	}
+
+	immediate = {
+		character:111 = { save_scope_as = godwin_raider }
+		set_global_variable = {
+			name = godwin_raids
+			value = yes
+		}
+	}
+	
+	option = {# Interesting
+		name = bryten_england.011.War
+		start_war = {
+			cb = claim_cb
+			target = character:140
+			claimant = character:111
+			target_title = title:k_england
+		}
+		hidden_effect = {
+			set_global_variable = {
+				name = danish_invansion_england
+				value = yes
+			}
+		}
+
+	}
+	option = {# Wait
+		name = bryten_england.011.Wait
+	}
+}
+bryten_england.012 = {# Join the Danish? 
+	type = character_event
+	title = bryten_england.012.t
+	desc = bryten_england.012.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		OR = {
+			has_culture = culture:anglo_norse	
+			has_culture = culture:anglo_saxon	
+		}
+		highest_held_title_tier >= tier_duchy		
+		any_character_war = {
+			any_war_participant = {
+				title:c_north_riding = {
+					county_controller = character:101515
+				}
+			}
+		}
+		has_global_variable = danish_invansion_england # Should happen after the danish
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+	}	
+
+	immediate = {
+		random_character_war = {
+			limit = { primary_attacker = character:101515 }
+			save_scope_as = danish_invansion
+		}
+		character:101515 = { save_scope_as = danish_king }
+	}
+	
+	option = {# Join the war
+		name = bryten_england.012.rebel
+		
+		scope:danish_invansion = {
+			add_attacker = scope:danish_king
+		}
+	}
+	option = {# Not timex
+		name = bryten_england.012.loyal
+
+	}
+
+}
+bryten_england.013 = {# The Danish Invansion 
+	type = character_event
+	title = bryten_england.013.t
+	desc = bryten_england.013.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+ 		has_title = title:k_england # is king of England
+		is_at_war_with = title:k_denmark.holder
+		this = character:140
+		has_global_variable = danish_invansion_england # Should happen after the debate
+		NOT = { has_global_variable = danish_invansion_offer } # once england is secured by the normans this shouldn't happen
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+		any_character_war = {
+			war_days >= 30 #a battle has likely happened
+		}
+	}	
+
+	immediate = {
+		character:101515 = { save_scope_as = danish_king }
+		set_global_variable = {
+			name = danish_invansion_offer
+			value = yes
+		}
+	}
+	
+	option = {# Danegeld
+		name = bryten_england.013.danegeld
+		scope:danish_king = {
+			trigger_event = {
+				id = bryten_england.014
+				days = { 10 20 }
+			}
+		}
+	}
+	option = {# Fight
+		name = bryten_england.013.fight
+	}
+
+}
+bryten_england.014 = {# The Norman Offer 
+	type = character_event
+	title = bryten_england.014.t
+	desc = bryten_england.014.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		character:140 = { save_scope_as = norman_king }
+	}
+	
+	option = {# Fight
+		name = bryten_england.014.fight
+		scope:norman_king = {
+			trigger_event = {
+				id = bryten_england.015
+				days = { 10 20 }
+			}
+		}
+	}
+	option = {# Bribe
+		name = bryten_england.014.bribe
+		scope:norman_king = {
+			trigger_event = {
+				id = bryten_england.016
+				days = { 10 20 }
+			}
+		}
+	}
+
+}
+bryten_england.015 = {# The Danes Reject the Danegeld 
+	type = character_event
+	title = bryten_england.015.t
+	desc = bryten_england.015.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	
+	option = {# Interesting
+		name = bryten_england.015.rejected
+
+	}
+}
+bryten_england.016 = {# The Danes accept the Danegeld 
+	type = character_event
+	title = bryten_england.016.t
+	desc = bryten_england.016.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		title:d_york = { save_scope_as = english_eorl }
+		character:101515 = { save_scope_as = danish_king }
+	}
+	
+	option = {# Interesting
+		name = bryten_england.016.accepted
+		pay_short_term_gold = {
+			target = scope:danish_king
+			gold = major_gold_value
+		}
+	}
+
+	after = {
+		scope:english_eorl = {
+			trigger_event = {
+				id = bryten_england.017
+				days = { 3 5 }
+			}
+		}
+	}
+
+}
+bryten_england.017 = {# The Danes head back home 
+	type = character_event
+	title = bryten_england.017.t
+	desc = bryten_england.017.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		character:140 = { save_scope_as = norman_king }
+		title:d_york = { save_scope_as = english_eorl }
+		random_character_war = {
+			limit = { 
+				primary_attacker = character:101515 
+			}
+			save_scope_as = danish_invansion
+		}
+		scope:danish_invansion = { end_war = white_peace }
+		culture:anglo_saxon = {
+			change_cultural_acceptance = {
+				target = culture:swedish
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+			change_cultural_acceptance = {
+				target = culture:norwegian
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+			change_cultural_acceptance = {
+				target = culture:danish
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+		}
+		culture:anglo_norse = {
+			change_cultural_acceptance = {
+				target = culture:swedish
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+			change_cultural_acceptance = {
+				target = culture:norwegian
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+			change_cultural_acceptance = {
+				target = culture:danish
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+		}
+	}
+	
+	option = {# Surrender
+		name = bryten_england.017.surrender
+		rightfully_imprison_character_effect = {
+			TARGET = scope:fugitive
+			IMPRISONER = scope:norman_king
+		}
+	}
+	option = {# Fight on
+		name = bryten_england.017.fight
+		start_war = {
+			cb = claim_cb
+			target = character:140
+			claimant = character:112
+			target_title = title:k_england
+		}
+		scope:norman_king = {
+			trigger_event = {
+				id = bryten_england.018
+				days = { 10 20 }
+			}
+		}
+	}
+}
+
+bryten_england.018 = {# The English fight on
+	type = character_event
+	title = bryten_england.018.t
+	desc = bryten_england.018.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = english_fight_on
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = bryten_england.018.harrying
+
+	}
+}
+bryten_england.019 = {# Harrying of the North 
+	type = character_event
+	title = bryten_england.019.t
+	desc = bryten_england.019.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		has_title = title:k_england # Holds Exeter
+		or = { 
+			has_global_variable = northern_rebellion # Should happen after the debate
+			has_global_variable = english_fight_on # Should happen after the debate
+		}
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+		NOT = { has_global_variable = north_harryed } # once england is secured by the normans this shouldn't happen
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = north_harryed
+			value = yes
+		}
+		culture:anglo_saxon = {
+			change_cultural_acceptance = {
+				target = culture:norman
+				value = -15
+				desc = cultural_harrying_north_relations
+			}
+		}
+		culture:anglo_norse = {
+			change_cultural_acceptance = {
+				target = culture:norman
+				value = -15
+				desc = cultural_harrying_north_relations
+			}
+		}
+	}
+	
+	option = {# Interesting
+		name = bryten_england.019.destroy
+		every_county_in_region = {
+			region = custom_northern_england_saxon
+			change_county_control = -10
+			limit = { target_is_de_facto_liege_or_above = root.primary_title }
+			change_county_control = -10
+			change_development_level = -25	
+		}
+	}
+}
+bryten_england.020 = {# Coronation after William 
+	type = character_event
+	title = {
+		first_valid = {
+			# Is this our second council here?
+			triggered_desc = {
+				trigger = { this = character:112 }
+				desc = bryten_england.020.t.edgar
+			}
+			triggered_desc = {
+				trigger = { this = character:101515 }
+				desc = bryten_england.020.t.svend
+			}
+			triggered_desc = {
+				trigger = { 
+					NOT = {
+						this = character:112
+						this = character:101515
+					}
+				}
+				desc = bryten_england.020.t.else
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { this = character:112}
+				desc = bryten_england.020.desc.edgar
+			}
+			triggered_desc = {
+				trigger = { this = character:101515 }
+				desc = bryten_england.020.desc.svend
+			}
+			triggered_desc = {
+				trigger = { 
+					NOT = {
+						this = character:112
+						this = character:101515
+					}				
+				}
+				desc = bryten_england.020.desc.else
+			}
+		}
+	}
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		NOT = { has_culture = culture:norman }
+		has_title = title:k_england # Holds Exeter
+		NOT = { has_global_variable = edgar_is_king }
+		has_global_variable = william_is_king # Should happen after the debate
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = edgar_is_king
+			value = yes
+		}
+		title:k_england = {# Edgar restores the Witengamot to power
+			add_title_law = saxon_elective_succession_law
+		}
+	}
+	
+	option = {# Interesting
+		name = bryten_england.020.king
+		every_vassal = {
+			limit = { special_succession_witengamot_trigger = yes }
+			add_opinion = {
+				modifier = implemented_traditional_succession_law_opinion
+				years = 20
+				target = root
+			}
+			custom = major_decisions.3100.tt_opinion_witengamot
+		}
+	}
+
+	after = {
+		trigger_event = {# Dealing with the Normans
+			id = bryten_england.022
+			days = { 10 20 }
+		}
+	}
+
+}
+bryten_england.021 = {# War with the North
+	hidden = yes	
+
+	trigger = {
+		has_title = title:k_england
+		is_at_war_with = title:d_york.holder
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = northern_rebellion
+			value = yes
+		}
+	}
+}
+bryten_england.022 = {# Dealing with the Normans who remain 
+	type = character_event
+	title = bryten_england.022.t
+	desc = bryten_england.022.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		random_knight = {
+			limit = { has_culture = culture:norman	}
+			save_scope_as = norman_knight
+		}
+		random_knight = {
+			limit = { 
+				has_culture = culture:norman
+				NOT = {
+					this = scope:norman_knight
+				} 			
+			}
+			save_scope_as = norman_knight1
+		}
+		random_knight = {
+			limit = { 
+				has_culture = culture:norman
+				NOT = {
+					this = scope:norman_knight
+					this = scope:norman_knight1
+				} 			
+			}
+			save_scope_as = norman_knight2
+		}
+		random_knight = {
+			limit = { 
+				has_culture = culture:norman
+				NOT = {
+					this = scope:norman_knight
+					this = scope:norman_knight1
+					this = scope:norman_knight2
+				} 			
+			}
+			save_scope_as = norman_knight3
+		}		
+		random_knight = {
+			limit = { 
+				has_culture = culture:norman
+				NOT = {
+					this = scope:norman_knight
+					this = scope:norman_knight1
+					this = scope:norman_knight2
+					this = scope:norman_knight3
+				} 			
+			}
+			save_scope_as = norman_knight4
+		}		
+		character:140 = {
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { this = title:c_middlesex }
+
+				}
+				save_scope_as = norman_england_county
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:norman_england_county
+					}
+
+				}
+				save_scope_as = norman_england_county2
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:norman_england_county
+						this = scope:norman_england_county2
+					}
+
+				}
+				save_scope_as = norman_england_county3
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:norman_england_county
+						this = scope:norman_england_county2
+						this = scope:norman_england_county3
+
+					}
+
+				}
+				save_scope_as = norman_england_county4
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:norman_england_county
+						this = scope:norman_england_county2
+						this = scope:norman_england_county3
+						this = scope:norman_england_county4
+
+					}
+
+				}
+				save_scope_as = norman_england_county5
+			}					
+		}
+	}
+	
+	option = {# Banish
+		name = bryten_england.022.banish		
+		every_vassal = {
+			limit = { 
+				has_culture = culture:norman 
+				kingdom = title:k_england
+			}
+			banish = yes
+		}
+		hidden_effect = {
+			# First Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county = {
+				change_title_holder = {
+					holder = scope:norman_knight
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+
+			# Second Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change2
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county2 = {
+				change_title_holder = {
+					holder = scope:norman_knight1
+					change = scope:change2
+				}
+			}
+			resolve_title_and_vassal_change = scope:change2
+
+			# Third Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change3
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county3 = {
+				change_title_holder = {
+					holder = scope:norman_knight2
+					change = scope:change3
+				}
+			}
+			resolve_title_and_vassal_change = scope:change3
+
+			# Fourth Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change4
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county4 = {
+				change_title_holder = {
+					holder = scope:norman_knight3
+					change = scope:change4
+				}
+			}
+			resolve_title_and_vassal_change = scope:change4
+
+			# Fifth Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change5
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county5 = {
+				change_title_holder = {
+					holder = scope:norman_knight4
+					change = scope:change5
+				}
+			}
+			resolve_title_and_vassal_change = scope:change5
+		}
+	}
+	option = {# don't Banish
+		name = bryten_england.022.leave
+		every_vassal = {
+			limit = { 
+				NOT = { has_culture = culture:norman } 
+				kingdom = title:k_england			
+			}
+			add_opinion = {
+				target = root
+				modifier = no_banish_normans
+				opinion = -25
+			}
+		}
+		hidden_effect = {
+			# First Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county = {
+				change_title_holder = {
+					holder = scope:norman_knight
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+
+			# Second Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change2
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county2 = {
+				change_title_holder = {
+					holder = scope:norman_knight1
+					change = scope:change2
+				}
+			}
+			resolve_title_and_vassal_change = scope:change2
+
+			# Third Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change3
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county3 = {
+				change_title_holder = {
+					holder = scope:norman_knight2
+					change = scope:change3
+				}
+			}
+			resolve_title_and_vassal_change = scope:change3
+
+			# Fourth Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change4
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county4 = {
+				change_title_holder = {
+					holder = scope:norman_knight3
+					change = scope:change4
+				}
+			}
+			resolve_title_and_vassal_change = scope:change4
+
+			# Fifth Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change5
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county5 = {
+				change_title_holder = {
+					holder = scope:norman_knight4
+					change = scope:change5
+				}
+			}
+			resolve_title_and_vassal_change = scope:change5
+		}
+	}
+
+}
+bryten_england.023 = {# Norman England Secured 
+	type = character_event
+	title = bryten_england.023.t
+	desc = bryten_england.023.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		has_culture = culture:norman # in case willy dies first.
+		has_title = title:k_england
+		is_at_war = no # Willy has to secure his throne first.
+		current_date >= 1080.1.1
+		has_global_variable = william_is_king # Should happen after the debate
+		NOT = { has_global_variable = norman_england_secured }
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = norman_england_secured
+			value = yes
+		}
+		establish_norman_adminstration_effects = yes
+	}
+	
+	option = {# Interesting
+		name = bryten_england.023.secured
+
 	}
 }
 #######################################
