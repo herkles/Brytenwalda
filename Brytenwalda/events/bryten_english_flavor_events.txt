@@ -345,13 +345,10 @@ bryten_england.003 = {# The Ermenfried Penitential
 	}
 
 	immediate = {
-		character:140 = {
-			random_held_title = {
-				limit = { 
-					tier = tier_county 
-					kingdom = title:k_england
-					any_county_province = {	has_holding = no }
-				}
+		random_realm_county = {
+			limit = { kingdom = title:k_england }
+			random_county_province = {
+				limit = { has_holding = no }
 				save_scope_as = norman_church_province
 			}
 		}
@@ -420,7 +417,6 @@ bryten_england.005 = {# Rise of The Silvatici
 		}
 		random_realm_province = {
 			limit = {
-				terrain = forest
 				province_owner = { culture = norman }
 			}
 			save_scope_as = silvatici_province
@@ -582,45 +578,6 @@ bryten_england.009 = {# The Exeter Rebellion
 		name = bryten_england.009.rebels
 	}
 }
-bryten_england.010 = {# The Godwinson Raids 
-	type = character_event
-	title = bryten_england.010.t
-	desc = bryten_england.010.desc
-	theme = realm
-	left_portrait = {
-		character = root
-		animation = personality_bold
-	}
-
-	trigger = {
-		this = character:140
-		has_title = title:k_england # Holds Exeter
-		NOT = { has_global_variable = godwin_raids }
-		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
-		has_global_variable = exeter_rebelion_debate # Should happen after the debate
-	}
-
-	immediate = {
-		character:111 = { save_scope_as = godwin_raider }
-		set_global_variable = {
-			name = godwin_raids
-			value = yes
-		}
-	}
-
-	option = {# Interesting
-		name = bryten_england.010.pirates
-		scope:godwin_raider = {
-			start_war = {
-				cb = claim_cb
-				target = character:140
-				claimant = character:111
-				target_title = title:k_england
-			}
-		}
-
-	}
-}
 bryten_england.011 = {# An Envoy from the English  
 	type = character_event
 	title = bryten_england.011.t
@@ -634,16 +591,12 @@ bryten_england.011 = {# An Envoy from the English
 	trigger = {
 		this = character:101515
 		has_title = title:k_england # Holds Exeter
-		has_global_variable = godwin_raids # Should happen after the debate
+		has_global_variable = exeter_rebelion_debate # Should happen after the debate
 		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
 	}
 
 	immediate = {
 		character:111 = { save_scope_as = godwin_raider }
-		set_global_variable = {
-			name = godwin_raids
-			value = yes
-		}
 	}
 	
 	option = {# Interesting
@@ -1982,6 +1935,7 @@ bryten_england.125 = {# The martydom of Edmund.
 		has_title = title:k_east_anglia
 		not = {	exists = global_var:bryten_monks_take_cuthbert } # Fire Only Once
 		this = character:163111
+		game_start_date = 867.1.1
 	}
 
 	immediate = {
@@ -2052,6 +2006,7 @@ bryten_england.127 = {# The cult of St. Edmund the Martyr
 		}
 		religion = religion:christianity_religion # Got to be a Christian
 		not = {	exists = global_var:bryten_saint_edmund_cult } # Fire Only Once
+		game_start_date = 867.1.1
 	}
 
 	immediate = {
