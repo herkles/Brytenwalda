@@ -344,7 +344,7 @@ bryten_england.003 = {# The Ermenfried Penitential
 		animation = personality_bold
 	}
 
-	immediate = {
+	immediate = {	
 		random_realm_county = {
 			limit = { kingdom = title:k_england }
 			random_county_province = {
@@ -376,19 +376,15 @@ bryten_england.004 = {# Resistance to William's Control
 		animation = personality_bold
 	}
 
-	# immediate = {
-	# 	set_global_variable = {
-	# 		name = resistance_to_norman_rule
-	# 		value = yes
-	# 	}
-	# }
-
 	option = {# Interesting
 		name = bryten_england.004.rebels
 		every_county_in_region = {
 			region = custom_england_saxon
-			limit = { target_is_de_facto_liege_or_above = root.primary_title }
-			change_county_control = -10	
+			limit = { 
+				target_is_de_facto_liege_or_above = root.primary_title
+				holder.culture = culture:norman
+			}
+			change_county_control = -15	
 		}
 	}
 }
@@ -415,18 +411,19 @@ bryten_england.005 = {# Rise of The Silvatici
 			name = silvatici_bandits_rise_up
 			value = yes
 		}
-		random_realm_province = {
-			limit = {
-				province_owner = { culture = norman }
+		random_realm_county = {
+			limit = { kingdom = title:k_england }
+			random_sub_realm_county = { 
+				limit = { holder.culture = culture:norman }
+				save_scope_as = silvatici_county
 			}
-			save_scope_as = silvatici_province
-		}		
+		}
 	}
 	
 	option = {# Interesting
 		name = bryten_england.005.bandits
-		scope:silvatici_province = {
-			add_province_modifier = {
+		scope:silvatici_county = {
+			add_county_modifier = {
 				modifier = silvatici_bandits
 				days = 360
 			}
@@ -498,19 +495,23 @@ bryten_england.007 = {# Building Castles
 			name = castle_building_norman
 			value = yes
 		}
-		every_realm_county = {
-			limit = { holder = culture:norman }
-			save_scope_as = norman_county_castles
-		}
 	}
 	
 	option = {# Interesting
-		name = bryten_england.007.castles
-		scope:norman_county_castles = {
+		name = bryten_england.007.castles	
+
+		every_county_in_region = {
+			region = custom_northern_england_saxon
+			limit = {
+				target_is_de_facto_liege_or_above = root.primary_title
+				holder.culture = culture:norman
+			}
 			add_county_modifier = {
 				modifier = castle_building_norman
-				years = 1
+				years = 2
 			}
+
+
 		}
 	}
 }
@@ -534,7 +535,18 @@ bryten_england.008 = {# The Exeter Rebellion
 	}
 
 	immediate = {
-		character:140 = { save_scope_as = norman_king }
+		character:140 = { save_scope_as = norman_king }		
+		character:122 = {
+			ordered_child = {
+				order_by = age
+				limit = {
+					is_male = yes
+					is_alive = yes
+				}
+				save_scope_as = godwine_head
+			}
+		}
+
 		set_global_variable = {
 			name = exeter_rebelion_debate
 			value = yes
@@ -543,13 +555,17 @@ bryten_england.008 = {# The Exeter Rebellion
 	
 	option = {# Rebel
 		name = bryten_england.008.rebel
+		add_character_flag = temp_no_claim_war_cost
 		start_war = {
-			cb = claim_cb
+			name = "war_exeter_rebellion"
+			cb = exeter_rebellion_cb
 			target = character:140
-			claimant = character:111
+			claimant = scope:godwine_head
 			target_title = title:k_england
-		}		
+		}
+		remove_character_flag = temp_no_claim_war_cost				
 		hidden_effect = {
+			add_visiting_courtier = scope:godwine_head
 			scope:norman_king = {
 				trigger_event = {
 					id = bryten_england.009
@@ -557,12 +573,10 @@ bryten_england.008 = {# The Exeter Rebellion
 				}
 			}
 		}
-
 	}
 	option = {# Don't Rebel
 		name = bryten_england.008.loyal
 	}
-
 }
 bryten_england.009 = {# The Exeter Rebellion 
 	type = character_event
@@ -590,23 +604,25 @@ bryten_england.011 = {# An Envoy from the English
 
 	trigger = {
 		this = character:101515
-		has_title = title:k_england # Holds Exeter
+		has_title = title:k_denmark # Holds Exeter
 		has_global_variable = exeter_rebelion_debate # Should happen after the debate
 		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
 	}
 
 	immediate = {
-		character:111 = { save_scope_as = godwin_raider }
+		character:101515 = { save_scope_as = danish_king }
 	}
 	
 	option = {# Interesting
 		name = bryten_england.011.War
+		add_character_flag = temp_no_claim_war_cost
 		start_war = {
 			cb = claim_cb
 			target = character:140
-			claimant = character:111
+			claimant = scope:danish_king
 			target_title = title:k_england
 		}
+		remove_character_flag = temp_no_claim_war_cost				
 		hidden_effect = {
 			set_global_variable = {
 				name = danish_invansion_england
@@ -873,7 +889,6 @@ bryten_england.017 = {# The Danes head back home
 		}
 	}
 }
-
 bryten_england.018 = {# The English fight on
 	type = character_event
 	title = bryten_england.018.t
