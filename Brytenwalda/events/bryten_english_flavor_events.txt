@@ -967,7 +967,6 @@ bryten_england.020 = {# Coronation after William
 	type = character_event
 	title = {
 		first_valid = {
-			# Is this our second council here?
 			triggered_desc = {
 				trigger = { this = character:112 }
 				desc = bryten_england.020.t.edgar
@@ -1026,9 +1025,7 @@ bryten_england.020 = {# Coronation after William
 			name = edgar_is_king
 			value = yes
 		}
-		title:k_england = {# Edgar restores the Witengamot to power
-			add_title_law = saxon_elective_succession_law
-		}
+		reestablish_saxon_adminstration_effects = yes
 	}
 	
 	option = {# Interesting
@@ -1191,6 +1188,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = norman_england_county5
 			}					
 		}
+
+
+
 	}
 	
 	option = {# Banish
@@ -1390,9 +1390,104 @@ bryten_england.023 = {# Norman England Secured
 	
 	option = {# Interesting
 		name = bryten_england.023.secured
-
 	}
 }
+
+bryten_england.024 = {# The Normans return to France(normandy dynasty)
+	type = character_event
+	title = bryten_england.024.t
+	desc = bryten_england.024.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		has_culture = culture:norman # in case willy dies first.
+		NOT = { has_title = title:k_england } # had to lose the throne
+		AND = {
+			dynasty = dynasty:752
+			has_title = title:d_normandy
+		}
+		is_at_war = no # Must not be fighting to reclaim his throne
+		has_global_variable = william_is_king # Can't return to Normandy if you haven't been to Englnad first.
+		NOT = { has_global_variable = norman_england_secured } # once William secures England just use normal stuff about taking normandy
+		NOT = { has_global_variable = normans_return_to_normandy } # once William secures England just use normal stuff about taking normandy
+
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = normans_return_to_normandy
+			value = yes
+		}
+		title:d_normandy = {# Willy's capital is back in Normandy
+			set_capital_county = title:c_alencon
+			liege = "k_france"
+		}
+		title:k_england.holder = { save_scope_as = saxon_king }
+		title:k_france.holder = { save_scope_as = french_king }
+		every_county_in_region = { # Normandy rules holding land in England lose it. 
+			region = custom_england_saxon
+			limit = {
+				OR = {
+					holder = title:d_normandy.holder
+					holder = title:c_rouen.holder
+					holder = title:c_rouen.holder
+					holder = title:c_bayeux.holder
+					holder = title:c_avranches.holder
+					holder = title:c_lisieux.holder
+					holder = title:c_eu.holder
+				} 
+			}
+			save_scope_as = norman_england_county
+		}
+	}
+
+	option = {# Interesting
+		name = bryten_england.024.return
+		hidden_effect = { 
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county = {
+				change_title_holder = {
+					holder = scope:saxon_king
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+
+		}
+	}
+
+	after = {
+		scope:french_king = {
+			trigger_event = {
+				id = bryten_england.025
+				days = { 3 5 }
+			}
+		}
+	}
+}
+bryten_england.025 = {# The Normans return to France(French)
+	type = character_event
+	title = bryten_england.025.t
+	desc = bryten_england.025.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {# Interesting
+		name = bryten_england.025.return
+	}
+}
+
 #######################################
 # Anglo-Saxon Culture Forming
 #######################################

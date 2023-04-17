@@ -253,6 +253,235 @@ unify_anglo_saxon_culture_effect = {# Unifying Anglo Saxon
 		}
 	}
 }
+
+reestablish_saxon_adminstration_effects = {
+	title:k_england = {# Edgar restores the Witengamot to power
+		add_title_law = saxon_elective_succession_law
+	}
+	title:k_england.holder = { save_scope_as = saxon_king }
+	title:d_normandy.holder = { save_scope_as = norman_king }
+	title:k_france.holder = { save_scope_as = french_king }
+	title:c_rouen.holder = { save_scope_as = rouen_count }
+	title:c_bayeux.holder = { save_scope_as = bayeux_count }
+	title:c_avranches.holder = { save_scope_as = avranches_count }
+	title:c_lisieux.holder = { save_scope_as = lisieux_count }
+	title:c_eu.holder = { save_scope_as = eu_count }
+	title:c_maine.holder = { save_scope_as = maine_count }
+
+
+	every_county_in_region = { # Normandy rules holding land in England lose it. 
+		region = custom_england_saxon
+		limit = {
+			OR = {
+				holder = title:d_normandy.holder
+				holder = title:c_rouen.holder
+				holder = title:c_bayeux.holder
+				holder = title:c_avranches.holder
+				holder = title:c_lisieux.holder
+				holder = title:c_eu.holder
+			} 
+		}
+		save_scope_as = norman_england_county
+	}
+	create_title_and_vassal_change = {
+		type = granted
+		save_scope_as = change
+		add_claim_on_loss = yes
+	}	
+	scope:norman_england_county = {
+		change_title_holder = {
+			holder = scope:saxon_king
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+
+	scope:norman_king = {
+		every_held_title = {
+			limit = {
+				tier >= tier_county
+				kingdom = title:k_england 
+			}
+			add_to_list = revoked_norman_king_titles
+		}
+		every_vassal = {
+			add_to_list = vassals_for_you
+		}
+		add_opinion = {
+			target = scope:saxon_king
+			modifier = revoked_title
+		}
+	}
+	scope:rouen_count = {
+		every_held_title = {
+			limit = {
+				tier >= tier_county
+				kingdom = title:k_england 
+			}
+			add_to_list = revoked_norman_king_titles
+		}
+		every_vassal = {
+			add_to_list = vassals_for_you
+		}
+		add_opinion = {
+			target = scope:saxon_king
+			modifier = revoked_title
+		}
+	}
+	scope:bayeux_count = {
+		every_held_title = {
+			limit = {
+				tier >= tier_county
+				kingdom = title:k_england 
+			}
+			add_to_list = revoked_norman_king_titles
+		}
+		every_vassal = {
+			add_to_list = vassals_for_you
+		}
+		add_opinion = {
+			target = scope:saxon_king
+			modifier = revoked_title
+		}
+	}
+	scope:avranches_count = {
+		every_held_title = {
+			limit = {
+				tier >= tier_county
+				kingdom = title:k_england 
+			}
+			add_to_list = revoked_norman_king_titles
+		}
+		every_vassal = {
+			add_to_list = vassals_for_you
+		}
+		add_opinion = {
+			target = scope:saxon_king
+			modifier = revoked_title
+		}
+	}
+	scope:lisieux_count = {
+		every_held_title = {
+			limit = {
+				tier >= tier_county
+				kingdom = title:k_england 
+			}
+			add_to_list = revoked_norman_king_titles
+		}
+		every_vassal = {
+			add_to_list = vassals_for_you
+		}
+		add_opinion = {
+			target = scope:saxon_king
+			modifier = revoked_title
+		}
+	}
+	scope:eu_count = {
+		every_held_title = {
+			limit = {
+				tier >= tier_county
+				kingdom = title:k_england 
+			}
+			add_to_list = revoked_norman_king_titles
+		}
+		every_vassal = {
+			add_to_list = vassals_for_you
+		}
+		add_opinion = {
+			target = scope:saxon_king
+			modifier = revoked_title
+		}
+	}
+	scope:maine_count = {
+		every_held_title = {
+			limit = {
+				tier >= tier_county
+				kingdom = title:k_england 
+			}
+			add_to_list = revoked_norman_king_titles
+		}
+		every_vassal = {
+			add_to_list = vassals_for_you
+		}
+		add_opinion = {
+			target = scope:saxon_king
+			modifier = revoked_title
+		}
+	}
+	create_title_and_vassal_change = {
+		type = granted
+		save_scope_as = title_change_normans_flee
+		add_claim_on_loss = yes
+	}
+	every_in_list = {
+		list = revoked_norman_king_titles
+		change_title_holder = {
+			holder = scope:saxon_king
+			change = scope:title_change_normans_flee
+			take_baronies = no
+		}
+	}
+	every_in_list = {
+		list = vassals_for_you
+		change_liege = {
+			liege = scope:saxon_king
+			change = scope:title_change_normans_flee
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change_normans_flee
+
+
+	create_title_and_vassal_change = {
+		type = swear_fealty
+		save_scope_as = normans_are_french
+	}
+	scope:norman_king = { 
+		change_liege = {
+			liege = scope:french_king
+			change = scope:normans_are_french
+		}
+	}
+	scope:rouen_count = { 
+		change_liege = {
+			liege = scope:norman_king
+			change = scope:normans_are_french
+		}
+	}
+	scope:bayeux_count = { 
+		change_liege = {
+			liege = scope:norman_king
+			change = scope:normans_are_french
+		}
+	}
+	scope:avranches_count = { 
+		change_liege = {
+			liege = scope:norman_king
+			change = scope:normans_are_french
+		}
+	}
+	scope:lisieux_count = { 
+		change_liege = {
+			liege = scope:norman_king
+			change = scope:normans_are_french
+		}
+	}
+	scope:eu_count = { 
+		change_liege = {
+			liege = scope:norman_king
+			change = scope:normans_are_french
+		}
+	}
+	scope:maine_count = { 
+		change_liege = {
+			liege = scope:norman_king
+			change = scope:normans_are_french
+		}
+	}			
+	resolve_title_and_vassal_change = scope:normans_are_french
+}
+
+
+
 #######################################
 #									  #
 #         Anglo-Norse Effects  	      #
@@ -348,9 +577,6 @@ establish_norman_adminstration_effects = {# Establishing the Norman Adminstratio
 		}
 		hidden_effect = {
 			add_realm_law_skip_effects = partition_succession_law
-
-	
-
 			# The Duchy of York
 			# The Duchy of Lancaster
 			title:c_lancashire = { set_de_jure_liege_title = title:d_lancaster }
