@@ -67,6 +67,16 @@ offer_vassalization_interaction = {
 		#Dread
 		#Compare Opinion modifier.
 		
+		# Titular Ireland Title - To ensure that the AI doesn't vassalize without becoming the actual high king
+		modifier = { #Is not the Rightful Liege of recipient
+			desc = offer_vassalization_interaction_weak_high_king
+			trigger = {
+				exists = title:k_ireland_titular
+				scope:actor = { has_title = title:k_ireland_titular }
+			}
+			add = -80
+		}
+
 		# PERKS
 		modifier = { # Perk boost
 			desc = offer_vassalization_true_ruler_perk_tt
@@ -83,7 +93,8 @@ offer_vassalization_interaction = {
 				scope:actor = { has_character_modifier = event_bonus_to_vassal_accept }
 			}
 			add = 20
-		}		
+		}
+		
 		modifier = { # Cultural Acceptance
 			add = offer_vassalage_acceptance_value
 			desc = cultural_acceptance_interaction_reason
@@ -133,7 +144,8 @@ offer_vassalization_interaction = {
 					add = -40
 				}
 			}
-		}		
+		}
+		
 		modifier = { #Different faith, pluralism.
 			desc = offer_vassalization_interaction_aibehavior_differentfaith_tt
 			trigger = {
@@ -172,7 +184,8 @@ offer_vassalization_interaction = {
 					add = -20
 				}
 			}
-		}		
+		}
+		
 		modifier = { #Different faith, both have pluralism.
 			desc = offer_vassalization_interaction_aibehavior_differentfaith_tt
 			trigger = {
@@ -523,7 +536,8 @@ offer_vassalization_interaction = {
 				}
 			}
 			add = 5
-		}		
+		}
+		
 		modifier = { # Same language
 			add = 5
 			desc = speaks_same_language_interaction_reason
@@ -532,7 +546,8 @@ offer_vassalization_interaction = {
 					knows_language_of_culture = scope:recipient.culture
 				}
 			}
-		}		
+		}
+		
 		modifier = { # Iberian Struggle, less likely for outsiders to vassalize inside
 			add = -35
 			desc = iberian_struggle_reason_reason
@@ -547,6 +562,7 @@ offer_vassalization_interaction = {
 				}
 			}
 		}
+
 		modifier = { #Ageism modifier vs kids.
 			desc = offer_vassalization_interaction_aibehavior_child_tt
 			trigger = {
@@ -577,6 +593,7 @@ offer_vassalization_interaction = {
 			}
 			add = -10
 		}
+
 		modifier = { #Claimant modifier.
 			desc = offer_vassalization_interaction_aibehavior_claimant_tt
 			trigger = {
@@ -588,6 +605,7 @@ offer_vassalization_interaction = {
 			}
 			add = -20
 		}
+
 		modifier = { # Ambitious
 			desc = TAKE_THE_VOWS_AMBITIOUS
 			trigger = {
@@ -597,6 +615,7 @@ offer_vassalization_interaction = {
 			}
 			add = -20
 		}
+
 		modifier = { # Paranoid
 			desc = INTERACTION_PARANOID
 			trigger = {
@@ -606,6 +625,7 @@ offer_vassalization_interaction = {
 			}
 			add = -20
 		}
+
 		modifier = { # Arrogant
 			desc = INTERACTION_ARROGANT
 			trigger = {
@@ -615,6 +635,7 @@ offer_vassalization_interaction = {
 			}
 			add = -20
 		}
+
 		modifier = { # Fickle
 			desc = INTERACTION_FICKLE
 			trigger = {
@@ -624,6 +645,7 @@ offer_vassalization_interaction = {
 			}
 			add = -10
 		}
+
 		modifier = { # Stubborn
 			desc = INTERACTION_STUBBORN
 			trigger = {
@@ -633,6 +655,7 @@ offer_vassalization_interaction = {
 			}
 			add = -10
 		}
+
 		modifier = { # Trusting
 			desc = TAKE_THE_VOWS_TRUSTING
 			trigger = {
@@ -642,6 +665,7 @@ offer_vassalization_interaction = {
 			}
 			add = 5
 		}
+
 		modifier = { # Content
 			desc = INTERACTION_CONTENT
 			trigger = {
@@ -753,6 +777,7 @@ offer_vassalization_interaction = {
 			scope:high_obligations = yes
 			desc = CONTRACT_HIGH_TAXES_REASON
 		}
+
 		modifier = { # AI-only weights, keep the pope from vassalizing too fast
 			trigger = {
 				exists = faith:catholic.religious_head
@@ -761,18 +786,6 @@ offer_vassalization_interaction = {
 			}
 			add = -50
 		}
-		
-		# Titular Ireland Title - To ensure that the AI doesn't vassalize without becoming the actual high king
-		modifier = { #Is not the Rightful Liege of recipient
-			desc = offer_vassalization_interaction_weak_high_king
-			trigger = {
-				exists = title:k_ireland_titular
-				scope:actor = { has_title = title:k_ireland_titular }
-			}
-			add = -80
-		}
-	}
-
 	}
 
 	# Low starting obligations
@@ -919,3 +932,4 @@ offer_vassalization_interaction = {
 		}
 	}
 }
+

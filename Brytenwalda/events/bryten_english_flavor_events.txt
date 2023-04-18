@@ -604,6 +604,9 @@ bryten_england.011 = {# An Envoy from the English
 
 	trigger = {
 		this = character:101515
+		is_at_war = no
+		title:k_england.holder = {	NOT = { has_culture = culture:norman } } # if they beat william they won't send the invite
+		title:k_england.holder = {	is_at_war = no } # if there is a rebellion they won't send the invite
 		has_title = title:k_denmark # Holds Exeter
 		has_global_variable = exeter_rebelion_debate # Should happen after the debate
 		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
@@ -617,7 +620,7 @@ bryten_england.011 = {# An Envoy from the English
 		name = bryten_england.011.War
 		add_character_flag = temp_no_claim_war_cost
 		start_war = {
-			cb = claim_cb
+			cb = svend_invasion_cb
 			target = character:140
 			claimant = scope:danish_king
 			target_title = title:k_england
@@ -650,7 +653,7 @@ bryten_england.012 = {# Join the Danish?
 			has_culture = culture:anglo_norse	
 			has_culture = culture:anglo_saxon	
 		}
-		highest_held_title_tier >= tier_duchy		
+		has_title = title:d_york # is king of England
 		any_character_war = {
 			any_war_participant = {
 				title:c_north_riding = {
@@ -663,23 +666,33 @@ bryten_england.012 = {# Join the Danish?
 	}	
 
 	immediate = {
+
+		title:d_york.holder = { save_scope_as = english_lord }
+		title:k_denmark.holder = { save_scope_as = danish_king }
 		random_character_war = {
-			limit = { primary_attacker = character:101515 }
+			limit = { primary_attacker = scope:danish_king }
 			save_scope_as = danish_invansion
 		}
-		character:101515 = { save_scope_as = danish_king }
 	}
 	
 	option = {# Join the war
 		name = bryten_england.012.rebel
-		
-		scope:danish_invansion = {
-			add_attacker = scope:danish_king
+		hidden_effect = {
+			create_title_and_vassal_change = {
+				type = swear_fealty
+				save_scope_as = york_swaps_sides
+			}
+			scope:english_lord = { 
+				change_liege = {
+					liege = scope:danish_king
+					change = scope:york_swaps_sides
+				}
+			}
+			resolve_title_and_vassal_change = scope:york_swaps_sides
 		}
 	}
-	option = {# Not timex
+	option = {# Not time
 		name = bryten_england.012.loyal
-
 	}
 
 }
@@ -788,16 +801,27 @@ bryten_england.016 = {# The Danes accept the Danegeld
 	}
 
 	immediate = {
-		title:d_york = { save_scope_as = english_eorl }
-		character:101515 = { save_scope_as = danish_king }
+		title:k_england.holder = { save_scope_as = norman_king }
+		title:d_york.holder = { save_scope_as = english_eorl }
+		title:k_denmark.holder = { save_scope_as = danish_king }
+		
+		random_character_war = {
+			limit = {
+				using_cb = svend_invasion_cb
+				primary_attacker = scope:danish_king
+				primary_defender = scope:norman_king
+			}
+			save_scope_as = svend_war
+		}
 	}
 	
 	option = {# Interesting
 		name = bryten_england.016.accepted
 		pay_short_term_gold = {
 			target = scope:danish_king
-			gold = major_gold_value
+			gold = monumental_gold_value
 		}
+		scope:svend_war = { end_war = defender }
 	}
 
 	after = {
@@ -821,15 +845,53 @@ bryten_england.017 = {# The Danes head back home
 	}
 
 	immediate = {
-		character:140 = { save_scope_as = norman_king }
-		title:d_york = { save_scope_as = english_eorl }
+		title:k_england.holder = { save_scope_as = norman_king }
+		title:d_york.holder = { save_scope_as = english_eorl }
+		title:k_denmark.holder = { save_scope_as = danish_king }
+		
 		random_character_war = {
-			limit = { 
-				primary_attacker = character:101515 
+			limit = {
+				primary_defender = scope:norman_king
 			}
-			save_scope_as = danish_invansion
+			end_war = white_peace
 		}
-		scope:danish_invansion = { end_war = white_peace }
+
+		if = {
+			character:112 = {
+				if = {
+					limit = { is_alive = yes }
+					save_scope_as = english_lord
+				}
+			}
+		}
+		else_if = {
+			character:112 = {
+				ordered_child = {
+					order_by = age
+					limit = {
+						is_male = yes
+						is_alive = yes
+					}
+					save_scope_as = english_lord
+				}
+			}
+		}
+		else_if = {
+			character:122 = {
+				ordered_child = {
+					order_by = age
+					limit = {
+						is_male = yes
+						is_alive = yes
+					}
+					save_scope_as = english_lord
+				}
+			}
+		}
+		else = {
+			title:d_york.holder = { save_scope_as = english_lord }
+		}
+
 		culture:anglo_saxon = {
 			change_cultural_acceptance = {
 				target = culture:swedish
@@ -869,16 +931,17 @@ bryten_england.017 = {# The Danes head back home
 	option = {# Surrender
 		name = bryten_england.017.surrender
 		rightfully_imprison_character_effect = {
-			TARGET = scope:fugitive
+			TARGET = scope:english_eorl
 			IMPRISONER = scope:norman_king
 		}
 	}
 	option = {# Fight on
 		name = bryten_england.017.fight
+
 		start_war = {
-			cb = claim_cb
-			target = character:140
-			claimant = character:112
+			cb = northern_rebellion_cb
+			target = scope:norman_king
+			claimant = scope:english_lord
 			target_title = title:k_england
 		}
 		scope:norman_king = {
@@ -1075,53 +1138,55 @@ bryten_england.022 = {# Dealing with the Normans who remain
 	}
 
 	immediate = {
+		title:k_england.holder = { save_scope_as = saxon_king }
+
 		random_knight = {
-			limit = { has_culture = culture:norman	}
-			save_scope_as = norman_knight
+			limit = { NOT = { has_culture = culture:norman }	}
+			save_scope_as = english_knight
 		}
 		random_knight = {
 			limit = { 
-				has_culture = culture:norman
+				NOT = { has_culture = culture:norman }
 				NOT = {
-					this = scope:norman_knight
+					this = scope:english_knight
 				} 			
 			}
-			save_scope_as = norman_knight1
+			save_scope_as = english_knight1
 		}
 		random_knight = {
 			limit = { 
-				has_culture = culture:norman
+				NOT = { has_culture = culture:norman }
 				NOT = {
-					this = scope:norman_knight
-					this = scope:norman_knight1
+					this = scope:english_knight
+					this = scope:english_knight1
 				} 			
 			}
-			save_scope_as = norman_knight2
+			save_scope_as = english_knight2
 		}
 		random_knight = {
 			limit = { 
-				has_culture = culture:norman
+				NOT = { has_culture = culture:norman }
 				NOT = {
-					this = scope:norman_knight
-					this = scope:norman_knight1
-					this = scope:norman_knight2
+					this = scope:english_knight
+					this = scope:english_knight1
+					this = scope:english_knight2
 				} 			
 			}
-			save_scope_as = norman_knight3
+			save_scope_as = english_knight3
 		}		
 		random_knight = {
 			limit = { 
-				has_culture = culture:norman
+				NOT = { has_culture = culture:norman }
 				NOT = {
-					this = scope:norman_knight
-					this = scope:norman_knight1
-					this = scope:norman_knight2
-					this = scope:norman_knight3
+					this = scope:english_knight
+					this = scope:english_knight1
+					this = scope:english_knight2
+					this = scope:english_knight3
 				} 			
 			}
-			save_scope_as = norman_knight4
+			save_scope_as = english_knight4
 		}		
-		character:140 = {
+		scope:saxon_king = {
 			random_held_title = {
 				limit = { 
 					tier = tier_county 
@@ -1129,7 +1194,7 @@ bryten_england.022 = {# Dealing with the Normans who remain
 					NOT = { this = title:c_middlesex }
 
 				}
-				save_scope_as = norman_england_county
+				save_scope_as = saxon_england_county
 			}
 			random_held_title = {
 				limit = { 
@@ -1137,11 +1202,11 @@ bryten_england.022 = {# Dealing with the Normans who remain
 					kingdom = title:k_england
 					NOT = { 
 						this = title:c_middlesex 
-						this = scope:norman_england_county
+						this = scope:saxon_england_county
 					}
 
 				}
-				save_scope_as = norman_england_county2
+				save_scope_as = saxon_england_county2
 			}
 			random_held_title = {
 				limit = { 
@@ -1149,12 +1214,12 @@ bryten_england.022 = {# Dealing with the Normans who remain
 					kingdom = title:k_england
 					NOT = { 
 						this = title:c_middlesex 
-						this = scope:norman_england_county
-						this = scope:norman_england_county2
+						this = scope:saxon_england_county
+						this = scope:saxon_england_county2
 					}
 
 				}
-				save_scope_as = norman_england_county3
+				save_scope_as = saxon_england_county3
 			}
 			random_held_title = {
 				limit = { 
@@ -1162,14 +1227,14 @@ bryten_england.022 = {# Dealing with the Normans who remain
 					kingdom = title:k_england
 					NOT = { 
 						this = title:c_middlesex 
-						this = scope:norman_england_county
-						this = scope:norman_england_county2
-						this = scope:norman_england_county3
+						this = scope:saxon_england_county
+						this = scope:saxon_england_county2
+						this = scope:saxon_england_county3
 
 					}
 
 				}
-				save_scope_as = norman_england_county4
+				save_scope_as = saxon_england_county4
 			}
 			random_held_title = {
 				limit = { 
@@ -1177,15 +1242,15 @@ bryten_england.022 = {# Dealing with the Normans who remain
 					kingdom = title:k_england
 					NOT = { 
 						this = title:c_middlesex 
-						this = scope:norman_england_county
-						this = scope:norman_england_county2
-						this = scope:norman_england_county3
-						this = scope:norman_england_county4
+						this = scope:saxon_england_county
+						this = scope:saxon_england_county2
+						this = scope:saxon_england_county3
+						this = scope:saxon_england_county4
 
 					}
 
 				}
-				save_scope_as = norman_england_county5
+				save_scope_as = saxon_england_county5
 			}					
 		}
 
@@ -1209,9 +1274,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = change
 				add_claim_on_loss = yes
 			}	
-			scope:norman_england_county = {
+			scope:saxon_england_county = {
 				change_title_holder = {
-					holder = scope:norman_knight
+					holder = scope:english_knight
 					change = scope:change
 				}
 			}
@@ -1223,9 +1288,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = change2
 				add_claim_on_loss = yes
 			}	
-			scope:norman_england_county2 = {
+			scope:saxon_england_county2 = {
 				change_title_holder = {
-					holder = scope:norman_knight1
+					holder = scope:english_knight1
 					change = scope:change2
 				}
 			}
@@ -1237,9 +1302,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = change3
 				add_claim_on_loss = yes
 			}	
-			scope:norman_england_county3 = {
+			scope:saxon_england_county3 = {
 				change_title_holder = {
-					holder = scope:norman_knight2
+					holder = scope:english_knight2
 					change = scope:change3
 				}
 			}
@@ -1251,9 +1316,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = change4
 				add_claim_on_loss = yes
 			}	
-			scope:norman_england_county4 = {
+			scope:saxon_england_county4 = {
 				change_title_holder = {
-					holder = scope:norman_knight3
+					holder = scope:english_knight3
 					change = scope:change4
 				}
 			}
@@ -1265,9 +1330,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = change5
 				add_claim_on_loss = yes
 			}	
-			scope:norman_england_county5 = {
+			scope:saxon_england_county5 = {
 				change_title_holder = {
-					holder = scope:norman_knight4
+					holder = scope:english_knight4
 					change = scope:change5
 				}
 			}
@@ -1294,9 +1359,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = change
 				add_claim_on_loss = yes
 			}	
-			scope:norman_england_county = {
+			scope:saxon_england_county = {
 				change_title_holder = {
-					holder = scope:norman_knight
+					holder = scope:english_knight
 					change = scope:change
 				}
 			}
@@ -1308,9 +1373,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = change2
 				add_claim_on_loss = yes
 			}	
-			scope:norman_england_county2 = {
+			scope:saxon_england_county2 = {
 				change_title_holder = {
-					holder = scope:norman_knight1
+					holder = scope:english_knight1
 					change = scope:change2
 				}
 			}
@@ -1322,9 +1387,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = change3
 				add_claim_on_loss = yes
 			}	
-			scope:norman_england_county3 = {
+			scope:saxon_england_county3 = {
 				change_title_holder = {
-					holder = scope:norman_knight2
+					holder = scope:english_knight2
 					change = scope:change3
 				}
 			}
@@ -1336,9 +1401,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = change4
 				add_claim_on_loss = yes
 			}	
-			scope:norman_england_county4 = {
+			scope:saxon_england_county4 = {
 				change_title_holder = {
-					holder = scope:norman_knight3
+					holder = scope:english_knight3
 					change = scope:change4
 				}
 			}
@@ -1350,9 +1415,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 				save_scope_as = change5
 				add_claim_on_loss = yes
 			}	
-			scope:norman_england_county5 = {
+			scope:saxon_england_county5 = {
 				change_title_holder = {
-					holder = scope:norman_knight4
+					holder = scope:english_knight4
 					change = scope:change5
 				}
 			}
@@ -1392,102 +1457,6 @@ bryten_england.023 = {# Norman England Secured
 		name = bryten_england.023.secured
 	}
 }
-
-bryten_england.024 = {# The Normans return to France(normandy dynasty)
-	type = character_event
-	title = bryten_england.024.t
-	desc = bryten_england.024.desc
-	theme = realm
-	left_portrait = {
-		character = root
-		animation = personality_bold
-	}
-
-	trigger = {
-		has_culture = culture:norman # in case willy dies first.
-		NOT = { has_title = title:k_england } # had to lose the throne
-		AND = {
-			dynasty = dynasty:752
-			has_title = title:d_normandy
-		}
-		is_at_war = no # Must not be fighting to reclaim his throne
-		has_global_variable = william_is_king # Can't return to Normandy if you haven't been to Englnad first.
-		NOT = { has_global_variable = norman_england_secured } # once William secures England just use normal stuff about taking normandy
-		NOT = { has_global_variable = normans_return_to_normandy } # once William secures England just use normal stuff about taking normandy
-
-	}
-
-	immediate = {
-		set_global_variable = {
-			name = normans_return_to_normandy
-			value = yes
-		}
-		title:d_normandy = {# Willy's capital is back in Normandy
-			set_capital_county = title:c_alencon
-			liege = "k_france"
-		}
-		title:k_england.holder = { save_scope_as = saxon_king }
-		title:k_france.holder = { save_scope_as = french_king }
-		every_county_in_region = { # Normandy rules holding land in England lose it. 
-			region = custom_england_saxon
-			limit = {
-				OR = {
-					holder = title:d_normandy.holder
-					holder = title:c_rouen.holder
-					holder = title:c_rouen.holder
-					holder = title:c_bayeux.holder
-					holder = title:c_avranches.holder
-					holder = title:c_lisieux.holder
-					holder = title:c_eu.holder
-				} 
-			}
-			save_scope_as = norman_england_county
-		}
-	}
-
-	option = {# Interesting
-		name = bryten_england.024.return
-		hidden_effect = { 
-			create_title_and_vassal_change = {
-				type = granted
-				save_scope_as = change
-				add_claim_on_loss = yes
-			}	
-			scope:norman_england_county = {
-				change_title_holder = {
-					holder = scope:saxon_king
-					change = scope:change
-				}
-			}
-			resolve_title_and_vassal_change = scope:change
-
-		}
-	}
-
-	after = {
-		scope:french_king = {
-			trigger_event = {
-				id = bryten_england.025
-				days = { 3 5 }
-			}
-		}
-	}
-}
-bryten_england.025 = {# The Normans return to France(French)
-	type = character_event
-	title = bryten_england.025.t
-	desc = bryten_england.025.desc
-	theme = realm
-	left_portrait = {
-		character = root
-		animation = personality_bold
-	}
-
-	option = {# Interesting
-		name = bryten_england.025.return
-	}
-}
-
 #######################################
 # Anglo-Saxon Culture Forming
 #######################################
