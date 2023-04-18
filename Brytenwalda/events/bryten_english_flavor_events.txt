@@ -187,6 +187,8 @@ bryten_england.002 = {# William rewarding his men with land in England.
 	
 	option = {# Interesting
 		name = bryten_england.002.reward
+		custom_tooltip = norman_conquest_reward_men_tt
+
 		hidden_effect = {
 			# First Norman County
 			create_title_and_vassal_change = {
@@ -352,6 +354,57 @@ bryten_england.003 = {# The Ermenfried Penitential
 				save_scope_as = norman_church_province
 			}
 		}
+		if = { # root's counties...
+			limit = {
+				any_held_title = {
+					county_has_empty_province_trigger = yes
+					kingdom = title:k_england
+				}
+			}
+			ordered_held_title = {
+				limit = {
+					county_has_empty_province_trigger = yes
+					kingdom = title:k_england
+					county_has_no_church_trigger = yes
+				}
+				alternative_limit = {
+					county_has_empty_province_trigger = yes
+					kingdom = title:k_england
+					county_has_all_holding_types = yes
+				}
+				alternative_limit = { county_has_empty_province_trigger = yes }
+				order_by = development_level
+				save_scope_as = norman_church_county
+			}
+		}
+		else = { # ... vassal counties
+			ordered_sub_realm_county = {
+				limit = {
+					holder = { is_vassal_of = ROOT }
+					kingdom = title:k_england
+					any_county_province = { province_has_no_holding_trigger = yes }
+					county_has_no_church_trigger = yes
+				}
+				alternative_limit = {
+					holder = { is_vassal_of = ROOT }
+					kingdom = title:k_england
+					any_county_province = {	province_has_no_holding_trigger = yes }
+					county_has_all_holding_types = yes
+				}
+				order_by = development_level
+				save_scope_as = norman_church_county
+			}
+		}
+		scope:norman_church_county = {
+			random_county_province = {
+				limit = { province_has_no_holding_trigger = yes }
+				save_scope_as = norman_church_province
+			}
+		}
+
+
+
+
 	}
 	
 	option = {# I must make penance
@@ -384,7 +437,7 @@ bryten_england.004 = {# Resistance to William's Control
 				target_is_de_facto_liege_or_above = root.primary_title
 				holder.culture = culture:norman
 			}
-			change_county_control = -15	
+			change_county_control = -30	
 		}
 	}
 }
@@ -412,11 +465,11 @@ bryten_england.005 = {# Rise of The Silvatici
 			value = yes
 		}
 		random_realm_county = {
-			limit = { kingdom = title:k_england }
-			random_sub_realm_county = { 
-				limit = { holder.culture = culture:norman }
-				save_scope_as = silvatici_county
+			limit = {
+				kingdom = title:k_england
+				holder.culture = culture:norman
 			}
+			save_scope_as = silvatici_county
 		}
 	}
 	
@@ -501,7 +554,7 @@ bryten_england.007 = {# Building Castles
 		name = bryten_england.007.castles	
 
 		every_county_in_region = {
-			region = custom_northern_england_saxon
+			region = custom_england_saxon
 			limit = {
 				target_is_de_facto_liege_or_above = root.primary_title
 				holder.culture = culture:norman
@@ -510,8 +563,6 @@ bryten_england.007 = {# Building Castles
 				modifier = castle_building_norman
 				years = 2
 			}
-
-
 		}
 	}
 }
@@ -557,7 +608,6 @@ bryten_england.008 = {# The Exeter Rebellion
 		name = bryten_england.008.rebel
 		add_character_flag = temp_no_claim_war_cost
 		start_war = {
-			name = "war_exeter_rebellion"
 			cb = exeter_rebellion_cb
 			target = character:140
 			claimant = scope:godwine_head
