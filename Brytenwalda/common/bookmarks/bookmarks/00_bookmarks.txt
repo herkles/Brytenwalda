@@ -861,6 +861,7 @@ bm_867_carolingians = {
 bm_1066_hastings = {
 	start_date = 1066.9.15
 	is_playable = yes
+	recommended = yes
 	group = bm_group_1066
 	
 	# Harold Godwineson ID: 122
@@ -1106,7 +1107,6 @@ bm_1066_hastings = {
 bm_1066_rags_to_riches = {
 	start_date = 1066.9.15
 	is_playable = yes
-	recommended = yes
 	test_default = yes
 	group = bm_group_1066
 
@@ -1114,54 +1114,36 @@ bm_1066_rags_to_riches = {
 		value = 100
 	}
 
-	# Murchad ua Briain ID: 83355
+	# toirrdelbach ua Briain ID: 83355
 	character = {
-		name = "bookmark_rags_to_riches_petty_king_murchad" #ID:83355
-		dynasty = 695
+		name = "bookmark_rags_to_riches_high_king_toirrdelbach" #ID:83355
+		dynasty_house = house_british_isles_briain
 		dynasty_splendor_level = 2
 		type = male
-		history_id = 83355
-		birth = 1027.1.1
-		title = d_munster
+		history_id = 906
+		birth = 1009.1.1
+		title = k_ireland_titular
 		government = feudal_government
 		culture = irish
-		religion = insular_celtic
+		religion = catholic
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
-		tutorial = yes
 		position = { 430 190 }
 		
 		animation = personality_rational
 
 		#	Potentially: Conchobar (half-brother) ID: 6207
 
-		#	Brian (son) ID: 83357
+		#	Muirchertach (son) ID: 907
 		character = {
-			name = "bookmark_rags_to_riches_petty_king_murchad_alt_brian"
+			name = "bookmark_rags_to_riches_high_king_toirrdelbach_alt_muirchertach"
 			relation = "BOOKMARK_RELATION_SON"
-			dynasty = 695
+			dynasty_house = house_british_isles_briain
 			type = male
-			birth = 1048.1.1
-			#title = k_east_francia
-			#government = feudal_government
+			birth = 1041.1.1
 			culture = irish
 			religion = catholic
-			history_id = 83357
+			history_id = 907
 			animation = personality_content
-		}
-
-		#	Bébinn (aunt) ID: 166126
-		character = {
-			name = "bookmark_rags_to_riches_petty_king_murchad_alt_bebinn"
-			relation = "BOOKMARK_RELATION_AUNT"
-			dynasty = 695
-			type = female
-			birth = 989.1.1
-			#title = k_east_francia
-			#government = feudal_government
-			culture = irish
-			religion = catholic
-			history_id = 166126
-			animation = personality_cynical
 		}
 	}
 

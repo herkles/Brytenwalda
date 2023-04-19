@@ -25,7 +25,6 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 			set_capital_county = title:c_middlesex
 			clear_title_laws = yes
 		}
-		save_scope_as = norman_england_king
 		set_global_variable = {
 			name = william_is_king
 			value = yes
@@ -1551,6 +1550,7 @@ bryten_england.023 = {# Norman England Secured
 			name = norman_england_secured
 			value = yes
 		}
+		save_scope_as = norman_england_king
 		establish_norman_adminstration_effects = yes
 	}
 	

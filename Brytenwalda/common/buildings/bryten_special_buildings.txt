@@ -1353,17 +1353,6 @@ bryten_building_edinburgh_castle_01 = {# The castle of Edinburgh
 	}
 	
 	can_construct = {
-		OR = {
-			scope:holder = {
-				religion = religion:christianity_religion
-			}
-			custom_description = {
-				text = holy_site_building_trigger
-				barony = {
-					is_holy_site_of = scope:holder.faith
-				}
-			}
-		}
 		scope:holder = {
 			culture = {
 				has_innovation = innovation_castle_baileys
@@ -1423,17 +1412,6 @@ bryten_building_dunbar_castle_01 = {# An important fortres
 	}
 	
 	can_construct = {
-		OR = {
-			scope:holder = {
-				religion = religion:christianity_religion
-			}
-			custom_description = {
-				text = holy_site_building_trigger
-				barony = {
-					is_holy_site_of = scope:holder.faith
-				}
-			}
-		}
 		scope:holder = {
 			culture = {
 				has_innovation = innovation_battlements
@@ -1570,17 +1548,6 @@ bryten_building_caernarfon_castle_01 = {# The great castle of Carnarfon Castle
 	}
 	
 	can_construct = {
-		OR = {
-			scope:holder = {
-				religion = religion:christianity_religion
-			}
-			custom_description = {
-				text = holy_site_building_trigger
-				barony = {
-					is_holy_site_of = scope:holder.faith
-				}
-			}
-		}
 		scope:holder = {
 			culture = {
 				has_innovation = innovation_machicolations
@@ -2132,17 +2099,6 @@ bryten_building_carrickfergus_castle_01 = {# An important Irish Castle
 	}
 	
 	can_construct = {
-		OR = {
-			scope:holder = {
-				religion = religion:christianity_religion
-			}
-			custom_description = {
-				text = holy_site_building_trigger
-				barony = {
-					is_holy_site_of = scope:holder.faith
-				}
-			}
-		}
 		scope:holder = {
 			culture = {
 				has_innovation = innovation_castle_baileys
