@@ -606,6 +606,9 @@ bryten_england.008 = {# The Exeter Rebellion
 	
 	option = {# Rebel
 		name = bryten_england.008.rebel
+		ai_chance = {
+			base = 80
+		}
 		add_character_flag = temp_no_claim_war_cost
 		start_war = {
 			cb = exeter_rebellion_cb
@@ -626,6 +629,9 @@ bryten_england.008 = {# The Exeter Rebellion
 	}
 	option = {# Don't Rebel
 		name = bryten_england.008.loyal
+		ai_chance = {
+			base = 20
+		}
 	}
 }
 bryten_england.009 = {# The Exeter Rebellion 
@@ -668,6 +674,9 @@ bryten_england.011 = {# An Envoy from the English
 	
 	option = {# Interesting
 		name = bryten_england.011.War
+		ai_chance = {
+			base = 80
+		}
 		add_character_flag = temp_no_claim_war_cost
 		start_war = {
 			cb = svend_invasion_cb
@@ -686,6 +695,9 @@ bryten_england.011 = {# An Envoy from the English
 	}
 	option = {# Wait
 		name = bryten_england.011.Wait
+		ai_chance = {
+			base = 20
+		}
 	}
 }
 bryten_england.012 = {# Join the Danish? 
@@ -727,6 +739,9 @@ bryten_england.012 = {# Join the Danish?
 	
 	option = {# Join the war
 		name = bryten_england.012.rebel
+		ai_chance = {
+			base = 80
+		}
 		hidden_effect = {
 			create_title_and_vassal_change = {
 				type = swear_fealty
@@ -743,6 +758,9 @@ bryten_england.012 = {# Join the Danish?
 	}
 	option = {# Not time
 		name = bryten_england.012.loyal
+		ai_chance = {
+			base = 20
+		}
 	}
 
 }
@@ -778,6 +796,9 @@ bryten_england.013 = {# The Danish Invansion
 	
 	option = {# Danegeld
 		name = bryten_england.013.danegeld
+		ai_chance = {
+			base = 75
+		}
 		scope:danish_king = {
 			trigger_event = {
 				id = bryten_england.014
@@ -787,6 +808,9 @@ bryten_england.013 = {# The Danish Invansion
 	}
 	option = {# Fight
 		name = bryten_england.013.fight
+		ai_chance = {
+			base = 25
+		}
 	}
 
 }
@@ -794,7 +818,8 @@ bryten_england.014 = {# The Norman Offer
 	type = character_event
 	title = bryten_england.014.t
 	desc = bryten_england.014.desc
-	theme = realm
+	theme = martial
+	override_background = { event_background = army_camp }
 	left_portrait = {
 		character = root
 		animation = personality_bold
@@ -806,6 +831,9 @@ bryten_england.014 = {# The Norman Offer
 	
 	option = {# Fight
 		name = bryten_england.014.fight
+		ai_chance = {
+			base = 30
+		}
 		scope:norman_king = {
 			trigger_event = {
 				id = bryten_england.015
@@ -815,6 +843,9 @@ bryten_england.014 = {# The Norman Offer
 	}
 	option = {# Bribe
 		name = bryten_england.014.bribe
+		ai_chance = {
+			base = 70
+		}
 		scope:norman_king = {
 			trigger_event = {
 				id = bryten_england.016
@@ -828,7 +859,8 @@ bryten_england.015 = {# The Danes Reject the Danegeld
 	type = character_event
 	title = bryten_england.015.t
 	desc = bryten_england.015.desc
-	theme = realm
+	theme = martial
+	override_background = { event_background = army_camp }
 	left_portrait = {
 		character = root
 		animation = personality_bold
@@ -844,7 +876,8 @@ bryten_england.016 = {# The Danes accept the Danegeld
 	type = character_event
 	title = bryten_england.016.t
 	desc = bryten_england.016.desc
-	theme = realm
+	theme = martial
+	override_background = { event_background = army_camp }
 	left_portrait = {
 		character = root
 		animation = personality_bold
@@ -888,7 +921,8 @@ bryten_england.017 = {# The Danes head back home
 	type = character_event
 	title = bryten_england.017.t
 	desc = bryten_england.017.desc
-	theme = realm
+	theme = martial
+	override_background = { event_background = docks }
 	left_portrait = {
 		character = root
 		animation = personality_bold
@@ -980,6 +1014,9 @@ bryten_england.017 = {# The Danes head back home
 	
 	option = {# Surrender
 		name = bryten_england.017.surrender
+		ai_chance = {
+			base = 20
+		}
 		rightfully_imprison_character_effect = {
 			TARGET = scope:english_eorl
 			IMPRISONER = scope:norman_king
@@ -987,7 +1024,9 @@ bryten_england.017 = {# The Danes head back home
 	}
 	option = {# Fight on
 		name = bryten_england.017.fight
-
+		ai_chance = {
+			base = 80
+		}
 		start_war = {
 			cb = northern_rebellion_cb
 			target = scope:norman_king
@@ -1006,7 +1045,8 @@ bryten_england.018 = {# The English fight on
 	type = character_event
 	title = bryten_england.018.t
 	desc = bryten_england.018.desc
-	theme = realm
+	theme = martial
+	override_background = { event_background = army_camp }
 	left_portrait = {
 		character = root
 		animation = personality_bold
@@ -1029,6 +1069,7 @@ bryten_england.019 = {# Harrying of the North
 	title = bryten_england.019.t
 	desc = bryten_england.019.desc
 	theme = realm
+	override_background = { event_background = burning_building }
 	left_portrait = {
 		character = root
 		animation = personality_bold
@@ -1067,12 +1108,16 @@ bryten_england.019 = {# Harrying of the North
 	
 	option = {# Interesting
 		name = bryten_england.019.destroy
+		add_dread = massive_dread_gain
 		every_county_in_region = {
 			region = custom_northern_england_saxon
-			change_county_control = -10
 			limit = { target_is_de_facto_liege_or_above = root.primary_title }
-			change_county_control = -10
-			change_development_level = -25	
+			change_county_control = 30
+			change_development_level = -30
+			add_county_modifier = {
+				modifier = harryed_county
+				years = 8
+			}	
 		}
 	}
 }
@@ -1309,7 +1354,10 @@ bryten_england.022 = {# Dealing with the Normans who remain
 	}
 	
 	option = {# Banish
-		name = bryten_england.022.banish		
+		name = bryten_england.022.banish
+		ai_chance = {
+			base = 50
+		}		
 		every_vassal = {
 			limit = { 
 				has_culture = culture:norman 
@@ -1391,6 +1439,9 @@ bryten_england.022 = {# Dealing with the Normans who remain
 	}
 	option = {# don't Banish
 		name = bryten_england.022.leave
+		ai_chance = {
+			base = 50
+		}
 		every_vassal = {
 			limit = { 
 				NOT = { has_culture = culture:norman } 

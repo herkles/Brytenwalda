@@ -10,9 +10,15 @@ silvatici_bandits = {# Silvatici Bandits
 }
 castle_building_norman = {# Castle Building
 	icon = martial_positive
-	castle_holding_build_speed = 0.1
+	castle_holding_build_speed = -0.1
 	castle_holding_build_gold_cost = -0.1
 	additional_fort_level = 1
 }
+harryed_county = {# For the harrying of the North
+	icon = martial_negative
+	build_speed = 0.5
+	development_growth_factor = -0.1
+	tax_mult = -0.5
 
+}
 
