@@ -17,12 +17,14 @@
 		holding = city_holding
 	}
 }
-
-
 32 = {	#DROGHEDA
-	holding = none
+	holding = tribal_holding
+	445.1.1 = {
+		special_building_slot = bryten_building_hill_of_tara_01
+		special_building = bryten_building_hill_of_tara_01
+	}
 	910.1.1 = {
-		holding = city_holding
+		holding = castle_holding
 	}
 }
 
@@ -350,9 +352,13 @@
 	holding = church_holding
 }
 51 = {	#CLONMEL
-	holding = none
-	1050.1.1 = {
-		holding = city_holding
+	holding = tribal_holding
+	445.1.1 = {
+		special_building_slot = bryten_building_rock_of_cashel_01
+		special_building = bryten_building_rock_of_cashel_01
+	}
+	988.1.1 = {
+		holding = castle_holding
 	}
 }
 

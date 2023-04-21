@@ -2757,3 +2757,16 @@ bryten_england.158 = {# Misc Cleanup file
 		}
 	}
 }
+
+#######################################
+# Maitance events
+#######################################
+bryten_england.500 = {# Make Alfred the successor to Aethelred
+	hidden = yes
+
+	immediate = {
+		set_designated_heir = character:7627	
+	}
+}
+
+

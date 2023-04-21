@@ -13,6 +13,12 @@ bryten_setup_after_game_start_on_actions = {
 			if = { limit = { game_start_date <= 1066.12.25 } }
 			trigger_event = bryten_england.001
 		}
+		character:33358 = {# Aethelred designates Alfred
+			if = { limit = { game_start_date <= 867.1.1 } }
+			trigger_event = bryten_england.500
+		}		
+
+
 		if = {# setting up the pilgrimage stuff for 1066 start date
 			limit = { 
 				or = {
