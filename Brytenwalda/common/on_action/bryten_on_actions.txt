@@ -113,7 +113,6 @@ bryten_events_historical_pulse = {# for Historical Events
 		# St. davids
 		100 = bryten_wales.109		# The Papal Bull	
 		# Edmund
-		100 = bryten_england.125 	# The martydom of Edmund	
 		100 = bryten_england.127	# The cult of St. Edmund the Martyr 
 		# Cuthbert
 		100 = bryten_england.140	# The Monks of Lindisfarne move the body of St. Cuthbert.	
@@ -129,38 +128,16 @@ bryten_events_historical_pulse = {# for Historical Events
 		100 = bryten_england.040	# English culture forming	
 		100 = bryten_england.041	# Cities are adopting English Culture
 		100 = bryten_scotland.001	# Scotland adopts English
+
+		#######################################
+		# The Great Heathen Army
+		#######################################
+		100 = bryten_england.101	# Guthrum's invansion of East Anglia
+		100 = bryten_england.102	# Meeting with Ceolwulf
+
 	}
 }
 
-#######################################
-# Wars Won 
-#######################################
-on_war_won_attacker = {
-    on_actions = {
-        bryten_war_won
-    }
-}
-on_war_won_defender = {
-    on_actions = {
-        bryten_war_won
-    }
-}
 
-bryten_war_won = {
-    effect = {
-		scope:defender = {# Northumbrians defeat the Norse
-			if = {
-				limit = { scope:winner = {culture = culture:northumbrian}  }
-				trigger_event = bryten_england.100 
-			}
-		} 
-		scope:attacker = {# William becomes king of England
-			if = {
-				limit = { this = character:140 }
-				trigger_event = bryten_england.001
-			} 
-		}
-	}
-}
 
 

@@ -12,13 +12,6 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 		character = root
 		animation = personality_bold
 	}
-
-	trigger = {
-		this = character:140
-		has_title = title:k_england
-		is_at_war = no # Willy has to secure his throne first.
-		NOT = { has_global_variable = william_is_king }
-	}
 	
 	immediate = {
 		title:k_england = {# Willy's capital is now in London
@@ -34,6 +27,26 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 	option = {# Interesting
 		name = bryten_england.001.coronation
 		custom_tooltip = bryten_william_is_king_tooltip
+		hidden_effect = {# Giving massive bonus to the Norman courtiers and vassals=
+			every_courtier_or_guest = {
+				limit = { has_culture = culture:norman	}
+				add_opinion = {
+					target = character:140
+					modifier = norman_rightful_king
+					opinion = 40
+				}
+			}
+			every_vassal = {
+				limit = { has_culture = culture:norman	}
+				add_opinion = {
+					target = character:140
+					modifier = norman_rightful_king
+					opinion = 40
+				}
+			}
+		}
+
+
 		if = {# William doesn't need more prestige when he is king. 
 			limit = { game_start_date = 1066.9.15 }
 			add_prestige = medium_prestige_gain
@@ -56,7 +69,6 @@ bryten_england.001 = {# William the Conquerer is Coronated in London at Westmini
 			days = { 40 80 }
 		}
 	}
-
 }
 bryten_england.002 = {# William rewarding his men with land in England. 
 	type = character_event
@@ -1999,6 +2011,439 @@ bryten_england.045 = {# Players informed
 #######################################
 # Norse Invansion Events
 #######################################
+scripted_effect guthrem_start_war_effect = {
+	#Give the adventurer a dynamic title to tide them over.
+
+	title:c_norfolk = { save_scope_as = adventurer_target }
+
+	create_dynamic_title = {
+		tier = duchy
+		name = {
+			first_valid = {
+				triggered_desc = {
+					trigger = {
+						faith = { has_doctrine = doctrine_gender_male_dominated }
+					}
+					desc = VIKING_ARMY_MEN_NAME
+				}
+				triggered_desc = {
+					trigger = {
+						faith = { has_doctrine = doctrine_gender_female_dominated }
+					}
+					desc = VIKING_ARMY_WOMEN_NAME
+				}
+				triggered_desc = {
+					trigger = {
+						faith = { has_doctrine = doctrine_gender_equal }
+					}
+					desc = VIKING_ARMY_NEUTRAL_NAME
+				}
+				#Fallback, just in case.
+				desc = VIKING_ARMY_NEUTRAL_NAME
+			}
+		}
+	}
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	scope:new_title = {
+		set_capital_county = scope:adventurer_target
+		set_landless_title = yes
+		set_destroy_on_gain_same_tier = yes
+		set_no_automatic_claims = yes
+		set_can_be_named_after_dynasty = no
+		change_title_holder = {
+			holder = character:168650
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+	scope:new_title = {
+		generate_coa = yes
+		set_variable = {
+			name = temporary_title
+			value = yes
+		}
+	}
+	#Declare the war.
+	character:168650 = {
+		start_war = {
+			casus_belli = fp1_scandi_adventurer_conquest
+			target = title:k_east_anglia.holder
+			target_title = title:k_east_anglia
+		}
+	}
+	# Setup event troops.
+	character:168650 = {
+		# Set a random spawn location.
+		## Try to pick a good spot in Scandinavia.
+		if = {
+			limit = {
+				any_county_in_region = {
+					region = custom_danish
+					is_coastal_county = yes
+					holder = { fp1_is_norse = yes }
+				}
+			}
+			random_county_in_region = {
+				region = custom_danish
+				limit = { 
+					is_coastal_county = yes
+					holder = { fp1_is_norse = yes } 				
+				}
+				# Weight up according to development, so armies tend to spawn in places where more randos would congregate.
+				weight = {
+					modifier = {
+						add = {
+							value = development_level
+							multiply = 10
+						}
+					}
+				}
+				save_temporary_scope_as = selected_county
+				character:168650 = {
+					set_variable = {
+						name = random_location
+						value = scope:selected_county.title_province
+						days = 365
+					}
+				}
+			}
+		}
+		## Otherwise, we used our backup of Lister, the last Scandinavian province left alive, three million miles into deep space.
+		else = {
+			set_variable = {
+				name = random_location
+				value = title:b_lister.title_province
+				days = 365
+			}
+		}
+		# Work out how many event troops we should give the adventurer for a 60:40 fight.
+		spawn_army = {
+			levies = {
+				add = {
+					#Base of 400.
+					add = scope:adventurer_target.holder.top_liege.max_military_strength
+					#Multiply that by the realm size of the target's top_liege.
+					multiply = 1.5
+					#Account for allies, adding more without just nullifying them.
+					scope:adventurer_target.holder.top_liege = {
+						every_ally = { add = this.max_military_strength }
+					}
+					#Cut it off so things don't get too ridiculous.
+					max = 8000
+					#Make sure all adventurers have a moderately respectable force.
+					min = 1000
+				}
+			}
+			inheritable = no
+			location = character:168650.var:random_location
+			name = scandi_adventurer_event_troops
+		}
+		spawn_army = {
+			men_at_arms = {
+				type = huscarl
+				stacks = {
+					value = 1
+					multiply = scope:adventurer_target.holder.top_liege.primary_title.tier
+				}
+			}
+			inheritable = yes
+			location = character:168650.var:random_location
+			name = scandi_adventurer_event_troops
+		}
+		spawn_army = {
+			men_at_arms = {
+				type = light_footmen
+				stacks = {
+					value = 1
+					multiply = scope:adventurer_target.holder.top_liege.primary_title.tier
+				}
+			}
+			inheritable = yes
+			location = character:168650.var:random_location
+			name = scandi_adventurer_event_troops
+		}
+		# Suppress startup error false-positive
+		if = {
+			limit = { has_variable = random_location }
+			# Do nothing.
+		}
+	}
+	# Loan a little gold in case they're in debt/to keep them going.
+	character:168650 = { add_gold = scandinavian_adventurer_efficacy_loan_value }
+}
+scripted_trigger valid_scandinavian_adventurer = {
+	is_available_ai_adult = yes
+	is_alive = yes
+	is_ruler = no
+	OR = {
+		any_heir_title = { count = 0 }
+		AND = {
+			save_temporary_scope_as = potential
+			any_heir_title = {
+				place_in_line_of_succession = {
+					target = scope:potential
+					value >= 3
+				}
+			}
+		}
+	}
+}
+scripted_trigger significant_north_germanic_presence_trigger = {
+	holder = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			has_culture = culture:norman
+			has_character_modifier = embraced_local_traditions_modifier
+			AND = {
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = settled_norse_dynasty_modifier
+				}
+			}
+		}
+		OR = {
+			AND = {
+				highest_held_title_tier >= tier_duchy
+				any_held_title = {
+					count >= 3
+					tier = tier_county
+					title_province = { geographical_region = $SCANDI_ADV_TARGET_REGION$ }
+				}
+			}
+			AND = {
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = settled_norse_dynasty_modifier
+				}
+			}
+		}
+	}
+}
+scripted_trigger scattered_north_germanic_presence_trigger = {
+	holder = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			has_culture = culture:norman
+			has_character_modifier = embraced_local_traditions_modifier
+			AND = {
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = settled_norse_dynasty_modifier
+				}
+			}
+		}
+	}
+}
+scripted_trigger valid_adventurer_target_trigger = {
+	holder = {
+		NOR = {
+			#Filter out North Germanics & Normans.
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			has_culture = culture:norman
+			has_character_modifier = embraced_local_traditions_modifier
+			AND = {
+				exists = dynasty
+				dynasty = {
+					has_dynasty_modifier = settled_norse_dynasty_modifier
+				}
+			}
+			#Plus any places already being attacked.
+			top_liege = {
+				any_character_war = { using_cb = fp1_scandi_adventurer_conquest }
+			}
+			#Or which have already earnt a ceasefire with this particular adventurer. Or any of their liege
+			OR = {
+				any_truce_holder = { this = scope:scandi_adventurer }
+				any_liege_or_above = { 
+					any_truce_holder = { this = scope:scandi_adventurer }
+				}
+			}
+			#And finally anywhere that has earnt a little peace.
+			OR = {
+				has_character_modifier = fp1_reprieve_from_sa_modifier
+				any_liege_or_above = { has_character_modifier = fp1_reprieve_from_sa_modifier }
+			}
+		}
+		OR = {
+			is_ai = yes
+			#Filter out players, unless they're large enough to take the hit.
+			AND = {
+				is_ai = no
+				sub_realm_size >= 8
+			}
+		}
+	}
+}
+scripted_trigger valid_scandinavian_county_trigger = {
+	#Should be simple enough, but might want to make it more complex in future.
+	culture = { has_cultural_pillar = heritage_north_germanic }
+}
+scripted_trigger valid_scandinavian_county_for_embark_trigger = {
+	is_coastal_county = yes
+	holder = { fp1_is_norse = yes }
+}
+scripted_effect scandinavian_adventurer_start_war_effect = {
+	#Give the adventurer a dynamic title to tide them over.
+	create_dynamic_title = {
+		tier = duchy
+		name = {
+			first_valid = {
+				triggered_desc = {
+					trigger = {
+						faith = { has_doctrine = doctrine_gender_male_dominated }
+					}
+					desc = VIKING_ARMY_MEN_NAME
+				}
+				triggered_desc = {
+					trigger = {
+						faith = { has_doctrine = doctrine_gender_female_dominated }
+					}
+					desc = VIKING_ARMY_WOMEN_NAME
+				}
+				triggered_desc = {
+					trigger = {
+						faith = { has_doctrine = doctrine_gender_equal }
+					}
+					desc = VIKING_ARMY_NEUTRAL_NAME
+				}
+				#Fallback, just in case.
+				desc = VIKING_ARMY_NEUTRAL_NAME
+			}
+		}
+	}
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = change
+		add_claim_on_loss = no
+	}
+	scope:new_title = {
+		set_capital_county = scope:adventurer_target
+		set_landless_title = yes
+		set_destroy_on_gain_same_tier = yes
+		set_no_automatic_claims = yes
+		set_can_be_named_after_dynasty = no
+		change_title_holder = {
+			holder = scope:scandi_adventurer
+			change = scope:change
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+	scope:new_title = {
+		generate_coa = yes
+		set_variable = {
+			name = temporary_title
+			value = yes
+		}
+	}
+	#Declare the war.
+	scope:scandi_adventurer = {
+		start_war = {
+			casus_belli = fp1_scandi_adventurer_conquest
+			target = scope:adventurer_target.holder.top_liege
+			target_title = scope:adventurer_target.duchy
+		}
+	}
+	# Setup event troops.
+	scope:scandi_adventurer = {
+		# Set a random spawn location.
+		## Try to pick a good spot in Scandinavia.
+		if = {
+			limit = {
+				any_county_in_region = {
+					region = world_europe_north
+					valid_scandinavian_county_for_embark_trigger = yes
+				}
+			}
+			random_county_in_region = {
+				region = world_europe_north
+				limit = { valid_scandinavian_county_for_embark_trigger = yes }
+				# Weight up according to development, so armies tend to spawn in places where more randos would congregate.
+				weight = {
+					modifier = {
+						add = {
+							value = development_level
+							multiply = 10
+						}
+					}
+				}
+				save_temporary_scope_as = selected_county
+				scope:scandi_adventurer = {
+					set_variable = {
+						name = random_location
+						value = scope:selected_county.title_province
+						days = 365
+					}
+				}
+			}
+		}
+		## Otherwise, we used our backup of Lister, the last Scandinavian province left alive, three million miles into deep space.
+		else = {
+			set_variable = {
+				name = random_location
+				value = title:b_lister.title_province
+				days = 365
+			}
+		}
+		# Work out how many event troops we should give the adventurer for a 60:40 fight.
+		spawn_army = {
+			levies = {
+				add = {
+					#Base of 400.
+					add = scope:adventurer_target.holder.top_liege.max_military_strength
+					#Multiply that by the realm size of the target's top_liege.
+					multiply = 1.5
+					#Account for allies, adding more without just nullifying them.
+					scope:adventurer_target.holder.top_liege = {
+						every_ally = { add = this.max_military_strength }
+					}
+					#Cut it off so things don't get too ridiculous.
+					max = 8000
+					#Make sure all adventurers have a moderately respectable force.
+					min = 1000
+				}
+			}
+			inheritable = no
+			location = scope:scandi_adventurer.var:random_location
+			name = scandi_adventurer_event_troops
+		}
+		spawn_army = {
+			men_at_arms = {
+				type = huscarl
+				stacks = {
+					value = 1
+					multiply = scope:adventurer_target.holder.top_liege.primary_title.tier
+				}
+			}
+			inheritable = yes
+			location = scope:scandi_adventurer.var:random_location
+			name = scandi_adventurer_event_troops
+		}
+		spawn_army = {
+			men_at_arms = {
+				type = light_footmen
+				stacks = {
+					value = 1
+					multiply = scope:adventurer_target.holder.top_liege.primary_title.tier
+				}
+			}
+			inheritable = yes
+			location = scope:scandi_adventurer.var:random_location
+			name = scandi_adventurer_event_troops
+		}
+		# Suppress startup error false-positive
+		if = {
+			limit = { has_variable = random_location }
+			# Do nothing.
+		}
+	}
+	# Loan a little gold in case they're in debt/to keep them going.
+	scope:scandi_adventurer = { add_gold = scandinavian_adventurer_efficacy_loan_value }
+}
+
 bryten_england.100 = {# Northumbria is victorious
 	type = character_event
 	title = bryten_england.100.t
@@ -2007,18 +2452,6 @@ bryten_england.100 = {# Northumbria is victorious
 	left_portrait = {
 		character = root
 		animation = personality_bold
-	}
-
-	trigger = {
-		NOT = { has_global_variable = northumbria_saxon_king }
-		game_start_date = 867.1.1
-	}
-	
-	immediate = {
-		set_global_variable = {
-			name = northumbria_saxon_king
-			value = yes
-		}
 	}
 
 	option = {# Good Riddence
@@ -2098,6 +2531,299 @@ bryten_england.100 = {# Northumbria is victorious
 		}
 	}
 }
+bryten_england.101 = {# Guthrem's invansion of East Anglia
+	hidden = yes
+
+	trigger = {
+		is_at_war = no # Won't happen if it is during Ivarr's invansion
+		current_date > 868.1.1
+		NOT = { exists = global_var:guthrem_invansion } # only fire once
+		character:168650 = { is_alive = yes }
+	}
+	
+	immediate = {
+		set_global_variable = {
+			name = guthrem_invansion
+			value = yes
+		}
+		guthrem_start_war_effect = yes
+	}
+}
+bryten_england.102 = {# Meeting with Ceolwulf
+	type = character_event
+	title = bryten_england.102.t
+	desc = bryten_england.102.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		is_at_war = no # Won't happen if it is during the war against Northumbria
+		has_title = title:k_northumbria # the Norse must be kings of Northumbria first
+		has_culture = culture:norse # It must be for the norse Kings, not Alle and his dynasty
+		current_date > 868.1.1 # Give it a couple of years after the war with Northumbria
+		NOT = { exists = global_var:great_heathen_army_looks_south } # only fire once
+		character:205112 = { is_alive = yes }
+	}
+	
+	immediate = {
+		set_global_variable = {
+			name = great_heathen_army_looks_south
+			value = yes
+		}
+	}
+
+	option = {# Good Riddence
+		name = bryten_england.102.send
+		character:205112 = {
+			trigger_event = {
+				id = bryten_england.103
+				days = { 10 20 }
+			}
+		}
+	}	
+	option = {# We don't need him for war
+		name = bryten_england.102.no_send
+		add_character_flag = temp_no_claim_war_cost
+		start_war = {
+			cb = sons_of_lothbrok_invasion_mercia_cb
+			target = title:k_mercia.holder
+			target_title = title:k_mercia
+		}
+		remove_character_flag = temp_no_claim_war_cost		
+
+	}
+	option = {# We have our own plans
+		name = bryten_england.102.no_war
+	}
+
+}
+bryten_england.103 = {# Heathen Arrangement
+	type = character_event
+	title = bryten_england.103.t
+	desc = bryten_england.103.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		title:k_mercia.holder = { save_scope_as = burgred }
+		title:k_northumbria.holder = { save_scope_as = heathen }
+	}
+
+	option = {# Good Riddence
+		name = bryten_england.103.accept
+		add_character_flag = temp_no_claim_war_cost
+		start_war = {
+			cb = sons_of_lothbrok_invasion_mercia2_cb
+			target = scope:mercian_king
+			claimant = character:205112
+			target_title = title:k_mercia
+		}
+		remove_character_flag = temp_no_claim_war_cost
+
+
+		hidden_effect = {
+			scope:heathen = {
+				trigger_event = {
+					id = bryten_england.104
+					days = { 5 10 }
+				}
+			}
+			scope:burgred = {
+				trigger_event = {
+					id = bryten_england.106
+					days = { 5 10 }
+				}
+			}
+		}
+	}	
+	option = {# Good Riddence
+		name = bryten_england.103.refuse
+		hidden_effect = {
+			scope:heathen = {
+				trigger_event = {
+					id = bryten_england.105
+					days = { 5 10 }
+				}
+			}
+		}
+	}
+	
+}
+bryten_england.104 = {# Ceolwulf agrees
+	type = character_event
+	title = bryten_england.104.t
+	desc = bryten_england.104.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:k_mercia.holder = {save_scope_as = mercian_king }
+		title:k_northumbria.holder = {save_scope_as = norse_allys}
+		character:205112 = {save_scope_as = ceolwulf}
+
+
+	}
+
+	option = {# War!
+		name = bryten_england.104.victory
+		scope:ceolwulf = {
+			every_character_war = {
+				limit = {
+					using_cb = sons_of_lothbrok_invasion_mercia2_cb
+					casus_belli = {
+						primary_attacker = scope:ceolwulf
+						primary_defender = scope:mercian_king
+					}
+				}
+				hidden_effect = {
+					set_called_to = root
+				}
+				add_attacker = scope:norse_allys
+			}
+			scope:recipient = {
+				add_opinion = {
+					target = root
+					modifier = helped_me_agaisnt_tyrant_opinion
+				}
+			}
+		}
+	}	
+}
+bryten_england.105 = {# Ceolwulf refuses
+	type = character_event
+	title = bryten_england.105.t
+	desc = bryten_england.105.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		set_global_variable = {
+			name = guthrem_invansion
+			value = yes
+		}
+		guthrem_start_war_effect = yes
+	}
+
+	option = {# Good Riddence
+		name = bryten_england.105.victory
+	}
+
+}
+bryten_england.106 = {# Ceolwulf betrays Burgred
+	type = character_event
+	title = bryten_england.106.t
+	desc = bryten_england.106.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {# Good Riddence
+		name = bryten_england.106.victory
+	}
+
+}
+bryten_england.107 = {# Leaving Mercia for rome
+	type = character_event
+	title = bryten_england.107.t
+	desc = bryten_england.107.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {# Good Riddence
+		name = bryten_england.107.victory
+	}
+
+}
+bryten_england.108 = {# Ceolwulf is King - Ceolwulf's view
+	type = character_event
+	title = bryten_england.108.t
+	desc = bryten_england.108.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		title:k_northumbria.holder = { save_scope_as = heathen }
+	}
+
+
+	option = {# Good Riddence
+		name = bryten_england.108.victory
+		hidden_effect = {# Giving the Eastern Part of Mercia to the Norse
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change
+				add_claim_on_loss = yes
+			}	
+			title:c_derby = {
+				change_title_holder = {
+					holder = scope:heathen
+					change = scope:change
+				}
+			}
+			title:c_lincolnshire = {
+				change_title_holder = {
+					holder = scope:heathen
+					change = scope:change
+				}
+			}
+			title:c_leicestershire = {
+				change_title_holder = {
+					holder = scope:heathen
+					change = scope:change
+				}
+			}
+			title:c_nottinghamshire = {
+				change_title_holder = {
+					holder = scope:heathen
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+
+	}
+	after = {
+		scope:heathen = {
+			trigger_event = bryten_england.109
+		}
+	}
+
+}
+bryten_england.109 = {# Ceolwulf is king - Norse view
+	type = character_event
+	title = bryten_england.109.t
+	desc = bryten_england.109.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Good Riddence
+		name = bryten_england.109.victory
+	}
+
+}
 #######################################
 # Pilgrimage to Bury St. Edmunds
 #######################################
@@ -2111,45 +2837,38 @@ bryten_england.125 = {# The martydom of Edmund.
 		animation = happiness
 	}
 
-	trigger = {
-		has_title = title:k_east_anglia
-		not = {	exists = global_var:bryten_monks_take_cuthbert } # Fire Only Once
-		this = character:163111
-		game_start_date = 867.1.1
-	}
-
 	immediate = {
-		character:163064 = { save_scope_as = edumund }
 		set_global_variable = {
-			name = bryten_monks_take_cuthbert
+			name = bryten_edmund_martydom
 			value = yes
 		}
 	}
 	
 	option = { # Ok
 		name = bryten_england.125.edmund
-		scope:edumund = {
-			death = natural
+		character:163064 = {
+			if = {
+				limit = { is_alive = yes }
+				death = {
+					death_reason = death_decapitated
+					killer = character:163111
+				}
+			}
 		}
 	}
 
 	after = {
-		every_ruler = {# Let other English Kings know of his death
-			if = {
-				limit = {
-					OR = {
-						has_primary_title = title:k_kent
-						has_primary_title = title:k_northumbria
-						has_primary_title = title:k_mercia
-						has_primary_title = title:k_wessex
-						has_primary_title = title:k_essex
-					}
-				}
-				trigger_event = {
-					id = bryten_england.126
-					days = { 10 20 }
+		every_player = {# Let other English Kings know of his death
+			limit = {
+				OR = {
+					has_primary_title = title:k_kent
+					has_primary_title = title:k_northumbria
+					has_primary_title = title:k_mercia
+					has_primary_title = title:k_wessex
+					has_primary_title = title:k_essex
 				}
 			}
+			trigger_event = bryten_england.126
 		}
 	}
 		
@@ -2176,17 +2895,11 @@ bryten_england.127 = {# The cult of St. Edmund the Martyr
 	}
 
 	trigger = {
-		OR = {# Have to own territory in East Anglia
-			has_title = title:k_east_anglia
-			has_title = title:d_east_anglia
-			has_title = title:d_norfolk
-			has_title = title:c_norfolk
-			has_title = title:c_suffolk
-			has_title = title:c_cambridgeshire
-		}
+		has_title = title:k_east_anglia
 		religion = religion:christianity_religion # Got to be a Christian
+		exists = global_var:bryten_edmund_martydom # the cult can't be formed till after 
 		not = {	exists = global_var:bryten_saint_edmund_cult } # Fire Only Once
-		game_start_date = 867.1.1
+		current_date > 870.1.1 # give it some time for the cult to not happen right away
 	}
 
 	immediate = {

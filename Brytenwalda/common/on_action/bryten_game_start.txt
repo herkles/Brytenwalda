@@ -9,15 +9,26 @@ on_game_start_after_lobby = {
 
 bryten_setup_after_game_start_on_actions = {
 	effect = {
-		character:140 = {# Norman is King in the Norman Conquest Bookmark
-			if = { limit = { game_start_date <= 1066.12.25 } }
+		character:140 = {
+			if = {
+				limit = {
+					is_alive = yes
+					is_landed = yes
+					game_start_date <= 1066.12.25
+				}
+			}
 			trigger_event = bryten_england.001
 		}
-		character:33358 = {# Aethelred designates Alfred
-			if = { limit = { game_start_date <= 867.1.1 } }
+		character:33358 = {
+			if = {
+				limit = {
+					is_alive = yes
+					is_landed = yes
+					game_start_date <= 867.1.1
+				}
+			}
 			trigger_event = bryten_england.500
-		}		
-
+		}
 
 		if = {# setting up the pilgrimage stuff for 1066 start date
 			limit = { 
@@ -37,7 +48,7 @@ bryten_setup_after_game_start_on_actions = {
 		}
 
 		if = {# Anglo-Saxons like the Scandivians more due to ties.
-			limit = { game_start_date <= 1066.9.15 }
+			limit = { current_date <= 1066.9.15 }
 			culture:anglo_saxon = {
 				change_cultural_acceptance = {
 					target = culture:swedish
@@ -62,7 +73,7 @@ bryten_setup_after_game_start_on_actions = {
 			}
 		}
 		if = {# Normans Don't like the Anglo Cultures
-			limit = { game_start_date = 1066.12.25 }
+			limit = { current_date = 1066.12.25 }
 			culture:norman = {
 				change_cultural_acceptance = {
 					target = culture:anglo_saxon

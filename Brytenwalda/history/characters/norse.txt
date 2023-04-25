@@ -6322,13 +6322,31 @@ bryten_norse_01 = {
 	culture = "norse"
 	father = 168648
 	mother = 168632
+
+	#Skills
+	diplomacy = 8
+	martial = 10
+	stewardship = 7
+	intrigue = 8
+	learning = 5
+	prowess = 12
+	
+	#Education
+	trait = education_martial_3
+
+	#Personality Traits
+	trait = cynical
+	trait = ambitious
+	trait = shrewd
+	trait = greedy
+	trait = viking
+
 	839.1.1 = {
 		birth = yes
 	}
 	881.1.1 = {
 		religion = "catholic"
 		name = "E_thelstan"
-		culture = anglo_saxon
 	}
 	891.1.1 = {
 		death = yes
