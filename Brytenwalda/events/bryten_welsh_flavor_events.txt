@@ -271,9 +271,7 @@ bryten_wales.109 = {# The Papal Bull - Let St. David's owner know
 			}
 		}
 		not = {	exists = global_var:bryten_papal_bull_davids } # Fire Only Once
-		any_realm_province = {
-			has_building = bryten_building_st_davids_cathedral_02
-		}
+		any_realm_province = { has_building = bryten_building_st_davids_cathedral_02 }
 	}
 
 	immediate = {
@@ -292,17 +290,11 @@ bryten_wales.109 = {# The Papal Bull - Let St. David's owner know
 	}
 
 	after = {
-		every_ruler = {# Let other English Kings know of his death
+		every_player = {# Let other English Kings know of his death
 			if = {
 				limit = {
-					capital_province = {
-						OR = {
-							geographical_region = world_europe_west_britannia
-							geographical_region = world_europe_west_francia
-							geographical_region = ghw_region_scandinavia
-							geographical_region = world_europe_west_germania
-						}
-					}
+					capital_province = { geographical_region = world_europe_west }
+					faith = faith:catholic
 				}
 				trigger_event = {
 					id = bryten_wales.110

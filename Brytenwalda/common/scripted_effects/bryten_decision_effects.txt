@@ -18,23 +18,23 @@ unite_kingdom_england_decision_effects = {# Uniting England
 	}
 
 	if = {
-		limit = { scope:spain_uniter.primary_title = title:k_mercia }
+		limit = { scope:england_kingdom_uniter.primary_title = title:k_mercia }
 		primary_title = { set_coa = k_england_mercia }
 	}
 	else_if = {
-		limit = { scope:spain_uniter.primary_title = title:k_northumbria }
+		limit = { scope:england_kingdom_uniter.primary_title = title:k_northumbria }
 		primary_title = { set_coa = k_england_northumbria }
 	}
 	else_if = {
-		limit = { scope:spain_uniter.primary_title = title:k_east_anglia }
+		limit = { scope:england_kingdom_uniter.primary_title = title:k_east_anglia }
 		primary_title = { set_coa = k_england_east_anglia }
 	}
 	else_if = {
-		limit = { scope:spain_uniter.primary_title = title:k_kent }
+		limit = { scope:england_kingdom_uniter.primary_title = title:k_kent }
 		primary_title = { set_coa = k_england_kent }
 	}
 	else_if = {
-		limit = { scope:spain_uniter.primary_title = title:k_wessex }
+		limit = { scope:england_kingdom_uniter.primary_title = title:k_wessex }
 		primary_title = { set_coa = k_england }
 	}
 

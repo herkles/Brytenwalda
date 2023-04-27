@@ -324,6 +324,80 @@ yearly_global_pulse = {
 				}
 			}
 		}
+
+		if = {# Anglo-Saxon Culture Forming
+			limit = {
+				NOT = { exists = global_var:bryten_anglo_saxon_created }
+				title:k_england = { is_title_created = yes } # England must be created first
+				current_date >= 900.1.1
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 867
+				modifier = {
+					add = 2 # 2% chance per year
+					current_date >= 900.1.1
+				}
+				modifier = {
+					add = 8 # 10% chance per year
+					current_date >= 930.1.1
+				}
+				modifier = {
+					add = 15 # 25% chance per year
+					current_date >= 930.1.1
+				}
+				modifier = {
+					add = 15 # 25% chance per year
+					current_date >= 930.1.1
+				}
+				modifier = {
+					add = 10 # 25% chance per year
+					culture = { has_innovation = innovation_chronicle_writing }
+				}
+				modifier = {
+					add = 15 # 25% chance per year
+					culture = { has_innovation = innovation_baliffs }
+				}
+				set_global_variable = {
+					name = bryten_anglo_saxon_created
+					value = yes
+				}
+				trigger_event = {
+					id = bryten_england.30
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# English Culture Forming
+			limit = {
+				NOT = { has_global_variable = bryten_english_created }
+				title:k_england = { is_title_created = yes } # England must be created first
+				title:k_england.holder = { culture = { has_cultural_pillar = heritage_frankish } }
+				current_date >= 1150.1.1
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 867
+				modifier = {
+					add = 2 # 2% chance per year
+					current_date >= 1150.1.1
+				}
+				modifier = {
+					add = 8 # 10% chance per year
+					current_date >= 1170.1.1
+				}
+				modifier = {
+					add = 15 # 25% chance per year
+					current_date >= 1190.1.1
+				}
+				set_global_variable = {
+					name = bryten_english_created
+					value = yes
+				}
+				trigger_event = {
+					id = bryten_england.040
+					days = { 60 300 }
+				}
+			}
+		}
 	}
 	on_actions = {
 		inspiration_maintenance_global_pulse

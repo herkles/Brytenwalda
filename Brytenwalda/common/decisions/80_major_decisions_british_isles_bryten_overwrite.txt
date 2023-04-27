@@ -395,11 +395,12 @@ negotiate_the_danelaw_decision = {
 negotiate_the_danelaw_integrate_duchies_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
 
-	ai_check_interval = 1
+	ai_check_interval = 0
 
 	desc = negotiate_the_danelaw_integrate_duchies_decision_desc
 
 	is_shown = {
+		always = no
 		# First off, k_england must currently be partitioned.
 		exists = global_var:partition_active_danelaw
 		# Then, you must be the holder of either k_england or k_danelaw.
@@ -414,6 +415,7 @@ negotiate_the_danelaw_integrate_duchies_decision = {
 	cost = { prestige = 500 }
 
 	is_valid = {
+		always = no
 		# Must completely control at least one duchy from the other side.
 		trigger_if = {
 			limit = { has_title = title:k_england }
@@ -593,19 +595,20 @@ negotiate_the_danelaw_integrate_duchies_decision = {
 	}
 
 	ai_will_do = {
-		base = 100
+		base = 0
 	}
 }
 formalise_the_daneland_decision = {
 	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
 	major = yes
 
-	ai_check_interval = 120
+	ai_check_interval = 0
 
 	desc = formalise_the_daneland_decision_desc
 
 	is_shown = {
 		# Has k_danelaw.
+		always = no
 		any_held_title = { this = title:k_danelaw }
 		NOT = {
 			is_target_in_global_variable_list = {
@@ -671,7 +674,7 @@ formalise_the_daneland_decision = {
 	}
 
 	ai_will_do = {
-		base = 100
+		base = 0
 	}
 }
 #############################################

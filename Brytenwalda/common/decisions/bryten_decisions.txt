@@ -11,12 +11,7 @@ unite_england_decision = {# Unite England
 		culture = { has_cultural_pillar = heritage_west_germanic }
 		custom_tooltip = {
 			text = capital_in_england_region_tooltip
-			capital_province = { # English Kings can go to Bury Saint Edmunds
-				OR = {
-					geographical_region = custom_england_saxon
-					geographical_region = custom_england
-				}
-			} 
+			capital_province = { geographical_region = custom_england } 
 		}
 		NOT = {# this is a unique decision
 			is_target_in_global_variable_list = {
@@ -31,12 +26,7 @@ unite_england_decision = {# Unite England
 	is_valid = {
 		custom_tooltip = {# Capital Must be in England
 			text = capital_in_england_region_tooltip
-			capital_province = { # English Kings can go to Bury Saint Edmunds
-				OR = {
-					geographical_region = custom_england_saxon
-					geographical_region = custom_england
-				}
-			} 
+			capital_province = { geographical_region = custom_england } 
 		}
 		custom_tooltip = {# Must own the majority of England
 			text = owns_majority_england_region_tooltip
@@ -153,12 +143,7 @@ restore_kingdom_kent_decision = {# Restore the Kingdom of Kent
 		}
 		custom_tooltip = {
 			text = capital_in_england_region_tooltip
-			capital_province = { # English Kings can go to Bury Saint Edmunds
-				OR = {
-					geographical_region = custom_england_saxon
-					geographical_region = custom_england
-				}
-			} 
+			capital_province = { geographical_region = custom_england } 
 		}
 
 	}
@@ -166,12 +151,7 @@ restore_kingdom_kent_decision = {# Restore the Kingdom of Kent
 	is_valid = {
 		custom_tooltip = {
 			text = capital_in_england_region_tooltip
-			capital_province = { # English Kings can go to Bury Saint Edmunds
-				OR = {
-					geographical_region = custom_england_saxon
-					geographical_region = custom_england
-				}
-			} 
+			capital_province = { geographical_region = custom_england } 
 		}
 		is_independent_ruler = yes
 		prestige_level >= high_prestige_level
@@ -245,12 +225,8 @@ restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
 		}
 		custom_tooltip = {
 			text = capital_in_england_region_tooltip
-			capital_province = { # English Kings can go to Bury Saint Edmunds
-				OR = {
-					geographical_region = custom_england_saxon
-					geographical_region = custom_england
-				}
-			} 
+			capital_province = { geographical_region = custom_england } 
+
 		}
 	}
 
@@ -322,12 +298,7 @@ promote_norse_settlement_decision = {# Promote Norse Settlement
 		highest_held_title_tier >= tier_kingdom
 		custom_description = {# capital must be in England
 			text = capital_in_england_region_tooltip
-			capital_province = { # English Kings can go to Bury Saint Edmunds
-				OR = {
-					geographical_region = custom_england_saxon
-					geographical_region = custom_england
-				}
-			} 
+			capital_province = { geographical_region = custom_england } 
 		}
 		culture = { has_cultural_pillar = heritage_north_germanic }
 		NOT = {
@@ -344,12 +315,7 @@ promote_norse_settlement_decision = {# Promote Norse Settlement
 		prestige_level >= 2 # Should be prestigious
 		custom_description = {# capital must be in England
 			text = capital_in_england_region_tooltip
-			capital_province = { # English Kings can go to Bury Saint Edmunds
-				OR = {
-					geographical_region = custom_england_saxon
-					geographical_region = custom_england
-				}
-			} 
+			capital_province = { geographical_region = custom_england } 
 		}
 	}
 
@@ -401,12 +367,7 @@ bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
 		religion = religion:christianity_religion
 		NOT = { has_character_flag = bryten_bury_saint_edmunds }
 		exists = global_var:bryten_saint_edmund_cult
-		capital_province = { # English Kings can go to Bury Saint Edmunds
-			OR = {
-				geographical_region = custom_england_saxon
-				geographical_region = custom_england
-			}
-		} 
+		capital_province = { geographical_region = world_europe_west_britannia } 
 	}
 	
 	is_valid = {
@@ -459,7 +420,9 @@ bryten_pilgrimage_durham = {# Pilgrimage to Durham
 		is_landed = yes
 		religion = religion:christianity_religion
 		NOT = { has_character_flag = bryten_pilgrimage_durham }
-		exists = global_var:bryten_monks_cuthbert_durham
+		exists = global_var:bryten_cuthbert_tomb
+		has_global_variable = bryten_cuthbert_tomb
+
 		OR = {
 			title:c_durham = {
 				squared_distance = {
@@ -467,17 +430,14 @@ bryten_pilgrimage_durham = {# Pilgrimage to Durham
 					value <= squared_distance_small
 				}
 			}
-			capital_province = { # English Kings can go to Bury Saint Edmunds
-				OR = {
-					geographical_region = custom_england_saxon
-					geographical_region = custom_england
-				}
-			}  
+			capital_province = { geographical_region = world_europe_west_britannia }   
 		}
 	}
 	
 	is_valid = {
 		gold >= medium_gold_value
+		exists = global_var:bryten_cuthbert_tomb
+		has_global_variable = bryten_cuthbert_tomb
 	}
 	
 	is_valid_showing_failures_only = {
@@ -522,16 +482,12 @@ bryten_pilgrimage_edmund = {# Pilgrimage to Bury Saint Edmunds
 		religion = religion:christianity_religion
 		NOT = { has_character_flag = bryten_pilgrimage_edmund }
 		exists = global_var:bryten_bury_saint_edmunds
-		capital_province = { # English Kings can go to Bury Saint Edmunds
-			OR = {
-				geographical_region = custom_england_saxon
-				geographical_region = custom_england
-			}
-		}
+		capital_province = { geographical_region = world_europe_west_britannia } 
 	}
 	
 	is_valid = {
 		gold >= medium_gold_value
+		exists = global_var:bryten_bury_saint_edmunds
 	}
 	
 	is_valid_showing_failures_only = {
