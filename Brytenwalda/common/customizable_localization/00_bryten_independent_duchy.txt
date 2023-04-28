@@ -1,0 +1,198 @@
+﻿###########################################################
+# Anglo-Saxon Titles
+###########################################################
+AngloSaxonIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_anglo_saxon
+	}
+	text = {
+		trigger = {
+			is_independent_ruler = yes
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultanate_anglo_saxon
+	}
+	text = {
+		fallback = yes
+		localization_key = kingdom_default_anglo_saxon
+	}
+}
+###########################################################
+# Anglo-Norse Titles
+###########################################################
+
+###########################################################
+# Norman Titles
+###########################################################
+NormanIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_french
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_norman
+	}
+}
+###########################################################
+# English Titles
+###########################################################
+EnglishIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_english
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_english
+	}
+}
+###########################################################
+# Scottish Titles
+###########################################################
+ScottishIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_scottish
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_scottish
+	}
+}
+###########################################################
+# Cumbrian Titles
+###########################################################
+PictishCumbrianIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_pictish
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_pictish_cumbrian
+	}
+}
+###########################################################
+# Welsh Titles
+###########################################################
+
+###########################################################
+# Cornish Titles
+###########################################################
+CornishIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_cornish
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_cornish
+	}
+}
+###########################################################
+# Goidelic Titles
+###########################################################
+DynastGoidIndepDukeMale = {
+	type = character
+	text = {
+		trigger = {
+			culture = { any_parent_culture_or_above = { has_cultural_pillar = heritage_north_germanic } }
+		}
+		localization_key = king_male_gael_norse
+	}
+	text = {
+		localization_key = indep_duke_male_goid
+		fallback = yes
+	}
+}
+IndepDukeMaleGoid = {
+	type = character
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_irish }
+		}
+		localization_key = duke_default_male_irish
+	}
+	text = {
+		localization_key = duke_feudalclan_male_gaelic_independent
+		fallback = yes
+	}
+}
+DynastGoidIndepDukeFemale = {
+	type = character
+	text = {
+		trigger = {
+			culture = { any_parent_culture_or_above = { has_cultural_pillar = heritage_north_germanic } }
+		}
+		localization_key = king_female_gael_norse
+	}
+	text = {
+		localization_key = indep_duke_female_goid
+		fallback = yes
+	}
+}
+IndepDukeFemaleGoid = {
+	type = character
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_irish }
+		}
+		localization_key = duke_default_female_irish
+	}
+	text = {
+		localization_key = duke_feudalclan_female_gaelic_independent
+		fallback = yes
+	}
+}
+GoidIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_irish }
+		}
+		localization_key = duchy_default_irish
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_gaelic
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_gaelic
+	}
+}
+###########################################################
+# Gaelic Titles
+###########################################################
+
+###########################################################
+# Irish Titles
+###########################################################
+
+###########################################################
+# Norse-Gael Titles
+###########################################################

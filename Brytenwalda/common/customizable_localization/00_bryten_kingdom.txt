@@ -1,0 +1,561 @@
+﻿###########################################################
+# Anglo-Saxon Titles
+###########################################################
+SultanMaleAngloSaxon = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_male_anglo_saxon
+	}
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = king_default_male_holder_anglo
+	}
+	text = {
+		fallback = yes
+		localization_key = king_default_male_anglo
+	}
+}
+KingMaleAnglo = {
+	type = character
+	text = {
+		trigger = {
+			culture = { any_parent_culture_or_above = { has_cultural_pillar = heritage_north_germanic } }
+		}
+		localization_key = king_default_male_anglo_norse
+	}
+	text = {
+		localization_key = king_default_male_anglo_saxon
+		fallback = yes
+	}
+}
+SultanFemaleAngloSaxon = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_female_anglo_saxon
+	}
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = king_default_female_holder_anglo
+	}
+	text = {
+		fallback = yes
+		localization_key = king_default_female_anglo
+	}
+}
+KingFemaleAnglo = {
+	type = character
+	text = {
+		trigger = {
+			culture = { any_parent_culture_or_above = { has_cultural_pillar = heritage_north_germanic } }
+		}
+		localization_key = king_default_female_anglo_norse
+	}
+	text = {
+		localization_key = king_default_female_anglo_saxon
+		fallback = yes
+	}
+}
+KingdomAngloSaxon = {
+	type = character
+	text = {
+		trigger = {
+			is_independent_ruler = yes
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultanate_anglo_saxon
+	}
+	text = {
+		fallback = yes
+		localization_key = kingdom_default_anglo_saxon
+	}
+}
+###########################################################
+# Anglo-Norse Titles
+###########################################################
+
+###########################################################
+# Norman Titles
+###########################################################
+
+###########################################################
+# English Titles
+###########################################################
+KingMaleEnglish = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_male_english
+	}
+	text = {
+		fallback = yes
+		localization_key = king_default_male_english
+	}
+}
+KingFemaleEnglish = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_female_english
+	}
+	text = {
+		fallback = yes
+		localization_key = king_default_female_english
+	}
+}
+KingdomEnglish = {
+	type = character
+	text = {
+		trigger = {
+			is_independent_ruler = yes
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultanate_english
+	}
+	text = {
+		fallback = yes
+		localization_key = kingdom_default_english
+	}
+}
+###########################################################
+# Scottish Titles
+###########################################################
+KingMaleScottish = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_male_scottish
+	}
+	text = {
+		fallback = yes
+		localization_key = king_default_male_scottish
+	}
+}
+KingFemaleScottish = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_female_scottish
+	}
+	text = {
+		fallback = yes
+		localization_key = king_default_female_scottish
+	}
+}
+KingdomScottish = {
+	type = character
+	text = {
+		trigger = {
+			is_independent_ruler = yes
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultanate_scottish
+	}
+	text = {
+		fallback = yes
+		localization_key = kingdom_default_scottish
+	}
+}
+###########################################################
+# Cumbrian Titles
+###########################################################
+
+###########################################################
+# Welsh Titles
+###########################################################
+KingMaleWelsh = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_male_welsh
+	}
+	text = {
+		fallback = yes
+		localization_key = king_default_male_welsh
+	}
+}
+KingFemaleWelsh = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_female_welsh
+	}
+	text = {
+		fallback = yes
+		localization_key = king_default_female_welsh
+	}
+}
+KingdomWelsh = {
+	type = character
+	text = {
+		trigger = {
+			is_independent_ruler = yes
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultanate_welsh
+	}
+	text = {
+		fallback = yes
+		localization_key = kingdom_default_welsh
+	}
+}
+###########################################################
+# Cornish Titles
+###########################################################
+KingMaleCornish = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_male_cornish
+	}
+	text = {
+		fallback = yes
+		localization_key = king_default_male_cornish
+	}
+}
+KingFemaleCornish = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_female_cornish
+	}
+	text = {
+		fallback = yes
+		localization_key = king_default_female_cornish
+	}
+}
+KingdomCornish = {
+	type = character
+	text = {
+		trigger = {
+			is_independent_ruler = yes
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultanate_cornish
+	}
+	text = {
+		fallback = yes
+		localization_key = kingdom_default_cornish
+	}
+}
+###########################################################
+# Goidelic Titles
+###########################################################
+SultanMaleGoidelic = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_male_goidelic
+	}
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = king_male_holder_goid
+	}
+	text = {
+		fallback = yes
+		localization_key = king_male_non_holder_goid
+	}
+}
+KingMaleGoid = {
+	type = character
+	text = {
+		trigger = {
+			culture = { any_parent_culture_or_above = { has_cultural_pillar = heritage_north_germanic } }
+		}
+		localization_key = high_king_male_gael_norse
+	}
+	text = {
+		localization_key = king_default_male_goidelic
+		fallback = yes
+	}
+}
+SultanFemaleGoidelic = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					is_independent_ruler = yes
+					root.faith = {
+						has_doctrine = tenet_struggle_submission
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						is_independent_ruler = yes
+						faith = {
+							has_doctrine = tenet_struggle_submission
+						}
+					}
+				}
+			}
+		}
+		localization_key = sultan_female_goidelic
+	}
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = king_female_holder_goid
+	}
+	text = {
+		fallback = yes
+		localization_key = king_female_non_holder_goid
+	}
+}
+KingFemaleGoid = {
+	type = character
+	text = {
+		trigger = {
+			culture = { any_parent_culture_or_above = { has_cultural_pillar = heritage_north_germanic } }
+		}
+		localization_key = high_king_female_gael_norse
+	}
+	text = {
+		localization_key = king_default_female_goidelic
+		fallback = yes
+	}
+}
+KingdomGoidelic = {
+	type = character
+	text = {
+		trigger = {
+			is_independent_ruler = yes
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultanate_goidelic
+	}
+	text = {
+		fallback = yes
+		localization_key = kingdom_default_goidelic
+	}
+}
+###########################################################
+# Gaelic Titles
+###########################################################
+
+###########################################################
+# Irish Titles
+###########################################################
+
+###########################################################
+# Norse-Gael Titles
+###########################################################

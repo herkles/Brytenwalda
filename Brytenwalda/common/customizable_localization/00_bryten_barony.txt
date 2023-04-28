@@ -1,0 +1,136 @@
+﻿###########################################################
+# Anglo-Saxon Titles
+###########################################################
+DynastyCheckBaronAnglo = {
+	type = character
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = baron_male_holder_anglo
+	}
+	text = {
+		localization_key = baron_male_non_holder_anglo
+		fallback = yes
+	}
+}
+BaronMaleAnglo = {
+	type = character
+	text = {
+		trigger = {
+			culture = { any_parent_culture_or_above = { has_cultural_pillar = heritage_north_germanic } }
+		}
+		localization_key = baron_male_anglo_norse
+	}
+	text = {
+		localization_key = baron_male_anglo_saxon
+		fallback = yes
+	}
+}
+BaronyAnglo = {
+	type = character
+	text = {
+		trigger = {
+			culture = { any_parent_culture_or_above = { has_cultural_pillar = heritage_north_germanic } }
+		}
+		localization_key = barony_castle_anglo_norse
+	}
+	text = {
+		localization_key = barony_castle_anglo_saxon
+		fallback = yes
+	}
+}
+###########################################################
+# Anglo-Norse Titles
+###########################################################
+
+###########################################################
+# Norman Titles
+###########################################################
+
+###########################################################
+# English Titles
+###########################################################
+
+###########################################################
+# Scottish Titles
+###########################################################
+
+###########################################################
+# Cumbrian Titles
+###########################################################
+
+###########################################################
+# Welsh Titles
+###########################################################
+
+###########################################################
+# Cornish Titles
+###########################################################
+
+###########################################################
+# Goidelic Titles
+###########################################################
+
+###########################################################
+# Gaelic Titles
+###########################################################
+
+###########################################################
+# Irish Titles
+###########################################################
+DynastyCheckBaronIrishM = {
+	type = character
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = baron_male_holder_irish
+	}
+	text = {
+		localization_key = baron_male_non_holder_irish
+		fallback = yes
+	}
+}
+BaronMaleIrish = {
+	type = character
+	text = {
+		trigger = {
+			culture = { any_parent_culture_or_above = { has_cultural_pillar = heritage_north_germanic } }
+		}
+		localization_key = baron_male_gael_norse
+	}
+	text = {
+		localization_key = baron_male_irish_default
+		fallback = yes
+	}
+}
+DynastyCheckBaronIrishF = {
+	type = character
+	text = {
+		trigger = {
+			is_ruler = yes
+		}
+		localization_key = baron_female_holder_irish
+	}
+	text = {
+		localization_key = baron_female_non_holder_irish
+		fallback = yes
+	}
+}
+BaronFemaleIrish = {
+	type = character
+	text = {
+		trigger = {
+			culture = { any_parent_culture_or_above = { has_cultural_pillar = heritage_north_germanic } }
+		}
+		localization_key = baron_female_gael_norse
+	}
+	text = {
+		localization_key = baron_female_irish_default
+		fallback = yes
+	}
+}
+###########################################################
+# Norse-Gael Titles
+###########################################################

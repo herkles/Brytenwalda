@@ -1,0 +1,284 @@
+﻿###########################################################
+# Anglo-Saxon Titles
+###########################################################
+QueenMAngloSaxon = {
+	type = character
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_anglo_saxon
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_anglo_saxon
+	}
+}
+###########################################################
+# Anglo-Norse Titles
+###########################################################
+
+###########################################################
+# Norman Titles
+###########################################################
+
+###########################################################
+# English Titles
+###########################################################
+QueenMEnglish = {
+	type = character
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_english
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_english
+	}
+}
+###########################################################
+# Scottish Titles
+###########################################################
+QueenMScottish = {
+	type = character
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_scottish
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_scottish
+	}
+}
+###########################################################
+# Cumbrian Titles
+###########################################################
+
+###########################################################
+# Welsh Titles
+###########################################################
+PrinceWelsh = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = father.primary_heir
+					root.father.primary_heir = root
+				}
+				AND = {
+					exists = mother.primary_heir
+					root.mother.primary_heir = root
+				}
+			}
+		}
+		localization_key = welsh_heir_male
+	}
+	text = {
+		fallback = yes
+		localization_key =  prince_default_male_welsh
+	}
+}
+PrincessWelsh = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = father.primary_heir
+					root.father.primary_heir = root
+				}
+				AND = {
+					exists = mother.primary_heir
+					root.mother.primary_heir = root
+				}
+			}
+		}
+		localization_key = welsh_heir_female
+	}
+	text = {
+		fallback = yes
+		localization_key =  prince_default_female_welsh
+	}
+}
+QueenMWelsh = {
+	type = character
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_welsh
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_welsh
+	}
+}
+###########################################################
+# Cornish Titles
+###########################################################
+PrinceCornish = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = father.primary_heir
+					root.father.primary_heir = root
+				}
+				AND = {
+					exists = mother.primary_heir
+					root.mother.primary_heir = root
+				}
+			}
+		}
+		localization_key = welsh_heir_male
+	}
+	text = {
+		fallback = yes
+		localization_key =  prince_default_male_cornish
+	}
+}
+PrincessCornish = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = father.primary_heir
+					root.father.primary_heir = root
+				}
+				AND = {
+					exists = mother.primary_heir
+					root.mother.primary_heir = root
+				}
+			}
+		}
+		localization_key = welsh_heir_female
+	}
+	text = {
+		fallback = yes
+		localization_key =  prince_default_female_cornish
+	}
+}
+###########################################################
+# Goidelic Titles
+###########################################################
+PrinceGoidelic = {
+	type = character
+	text = {
+		trigger = {
+			any_parent = {
+				is_independent_ruler = yes
+				faith = {
+					has_doctrine = tenet_struggle_submission
+				}
+			}
+		}
+		localization_key = sultan_prince_male_goidelic
+	}
+	text = {
+		fallback = yes
+		localization_key =  prince_default_male_goidelic
+	}
+}
+PrincessGoidelic = {
+	type = character
+	text = {
+		trigger = {
+			any_parent = {
+				is_independent_ruler = yes
+				faith = {
+					has_doctrine = tenet_struggle_submission
+				}
+			}
+		}
+		localization_key = sultan_prince_female_goidelic
+	}
+	text = {
+		fallback = yes
+		localization_key =  prince_default_female_goidelic
+	}
+}
+QueenMGoidelic = {
+	type = character
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_goidelic
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_goidelic
+	}
+}
+###########################################################
+# Gaelic Titles
+###########################################################
+
+PrincePictish = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = father.primary_heir
+					root.father.primary_heir = root
+				}
+				AND = {
+					exists = mother.primary_heir
+					root.mother.primary_heir = root
+				}
+			}
+		}
+		localization_key = piccum_heir_male
+	}
+	text = {
+		fallback = yes
+		localization_key =  prince_default_male_piccum
+	}
+}
+PrincessPictish = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = father.primary_heir
+					root.father.primary_heir = root
+				}
+				AND = {
+					exists = mother.primary_heir
+					root.mother.primary_heir = root
+				}
+			}
+		}
+		localization_key = piccum_heir_female
+	}
+	text = {
+		fallback = yes
+		localization_key =  prince_default_female_piccum
+	}
+}
+###########################################################
+# Irish Titles
+###########################################################
+
+###########################################################
+# Norse-Gael Titles
+###########################################################
