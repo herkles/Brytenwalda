@@ -311,12 +311,16 @@ promote_norse_settlement_decision = {# Promote Norse Settlement
 
 	is_valid = {
 		highest_held_title_tier >= tier_kingdom # Got to be a kingdom
-		primary_title.title_held_years >= 30 # Need to rule for a number of years in England
+		
 		prestige_level >= 2 # Should be prestigious
-		custom_description = {# capital must be in England
+		custom_tooltip = {# capital must be in England
 			text = capital_in_england_region_tooltip
 			capital_province = { geographical_region = custom_england } 
 		}
+		custom_tooltip = {# Got to have 30 years
+			text = reign_in_england_time_tooltip
+			primary_title.title_held_years >= 30
+		}		
 	}
 
 	is_valid_showing_failures_only = {

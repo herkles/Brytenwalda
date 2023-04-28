@@ -1572,13 +1572,12 @@ bryten_england.023 = {# Norman England Secured
 	}
 }
 #######################################
-# Anglo-Saxon Culture Forming
+# Anglo-Saxon Culture forming
 #######################################
 bryten_england.029 = {# Anglo-Saxon Secured  
 	hidden = yes	
 
 	trigger = {
-		not = { exists = global_var:bryten_scots_language_english }
 		not = { exists = global_var:bryten_anglo_saxon_secured }
 		current_date >= 1150.1.1
 		has_title = title:k_england

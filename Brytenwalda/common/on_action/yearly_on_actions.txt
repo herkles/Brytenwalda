@@ -2,8 +2,8 @@
 # Root does not exist
 yearly_global_pulse = {
 	effect = {
-		# Visigothic culture split
-		if = {
+		
+		if = {# Visigothic culture split
 			limit = {
 				always = no
 				current_date <= 920.1.1 # No need to check this in later starts
@@ -33,9 +33,8 @@ yearly_global_pulse = {
 					#days = { 60 300 }
 				#}
 			}
-		}
-		# Norse culture split.
-		if = {
+		}		
+		if = {# Norse culture split.
 			limit = {
 				current_date < 990.1.1
 				NOT = { has_global_variable = norse_culture_split }
@@ -64,43 +63,8 @@ yearly_global_pulse = {
 					days = { 60 300 }
 				}
 			}
-		}
-		# Anglo-Saxon -> Scottish Culture Shift
-		if = {
-			limit = {
-				NOT = { has_global_variable = scottish_culture_creation }
-				OR = {
-					exists = global_var:bryten_english_created # English has to be created first
-					exists = global_var:bryten_anglo_saxon_secured # Anglo-Saxon has to be created
-				}
-				current_date >= 1150.1.1
-			}
-			random = {
-				chance = 0 # No chance the first year of play if starting in 867
-				modifier = {
-					add = 2 # 2% chance per year
-					current_date >= 1150.1.1
-				}
-				modifier = {
-					add = 8 # 10% chance per year
-					current_date >= 1160.1.1
-				}
-				modifier = {
-					add = 15 # 25% chance per year
-					current_date >= 1170.1.1
-				}
-				set_global_variable = {
-					name = scottish_culture_creation
-					value = yes
-				}
-				trigger_event = {
-					id = global_culture.0031
-					days = { 60 300 }
-				}
-			}
-		}
-		# Mongol Invasion
-		if = {
+		}			
+		if = {# Mongol Invasion
 			limit = {
 				has_game_rule = never_mongol_invasion
 			}
@@ -172,9 +136,8 @@ yearly_global_pulse = {
 					}
 				}
 			}
-		}
-		# Almohad Invasion
-		if = {
+		}		
+		if = {# Almohad Invasion
 			limit = {
 				current_date >= 1110.1.1
 				current_date < 1150.1.1
@@ -196,9 +159,8 @@ yearly_global_pulse = {
 					days = { 2 240 }
 				}
 			}
-		}
-		# Jomsvikings form autonomously.
-		if = {
+		}		
+		if = {# Jomsvikings form autonomously.
 			limit = {
 				# Do we have the correct flavour pack?
 				has_fp1_dlc_trigger = yes
@@ -248,9 +210,8 @@ yearly_global_pulse = {
 					days = { 30 300 }
 				}
 			}
-		}
-		# A wandering French monk appears.
-		if = {
+		}		
+		if = {# A wandering French monk appears.
 			limit = {
 				# Do we have the correct flavour pack?
 				has_fp2_dlc_trigger = yes
@@ -325,6 +286,39 @@ yearly_global_pulse = {
 			}
 		}
 
+		if = {# Anglo-Saxon -> Scottish Culture Shift
+			limit = {
+				NOT = { has_global_variable = scottish_culture_creation }
+				OR = {
+					exists = global_var:bryten_english_created # English has to be created first
+					exists = global_var:bryten_anglo_saxon_secured # Anglo-Saxon has to be created
+				}
+				current_date >= 1150.1.1
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 867
+				modifier = {
+					add = 2 # 2% chance per year
+					current_date >= 1150.1.1
+				}
+				modifier = {
+					add = 8 # 10% chance per year
+					current_date >= 1170.1.1
+				}
+				modifier = {
+					add = 15 # 25% chance per year
+					current_date >= 1190.1.1
+				}
+				set_global_variable = {
+					name = scottish_culture_creation
+					value = yes
+				}
+				trigger_event = {
+					id = global_culture.0031
+					days = { 60 300 }
+				}
+			}
+		}
 		if = {# Anglo-Saxon Culture Forming
 			limit = {
 				NOT = { exists = global_var:bryten_anglo_saxon_created }

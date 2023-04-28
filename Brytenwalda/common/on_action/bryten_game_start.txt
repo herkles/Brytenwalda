@@ -29,6 +29,19 @@ bryten_setup_after_game_start_on_actions = {
 			}
 			trigger_event = bryten_england.500
 		}
+		character:163111 = {
+			if = {
+				limit = {
+					is_alive = yes
+					is_landed = yes
+					current_date = 867.1.1
+				}
+			}
+			trigger_event = bryten_scotland.500
+		}
+
+
+
 
 		if = {# setting up the pilgrimage stuff for 1066 start date
 			limit = { 

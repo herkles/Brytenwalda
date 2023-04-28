@@ -3,24 +3,34 @@
 #######################################
 # Scottish Language
 #######################################
-bryten_scotland.001 = {# The language of Scotland 
+bryten_scotland.001 = {# Scottish is Anglic
 	hidden = yes	
 
 	trigger = {
-		exists = global_var:bryten_english_created
-		not = { exists = global_var:bryten_scots_language_english }
+		exists = global_var:bryten_anglo_saxon_secured
+		not = { exists = global_var:bryten_scots_language_anglisc }
 	}
 
 	immediate = {
 		set_global_variable = {
-			name = bryten_scots_language_english
+			name = bryten_scots_language_anglisc
 			value = yes
 		}
-		culture:scots = { set_culture_pillar = language_english	}
+		culture:scots = { set_name_list = name_list_anglo_saxon }
+		culture:scots = { set_culture_pillar = language_anglic	}
 	}
 }
 
+#######################################
+# Scottish Maintence
+#######################################
+bryten_scotland.500 = {# Give Ivar's capital dublin
+	hidden = yes
 
+	immediate = {
+		set_realm_capital = title:c_dublin
+	}
+}
 
 
 
