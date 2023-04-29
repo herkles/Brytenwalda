@@ -2,7 +2,7 @@
 # Root does not exist
 yearly_global_pulse = {
 	effect = {
-		
+		# Unchanged Stuff
 		if = {# Visigothic culture split
 			limit = {
 				always = no
@@ -286,6 +286,7 @@ yearly_global_pulse = {
 			}
 		}
 
+		# New Shifts
 		if = {# Anglo-Saxon -> Scottish Culture Shift
 			limit = {
 				NOT = { has_global_variable = scottish_culture_creation }
@@ -388,6 +389,43 @@ yearly_global_pulse = {
 				}
 				trigger_event = {
 					id = bryten_england.040
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# Anglo-Norse Culture Forming
+			limit = {
+				NOT = { has_global_variable = bryten_anglo_norse_created }
+				OR = {# For the culture to form the norse have to have control of at least one english kingdom
+					title:k_northumbria.holder = { culture = { has_cultural_pillar = heritage_frankish } }
+					title:k_east_anglia.holder = { culture = { has_cultural_pillar = heritage_frankish } }
+					title:k_mercia.holder = { culture = { has_cultural_pillar = heritage_frankish } }
+					title:k_wessex.holder = { culture = { has_cultural_pillar = heritage_frankish } }
+					title:k_essex.holder = { culture = { has_cultural_pillar = heritage_frankish } }
+					title:k_kent.holder = { culture = { has_cultural_pillar = heritage_frankish } }
+				}
+				current_date >= 867.1.1
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 867
+				modifier = {
+					add = 2 # 2% chance per year
+					current_date >= 880.1.1
+				}
+				modifier = {
+					add = 8 # 10% chance per year
+					current_date >= 890.1.1
+				}
+				modifier = {
+					add = 15 # 25% chance per year
+					current_date >= 900.1.1
+				}
+				set_global_variable = {
+					name = bryten_anglo_norse_created
+					value = yes
+				}
+				trigger_event = {
+					id = bryten_england.032
 					days = { 60 300 }
 				}
 			}

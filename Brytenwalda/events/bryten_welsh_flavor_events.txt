@@ -264,7 +264,7 @@ bryten_wales.109 = {# The Papal Bull - Let St. David's owner know
 			has_title = title:k_papal_state
 		}
 		piety_level >= 3
-		root.faith.religious_head = {
+		title:k_papal_state.holder = {
 			opinion = {
 				target = root
 				value >= very_high_positive_opinion

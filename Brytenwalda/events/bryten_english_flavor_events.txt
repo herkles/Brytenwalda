@@ -1676,42 +1676,77 @@ bryten_england.31 = {# Players informed
 #######################################
 # Anglo-Norse culture Forming
 #######################################
-bryten_england.032 = {# Anglo-Norse Culture settlement
-	type = character_event
-	title = bryten_england.032.t
-	desc = bryten_england.032.desc
-	theme = culture_change
-	left_portrait = {
-		character = scope:embracer
-		animation = personality_bold
-	}
-
+bryten_england.032 = {
+	type = empty
+	hidden = yes
+	
 	immediate = {
-		save_scope_as = embracer
-		culture = { save_scope_as = embracer_former_culture }
-	}
+		# Save scopes for player notification events.
+		culture:northumbrian = { save_scope_as = northumbrian }
+		culture:scottish = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:norse
+			get_all_innovations_from = culture:northumbrian
 
-	option = {
-		name = bryten_england.032.a
-		embrace_anglo_norse_culture_effect = yes
-		hidden_effect = { # Moved here from embrace_english_culture_decision
-			# Send event to other players
-			every_player = {
+			# Save scope for player notification events.
+			save_scope_as = anglo_norse
+		}
+
+		# All Norse counties in England will convert to Anglo-Norse
+		culture:norse = {
+			every_culture_county = {
 				limit = {
-					NOT = { this = root }
-					OR = {
-						primary_title = {
-							OR = {
-								de_jure_liege = title:e_britannia
-								de_jure_liege.de_jure_liege = title:e_britannia
-								de_jure_liege.de_jure_liege.de_jure_liege = title:e_britannia
+					title_province = {
+						geographical_region = custom_england
+					}
+				}
+				add_to_list = anglo_norse_counties
+			}
+		}
+
+		# Convert the norse counties to anglo-norse
+		every_in_list = {
+			list = anglo_norse_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = culture:norse
+								capital_province = { geographical_region = custom_england }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_west_germanic }
+								capital_province = { geographical_region = custom_england }
 							}
 						}
-						culture = { has_cultural_pillar = heritage_north_germanic }
-						culture = { has_cultural_pillar = heritage_central_germanic }
-						culture = { has_cultural_pillar = heritage_west_germanic }
-						culture = { has_cultural_pillar = heritage_goidelic }
-						culture = { has_cultural_pillar = heritage_brythonic }
+					}
+				}
+			}
+						
+			# All Norse counties in Scotland become anglo_norse
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:norse
+				NEW_CULTURE = culture:anglo_norse
+				REGION = custom_england
+			}
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = anglo_norse_counties
+						holder = {
+							is_within_diplo_range = { CHARACTER = scope:player }
+						}
 					}
 				}
 				trigger_event = bryten_england.033
@@ -1719,17 +1754,18 @@ bryten_england.032 = {# Anglo-Norse Culture settlement
 		}
 	}
 }
-bryten_england.033 = {# Players informed
+bryten_england.033 = {
 	type = character_event
-	title = bryten_england.032.t
+	title = bryten_england.033.t
 	desc = bryten_england.033.desc
 	theme = culture_change
+
 	left_portrait = {
-		character = scope:embracer
-		animation = personality_bold
+		character = root
+		animation = personality_rational
 	}
 
-	option = {# Interesting
+	option = {
 		name = bryten_england.033.a
 	}
 }
@@ -2637,19 +2673,19 @@ bryten_england.108 = {# Ceolwulf is King - Ceolwulf's view
 			}
 			resolve_title_and_vassal_change = scope:change
 
-
 			create_title_and_vassal_change = {
-				type = granted
-				save_scope_as = take_burgreds_land
-				add_claim_on_loss = yes
-			}	
-			scope:mercian_county = {
-				change_title_holder = {
-					holder = scope:ceolwulf
-					change = scope:take_burgreds_land
+				type = revoked
+				save_scope_as = change
+			}
+			scope:burgred = {
+				every_held_title = {
+					change_title_holder = {
+						holder = root
+						change = scope:change
+					}
 				}
 			}
-			resolve_title_and_vassal_change = scope:take_burgreds_land
+			resolve_title_and_vassal_change = scope:change
 		}
 	}
 

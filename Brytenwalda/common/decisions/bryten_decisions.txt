@@ -285,73 +285,7 @@ restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
 #############################################
 # Anglo-Norse England Decisions
 #############################################
-promote_norse_settlement_decision = {# Promote Norse Settlement
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
-	major = yes
 
-	ai_check_interval = 36
-
-	desc = promote_norse_settlement_decision_desc
-
-	is_shown = {
-		is_landed = yes
-		highest_held_title_tier >= tier_kingdom
-		custom_description = {# capital must be in England
-			text = capital_in_england_region_tooltip
-			capital_province = { geographical_region = custom_england } 
-		}
-		culture = { has_cultural_pillar = heritage_north_germanic }
-		NOT = {
-			is_target_in_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:norse_settlement_culture_decision
-			}
-		}
-	}
-
-	is_valid = {
-		highest_held_title_tier >= tier_kingdom # Got to be a kingdom
-		
-		prestige_level >= 2 # Should be prestigious
-		custom_tooltip = {# capital must be in England
-			text = capital_in_england_region_tooltip
-			capital_province = { geographical_region = custom_england } 
-		}
-		custom_tooltip = {# Got to have 30 years
-			text = reign_in_england_time_tooltip
-			primary_title.title_held_years >= 30
-		}		
-	}
-
-	is_valid_showing_failures_only = {
-		is_imprisoned = no
-		is_available_adult = yes
-	}
-
-	effect = {
-		add_to_global_variable_list = {
-			name = unavailable_unique_decisions
-			target = flag:norse_settlement_culture_decision
-		}
-		show_as_tooltip = { embrace_anglo_norse_culture_effect = yes }
-		trigger_event = bryten_england.032
-	}
-	
-	ai_potential = {
-		is_landed = yes
-		culture = { has_cultural_pillar = heritage_north_germanic }
-		NOT = {
-			is_target_in_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:norse_settlement_culture_decision
-			}
-		}
-	}
-
-	ai_will_do = {
-		base = 100
-	}
-}
 #############################################
 # Norman England Decisions
 #############################################
