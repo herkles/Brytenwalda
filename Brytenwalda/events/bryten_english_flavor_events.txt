@@ -1676,14 +1676,14 @@ bryten_england.31 = {# Players informed
 #######################################
 # Anglo-Norse culture Forming
 #######################################
-bryten_england.032 = {
+bryten_england.032 = {# Anglo-Norse Culture forming
 	type = empty
 	hidden = yes
 	
 	immediate = {
 		# Save scopes for player notification events.
 		culture:northumbrian = { save_scope_as = northumbrian }
-		culture:scottish = {
+		culture:anglo_norse = {
 			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
 			reset_culture_creation_date = yes
 			get_all_innovations_from = culture:norse
@@ -1728,12 +1728,29 @@ bryten_england.032 = {
 				}
 			}
 						
-			# All Norse counties in Scotland become anglo_norse
+			# All Norse counties in England become anglo_norse
 			convert_county_and_holder_if_in_region_effect = {
 				OLD_CULTURE = culture:norse
 				NEW_CULTURE = culture:anglo_norse
 				REGION = custom_england
 			}
+		}
+
+
+		# Rulers get the next decision
+		every_ruler = {
+			limit = {
+				culture = culture:norse
+				is_landed = yes
+				OR = {# Must own one of the Kingdoms
+					has_title = title:k_northumbria
+					has_title = title:k_mercia
+					has_title = title:k_wessex
+					has_title = title:k_east_anglia
+				}
+				capital_province = { geographical_region = custom_england }
+			}
+			trigger_event = bryten_england.033
 		}
 
 		# Send the appropraite notification event to each player.
@@ -1749,15 +1766,135 @@ bryten_england.032 = {
 						}
 					}
 				}
-				trigger_event = bryten_england.033
+				trigger_event = bryten_england.034
 			}
 		}
 	}
 }
-bryten_england.033 = {
+bryten_england.033 = {# Norse Ruled Realms
 	type = character_event
 	title = bryten_england.033.t
 	desc = bryten_england.033.desc
+	theme = culture_change
+
+	immediate = {
+		if = {# For Northumbria
+			limit = { has_title = title:k_northumbria }
+			# All coastal Northumbrian counties in England will convert to Anglo-Norse
+			culture:northumbrian = {
+				every_culture_county = {
+					limit = {
+						is_coastal_county = yes
+						title_province = { geographical_region = custom_england }
+					}
+					add_to_list = northumbrian_counties
+				}
+			}
+			# Convert the northumbrian counties to anglo-norse
+			every_in_list = {
+				list = northumbrian_counties						
+				# All northumbrian counties in England become anglo_norse
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:northumbrian
+					NEW_CULTURE = culture:anglo_norse
+					REGION = custom_england
+				}
+			}
+		}
+		if = {# For Mercia
+			limit = { has_title = title:k_mercia }
+			# All coastal Mercian counties in England will convert to Anglo-Norse
+			culture:mercian = {
+				every_culture_county = {
+					limit = {
+						is_coastal_county = yes
+						title_province = { geographical_region = custom_england }
+					}
+					add_to_list = mercian_counties
+				}
+			}
+			# Convert the Mercian counties to anglo-norse
+			every_in_list = {
+				list = mercian_counties						
+				# All mercian counties in England become anglo_norse
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:mercian
+					NEW_CULTURE = culture:anglo_norse
+					REGION = custom_england
+				}
+			}
+		}
+		if = {# For East Anglia
+			limit = { has_title = title:k_east_anglia }
+			# All coastal East Anglian counties in England will convert to Anglo-Norse
+			culture:east_anglian = {
+				every_culture_county = {
+					limit = {
+						is_coastal_county = yes
+						title_province = { geographical_region = custom_england }
+					}
+					add_to_list = east_anglian_counties
+				}
+			}
+			# Convert the East Anglian counties to anglo-norse
+			every_in_list = {
+				list = east_anglian_counties						
+				# All east_anglian counties in England become anglo_norse
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:east_anglian
+					NEW_CULTURE = culture:anglo_norse
+					REGION = custom_england
+				}
+			}
+		}
+		if = {# For Wessex
+			limit = { has_title = title:k_wessex }
+			# All coastal west_saxon counties in England will convert to Anglo-Norse
+			culture:west_saxon = {
+				every_culture_county = {
+					limit = {
+						is_coastal_county = yes
+						title_province = { geographical_region = custom_england }
+					}
+					add_to_list = anglo_norse_counties
+				}
+			}
+			# Convert the west_saxon counties to anglo-norse
+			every_in_list = {
+				list = anglo_norse_counties						
+				# All west_saxon counties in England become anglo_norse
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:west_saxon
+					NEW_CULTURE = culture:anglo_norse
+					REGION = custom_england
+				}
+			}
+		}		
+	}
+
+	option = {# Embrace Anglo Norse
+		name = bryten_england.033.embrace
+		embrace_anglo_norse_culture_effect = {
+			CONVERTER = root
+			OLD_CULTURE = root.culture
+			NEW_CULTURE = culture:anglo_norse
+		}
+	}
+	option = {# Embrace Anglo Norse and catholicism
+		name = bryten_england.033.embrace
+		norse_assimilate_local_traditions_effect = {
+			CONVERTER = root
+			OLD_CULTURE = root.culture
+			OLD_FAITH = root.faith
+			NEW_CULTURE = culture:anglo_norse
+			NEW_FAITH = faith:catholic
+		}
+	}	
+}
+bryten_england.034 = {# Let other players know that anglo-norse has been created
+	type = character_event
+	title = bryten_england.034.t
+	desc = bryten_england.034.desc
 	theme = culture_change
 
 	left_portrait = {
@@ -1766,7 +1903,7 @@ bryten_england.033 = {
 	}
 
 	option = {
-		name = bryten_england.033.a
+		name = bryten_england.034.a
 	}
 }
 #######################################
@@ -2671,6 +2808,27 @@ bryten_england.108 = {# Ceolwulf is King - Ceolwulf's view
 					change = scope:change
 				}
 			}
+
+
+			title:c_northamptonshire = {
+				change_title_holder = {
+					holder = scope:heathen
+					change = scope:change
+				}
+			}
+			title:c_bedford = {
+				change_title_holder = {
+					holder = scope:heathen
+					change = scope:change
+				}
+			}
+			title:c_buckinghamshire = {
+				change_title_holder = {
+					holder = scope:heathen
+					change = scope:change
+				}
+			}
+
 			resolve_title_and_vassal_change = scope:change
 
 			create_title_and_vassal_change = {

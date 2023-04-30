@@ -3286,8 +3286,23 @@
 		841.1.1 = {
 			birth = "841.1.1"
 		}
+		855.1.1 = {
+			add_spouse = bryten_east_anglia_01
+		}
 		875.1.1 = {
 			death = "875.1.1"
+		}
+	}
+	bryten_east_anglia_01 = {# Fictional wife of Oswald
+		name = E_lfgifu
+		female = yes
+		religion = catholic
+		culture = east_anglian
+		845.1.1 = {
+			birth = yes
+		}
+		881.1.6 = {
+			death = yes
 		}
 	}
 	205024 = {# Aethelread
@@ -3296,7 +3311,8 @@
 		religion = "catholic"
 		culture = east_anglian
 		father = 205023
-		860.1.1 = {
+		mother = bryten_east_anglia_01
+		863.1.1 = {
 			birth = "860.1.1"
 		}
 		879.1.1 = {
