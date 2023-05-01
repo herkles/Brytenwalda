@@ -3259,11 +3259,29 @@
 		father = 205021
 		840.1.1 = {
 			birth = "840.1.1"
+		}
+		855.1.1 = {
+			add_spouse = bryten_east_anglia_02
 		}		
 		869.11.20 = {
 			death = "869.11.20"
 		}
 	}
+	bryten_east_anglia_02 = {# Fictional wife of edmund
+		name = Cynethryth
+		female = yes
+		religion = catholic
+		culture = east_anglian
+		845.1.1 = {
+			birth = yes
+		}
+		881.1.6 = {
+			death = yes
+		}
+	}
+
+
+
 	205022 = {# Beorhtric
 		name = "Beorhtric" # of East Anglia
 		dynasty = 626
