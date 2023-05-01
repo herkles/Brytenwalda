@@ -2768,13 +2768,16 @@ bryten_england.108 = {# Ceolwulf is King - Ceolwulf's view
 		title:k_northumbria.holder = { save_scope_as = heathen }
 		character:163102 = { save_scope_as = burgred }
 		character:205112 = { save_scope_as = ceolwulf }
+		every_sub_realm_county = {
+			limit = { duchy = title:d_five_burhs	}
+			add_to_list = eastern_mercian_county
+		}
 		every_county_in_region = {# taking Burgred's kingdom
 			region = custom_england_saxon
 			limit = { holder = character:163102 }
 			save_scope_as = mercian_county
 		}
 	}
-
 
 	option = {# Good Riddence
 		name = bryten_england.108.victory
@@ -2784,51 +2787,14 @@ bryten_england.108 = {# Ceolwulf is King - Ceolwulf's view
 				save_scope_as = change
 				add_claim_on_loss = yes
 			}	
-			title:c_derby = {
+			every_in_list = {
+				list = eastern_mercian_county
 				change_title_holder = {
 					holder = scope:heathen
 					change = scope:change
+					take_baronies = yes
 				}
 			}
-			title:c_lincolnshire = {
-				change_title_holder = {
-					holder = scope:heathen
-					change = scope:change
-				}
-			}
-			title:c_leicestershire = {
-				change_title_holder = {
-					holder = scope:heathen
-					change = scope:change
-				}
-			}
-			title:c_nottinghamshire = {
-				change_title_holder = {
-					holder = scope:heathen
-					change = scope:change
-				}
-			}
-
-
-			title:c_northamptonshire = {
-				change_title_holder = {
-					holder = scope:heathen
-					change = scope:change
-				}
-			}
-			title:c_bedford = {
-				change_title_holder = {
-					holder = scope:heathen
-					change = scope:change
-				}
-			}
-			title:c_buckinghamshire = {
-				change_title_holder = {
-					holder = scope:heathen
-					change = scope:change
-				}
-			}
-
 			resolve_title_and_vassal_change = scope:change
 
 			create_title_and_vassal_change = {
@@ -2838,7 +2804,7 @@ bryten_england.108 = {# Ceolwulf is King - Ceolwulf's view
 			scope:burgred = {
 				every_held_title = {
 					change_title_holder = {
-						holder = root
+						holder = scope:ceolwulf
 						change = scope:change
 					}
 				}
@@ -2907,6 +2873,102 @@ bryten_england.110 = {# Gutthrum is victorious
 			}
 		}
 		resolve_title_and_vassal_change = scope:change
+	}
+}
+bryten_england.111 = {# Ecgberht in the North
+	type = character_event
+	title = bryten_england.111.t
+	desc = bryten_england.111.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		if = {# Ecgberht 
+			character:northumbrian05 = {
+				if = {
+					limit = { 
+						is_alive = yes 
+						is_landed = no
+					}
+					save_scope_as = northumbrian_lord
+				}
+			}
+		}
+		else = {# King Alle's children
+			character:163103 = {
+				ordered_child = {
+					order_by = age
+					limit = {
+						is_male = yes
+						is_alive = yes
+						is_landed = no
+					}
+					save_scope_as = northumbrian_lord
+				}
+			}
+		}
+
+		every_sub_realm_county = {
+			limit = { duchy = title:d_brambugh }
+			add_to_list = north_northumbria_county
+		}
+	}
+
+	option = {# Good Riddence
+		name = bryten_england.111.victory
+		hidden_effect = {
+			create_title_and_vassal_change = {
+				type = conquest
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			every_in_list = {
+				list = north_northumbria_county	
+				change_title_holder = {
+					holder = scope:northumbrian_lord
+					change = scope:change
+					take_baronies = yes
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+
+			create_title_and_vassal_change = {
+				type = conquest
+				save_scope_as = north_northumbria_land
+			}
+			title:d_brambugh = {
+				change_title_holder = {
+					holder = scope:northumbrian_lord
+					change = scope:north_northumbria_land
+				}
+			}
+			resolve_title_and_vassal_change = scope:north_northumbria_land
+
+
+			scope:northumbrian_lord = {
+				create_title_and_vassal_change = {
+					type = independency
+					save_scope_as = north_northumbria_change
+				}
+				change_liege_or_become_independent = {
+					CHANGE = scope:north_northumbria_change
+					VASSAL = this
+				}
+				resolve_title_and_vassal_change = scope:north_northumbria_change
+			}
+
+
+
+		}
+		add_truce_both_ways = {
+			character = scope:northumbrian_lord
+			days = 1825
+			name = TRUCE_TRADE_DEAL
+		}
+
 	}
 }
 #######################################
@@ -3248,9 +3310,17 @@ bryten_england.140 = {# The Monks of Lindisfarne move the body of St. Cuthbert.
 	}
 	option = { # Ok
 		name = bryten_england.140.christian
+		trigger = {  religion = religion:christianity_religion }
 
 	}
-		
+
+	after = {
+		trigger_event = {
+			id = bryten_england.141
+			years = 7
+		}
+	}
+
 }
 bryten_england.141 = {# The Monks bring his body to Durham
 	type = character_event
@@ -3297,9 +3367,7 @@ bryten_england.142 = {# Building the tomb for St. Cuthbert.
 		has_title = title:c_durham
 		exists = global_var:bryten_monks_cuthbert_durham # The monks have to take the body
 		not = {	exists = global_var:bryten_cuthbert_tomb } # Fire Only Once
-		any_realm_province = {
-			has_building = bryten_building_durham_cathedral_01
-		}
+		any_realm_province = { has_building = bryten_building_durham_cathedral_01 }
 	}
 
 	immediate = {

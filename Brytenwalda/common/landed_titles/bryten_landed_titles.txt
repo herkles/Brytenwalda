@@ -188,16 +188,24 @@ e_britannia = {
 			}
 
 			cultural_names = {
-				name_list_breton = cn_bryneich
-				name_list_cornish = cn_bryneich
-				name_list_cumbrian = cn_bryneich
-				name_list_pictish = cn_bryneich
-				name_list_welsh = cn_bryneich
-				
-				name_list_norman = cn_norroy
-				name_list_french = cn_norroy
-				name_list_outremer = cn_norroy
-				name_list_occitan = cn_norroy
+                name_list_anglo_saxon = cn_brambugh_anglo_saxon # Norþymbraland # Or Norþhymbraland
+                name_list_scottish = cn_brambugh_scottish # Norþumbrelond
+                name_list_english = cn_brambugh_english # Norþumbrelond
+                name_list_norman = cn_brambugh_norman # Nord-Humbrelande
+
+                name_list_pictish = cn_brambugh_pictish # Norðhymbraland
+                name_list_irish = cn_brambugh_irish # Nortumbarlann
+                name_list_gaelic = cn_brambugh_gaelic # Norðhymbraland
+
+                name_list_cornish = cn_brambugh_cornish # Bryneich
+                name_list_welsh = cn_brambugh_welsh # Bryneich
+                name_list_cumbrian = cn_brambugh_cumbrian # Bryneich
+
+				name_list_norse = cn_brambugh_norse # Norðimbraland
+				name_list_danish = cn_brambugh_danish # Norðhymbraland
+                name_list_norwegian = cn_brambugh_norwegian # Norðhymbraland
+                name_list_swedish = cn_brambugh_swedish # Norðhymbraland
+
 			}
 		}		
 		d_east_anglia = {# East Anglia
@@ -368,8 +376,7 @@ e_britannia = {
 				}
 			}
 
-		}		
-
+		}
 		d_bedford = { # Essex
 			color = { 210 31 60 }
 
