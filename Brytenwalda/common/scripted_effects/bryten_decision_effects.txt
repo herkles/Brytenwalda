@@ -42,9 +42,6 @@ unite_kingdom_england_decision_effects = {# Uniting England
 	resolve_title_and_vassal_change = scope:title_change
 	set_primary_title_to = title:k_england
 
-
-
-
 	title:k_kent = { add_to_list = english_kingdoms }
 	title:k_northumbria = { add_to_list = english_kingdoms }
 	title:k_mercia = { add_to_list = english_kingdoms }
@@ -152,19 +149,14 @@ restore_kingdom_essex_decision_scripted_effect = {# Restoring The Kingdom of Ess
 
 }
 unify_anglo_saxon_culture_effect = {# Unifying Anglo Saxon
-	# Scopes saves for localization
-	root = { save_scope_as = unifier }
 	# Prestige Bonus
-	add_prestige = medium_prestige_gain
 
 	#Convert your, and your whole family's, culture
 	set_culture = culture:anglo_saxon
 	if = {
 		limit = { any_spouse = { is_landed = no } }
 		every_spouse = {
-			limit = {
-				is_landed = no
-			}
+			limit = { is_landed = no }
 			set_culture = culture:anglo_saxon
 		}
 	}
@@ -194,6 +186,8 @@ unify_anglo_saxon_culture_effect = {# Unifying Anglo Saxon
 					culture = culture:mercian
 					culture = culture:northumbrian
 					culture = culture:west_saxon
+					culture = culture:east_anglian
+
 				}
 				primary_title = {
 					OR = {
@@ -212,6 +206,7 @@ unify_anglo_saxon_culture_effect = {# Unifying Anglo Saxon
 					culture = culture:mercian
 					culture = culture:northumbrian
 					culture = culture:west_saxon
+					culture = culture:east_anglian
 				}
 				primary_title = {
 					OR = {
@@ -222,34 +217,6 @@ unify_anglo_saxon_culture_effect = {# Unifying Anglo Saxon
 				}
 			}
 			set_culture = culture:anglo_saxon
-		}
-	}
-
-	#Flip Counties
-	every_county_in_region = {
-		region = custom_england
-		custom = unify_anglo_saxon_culture_counties_custom
-		limit = {
-			target_is_de_facto_liege_or_above = root.primary_title
-			OR = {
-				culture = culture:east_anglian
-				culture = culture:mercian
-				culture = culture:northumbrian
-				culture = culture:west_saxon
-			}
-			NOT = { culture = culture:anglo_norse }
-
-		}
-		set_county_culture = culture:anglo_saxon
-	}
-	culture:anglo_saxon = {
-		custom_tooltip = decision_unify_anglo_saxon_culture_get_innovations
-		hidden_effect = {
-			reset_culture_creation_date = yes
-			get_all_innovations_from = culture:mercian
-			get_all_innovations_from = culture:northumbrian
-			get_all_innovations_from = culture:west_saxon
-			get_all_innovations_from = culture:east_anglian
 		}
 	}
 }
@@ -645,7 +612,6 @@ embrace_anglo_norse_culture_effect = {
 		}
 	}
 }
-
 #######################################
 #									  #
 #       Norman/English Effects  	  #
@@ -947,3 +913,92 @@ integrate_strathclyde_kingdom_effect = {
 		}
 	}
 }
+#######################################
+#									  #
+#         Brythonic Effects  	      #
+#									  #
+#######################################
+reclaim_britannia_decision_effect = {
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:k_britian = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:k_england
+
+	title:k_kent = { add_to_list = brythonic_kingdom }
+	title:k_northumbria = { add_to_list = brythonic_kingdom }
+	title:k_mercia = { add_to_list = brythonic_kingdom }
+	title:k_east_anglia = { add_to_list = brythonic_kingdom }
+	title:k_wessex = { add_to_list = brythonic_kingdom }
+	title:k_essex = { add_to_list = brythonic_kingdom }
+	title:k_wales = { add_to_list = brythonic_kingdom }
+	title:k_cornwall = { add_to_list = brythonic_kingdom }
+
+	every_in_list = {
+		list = brythonic_kingdom
+		every_in_de_jure_hierarchy = {
+			limit = {
+				tier = tier_duchy
+			}
+			set_de_jure_liege_title = title:k_britian
+		}
+	}
+
+	hidden_effect = {
+		if = {
+			limit = { has_title = title:k_kent }
+			destroy_title = title:k_kent
+		}
+		if = {
+			limit = { has_title = title:k_northumbria }
+			destroy_title = title:k_northumbria
+		}
+		if = {
+			limit = { has_title = title:k_mercia }
+			destroy_title = title:k_mercia
+		}
+		if = {
+			limit = { has_title = title:k_east_anglia }
+			destroy_title = title:k_east_anglia
+		}
+		if = {
+			limit = { has_title = title:k_wessex }
+			destroy_title = title:k_wessex
+		}
+		if = {
+			limit = { has_title = title:k_essex }
+			destroy_title = title:k_essex
+		}
+	}
+
+	every_sub_realm_county = {
+		limit = {
+			NOR = {
+				culture = { has_cultural_pillar = heritage_goidelic }
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+			title_province = { geographical_region = custom_brythonic_britian }
+		}
+		custom = british_isles.0001.custom
+		add_county_modifier = {
+			modifier = reclaim_britannia_culture_modifier
+			days = 3650
+		}
+	}
+	capital_county = { set_county_culture = root.culture }
+	give_nickname = nick_pendragon
+}
+
+
+
+
+
+

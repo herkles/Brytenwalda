@@ -1,4 +1,4 @@
-﻿pictish = {
+﻿pictish = {# Pictish
 	color = hsv { 0.58 1.00 0.72 }
 	
 	ethos = ethos_bellicose
@@ -27,8 +27,7 @@
 		30 = caucasian_dark_hair
 	}
 }
-
-welsh = {
+welsh = {# Welsh
 	color = welsh
 	
 	ethos = ethos_stoic
@@ -56,8 +55,7 @@ welsh = {
 		30 = caucasian_dark_hair
 	}
 }
-
-breton = {
+breton = {# Breton
 	color = hsv { 0.72 0.6 0.76 }
 	
 	ethos = ethos_communal
@@ -85,8 +83,7 @@ breton = {
 		30 = caucasian_dark_hair
 	}
 }
-
-cornish = {
+cornish = {# Cornish
 	color = hsv { 0.72 0.6 0.72 }
 	
 	ethos = ethos_communal
@@ -113,8 +110,7 @@ cornish = {
 		30 = caucasian_dark_hair
 	}
 }
-
-cumbrian = {
+cumbrian = {# Cumbrian
 	color = hsv { 0.64 0.6 0.72 }
 	
 	ethos = ethos_stoic
@@ -140,5 +136,34 @@ cumbrian = {
 		30 = caucasian_ginger
 		35 = caucasian_brown_hair
 		30 = caucasian_dark_hair
+	}
+}
+# New Cultures
+brython = {# Brython
+	color = english
+	
+	ethos = ethos_stoic
+	heritage = heritage_brythonic
+	language = language_brythonic
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_bards
+		tradition_longbow_competitions
+		tradition_city_keepers
+		tradition_religious_patronage
+	}
+	
+	name_list = name_list_welsh
+	
+	coa_gfx = { welsh_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		25 = caucasian_blond
+		15 = caucasian_ginger
+		35 = caucasian_brown_hair
+		25 = caucasian_dark_hair
 	}
 }

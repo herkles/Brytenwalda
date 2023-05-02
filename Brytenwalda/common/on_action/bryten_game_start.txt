@@ -42,7 +42,7 @@ bryten_setup_after_game_start_on_actions = {
 
 		culture:norse = {
 			if = {
-				limit = { has_game_rule = bryten_british_culture_spreads }
+				limit = { has_game_rule = bryten_british_culture_spreads_on  }
 				set_variable = {
 					name = ng_culture
 					value = culture:norse_gael

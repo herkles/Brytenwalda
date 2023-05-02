@@ -21,6 +21,7 @@ e_britannia = {
         name_list_pictish = cn_britain_pictish # Pictavia
         name_list_irish = cn_britain_irish # Cruithn
         name_list_gaelic = cn_britain_gaelic # Cruithn
+        name_list_norse_gael = cn_britain_irish # Cruithn
 
 		name_list_welsh = cn_britain_welsh # Prydain
         name_list_cornish = cn_britain_cornish # Prydain
@@ -30,6 +31,8 @@ e_britannia = {
         name_list_norwegian = cn_britain_norwegian # Bretland
         name_list_norse = cn_britain_norse # Bretland
         name_list_danish = cn_britain_danish # Bretland		
+		name_list_anglo_norse = cn_britain_danish # Bretland		
+
 	}
 	
 	ai_primary_priority = {
@@ -151,6 +154,7 @@ e_britannia = {
             name_list_pictish = cn_england_pictish # Logres
             name_list_irish = cn_england_irish # Lloegyr
             name_list_gaelic = cn_england_gaelic # Lloegyr
+            name_list_norse_gael = cn_england_irish # Lloegyr
 
             name_list_welsh = cn_england_welsh # Lloegyr
             name_list_cornish = cn_england_cornish # Lloegyr
@@ -160,6 +164,8 @@ e_britannia = {
             name_list_norwegian = cn_england_norwegian # Ænglandi
             name_list_norse = cn_england_norse # Ænglandi
             name_list_danish = cn_england_danish # Ænglandi
+			name_list_anglo_norse = cn_england_norwegian # Ænglandi
+
 		}
 
 		ai_primary_priority = {
@@ -196,6 +202,7 @@ e_britannia = {
                 name_list_pictish = cn_brambugh_pictish # Norðhymbraland
                 name_list_irish = cn_brambugh_irish # Nortumbarlann
                 name_list_gaelic = cn_brambugh_gaelic # Norðhymbraland
+                name_list_norse_gael = cn_brambugh_irish # Nortumbarlann
 
                 name_list_cornish = cn_brambugh_cornish # Bryneich
                 name_list_welsh = cn_brambugh_welsh # Bryneich
@@ -205,7 +212,7 @@ e_britannia = {
 				name_list_danish = cn_brambugh_danish # Norðhymbraland
                 name_list_norwegian = cn_brambugh_norwegian # Norðhymbraland
                 name_list_swedish = cn_brambugh_swedish # Norðhymbraland
-
+				name_list_anglo_norse = cn_brambugh_norse # Norðimbraland
 			}
 		}		
 		d_east_anglia = {# East Anglia
@@ -220,10 +227,6 @@ e_britannia = {
 				}
 			}
 
-			cultural_names = {
-				name_list_norse = cn_jarnamoda
-				name_list_norwegian = cn_jarnamoda
-			}
 
 		}
 		d_wessex = {# Wessex
@@ -237,12 +240,6 @@ e_britannia = {
 					has_innovation = innovation_manorialism
 				}
 			}
-
-			cultural_names = {
-				name_list_norse = cn_jarnamoda
-				name_list_norwegian = cn_jarnamoda
-			}
-
 		}
 		d_kent = {# Kent
 			color = { 241 100 15 }
@@ -270,6 +267,9 @@ e_britannia = {
 				name_list_norwegian = cn_kent_norwegian # Ænglandi
 				name_list_norse = cn_kent_norse # Ænglandi
 				name_list_danish = cn_kent_danish # Ænglandi
+				name_list_anglo_norse = cn_kent_norse # Ænglandi
+				name_list_norse_gael = cn_kent_norse # Ænglandi
+
 			}
 
 			capital = c_kent # Dover
@@ -308,11 +308,6 @@ e_britannia = {
 				}
 			}
 
-			cultural_names = {
-				name_list_norse = cn_jarnamoda
-				name_list_norwegian = cn_jarnamoda
-			}
-
 		}
 		d_essex = {# Essex
 			color = { 241 15 15 }
@@ -333,10 +328,15 @@ e_britannia = {
 				name_list_pictish = cn_essex_pictish # Logres
 				name_list_irish = cn_essex_irish # Lloegyr
 				name_list_gaelic = cn_essex_gaelic # Lloegyr
+
 				name_list_swedish = cn_essex_swedish # Ænglandi
 				name_list_norwegian = cn_essex_norwegian # Ænglandi
 				name_list_norse = cn_essex_norse # Ænglandi
 				name_list_danish = cn_essex_danish # Ænglandi
+				name_list_anglo_norse = cn_essex_norse # Ænglandi
+				name_list_norse_gael = cn_essex_norse # Ænglandi
+
+
 			}
 		
 		}	
@@ -387,29 +387,14 @@ e_britannia = {
 					has_innovation = innovation_noblesse_oblige
 				}
 			}			
-
-			cultural_names = {
-                name_list_anglo_saxon = cn_essex_anglo_saxon # Ēastseaxe
-				name_list_scottish = cn_essex_scottish # Estsex
-                name_list_english = cn_essex_english # Estsex
-                name_list_norman = cn_essex_norman # Essesse
-
-                name_list_gaelic = cn_essex_gaelic # Saxain Thoir
-                name_list_pictish = cn_essex_pictish # Saxain Thoir
-                name_list_irish = cn_essex_irish # Saxain Thoir
-
-                name_list_swedish = cn_essex_swedish # Austseaxe
-                name_list_norwegian = cn_essex_norwegian # Austseaxe
-                name_list_norse = cn_essex_norse # Austseaxe
-                name_list_danish = cn_essex_danish # Austseaxe
-			}
-
 			c_middlesex = {
 				color = { 230 5 5 }
 
 				cultural_names = {
 					name_list_anglo_saxon = cn_middle_seaxe
 					name_list_old_saxon = cn_middle_seaxe
+					name_list_anglo_norse = cn_middle_seaxe
+
 				}
 
 				b_london = {
@@ -420,6 +405,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_lunden
 						name_list_old_saxon = cn_lunden
+						name_list_anglo_norse = cn_lunden
+
 
 						name_list_roman = cn_londinium
 
@@ -439,6 +426,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_suthweorc
 						name_list_old_saxon = cn_suthweorc
+						name_list_anglo_norse = cn_suthweorc
+
 					}
 
 					color = { 230 5 5 }
@@ -451,6 +440,8 @@ e_britannia = {
 						name_list_english = cn_woxbrigge_scottish 
 						name_list_scottish = cn_woxbrigge_english
 						name_list_norman = cn_woxbrigge_norman 
+						name_list_anglo_norse = cn_woxbrigge_anglo_saxon
+
 					}
 
 				}
@@ -460,10 +451,14 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_gorey_anglo_saxon 
 						name_list_norman = cn_gorey_norman 
+						name_list_anglo_norse = cn_gorey_anglo_saxon
+
 
 						name_list_gaelic = cn_gorey_gaelic 
 						name_list_pictish = cn_gorey_pictish 
 						name_list_irish = cn_gorey_irish 
+						name_list_norse_gael = cn_gorey_gaelic # Ænglandi
+
 					}
 				}
 				b_brentford = {
@@ -488,6 +483,9 @@ e_britannia = {
 						name_list_norwegian = cn_brentford_norwegian # Ænglandi
 						name_list_norse = cn_brentford_norse # Ænglandi
 						name_list_danish = cn_brentford_danish # Ænglandi
+						name_list_anglo_norse = cn_brentford_norse # Ænglandi
+						name_list_norse_gael = cn_brentford_norse # Ænglandi
+
 					}
 					
 				}
@@ -498,6 +496,8 @@ e_britannia = {
 				cultural_names = {
 					name_list_anglo_saxon = cn_east_seaxe
 					name_list_old_saxon = cn_east_seaxe
+					name_list_anglo_norse = cn_east_seaxe
+
 				}
 
 				b_colchester = {
@@ -506,6 +506,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_colenceaster
 						name_list_old_saxon = cn_colenceaster
+						name_list_anglo_norse = cn_colenceaster
+
 					}
 
 					color = { 220 20 30 }
@@ -528,6 +530,8 @@ e_britannia = {
 						name_list_norwegian = cn_maldon_norwegian # Ænglandi
 						name_list_norse = cn_maldon_norse # Ænglandi
 						name_list_danish = cn_maldon_danish # Ænglandi
+						name_list_anglo_norse = cn_maldon_norse # Ænglandi
+						name_list_norse_gael = cn_maldon_norse # Ænglandi
 					}
 
 				}
@@ -540,10 +544,13 @@ e_britannia = {
 						name_list_english = cn_chelmsford_english # Engelond
 						name_list_scottish = cn_chelmsford_scottish # Engelond
 						name_list_norman = cn_chelmsford_norman # Angliétèrre
+						name_list_anglo_norse = cn_chelmsford_anglo_saxon
 			
 						name_list_pictish = cn_chelmsford_pictish # Logres
 						name_list_irish = cn_chelmsford_irish # Lloegyr
 						name_list_gaelic = cn_chelmsford_gaelic # Lloegyr
+						name_list_norse_gael = cn_chelmsford_gaelic # Ænglandi
+
 					}
 
 				}
@@ -554,7 +561,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_great_dunmow_anglo_saxon # Ænglaland
 						name_list_norman = cn_great_dunmow_norman # Angliétèrre
-			
+						name_list_anglo_norse = cn_great_dunmow_anglo_saxon
+
 						name_list_welsh = cn_great_dunmow_welsh # Lloegyr
 						name_list_cornish = cn_great_dunmow_cornish # Lloegyr
 						name_list_cumbrian = cn_great_dunmow_cumbrian # Lloegyr
@@ -563,6 +571,8 @@ e_britannia = {
 						name_list_norwegian = cn_great_dunmow_norwegian # Ænglandi
 						name_list_norse = cn_great_dunmow_norse # Ænglandi
 						name_list_danish = cn_great_dunmow_danish # Ænglandi
+						name_list_anglo_norse = cn_great_dunmow_norse # Ænglandi
+						name_list_norse_gael = cn_great_dunmow_norse # Ænglandi
 					}
 
 
@@ -589,6 +599,9 @@ e_britannia = {
 					name_list_norwegian = cn_bedford_norwegian # Ænglandi
 					name_list_norse = cn_bedford_norse # Ænglandi
 					name_list_danish = cn_bedford_danish # Ænglandi
+
+					name_list_anglo_norse = cn_bedford_norse # Ænglandi
+					name_list_norse_gael = cn_bedford_norse # Ænglandi
 				}
 
 				b_bedford = {
@@ -612,6 +625,9 @@ e_britannia = {
 						name_list_norwegian = cn_bedford_norwegian # Ænglandi
 						name_list_norse = cn_bedford_norse # Ænglandi
 						name_list_danish = cn_bedford_danish # Ænglandi
+
+						name_list_anglo_norse = cn_bedford_norse # Ænglandi
+						name_list_norse_gael = cn_bedford_norse # Ænglandi
 					}
 
 					color = { 205 20 15 }
@@ -630,6 +646,9 @@ e_britannia = {
 						name_list_norwegian = cn_ampthill_england_norwegian # Ænglandi
 						name_list_norse = cn_ampthill_england_norse # Ænglandi
 						name_list_danish = cn_ampthill_england_danish # Ænglandi
+
+						name_list_anglo_norse = cn_ampthill_england_norse # Ænglandi
+						name_list_norse_gael = cn_ampthill_england_norse # Ænglandi
 					}
 
 				}
@@ -650,6 +669,9 @@ e_britannia = {
 						name_list_norwegian = cn_luton_norwegian # Ænglandi
 						name_list_norse = cn_luton_norse # Ænglandi
 						name_list_danish = cn_luton_danish # Ænglandi
+
+						name_list_anglo_norse = cn_luton_norse # Ænglandi
+						name_list_norse_gael = cn_luton_norse # Ænglandi
 					}
 				}
 			}
@@ -660,7 +682,8 @@ e_britannia = {
 					name_list_anglo_saxon = cn_hertfordshire_anglo_saxon # Ænglaland
 					name_list_english = cn_hertfordshire_english # Engelond
 					name_list_scottish = cn_hertfordshire_scottish # Engelond
-					name_list_norman = cn_luton_norman # Angliétèrre
+					name_list_norman = cn_hertford_norman # Angliétèrre
+					name_list_anglo_norse = cn_hertfordshire_anglo_saxon # Ænglandi
 
 					name_list_welsh = cn_hertfordshire_welsh # Lloegyr
 					name_list_cornish = cn_hertfordshire_cornish # Lloegyr
@@ -685,6 +708,9 @@ e_britannia = {
 						name_list_norwegian = cn_berkhamsted_norwegian # Ænglandi
 						name_list_norse = cn_berkhamsted_norse # Ænglandi
 						name_list_danish = cn_berkhamsted_danish # Ænglandi
+
+						name_list_anglo_norse = cn_berkhamsted_norse # Ænglandi
+						name_list_norse_gael = cn_berkhamsted_norse # Ænglandi
 					}
 
 				}
@@ -709,6 +735,9 @@ e_britannia = {
 						name_list_norwegian = cn_st_albans_norwegian # Ænglandi
 						name_list_norse = cn_st_albans_norse # Ænglandi
 						name_list_danish = cn_st_albans_danish # Ænglandi
+
+						name_list_anglo_norse = cn_st_albans_norse # Ænglandi
+						name_list_norse_gael = cn_st_albans_norse # Ænglandi
 					}
 
 				}
@@ -733,6 +762,9 @@ e_britannia = {
 						name_list_norwegian = cn_hertford_norwegian # Ænglandi
 						name_list_norse = cn_hertford_norse # Ænglandi
 						name_list_danish = cn_hertford_danish # Ænglandi
+
+						name_list_anglo_norse = cn_hertford_norse # Ænglandi
+						name_list_norse_gael = cn_hertford_norse # Ænglandi
 					}
 					
 				}
@@ -754,6 +786,9 @@ e_britannia = {
 					name_list_norwegian = cn_buckingham_norwegian # Ænglandi
 					name_list_norse = cn_buckingham_norse # Ænglandi
 					name_list_danish = cn_buckingham_danish # Ænglandi
+
+					name_list_anglo_norse = cn_buckingham_norse # Ænglandi
+					name_list_norse_gael = cn_buckingham_norse # Ænglandi
 				}
 
 				b_buckingham = {
@@ -773,6 +808,9 @@ e_britannia = {
 						name_list_norwegian = cn_buckingham_norwegian # Ænglandi
 						name_list_norse = cn_buckingham_norse # Ænglandi
 						name_list_danish = cn_buckingham_danish # Ænglandi
+
+						name_list_anglo_norse = cn_buckingham_norse # Ænglandi
+						name_list_norse_gael = cn_buckingham_norse # Ænglandi
 					}
 
 					color = { 200 25 25 }
@@ -795,6 +833,9 @@ e_britannia = {
 						name_list_norwegian = cn_aylesbury_norwegian # Ænglandi
 						name_list_norse = cn_aylesbury_norse # Ænglandi
 						name_list_danish = cn_aylesbury_danish # Ænglandi
+
+						name_list_anglo_norse = cn_aylesbury_norse # Ænglandi
+						name_list_norse_gael = cn_aylesbury_norse # Ænglandi
 					}
 
 				}
@@ -820,6 +861,9 @@ e_britannia = {
 						name_list_norwegian = cn_newport_norwegian # Ænglandi
 						name_list_norse = cn_newport_norse # Ænglandi
 						name_list_danish = cn_newport_danish # Ænglandi
+
+						name_list_anglo_norse = cn_newport_norse # Ænglandi
+						name_list_norse_gael = cn_newport_norse # Ænglandi
 					}
 
 				}
@@ -837,6 +881,9 @@ e_britannia = {
 						name_list_norwegian = cn_wycombe_norwegian # Ænglandi
 						name_list_norse = cn_wycombe_norse # Ænglandi
 						name_list_danish = cn_wycombe_danish # Ænglandi
+
+						name_list_anglo_norse = cn_wycombe_norse # Ænglandi
+						name_list_norse_gael = cn_wycombe_norse # Ænglandi
 					}
 
 				}
@@ -870,6 +917,9 @@ e_britannia = {
                 name_list_norwegian = cn_northumberland_norwegian # Norðhymbraland
                 name_list_swedish = cn_northumberland_swedish # Norðhymbraland
 
+				name_list_anglo_norse = cn_northumberland_norse # Ænglandi
+				name_list_norse_gael = cn_northumberland_norse # Ænglandi
+
 			}
 		
 			ai_primary_priority = {
@@ -893,6 +943,8 @@ e_britannia = {
 					name_list_cumbrian = cn_bryneich
 					name_list_pictish = cn_bryneich
 					name_list_welsh = cn_bryneich
+					name_list_anglo_norse = cn_bernicia # Ænglandi
+
 				}
 
 				b_bamburgh = {
@@ -908,6 +960,9 @@ e_britannia = {
 						name_list_danish = cn_bamborg
 						name_list_swedish = cn_bamborg
 						name_list_norse = cn_bamborg
+
+						name_list_anglo_norse = cn_bamborg # Ænglandi
+						name_list_norse_gael = cn_bamborg # Ænglandi
 
 						name_list_welsh = cn_din_guarie
 						name_list_cumbrian = cn_din_guarie
@@ -931,6 +986,9 @@ e_britannia = {
 						name_list_norwegian = cn_rothbury_norwegian # Ænglandi
 						name_list_norse = cn_rothbury_norse # Ænglandi
 						name_list_danish = cn_rothbury_danish # Ænglandi
+
+						name_list_anglo_norse = cn_rothbury_norse # Ænglandi
+						name_list_norse_gael = cn_rothbury_norse # Ænglandi
 					}
 
 				}
@@ -956,6 +1014,9 @@ e_britannia = {
 						name_list_norwegian = cn_lindisfarne_norwegian # Ænglandi
 						name_list_norse = cn_lindisfarne_norse # Ænglandi
 						name_list_danish = cn_lindisfarne_danish # Ænglandi
+
+						name_list_anglo_norse = cn_lindisfarne_norse # Ænglandi
+						name_list_norse_gael = cn_lindisfarne_norse # Ænglandi
 					}
 				}
 				b_hexham = {
@@ -976,6 +1037,9 @@ e_britannia = {
 						name_list_norwegian = cn_hexham_norwegian # Ænglandi
 						name_list_norse = cn_hexham_norse # Ænglandi
 						name_list_danish = cn_hexham_danish # Ænglandi
+
+						name_list_anglo_norse = cn_hexham_norse # Ænglandi
+						name_list_norse_gael = cn_hexham_norse # Ænglandi
 					}
 
 				}
@@ -990,6 +1054,8 @@ e_britannia = {
 					name_list_french = cn_duresm
 					name_list_outremer = cn_duresm
 					name_list_occitan = cn_duresm
+					name_list_anglo_norse = cn_dunholm # Ænglandi
+
 				}
 
 				b_durham = {
@@ -1004,6 +1070,9 @@ e_britannia = {
 						name_list_occitan = cn_duresm
 						name_list_norse = cn_ulfreksfjordr
 						name_list_norwegian = cn_ulfreksfjordr
+
+						name_list_anglo_norse = cn_ulfreksfjordr # Ænglandi
+						name_list_norse_gael = cn_ulfreksfjordr # Ænglandi
 					}
 
 					color = { 255 15 15 }
@@ -1026,6 +1095,9 @@ e_britannia = {
 						name_list_norwegian = cn_hartlepool_norwegian # Ænglandi
 						name_list_norse = cn_hartlepool_norse # Ænglandi
 						name_list_danish = cn_hartlepool_danish # Ænglandi
+
+						name_list_anglo_norse = cn_hartlepool_norse # Ænglandi
+						name_list_norse_gael = cn_hartlepool_norse # Ænglandi
 					}
 
 				}
@@ -1043,6 +1115,9 @@ e_britannia = {
 						name_list_norwegian = cn_darlington_norwegian # Ænglandi
 						name_list_norse = cn_darlington_norse # Ænglandi
 						name_list_danish = cn_darlington_danish # Ænglandi
+
+						name_list_anglo_norse = cn_darlington_norse # Ænglandi
+						name_list_norse_gael = cn_darlington_norse # Ænglandi
 					}
 
 				}
@@ -1056,6 +1131,8 @@ e_britannia = {
 					name_list_english = cn_cumberland_english # Engelond
 					name_list_scottish = cn_cumberland_scottish # Engelond
 					name_list_norman = cn_cumberland_norman # Angliétèrre
+					name_list_anglo_norse = cn_cumberland_anglo_saxon # Ænglandi
+
 				}
 
 				ai_primary_priority = {
@@ -1075,10 +1152,12 @@ e_britannia = {
 						name_list_english = cn_carlisle_english # Engelond
 						name_list_scottish = cn_carlisle_scottish # Engelond
 						name_list_norman = cn_carlisle_norman # Angliétèrre
+						name_list_anglo_norse = cn_carlisle_anglo_saxon # Ænglandi
 			
 						name_list_pictish = cn_carlisle_pictish # Logres
 						name_list_irish = cn_carlisle_irish # Lloegyr
 						name_list_gaelic = cn_carlisle_gaelic # Lloegyr
+						name_list_norse_gael = cn_carlisle_gaelic # Ænglandi
 			
 						name_list_welsh = cn_carlisle_welsh # Lloegyr
 						name_list_cornish = cn_carlisle_cornish # Lloegyr
@@ -1101,6 +1180,9 @@ e_britannia = {
 						name_list_norwegian = cn_whiteheaven_norwegian # Ænglandi
 						name_list_norse = cn_whiteheaven_norse # Ænglandi
 						name_list_danish = cn_whiteheaven_danish # Ænglandi
+
+						name_list_anglo_norse = cn_whiteheaven_norse # Ænglandi
+						name_list_norse_gael = cn_whiteheaven_norse # Ænglandi
 					}
 
 				}
@@ -1118,6 +1200,9 @@ e_britannia = {
 						name_list_norwegian = cn_furness_norwegian # Ænglandi
 						name_list_norse = cn_furness_norse # Ænglandi
 						name_list_danish = cn_furness_danish # Ænglandi
+
+						name_list_anglo_norse = cn_furness_norse # Ænglandi
+						name_list_norse_gael = cn_furness_norse # Ænglandi
 					}
 
 				}
@@ -1139,6 +1224,9 @@ e_britannia = {
 						name_list_norwegian = cn_wigtown_norwegian # Ænglandi
 						name_list_norse = cn_wigtown_norse # Ænglandi
 						name_list_danish = cn_wigtown_danish # Ænglandi
+
+						name_list_anglo_norse = cn_wigtown_norse # Ænglandi
+						name_list_norse_gael = cn_wigtown_norse # Ænglandi
 					}
 
 				}
@@ -1167,7 +1255,10 @@ e_britannia = {
                 name_list_swedish = cn_lancaster_england_swedish # Lonceaster
                 name_list_norwegian = cn_lancaster_england_norwegian # Lonceaster
                 name_list_norse = cn_lancaster_england_norse # Lonceaster
-                name_list_danish = cn_lancaster_england_danish # Lonceaster				
+                name_list_danish = cn_lancaster_england_danish # Lonceaster
+				
+				name_list_anglo_norse = cn_lancaster_england_norse
+				name_list_norse_gael = cn_lancaster_england_norse
 			}			
 
 			can_create = {
@@ -1184,10 +1275,12 @@ e_britannia = {
 					name_list_english = cn_lancaster_england_scottish # Engelond
 					name_list_scottish = cn_lancaster_england_english # Engelond
 					name_list_norman = cn_lancaster_england_norman # Angliétèrre
-		
+					name_list_anglo_norse = cn_lancashire_anglo_saxon # Ænglandi
+
 					name_list_pictish = cn_lancashire_pictish # Logres
 					name_list_irish = cn_lancashire_irish # Lloegyr
 					name_list_gaelic = cn_lancashire_gaelic # Lloegyr
+					name_list_norse_gael = cn_lancashire_gaelic # Ænglandi
 		
 					name_list_welsh = cn_lancashire_welsh # Lloegyr
 					name_list_cornish = cn_lancashire_cornish # Lloegyr
@@ -1212,6 +1305,9 @@ e_britannia = {
 						name_list_norwegian = cn_lancaster_england_norwegian # Ænglandi
 						name_list_norse = cn_lancaster_england_norse # Ænglandi
 						name_list_danish = cn_lancaster_england_danish # Ænglandi
+
+						name_list_anglo_norse = cn_lancaster_england_norse
+						name_list_norse_gael = cn_lancaster_england_norse
 					}
 
 				}
@@ -1224,7 +1320,8 @@ e_britannia = {
 						name_list_english = cn_salford_english # Engelond
 						name_list_scottish = cn_salford_scottish # Engelond
 						name_list_norman = cn_salford_norman # Angliétèrre
-			
+						name_list_anglo_norse = cn_salford_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_salford_welsh # Lloegyr
 						name_list_cornish = cn_salford_cornish # Lloegyr
 						name_list_cumbrian = cn_salford_cumbrian # Lloegyr
@@ -1258,6 +1355,9 @@ e_britannia = {
 					name_list_norwegian = cn_westmorland_england_norwegian # Ænglandi
 					name_list_norse = cn_westmorland_england_norse # Ænglandi
 					name_list_danish = cn_westmorland_england_danish # Ænglandi
+
+					name_list_anglo_norse = cn_westmorland_england_norse
+					name_list_norse_gael = cn_westmorland_england_norse
 				}
 
 				b_kendal = {
@@ -1278,6 +1378,9 @@ e_britannia = {
 						name_list_norwegian = cn_kendal_norwegian # Ænglandi
 						name_list_norse = cn_kendal_norse # Ænglandi
 						name_list_danish = cn_kendal_danish # Ænglandi
+
+						name_list_anglo_norse = cn_kendal_norse
+						name_list_norse_gael = cn_kendal_norse
 					}
 
 				}
@@ -1297,6 +1400,9 @@ e_britannia = {
 						name_list_norwegian = cn_appleby_norwegian # Ænglandi
 						name_list_norse = cn_appleby_norse # Ænglandi
 						name_list_danish = cn_appleby_danish # Ænglandi
+
+						name_list_anglo_norse = cn_appleby_norse
+						name_list_norse_gael = cn_appleby_norse
 					}
 
 
@@ -1322,6 +1428,9 @@ e_britannia = {
 					name_list_norwegian = cn_chester_norwegian # Ænglandi
 					name_list_norse = cn_chester_norse # Ænglandi
 					name_list_danish = cn_chester_danish # Ænglandi
+
+					name_list_anglo_norse = cn_chester_norse
+					name_list_norse_gael = cn_chester_norse
 				}
 
 				b_chester = {
@@ -1346,6 +1455,8 @@ e_britannia = {
 						name_list_norwegian = cn_chester_norwegian # Ænglandi
 						name_list_norse = cn_chester_norse # Ænglandi
 						name_list_danish = cn_chester_danish # Ænglandi
+						name_list_anglo_norse = cn_chester_norse
+						name_list_norse_gael = cn_chester_norse						
 					}
 
 				}
@@ -1369,6 +1480,9 @@ e_britannia = {
 						name_list_norwegian = cn_northwich_norwegian # Ænglandi
 						name_list_norse = cn_northwich_norse # Ænglandi
 						name_list_danish = cn_northwich_danish # Ænglandi
+
+						name_list_anglo_norse = cn_northwich_norse
+						name_list_norse_gael = cn_northwich_norse
 					}
 
 				}
@@ -1390,6 +1504,9 @@ e_britannia = {
 						name_list_norwegian = cn_macclesfield_norwegian # Ænglandi
 						name_list_norse = cn_macclesfield_norse # Ænglandi
 						name_list_danish = cn_macclesfield_danish # Ænglandi
+
+						name_list_anglo_norse = cn_macclesfield_norse
+						name_list_norse_gael = cn_macclesfield_norse
 					}
 
 				}
@@ -1411,6 +1528,9 @@ e_britannia = {
 					name_list_norwegian = cn_derby_norwegian # Ænglandi
 					name_list_norse = cn_derby_norse # Ænglandi
 					name_list_danish = cn_derby_danish # Ænglandi
+
+					name_list_anglo_norse = cn_derby_norse
+					name_list_norse_gael = cn_derby_norse
 				}
 
 				b_derby = {
@@ -1432,6 +1552,9 @@ e_britannia = {
 						name_list_norwegian = cn_derby_norwegian # Ænglandi
 						name_list_norse = cn_derby_norse # Ænglandi
 						name_list_danish = cn_derby_danish # Ænglandi
+
+						name_list_anglo_norse = cn_derby_norse
+						name_list_norse_gael = cn_derby_norse
 					}
 				}
 				b_chesterfield = {
@@ -1444,7 +1567,8 @@ e_britannia = {
 						name_list_english = cn_chesterfield_english # Engelond
 						name_list_scottish = cn_chesterfield_scottish # Engelond
 						name_list_norman = cn_chesterfield_norman # Angliétèrre
-						
+						name_list_anglo_norse = cn_chesterfield_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_chesterfield_welsh # Lloegyr
 						name_list_cornish = cn_chesterfield_cornish # Lloegyr
 						name_list_cumbrian = cn_chesterfield_cumbrian # Lloegyr
@@ -1469,6 +1593,9 @@ e_britannia = {
 						name_list_norwegian = cn_castleton_norwegian # Ænglandi
 						name_list_norse = cn_castleton_norse # Ænglandi
 						name_list_danish = cn_castleton_danish # Ænglandi
+
+						name_list_anglo_norse = cn_castleton_norse
+						name_list_norse_gael = cn_castleton_norse
 					}
 
 				}
@@ -1497,6 +1624,9 @@ e_britannia = {
                 name_list_norwegian = cn_york_norwegian # Jórvík # Or Jorvík
                 name_list_danish = cn_york_danish # Jórvík # Or Jorvík
                 name_list_swedish = cn_york_swedish # Jórvík # Or Jorvík
+
+				name_list_anglo_norse = cn_york_norse
+				name_list_norse_gael = cn_york_norse
 			}
 
 			ai_primary_priority = {
@@ -1537,6 +1667,9 @@ e_britannia = {
 						name_list_cumbrian = cn_efrog
 						name_list_welsh = cn_efrog
 						name_list_pictish = cn_efrog
+
+						name_list_anglo_norse = cn_jorvik
+						name_list_norse_gael = cn_jorvik
 					}
 				}
 				b_scarborough = {
@@ -1558,6 +1691,9 @@ e_britannia = {
 						name_list_norwegian = cn_scarborough_england_norwegian # Ænglandi
 						name_list_norse = cn_scarborough_england_norse # Ænglandi
 						name_list_danish = cn_scarborough_england_danish # Ænglandi
+
+						name_list_anglo_norse = cn_scarborough_england_norse
+						name_list_norse_gael = cn_scarborough_england_norse
 					}
 
 				}
@@ -1583,6 +1719,9 @@ e_britannia = {
 						name_list_norwegian = cn_richmond_england_norwegian # Ænglandi
 						name_list_norse = cn_richmond_england_norse # Ænglandi
 						name_list_danish = cn_richmond_england_danish # Ænglandi
+
+						name_list_anglo_norse = cn_richmond_england_norse
+						name_list_norse_gael = cn_richmond_england_norse
 					}
 
 				}
@@ -1600,6 +1739,9 @@ e_britannia = {
 						name_list_norwegian = cn_yarlestre_norwegian # Ænglandi
 						name_list_norse = cn_yarlestre_norse # Ænglandi
 						name_list_danish = cn_yarlestre_danish # Ænglandi
+
+						name_list_anglo_norse = cn_yarlestre_norse
+						name_list_norse_gael = cn_yarlestre_norse
 					}
 
 				}
@@ -1610,6 +1752,8 @@ e_britannia = {
 				b_pockington = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_poclintun
+						name_list_anglo_norse = cn_poclintun # Ænglandi
+
 					}
 					province = 1588
 
@@ -1645,6 +1789,8 @@ e_britannia = {
 						name_list_pictish = cn_ladenses
 
 						name_list_anglo_saxon = cn_leodis
+						name_list_anglo_norse = cn_leodis # Ænglandi
+
 					}
 					province = 1591
 
@@ -1656,7 +1802,8 @@ e_britannia = {
 
 					cultural_names = {
 						name_list_anglo_saxon = cn_doncaster_anglo_saxon # Ænglaland
-			
+						name_list_anglo_norse = cn_doncaster_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_doncaster_welsh # Lloegyr
 						name_list_cornish = cn_doncaster_cornish # Lloegyr
 						name_list_cumbrian = cn_doncaster_cumbrian # Lloegyr
@@ -1675,7 +1822,8 @@ e_britannia = {
 
 					cultural_names = {
 						name_list_anglo_saxon = cn_sheffield_anglo_saxon # Ænglaland
-						
+						name_list_anglo_norse = cn_sheffield_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_sheffield_welsh # Lloegyr
 						name_list_cornish = cn_sheffield_cornish # Lloegyr
 						name_list_cumbrian = cn_sheffield_cumbrian # Lloegyr
@@ -1699,6 +1847,9 @@ e_britannia = {
 						name_list_norwegian = cn_bolton_norwegian # Ænglandi
 						name_list_norse = cn_bolton_norse # Ænglandi
 						name_list_danish = cn_bolton_danish # Ænglandi
+
+						name_list_anglo_norse = cn_bolton_norse
+						name_list_norse_gael = cn_bolton_norse
 					}
 
 
@@ -1715,6 +1866,9 @@ e_britannia = {
 						name_list_norwegian = cn_ripon_norwegian # Ænglandi
 						name_list_norse = cn_ripon_norse # Ænglandi
 						name_list_danish = cn_ripon_danish # Ænglandi
+
+						name_list_anglo_norse = cn_ripon_norse
+						name_list_norse_gael = cn_ripon_norse
 					}
 
 				}
@@ -1738,6 +1892,9 @@ e_britannia = {
 					name_list_norwegian = cn_lincolnshire_swedish # Ænglandi
 					name_list_norse = cn_lincolnshire_norse # Ænglandi
 					name_list_danish = cn_lincolnshire_danish # Ænglandi
+
+					name_list_anglo_norse = cn_lincolnshire_norse
+					name_list_norse_gael = cn_lincolnshire_norse
 				}
 
 				b_lincoln = {
@@ -1761,6 +1918,9 @@ e_britannia = {
 						name_list_norwegian = cn_lincoln_norwegian # Ænglandi
 						name_list_norse = cn_lincoln_norse # Ænglandi
 						name_list_danish = cn_lincoln_danish # Ænglandi
+
+						name_list_anglo_norse = cn_lincoln_norse
+						name_list_norse_gael = cn_lincoln_norse
 					}
 
 				}
@@ -1780,6 +1940,9 @@ e_britannia = {
 						name_list_norwegian = cn_stamford_england_norwegian # Ænglandi
 						name_list_norse = cn_stamford_england_norse # Ænglandi
 						name_list_danish = cn_stamford_england_danish # Ænglandi
+
+						name_list_anglo_norse = cn_stamford_england_norse
+						name_list_norse_gael = cn_stamford_england_norse
 					}
 
 				}
@@ -1804,6 +1967,9 @@ e_britannia = {
 						name_list_norwegian = cn_boston_norwegian # Ænglandi
 						name_list_norse = cn_boston_norse # Ænglandi
 						name_list_danish = cn_boston_danish # Ænglandi
+
+						name_list_anglo_norse = cn_boston_norse
+						name_list_norse_gael = cn_boston_norse
 					}
 
 				}
@@ -1820,6 +1986,9 @@ e_britannia = {
 						name_list_norwegian = cn_bolingbroke_norwegian # Ænglandi
 						name_list_norse = cn_bolingbroke_norse # Ænglandi
 						name_list_danish = cn_bolingbroke_danish # Ænglandi
+
+						name_list_anglo_norse = cn_bolingbroke_norse
+						name_list_norse_gael = cn_bolingbroke_norse
 					}
 
 				}
@@ -1845,6 +2014,9 @@ e_britannia = {
                 name_list_danish = cn_england_east_danish # Austængle
                 name_list_norwegian = cn_england_east_norwegian # Austængle
                 name_list_swedish = cn_england_east_swedish # Austængle
+
+				name_list_anglo_norse = cn_england_east_norse
+				name_list_norse_gael = cn_england_east_norse
 			}
 			
 			capital = c_norfolk # Norwich
@@ -1872,6 +2044,9 @@ e_britannia = {
 					name_list_norwegian = cn_norfolk_england_norwegian # Ænglandi
 					name_list_norse = cn_norfolk_england_norse # Ænglandi
 					name_list_danish = cn_norfolk_england_danish # Ænglandi
+
+					name_list_anglo_norse = cn_norfolk_england_norse
+					name_list_norse_gael = cn_norfolk_england_norse
 				}
 
 				b_norwich = {
@@ -1894,6 +2069,9 @@ e_britannia = {
 						name_list_norwegian = cn_northwich_norwegian # Ænglandi
 						name_list_norse = cn_northwich_norse # Ænglandi
 						name_list_danish = cn_northwich_danish # Ænglandi
+
+						name_list_anglo_norse = cn_northwich_norse
+						name_list_norse_gael = cn_northwich_norse
 					}
 				}
 				b_thetford = {
@@ -1914,6 +2092,9 @@ e_britannia = {
 						name_list_norwegian = cn_thetford_norwegian # Ænglandi
 						name_list_norse = cn_thetford_norse # Ænglandi
 						name_list_danish = cn_thetford_danish # Ænglandi
+
+						name_list_anglo_norse = cn_thetford_norse
+						name_list_norse_gael = cn_thetford_norse
 					}
 
 				}
@@ -1944,6 +2125,9 @@ e_britannia = {
 					name_list_norwegian = cn_suffolk_norwegian # Ænglandi
 					name_list_norse = cn_suffolk_norse # Ænglandi
 					name_list_danish = cn_suffolk_danish # Ænglandi
+
+					name_list_anglo_norse = cn_suffolk_norse
+					name_list_norse_gael = cn_suffolk_norse
 				}
 
 				b_ipswich = {
@@ -1963,6 +2147,9 @@ e_britannia = {
 						name_list_norwegian = cn_ipswich_norwegian # Ænglandi
 						name_list_norse = cn_ipswich_norse # Ænglandi
 						name_list_danish = cn_ipswich_danish # Ænglandi
+
+						name_list_anglo_norse = cn_ipswich_norse
+						name_list_norse_gael = cn_ipswich_norse
 					}
 
 				}
@@ -1980,6 +2167,9 @@ e_britannia = {
 						name_list_norwegian = cn_sudbury_norwegian # Ænglandi
 						name_list_norse = cn_sudbury_norse # Ænglandi
 						name_list_danish = cn_sudbury_danish # Ænglandi
+
+						name_list_anglo_norse = cn_sudbury_norse
+						name_list_norse_gael = cn_sudbury_norse
 					}
 
 				}
@@ -2002,6 +2192,9 @@ e_britannia = {
 						name_list_norwegian = cn_bury_st_edmunds_norwegian # Ænglandi
 						name_list_norse = cn_bury_st_edmunds_norse # Ænglandi
 						name_list_danish = cn_bury_st_edmunds_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_bury_st_edmunds_norse
+						name_list_norse_gael = cn_bury_st_edmunds_norse
 					}
 
 				}
@@ -2021,6 +2214,9 @@ e_britannia = {
 					name_list_norwegian = cn_cambridge_norwegian # Ænglandi
 					name_list_norse = cn_cambridge_norse # Ænglandi
 					name_list_danish = cn_cambridge_danish # Ænglandi
+
+					name_list_anglo_norse = cn_cambridge_norse
+					name_list_norse_gael = cn_cambridge_norse
 				}
 
 				b_cambridge = {
@@ -2039,6 +2235,9 @@ e_britannia = {
 						name_list_norwegian = cn_cambridge_norwegian # Ænglandi
 						name_list_norse = cn_cambridge_norse # Ænglandi
 						name_list_danish = cn_cambridge_danish # Ænglandi
+
+						name_list_anglo_norse = cn_cambridge_norse
+						name_list_norse_gael = cn_cambridge_norse
 					}
 
 				}
@@ -2056,6 +2255,8 @@ e_britannia = {
 						name_list_english = cn_papworth_english # Engelond
 						name_list_scottish = cn_papworth_scottish # Engelond
 						name_list_norman = cn_papworth_norman # Angliétèrre
+						name_list_anglo_norse = cn_papworth_anglo_saxon # Ænglandi
+
 					}
 
 				}
@@ -2076,6 +2277,9 @@ e_britannia = {
 						name_list_norwegian = cn_ely_england_norwegian # Ænglandi
 						name_list_norse = cn_ely_england_norse # Ænglandi
 						name_list_danish = cn_ely_england_danish # Ænglandi
+
+						name_list_anglo_norse = cn_ely_england_norse
+						name_list_norse_gael = cn_ely_england_norse
 					}
 				}
 			}
@@ -2109,6 +2313,9 @@ e_britannia = {
 					name_list_norwegian = cn_warwick_norwegian # Ænglandi
 					name_list_norse = cn_warwick_norse # Ænglandi
 					name_list_danish = cn_warwick_danish # Ænglandi
+
+					name_list_anglo_norse = cn_warwick_norse
+					name_list_norse_gael = cn_warwick_norse
 				}
 
 
@@ -2128,6 +2335,9 @@ e_britannia = {
 						name_list_norwegian = cn_warwick_norwegian # Ænglandi
 						name_list_norse = cn_warwick_norse # Ænglandi
 						name_list_danish = cn_warwick_danish # Ænglandi
+
+						name_list_anglo_norse = cn_warwick_norse
+						name_list_norse_gael = cn_warwick_norse
 					}
 
 				}
@@ -2161,6 +2371,10 @@ e_britannia = {
 					name_list_norwegian = cn_leicester_norwegian # Ænglandi
 					name_list_norse = cn_leicester_norse # Ænglandi
 					name_list_danish = cn_leicester_danish # Ænglandi
+
+					name_list_anglo_norse = cn_leicester_norse
+					name_list_norse_gael = cn_leicester_norse
+					
 				}
 
 
@@ -2186,6 +2400,9 @@ e_britannia = {
 						name_list_norwegian = cn_leicester_norwegian # Ænglandi
 						name_list_norse = cn_leicester_norse # Ænglandi
 						name_list_danish = cn_leicester_danish # Ænglandi
+
+						name_list_anglo_norse = cn_leicester_norse
+						name_list_norse_gael = cn_leicester_norse
 					}
 
 				}
@@ -2203,6 +2420,9 @@ e_britannia = {
 						name_list_norwegian = cn_melton_mowbray_norwegian # Ænglandi
 						name_list_norse = cn_melton_mowbray_norse # Ænglandi
 						name_list_danish = cn_melton_mowbray_danish # Ænglandi
+
+						name_list_anglo_norse = cn_melton_mowbray_norse
+						name_list_norse_gael = cn_melton_mowbray_norse
 					}
 
 				}
@@ -2215,6 +2435,8 @@ e_britannia = {
 						name_list_english = cn_bosworth_english # Engelond
 						name_list_scottish = cn_bosworth_scottish # Engelond
 						name_list_norman = cn_bosworth_norman # Angliétèrre
+						name_list_anglo_norse = cn_bosworth_anglo_saxon # Ænglandi
+
 					}
 
 
@@ -2243,6 +2465,9 @@ e_britannia = {
 					name_list_norwegian = cn_nottingham_norwegian # Ænglandi
 					name_list_norse = cn_nottingham_norse # Ænglandi
 					name_list_danish = cn_nottingham_danish # Ænglandi
+
+					name_list_anglo_norse = cn_nottingham_norse
+					name_list_norse_gael = cn_nottingham_norse
 				}
 
 				b_nottingham = {
@@ -2266,6 +2491,9 @@ e_britannia = {
 						name_list_norwegian = cn_nottingham_norwegian # Ænglandi
 						name_list_norse = cn_nottingham_norse # Ænglandi
 						name_list_danish = cn_nottingham_danish # Ænglandi
+
+						name_list_anglo_norse = cn_nottingham_norse
+						name_list_norse_gael = cn_nottingham_norse
 					}
 
 				}
@@ -2294,6 +2522,9 @@ e_britannia = {
 					name_list_norwegian = cn_staffordshire_norwegian # Ænglandi
 					name_list_norse = cn_staffordshire_norse # Ænglandi
 					name_list_danish = cn_staffordshire_danish # Ænglandi
+
+					name_list_anglo_norse = cn_staffordshire_norse
+					name_list_norse_gael = cn_staffordshire_norse
 				}
 
 
@@ -2312,6 +2543,9 @@ e_britannia = {
 						name_list_norwegian = cn_stafford_norwegian # Ænglandi
 						name_list_norse = cn_stafford_norse # Ænglandi
 						name_list_danish = cn_stafford_danish # Ænglandi
+
+						name_list_anglo_norse = cn_stafford_norse
+						name_list_norse_gael = cn_stafford_norse
 					}
 
 				}
@@ -2326,6 +2560,9 @@ e_britannia = {
 						name_list_norwegian = cn_wolverhampton_norwegian # Ænglandi
 						name_list_norse = cn_wolverhampton_norse # Ænglandi
 						name_list_danish = cn_wolverhampton_danish # Ænglandi
+
+						name_list_anglo_norse = cn_wolverhampton_norse
+						name_list_norse_gael = cn_wolverhampton_norse
 					}
 
 				}
@@ -2350,6 +2587,9 @@ e_britannia = {
 					name_list_norwegian = cn_worcester_norwegian # Ænglandi
 					name_list_norse = cn_worcester_norse # Ænglandi
 					name_list_danish = cn_worcester_danish # Ænglandi
+					
+					name_list_anglo_norse = cn_worcester_norse
+					name_list_norse_gael = cn_worcester_norse
 				}
 
 
@@ -2369,6 +2609,9 @@ e_britannia = {
 						name_list_norwegian = cn_worcester_norwegian # Ænglandi
 						name_list_norse = cn_worcester_norse # Ænglandi
 						name_list_danish = cn_worcester_danish # Ænglandi
+											
+						name_list_anglo_norse = cn_worcester_norse
+						name_list_norse_gael = cn_worcester_norse
 					}
 
 				}
@@ -2388,6 +2631,9 @@ e_britannia = {
 						name_list_norwegian = cn_evesham_norwegian # Ænglandi
 						name_list_norse = cn_evesham_norse # Ænglandi
 						name_list_danish = cn_evesham_danish # Ænglandi
+
+						name_list_anglo_norse = cn_evesham_norse
+						name_list_norse_gael = cn_evesham_norse
 					}
 
 				}
@@ -2409,6 +2655,9 @@ e_britannia = {
 						name_list_norwegian = cn_kidderminster_norwegian # Ænglandi
 						name_list_norse = cn_kidderminster_norse # Ænglandi
 						name_list_danish = cn_kidderminster_danish # Ænglandi
+
+						name_list_anglo_norse = cn_kidderminster_norse
+						name_list_norse_gael = cn_kidderminster_norse
 					}
 
 				}
@@ -2423,6 +2672,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_hurstingstone_anglo_saxon # Ænglaland
 						name_list_norman = cn_hurstingstone_norman # Angliétèrre
+						name_list_anglo_norse = cn_hurstingstone_anglo_saxon # Ænglandi
+
 					}
 
 				}
@@ -2439,6 +2690,8 @@ e_britannia = {
 						name_list_english = cn_leightonstone_english # Engelond
 						name_list_scottish = cn_leightonstone_scottish # Engelond
 						name_list_norman = cn_leightonstone_norman # Angliétèrre
+						name_list_anglo_norse = cn_leightonstone_anglo_saxon # Ænglandi
+
 					}
 
 				}
@@ -2454,6 +2707,9 @@ e_britannia = {
 					name_list_norwegian = cn_northamptonshire_norwegian # Ænglandi
 					name_list_norse = cn_northamptonshire_norse # Ænglandi
 					name_list_danish = cn_northamptonshire_danish # Ænglandi
+
+					name_list_anglo_norse = cn_northamptonshire_norse
+					name_list_norse_gael = cn_northamptonshire_norse
 				}
 
 				b_northampton = {
@@ -2468,6 +2724,9 @@ e_britannia = {
 						name_list_norwegian = cn_northampton_norwegian # Ænglandi
 						name_list_norse = cn_northampton_norse # Ænglandi
 						name_list_danish = cn_northampton_danish # Ænglandi
+
+						name_list_anglo_norse = cn_northampton_norse
+						name_list_norse_gael = cn_northampton_norse
 					}
 
 				}
@@ -2492,6 +2751,9 @@ e_britannia = {
 						name_list_norwegian = cn_peterborough_norwegian # Ænglandi
 						name_list_norse = cn_peterborough_norse # Ænglandi
 						name_list_danish = cn_peterborough_danish # Ænglandi
+
+						name_list_anglo_norse = cn_peterborough_norse
+						name_list_norse_gael = cn_peterborough_norse
 					}
 
 				}
@@ -2513,6 +2775,9 @@ e_britannia = {
 						name_list_norwegian = cn_kettering_norwegian # Ænglandi
 						name_list_norse = cn_kettering_norse # Ænglandi
 						name_list_danish = cn_kettering_danish # Ænglandi
+
+						name_list_anglo_norse = cn_kettering_norse
+						name_list_norse_gael = cn_kettering_norse
 					}
 
 				}
@@ -2536,6 +2801,9 @@ e_britannia = {
 					name_list_norwegian = cn_shrewsbury_norwegian # Ænglandi
 					name_list_norse = cn_shropshire_norse # Ænglandi
 					name_list_danish = cn_shropshire_danish # Ænglandi
+					
+					name_list_anglo_norse = cn_shropshire_norse
+					name_list_norse_gael = cn_shropshire_norse
 				}
 
 				b_shrewsbury = {
@@ -2560,6 +2828,9 @@ e_britannia = {
 						name_list_norwegian = cn_shrewsbury_norwegian # Ænglandi
 						name_list_norse = cn_shrewsbury_norse # Ænglandi
 						name_list_danish = cn_shrewsbury_danish # Ænglandi
+					
+						name_list_anglo_norse = cn_shrewsbury_norse
+						name_list_norse_gael = cn_shrewsbury_norse						
 					}
 
 				}
@@ -2602,6 +2873,9 @@ e_britannia = {
                 name_list_norse = cn_gloucester_norse # Gleawceaster
                 name_list_danish = cn_gloucester_danish # Gleawceaster
                 name_list_norwegian = cn_gloucester_norwegian # Gleawceaster
+
+				name_list_anglo_norse = cn_gloucester_norse
+				name_list_norse_gael = cn_gloucester_norse	
 			}			
 			
 			can_create = {
@@ -2628,7 +2902,10 @@ e_britannia = {
 					name_list_swedish = cn_gloucester_swedish # Ænglandi
 					name_list_norwegian = cn_gloucester_norwegian # Ænglandi
 					name_list_norse = cn_gloucester_norse # Ænglandi
-					name_list_danish = cn_gloucester_danish # Ænglandi
+					name_list_danish = cn_gloucester_danish # 
+					
+					name_list_anglo_norse = cn_gloucester_norse
+					name_list_norse_gael = cn_gloucester_norse	
 				}
 
 				b_gloucester = {
@@ -2652,6 +2929,9 @@ e_britannia = {
 						name_list_norwegian = cn_gloucester_norwegian # Ænglandi
 						name_list_norse = cn_gloucester_norse # Ænglandi
 						name_list_danish = cn_gloucester_danish # Ænglandi
+
+						name_list_anglo_norse = cn_gloucester_norse
+						name_list_norse_gael = cn_gloucester_norse	
 					}
 
 				}
@@ -2677,6 +2957,9 @@ e_britannia = {
 						name_list_norwegian = cn_bristol_norwegian # Ænglandi
 						name_list_norse = cn_bristol_norse # Ænglandi
 						name_list_danish = cn_bristol_danish # Ænglandi
+
+						name_list_anglo_norse = cn_bristol_norse
+						name_list_norse_gael = cn_bristol_norse	
 					}
 
 				}
@@ -2687,7 +2970,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_winchcombe_anglo_saxon # Ænglaland
 						name_list_norman = cn_winchcombe_norman # Angliétèrre
-			
+						name_list_anglo_norse = cn_winchcombe_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_winchcombe_welsh # Lloegyr
 						name_list_cornish = cn_winchcombe_cornish # Lloegyr
 						name_list_cumbrian = cn_winchcombe_cumbrian # Lloegyr
@@ -2711,6 +2995,9 @@ e_britannia = {
 					name_list_norwegian = cn_wiltshire_norwegian # Ænglandi
 					name_list_norse = cn_wiltshire_norse # Ænglandi
 					name_list_danish = cn_wiltshire_danish # Ænglandi
+
+					name_list_anglo_norse = cn_wiltshire_norse
+					name_list_norse_gael = cn_wiltshire_norse	
 				}
 
 				b_salisbury = {
@@ -2735,6 +3022,9 @@ e_britannia = {
 						name_list_norwegian = cn_salisbury_england_norwegian # Ænglandi
 						name_list_norse = cn_salisbury_england_norse # Ænglandi
 						name_list_danish = cn_salisbury_england_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_salisbury_england_norse
+						name_list_norse_gael = cn_salisbury_england_norse
 					}
 
 				}
@@ -2757,6 +3047,9 @@ e_britannia = {
 						name_list_norwegian = cn_wilton_norwegian # Ænglandi
 						name_list_norse = cn_wilton_norse # Ænglandi
 						name_list_danish = cn_wiltone_danish # Ænglandi
+
+						name_list_anglo_norse = cn_wilton_norse
+						name_list_norse_gael = cn_wilton_norse
 					}
 
 				}
@@ -2776,6 +3069,9 @@ e_britannia = {
 						name_list_norwegian = cn_ramsbury_norwegian # Ænglandi
 						name_list_norse = cn_wilton_norse # Ænglandi
 						name_list_danish = cn_ramsbury_danish # Ænglandi
+
+						name_list_anglo_norse = cn_wilton_norse
+						name_list_norse_gael = cn_wilton_norse
 					}
 
 				}
@@ -2795,6 +3091,9 @@ e_britannia = {
 						name_list_norwegian = cn_malmesbury_norwegian # Ænglandi
 						name_list_norse = cn_malmesbury_norse # Ænglandi
 						name_list_danish = cn_malmesbury_danish # Ænglandi
+
+						name_list_anglo_norse = cn_malmesbury_norse
+						name_list_norse_gael = cn_malmesbury_norse
 					}
 
 				}
@@ -2817,6 +3116,9 @@ e_britannia = {
 					name_list_norwegian = cn_oxfordshire_norwegian # Ænglandi
 					name_list_norse = cn_oxfordshire_norse # Ænglandi
 					name_list_danish = cn_oxfordshire_danish # Ænglandi
+
+					name_list_anglo_norse = cn_oxfordshire_norse
+					name_list_norse_gael = cn_oxfordshire_norse
 				}
 
 				b_oxford = {
@@ -2837,6 +3139,9 @@ e_britannia = {
 						name_list_norwegian = cn_oxford_swedish # Ænglandi
 						name_list_norse = cn_oxford_norse # Ænglandi
 						name_list_danish = cn_oxford_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_oxford_norse
+						name_list_norse_gael = cn_oxford_norse
 					}
 
 				}
@@ -2856,6 +3161,9 @@ e_britannia = {
 						name_list_norwegian = cn_banbury_norwegian # Ænglandi
 						name_list_norse = cn_banbury_norse # Ænglandi
 						name_list_danish = cn_banbury_danish # Ænglandi
+
+						name_list_anglo_norse = cn_banbury_norse
+						name_list_norse_gael = cn_banbury_norse
 					}
 
 				}
@@ -2871,6 +3179,9 @@ e_britannia = {
 						name_list_norwegian = cn_witney_norwegian # Ænglandi
 						name_list_norse = cn_witney_norse # Ænglandi
 						name_list_danish = cn_witney_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_witney_norse
+						name_list_norse_gael = cn_witney_norse
 					}
 
 				}
@@ -2880,10 +3191,12 @@ e_britannia = {
 
 				cultural_names = {
 					name_list_anglo_saxon = cn_berkshire_anglo_saxon # Ænglaland
-		
+					name_list_anglo_norse = cn_berkshire_anglo_saxon # Ænglandi
+
 					name_list_pictish = cn_berkshire_pictish # Logres
 					name_list_irish = cn_berkshire_irish # Lloegyr
 					name_list_gaelic = cn_berkshire_gaelic # Lloegyr
+					name_list_norse_gael = cn_berkshire_gaelic # Ænglandi
 		
 					name_list_welsh = cn_berkshire_welsh # Lloegyr
 					name_list_cornish = cn_berkshire_cornish # Lloegyr
@@ -2909,6 +3222,9 @@ e_britannia = {
 						name_list_norwegian = cn_reading_england_norwegian # Ænglandi
 						name_list_norse = cn_reading_england_norse # Ænglandi
 						name_list_danish = cn_reading_england_danish # Ænglandi
+
+						name_list_anglo_norse = cn_reading_england_norse
+						name_list_norse_gael = cn_reading_england_norse
 					}
 
 				}
@@ -2919,6 +3235,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_newbury_anglo_saxon # Ænglaland
 						name_list_norman = cn_newbury_norman # Angliétèrre
+						name_list_anglo_norse = cn_newbury_anglo_saxon # Ænglandi
+
 					}
 
 				}
@@ -2938,6 +3256,9 @@ e_britannia = {
 						name_list_norwegian = cn_abingdon_norwegian # Ænglandi
 						name_list_norse = cn_abingdon_norse # Ænglandi
 						name_list_danish = cn_abingdon_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_abingdon_norse
+						name_list_norse_gael = cn_abingdon_norse
 					}
 
 				}
@@ -2963,6 +3284,9 @@ e_britannia = {
                 name_list_norwegian = cn_kent_norwegian # Cent
                 name_list_norse = cn_kent_norse # Cent
                 name_list_danish = cn_kent_danish # Cent
+
+				name_list_anglo_norse = cn_kent_norse
+				name_list_norse_gael = cn_kent_norse
 			}
 
 			c_kent = {
@@ -2983,6 +3307,9 @@ e_britannia = {
 					name_list_norwegian = cn_kent_norwegian # Cent
 					name_list_norse = cn_kent_norse # Cent
 					name_list_danish = cn_kent_danish # Cent
+						
+					name_list_anglo_norse = cn_kent_norse
+					name_list_norse_gael = cn_kent_norse
 				}
 
 				b_dover = {
@@ -3003,6 +3330,9 @@ e_britannia = {
 						name_list_norwegian = cn_dover_norwegian # Ænglandi
 						name_list_norse = cn_dover_norse # Ænglandi
 						name_list_danish = cn_dover_danish # Ænglandi
+
+						name_list_anglo_norse = cn_dover_norse
+						name_list_norse_gael = cn_dover_norse
 					}
 
 
@@ -3029,6 +3359,9 @@ e_britannia = {
 						name_list_norwegian = cn_canterbury_norwegian # Ænglandi
 						name_list_norse = cn_canterbury_norse # Ænglandi
 						name_list_danish = cn_canterbury_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_canterbury_norse
+						name_list_norse_gael = cn_canterbury_norse
 					}
 
 				}
@@ -3050,6 +3383,9 @@ e_britannia = {
 						name_list_norwegian = cn_rochester_norwegian # Ænglandi
 						name_list_norse = cn_rochester_norse # Ænglandi
 						name_list_danish = cn_rochester_danish # Ænglandi
+
+						name_list_anglo_norse = cn_rochester_norse
+						name_list_norse_gael = cn_rochester_norse
 					}
 
 				}
@@ -3071,6 +3407,10 @@ e_britannia = {
 						name_list_norwegian = cn_tonbridge_norwegian # Ænglandi
 						name_list_norse = cn_tonbridge_norse # Ænglandi
 						name_list_danish = cn_tonbridge_danish # Ænglandi
+
+						name_list_anglo_norse = cn_tonbridge_norse
+						name_list_norse_gael = cn_tonbridge_norse
+						
 					}
 
 				}
@@ -3091,6 +3431,9 @@ e_britannia = {
 					name_list_norwegian = cn_surrey_norwegian # Ænglandi
 					name_list_norse = cn_surrey_norse # Ænglandi
 					name_list_danish = cn_surrey_danish # Ænglandi
+					
+					name_list_anglo_norse = cn_surrey_norse
+					name_list_norse_gael = cn_surrey_norse
 				}
 
 
@@ -3110,6 +3453,9 @@ e_britannia = {
 						name_list_norwegian = cn_chertsey_england_norwegian # Ænglandi
 						name_list_norse = cn_chertsey_england_norse # Ænglandi
 						name_list_danish = cn_chertsey_england_danish # Ænglandi
+
+						name_list_anglo_norse = cn_chertsey_england_norse
+						name_list_norse_gael = cn_chertsey_england_norse
 					}
 
 				}
@@ -3131,6 +3477,9 @@ e_britannia = {
 						name_list_norwegian = cn_guildford_norwegian # Ænglandi
 						name_list_norse = cn_guildford_norse # Ænglandi
 						name_list_danish = cn_guildford_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_guildford_norse
+						name_list_norse_gael = cn_guildford_norse
 					}
 
 				}
@@ -3143,6 +3492,8 @@ e_britannia = {
 						name_list_english = cn_kingston_english # Engelond
 						name_list_scottish = cn_kingston_scottish # Engelond
 						name_list_norman = cn_kingston_norman # Angliétèrre
+						name_list_anglo_norse = cn_kingston_anglo_saxon # Ænglandi
+
 					}
 
 				}
@@ -3154,6 +3505,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_tandbirdge_anglo_saxon # Ænglaland
 						name_list_norman = cn_tandbirdge_norman # Angliétèrre
+						name_list_anglo_norse = cn_tandbirdge_anglo_saxon # Ænglandi
+
 					}
 
 				}
@@ -3174,6 +3527,9 @@ e_britannia = {
 					name_list_norwegian = cn_sussex_norwegian # Ænglandi
 					name_list_norse = cn_sussex_norse # Ænglandi
 					name_list_danish = cn_sussex_danish # Ænglandi
+
+					name_list_anglo_norse = cn_sussex_norse
+					name_list_norse_gael = cn_sussex_norse
 				}
 
 				b_lewes = {
@@ -3182,7 +3538,8 @@ e_britannia = {
 
 					cultural_names = {
 						name_list_anglo_saxon = cn_lewes_anglo_saxon # Ænglaland
-						
+						name_list_anglo_norse = cn_lewes_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_lewes_welsh # Lloegyr
 						name_list_cornish = cn_lewes_cornish # Lloegyr
 						name_list_cumbrian = cn_lewes_cumbrian # Lloegyr
@@ -3208,6 +3565,9 @@ e_britannia = {
 						name_list_norwegian = cn_chichester_norwegian # Ænglandi
 						name_list_norse = cn_chichester_norse # Ænglandi
 						name_list_danish = cn_chichester_danish # Ænglandi
+
+						name_list_anglo_norse = cn_chichester_norse
+						name_list_norse_gael = cn_chichester_norse
 					}
 
 				}
@@ -3220,7 +3580,8 @@ e_britannia = {
 						name_list_english = cn_arundel_english # Engelond
 						name_list_scottish = cn_arundel_scottish # Engelond
 						name_list_norman = cn_arundel_norman # Angliétèrre
-			
+						name_list_anglo_norse = cn_arundel_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_arundel_welsh # Lloegyr
 						name_list_cornish = cn_arundel_cumbrian # Lloegyr
 						name_list_cumbrian = cn_arundel_cornish # Lloegyr
@@ -3238,6 +3599,9 @@ e_britannia = {
 						name_list_norwegian = cn_hastings_norwegian # Ænglandi
 						name_list_norse = cn_hastings_norse # Ænglandi
 						name_list_danish = cn_hastings_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_hastings_norse
+						name_list_norse_gael = cn_hastings_norse
 					}
 
 				}
@@ -3261,6 +3625,8 @@ e_britannia = {
                 name_list_norse = cn_wessex_norse # Westseaxe
                 name_list_danish = cn_wessex_danish # Westseaxe
 
+				name_list_anglo_norse = cn_wessex_norse
+				name_list_norse_gael = cn_wessex_norse
 			}			
 
 			can_create = {
@@ -3299,6 +3665,9 @@ e_britannia = {
 						name_list_norwegian = cn_winchester_norwegian # Ænglandi
 						name_list_norse = cn_winchester_norse # Ænglandi
 						name_list_danish = cn_winchester_danish # Ænglandi
+
+						name_list_anglo_norse = cn_winchester_norse
+						name_list_norse_gael = cn_winchester_norse
 					}
 
 				}
@@ -3317,6 +3686,9 @@ e_britannia = {
 						name_list_norwegian = cn_southampton_norwegian # Ænglandi
 						name_list_norse = cn_southampton_norse # Ænglandi
 						name_list_danish = cn_southampton_danish # Ænglandi
+
+						name_list_anglo_norse = cn_southampton_norse
+						name_list_norse_gael = cn_southampton_norse
 					}
 
 				}
@@ -3334,6 +3706,10 @@ e_britannia = {
 						name_list_norwegian = cn_portsmouth_norwegian # Ænglandi
 						name_list_norse = cn_portsmouth_norse # Ænglandi
 						name_list_danish = cn_portsmouth_danish # Ænglandi
+
+						name_list_anglo_norse = cn_portsmouth_norse
+						name_list_norse_gael = cn_portsmouth_norse
+						
 					}
 
 				}
@@ -3349,6 +3725,9 @@ e_britannia = {
 						name_list_norwegian = cn_basingstoke_norwegian # Ænglandi
 						name_list_norse = cn_basingstoke_norse # Ænglandi
 						name_list_danish = cn_basingstoke_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_basingstoke_norse
+						name_list_norse_gael = cn_basingstoke_norse
 					}
 
 				}
@@ -3370,6 +3749,9 @@ e_britannia = {
 						name_list_norwegian = cn_christchurch_norwegian # Ænglandi
 						name_list_norse = cn_christchurch_norse # Ænglandi
 						name_list_danish = cn_christchurch_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_christchurch_norse
+						name_list_norse_gael = cn_christchurch_norse
 					}
 
 				}
@@ -3384,7 +3766,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_carisbrooke_anglo_saxon # Ænglaland
 						name_list_norman = cn_carisbrooke_norman # Angliétèrre
-			
+						name_list_anglo_norse = cn_carisbrooke_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_carisbrooke_welsh # Lloegyr
 						name_list_cornish = cn_carisbrooke_cornish # Lloegyr
 						name_list_cumbrian = cn_carisbrooke_cumbrian # Lloegyr
@@ -3412,6 +3795,9 @@ e_britannia = {
 					name_list_norwegian = cn_dorset_norwegian # Ænglandi
 					name_list_norse = cn_dorset_norse # Ænglandi
 					name_list_danish = cn_dorset_danish # Ænglandi
+					
+					name_list_anglo_norse = cn_dorset_norse
+					name_list_norse_gael = cn_dorset_norse
 				}
 
 
@@ -3432,6 +3818,9 @@ e_britannia = {
 						name_list_norwegian = cn_wareham_norwegian # Ænglandi
 						name_list_norse = cn_wareham_norse # Ænglandi
 						name_list_danish = cn_wareham_danish # Ænglandi
+						
+						name_list_anglo_norse = cn_wareham_norse
+						name_list_norse_gael = cn_wareham_norse
 					}
 
 				}
@@ -3465,6 +3854,9 @@ e_britannia = {
 						name_list_norwegian = cn_shaftesbury_norwegian # Ænglandi
 						name_list_norse = cn_shaftesbury_norse # Ænglandi
 						name_list_danish = cn_shaftesbury_danish # Ænglandi
+
+						name_list_anglo_norse = cn_shaftesbury_norse
+						name_list_norse_gael = cn_shaftesbury_norse
 					}
 
 				}
@@ -3474,7 +3866,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_lyme_anglo_saxon # Ænglaland
 						name_list_norman = cn_lyme_norman # Angliétèrre
-	
+						name_list_anglo_norse = cn_lyme_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_lyme_welsh # Lloegyr
 						name_list_cornish = cn_lyme_cornish # Lloegyr
 						name_list_cumbrian = cn_lyme_cumbrian # Lloegyr
@@ -3504,6 +3897,10 @@ e_britannia = {
 					name_list_norwegian = cn_somerset_norwegian # Ænglandi
 					name_list_norse = cn_somerset_norse # Ænglandi
 					name_list_danish = cn_somerset_danish # Ænglandi
+
+					name_list_anglo_norse = cn_somerset_norse
+					name_list_norse_gael = cn_somerset_norse
+					
 				}
 
 
@@ -3529,6 +3926,9 @@ e_britannia = {
 						name_list_norwegian = cn_bath_norwegian # Ænglandi
 						name_list_norse = cn_bath_norse # Ænglandi
 						name_list_danish = cn_bath_danish # Ænglandi
+							
+						name_list_anglo_norse = cn_bath_norse
+						name_list_norse_gael = cn_bath_norse
 					}
 
 				}
@@ -3552,6 +3952,9 @@ e_britannia = {
 						name_list_norwegian = cn_ilchester_norwegian # Ænglandi
 						name_list_norse = cn_ilchester_norse # Ænglandi
 						name_list_danish = cn_ilchester_danish # Ænglandi
+
+						name_list_anglo_norse = cn_ilchester_norse
+						name_list_norse_gael = cn_ilchester_norse
 					}
 
 				}
@@ -3571,6 +3974,7 @@ e_britannia = {
 		d_cornwall = {
 			color = { 181 60 10 }
 			capital = c_devon
+
 			cultural_names = {
 				name_list_anglo_saxon = cn_cornwall_anglo_saxon # Ænglaland
 				name_list_english = cn_cornwall_english # Engelond
@@ -3589,8 +3993,10 @@ e_britannia = {
 				name_list_norwegian = cn_cornwall_norwegian # Ænglandi
 				name_list_norse = cn_cornwall_norse # Ænglandi
 				name_list_danish = cn_cornwall_danish # Ænglandi
-			}
 
+				name_list_anglo_norse = cn_cornwall_norse
+				name_list_norse_gael = cn_cornwall_norse
+			}
 
 			ai_primary_priority = {
 				if = {
@@ -3624,6 +4030,9 @@ e_britannia = {
 					name_list_norwegian = cn_devon_norwegian # Ænglandi
 					name_list_norse = cn_devon_norse # Ænglandi
 					name_list_danish = cn_devon_danish # Ænglandi
+						
+					name_list_anglo_norse = cn_devon_norse
+					name_list_norse_gael = cn_devon_norse
 				}
 
 
@@ -3643,6 +4052,10 @@ e_britannia = {
 						name_list_norwegian = cn_exeter_norwegian # Ænglandi
 						name_list_norse = cn_exeter_norse # Ænglandi
 						name_list_danish = cn_exeter_danish # Ænglandi
+
+						name_list_anglo_norse = cn_exeter_norse
+						name_list_norse_gael = cn_exeter_norse						
+						
 					}
 
 				}
@@ -3655,7 +4068,8 @@ e_britannia = {
 						name_list_english = cn_totnes_english # Engelond
 						name_list_scottish = cn_totnes_scottish # Engelond
 						name_list_norman = cn_totnes_norman # Angliétèrre
-			
+						name_list_anglo_norse = cn_totnes_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_totnes_welsh # Lloegyr
 						name_list_cornish = cn_totnes_cornish # Lloegyr
 						name_list_cumbrian = cn_totnes_cumbrian # Lloegyr
@@ -3675,7 +4089,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_barnstaple_anglo_saxon # Ænglaland
 						name_list_norman = cn_barnstaple_norman # Angliétèrre
-		
+						name_list_anglo_norse = cn_barnstaple_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_barnstaple_welsh # Lloegyr
 						name_list_cornish = cn_barnstaple_cornish # Lloegyr
 						name_list_cumbrian = cn_barnstaple_cumbrian # Lloegyr
@@ -3711,6 +4126,9 @@ e_britannia = {
 					name_list_norwegian = cn_cornwall_norwegian # Ænglandi
 					name_list_norse = cn_cornwall_norse # Ænglandi
 					name_list_danish = cn_cornwall_danish # Ænglandi
+					
+					name_list_anglo_norse = cn_cornwall_norse
+					name_list_norse_gael = cn_cornwall_norse	
 				}
 
 				b_launceston = {
@@ -3729,6 +4147,9 @@ e_britannia = {
 						name_list_norwegian = cn_launceston_norwegian # Ænglandi
 						name_list_norse = cn_launceston_norse # Ænglandi
 						name_list_danish = cn_launceston_danish # Ænglandi
+							
+						name_list_anglo_norse = cn_launceston_norse
+						name_list_norse_gael = cn_launceston_norse	
 					}
 
 				}
@@ -3753,7 +4174,8 @@ e_britannia = {
 					cultural_names = {
 						name_list_anglo_saxon = cn_helston_anglo_saxon # Ænglaland
 						name_list_norman = cn_helston_norman # Angliétèrre
-			
+						name_list_anglo_norse = cn_helston_anglo_saxon # Ænglandi
+
 						name_list_welsh = cn_helston_welsh # Lloegyr
 						name_list_cornish = cn_helston_cornish # Lloegyr
 						name_list_cumbrian = cn_helston_cumbrian # Lloegyr
@@ -3788,6 +4210,9 @@ e_britannia = {
             name_list_norse = cn_wales_norse # Bretland
             name_list_danish = cn_wales_danish # Bretland
             name_list_swedish = cn_wales_swedish # Bretland
+										
+			name_list_anglo_norse = cn_wales_norse
+			name_list_norse_gael = cn_wales_norse	
 		}
 
 		can_create = {
@@ -3824,6 +4249,8 @@ e_britannia = {
                 name_list_anglo_saxon = cn_gwynedd_anglo_saxon # Norþwēalas
 				name_list_scottish = cn_gwynedd_scottish # Norþ Wales
                 name_list_english = cn_gwynedd_english # Norþ Wales
+				name_list_anglo_norse = cn_helston_anglo_saxon # Ænglandi
+
 			}			
 			
 			capital = c_cardiganshire # Cardigan
@@ -3835,6 +4262,8 @@ e_britannia = {
                     name_list_scottish = cn_ceredigionshire_scottish # Kerdigan
                     name_list_english = cn_ceredigionshire_english # Kerdigan
 					name_list_norman = cn_ceredigionshire_norman # Cardigan
+					name_list_anglo_norse = cn_ceredigion_anglo_saxon # Ænglandi
+
 				}				
 
 				b_cardigan = {	#Aberteifi
@@ -3845,6 +4274,8 @@ e_britannia = {
 						name_list_scottish = cn_ceredigion_scottish # Kerdigan
 						name_list_english = cn_ceredigion_english # Kerdigan
 						name_list_norman = cn_ceredigion_norman # Cardigan
+						name_list_anglo_norse = cn_cardigan_anglo_saxon # Ænglandi
+
 					}					
 				}
 				b_aberystwyth = {
@@ -3855,6 +4286,8 @@ e_britannia = {
                         name_list_scottish = cn_aberystwyth_scottish # Aberestuuþ
                         name_list_english = cn_aberystwyth_english # Aberestuuþ
                         name_list_norman = cn_aberystwyth_norman # Aberestuth
+						name_list_anglo_norse = cn_aberystwyth_anglo_saxon # Ænglandi
+
 					}					
 				}
 			}
@@ -3865,6 +4298,7 @@ e_britannia = {
                     name_list_anglo_saxon = cn_merionethshire_anglo_saxon # Merioneð
                     name_list_english = cn_merionethshire_english # Merionethshire
                     name_list_scottish = cn_merionethshire_scottish # Merionethshire
+					name_list_anglo_norse = cn_merionethshire_anglo_saxon # Ænglandi
 
                     name_list_cumbrian = cn_merionethshire_cumbrian # Meirionnydd
                     name_list_cornish = cn_merionethshire_cornish # Meirionnydd
@@ -3881,6 +4315,8 @@ e_britannia = {
                         name_list_english = cn_dolgellau_english # Hardelagh
                         name_list_english = cn_dolgellau_english # Hardelagh
 						name_list_norman = cn_dolgellau_norman # Dolkelew
+						name_list_anglo_norse = cn_dolgellau_anglo_saxon # Ænglandi
+
 					}						
 					
 				}
@@ -3909,7 +4345,8 @@ e_britannia = {
 						name_list_anglo_saxon = cn_caernarvon_anglo_saxon # Carnarvan
                         name_list_english = cn_caernarvon_english # Carnarvan
                         name_list_scottish = cn_caernarvon_scottish # Carnarvan
-	
+						name_list_anglo_norse = cn_caernarvon_anglo_saxon # Ænglandi
+
                         name_list_cumbrian = cn_caernarvon_cumbrian # Kararvon
                         name_list_cornish = cn_caernarvon_cornish # Kararvon
                         name_list_welsh = cn_caernarvon_welsh # Cair Segeint # Or Cair Custoeint
@@ -3945,7 +4382,10 @@ e_britannia = {
                     name_list_swedish = cn_anglesey_swedish # Ongullsey
                     name_list_norse = cn_anglesey_norse # Ongullsey
                     name_list_danish = cn_anglesey_danish # Ongullsey
-                    name_list_norwegian = cn_anglesey_norwegian # Ongullsøy					
+                    name_list_norwegian = cn_anglesey_norwegian # Ongullsøy	
+					
+					name_list_anglo_norse = cn_anglesey_norse
+					name_list_norse_gael = cn_anglesey_norse
 				}			
 
 				b_yns_mon = {
@@ -3968,7 +4408,10 @@ e_britannia = {
                         name_list_swedish = cn_abberffraw_swedish # Ongullsey
                         name_list_norse = cn_abberffraw_norse # Ongullsey
                         name_list_danish = cn_abberffraw_danish # Ongullsey
-                        name_list_norwegian = cn_abberffraw_norwegian # Ongullsøy			
+                        name_list_norwegian = cn_abberffraw_norwegian # Ongullsøy
+							
+						name_list_anglo_norse = cn_abberffraw_norse
+						name_list_norse_gael = cn_abberffraw_norse
 					}					
 				}
 				b_holyhead = {# Caer Gybi
@@ -3979,7 +4422,8 @@ e_britannia = {
                         name_list_scottish = cn_holyhead_scottish # Haliheved
                         name_list_english = cn_holyhead_english # Haliheved
                         name_list_norman = cn_holyhead_norman # Haliheved
-	
+						name_list_anglo_norse = cn_holyhead_anglo_saxon # Ænglandi
+
                         name_list_welsh = cn_holyhead_welsh # Caergybi # Or Cair Gybi
                         name_list_cumbrian = cn_holyhead_cumbrian # Caergybi # Or Cair Gybi
                         name_list_cornish = cn_holyhead_cornish # Caergybi # Or Cair Gybi
@@ -3987,6 +4431,8 @@ e_britannia = {
                         name_list_pictish = cn_holyhead_pictish # Caer Gybi
                         name_list_irish = cn_holyhead_irish # Caer Gybi
                         name_list_gaelic = cn_holyhead_gaelic # Caer Gybi
+						name_list_norse_gael = cn_holyhead_gaelic # Ænglandi
+
 		
 					}					
 
@@ -3999,6 +4445,7 @@ e_britannia = {
                     name_list_english = cn_tegeingl_english # Englefield
                     name_list_scottish = cn_tegeingl_scottish # Englefield
                     name_list_norman = cn_tegeingl_norman # Englefel
+					name_list_anglo_norse = cn_tegeingl_anglo_saxon # Ænglandi
 
                     name_list_welsh = cn_perfeddwlad_welsh # Perfeddwlad # Or Y Berfeddwlad
                     name_list_cumbrian = cn_perfeddwlad_cumbrian # Perfeddwlad # Or Y Berfeddwlad
@@ -4026,7 +4473,8 @@ e_britannia = {
 						name_list_english = cn_tegeingl_english # Englefield
 						name_list_scottish = cn_tegeingl_scottish # Englefield
 						name_list_norman = cn_tegeingl_norman # Englefel
-	
+						name_list_anglo_norse = cn_tegeingl_anglo_saxon # Ænglandi
+
                         name_list_welsh = cn_tegeingl_welsh # Tegeingl
                         name_list_cumbrian = cn_tegeingl_cumbrian # Tegeingl
                         name_list_cornish = cn_tegeingl_cornish # Tegeingl
@@ -4047,6 +4495,8 @@ e_britannia = {
                 name_list_anglo_saxon = cn_powys_anglo_saxon # Powis
                 name_list_scottish = cn_powys_scottish # Powis
                 name_list_english = cn_powys_english # Powis
+				name_list_anglo_norse = cn_powys_anglo_saxon # Ænglandi
+
 			}
 
 			c_maldwyn = {# Penllyn (Cantrefi, not the peninsula)
@@ -4083,6 +4533,9 @@ e_britannia = {
                         name_list_norwegian = cn_newtown_norwegian # Nyby
                         name_list_swedish = cn_newtown_swedish # Nystad
 						name_list_danish = cn_newtown_danish # Nyby
+													
+						name_list_anglo_norse = cn_newtown_norse
+						name_list_norse_gael = cn_newtown_norse
 					}					
 					
 				}
@@ -4093,10 +4546,12 @@ e_britannia = {
                     name_list_anglo_saxon = cn_radnor_anglo_saxon # Readanora
                     name_list_english = cn_radnor_english # Radnore
                     name_list_scottish = cn_radnor_scottish # Radnore
-	
+					name_list_anglo_norse = cn_radnor_anglo_saxon # Ænglandi
+
                     name_list_pictish = cn_radnor_region_pictish # Rhwng Gwy a Hafren
                     name_list_gaelic = cn_radnor_region_gaelic # Rhwng Gwy a Hafren
                     name_list_irish = cn_radnor_region_irish # Rhwng Gwy a Hafren
+					name_list_norse_gael = cn_radnor_region_gaelic # Ænglandi
 
                     name_list_welsh = cn_radnor_region_welsh # Rhwng Gwy a Hafren
                     name_list_cumbrian = cn_radnor_region_cumbrian # Rhwng Gwy a Hafren
@@ -4113,6 +4568,7 @@ e_britannia = {
                         name_list_gaelic = cn_llandrindod_wells_gaelic # Llandrindod
                         name_list_pictish = cn_llandrindod_wells_pictish # Llandrindod
                         name_list_irish = cn_llandrindod_wells_irish # Llandrindod
+						name_list_norse_gael = cn_llandrindod_wells_gaelic # Ænglandi
 	
                         name_list_welsh = cn_llandrindod_wells_welsh # Lann Drintaut # Or Llandrindod
                         name_list_cumbrian = cn_llandrindod_wells_cumbrian # Lann Drintaut # Or Llandrindod
@@ -4153,6 +4609,9 @@ e_britannia = {
                     name_list_danish = cn_hereford_danish # Hærfjord
                     name_list_norse = cn_hereford_norse # Herrfjorðr
                     name_list_norwegian = cn_hereford_norwegian # Hærfjord
+					
+					name_list_anglo_norse = cn_hereford_norse
+					name_list_norse_gael = cn_hereford_norse
 				}				
 
 				b_hereford = {
@@ -4173,6 +4632,10 @@ e_britannia = {
 						name_list_danish = cn_hereford_danish # Hærfjord
 						name_list_norse = cn_hereford_norse # Herrfjorðr
                         name_list_norwegian = cn_hereford_norwegian # Hærfjord
+
+						name_list_anglo_norse = cn_hereford_norse
+						name_list_norse_gael = cn_hereford_norse
+						
 					}					
 					
 				}
@@ -4186,6 +4649,7 @@ e_britannia = {
 					cultural_names = {
                         name_list_anglo_saxon = cn_clifford_anglo_saxon # Clifforda
                         name_list_norman = cn_clifford_norman # Clifort
+						name_list_anglo_norse = cn_clifford_anglo_saxon # Ænglandi
 
                         name_list_welsh = cn_clifford_welsh # Rhyd-ar-Wy
                         name_list_cumbrian = cn_clifford_cumbrian # Rhyd-ar-Wy
@@ -4219,6 +4683,9 @@ e_britannia = {
                     name_list_welsh = cn_carmarthenshire_welsh # Ystrad Tywi
                     name_list_cumbrian = cn_carmarthenshire_cumbrian # Ystrad Tywi
                     name_list_cornish = cn_carmarthenshire_cornish # Ystrad Tywi
+					
+					name_list_anglo_norse = cn_carmarthenshire_norse
+					name_list_norse_gael = cn_carmarthenshire_norse
 				}					
 			
 				b_carmarthen = {# Caerfyrddin
@@ -4230,10 +4697,12 @@ e_britannia = {
                         name_list_scottish = cn_carmarthen_scottish # Karmarthyn
                         name_list_english = cn_carmarthen_english # Karmarthyn
 						name_list_norman = cn_carmarthen_norman # Camarthen
-	
+						name_list_anglo_norse = cn_carmarthen_anglo_saxon # Ænglandi
+
                         name_list_pictish = cn_carmarthen_pictish # Caerfyrddin
                         name_list_gaelic = cn_carmarthen_gaelic # Caerfyrddin
                         name_list_irish = cn_carmarthen_irish # Caerfyrddin
+						name_list_norse_gael = cn_carmarthen_gaelic # Ænglandi
 	
                         name_list_welsh = cn_carmarthen_welsh # Cair Merdin
                         name_list_cumbrian = cn_carmarthen_cumbrian # Cair Merdin
@@ -4262,10 +4731,12 @@ e_britannia = {
                     name_list_english = cn_pembrokeshire_english # Pembrokeshire
                     name_list_scottish = cn_pembrokeshire_scottish # Pembrokeshire
                     name_list_norman = cn_pembroke_norman # Pennbroch
+					name_list_anglo_norse = cn_pembrokeshire_anglo_saxon # Ænglandi
 
                     name_list_gaelic = cn_pembrokeshire_gaelic # Dyfed
                     name_list_pictish = cn_pembrokeshire_pictish # Dyfed
                     name_list_irish = cn_pembrokeshire_irish # Dyfed
+					name_list_norse_gael = cn_pembrokeshire_gaelic # Ænglandi
 
                     name_list_welsh = cn_pembrokeshire_welsh # Dyfed
                     name_list_cumbrian = cn_pembrokeshire_cumbrian # Dyfed
@@ -4281,10 +4752,12 @@ e_britannia = {
                         name_list_english = cn_pembroke_english # Penbrook
                         name_list_scottish = cn_pembroke_scottish # Penbrook
 						name_list_norman = cn_pembroke_norman # Pennbroch
-	
+						name_list_anglo_norse = cn_pembroke_anglo_saxon # Ænglandi
+
                         name_list_pictish = cn_pembroke_pictish # Penfro
                         name_list_gaelic = cn_pembroke_gaelic # Penfro
                         name_list_irish = cn_pembroke_irish # Penfro
+						name_list_norse_gael = cn_pembroke_gaelic # Ænglandi
 	
                         name_list_cumbrian = cn_pembroke_cumbrian # Penfro
                         name_list_welsh = cn_pembroke_welsh # Penfro
@@ -4300,11 +4773,13 @@ e_britannia = {
                         name_list_english = cn_tyddewi_english # St. Davids
                         name_list_scottish = cn_tyddewi_scottish # St. Davids
                         name_list_norman = cn_saint_david_norman # Saint Dâvi
-	
+						name_list_anglo_norse = cn_saint_david_anglo_saxon # Ænglandi
+
                         name_list_pictish = cn_tyddewi_pictish # Tyddewi
                         name_list_gaelic = cn_tyddewi_gaelic # Tyddewi
                         name_list_irish = cn_tyddewi_irish # Tyddewi
-	
+						name_list_norse_gael = cn_tyddewi_gaelic # Ænglandi
+
                         name_list_cumbrian = cn_tyddewi_cumbrian # Tyddewi
                         name_list_welsh = cn_pembroke_welsh # Penfro
                         name_list_cornish = cn_tyddewi_cornish # Tyddewi
@@ -4328,6 +4803,10 @@ e_britannia = {
                         name_list_cumbrian = cn_fishguard_cumbrian # Aper Guoun
                         name_list_welsh = cn_fishguard_welsh # Aper Guoun
                         name_list_cornish = cn_fishguard_cornish # Aper Guoun
+
+						name_list_anglo_norse = cn_fishguard_norse
+						name_list_norse_gael = cn_fishguard_norse
+						
 					}					
 
 				}
@@ -4340,6 +4819,7 @@ e_britannia = {
                     name_list_english = cn_glamorgan_english # Glamorgan
                     name_list_scottish = cn_glamorgan_scottish # Glamorgan
                     name_list_norman = cn_glamorgan_norman # Glamorgan
+					name_list_anglo_norse = cn_glamorgan_anglo_saxon # Ænglandi
 
                     name_list_welsh = cn_glamorgan_welsh # Morgannwg
                     name_list_cumbrian = cn_glamorgan_cumbrian # Morgannwg
@@ -4355,10 +4835,12 @@ e_britannia = {
                         name_list_english = cn_cardiff_english # Kerdif
                         name_list_scottish = cn_cardiff_scottish # Kerdif
                         name_list_norman = cn_cardiff_norman # Kairdif
-	
+						name_list_anglo_norse = cn_cardiff_anglo_saxon # Ænglandi
+
                         name_list_gaelic = cn_cardiff_gaelic # Cayr Deeth
                         name_list_pictish = cn_cardiff_pictish # Cayr Deeth
                         name_list_irish = cn_cardiff_irish # Cayr Deeth
+						name_list_norse_gael = cn_cardiff_gaelic # Ænglandi
 
                         name_list_welsh = cn_cardiff_welsh # Cair Dyf
                         name_list_cumbrian = cn_cardiff_cumbrian # Cair Dyf
@@ -4387,7 +4869,10 @@ e_britannia = {
                         name_list_swedish = cn_swansea_swedish # Sveinsey
                         name_list_norwegian = cn_swansea_norwegian # Sveinsey
                         name_list_norse = cn_swansea_norse # Sveinsey
-                        name_list_danish = cn_swansea_danish # Sveinsey						
+                        name_list_danish = cn_swansea_danish # Sveinsey	
+						
+						name_list_anglo_norse = cn_swansea_norse
+						name_list_norse_gael = cn_swansea_norse					
 					}					
 
 				}
@@ -4409,10 +4894,12 @@ e_britannia = {
                     name_list_anglo_saxon = cn_monmouthshire_anglo_saxon # Munwimuþascīr # Or Monmuþscīr
                     name_list_english = cn_monmouthshire_english # Monmouthshire
                     name_list_scottish = cn_monmouthshire_scottish # Monmouthshire
+					name_list_anglo_norse = cn_monmouthshire_anglo_saxon # Ænglandi
 
 					name_list_pictish = cn_monmouthshire_pictish # Fynwy
                     name_list_gaelic = cn_monmouthshire_gaelic # Fynwy
                     name_list_irish = cn_monmouthshire_irish # Fynwy
+					name_list_norse_gael = cn_monmouthshire_gaelic # Ænglandi
 
                     name_list_welsh = cn_gwent_welsh # Guent
                     name_list_cumbrian = cn_gwent_cumbrian # Guent
@@ -4428,7 +4915,8 @@ e_britannia = {
                         name_list_english = cn_caer_leon_english # Caerlion
                         name_list_scottish = cn_caer_leon_scottish # Caerlion
                         name_list_norman = cn_caer_leon_norman # Caerleion
-	
+						name_list_anglo_norse = cn_caer_leon_anglo_saxon # Ænglandi
+
                         name_list_welsh = cn_caer_leon_welsh # Cair Lion
                         name_list_cumbrian = cn_caer_leon_cumbrian # Cair Lion
                         name_list_cornish = cn_caer_leon_cornish # Cair Lion
@@ -4443,10 +4931,13 @@ e_britannia = {
                         name_list_anglo_saxon = cn_monmouth_anglo_saxon # Munwimuþa # Or Monmuþ
                         name_list_english = cn_monmouth_english # Minumouþe
                         name_list_norman = cn_monmouth_norman # Minumue
-	
+						name_list_anglo_norse = cn_monmouth_anglo_saxon # Ænglandi
+
                         name_list_gaelic = cn_monmouth_gaelic # Trefynwy
                         name_list_pictish = cn_monmouth_pictish # Trefynwy
                         name_list_irish = cn_monmouth_irish # Trefynwy
+
+						name_list_norse_gael = cn_monmouth_irish
 
                         name_list_welsh = cn_monmouth_welsh # Trefynwy
                         name_list_cumbrian = cn_monmouth_cumbrian # Trefynwy
@@ -4472,7 +4963,11 @@ e_britannia = {
 
                     name_list_swedish = cn_brecknockshire_swedish # Brecon
                     name_list_norse = cn_brecknockshire_norse # Brecon
-                    name_list_danish = cn_brecknockshire_danish # Brecon					
+                    name_list_danish = cn_brecknockshire_danish # Brecon
+					
+					name_list_anglo_norse = cn_brecknockshire_norse
+					name_list_norse_gael = cn_brecknockshire_norse
+										
 				}				
 
 				b_brecon = {# Aberhonddu
@@ -4484,7 +4979,8 @@ e_britannia = {
                         name_list_scottish = cn_brecon_scottish # Brekenoke
                         name_list_english = cn_brecon_english # Brekenoke
                         name_list_norman = cn_brecon_norman # Brecon # Or Brekenoke
-	
+						name_list_anglo_norse = cn_brecon_anglo_saxon # Ænglandi
+
                         name_list_welsh = cn_brecon_welsh # Aper Honddu
                         name_list_cumbrian = cn_brecon_cumbrian # Aper Honddu
                         name_list_cornish = cn_brecon_cornish # Aper Honddu
@@ -4497,7 +4993,8 @@ e_britannia = {
 
 					cultural_names = {
                         name_list_anglo_saxon = cn_talgarth_anglo_saxon # Talgarþ
-	
+						name_list_anglo_norse = cn_talgarth_anglo_saxon # Ænglandi
+
                         name_list_welsh = cn_talgarth_welsh # Talgard
                         name_list_cumbrian = cn_talgarth_cumbrian # Talgarzh
                         name_list_cornish = cn_talgarth_cornish # Talgarzh
@@ -4509,15 +5006,37 @@ e_britannia = {
 	}
 	k_cornwall = {
 		color = { 204 153 10 }
-		
+
 		can_create = {
 			trigger_if = {
-				limit = {
-					is_ai = yes
-				}
+				limit = { is_ai = yes }
 				culture = { has_cultural_pillar = heritage_brythonic }
 			}
 		}
+
+		cultural_names = {
+			name_list_anglo_saxon = cn_cornwall_anglo_saxon # Ænglaland
+			name_list_english = cn_cornwall_english # Engelond
+			name_list_scottish = cn_cornwall_scottish # Engelond
+			name_list_norman = cn_cornwall_norman # Angliétèrre
+
+			name_list_pictish = cn_cornwall_pictish # Logres
+			name_list_irish = cn_cornwall_irish # Lloegyr
+			name_list_gaelic = cn_cornwall_gaelic # Lloegyr
+
+			name_list_welsh = cn_cornwall_welsh # Lloegyr
+			name_list_cornish = cn_cornwall_cornish # Lloegyr
+			name_list_cumbrian = cn_cornwall_cumbrian # Lloegyr
+
+			name_list_swedish = cn_cornwall_swedish # Ænglandi
+			name_list_norwegian = cn_cornwall_norwegian # Ænglandi
+			name_list_norse = cn_cornwall_norse # Ænglandi
+			name_list_danish = cn_cornwall_danish # Ænglandi
+			
+			name_list_anglo_norse = cn_cornwall_norse
+			name_list_norse_gael = cn_cornwall_norse
+		}
+
 		
 		ai_primary_priority = {
 			if = {
@@ -4542,6 +5061,7 @@ e_britannia = {
 	}
 	k_strathclyde = {
 		color = { 50 150 130 }
+
 		
 		
 		can_create = {
@@ -4563,6 +5083,42 @@ e_britannia = {
 		}
 
 		capital = c_lennox
+	}
+	k_britian = {# Kingdom of Britain
+		color = { 202 26 26 }
+		cultural_names = {
+			name_list_scottish = cn_britain_scottish # Bretayne
+			name_list_english = cn_britain_english # Bretayne
+			name_list_anglo_saxon = cn_britain_anglo_saxon # Breoton
+			name_list_norman = cn_britain_norman # Bretaigne
+	
+			name_list_pictish = cn_britain_pictish # Pictavia
+			name_list_irish = cn_britain_irish # Cruithn
+			name_list_gaelic = cn_britain_gaelic # Cruithn
+	
+			name_list_welsh = cn_britain_welsh # Prydain
+			name_list_cornish = cn_britain_cornish # Prydain
+			name_list_cumbrian = cn_britain_cumbrian # Prydain
+	
+			name_list_swedish = cn_britain_swedish # Bretland
+			name_list_norwegian = cn_britain_norwegian # Bretland
+			name_list_norse = cn_britain_norse # Bretland
+			name_list_danish = cn_britain_danish # Bretland	
+			
+			name_list_anglo_norse = cn_britain_norse
+			name_list_norse_gael = cn_britain_norse	
+		}		
+		capital = c_hampton
+		
+		ai_primary_priority = {
+			if = {
+				limit = {
+					culture = culture:brython
+				}
+				add = @correct_culture_primary_score
+			}
+		}
+		
 	}
 	#######################################
 	# Gaelic Kingdoms
@@ -4588,6 +5144,9 @@ e_britannia = {
             name_list_norwegian = cn_scotland_norwegian # Skotlandi
             name_list_norse = cn_scotland_norse # Skotlandi
             name_list_danish = cn_scotland_danish # Skotlandi
+			
+			name_list_anglo_norse = cn_scotland_norse
+			name_list_norse_gael = cn_scotland_norse	
 		}
 		
 		ai_primary_priority = {
@@ -4620,6 +5179,9 @@ e_britannia = {
 				name_list_cumbrian = cn_circinn
 				name_list_cornish = cn_circinn
 				name_list_breton = cn_circinn
+
+				name_list_norse_gael = cn_circinn
+
 			}
 			
 			capital = c_gowrie # Perth/St Johnston
@@ -4634,6 +5196,8 @@ e_britannia = {
                     name_list_irish = cn_gowrie_scotland_irish # Gobharaidh
                     name_list_gaelic = cn_gowrie_scotland_gaelic # Gobharaidh
                     name_list_pictish = cn_gowrie_scotland_pictish # Circinn
+					name_list_norse_gael = cn_gowrie_scotland_irish
+
 		
                     name_list_welsh = cn_gowrie_scotland_welsh # Cinn
                     name_list_cumbrian = cn_gowrie_scotland_cumbrian # Circinn
@@ -4661,6 +5225,8 @@ e_britannia = {
                         name_list_gaelic = cn_scone_gaelic # Scoine
                         name_list_pictish = cn_scone_pictish # Scoine
                         name_list_irish = cn_scone_irish # Scoine
+						name_list_norse_gael = cn_scone_irish
+
 					}
 	
 				}
@@ -4672,6 +5238,7 @@ e_britannia = {
                         name_list_gaelic = cn_crieff_gaelic # Craoibh
 						name_list_pictish = cn_crieff_pictish # Fìobha
                         name_list_irish = cn_crieff_irish # Craoibh
+						name_list_norse_gael = cn_crieff_irish
 
                         name_list_welsh = cn_crieff_welsh # Coeden
 						name_list_cumbrian = cn_crieff_cumbrian # Fìobha
@@ -4687,6 +5254,7 @@ e_britannia = {
 					name_list_gaelic = cn_crieff_gaelic # Craoibh
 					name_list_pictish = cn_crieff_pictish # Craoibh
 					name_list_irish = cn_crieff_irish # Craoibh
+					name_list_norse_gael = cn_crieff_irish
 
 					name_list_welsh = cn_crieff_welsh # Coeden
 					name_list_cumbrian = cn_crieff_cumbrian # Coeden
@@ -4703,6 +5271,7 @@ e_britannia = {
                         name_list_gaelic = cn_dunfermline_gaelic # Dún Phàrlain
                         name_list_pictish = cn_dunfermline_pictish # Dún Phàrlain
                         name_list_irish = cn_dunfermline_irish # Dún Phàrlain
+						name_list_norse_gael = cn_dunfermline_irish
 
                         name_list_welsh = cn_dunfermline_welsh # Dinfirllyn
                         name_list_cumbrian = cn_dunfermline_cumbrian # Dinfirllyn
@@ -4718,10 +5287,12 @@ e_britannia = {
 						name_list_scottish = cn_kirkcaldy_scottish # Kircalethin
                         name_list_english = cn_kirkcaldy_english # Kircalethin
                         name_list_anglo_saxon = cn_kirkcaldy_anglo_saxon # Circalethin
+						name_list_anglo_norse = cn_kirkcaldy_anglo_saxon # Ænglandi
 
                         name_list_gaelic = cn_kirkcaldy_gaelic # Cair Chaladain
                         name_list_irish = cn_kirkcaldy_irish # Cair Chaladain
                         name_list_pictish = cn_kirkcaldy_pictish # Caergaledin
+						name_list_norse_gael = cn_kirkcaldy_irish
 
                         name_list_cornish = cn_kirkcaldy_cornish # Caergaledin
                         name_list_welsh = cn_kirkcaldy_welsh # Caergaledin
@@ -4735,10 +5306,12 @@ e_britannia = {
 
 					cultural_names = {
                         name_list_anglo_saxon = cn_st_andrews_anglo_saxon # Sancte Andreas
+						name_list_anglo_norse = cn_st_andrews_anglo_saxon # Ænglandi
 
                         name_list_gaelic = cn_st_andrews_gaelic # Cill Rìmhinn
                         name_list_irish = cn_st_andrews_irish # Cill Rìmhinn
                         name_list_pictish = cn_st_andrews_pictish # Cill Rìmhinn
+						name_list_norse_gael = cn_st_andrews_irish
 
                         name_list_cornish = cn_st_andrews_cornish # Cill Rìmhinn
                         name_list_welsh = cn_st_andrews_welsh # Cill Rìmhinn
@@ -4753,10 +5326,12 @@ e_britannia = {
 					name_list_scottish = cn_strathearn_scottish # Stradearn
                     name_list_english = cn_strathearn_english # Stradearn
                     name_list_anglo_saxon = cn_strathearn_anglo_saxon # Sraiþherni
+					name_list_anglo_norse = cn_strathearn_anglo_saxon # Ænglandi
 
                     name_list_gaelic = cn_strathearn_gaelic # Srath Èireann
                     name_list_irish = cn_strathearn_irish # Srath Èireann
                     name_list_pictish = cn_strathearn_pictish # Fanun
+					name_list_norse_gael = cn_strathearn_irish
 
                     name_list_cumbrian = cn_strathearn_cumbrian # Fanun
                     name_list_welsh = cn_strathearn_welsh # Gwynun
@@ -4781,7 +5356,10 @@ e_britannia = {
                         name_list_swedish = cn_stirling_swedish # Styrling
                         name_list_norwegian = cn_stirling_norwegian # Styrling
                         name_list_norse = cn_stirling_norse # Styrling
-                        name_list_danish = cn_stirling_danish # Styrling						
+                        name_list_danish = cn_stirling_danish # Styrling
+
+						name_list_anglo_norse = cn_stirling_norse
+						name_list_norse_gael = cn_stirling_norse													
 					}
 
 				}
@@ -4793,6 +5371,8 @@ e_britannia = {
                         name_list_gaelic = cn_callander_gaelic # Calasraid
                         name_list_pictish = cn_callander_pictish # Calasraid
                         name_list_irish = cn_callander_irish # Calasraid
+						name_list_norse_gael = cn_callander_irish
+
 					}					
 					
 				}
@@ -4804,6 +5384,8 @@ e_britannia = {
                         name_list_gaelic = cn_clackmannan_gaelic # Clach Mhanainn
                         name_list_pictish = cn_clackmannan_pictish # Clach Mhanainn
                         name_list_irish = cn_clackmannan_irish # Clach Mhanainn
+						name_list_norse_gael = cn_clackmannan_irish
+
 					}					
 					
 				}
@@ -4820,10 +5402,12 @@ e_britannia = {
 						name_list_scottish = cn_dunkeld_scottish # Dunkell
                         name_list_english = cn_dunkeld_english # Duncalden
 						name_list_anglo_saxon = cn_dunkeld_anglo_saxon # Duncalden
+						name_list_anglo_norse = cn_dunkeld_anglo_saxon # Ænglandi
 
                         name_list_gaelic = cn_dunkeld_gaelic # Dún Chailleann
                         name_list_pictish = cn_dunkeld_pictish # Dun Celadon
                         name_list_irish = cn_dunkeld_irish # Dún Chailleann
+						name_list_norse_gael = cn_dunkeld_irish
 
 						name_list_cumbrian = cn_dunkeld_cumbrian # Dun Celadon
                         name_list_welsh = cn_dunkeld_welsh # Din Celyddon
@@ -4840,6 +5424,7 @@ e_britannia = {
                         name_list_gaelic = cn_aberfeldy_gaelic # Obar Pheallaidh
                         name_list_pictish = cn_aberfeldy_pictish # Aberfel
                         name_list_irish = cn_aberfeldy_irish # Obar Pheallaidh
+						name_list_norse_gael = cn_aberfeldy_irish
 					}					
 					
 				}
@@ -4851,6 +5436,7 @@ e_britannia = {
                     name_list_gaelic = cn_angus_gaelic # Aonghais
                     name_list_pictish = cn_angus_pictish # Aonghas
                     name_list_irish = cn_angus_irish # Aonghais
+					name_list_norse_gael = cn_angus_irish
 
 					name_list_welsh = cn_angus_welsh # Aonghas
                     name_list_cumbrian = cn_angus_cumbrian # Aonghas
@@ -4868,7 +5454,8 @@ e_britannia = {
 					cultural_names = {
                         name_list_gaelic = cn_kirriemuir_gaelic # Cearan Mhoire
                         name_list_pictish = cn_kirriemuir_pictish # Cearan Mhoire
-                        name_list_irish = cn_kirriemuir_irish # Cearan Mhoire						
+                        name_list_irish = cn_kirriemuir_irish # Cearan Mhoire	
+						name_list_norse_gael = cn_kirriemuir_irish				
 					}
 					
 				}
@@ -4895,7 +5482,10 @@ e_britannia = {
                         name_list_swedish = cn_aberdeen_scotland_swedish # Apardjón
 						name_list_norwegian = cn_aberdeen_scotland_norwegian # Apardjón # IDK how old
                         name_list_norse = cn_aberdeen_scotland_norse # Apardjón
-                        name_list_danish = cn_aberdeen_scotland_danish # Apardjón						
+                        name_list_danish = cn_aberdeen_scotland_danish # Apardjón
+						
+						name_list_anglo_norse = cn_aberdeen_scotland_norse
+						name_list_norse_gael = cn_aberdeen_scotland_norse						
 					}
 
 				}
@@ -4906,6 +5496,8 @@ e_britannia = {
                         name_list_gaelic = cn_kincardine_gaelic # Cinn Chàrdainn
                         name_list_pictish = cn_kincardine_pictish # Cinn Chàrdainn
 						name_list_irish = cn_kincardine_irish # Cinn Chàrdainn
+						name_list_norse_gael = cn_kincardine_irish				
+
 					}
 					
 				}
@@ -4916,6 +5508,8 @@ e_britannia = {
                         name_list_gaelic = cn_ballater_gaelic # Bealadair
                         name_list_pictish = cn_ballater_pictish # Bealadair
                         name_list_irish = cn_ballater_irish # Bealadair
+						name_list_norse_gael = cn_ballater_irish				
+
 					}					
 				}
 			}
@@ -4942,6 +5536,9 @@ e_britannia = {
                 name_list_norse = cn_isle_of_man_norse # Mön
                 name_list_norwegian = cn_isle_of_man_norwegian # Mön
 				name_list_swedish = cn_isle_of_man_swedish # Mön
+				
+				name_list_anglo_norse = cn_isle_of_man_norse
+				name_list_norse_gael = cn_isle_of_man_norse
 			}
 		
 			c_isle_of_man = {
@@ -4965,6 +5562,9 @@ e_britannia = {
 					name_list_norse = cn_isle_of_man_norse # Mön
 					name_list_norwegian = cn_isle_of_man_norwegian # Mön
 					name_list_swedish = cn_isle_of_man_swedish # Mön
+						
+					name_list_anglo_norse = cn_isle_of_man_norse
+					name_list_norse_gael = cn_isle_of_man_norse
 				}
 
 				
@@ -4979,7 +5579,10 @@ e_britannia = {
 						name_list_danish = cn_castletown_danish # Slotby
 						name_list_norse = cn_castletown_norse # Kastalabær
 						name_list_norwegian = cn_castletown_norwegian # Slottsbyen
-						name_list_swedish = cn_castletown_swedish # Slottstaden 
+						name_list_swedish = cn_castletown_swedish # Slottstaden
+							
+						name_list_anglo_norse = cn_castletown_norse
+						name_list_norse_gael = cn_castletown_norse 
 					}
 
 				}
@@ -5004,6 +5607,9 @@ e_britannia = {
                         name_list_norwegian = cn_ramsey_norwegian # Hramsá
                         name_list_norse = cn_ramsey_norse # Hramsá
                         name_list_danish = cn_ramsey_danish # Hramsá
+						
+						name_list_anglo_norse = cn_ramsey_norse
+						name_list_norse_gael = cn_ramsey_norse 
 					}
 				}
 			}
@@ -5029,6 +5635,9 @@ e_britannia = {
 				name_list_norwegian = cn_galloway_norwegian # Galvei
 				name_list_norse = cn_galloway_norse # Galvei
 				name_list_danish = cn_galloway_danish # Galvei
+				
+				name_list_anglo_norse = cn_galloway_norse
+				name_list_norse_gael = cn_galloway_norse 
 			}			
 			
 			ai_primary_priority = {
@@ -5064,10 +5673,12 @@ e_britannia = {
                     name_list_english = cn_lennox_scotland_english # Levenachs
                     name_list_scottish = cn_lennox_scotland_scottish # Lennox
 					name_list_norman = cn_dumbarton_norman # Dunbretaine
+					name_list_anglo_norse = cn_lennox_scotland_anglo_saxon # Ænglandi
 
                     name_list_irish = cn_lennox_scotland_irish # Leamhnachd
                     name_list_gaelic = cn_lennox_scotland_gaelic # Lennox
                     name_list_pictish = cn_lennox_scotland_pictish # Lenno
+					name_list_norse_gael = cn_lennox_scotland_gaelic				
 	
                     name_list_welsh = cn_dumbarton_welsh # Alt Clut
                     name_list_cumbrian = cn_dumbarton_cumbrian # Alt Clut
@@ -5082,11 +5693,13 @@ e_britannia = {
 						name_list_english = cn_lennox_scotland_english # Levenachs
 						name_list_scottish = cn_lennox_scotland_scottish # Lennox
 						name_list_norman = cn_dumbarton_norman # Dunbretaine
-	
+						name_list_anglo_norse = cn_lennox_scotland_anglo_saxon # Ænglandi	
+
 						name_list_irish = cn_lennox_scotland_irish # Leamhnachd
 						name_list_gaelic = cn_lennox_scotland_gaelic # Lennox
 						name_list_pictish = cn_lennox_scotland_pictish # Lenno
-		
+						name_list_norse_gael = cn_lennox_scotland_gaelic				
+
 						name_list_welsh = cn_dumbarton_welsh # Alt Clut
 						name_list_cumbrian = cn_dumbarton_cumbrian # Alt Clut
 						name_list_cornish = cn_dumbarton_cornish # Alt Clut
@@ -5121,6 +5734,9 @@ e_britannia = {
 					name_list_norwegian = cn_galloway_norwegian # Galvei
 					name_list_norse = cn_galloway_norse # Galvei
 					name_list_danish = cn_galloway_danish # Galvei
+						
+					name_list_anglo_norse = cn_galloway_norse
+					name_list_norse_gael = cn_galloway_norse 
 				}
 				color = { 230 120 65 }
 				
@@ -5131,10 +5747,13 @@ e_britannia = {
 
 					cultural_names = {
                         name_list_anglo_saxon = cn_kilcudbrite_anglo_saxon # Cilcuþbeorht
-	
+						name_list_anglo_norse = cn_kilcudbrite_anglo_saxon # Ænglandi	
+
                         name_list_gaelic = cn_kilcudbrite_gaelic # Celle Chuithbeirt
                         name_list_pictish = cn_kilcudbrite_pictish # Celle Chuithbeirt
                         name_list_irish = cn_kilcudbrite_irish # Celle Chuithbeirt
+						name_list_norse_gael = cn_kilcudbrite_irish				
+
 					}					
 					
 				}
@@ -5148,6 +5767,8 @@ e_britannia = {
 						name_list_irish = cn_sanquhar_irish # Seanchair
 						name_list_gaelic = cn_sanquhar_gaelic # Seanchair
                         name_list_pictish = cn_sanquhar_pictish # Seanchair
+						name_list_norse_gael = cn_sanquhar_irish				
+
 					}					
 					
 				}
@@ -5166,7 +5787,10 @@ e_britannia = {
                         name_list_swedish = cn_wigtown_swedish # Vìktun
                         name_list_norwegian = cn_wigtown_norwegian # Vìktun
                         name_list_norse = cn_wigtown_norse # Vìktun
-                        name_list_danish = cn_wigtown_danish # Vìktun						
+                        name_list_danish = cn_wigtown_danish # Vìktun
+							
+						name_list_anglo_norse = cn_wigtown_norse
+						name_list_norse_gael = cn_wigtown_norse						
 					}					
 					
 				}
@@ -5183,10 +5807,12 @@ e_britannia = {
                         name_list_scottish = cn_maybole_scottish # Mayboill
 						name_list_english = cn_maybole_english # Mayboill
                         name_list_anglo_saxon = cn_maybole_anglo_saxon # Mægboþl
+						name_list_anglo_norse = cn_maybole_anglo_saxon # Ænglandi	
 
                         name_list_gaelic = cn_maybole_gaelic # Am Magh Baoghail
                         name_list_irish = cn_maybole_irish # Am Magh Baoghail
                         name_list_pictish = cn_maybole_pictish # Maescanatan
+						name_list_norse_gael = cn_maybole_irish				
 
                         name_list_cornish = cn_maybole_cornish # Y Maes Ynfytyn
                         name_list_welsh = cn_maybole_welsh # Y Maes Ynfytyn
@@ -5202,6 +5828,8 @@ e_britannia = {
                         name_list_gaelic = cn_girvan_gaelic # Inbhir Gharbhain
                         name_list_pictish = cn_girvan_pictish # Inbhir Gharbhain
                         name_list_irish = cn_girvan_irish # Inbhir Gharbhain
+						name_list_norse_gael = cn_girvan_irish				
+
 					}						
 					
 				}
@@ -5210,10 +5838,12 @@ e_britannia = {
 				color = { 230 145 50 }
 				cultural_names = {
 					name_list_anglo_saxon = cn_ayrshire_anglo_saxon # Ægrscīr # Or Ayrscīr
+					name_list_anglo_norse = cn_ayrshire_anglo_saxon # Ænglandi	
 
                 	name_list_gaelic = cn_ayrshire_gaelic # Àir
                     name_list_irish = cn_ayrshire_irish # Àir
                     name_list_pictish = cn_ayrshire_pictish # Aeron
+					name_list_norse_gael = cn_ayrshire_irish				
 
 					name_list_welsh = cn_ayrshire_welsh # Aeron
                     name_list_cumbrian = cn_ayrshire_cumbrian # Aeron
@@ -5232,7 +5862,9 @@ e_britannia = {
 					cultural_names = {
                         name_list_gaelic = cn_strathgryte_gaelic # Srath Ghriobhaidh
                         name_list_pictish = cn_strathgryte_pictish # Srath Ghriobhaidh
-                        name_list_irish = cn_strathgryte_irish # Srath Ghriobhaidh					
+                        name_list_irish = cn_strathgryte_irish # Srath Ghriobhaidh
+						name_list_norse_gael = cn_strathgryte_gaelic				
+					
 					}
 				}
 				b_cunningham = {
@@ -5243,6 +5875,7 @@ e_britannia = {
                         name_list_gaelic = cn_cunningham_gaelic # Coineagan
                         name_list_pictish = cn_cunningham_pictish # Coineagan
                         name_list_irish = cn_cunningham_irish # Coineagan
+						name_list_norse_gael = cn_cunningham_gaelic				
 					}					
 
 				}
@@ -5253,10 +5886,12 @@ e_britannia = {
 					name_list_anglo_saxon = cn_annandale_scotland_anglo_saxon # Annandesdæl
                     name_list_english = cn_annandale_scotland_english # Annandesdale
                     name_list_scottish = cn_annandale_scotland_scottish # Annandesdale
+					name_list_anglo_norse = cn_annandale_scotland_anglo_saxon # Ænglandi	
 
                     name_list_gaelic = cn_annandale_scotland_gaelic # Srath Anann
                     name_list_pictish = cn_annandale_scotland_pictish # Srath Anann
                     name_list_irish = cn_annandale_scotland_irish # Srath Anann
+					name_list_norse_gael = cn_annandale_scotland_gaelic	
 
 					name_list_welsh = cn_annandale_scotland_welsh # Ystrad Annan
                     name_list_cumbrian = cn_annandale_scotland_cumbrian # Ystrad Annan
@@ -5271,6 +5906,8 @@ e_britannia = {
                         name_list_gaelic = cn_annan_gaelic # Anainn # Or Inbhir Anainn
                         name_list_pictish = cn_annan_pictish # Anainn # Or Inbhir Anainn
                         name_list_irish = cn_annan_irish # Anainn # Or Inbhir Anain
+						name_list_norse_gael = cn_annan_gaelic				
+
 					}
 
 				}
@@ -5282,6 +5919,8 @@ e_britannia = {
                         name_list_gaelic = cn_dumfries_gaelic # Dùn Phris
                         name_list_pictish = cn_dumfries_pictish # Dunrad
                         name_list_irish = cn_dumfries_irish # Dùn Phris
+						name_list_norse_gael = cn_dumfries_gaelic				
+
 
                         name_list_welsh = cn_dumfries_welsh # Dinrhyd
                         name_list_cornish = cn_dumfries_cornish # Dinrhyd
@@ -5316,6 +5955,9 @@ e_britannia = {
                 name_list_norwegian = cn_hebrides_outer_norwegian # Søreyar
 				name_list_danish = cn_hebrides_outer_danish # Søreyar
                 name_list_swedish = cn_hebrides_outer_swedish # Suðreyjar
+				
+				name_list_anglo_norse = cn_hebrides_outer_norse
+				name_list_norse_gael = cn_hebrides_outer_norse	
 			}
 			
 			c_inner_hebrides = {
@@ -5339,6 +5981,9 @@ e_britannia = {
                     name_list_norwegian = cn_hebrides_inner_norwegian # Laithlinn
 					name_list_danish = cn_hebrides_outer_danish # Søreyar
 					name_list_swedish = cn_hebrides_inner_swedish # Laithlinn
+						
+					name_list_anglo_norse = cn_hebrides_inner_norse
+					name_list_norse_gael = cn_hebrides_inner_norse
 				}
 
 				b_islay = {
@@ -5357,6 +6002,9 @@ e_britannia = {
                         name_list_norwegian = cn_islay_norwegian # Íl
                         name_list_danish = cn_islay_danish # Íl
                         name_list_swedish = cn_islay_swedish # Íl
+							
+						name_list_anglo_norse = cn_islay_norse
+						name_list_norse_gael = cn_islay_norse
 					}					
 
 				}
@@ -5376,6 +6024,9 @@ e_britannia = {
                         name_list_norwegian = cn_arran_scotland_norwegian # Herrey
                         name_list_danish = cn_arran_scotland_danish # Herrey
                         name_list_swedish = cn_arran_scotland_swedish # Herrey
+						
+						name_list_anglo_norse = cn_arran_scotland_norse
+						name_list_norse_gael = cn_arran_scotland_norse
 					}					
 
 				}
@@ -5399,6 +6050,9 @@ e_britannia = {
                         name_list_norwegian = cn_iona_norwegian # Myl
                         name_list_norse = cn_iona_norse # Myl
                         name_list_danish = cn_iona_danish # Myl
+						
+						name_list_anglo_norse = cn_iona_norse
+						name_list_norse_gael = cn_iona_norse
 					}					
 
 				}
@@ -5424,6 +6078,9 @@ e_britannia = {
 					name_list_norwegian = cn_hebrides_outer_norwegian # Søreyar
 					name_list_danish = cn_hebrides_outer_danish # Søreyar
 					name_list_swedish = cn_hebrides_outer_swedish # Suðreyjar
+					
+					name_list_anglo_norse = cn_hebrides_outer_norse
+					name_list_norse_gael = cn_hebrides_outer_norse
 
 				}
 
@@ -5440,6 +6097,9 @@ e_britannia = {
                         name_list_norwegian = cn_skye_norwegian # Skíð # Or Skuy, Skýey, Skuyö
                         name_list_norse = cn_skye_norse # Skíð # Or Skuy, Skýey, Skuyö
                         name_list_danish = cn_skye_danish # Skíð # Or Skuy, Skýey, Skuyö
+							
+						name_list_anglo_norse = cn_skye_norse
+						name_list_norse_gael = cn_skye_norse
 					}					
 					
 				}
@@ -5464,6 +6124,9 @@ e_britannia = {
                         name_list_norwegian = cn_lewis_norwegian # Ljóðhús # Or Ljoðhús
                         name_list_norse = cn_lewis_norse # Ljóðhús # Or Ljoðhús
                         name_list_danish = cn_lewis_danish # Ljóðhús # Or Ljoðhús
+						
+						name_list_anglo_norse = cn_lewis_norse
+						name_list_norse_gael = cn_lewis_norse
 					}						
 
 				}
@@ -5483,6 +6146,9 @@ e_britannia = {
                         name_list_norse = cn_uist_norse # Ívistirnir
                         name_list_norwegian = cn_uist_norwegian # Ivist
                         name_list_swedish = cn_uist_swedish # Ivist
+						
+						name_list_anglo_norse = cn_uist_norse
+						name_list_norse_gael = cn_uist_norse
 					}
 
 				}
@@ -5492,9 +6158,10 @@ e_britannia = {
 				cultural_names = {
                     name_list_anglo_saxon = cn_argyll_anglo_saxon # Arregaiðel
 
-                    name_list_gaelic = cn_argyll_gaelic # Airer Goídel
+                    name_list_irish = cn_argyll_irish # Airer Goídel
                     name_list_pictish = cn_argyll_pictish # Ebithan
                     name_list_gaelic = cn_argyll_gaelic # Airer Goídel
+					name_list_norse_gael = cn_argyll_gaelic				
 
                     name_list_cumbrian = cn_argyll_cumbrian # Ebithan
                     name_list_welsh = cn_argyll_welsh # Epiddant
@@ -5504,6 +6171,9 @@ e_britannia = {
                     name_list_norwegian = cn_argyll_norwegian # Argjáll
                     name_list_norse = cn_argyll_norse # Argjáll
                     name_list_danish = cn_argyll_danish # Argjáll
+					
+					name_list_anglo_norse = cn_argyll_norse
+					name_list_norse_gael = cn_argyll_norse
 				}				
 				
 				b_kilmarten = {
@@ -5514,11 +6184,15 @@ e_britannia = {
                         name_list_gaelic = cn_kilmartin_gaelic # Cille Mhàrtainn
                         name_list_pictish = cn_kilmartin_pictish # Cille Mhàrtainn
                         name_list_irish = cn_kilmartin_irish # Cille Mhàrtainn
-	
+						name_list_norse_gael = cn_kilmartin_gaelic				
+
                         name_list_swedish = cn_kilmartin_swedish # Kjarbarey
                         name_list_norwegian = cn_kilmartin_norwegian # Kjarbarey
                         name_list_norse = cn_kilmartin_norse # Kjarbarey
                         name_list_danish = cn_kilmartin_danish # Kjarbarey
+							
+						name_list_anglo_norse = cn_kilmartin_norse
+						name_list_norse_gael = cn_kilmartin_norse
 					}
 				}
 				b_glencoe = {
@@ -5533,6 +6207,9 @@ e_britannia = {
                         name_list_norwegian = cn_glencoe_norwegian # Dysjarstaðr
                         name_list_norse = cn_glencoe_norse # Dysjarstaðr
                         name_list_danish = cn_glencoe_danish # Dysjarstaðr
+						
+						name_list_anglo_norse = cn_glencoe_norse
+						name_list_norse_gael = cn_glencoe_norse
 					}					
 
 				}
@@ -5549,6 +6226,9 @@ e_britannia = {
                         name_list_norwegian = cn_lomond_norwegian # Lokolofni
                         name_list_norse = cn_lomond_norse # Lokolofni
                         name_list_danish = cn_lomond_danish # Lokolofni
+						
+						name_list_anglo_norse = cn_lomond_norse
+						name_list_norse_gael = cn_lomond_norse
 					}
 				}
 				b_ardnamurchon = {
@@ -5563,6 +6243,9 @@ e_britannia = {
                         name_list_norwegian = cn_ardnamurchan_norwegian # Mýlarsund
                         name_list_norse = cn_ardnamurchan_norse # Mýlarsund
                         name_list_danish = cn_ardnamurchan_danish # Mýlarsund
+						
+						name_list_anglo_norse = cn_ardnamurchan_norse
+						name_list_norse_gael = cn_ardnamurchan_norse
 					}				
 
 				}
@@ -5590,6 +6273,9 @@ e_britannia = {
                 name_list_norse = cn_lothian_norse # Luðen
                 name_list_norwegian = cn_lothian_norwegian # Luden
                 name_list_swedish = cn_lothian_swedish # Luden
+				
+				name_list_anglo_norse = cn_lothian_norse
+				name_list_norse_gael = cn_lothian_norse
 			}
 			
 			c_lothian = {
@@ -5612,6 +6298,9 @@ e_britannia = {
 					name_list_norse = cn_lothian_norse # Luðen
 					name_list_norwegian = cn_lothian_norwegian # Luden
 					name_list_swedish = cn_lothian_swedish # Luden
+						
+					name_list_anglo_norse = cn_lothian_norse
+					name_list_norse_gael = cn_lothian_norse
 				}				
 				
 				b_edinburgh = {
@@ -5636,6 +6325,9 @@ e_britannia = {
                         name_list_norwegian = cn_edinburgh_norwegian # Edinborg
                         name_list_norse = cn_edinburgh_norse # Edinborg
                         name_list_danish = cn_edinburgh_danish # Edinborg
+							
+						name_list_anglo_norse = cn_edinburgh_norse
+						name_list_norse_gael = cn_edinburgh_norse
 					}					
 					
 				}
@@ -5648,7 +6340,8 @@ e_britannia = {
                         name_list_english = cn_haddington_english # Haddington
                         name_list_scottish = cn_haddington_scottish # Haidintoun
                         name_list_norman = cn_haddington_norman # Haddinctun
-		
+						name_list_anglo_norse = cn_haddington_anglo_saxon # Ænglandi	
+
                         name_list_welsh = cn_haddington_welsh # Baile Adainn
                         name_list_cumbrian = cn_haddington_cumbrian # Baile Adainn
                         name_list_cornish = cn_haddington_cornish # Baile Adainn
@@ -5656,6 +6349,8 @@ e_britannia = {
                         name_list_gaelic = cn_haddington_gaelic # Adain
                         name_list_irish = cn_haddington_irish # Adain
                         name_list_pictish = cn_haddington_pictish # Adain
+						name_list_norse_gael = cn_haddington_gaelic				
+
 					}					
 					
 				}
@@ -5667,6 +6362,8 @@ e_britannia = {
                         name_list_gaelic = cn_galashiels_gaelic # An Geal Àth
                         name_list_pictish = cn_galashiels_pictish # An Geal Àth
                         name_list_irish = cn_galashiels_irish # An Geal Àth
+						name_list_norse_gael = cn_galashiels_gaelic				
+
 					}					
 
 				}
@@ -5678,6 +6375,7 @@ e_britannia = {
                         name_list_gaelic = cn_penicuick_gaelic # Peighinn na Cuthaig
                         name_list_pictish = cn_penicuick_pictish # Peighinn na Cuthaig
                         name_list_irish = cn_penicuick_irish # Peighinn na Cuthaig
+						name_list_norse_gael = cn_penicuick_gaelic
 
                         name_list_welsh = cn_penicuick_welsh # Penn y Cog
                         name_list_cumbrian = cn_penicuick_cumbrian # Penn y Cog
@@ -5704,7 +6402,10 @@ e_britannia = {
 					name_list_swedish = cn_dunbar_swedish # Dúnnbarr
 					name_list_norwegian = cn_dunbar_norwegian # Dúnnbarr
 					name_list_norse = cn_dunbar_norse # Dúnnbarr
-					name_list_danish = cn_dunbar_danish # Dúnnbarr						
+					name_list_danish = cn_dunbar_danish # Dúnnbarr
+					
+					name_list_anglo_norse = cn_dunbar_norse
+					name_list_norse_gael = cn_dunbar_norse						
 				}				
 				
 				b_dunbar = {
@@ -5727,7 +6428,10 @@ e_britannia = {
 						name_list_swedish = cn_dunbar_swedish # Dúnnbarr
 						name_list_norwegian = cn_dunbar_norwegian # Dúnnbarr
 						name_list_norse = cn_dunbar_norse # Dúnnbarr
-						name_list_danish = cn_dunbar_danish # Dúnnbarr						
+						name_list_danish = cn_dunbar_danish # Dúnnbarr	
+							
+						name_list_anglo_norse = cn_dunbar_norse
+						name_list_norse_gael = cn_dunbar_norse					
 					}					
 					
 				}
@@ -5752,6 +6456,9 @@ e_britannia = {
                         name_list_norwegian = cn_berwick_norwegian # Berewic
                         name_list_norse = cn_berwick_norse # Barrvík
                         name_list_danish = cn_berwick_danish # Berewic
+						
+						name_list_anglo_norse = cn_berwick_norse
+						name_list_norse_gael = cn_berwick_norse
 					}					
 					
 				}
@@ -5775,6 +6482,9 @@ e_britannia = {
                     name_list_norwegian = cn_teviotdale_norwegian # Teviœtdalr
                     name_list_norse = cn_teviotdale_norse # Teviœtdalr
                     name_list_danish = cn_teviotdale_danish # Teviœtdalr
+					
+					name_list_anglo_norse = cn_teviotdale_norse
+					name_list_norse_gael = cn_teviotdale_norse
 				}				
 				
 				b_kelso = {
@@ -5785,10 +6495,12 @@ e_britannia = {
                         name_list_anglo_saxon = cn_kelso_anglo_saxon # Cealchōh # Or Calsehou
                         name_list_scottish = cn_kelso_scottish # Calcehou
                         name_list_english = cn_kelso_english # Calcehou
-	
+						name_list_anglo_norse = cn_kelso_anglo_saxon # Ænglandi	
+
                         name_list_gaelic = cn_kelso_gaelic # Cealsach
                         name_list_pictish = cn_kelso_pictish # Calchanith
                         name_list_irish = cn_kelso_irish # Cealsach
+						name_list_norse_gael = cn_kelso_gaelic
 						
                         name_list_welsh = cn_kelso_welsh # Calchow
                         name_list_cumbrian = cn_kelso_cumbrian # Calchanith
@@ -5816,7 +6528,10 @@ e_britannia = {
                         name_list_swedish = cn_jedburgh_swedish # Jedborg
                         name_list_norwegian = cn_jedburgh_norwegian # Jedborg
                         name_list_norse = cn_jedburgh_norse # Jedborg
-                        name_list_danish = cn_jedburgh_danish # Jedborg						
+                        name_list_danish = cn_jedburgh_danish # Jedborg	
+							
+						name_list_anglo_norse = cn_jedburgh_norse
+						name_list_norse_gael = cn_jedburgh_norse					
 					}					
 					
 				}
@@ -5841,6 +6556,9 @@ e_britannia = {
                         name_list_norwegian = cn_selkirk_norwegian # Selkirkju
                         name_list_norse = cn_selkirk_norse # Salkirkja
                         name_list_danish = cn_selkirk_danish # Selkirkju
+						
+						name_list_anglo_norse = cn_selkirk_norse
+						name_list_norse_gael = cn_selkirk_norse
 					}	
 
 				}
@@ -5851,10 +6569,12 @@ e_britannia = {
                     name_list_anglo_saxon = cn_linlithgowshire_anglo_saxon # Linliðagæscīr
                     name_list_english = cn_linlithgowshire_english # Linlithgowshire
                     name_list_scottish = cn_linlithgowshire_scottish # Linlithgowshire
+					name_list_anglo_norse = cn_linlithgowshire_anglo_saxon # Ænglandi	
 
                     name_list_gaelic = cn_linlithgow_gaelic # Gleann Iucha
                     name_list_pictish = cn_linlithgow_pictish # Glanaluu
                     name_list_irish = cn_linlithgow_irish # Gleann Iucha
+					name_list_norse_gael = cn_linlithgow_gaelic
 					
                     name_list_welsh = cn_linlithgow_welsh # Glynallwedd
                     name_list_cumbrian = cn_linlithgow_cumbrian # Glanaluu
@@ -5869,10 +6589,12 @@ e_britannia = {
                         name_list_anglo_saxon = cn_linlithgow_anglo_saxon # Linliðagæ
                         name_list_english = cn_linlithgow_english # Lithgae
                         name_list_scottish = cn_linlithgow_scottish # Lithgae
-	
+						name_list_anglo_norse = cn_linlithgow_anglo_saxon # Ænglandi	
+
 						name_list_gaelic = cn_linlithgow_gaelic # Gleann Iucha
 						name_list_pictish = cn_linlithgow_pictish # Glanaluu
 						name_list_irish = cn_linlithgow_irish # Gleann Iucha
+						name_list_norse_gael = cn_linlithgow_gaelic
 						
 						name_list_welsh = cn_linlithgow_welsh # Glynallwedd
 						name_list_cumbrian = cn_linlithgow_cumbrian # Glanaluu
@@ -5888,10 +6610,13 @@ e_britannia = {
                         name_list_anglo_saxon = cn_queensferry_scotland_anglo_saxon # Cwenesferie
                         name_list_english = cn_queensferry_scotland_english # Quenesferie
                         name_list_scottish = cn_queensferry_scotland_scottish # Quenesferie
-	
+						name_list_anglo_norse = cn_queensferry_scotland_anglo_saxon # Ænglandi	
+
                         name_list_gaelic = cn_queensferry_scotland_gaelic # Cas Chaolais
                         name_list_pictish = cn_queensferry_scotland_pictish # Cas Chaolais
                         name_list_irish = cn_queensferry_scotland_irish # Cas Chaolais
+						name_list_norse_gael = cn_queensferry_scotland_gaelic
+
 					}					
 					
 				}
@@ -5903,10 +6628,12 @@ e_britannia = {
                         name_list_anglo_saxon = cn_falkirk_anglo_saxon # Fawcirice
                         name_list_english = cn_falkirk_english # Faukirke
                         name_list_scottish = cn_falkirk_scottish # Faukirke
-	
+						name_list_anglo_norse = cn_falkirk_anglo_saxon # Ænglandi	
+
                         name_list_pictish = cn_falkirk_pictish # Ecclescbret
                         name_list_gaelic = cn_falkirk_gaelic # Ecclescbret
                         name_list_irish = cn_falkirk_irish # An Eaglais Bhreac
+						name_list_norse_gael = cn_falkirk_gaelic
 
                         name_list_cornish = cn_falkirk_cornish # Eglwysfrith
                         name_list_welsh = cn_falkirk_welsh # Eglwysfrith
@@ -5920,10 +6647,12 @@ e_britannia = {
 				cultural_names = {
                     name_list_anglo_saxon = cn_lanarkshire_anglo_saxon # Lanercscīr # Or Lannarcscīr
                     name_list_scottish = cn_lanarkshire_scottish # Lanrikshire
+					name_list_anglo_norse = cn_lanarkshire_anglo_saxon # Ænglandi	
 
                     name_list_gaelic = cn_lanarkshire_gaelic # Lannraig
                     name_list_pictish = cn_lanarkshire_pictish # Lannraig
                     name_list_irish = cn_lanarkshire_irish # Lannraig
+					name_list_norse_gael = cn_lanarkshire_gaelic
 
                     name_list_welsh = cn_lanarkshire_welsh # Llannerch
                     name_list_cumbrian = cn_lanarkshire_cumbrian # Llannerch
@@ -5939,10 +6668,12 @@ e_britannia = {
                         name_list_anglo_saxon = cn_lanark_anglo_saxon # Lanarc
                         name_list_scottish = cn_lanark_scottish # Lannarc
 						name_list_english = cn_lanark_english # Lannarc
+						name_list_anglo_norse = cn_lanark_anglo_saxon # Ænglandi	
 
                         name_list_gaelic = cn_lanark_gaelic # Lannraigh
                         name_list_irish = cn_lanark_irish # Lannraigh
 						name_list_pictish = cn_lanark_pictish # Lanirc
+						name_list_norse_gael = cn_lanark_gaelic
 
                         name_list_cumbrian = cn_lanark_cumbrian # Lanirc
                         name_list_welsh = cn_lanark_welsh # Llannerch
@@ -5958,10 +6689,12 @@ e_britannia = {
                         name_list_scottish = cn_cadzow_scottish # Cadihow
                         name_list_english = cn_cadzow_english # Cadihow
                         name_list_anglo_saxon = cn_cadzow_anglo_saxon # Cadihow
+						name_list_anglo_norse = cn_cadzow_anglo_saxon # Ænglandi	
 
                         name_list_gaelic = cn_cadzow_gaelic # Bàile Ghobhainn
                         name_list_irish = cn_cadzow_irish # Bàile Ghobhainn
                         name_list_pictish = cn_cadzow_pictish # Uuohan
+						name_list_norse_gael = cn_cadzow_gaelic
 
                         name_list_cumbrian = cn_cadzow_cumbrian # Uuohan
                         name_list_welsh = cn_cadzow_welsh # Guofan
@@ -5988,6 +6721,7 @@ e_britannia = {
                 name_list_gaelic = cn_moray_gaelic # Muireb
                 name_list_irish = cn_moray_irish # Muireb
                 name_list_pictish = cn_moray_pictish # Moireibh
+				name_list_norse_gael = cn_moray_gaelic
 
                 name_list_welsh = cn_moray_welsh # Moireibh
                 name_list_cumbrian = cn_moray_cumbrian # Moireibh
@@ -5997,6 +6731,9 @@ e_britannia = {
                 name_list_norwegian = cn_moray_norwegian # Myræve
 				name_list_swedish = cn_moray_swedish # Myräva
 				name_list_danish = cn_moray_danish # Myræve
+				
+				name_list_anglo_norse = cn_moray_norse
+				name_list_norse_gael = cn_moray_norse
 			}
 			
 			c_moray = {
@@ -6018,6 +6755,9 @@ e_britannia = {
 					name_list_norwegian = cn_moray_norwegian # Myræve
 					name_list_swedish = cn_moray_swedish # Myräva
 					name_list_danish = cn_moray_danish # Myræve
+						
+					name_list_anglo_norse = cn_moray_norse
+					name_list_norse_gael = cn_moray_norse
 				}				
 				
 				b_elgin = {
@@ -6028,6 +6768,7 @@ e_britannia = {
                         name_list_gaelic = cn_elgin_gaelic # Eilginn
                         name_list_pictish = cn_elgin_pictish # Eilginn
                         name_list_irish = cn_elgin_irish # Eilginn
+						name_list_norse_gael = cn_elgin_gaelic
 		
                         name_list_welsh = cn_elgin_welsh # Aergwyn
                         name_list_cumbrian = cn_elgin_cumbrian # Aergwyn
@@ -6048,6 +6789,8 @@ e_britannia = {
                         name_list_gaelic = cn_garioch_gaelic # Gaibheach
                         name_list_pictish = cn_garioch_pictish # Gaibheach
                         name_list_irish = cn_garioch_irish # Gaibheac
+						name_list_norse_gael = cn_garioch_gaelic
+
 					}						
 				}
 			}
@@ -6066,6 +6809,9 @@ e_britannia = {
                     name_list_norwegian = cn_ross_norwegian # Hrossey
                     name_list_norse = cn_ross_norse # Hrossey
                     name_list_danish = cn_ross_danish # Hrossey
+					
+					name_list_anglo_norse = cn_ross_norse
+					name_list_norse_gael = cn_ross_norse
 				}				
 	
 				b_dingwall = {
@@ -6086,7 +6832,10 @@ e_britannia = {
                         name_list_swedish = cn_dingwall_swedish # Tingvall
                         name_list_norwegian = cn_dingwall_norwegian # Tingvall
                         name_list_norse = cn_dingwall_norse # Þingvöllr
-						name_list_danish = cn_ross_danish # Hrossey
+						name_list_danish = cn_dingwall_danish # Hrossey
+							
+						name_list_anglo_norse = cn_dingwall_norse
+						name_list_norse_gael = cn_dingwall_norse
 					}
 					
 				}
@@ -6098,10 +6847,13 @@ e_britannia = {
                         name_list_anglo_saxon = cn_gairloch_anglo_saxon # Gerloch
                         name_list_english = cn_gairloch_english # Gerloch
                         name_list_scottish = cn_gairloch_scottish # Gerloch
+						name_list_anglo_norse = cn_gairloch_anglo_saxon # Ænglandi	
 
                         name_list_gaelic = cn_gairloch_gaelic # Geàrrloch
                         name_list_pictish = cn_gairloch_pictish # Geàrrloch
                         name_list_irish = cn_gairloch_irish # Geàrrloch
+						name_list_norse_gael = cn_gairloch_gaelic
+
 					}					
 					
 				}
@@ -6113,6 +6865,7 @@ e_britannia = {
                         name_list_gaelic = cn_tain_gaelic # Baile Dhubhthaich
                         name_list_pictish = cn_tain_pictish # Baile Dhubhthaich
                         name_list_irish = cn_tain_irish # Baile Dhubhthaich
+						name_list_norse_gael = cn_tain_irish
 
                         name_list_cornish = cn_tain_cornish # Baile Dhubhthaich
                         name_list_cumbrian = cn_tain_cumbrian # Baile Dhubhthaich
@@ -6130,6 +6883,7 @@ e_britannia = {
                         name_list_gaelic = cn_applecross_gaelic # Obar Crosain
                         name_list_pictish = cn_applecross_pictish # Aporcrosan
                         name_list_irish = cn_applecross_irish # Obar Crosain
+						name_list_norse_gael = cn_applecross_irish
 
                         name_list_cornish = cn_applecross_cornish # Cymergrwysau
                         name_list_cumbrian = cn_applecross_cumbrian # Aporcrosan
@@ -6151,6 +6905,7 @@ e_britannia = {
                         name_list_gaelic = cn_banff_scotland_gaelic # Bhanbh # Or Banbh
                         name_list_pictish = cn_banff_scotland_pictish # Bhanbh # Or Banbh
                         name_list_irish = cn_banff_scotland_irish # Bhanbh # Or Banbh
+						name_list_norse_gael = cn_banff_scotland_irish
 
                         name_list_welsh = cn_banff_scotland_welsh # Benywlwys
                         name_list_cumbrian = cn_banff_scotland_cumbrian # Benywlwys
@@ -6166,10 +6921,13 @@ e_britannia = {
                         name_list_scottish = cn_dufftown_scottish # Mortelag
                         name_list_english = cn_dufftown_english # Mortelag
                         name_list_anglo_saxon = cn_dufftown_anglo_saxon # Mortelag
+						name_list_anglo_norse = cn_dufftown_anglo_saxon # Ænglandi	
 
                         name_list_gaelic = cn_dufftown_gaelic # Mòrthlach
                         name_list_pictish = cn_dufftown_pictish # Mòrthlach
                         name_list_irish = cn_dufftown_irish # Mòrthlach
+						name_list_norse_gael = cn_dufftown_irish
+
 					}					
 					
 				}
@@ -6181,10 +6939,13 @@ e_britannia = {
                         name_list_scottish = cn_peterhead_scottish # Peterheved
                         name_list_english = cn_peterhead_english # Peterheved
                         name_list_anglo_saxon = cn_peterhead_anglo_saxon # Peterheafod
+						name_list_anglo_norse = cn_peterhead_anglo_saxon # Ænglandi	
 
                         name_list_gaelic = cn_peterhead_gaelic # Ceann Phàdraig
                         name_list_pictish = cn_peterhead_pictish # Ceann Phàdraig
                         name_list_irish = cn_peterhead_irish # Ceann Phàdraig
+						name_list_norse_gael = cn_peterhead_irish
+
 					}					
 					
 				}
@@ -6207,7 +6968,10 @@ e_britannia = {
                     name_list_swedish = cn_sutherland_swedish # Suðrland
                     name_list_norwegian = cn_sutherland_norwegian # Suðrland
                     name_list_norse = cn_sutherland_norse # Suðrland
-                    name_list_danish = cn_sutherland_danish # Suðrlan					
+                    name_list_danish = cn_sutherland_danish # Suðrlan	
+					
+					name_list_anglo_norse = cn_sutherland_norse
+					name_list_norse_gael = cn_sutherland_norse
 				}
 				
 				b_dornoch = {
@@ -6230,7 +6994,10 @@ e_britannia = {
                         name_list_swedish = cn_dornoch_swedish # Hjálmundalr
                         name_list_norwegian = cn_dornoch_norwegian # Hjálmundalr
                         name_list_norse = cn_dornoch_norse # Hjálmundalr
-                        name_list_danish = cn_dornoch_danish # Hjálmundalr				
+                        name_list_danish = cn_dornoch_danish # Hjálmundalr	
+							
+						name_list_anglo_norse = cn_dornoch_norse
+						name_list_norse_gael = cn_dornoch_norse			
 					}			
 
 				}
@@ -6254,7 +7021,10 @@ e_britannia = {
                         name_list_swedish = cn_durness_swedish # Dýrnes
                         name_list_norwegian = cn_durness_norwegian # Dýrnes
                         name_list_norse = cn_durness_norse # Dýrnes
-                        name_list_danish = cn_durness_danish # Dýrnes				
+                        name_list_danish = cn_durness_danish # Dýrnes
+						
+						name_list_anglo_norse = cn_durness_norse
+						name_list_norse_gael = cn_durness_norse					
 					}
 
 				}
@@ -6266,10 +7036,13 @@ e_britannia = {
                         name_list_anglo_saxon = cn_assynt_anglo_saxon # Asainte
                         name_list_scottish = cn_assynt_scottish # Assynt
                         name_list_english = cn_assynt_english # Assynt
+						name_list_anglo_norse = cn_assynt_anglo_saxon # Ænglandi	
 
                         name_list_gaelic = cn_assynt_gaelic # Asainn # Or Asainte
                         name_list_pictish = cn_assynt_pictish # Asainn # Or Asainte
-                        name_list_irish = cn_assynt_irish # Asainn # Or Asainte				
+                        name_list_irish = cn_assynt_irish # Asainn # Or Asainte	
+						name_list_norse_gael = cn_assynt_irish
+			
 					}					
 
 				}
@@ -6293,7 +7066,10 @@ e_britannia = {
                     name_list_swedish = cn_caithness_swedish # Katanes
                     name_list_norwegian = cn_caithness_norwegian # Katanes
                     name_list_norse = cn_caithness_norse # Katanes
-                    name_list_danish = cn_caithness_danish # Katanes					
+                    name_list_danish = cn_caithness_danish # Katanes
+					
+					name_list_anglo_norse = cn_caithness_norse
+					name_list_norse_gael = cn_caithness_norse						
 				}
 				
 				b_thurso = {
@@ -6315,7 +7091,10 @@ e_britannia = {
 						name_list_danish = cn_thurso_danish # Tyrsaa
                         name_list_norse = cn_thurso_norse # Þórsá
                         name_list_norwegian = cn_thurso_norwegian # Tyrsaa
-                        name_list_swedish = cn_thurso_swedish # Tjurså					
+                        name_list_swedish = cn_thurso_swedish # Tjurså	
+							
+						name_list_anglo_norse = cn_thurso_norse
+						name_list_norse_gael = cn_thurso_norse					
 					}
 				}
 				b_wick = {
@@ -6338,6 +7117,9 @@ e_britannia = {
                         name_list_norse = cn_wick_norse # Vík
                         name_list_norwegian = cn_wick_norwegian # Vik
                         name_list_swedish = cn_wick_swedish # Vik
+						
+						name_list_anglo_norse = cn_wick_norse
+						name_list_norse_gael = cn_wick_norse	
 					}
 				}
 			}
@@ -6361,6 +7143,9 @@ e_britannia = {
                     name_list_norse = cn_inverness_norse # Invernes
                     name_list_norwegian = cn_inverness_norwegian # Aarhusenes
                     name_list_swedish = cn_inverness_swedish # Århusanäs
+					
+					name_list_anglo_norse = cn_inverness_norse
+					name_list_norse_gael = cn_inverness_norse
 				}
 				b_inverness = {
 					province = 1709
@@ -6383,8 +7168,10 @@ e_britannia = {
 						name_list_norse = cn_inverness_norse # Invernes
 						name_list_norwegian = cn_inverness_norwegian # Aarhusenes
 						name_list_swedish = cn_inverness_swedish # Århusanäs
-					}					
-
+							
+						name_list_anglo_norse = cn_inverness_norse
+						name_list_norse_gael = cn_inverness_norse
+					}
 
 				}
 				b_badenoch = {
@@ -6395,6 +7182,8 @@ e_britannia = {
                         name_list_gaelic = cn_badenoch_gaelic # Bàideanach
                         name_list_pictish = cn_badenoch_pictish # Bàideanach
                         name_list_irish = cn_badenoch_irish # Bàideanach
+						name_list_norse_gael = cn_badenoch_irish
+
 					}
 					
 				}
@@ -6406,6 +7195,7 @@ e_britannia = {
                         name_list_gaelic = cn_glenfinnan_gaelic # Gleann Fhionghain
                         name_list_pictish = cn_glenfinnan_pictish # Gleann Fhionghain
                         name_list_irish = cn_glenfinnan_irish # Gleann Fhionghain
+						name_list_norse_gael = cn_glenfinnan_irish
 					}					
 					
 				}
@@ -6416,6 +7206,8 @@ e_britannia = {
                         name_list_gaelic = cn_urquhart_gaelic # Airchartdan
                         name_list_pictish = cn_urquhart_pictish # Airchartdan
                         name_list_irish = cn_urquhart_irish # Airchartdan
+						name_list_norse_gael = cn_urquhart_irish
+
 					}					
 				}
 				b_glenelg = {
@@ -6426,6 +7218,8 @@ e_britannia = {
                         name_list_gaelic = cn_glenelg_gaelic # Glinn Eilg # Or Gleann Eilg
                         name_list_pictish = cn_glenelg_pictish # Glinn Eilg # Or Gleann Eilg
                         name_list_irish = cn_glenelg_irish # Glinn Eilg # Or Gleann Eilg
+						name_list_norse_gael = cn_glenelg_irish
+
 					}					
 
 				}
@@ -6471,6 +7265,9 @@ e_britannia = {
             name_list_norwegian = cn_ireland_norwegian # Íraland
             name_list_norse = cn_ireland_norse # Íraland
             name_list_danish = cn_ireland_danish # Íraland
+			
+			name_list_anglo_norse = cn_ireland_norse
+			name_list_norse_gael = cn_ireland_norse
 		}		
 
 		d_meath = {
@@ -6491,6 +7288,9 @@ e_britannia = {
                 name_list_norwegian = cn_meath_ireland_norwegian # Miðr
                 name_list_norse = cn_meath_ireland_norse # Miðr
                 name_list_danish = cn_meath_ireland_danish # Miðr
+					
+				name_list_anglo_norse = cn_meath_ireland_norse
+				name_list_norse_gael = cn_meath_ireland_norse
 			}
 
 			c_dublin = {
@@ -6514,6 +7314,9 @@ e_britannia = {
                     name_list_norwegian = cn_dublin_county_norwegian # Diflinarskiri
                     name_list_norse = cn_dublin_county_norse # Diflinarskiri
                     name_list_danish = cn_dublin_county_danish # Diflinarskiri
+						
+					name_list_anglo_norse = cn_dublin_county_norse
+					name_list_norse_gael = cn_dublin_county_norse
 				}
 				
 				b_dublin = {
@@ -6538,6 +7341,9 @@ e_britannia = {
 						name_list_norwegian = cn_dublin_county_norwegian # Diflinarskiri
 						name_list_norse = cn_dublin_county_norse # Diflinarskiri
 						name_list_danish = cn_dublin_county_danish # Diflinarskiri
+							
+						name_list_anglo_norse = cn_dublin_county_norse
+						name_list_norse_gael = cn_dublin_county_norse
 					}					
 
 				}
@@ -6558,6 +7364,9 @@ e_britannia = {
                         name_list_norwegian = cn_wicklow_norwegian # Wykynlo
                         name_list_swedish = cn_wicklow_swedish # Wykynlo
                         name_list_danish = cn_wicklow_danish # Wykynlo
+						
+						name_list_anglo_norse = cn_wicklow_norse
+						name_list_norse_gael = cn_wicklow_norse
 					}					
 
 				}
@@ -6579,6 +7388,9 @@ e_britannia = {
                         name_list_norwegian = cn_kildare_norwegian # Kildari
                         name_list_swedish = cn_kildare_swedish # Kildari
                         name_list_danish = cn_kildare_danish # Kildari
+						
+						name_list_anglo_norse = cn_kildare_norse
+						name_list_norse_gael = cn_kildare_norse
 					}					
 					
 				}
@@ -6589,6 +7401,8 @@ e_britannia = {
                         name_list_pictish = cn_trim_pictish # Baile Átha Troim
                         name_list_irish = cn_trim_irish # Baile Átha Troim
                         name_list_gaelic = cn_trim_gaelic # Baile Átha Troim
+						name_list_norse_gael = cn_trim_gaelic
+
 					}					
 
 				}
@@ -6600,6 +7414,8 @@ e_britannia = {
                         name_list_pictish = cn_drogheda_pictish # Droghad Aah
                         name_list_gaelic = cn_drogheda_gaelic # Droichead Átha
                         name_list_irish = cn_drogheda_irish # Droichead Átha
+						name_list_norse_gael = cn_drogheda_gaelic
+
 					}			
 				}
 			}
@@ -6609,6 +7425,8 @@ e_britannia = {
                     name_list_gaelic = cn_athlone_ireland_gaelic # Aah Luain
                     name_list_irish = cn_athlone_ireland_irish # Átha Luain
                     name_list_pictish = cn_athlone_ireland_pictish # Balley Aah Luain
+					name_list_norse_gael = cn_athlone_ireland_irish
+
 				}				
 
 				b_athlone = {
@@ -6619,6 +7437,8 @@ e_britannia = {
 						name_list_gaelic = cn_athlone_ireland_gaelic # Aah Luain
 						name_list_irish = cn_athlone_ireland_irish # Átha Luain
 						name_list_pictish = cn_athlone_ireland_pictish # Balley Aah Luain
+						name_list_norse_gael = cn_athlone_ireland_irish
+
 					}						
 					
 				}
@@ -6630,6 +7450,7 @@ e_britannia = {
                         name_list_pictish = cn_birr_pictish # Caisleán Bhiorra
                         name_list_gaelic = cn_birr_gaelic # Bhiorra # Or Birra
                         name_list_irish = cn_birr_irish # Bhiorra # Or Birra
+						name_list_norse_gael = cn_birr_gaelic
 
                         name_list_welsh = cn_birr_welsh # Caisleán Bhiorra
                         name_list_cumbrian = cn_birr_cumbrian # Caisleán Bhiorra
@@ -6666,6 +7487,9 @@ e_britannia = {
                 name_list_norwegian = cn_ulster_norwegian # Ullagh
                 name_list_norse = cn_ulster_norse # Ullagh
                 name_list_danish = cn_ulster_danish # Ullagh
+				
+				name_list_anglo_norse = cn_ulster_norse
+				name_list_norse_gael = cn_ulster_norse
 			}
 		
 			c_ulster = {
@@ -6688,6 +7512,9 @@ e_britannia = {
 					name_list_norwegian = cn_ulster_norwegian # Ullagh
 					name_list_norse = cn_ulster_norse # Ullagh
 					name_list_danish = cn_ulster_danish # Ullagh
+						
+					name_list_anglo_norse = cn_ulster_norse
+					name_list_norse_gael = cn_ulster_norse
 				}
 
 				b_downpatrick = {
@@ -6707,6 +7534,9 @@ e_britannia = {
                         name_list_norwegian = cn_downpatrick_norwegian # Strangfjord
                         name_list_danish = cn_downpatrick_danish # Strangfjord
                         name_list_swedish = cn_downpatrick_swedish # Strangfjord
+							
+						name_list_anglo_norse = cn_downpatrick_norse
+						name_list_norse_gael = cn_downpatrick_norse
 					}
 				}
 				b_slemish = {
@@ -6717,6 +7547,8 @@ e_britannia = {
                         name_list_gaelic = cn_slemish_gaelic # Slébh Mis
                         name_list_pictish = cn_slemish_pictish # Slébh Mis
                         name_list_irish = cn_slemish_irish # Slébh Mis
+						name_list_norse_gael = cn_slemish_gaelic
+
                     }					
 
 				}
@@ -6728,6 +7560,8 @@ e_britannia = {
                         name_list_gaelic = cn_carrickfergus_gaelic # Carraig Fhearghais
                         name_list_pictish = cn_carrickfergus_pictish # Carraig Fhearghais
                         name_list_irish = cn_carrickfergus_irish # Carraig Fhearghais
+						name_list_norse_gael = cn_carrickfergus_gaelic
+
 					}
 
 				}
@@ -6739,6 +7573,8 @@ e_britannia = {
                         name_list_gaelic = cn_bangor_ulster_gaelic # Inbhear Beg
                         name_list_pictish = cn_bangor_ulster_pictish # Inbhear Beg
                         name_list_irish = cn_bangor_ulster_irish # Inbhear Beg
+						name_list_norse_gael = cn_bangor_ulster_gaelic
+
 					}					
 					
 				}
@@ -6750,6 +7586,7 @@ e_britannia = {
                     name_list_irish = cn_oriel_irish # Airgíalla
                     name_list_gaelic = cn_oriel_gaelic # Airgíalla
                     name_list_pictish = cn_oriel_pictish # Airgíalla
+					name_list_norse_gael = cn_oriel_gaelic
 
 					name_list_cornish = cn_oriel_cornish # Airgíalla
                     name_list_cumbrian = cn_oriel_cumbrian # Airgíalla
@@ -6772,6 +7609,9 @@ e_britannia = {
                         name_list_norse = cn_dundalk_norse # Kerlíngafjörðr
                         name_list_norwegian = cn_dundalk_norwegian # Kerlingfjord
                         name_list_danish = cn_dundalk_danish # Kerlingfjord
+						
+						name_list_anglo_norse = cn_dundalk_norse
+						name_list_norse_gael = cn_dundalk_norse
 					}
 
 				}
@@ -6790,6 +7630,9 @@ e_britannia = {
                         name_list_norwegian = cn_armagh_norwegian # Ardmagh
                         name_list_norse = cn_armagh_norse # Ardmagh
                         name_list_danish = cn_armagh_danish # Ardmagh
+						
+						name_list_anglo_norse = cn_armagh_norse
+						name_list_norse_gael = cn_armagh_norse
 					}
 				}
 				b_ardee = {
@@ -6800,6 +7643,8 @@ e_britannia = {
                         name_list_gaelic = cn_ardee_gaelic # Átha Fhirdhia
                         name_list_pictish = cn_ardee_pictish # Átha Fhirdhia
                         name_list_irish = cn_ardee_irish # Átha Fhirdhia
+						name_list_norse_gael = cn_ardee_irish
+
 					}
 				}
 				b_clogher = {
@@ -6810,6 +7655,8 @@ e_britannia = {
                         name_list_gaelic = cn_clogher_gaelic # Clochar
                         name_list_pictish = cn_clogher_pictish # Clochar
                         name_list_irish = cn_clogher_irish # Clochar
+						name_list_norse_gael = cn_clogher_gaelic
+
 					}					
 					
 				}
@@ -6826,6 +7673,9 @@ e_britannia = {
 						name_list_norwegian = cn_dungannon_ireland_norwegian # Heer Eoin
                         name_list_norse = cn_dungannon_ireland_norse # Rathgannon
                         name_list_danish = cn_dungannon_ireland_danish # Heer Eoin
+						
+						name_list_anglo_norse = cn_dungannon_ireland_norse
+						name_list_norse_gael = cn_dungannon_ireland_norse
 
 					}						
 					
@@ -6837,6 +7687,9 @@ e_britannia = {
 				cultural_names = {
 					name_list_norse = cn_ulfkelsfjordr
 					name_list_norwegian = cn_ulfkelsfjordr
+					
+					name_list_anglo_norse = cn_ulfkelsfjordr
+					name_list_norse_gael = cn_ulfkelsfjordr
 				}
 				
 				b_donegal = {
@@ -6847,6 +7700,8 @@ e_britannia = {
 						name_list_irish = cn_donegal_irish # Doon ny Ghoal
                         name_list_pictish = cn_donegal_pictish # Doon ny Ghoal
                         name_list_gaelic = cn_donegal_gaelic # Dún na nGall
+						name_list_norse_gael = cn_donegal_gaelic
+
 					}
 				}
 				b_raphoe = { #historical note: monastery
@@ -6856,6 +7711,8 @@ e_britannia = {
 					cultural_names = {
                         name_list_irish = cn_raphoe_irish # Ráth Bhoth
 						name_list_gaelic = cn_raphoe_gaelic # Ráth Bhoth
+						name_list_norse_gael = cn_raphoe_gaelic
+
 					}
 				}
 				b_fahan = {
@@ -6866,6 +7723,8 @@ e_britannia = {
                         name_list_irish = cn_fahan_irish # Fathain Mura
                         name_list_pictish = cn_fahan_pictish # Fathain Mura
                         name_list_gaelic = cn_fahan_gaelic # Fathain Mura
+						name_list_norse_gael = cn_fahan_gaelic
+
 
 						name_list_cornish = cn_fahan_cornish # Fathain Mura
                         name_list_cumbrian = cn_fahan_cumbrian # Fathain Mura
@@ -6889,6 +7748,9 @@ e_britannia = {
                         name_list_norwegian = cn_derry_norwegian # Úlfkelsfjörðr
                         name_list_norse = cn_derry_norse # Úlfkelsfjörðr
                         name_list_danish = cn_derry_danish # Úlfkelsfjörðr
+							
+						name_list_anglo_norse = cn_derry_norse
+						name_list_norse_gael = cn_derry_norse
 					}					
 					
 				}
@@ -6905,6 +7767,8 @@ e_britannia = {
                     name_list_irish = cn_hy_many_irish # Uí Mháine
                     name_list_pictish = cn_hy_many_pictish # Uí Mháine
                     name_list_gaelic = cn_hy_many_gaelic # Uí Mháine
+					name_list_norse_gael = cn_hy_many_gaelic
+
 				}					
 			
 				b_galway = {
@@ -6924,6 +7788,9 @@ e_britannia = {
                         name_list_norwegian = cn_galway_norwegian # Galwæg
                         name_list_norse = cn_galway_norse # Galwæg
                         name_list_danish = cn_galway_danish # Galwæg
+						
+						name_list_anglo_norse = cn_galway_norse
+						name_list_norse_gael = cn_galway_norse
 					}					
 
 				}
@@ -6935,6 +7802,7 @@ e_britannia = {
                         name_list_irish = cn_athenry_irish # Aah yn Ree
                         name_list_pictish = cn_athenry_pictish # Aah yn Ree
                         name_list_gaelic = cn_athenry_gaelic # Átha an Rí
+						name_list_norse_gael = cn_athenry_gaelic
 					}					
 					
 				}
@@ -6946,6 +7814,7 @@ e_britannia = {
                         name_list_irish = cn_tuam_irish # Tuaim Dá Ghualann
                         name_list_pictish = cn_tuam_pictish # Tuaim Dá Ghualann
                         name_list_gaelic = cn_tuam_gaelic # Tuaim Dá Ghualann
+						name_list_norse_gael = cn_tuam_gaelic
 					}							
 					
 				}
@@ -6973,7 +7842,10 @@ e_britannia = {
                     name_list_swedish = cn_mayo_swedish # Mageo
                     name_list_norwegian = cn_mayo_norwegian # Mageo
                     name_list_norse = cn_mayo_norse # Mageo
-                    name_list_danish = cn_mayo_danish # Mageo					
+                    name_list_danish = cn_mayo_danish # Mageo	
+					
+					name_list_anglo_norse = cn_mayo_norse
+					name_list_norse_gael = cn_mayo_norse				
 				}				
 
 				b_cruachu = {
@@ -6984,6 +7856,7 @@ e_britannia = {
                         name_list_irish = cn_cruachu_irish # Cruachan
                         name_list_pictish = cn_cruachu_pictish # Cruachan
 						name_list_gaelic = cn_cruachu_gaelic # Cruachan
+						name_list_norse_gael = cn_cruachu_gaelic
 					}					
 
 					
@@ -6997,10 +7870,13 @@ e_britannia = {
                         name_list_scottish = cn_castlebar_scottish # Castel Barri
                         name_list_english = cn_castlebar_english # Castel Barri
                         name_list_norman = cn_castlebar_norman # Chastel de Barri
+						name_list_anglo_norse = cn_castlebar_anglo_saxon # Ænglandi	
 
                         name_list_irish = cn_castlebar_irish # Magh Eo
                         name_list_gaelic = cn_castlebar_gaelic # Magh Eo
                         name_list_pictish = cn_castlebar_pictish # Magh Eo
+						name_list_norse_gael = cn_castlebar_gaelic
+
 					}								
 				}
 				b_sligo = {
@@ -7019,7 +7895,10 @@ e_britannia = {
                         name_list_swedish = cn_sligo_swedish # Slich
                         name_list_norwegian = cn_sligo_norwegian # Slich
                         name_list_norse = cn_sligo_norse # Slich
-                        name_list_danish = cn_sligo_danish # Slich						
+                        name_list_danish = cn_sligo_danish # Slich	
+							
+						name_list_anglo_norse = cn_sligo_norse
+						name_list_norse_gael = cn_sligo_norse					
 					}
 					
 				}
@@ -7031,7 +7910,8 @@ e_britannia = {
 					cultural_names = {
                         name_list_gaelic = cn_killala_gaelic # Cill Ala
                         name_list_pictish = cn_killala_pictish # Cill Ala
-                        name_list_irish = cn_killala_irish # Cill Ala						
+                        name_list_irish = cn_killala_irish # Cill Ala
+						name_list_norse_gael = cn_killala_gaelic						
 					}
 
 					
@@ -7048,6 +7928,8 @@ e_britannia = {
                         name_list_gaelic = cn_dromahair_gaelic # Druimm Dhá Thiar
                         name_list_pictish = cn_dromahair_pictish # Druimm Dhá Thiar
                         name_list_irish = cn_dromahair_irish # Druimm Dhá Thiar
+						name_list_norse_gael = cn_dromahair_gaelic						
+
 					}					
 
 				}
@@ -7059,7 +7941,7 @@ e_britannia = {
 						name_list_gaelic = cn_belcoo_gaelic # Béal Cú
                         name_list_pictish = cn_belcoo_pictish # Béal Cú
                         name_list_irish = cn_belcoo_irish # Béal Cú
-
+						name_list_norse_gael = cn_belcoo_gaelic				
 					}
 
 					
@@ -7076,6 +7958,7 @@ e_britannia = {
                         name_list_irish = cn_longford_irish # An Longphort
                         name_list_pictish = cn_longford_pictish # An Longphort
                         name_list_gaelic = cn_longford_gaelic # An Longphort
+						name_list_norse_gael = cn_longford_gaelic				
 					}
 
 				}
@@ -7087,6 +7970,8 @@ e_britannia = {
                         name_list_irish = cn_cavan_irish # Yn Cavan
                         name_list_pictish = cn_cavan_pictish # Yn Cavan
                         name_list_gaelic = cn_cavan_gaelic # Chavan
+						name_list_norse_gael = cn_cavan_gaelic				
+
 					}					
 
 				}
@@ -7097,6 +7982,8 @@ e_britannia = {
                         name_list_gaelic = cn_adragh_gaelic # Ardachadh
                         name_list_pictish = cn_adragh_pictish # Ardachadh 
                         name_list_irish = cn_adragh_irish # Ardachadh 
+						name_list_norse_gael = cn_adragh_gaelic				
+
 					}	
 				}
 			}	
@@ -7114,6 +8001,9 @@ e_britannia = {
                 name_list_norwegian = cn_leinster_norwegian # Laistaðr
                 name_list_norse = cn_leinster_norse # Laistaðr
                 name_list_danish = cn_leinster_danish # Laistaðr
+				
+				name_list_anglo_norse = cn_leinster_norse
+				name_list_norse_gael = cn_leinster_norse
 			}			
 			
 			c_leinster = {
@@ -7127,6 +8017,9 @@ e_britannia = {
 					name_list_norwegian = cn_leinster_norwegian # Laistaðr
 					name_list_norse = cn_leinster_norse # Laistaðr
 					name_list_danish = cn_leinster_danish # Laistaðr
+						
+					name_list_anglo_norse = cn_leinster_norse
+					name_list_norse_gael = cn_leinster_norse
 				}				
 				
 				b_wexford = {
@@ -7145,6 +8038,9 @@ e_britannia = {
                         name_list_norwegian = cn_wexford_norwegian # Veisafjorð
                         name_list_norse = cn_wexford_norse # Veisafjorð
                         name_list_danish = cn_wexford_danish # Veisafjorð
+							
+						name_list_anglo_norse = cn_wexford_norse
+						name_list_norse_gael = cn_wexford_norse
 					}
 				}
 				b_enniscorthy = {
@@ -7155,6 +8051,8 @@ e_britannia = {
                         name_list_gaelic = cn_enniscorthy_gaelic # Inis Córthaidh
                         name_list_pictish = cn_enniscorthy_pictish # Inis Córthaidh
                         name_list_irish = cn_enniscorthy_irish # Inis Córthaidh
+						name_list_norse_gael = cn_enniscorthy_gaelic				
+
 					}					
 				}
 				b_ferns = {
@@ -7164,6 +8062,7 @@ e_britannia = {
                         name_list_gaelic = cn_ferns_gaelic # Fearna
                         name_list_irish = cn_ferns_irish # Fearna
 						name_list_pictish = cn_ferns_pictish # Fearna
+						name_list_norse_gael = cn_ferns_gaelic				
 					}					
 				}
 				b_carlow = {
@@ -7173,6 +8072,7 @@ e_britannia = {
                         name_list_gaelic = cn_carlow_gaelic # Ceatharlach
                         name_list_pictish = cn_carlow_pictish # Ceatharlach
                         name_list_irish = cn_carlow_irish # Ceatharlach
+						name_list_norse_gael = cn_carlow_gaelic				
 
 						name_list_welsh = cn_carlow_welsh # Ceatharlach
                         name_list_cumbrian = cn_carlow_cumbrian # Ceatharlach
@@ -7186,6 +8086,7 @@ e_britannia = {
                     name_list_gaelic = cn_ossory_gaelic # Osraige
                     name_list_irish = cn_ossory_irish # Osraige
                     name_list_pictish = cn_ossory_pictish # Osraige
+					name_list_norse_gael = cn_ossory_gaelic				
 
                     name_list_welsh = cn_ossory_welsh # Osraige
                     name_list_cumbrian = cn_ossory_cumbrian # Osraige
@@ -7199,6 +8100,7 @@ e_britannia = {
                         name_list_gaelic = cn_gowran_gaelic # Gabhrán
                         name_list_irish = cn_gowran_irish # Gabhrán
                         name_list_pictish = cn_gowran_pictish # Gabhrán
+						name_list_norse_gael = cn_gowran_gaelic				
 	
                         name_list_cornish = cn_gowran_cornish # Gabhrán
                         name_list_welsh = cn_gowran_welsh # Gabhrán
@@ -7213,6 +8115,7 @@ e_britannia = {
                         name_list_gaelic = cn_kilkenny_gaelic # Cell Chainnigh
                         name_list_irish = cn_kilkenny_irish # Cell Chainnigh
                         name_list_pictish = cn_kilkenny_pictish # Ceall Cainnigh
+						name_list_norse_gael = cn_kilkenny_gaelic				
 					}
 
 				}
@@ -7224,6 +8127,7 @@ e_britannia = {
                         name_list_gaelic = cn_athy_gaelic # Átha Í
                         name_list_pictish = cn_athy_pictish # Átha Í
                         name_list_irish = cn_athy_irish # Átha Í
+						name_list_norse_gael = cn_athy_gaelic				
 					}					
 					
 				}
@@ -7235,6 +8139,8 @@ e_britannia = {
                         name_list_gaelic = cn_carrick_ireland_gaelic # An Carraic
                         name_list_pictish = cn_carrick_ireland_pictish # An Carraic
                         name_list_irish = cn_carrick_ireland_irish # An Carraic
+						name_list_norse_gael = cn_carrick_ireland_gaelic				
+
 					}					
 					
 				}
@@ -7247,6 +8153,7 @@ e_britannia = {
                 name_list_gaelic = cn_munster_ireland_gaelic # Mumhain # Or Còigeamh Mumhan
                 name_list_irish = cn_munster_ireland_irish # Mumhain # Or Còigeamh Mumhan
                 name_list_pictish = cn_munster_ireland_pictish # Mooan # Or Queiggey Mooan
+				name_list_norse_gael = cn_munster_ireland_gaelic				
 
                 name_list_welsh = cn_munster_ireland_welsh # Cúige Mumhan
                 name_list_cumbrian = cn_munster_ireland_cumbrian # Cúige Mumhan
@@ -7259,6 +8166,7 @@ e_britannia = {
                     name_list_gaelic = cn_thomond_gaelic # Tuadhmhumhain
                     name_list_pictish = cn_thomond_pictish # Tuadhmhumhain
                     name_list_irish = cn_thomond_irish # Tuadhmhumhain
+					name_list_norse_gael = cn_thomond_gaelic				
 				}				
 
 				b_limerick = {
@@ -7278,6 +8186,9 @@ e_britannia = {
                         name_list_norwegian = cn_limerick_norwegian # Hlymrek
                         name_list_swedish = cn_limerick_swedish # Lymrek
                         name_list_breton = cn_limerick_breton # Lymryk
+						
+						name_list_anglo_norse = cn_limerick_norse
+						name_list_norse_gael = cn_limerick_norse
 					}					
 
 				}
@@ -7289,6 +8200,7 @@ e_britannia = {
                         name_list_pictish = cn_nenagh_pictish # Aonach Urmhumhan # Or An tAonach
                         name_list_gaelic = cn_nenagh_gaelic # Aonach Urmhumhan # Or An tAonach
                         name_list_irish = cn_nenagh_irish # Aonach Urmhumhan # Or An tAonach
+						name_list_norse_gael = cn_nenagh_gaelic				
 					}					
 				}
 				b_roscrea = { #Historical note: important trading town
@@ -7299,6 +8211,7 @@ e_britannia = {
                         name_list_gaelic = cn_roscrea_gaelic # Ros Cré
                         name_list_pictish = cn_roscrea_pictish # Ros Cré
                         name_list_irish = cn_roscrea_irish # Ros Cré
+						name_list_norse_gael = cn_roscrea_gaelic				
                       
 						name_list_welsh = cn_roscrea_welsh # Ros Cré
                         name_list_cumbrian = cn_roscrea_cumbrian # Ros Cré
@@ -7314,6 +8227,8 @@ e_britannia = {
                         name_list_gaelic = cn_kilmallock_gaelic # Cill Mocheallóg
                         name_list_pictish = cn_kilmallock_pictish # Cill Mocheallóg
                         name_list_irish = cn_kilmallock_irish # Cill Mocheallóg
+						name_list_norse_gael = cn_kilmallock_gaelic				
+
 					}
 					
 				}
@@ -7324,6 +8239,7 @@ e_britannia = {
                     name_list_pictish = cn_ennis_pictish # Inis
                     name_list_gaelic = cn_ennis_gaelic # Innys
                     name_list_irish = cn_ennis_irish # Inis
+					name_list_norse_gael = cn_ennis_gaelic				
 
 					name_list_cornish = cn_ennis_cornish # Inis
 					name_list_cumbrian = cn_ennis_cumbrian # Inis
@@ -7337,6 +8253,7 @@ e_britannia = {
 						name_list_pictish = cn_ennis_pictish # Inis
 						name_list_gaelic = cn_ennis_gaelic # Innys
 						name_list_irish = cn_ennis_irish # Inis
+						name_list_norse_gael = cn_ennis_gaelic				
 	
 						name_list_cornish = cn_ennis_cornish # Inis
 						name_list_cumbrian = cn_ennis_cumbrian # Inis
@@ -7352,6 +8269,8 @@ e_britannia = {
                         name_list_gaelic = cn_kincora_gaelic # Ceann Coradh
                         name_list_pictish = cn_kincora_pictish # Ceann Coradh
                         name_list_irish = cn_kincora_irish # Ceann Coradh
+						name_list_norse_gael = cn_kincora_gaelic				
+
 					}					
 
 				}
@@ -7371,6 +8290,9 @@ e_britannia = {
 					name_list_norwegian = cn_ormond_norwegian # Vedrafjord
 					name_list_swedish = cn_ormond_swedish # Vedrafjord
 					name_list_danish = cn_ormond_danish # Vedrafjord
+					
+					name_list_anglo_norse = cn_ormond_norse
+					name_list_norse_gael = cn_ormond_norse
 				}				
 				
 
@@ -7390,6 +8312,9 @@ e_britannia = {
 						name_list_norwegian = cn_waterford_norwegian # Vedrafjord
 						name_list_swedish = cn_waterford_swedish # Vedrafjord
 						name_list_danish = cn_waterford_danish # Vedrafjord
+							
+						name_list_anglo_norse = cn_waterford_norse
+						name_list_norse_gael = cn_waterford_norse
 					}					
 
 				}
@@ -7400,6 +8325,8 @@ e_britannia = {
                         name_list_gaelic = cn_emly_gaelic # Imleach Iubhair # Or Imlech Ibuir
                         name_list_pictish = cn_emly_pictish # Imleach Iubhair # Or Imlech Ibuir
                         name_list_irish = cn_emly_irish # Imleach Iubhair # Or Imlech Ibuir
+						name_list_norse_gael = cn_emly_gaelic				
+
 					}					
 
 				}
@@ -7410,6 +8337,7 @@ e_britannia = {
                         name_list_gaelic = cn_clonmel_gaelic # Cluain Meala
                         name_list_pictish = cn_clonmel_pictish # Cluain Meala
                         name_list_irish = cn_clonmel_irish # Cluain Meala
+						name_list_norse_gael = cn_clonmel_gaelic			
 
 						name_list_cumbrian = cn_clonmel_cumbrian # Cluain Meala
                         name_list_cornish = cn_clonmel_cornish # Cluain Meala
@@ -7424,6 +8352,7 @@ e_britannia = {
                     name_list_gaelic = cn_desmond_gaelic # Deasmhumhain
                     name_list_pictish = cn_desmond_pictish # Deasmhumhain
                     name_list_irish = cn_desmond_irish # Deasmhumhain
+					name_list_norse_gael = cn_desmond_gaelic			
 				}				
 				
 				b_tralee = {
@@ -7434,6 +8363,7 @@ e_britannia = {
                         name_list_gaelic = cn_tralee_gaelic # Traigh Lí # Or Tráig Lí
                         name_list_irish = cn_tralee_irish # Traigh Lí # Or Tráig Lí
                         name_list_pictish = cn_tralee_pictish # Traie Lee
+						name_list_norse_gael = cn_tralee_gaelic			
 
                         name_list_welsh = cn_tralee_welsh # Trá Lí
                         name_list_cumbrian = cn_tralee_cumbrian # Trá Lí
@@ -7447,6 +8377,8 @@ e_britannia = {
 					cultural_names = {
                         name_list_gaelic = cn_cork_gaelic # Corcaigh
                         name_list_irish = cn_cork_irish # Corcaigh
+						name_list_norse_gael = cn_cork_gaelic			
+
 					}					
 
 				}
@@ -7458,6 +8390,8 @@ e_britannia = {
                         name_list_gaelic = cn_kinsale_gaelic # Cionn tSáile
                         name_list_irish = cn_kinsale_irish # Cionn tSáile
 						name_list_pictish = cn_kinsale_pictish # Kione Sailley
+						name_list_norse_gael = cn_kinsale_gaelic			
+
 					}					
 					
 				}
@@ -7469,6 +8403,7 @@ e_britannia = {
                         name_list_gaelic = cn_baltimore_ireland_gaelic # Dún na Séad
                         name_list_pictish = cn_baltimore_ireland_pictish # Dún na Séad
                         name_list_irish = cn_baltimore_ireland_irish # Dún na Séad
+						name_list_norse_gael = cn_baltimore_ireland_gaelic			
 
                         name_list_welsh = cn_baltimore_ireland_welsh # Dún na Séad
                         name_list_cumbrian = cn_baltimore_ireland_cumbrian # Dún na Séad
@@ -7483,6 +8418,28 @@ e_britannia = {
 		color = { 124 59 8 }
 
 		capital = c_isle_of_man	#Mann
+		cultural_names = {
+			name_list_anglo_saxon = cn_isle_of_man_anglo_saxon # Mæn
+			name_list_scottish = cn_isle_of_man_scottish # Mann
+			name_list_english = cn_isle_of_man_english # Mann
+			name_list_norman = cn_isle_of_man_norman # Man
+
+			name_list_welsh = cn_isle_of_man_welsh # Manaw
+			name_list_cornish = cn_isle_of_man_cornish # Manaw
+			name_list_cumbrian = cn_isle_of_man_cumbrian # Manau
+
+			name_list_pictish = cn_isle_of_man_pictish # Manu
+			name_list_gaelic = cn_isle_of_man_gaelic # Mhannin
+			name_list_irish = cn_isle_of_man_irish # Mhannin
+
+			name_list_danish = cn_isle_of_man_danish # Mön
+			name_list_norse = cn_isle_of_man_norse # Mön
+			name_list_norwegian = cn_isle_of_man_norwegian # Mön
+			name_list_swedish = cn_isle_of_man_swedish # Mön
+				
+			name_list_anglo_norse = cn_isle_of_man_norse
+			name_list_norse_gael = cn_isle_of_man_norse
+		}
 	}
 	k_ireland_titular = {# This is the non de jure kingdom to reflect that the high king existed but didn't have much power
 		color = { 6 127 2 }
@@ -7504,6 +8461,9 @@ e_britannia = {
             name_list_norwegian = cn_ireland_norwegian # Íraland
             name_list_norse = cn_ireland_norse # Íraland
             name_list_danish = cn_ireland_danish # Íraland
+			
+			name_list_anglo_norse = cn_ireland_norse
+			name_list_norse_gael = cn_ireland_norse
 		}		
 	}
 }

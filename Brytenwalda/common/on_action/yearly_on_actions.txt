@@ -324,17 +324,17 @@ yearly_global_pulse = {
 			limit = {
 				NOT = { exists = global_var:bryten_anglo_saxon_created }
 				title:k_england = { is_title_created = yes } # England must be created first
-				current_date >= 900.1.1
+				current_date >= 867.1.1
 			}
 			random = {
 				chance = 0 # No chance the first year of play if starting in 867
 				modifier = {
 					add = 2 # 2% chance per year
-					current_date >= 900.1.1
+					current_date >= 880.1.1
 				}
 				modifier = {
 					add = 8 # 10% chance per year
-					current_date >= 930.1.1
+					current_date >= 900.1.1
 				}
 				modifier = {
 					add = 15 # 25% chance per year
@@ -345,11 +345,11 @@ yearly_global_pulse = {
 					current_date >= 930.1.1
 				}
 				modifier = {
-					add = 10 # 25% chance per year
+					add = 3 # 25% chance per year
 					culture = { has_innovation = innovation_chronicle_writing }
 				}
 				modifier = {
-					add = 15 # 25% chance per year
+					add = 3 # 25% chance per year
 					culture = { has_innovation = innovation_baliffs }
 				}
 				set_global_variable = {
@@ -388,7 +388,7 @@ yearly_global_pulse = {
 					value = yes
 				}
 				trigger_event = {
-					id = bryten_england.040
+					id = bryten_england.050
 					days = { 60 300 }
 				}
 			}
@@ -423,7 +423,7 @@ yearly_global_pulse = {
 					value = yes
 				}
 				trigger_event = {
-					id = bryten_england.032
+					id = bryten_england.040
 					days = { 60 300 }
 				}
 			}

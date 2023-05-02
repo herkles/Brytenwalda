@@ -581,7 +581,7 @@ task_promote_culture = {
 				trigger = {
 					scope:councillor_liege = {
 						culture = { has_cultural_pillar = heritage_north_germanic }
-						has_game_rule = bryten_british_culture_spreads
+						has_game_rule = bryten_british_culture_spreads_on
 						OR = {
 							capital_province = { geographical_region = custom_ireland }
 							capital_province = { geographical_region = custom_scotland }
@@ -595,7 +595,7 @@ task_promote_culture = {
 				trigger = {
 					scope:councillor_liege = {
 						culture = { has_cultural_pillar = heritage_north_germanic }
-						has_game_rule = bryten_british_culture_spreads
+						has_game_rule = bryten_british_culture_spreads_on
 						capital_province = { geographical_region = custom_england }
 						exists = global_var:bryten_anglo_norse_created
 					}
@@ -1002,7 +1002,7 @@ task_promote_culture = {
 				limit = {
 					scope:councillor_liege = {
 						culture = { has_cultural_pillar = heritage_north_germanic }
-						has_game_rule = bryten_british_culture_spreads
+						has_game_rule = bryten_british_culture_spreads_on
 						OR = {
 							capital_province = { geographical_region = custom_ireland }
 							capital_province = { geographical_region = custom_scotland }
@@ -1016,7 +1016,7 @@ task_promote_culture = {
 				limit = {
 					scope:councillor_liege = {
 						culture = { has_cultural_pillar = heritage_north_germanic }
-						has_game_rule = bryten_british_culture_spreads
+						has_game_rule = bryten_british_culture_spreads_on
 						capital_province = { geographical_region = custom_england }
 						exists = global_var:bryten_anglo_norse_created
 					}
