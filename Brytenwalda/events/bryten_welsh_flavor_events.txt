@@ -1,5 +1,6 @@
 ﻿namespace = bryten_wales
 
+
 #######################################
 # Pilgrimage to St. Davids
 #######################################
@@ -319,3 +320,91 @@ bryten_wales.110 = {# Other European Leaders are notified
 		
 }
 
+#######################################
+# Brython culture forming
+#######################################
+bryten_wales.300 = {# brython Culture arising
+	type = empty
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:brython = { save_scope_as = brython }
+		culture:brython = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:welsh
+			get_all_innovations_from = culture:cornish
+			get_all_innovations_from = culture:cumbrian
+			# Save scope for player notification events.
+			save_scope_as = brython
+		}
+
+		# Random anglo counties in south England will convert to Anglo-Norse
+		culture:brython = {
+			every_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_britain_byrthon_area
+					}
+				}
+				add_to_list = brython_counties
+			}
+		}
+
+		# Convert the norse counties to anglo-norse
+		every_in_list = {
+			list = brython_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_west_germanic }
+								capital_province = { geographical_region = custom_england }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_west_germanic }
+								capital_province = { geographical_region = custom_england }
+							}
+						}
+					}
+				}
+			}
+						
+			# All Norse counties in England become byrthon
+			every_county_in_region = {
+				region = custom_britain_byrthon_area
+				random = {
+					chance = 50
+					set_county_culture = culture:byrthon
+				}
+			}
+		}
+
+		every_ruler = {
+			limit = {
+				has_title = title:k_britian
+			}
+			trigger_event = bryten_wales.301
+		}
+	
+	}
+}
+bryten_wales.301 = {# British King gets a choice
+	type = character_event
+	title = bryten_wales.301.t
+	desc = bryten_wales.301.desc
+	theme = culture_change
+
+	option = {# Embrace brython
+		name = bryten_wales.301.embrace
+		embrace_brython_culture_effect = yes
+	}
+	option = {# Stick with my old culture
+		name = bryten_wales.301.no_embrace
+	}
+}

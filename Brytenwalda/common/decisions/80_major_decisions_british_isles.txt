@@ -66,9 +66,9 @@ reclaim_britannia_decision = {
 			target = flag:reclaim_britannia_decision
 		}
 		show_as_tooltip = {
-			reclaim_britannia_decision_effect = yes
+			bryten_reclaim_britannia_decision_effect = yes
 		}
-		trigger_event = british_isles.0001
+		trigger_event = bryten_decision.0012
 		# Send event to other players
 		every_player = {
 			limit = {
@@ -80,7 +80,7 @@ reclaim_britannia_decision = {
 					has_culture = culture:norman
 				}
 			}
-			trigger_event = british_isles.0002
+			trigger_event = bryten_decision.0013
 		}
 	}
 	
@@ -158,7 +158,7 @@ embrace_english_culture_decision = {# For the King of england
 		show_as_tooltip = {
 			embrace_english_culture_effect = yes
 		}
-		trigger_event = bryten_england.044
+		trigger_event = bryten_england.054 
 	}
 	
 	ai_potential = {
@@ -358,9 +358,7 @@ restore_dumnonia_decision = {
 			restore_dumnonia_decision_scripted_effect = yes
 		}
 		save_scope_as = founder
-		trigger_event = {
-			id = british_isles.4001
-		}
+		trigger_event = {id = british_isles.4001 }
 		#Notify other players.
 		every_player = {
 			limit = {

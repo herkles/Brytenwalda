@@ -244,3 +244,74 @@ bryten_decision.0011 = {# Someone intergrated the Kingdom of Strathclyde
 		name = name_i_see
 	}
 }
+#######################################
+# Reclaim Britannia
+#######################################
+bryten_decision.0012 = {# Britannia restored
+	type = character_event
+	title = bryten_decision.0012.t
+	desc = bryten_decision.0012.desc
+	theme = realm
+	left_portrait = {
+		character = scope:reclaimer
+		animation = personality_honorable
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		save_scope_as = reclaimer
+		bryten_reclaim_britannia_decision_effect = yes
+	}
+
+	option = {# embrace Brython Culture
+		name = bryten_decision.0012.a
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_wales.300
+			days = { 60 300 }
+		}
+	}
+
+
+}
+bryten_decision.0013 = {# Players informed
+	type = character_event
+	title = bryten_decision.0012.t
+	desc = bryten_decision.0013.desc
+	theme = realm
+	left_portrait = {
+		character = scope:reclaimer
+		animation = personality_honorable
+	}
+
+
+	option = { # Also celtic
+		name = bryten_decision.0013.celtic
+		trigger = {
+			OR = {
+				culture = { has_cultural_pillar = heritage_goidelic }
+				culture = { has_cultural_pillar = heritage_brythonic }
+			}
+		}
+	}
+	option = { # Also celtic
+		name = bryten_decision.0013.germanic
+		trigger = {
+			culture = { has_cultural_pillar = heritage_west_germanic }
+		}
+	}
+	option = { # Not celtic
+		name = bryten_decision.0013.other
+		trigger = {
+			NOR = {
+				culture = { has_cultural_pillar = heritage_goidelic }
+				culture = { has_cultural_pillar = heritage_brythonic }
+				culture = { has_cultural_pillar = heritage_west_germanic }
+			}
+		}
+	}
+
+
+}

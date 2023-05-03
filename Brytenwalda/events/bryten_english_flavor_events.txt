@@ -1733,7 +1733,7 @@ bryten_england.030 = {# Anglo-Saxon Culture forming
 		}
 	}
 }
-bryten_england.031 = {# Saxon Ruled Realms
+bryten_england.031 = {# Saxon Ruled Realms 
 	type = character_event
 	title = bryten_england.031.t
 	desc = bryten_england.031.desc
@@ -1835,7 +1835,7 @@ bryten_england.040 = {# Anglo-Norse Culture forming
 				}				
 				capital_province = { geographical_region = custom_england }
 			}
-			trigger_event = bryten_england.033
+			trigger_event = bryten_england.041
 		}
 
 		# Send the appropraite notification event to each player.
@@ -1851,15 +1851,15 @@ bryten_england.040 = {# Anglo-Norse Culture forming
 						}
 					}
 				}
-				trigger_event = bryten_england.034
+				trigger_event = bryten_england.042
 			}
 		}
 	}
 }
 bryten_england.041 = {# Norse Ruled Realms
 	type = character_event
-	title = bryten_england.033.t
-	desc = bryten_england.033.desc
+	title = bryten_england.041.t
+	desc = bryten_england.041.desc
 	theme = culture_change
 
 	immediate = {
@@ -1873,7 +1873,7 @@ bryten_england.041 = {# Norse Ruled Realms
 				limit = { 	
 					is_coastal_county = yes
 					title_province = { geographical_region = custom_england }
-					has_culture = culture:northumbrian				
+					culture = culture:northumbrian				
 				}
 				add_to_list = northumbrian_counties
 			}
@@ -1898,7 +1898,7 @@ bryten_england.041 = {# Norse Ruled Realms
 				limit = { 	
 					is_coastal_county = yes
 					title_province = { geographical_region = custom_england }
-					has_culture = culture:mercian				
+					culture = culture:mercian				
 				}
 				add_to_list = mercian_counties
 			}
@@ -1924,7 +1924,7 @@ bryten_england.041 = {# Norse Ruled Realms
 				limit = { 	
 					is_coastal_county = yes
 					title_province = { geographical_region = custom_england }
-					has_culture = culture:east_anglian				
+					culture = culture:east_anglian				
 				}
 				add_to_list = east_anglian_counties
 			}
@@ -1949,7 +1949,7 @@ bryten_england.041 = {# Norse Ruled Realms
 				limit = { 	
 					is_coastal_county = yes
 					title_province = { geographical_region = custom_england }
-					has_culture = culture:west_saxon				
+					culture = culture:west_saxon				
 				}
 				add_to_list = west_saxon_counties
 			}
@@ -1967,7 +1967,7 @@ bryten_england.041 = {# Norse Ruled Realms
 	}
 
 	option = {# Embrace Anglo Norse
-		name = bryten_england.033.embrace
+		name = bryten_england.041.embrace
 		embrace_anglo_norse_culture_effect = {
 			CONVERTER = root
 			OLD_CULTURE = root.culture
@@ -1975,7 +1975,7 @@ bryten_england.041 = {# Norse Ruled Realms
 		}
 	}
 	option = {# Embrace Anglo Norse and catholicism
-		name = bryten_england.033.embrace
+		name = bryten_england.041.embrace
 		norse_assimilate_local_traditions_effect = {
 			CONVERTER = root
 			OLD_CULTURE = root.culture
@@ -1987,8 +1987,8 @@ bryten_england.041 = {# Norse Ruled Realms
 }
 bryten_england.042 = {# Let other players know that anglo-norse has been created
 	type = character_event
-	title = bryten_england.034.t
-	desc = bryten_england.034.desc
+	title = bryten_england.042.t
+	desc = bryten_england.042.desc
 	theme = culture_change
 
 	left_portrait = {
@@ -1997,7 +1997,7 @@ bryten_england.042 = {# Let other players know that anglo-norse has been created
 	}
 
 	option = {
-		name = bryten_england.034.a
+		name = bryten_england.042.a
 	}
 }
 #######################################
@@ -2226,8 +2226,8 @@ bryten_england.054 = {# The king has embraced English Culture
 }
 bryten_england.055 = {# Players informed
 	type = character_event
-	title = bryten_england.044.t
-	desc = bryten_england.045.desc
+	title = bryten_england.055.t
+	desc = bryten_england.055.desc
 	theme = culture_change
 	left_portrait = {
 		character = scope:embracer

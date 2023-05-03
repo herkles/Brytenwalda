@@ -829,14 +829,6 @@ embrace_english_culture_effect = {# embracing English
 			set_county_culture = culture:english
 		}
 	}
-
-	culture:english = {
-		custom_tooltip = decision_embrace_english_culture_get_innovations
-		hidden_effect = {
-			get_all_innovations_from = culture:norman
-			get_all_innovations_from = culture:anglo_saxon
-		}
-	}
 }
 #######################################
 #									  #
@@ -918,7 +910,7 @@ integrate_strathclyde_kingdom_effect = {
 #         Brythonic Effects  	      #
 #									  #
 #######################################
-reclaim_britannia_decision_effect = {
+bryten_reclaim_britannia_decision_effect = {# Restoring Britian
 	create_title_and_vassal_change = {
 		type = created
 		save_scope_as = title_change
@@ -952,7 +944,23 @@ reclaim_britannia_decision_effect = {
 		}
 	}
 
-	hidden_effect = {
+	hidden_effect = {# turn all the counties of the kingdom of cornwall into counties for the duchy of cornwall 
+		if = {
+			limit = { has_title = title:k_cornwall }
+			title:k_cornwall = { add_to_list = brythonic_kingdom_cornwall }
+			every_in_list = {
+				list = brythonic_kingdom
+				every_in_de_jure_hierarchy = {
+					limit = {
+						tier = tier_county
+					}
+					set_de_jure_liege_title = title:d_cornwall
+				}
+			}
+		}
+	}
+
+	hidden_effect = {# destroy other English titles
 		if = {
 			limit = { has_title = title:k_kent }
 			destroy_title = title:k_kent
@@ -977,6 +985,14 @@ reclaim_britannia_decision_effect = {
 			limit = { has_title = title:k_essex }
 			destroy_title = title:k_essex
 		}
+		if = {
+			limit = { has_title = title:k_wales }
+			destroy_title = title:k_wales
+		}
+		if = {
+			limit = { has_title = title:k_cornwall }
+			destroy_title = title:k_cornwall
+		}
 	}
 
 	every_sub_realm_county = {
@@ -996,9 +1012,63 @@ reclaim_britannia_decision_effect = {
 	capital_county = { set_county_culture = root.culture }
 	give_nickname = nick_pendragon
 }
+embrace_brython_culture_effect = {# Embracing brython culture
+	# Prestige Bonus
 
+	#Convert your, and your whole family's, culture
+	set_culture = culture:brython
+	if = {
+		limit = { any_spouse = { is_landed = no } }
+		every_spouse = {
+			limit = { is_landed = no }
+			set_culture = culture:brython
+		}
+	}
+	if = {
+		limit = {
+			any_close_family_member = {
+				is_landed = no
+				NOT = { is_spouse_of = root }
+			}
+		}
+		every_close_family_member = {
+			limit = {
+				is_landed = no
+				NOT = { is_spouse_of = root }
+			}
+			custom = all_unlanded_family_members
+			set_culture = culture:brython
+		}
+	}
 
-
-
-
+	#Convert appropriate vassals, and their family
+	if = {
+		limit = {
+			any_vassal_or_below = {
+				is_ai = yes
+				primary_title = {
+					OR = {
+						de_jure_liege = title:k_britian
+						de_jure_liege.de_jure_liege = title:k_britian
+						de_jure_liege.de_jure_liege.de_jure_liege = title:k_britian
+					}
+				}
+			}
+		}
+		every_vassal_or_below = {
+			custom = embrace_english_culture_vassals_custom
+			limit = {
+				is_ai = yes
+				primary_title = {
+					OR = {
+						de_jure_liege = title:k_britian
+						de_jure_liege.de_jure_liege = title:k_britian
+						de_jure_liege.de_jure_liege.de_jure_liege = title:k_britian
+					}
+				}
+			}
+			set_culture = culture:brython
+		}
+	}
+}
 
