@@ -3,7 +3,7 @@
 #######################################
 # Scottish Language
 #######################################
-bryten_scotland.001 = {# Scottish is Anglic
+bryten_scotland.001 = {# Scots is forming
 	hidden = yes	
 
 	trigger = {
@@ -16,11 +16,207 @@ bryten_scotland.001 = {# Scottish is Anglic
 			name = bryten_scots_language_anglisc
 			value = yes
 		}
-		culture:scots = { set_name_list = name_list_anglo_saxon }
-		culture:scots = { set_culture_pillar = language_anglic	}
+		if = {
+			limit = { exists = global_var:bryten_anglo_saxon_secured }
+			culture:scots = { set_name_list = name_list_scottish_anglic }
+			culture:scots = { set_culture_pillar = language_anglic	}
+		}
+
+
+
+		# Save scopes for player notification events.
+		culture:anglo_saxon = { save_scope_as = anglo_saxon }
+		culture:scottish = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:anglo_saxon
+			get_all_innovations_from = culture:gaelic
+
+			# Save scope for player notification events.
+			save_scope_as = scottish
+		}
+
+		# All Anglo-Saxon counties in Scotland will convert to Scots
+		culture:anglo_saxon = {
+			every_culture_county = {
+				limit = {title_province = { geographical_region = custom_scotland } }
+				add_to_list = anglo_saxon_counties
+			}
+		}
+
+		# Convert the Anglo-Saxon counties to Scots
+		every_in_list = {
+			list = anglo_saxon_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = culture:anglo_saxon
+								capital_province = { geographical_region = custom_scotland }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = culture:anglo_saxon
+								capital_province = { geographical_region = custom_scotland }
+							}
+						}
+					}
+				}
+			}
+						
+			# All Anglo-Saxon counties in Scotland become Scots
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:anglo_saxon
+				NEW_CULTURE = culture:scottish
+				REGION = custom_scotland
+			}
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					culture = culture:anglo_saxon
+					capital_province = { geographical_region = custom_scotland }
+					any_sub_realm_county = {
+						culture = culture:anglo_saxon
+						title_province = {
+							geographical_region = custom_scotland
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_liege_or_above = {
+								is_ai = no
+							}
+						}
+					}
+					trigger_event = bryten_scotland.002
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						is_ai = no
+						save_temporary_scope_as = player
+						any_in_list = {
+							list = anglo_saxon_counties
+							holder = {
+								is_within_diplo_range = { CHARACTER = scope:player }
+							}
+						}
+					}
+					trigger_event = bryten_scotland.003
+				}
+			}
+		}
 	}
 }
+bryten_scotland.002 = {# Players become scots
+	type = character_event
+	title = bryten_scotland.002.t
+	desc = bryten_scotland.002.desc
+	theme = culture_change
+	left_portrait = root
 
+	immediate = {
+		# All of anglo_saxon turns scottish, there is no 'splitting'.
+		culture = { save_scope_as = old_culture }
+		culture:scottish = { save_scope_as = my_new_culture }
+	}
+
+	option = {# Embrace
+		name = bryten_scotland.002.a
+		show_as_tooltip = {
+			set_culture = culture:scottish
+			every_in_list = {
+				list = anglo_saxon_counties
+				limit = {
+					holder.top_liege = root.top_liege
+				}
+				set_county_culture = culture:scottish
+			}
+		}
+		# Convert the Anglo-Saxon counties to Scots
+		every_in_list = {
+			list = anglo_saxon_counties
+			limit = {
+				holder.top_liege = root.top_liege
+			}	
+			# All Anglo-Saxon counties in Scotland become Scots
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:anglo_saxon
+					NEW_CULTURE = culture:scottish
+					REGION = custom_scotland
+				}
+			}
+		}
+	}
+	option = {# don't embrace
+		name = bryten_scotland.002.b
+
+		trigger = {
+			custom_description = {
+				text = controls_enough_culture_counties
+				any_in_list = {
+					list = anglo_saxon_counties
+					percent >= 0.8
+
+					OR = {
+						holder = root
+						holder = {
+							any_liege_or_above = {
+								this = root
+							}
+						}
+					}
+				}
+			}
+		}
+
+		show_as_unavailable = {
+			custom_description = {
+				text = controls_enough_culture_counties	
+				any_in_list = {
+					list = anglo_saxon_counties
+					percent < 0.8
+
+					OR = {
+						holder = root
+						holder = {
+							any_liege_or_above = {
+								this = root
+							}
+						}
+					}
+				}
+			}
+		}
+
+		custom_tooltip = global_culture.custom.keep_culture
+	}
+}
+bryten_scotland.003 = {# players alerted
+	type = character_event
+	title = bryten_scotland.003.t
+	desc = bryten_scotland.003.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = bryten_scotland.003.a
+	}
+}
 #######################################
 # Scottish Maintence
 #######################################
