@@ -1759,6 +1759,45 @@ bryten_england.032 = {# Let other players know that anglo-Saxon has been created
 		name = bryten_england.032.a
 	}
 }
+
+
+bryten_england.033 = {# Housecarls for Anglo-Saxons 
+	type = character_event
+	title = bryten_england.033.t
+	desc = bryten_england.033.desc
+	theme = culture_change
+
+	trigger = {
+		not = { exists = global_var:bryten_fyrd_housecarls }
+		has_title = title:k_england
+		title:k_england = { title_held_years >= 20 }
+		culture = { has_cultural_pillar = heritage_north_germanic }
+
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = bryten_fyrd_housecarls
+			value = yes
+		}
+	}
+
+	option = {
+		name = bryten_england.033.a
+		culture:anglo_saxon = {
+			remove_culture_tradition = tradition_fyrd
+			add_culture_tradition = tradition_fyrd_huscarl_name
+		}
+		culture:anglo_norse = {
+			remove_culture_tradition = tradition_fyrd
+			add_culture_tradition = tradition_fyrd_huscarl_name
+		}
+
+	}
+
+
+}
+
 #######################################
 # Anglo-Norse culture Forming
 #######################################

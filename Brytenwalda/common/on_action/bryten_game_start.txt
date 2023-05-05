@@ -54,14 +54,9 @@ bryten_setup_after_game_start_on_actions = {
 			}
 		}
 
-
+		# cultural acceptance stuff
 		if = {# setting up the pilgrimage stuff for 1066 start date
-			limit = { 
-				or = {
-					current_date = 1066.12.25
-					current_date = 1066.9.15
-				}
-			}
+			limit = { game_start_date >= 1016.1.1 }
 			set_global_variable = {
 				name = bryten_bury_saint_edmunds
 				value = yes
@@ -71,9 +66,8 @@ bryten_setup_after_game_start_on_actions = {
 				value = yes
 			}
 		}
-
 		if = {# Anglo-Saxons like the Scandivians more due to ties.
-			limit = { current_date = 1066.9.15 }
+			limit = { game_start_date >= 1016.1.1 }
 			culture:anglo_saxon = {
 				change_cultural_acceptance = {
 					target = culture:swedish
@@ -98,7 +92,7 @@ bryten_setup_after_game_start_on_actions = {
 			}
 		}
 		if = {# Normans Don't like the Anglo Cultures
-			limit = { current_date = 1066.12.25 }
+		limit = { game_start_date >= 1066.1.1 }
 			culture:norman = {
 				change_cultural_acceptance = {
 					target = culture:anglo_saxon
@@ -112,6 +106,21 @@ bryten_setup_after_game_start_on_actions = {
 				}
 
 			}
-		}		
+		}
+		# traditions
+		if = {# Anglo-Saxons have housecarls thanks to cnut
+			limit = { game_start_date >= 1016.1.1 }
+			culture:anglo_saxon = {
+				remove_culture_tradition = tradition_fyrd
+				add_culture_tradition = tradition_fyrd_huscarl_name
+			}
+		}
+		if = {# Anglo-norse like the Scandivians more due to ties.
+			limit = { game_start_date >= 1016.1.1 }
+			culture:anglo_norse = {
+				remove_culture_tradition = tradition_fyrd
+				add_culture_tradition = tradition_fyrd_huscarl_name
+			}
+		}
 	}
 }
