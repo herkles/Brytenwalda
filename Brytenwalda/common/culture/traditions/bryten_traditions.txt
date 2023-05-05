@@ -1,5 +1,5 @@
 ﻿#############################################
-# Brytenwalda new traditions			
+# Goidialic traditions			
 #############################################
 tradition_brehon_laws = {# The Irish Brehon Laws
 	category = regional
@@ -185,6 +185,649 @@ tradition_bards = {# Celtic Bards
 		}
 	}
 }
+#############################################
+# Anglo-Saxon traditions			
+#############################################
+tradition_fyrd = {# The Fyrd - everyone gets this
+	category = regional
 
+	layers = {
+		0 = martial
+		1 = western
+		4 = soldiers.dds
+	}
+	
+	is_shown = {
+		OR = {
+			OR = {
+				this = culture:west_saxon
+				this = culture:anglo_saxon
+				this = culture:anglo_norse
+				this = culture:northumbrian
+				this = culture:mercian
+				this = culture:east_anglian
+			}
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:west_saxon
+					this = culture:anglo_saxon
+					this = culture:anglo_norse
+					this = culture:northumbrian
+					this = culture:mercian
+					this = culture:east_anglian
+				}
+			}
+		}
 
+	}
+	can_pick = {
+		OR = {
+			OR = {
+				this = culture:west_saxon
+				this = culture:anglo_saxon
+				this = culture:anglo_norse
+				this = culture:northumbrian
+				this = culture:mercian
+				this = culture:east_anglian
+			}
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:west_saxon
+					this = culture:anglo_saxon
+					this = culture:anglo_norse
+					this = culture:northumbrian
+					this = culture:mercian
+					this = culture:east_anglian
+				}
+			}
+		}
+	}
+	
+	parameters = {
+		strong_traits_more_valued = yes
+		strong_traits_more_common = yes
+		weak_traits_looked_down_upon = yes
+		rowdy_trait_more_common = yes
+	}
+	character_modifier = {
+		ai_boldness = 25
+		pikemen_damage_mult = 0.05
+		pikemen_toughness_mult = 0.1
+		heavy_infantry_toughness_mult = 0.1
+		heavy_infantry_damage_mult = 0.05
+		build_speed = -0.05
+	}
 
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_bellicose }
+						any_in_list = { list = traits this = flag:ethos_spiritual }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bellicose_or_spiritual_desc
+				}
+			}
+			if = {
+				limit = {
+					trigger_if = {
+						limit = {
+							scope:character = {
+								is_ai = no
+							}
+						}
+						NOT = {
+							any_ruler = {
+								count >= 3
+								culture = prev
+								primary_title.tier >= tier_county
+								OR = {	
+									has_trait = strong
+									has_trait = physique_good
+								}
+							}
+						}
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = strong_rulers_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOT = {
+					any_in_list = { list = traits this = flag:ethos_bellicose }
+				}
+			}
+			multiply = 0
+		}
+	}
+}
+tradition_northumbrian = {# Northumbrian Vengence
+	category = realm
+
+	layers = {
+		0 = diplo
+		1 = indian
+		4 = tools.dds
+	}
+	
+	is_shown = {
+		always = no
+	}
+
+	can_pick = {
+		scope:character = {
+			any_held_title = {
+				tier = tier_county
+				title_province = { geographical_region = custom_northern_england }
+			}
+		}
+	}
+
+	parameters = {
+		rivalries_more_common = yes
+		hostile_action_vs_rival_bonuses = yes
+		stubborn_trait_more_common = yes
+		stubborn_trait_gives_bonuses = yes
+		vengeful_trait_more_common = yes
+		vengeful_positive_forgiving_negative = yes
+	}
+
+	character_modifier = {
+		dread_baseline_add = 10
+		monthly_county_control_change_factor = -0.2
+		opinion_of_liege = -10
+		ai_honor = -20
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_bellicose }
+						any_in_list = { list = traits this = flag:ethos_stoic }
+						any_in_list = { list = traits this = flag:ethos_communal }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bellicose_stoic_or_communal_desc
+				}
+			}
+			if = {
+				limit = {
+					trigger_if = {
+						limit = {
+							scope:character = {
+								is_ai = no
+							}
+						}
+						NOT = {
+							any_ruler = {
+								count >= 5
+								culture = prev
+								primary_title.tier >= tier_county
+								has_trait = diligent
+							}
+						}
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = rulers_with_diligent_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOR = {
+					any_in_list = { list = traits this = flag:ethos_stoic }
+					any_in_list = { list = traits this = flag:ethos_communal }
+				}
+			}
+			multiply = 0.5
+		}
+	}
+}
+tradition_east_anglian = {# East Anglian Seabound
+	category = realm
+
+	layers = {
+		0 = diplo
+		1 = indian
+		4 = tools.dds
+	}
+	
+	is_shown = {
+		always = no
+	}
+
+	can_pick = {
+		scope:character = {
+			any_held_title = {
+				tier = tier_county
+				title_province = { geographical_region = custom_northern_england }
+			}
+		}
+	}
+
+	parameters = {
+		peat_quarries_building_bonuses = yes
+		coastal_agriculture_building_bonuses = yes
+		coastal_holding_bonuses = yes
+		rough_terrain_expert_trait_more_common = yes
+	}
+	character_modifier = {
+		wetlands_advantage = 10
+	}
+	county_modifier = {
+		wetlands_development_growth_factor = 0.25
+	}
+	province_modifier = {
+		wetlands_construction_gold_cost = -0.25
+		wetlands_holding_construction_gold_cost = -0.25
+		wetlands_supply_limit_mult = 0.25
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_bellicose }
+						any_in_list = { list = traits this = flag:ethos_stoic }
+						any_in_list = { list = traits this = flag:ethos_communal }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bellicose_stoic_or_communal_desc
+				}
+			}
+			if = {
+				limit = {
+					trigger_if = {
+						limit = {
+							scope:character = {
+								is_ai = no
+							}
+						}
+						NOT = {
+							any_ruler = {
+								count >= 5
+								culture = prev
+								primary_title.tier >= tier_county
+								has_trait = diligent
+							}
+						}
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = rulers_with_diligent_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOR = {
+					any_in_list = { list = traits this = flag:ethos_stoic }
+					any_in_list = { list = traits this = flag:ethos_communal }
+				}
+			}
+			multiply = 0.5
+		}
+	}
+}
+tradition_mercian = {# Mercian Hegemony
+	category = realm
+
+	layers = {
+		0 = diplo
+		1 = indian
+		4 = tools.dds
+	}
+	
+	is_shown = {
+		always = no
+	}
+
+	can_pick = {
+		scope:character = {
+			any_held_title = {
+				tier = tier_county
+				title_province = { geographical_region = custom_northern_england }
+			}
+		}
+	}
+
+	parameters = {
+		hill_farms_building_bonuses = yes
+		rough_terrain_expert_trait_more_common = yes
+		disloyal_trait_more_common = yes
+		martial_education_more_valued = yes
+		prowess_traits_more_valued = yes
+		blademaster_trait_bonuses = yes
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_bellicose }
+						any_in_list = { list = traits this = flag:ethos_stoic }
+						any_in_list = { list = traits this = flag:ethos_communal }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bellicose_stoic_or_communal_desc
+				}
+			}
+			if = {
+				limit = {
+					trigger_if = {
+						limit = {
+							scope:character = {
+								is_ai = no
+							}
+						}
+						NOT = {
+							any_ruler = {
+								count >= 5
+								culture = prev
+								primary_title.tier >= tier_county
+								has_trait = diligent
+							}
+						}
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = rulers_with_diligent_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOR = {
+					any_in_list = { list = traits this = flag:ethos_stoic }
+					any_in_list = { list = traits this = flag:ethos_communal }
+				}
+			}
+			multiply = 0.5
+		}
+	}
+}
+tradition_west_saxon = {# West Saxon Lands
+	category = realm
+
+	layers = {
+		0 = diplo
+		1 = indian
+		4 = tools.dds
+	}
+	
+	is_shown = {
+		always = no
+	}
+
+	can_pick = {
+		scope:character = {
+			any_held_title = {
+				tier = tier_county
+				title_province = { geographical_region = custom_northern_england }
+			}
+		}
+	}
+
+	parameters = {
+		just_trait_more_common = yes
+		just_trait_gives_bonuses = yes
+		coastal_holdings_give_defensive_bonus = yes
+        pensive_trait_more_common = yes
+	}
+
+	character_modifier = {
+		defender_advantage = 2
+		coastal_advantage = 5
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_bellicose }
+						any_in_list = { list = traits this = flag:ethos_stoic }
+						any_in_list = { list = traits this = flag:ethos_communal }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bellicose_stoic_or_communal_desc
+				}
+			}
+			if = {
+				limit = {
+					trigger_if = {
+						limit = {
+							scope:character = {
+								is_ai = no
+							}
+						}
+						NOT = {
+							any_ruler = {
+								count >= 5
+								culture = prev
+								primary_title.tier >= tier_county
+								has_trait = diligent
+							}
+						}
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = rulers_with_diligent_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOR = {
+					any_in_list = { list = traits this = flag:ethos_stoic }
+					any_in_list = { list = traits this = flag:ethos_communal }
+				}
+			}
+			multiply = 0.5
+		}
+	}
+}
+tradition_anglo_saxon = {# Anglo-Saxon Burhs, ShireCourts
+	category = realm
+
+	layers = {
+		0 = diplo
+		1 = indian
+		4 = tools.dds
+	}
+	
+	is_shown = {
+		always = no
+	}
+
+	can_pick = {
+		scope:character = {
+			any_held_title = {
+				tier = tier_county
+				title_province = { geographical_region = custom_northern_england }
+			}
+		}
+	}
+
+	parameters = {
+		just_trait_gives_bonuses = yes
+		hill_farms_building_bonuses = yes
+		rough_terrain_expert_trait_more_common = yes
+		martial_education_more_valued = yes
+	}
+	county_modifier = {
+		monthly_county_control_change_add = 0.1
+	}
+	character_modifier = {
+		defender_advantage = 2
+	}
+	province_modifier = {
+		garrison_size = 0.25
+		levy_size = 0.1
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_bellicose }
+						any_in_list = { list = traits this = flag:ethos_stoic }
+						any_in_list = { list = traits this = flag:ethos_communal }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bellicose_stoic_or_communal_desc
+				}
+			}
+			if = {
+				limit = {
+					trigger_if = {
+						limit = {
+							scope:character = {
+								is_ai = no
+							}
+						}
+						NOT = {
+							any_ruler = {
+								count >= 5
+								culture = prev
+								primary_title.tier >= tier_county
+								has_trait = diligent
+							}
+						}
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = rulers_with_diligent_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOR = {
+					any_in_list = { list = traits this = flag:ethos_stoic }
+					any_in_list = { list = traits this = flag:ethos_communal }
+				}
+			}
+			multiply = 0.5
+		}
+	}
+}
+#############################################
+# Brythonic traditions			
+#############################################
+
+#############################################
+# Norse traditions			
+#############################################

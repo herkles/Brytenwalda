@@ -235,7 +235,6 @@ on_title_gain = {
 		fp1_other_decisions.0113	# FP1: new holder of a county with a runestone
 		delay = { days = 1 }
 		realm_maintenance.2001		#Big notification about inheriting emperor tier title
-		british_isles.1032			# Danelaw-England partition calc.
 		fp1_major_decisions.1011	# Harald Tanglehair becomes Harald Fairhair.
 		fp1_major_decisions.1012	# If Norway has just been created for the first time, flag that.
 		title_event.0001			# Rename West Francia to France
@@ -276,10 +275,6 @@ on_title_gain_usurpation = {
 # scope:title = the title that changes hands
 # scope:new_holder = new holder.
 on_title_lost = {
-	events = {
-		british_isles.1033	# Danelaw-England partition calc.
-	}
-
 	effect = {
 		#Make sure nobody ever has only the Kingdom of Fashion
 		if = {

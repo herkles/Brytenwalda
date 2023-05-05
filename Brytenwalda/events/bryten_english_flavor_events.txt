@@ -2137,7 +2137,7 @@ bryten_england.052 = {# Let other players know that English has been created
 	}
 
 	option = {
-		name = bryten_england.052.a
+		name = bryten_england.052.culture
 	}
 }
 bryten_england.053 = {# English Culture Forming 
@@ -2228,7 +2228,7 @@ bryten_england.054 = {# The king has embraced English Culture
 }
 bryten_england.055 = {# Players informed
 	type = character_event
-	title = bryten_england.055.t
+	title = bryten_england.054.t
 	desc = bryten_england.055.desc
 	theme = culture_change
 	left_portrait = {
@@ -2237,13 +2237,13 @@ bryten_england.055 = {# Players informed
 	}
 
 	option = { # Not norman
-		name = bryten_england.045.a
+		name = bryten_england.054.a
 		trigger = {
 			NOT = { has_culture = scope:embracer.culture }
 		}
 	}
 	option = { # Also norman
-		name = bryten_england.045.b
+		name = bryten_england.054.b
 		trigger = {
 			has_culture = scope:embracer.culture
 		}
