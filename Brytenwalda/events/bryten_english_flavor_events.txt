@@ -1786,11 +1786,11 @@ bryten_england.033 = {# Housecarls for Anglo-Saxons
 		name = bryten_england.033.a
 		culture:anglo_saxon = {
 			remove_culture_tradition = tradition_fyrd
-			add_culture_tradition = tradition_fyrd_huscarl_name
+			add_culture_tradition = tradition_fyrd_huscarl
 		}
 		culture:anglo_norse = {
 			remove_culture_tradition = tradition_fyrd
-			add_culture_tradition = tradition_fyrd_huscarl_name
+			add_culture_tradition = tradition_fyrd_huscarl
 		}
 
 	}
@@ -2276,13 +2276,13 @@ bryten_england.055 = {# Players informed
 	}
 
 	option = { # Not norman
-		name = bryten_england.054.a
+		name = bryten_england.055.a
 		trigger = {
 			NOT = { has_culture = scope:embracer.culture }
 		}
 	}
 	option = { # Also norman
-		name = bryten_england.054.b
+		name = bryten_england.055.a
 		trigger = {
 			has_culture = scope:embracer.culture
 		}

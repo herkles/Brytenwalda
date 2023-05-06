@@ -9,7 +9,7 @@
 		tradition_brehon_laws
 		tradition_bards
 		tradition_polygamous
-		tradition_maritime_mercantilism
+		tradition_wetlanders
 		tradition_monastic_communities
 	}
 	
@@ -37,10 +37,10 @@ gaelic = {# Gaelic
 	language = language_goidelic
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_fishermen
-		tradition_hill_dwellers
-		tradition_highland_warriors
+		tradition_scottish_highlands
 		tradition_strong_kinship
+		tradition_bards
+		tradition_fishermen
 		tradition_concubines
 	}
 
@@ -71,16 +71,22 @@ norse_gael = {# Irish
 	language = language_goidelic
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_bards
 		tradition_things
-		tradition_maritime_mercantilism
+		tradition_norse_gael
 	}
 	
-	dlc_tradition = {
+	dlc_tradition = {# Coastal Warriors / Hird
 		trait = tradition_fp1_coastal_warriors
 		requires_dlc_flag = the_northern_lords
 		fallback = tradition_hird
 	}
+	dlc_tradition = {
+		trait = tradition_fp1_northern_stories
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_runestones
+	}
+
+
 
 	name_list = name_list_irish
 	

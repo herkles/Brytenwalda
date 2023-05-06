@@ -10,7 +10,10 @@ special_succession_thing_trigger = {
 }
 
 special_succession_tanistry_trigger = {
-	culture = { has_cultural_pillar = heritage_goidelic }
+	OR = {
+		culture = { has_cultural_pillar = heritage_goidelic }
+		culture = { has_cultural_pillar = heritage_brythonic }
+	}
 }
 
 historical_succession_access_single_heir_succession_law_trigger = {

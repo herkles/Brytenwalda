@@ -1,14 +1,15 @@
 ﻿#############################################
-# Goidialic traditions			
+# Ireland traditions			
 #############################################
 tradition_brehon_laws = {# The Irish Brehon Laws
 	category = regional
 
 	layers = {
-		0 = martial
+		0 = learning
 		1 = western
-		4 = conversation.dds
+		4 = quill.dds
 	}
+
 
 	is_shown = {
 		OR = {
@@ -34,7 +35,7 @@ tradition_brehon_laws = {# The Irish Brehon Laws
 	parameters = {
 		can_blind_prisoners = yes
 		physical_disfigurement_blocks_inheritance = yes
-		just_trait_gives_bonuses = yes
+		rivalries_more_common = yes	
 		bonuses_from_patriarch_matriarch_trait = yes
 		landing_house_members_give_prestige = yes
 		penalty_for_revoking_titles_from_house_members = yes
@@ -97,8 +98,8 @@ tradition_bards = {# Celtic Bards
 
 	layers = {
 		0 = diplo
-		1 = western
-		4 = quill.dds
+		1 = mena
+		4 = diplomat.dds
 	}
 
 	is_shown = {
@@ -113,6 +114,11 @@ tradition_bards = {# Celtic Bards
 		custom_tooltip = {
 			text = cannot_have_tradition_fp1_northern_stories
 			NOT = { any_in_list = { list = traits this = flag:tradition_fp1_northern_stories } }
+		}
+		OR = {
+			has_cultural_pillar = heritage_goidelic 
+			has_cultural_pillar = heritage_brythonic 
+			this = culture:scottish # Scots can embrace it if they want.
 		}
 	}
 	
@@ -185,6 +191,116 @@ tradition_bards = {# Celtic Bards
 		}
 	}
 }
+tradition_scottish_highlands = {# Scottish Highlands
+	category = realm
+
+	layers = {
+		0 = steward
+		1 = indian
+		4 = desert_mountains.dds
+	}
+	is_shown = {
+		scope:character = {
+			NOT = {# Can't Pick if you have Cumbric Heritage
+				has_cultural_tradition = tradition_cumbrian
+			}
+			any_held_title = {
+				tier = tier_county
+				title_province = { geographical_region = custom_scottish_highlands }
+			}
+		}
+	}
+
+	can_pick = {
+		scope:character = {
+			NOT = {# Can't Pick if you have Cumbric Heritage
+				has_cultural_tradition = tradition_cumbrian
+			}
+			any_held_title = {
+				tier = tier_county
+				title_province = { geographical_region = custom_scottish_highlands }
+			}
+		}
+	}
+
+	parameters = {
+		rough_terrain_expert_trait_more_common = yes
+		hill_trait_bonuses = yes
+		can_recruit_hill_specialist = yes
+		hill_farms_building_bonuses = yes
+		rivalries_more_common = yes
+		disloyal_trait_more_common = yes
+	}
+	character_modifier = {
+		different_culture_opinion = 10
+	}
+	county_modifier = {
+		hills_development_growth_factor = 0.2
+	}
+	province_modifier = {
+		hills_levy_size = 0.1
+		hills_supply_limit_mult = 0.25
+		hills_construction_gold_cost = -0.15
+		hills_holding_construction_gold_cost = -0.15
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					any_in_list = { list = traits this = flag:ethos_bellicose }
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = culture_not_bellicose
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_culture_county = {
+							percent >= 0.3
+							any_county_province = {
+								terrain = hills
+							}
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = hill_percentage_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOT = {
+					scope:character = {
+						any_sub_realm_county = {
+							percent >= 0.2
+							culture = scope:character.culture
+							any_county_province = {
+								terrain = hills
+							}
+						}
+					}
+				}
+			}
+			multiply = 0
+		}
+	}
+}
 #############################################
 # Anglo-Saxon traditions			
 #############################################
@@ -192,56 +308,40 @@ tradition_fyrd = {# The Fyrd - everyone gets this
 	category = regional
 
 	layers = {
-		0 = martial
-		1 = western
-		4 = soldiers.dds
+		0 = intrigue
+		1 = mediterranean
+		4 = battle.dds
 	}
-	
+
 	is_shown = {
-		OR = {
-			OR = {
-				this = culture:west_saxon
-				this = culture:anglo_saxon
-				this = culture:anglo_norse
-				this = culture:northumbrian
-				this = culture:mercian
-				this = culture:east_anglian
-			}
-			any_parent_culture_or_above = {
-				OR = {
-					this = culture:west_saxon
-					this = culture:anglo_saxon
-					this = culture:anglo_norse
-					this = culture:northumbrian
-					this = culture:mercian
-					this = culture:east_anglian
-				}
+		NOT = { exists = global_var:bryten_fyrd_housecarls }
+		scope:character = {
+			NOT = {# Can't Pick if you have Cumbric Heritage
+				has_cultural_tradition = tradition_fyrd_huscarl
 			}
 		}
-
+		OR = {
+			has_cultural_pillar = heritage_west_germanic 
+			any_parent_culture_or_above = {
+				has_cultural_pillar = heritage_goidelic 
+			}
+		}
 	}
 	can_pick = {
-		OR = {
-			OR = {
-				this = culture:west_saxon
-				this = culture:anglo_saxon
-				this = culture:anglo_norse
-				this = culture:northumbrian
-				this = culture:mercian
-				this = culture:east_anglian
+		NOT = { exists = global_var:bryten_fyrd_housecarls }
+		scope:character = {
+			NOT = {# Can't Pick if you have Cumbric Heritage
+				has_cultural_tradition = tradition_fyrd_huscarl
 			}
+		}
+		OR = {
+			has_cultural_pillar = heritage_west_germanic 
 			any_parent_culture_or_above = {
-				OR = {
-					this = culture:west_saxon
-					this = culture:anglo_saxon
-					this = culture:anglo_norse
-					this = culture:northumbrian
-					this = culture:mercian
-					this = culture:east_anglian
-				}
+				has_cultural_pillar = heritage_west_germanic 
 			}
 		}
 	}
+	
 	
 	parameters = {
 		strong_traits_more_valued = yes
@@ -256,6 +356,8 @@ tradition_fyrd = {# The Fyrd - everyone gets this
 		heavy_infantry_toughness_mult = 0.1
 		heavy_infantry_damage_mult = 0.05
 		build_speed = -0.05
+		heavy_infantry_recruitment_cost_mult = -0.1
+		pikemen_recruitment_cost_mult = -0.1
 	}
 
 	cost = {
@@ -322,57 +424,40 @@ tradition_fyrd = {# The Fyrd - everyone gets this
 		}
 	}
 }
-tradition_fyrd_huscarl_name = {# Revised Fyrd to allow for Houscarl MAA
+tradition_fyrd_huscarl = {# Revised Fyrd to allow for Houscarl MAA
 	category = regional
 
 	layers = {
-		0 = martial
-		1 = western
-		4 = soldiers.dds
+		0 = intrigue
+		1 = mediterranean
+		4 = battle.dds
 	}
 	
 	is_shown = {
-		OR = {
-			OR = {
-				this = culture:west_saxon
-				this = culture:anglo_saxon
-				this = culture:anglo_norse
-				this = culture:northumbrian
-				this = culture:mercian
-				this = culture:east_anglian
-			}
-			any_parent_culture_or_above = {
-				OR = {
-					this = culture:west_saxon
-					this = culture:anglo_saxon
-					this = culture:anglo_norse
-					this = culture:northumbrian
-					this = culture:mercian
-					this = culture:east_anglian
-				}
+		exists = global_var:bryten_fyrd_housecarls
+		scope:character = {
+			NOT = {# Can't Pick if you have Cumbric Heritage
+				has_cultural_tradition = tradition_fyrd
 			}
 		}
-
+		OR = {
+			has_cultural_pillar = heritage_west_germanic 
+			any_parent_culture_or_above = {
+				has_cultural_pillar = heritage_goidelic 
+			}
+		}
 	}
 	can_pick = {
-		OR = {
-			OR = {
-				this = culture:west_saxon
-				this = culture:anglo_saxon
-				this = culture:anglo_norse
-				this = culture:northumbrian
-				this = culture:mercian
-				this = culture:east_anglian
+		exists = global_var:bryten_fyrd_housecarls
+		scope:character = {
+			NOT = {# Can't Pick if you have Cumbric Heritage
+				has_cultural_tradition = tradition_fyrd
 			}
+		}
+		OR = {
+			has_cultural_pillar = heritage_west_germanic 
 			any_parent_culture_or_above = {
-				OR = {
-					this = culture:west_saxon
-					this = culture:anglo_saxon
-					this = culture:anglo_norse
-					this = culture:northumbrian
-					this = culture:mercian
-					this = culture:east_anglian
-				}
+				has_cultural_pillar = heritage_west_germanic 
 			}
 		}
 	}
@@ -461,9 +546,9 @@ tradition_northumbrian = {# Northumbrian Vengence
 	category = realm
 
 	layers = {
-		0 = diplo
-		1 = indian
-		4 = tools.dds
+		0 = learning
+		1 = western
+		4 = fight.dds
 	}
 	
 	is_shown = {
@@ -471,21 +556,18 @@ tradition_northumbrian = {# Northumbrian Vengence
 	}
 
 	can_pick = {
-		scope:character = {
-			any_held_title = {
-				tier = tier_county
-				title_province = { geographical_region = custom_northern_england }
-			}
-		}
+		always = no
 	}
 
 	parameters = {
 		rivalries_more_common = yes
 		hostile_action_vs_rival_bonuses = yes
 		stubborn_trait_more_common = yes
-		stubborn_trait_gives_bonuses = yes
+		martial_education_more_valued = yes
 		vengeful_trait_more_common = yes
 		vengeful_positive_forgiving_negative = yes
+		rough_terrain_expert_trait_more_common = yes
+		hill_trait_bonuses = yes
 	}
 
 	character_modifier = {
@@ -564,21 +646,15 @@ tradition_east_anglian = {# East Anglian Seabound
 
 	layers = {
 		0 = diplo
-		1 = indian
-		4 = tools.dds
+		1 = western
+		4 = svamp.dds
 	}
 	
 	is_shown = {
 		always = no
 	}
-
 	can_pick = {
-		scope:character = {
-			any_held_title = {
-				tier = tier_county
-				title_province = { geographical_region = custom_northern_england }
-			}
-		}
+		always = no
 	}
 
 	parameters = {
@@ -667,9 +743,9 @@ tradition_mercian = {# Mercian Hegemony
 	category = realm
 
 	layers = {
-		0 = diplo
-		1 = indian
-		4 = tools.dds
+		0 = intrigue
+		1 = mediterranean
+		4 = king.dds
 	}
 	
 	is_shown = {
@@ -677,19 +753,14 @@ tradition_mercian = {# Mercian Hegemony
 	}
 
 	can_pick = {
-		scope:character = {
-			any_held_title = {
-				tier = tier_county
-				title_province = { geographical_region = custom_northern_england }
-			}
-		}
+		always = no
 	}
 
 	parameters = {
-		hill_farms_building_bonuses = yes
 		rough_terrain_expert_trait_more_common = yes
 		disloyal_trait_more_common = yes
 		martial_education_more_valued = yes
+		rivalries_more_common = yes
 		prowess_traits_more_valued = yes
 		blademaster_trait_bonuses = yes
 	}
@@ -762,9 +833,9 @@ tradition_west_saxon = {# West Saxon Lands
 	category = realm
 
 	layers = {
-		0 = diplo
-		1 = indian
-		4 = tools.dds
+		0 = steward
+		1 = western
+		4 = shield.dds
 	}
 	
 	is_shown = {
@@ -772,12 +843,7 @@ tradition_west_saxon = {# West Saxon Lands
 	}
 
 	can_pick = {
-		scope:character = {
-			any_held_title = {
-				tier = tier_county
-				title_province = { geographical_region = custom_northern_england }
-			}
-		}
+		always = no
 	}
 
 	parameters = {
@@ -789,7 +855,7 @@ tradition_west_saxon = {# West Saxon Lands
 
 	character_modifier = {
 		defender_advantage = 2
-		coastal_advantage = 5
+		coastal_advantage = 2
 	}
 	
 	cost = {
@@ -861,19 +927,27 @@ tradition_anglo_saxon = {# Anglo-Saxon Burhs, ShireCourts
 
 	layers = {
 		0 = diplo
-		1 = indian
-		4 = tools.dds
+		1 = mediterranean
+		4 = conversation.dds
 	}
 	
 	is_shown = {
-		always = no
+		OR = {
+			this = culture:anglo_saxon
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:anglo_saxon
+				}
+			}
+		}
 	}
-
 	can_pick = {
-		scope:character = {
-			any_held_title = {
-				tier = tier_county
-				title_province = { geographical_region = custom_northern_england }
+		OR = {
+			this = culture:anglo_saxon
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:anglo_saxon
+				}
 			}
 		}
 	}
@@ -882,6 +956,7 @@ tradition_anglo_saxon = {# Anglo-Saxon Burhs, ShireCourts
 		just_trait_gives_bonuses = yes
 		hill_farms_building_bonuses = yes
 		rough_terrain_expert_trait_more_common = yes
+		poorly_educated_leaders_distrusted = yes
 		martial_education_more_valued = yes
 	}
 	county_modifier = {
@@ -962,7 +1037,406 @@ tradition_anglo_saxon = {# Anglo-Saxon Burhs, ShireCourts
 #############################################
 # Brythonic traditions			
 #############################################
+tradition_cumbrian = {# Last of the Old North - Cumbrians
+	category = realm
 
+	layers = {
+		0 = intrigue
+		1 = mediterranean
+		4 = shield.dds
+	}
+
+	is_shown = {
+		always = no
+	}
+
+	can_pick = {
+		always = no
+	}
+
+	parameters = {
+		rowdy_trait_more_common = yes
+		can_recruit_hill_specialist = yes
+		rough_terrain_expert_trait_more_common = yes
+		strong_traits_more_valued = yes
+		strong_traits_more_common = yes
+		weak_traits_looked_down_upon = yes
+		coastal_holdings_give_defensive_bonus = yes
+		more_fame_for_successful_defensive_wars = yes
+		more_gold_for_successful_defensive_wars = yes
+	}
+	culture_modifier = {
+		cultural_acceptance_gain_mult = -0.15
+	}
+	province_modifier = {
+		garrison_size = 0.25
+	}
+	character_modifier = {
+		same_culture_opinion = 5
+		defender_advantage = 3
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					any_in_list = { list = traits this = flag:ethos_bellicose }
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = culture_not_bellicose
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_culture_county = {
+							percent >= 0.3
+							any_county_province = {
+								terrain = hills
+							}
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = hill_percentage_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOT = {
+					scope:character = {
+						any_sub_realm_county = {
+							percent >= 0.2
+							culture = scope:character.culture
+							any_county_province = {
+								terrain = hills
+							}
+						}
+					}
+				}
+			}
+			multiply = 0
+		}
+	}
+}
+tradition_cornish = {# land's end
+	category = realm
+
+	is_shown = {
+		always = no
+	}
+
+	can_pick = {
+		always = no
+	}
+
+	layers = {
+		0 = intrigue
+		1 = mediterranean
+		4 = city.dds
+	}
+	
+	parameters = {
+		doesnt_care_about_culture_faith_in_factions = yes
+		expensive_convert_to_local_culture = yes
+		harder_to_hybridize = yes
+		gain_gold_from_battles = yes
+        culture_can_raid_at_sea_even_if_feudal = yes
+		dislikes_marrying_outside_of_culture = yes
+	}
+	culture_modifier = {
+		cultural_acceptance_gain_mult = -0.15
+	}
+	character_modifier = {
+		same_culture_opinion = 5
+		max_loot_mult = 0.5
+		monthly_county_control_change_add = 0.3
+		controlled_province_advantage = 2		
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_communal }
+						any_in_list = { list = traits this = flag:ethos_spiritual }
+						any_in_list = { list = traits this = flag:ethos_stoic }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_communal_spiritual_or_stoic_desc
+				}
+			}
+			if = {
+				limit = {
+					scope:character = {
+						any_sub_realm_county = {
+							culture = scope:character.culture
+							any_neighboring_county = {
+								NOT = {
+									culture = scope:character.culture
+								}
+								culture = {
+									cultural_acceptance = { target = scope:character.culture value >= 40 }
+								}
+							}
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = non_tolerated_cultures_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOT = {
+					is_divergent_culture = yes
+				}
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				any_in_list = { list = traits this = flag:ethos_egalitarian }
+			}
+			multiply = 0
+		}
+	}
+}
+tradition_welsh_laws = {# Welsh Laws
+	category = realm
+
+	layers = {
+		0 = learning
+		1 = western
+		4 = quill.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:welsh
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:welsh
+				}
+			}
+		}
+	}
+	can_pick = {
+		OR = {
+			this = culture:welsh
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:welsh
+				}
+			}
+		}
+	}
+
+	
+	parameters = {
+		expensive_convert_to_local_culture = yes
+		harder_to_hybridize = yes
+		rivalries_more_common = yes
+		hostile_action_vs_rival_bonuses = yes
+		stubborn_trait_more_common = yes
+		disloyal_trait_more_common = yes
+		landing_house_members_give_prestige = yes
+		penalty_for_revoking_titles_from_house_members = yes
+	}
+	culture_modifier = {
+		cultural_acceptance_gain_mult = -0.15
+	}
+	character_modifier = {
+		different_culture_opinion = -10
+		same_culture_opinion = 5
+		opinion_of_liege = -10
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_communal }
+						any_in_list = { list = traits this = flag:ethos_spiritual }
+						any_in_list = { list = traits this = flag:ethos_stoic }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_communal_spiritual_or_stoic_desc
+				}
+			}
+			if = {
+				limit = {
+					scope:character = {
+						any_sub_realm_county = {
+							culture = scope:character.culture
+							any_neighboring_county = {
+								NOT = {
+									culture = scope:character.culture
+								}
+								culture = {
+									cultural_acceptance = { target = scope:character.culture value >= 40 }
+								}
+							}
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = non_tolerated_cultures_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				NOT = {
+					is_divergent_culture = yes
+				}
+			}
+			multiply = 0
+		}
+		if = {
+			limit = {
+				any_in_list = { list = traits this = flag:ethos_egalitarian }
+			}
+			multiply = 0
+		}
+	}
+}
 #############################################
 # Norse traditions			
 #############################################
+tradition_norse_gael = {
+	category = realm
+
+	layers = {
+		0 = martial
+		1 = western
+		4 = ship.dds
+	}
+	
+	is_shown = {
+		always = no
+	}
+
+	can_pick = {
+		always = no
+	}
+
+	parameters = {
+		gain_gold_from_battles = yes
+        culture_can_raid_at_sea_even_if_feudal = yes
+		doesnt_care_about_culture_faith_in_factions = yes
+		next_level_trade_ports = yes
+		maritime_mercantilism_coastal_holdings = yes
+		trade_ports_give_control_growth = yes
+		trade_ports_give_levies = yes
+		can_travel_along_rivers = yes
+	}
+	character_modifier = {
+		max_loot_mult = 0.5
+        embarkation_cost_mult = -0.50
+		faith_conversion_piety_cost_mult = -0.2
+		different_faith_county_opinion_mult = -0.2
+
+		ai_greed = 20
+		ai_war_chance = 0.25
+		ai_war_cooldown = -0.25
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_communal }
+						any_in_list = { list = traits this = flag:ethos_spiritual }
+						any_in_list = { list = traits this = flag:ethos_stoic }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_communal_spiritual_or_stoic_desc
+				}
+			}
+			if = {
+				limit = {
+					scope:character = {
+						any_sub_realm_county = {
+							culture = scope:character.culture
+							any_neighboring_county = {
+								NOT = {
+									culture = scope:character.culture
+								}
+								culture = {
+									cultural_acceptance = { target = scope:character.culture value >= 40 }
+								}
+							}
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = non_tolerated_cultures_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+	}
+}
+
+
+
