@@ -151,7 +151,7 @@ holy_site_canterbury_cathedral_02 = {# The Gothic Inspired Canterbury Cathedral
 bryten_building_winchester_01 = {# Old Minister Church
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_structure_palace_of_achen.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -293,7 +293,7 @@ bryten_building_winchester_02 = {# New Minister Cathedral, built historically in
 bryten_building_york_minster_01 = {# The original Cathedral
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_structure_palace_of_achen.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -502,7 +502,7 @@ bryten_building_exeter_cathedral_01 = {# Exeter Cathedral built historically in 
 bryten_building_lindisfarne_01 = {# The famous monastary on Lindisfarne.
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_monastic_schools.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -571,7 +571,7 @@ bryten_building_lindisfarne_01 = {# The famous monastary on Lindisfarne.
 bryten_building_durham_cathedral_01 = {# The White Church of Durham - built in 998
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_structure_palace_of_achen.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -702,7 +702,7 @@ bryten_building_durham_cathedral_02 = {# Durham Cathedral - historically built b
 bryten_building_lincoln_cathedral_01 = {# Stow minster the original building during the Anglo-Saxons era.
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_structure_palace_of_achen.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -915,7 +915,7 @@ bryten_building_norwich_cathedral_01 = {# Norwhich Cathedral, built in the 12th 
 bryten_building_st_micheals_mount_01 = {# Saint Micheal's Mount off the coast in Cornwall
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_hill_forts.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1062,7 +1062,7 @@ bryten_building_elgin_cathedral_01 = {# The famous Elgin Cathedral
 bryten_building_scone_abbey_01 = {# Scone abbey, the royal abbey of the scottish kings.
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_structure_palace_of_achen.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1210,7 +1210,7 @@ bryten_building_st_andrews_cathedral_01 = {# Saint Andrews Cathedral in St Andre
 bryten_building_paisley_abbey_01 = {# An important Abbey
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_structure_palace_of_achen.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1277,7 +1277,7 @@ bryten_building_paisley_abbey_01 = {# An important Abbey
 bryten_building_paisley_abbey_02 = {# An important Abbey
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_structure_palace_of_achen.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1346,7 +1346,7 @@ bryten_building_paisley_abbey_02 = {# An important Abbey
 bryten_building_edinburgh_castle_01 = {# The castle of Edinburgh
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_ramparts.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1405,7 +1405,7 @@ bryten_building_edinburgh_castle_01 = {# The castle of Edinburgh
 bryten_building_dunbar_castle_01 = {# An important fortres
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_ramparts.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1541,7 +1541,7 @@ bryten_building_iona_abbey_01 = {# The Famous abbey of Iona
 bryten_building_caernarfon_castle_01 = {# The great castle of Carnarfon Castle
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_ramparts.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1555,24 +1555,7 @@ bryten_building_caernarfon_castle_01 = {# The great castle of Carnarfon Castle
 			}
 		}
 	}
-	
-	is_enabled = {
-		custom_description = {
-			text = holy_site_christian_or_holy_site_trigger
-			OR = {
-				scope:holder = {
-					religion = religion:christianity_religion
-				}
-				custom_description = {
-					text = holy_site_building_trigger
-					barony = {
-						is_holy_site_of = scope:holder.faith
-					}
-				}
-			}
-		}
-	}
-	
+		
 	show_disabled = yes
 	
 	cost_gold = 1000
@@ -1600,7 +1583,7 @@ bryten_building_caernarfon_castle_01 = {# The great castle of Carnarfon Castle
 bryten_building_st_davids_cathedral_01 = {# St. Davids Cathedral an ancient holy site in Wales
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_structure_palace_of_achen.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1739,7 +1722,7 @@ bryten_building_st_davids_cathedral_02 = {# St. Davids Cathedral - the later upd
 bryten_building_holy_well_01 = {# Holy Well a popular pilgrimage destination in wales, the waters are said to be magical
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_monastic_schools.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1886,7 +1869,7 @@ bryten_building_ewenny_priory_01 = {# One of the finest fortified religious buil
 bryten_building_clonard_abbey_01 = {# An important Irish Monastary
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_monastic_schools.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1953,7 +1936,7 @@ bryten_building_clonard_abbey_01 = {# An important Irish Monastary
 bryten_building_clonmacnoise_01 = {# Clonmacnoise an important medieval monastary
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_monastic_schools.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -2092,7 +2075,7 @@ bryten_building_kilkenny_cathedral_01 = {# Killkenny Cathedral
 bryten_building_carrickfergus_castle_01 = {# An important Irish Castle
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_ramparts.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -2105,23 +2088,7 @@ bryten_building_carrickfergus_castle_01 = {# An important Irish Castle
 			}
 		}
 	}
-	
-	is_enabled = {
-		custom_description = {
-			text = holy_site_christian_or_holy_site_trigger
-			OR = {
-				scope:holder = {
-					religion = religion:christianity_religion
-				}
-				custom_description = {
-					text = holy_site_building_trigger
-					barony = {
-						is_holy_site_of = scope:holder.faith
-					}
-				}
-			}
-		}
-	}
+
 	
 	show_disabled = yes
 	
@@ -2150,7 +2117,7 @@ bryten_building_carrickfergus_castle_01 = {# An important Irish Castle
 bryten_building_st_patrick_cathedral_01 = {# St Patrick's Cathedral in Armagha, the original church
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_structure_palace_of_achen.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -2283,40 +2250,14 @@ bryten_building_st_patrick_cathedral_02 = {# St Patrick's Cathedral in Armagha, 
 	
 	type = special
 }
-
 bryten_building_rock_of_cashel_01 = {# The Rock of Cashel
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_hill_forts.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
-	}
-	
-	can_construct = {
-		scope:holder = {
-			culture = {
-				has_innovation = innovation_castle_baileys
-			}
-		}
-	}
-	
-	is_enabled = {
-		custom_description = {
-			text = holy_site_christian_or_holy_site_trigger
-			OR = {
-				scope:holder = {
-					religion = religion:christianity_religion
-				}
-				custom_description = {
-					text = holy_site_building_trigger
-					barony = {
-						is_holy_site_of = scope:holder.faith
-					}
-				}
-			}
-		}
-	}
+	}	
 	
 	show_disabled = yes
 	
@@ -2345,7 +2286,7 @@ bryten_building_rock_of_cashel_01 = {# The Rock of Cashel
 bryten_building_hill_of_tara_01 = {# The Hill of Tara
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_building_hill_farms.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -2353,22 +2294,16 @@ bryten_building_hill_of_tara_01 = {# The Hill of Tara
 	can_construct = {
 		scope:holder = {
 			culture = {
-				has_innovation = innovation_castle_baileys
+				culture = {	has_cultural_pillar = heritage_goidelic }
 			}
 		}
 	}	
 	is_enabled = {
 		custom_description = {
-			text = holy_site_christian_or_holy_site_trigger
+			text = hill_of_tara_irish_trigger
 			OR = {
 				scope:holder = {
-					religion = religion:christianity_religion
-				}
-				custom_description = {
-					text = holy_site_building_trigger
-					barony = {
-						is_holy_site_of = scope:holder.faith
-					}
+					culture = {	has_cultural_pillar = heritage_goidelic }
 				}
 			}
 		}
@@ -2397,7 +2332,7 @@ bryten_building_hill_of_tara_01 = {# The Hill of Tara
 bryten_building_hill_of_tara_02 = {# The Hill of Tara - modernized with a cathedral
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_canterbury_cathedral.dds"
+	type_icon = "icon_structure_alhambra.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -2406,23 +2341,17 @@ bryten_building_hill_of_tara_02 = {# The Hill of Tara - modernized with a cathed
 	can_construct = {
 		scope:holder = {
 			culture = {
-				has_innovation = innovation_castle_baileys
+				culture = {	has_cultural_pillar = heritage_goidelic }
+				has_innovation = innovation_windmills
 			}
 		}
-	}
-	
+	}	
 	is_enabled = {
 		custom_description = {
-			text = holy_site_christian_or_holy_site_trigger
+			text = hill_of_tara_irish_trigger
 			OR = {
 				scope:holder = {
-					religion = religion:christianity_religion
-				}
-				custom_description = {
-					text = holy_site_building_trigger
-					barony = {
-						is_holy_site_of = scope:holder.faith
-					}
+					culture = {	has_cultural_pillar = heritage_goidelic }
 				}
 			}
 		}
