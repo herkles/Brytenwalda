@@ -202,7 +202,7 @@ tradition_scottish_highlands = {# Scottish Highlands
 	is_shown = {
 		scope:character = {
 			NOT = {# Can't Pick if you have Cumbric Heritage
-				has_cultural_tradition = tradition_cumbrian
+				culture = { has_cultural_tradition = tradition_cumbrian }
 			}
 			any_held_title = {
 				tier = tier_county
@@ -214,7 +214,7 @@ tradition_scottish_highlands = {# Scottish Highlands
 	can_pick = {
 		scope:character = {
 			NOT = {# Can't Pick if you have Cumbric Heritage
-				has_cultural_tradition = tradition_cumbrian
+				culture = { has_cultural_tradition = tradition_cumbrian }
 			}
 			any_held_title = {
 				tier = tier_county
@@ -316,8 +316,8 @@ tradition_fyrd = {# The Fyrd - everyone gets this
 	is_shown = {
 		NOT = { exists = global_var:bryten_fyrd_housecarls }
 		scope:character = {
-			NOT = {# Can't Pick if you have Cumbric Heritage
-				has_cultural_tradition = tradition_fyrd_huscarl
+			NOT = {# Can't Pick if you have housecarl fyrd Heritage
+				culture = { has_cultural_tradition = tradition_fyrd_huscarl }
 			}
 		}
 		OR = {
@@ -331,7 +331,7 @@ tradition_fyrd = {# The Fyrd - everyone gets this
 		NOT = { exists = global_var:bryten_fyrd_housecarls }
 		scope:character = {
 			NOT = {# Can't Pick if you have Cumbric Heritage
-				has_cultural_tradition = tradition_fyrd_huscarl
+				culture = { has_cultural_tradition = tradition_fyrd_huscarl }
 			}
 		}
 		OR = {
@@ -437,7 +437,7 @@ tradition_fyrd_huscarl = {# Revised Fyrd to allow for Houscarl MAA
 		exists = global_var:bryten_fyrd_housecarls
 		scope:character = {
 			NOT = {# Can't Pick if you have Cumbric Heritage
-				has_cultural_tradition = tradition_fyrd
+				culture = { has_cultural_tradition = tradition_fyrd }
 			}
 		}
 		OR = {
@@ -451,7 +451,7 @@ tradition_fyrd_huscarl = {# Revised Fyrd to allow for Houscarl MAA
 		exists = global_var:bryten_fyrd_housecarls
 		scope:character = {
 			NOT = {# Can't Pick if you have Cumbric Heritage
-				has_cultural_tradition = tradition_fyrd
+				culture = { has_cultural_tradition = tradition_fyrd }
 			}
 		}
 		OR = {

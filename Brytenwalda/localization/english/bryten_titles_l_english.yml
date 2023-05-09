@@ -6,6 +6,9 @@
     #######################################
     # Kingdoms
     #######################################
+        k_britian:0 "Brtannia"
+        k_britian_adj:0 "Brythonic"
+
         k_england:0 "Englaland"
         k_england_adj:0 "English"
         k_england_pre:0 "Anglo"
@@ -42,43 +45,32 @@
     #######################################
     # Duchies
     #######################################
-        d_brambugh:0 "Brambugh"
-        d_brambugh_adj:0 "Brambughian"
+        d_norfolk:0 "East Anglia"
+        d_norfolk_adj:0 "East Anglian"
+        d_norfolk_adj_anglo_saxon:0 "Eastengla"
+        d_norfolk_adj_english:0 "Norfolkian"
+        d_norfolk_adj_norman:0 "Norfolkian"
 
-        d_northumbria:0 "Norþanhymbra"
-        d_northumbria_adj:0 "Norþanhymbra"
+        d_canterbury:0 "Cent"
+        d_canterbury_adj:0 "Kentish"
+        d_canterbury_adj_anglo_saxon:0 "Cantwara"
+        d_canterbury_adj_english:0 "Kentish"
+        d_canterbury_adj_norman:0 "Kentish"
 
-        d_east_anglia:0 "Ēastengla"
-        d_east_anglia_adj:0 "Ēastengla"
+        d_bedford:0 "Essex"
+        d_bedford_adj:0 "Essexian"
+        d_bedford_adj_anglo_saxon:0 "Essexian"
+        d_bedford_adj_english:0 "Essexian"
+        d_bedford_adj_norman:0 "Essexian"
 
-        d_mercia:0 "Miercna"
-        d_mercia_adj:0 "Miercnan"
+        d_somerset:0 "Wessex"
+        d_somerset_adj:0 "Brambughian"
+        d_somerset_adj_anglo_saxon:0 "Westseaxna"
+        d_somerset_adj_english:0 "Wessexian"
+        d_somerset_adj_norman:0 "Wessexian"
 
-        d_wessex:0 "Wessex"
-        d_wessex_adj:0 "West Saxon"
-
-        d_kent:0 "Cent"
-        d_kent_adj:0 "Cantwara"
-
-        d_five_burhs:0 "Fífburhga"
-        d_five_burhs_adj:0 "Fífburhga"
-
-        d_essex:0 "Ēastseaxna"
-        d_essex_adj:0 "Ēastseaxna"
-        # Norman Duchies
-        d_bedford:0 "Bedford"
-        d_bedford_adj:0 "Bedforder"
-        d_bedford_adj_english:0 "Bedforder"
-        d_bedford_adj_norman:0 "Bedforder"
-
-        d_northumberland:1 "Northumbria"
-        d_northumberland_adj:0 "Northumbrian"
-
-        d_warwick:1 "Warwick"
-        d_warwick_adj:0 "Warwickian"
-
-        d_lancaster:0 "Lancaster"
-        d_lancaster_adj:0 "Lancastrian"
+        d_cornwall:0 "Cornwall"
+        d_cornwall_adj:0 "Cornish"
 
         d_york:0 "York"
         d_york_adj:0 "Yorkist"
@@ -87,28 +79,20 @@
         d_york_adj_norwegian:0 "Jorvik"
         d_york_adj_swedish:0 "Jorvik"
 
-        d_norfolk:0 "Norfolk"
-        d_norfolk_adj:0 "Norfolkian"
-        d_norfolk_adj_english:0 "Norfolkian"
-        d_norfolk_adj_norman:0 "Norfolkian"
+        d_brambugh:0 "Brambugh"
+        d_brambugh_adj:0 "Brambughian"
 
-        d_hereford:0 "Warwickian"
-        d_hereford_adj:0 "Warwickian"
-        d_hereford_adj_english:0 "Warwickian"
-        d_hereford_adj_norman:0 "Warwickian"
+        d_mercia:0 "Mercia"
+        d_mercia_adj:0 "Mercian"
+        d_mercia_adj_anglo_saxon:0 "Miercnan"
+        d_mercia_adj_english:0 "Mercian"
+        d_mercia_adj_norman:0 "Mercian"
 
-        d_gloucester:0 "Gloucester"
-        d_gloucester_adj:0 "Gloucester"
-        d_gloucester_adj_english:0 "Gloucesterian"
-        d_gloucester_adj_norman:0 "Gloucesterian"
+        d_five_burhs:0 "Fífburhga"
+        d_five_burhs_adj:0 "Fífburhga"
 
-        d_canterbury:0 "Kent"
-        d_canterbury_adj:0 "Kentish"
-
-        d_somerset:0 "Somreset"
-        d_somerset_adj:0 "Somersetian"
-        d_somerset_adj_english:0 "Somersetian"
-        d_somerset_adj_norman:0 "Somersetian"
+        d_warwick:1 "Warwick"
+        d_warwick_adj:0 "Warwickian"
 
         d_buckingham:0 "buckingham"
         d_buckingham_adj:0 "buckingham"
@@ -116,6 +100,19 @@
         d_lincoln:0 "Lincoln"
         d_lincoln_adj:0 "Lincolnian"
 
+        d_northumberland:1 "Northumbria"
+        d_northumberland_adj:0 "Northumbrian"
+
+        d_lancaster:0 "Lancaster"
+        d_lancaster_adj:0 "Lancastrian"
+
+        d_hereford:0 "Hereford"
+        d_hereford_adj:0 "Herefordian"
+
+        d_gloucester:0 "Gloucester"
+        d_gloucester_adj:0 "Gloucester"
+        d_gloucester_adj_english:0 "Gloucesterian"
+        d_gloucester_adj_norman:0 "Gloucesterian"
 #######################################
 # Wales
 #######################################

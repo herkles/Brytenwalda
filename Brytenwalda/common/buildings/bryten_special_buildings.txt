@@ -2293,21 +2293,10 @@ bryten_building_hill_of_tara_01 = {# The Hill of Tara
 	}	
 	can_construct = {
 		scope:holder = {
-			culture = {
-				culture = {	has_cultural_pillar = heritage_goidelic }
-			}
+			culture = {	has_cultural_pillar = heritage_goidelic }
 		}
 	}	
-	is_enabled = {
-		custom_description = {
-			text = hill_of_tara_irish_trigger
-			OR = {
-				scope:holder = {
-					culture = {	has_cultural_pillar = heritage_goidelic }
-				}
-			}
-		}
-	}
+
 
 	next_building = bryten_building_hill_of_tara_02
 
@@ -2341,18 +2330,8 @@ bryten_building_hill_of_tara_02 = {# The Hill of Tara - modernized with a cathed
 	can_construct = {
 		scope:holder = {
 			culture = {
-				culture = {	has_cultural_pillar = heritage_goidelic }
+				has_cultural_pillar = heritage_goidelic
 				has_innovation = innovation_windmills
-			}
-		}
-	}	
-	is_enabled = {
-		custom_description = {
-			text = hill_of_tara_irish_trigger
-			OR = {
-				scope:holder = {
-					culture = {	has_cultural_pillar = heritage_goidelic }
-				}
 			}
 		}
 	}

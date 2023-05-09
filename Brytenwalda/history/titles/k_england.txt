@@ -1290,7 +1290,7 @@ c_west_riding = {
 #######################################
 # Earldom of East Anglia
 #######################################
-d_east_anglia = {
+d_norfolk = {
 	867.1.1 = {
 		de_jure_liege = k_east_anglia
 	}
@@ -1335,11 +1335,11 @@ c_norfolk = {
 		holder = 205016
 	}
 	855.1.8 = {
-		liege = "d_east_anglia"
+		liege = "d_norfolk"
 	}
 	855.1.8 = {
 		holder = 163064
-		de_jure_liege = d_east_anglia
+		de_jure_liege = d_norfolk
 
 	}
 	879.1.1 = {
@@ -1351,7 +1351,7 @@ c_norfolk = {
 	}
 	1066.1.1 = {
 		holder = 5650 #Radulf 'Stalre'
-		liege = "d_east_anglia"
+		liege = "d_norfolk"
 	}
 	1066.10.14 = {
 		liege = "k_england"
@@ -1405,11 +1405,11 @@ c_suffolk = {
 		holder = 205016
 	}
 	855.1.8 = {
-		liege = "d_east_anglia"
+		liege = "d_norfolk"
 	}
 	855.1.8 = {
 		holder = 163064
-		de_jure_liege = d_east_anglia
+		de_jure_liege = d_norfolk
 	}
 	
 	879.1.1 = {
@@ -1472,11 +1472,11 @@ c_cambridgeshire = {
 		holder = 205016
 	}
 	855.1.8 = {
-		liege = "d_east_anglia"
+		liege = "d_norfolk"
 	}
 	855.1.8 = {
 		holder = 163064
-		de_jure_liege = d_east_anglia
+		de_jure_liege = d_norfolk
 	}
 	
 	879.1.1 = {
@@ -1534,7 +1534,7 @@ c_cambridgeshire = {
 #######################################
 # Earldom of Wessex
 #######################################
-d_wessex = {
+d_somerset = {
 	867.1.1 = {
 		de_jure_liege = k_wessex
 	}
@@ -1559,7 +1559,7 @@ c_wiltshire = {
 	}
 	865.1.1 = {
 		liege = "k_wessex"
-		de_jure_liege = d_wessex
+		de_jure_liege = d_somerset
 		holder = bryten_wessex_10
 	}
 	1066.1.5 = {
@@ -1606,7 +1606,7 @@ c_berkshire = {
 	}
 	865.1.1 = {
 		liege = "k_wessex"
-		de_jure_liege = d_wessex
+		de_jure_liege = d_somerset
 		holder = bryten_wessex_01
 	}
 	1066.1.5 = {
@@ -1661,7 +1661,7 @@ c_hampton = {
 	}
 	865.1.1 = {
 		liege = "k_england"
-		de_jure_liege = d_wessex
+		de_jure_liege = d_somerset
 		holder = 33358
 	}
 	1066.1.5 = {
@@ -1729,7 +1729,7 @@ c_isle_of_wight = {
 	}
 	865.1.1 = {
 		liege = "k_england"
-		de_jure_liege = d_wessex
+		de_jure_liege = d_somerset
 		holder = 33358
 	}
 	1065.12.10 = {
@@ -1801,7 +1801,7 @@ c_dorset = {
 	}
 	865.1.1 = {
 		liege = "k_wessex"
-		de_jure_liege = d_wessex
+		de_jure_liege = d_somerset
 		holder = bryten_wessex_05
 	}
 	1066.1.5 = {
@@ -1848,7 +1848,7 @@ c_somerset = {
 	}
 	865.1.1 = {
 		liege = "k_wessex"
-		de_jure_liege = d_wessex
+		de_jure_liege = d_somerset
 		holder = bryten_wessex_04
 	}
 	1066.1.5 = {
@@ -1889,7 +1889,7 @@ c_somerset = {
 #######################################
 # Earldom of Kent
 #######################################
-d_kent = {
+d_canterbury = {
 	440.1.1 = {
 		de_jure_liege = k_kent
 	}
@@ -1963,7 +1963,7 @@ c_kent = {
 	}
 	840.1.1 = {
 		holder = bryten_wessex_20
-		de_jure_liege = d_kent
+		de_jure_liege = d_canterbury
 
 	}
 	882.1.1 = {
@@ -2182,7 +2182,7 @@ c_surrey = {
 	}
 	865.1.1 = {
 		liege = "k_wessex"
-		de_jure_liege = d_kent
+		de_jure_liege = d_canterbury
 		holder = 33358
 	}
 	1066.1.1 = {
@@ -2221,7 +2221,7 @@ c_sussex = {
 	}
 	865.1.1 = {
 		liege = "k_wessex"
-		de_jure_liege = d_kent
+		de_jure_liege = d_canterbury
 		holder = bryten_wessex_12
 	}
 	1066.1.1 = {
@@ -2442,7 +2442,7 @@ c_gloucestershire = {
 		de_jure_liege = d_mercia
 	}
 	927.1.1 = {
-		de_jure_liege = d_wessex
+		de_jure_liege = d_somerset
 		liege = "k_england"
 	}	
 	1066.1.1 = {
@@ -2516,7 +2516,7 @@ c_oxfordshire = {
 		de_jure_liege = d_mercia
 	}
 	927.1.1 = {
-		de_jure_liege = d_wessex
+		de_jure_liege = d_somerset
 		liege = "k_england"
 	}	
 	1066.1.5 = {
@@ -3002,7 +3002,7 @@ c_huntingdonshire = {
 		holder = 163102
 	}
 	927.1.1 = {
-		de_jure_liege = d_east_anglia
+		de_jure_liege = d_norfolk
 		liege = "k_england"
 	}	
 	1066.1.1 = {
@@ -3131,7 +3131,7 @@ c_bedford = {
 		de_jure_liege = d_five_burhs
 	}
 	927.1.1 = {
-		de_jure_liege = d_east_anglia
+		de_jure_liege = d_norfolk
 		liege = "k_england"
 	}	
 	1066.1.1 = {
@@ -3206,7 +3206,7 @@ c_buckinghamshire = {
 		holder = 33350 # Aethelstan the Glorious
 	}
 	927.1.1 = {
-		de_jure_liege = d_east_anglia
+		de_jure_liege = d_norfolk
 		liege = "k_england"
 	}	
 	939.10.28 = {
@@ -3364,7 +3364,7 @@ c_lincolnshire = {
 #######################################
 # Earldom of Essex
 #######################################
-d_essex = {
+d_bedford = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 9 }
 
@@ -3398,7 +3398,7 @@ c_middlesex = {
 	}
 	865.1.1 = {
 		holder = 33358 # Aethelraed
-		de_jure_liege = d_essex
+		de_jure_liege = d_bedford
 	}
 	867.1.1 = {
 		de_jure_liege = k_wessex
@@ -3413,7 +3413,7 @@ c_middlesex = {
 		holder = 33350 # Aethelstan the Glorious
 	}
 	927.1.1 = {
-		de_jure_liege = d_east_anglia
+		de_jure_liege = d_norfolk
 		liege = "k_england"
 	}
 	939.10.28 = {
@@ -3501,15 +3501,15 @@ c_essex = {
 	}
 	865.1.1 = {
 		liege = "k_wessex"
-		de_jure_liege = d_essex
+		de_jure_liege = d_bedford
 		holder = 33358
 	}
 	927.1.1 = {
-		de_jure_liege = d_east_anglia
+		de_jure_liege = d_norfolk
 		liege = "k_england"
 	}	
 	1066.1.1 = {
-		liege = "d_east_anglia"
+		liege = "d_norfolk"
 	}
 	1066.1.5 = {
 		holder = 132 #Gyrth Godwinsson
@@ -3582,7 +3582,7 @@ c_hertfordshire = {
 	}
 	865.1.1 = {
 		holder = 33358 # Aethelraed
-		de_jure_liege = d_essex
+		de_jure_liege = d_bedford
 	}
 	867.1.1 = {
 		de_jure_liege = k_wessex
@@ -3597,7 +3597,7 @@ c_hertfordshire = {
 		holder = 33350 # Aethelstan the Glorious
 	}
 	927.1.1 = {
-		de_jure_liege = d_east_anglia
+		de_jure_liege = d_norfolk
 		liege = "k_england"
 	}	
 	939.10.28 = {

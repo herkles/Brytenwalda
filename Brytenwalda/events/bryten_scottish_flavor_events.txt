@@ -6,24 +6,13 @@
 bryten_scotland.001 = {# Scots is forming
 	hidden = yes	
 
-	trigger = {
-		exists = global_var:bryten_anglo_saxon_secured
-		not = { exists = global_var:bryten_scots_language_anglisc }
-	}
-
 	immediate = {
-		set_global_variable = {
-			name = bryten_scots_language_anglisc
-			value = yes
-		}
 		if = {
 			limit = { exists = global_var:bryten_anglo_saxon_secured }
 			culture:scots = { set_name_list = name_list_scottish_anglic }
 			culture:scots = { set_culture_pillar = language_anglic	}
 		}
-
-
-
+		
 		# Save scopes for player notification events.
 		culture:anglo_saxon = { save_scope_as = anglo_saxon }
 		culture:scottish = {

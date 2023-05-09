@@ -396,11 +396,12 @@ yearly_global_pulse = {
 		if = {# Anglo-Norse Culture Forming
 			limit = {
 				NOT = { has_global_variable = bryten_anglo_norse_created }
+
 				OR = {# For the culture to form the norse have to have control of at least one english kingdom
-					title:k_northumbria.holder = { culture = culture:norse }
-					title:k_east_anglia.holder = { culture = culture:norse }
-					title:k_mercia.holder = { culture = culture:norse }
-					title:k_wessex.holder = { culture = culture:norse }
+					title:k_northumbria.holder = { has_culture = culture:norse }
+					title:k_east_anglia.holder = { has_culture = culture:norse }
+					title:k_mercia.holder = { has_culture = culture:norse }
+					title:k_wessex.holder = { has_culture = culture:norse }
 				}
 				current_date >= 867.1.1
 			}

@@ -332,17 +332,78 @@ bryten_wales.300 = {# brython Culture arising
 		culture:brython = { save_scope_as = brython }
 		culture:brython = {
 			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
-			reset_culture_creation_date = yes
 			get_all_innovations_from = culture:welsh
 			get_all_innovations_from = culture:cornish
 			get_all_innovations_from = culture:cumbrian
 			# Save scope for player notification events.
 			save_scope_as = brython
+			if = {# if Wales founded Britain
+				limit = { title:k_britian.holder = { has_culture = culture:welsh } }
+				add_culture_tradition = tradition_welsh_laws
+			}
 		}
 
-		# Random anglo counties in south England will convert to Anglo-Norse
-		culture:brython = {
-			every_culture_county = {
+		# Save scopes for player notification events.
+		culture:northumbrian = { save_scope_as = northumbrian }
+		culture:mercian = { save_scope_as = mercian }
+		culture:west_saxon = { save_scope_as = west_saxon }
+		culture:east_anglian = { save_scope_as = east_anglian }
+		culture:anglo_saxon = { save_scope_as = east_anglian }
+		culture:anglo_norse = { save_scope_as = east_anglian }
+
+		# All Norse counties in England will convert to Anglo-saxon
+		culture:northumbrian = {
+			random_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_britain_byrthon_area
+					}
+				}
+				add_to_list = brython_counties
+			}
+		}
+		culture:mercian = {
+			random_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_britain_byrthon_area
+					}
+				}
+				add_to_list = brython_counties
+			}
+		}
+		culture:west_saxon = {
+			random_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_britain_byrthon_area
+					}
+				}
+				add_to_list = brython_counties
+			}
+		}
+		culture:east_anglian = {
+			random_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_britain_byrthon_area
+					}
+				}
+				add_to_list = brython_counties
+			}
+		}
+		culture:anglo_norse = {
+			random_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_britain_byrthon_area
+					}
+				}
+				add_to_list = brython_counties
+			}
+		}
+		culture:anglo_saxon = {
+			random_culture_county = {
 				limit = {
 					title_province = {
 						geographical_region = custom_britain_byrthon_area
@@ -352,7 +413,7 @@ bryten_wales.300 = {# brython Culture arising
 			}
 		}
 
-		# Convert the norse counties to anglo-norse
+		# Convert the england counties to anglo-norse
 		every_in_list = {
 			list = brython_counties
 			limit = {
@@ -362,36 +423,55 @@ bryten_wales.300 = {# brython Culture arising
 						OR = {
 							AND = {
 								is_ai = no
-								culture = { has_cultural_pillar = heritage_west_germanic }
-								capital_province = { geographical_region = custom_england }
+								culture = { has_cultural_pillar = heritage_brythonic }
+								capital_province = { geographical_region = custom_britain_byrthon_area }
 							}
 							any_liege_or_above = {
 								is_ai = no
-								culture = { has_cultural_pillar = heritage_west_germanic }
-								capital_province = { geographical_region = custom_england }
+								culture = { has_cultural_pillar = heritage_brythonic }
+								capital_province = { geographical_region = custom_britain_byrthon_area }
 							}
 						}
 					}
 				}
 			}
 						
-			# All Norse counties in England become byrthon
-			every_county_in_region = {
-				region = custom_britain_byrthon_area
-				random = {
-					chance = 50
-					set_county_culture = culture:byrthon
-				}
+			# All England counties in England become anglo_saxon_counties
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:northumbrian
+				NEW_CULTURE = culture:brython
+				REGION = custom_britain_byrthon_area
 			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:mercian
+				NEW_CULTURE = culture:brython
+				REGION = custom_britain_byrthon_area
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:west_saxon
+				NEW_CULTURE = culture:brython
+				REGION = custom_britain_byrthon_area
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:east_anglian
+				NEW_CULTURE = culture:brython
+				REGION = custom_britain_byrthon_area
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:anglo_norse
+				NEW_CULTURE = culture:brython
+				REGION = custom_britain_byrthon_area
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:anglo_saxon
+				NEW_CULTURE = culture:brython
+				REGION = custom_britain_byrthon_area
+			}
+
+
+
 		}
 
-		every_ruler = {
-			limit = {
-				has_title = title:k_britian
-			}
-			trigger_event = bryten_wales.301
-		}
-	
 	}
 }
 bryten_wales.301 = {# British King gets a choice

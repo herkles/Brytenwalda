@@ -686,28 +686,28 @@ establish_norman_adminstration_effects = {# Establishing the Norman Adminstratio
 				limit = {
 					AND = {
 						is_ai = yes
-						has_title = title:d_east_anglia 
+						has_title = title:d_norfolk 
 					}
 				}
-				destroy_title = title:d_east_anglia
+				destroy_title = title:d_norfolk
 			}
 			if = {
 				limit = { 
 					AND = {
 						is_ai = yes
-						has_title = title:d_wessex 
+						has_title = title:d_somerset 
 					}					
 				}
-				destroy_title = title:d_wessex
+				destroy_title = title:d_somerset
 			}
 			if = {
 				limit = {
 					AND = {
 						is_ai = yes
-						has_title = title:d_kent 
+						has_title = title:d_canterbury 
 					}					
 				}
-				destroy_title = title:d_kent
+				destroy_title = title:d_canterbury
 			}
 			if = {
 				limit = {
@@ -732,10 +732,10 @@ establish_norman_adminstration_effects = {# Establishing the Norman Adminstratio
 				limit = {
 					AND = {
 						is_ai = yes
-						has_title = title:d_essex 
+						has_title = title:d_bedford 
 					}					
 				}
-				destroy_title = title:d_essex
+				destroy_title = title:d_bedford
 			}
 			resolve_title_and_vassal_change = scope:change
 
@@ -990,7 +990,7 @@ bryten_reclaim_britannia_decision_effect = {# Restoring Britian
 		}
 	}
 	resolve_title_and_vassal_change = scope:title_change
-	set_primary_title_to = title:k_england
+	set_primary_title_to = title:k_britian
 
 	title:k_kent = { add_to_list = brythonic_kingdom }
 	title:k_northumbria = { add_to_list = brythonic_kingdom }
@@ -1011,20 +1011,57 @@ bryten_reclaim_britannia_decision_effect = {# Restoring Britian
 		}
 	}
 
-	hidden_effect = {# turn all the counties of the kingdom of cornwall into counties for the duchy of cornwall 
-		if = {
-			limit = { has_title = title:k_cornwall }
-			title:k_cornwall = { add_to_list = brythonic_kingdom_cornwall }
-			every_in_list = {
-				list = brythonic_kingdom
-				every_in_de_jure_hierarchy = {
-					limit = {
-						tier = tier_county
-					}
-					set_de_jure_liege_title = title:d_cornwall
-				}
-			}
-		}
+	hidden_effect = {# transform the duchies for the celts
+		title:d_cornwall = { set_de_jure_liege_title = title:k_britian }
+		title:d_york = { set_de_jure_liege_title = title:k_britian }
+		title:d_lancaster = { set_de_jure_liege_title = title:k_britian }
+		title:d_gloucester = { set_de_jure_liege_title = title:k_britian }
+		title:d_lincoln = { set_de_jure_liege_title = title:k_britian }
+		title:d_buckingham = { set_de_jure_liege_title = title:k_britian }
+		title:d_powys = { set_de_jure_liege_title = title:k_britian }
+		title:d_somerset = { set_de_jure_liege_title = title:k_britian }
+		title:d_canterbury = { set_de_jure_liege_title = title:k_britian }
+		title:d_bedford = { set_de_jure_liege_title = title:k_britian }
+		title:d_brambugh = { set_de_jure_liege_title = title:k_britian }
+		title:d_gwynedd = { set_de_jure_liege_title = title:k_britian }
+		title:d_deheubarth = { set_de_jure_liege_title = title:k_britian }
+		# Duchy of Cornwall
+		title:c_dorset = { set_de_jure_liege_title = title:d_cornwall }
+		title:c_somerset = { set_de_jure_liege_title = title:d_cornwall }
+		# Duchy of Elmet / York
+		title:c_north_riding = { set_de_jure_liege_title = title:d_york }
+		title:c_east_riding = { set_de_jure_liege_title = title:d_york }
+		title:c_west_riding = { set_de_jure_liege_title = title:d_york }
+		# Duchy of Rhegghed
+		title:c_cumberland = { set_de_jure_liege_title = title:d_lancaster }
+		title:c_cheshire = { set_de_jure_liege_title = title:d_lancaster }
+		title:c_westmorland = { set_de_jure_liege_title = title:d_lancaster }
+		title:c_lancashire = { set_de_jure_liege_title = title:d_lancaster }
+		# Duchy of Llwytgoed / Gloustershire
+		title:c_gloucestershire = { set_de_jure_liege_title = title:d_gloucester }
+		title:c_wiltshire = { set_de_jure_liege_title = title:d_gloucester }
+		title:c_warwickshire = { set_de_jure_liege_title = title:d_gloucester }
+		title:c_worcestershire = { set_de_jure_liege_title = title:d_gloucester }
+		title:c_oxfordshire = { set_de_jure_liege_title = title:d_gloucester }
+		# Duchy of Caerlinnwys(lincoln
+		title:c_leicestershire = { set_de_jure_liege_title = title:d_lincoln }
+		title:c_staffordshire = { set_de_jure_liege_title = title:d_lincoln }
+		title:c_derby = { set_de_jure_liege_title = title:d_lincoln }
+		title:c_nottinghamshire = { set_de_jure_liege_title = title:d_lincoln }
+		title:c_lincolnshire = { set_de_jure_liege_title = title:d_lincoln }
+		# Duchy of Rhydwely / Bedford
+		title:c_huntingdonshire = { set_de_jure_liege_title = title:d_buckingham }
+		title:c_northamptonshire = { set_de_jure_liege_title = title:d_buckingham }
+		title:c_bedford = { set_de_jure_liege_title = title:d_buckingham }
+		title:c_buckinghamshire = { set_de_jure_liege_title = title:d_buckingham }
+		# Duchy of Powys
+		title:c_hereford = { set_de_jure_liege_title = title:d_powys }
+		title:c_shropshire = { set_de_jure_liege_title = title:d_powys }
+		# Duchy of Powys
+		title:c_hampton = { set_de_jure_liege_title = title:d_somerset }
+		title:c_isle_of_wight = { set_de_jure_liege_title = title:d_somerset }
+		title:c_wiltshire = { set_de_jure_liege_title = title:d_somerset }
+		title:c_berkshire = { set_de_jure_liege_title = title:d_somerset }
 	}
 
 	hidden_effect = {# destroy other English titles
