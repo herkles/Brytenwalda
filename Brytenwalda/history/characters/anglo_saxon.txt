@@ -1174,7 +1174,7 @@
 			add_pressed_claim = title:k_england
 		}
 		1066.1.6 = {
-			trait = hunter_1
+			trait = lifestyle_hunter
 		}
 		1066.10.14 = {
 			employer = 5644
@@ -1746,7 +1746,7 @@
 			birth = "1032.1.1"
 		}
 		1050.1.1 = {
-			trait = hunter_1
+			trait = lifestyle_hunter
 		}
 		1066.10.14 = {
 			death = "1066.10.14"
@@ -5955,7 +5955,7 @@
 			birth = "1044.1.1"
 		}
 		1066.1.1 = {
-			trait = hunter_1
+			trait = lifestyle_hunter
 		}
 		1071.1.1 = {
 			death = "1071.1.1"
@@ -5997,7 +5997,7 @@
 			}
 		}
 		1066.1.1 = {
-			trait = hunter_1
+			trait = lifestyle_hunter
 		}
 		1087.1.1 = {
 			death = "1087.1.1"
@@ -6923,7 +6923,6 @@
 		trait = ambitious
 		trait = vengeful #killed a bunch of Normans who killed his brother
 		trait = wrathful #see above
-		trait = blademaster_2 # noted duelist
 		trait = forder #defended the fenlands
 		trait = adventurer
 
@@ -6935,6 +6934,18 @@
 			employer = 364 #Baldwin of Flanders
 			add_pressed_claim = title:c_cambridgeshire
 			give_nickname = nick_the_wake
+			effect = {
+				add_trait = lifestyle_blademaster # noted duelist
+				add_trait_xp = {
+					trait = lifestyle_blademaster
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+			}
 		}
 		1094.1.2 = {
 			death = "1094.1.2"

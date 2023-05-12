@@ -4,327 +4,326 @@
 #######################################
 # Pilgrimage to St. Davids
 #######################################
-# Pilgrimage to St. Davids it self
-bryten_wales.100 = {# Make preparations to begin the pilgrimage
-	type = character_event
-	title = bryten_wales.100.t
-	desc = bryten_wales.100.desc
-	theme = friendly
-	override_icon = {
-		reference = "gfx/interface/icons/event_types/type_faith.dds"
-	}
-	right_portrait = root
+# # Pilgrimage to St. Davids it self
+# bryten_wales.100 = {# Make preparations to begin the pilgrimage
+# 	type = character_event
+# 	title = bryten_wales.100.t
+# 	desc = bryten_wales.100.desc
+# 	theme = friendly
+# 	override_icon = {
+# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
+# 	}
+# 	right_portrait = root
 	
-	immediate = {
-		# Stop characters from planning multiple activities at once
-		add_character_flag = planning_an_activity
-	}
+# 	immediate = {
+# 		# Stop characters from planning multiple activities at once
+# 		add_character_flag = planning_an_activity
+# 	}
 	
-	option = { # Ok
-		name = bryten_wales.100.pilgrimage
-		title:b_st_davids.title_province = {	
-			spawn_activity = {
-				owner = root
-				type = activity_davids_pilgrimage
-			}	
-		}
-	}
-}
-bryten_wales.101 = {# Pilgrimage Begins
-	type = character_event
-	title = bryten_wales.101.t
-	desc = bryten_wales.101.desc
-	theme = friendly
-	override_icon = {
-		reference = "gfx/interface/icons/event_types/type_faith.dds"
-	}
-	left_portrait = {
-		character = root
-		animation = happiness
-	}
+# 	option = { # Ok
+# 		name = bryten_wales.100.pilgrimage
+# 		title:b_st_davids.title_province = {	
+# 			spawn_activity = {
+# 				owner = root
+# 				type = activity_davids_pilgrimage
+# 			}	
+# 		}
+# 	}
+# }
+# bryten_wales.101 = {# Pilgrimage Begins
+# 	type = character_event
+# 	title = bryten_wales.101.t
+# 	desc = bryten_wales.101.desc
+# 	theme = friendly
+# 	override_icon = {
+# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
+# 	}
+# 	left_portrait = {
+# 		character = root
+# 		animation = happiness
+# 	}
 
-	immediate = {
-		play_music_cue = "mx_cue_epic_sacral_moment"
-	}
+# 	immediate = {
+# 		play_music_cue = "mx_cue_epic_sacral_moment"
+# 	}
 	
-	option = { # Ok
-		name = bryten_wales.101.pilgrimage
+# 	option = { # Ok
+# 		name = bryten_wales.101.pilgrimage
 
-	}
+# 	}
 
-	after = {
-		trigger_event = {
-			id = bryten_wales.102
-			days = { 10 20 }
-		}
-	}
-}
-bryten_wales.102 = {# Stopping at St. Patrick's Chapel
-	type = character_event
-	title = bryten_wales.102.t
-	desc = bryten_wales.102.desc
-	theme = friendly
-	override_icon = {
-		reference = "gfx/interface/icons/event_types/type_faith.dds"
-	}
+# 	after = {
+# 		trigger_event = {
+# 			id = bryten_wales.102
+# 			days = { 10 20 }
+# 		}
+# 	}
+# }
+# bryten_wales.102 = {# Stopping at St. Patrick's Chapel
+# 	type = character_event
+# 	title = bryten_wales.102.t
+# 	desc = bryten_wales.102.desc
+# 	theme = friendly
+# 	override_icon = {
+# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
+# 	}
 	
-	left_portrait = {
-		character = root
-		animation = happiness
-	}
+# 	left_portrait = {
+# 		character = root
+# 		animation = happiness
+# 	}
 
-	immediate = {
-		play_music_cue = "mx_cue_epic_sacral_moment"
-	}
+# 	immediate = {
+# 		play_music_cue = "mx_cue_epic_sacral_moment"
+# 	}
 	
-	option = { # Ok
-		name = bryten_wales.102.patrick
-	}
+# 	option = { # Ok
+# 		name = bryten_wales.102.patrick
+# 	}
 
-	after = {
-		trigger_event = {
-			id = bryten_wales.103
-			days = { 10 20 }
-		}
-	}
-}
-bryten_wales.103 = {# Arrive in St. Davids
-	type = character_event
-	title = bryten_wales.103.t
-	desc = bryten_wales.103.desc
-	theme = friendly
-	override_icon = {
-		reference = "gfx/interface/icons/event_types/type_faith.dds"
-	}
+# 	after = {
+# 		trigger_event = {
+# 			id = bryten_wales.103
+# 			days = { 10 20 }
+# 		}
+# 	}
+# }
+# bryten_wales.103 = {# Arrive in St. Davids
+# 	type = character_event
+# 	title = bryten_wales.103.t
+# 	desc = bryten_wales.103.desc
+# 	theme = friendly
+# 	override_icon = {
+# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
+# 	}
 	
-	left_portrait = {
-		character = root
-		animation = happiness
-	}
+# 	left_portrait = {
+# 		character = root
+# 		animation = happiness
+# 	}
 
-	immediate = {
-		play_music_cue = "mx_cue_epic_sacral_moment"
-	}
+# 	immediate = {
+# 		play_music_cue = "mx_cue_epic_sacral_moment"
+# 	}
 	
-	option = { # Ok
-		name = bryten_wales.103.arrival
+# 	option = { # Ok
+# 		name = bryten_wales.103.arrival
 
-	}
+# 	}
 
-	after = {
-		trigger_event = {
-			id = bryten_wales.104
-			days = { 10 20 }
-		}
-	}
-}
-bryten_wales.104 = {# Meditating in the cathedral
-	type = character_event
-	title = bryten_wales.104.t
-	desc = bryten_wales.104.desc
-	theme = friendly
-	override_icon = {
-		reference = "gfx/interface/icons/event_types/type_faith.dds"
-	}
+# 	after = {
+# 		trigger_event = {
+# 			id = bryten_wales.104
+# 			days = { 10 20 }
+# 		}
+# 	}
+# }
+# bryten_wales.104 = {# Meditating in the cathedral
+# 	type = character_event
+# 	title = bryten_wales.104.t
+# 	desc = bryten_wales.104.desc
+# 	theme = friendly
+# 	override_icon = {
+# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
+# 	}
 	
-	left_portrait = {
-		character = root
-		animation = happiness
-	}
+# 	left_portrait = {
+# 		character = root
+# 		animation = happiness
+# 	}
 
-	immediate = {
-		play_music_cue = "mx_cue_epic_sacral_moment"
-	}
+# 	immediate = {
+# 		play_music_cue = "mx_cue_epic_sacral_moment"
+# 	}
 	
-	option = { # Ok
-		name = bryten_wales.104.cathedral
+# 	option = { # Ok
+# 		name = bryten_wales.104.cathedral
 
-	}
+# 	}
 
-	after = {
-		trigger_event = {
-			id = bryten_wales.105
-			days = { 10 20 }
-		}
-	}
-}
-bryten_wales.105 = {# Visiting the tomb of st. David
-	type = character_event
-	title = bryten_wales.105.t
-	desc = bryten_wales.105.desc
-	theme = friendly
-	override_icon = {
-		reference = "gfx/interface/icons/event_types/type_faith.dds"
-	}
+# 	after = {
+# 		trigger_event = {
+# 			id = bryten_wales.105
+# 			days = { 10 20 }
+# 		}
+# 	}
+# }
+# bryten_wales.105 = {# Visiting the tomb of st. David
+# 	type = character_event
+# 	title = bryten_wales.105.t
+# 	desc = bryten_wales.105.desc
+# 	theme = friendly
+# 	override_icon = {
+# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
+# 	}
 	
-	left_portrait = {
-		character = root
-		animation = happiness
-	}
+# 	left_portrait = {
+# 		character = root
+# 		animation = happiness
+# 	}
 
-	immediate = {
-		play_music_cue = "mx_cue_epic_sacral_moment"
-	}
+# 	immediate = {
+# 		play_music_cue = "mx_cue_epic_sacral_moment"
+# 	}
 	
-	option = { # Ok
-		name = bryten_wales.105.david
+# 	option = { # Ok
+# 		name = bryten_wales.105.david
 
-	}
+# 	}
 
-	after = {
-		trigger_event = {
-			id = bryten_wales.106
-			days = { 10 20 }
-		}
-	}
-}
-bryten_wales.106 = {#  Preparing to return home
-	type = character_event
-	title = bryten_wales.106.t
-	desc = bryten_wales.106.desc
-	theme = friendly
-	override_icon = {
-		reference = "gfx/interface/icons/event_types/type_faith.dds"
-	}
+# 	after = {
+# 		trigger_event = {
+# 			id = bryten_wales.106
+# 			days = { 10 20 }
+# 		}
+# 	}
+# }
+# bryten_wales.106 = {#  Preparing to return home
+# 	type = character_event
+# 	title = bryten_wales.106.t
+# 	desc = bryten_wales.106.desc
+# 	theme = friendly
+# 	override_icon = {
+# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
+# 	}
 	
-	left_portrait = {
-		character = root
-		animation = happiness
-	}
+# 	left_portrait = {
+# 		character = root
+# 		animation = happiness
+# 	}
 
-	immediate = {
-		play_music_cue = "mx_cue_epic_sacral_moment"
-	}
+# 	immediate = {
+# 		play_music_cue = "mx_cue_epic_sacral_moment"
+# 	}
 	
-	option = { # Ok
-		name = bryten_wales.106.home
+# 	option = { # Ok
+# 		name = bryten_wales.106.home
 
-	}
+# 	}
 
-	after = {
-		trigger_event = {
-			id = bryten_wales.107
-			days = { 10 20 }
-		}
-	}
-}
-bryten_wales.107 = {# Return home
-	type = character_event
-	title = bryten_wales.107.t
-	desc = bryten_wales.107.desc
-	theme = friendly
-	override_icon = {
-		reference = "gfx/interface/icons/event_types/type_faith.dds"
-	}
+# 	after = {
+# 		trigger_event = {
+# 			id = bryten_wales.107
+# 			days = { 10 20 }
+# 		}
+# 	}
+# }
+# bryten_wales.107 = {# Return home
+# 	type = character_event
+# 	title = bryten_wales.107.t
+# 	desc = bryten_wales.107.desc
+# 	theme = friendly
+# 	override_icon = {
+# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
+# 	}
 	
-	left_portrait = {
-		character = root
-		animation = happiness
-	}
+# 	left_portrait = {
+# 		character = root
+# 		animation = happiness
+# 	}
 
-	immediate = {
-		play_music_cue = "mx_cue_epic_sacral_moment"
-	}
+# 	immediate = {
+# 		play_music_cue = "mx_cue_epic_sacral_moment"
+# 	}
 	
-	option = { # Ok
-		name = bryten_wales.107.home
+# 	option = { # Ok
+# 		name = bryten_wales.107.home
 
-	}
+# 	}
 
-	after = {
-		trigger_event = {
-			id = bryten_wales.108
-			days = { 10 20 }
-		}
-	}
-}
-bryten_wales.108 = {# Misc Cleanup file
-	hidden = yes	
-	immediate = {
-		remove_character_flag = bryten_pilgrimage_david
-		scope:activity = {
-			complete_activity = yes
-		}
-	}
-}
-# The Papal Bull that supports
-bryten_wales.109 = {# The Papal Bull - Let St. David's owner know 
-	type = character_event
-	title = bryten_wales.109.t
-	desc = bryten_wales.109.desc
-	theme = friendly
-	left_portrait = {
-		character = scope:scoped_pope
-		animation = personality_zealous
-	}
+# 	after = {
+# 		trigger_event = {
+# 			id = bryten_wales.108
+# 			days = { 10 20 }
+# 		}
+# 	}
+# }
+# bryten_wales.108 = {# Misc Cleanup file
+# 	hidden = yes	
+# 	immediate = {
+# 		remove_character_flag = bryten_pilgrimage_david
+# 		scope:activity = {
+# 			complete_activity = yes
+# 		}
+# 	}
+# }
+# # The Papal Bull that supports
+# bryten_wales.109 = {# The Papal Bull - Let St. David's owner know 
+# 	type = character_event
+# 	title = bryten_wales.109.t
+# 	desc = bryten_wales.109.desc
+# 	theme = friendly
+# 	left_portrait = {
+# 		character = scope:scoped_pope
+# 		animation = personality_zealous
+# 	}
 
-	trigger = {
-		completely_controls = title:c_pembrokeshire
+# 	trigger = {
+# 		completely_controls = title:c_pembrokeshire
 
-		faith:catholic.religious_head = {
-			has_title = title:k_papal_state
-		}
-		piety_level >= 3
-		title:k_papal_state.holder = {
-			opinion = {
-				target = root
-				value >= very_high_positive_opinion
-			}
-		}
-		not = {	exists = global_var:bryten_papal_bull_davids } # Fire Only Once
-		any_realm_province = { has_building = bryten_building_st_davids_cathedral_02 }
-	}
+# 		faith:catholic.religious_head = {
+# 			has_title = title:k_papal_state
+# 		}
+# 		piety_level >= 3
+# 		title:k_papal_state.holder = {
+# 			opinion = {
+# 				target = root
+# 				value >= very_high_positive_opinion
+# 			}
+# 		}
+# 		not = {	exists = global_var:bryten_papal_bull_davids } # Fire Only Once
+# 		any_realm_province = { has_building = bryten_building_st_davids_cathedral_02 }
+# 	}
 
-	immediate = {
-		set_global_variable = {
-			name = bryten_papal_bull_davids
-			value = yes
-		}
-		root.faith.religious_head = {
-			save_scope_as = scoped_pope
-		}
-	}
+# 	immediate = {
+# 		set_global_variable = {
+# 			name = bryten_papal_bull_davids
+# 			value = yes
+# 		}
+# 		root.faith.religious_head = {
+# 			save_scope_as = scoped_pope
+# 		}
+# 	}
 	
-	option = { # Ok
-		name = bryten_wales.109.pope
+# 	option = { # Ok
+# 		name = bryten_wales.109.pope
 
-	}
+# 	}
 
-	after = {
-		every_player = {# Let other English Kings know of his death
-			if = {
-				limit = {
-					capital_province = { geographical_region = world_europe_west }
-					faith = faith:catholic
-				}
-				trigger_event = {
-					id = bryten_wales.110
-					days = { 10 20 }
-				}
-			}
-		}
-	}	
-}
-bryten_wales.110 = {# Other European Leaders are notified
-	type = character_event
-	title = bryten_wales.110.t
-	desc = bryten_wales.110.desc
-	theme = friendly
-	left_portrait = {
-		character = scope:scoped_pope
-		animation = personality_zealous
-	}
-	option = { # Ok
-		name = bryten_wales.110.pope
-	}
+# 	after = {
+# 		every_player = {# Let other English Kings know of his death
+# 			if = {
+# 				limit = {
+# 					capital_province = { geographical_region = world_europe_west }
+# 					faith = faith:catholic
+# 				}
+# 				trigger_event = {
+# 					id = bryten_wales.110
+# 					days = { 10 20 }
+# 				}
+# 			}
+# 		}
+# 	}	
+# }
+# bryten_wales.110 = {# Other European Leaders are notified
+# 	type = character_event
+# 	title = bryten_wales.110.t
+# 	desc = bryten_wales.110.desc
+# 	theme = friendly
+# 	left_portrait = {
+# 		character = scope:scoped_pope
+# 		animation = personality_zealous
+# 	}
+# 	option = { # Ok
+# 		name = bryten_wales.110.pope
+# 	}
 		
-}
+# }
 
 #######################################
 # Brython culture forming
 #######################################
 bryten_wales.300 = {# brython Culture arising
-	type = empty
 	hidden = yes
 	
 	immediate = {
@@ -468,7 +467,12 @@ bryten_wales.300 = {# brython Culture arising
 				REGION = custom_britain_byrthon_area
 			}
 
-
+			every_ruler = {
+				limit = {
+					has_title = title:k_britian
+				}
+				trigger_event = bryten_wales.301
+			}
 
 		}
 

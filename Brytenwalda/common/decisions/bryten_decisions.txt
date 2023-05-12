@@ -345,183 +345,183 @@ bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
 #############################################
 # Pilgrimages Decisions
 #############################################
-bryten_pilgrimage_durham = {# Pilgrimage to Durham
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
-	ai_check_interval = 64
-	cooldown = { days = 7300 }
-	desc = bryten_pilgrimage_durham_desc
+# bryten_pilgrimage_durham = {# Pilgrimage to Durham
+# 	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+# 	ai_check_interval = 64
+# 	cooldown = { days = 7300 }
+# 	desc = bryten_pilgrimage_durham_desc
 	
-	is_shown = {
-		is_ruler = yes
-		is_landed = yes
-		religion = religion:christianity_religion
-		NOT = { has_character_flag = bryten_pilgrimage_durham }
-		exists = global_var:bryten_cuthbert_tomb
-		has_global_variable = bryten_cuthbert_tomb
+# 	is_shown = {
+# 		is_ruler = yes
+# 		is_landed = yes
+# 		religion = religion:christianity_religion
+# 		NOT = { has_character_flag = bryten_pilgrimage_durham }
+# 		exists = global_var:bryten_cuthbert_tomb
+# 		has_global_variable = bryten_cuthbert_tomb
 
-		OR = {
-			title:c_durham = {
-				squared_distance = {
-					target = root.capital_province
-					value <= squared_distance_small
-				}
-			}
-			capital_province = { geographical_region = world_europe_west_britannia }   
-		}
-	}
+# 		OR = {
+# 			title:c_durham = {
+# 				squared_distance = {
+# 					target = root.capital_province
+# 					value <= squared_distance_small
+# 				}
+# 			}
+# 			capital_province = { geographical_region = world_europe_west_britannia }   
+# 		}
+# 	}
 	
-	is_valid = {
-		gold >= medium_gold_value
-		exists = global_var:bryten_cuthbert_tomb
-		has_global_variable = bryten_cuthbert_tomb
-	}
+# 	is_valid = {
+# 		gold >= medium_gold_value
+# 		exists = global_var:bryten_cuthbert_tomb
+# 		has_global_variable = bryten_cuthbert_tomb
+# 	}
 	
-	is_valid_showing_failures_only = {
-		is_available_adult = yes
-	}
+# 	is_valid_showing_failures_only = {
+# 		is_available_adult = yes
+# 	}
 
-	effect = {
-		add_character_flag = bryten_pilgrimage_durham
-		custom_tooltip = bryten_pilgrimage_durham_tooltip
-		trigger_event = { id = bryten_england.150 }
-	}
+# 	effect = {
+# 		add_character_flag = bryten_pilgrimage_durham
+# 		custom_tooltip = bryten_pilgrimage_durham_tooltip
+# 		trigger_event = { id = bryten_england.150 }
+# 	}
 
-	cost = { 
-		gold = { value = medium_gold_value } # Will depend
-	}	
+# 	cost = { 
+# 		gold = { value = medium_gold_value } # Will depend
+# 	}	
 
-	ai_potential = {
-		short_term_gold > standard_activity_cost
-	}
+# 	ai_potential = {
+# 		short_term_gold > standard_activity_cost
+# 	}
 
-	ai_will_do = {
-		base = 30
-		modifier = {
-			add = 5
-			has_trait = zealous
-		}
-		modifier = {
-			add = -15
-			has_trait = cynical
-		}
-	}
-}
-bryten_pilgrimage_edmund = {# Pilgrimage to Bury Saint Edmunds
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
-	ai_check_interval = 64
-	cooldown = { days = 7300 }
-	desc = bryten_pilgrimage_edmund_desc
+# 	ai_will_do = {
+# 		base = 30
+# 		modifier = {
+# 			add = 5
+# 			has_trait = zealous
+# 		}
+# 		modifier = {
+# 			add = -15
+# 			has_trait = cynical
+# 		}
+# 	}
+# }
+# bryten_pilgrimage_edmund = {# Pilgrimage to Bury Saint Edmunds
+# 	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+# 	ai_check_interval = 64
+# 	cooldown = { days = 7300 }
+# 	desc = bryten_pilgrimage_edmund_desc
 	
-	is_shown = {
-		is_ruler = yes
-		is_landed = yes
-		religion = religion:christianity_religion
-		NOT = { has_character_flag = bryten_pilgrimage_edmund }
-		exists = global_var:bryten_bury_saint_edmunds
-		capital_province = { geographical_region = world_europe_west_britannia } 
-	}
+# 	is_shown = {
+# 		is_ruler = yes
+# 		is_landed = yes
+# 		religion = religion:christianity_religion
+# 		NOT = { has_character_flag = bryten_pilgrimage_edmund }
+# 		exists = global_var:bryten_bury_saint_edmunds
+# 		capital_province = { geographical_region = world_europe_west_britannia } 
+# 	}
 	
-	is_valid = {
-		gold >= medium_gold_value
-		exists = global_var:bryten_bury_saint_edmunds
-	}
+# 	is_valid = {
+# 		gold >= medium_gold_value
+# 		exists = global_var:bryten_bury_saint_edmunds
+# 	}
 	
-	is_valid_showing_failures_only = {
-		is_available_adult = yes
-	}
+# 	is_valid_showing_failures_only = {
+# 		is_available_adult = yes
+# 	}
 
-	effect = {
-		add_character_flag = bryten_pilgrimage_edmund
-		custom_tooltip = bryten_pilgrimage_edmund_tooltip
-		trigger_event = { id = bryten_england.130 }
-	}
+# 	effect = {
+# 		add_character_flag = bryten_pilgrimage_edmund
+# 		custom_tooltip = bryten_pilgrimage_edmund_tooltip
+# 		trigger_event = { id = bryten_england.130 }
+# 	}
 
-	cost = { 
-		gold = { value = medium_gold_value } # Will depend
-	}	
+# 	cost = { 
+# 		gold = { value = medium_gold_value } # Will depend
+# 	}	
 
-	ai_potential = {
-		short_term_gold > standard_activity_cost
-	}
+# 	ai_potential = {
+# 		short_term_gold > standard_activity_cost
+# 	}
 
-	ai_will_do = {
-		base = 30
-		modifier = {
-			add = 5
-			has_trait = zealous
-		}
-		modifier = {
-			add = -15
-			has_trait = cynical
-		}
-	}
-}
-bryten_pilgrimage_david = {# Pilgrimage to St. Davids
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
-	ai_check_interval = 64
-	cooldown = { days = 7300 }
-	desc = bryten_pilgrimage_david_desc
+# 	ai_will_do = {
+# 		base = 30
+# 		modifier = {
+# 			add = 5
+# 			has_trait = zealous
+# 		}
+# 		modifier = {
+# 			add = -15
+# 			has_trait = cynical
+# 		}
+# 	}
+# }
+# bryten_pilgrimage_david = {# Pilgrimage to St. Davids
+# 	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+# 	ai_check_interval = 64
+# 	cooldown = { days = 7300 }
+# 	desc = bryten_pilgrimage_david_desc
 	
-	is_shown = {
-		is_ruler = yes
-		is_landed = yes
-		religion = religion:christianity_religion
-		NOT = { has_character_flag = bryten_pilgrimage_david }
-		OR = {
-			title:c_pembrokeshire = {
-				squared_distance = {
-					target = root.capital_province
-					value <= squared_distance_small
-				}
-			}
-			AND = {
-				exists = global_var:bryten_papal_bull_davids
-				capital_province = {
-					OR = {
-						geographical_region = world_europe_west_britannia
-						geographical_region = world_europe_west_francia
-						geographical_region = ghw_region_scandinavia
-						geographical_region = world_europe_west_germania
-					}
-				}			
-			}
-		}
-	}
+# 	is_shown = {
+# 		is_ruler = yes
+# 		is_landed = yes
+# 		religion = religion:christianity_religion
+# 		NOT = { has_character_flag = bryten_pilgrimage_david }
+# 		OR = {
+# 			title:c_pembrokeshire = {
+# 				squared_distance = {
+# 					target = root.capital_province
+# 					value <= squared_distance_small
+# 				}
+# 			}
+# 			AND = {
+# 				exists = global_var:bryten_papal_bull_davids
+# 				capital_province = {
+# 					OR = {
+# 						geographical_region = world_europe_west_britannia
+# 						geographical_region = world_europe_west_francia
+# 						geographical_region = ghw_region_scandinavia
+# 						geographical_region = world_europe_west_germania
+# 					}
+# 				}			
+# 			}
+# 		}
+# 	}
 	
-	is_valid = {
-		gold >= medium_gold_value
-	}
+# 	is_valid = {
+# 		gold >= medium_gold_value
+# 	}
 	
-	is_valid_showing_failures_only = {
-		is_available_adult = yes
-	}
+# 	is_valid_showing_failures_only = {
+# 		is_available_adult = yes
+# 	}
 
-	effect = {
-		add_character_flag = bryten_pilgrimage_david
-		custom_tooltip = bryten_pilgrimage_edmund_tooltip
-		trigger_event = { id = bryten_wales.100 }
-	}
+# 	effect = {
+# 		add_character_flag = bryten_pilgrimage_david
+# 		custom_tooltip = bryten_pilgrimage_edmund_tooltip
+# 		trigger_event = { id = bryten_wales.100 }
+# 	}
 
-	cost = { 
-		gold = { value = medium_gold_value } # Will depend
-	}	
+# 	cost = { 
+# 		gold = { value = medium_gold_value } # Will depend
+# 	}	
 
-	ai_potential = {
-		short_term_gold > standard_activity_cost
-	}
+# 	ai_potential = {
+# 		short_term_gold > standard_activity_cost
+# 	}
 
-	ai_will_do = {
-		base = 30
-		modifier = {
-			add = 5
-			has_trait = zealous
-		}
-		modifier = {
-			add = -15
-			has_trait = cynical
-		}
-	}
-}
+# 	ai_will_do = {
+# 		base = 30
+# 		modifier = {
+# 			add = 5
+# 			has_trait = zealous
+# 		}
+# 		modifier = {
+# 			add = -15
+# 			has_trait = cynical
+# 		}
+# 	}
+# }
 #############################################
 # Irish Decisions
 #############################################

@@ -27,7 +27,6 @@
 	}
 }
 
-# removed restore the danelaw
 
 create_holy_order_effect = {
 	if = {
@@ -1009,7 +1008,7 @@ become_saoshyant_decision_effect = {
 }
 
 build_grand_church_decision_effect = {
-	faith = { activate_holy_site = segrada_familia }
+	#faith = { activate_holy_site = segrada_familia }
 	if = {
 		limit = {
 			prestige_level < 5
@@ -1091,19 +1090,19 @@ accept_cannibalism_decision_effect = {
 found_university_decision_event_effect = {
 	if = {
 		limit = {
-			NOT = { has_nickname = nick_the_scholar }
+			OR = {
+				has_bad_nickname = yes
+				has_any_nickname = no
+			}
 		}
 		give_nickname = nick_the_scholar
 	}
 
 	hidden_effect = {
 		#Event that gives you highly skilled courtier
-		random = {
-			chance = 75
-			trigger_event = {
-				id = major_decisions.2011
-				days = { 50 365 }
-			}
+		trigger_event = {
+			id = major_decisions.2011
+			days = { 50 365 }
 		}
 	}
 }
@@ -1133,7 +1132,7 @@ lunatic_building_decision_effect = {
 			name = variable_greenhouse
 			value = yes
 		}
-		add_building_slot = 1
+		add_province_modifier = extra_building_slot
 		add_building = special_greenhouse_01
 	}
 	
@@ -1169,9 +1168,9 @@ convert_whole_realm_to_feudalism_effect = {
 		limit = {
 			is_independent_ruler = no
 			OR = {
-				liege = { has_government = clan_government }
+				liege = { government_has_flag = government_is_clan }
 				AND = {
-					liege = { has_government = tribal_government }
+					liege = { government_has_flag = government_is_tribal }
 					religion = religion:islam_religion
 				}
 			}
@@ -1183,9 +1182,9 @@ convert_whole_realm_to_feudalism_effect = {
 		limit = {
 			is_independent_ruler = no
 			OR = {
-				liege = { has_government = feudal_government }
+				liege = { government_has_flag = government_is_feudal }
 				AND = {
-					liege = { has_government = tribal_government }
+					liege = { government_has_flag = government_is_tribal }
 					NOT = { religion = religion:islam_religion }
 				}
 			}
@@ -1208,7 +1207,7 @@ convert_whole_realm_to_feudalism_effect = {
 	if = {
 		limit = {
 			is_independent_ruler = no
-			liege = { has_government = clan_government }
+			liege = { government_has_flag = government_is_clan }
 		}
 		custom_tooltip = clan_liege_vassals_will_convert
 	}
@@ -1216,7 +1215,7 @@ convert_whole_realm_to_feudalism_effect = {
 	if = {
 		limit = {
 			is_independent_ruler = no
-			liege = { has_government = feudal_government }
+			liege = { government_has_flag = government_is_feudal }
 		}
 		custom_tooltip = feudal_liege_vassals_will_convert
 	}
@@ -1264,10 +1263,10 @@ convert_whole_realm_to_feudalism_effect = {
 		#Liege has taken clan, so become clan.
 		if = {
 			limit = {
-				has_government = clan_government
+				government_has_flag = government_is_clan
 			}
 			every_vassal_or_below = {
-				limit = { has_government = tribal_government }
+				limit = { government_has_flag = government_is_tribal }
 				change_government = clan_government
 				#Nuke tribal authorities.
 				if = {
@@ -1297,7 +1296,7 @@ convert_whole_realm_to_feudalism_effect = {
 		#Liege is not clan, become feudal.
 		else = {
 			every_vassal_or_below = {
-				limit = { has_government = tribal_government }
+				limit = { government_has_flag = government_is_tribal }
 				change_government = feudal_government
 				#Nuke tribal authorities.
 				if = {
@@ -1534,6 +1533,8 @@ convert_whole_realm_to_feudalism_effect = {
 
 ##################################################
 # Add Special Succession Effects
+
+
 
 special_succession_witengamot_effect = {
 	if = {
@@ -2287,9 +2288,6 @@ tribal_challenger_lost_effect = {
 }
 
 ##################################################
-# Negotiate the Danelaw Effects - removed 
-
-##################################################
 # Found Cadet House Effects
 found_cadet_house_decision_effect = {
 	hidden_effect = {
@@ -2396,7 +2394,6 @@ learn_language_linguist_effect = {
 		if = {
 			limit = {
 				can_employ_court_position_type = court_tutor_court_position
-				NOT = { employs_court_position = court_tutor_court_position }
 			}
 			appoint_court_position = {
 				recipient = $LINGUIST$
@@ -2405,7 +2402,7 @@ learn_language_linguist_effect = {
 		}
 		else_if = {
 			limit = {
-				can_employ_court_position_type = court_tutor_court_position
+				exists = court_position:court_tutor_court_position
 			}
 			court_position:court_tutor_court_position = {
 				add_opinion = {
