@@ -56,13 +56,13 @@ bryten_setup_after_game_start_on_actions = {
 
 		# cultural acceptance stuff
 		if = {# setting up the pilgrimage stuff for 1066 start date
-			limit = { game_start_date >= 1016.1.1 }
+			limit = { game_start_date >= 1000.1.1 }
 			set_global_variable = {
 				name = bryten_bury_saint_edmunds
 				value = yes
 			}
 			set_global_variable = {
-				name = bryten_monks_cuthbert_durham
+				name = bryten_cuthbert_tomb
 				value = yes
 			}
 		}

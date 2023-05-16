@@ -1,0 +1,918 @@
+﻿
+
+activity_bryten_english_pilgrimage = {
+	is_shown = {
+		religion = religion:christianity_religion
+		highest_held_title_tier > tier_barony
+		is_landed = yes
+		trigger_if = {
+			limit = { is_ai = yes }
+			is_at_war = no
+			short_term_gold >= bryten_activity_cost
+			capital_province = {# should be in Western Europe
+				OR = {
+					geographical_region = world_europe_west_britannia
+					geographical_region = world_europe_north
+					geographical_region = world_europe_west_francia
+					geographical_region = custom_frisia
+				}
+			}
+		}
+	}
+
+	can_start = {
+		religion = religion:christianity_religion
+		#is_at_war = no
+	}
+
+	can_start_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	is_valid = {
+		NOT = {
+			has_variable = activity_invalidated
+		}
+		scope:host = {
+			is_landed = yes
+			NOT = { is_incapable = yes }
+		}
+		# If no one shows up
+		trigger_if = {
+			limit = {
+				is_current_phase_active = yes
+			}
+			has_attending_activity_guests = yes
+		}
+	}
+
+	on_invalidated = {
+		# Host becomes unlanded
+		if = {
+			limit = {
+				scope:host = { is_landed = no }
+			}
+			scope:activity = {
+				activity_type = { save_scope_as = activity_type }
+			}
+			every_attending_character = {
+				trigger_event = activity_system.0320
+			}
+		}
+		if = {
+			limit = {
+				scope:host = { is_incapable = yes }
+			}
+			scope:activity = {
+				activity_type = { save_scope_as = activity_type }
+			}
+			scope:host = {
+				trigger_event = activity_system.0330
+			}
+			every_attending_character = {
+				limit = { NOT = { this = scope:host } }
+				trigger_event = activity_system.0331
+			}
+		}
+	}
+
+	on_host_death = {
+		scope:activity = {
+			set_variable = {
+				name = activity_invalidated
+			}
+		}
+	}
+
+	province_filter = all
+	ai_province_filter = realm
+
+	province_description = {
+		triggered_desc = {# For Durham
+			trigger = {
+				barony = title:b_durham
+			}
+			desc = activity_bryten_england_pilgrimage_durham_province_desc
+		}
+		triggered_desc = {# For St. Edmunds
+			trigger = {
+				barony = title:b_beodericsworth
+			}
+			desc = activity_bryten_england_pilgrimage_bury_st_edmunds_province_desc
+		}
+		triggered_desc = {# For St. Davids
+			trigger = {
+				barony = title:b_st_davids
+			}
+			desc = activity_bryten_england_pilgrimage_st_davids_province_desc
+		}
+	}
+	
+	wait_time_before_start = { days = 7 }
+
+	###################
+	# OPTIONS
+	###################
+
+	special_option_category = special_type
+
+	options = {
+		special_type = {# Pilgrimage type
+			bryten_english_pilgrimage_type_pious = {# Pious Pilgrimage
+				default = yes	
+				ai_will_do = {
+					value = 10
+					if = {
+						limit = {
+							has_trait = lifestyle_mystic
+						}
+						add = 10
+					}
+					if = {
+						limit = {
+							has_trait = zealous
+							has_trait = humble
+						}
+						add = 20
+					}
+					if = {
+						limit = {
+							has_trait = theologian
+						}
+						add = 10
+					}
+				}
+			}
+			bryten_english_pilgrimage_type_worldy = {# Worldy Pilgrimage		
+				ai_will_do = {
+					value = 10
+					if = {
+						limit = {
+							has_trait = lifestyle_mystic
+						}
+						add = 10
+					}
+					if = {
+						limit = {
+							has_trait = zealous
+							has_trait = humble
+						}
+						add = 20
+					}
+					if = {
+						limit = {
+							has_trait = theologian
+						}
+						add = 10
+					}
+				}
+			}	
+		}
+		pilgrimage_option_pomp = {# Pilgrimage Pomp level
+			pilgrimage_pomp_humble = {
+				is_shown = { has_dlc_feature = advanced_activities }
+
+				cost = { 
+					gold = {
+						subtract = {
+							value = 0
+							desc = pilgrimage_cost_pomp_ceremonial
+							add = {
+								value = 10
+								desc = pilgrimage_cost_pomp_ceremonial
+							}
+							add = {
+								value = 10 
+								multiply = activity_cost_scale_by_tier
+								subtract = 10
+								desc = activity_cost_scale_by_tier
+							}
+							add = {
+								value = 10 
+								multiply = activity_cost_scale_by_era
+								subtract = 10 
+								desc = activity_cost_scale_by_era
+							}
+						}
+					}
+				}
+				
+				# Travel modifier given in on_enter_travel_state.
+
+				# We just grab/generate random same-faith "pilgrims" from the local pool.
+
+				ai_will_do = {
+					value = 0
+					add = {
+						value = 40
+						desc = "Base test value"
+					}
+				}
+			}
+			pilgrimage_pomp_appropriate = {
+				default = yes
+
+				# Entourage option grabbing suitable bodyguards & maybe someone from court who really likes you, + randos.
+				travel_entourage_selection = { 
+					weight = pilgrimage_entourage_base_set_weighting_value
+					max = pilgrimage_entourage_pomp_appropriate_max_value
+					invite_rule_order = 1
+				}
+
+				ai_will_do = {
+					value = 0
+					add = {
+						value = 40
+						desc = "Base test value"
+					}
+				}
+			}
+			pilgrimage_pomp_ceremonial = {
+				is_shown = { has_dlc_feature = advanced_activities }
+
+				cost = { 
+					gold = {
+						add = {
+							value = 0
+							desc = pilgrimage_cost_pomp_ceremonial
+							add = {
+								value = 50
+								desc = pilgrimage_cost_pomp_ceremonial
+							}
+							add = {
+								value = 50 
+								multiply = activity_cost_scale_by_tier
+								subtract = 50
+								desc = activity_cost_scale_by_tier_desc
+							}
+							add = {
+								value = 50 
+								multiply = activity_cost_scale_by_era
+								subtract = 50 
+								desc = activity_cost_scale_by_era_desc
+							}
+							if = {
+								limit = {
+									dynasty ?= { has_dynasty_perk = ep2_activities_legacy_1 }
+								}
+								subtract = {
+									value = 50
+									multiply = ep2_activities_legacy_1_pilgrimages_discount_value
+									desc = ep2_activities_legacy_track
+								}
+							}
+						}
+					}
+				}
+
+				#Entourage option grabbing most people suitable from court, + randos.
+				travel_entourage_selection = {
+					weight = {
+						add = pilgrimage_entourage_base_set_weighting_value
+						add = pilgrimage_entourage_extras_set_weighting_value
+					}
+
+					max = pilgrimage_entourage_pomp_ceremonial_max_value
+					invite_rule_order = 1
+				}
+
+				ai_will_do = {
+					value = 0
+					add = {
+						value = 40
+						desc = "Base test value"
+					}
+				}
+			}
+			pilgrimage_pomp_throng = {
+				is_shown = { has_dlc_feature = advanced_activities }
+
+				cost = { 
+					gold = {
+						add = {
+							value = 0
+							desc = pilgrimage_cost_pomp_throng
+							add = {
+								value = 100
+								desc = pilgrimage_cost_pomp_throng
+							}
+							add = {
+								value = 100 
+								multiply = activity_cost_scale_by_tier
+								subtract = 100
+								desc = activity_cost_scale_by_tier_desc
+							}
+							add = {
+								value = 100 
+								multiply = activity_cost_scale_by_era
+								subtract = 100 
+								desc = activity_cost_scale_by_era_desc
+							}
+							if = {
+								limit = {
+									dynasty ?= { has_dynasty_perk = ep2_activities_legacy_1 }
+								}
+								subtract = {
+									value = 100
+									multiply = ep2_activities_legacy_1_pilgrimages_discount_value
+									desc = ep2_activities_legacy_track
+								}
+							}
+						}
+					}
+				}
+				#Entourage option grabbing sodding everyone suitable from court, + every grabbable rando in the duchy and maybe a few extra.
+				travel_entourage_selection = {
+					weight = {
+						add = pilgrimage_entourage_base_set_weighting_value
+						add = pilgrimage_entourage_extras_set_weighting_value
+						add = pilgrimage_entourage_sodding_everyone_set_weighting_value
+					}
+
+					max = pilgrimage_entourage_pomp_throng_max_value
+					invite_rule_order = 1
+				}
+
+				ai_will_do = {
+					value = 0
+					add = {
+						value = 40
+						desc = "Base test value"
+					}
+				}
+			}
+		}		
+	}	
+
+	###################
+	# PHASES
+	###################
+
+	phases = {
+		bryten_english_pilgrimage_phases = {
+			is_predefined = yes
+			
+			on_phase_active = {
+				if = {
+					limit = {
+						this = scope:host
+					}
+					if = {# Visiting Durham
+						limit = {
+							involved_activity.activity_location.barony = title:b_durham
+						}
+						scope:host = { trigger_event = bryten_england.152 }
+					}
+					else_if = {# Visiting Bury St. Edmunds
+						limit = {
+							involved_activity.activity_location.barony = title:b_beodericsworth
+						}
+						scope:host = { trigger_event = bryten_england.132 }
+					}
+					else_if = {# Visiting Bury St. Davids
+						limit = {
+							involved_activity.activity_location.barony = title:b_st_davids
+						}
+						scope:host = { trigger_event = bryten_wales.100 }
+					}					
+				}
+
+			}
+
+			on_end = {
+				# Run conclusion stuff here
+				# if = {
+				# 	limit = { this = scope:host }
+				# 	scope:activity = { progress_activity_phase_after = { weeks = 2 } }
+				# }
+			}
+		}
+	}
+
+	max_guest_arrival_delay_time = { days = 3 }
+
+	# desc is only shown in debug AI watch window
+	ai_will_do = {
+		value = 50
+		
+		# How much do you care about your faith not liking this?
+		if = {
+			limit = {
+				has_trait = cynical
+			}
+			add = -25
+		}
+		if = {
+			limit = {
+				has_trait = zealous
+			}
+			add = 25
+		}
+		
+		#Can you actually afford this?
+		if = {
+			limit = {
+				NOT = { can_make_expensive_purchase_trigger = { PRICE = bryten_activity_cost } }
+			}
+			add = -50
+		}
+	}
+
+	ai_check_interval = 60
+
+	ai_will_select_province = {
+		value = 10
+	}
+	
+	is_location_valid = {
+		OR = {
+			trigger_if = {# Durham
+				limit = {
+					exists = barony
+					exists = global_var:bryten_cuthbert_tomb
+				}
+				barony = title:b_durham
+			}
+			trigger_if = {# Bury St. Edmunds
+				limit = {
+					exists = barony
+					exists = global_var:bryten_bury_saint_edmunds
+				}
+				barony = title:b_beodericsworth
+			}
+			trigger_if = {# St. David
+				limit = {
+					exists = barony
+				}
+				barony = title:b_st_davids
+			}
+		}
+	}
+
+	cost = {
+		gold = {
+			add = {
+				value = 0
+				add = {
+					value = bryten_activity_cost
+					desc = hunt_base_cost
+				}
+			}
+		}
+	}
+
+	ui_predicted_cost = {
+		gold = {
+			value = bryten_activity_cost
+			# Make it a multiple of 5 (rounded up)
+			divide = 5 
+			ceiling = yes 
+			multiply = 5
+		}
+	}
+
+	cooldown = { days = 3650 }
+	
+	###################
+	# ACTIVITY-SPECIFIC PULSES
+	###################
+	
+	pulse_actions = {
+
+	}
+
+	on_start = {
+		# Check what faith the pilgrimage is supposed to be for.
+		set_variable = {
+			name = starting_faith
+			value = scope:host.faith
+		}
+	}
+
+	on_enter_passive_state = {
+
+	}
+
+	###################
+	# GUEST HANDLING
+	###################
+
+	max_guests = 15
+
+	#allow_zero_guest_invites = yes
+
+	guest_invite_rules = {
+		rules = {
+			# Relations.
+			2 = activity_invite_rule_lovers
+			2 = activity_invite_rule_rivals_if_appropriate
+
+			# Family.
+			3 = activity_invite_rule_extended_family
+
+			# Misc landless.
+			5 = activity_invite_rule_knights
+
+			# MP 
+			6 = activity_invite_mp
+		}
+		defaults = {
+			1 = activity_invite_rule_friends
+			1 = activity_invite_rule_close_family
+			3 = activity_invite_rule_courtiers
+			4 = activity_invite_rule_guests
+			1 = activity_invite_spouses
+		}
+	}
+
+	can_be_activity_guest = {
+		is_adult = yes
+		is_available = yes
+		in_diplomatic_range = scope:host
+		is_landed = no
+	}
+
+	host_intents = {
+		intents = { 
+			bryten_reflection_intent
+			bryten_altruism_intent
+			bryten_zealous_intent
+			bryten_travel_intent
+		}
+		default = bryten_reflection_intent
+	}
+
+	guest_intents = {
+		intents = { 
+			bryten_reflection_intent
+			bryten_altruism_intent
+			bryten_zealous_intent
+			bryten_travel_intent
+		}
+		default = bryten_reflection_intent
+	}
+
+	guest_join_chance = {
+		base = 0
+		base_activity_modifier = yes
+
+		# Scripted Modifiers
+		activity_guest_shared_ai_accept_modifier = yes
+	}
+	
+	on_complete = {
+		if = {# Did the Durham pilgrimage for the first time
+			limit = { 
+				scope:activity.activity_location.county = title:c_durham
+			}
+			create_character_memory = {
+				type = bryten_english_pilgrimage_durham_host_memory
+			}
+			scope:host = {
+				bryten_english_pilgrimage_durham_host_memory_log_entry_effect = yes
+			}
+		}
+		if = {# Did the bury st. Edmunds pilgrimage for the first time
+			limit = { 
+				scope:activity.activity_location.county = title:c_suffolk
+			}
+			create_character_memory = {
+				type = bryten_english_pilgrimage_edmund_host_memory
+			}
+			scope:host = {
+				bryten_english_pilgrimage_edmund_host_memory_log_entry_effect = yes
+			}
+		}
+		if = {# Did the bury st. Edmunds pilgrimage for the first time
+			limit = { 
+				scope:activity.activity_location.county = title:c_suffolk
+			}
+			create_character_memory = {
+				type = bryten_english_pilgrimage_st_davids_host_memory
+			}
+			scope:host = {
+				bryten_english_pilgrimage_edmund_host_memory_log_entry_effect = yes
+			}
+		}
+
+	}	
+
+	#################
+	#
+	# TRAVEL
+	#
+	#################
+
+	background = { # Bridge
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				is_riverside_province = yes
+				geographical_region = world_europe
+				OR = {
+					terrain = farmlands
+					terrain = plains
+					terrain = mountains
+					terrain = hills
+				}
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/ep2_travel_bridge.dds"
+		environment = "environment_travel_bridge"
+		ambience = "event:/SFX/Events/Backgrounds/mountains_day"
+	}	
+	background = { # Farmland, settled
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				terrain = farmlands
+				exists = province_owner
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/ep2_travel_farm.dds"
+		environment = "environment_travel_farmlands"
+		ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
+	}
+	background = { # Farmland, unsettled
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				terrain = farmlands
+				NOT = { exists = province_owner }
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/farms.dds"
+		environment = "environment_event_farms"
+		ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
+	}
+	background = { #forest snowy
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location ?= { hunt_snowy_forest_trigger = yes }
+		}
+		texture = "gfx/interface/illustrations/event_scenes/ep2_hunt_snowy_forest.dds"
+		environment = "environment_hunt_snowy_forest"
+		ambience = "event:/SFX/Events/Backgrounds/mountains_day"
+	}
+	background = { #forest_pine
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				graphical_wilderness_forest_pine_trigger = yes
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/forest_pine.dds"
+		environment = "environment_event_forest_pine"
+		ambience = "event:/SFX/Events/Backgrounds/coniferous_forest_day"
+	}
+	background = { #forest
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				graphical_wilderness_forest_trigger = yes
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/forest.dds"
+		environment = "environment_event_forest"
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+	background = { #mountains, settled
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				graphical_wilderness_mountains_trigger = yes
+				exists = province_owner
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/ep2_travel_mountains.dds"
+		environment = "environment_travel_mountain_settlement"
+		ambience = "event:/SFX/Events/Backgrounds/mountains_day"
+	}
+	background = { #mountains, unsettled
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				graphical_wilderness_mountains_trigger = yes
+				NOT = { exists = province_owner }
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/mountains.dds"
+		environment = "environment_event_mountains"
+		ambience = "event:/SFX/Events/Backgrounds/mountains_day"
+	}
+	background = { #wetlands
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				graphical_wilderness_wetlands_trigger = yes
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/bp1_wetlands.dds"
+		environment = "environment_event_bp1_wetlands" 
+		ambience = "event:/SFX/Events/Backgrounds/deciduous_forest_day"
+	}
+	background = { #plains, settled
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				graphical_plains_trigger = yes
+				exists = province_owner
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/ep2_travel_hills.dds"
+		environment = "environment_travel_hills_settlement"
+		ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
+	}
+	background = { #plains, unsettled
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				graphical_plains_trigger = yes
+				NOT = { exists = province_owner }
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/bp1_plains.dds"
+		environment = "environment_event_bp1_plains"
+		ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
+	}
+	background = { #hills, settled
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				graphical_hills_trigger = yes
+				exists = province_owner
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/ep2_travel_hills.dds"
+		environment = "environment_travel_hills_settlement"
+		ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
+	}
+	background = { #hills, unsettled
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				graphical_hills_trigger = yes
+				NOT = { exists = province_owner }
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/bp1_hills.dds"
+		environment = "environment_event_bp1_hills"
+		ambience = "event:/SFX/Events/Backgrounds/fields_farms_day"
+	}
+	background = { #sea
+		trigger = {
+			NOT = { scope:host.location = scope:activity.activity_location }
+			scope:host.location = {
+				is_sea_province = yes
+			}
+		}
+		texture = "gfx/interface/illustrations/event_scenes/fp1_ocean.dds"
+		environment = "environment_event_fp1_ocean"
+		ambience = "event:/DLC/FP1/SFX/Events/event_ocean_longship"
+	}
+	#################
+	#
+	# ARRIVED
+	#
+	#################
+	background = {# Durham
+		trigger = {
+			activity_location.barony = title:b_durham
+		}
+		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_western.dds"
+		environment = "environment_western_holy_site"
+		ambience = "event:/SFX/Events/Backgrounds/temple_christian"
+	}
+	background = {# Bury St. Edmunds
+		trigger = {
+			activity_location.barony = title:b_beodericsworth
+		}
+		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_western.dds"
+		environment = "environment_western_holy_site"
+		ambience = "event:/SFX/Events/Backgrounds/temple_christian"
+	}
+	background = {# Fall back
+		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_western.dds"
+		environment = "environment_western_holy_site"
+		ambience = "event:/SFX/Events/Backgrounds/temple_christian"
+	}
+
+
+	window_characters = {
+
+		guest = {
+			camera = camera_body
+			
+			effect = {
+				every_attending_character = {
+					limit = {
+						scope:host.location = scope:activity.activity_location
+					}
+					add_to_list = characters
+				}
+			}
+
+			scripted_animation = {
+				animation = idle
+			}
+		}
+
+		guest = {
+			camera = camera_body
+			
+			effect = {
+				every_attending_character = {
+					limit = {
+						scope:host.location = scope:activity.activity_location
+					}
+					add_to_list = characters
+				}
+			}
+
+			scripted_animation = {
+				animation = happiness
+			}
+		}
+		
+		host = {
+			camera = camera_body
+			
+			effect = {
+				if = {
+					limit = {
+						scope:host.location = scope:activity.activity_location
+					}
+					scope:host = {
+						add_to_list = characters
+					}
+				}
+			}
+
+			scripted_animation = {
+				animation = idle
+			}
+		}
+		
+		travel_host = {
+			camera = camera_body
+			
+			effect = {
+				if = {
+					limit = {
+						NOT = {
+							scope:host.location = scope:activity.activity_location
+						}
+					}
+					scope:host = {
+						add_to_list = characters
+					}
+				}
+			}
+
+			scripted_animation = {
+				animation = jockey_walk
+			}
+		}
+
+		guest = {
+			camera = camera_body
+			
+			effect = {
+				every_attending_character = {
+					limit = {
+						NOT = {
+							scope:host.location = scope:activity.activity_location
+						}
+					}
+					add_to_list = characters
+				}
+			}
+
+			scripted_animation = {
+				animation = jockey_walk
+			}
+		}
+
+		guest = {
+			camera = camera_body
+			
+			effect = {
+				every_attending_character = {
+					limit = {
+						NOT = {
+							scope:host.location = scope:activity.activity_location
+						}
+					}
+					add_to_list = characters
+				}
+			}
+
+			scripted_animation = {
+				animation = jockey_walk
+			}
+		}
+	}
+}
+
+
+

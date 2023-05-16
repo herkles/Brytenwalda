@@ -3,3 +3,66 @@
 #######################################
 bryten_treaty_truce_danish_norman = 3650
 bryten_treaty_truce_norman_conquest_scottish = 3650
+
+
+######################
+# DECISION/ACTIVITY VALUES
+######################
+
+bryten_standard_festival_cooldown_time = {
+	value = 1825
+	if = {
+		limit = {
+			root.culture = {
+				has_cultural_parameter = more_frequent_feasts
+			}
+		}
+		multiply = 0.5
+	}
+}
+
+# Since the vanilla activity costs are unimmersively inflated at higher levels
+bryten_activity_cost = {
+	value = 25
+	multiply = {
+		value = root.primary_title.tier
+		subtract = 1
+		min = 1
+	}
+	if = {
+		limit = {
+			root.primary_title.tier > tier_duchy
+		}
+		add = 15
+	}
+	if = {
+		limit = {
+			root= {
+				exists = dynasty
+				dynasty = {
+					has_dynasty_perk = law_legacy_1
+				}
+			}
+		}
+		multiply = law_legacy_cost_reduction_mult
+	}
+	if = {
+		limit = {
+			root= {
+				has_government = tribal_government
+			}
+		}
+		multiply = 0.5
+	}
+	# Make it a little easier for smaller realms
+	if = {
+		limit = {
+			root= {
+				sub_realm_size <= 5
+			}
+		}
+		multiply = 0.75
+	}
+	min = 25
+	max = 100
+}

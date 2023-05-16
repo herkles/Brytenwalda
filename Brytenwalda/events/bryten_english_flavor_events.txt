@@ -3219,185 +3219,67 @@ bryten_england.128 = {# The abbey at Bury St. Edmunds.
 	}
 		
 }
-# # Pilgrimage to Durham it self
-# bryten_england.130 = {# Make preparations to begin the pilgrimage
-# 	type = character_event
-# 	title = bryten_england.130.t
-# 	desc = bryten_england.130.desc
-# 	theme = friendly
-# 	override_icon = {
-# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
-# 	}
-# 	right_portrait = root
+# Pilgrimage to Durham it self
+bryten_england.130 = {# Arrive in Bury Saint Edmunds
+	type = character_event
+	title = bryten_england.130.t
+	desc = bryten_england.130.desc
+	theme = friendly
 	
-# 	immediate = {
-# 		# Stop characters from planning multiple activities at once
-# 		add_character_flag = planning_an_activity
-# 	}
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
 	
-# 	option = { # Ok
-# 		name = bryten_england.130.pilgrimage
-# 		title:b_beodericsworth.title_province = {	
-# 			spawn_activity = {
-# 				owner = root
-# 				type = activity_edmund_pilgrimage
-# 			}	
-# 		}
-# 	}
-# }
-# bryten_england.131 = {# Pilgrimage begins
-# 	type = character_event
-# 	title = bryten_england.131.t
-# 	desc = bryten_england.131.desc
-# 	theme = friendly
-# 	override_icon = {
-# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
-# 	}
-	
-# 	left_portrait = {
-# 		character = root
-# 		animation = happiness
-# 	}
+	option = { # Ok
+		name = bryten_england.130.arrival
+	}
 
-# 	immediate = {
-# 		play_music_cue = "mx_cue_epic_sacral_moment"
-# 	}
-	
-# 	option = { # Ok
-# 		name = bryten_england.131.pilgrimage
+	after = {
+		trigger_event = {
+			id = bryten_england.131
+			days = { 4 12 }
+		}
+	}
 
-# 	}
+}
+bryten_england.131 = {# Praying in the abbey
+	type = character_event
+	title = bryten_england.131.t
+	desc = bryten_england.131.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_england.131.abbey
+	}
 
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.132
-# 			days = { 10 20 }
-# 		}
-# 	}
-
-# }
-# bryten_england.132 = {# Arrive in Bury Saint Edmunds
-# 	type = character_event
-# 	title = bryten_england.132.t
-# 	desc = bryten_england.132.desc
-# 	theme = friendly
+	after = {
+		trigger_event = {
+			id = bryten_england.132
+			days = { 3 6 }
+		}
+	}
+}
+bryten_england.132 = {# Visiting the Edmund.
+	type = character_event
+	title = bryten_england.132.t
+	desc = bryten_england.132.desc
+	theme = faith
 	
-# 	right_portrait = {
-# 		character = root
-# 		animation = personality_zealous
-# 	}
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
 	
-# 	option = { # Ok
-# 		name = bryten_england.132.arrival
-# 	}
-
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.133
-# 			days = { 4 12 }
-# 		}
-# 	}
-
-# }
-# bryten_england.133 = {# Meditating in the abbey
-# 	type = character_event
-# 	title = bryten_england.133.t
-# 	desc = bryten_england.133.desc
-# 	theme = faith
-	
-# 	left_portrait = {
-# 		character = root
-# 		animation = personality_zealous
-# 	}
-	
-# 	option = { # Ok
-# 		name = bryten_england.133.abbey
-# 	}
-
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.134
-# 			days = { 3 6 }
-# 		}
-# 	}
-# }
-# bryten_england.134 = {# Visiting the Edmund.
-# 	type = character_event
-# 	title = bryten_england.134.t
-# 	desc = bryten_england.134.desc
-# 	theme = faith
-	
-# 	left_portrait = {
-# 		character = root
-# 		animation = personality_zealous
-# 	}
-	
-# 	option = { # Ok
-# 		name = bryten_england.134.edmund
-# 	}
-
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.135
-# 			days = { 4 12 }
-# 		}
-# 	}
-# }
-# bryten_england.135 = {# Preparing to return home
-# 	type = character_event
-# 	title = bryten_england.135.t
-# 	desc = bryten_england.135.desc
-# 	theme = friendly
-# 	override_background = { reference = alley_day }
-	
-# 	right_portrait = root
-	
-# 	option = { # Ok
-# 		name = bryten_england.135.home
-# 	}
-
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.136
-# 			days = { 10 25 }
-# 		}
-# 	}
-
-# }
-# bryten_england.136 = {# Return home
-# 	type = character_event
-# 	title = bryten_england.136.t
-# 	desc = bryten_england.136.desc
-# 	theme = friendly
-	
-# 	left_portrait = {
-# 		character = root
-# 		animation = happiness
-# 	}
-	
-# 	option = { # Ok
-# 		name = bryten_england.136.home
-# 		add_piety = medium_piety_gain
-# 		pilgrimage_additional_reward_effect = yes
-# 		add_trait = pilgrim
-# 	}
-	
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.137
-# 			days = 1
-# 		}
-# 	}	
-# }
-# bryten_england.137 = {# Misc Cleanup file
-# 	hidden = yes	
-# 	immediate = {
-# 		remove_character_flag = bryten_pilgrimage_edmund
-# 		scope:activity = {
-# 			complete_activity = yes
-# 		}
-# 	}
-# }
+	option = { # Ok
+		name = bryten_england.132.edmund
+	}
+}
 #######################################
 # Pilgrimage to Durham
 #######################################
@@ -3546,214 +3428,95 @@ bryten_england.143 = {# St. Cuthbert's Gospel of John.
 	}
 		
 }
-# # Pilgrimage to Durham it self
-# bryten_england.150 = {# Make preparations to begin the pilgrimage
-# 	type = character_event
-# 	title = bryten_england.150.t
-# 	desc = bryten_england.150.desc
-# 	theme = friendly
-# 	override_icon = {
-# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
-# 	}
-# 	right_portrait = root
+# Pilgrimage to Durham it self
+bryten_england.150 = {# Arrive in Durham
+	type = character_event
+	title = bryten_england.150.t
+	desc = bryten_england.150.desc
+	theme = friendly
 	
-# 	immediate = {
-# 		# Stop characters from planning multiple activities at once
-# 		add_character_flag = planning_an_activity
-# 	}
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
 	
-# 	option = { # Ok
-# 		name = bryten_england.150.pilgrimage
-# 		title:c_durham.title_province = {	
-# 			spawn_activity = {
-# 				owner = root
-# 				type = activity_durham_pilgrimage
-# 			}	
-# 		}
-# 	}
-# }
-# bryten_england.151 = {# Pilgrimage begins
-# 	type = character_event
-# 	title = bryten_england.151.t
-# 	desc = bryten_england.151.desc
-# 	theme = friendly
-# 	override_icon = {
-# 		reference = "gfx/interface/icons/event_types/type_faith.dds"
-# 	}
-	
-# 	left_portrait = {
-# 		character = root
-# 		animation = happiness
-# 	}
+	option = { # Ok
+		name = bryten_england.150.arrival
 
-# 	immediate = {
-# 		play_music_cue = "mx_cue_epic_sacral_moment"
-# 	}
-	
-# 	option = { # Ok
-# 		name = bryten_england.151.pilgrimage
+	}
 
-# 	}
+	after = {
+		trigger_event = {
+			id = bryten_england.151
+			days = { 4 12 }
+		}
+	}
 
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.152
-# 			days = { 10 20 }
-# 		}
-# 	}
+}
+bryten_england.151 = {# Praying in Durham Cathedral
+	type = character_event
+	title = bryten_england.151.t
+	desc = bryten_england.151.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_england.151.cathedral
+	}
 
-# }
-# bryten_england.152 = {# Arrive in Durham
-# 	type = character_event
-# 	title = bryten_england.152.t
-# 	desc = bryten_england.152.desc
-# 	theme = friendly
+	after = {
+		trigger_event = {
+			id = bryten_england.152
+			days = { 3 6 }
+		}
+	}
+}
+bryten_england.152 = {# Visiting the Tomb of the Venerable Bede
+	type = character_event
+	title = bryten_england.152.t
+	desc = bryten_england.152.desc
+	theme = faith
 	
-# 	right_portrait = {
-# 		character = root
-# 		animation = personality_zealous
-# 	}
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
 	
-# 	option = { # Ok
-# 		name = bryten_england.152.arrival
-
-# 	}
-
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.153
-# 			days = { 4 12 }
-# 		}
-# 	}
-
-# }
-# bryten_england.153 = {# Meditating in Durham Cathedral
-# 	type = character_event
-# 	title = bryten_england.153.t
-# 	desc = bryten_england.153.desc
-# 	theme = faith
+	immediate = {
+		play_music_cue = mx_cue_sacredrite
+	}
 	
-# 	left_portrait = {
-# 		character = root
-# 		animation = personality_zealous
-# 	}
+	option = { # Ok
+		name = bryten_england.152.bede
+	}
 	
-# 	option = { # Ok
-# 		name = bryten_england.153.cathedral
-# 	}
-
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.154
-# 			days = { 3 6 }
-# 		}
-# 	}
-# }
-# bryten_england.154 = {# Visiting the Tomb of the Venerable Bede
-# 	type = character_event
-# 	title = bryten_england.154.t
-# 	desc = bryten_england.154.desc
-# 	theme = faith
+	after = {
+		trigger_event = {
+			id = bryten_england.153
+			days = { 1 6 }
+		}
+	}
 	
-# 	left_portrait = {
-# 		character = root
-# 		animation = personality_content
-# 	}
+}
+bryten_england.153 = {# Visiting the Tomb of St. Cuthbert.
+	type = character_event
+	title = bryten_england.153.t
+	desc = bryten_england.153.desc
+	theme = faith
 	
-# 	immediate = {
-# 		play_music_cue = mx_cue_sacredrite
-# 	}
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
 	
-# 	option = { # Ok
-# 		name = bryten_england.154.bede
-# 	}
-	
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.155
-# 			days = { 1 6 }
-# 		}
-# 	}
-	
-# }
-# bryten_england.155 = {# Visiting the Tomb of St. Cuthbert.
-# 	type = character_event
-# 	title = bryten_england.155.t
-# 	desc = bryten_england.155.desc
-# 	theme = faith
-	
-# 	left_portrait = {
-# 		character = root
-# 		animation = personality_zealous
-# 	}
-	
-# 	option = { # Ok
-# 		name = bryten_england.155.cuthbert
-# 	}
-
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.156
-# 			days = { 4 12 }
-# 		}
-# 	}
-# }
-# bryten_england.156 = {# Preparing to return home
-# 	type = character_event
-# 	title = bryten_england.156.t
-# 	desc = bryten_england.156.desc
-# 	theme = friendly
-# 	override_background = { reference = alley_day }
-	
-# 	right_portrait = root
-	
-# 	option = { # Ok
-# 		name = bryten_england.156.home
-# 	}
-
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.157
-# 			days = { 10 25 }
-# 		}
-# 	}
-
-# }
-# bryten_england.157 = {# Return home
-# 	type = character_event
-# 	title = bryten_england.157.t
-# 	desc = bryten_england.157.desc
-# 	theme = friendly
-	
-# 	left_portrait = {
-# 		character = root
-# 		animation = happiness
-# 	}
-	
-# 	option = { # Ok
-# 		name = bryten_england.157.home
-# 		add_piety = medium_piety_gain
-# 		pilgrimage_additional_reward_effect = yes
-# 		add_trait = pilgrim
-# 	}
-	
-# 	after = {
-# 		trigger_event = {
-# 			id = bryten_england.158
-# 			days = 1
-# 		}
-# 	}	
-# }
-# bryten_england.158 = {# Misc Cleanup file
-# 	hidden = yes	
-# 	immediate = {
-# 		remove_character_flag = bryten_pilgrimage_durham
-# 		scope:activity = {
-# 			complete_activity = yes
-# 		}
-# 	}
-# }
-
+	option = { # Ok
+		name = bryten_england.153.cuthbert
+	}
+}
 #######################################
 # Maitance events
 #######################################

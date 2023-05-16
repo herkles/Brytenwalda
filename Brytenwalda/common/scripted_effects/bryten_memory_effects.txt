@@ -1,0 +1,40 @@
+﻿#######################################
+#									  #
+#     English Pilgrimage Memories     #
+#									  #
+#######################################
+bryten_english_pilgrimage_durham_host_memory_log_entry_effect = {# Memory for Durham
+	scope:activity = {
+		add_activity_log_entry = {
+			key = bryten_english_pilgrimage_durham_host_memory_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+		}
+	}
+}
+bryten_english_pilgrimage_edmund_host_memory_log_entry_effect = {# Memory for St. Edmund's
+	scope:activity = {
+		add_activity_log_entry = {
+			key = bryten_english_pilgrimage_edmund_host_memory_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+		}
+	}
+}
+bryten_english_pilgrimage_edmund_host_memory_log_entry_effect = {# Memory for St. Davids's
+	scope:activity = {
+		add_activity_log_entry = {
+			key = bryten_english_pilgrimage_davids_host_memory_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+		}
+	}
+}
+
+
