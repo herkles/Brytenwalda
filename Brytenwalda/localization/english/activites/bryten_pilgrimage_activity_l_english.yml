@@ -1,8 +1,8 @@
 ﻿l_english:
 #######################################
-# English Pilgrimage
+# Setting up Pilgrimage
 #######################################
- activity_bryten_english_pilgrimage:0 "A British Pilgrimage"
+ activity_bryten_english_pilgrimage:0 "British Pilgrimage"
  activity_bryten_english_pilgrimage_desc:0 "Within the lands of Britain, there are many holy sites dedicated to many saints and martyrs, beacons of their christian faith. The places associated with them may not be as influential as the major holy sites of Christendom, but they nevertheless attract pilgrims to visit them. Perhaps it is time to visit one of them?"
  activity_bryten_english_pilgrimage_selection:0 "Visit one of the pilgrimage sites in Britain."
  activity_bryten_english_pilgrimage_selection_tooltip: "Visit one of the pilgrimage sites in Britain.\n\nAnticipated Rewards:\n$BULLET_WITH_TAB$[piety_i] [piety|E]\n$BULLET_WITH_TAB$[prestige_i] [prestige|E]"
@@ -11,6 +11,8 @@
  activity_bryten_english_pilgrimage_guest_help_text: "$activity_bryten_english_pilgrimage$"
  activity_bryten_english_pilgrimage_predicted_cost: "The cost of a pilgrimage in Britain depends on where you are going and how far is it away."
  activity_bryten_english_pilgrimage_conclusion_desc: "The [GetActivityType( 'activity_bryten_english_pilgrimage' ).GetName] is over. It was a fun and relaxing experience!"
+
+ activity_bryten_english_pilgrimage_destination_selection:0 "There are a number of places in Britain and Ireland that attract pilgrims, which pilgrimage location shall you visit?"
 
 #######################################
 # Pilgrimage Types
@@ -63,3 +65,4 @@
  bryten_travel_intent_header: "Travel"
  bryten_travel_intent: "Travel"
  bryten_travel_intent_desc: "While this is a holy pilgrimage, you are more interested in just exploring the pilgrimage site and some of the more worldly matters of the pilgrimage."
+

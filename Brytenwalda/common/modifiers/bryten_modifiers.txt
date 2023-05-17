@@ -1,5 +1,4 @@
-﻿
-##########################################
+﻿##########################################
 # Province and County Modifers
 ##########################################
 silvatici_bandits = {# Silvatici Bandits
@@ -21,4 +20,30 @@ harryed_county = {# For the harrying of the North
 	tax_mult = -0.5
 
 }
-
+##########################################
+# Worldy Pilgrimage Modifiers
+##########################################
+british_pilgrimage_perfect_worldly_reward_modifier = {
+	icon = compass_positive
+	opinion_of_different_culture = 20
+	different_culture_opinion = 20
+	stress_gain_mult = -0.2
+}
+british_pilgrimage_high_worldly_reward_modifier = {
+	icon = compass_positive
+	opinion_of_different_culture = 15
+	different_culture_opinion = 15
+	stress_gain_mult = -0.15
+}
+british_pilgrimage_mid_worldly_reward_modifier = {
+	icon = compass_positive
+	opinion_of_different_culture = 10
+	different_culture_opinion = 10
+	stress_gain_mult = -0.1
+}
+british_pilgrimage_low_worldly_reward_modifier = {
+	icon = compass_positive
+	opinion_of_different_culture = 5
+	different_culture_opinion = 5
+	stress_gain_mult = -0.05
+}

@@ -1,0 +1,180 @@
+﻿# On actions for the Pilgrimage activity
+
+#############################################
+# Journey Events			
+#############################################
+bryten_pilgrimage_journey_events = {# On-action managing possible Pilgrimage journey events
+	trigger = {
+		exists = involved_activity
+		involved_activity = {
+			has_activity_type = activity_pilgrimage
+		}
+		#We should only get pilgrimage events on our way TO the pilgrimage destination
+		is_on_a_pilgrimage_trigger = yes
+		NOR = { 
+			has_character_flag = in_pilgrimage_event_chain
+			has_character_flag = pilgrimage_dealing_with_invalidation
+		} 
+		#Barons don't need pilgrimage events - to avoid them bloating their court when getting add_courtier events
+		highest_held_title_tier >= tier_county
+	}
+
+	random_on_action = {
+		10 = pilgrimage_generic_travel_events
+		5 = pilgrimage_temptation_travel_events
+		5 = pilgrimage_religious_travel_events
+		8 = pilgrimage_intent_travel_events
+	}
+}
+bryten_pilgrimage_generic_travel_events = {# Generic Travel Events
+	random_events = {
+		chance_of_no_event = { value = 50 }
+		100 = 0
+		# Generic Pilgrimage Events
+		50 = pilgrimage.1110 # Heathen Raiders
+		150 = pilgrimage.1120 # Tour Church
+		100 = pilgrimage.1130 # Roadside Shrine
+		50 = pilgrimage.1140 # Strength in Numbers
+		100 = pilgrimage.2002 # Heathen-hating adherent challenges you
+		100 = pilgrimage.2003 # Companions are running low
+		100 = pilgrimage.2004 # Run into a potential friend
+		100 = pilgrimage.2005 # A peasant inadvertedly insults you
+		100 = pilgrimage.2006 # You have gotten lost
+		25 = pilgrimage.2008 # Fall ill
+		100 = pilgrimage.2009 # Develop pneumonia
+		25 = pilgrimage.2010 # Meet a Mystic (chain)
+		50 = pilgrimage.2020 # Pilgrimage thieves
+		# Sea Generic Pilgrimage Events Events
+		50 = pilgrimage.1100 # Saint Elmo's Fire
+		50 = pilgrimage.2030 # Massive rainbow
+		50 = pilgrimage.2040 # Go fish
+		50 = pilgrimage.2050 # Shipwrecked pilgrims
+		# BP1 Events 
+		50 = pilgrimage.6001 #Sneaking off to a tavern with your pal
+	}
+}
+bryten_pilgrimage_temptation_travel_events = {# Temptation Travel Events
+	random_events = {
+		chance_of_no_event = { value = 50 }
+		100 = 0
+		# 'Temptation' Events
+		50 = pilgrimage.2101 # Rakish or Lustful character considers making a pit stop, or perhaps, a detour to the local brothels
+		50 = pilgrimage.2501 # Persistent Beggar
+		50 = pilgrimage.2511 # Cocky Lordling
+	}
+}
+bryten_pilgrimage_religious_travel_events = {# Religious Travel Events
+	random_events = {
+		chance_of_no_event = { value = 50 }
+		100 = 0
+		# Christian-specific Pilgrimage Events
+		50 = bryten_pilgrimage.3001 # Visiting a wandering Monk
+		50 = bryten_pilgrimage.3001 # Visiting a Holy Well
+	}
+}
+bryten_pilgrimage_intent_travel_events = {# Intent Travel Events
+	random_events = {
+		chance_of_no_event = { value = 50 }
+
+		100 = 0
+		#Intent Events
+		50 = pilgrimage_intent.025 #Sea: Sea legs
+		#Altruism
+		50 = bryten_pilgrimage.026 # You decide to wash the feet of locals
+		50 = bryten_pilgrimage.027 # Locals beg for your royal touch
+		50 = bryten_pilgrimage.028 # Distribute alms in front of a temple
+		#Zealot
+		50 = bryten_pilgrimage.030 # Console a local
+		50 = bryten_pilgrimage.031 # Convert a child
+		50 = bryten_pilgrimage.032 # Local courtier is passing by, convert them and bring them on your pilgrimage!
+		50 = bryten_pilgrimage.033 # Fellow pilgrims of a different faith are on your path
+		100 = bryten_pilgrimage.034 # A local heathen is smitten with one of your entourage members and asks to marry them
+		#Reflection
+		50 = bryten_pilgrimage.035 # You see a particularly calm clearing along your way and stop to meditate
+		50 = bryten_pilgrimage.036 # You spot an animal, follow it for an omen?
+		50 = bryten_pilgrimage.037 # You contemplate the brevity of life
+		50 = bryten_pilgrimage.038 # You contemplate old empires
+		100 = bryten_pilgrimage.039 # Personal reflections
+	}
+}
+#############################################
+# Arrival events			
+#############################################
+bryten_pilgrimage_arrival_events = {# Arrival Events
+	trigger = {
+		religion = religion:christianity_religion
+		involved_activity.activity_location = {
+			OR = {
+				county = title:c_durham # Durham
+				county = title:c_suffolk # Bury St. Edmunds
+				county = title:c_pembrokeshire # St. Davids
+			}
+		}
+	}
+
+	random_events = {
+		100 = bryten_pilgrimage.125 # Durham
+		100 = bryten_pilgrimage.100 # Bury St. Edmunds
+		100 = bryten_pilgrimage.140 # St. Davids
+	}
+}
+#############################################
+# Destination Events			
+#############################################
+bryten_pilgrimage_destination_events = {# Events that happen while remaining on-site
+	random_events = {
+		# St. Davids Pilgrimage specific
+		100 = bryten_pilgrimage.141 # Visiting the tomb of st. David
+		100 = bryten_pilgrimage.142 # Praying in Durham Cathedral
+		100 = bryten_pilgrimage.143 # Feast Day Procession - 1st of March
+		# St. Edmunds Pilgrimage specific
+		100 = bryten_pilgrimage.101 # Praying in St. Edmunds Abbey 
+		100 = bryten_pilgrimage.102 # Visiting Edmund's tomb
+		100 = bryten_pilgrimage.103 # Feast Day Procession - 20th of November
+		# Durham Pilgrimage specific
+		100 = bryten_pilgrimage.126 # Praying in St. Davids Cathedral
+		100 = bryten_pilgrimage.127 # Visiting the Tomb of the Venerable Bede
+		100 = bryten_pilgrimage.128 # PVisiting the Tomb of St. Cuthbert.
+		100 = bryten_pilgrimage.129 # Feast Day Procession - 20th of March
+		# General Destination Events
+		100 = bryten_pilgrimage.300 # Ask local priest to bless your artifact
+		120 = bryten_pilgrimage.301 # Appreciation
+		150 = bryten_pilgrimage.302 # Repentance - remove secret/coping trait
+		120 = bryten_pilgrimage.303 # Buy a pilgrims' guide
+		100 = bryten_pilgrimage.304 # Buy a relic
+		100 = bryten_pilgrimage.305 # Recruit local expert
+		100 = bryten_pilgrimage.306 # Find some exotic wares
+		100 = bryten_pilgrimage.307 # Do you wanna buy an indulgence?
+		120 = bryten_pilgrimage.308 # The Disputation of GetCurrentLocation
+		# Intent Destination events
+		100 = bryten_pilgrimage.309 # An entourage member feels a religious calling
+		100 = bryten_pilgrimage.310 # Communal Prayer
+		100 = bryten_pilgrimage.311 # Silent Contemplation
+		100 = bryten_pilgrimage.312 # Charity to the Poor
+		100 = bryten_pilgrimage.313 # Donating to the Church
+		100 = bryten_pilgrimage.314 # Donating to Travellers
+		100 = bryten_pilgrimage.315 # Foreign Customs
+		100 = bryten_pilgrimage.316 # Seeing the sights
+		100 = bryten_pilgrimage.317 # Studying the Bible
+		100 = bryten_pilgrimage.318 # Visiting Markets
+		# Catholic Liturgical Year events
+		100 = bryten_pilgrimage.325 # Visiting During the Christmas Season
+		100 = bryten_pilgrimage.326 # Visiting During the Carnival Season
+		100 = bryten_pilgrimage.327 # Visiting During the Lent Season
+		100 = bryten_pilgrimage.328 # Visiting During Easter Time
+	}
+}
+#############################################
+# Return Events			
+#############################################
+bryten_pilgrimage_return_events = {# Events that happen once you've returned home
+	effect = {
+		if = {
+			limit = { exists = var:visited_cultures_list }
+			remove_variable = visited_cultures_list
+		}
+	}
+	random_events = {
+		100 = pilgrimage.9001
+	}
+}

@@ -1,6 +1,8 @@
 ﻿
-
 activity_bryten_english_pilgrimage = {
+	############################
+	# STARTING AND VALID
+	############################
 	is_shown = {
 		religion = religion:christianity_religion
 		highest_held_title_tier > tier_barony
@@ -19,16 +21,13 @@ activity_bryten_english_pilgrimage = {
 			}
 		}
 	}
-
 	can_start = {
 		religion = religion:christianity_religion
 		#is_at_war = no
 	}
-
 	can_start_showing_failures_only = {
 		is_available_adult = yes
 	}
-
 	is_valid = {
 		NOT = {
 			has_variable = activity_invalidated
@@ -45,7 +44,6 @@ activity_bryten_english_pilgrimage = {
 			has_attending_activity_guests = yes
 		}
 	}
-
 	on_invalidated = {
 		# Host becomes unlanded
 		if = {
@@ -75,7 +73,6 @@ activity_bryten_english_pilgrimage = {
 			}
 		}
 	}
-
 	on_host_death = {
 		scope:activity = {
 			set_variable = {
@@ -87,6 +84,9 @@ activity_bryten_english_pilgrimage = {
 	province_filter = all
 	ai_province_filter = realm
 
+	############################
+	# PROVINCE DESCRIPTIONS
+	############################
 	province_description = {
 		triggered_desc = {# For Durham
 			trigger = {
@@ -109,11 +109,9 @@ activity_bryten_english_pilgrimage = {
 	}
 	
 	wait_time_before_start = { days = 7 }
-
-	###################
+	##########################
 	# OPTIONS
-	###################
-
+	##########################
 	special_option_category = special_type
 
 	options = {
@@ -342,17 +340,15 @@ activity_bryten_english_pilgrimage = {
 				}
 			}
 		}		
-	}	
-
-	###################
+	}
+	##########################
 	# PHASES
-	###################
-
+	##########################
 	phases = {
 		bryten_english_pilgrimage_phases = {
 			is_predefined = yes
 			
-			on_phase_active = {
+			on_phase_active = {# For activiating the stuff
 				if = {
 					limit = {
 						this = scope:host
@@ -361,7 +357,7 @@ activity_bryten_english_pilgrimage = {
 						limit = {
 							involved_activity.activity_location.barony = title:b_durham
 						}
-						scope:host = { trigger_event = bryten_england.152 }
+						scope:host = { trigger_event = bryten_england.150 }
 					}
 					else_if = {# Visiting Bury St. Edmunds
 						limit = {
@@ -376,15 +372,17 @@ activity_bryten_english_pilgrimage = {
 						scope:host = { trigger_event = bryten_wales.100 }
 					}					
 				}
-
 			}
-
-			on_end = {
-				# Run conclusion stuff here
-				# if = {
-				# 	limit = { this = scope:host }
-				# 	scope:activity = { progress_activity_phase_after = { weeks = 2 } }
-				# }
+			on_monthly_pulse = {# Things to do in each place.
+				trigger_event = { on_action = british_pilgrimage_destination_events }
+			}
+			on_end = {# When the pilgrimage is over
+				if = {
+					limit = { this = scope:host }
+					bryten_british_pilgrimage_reward_effect = yes 
+					# Conclusion event
+					trigger_event = pilgrimage.7000 
+				}
 			}
 		}
 	}
@@ -419,11 +417,12 @@ activity_bryten_english_pilgrimage = {
 	}
 
 	ai_check_interval = 60
-
+	##########################
+	# LOCATION PICKING
+	##########################
 	ai_will_select_province = {
 		value = 10
-	}
-	
+	}	
 	is_location_valid = {
 		OR = {
 			trigger_if = {# Durham
@@ -448,7 +447,6 @@ activity_bryten_english_pilgrimage = {
 			}
 		}
 	}
-
 	cost = {
 		gold = {
 			add = {
@@ -460,7 +458,6 @@ activity_bryten_english_pilgrimage = {
 			}
 		}
 	}
-
 	ui_predicted_cost = {
 		gold = {
 			value = bryten_activity_cost
@@ -473,33 +470,25 @@ activity_bryten_english_pilgrimage = {
 
 	cooldown = { days = 3650 }
 	
-	###################
-	# ACTIVITY-SPECIFIC PULSES
-	###################
-	
+	##########################
+	# PULSES
+	##########################
 	pulse_actions = {
 
 	}
-
-	on_start = {
-		# Check what faith the pilgrimage is supposed to be for.
+	on_start = {# Check what faith the pilgrimage is supposed to be for.
 		set_variable = {
 			name = starting_faith
 			value = scope:host.faith
 		}
 	}
-
 	on_enter_passive_state = {
 
 	}
-
-	###################
+	##########################
 	# GUEST HANDLING
-	###################
-
+	##########################
 	max_guests = 15
-
-	#allow_zero_guest_invites = yes
 
 	guest_invite_rules = {
 		rules = {
@@ -524,14 +513,12 @@ activity_bryten_english_pilgrimage = {
 			1 = activity_invite_spouses
 		}
 	}
-
 	can_be_activity_guest = {
 		is_adult = yes
 		is_available = yes
 		in_diplomatic_range = scope:host
 		is_landed = no
 	}
-
 	host_intents = {
 		intents = { 
 			bryten_reflection_intent
@@ -541,7 +528,6 @@ activity_bryten_english_pilgrimage = {
 		}
 		default = bryten_reflection_intent
 	}
-
 	guest_intents = {
 		intents = { 
 			bryten_reflection_intent
@@ -551,7 +537,6 @@ activity_bryten_english_pilgrimage = {
 		}
 		default = bryten_reflection_intent
 	}
-
 	guest_join_chance = {
 		base = 0
 		base_activity_modifier = yes
@@ -559,7 +544,9 @@ activity_bryten_english_pilgrimage = {
 		# Scripted Modifiers
 		activity_guest_shared_ai_accept_modifier = yes
 	}
-	
+	##########################
+	# COMPLETION EFFECTS
+	##########################	
 	on_complete = {
 		if = {# Did the Durham pilgrimage for the first time
 			limit = { 
@@ -583,7 +570,7 @@ activity_bryten_english_pilgrimage = {
 				bryten_english_pilgrimage_edmund_host_memory_log_entry_effect = yes
 			}
 		}
-		if = {# Did the bury st. Edmunds pilgrimage for the first time
+		if = {# Did the St. David pilgrimage for the first time
 			limit = { 
 				scope:activity.activity_location.county = title:c_suffolk
 			}
@@ -594,15 +581,10 @@ activity_bryten_english_pilgrimage = {
 				bryten_english_pilgrimage_edmund_host_memory_log_entry_effect = yes
 			}
 		}
-
-	}	
-
-	#################
-	#
-	# TRAVEL
-	#
-	#################
-
+	}
+	###################
+	# EVENT IMAGES
+	###################
 	background = { # Bridge
 		trigger = {
 			NOT = { scope:host.location = scope:activity.activity_location }
@@ -770,11 +752,9 @@ activity_bryten_english_pilgrimage = {
 		environment = "environment_event_fp1_ocean"
 		ambience = "event:/DLC/FP1/SFX/Events/event_ocean_longship"
 	}
-	#################
-	#
-	# ARRIVED
-	#
-	#################
+	##########################
+	# PILGRIMAGE IMAGES
+	##########################
 	background = {# Durham
 		trigger = {
 			activity_location.barony = title:b_durham
@@ -796,8 +776,9 @@ activity_bryten_english_pilgrimage = {
 		environment = "environment_western_holy_site"
 		ambience = "event:/SFX/Events/Backgrounds/temple_christian"
 	}
-
-
+	##########################
+	# CHARACTER WINDOW
+	##########################
 	window_characters = {
 
 		guest = {

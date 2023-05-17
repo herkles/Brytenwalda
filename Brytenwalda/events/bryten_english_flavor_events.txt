@@ -3103,7 +3103,7 @@ bryten_england.111 = {# Ecgberht in the North
 	}
 }
 #######################################
-# Pilgrimage to Bury St. Edmunds
+# The Martydom of St. Edmunds
 #######################################
 bryten_england.125 = {# The martydom of Edmund. 
 	type = character_event
@@ -3219,69 +3219,8 @@ bryten_england.128 = {# The abbey at Bury St. Edmunds.
 	}
 		
 }
-# Pilgrimage to Durham it self
-bryten_england.130 = {# Arrive in Bury Saint Edmunds
-	type = character_event
-	title = bryten_england.130.t
-	desc = bryten_england.130.desc
-	theme = friendly
-	
-	right_portrait = {
-		character = root
-		animation = personality_zealous
-	}
-	
-	option = { # Ok
-		name = bryten_england.130.arrival
-	}
-
-	after = {
-		trigger_event = {
-			id = bryten_england.131
-			days = { 4 12 }
-		}
-	}
-
-}
-bryten_england.131 = {# Praying in the abbey
-	type = character_event
-	title = bryten_england.131.t
-	desc = bryten_england.131.desc
-	theme = faith
-	
-	left_portrait = {
-		character = root
-		animation = personality_zealous
-	}
-	
-	option = { # Ok
-		name = bryten_england.131.abbey
-	}
-
-	after = {
-		trigger_event = {
-			id = bryten_england.132
-			days = { 3 6 }
-		}
-	}
-}
-bryten_england.132 = {# Visiting the Edmund.
-	type = character_event
-	title = bryten_england.132.t
-	desc = bryten_england.132.desc
-	theme = faith
-	
-	left_portrait = {
-		character = root
-		animation = personality_zealous
-	}
-	
-	option = { # Ok
-		name = bryten_england.132.edmund
-	}
-}
 #######################################
-# Pilgrimage to Durham
+# wanderings of St. Cuthbert
 #######################################
 bryten_england.140 = {# The Monks of Lindisfarne move the body of St. Cuthbert. 
 	type = character_event
@@ -3427,95 +3366,6 @@ bryten_england.143 = {# St. Cuthbert's Gospel of John.
 		add_piety = medium_piety_gain
 	}
 		
-}
-# Pilgrimage to Durham it self
-bryten_england.150 = {# Arrive in Durham
-	type = character_event
-	title = bryten_england.150.t
-	desc = bryten_england.150.desc
-	theme = friendly
-	
-	right_portrait = {
-		character = root
-		animation = personality_zealous
-	}
-	
-	option = { # Ok
-		name = bryten_england.150.arrival
-
-	}
-
-	after = {
-		trigger_event = {
-			id = bryten_england.151
-			days = { 4 12 }
-		}
-	}
-
-}
-bryten_england.151 = {# Praying in Durham Cathedral
-	type = character_event
-	title = bryten_england.151.t
-	desc = bryten_england.151.desc
-	theme = faith
-	
-	left_portrait = {
-		character = root
-		animation = personality_zealous
-	}
-	
-	option = { # Ok
-		name = bryten_england.151.cathedral
-	}
-
-	after = {
-		trigger_event = {
-			id = bryten_england.152
-			days = { 3 6 }
-		}
-	}
-}
-bryten_england.152 = {# Visiting the Tomb of the Venerable Bede
-	type = character_event
-	title = bryten_england.152.t
-	desc = bryten_england.152.desc
-	theme = faith
-	
-	left_portrait = {
-		character = root
-		animation = personality_content
-	}
-	
-	immediate = {
-		play_music_cue = mx_cue_sacredrite
-	}
-	
-	option = { # Ok
-		name = bryten_england.152.bede
-	}
-	
-	after = {
-		trigger_event = {
-			id = bryten_england.153
-			days = { 1 6 }
-		}
-	}
-	
-}
-bryten_england.153 = {# Visiting the Tomb of St. Cuthbert.
-	type = character_event
-	title = bryten_england.153.t
-	desc = bryten_england.153.desc
-	theme = faith
-	
-	left_portrait = {
-		character = root
-		animation = personality_zealous
-	}
-	
-	option = { # Ok
-		name = bryten_england.153.cuthbert
-	}
 }
 #######################################
 # Maitance events

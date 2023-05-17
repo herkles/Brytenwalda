@@ -1,0 +1,97 @@
+﻿#######################################
+#									  #
+#     British Pilgrimage effects      #
+#									  #
+#######################################
+resolve_pilgrimage_type_reward_effect = {
+	involved_activity ?= {# Pious Type
+		if = {	
+			limit = {
+				has_activity_option = {
+					category = special_type
+					option = bryten_english_pilgrimage_type_pious
+				}
+			}
+			if = {# Perfect piousness - 75-100
+				limit = { var:activity_special_type_progression >= 75 }
+				scope:host = { 
+					add_piety = major_piety_gain
+				}
+			}			
+			else_if = {# High-end piousness - 50-75
+				limit = { 
+					var:activity_special_type_progression < 75
+					var:activity_special_type_progression >= 50
+				} 
+				scope:host = { 
+					add_piety = major_piety_gain
+				}
+			}
+			else_if = {# OK piousness - 25-50
+				limit = {
+					var:activity_special_type_progression < 50
+					var:activity_special_type_progression >= 25
+				}
+				scope:host = { 
+					add_piety = major_piety_gain
+				}
+			}
+			else = {# Lousy piousness - 0-25
+				scope:host = { 
+					add_piety = major_piety_gain
+				}
+			}
+		}
+		
+		if = {# Worldly Type
+			limit = {
+				has_activity_option = {
+					category = special_type
+					option = bryten_english_pilgrimage_type_worldy
+				}
+			}
+			if = {# Perfect worldliness - 75-100
+				limit = { var:activity_special_type_progression >= 75 }
+				scope:host = { 
+					add_character_modifier = {
+						modifier = british_pilgrimage_perfect_worldly_reward_modifier
+						years = 5
+					}
+				}
+			}
+			else_if = {# High end worldliness - 50-75
+				limit = { 
+					var:activity_special_type_progression < 75
+					var:activity_special_type_progression >= 50
+				}
+				scope:host = { 
+					add_character_modifier = {
+						modifier = british_pilgrimage_high_worldly_reward_modifier
+						years = 5
+					}
+				}
+			}			
+			else_if = {# OK piousness - 25-50
+				limit = {
+					var:activity_special_type_progression < 50
+					var:activity_special_type_progression >= 25
+				}
+				scope:host = { 
+					add_character_modifier = {
+						modifier = british_pilgrimage_mid_worldly_reward_modifier
+						years = 5
+					}
+				}
+			}			
+			else = {# Lousy piousness - 0-25
+				scope:host = { 
+					add_character_modifier = {
+						modifier = british_pilgrimage_low_worldly_reward_modifier
+						years = 5
+					}
+				}
+			}
+		}
+	}
+}
+

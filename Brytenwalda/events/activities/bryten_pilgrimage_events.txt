@@ -1,0 +1,2451 @@
+﻿
+namespace = bryten_pilgrimage
+
+#######################################
+# Norman Conquest Stuff
+#######################################
+
+#######################################
+# Norman Conquest Stuff
+#######################################
+
+#######################################
+# Intent Travel Events
+#######################################
+
+#######################################
+# Pilgrimage to Bury St. Edmunds
+#######################################
+bryten_pilgrimage.100 = {# Arrive in Bury Saint Edmunds
+	type = character_event
+	title = bryten_pilgrimage.100.t
+	desc = bryten_pilgrimage.100.desc
+	theme = friendly
+	
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.130.arrival
+	}
+
+}
+bryten_pilgrimage.101 = {# Visiting Edmund's tomb.
+	type = character_event
+	title = bryten_pilgrimage.101.t
+	desc = bryten_pilgrimage.101.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.101.edmund
+	}
+}
+bryten_pilgrimage.102 = {# Praying in St. Edmunds Abbey 
+	type = character_event
+	title = bryten_pilgrimage.102.t
+	desc = bryten_pilgrimage.102.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.102.cathedral
+	}
+
+}
+#######################################
+# Pilgrimage to Durham
+#######################################
+bryten_pilgrimage.125 = {# Arrive in Durham
+	type = character_event
+	title = bryten_pilgrimage.125.t
+	desc = bryten_pilgrimage.125.desc
+	theme = friendly
+	
+	right_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.125.arrival
+
+	}
+
+}
+bryten_pilgrimage.126 = {# Praying in Durham Cathedral
+	type = character_event
+	title = bryten_pilgrimage.126.t
+	desc = bryten_pilgrimage.126.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.126.cathedral
+	}
+
+}
+bryten_pilgrimage.127 = {# Visiting the Tomb of the Venerable Bede
+	type = character_event
+	title = bryten_pilgrimage.127.t
+	desc = bryten_pilgrimage.127.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_sacredrite
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.127.bede
+	}
+	
+}
+bryten_pilgrimage.128 = {# Visiting the Tomb of St. Cuthbert.
+	type = character_event
+	title = bryten_pilgrimage.128.t
+	desc = bryten_pilgrimage.128.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.128.cuthbert
+	}
+}
+#######################################
+# Pilgrimage to St. Davids
+#######################################
+bryten_pilgrimage.140 = {# Arrive in St. Davids
+	type = character_event
+	title = bryten_pilgrimage.140.t
+	desc = bryten_pilgrimage.140.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.140.arrival
+
+	}
+
+}
+bryten_pilgrimage.141 = {# Visiting the tomb of st. David
+	type = character_event
+	title = bryten_pilgrimage.141.t
+	desc = bryten_pilgrimage.141.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.141.david
+
+	}
+
+}
+bryten_pilgrimage.142 = {# Praying in St. Davids Cathedral
+	type = character_event
+	title = bryten_pilgrimage.142.t
+	desc = bryten_pilgrimage.142.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.142.cathedral
+	}
+}
+#######################################
+# General Destination Events
+#######################################
+scripted_effect pilgrimage_6770_relic_effect = {
+	if = {
+		limit = { has_trait = trusting }
+		add_piety = major_piety_gain
+		add_prestige = medium_prestige_gain
+	}
+	else = {
+		add_piety = medium_piety_gain
+	}
+}
+scripted_trigger pilgrimage_6770_trigger = {
+	age = { 20 60 }
+	is_lowborn = yes
+	has_faith = root.faith #We are looking for a relic merchant who sells relics we have an interest in and can use.
+	stewardship = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+}
+scripted_effect pilgrimage_6810_friend_effect = {
+	if = {
+		limit = {
+			exists = scope:my_bishop
+			can_set_relation_friend_trigger = { CHARACTER = scope:my_bishop }
+		}
+		set_relation_friend = {
+			reason = friend_bought_indulgences
+			target = scope:my_bishop
+		}
+	}
+	else_if = { #if you can't be friends we make them endorse you
+		limit = { exists = scope:my_bishop }
+		scope:my_bishop = {
+			add_opinion = {
+				target = prev #we use prev so we can use the effect with your heir too
+				modifier = pious_opinion
+				opinion = 30
+			}
+		}
+	}
+	else = {
+		scope:religious_head_scope = {
+			add_opinion = {
+				target = prev
+				modifier = pious_opinion
+				opinion = 30
+			}
+		}
+	}
+}
+scripted_trigger pilgrimage_6820_trigger = {
+	age = { 20 60 }
+	is_lowborn = yes
+	stewardship = {
+		min_template_decent_skill
+		max_template_decent_skill
+	}
+}
+
+pilgrimage.6500 = {# Appreciation
+	type = activity_event
+	title = pilgrimage.6500.t
+	desc = pilgrimage.6500.desc
+	theme = pilgrimage_destination
+	override_background = { reference = market }
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { has_trait = cynical }
+			animation = personality_cynical
+		}
+		animation = personality_content
+	}
+	right_portrait = {
+		character = scope:pilgrimage_member
+		animation = thinking
+	}
+	cooldown = { years = 1 }
+	trigger = {
+		current_travel_plan ?= {
+			any_entourage_character = { 
+				count > 1
+				NOR = {
+					has_trait = sadistic
+					has_trait = cynical
+					has_trait = paranoid
+					has_trait = craven
+					has_trait = reclusive
+				}
+			}
+		}
+	}
+	immediate = {
+		current_travel_plan = {
+			random_entourage_character = {
+				limit = { 
+					is_adult = yes
+					NOR = {
+						has_trait = sadistic
+						has_trait = cynical
+						has_trait = paranoid
+						has_trait = craven
+						has_trait = reclusive
+						has_trait = callous
+					}
+				}
+				save_scope_as = pilgrimage_member
+			}
+		}
+	}
+	#Let's frolick!
+	option = {
+		name = pilgrimage.6500.a
+		trigger = {
+			culture = { has_cultural_tradition = tradition_xenophilic }
+		}
+		show_as_unavailable = { 
+			custom_tooltip = { text = pilgrimage.6500.a.tt } 
+			NOT = {
+				culture = { has_cultural_tradition = tradition_xenophilic }
+			}
+		}
+		worldly_type_option_effect = yes
+		scope:pilgrimage_member = {
+			add_opinion = {
+				modifier = pleased_opinion
+				target = root
+				opinion = 20
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_loss
+			sadistic = minor_stress_impact_gain
+			cynical = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+			craven = minor_stress_impact_gain
+			reclusive = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 200
+			modifier = {
+				OR = {
+					has_trait = sadistic
+					has_trait = cynical
+					has_trait = paranoid
+					has_trait = craven
+					has_trait = reclusive
+					has_trait = callous
+				}
+				factor = 0
+			}
+		}
+	}
+	#That's nice
+	option = {
+		name = pilgrimage.6500.b
+		pious_type_option_effect = yes
+		add_piety = minor_piety_gain
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				has_trait = cynical
+				factor = 0
+			}
+		}
+	}
+	#_Technically_ ...
+	option = {
+		name = pilgrimage.6500.c
+		trigger = { has_trait = cynical }
+		stress_impact = {
+			cynical = minor_stress_impact_loss
+		}
+		scope:pilgrimage_member = {
+			add_opinion = {
+				modifier = insulted_opinion
+				target = root
+				opinion = -10
+			}
+		}
+		ai_chance = {
+			base = 200
+		}
+	}
+}
+pilgrimage.6750 = {# Repentance
+	type = activity_event
+	title = pilgrimage.6750.t
+	desc = {
+		desc = pilgrimage.6750.desc.intro
+		random_valid = {
+			triggered_desc = {
+				trigger = {
+					any_known_secret = { is_criminal_for = secret_owner }
+				}
+				desc = pilgrimage.6750.desc.secret
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = drunkard
+				}
+				desc = pilgrimage.6750.desc.drunkard
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = hashishiyah
+				}
+				desc = pilgrimage.6750.desc.hashishiyah
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = rakish
+				}
+				desc = pilgrimage.6750.desc.rakish
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = irritable
+				}
+				desc = pilgrimage.6750.desc.irritable
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = flagellant
+				}
+				desc = pilgrimage.6750.desc.flagellant
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = contrite
+				}
+				desc = pilgrimage.6750.desc.contrite
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = profligate
+				}
+				desc = pilgrimage.6750.desc.profligate
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = comfort_eater
+				}
+				desc = pilgrimage.6750.desc.comfort_eater
+			}
+			triggered_desc = {
+				trigger = {
+					has_trait = inappetetic
+				}
+				desc = pilgrimage.6750.desc.inappetetic
+			}
+		}
+		desc = pilgrimage.6750.desc.outro
+	}
+	theme = pilgrimage_destination
+	override_background = {
+		trigger = {
+			NOR = {
+				religion = religion:hinduism_religion
+				religion = religion:jainism_religion
+				religion = religion:buddhism_religion
+				religion = religion:tengrism_religion
+			}
+		}
+		reference = temple
+	}
+	left_portrait = {
+		character = root
+		animation = beg
+	}
+	#We don't really need a cooldown since it's once per character
+	trigger = {
+		has_dlc_feature = tours_and_tournaments
+		NOT = { has_variable = had_pilgrimage_event_6750 }
+		OR = { #you have something to repent
+			any_known_secret = { is_criminal_for = secret_owner }
+			has_a_bad_stress_coping_trait_trigger = yes
+		}
+		OR = { #you're in a religious journey
+			has_activity_intent = zealot_intent
+			scope:activity = {
+				has_activity_option = {
+					category = special_type
+					option = pilgrimage_type_pious
+				}
+			}
+		}
+	}
+	immediate = {
+		set_variable = had_pilgrimage_event_6750 #once per character
+		location = { save_scope_as = repent_location }
+		if = {
+			limit = {
+				any_known_secret = { is_criminal_for = secret_owner }
+			}
+			random_known_secret = {
+				limit = { is_criminal_for = secret_owner }
+				save_scope_as = repent_trait
+			}
+		}
+	}
+	#I regret it all
+	option = {
+		name = pilgrimage.6750.a
+		pious_type_option_effect = yes
+		involved_activity = {
+			add_activity_log_entry = {
+				key = pilgrimage_repented_log
+				tags = { destination_event }
+				score = 50
+				character = root
+				location = scope:repent_location
+				show_in_conclusion = yes
+				#Effects
+				root = {
+					add_piety = major_piety_gain
+					if = {
+						limit = {
+							any_known_secret = { is_criminal_for = secret_owner }
+						}
+						scope:repent_trait = { remove_secret = yes }
+					}
+					else_if = {
+						limit = { has_trait = drunkard }
+						remove_trait = drunkard
+					}
+					else_if = {
+						limit = { has_trait = hashishiyah }
+						remove_trait = hashishiyah
+					}
+					else_if = {
+						limit = { has_trait = rakish }
+						remove_trait = rakish
+					}
+					else_if = {
+						limit = { has_trait = irritable }
+						remove_trait = irritable
+					}
+					else_if = {
+						limit = { has_trait = flagellant }
+						remove_trait = flagellant
+					}
+					else_if = {
+						limit = { has_trait = contrite }
+						remove_trait = contrite
+					}
+					else_if = {
+						limit = { has_trait = profligate }
+						remove_trait = profligate
+					}
+					else_if = {
+						limit = { has_trait = comfort_eater }
+						remove_trait = comfort_eater
+					}
+					else_if = {
+						limit = { has_trait = inappetetic }
+						remove_trait = inappetetic
+					}
+				}
+			}
+		}
+		stress_impact = {
+			base = major_stress_impact_gain
+			zealous = major_stress_impact_loss
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 0.75
+				ai_compassion = 1.25
+				ai_honor = 1.5
+			}
+		}
+	}
+	
+	#Je ne regrette rien
+	option = {
+		name = pilgrimage.6750.b
+		worldly_type_option_effect = yes
+		stress_impact = {
+			base = major_stress_impact_loss
+			zealous = massive_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_trait = zealous
+			}
+		}
+	}
+}
+pilgrimage.6760 = {# Theological Debate
+	type = activity_event
+	title = pilgrimage.6760.t
+	desc = {
+		desc = pilgrimage.6760.desc.intro
+		desc = pilgrimage.6760.desc.christian
+	}
+	theme = pilgrimage_destination
+	override_background = {
+		trigger = {
+			NOR = {
+				religion = religion:hinduism_religion
+				religion = religion:jainism_religion
+				religion = religion:buddhism_religion
+				religion = religion:tengrism_religion
+			}
+		}
+		reference = temple
+	}
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:bishop_pilgrim
+		animation = chaplain
+	}
+	cooldown = { years = 2 }
+	
+	trigger = {
+		faith.religion = religion:christianity_religion
+		location.county.holder.cp:councillor_court_chaplain.faith.religion ?= religion:christianity_religion
+	}
+	
+	immediate = {
+		if = {
+			limit = { exists = location.county.holder.cp:councillor_court_chaplain }
+			location.county.holder.cp:councillor_court_chaplain = { save_scope_as = bishop_pilgrim }
+		}
+		else = {
+			location.county.holder = {
+				ordered_courtier_or_guest = {
+					limit = {
+						NOT = { has_trait = cynical }
+					}
+					order_by = {
+						value = learning
+						if = {
+							limit = { has_trait = theologian }
+							add = 50
+						}
+						if = {
+							limit = { has_trait = zealous }
+							add = 20
+						}
+					}
+					save_scope_as = bishop_pilgrim
+				}
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_lifestyle = learning_lifestyle
+		}
+		modifier = {
+			factor = 2
+			OR = { #you're in a religious journey
+				has_activity_intent = zealot_intent
+				scope:activity = {
+					has_activity_option = {
+						category = special_type
+						option = pilgrimage_type_pious
+					}
+				}
+			}
+		}
+	}
+	#HEATHEN!
+	option = {
+		name = pilgrimage.6760.a
+		pious_type_option_effect = yes
+		add_piety = major_piety_gain
+		scope:bishop_pilgrim = {
+			add_opinion = {
+				target = root
+				modifier = insulted_opinion
+				opinion = -50
+			}
+		}
+		stress_impact = {
+			calm = minor_stress_impact_gain
+			gregarious = minor_stress_impact_gain
+			cynical = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 2
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 1.5
+				OR = {
+					has_trait = wrathful
+					has_trait = vengeful
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = calm
+					has_trait = gregarious
+					has_trait = cynical
+				}
+			}
+		}
+	}
+	#Refute back
+	option = {
+		name = pilgrimage.6760.b
+		duel = {
+			skill = learning
+			target = scope:bishop_pilgrim
+			50 = { #this is HARD
+				desc = pilgrimage.6760.b.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+				}
+				modifier = {
+					add = 25
+					OR = {
+						has_trait = theologian
+						has_trait = zealous
+					}
+				}
+				send_interface_toast = {
+					title = pilgrimage.6760.b.success
+					left_icon = root
+					right_icon = scope:bishop_pilgrim
+					involved_activity ?= {
+						add_activity_log_entry = {
+							key = pilgrimage_theological_debate_log
+							tags = { good }
+							score = 50
+							character = root
+							target = scope:bishop_pilgrim
+
+							#Effects
+							root = {
+								if = {
+									limit = { NOT = { has_perk = zealous_proselytizer_perk } }
+									add_perk = zealous_proselytizer_perk
+								}
+								else = {
+									add_learning_lifestyle_xp = major_lifestyle_experience
+								}
+							}
+						}
+					}
+				}
+			}
+			50 = {
+				desc = pilgrimage.6760.b.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+				}
+				send_interface_toast = {
+					title = pilgrimage.6760.b.failure
+					left_icon = root
+					right_icon = scope:bishop_pilgrim
+					involved_activity ?= {
+						add_activity_log_entry = {
+							key = pilgrimage_theological_debate_log
+							tags = { bad }
+							score = 50
+							character = root
+							target = scope:bishop_pilgrim
+
+							#Effects
+							root = { add_piety = minor_piety_loss }
+						}
+					}
+				}
+			}
+		}
+		stress_impact = {
+			calm = minor_stress_impact_gain
+			gregarious = minor_stress_impact_gain
+			cynical = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 1.5
+				has_lifestyle = learning_lifestyle
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = lazy
+					has_trait = gregarious
+					has_trait = cynical
+				}
+			}
+		}
+	}
+	#Let's just revel
+	option = {
+		name = pilgrimage.6760.c
+		worldly_type_option_effect = yes
+		if = {
+			limit = {
+				can_set_relation_friend_trigger = { CHARACTER = scope:bishop_pilgrim }
+			}
+			set_relation_friend = {
+				target = scope:bishop_pilgrim
+				reason = friend_theological_debate
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_loss
+			zealous = major_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_trait = zealous
+			}
+		}
+	}
+}
+pilgrimage.6770 = {# Buy a relic
+	type = activity_event
+	title = pilgrimage.6770.t
+	desc = {
+		desc = pilgrimage.6770.desc.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					religion = religion:christianity_religion
+				}
+				desc = pilgrimage.6770.desc.christian
+			}
+			triggered_desc = {
+				trigger = {
+					religion = religion:islam_religion
+				}
+				desc = pilgrimage.6770.desc.islam
+			}
+			triggered_desc = {
+				trigger = {
+					religion = religion:buddhism_religion
+				}
+				desc = pilgrimage.6770.desc.buddhist
+			}
+			triggered_desc = {
+				trigger = {
+					religion = religion:judaism_religion
+				}
+				desc = pilgrimage.6770.desc.judaism
+			}
+			desc = pilgrimage.6770.desc.fallback
+		}
+		desc = pilgrimage.6770.desc.outro
+	}
+	theme = pilgrimage_destination
+	override_background = { reference = market }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:relic_merchant
+		animation = ecstasy
+	}
+	artifact = {
+		target = scope:merchant_relic
+		position = lower_center_portrait
+	}
+	cooldown = { years = 1 }
+	immediate = {
+		location = { save_scope_as = relic_location }
+		if = {
+			limit = {
+				any_pool_character = {
+					province = root.location
+					pilgrimage_6770_trigger = yes
+				}
+			}
+			random_pool_character = {
+				province = root.location
+				limit = { pilgrimage_6770_trigger = yes }
+				save_scope_as = relic_merchant
+			}
+		}
+		else = {
+			create_character = {
+				template = merchant_template
+				dynasty = none
+				location = root.location
+				culture = root.location.culture
+				faith = root.faith #We are interested in relics we can use
+				save_scope_as = relic_merchant
+			}
+			set_variable = created_random_merchant_var
+		}
+		hidden_effect_new_object = {
+			if = {
+				limit = { religion = religion:christianity_religion }
+				create_artifact_pedestal_reliquary_christian_effect = { OWNER = scope:relic_merchant }
+			}
+			else_if = {
+				limit = { religion = religion:islam_religion }
+				create_artifact_pedestal_reliquary_islam_effect = { OWNER = scope:relic_merchant }
+			}
+			else_if = {
+				limit = { religion = religion:buddhism_religion }
+				create_artifact_pedestal_reliquary_buddhism_effect = { OWNER = scope:relic_merchant }
+			}
+			else_if = {
+				limit = { religion = religion:judaism_religion }
+				create_artifact_pedestal_reliquary_judaism_effect = { OWNER = scope:relic_merchant }
+			}
+			else = {
+				create_artifact_sculpture_religious_effect = { OWNER = scope:relic_merchant } #TODO_CD_EP2 This causes an asset error
+			}
+			scope:newly_created_artifact = {
+				save_scope_as = merchant_relic
+				if = {
+					limit = {
+						NOT = {
+							root = { has_royal_court = yes }
+						}
+					}
+					reforge_artifact = { type = miscellaneous }
+				}
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+	#Buy
+	option = {
+		name = pilgrimage.6770.a
+		bonus_to_all_types_effect = yes
+		involved_activity ?= {
+			add_activity_log_entry = {
+				key = pilgrimage_acquired_relic_log
+				tags = { relic }
+				score = 50
+				character = root
+				artifact = scope:newly_created_artifact
+				location = scope:relic_location
+				show_in_conclusion = yes
+				# Effects
+				root = { pilgrimage_6770_relic_effect = yes }
+				scope:merchant_relic = { set_owner = root }
+			}
+		}
+		pay_short_term_gold = {
+			target = scope:relic_merchant
+			gold = {
+				value = minor_gold_value
+				max = 10
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			avaricious = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				short_term_gold <= minor_gold_value
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = greedy
+					has_trait = avaricious
+				}
+			}
+		}
+	}
+	#Barter
+	option = {
+		name = pilgrimage.6770.b
+		worldly_type_option_effect = yes
+		duel = {
+			skills = { diplomacy stewardship }
+			target = scope:relic_merchant
+			50 = {
+				desc = pilgrimage.6770.b.success
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+				}
+				send_interface_toast = {
+					title = pilgrimage.6770.b.success
+					left_icon = root
+					involved_activity ?= {
+						add_activity_log_entry = {
+							key = pilgrimage_acquired_relic_log
+							tags = { relic }
+							score = 50
+							character = root
+							artifact = scope:newly_created_artifact
+							location = scope:relic_location
+							show_in_conclusion = yes
+							# Effects
+							root = { pilgrimage_6770_relic_effect = yes }
+							scope:merchant_relic = { set_owner = root }
+						}
+					}
+					pay_short_term_gold = {
+						target = scope:relic_merchant
+						gold = {
+							value = minor_gold_value
+							max = 5
+						}
+					}
+				}
+			}
+			50 = {
+				desc = pilgrimage.6770.b.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+				}
+				send_interface_toast = {
+					title = pilgrimage.6770.b.failure
+					left_icon = root
+					scope:relic_merchant = {
+						add_opinion = {
+							target = root
+							modifier = insulted_opinion
+							opinion = -10
+						}
+					}
+				}
+			}
+		}
+		stress_impact = {
+			lazy = minor_stress_impact_gain
+			gregarious = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				short_term_gold <= minor_gold_value
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = lazy
+					has_trait = gregarious
+				}
+			}
+		}
+	}
+	#Nah
+	option = {
+		name = pilgrimage.6770.c
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_trait = zealous
+			}
+		}
+	}
+	#Is this... a real piece?
+	option = {
+		name = pilgrimage.6770.d
+		trigger = { learning >= high_skill_rating }
+		bonus_to_all_types_effect = yes
+		if = {
+			limit = { has_lifestyle = learning_lifestyle }
+			add_learning_lifestyle_xp = major_lifestyle_experience
+		}
+		else = {
+			add_character_modifier = keen_eye_modifier
+		}
+		stress_impact = {
+			base = major_stress_impact_loss
+			zealous = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_trait = zealous
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				is_ai = yes
+				has_variable = created_random_merchant_var #we only kill them if we created them, not if they came from the pool
+			}
+			scope:relic_merchant = {
+				if = {
+					limit = {
+						root = { is_ai = yes }
+					}
+					silent_disappearance_effect = yes
+				}
+			}
+			remove_variable = created_random_merchant_var
+		}
+	}
+}
+pilgrimage.6780 = {# Recruit skillful local
+	type = activity_event
+	title = pilgrimage.6780.t
+	desc = pilgrimage.6780.desc
+	theme = pilgrimage_destination
+	override_background = { reference = relaxing_room }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:stolen_courtier
+		animation = thinking
+	}
+	lower_center_portrait = scope:current_employer
+	cooldown = { years = 1 }
+	trigger = {
+		location.county.holder ?= {
+			is_ai = yes
+			NOT = { this = root }
+			OR = {
+				any_court_position_holder = {
+					location = root.location
+					is_physically_able_adult = yes
+				}
+				any_courtier_or_guest = {
+					has_any_high_skill_rating = yes
+					is_physically_able_adult = yes
+				}
+			}
+		}
+	}
+	immediate = {
+		location.county.holder = { save_scope_as = current_employer }
+		if = {
+			limit = {
+				scope:current_employer = {
+					any_court_position_holder = {
+						location = root.location
+						is_physically_able_adult = yes
+						is_available = yes
+					}
+				}
+			}
+			scope:current_employer = {
+				random_court_position_holder = {
+					limit = {
+						location = root.location
+						is_physically_able_adult = yes
+						is_available = yes
+					}
+					save_scope_as = stolen_courtier
+				}
+			}
+		}
+		else = {
+			scope:current_employer = {
+				random_courtier_or_guest = {
+					limit = {
+						is_physically_able_adult = yes
+						has_any_high_skill_rating = yes
+						is_available = yes
+					}
+					save_scope_as = stolen_courtier
+				}
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+	}
+	#Hey you wanna come work for me?
+	option = {
+		name = pilgrimage.6780.a
+		pay_short_term_gold = {
+			target = scope:stolen_courtier
+			gold = minor_gold_value
+		}
+		custom_tooltip = obligation_hook_tt
+		add_hook = {
+			type = obligation_hook
+			target = scope:stolen_courtier
+		}
+		involved_activity ?= {
+			add_activity_log_entry = {
+				key = pilgrimage_recruited_courtier_log
+				tags = { good }
+				score = 50
+				character = root
+				target = scope:stolen_courtier
+
+				#Effects
+				root = {
+					recruit_to_entourage_court_and_activity_effect = { 
+						CHAR_TO_ADD = scope:stolen_courtier 
+						NEW_COURT_OWNER = root 
+					}
+				}
+			}
+		}
+		hidden_effect = {
+			reverse_add_opinion = {
+				target = scope:stolen_courtier
+				modifier = recruited_me_opinion
+				opinion = 30
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					scope:stolen_courtier = {
+						is_of_major_or_minor_interest_trigger = { CHARACTER = scope:stolen_courtier }
+					}
+					NOT = { has_relation_nemesis = scope:current_employer }
+				}
+			}
+			progress_towards_rival_effect = {
+				REASON = pilgrimage_poached_courtier
+				CHARACTER = scope:current_employer
+				OPINION = -10
+			}
+		}
+		else = {
+			scope:current_employer = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -20
+				}
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			avaricious = minor_stress_impact_gain
+			honest = minor_stress_impact_gain
+			loyal = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = greedy
+					has_trait = avaricious
+					has_trait = honest
+					has_trait = loyal
+				}
+			}
+		}
+	}
+	#My court is so much better than this one
+	option = {
+		name = pilgrimage.6780.b
+		trigger = { diplomacy >= high_skill_rating } 
+		show_as_unavailable = { diplomacy < high_skill_rating }
+		skill = diplomacy
+		duel = {
+			skill = diplomacy
+			target = scope:current_employer
+			50 = { #you convince them
+				desc = pilgrimage.6780.b.success.desc
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+				}
+				send_interface_toast = {
+					title = pilgrimage.6780.b.success.t
+					left_icon = root
+					right_icon = scope:stolen_courtier
+					involved_activity ?= {
+						add_activity_log_entry = {
+							key = pilgrimage_recruited_courtier_log
+							tags = { good }
+							score = 50
+							character = root
+							target = scope:stolen_courtier
+
+							#Effects
+							root = {
+								recruit_to_entourage_court_and_activity_effect = { 
+									CHAR_TO_ADD = scope:stolen_courtier 
+									NEW_COURT_OWNER = root 
+								}
+							}
+						}
+					}
+				}
+				hidden_effect = {
+					reverse_add_opinion = {
+						target = scope:stolen_courtier
+						modifier = recruited_me_opinion
+						opinion = 30
+					}
+				}
+			}
+			50 = { #theyre not impressed
+				desc = pilgrimage.6780.b.failure.desc
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = 5
+				}
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = pilgrimage.6780.b.failure.t
+					right_icon = scope:stolen_courtier
+					desc = pilgrimage.6780.b.failure.desc
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					scope:stolen_courtier = {
+						is_of_major_or_minor_interest_trigger = { CHARACTER = scope:stolen_courtier }
+					}
+					NOT = { has_relation_nemesis = scope:current_employer }
+				}
+			}
+			progress_towards_rival_effect = {
+				REASON = pilgrimage_poached_courtier
+				CHARACTER = scope:current_employer
+				OPINION = -10
+			}
+		}
+		else = {
+			scope:current_employer = {
+				add_opinion = {
+					target = root
+					modifier = angry_opinion
+					opinion = -20
+				}
+			}
+		}
+		stress_impact = {
+			honest = medium_stress_impact_gain
+			loyal = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = honest
+					has_trait = loyal
+				}
+			}
+		}
+	}
+	#I don't care enough
+	option = {
+		name = pilgrimage.6780.c
+		scope:current_employer = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}
+		stress_impact = {
+			ambitious = minor_stress_impact_gain
+			deceitful = minor_stress_impact_gain
+			disloyal = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = ambitious
+					has_trait = deceitful
+					has_trait = disloyal
+				}
+			}
+		}
+	}
+}
+pilgrimage.6540 = {# Find some exotic wares
+	type = activity_event
+	title = pilgrimage.6540.t
+	desc = pilgrimage.6540.desc
+	theme = pilgrimage_destination
+	override_background = { reference = market }
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = {
+				has_trait = zealous
+			}
+			animation = disapproval
+		}
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:6540_vendor
+		animation = personality_greedy
+	}
+	cooldown = { years = 10 }
+	trigger = { 
+		#This is more for human flavor
+		is_ai = no 
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			scope:activity = {
+				has_activity_option = {
+					category = special_type
+					option = pilgrimage_type_worldly
+				}
+			}
+			factor = 2
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_pool_character = {
+					province = root.location
+					6540_wares_vendor_trigger = yes
+				}
+			}
+			random_pool_character = {
+				province = root.location
+				limit = { 6540_wares_vendor_trigger = yes }
+				save_scope_as = 6540_vendor
+			}
+		}
+		else = {
+			create_character = {
+				location = root.location
+				random_traits_list = {
+					count = 1
+					education_stewardship_1 = {}
+					education_stewardship_2 = {}
+					education_stewardship_3 = {}
+					education_stewardship_4 = {}
+				}
+				random_traits = yes
+				dynasty = none
+				faith = root.location.county.faith
+				culture = root.location.county.culture
+				gender_female_chance = 50
+				stewardship = {
+					min_template_decent_skill
+					max_template_decent_skill
+				}
+				save_scope_as = 6540_vendor
+			}
+			scope:6540_vendor = { add_character_flag = created_merchant }
+		}
+	}
+	#Buy the goods
+	option = {
+		name = pilgrimage.6540.a
+		flavor = pilgrimage.6540.a.flavor
+		worldly_type_option_effect = yes
+		custom_tooltip = pilgrimage.6540.a.tt
+		pay_short_term_gold = {
+			target = scope:6540_vendor
+			gold = minor_gold_value
+		}
+		involved_activity = {
+			add_activity_log_entry = {
+				key = pilgrimage_exotic_wares_log
+				tags = { destination_event }
+				score = 50
+				character = root
+
+				#Effects
+				root = {
+					add_character_modifier = {
+						modifier = pilgrimage_exotic_wares_modifier
+					}
+				}
+			}
+		}
+		set_variable = {
+			name = 6540_exotic_wares_cost
+			value = minor_gold_value
+		}
+		stress_impact = { zealous = minor_stress_impact_gain }
+	}
+	#High stewardship; better goods!
+	option = {
+		name = pilgrimage.6540.b
+		flavor = pilgrimage.6540.b.flavor
+		trigger = { stewardship >= high_skill_rating }
+		worldly_type_option_effect = yes
+		custom_tooltip = pilgrimage.6540.a.tt
+		pay_short_term_gold = {
+			target = scope:6540_vendor
+			gold = medium_gold_value
+		}
+		involved_activity = {
+			add_activity_log_entry = {
+				key = pilgrimage_exotic_wares_log
+				tags = { destination_event }
+				score = 50
+				character = root
+
+				#Effects
+				root = {
+					add_character_modifier = {
+						modifier = pilgrimage_super_exotic_wares_modifier
+					}
+				}
+			}
+		}
+		set_variable = {
+			name = 6540_exotic_wares_cost
+			value = medium_gold_value
+		}
+		stress_impact = { zealous = minor_stress_impact_gain }
+	}
+	#Pass
+	option = {
+		name = pilgrimage.6540.c
+		if = {
+			limit = {
+				faith = {
+					NOT = { trait_is_virtue = greedy }
+				}
+			}
+			pious_type_option_effect = yes
+		}
+		stress_impact = { zealous = minor_stress_impact_loss }
+	}
+	after = {
+		if = {
+			limit = {
+				OR = {
+					has_character_modifier = pilgrimage_exotic_wares_modifier
+					has_character_modifier = pilgrimage_super_exotic_wares_modifier
+				}
+			}
+			set_variable = {
+				name = 6540_exotic_wares_location
+				value = root.location
+			}
+		}
+		scope:6540_vendor = {
+			if = {
+				limit = { has_character_flag = created_merchant }
+				if = {
+					limit = {
+						root = { is_ai = yes }
+					}
+					silent_disappearance_effect = yes
+				}
+			}
+		}
+	}
+}
+pilgrimage.6810 = {# Buy indulgences
+	type = activity_event
+	title = pilgrimage.6810.t
+	desc = pilgrimage.6810.desc
+	theme = pilgrimage_destination
+	override_background = {
+		trigger = {
+			NOR = {
+				religion = religion:hinduism_religion
+				religion = religion:jainism_religion
+				religion = religion:buddhism_religion
+				religion = religion:tengrism_religion
+			}
+		}
+		reference = temple
+	}
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:bishop_pilgrim
+		animation = personality_greedy
+	}
+	lower_left_portrait = {
+		trigger = { exists = scope:my_heir }
+		character = scope:my_heir
+	}
+	lower_right_portrait = scope:religious_head_scope
+	lower_center_portrait = {
+		trigger = { exists = scope:my_bishop }
+		character = scope:my_bishop
+	}
+	cooldown = { years = 1 }
+	trigger = {
+		faith = { religion_tag = christianity_religion } #this is basically a Christian thing
+		exists = faith.religious_head #you have a religious head
+		faith.religious_head = {
+			NOT = { this = root } #and it's not you
+			is_available_ai_adult = yes
+		}
+		exists = location.county.holder.cp:councillor_court_chaplain #there's also someone around to be handing out these
+		location.county.holder.cp:councillor_court_chaplain.faith = faith.religious_head.faith #and they're the same faith (and, by extension, yours)
+	}
+	immediate = {
+		faith.religious_head = { save_scope_as = religious_head_scope }
+		location.county.holder.cp:councillor_court_chaplain = { save_scope_as = bishop_pilgrim }
+		if = {
+			limit = { exists = root.player_heir }
+			player_heir = { save_scope_as = my_heir }
+		}
+		if = {
+			limit = {
+				exists = cp:councillor_court_chaplain
+				current_travel_plan ?= {
+					any_entourage_character = {
+						this = root.cp:councillor_court_chaplain
+					}
+				}
+			}
+			cp:councillor_court_chaplain = { save_scope_as = my_bishop }
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			OR = { #you're in a religious journey
+				has_activity_intent = zealot_intent
+				scope:activity = {
+					has_activity_option = {
+						category = special_type
+						option = pilgrimage_type_pious
+					}
+				}
+			}
+		}
+	}
+	#Buy one
+	option = {
+		name = pilgrimage.6810.a
+		pious_type_option_effect = yes
+		pay_short_term_gold = {
+			target = scope:bishop_pilgrim
+			gold = {
+				value = medium_gold_value
+				max = 25
+			}
+		}
+		add_piety = medium_piety_gain
+		pilgrimage_6810_friend_effect = yes
+		if = {
+			limit = {
+				faith = { trait_is_virtue = greedy }
+			}
+			stress_impact = {
+				greedy = medium_stress_impact_loss
+			}
+		}
+		else = {
+			stress_impact = {
+				honest = minor_stress_impact_gain
+				just = medium_stress_impact_gain
+			}
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0.5
+				has_trait = greedy
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = honest
+					has_trait = just
+				}
+			}
+			modifier = {
+				factor = 0
+				short_term_gold <= medium_gold_value
+			}
+		}
+	}
+	#Buy one for your heir
+	option = {
+		name = pilgrimage.6810.b
+		trigger = { exists = scope:my_heir }
+		pious_type_option_effect = yes
+		pay_short_term_gold = {
+			target = scope:bishop_pilgrim
+			gold = {
+				value = medium_gold_value
+				max = 25
+			}
+		}
+		add_piety = medium_piety_gain
+		scope:my_heir = { pilgrimage_6810_friend_effect = yes }
+		if = {
+			limit = {
+				faith = { trait_is_virtue = greedy }
+			}
+			stress_impact = {
+				greedy = medium_stress_impact_loss
+				generous = medium_stress_impact_loss
+			}
+		}
+		else = {
+			stress_impact = {
+				honest = minor_stress_impact_gain
+				just = medium_stress_impact_gain
+				generous = medium_stress_impact_loss
+			}
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 1.5
+				has_trait = generous
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_trait = greedy
+					has_trait = callous
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = honest
+					has_trait = just
+				}
+			}
+			modifier = {
+				factor = 0
+				short_term_gold <= medium_gold_value
+			}
+		}
+	}
+	#This is immoral
+	option = {
+		name = pilgrimage.6810.c
+		worldly_type_option_effect = yes
+		if = {
+			limit = { has_lifestyle = learning_lifestyle }
+			add_learning_lifestyle_xp = minor_lifestyle_experience
+		}
+		else_if = {
+			limit = { has_lifestyle = diplomacy_lifestyle }
+			add_diplomacy_lifestyle_xp = minor_lifestyle_experience
+		}
+		stress_impact = {
+			cynical = medium_stress_impact_loss
+			deceitful = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = deceitful
+					has_trait = arbitrary
+					has_trait = callous
+				}
+			}
+		}
+	}
+}
+pilgrimage.6820 = {# pilgrim's guide
+	type = activity_event
+	title = pilgrimage.6820.t
+	desc = pilgrimage.6820.desc
+	theme = pilgrimage_destination
+	override_background = { reference = market }
+	left_portrait = {
+		character = root
+		animation = personality_greedy
+	}
+	right_portrait = {
+		character = scope:guide_merchant
+		animation = beg
+	}
+	artifact = {
+		target = scope:guide_scope
+		position = lower_center_portrait
+	}
+	cooldown = { years = 1 }
+	trigger = {
+		#triggered by the on_action
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_pool_character = {
+					province = root.location
+					pilgrimage_6820_trigger = yes
+				}
+			}
+			random_pool_character = {
+				province = root.location
+				limit = { pilgrimage_6820_trigger = yes }
+				save_scope_as = guide_merchant
+			}
+		}
+		else = {
+			create_character = {
+				template = merchant_template
+				dynasty = none
+				location = root.location
+				culture = root.location.culture
+				faith = root.location.faith
+				save_scope_as = guide_merchant
+			}
+			set_variable = guide_merchant_var
+		}
+		hidden_effect_new_object = {
+			scope:guide_merchant = {
+				if = {
+					limit = { artifact_use_indian_building_visuals_trigger = yes }
+					create_artifact = {
+						name = pilgrim_guide_artifact
+						description = pilgrim_guide_artifact_desc
+						type = miscellaneous
+						visuals = indian_book
+						modifier = artifact_monthly_piety_2_modifier
+						modifier = artifact_diplomacy_1_modifier
+						save_scope_as = guide_scope
+					}
+				}
+				else = {
+					create_artifact = {
+						name = pilgrim_guide_artifact
+						description = pilgrim_guide_artifact_desc
+						type = miscellaneous
+						visuals = book
+						modifier = artifact_monthly_piety_2_modifier
+						modifier = artifact_diplomacy_1_modifier
+						save_scope_as = guide_scope
+					}
+				}
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			has_lifestyle = diplomacy_lifestyle
+		}
+		modifier = {
+			factor = 2
+			scope:activity = {
+				has_activity_option = {
+					category = special_type
+					option = pilgrimage_type_worldly
+				}
+			}
+		}
+	}
+	#I wanna buy
+	option = {
+		name = pilgrimage.6820.a
+		worldly_type_option_effect = yes
+		pay_short_term_gold = {
+			target = scope:guide_merchant
+			gold = {
+				value = minor_gold_value
+				max = 5
+			}
+		}
+		scope:guide_scope = {
+			set_owner = {
+				target = root
+				history = {
+					type = purchased
+					actor = root
+					recipient = scope:guide_merchant #giver
+					location = root.location
+				}
+			}
+		}
+		current_travel_plan ?= {
+			add_travel_plan_modifier = { modifier = pilgrim_guide_modifier }
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			avaricious = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = greedy
+					has_trait = avaricious
+					has_trait = arrogant
+				}
+			}
+			modifier = {
+				factor = 0
+				gold <= medium_gold_value
+			}
+		}
+	}	
+	#You explain the place to them
+	option = {
+		name = pilgrimage.6820.b
+		flavor = pilgrim.6820.b.flavor
+		trigger = {
+			learning >= decent_skill_rating
+			diplomacy >= decent_skill_rating
+		}
+		show_as_unavailable = {
+			learning < decent_skill_rating
+			diplomacy < decent_skill_rating
+		}
+		bonus_to_all_types_effect = yes
+		add_character_modifier = {
+			modifier = local_expert_modifier
+			years = 10
+		}
+		random_list = {
+			80 = { }
+			20 = { add_diplomacy_skill = 1 }
+		}
+		current_travel_plan = {
+			add_travel_plan_modifier = {
+				modifier = pilgrim_guide_modifier
+			}
+		}
+		stress_impact = {
+			humble = medium_stress_impact_gain
+		}
+		hidden_effect = { destroy_artifact = scope:guide_scope } # Destroy the trinket if its not bought
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_trait = humble
+			}
+		}
+	}
+	#I don't need no guide
+	option = {
+		name = pilgrimage.6820.c
+		pious_type_option_effect = yes
+		add_piety = minor_piety_gain
+		hidden_effect = { destroy_artifact = scope:guide_scope } # Destroy the trinket if its not bought
+	}
+	after = {
+		if = {
+			limit = {
+				is_ai = yes
+				has_variable = guide_merchant_var
+			}
+			scope:guide_merchant = {
+				if = {
+					limit = {
+						root = { is_ai = yes }
+					}
+					silent_disappearance_effect = yes
+				}
+			}
+			remove_variable = guide_merchant_var
+		}
+	}
+}
+pilgrimage.6830 = {# Admire the holy site in a religious way
+	type = activity_event
+	title = pilgrimage.6830.t
+	desc = pilgrimage.6830.desc
+	theme = pilgrimage_destination
+	override_background = { reference = temple }
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = {
+				OR = {
+					has_trait = cynical
+					has_trait = lifestyle_reveler
+				}
+			}
+			animation = boredom
+		}
+		animation = personality_zealous
+	}
+	artifact = {
+		trigger = { exists = scope:votive_artifact }
+		target = scope:votive_artifact
+		position = lower_center_portrait
+	}
+	cooldown = { years = 1 }
+	trigger = {
+		has_activity_intent = reflection_intent
+		NOT = { religion = religion:tengrism_religion }
+	}
+	immediate = {
+		if = {
+			limit = {
+				any_character_artifact = {
+					is_equipped = no
+					artifact_durability < 50
+					NOR = { 
+						rarity = illustrious
+						rarity = famed 
+					}
+				}
+			}
+			random_character_artifact = {
+				limit = {
+					is_equipped = no
+					artifact_durability < 50
+					NOR = { 
+						rarity = illustrious
+						rarity = famed 
+					}
+				}
+				save_scope_as = votive_artifact
+			}
+		}
+		else_if = {
+			limit = {
+				any_character_artifact = {
+					is_equipped = no
+					NOR = { 
+						rarity = illustrious
+						rarity = famed 
+					}
+				}
+			}
+			random_character_artifact = {
+				limit = {
+					is_equipped = no
+					NOR = { 
+						rarity = illustrious
+						rarity = famed 
+					}
+				}
+				save_scope_as = votive_artifact
+			}
+		}
+		else_if = {
+			limit = {
+				any_character_artifact = { is_equipped = no }
+			}
+			random_character_artifact = {
+				limit = { is_equipped = no }
+				save_scope_as = votive_artifact
+			}
+		}
+		else = {
+			random_character_artifact = { save_scope_as = votive_artifact }
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			OR = { #you're in a reflection journey
+				has_activity_intent = reflection_intent
+				scope:activity = {
+					has_activity_option = {
+						category = special_type
+						option = pilgrimage_type_pious
+					}
+				}
+			}
+		}
+	}
+	#Pray
+	option = {
+		name = pilgrimage.6830.a
+		pious_type_option_effect = yes
+		add_piety = minor_piety_gain
+		stress_impact = {
+			base = medium_stress_impact_loss
+			arrogant = minor_stress_impact_gain
+			cynical = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_trait = arrogant
+				has_trait = cynical
+			}
+		}
+	}
+	#Admire the architecture
+	option = {
+		name = pilgrimage.6830.b
+		worldly_type_option_effect = yes
+		if = {
+			limit = { has_lifestyle = learning_lifestyle }
+			add_learning_lifestyle_xp = minor_lifestyle_experience
+		}
+		random_list = {
+			80 = {
+				add_character_modifier = {
+					modifier = architectural_interest_modifier
+					years = 10
+				}
+			}
+			20 = {
+				add_learning_skill = 1
+			}
+		}
+		stress_impact = {
+			base = medium_stress_impact_loss
+			zealous = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_trait = zealous
+			}
+		}
+	}
+	#Make a donation
+	option = {
+		name = pilgrimage.6830.c
+		trigger = {
+			exists = scope:votive_artifact
+			has_trait = pilgrim #Only pilgrim since you can't level up the hajj trait
+			has_trait_xp = {
+				trait = pilgrim
+				value < 100 #TODO_CD_EP2 Standardize less than MAX
+			}
+		}
+		custom_tooltip = pilgrimage.6830.c.tt
+		pious_type_option_effect = yes
+		add_piety = minor_piety_gain
+		add_trait_xp = {
+			trait = pilgrim
+			value = 20 #TODO_CD_EP2 Standardize MAJOR
+		}
+		hidden_effect = { destroy_artifact = scope:votive_artifact }
+		stress_impact = {
+			base = medium_stress_impact_loss
+			greedy = minor_stress_impact_gain
+			avaricious = minor_stress_impact_gain
+			cynical = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = greedy
+					has_trait = avaricious
+					has_trait = cynical
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					scope:votive_artifact = {
+						rarity = illustrious
+					}
+					scope:votive_artifact = {
+						rarity = famed
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				has_trait = zealous
+			}
+		}
+	}
+}
+pilgrimage.6840 = {# Ask a local priest to bless your artifact
+	type = activity_event
+	title = pilgrimage.6840.t
+	desc = pilgrimage.6840.desc
+	theme = pilgrimage_destination
+	override_background = {
+		trigger = {
+			NOR = {
+				religion = religion:hinduism_religion
+				religion = religion:jainism_religion
+				religion = religion:buddhism_religion
+				religion = religion:tengrism_religion
+			}
+		}
+		reference = temple
+	}
+	left_portrait = {
+		character = root
+		animation = beg
+	}
+	right_portrait = {
+		character = scope:blessed_bishop
+		animation = personality_zealous
+	}
+	artifact = {
+		target = scope:blessed_artifact
+		position = lower_center_portrait
+	}
+	cooldown = { years = 1 }
+	trigger = {
+		any_character_artifact = {
+			category = inventory
+		}
+	}
+	immediate = {
+		location = { save_scope_as = holy_site_scope }
+		if = {
+			limit = {
+				exists = location.county.holder.cp:councillor_court_chaplain
+				location.county.holder.cp:councillor_court_chaplain.faith = root.faith
+			}
+			location.county.holder.cp:councillor_court_chaplain = { save_scope_as = blessed_bishop }
+		}
+		else = {
+			create_character = {
+				template = priest_character_template
+				dynasty = none
+				location = root.location
+				culture = root.location.culture
+				faith = root.faith
+				save_scope_as = blessed_bishop
+			}
+			set_variable = created_blessed_bishop_var
+		}
+		if = {
+			limit = {
+				any_character_artifact = {
+					is_equipped = yes
+					rarity = illustrious
+				}
+			}
+			random_character_artifact = {
+				limit = {
+					is_equipped = yes
+					rarity = illustrious
+				}
+				save_scope_as = blessed_artifact
+			}
+		}
+		else_if = {
+			limit = {
+				any_character_artifact = { is_equipped = yes }
+			}
+			random_character_artifact = {
+				limit = { is_equipped = yes }
+				save_scope_as = blessed_artifact
+			}
+		}
+		else = { #inventory artifacts
+			random_character_artifact = {
+				save_scope_as = blessed_artifact
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			factor = 2
+			OR = { #you're in a religious journey
+				has_activity_intent = zealot_intent
+				scope:activity = {
+					has_activity_option = {
+						category = special_type
+						option = pilgrimage_type_pious
+					}
+				}
+			}
+		}
+	}
+	#Make my artifact more pious
+	option = {
+		name = pilgrimage.6840.a
+		pious_type_option_effect = yes
+		pay_short_term_gold = {
+			target = scope:blessed_bishop
+			gold = {
+				value = medium_gold_value
+				max = 15
+			}
+		}
+		add_piety = minor_piety_gain
+		scope:blessed_artifact = {
+			add_durability = 10
+			custom_tooltip = {
+				text = pilgrimage.6840.a.tt
+				add_artifact_modifier = artifact_monthly_piety_gain_mult_1_modifier
+			}
+			set_artifact_description = blessed_artifact_desc
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			avaricious = minor_stress_impact_gain
+			humble = minor_stress_impact_gain
+			cynical = minor_stress_impact_gain
+			zealous = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = greedy
+					has_trait = avaricious
+					has_trait = humble
+					has_trait = cynical
+				}
+			}
+			modifier = {
+				factor = 0
+				gold < major_gold_value
+			}
+		}
+	}
+	#Make my artifact stronger
+	option = {
+		name = pilgrimage.6840.b
+		worldly_type_option_effect = yes
+		pay_short_term_gold = {
+			target = scope:blessed_bishop
+			gold = {
+				value = medium_gold_value
+				max = 15
+			}
+		}
+		add_piety = minor_piety_gain
+		scope:blessed_artifact = {
+			add_durability = 10
+			custom_tooltip = {
+				text = pilgrimage.6840.b.tt
+				add_artifact_modifier = artifact_monthly_prestige_5_modifier
+			}
+			set_artifact_description = blessed_artifact_desc
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			avaricious = minor_stress_impact_gain
+			humble = minor_stress_impact_gain
+			zealous = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					has_trait = greedy
+					has_trait = avaricious
+					has_trait = humble
+					has_trait = zealous
+				}
+			}
+			modifier = {
+				factor = 0
+				gold < major_gold_value
+			}
+		}
+	}
+	#I don't need no blessing
+	option = {
+		name = pilgrimage.6840.c
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 1
+				ai_zeal = -1
+			}
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				is_ai = yes
+				has_variable = created_blessed_bishop_var
+			}
+			scope:blessed_bishop = {
+				if = {
+					limit = {
+						root = { is_ai = yes }
+					}
+					silent_disappearance_effect = yes
+				}
+			}
+			remove_variable = created_blessed_bishop_var
+		}
+	}
+}
+#######################################
+# Intent Destination Events
+#######################################
+
+#######################################
+# Catholic Liturgical Year EVents
+#######################################
+
+#######################################
+# Norman Conquest Stuff
+#######################################
+
+#######################################
+# Norman Conquest Stuff
+#######################################
+
+#######################################
+# Norman Conquest Stuff
+#######################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
