@@ -164,6 +164,234 @@ bryten_pilgrimage_destination_events = {# Events that happen while remaining on-
 		100 = bryten_pilgrimage.328 # Visiting During Easter Time
 	}
 }
+
+bryten_pilgrimage_carnival_destination_events = {# Events that happen while remaining on-site during Carnival time
+	random_events = {
+		# St. Davids Pilgrimage specific
+		100 = bryten_pilgrimage.141 # Visiting the tomb of st. David
+		100 = bryten_pilgrimage.142 # Praying in Durham Cathedral
+		100 = bryten_pilgrimage.143 # Feast Day Procession - 1st of March
+		# St. Edmunds Pilgrimage specific
+		100 = bryten_pilgrimage.101 # Praying in St. Edmunds Abbey 
+		100 = bryten_pilgrimage.102 # Visiting Edmund's tomb
+		100 = bryten_pilgrimage.103 # Feast Day Procession - 20th of November
+		# Durham Pilgrimage specific
+		100 = bryten_pilgrimage.126 # Praying in St. Davids Cathedral
+		100 = bryten_pilgrimage.127 # Visiting the Tomb of the Venerable Bede
+		100 = bryten_pilgrimage.128 # PVisiting the Tomb of St. Cuthbert.
+		100 = bryten_pilgrimage.129 # Feast Day Procession - 20th of March
+		# Carnival time events
+		120 = bryten_pilgrimage.301 # Carnival vs Lent
+		120 = bryten_pilgrimage.302 # Appreciation
+		120 = bryten_pilgrimage.303 # Appreciation
+		120 = bryten_pilgrimage.304 # Appreciation
+		120 = bryten_pilgrimage.305 # Appreciation
+		120 = bryten_pilgrimage.306 # Appreciation
+		120 = bryten_pilgrimage.307 # Corpus Christi
+		120 = bryten_pilgrimage.308 # Shrove Tuesday
+		# General Destination Events
+		100 = bryten_pilgrimage.350 # Ask local priest to bless your artifact
+		120 = bryten_pilgrimage.351 # Appreciation
+		150 = bryten_pilgrimage.352 # Repentance - remove secret/coping trait
+		120 = bryten_pilgrimage.353 # Buy a pilgrims' guide
+		100 = bryten_pilgrimage.354 # Buy a relic
+		100 = bryten_pilgrimage.355 # Recruit local expert
+		100 = bryten_pilgrimage.356 # Find some exotic wares
+		100 = bryten_pilgrimage.357 # Do you wanna buy an indulgence?
+		120 = bryten_pilgrimage.358 # The Disputation of GetCurrentLocation
+		# Intent Destination events
+		100 = bryten_pilgrimage.359 # An entourage member feels a religious calling
+		100 = bryten_pilgrimage.360 # Communal Prayer
+		100 = bryten_pilgrimage.361 # Silent Contemplation
+		100 = bryten_pilgrimage.362 # Charity to the Poor
+		100 = bryten_pilgrimage.363 # Donating to the Church
+		100 = bryten_pilgrimage.364 # Donating to Travellers
+		100 = bryten_pilgrimage.365 # Foreign Customs
+		100 = bryten_pilgrimage.366 # Seeing the sights
+		100 = bryten_pilgrimage.367 # Studying the Bible
+		100 = bryten_pilgrimage.368 # Visiting Markets
+	}
+}
+bryten_pilgrimage_lent_destination_events = {# Events that happen while remaining on-site during Lent
+	random_events = {
+		# St. Davids Pilgrimage specific
+		100 = bryten_pilgrimage.141 # Visiting the tomb of st. David
+		100 = bryten_pilgrimage.142 # Praying in Durham Cathedral
+		100 = bryten_pilgrimage.143 # Feast Day Procession - 1st of March
+		# St. Edmunds Pilgrimage specific
+		100 = bryten_pilgrimage.101 # Praying in St. Edmunds Abbey 
+		100 = bryten_pilgrimage.102 # Visiting Edmund's tomb
+		100 = bryten_pilgrimage.103 # Feast Day Procession - 20th of November
+		# Durham Pilgrimage specific
+		100 = bryten_pilgrimage.126 # Praying in St. Davids Cathedral
+		100 = bryten_pilgrimage.127 # Visiting the Tomb of the Venerable Bede
+		100 = bryten_pilgrimage.128 # PVisiting the Tomb of St. Cuthbert.
+		100 = bryten_pilgrimage.129 # Feast Day Procession - 20th of March
+		# Lent time events
+		120 = bryten_pilgrimage.310 # Appreciation
+		120 = bryten_pilgrimage.311 # Appreciation
+		120 = bryten_pilgrimage.312 # Appreciation
+		120 = bryten_pilgrimage.313 # Appreciation
+		120 = bryten_pilgrimage.314 # Appreciation
+		120 = bryten_pilgrimage.315 # Appreciation
+		120 = bryten_pilgrimage.316 # Appreciation
+		120 = bryten_pilgrimage.317 # Appreciation
+		# General Destination Events
+		100 = bryten_pilgrimage.350 # Ask local priest to bless your artifact
+		120 = bryten_pilgrimage.351 # Appreciation
+		150 = bryten_pilgrimage.352 # Repentance - remove secret/coping trait
+		120 = bryten_pilgrimage.353 # Buy a pilgrims' guide
+		100 = bryten_pilgrimage.354 # Buy a relic
+		100 = bryten_pilgrimage.355 # Recruit local expert
+		100 = bryten_pilgrimage.356 # Find some exotic wares
+		100 = bryten_pilgrimage.357 # Do you wanna buy an indulgence?
+		120 = bryten_pilgrimage.358 # The Disputation of GetCurrentLocation
+		# Intent Destination events
+		100 = bryten_pilgrimage.359 # An entourage member feels a religious calling
+		100 = bryten_pilgrimage.360 # Communal Prayer
+		100 = bryten_pilgrimage.361 # Silent Contemplation
+		100 = bryten_pilgrimage.362 # Charity to the Poor
+		100 = bryten_pilgrimage.363 # Donating to the Church
+		100 = bryten_pilgrimage.364 # Donating to Travellers
+		100 = bryten_pilgrimage.365 # Foreign Customs
+		100 = bryten_pilgrimage.366 # Seeing the sights
+		100 = bryten_pilgrimage.367 # Studying the Bible
+		100 = bryten_pilgrimage.368 # Visiting Markets
+	}
+}
+bryten_pilgrimage_easter_destination_events = {# Events that happen while remaining on-site during Easter
+	random_events = {
+		# St. Davids Pilgrimage specific
+		100 = bryten_pilgrimage.141 # Visiting the tomb of st. David
+		100 = bryten_pilgrimage.142 # Praying in Durham Cathedral
+		100 = bryten_pilgrimage.143 # Feast Day Procession - 1st of March
+		# St. Edmunds Pilgrimage specific
+		100 = bryten_pilgrimage.101 # Praying in St. Edmunds Abbey 
+		100 = bryten_pilgrimage.102 # Visiting Edmund's tomb
+		100 = bryten_pilgrimage.103 # Feast Day Procession - 20th of November
+		# Durham Pilgrimage specific
+		100 = bryten_pilgrimage.126 # Praying in St. Davids Cathedral
+		100 = bryten_pilgrimage.127 # Visiting the Tomb of the Venerable Bede
+		100 = bryten_pilgrimage.128 # PVisiting the Tomb of St. Cuthbert.
+		100 = bryten_pilgrimage.129 # Feast Day Procession - 20th of March
+		# Easter time events
+		120 = bryten_pilgrimage.320 # Appreciation
+		120 = bryten_pilgrimage.321 # Appreciation
+		120 = bryten_pilgrimage.322 # Appreciation
+		120 = bryten_pilgrimage.323 # Appreciation
+		120 = bryten_pilgrimage.324 # Appreciation
+		120 = bryten_pilgrimage.325 # Appreciation
+		120 = bryten_pilgrimage.326 # Appreciation
+		120 = bryten_pilgrimage.327 # Appreciation
+		# General Destination Events
+		100 = bryten_pilgrimage.350 # Ask local priest to bless your artifact
+		120 = bryten_pilgrimage.351 # Appreciation
+		150 = bryten_pilgrimage.352 # Repentance - remove secret/coping trait
+		120 = bryten_pilgrimage.353 # Buy a pilgrims' guide
+		100 = bryten_pilgrimage.354 # Buy a relic
+		100 = bryten_pilgrimage.355 # Recruit local expert
+		100 = bryten_pilgrimage.356 # Find some exotic wares
+		100 = bryten_pilgrimage.357 # Do you wanna buy an indulgence?
+		120 = bryten_pilgrimage.358 # The Disputation of GetCurrentLocation
+		# Intent Destination events
+		100 = bryten_pilgrimage.359 # An entourage member feels a religious calling
+		100 = bryten_pilgrimage.360 # Communal Prayer
+		100 = bryten_pilgrimage.361 # Silent Contemplation
+		100 = bryten_pilgrimage.362 # Charity to the Poor
+		100 = bryten_pilgrimage.363 # Donating to the Church
+		100 = bryten_pilgrimage.364 # Donating to Travellers
+		100 = bryten_pilgrimage.365 # Foreign Customs
+		100 = bryten_pilgrimage.366 # Seeing the sights
+		100 = bryten_pilgrimage.367 # Studying the Bible
+		100 = bryten_pilgrimage.368 # Visiting Markets
+	}
+}
+bryten_pilgrimage_christmas_destination_events = {# Events that happen while remaining on-site during Christmas
+	random_events = {
+		# St. Davids Pilgrimage specific
+		100 = bryten_pilgrimage.141 # Visiting the tomb of st. David
+		100 = bryten_pilgrimage.142 # Praying in Durham Cathedral
+		100 = bryten_pilgrimage.143 # Feast Day Procession - 1st of March
+		# St. Edmunds Pilgrimage specific
+		100 = bryten_pilgrimage.101 # Praying in St. Edmunds Abbey 
+		100 = bryten_pilgrimage.102 # Visiting Edmund's tomb
+		100 = bryten_pilgrimage.103 # Feast Day Procession - 20th of November
+		# Durham Pilgrimage specific
+		100 = bryten_pilgrimage.126 # Praying in St. Davids Cathedral
+		100 = bryten_pilgrimage.127 # Visiting the Tomb of the Venerable Bede
+		100 = bryten_pilgrimage.128 # PVisiting the Tomb of St. Cuthbert.
+		100 = bryten_pilgrimage.129 # Feast Day Procession - 20th of March
+		# Christmastime events
+		120 = bryten_pilgrimage.330 # Appreciation
+		120 = bryten_pilgrimage.331 # Appreciation
+		120 = bryten_pilgrimage.332 # Appreciation
+		120 = bryten_pilgrimage.333 # Appreciation
+		120 = bryten_pilgrimage.334 # Appreciation
+		120 = bryten_pilgrimage.335 # Appreciation
+		120 = bryten_pilgrimage.336 # Appreciation
+		120 = bryten_pilgrimage.337 # Appreciation
+		# General Destination Events
+		100 = bryten_pilgrimage.350 # Ask local priest to bless your artifact
+		120 = bryten_pilgrimage.351 # Appreciation
+		150 = bryten_pilgrimage.352 # Repentance - remove secret/coping trait
+		120 = bryten_pilgrimage.353 # Buy a pilgrims' guide
+		100 = bryten_pilgrimage.354 # Buy a relic
+		100 = bryten_pilgrimage.355 # Recruit local expert
+		100 = bryten_pilgrimage.356 # Find some exotic wares
+		100 = bryten_pilgrimage.357 # Do you wanna buy an indulgence?
+		120 = bryten_pilgrimage.358 # The Disputation of GetCurrentLocation
+		# Intent Destination events
+		100 = bryten_pilgrimage.359 # An entourage member feels a religious calling
+		100 = bryten_pilgrimage.360 # Communal Prayer
+		100 = bryten_pilgrimage.361 # Silent Contemplation
+		100 = bryten_pilgrimage.362 # Charity to the Poor
+		100 = bryten_pilgrimage.363 # Donating to the Church
+		100 = bryten_pilgrimage.364 # Donating to Travellers
+		100 = bryten_pilgrimage.365 # Foreign Customs
+		100 = bryten_pilgrimage.366 # Seeing the sights
+		100 = bryten_pilgrimage.367 # Studying the Bible
+		100 = bryten_pilgrimage.368 # Visiting Markets
+	}
+}
+bryten_pilgrimage_ordinary_destination_events = {# Events that happen while remaining on-site during during ordinary time
+	random_events = {
+		# St. Davids Pilgrimage specific
+		100 = bryten_pilgrimage.141 # Visiting the tomb of st. David
+		100 = bryten_pilgrimage.142 # Praying in Durham Cathedral
+		100 = bryten_pilgrimage.143 # Feast Day Procession - 1st of March
+		# St. Edmunds Pilgrimage specific
+		100 = bryten_pilgrimage.101 # Praying in St. Edmunds Abbey 
+		100 = bryten_pilgrimage.102 # Visiting Edmund's tomb
+		100 = bryten_pilgrimage.103 # Feast Day Procession - 20th of November
+		# Durham Pilgrimage specific
+		100 = bryten_pilgrimage.126 # Praying in St. Davids Cathedral
+		100 = bryten_pilgrimage.127 # Visiting the Tomb of the Venerable Bede
+		100 = bryten_pilgrimage.128 # PVisiting the Tomb of St. Cuthbert.
+		100 = bryten_pilgrimage.129 # Feast Day Procession - 20th of March
+		# General Destination Events
+		100 = bryten_pilgrimage.350 # Ask local priest to bless your artifact
+		120 = bryten_pilgrimage.351 # Appreciation
+		150 = bryten_pilgrimage.352 # Repentance - remove secret/coping trait
+		120 = bryten_pilgrimage.353 # Buy a pilgrims' guide
+		100 = bryten_pilgrimage.354 # Buy a relic
+		100 = bryten_pilgrimage.355 # Recruit local expert
+		100 = bryten_pilgrimage.356 # Find some exotic wares
+		100 = bryten_pilgrimage.357 # Do you wanna buy an indulgence?
+		120 = bryten_pilgrimage.358 # The Disputation of GetCurrentLocation
+		# Intent Destination events
+		100 = bryten_pilgrimage.359 # An entourage member feels a religious calling
+		100 = bryten_pilgrimage.360 # Communal Prayer
+		100 = bryten_pilgrimage.361 # Silent Contemplation
+		100 = bryten_pilgrimage.362 # Charity to the Poor
+		100 = bryten_pilgrimage.363 # Donating to the Church
+		100 = bryten_pilgrimage.364 # Donating to Travellers
+		100 = bryten_pilgrimage.365 # Foreign Customs
+		100 = bryten_pilgrimage.366 # Seeing the sights
+		100 = bryten_pilgrimage.367 # Studying the Bible
+		100 = bryten_pilgrimage.368 # Visiting Markets
+	}
+}
+
 #############################################
 # Return Events			
 #############################################
