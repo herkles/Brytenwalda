@@ -357,32 +357,28 @@ activity_bryten_english_pilgrimage = {
 						limit = {
 							involved_activity.activity_location.barony = title:b_durham
 						}
-						scope:host = { trigger_event = bryten_england.150 }
+						scope:host = { trigger_event = bryten_pilgrimage.125 }
 					}
 					else_if = {# Visiting Bury St. Edmunds
 						limit = {
 							involved_activity.activity_location.barony = title:b_beodericsworth
 						}
-						scope:host = { trigger_event = bryten_england.132 }
+						scope:host = { trigger_event = bryten_pilgrimage.100 }
 					}
-					else_if = {# Visiting Bury St. Davids
+					else_if = {# Visiting St. Davids
 						limit = {
 							involved_activity.activity_location.barony = title:b_st_davids
 						}
-						scope:host = { trigger_event = bryten_wales.100 }
+						scope:host = { trigger_event = bryten_pilgrimage.140 }
 					}					
 				}
 			}
-			on_monthly_pulse = {# Things to do in each place.
-				trigger_event = { on_action = british_pilgrimage_destination_events }
-			}
-			on_end = {# When the pilgrimage is over
-				if = {
-					limit = { this = scope:host }
-					bryten_british_pilgrimage_reward_effect = yes 
-					# Conclusion event
-					trigger_event = pilgrimage.7000 
-				}
+			on_end = {# When the Pilgrimage is over
+				# Run conclusion stuff here
+				# if = {
+				# 	limit = { this = scope:host }
+				# 	scope:activity = { progress_activity_phase_after = { weeks = 2 } }
+				# }
 			}
 		}
 	}
@@ -894,6 +890,4 @@ activity_bryten_english_pilgrimage = {
 		}
 	}
 }
-
-
 

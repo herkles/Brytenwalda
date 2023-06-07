@@ -12,7 +12,11 @@
 
   bryten_pilgrimage.102.t:0 "Visiting the Tomb of Saint Edmund the Martyr"
   bryten_pilgrimage.102.desc:0 "After visiting the Abbey of Bury Saint Edmunds,I am now at the tomb of Saint Edmund himself. The great King of East Anglia who was killed for his faith by the heathen Danes. Being in his tomb I feel a great deal of spiritual peace, as if the wise and pious Saint is guiding me to achieve greater things as a [ROOT.Char.GetTitledFirstName]."
-  bryten_pilgrimage.102.edmund:1 "I sit silently in prayer."
+  bryten_pilgrimage.102.cathedral:1 "I sit silently in prayer."
+
+  bryten_pilgrimage.110.t:0 "Departing Bury Saint Edmunds for Home."
+  bryten_pilgrimage.110.desc:0 "You have spent time in Bury Saint Edmunds, visiting the tomb of Saint Edmund the Martyr, and praying at the church. However it is time to return home. You and your companions begin making the preparations to return home."
+  bryten_pilgrimage.110.home:1 "Time to return home."
 
   # the memory
   bryten_english_pilgrimage_edmund_host_memory:0 "Went on a pilgrimage to Bury St. Edmunds."
@@ -39,6 +43,10 @@
   bryten_pilgrimage.128.desc:0 "I am now at the tomb of Saint Cuthbert. To imagine that such a holy man is buried here! Cuthbert helped to establish many monastries in the north of England, including the famous Lindisfarne. He was renowned for his piety. His body was moved from Lindisfarne to Durham where you now stand, due to the raids by the Danes for protection.Being in his tomb I feel a great deal of spiritual peace, as if the wise and pious Saint is guiding me to achieve greater things as a [ROOT.Char.GetTitledFirstName]." 
   bryten_pilgrimage.128.cuthbert:1 "I sit silently in prayer."
 
+  bryten_pilgrimage.129.t:0 "Departing Durham for Home."
+  bryten_pilgrimage.129.desc:0 "You have spent time in Durham. You have seen the sights, the church of Durham and visited the tombs of the Venerable Bede and Saint Cuthbert. However it is time to return home. You and your companions begin making the preparations to return home."
+  bryten_pilgrimage.129.home:1 "Time to return home."
+
   # the memory
   bryten_english_pilgrimage_durham_host_memory:0 "Went on a pilgrimage to Durham."
   bryten_visited_durham_first_perspective:0 "I went on a pilgrimage to Durham."
@@ -52,36 +60,149 @@
   bryten_pilgrimage.140.desc:0 "I have arrived in the center of Saint Davids. Pilgrims bustle about, no doubt here to visit Abbey at Bury Saint Edmunds and the city's other sights, just like me. I and my entourage decide to find appropriate lodgings for ourselves. Later, we will visit the Saint Davids Cathedral, and hopefully see the spiritual wonders stored within."
   bryten_pilgrimage.140.arrival:1 "I'm Glad to be here."
 
-  bryten_pilgrimage.141.t:0 "Meditating in the Saint Davids Cathedral"
-  bryten_pilgrimage.141.desc:0 "In the past few days, while at Saint Davids, I visited some other religious sites and met with some of the town's notables. Today, with all my other business taken care of, I can finally enter the Saint Davids Cathedral itself at last. It is a remarkable and splendid building, designed by a talented architect. I sit in the main part of the Cathedral, reflecting on my faith, and engaging in prayer."
-  bryten_pilgrimage.141.cathedral:1 "A marvelous place."
+  bryten_pilgrimage.141.t:0 "Visiting the Tomb of Saint Edmund the Martyr"
+  bryten_pilgrimage.141.desc:0 "After visiting the Saint Davids Cathedral,I am now at the tomb of Saint Edmund himself. The great King of East Anglia who was killed for his faith by the heathen Danes. Being in his tomb I feel a great deal of spiritual peace, as if the wise and pious Saint is guiding me to achieve greater things as a [ROOT.Char.GetTitledFirstName]."
+  bryten_pilgrimage.141.david:1 "I sit silently in prayer."
 
-  bryten_pilgrimage.142.t:0 "Visiting the Tomb of Saint Edmund the Martyr"
-  bryten_pilgrimage.142.desc:0 "After visiting the Saint Davids Cathedral,I am now at the tomb of Saint Edmund himself. The great King of East Anglia who was killed for his faith by the heathen Danes. Being in his tomb I feel a great deal of spiritual peace, as if the wise and pious Saint is guiding me to achieve greater things as a [ROOT.Char.GetTitledFirstName]."
-  bryten_pilgrimage.142.david:1 "I sit silently in prayer."
+  bryten_pilgrimage.142.t:0 "praying in the Saint Davids Cathedral"
+  bryten_pilgrimage.142.desc:0 "In the past few days, while at Saint Davids, I visited some other religious sites and met with some of the town's notables. Today, with all my other business taken care of, I can finally enter the Saint Davids Cathedral itself at last. It is a remarkable and splendid building, designed by a talented architect. I sit in the main part of the Cathedral, reflecting on my faith, and engaging in prayer."
+  bryten_pilgrimage.142.cathedral:1 "A marvelous place."
 
-  # the memory
+  bryten_pilgrimage.149.t:0 "Departing St. Davids for Home."
+  bryten_pilgrimage.149.desc:0 "You have spent time in St. Davids, visiting their church and the reliquary tomb of Saint David. However it is time to return home. You and your companions begin making the preparations to return home."
+  bryten_pilgrimage.149.home:1 "Time to return home."
+
+  # the memory 
   bryten_english_pilgrimage_st_davids_host_memory:0 "Went on a pilgrimage to St. Davids."
   bryten_visited_st_davids_first_perspective:0 "I went on a pilgrimage to St. Davids."  bryten_visited_st_davids_second_perspective:0 "You went on a pilgrimage to St. Davids."
   bryten_visited_st_davids_third_perspective:0 "[owner.GetName] went on a pilgrimage to St. Davids."
 
+#######################################
+# Intent Destination Events
+#######################################
 
 
+#######################################
+# Carnival Time Events
+#######################################
+  bryten_pilgrimage.301.t:0 "Carnival vs Lent"
+  bryten_pilgrimage.301.desc:0 "While visiting the town, you see a little play where Lent and Carnival are battling it out. It is a silly, and amusing performance, and while Carnival is extravagant, Lent is the one that comes out on top."
+  bryten_pilgrimage.301.a:1 "What a performance"
 
+  bryten_pilgrimage.302.t:0 "Visiting a Carnival Market"
+  bryten_pilgrimage.302.desc:0 "While visiting the town, you notice that the Carnival Market is set up. Where the artisans are selling their wares. This will be the last time before Eastertide comes around to get something nice. So perhaps I shall buy something?"
+  bryten_pilgrimage.302.a:1 "I think I will buy something"
+  bryten_pilgrimage.302.b:1 "Just Browsing"
 
+  bryten_pilgrimage.303.t:0 "Enjoying the Foods"
+  bryten_pilgrimage.303.desc:0 "I am enjoying the pilgrimage in the town during carnival. This is the last time to enjoy good food before Lent begins. Shall I enjoy the local food or not?"
+  bryten_pilgrimage.303.a:1 "I shall enjoy good food"
+  bryten_pilgrimage.303.b:1 "I shall not."
 
+  bryten_pilgrimage.304.t:0 "Indulging one's self"
+  bryten_pilgrimage.304.desc:0 "The time of Carnival is the time to feast and enjoy oneself, the time to indulge before the time of reflection and fasting of Lent. Shall you indulge yourself or restrain yourself."
+  bryten_pilgrimage.304.a:1 "Indulge yourself"
+  bryten_pilgrimage.304.b:1 "Restrain yourself"
 
+  bryten_pilgrimage.305.t:0 "Seeing a Carnival Play"
+  bryten_pilgrimage.305.desc:0 "While visiting the town, you watch a small play celebrating Carnival time and the preparation for lent. These are comedies and amusements and quite the enjoyable experience. This is a time to relax and enjoy oneself."
+  bryten_pilgrimage.305.play:1 "What Fun"
 
+  bryten_pilgrimage.307.t:0 "Celebrating Corpus Christi"
+  bryten_pilgrimage.307.desc:0 "While visiting the town it is the time for the feast of Corpus Christi. While this does mean visiting the local church for the religious procession and as a visiting noble your seat in the pews is near the altar. It also means the time to watch a Mystery play about the Christian Faith, that the local artisans put on."
+  bryten_pilgrimage.307.corpus_christi:1 "Quite the time."
 
+  bryten_pilgrimage.308.t:0 "Celebrating Shrove Tuesday"
+  bryten_pilgrimage.308.desc:0 "Today is one of the Last days before Lent. What this means is eating pancakes coated in honey or jams before Lent begins. The church bells ring, and the people make the pancakes. Quite an enjoyable time."
+  bryten_pilgrimage.308.pancakes:1 "Time for Pancakes"
+#######################################
+# Lent Time Events
+#######################################
+  bryten_pilgrimage.310.t:0 "Fasting during Lent"
+  bryten_pilgrimage.310.desc:0 "You have arrived during the time of Lent. As such, fasting and avoiding certain foods is common. This does make the trip a bit more to deal with but it does add to the spiritual feeling of connection to the teachings of Jesus."
+  bryten_pilgrimage.310.fast:1 "Time for a fast"
 
+  bryten_pilgrimage.311.t:0 "Religious Study?"
+  bryten_pilgrimage.311.desc:0 "You have arrived during the time of Lent. As such the local religious leaders have suggested studying some of the advice to princes written by the local monks and clergy, as well as the teachings of the Church Fathers and the Bible. Of course you can instead focus on seeing the sights. "
+  bryten_pilgrimage.311.study:1 "Focus on religious Study"
+  bryten_pilgrimage.311.sights:1 "See the Sights"
 
+  bryten_pilgrimage.312.t:0 "Dealing with the Abistance of Meat"
+  bryten_pilgrimage.312.desc:0 "You have to deal with the abstinence of meat since you have arrived during the time of Lent. As a lord you are used to receiving feasts of meat while you travel and visit places, but due to the religious timing of your visit you have to deal with the lack of meat."
+  bryten_pilgrimage.312.no_meat:1 "I can handle the lack of meat"
 
+  bryten_pilgrimage.313.t:0 "Have a Black Fast?"
+  bryten_pilgrimage.313.desc:0 "As it is the time of Lent, the local religious leaders ask if as a visiting noble, you will be undergoing a strict fast, also called a black Fast. This is a fast where you do not eat during the daylight hours, nor consume water during the day, and when you break your fast it is to be devoid of meat, eggs, and dairy products, as well as not including alcohol."
+  bryten_pilgrimage.313.a:1 "I will do a black fast"
+  bryten_pilgrimage.313.b:1 "I will not do a black fast"
 
+  bryten_pilgrimage.315.t:0 "Celebrating the Annucitation"
+  bryten_pilgrimage.315.desc:0 "While normally I would celebrate the Annucitation at my home church. However this time I am visiting a pilgrimage in England. As a visiting ruler, the local church has offered me a place near the front of the altar to watch the procession"
+  bryten_pilgrimage.315.annucitation:1 "Hail Mary Full of Grace"
+#######################################
+# Easter Time Events
+#######################################
+  bryten_pilgrimage.320.t:0 "New Clothes"
+  bryten_pilgrimage.320.desc:0 "I have arrived during the time of Easter, and the town is in a celebratory mood. Celebrating the resurrection of our Lord and Savior. This means the shops are once again open, and as such it is custom to get new clothes. Shall you buy something to bring home?"
+  bryten_pilgrimage.320.clothes:1 "I will buy some new clothes"
+  bryten_pilgrimage.320.dont_buy:1 "I will not buy some new clothes"
 
+  bryten_pilgrimage.321.t:0 "Eating Meat Again"
+  bryten_pilgrimage.321.desc:0 "I have arrived during the time of Easter, and the town is in a celebratory mood. Celebrating the resurrection of our Lord and Savior. What this means is that you are able to eat meat again. And you have been invited to the first feast of the town."
+  bryten_pilgrimage.321.meat:1 "delicious meat."
 
+  bryten_pilgrimage.322.t:0 "Feeding Servants"
+  bryten_pilgrimage.322.desc:0 "I have arrived during the time of Easter, and the town is in a celebratory mood. Celebrating the resurrection of our Lord and Savior. One custom is to show your magnanimity and generosity by feeding your servants. "
+  bryten_pilgrimage.322.feeding:1 "I am a generous Lord"
 
+  bryten_pilgrimage.324.t:0 "Celebrating Good Friday"
+  bryten_pilgrimage.324.desc:0 "While normally I would celebrate Good Friday at my home church. However this time I am visiting a pilgrimage in England. As a visiting ruler, the local church has offered me a place near the front of the altar to watch the procession"
+  bryten_pilgrimage.324.good:1 "Amen"
 
+  bryten_pilgrimage.325.t:0 "Celebrating Easter"
+  bryten_pilgrimage.325.desc:0 "While normally I would celebrate Easter at my home church. However this time I am visiting a pilgrimage in England. As a visiting ruler, the local church has offered me a place near the front of the altar to watch the procession"
+  bryten_pilgrimage.325.easter:1 "Amen"
 
+  bryten_pilgrimage.326.t:0 "Celebrating the Ascension"
+  bryten_pilgrimage.326.desc:0 "While normally I would celebrate the Ascension at my home church. However this time I am visiting a pilgrimage in England. As a visiting ruler, the local church has offered me a place near the front of the altar to watch the procession"
+  bryten_pilgrimage.326.ascension:1 "Amen"
+
+  bryten_pilgrimage.327.t:0 "Celebrating Pentecost"
+  bryten_pilgrimage.327.desc:0 "While normally I would celebrate Pentecost at my home church. However this time I am visiting a pilgrimage in England. As a visiting ruler, the local church has offered me a place near the front of the altar to watch the procession"
+  bryten_pilgrimage.327.pentecost:1 "Amen"
+#######################################
+# Christmas time Events
+#######################################
+  bryten_pilgrimage.331.t:0 "The Christmas Markets"
+  bryten_pilgrimage.331.desc:0 "While visiting the town, the town has set up their Christmas market. Many craftsmen and artisans are out and about selling their wares. I have the opportunity to bring something back with me once this pilgrimage is over."
+  bryten_pilgrimage.331.buy:1 "Buy something"
+  bryten_pilgrimage.331.dont:1 "Don't Buy something"
+
+  bryten_pilgrimage.332.t:0 "Mummer Plays"
+  bryten_pilgrimage.332.desc:0 "As I visit the town, I watch a mummer's play about the birth of our Saviour Jesus Christ. The play was an enjoyable diversion and celebration while I am visiting the town."
+  bryten_pilgrimage.332.show:1 "what a Show."
+
+  bryten_pilgrimage.333.t:0 "Wassailing"
+  bryten_pilgrimage.333.desc:0 "I notice that a number of people both rich and poor go door to door singing and knocking on doors. Even the local nobility go a wassailing, shall I join them and get some of this wassail or just watch."
+  bryten_pilgrimage.333.a:1 "Wassail! give me some ale!"
+  bryten_pilgrimage.333.b:1 "custom! What a neat custom"
+
+  bryten_pilgrimage.334.t:0 "Undergo a Nativity Fast"
+  bryten_pilgrimage.334.desc:0 "As this is Christmastime, the local religious leader wishes to know if I shall undergo a Nativity Fast, which follows the rules similar to the Lenten Fasts. "
+  bryten_pilgrimage.334.a:1 "Undergo the fast"
+  bryten_pilgrimage.334.b:1 "Dont undergot the fast"
+
+  bryten_pilgrimage.335.t:0 "Celebrating Advent"
+  bryten_pilgrimage.335.desc:0 "While normally I would celebrate Advent at my home church. However this time I am visiting a pilgrimage in England. As a visiting ruler, the local church has offered me a place near the front of the altar to watch the procession."
+  bryten_pilgrimage.335.advent:1 "Amen"
+
+  bryten_pilgrimage.336.t:0 "Celebrating Christmas"
+  bryten_pilgrimage.336.desc:0 "While normally I would celebrate Christmas at my home church. However this time I am visiting a pilgrimage in England. As a visiting ruler, the local church has offered me a place near the front of the altar to watch the procession."
+  bryten_pilgrimage.336.christmas:1 "Amen"
+
+  bryten_pilgrimage.337.t:0 "Celebrating Epiphany"
+  bryten_pilgrimage.337.desc:0 "While normally I would celebrate the feast of the Epiphany at my home church. However this time I am visiting a pilgrimage in England. As a visiting ruler, the local church has offered me a place near the front of the altar to watch the procession."
+  bryten_pilgrimage.337.epiphany:1 "Amen"
 
 
 

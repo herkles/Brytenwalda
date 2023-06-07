@@ -3,7 +3,351 @@
 #     British Pilgrimage effects      #
 #									  #
 #######################################
-resolve_pilgrimage_type_reward_effect = {
+bryten_pilgrimage_completed_log_entry_effect = {
+	involved_activity = {
+		add_activity_log_entry = {
+			key = pilgrimage_completed_log
+			tags = { completed }
+			score = 100
+			show_in_conclusion = yes
+			character = root
+			#Effects
+			root = {
+				#This effect applies traits/xp as appropriate and also calls give_pilgrimage_reward_effect
+				bryten_give_pilgrimage_reward_effect = yes
+			}
+		}
+	}
+}
+bryten_give_pilgrimage_reward_effect = {
+	if = {# Short Pilgrimage reward
+		limit = { short_pilgrimage_trigger = yes }
+		bryten_give_piety_reward_effect = { LENGTH = short }
+		bryten_give_pious_type_reward_effect = yes
+		bryten_give_worldly_type_reward_effect = yes
+	}
+	else_if = {# Medium Pilgrimage reward
+		limit = { medium_pilgrimage_trigger = yes }
+		bryten_give_piety_reward_effect = { LENGTH = medium }
+		bryten_give_pious_type_reward_effect = yes
+		bryten_give_worldly_type_reward_effect = yes
+	}	
+	else_if = {# Long Pilgrimage reward
+		limit = { long_pilgrimage_trigger = yes }
+		bryten_give_piety_reward_effect = { LENGTH = long }
+		bryten_give_pious_type_reward_effect = yes
+		bryten_give_worldly_type_reward_effect = yes
+	}	
+	else_if = {# Very Long Pilgrimage reward
+		limit = { very_long_pilgrimage_trigger = yes }
+		bryten_give_piety_reward_effect = { LENGTH = very_long }
+		bryten_give_pious_type_reward_effect = yes
+		bryten_give_worldly_type_reward_effect = yes
+	}
+
+	pilgrimage_additional_reward_effect = yes
+	remove_character_flag = should_get_trait_piety
+}
+bryten_give_piety_reward_effect = {
+	add_piety = {
+		value = $LENGTH$_pilgrimage_piety_gain
+		# Multipliers
+		## Depending on how well you clung to your intent, you may get a higher reward.
+		if = {
+			limit = { has_character_flag = perfect_pious_reward }
+			multiply = pilgrimage_perfect_pious_multiplier
+		}
+		else_if = {
+			limit = { has_character_flag = high_pious_reward }
+			multiply = pilgrimage_high_pious_multiplier
+		}
+		else_if = {
+			limit = { has_character_flag = mid_pious_reward }
+			multiply = pilgrimage_mid_pious_multiplier
+		}
+		else_if = {
+			limit = { has_character_flag = low_pious_reward }
+			multiply = pilgrimage_low_pious_multiplier
+		}
+		# Additives
+		## Experienced pilgrims may get more piety overall.
+		if = {
+			limit = { has_character_flag = should_get_trait_piety }
+			add = medium_piety_gain
+		}
+		## Certain activity options may give you more piety also.
+		if = {
+			limit = {
+				root.involved_activity = {
+					OR = {
+						has_activity_option = {
+							category = pilgrimage_option_pomp
+							option = pilgrimage_pomp_humble
+						}
+						has_activity_option = {
+							category = pilgrimage_option_pomp
+							option = pilgrimage_pomp_ceremonial
+						}
+					}
+				}
+			}
+			add = medium_piety_gain
+		}
+		else_if = {
+			limit = {
+				root.involved_activity = {
+					has_activity_option = {
+						category = pilgrimage_option_pomp
+						option = pilgrimage_pomp_throng
+					}
+				}
+			}
+			add = major_piety_gain
+		}
+	}
+}
+bryten_give_pious_type_reward_effect = {
+	if = {
+		limit = { 
+			has_trait = pilgrim #This should be awarded upon arrival from your first pilgrimage
+			has_trait_xp = {
+				trait = pilgrim
+				value < 20 
+			}
+		}
+		if = {
+			limit = { has_character_flag = perfect_pious_reward }
+			add_trait_xp = {
+				trait = pilgrim
+				value = 25 
+			}
+		}
+		if = {
+			limit = { has_character_flag = high_pious_reward }
+			add_trait_xp = {
+				trait = pilgrim
+				value = 15 
+			}
+		}
+		if = {
+			limit = { has_character_flag = mid_pious_reward }
+			add_trait_xp = {
+				trait = pilgrim
+				value = 5 
+			}
+		}
+		if = {
+			limit = { has_character_flag = low_pious_reward }
+			add_trait_xp = {
+				trait = pilgrim
+				value = 1 
+			}
+		}
+	}
+}
+bryten_give_worldly_type_reward_effect = {
+	if = {
+		limit = { has_character_flag = perfect_worldly_reward }
+		if = {
+			limit = { 
+				root.culture.culture_head = root
+				current_travel_plan = {
+					any_in_list = {
+						variable = visited_cultures_list
+						count > 0
+					}
+				}
+			}
+			current_travel_plan = {
+				if = {
+					limit = {
+						any_in_list = {
+							variable = visited_cultures_list
+							count > 5
+						}
+					}
+					every_in_list = {
+						variable = visited_cultures_list
+						custom = pilgrimage_cultural_acceptance_all_encountered.tt
+						change_cultural_acceptance = {
+							target = root.culture
+							value = pilgrimage_perfect_worldly_acceptance_value
+							desc = cultural_acceptance_gain_worldly_pilgrimage
+						}
+					}
+				}
+				else = {
+					every_in_list = {
+						variable = visited_cultures_list
+						custom = pilgrimage_cultural_acceptance_all_encountered.tt
+						change_cultural_acceptance = {
+							target = root.culture
+							value = pilgrimage_perfect_worldly_acceptance_value
+							desc = cultural_acceptance_gain_worldly_pilgrimage
+						}
+					}
+				}
+			}
+		}
+		else = {
+			add_character_modifier = {
+				modifier = pilgrimage_perfect_worldly_reward_modifier
+				years = 5
+			}
+		}
+	}
+	if = {
+		limit = { has_character_flag = high_worldly_reward }
+		if = {
+			limit = { 
+				root.culture.culture_head = root
+				current_travel_plan = {
+					any_in_list = {
+						variable = visited_cultures_list
+						count > 0
+					}
+				}
+			}
+			current_travel_plan = {
+				if = {
+					limit = {
+						any_in_list = {
+							variable = visited_cultures_list
+							count > 5
+						}
+					}
+					every_in_list = {
+						variable = visited_cultures_list
+						custom = pilgrimage_cultural_acceptance_all_encountered.tt
+						change_cultural_acceptance = {
+							target = root.culture
+							value = pilgrimage_high_worldly_acceptance_value
+							desc = cultural_acceptance_gain_worldly_pilgrimage
+						}
+					}
+				}
+				else = {
+					every_in_list = {
+						variable = visited_cultures_list
+						custom = pilgrimage_cultural_acceptance_all_encountered.tt
+						change_cultural_acceptance = {
+							target = root.culture
+							value = pilgrimage_high_worldly_acceptance_value
+							desc = cultural_acceptance_gain_worldly_pilgrimage
+						}
+					}
+				}
+			}
+		}
+		else = {
+			add_character_modifier = {
+				modifier = pilgrimage_high_worldly_reward_modifier
+				years = 5
+			}
+		}
+	}
+	if = {
+		limit = { has_character_flag = mid_worldly_reward }
+		if = {
+			limit = { 
+				root.culture.culture_head = root
+				current_travel_plan = {
+					any_in_list = {
+						variable = visited_cultures_list
+						count > 0
+					}
+				}
+			}
+			current_travel_plan = {
+				if = {
+					limit = {
+						any_in_list = {
+							variable = visited_cultures_list
+							count > 3
+						}
+					}
+					every_in_list = {
+						variable = visited_cultures_list
+						custom = pilgrimage_cultural_acceptance_all_encountered.tt
+						change_cultural_acceptance = {
+							target = root.culture
+							value = pilgrimage_mid_worldly_acceptance_value
+							desc = cultural_acceptance_gain_worldly_pilgrimage
+						}
+					}
+				}
+				else = {
+					every_in_list = {
+						variable = visited_cultures_list
+						custom = pilgrimage_cultural_acceptance_all_encountered.tt
+						change_cultural_acceptance = {
+							target = root.culture
+							value = pilgrimage_mid_worldly_acceptance_value
+							desc = cultural_acceptance_gain_worldly_pilgrimage
+						}
+					}
+				}
+			}
+		}
+		else = {
+			add_character_modifier = {
+				modifier = pilgrimage_mid_worldly_reward_modifier
+				years = 5
+			}
+		}
+	}
+	if = {
+		limit = { has_character_flag = low_worldly_reward }
+		if = {
+			limit = { 
+				root.culture.culture_head = root
+				current_travel_plan = {
+					any_in_list = {
+						variable = visited_cultures_list
+						count > 0
+					}
+				}	
+			}
+			current_travel_plan = {
+				if = {
+					limit = {
+						any_in_list = {
+							variable = visited_cultures_list
+							count > 5
+						}
+					}
+					every_in_list = {
+						variable = visited_cultures_list
+						custom = pilgrimage_cultural_acceptance_all_encountered.tt
+						change_cultural_acceptance = {
+							target = root.culture
+							value = pilgrimage_low_worldly_acceptance_value
+							desc = cultural_acceptance_gain_worldly_pilgrimage
+						}
+					}
+				}
+				else = {
+					every_in_list = {
+						variable = visited_cultures_list
+						custom = pilgrimage_cultural_acceptance_all_encountered.tt
+						change_cultural_acceptance = {
+							target = root.culture
+							value = pilgrimage_low_worldly_acceptance_value
+							desc = cultural_acceptance_gain_worldly_pilgrimage
+						}
+					}
+				}
+			}
+		}
+		else = {
+			add_character_modifier = {
+				modifier = pilgrimage_low_worldly_reward_modifier
+				years = 5
+			}
+		}
+	}
+}
+bryten_british_pilgrimage_reward_effect = {
 	involved_activity ?= {# Pious Type
 		if = {	
 			limit = {
@@ -94,4 +438,30 @@ resolve_pilgrimage_type_reward_effect = {
 		}
 	}
 }
+bryten_worldly_type_option_effect = {
+	involved_activity = {
+		if = {
+			limit = { bryten_activity_has_worldly_pilgrimage_type_trigger = yes }
+			custom_tooltip = pilgrimage_worldly_type_tt_positive
+			activity_special_type_progression_major = yes
+		}
+	}
+}
+bryten_pious_type_option_effect = {
+	involved_activity = {
+		if = {
+			limit = { bryten_activity_has_pious_pilgrimage_type_trigger = yes }
+			custom_tooltip = pilgrimage_pious_type_tt_positive
+			activity_special_type_progression_major= yes
+		}
+	}
+}
+bryten_bonus_to_all_types_effect = {
+	pious_type_option_effect = yes
+	worldly_type_option_effect = yes
+}
+
+
+
+
 

@@ -2287,6 +2287,9 @@ tribal_challenger_lost_effect = {
 	}
 }
 
+
+
+
 ##################################################
 # Found Cadet House Effects
 found_cadet_house_decision_effect = {
@@ -2385,8 +2388,9 @@ found_cadet_house_decision_effect = {
 }
 
 learn_language_linguist_effect = {
-	hidden_effect = { recruit_courtier = $LINGUIST$ }
+	hidden_effect = { add_courtier = $LINGUIST$ }
 	$LINGUIST$ = { save_scope_as = selected_linguist }
+	custom_tooltip = ep1_decision.0201.tt.aptitude
 	send_interface_toast = {
 		title = learn_court_language_toast_title
 		left_icon = root
@@ -2547,3 +2551,4 @@ linguist_random_realm_effect = {
 		scope:target_court_language = { save_scope_as = $CULTURE$_ruler }
 	}
 }
+
