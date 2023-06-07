@@ -512,6 +512,7 @@ norman_conquest_cb = {# William's Norman Conquest
 	max_ai_diplo_distance_to_title = 1000
 }
 norwegian_invasion_cb = {# Harold Hardrada's invansion
+	icon = invasion
 	group = event
 	mutually_exclusive_titles = {
 		always = yes
@@ -587,10 +588,15 @@ norwegian_invasion_cb = {# Harold Hardrada's invansion
 	
 	on_victory = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_high_effect = yes }
+
 		# Loc setup.
 		character:124 = { save_scope_as = tostig }
-		title:d_brambugh = { save_scope_as = brambugh}
+		title:d_northumberland = { save_scope_as = northumberland}
 		title:d_york = { save_scope_as = york }
+		title:d_lancaster = { save_scope_as = lancaster}
 		custom_tooltip = norwegian_invasion_cb_victory_with_tostig_desc
 		# Set land acquisition type to conquest.
 		hidden_effect = {
@@ -726,7 +732,7 @@ norwegian_invasion_cb = {# Harold Hardrada's invansion
 				}
 
 				#Grab the appropriate titles.
-				title:d_brambugh = {
+				title:d_northumberland = {
 					every_in_de_jure_hierarchy = {
 						continue = { tier >= tier_duchy }
 						add_to_list = tostig_reward_titles
@@ -738,6 +744,13 @@ norwegian_invasion_cb = {# Harold Hardrada's invansion
 						add_to_list = tostig_reward_titles
 					}
 				}
+				title:d_lancaster = {
+					every_in_de_jure_hierarchy = {
+						continue = { tier >= tier_duchy }
+						add_to_list = tostig_reward_titles
+					}
+				}
+
 				#Adjust titles.
 				hidden_effect = {
 					create_title_and_vassal_change = {
@@ -875,6 +888,10 @@ norwegian_invasion_cb = {# Harold Hardrada's invansion
 	
 	on_white_peace = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:attacker = { accolade_attacker_war_end_glory_gain_low_effect = yes }
+		scope:defender = { accolade_defender_war_end_glory_gain_med_effect = yes }
 		
 		# press claims
 		every_in_list = {
@@ -960,6 +977,9 @@ norwegian_invasion_cb = {# Harold Hardrada's invansion
 	
 	on_defeat = {
 		scope:attacker = { show_pow_release_message_effect = yes }
+
+		#EP2 accolade glory gain for winning against higher ranked enemy
+		scope:defender = { accolade_defender_war_end_glory_gain_high_effect = yes }
 	
 		# lose claims
 		if = {
@@ -1033,6 +1053,9 @@ norwegian_invasion_cb = {# Harold Hardrada's invansion
 	interface_priority = 60
 	
 	attacker_wargoal_percentage = 0.8
+	
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
 
 	should_show_war_goal_subview = yes
 	
