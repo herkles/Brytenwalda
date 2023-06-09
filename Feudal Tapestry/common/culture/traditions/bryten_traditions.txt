@@ -1456,23 +1456,11 @@ tradition_troubadour = {# Troubadour
 	}
 
 	is_shown = {
-		OR = {
-			has_cultural_pillar = heritage_goidelic 
-			has_cultural_pillar = heritage_brythonic 
-			this = culture:scottish # Scots can embrace it if they want.
-		}
+		has_cultural_pillar = language_occitano_romance 
 	}
 
 	can_pick = {
-		custom_tooltip = {
-			text = cannot_have_tradition_fp1_northern_stories
-			NOT = { culture_tradition:tradition_fp1_northern_stories = { is_in_list = traits } }
-		}
-		OR = {
-			has_cultural_pillar = heritage_goidelic 
-			has_cultural_pillar = heritage_brythonic 
-			this = culture:scottish # Scots can embrace it if they want.
-		}
+		has_cultural_pillar = language_occitano_romance 
 	}
 	
 	parameters = {
@@ -1483,6 +1471,185 @@ tradition_troubadour = {# Troubadour
 		poet_trait_romance_bonuses = yes
 	}
 	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_courtly }
+						any_in_list = { list = traits this = flag:ethos_communal }
+						any_in_list = { list = traits this = flag:ethos_spiritual }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_courtly_communal_or_spiritual_desc
+				}
+			}
+			if = {
+				limit = {
+					trigger_if = {
+						limit = {
+							scope:character = {
+								is_ai = no
+							}
+						}
+						NOT = {
+							any_ruler = {
+								count >= 3
+								culture = prev
+								primary_title.tier >= tier_county
+								has_trait = poet
+							}
+						}
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = rulers_with_poet_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = { # AI should avoid stacking traditions for courtly court positions
+				any_in_list = { list = traits this = flag:tradition_music_theory }
+			}
+			multiply = 0.25
+		}
+	}
+}
+tradition_languedoc_wine = {# Lengdeoc Wine
+	category = societal
+
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = diplomat.dds
+	}
+
+	is_shown = {
+		has_cultural_pillar = language_occitano_romance 
+	}
+
+	can_pick = {
+		has_cultural_pillar = language_occitano_romance 
+	}
+	
+	parameters = {
+		trade_ports_give_control_growth = yes
+		coastal_agriculture_building_bonuses = yes
+		coastal_holding_bonuses = yes
+	}
+	character_modifier = {
+		health = 0.25
+	}
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_courtly }
+						any_in_list = { list = traits this = flag:ethos_communal }
+						any_in_list = { list = traits this = flag:ethos_spiritual }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_courtly_communal_or_spiritual_desc
+				}
+			}
+			if = {
+				limit = {
+					trigger_if = {
+						limit = {
+							scope:character = {
+								is_ai = no
+							}
+						}
+						NOT = {
+							any_ruler = {
+								count >= 3
+								culture = prev
+								primary_title.tier >= tier_county
+								has_trait = poet
+							}
+						}
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = rulers_with_poet_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = { # AI should avoid stacking traditions for courtly court positions
+				any_in_list = { list = traits this = flag:tradition_music_theory }
+			}
+			multiply = 0.25
+		}
+	}
+}
+
+tradition_mediterranean_redoubt = {# Mediterranean Redoubt
+	category = societal
+
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = diplomat.dds
+	}
+
+	is_shown = {
+		has_cultural_pillar = language_occitano_romance 
+	}
+
+	can_pick = {
+		has_cultural_pillar = language_occitano_romance 
+	}
+	
+	parameters = {
+		trade_ports_give_control_growth = yes
+		trade_ports_give_levies = yes
+		can_travel_along_rivers = yes
+		trade_ports_stationed_maa_bonus = yes
+		coastal_holdings_give_defensive_bonus = yes
+	}
+	character_modifier = {
+		coastal_advantage = 5
+
+		embarkation_cost_mult = -0.25
+		sea_travel_danger = medium_sea_danger_reduction
+	}
+
 	cost = {
 		prestige = {
 			add = {
