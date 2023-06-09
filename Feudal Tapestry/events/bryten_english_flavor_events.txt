@@ -1860,15 +1860,17 @@ bryten_england.040 = {# Anglo-Norse Culture forming
 		# Rulers get the next decision
 		every_ruler = {
 			limit = {
-				culture = culture:norse
-				is_landed = yes
-				OR = {# Must own one of the Kingdoms
-					has_title = title:k_northumbria
-					has_title = title:k_mercia
-					has_title = title:k_wessex
-					has_title = title:k_east_anglia
-				}				
-				capital_province = { geographical_region = custom_england }
+				AND = {
+					culture = culture:norse
+					is_landed = yes
+					OR = {# Must own one of the Kingdoms
+						has_title = title:k_northumbria
+						has_title = title:k_mercia
+						has_title = title:k_wessex
+						has_title = title:k_east_anglia
+					}				
+					capital_province = { geographical_region = custom_england }
+				}
 			}
 			trigger_event = bryten_england.041
 		}
@@ -1896,6 +1898,18 @@ bryten_england.041 = {# Norse Ruled Realms
 	title = bryten_england.041.t
 	desc = bryten_england.041.desc
 	theme = culture_change
+
+	trigger = {# safety checks
+		culture = culture:norse
+		is_landed = yes
+		OR = {# Must own one of the Kingdoms
+			has_title = title:k_northumbria
+			has_title = title:k_mercia
+			has_title = title:k_wessex
+			has_title = title:k_east_anglia
+		}				
+		capital_province = { geographical_region = custom_england }
+	}
 
 	immediate = {
 		if = {# For Northumbria
