@@ -4,7 +4,7 @@ tags={
 	"Decisions"
 	"Events"
 	"Gameplay"
-}
-name="Feudal Tapestry - A Western European Overhaul"
+}apestry - A Western European Overhaul"
 supported_version="1.9.*"
-path="C:/Users/Sean Zeitler/Documents/Paradox Interactive/Crusader Kings III/mod/Brytenwalda/Brytenwalda"
+path="C:/User
+name="Feudal Ts/Sean Zeitler/Documents/Paradox Interactive/Crusader Kings III/mod/Brytenwalda/Feudal Tapestry"

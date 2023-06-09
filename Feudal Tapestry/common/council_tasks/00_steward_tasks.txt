@@ -1015,10 +1015,12 @@ task_promote_culture = {
 			else_if = {# Norse to Anglo-Norse
 				limit = {
 					scope:councillor_liege = {
-						culture = { has_cultural_pillar = heritage_north_germanic }
-						has_game_rule = bryten_british_culture_spreads_on
-						capital_province = { geographical_region = custom_england }
-						exists = global_var:bryten_anglo_norse_created
+						AND = {
+							culture = { has_cultural_pillar = heritage_north_germanic }
+							has_game_rule = bryten_british_culture_spreads_on
+							capital_province = { geographical_region = custom_england }
+							exists = global_var:bryten_anglo_norse_created
+						}
 					}
 				}
 				set_county_culture = culture:anglo_norse
