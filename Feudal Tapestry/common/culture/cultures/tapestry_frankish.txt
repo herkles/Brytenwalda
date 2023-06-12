@@ -3,7 +3,7 @@
 #############################################
 frankish = {# Frankish
 	color = frankish
-	
+
 	ethos = ethos_spiritual
 	heritage = heritage_frankish
 	language = language_frankish
@@ -12,6 +12,7 @@ frankish = {# Frankish
 		tradition_warrior_culture
 		tradition_hereditary_hierarchy
 		tradition_stand_and_fight
+		tradition_frankish_church
 	}
 	
 	name_list = name_list_frankish
@@ -30,8 +31,8 @@ frankish = {# Frankish
 }
 french = {# French
 	color = french
-	created = 862.1.1
-	parents = { frankish }
+	created = 842.2.14 # the Oaths of Strassbourg
+	parents = { gallo_roman frankish }
 	
 	ethos = ethos_courtly
 	heritage = heritage_frankish
@@ -87,7 +88,7 @@ norman = {# Norman
 	}	
 }
 #############################################
-# new d'Oil Cultures			
+# new Frankish Cultures			
 #############################################
 arpitan = {# Arpitan
 	color = hsv{ 0.62 0.9 0.7 }
@@ -115,6 +116,96 @@ arpitan = {# Arpitan
 		5 = caucasian_ginger
 		45 = caucasian_brown_hair
 		35 = caucasian_dark_hair
+	}	
+}
+poitevin = {# Poitevin
+	color = { 0 71 171 }
+	created = 862.1.1
+	parents = { gallo_roman frankish }
+	
+	ethos = ethos_spiritual
+	heritage = heritage_frankish
+	language = language_occitano_romance
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_chanson_de_geste
+		tradition_hereditary_hierarchy
+		tradition_chivalry
+		tradition_fishermen
+	}
+	
+	name_list = name_list_french
+	
+	coa_gfx = { french_coa_gfx frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = caucasian_blond
+		5 = caucasian_ginger
+		45 = caucasian_brown_hair
+		35 = caucasian_dark_hair
+	}	
+}
+burgundian = {# Burgundian
+	color = hsv{ 0.66 0.69 0.58 }
+	created = 862.1.1
+	parents = { gallo_roman frankish }
+	
+	ethos = ethos_courtly
+	heritage = heritage_frankish
+	language = language_french
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_chanson_de_geste
+		tradition_hereditary_hierarchy
+		tradition_chivalry
+		tradition_agrarian
+	}
+	
+	name_list = name_list_french
+	
+	coa_gfx = { french_coa_gfx frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = caucasian_blond
+		5 = caucasian_ginger
+		45 = caucasian_brown_hair
+		35 = caucasian_dark_hair
+	}	
+}
+lorrainian = {# Lorrainian
+	color = { 70 130 180 }
+	created = 862.1.1
+	parents = { gallo_roman frankish }
+	
+	ethos = ethos_courtly
+	heritage = heritage_frankish
+	language = language_french
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_parochialism
+		tradition_castle_keepers
+		tradition_poetry
+		tradition_rhine_valley
+	}
+	
+	name_list = name_list_french
+	
+	coa_gfx = { french_coa_gfx frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		25 = caucasian_blond
+		15 = caucasian_ginger
+		35 = caucasian_brown_hair
+		25 = caucasian_dark_hair
 	}	
 }
 picard = {# Picard
@@ -146,94 +237,7 @@ picard = {# Picard
 		35 = caucasian_dark_hair
 	}	
 }
-poitevin = {# Poitevin
-	color = { 0 71 171 }
-	created = 862.1.1
-	parents = { frankish }
-	
-	ethos = ethos_courtly
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_male_only
-	traditions = {
-		tradition_chanson_de_geste
-		tradition_hereditary_hierarchy
-		tradition_chivalry
-	}
-	
-	name_list = name_list_french
-	
-	coa_gfx = { french_coa_gfx frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	
-	ethnicities = {
-		10 = caucasian_blond
-		5 = caucasian_ginger
-		45 = caucasian_brown_hair
-		35 = caucasian_dark_hair
-	}	
-}
-burgundian = {# French
-	color = hsv{ 0.66 0.69 0.58 }
-	created = 862.1.1
-	parents = { frankish }
-	
-	ethos = ethos_courtly
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_male_only
-	traditions = {
-		tradition_chanson_de_geste
-		tradition_hereditary_hierarchy
-		tradition_chivalry
-	}
-	
-	name_list = name_list_french
-	
-	coa_gfx = { french_coa_gfx frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	
-	ethnicities = {
-		10 = caucasian_blond
-		5 = caucasian_ginger
-		45 = caucasian_brown_hair
-		35 = caucasian_dark_hair
-	}	
-}
-lorrainian = {# French
-	color = { 70 130 180 }
-	created = 862.1.1
-	parents = { frankish }
-	
-	ethos = ethos_courtly
-	heritage = heritage_frankish
-	language = language_french
-	martial_custom = martial_custom_male_only
-	traditions = {
-		tradition_chanson_de_geste
-		tradition_hereditary_hierarchy
-		tradition_chivalry
-	}
-	
-	name_list = name_list_french
-	
-	coa_gfx = { french_coa_gfx frankish_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	
-	ethnicities = {
-		10 = caucasian_blond
-		5 = caucasian_ginger
-		45 = caucasian_brown_hair
-		35 = caucasian_dark_hair
-	}	
-}
-walloon = {# French
+walloon = {# Wallon
 	color = { 204 204 255 }
 	created = 862.1.1
 	parents = { frankish }
@@ -262,6 +266,31 @@ walloon = {# French
 		35 = caucasian_dark_hair
 	}	
 }
-
-
-
+gallo = {# Gallo / Angevien / Mainse
+	color = { 0 147 175 }
+	created = 842.2.14 # the Oaths of Strassbourg
+	parents = { gallo_roman frankish }
+	
+	ethos = ethos_courtly
+	heritage = heritage_frankish
+	language = language_french
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_chanson_de_geste
+		tradition_chivalry
+	}
+	
+	name_list = name_list_french
+	
+	coa_gfx = { french_coa_gfx frankish_group_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = caucasian_blond
+		5 = caucasian_ginger
+		45 = caucasian_brown_hair
+		35 = caucasian_dark_hair
+	}	
+}

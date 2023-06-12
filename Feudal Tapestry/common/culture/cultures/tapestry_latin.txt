@@ -1,0 +1,40 @@
+﻿#############################################
+# Vanilla Cultures			
+#############################################
+
+#############################################
+# New Cultures			
+#############################################
+gallo_roman = {
+	color = { 0.5 0.1 0.1 }
+	created = 2.1.1 # Conquest of Gaul
+	parents = { roman gaul }
+	history_loc_override = gallo_roman_history_loc
+
+	ethos = ethos_spiritual
+	heritage = heritage_latin
+	language = language_latin
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_zealous_people
+		tradition_legalistic
+		tradition_poetry 
+	}
+	
+	name_list = name_list_gallo_roman
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+
+	ethnicities = {
+		5 = caucasian_blond
+		10 = mediterranean
+		30 = caucasian_ginger
+		30 = caucasian_brown_hair
+		30 = caucasian_dark_hair
+	}
+}
+
+

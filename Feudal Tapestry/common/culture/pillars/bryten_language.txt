@@ -15,7 +15,6 @@
 	
 	color = english
 }
-
 language_english = {
 	type = language
 	is_shown = {
@@ -33,3 +32,21 @@ language_english = {
 	
 	color = english
 }
+language_arpitan = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_arpitan
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_arpitan }
+			multiply = 10
+		}
+	}
+	
+	color = english
+}
+
