@@ -1,0 +1,164 @@
+﻿namespace = tapestry_frankish
+
+#######################################
+# Frankish Cultural Split up
+#######################################
+tapestry_frankish.001 = {# splitting up the culture
+	scope = none
+	hidden = yes
+	
+	immediate = {
+		# Split the Frankish culture into French, Lotharingian/Lorraine/Franconian
+		culture:frankish = { save_scope_as = frankish } # Save scope for player notification events.
+		culture:french = {
+			# 'Diverge' this culture by copying innovations/traditions.
+			get_all_innovations_from = scope:frankish
+			# Save scope for player notification events.
+			save_scope_as = french 
+		}
+		culture:lorrainian = {
+			# 'Diverge' this culture by copying innovations/traditions.
+			get_all_innovations_from = scope:frankish
+			# Save scope for player notification events.
+			save_scope_as = lorrainian 
+		}
+		culture:lothringian = {
+			# 'Diverge' this culture by copying innovations/traditions.
+			get_all_innovations_from = scope:frankish
+			# Save scope for player notification events.
+			save_scope_as = lothringian 
+		}		
+		culture:franconian = {
+			# 'Diverge' this culture by copying innovations/traditions.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = scope:frankish
+			# Save scope for player notification events.
+			save_scope_as = franconian 
+		}
+		culture:burgundian = {
+			# 'Diverge' this culture by copying innovations/traditions.
+			get_all_innovations_from = scope:frankish
+			# Save scope for player notification events.
+			save_scope_as = burgundian 
+		}
+		culture:gallo = {
+			# 'Diverge' this culture by copying innovations/traditions.
+			get_all_innovations_from = scope:frankish
+			# Save scope for player notification events.
+			save_scope_as = gallo 
+		}
+		# Compile a list of all Frankish counties in the frankish empire to convert to the appropriate culture.
+		every_county = {
+			limit = {
+				# All Frankish counties in Frankia will convert to the appropriate culture.
+				culture = culture:frankish
+				title_province = {
+					OR = {
+						geographical_region = world_europe_west_germania
+						geographical_region = world_europe_west_francia
+					}
+				}
+			}
+			add_to_list = frankish_counties
+		}
+
+		# Convert the Frankish counties to the new culture.
+		every_in_list = {
+			list = frankish_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = culture:frankish
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = culture:frankish
+							}
+						}
+					}
+				}
+			}
+
+			# Some of the Unique Options come first if they happend
+			if = {# if Britanny controls Anjou then Gallo Gets to spread further.
+				limit = {
+					title.k_brittany.holder = { completely_controls = title:d_anjou }
+				}
+				convert_county_and_holder_if_in_region_effect = {# 
+					OLD_CULTURE = culture:frankish
+					NEW_CULTURE = culture:gallo
+					REGION = custom_anjou
+				}
+				convert_county_and_holder_if_in_region_effect = {# 
+					OLD_CULTURE = culture:french
+					NEW_CULTURE = culture:gallo
+					REGION = custom_anjou
+				}				
+			}
+			if = {# if Burgundy is controlled by a burgundian then burgundian spreads northwards.
+				limit = {
+					title.d_burgundy.holder = {	has_culture = culture:burgundy }
+				}
+				every_sub_realm_county = {
+					limit = {
+						tier = tier_county
+						culture = { has_cultural_pillar = heritage_frankish }
+						de_jure_liege = title:d_burgundy
+					}
+					custom = burgundian_convert_burgundy_counties
+					set_county_culture = culture:burgundian
+				}				
+			}	
+			if = {# if Lotharingia controls the other side of the Rhine spread Lotharingia instead of Franconian
+				limit = {
+					title.k_lotharingia.holder = {	has_title = title:d_lower_lorraine	}
+				}
+				every_sub_realm_county = {
+					limit = {
+						tier = tier_county
+						culture = { has_cultural_pillar = heritage_frankish }
+						de_jure_liege = title:c_sayn
+						de_jure_liege = title:c_arnsberg
+						de_jure_liege = title:c_mark
+						de_jure_liege = title:c_dortmund
+						de_jure_liege = title:c_bergh
+					}
+					custom = lothringian_convert_rhine_counties
+					set_county_culture = culture:lothringian
+				}				
+			}
+			# Next add make Lotharingian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:frankish
+				NEW_CULTURE = culture:lorrainian
+				REGION = custom_french_lotharingia
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:frankish
+				NEW_CULTURE = culture:lothringian
+				REGION = custom_german_lotharingia
+			}
+			# Second, any frankish counties in West Francia become French
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:frankish
+				NEW_CULTURE = culture:french
+				REGION = world_europe_west_francia
+			}
+			# Finally, all remaining Frankish counties become franconian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:frankish
+				NEW_CULTURE = culture:franconian
+				REGION = world_europe_west_germania
+			}
+		}
+
+		# Send the appropriate notification event to each player.
+	}
+}
+
+
+
