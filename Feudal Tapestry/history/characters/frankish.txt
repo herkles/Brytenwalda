@@ -1,1668 +1,3269 @@
 ﻿#######################################
 # Carolingian Dynasty
 #######################################
-6392 = {
-	name = "Karl"  	# Charlemagne
-	dynasty = 25061
-	martial = 11
-	diplomacy = 9
-	intrigue = 7
-	stewardship = 12
-	religion = "catholic"
-	culture = "frankish"
-	trait = diligent
-	trait = zealous
-	trait = lustful
-	trait = lifestyle_hunter
-	trait = education_martial_4
-	disallow_random_traits = yes
-	father = 131722
-	mother = 190429
-	742.1.2 = {
-		birth = "742.1.2"
-	}
-	765.1.1 = {
-		effect = {
-			set_relation_lover = { reason = lover_history target = character:194168 } # Himiltrude
+	6392 = {
+		name = "Karl"  	# Charlemagne
+		dynasty = 25061
+		martial = 11
+		diplomacy = 9
+		intrigue = 7
+		stewardship = 12
+		religion = "catholic"
+		culture = "frankish"
+		trait = diligent
+		trait = zealous
+		trait = lustful
+		trait = lifestyle_hunter
+		trait = education_martial_4
+		disallow_random_traits = yes
+		father = 131722
+		mother = 190429
+		742.1.2 = {
+			birth = "742.1.2"
+		}
+		765.1.1 = {
+			effect = {
+				set_relation_lover = { reason = lover_history target = character:194168 } # Himiltrude
+			}
+		}
+		768.9.24 = {
+			add_pressed_claim = title:k_lotharingia
+		}
+		772.1.1 = {
+			add_spouse = 167827
+		}
+		784.1.1 = {
+			add_spouse = 168225
+			give_nickname = nick_the_great
+		}
+		814.1.2 = {
+			death = "814.1.2"
 		}
 	}
-	768.9.24 = {
-		add_pressed_claim = title:k_lotharingia
-	}
-	772.1.1 = {
-		add_spouse = 167827
-	}
-	784.1.1 = {
-		add_spouse = 168225
-		give_nickname = nick_the_great
-	}
-	814.1.2 = {
-		death = "814.1.2"
-	}
-}
-144999 = {
-	name = Karloman # Carloman, brother of Charlemagne
-	dynasty = 25061
-	religion = catholic
-	culture = frankish
-	father = 131722
-	mother = 190429
-	751.1.1 = {
-		birth = yes
-	}
-	767.5.5 = {
-		add_spouse = 194173
-	}
-	768.9.24 = {
-		add_pressed_claim = title:k_france
-	}
-	771.12.4 = {
-		death = yes
-	}
-}
-131720 = {
-	name = "Pepin" #PEPIN [II] "le_Gros" or "d'Herstal", son of ANSEGISEL & his wife Begga
-	dynasty = 25061 #Karlings
-	martial = 8
-	diplomacy = 9
-	intrigue = 7
-	stewardship = 12
-	religion = "catholic"
-	culture = "frankish"
-	trait = education_martial_4
-	father = 190417 #ANSEGISEL
-	mother = 91404 #Begga
-	636.1.2 = {
-		birth = "636.1.2"
-	}
-	658.1.1 = {
-		add_spouse = 190419
-	}
-	674.1.1 = {
-		remove_spouse = 190419
-	}
-	675.1.1 = {
-		add_spouse = 190420
-	}
-	714.1.17 = {
-		death = "714.1.17"
-	}
-}
-190412 = {
-	name = "Arnold"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	557.1.1 = {
-		birth = yes
-	}
-	602.1.1 = {
-		death = yes
-	}
-}
-190413 = {
-	name = "Arnulf" #Arnulf Count of Metz
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 190412
-	580.1.1 = {
-		birth = yes
-	}
-	640.7.18 = {
-		death = yes
-	}
-}
-190414 = {
-	name = "Chlodulf" #Arnulf Count of Metz
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 190413
-	610.1.1 = {
-		birth = yes
-	}
-	697.5.8 = {
-		death = yes
-	}
-}
-190415 = {
-	name = "Arnulf" #Arnulf Count of Metz
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 190414
-	638.1.1 = {
-		birth = yes
-	}
-	712.1.1 = {
-		death = yes
-	}
-}
-190416 = {
-	name = "Martin" #Martin Count of Metz
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 190414
-	647.1.1 = {
-		birth = yes
-	}
-	716.1.1 = {
-		death = yes
-	}
-}
-190417 = {
-	name = "Ansegisel"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 190413
-	612.1.1 = {
-		birth = yes
-	}
-	643.1.1 = { add_spouse = 91404 } #Begga
-	662.1.1 = {
-		death = yes
-	}
-}
-190418 = {
-	name = "Chrothechildis"
-	female = yes
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 190417 #ANSEGISEL
-	mother = 91404 #Begga
-	632.1.1 = {
-		birth = yes
-	}
-	692.1.1 = {
-		death = yes
-	}
-}
-190421 = {
-	name = "Hugh"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 131719
-	690.1.1 = {
-		birth = yes
-	}
-	730.1.1 = {
-		death = yes
-	}
-}
-190422 = {
-	name = "Pepin"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 131719
-	685.1.1 = {
-		birth = yes
-	}
-	726.1.1 = {
-		death = yes
-	}
-}
-190427 = {
-	name = "Karloman"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 131721
-	mother = 190425
-	706.1.1 = {
-		birth = yes
-	}
-	754.12.4 = {
-		death = yes
-	}
-}
-190428 = {
-	name = "Drogo"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 190427
-	730.1.1 = {
-		birth = yes
-	}
-	754.1.1 = {
-		death = yes
-	}
-}
-190454 = {
-	name = "Gisela"
-	female = yes
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 131722
-	mother = 190429
-	757.1.1 = {
-		birth = yes
-	}
-	810.7.30 = {
-		death = yes
-	}
-}
-190430 = {
-	name = "Pipin"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 131722
-	mother = 190429
-	759.1.1 = {
-		birth = yes
-	}
-	762.1.1 = {
-		death = yes
-	}
-}
-190431 = {
-	name = "Chrothais"
-	female = yes
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 131722
-	mother = 190429
-	761.1.1 = {
-		birth = yes
-	}
-	763.1.1 = {
-		death = yes
-	}
-}
-190432 = {
-	name = "Adelais"
-	female = yes
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 131722
-	mother = 190429
-	763.1.1 = {
-		birth = yes
-	}
-	764.1.1 = {
-		death = yes
-	}
-}
-190433 = {
-	name = "Chiltrudis"
-	female = yes
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 131721
-	mother = 190425
-	725.1.1 = {
-		birth = yes
-	}
-	754.1.1 = {
-		death = yes
-	}
-}
-190434 = {
-	name = "Grifo"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 144989
-	745.1.1 = {
-		birth = yes
-	}
-	796.1.1 = {
-		death = yes
-	}
-}
-190435 = {
-	name = "Karl"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 144989
-	749.1.1 = {
-		birth = yes
-	}
-	802.1.1 = {
-		death = yes
-	}
-}
-190436 = {
-	name = "Landrada"
-	female = yes
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 131721
-	mother = 190426
-	729.1.1 = {
-		birth = yes
-	}
-	780.1.1 = {
-		death = yes
-	}
-}
-190450 = {
-	name = "Walacho"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 190413
-	620.1.1 = {
-		birth = yes
-	}
-	689.1.1 = {
-		death = yes
-	}
-}
-190451 = {
-	name = "Wandregisel"
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 190450
-	635.1.1 = {
-		birth = yes
-	}
-	665.1.1 = {
-		death = yes
-	}
-}
-190452 = {
-	name = "Waltrude" #wife of Eudes of Aquitaine
-	female = yes
-	dynasty = 25061 #Karling
-	religion = "catholic"
-	culture = "frankish"
-	father = 190450
-	675.1.1 = {
-		birth = yes
-	}
-	735.1.1 = {
-		death = yes
-	}
-}
-91401 = {
-	name = "Bertrade"
-	female = yes
-	dynasty = 25061 #Karlings
-	religion = "catholic"
-	culture = "frankish"
-	father = 6392 #Charlemagne
-	mother = 167827 #HILDEGARD, daughter of GEROLD
-	
-	770.1.1 = {
-		birth = yes
-	}
-	824.3.11 = {
-		death = yes #11th of March, 824 or after
-	}
-}
-194174 = {
-	name = "Pepin"
-	dynasty = 25061
-	religion = "catholic"
-	culture = "frankish"
-	father = 144999
-	mother = 194173
-	768.11.4 = {
-		birth = yes
-	}
-	800.1.1 = {
-		death = yes
-	}
-}
-131721 = {
-	name = "Karl"
-	# AKA: Charles 'Martel'
-	dynasty = 25061
-	religion = "catholic"
-	culture = "frankish"
-	martial = 10
-	diplomacy = 10
-	intrigue = 9
-	stewardship = 10
-	learning = 8
-	trait = education_martial_4
-	trait = intellect_good_1
-	trait = brave
-	trait = strong
-	trait = ambitious
-	father = 131720
-	mother = 190420
-	686.8.23 = {
-		birth = "686.8.23"
-	}
-	703.1.1 = {
-		add_spouse = 190425
-	}
-	725.2.1 = {
-		add_spouse = 190426
-	}
-	732.11.1 = {
-		give_nickname = nick_the_hammer
-	}
-	741.1.23 = {
-		death = "741.1.23"
-	}
-}
-131722 = {
-	name = "Pepin"
-	# AKA: Pepin 'le Bref'
-	dynasty = 25061
-	martial = 7
-	diplomacy = 9
-	intrigue = 11
-	stewardship = 7
-	religion = "catholic"
-	culture = "frankish"
-	father = 131721
-	mother = 190426
-	714.1.1 = {
-		birth = "714.1.1"
-	}
-	736.1.1 = {
-		add_spouse = 190429
-	}
-	768.9.24 = {
-		death = "768.9.24"
-	}
-}
-131719 = {
-	name = "Drogo" # Duke of Champagne and Burgundy
-	# AKA Dreux
-	dynasty = 25061
-	martial = 5
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = "frankish"
-	father = 131720
-	mother = 190419
-	670.1.1 = {
-		birth = "670.1.1"
-	}
-	708.1.1 = {
-		death = "708.1.1"
-	}
-}
-131723 = {
-	name = "Grimoald"
-	dynasty = 25061
-	religion = "catholic"
-	culture = "frankish"
-	father = 131720
-	mother = 190419
-	673.1.1 = {
-		birth = "673.1.1"
-	}
-	711.1.1 = {
-		add_spouse = 131724 # Thiadsvind
-	}
-	714.1.1 = {
-		death = "714.1.1"
-	}
-}
-144988 = {
-	name = "Childebrand"
-	dynasty = 25061
-	religion = "catholic"
-	culture = "frankish"
-	father = 131720
-	#mother Alpaida, a concubine
-	trait = legitimized_bastard
-	688.1.1 = {
-		birth = "688.1.1"
-	}
-	762.1.1 = {
-		death = "762.1.1"
-	}
-}
-144989 = {
-	name = "Grifo"
-	dynasty = 25061
-	religion = "catholic"
-	culture = "frankish"
-	father = 131721
-	mother = 190426
-	728.1.1 = {
-		birth = yes
-	}
-	752.1.1 = {
-		death = "752.1.1"
-	}
-}
-168128 = {
-	name = "Aldana"
-	female = yes
-	dynasty = 25061
-	religion = "catholic"
-	culture = "frankish"
-	father = 131721
-	mother = 190426
-	735.1.1 = {
-		birth = "735.1.1"
-	}
-	766.1.1 = { #postponed from 752, dead from childbirth is my bet this time
-		death = yes
-	}
-}
-##Ludwig the German and his sons
-#Ludwig the German
-90107 = {
-	name = "Ludwig"
-	dna = 90107_ludwig_the_german
-	# AKA: Ludwig 'der Deutsche'
-	dynasty = 25061
-	martial = 6
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	trait = education_martial_1
-	trait = ambitious
-	trait = stubborn
-	trait = trusting
-	sexuality = heterosexual
-	father = 90095
-	mother = 91002
-	806.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_scripted_appearance
+	144999 = {
+		name = Karloman # Carloman, brother of Charlemagne
+		dynasty = 25061
+		religion = catholic
+		culture = frankish
+		father = 131722
+		mother = 190429
+		751.1.1 = {
+			birth = yes
+		}
+		767.5.5 = {
+			add_spouse = 194173
+		}
+		768.9.24 = {
+			add_pressed_claim = title:k_france
+		}
+		771.12.4 = {
+			death = yes
 		}
 	}
-	826.1.1 = {
-		set_primary_title_to = title:k_east_francia
-	}
-	827.1.1 = {
-		add_spouse = 7987 #Hemma
-		give_nickname = nick_the_german
-	}
-	876.1.29 = {
-		death = yes
-	}
-}
-#Karlmann of Bavaria
-42018 = {
-	name = "Karlmann"
-	dna = 42018_karlmann
-	dynasty = 25061
-	martial = 8
-	diplomacy = 5
-	intrigue = 3
-	stewardship = 5
-	learning = 8
-	religion = "catholic"
-	culture = frankish
-	trait = education_martial_4
-	trait = greedy
-	trait = zealous
-	trait = humble
-	sexuality = heterosexual
-	father = 90107 #(Ludwig the German)
-	mother = 7987
-	830.1.14 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_scripted_appearance
-		}	
-	}
-	846.1.1 = {
-		effect = {
-			set_relation_friend = { reason = friend_generic_history target = character:7987 } #His mother Hemma, he was her favorite
+	131720 = {
+		name = "Pepin" #PEPIN [II] "le_Gros" or "d'Herstal", son of ANSEGISEL & his wife Begga
+		dynasty = 25061 #Karlings
+		martial = 8
+		diplomacy = 9
+		intrigue = 7
+		stewardship = 12
+		religion = "catholic"
+		culture = "frankish"
+		trait = education_martial_4
+		father = 190417 #ANSEGISEL
+		mother = 91404 #Begga
+		636.1.2 = {
+			birth = "636.1.2"
+		}
+		658.1.1 = {
+			add_spouse = 190419
+		}
+		674.1.1 = {
+			remove_spouse = 190419
+		}
+		675.1.1 = {
+			add_spouse = 190420
+		}
+		714.1.17 = {
+			death = "714.1.17"
 		}
 	}
-	850.1.1 = {
-		effect = {
-			set_relation_lover = { reason = lover_history target = character:167813 } # Liutswind
-			set_relation_rival = { target = character:167812 reason = rival_historical } # Liutswind's brother, Ernst
+	190412 = {
+		name = "Arnold"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		557.1.1 = {
+			birth = yes
+		}
+		602.1.1 = {
+			death = yes
 		}
 	}
-	860.1.1 = {
-		effect = {
-			set_relation_rival = { target = character:90107 reason = rival_historical }
-			add_opinion = {
-				target = character:90107 #Karlmann had a "conflictual" relationship with his father
-				modifier = hate_opinion
-				opinion = -200
+	190413 = {
+		name = "Arnulf" #Arnulf Count of Metz
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 190412
+		580.1.1 = {
+			birth = yes
+		}
+		640.7.18 = {
+			death = yes
+		}
+	}
+	190414 = {
+		name = "Chlodulf" #Arnulf Count of Metz
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 190413
+		610.1.1 = {
+			birth = yes
+		}
+		697.5.8 = {
+			death = yes
+		}
+	}
+	190415 = {
+		name = "Arnulf" #Arnulf Count of Metz
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 190414
+		638.1.1 = {
+			birth = yes
+		}
+		712.1.1 = {
+			death = yes
+		}
+	}
+	190416 = {
+		name = "Martin" #Martin Count of Metz
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 190414
+		647.1.1 = {
+			birth = yes
+		}
+		716.1.1 = {
+			death = yes
+		}
+	}
+	190417 = {
+		name = "Ansegisel"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 190413
+		612.1.1 = {
+			birth = yes
+		}
+		643.1.1 = { add_spouse = 91404 } #Begga
+		662.1.1 = {
+			death = yes
+		}
+	}
+	190418 = {
+		name = "Chrothechildis"
+		female = yes
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 190417 #ANSEGISEL
+		mother = 91404 #Begga
+		632.1.1 = {
+			birth = yes
+		}
+		692.1.1 = {
+			death = yes
+		}
+	}
+	190421 = {
+		name = "Hugh"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 131719
+		690.1.1 = {
+			birth = yes
+		}
+		730.1.1 = {
+			death = yes
+		}
+	}
+	190422 = {
+		name = "Pepin"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 131719
+		685.1.1 = {
+			birth = yes
+		}
+		726.1.1 = {
+			death = yes
+		}
+	}
+	190427 = {
+		name = "Karloman"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 131721
+		mother = 190425
+		706.1.1 = {
+			birth = yes
+		}
+		754.12.4 = {
+			death = yes
+		}
+	}
+	190428 = {
+		name = "Drogo"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 190427
+		730.1.1 = {
+			birth = yes
+		}
+		754.1.1 = {
+			death = yes
+		}
+	}
+	190454 = {
+		name = "Gisela"
+		female = yes
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 131722
+		mother = 190429
+		757.1.1 = {
+			birth = yes
+		}
+		810.7.30 = {
+			death = yes
+		}
+	}
+	190430 = {
+		name = "Pipin"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 131722
+		mother = 190429
+		759.1.1 = {
+			birth = yes
+		}
+		762.1.1 = {
+			death = yes
+		}
+	}
+	190431 = {
+		name = "Chrothais"
+		female = yes
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 131722
+		mother = 190429
+		761.1.1 = {
+			birth = yes
+		}
+		763.1.1 = {
+			death = yes
+		}
+	}
+	190432 = {
+		name = "Adelais"
+		female = yes
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 131722
+		mother = 190429
+		763.1.1 = {
+			birth = yes
+		}
+		764.1.1 = {
+			death = yes
+		}
+	}
+	190433 = {
+		name = "Chiltrudis"
+		female = yes
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 131721
+		mother = 190425
+		725.1.1 = {
+			birth = yes
+		}
+		754.1.1 = {
+			death = yes
+		}
+	}
+	190434 = {
+		name = "Grifo"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 144989
+		745.1.1 = {
+			birth = yes
+		}
+		796.1.1 = {
+			death = yes
+		}
+	}
+	190435 = {
+		name = "Karl"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 144989
+		749.1.1 = {
+			birth = yes
+		}
+		802.1.1 = {
+			death = yes
+		}
+	}
+	190436 = {
+		name = "Landrada"
+		female = yes
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 131721
+		mother = 190426
+		729.1.1 = {
+			birth = yes
+		}
+		780.1.1 = {
+			death = yes
+		}
+	}
+	190450 = {
+		name = "Walacho"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 190413
+		620.1.1 = {
+			birth = yes
+		}
+		689.1.1 = {
+			death = yes
+		}
+	}
+	190451 = {
+		name = "Wandregisel"
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 190450
+		635.1.1 = {
+			birth = yes
+		}
+		665.1.1 = {
+			death = yes
+		}
+	}
+	190452 = {
+		name = "Waltrude" #wife of Eudes of Aquitaine
+		female = yes
+		dynasty = 25061 #Karling
+		religion = "catholic"
+		culture = "frankish"
+		father = 190450
+		675.1.1 = {
+			birth = yes
+		}
+		735.1.1 = {
+			death = yes
+		}
+	}
+	91401 = {
+		name = "Bertrade"
+		female = yes
+		dynasty = 25061 #Karlings
+		religion = "catholic"
+		culture = "frankish"
+		father = 6392 #Charlemagne
+		mother = 167827 #HILDEGARD, daughter of GEROLD
+		
+		770.1.1 = {
+			birth = yes
+		}
+		824.3.11 = {
+			death = yes #11th of March, 824 or after
+		}
+	}
+	194174 = {
+		name = "Pepin"
+		dynasty = 25061
+		religion = "catholic"
+		culture = "frankish"
+		father = 144999
+		mother = 194173
+		768.11.4 = {
+			birth = yes
+		}
+		800.1.1 = {
+			death = yes
+		}
+	}
+	131721 = {
+		name = "Karl"
+		# AKA: Charles 'Martel'
+		dynasty = 25061
+		religion = "catholic"
+		culture = "frankish"
+		martial = 10
+		diplomacy = 10
+		intrigue = 9
+		stewardship = 10
+		learning = 8
+		trait = education_martial_4
+		trait = intellect_good_1
+		trait = brave
+		trait = strong
+		trait = ambitious
+		father = 131720
+		mother = 190420
+		686.8.23 = {
+			birth = "686.8.23"
+		}
+		703.1.1 = {
+			add_spouse = 190425
+		}
+		725.2.1 = {
+			add_spouse = 190426
+		}
+		732.11.1 = {
+			give_nickname = nick_the_hammer
+		}
+		741.1.23 = {
+			death = "741.1.23"
+		}
+	}
+	131722 = {
+		name = "Pepin"
+		# AKA: Pepin 'le Bref'
+		dynasty = 25061
+		martial = 7
+		diplomacy = 9
+		intrigue = 11
+		stewardship = 7
+		religion = "catholic"
+		culture = "frankish"
+		father = 131721
+		mother = 190426
+		714.1.1 = {
+			birth = "714.1.1"
+		}
+		736.1.1 = {
+			add_spouse = 190429
+		}
+		768.9.24 = {
+			death = "768.9.24"
+		}
+	}
+	131719 = {
+		name = "Drogo" # Duke of Champagne and Burgundy
+		# AKA Dreux
+		dynasty = 25061
+		martial = 5
+		diplomacy = 5
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = "frankish"
+		father = 131720
+		mother = 190419
+		670.1.1 = {
+			birth = "670.1.1"
+		}
+		708.1.1 = {
+			death = "708.1.1"
+		}
+	}
+	131723 = {
+		name = "Grimoald"
+		dynasty = 25061
+		religion = "catholic"
+		culture = "frankish"
+		father = 131720
+		mother = 190419
+		673.1.1 = {
+			birth = "673.1.1"
+		}
+		711.1.1 = {
+			add_spouse = 131724 # Thiadsvind
+		}
+		714.1.1 = {
+			death = "714.1.1"
+		}
+	}
+	144988 = {
+		name = "Childebrand"
+		dynasty = 25061
+		religion = "catholic"
+		culture = "frankish"
+		father = 131720
+		#mother Alpaida, a concubine
+		trait = legitimized_bastard
+		688.1.1 = {
+			birth = "688.1.1"
+		}
+		762.1.1 = {
+			death = "762.1.1"
+		}
+	}
+	144989 = {
+		name = "Grifo"
+		dynasty = 25061
+		religion = "catholic"
+		culture = "frankish"
+		father = 131721
+		mother = 190426
+		728.1.1 = {
+			birth = yes
+		}
+		752.1.1 = {
+			death = "752.1.1"
+		}
+	}
+	168128 = {
+		name = "Aldana"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = "frankish"
+		father = 131721
+		mother = 190426
+		735.1.1 = {
+			birth = "735.1.1"
+		}
+		766.1.1 = { #postponed from 752, dead from childbirth is my bet this time
+			death = yes
+		}
+	}
+	##Ludwig the German and his sons
+	#Ludwig the German
+	90107 = {
+		name = "Ludwig"
+		dna = 90107_ludwig_the_german
+		# AKA: Ludwig 'der Deutsche'
+		dynasty = 25061
+		martial = 6
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = education_martial_1
+		trait = ambitious
+		trait = stubborn
+		trait = trusting
+		sexuality = heterosexual
+		father = 90095
+		mother = 91002
+		806.1.1 = {
+			birth = yes
+			effect = {
+				add_character_flag = has_scripted_appearance
+			}
+		}
+		826.1.1 = {
+			set_primary_title_to = title:k_east_francia
+		}
+		827.1.1 = {
+			add_spouse = 7987 #Hemma
+			give_nickname = nick_the_german
+		}
+		876.1.29 = {
+			death = yes
+		}
+	}
+	#Karlmann of Bavaria
+	42018 = {
+		name = "Karlmann"
+		dna = 42018_karlmann
+		dynasty = 25061
+		martial = 8
+		diplomacy = 5
+		intrigue = 3
+		stewardship = 5
+		learning = 8
+		religion = "catholic"
+		culture = frankish
+		trait = education_martial_4
+		trait = greedy
+		trait = zealous
+		trait = humble
+		sexuality = heterosexual
+		father = 90107 #(Ludwig the German)
+		mother = 7987
+		830.1.14 = {
+			birth = yes
+			effect = {
+				add_character_flag = has_scripted_appearance
+			}	
+		}
+		846.1.1 = {
+			effect = {
+				set_relation_friend = { reason = friend_generic_history target = character:7987 } #His mother Hemma, he was her favorite
+			}
+		}
+		850.1.1 = {
+			effect = {
+				set_relation_lover = { reason = lover_history target = character:167813 } # Liutswind
+				set_relation_rival = { target = character:167812 reason = rival_historical } # Liutswind's brother, Ernst
+			}
+		}
+		860.1.1 = {
+			effect = {
+				set_relation_rival = { target = character:90107 reason = rival_historical }
+				add_opinion = {
+					target = character:90107 #Karlmann had a "conflictual" relationship with his father
+					modifier = hate_opinion
+					opinion = -200
+				}
+			}
+		}
+		864.1.1 = {
+			set_primary_title_to = title:d_bavaria
+		}
+		866.1.1 = {
+			add_spouse = 167813# Liutswind
+		}
+		867.1.1 = {
+			contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
+		}
+		880.9.29 = {
+			death = yes
+		}
+	}
+	#Ludwig the Younger
+	42019 = {
+		name = "Ludwig"
+		# AKA: Ludwig 'der Junge'
+		dna = 42019_ludwig
+		dynasty = 25061
+		martial = 6
+		diplomacy = 8
+		intrigue = 3
+		stewardship = 7
+		religion = "catholic"
+		culture = frankish
+		trait = education_martial_3
+		trait = honest
+		trait = fickle
+		trait = gregarious
+		father = 90107 #(Ludwig the German)
+		mother = 7987
+		835.1.14 = {
+			birth = yes
+			give_nickname = nick_the_younger
+		}
+		882.1.21 = {
+			death = yes
+		}
+	}
+	90105 = {
+		name = "Karl" # AKA: Karl 'Pinguis'
+		dna = 90105_karl
+		dynasty = 25061
+		martial = 4
+		diplomacy = 5
+		intrigue = 3
+		stewardship = 4
+		learning = 7
+		religion = "catholic"
+		culture = frankish
+		trait = education_stewardship_3
+		trait = lazy
+		trait = generous
+		trait = zealous
+		trait = possessed_1
+		father = 90107 #(Ludwig the German)
+		mother = 7987
+		839.1.14 = {
+			birth = yes
+		}
+		862.1.1 = {
+			add_spouse = 167847
+		}
+		888.1.14 = {
+			death = yes
+		}
+	}
+	7945 = {
+		name = "Arnulf"
+		dna = 7945_arnulf
+		dynasty = 25061
+		martial = 4
+		diplomacy = 8
+		intrigue = 2
+		stewardship = 4
+		learning = 5
+		religion = "catholic"
+		culture = frankish
+		trait = ambitious
+		trait = callous
+		trait = just
+		trait = education_martial_3
+		trait = legitimized_bastard
+		father = 42018 #(King Karlmann of Bavaria)
+		mother = 167813
+		850.1.1 = {
+			birth = "850.1.1"
+		}
+		866.1.1 = {
+			effect = {
+				set_relation_friend = { reason = friend_generic_history target = character:42018 } # Beloved by his father, and a loyal son
+			}
+		}
+		890.1.1 = {
+			add_spouse = 7948
+		}
+		899.8.12 = {
+			death = "899.8.12"
+		}
+	}
+	7949 = {
+		name = "Ludwig"
+		dynasty = 25061
+		martial = 4
+		diplomacy = 5
+		intrigue = 3
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = ambitious
+		trait = ill
+		father = 7945
+		mother = 7948
+		893.1.1 = {
+			birth = "893.1.1"
+		}
+		911.9.20 = {
+			death = "911.9.20"
+		}
+	}
+	# West Francia Kings
+	150951 = {
+		name = "Lothaire"
+		dynasty = 25061
+		martial = 7
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = ill
+		father = 6392
+		mother = 167827
+		779.1.1 = {
+			birth = "779.1.1"
+		}
+		780.1.1 = {
+			death = "780.1.1"
+		}
+	}
+	151301 = {
+		name = "Rotrude"
+		female = yes
+		dynasty = 25061
+		martial = 6
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		father = 90095
+		mother = 91002
+		800.1.1 = {
+			birth = "800.1.1"
+		}
+		840.1.1 = {
+			death = "840.1.1"
+		}
+	}
+	30227 = {
+		name = "Lothaire"
+		dynasty = 25061
+		martial = 6
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 6
+		religion = "catholic"
+		culture = frankish
+		father = 90095
+		mother = 91002
+		795.1.1 = {
+			birth = "795.1.1"
+		}
+		825.1.1 = {
+			add_spouse = 161484
+		}
+		855.9.20 = {
+			death = "855.9.20"
+		}
+	}
+	#King Louis II of Italy
+	30228 = {
+		name = "Louis"
+		dna = 30228_king_louis
+		dynasty = 25061
+		martial = 7
+		diplomacy = 2
+		intrigue = 4
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		father = 30227
+		mother = 161484
+		trait = education_stewardship_3
+		trait = arrogant
+		trait = greedy
+		trait = fickle
+		sexuality = heterosexual
+		835.1.1 = {
+			birth = yes
+			effect = {
+				add_character_flag = has_scripted_appearance
+			}
+		}
+		852.1.1 = {
+			give_nickname = nick_the_younger
+			add_spouse = 167894
+		}
+		865.1.1 = {
+			add_piety = 750 # This period of life dominated by holy wars in southern Italy.
+		}
+		875.8.12 = {
+			death = yes
+		}
+	}
+	90102 = {
+		name = "Hugues"
+		# AKA: Hugh of Alsace
+		martial = 6
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = bastard
+		trait = ambitious
+		father = 144998 #(King Lothaire II)
+		mother = 168314
+		855.12.1 = {
+			birth = yes
+		}
+		885.1.1 = {
+			trait = blind
+		}
+		895.1.1 = {
+			death = yes
+		}
+	}
+	7920 = {
+		name = "Bertha"
+		female = yes
+		martial = 6
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = bastard
+		trait = beauty_good_1
+		trait = brave
+		trait = ambitious
+		father = 144998 #(King Lothaire II)
+		mother = 168314
+		863.1.1 = {
+			birth = yes
+		}
+		925.1.1 = {
+			death = yes
+		}
+	}
+	40994 = {
+		name = "Charles"
+		# AKA: Charles 'le Jeune'
+		dynasty = 25061
+		martial = 7
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = education_stewardship_2
+		trait = ill
+		father = 6392
+		mother = 167827
+		773.1.1 = {
+			birth = "773.1.1"
+		}
+		790.1.1 = {
+			give_nickname = nick_the_young
+		}
+		811.12.4 = {
+			death = "811.12.4"
+		}
+	}
+
+
+	42020 = {
+		name = "Charles"
+		# AKA: Charles 'Puer'
+		dynasty = 25061
+		martial = 6
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = honest
+		father = 90104 #(King Charles the Bald)
+		mother = 167830 #(Irminitrude of Orléans)
+		847.1.2 = {
+			birth = "847.1.2"
+		}
+		866.1.30 = {
+			effect = { give_nickname = nick_the_child }
+			death = "866.1.30"
+		}
+	}
+	42021 = {
+		name = "Carloman"
+		dynasty = 25061
+		martial = 6
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = disfigured
+		father = 90104 #(King Charles the Bald)
+		mother = 167830 #(Irminitrude of Orléans)
+		849.1.2 = {
+			birth = "849.1.2"
+		}
+		876.1.2 = {
+			death = "876.1.2"
+		}
+	}
+	6394 = {
+		name = "Pepin"
+		# AKA: Pepin 'Carloman'
+		dynasty = 25061
+		martial = 7
+		diplomacy = 6
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		father = 6392
+		mother = 167827
+		774.1.1 = {
+			birth = "774.1.1"
+		}
+		810.7.8 = {
+			death = "810.7.8"
+		}
+	}
+	6396 = {
+		name = "Bernard"
+		dynasty = 25061
+		martial = 4
+		diplomacy = 4
+		intrigue = 2
+		stewardship = 6
+		religion = "catholic"
+		culture = frankish
+		trait = legitimized_bastard
+		father = 6394
+		797.1.2 = {
+			birth = "797.1.2"
+		}
+		816.1.1 = {
+			add_spouse = 168140
+		}
+		818.8.15 = {
+			trait = blind #blinded by having red hot iron pressed against his eyes, trauma killed him 2 days later.
+		}
+		818.8.17 = {
+			death = "818.8.17"
+		}
+	}
+	6398 = {
+		name = "Pepin"
+		# AKA: Pepin 'Quentin'
+		dynasty = 25061
+		martial = 4
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		father = 6396
+		mother = 168140
+		817.1.1 = {
+			birth = "817.1.1"
+		}
+		848.1.1 = {
+			add_spouse = 144982
+		}
+		892.1.1 = {
+			death = "892.1.1"
+		}
+	}
+	6400 = {
+		name = "Herbert"
+		dynasty = 25061
+		martial = 5
+		diplomacy = 8
+		intrigue = 8
+		stewardship = 4
+		religion = "catholic"
+		culture = frankish
+		trait = education_martial_2
+		father = 6398
+		mother = 144982
+		850.1.2 = {
+			birth = "850.1.2"
+		}
+		869.1.2 = {
+			add_spouse = 6449
+		}
+		907.1.7 = {
+			death = "907.1.7"
+		}
+	}
+	6401 = {
+		name = "Beatrix"
+		female = yes
+		dynasty = 25061
+		martial = 4
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = education_diplomacy_2
+		father = 6400
+		mother = 6449
+		870.1.2 = {
+			birth = "870.1.2"
+		}
+		931.1.2 = {
+			death = "931.1.2"
+		}
+	}
+	6402 = {
+		name = "Herbert"
+		dynasty = 25061
+		martial = 6
+		diplomacy = 4
+		intrigue = 8
+		stewardship = 4
+		religion = "catholic"
+		culture = frankish
+		trait = cynical
+		trait = gluttonous
+		trait = education_martial_2
+		father = 6400
+		mother = 6449
+		880.1.2 = {
+			birth = "880.1.2"
+		}
+		943.1.24 = {
+			death = "943.1.24"
+		}
+	}
+	6403 = {
+		name = "Kunigunde"
+		female = yes
+		dynasty = 25061
+		martial = 8
+		diplomacy = 8
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = frankish
+		trait = education_learning_3
+		father = 6400
+		mother = 6449
+		898.1.2 = {
+			birth = "898.1.2"
+		}
+		943.1.2 = {
+			death = "943.1.2"
+		}
+	}
+
+	6441 = {
+		name = "Adelaide"
+		female = yes
+		dynasty = 25061
+		martial = 4
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = frankish
+		trait = education_intrigue_2
+		father = 90095
+		mother = 91002
+		818.1.1 = {
+			birth = "818.1.1"
+		}
+		866.1.1 = {
+			death = "866.1.1"
+		}
+	}
+	7814 = {
+		name = "Ermengarde"
+		female = yes
+		dynasty = 25061
+		martial = 6
+		diplomacy = 6
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		father = 30227
+		mother = 161484
+		830.1.1 = {
+			birth = "830.1.1"
+		}
+		880.1.1 = {
+			death = "880.1.1"
+		}
+	}
+	7907 = {
+		name = "Gisela"
+		female = yes
+		dynasty = 25061
+		martial = 4
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = frankish
+		trait = education_intrigue_2
+		father = 90095
+		mother = 7986
+		821.1.1 = {
+			birth = "821.1.1"
+		}
+		866.1.1 = {
+			death = "866.1.1"
+		}
+	}
+	7982 = { #Spouse of Boson 7981
+		name = "Ermengarde"
+		female = yes
+		dynasty = 25061
+		martial = 8
+		diplomacy = 8
+		intrigue = 5
+		stewardship = 6
+		religion = "catholic"
+		culture = frankish
+		trait = education_intrigue_3
+		trait = brave
+		trait = strong
+
+		father = 30228 #(King Louis II of Italy)
+		mother = 167894
+		859.1.1 = {
+			birth = "859.1.1"
+		}
+		880.1.1. = {
+			add_trait = unyielding_defender
+		}
+		897.1.1 = {
+			death = "897.1.1"
+		}
+	}
+	90095 = {
+		name = "Louis"
+		# AKA: Louis 'le Pieux'
+		dynasty = 25061
+		martial = 8
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = education_martial_3
+		trait = zealous
+		father = 6392
+		mother = 167827
+		778.1.1 = {
+			birth = "778.1.1"
+		}
+		793.1.1 = {
+			add_spouse = 91002
+		}
+		819.1.1 = {
+			add_spouse = 7986
+		}
+		840.6.20 = {
+			death = "840.6.20"
+		}
+	}
+	90096 = {
+		name = "Pepin"
+		dynasty = 25061
+		martial = 6
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 8
+		religion = "catholic"
+		culture = frankish
+		father = 90095
+		mother = 91002
+		797.1.1 = {
+			birth = "797.1.1"
+		}
+		838.12.13 = {
+			death = "838.12.13"
+		}
+	}
+	90097 = {
+		name = "Pepin"
+		# AKA: Pepin 'le Jeune'
+		dynasty = 25061
+		martial = 4
+		diplomacy = 5
+		intrigue = 3
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		father = 90096
+		823.1.2 = {
+			birth = "823.1.2"
+		}
+		838.1.1 = {
+			give_nickname = nick_the_young
+		}
+		864.1.2 = {
+			death = "864.1.2"
+		}
+	}
+	90098 = {
+		name = "Charles"
+		dynasty = 25061
+		martial = 5
+		diplomacy = 6
+		intrigue = 5
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = education_learning_3
+		father = 90096
+		825.1.2 = {
+			birth = "825.1.2"
+		}
+		863.6.4 = {
+			death = "863.6.4"
+		}
+	}
+	90103 = {
+		name = "Charles"	#Charles of Provence
+		dynasty = 25061
+		martial = 6
+		diplomacy = 6
+		intrigue = 4
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = ill
+		father = 30227
+		mother = 161484
+		845.1.2 = {
+			birth = "845.1.2"
+		}
+		863.1.25 = {
+			death = "863.1.25"
+		}
+	}
+	#Charles the Bald
+	90104 = {
+		name = "Charles"
+		dna = 90104_charles_the_bald
+		# AKA: Charles 'le Chauvre'
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		martial = 6
+		diplomacy = 3
+		intrigue = 7
+		stewardship = 8
+		learning = 8
+		trait = education_learning_3
+		trait = deceitful
+		trait = impatient
+		trait = stubborn
+		sexuality = heterosexual
+		father = 90095
+		mother = 7986
+		
+		823.1.14 = {
+			birth = yes
+			effect = {
+				add_character_flag = has_scripted_appearance
+			}
+		}
+		842.1.1 = {
+			add_spouse = 167830 #(Irminitrude of Orléans)
+			give_nickname = nick_the_bald_ironic
+		}
+		858.12.1 = {
+			set_relation_rival = { target = character:90107 reason = rival_historical } #(Ludwig the German), tried to take his Kingdom title
+		}
+		870.1.1 = {
+			add_spouse = 168164
+		}
+		877.6.10 = {
+			death = yes
+		}
+	}
+	#Judith of Flanders
+	90110 = {
+		name = "Judith"
+		dna = 90110_judith
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 90104 #(King Charles the Bald)
+		mother = 167830 #(Irminitrude of Orléans)
+		trait = brave
+		trait = ambitious
+		trait = cynical
+		844.1.2 = {
+			birth = "844.1.2"
+		}
+		871.1.2 = {
+			death = "871.1.2"
+		}
+	}
+	90111 = {
+		name = "Charles"
+		# AKA: Charles 'le Simple'
+		dynasty = 25061
+		martial = 6
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		trait = lazy
+		father = 90123
+		mother = 168091
+		879.1.18 = {
+			birth = "879.1.18"
+		}
+		919.10.7 = {
+			add_spouse = 90124
+		}
+		929.1.8 = {
+			death = "929.1.8"
+		}
+	}
+	90112 = {
+		name = "Ermentrude"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 90123 # Louis le Bègue
+		mother = 168091
+		876.1.1 = {
+			birth = "876.1.1"
+		}
+		916.1.1 = {
+			death = "916.1.1"
+		}
+	}
+	90113 = {
+		name = "Cunigunde"
+		female = yes
+		dynasty = 25061
+		martial = 6
+		diplomacy = 5
+		intrigue = 7
+		stewardship = 5
+		religion = "catholic"
+		culture = frankish
+		mother = 90112
+		890.1.1 = {
+			birth = "890.1.1"
+		}
+		930.1.1 = {
+			death = "930.1.1"
+		}
+	}
+	90123 = {
+		name = "Louis"
+		# AKA: Louis 'le Begue'
+		dna = 90123_louis_the_stammerer
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		trait = content
+		trait = trusting
+		trait = craven
+		trait = stuttering
+		trait = education_learning_4
+		father = 90104 #(King Charles the Bald)
+		mother = 167830 #(Irminitrude of Orléans)
+		843.1.2 = {
+			birth = yes
+		}
+		862.3.1 = {
+			add_spouse = 91385 # Ansgarde de Bourgogne
+			give_nickname = nick_the_stammerer
+		}
+		866.7.1 = {
+			remove_spouse = 91385 # Ansgarde de Bourgogne
+			set_relation_friend = { reason = friend_generic_history target = character:7853 } # Pope Nicholas
+		}
+		875.1.1 = {
+			add_spouse = 168091
+		}
+		879.1.11 = {
+			death = yes
+		}
+	}
+	90154 = {
+		name = "Louis" # Louis III
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 90123 # Louis le Bègue
+		mother = 91385 # Ansgarde de Bourgogne
+		trait = rowdy
+		863.1.18 = {
+			birth = "863.1.18"
+		}
+		882.8.5 = {
+			death = "882.8.5"
+		}
+	}
+	90155 = {
+		name = "Carloman" # Carloman II
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 90123 # Louis le Bègue
+		mother = 91385 # Ansgarde de Bourgogne
+		trait = bossy
+		866.1.18 = {
+			birth = "866.1.18"
+		}
+		880.1.1 = {
+			add_trait = lifestyle_hunter
+		}
+		884.12.12 = {
+			death = {
+				death_reason = death_hunting_mistakenly_stabbed
 			}
 		}
 	}
-	864.1.1 = {
-		set_primary_title_to = title:d_bavaria
-	}
-	866.1.1 = {
-		add_spouse = 167813# Liutswind
-	}
-	867.1.1 = {
-        contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
-	}
-	880.9.29 = {
-		death = yes
-	}
-}
-#Ludwig the Younger
-42019 = {
-	name = "Ludwig"
-	# AKA: Ludwig 'der Junge'
-	dna = 42019_ludwig
-	dynasty = 25061
-	martial = 6
-	diplomacy = 8
-	intrigue = 3
-	stewardship = 7
-	religion = "catholic"
-	culture = frankish
-	trait = education_martial_3
-	trait = honest
-	trait = fickle
-	trait = gregarious
-	father = 90107 #(Ludwig the German)
-	mother = 7987
-	835.1.14 = {
-		birth = yes
-		give_nickname = nick_the_younger
-	}
-	882.1.21 = {
-		death = yes
-	}
-}
-90105 = {
-	name = "Karl" # AKA: Karl 'Pinguis'
-	dna = 90105_karl
-	dynasty = 25061
-	martial = 4
-	diplomacy = 5
-	intrigue = 3
-	stewardship = 4
-	learning = 7
-	religion = "catholic"
-	culture = frankish
-	trait = education_stewardship_3
-	trait = lazy
-	trait = generous
-	trait = zealous
-	trait = possessed_1
-	father = 90107 #(Ludwig the German)
-	mother = 7987
-	839.1.14 = {
-		birth = yes
-	}
-	862.1.1 = {
-		add_spouse = 167847
-	}
-	888.1.14 = {
-		death = yes
-	}
-}
-7945 = {
-	name = "Arnulf"
-	dna = 7945_arnulf
-	dynasty = 25061
-	martial = 4
-	diplomacy = 8
-	intrigue = 2
-	stewardship = 4
-	learning = 5
-	religion = "catholic"
-	culture = frankish
-	trait = ambitious
-	trait = callous
-	trait = just
-	trait = education_martial_3
-	trait = legitimized_bastard
-	father = 42018 #(King Karlmann of Bavaria)
-	mother = 167813
-	850.1.1 = {
-		birth = "850.1.1"
-	}
-	866.1.1 = {
-		effect = {
-			set_relation_friend = { reason = friend_generic_history target = character:42018 } # Beloved by his father, and a loyal son
+	71907 = {
+		name = "Adelaide"
+		dynasty = 25061
+		female = yes
+		religion = "catholic"
+		culture = frankish
+		father = 6394
+		798.1.1 = {
+			birth = "798.1.1"
+		}
+		836.1.1 = {
+			death = "836.1.1"
 		}
 	}
-	890.1.1 = {
-		add_spouse = 7948
-	}
-	899.8.12 = {
-		death = "899.8.12"
-	}
-}
-7949 = {
-	name = "Ludwig"
-	dynasty = 25061
-	martial = 4
-	diplomacy = 5
-	intrigue = 3
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	trait = ambitious
-	trait = ill
-	father = 7945
-	mother = 7948
-	893.1.1 = {
-		birth = "893.1.1"
-	}
-	911.9.20 = {
-		death = "911.9.20"
-	}
-}
-# West Francia Kings
-150951 = {
-	name = "Lothaire"
-	dynasty = 25061
-	martial = 7
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	trait = ill
-	father = 6392
-	mother = 167827
-	779.1.1 = {
-		birth = "779.1.1"
-	}
-	780.1.1 = {
-		death = "780.1.1"
-	}
-}
-151301 = {
-	name = "Rotrude"
-	female = yes
-	dynasty = 25061
-	martial = 6
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	father = 90095
-	mother = 91002
-	800.1.1 = {
-		birth = "800.1.1"
-	}
-	840.1.1 = {
-		death = "840.1.1"
-	}
-}
-30227 = {
-	name = "Lothaire"
-	dynasty = 25061
-	martial = 6
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 6
-	religion = "catholic"
-	culture = frankish
-	father = 90095
-	mother = 91002
-	795.1.1 = {
-		birth = "795.1.1"
-	}
-	825.1.1 = {
-		add_spouse = 161484
-	}
-	855.9.20 = {
-		death = "855.9.20"
-	}
-}
-#King Louis II of Italy
-30228 = {
-	name = "Louis"
-	dna = 30228_king_louis
-	dynasty = 25061
-	martial = 7
-	diplomacy = 2
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	father = 30227
-	mother = 161484
-	trait = education_stewardship_3
-	trait = arrogant
-	trait = greedy
-	trait = fickle
-	sexuality = heterosexual
-	835.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_scripted_appearance
+	144980 = {
+		name = "Pepin"
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 144981
+		879.1.1 = {
+			birth = "879.1.1"
+		}
+		930.1.1 = {
+			death = "930.1.1"
 		}
 	}
-	852.1.1 = {
-		give_nickname = nick_the_younger
-		add_spouse = 167894
+	144981 = {
+		name = "Pepin"
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 6398
+		mother = 144982
+		849.1.1 = {
+			birth = "849.1.1"
+		}
+		893.1.28 = {
+			death = "893.1.28"
+		}
 	}
-	865.1.1 = {
-		add_piety = 750 # This period of life dominated by holy wars in southern Italy.
+	#King Lothaire II
+	144998 = {
+		name = Lothaire
+		dna = 144998_king_lothaire
+		dynasty = 25061
+		martial = 6
+		diplomacy = 5
+		intrigue = 6
+		stewardship = 5
+		learning = 7
+		religion = catholic
+		culture = frankish
+		father = 30227
+		mother = 161484
+		trait = cynical
+		trait = temperate
+		trait = calm
+		trait = education_intrigue_3
+		sexuality = heterosexual
+		836.1.1 = {
+			birth = yes
+			effect = {
+				add_character_flag = has_scripted_appearance
+			}
+		}
+		855.8.25 = {
+			set_primary_title_to = title:k_lotharingia
+		}
+		854.1.1 = {
+			add_spouse = 6877 # Teutberga
+			effect = {
+				set_relation_soulmate = character:168314 # Waldrada
+			}
+		}
+		869.5.1 = {
+			remove_spouse = 6877 # Finally granted a divorce by Pope Adrian II
+		}
+		869.8.8 = {
+			death = yes
+		}
 	}
-	875.8.12 = {
-		death = yes
+	167754 = {
+		name = "Ida"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 144999
+		770.1.1 = {
+			birth = "770.1.1"
+		}
+		825.1.1 = {
+			death = "825.1.1"
+		}
 	}
-}
-
-
-40994 = {
-	name = "Charles"
-	# AKA: Charles 'le Jeune'
-	dynasty = 25061
-	martial = 7
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	trait = education_stewardship_2
-	trait = ill
-	father = 6392
-	mother = 167827
-	773.1.1 = {
-		birth = "773.1.1"
+	168024 = {
+		name = "Rotrud"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 6392
+		mother = 167827
+		775.1.1 = {
+			birth = "775.1.1"
+		}
+		810.6.6 = {
+			death = "810.6.6"
+		}
 	}
-	790.1.1 = {
-		give_nickname = nick_the_young
+	163170 = {
+		name = "Cunegundis"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 6398
+		mother = 144982
+		853.1.1 = {
+			birth = "853.1.1"
+		}
+		900.1.1 = {
+			death = "900.1.1"
+		}
 	}
-	811.12.4 = {
-		death = "811.12.4"
+	163171 = {
+		name = "Adelheid"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 6398
+		mother = 144982
+		855.1.1 = {
+			birth = "855.1.1"
+		}
+		898.1.1 = {
+			death = "898.1.1"
+		}
 	}
-}
-
-
-42020 = {
-	name = "Charles"
-	# AKA: Charles 'Puer'
-	dynasty = 25061
-	martial = 6
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	trait = honest
-	father = 90104 #(King Charles the Bald)
-	mother = 167830 #(Irminitrude of Orléans)
-	847.1.2 = {
-		birth = "847.1.2"
+	163172 = {
+		name = "Gisele"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 30228 #(King Louis II of Italy)
+		mother = 167894
+		diplomacy = 6
+		stewardship = 4
+		martial = 3
+		intrigue = 2
+		learning = 10
+		trait = humble
+		trait = forgiving
+		trait = temperate
+		trait = devoted
+		853.1.1 = {
+			birth = "853.1.1"
+		}
+		868.4.28 = {
+			death = "868.4.28"
+		}
 	}
-	866.1.30 = {
-		effect = { give_nickname = nick_the_child }
-		death = "866.1.30"
+	163175 = {
+		name = "Ermentrude"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 90104 #(King Charles the Bald)
+		mother = 167830 #(Irminitrude of Orléans)
+		850.1.1 = {
+			birth = "850.1.1 "
+		}
+		877.1.1 = {
+			death = "877.1.1"
+		}
 	}
-}
-42021 = {
-	name = "Carloman"
-	dynasty = 25061
-	martial = 6
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	trait = disfigured
-	father = 90104 #(King Charles the Bald)
-	mother = 167830 #(Irminitrude of Orléans)
-	849.1.2 = {
-		birth = "849.1.2"
+	163176 = {
+		name = "Hildegard"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 90104 #(King Charles the Bald)
+		mother = 167830 #(Irminitrude of Orléans)
+		851.1.1 = {
+			birth = "851.1.1 "
+		}
+		880.1.1 = {
+			death = "880.1.1"
+		}
 	}
-	876.1.2 = {
-		death = "876.1.2"
+	163177 = {
+		name = "Gisele"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 90104 #(King Charles the Bald)
+		mother = 167830 #(Irminitrude of Orléans)
+		852.1.1 = {
+			birth = "852.1.1 "
+		}
+		874.7.1 = {
+			death = "874.7.1"
+		}
 	}
-}
-6394 = {
-	name = "Pepin"
-	# AKA: Pepin 'Carloman'
-	dynasty = 25061
-	martial = 7
-	diplomacy = 6
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	father = 6392
-	mother = 167827
-	774.1.1 = {
-		birth = "774.1.1"
+	163178 = {
+		name = "Rotryde"
+		female = yes
+		dynasty = 25061
+		religion = "catholic"
+		culture = frankish
+		father = 90104 #(King Charles the Bald)
+		mother = 167830 #(Irminitrude of Orléans)
+		853.1.1 = {
+			birth = "853.1.1 "
+		}
+		912.1.1 = {
+			death = "912.1.1"
+		}
 	}
-	810.7.8 = {
-		death = "810.7.8"
+#######################################
+# Hetanid Dynasty
+#######################################
+	190388 = {
+		name = "Hruodis" #duke of Franconia
+		dynasty = 1044099 #Hetanid
+		religion = "catholic"
+		culture = "frankish"
+		608.1.1 = {
+			birth = yes
+		}
+		651.1.1 = {
+			death = yes
+		}
 	}
-}
-6396 = {
-	name = "Bernard"
-	dynasty = 25061
-	martial = 4
-	diplomacy = 4
-	intrigue = 2
-	stewardship = 6
-	religion = "catholic"
-	culture = frankish
-	trait = legitimized_bastard
-	father = 6394
-	797.1.2 = {
-		birth = "797.1.2"
+	190389 = {
+		name = "Hetan" #duke of Franconia
+		dynasty = 1044099 #Hetanid
+		religion = "catholic"
+		culture = "frankish"
+		father = 190388
+		631.1.1 = {
+			birth = yes
+		}
+		677.1.1 = {
+			death = yes
+		}
 	}
-	816.1.1 = {
-		add_spouse = 168140
+	190390 = {
+		name = "Gozbert" #duke of Franconia
+		dynasty = 1044099 #Hetanid
+		religion = "catholic"
+		culture = "frankish"
+		father = 190389
+		652.1.1 = {
+			birth = yes
+		}
+		697.1.1 = {
+			death = yes
+		}
 	}
-	818.8.15 = {
-		trait = blind #blinded by having red hot iron pressed against his eyes, trauma killed him 2 days later.
+	190391 = {
+		name = "Hetan" #duke of Franconia
+		dynasty = 1044099 #Hetanid
+		religion = "catholic"
+		culture = "frankish"
+		father = 190390
+		680.1.1 = {
+			birth = yes
+		}
+		733.1.1 = {
+			death = yes
+		}
 	}
-	818.8.17 = {
-		death = "818.8.17"
+	190392 = {
+		name = "Thuringus" #duke of Franconia
+		dynasty = 1044099 #Hetanid
+		religion = "catholic"
+		culture = "frankish"
+		father = 190391
+		719.1.1 = {
+			birth = yes
+		}
+		770.1.1 = {
+			death = yes
+		}
 	}
-}
-6398 = {
-	name = "Pepin"
-	# AKA: Pepin 'Quentin'
-	dynasty = 25061
-	martial = 4
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	father = 6396
-	mother = 168140
-	817.1.1 = {
-		birth = "817.1.1"
+	190393 = {
+		name = "Ado" #duke of Franconia
+		dynasty = 1044099 #Hetanid
+		religion = "catholic"
+		culture = "frankish"
+		father = 190392
+		756.1.1 = {
+			birth = yes
+		}
+		805.1.1 = {
+			death = yes
+		}
 	}
-	848.1.1 = {
-		add_spouse = 144982
+#######################################
+# babenberger Dynasty
+#######################################
+	190394 = {
+		name = "Robert"
+		dynasty_house = house_babenberger #babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 33328
+		766.1.1 = {
+			birth = yes
+		}
+		805.1.1 = {
+			death = yes
+		}
 	}
-	892.1.1 = {
-		death = "892.1.1"
+	190395 = {
+		name = "Cancor"
+		dynasty_house = house_babenberger #babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 190394
+		786.1.1 = {
+			birth = yes
+		}
+		813.1.1 = {
+			death = yes
+		}
 	}
-}
-6400 = {
-	name = "Herbert"
-	dynasty = 25061
-	martial = 5
-	diplomacy = 8
-	intrigue = 8
-	stewardship = 4
-	religion = "catholic"
-	culture = frankish
-	trait = education_martial_2
-	father = 6398
-	mother = 144982
-	850.1.2 = {
-		birth = "850.1.2"
+	190396 = {
+		name = "Robert"
+		dynasty_house = house_babenberger #babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 190394
+		789.1.1 = {
+			birth = yes
+		}
+		818.1.1 = {
+			death = yes
+		}
 	}
-	869.1.2 = {
-		add_spouse = 6449
+	190397 = {
+		name = "Heimerich" #count of nassau till 826
+		dynasty_house = house_babenberger #babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 33329
+		781.1.1 = {
+			birth = yes
+		}
+		836.1.1 = {
+			death = yes
+		}
 	}
-	907.1.7 = {
-		death = "907.1.7"
+	190398 = {
+		name = "Ratolf"
+		dynasty_house = house_babenberger #babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 190397
+		811.1.1 = {
+			birth = yes
+		}
+		840.1.1 = {
+			death = yes
+		}
 	}
-}
-6401 = {
-	name = "Beatrix"
+	190399 = {
+		name = "Hraban"
+		dynasty_house = house_babenberger #babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 190398
+		837.1.1 = {
+			birth = yes
+		}
+		872.1.1 = {
+			death = yes
+		}
+	}
+	190405 = {
+		name = "Chrodgang" #archbishop of Metz
+		dynasty_house = house_babenberger #babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 33327
+		748.1.1 = {
+			birth = yes
+		}
+		775.1.1 = {
+			death = yes
+		}
+	}
+	190406 = {
+		name = "Ermbert" #bishop of Worms
+		dynasty_house = house_babenberger #babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 33327
+		751.1.1 = {
+			birth = yes
+		}
+		803.1.1 = {
+			death = yes
+		}
+	}
+	190407 = {
+		name = "Rachilt" #daughter of Cancor of Worms
+		female = yes
+		dynasty_house = house_babenberger #babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 33327
+		750.1.1 = {
+			birth = yes
+		}
+		797.1.1 = {
+			death = yes
+		}
+	}
+	190408 = {
+		name = "Euphemia" #daughter of Cancor of Worms
+		female = yes
+		dynasty_house = house_babenberger #babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 33327
+		756.1.1 = {
+			birth = yes
+		}
+		779.1.1 = {
+			death = yes
+		}
+	}
+	33327 = {
+		name = "Cancor"
+		#Rupert Cancor
+		dynasty_house = house_babenberger
+		religion = "catholic"
+		culture = "frankish"
+		father = 91000
+		mother = 91121
+		722.1.1 = {
+			birth = "722.1.1"
+		}
+		771.1.1 = {
+			death = "782.1.1"
+		}
+	}
+#######################################
+# Formerly French Characters
+#######################################
+6877 = { #Spouse of Lothaire II, 144998
+	name = Teutberga
+	dna = 6877_teutberga
 	female = yes
-	dynasty = 25061
-	martial = 4
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
+	dynasty = 7052
+	religion = catholic
 	culture = frankish
+	trait = stubborn
 	trait = education_diplomacy_2
-	father = 6400
-	mother = 6449
-	870.1.2 = {
-		birth = "870.1.2"
+	trait = infertile
+	father = 7976 # Boso the Elder
+	831.1.1 = {
+		birth = yes
 	}
-	931.1.2 = {
-		death = "931.1.2"
+	854.1.1 = {
+		effect = {
+			set_relation_rival = { target = character:168314 reason = rival_historical } # Waldrada, husband's lover
+		}
 	}
-}
-6402 = {
-	name = "Herbert"
-	dynasty = 25061
-	martial = 6
-	diplomacy = 4
-	intrigue = 8
-	stewardship = 4
-	religion = "catholic"
-	culture = frankish
-	trait = cynical
-	trait = gluttonous
-	trait = education_martial_2
-	father = 6400
-	mother = 6449
-	880.1.2 = {
-		birth = "880.1.2"
+	861.1.1 = {
+		effect = {
+			set_relation_rival = { target = character:144998 reason = rival_historical } # Husband Lothaire II, tries to annul marriage
+		}
 	}
-	943.1.24 = {
-		death = "943.1.24"
+	863.1.1 = {
+		effect = {
+			set_relation_friend = { reason = friend_generic_history target = character:90104 } #(King Charles the Bald), defended her marriage and gave shelter
+		}
+	}
+	875.1.1 = {
+		death = yes
 	}
 }
-6403 = {
-	name = "Kunigunde"
-	female = yes
-	dynasty = 25061
-	martial = 8
+127022 = {
+	name = "Guillaume" #Guillaume Ier d'Aquitaine
+	dynasty = 100217
+	martial = 7
 	diplomacy = 8
 	intrigue = 5
 	stewardship = 6
 	religion = "catholic"
 	culture = frankish
+	father = 127019
+	mother = 127020
+	865.1.1 = {
+		birth = "865.1.1"
+	}
+	897.1.1 = {
+		add_spouse = 127023
+	}
+	918.7.6 = {
+		death = "918.7.6"
+	}
+}
+127023 = {
+	name = "Engelberga"
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	female = yes
+	martial = 4
+	diplomacy = 6
+	intrigue = 8
+	stewardship = 6
+	religion = "catholic"
+	culture = frankish
+	father = 7981
+	mother = 7982
+	877.1.1 = {
+		birth = "877.1.1"
+	}
+	917.2.1 = {
+		death = "917.2.1"
+	}
+}
+127024 = {
+	name = "Adelinda"
+	dynasty = 100217
+	female = yes
+	martial = 5
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = frankish
+	father = 127019
+	mother = 127020
+	870.1.1 = {
+		birth = "870.1.1"
+	}
+	930.1.1 = {
+		death = "930.1.1"
+	}
+}
+131715 = {
+	name = "Rainier"
+	dynasty_house = house_chaumontois
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = frankish
+	father = 131716
+	820.1.2 = {
+		birth = "820.1.2"
+	}
+	890.1.2 = {
+		death = "890.1.2"
+	}
+}
+1799 = {
+	name = "Foulques"
+	dynasty = 723
+	martial = 4
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 6
+	religion = "catholic"
+	culture = frankish
+	trait = honest
+	trait = cynical
+	trait = education_intrigue_1
+	father = 168061
+	870.1.1 = {
+		birth = "870.1.1"
+	}
+	942.1.1 = {
+		death = "942.1.1"
+	}
+}
+241 = {
+	name = "Papia"
+	female = yes
+	dynasty = 100097
+	martial = 7
+	diplomacy = 7
+	intrigue = 5
+	stewardship = 7
+	religion = "catholic"
+	culture = frankish
 	trait = education_learning_3
-	father = 6400
-	mother = 6449
-	898.1.2 = {
-		birth = "898.1.2"
+	870.1.2 = {
+		birth = "870.1.2"
 	}
 	943.1.2 = {
 		death = "943.1.2"
 	}
 }
-
-6441 = {
-	name = "Adelaide"
-	female = yes
-	dynasty = 25061
-	martial = 4
-	diplomacy = 6
+40080 = {
+	name = "Wulgrin" #Wulgrim I Taillefer
+	dynasty = 541
+	religion = "catholic"
+	culture = frankish
+	father = 168085
+	mother = 168084
+	830.1.1 = {
+		birth = "830.1.1"
+	}
+	860.1.1 = {
+		add_spouse = 168142
+	}
+	886.1.1 = {
+		death = "886.1.1"
+	}
+}
+40084 = {
+	name = "Audouin" #Audoin I Taillefer
+	dynasty = 541
+	religion = "catholic"
+	culture = frankish
+	father = 40080
+	mother = 168142
+	870.1.1 = {
+		birth = "870.1.1"
+	}
+	916.3.27 = {
+		death = "916.3.27"
+	}
+}
+40150 = {
+	name = "Aymar"
+	dynasty = 329
+	martial = 7
+	diplomacy = 9
+	intrigue = 9
+	stewardship = 5
+	religion = "catholic"
+	culture = frankish
+	870.1.1 = {
+		birth = "870.1.1"
+	}
+	921.1.1 = {
+		death = "921.1.1"
+	}
+}
+40266 = {
+	name = "Aldebert" #Hildebert I de Limoges
+	dynasty_house = house_limoges
+	martial = 7
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = frankish
+	father = 40264
+	mother = 168058
+	868.1.1 = {
+		birth = "868.1.1"
+	}
+	#married Adaltrude de Caillac
+	914.1.1 = {
+		death = "914.1.1"
+	}
+}
+40270 = {
+	name = "Foucher" #Foucher I de Limoges
+	dynasty_house = house_limoges
+	martial = 6
+	diplomacy = 3
 	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = frankish
+	father = 40266 #Hildebert I de Limoges
+	885.1.1 = {
+		birth = "885.1.1"
+	}
+	923.1.1 = {
+		death = "923.1.1"
+	}
+}
+40320 = {
+	name = "MannassE_s"
+	# AKA: Mannasses
+	dynasty = 100240
+	martial = 7
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = frankish
+	875.1.2 = {
+		birth = "875.1.2"
+	}
+	918.1.2 = {
+		death = "918.1.2"
+	}
+}
+40398 = {
+	name = "Raoul" # I of Vexin
+	dynasty_house = house_vexin_amiens
+	religion = "catholic"
+	culture = frankish
+	father = 168064
+	mother = 168065
+	875.1.1 = {
+		birth = "875.1.1" # Estimate
+	}
+	926.1.1 = {
+		death = "926.1.1"
+	}
+}
+6449 = {
+	name = "Bertha"
+	female = yes
+	dynasty = 743
+	martial = 6
+	diplomacy = 7
+	intrigue = 6
 	stewardship = 6
 	religion = "catholic"
 	culture = frankish
-	trait = education_intrigue_2
-	father = 90095
-	mother = 91002
+	trait = lazy
+	trait = craven
+	trait = education_learning_3
+	father = 6440
+	mother = 6441
+	842.1.2 = {
+		birth = "842.1.2"
+	}
+	910.1.2 = {
+		death = "910.1.2"
+	}
+}
+7561 = {
+	name = "Boson"
+	dynasty = 7052
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	father = 7976
+	809.1.1 = {
+		birth = "809.1.1"
+	}
+	874.1.1 = {
+		death = "874.1.1"
+	}
+}
+7921 = {
+	name = "Theobald"
+	# AKA: Theodald
+	dynasty = 7052
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	father = 7977
+	860.1.1 = {
+		birth = "860.1.1"
+	}
+	880.1.1 = {
+		add_spouse = 7920
+	}
+	895.1.1 = {
+		death = "895.1.1"
+	}
+}
+7923 = {
+	name = "Hugues"
+	dynasty = 7052
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	father = 7921
+	mother = 7920
+	885.1.1 = {
+		birth = "885.1.1"
+	}
+	948.4.10 = {
+		death = "948.4.10"
+	}
+}
+7977 = {
+	name = "Hucbert"
+	dynasty = 7052
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	father = 7976
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	864.1.1 = {
+		death = "864.1.1"
+	}
+}
+7978 = {
+	name = "Richildis"
+	female = yes
+	dynasty = 7052
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	father = 7561
+	833.1.1 = {
+		birth = "833.1.1"
+	}
+	865.1.1 = {
+		death = "865.1.1"
+	}
+}
+7981 = {
+	name = "Boson"
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	father = 7979
+	mother = 7978
+	850.1.1 = {
+		birth = "850.1.1"
+	}
+	876.1.1 = {
+		add_spouse = 7982
+	}
+	887.11.1 = {
+		death = "887.11.1"
+	}
+}
+7983 = {
+	name = "Willa"
+	female = yes
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	father = 7981
+	mother = 7982
+	876.1.1 = {
+		birth = "876.1.1"
+	}
+	929.1.14 = {
+		death = "929.1.14"
+	}
+}
+7994 = {
+	name = "Richard"
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	father = 7979
+	mother = 7978
+	851.1.1 = {
+		birth = "851.1.1"
+	}
+	876.1.1 = {
+		add_spouse = 7993
+	}
+	921.1.1 = {
+		death = "921.1.1"
+	}
+}
+7995 = {
+	name = "Raoul"
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	father = 7994
+	mother = 7993
+	890.1.1 = {
+		birth = "890.1.1"
+	}
+	894.1.1 = {
+		add_spouse = 6443
+	}
+	936.1.15 = {
+		death = "936.1.15"
+	}
+}
+7996 = {
+	name = "Richeut"
+	female = yes
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = calm
+	trait = zealous
+	trait = education_diplomacy_3
+	father = 7994
+	mother = 7993
+	892.1.1 = {
+		birth = "892.1.1"
+	}
+	956.1.1 = {
+		death = "956.1.1"
+	}
+}
+90127 = {
+	name = "Ebles"
+	# AKA: Ebalus Manzer
+	dynasty = 413
+	martial = 7
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = frankish
+	trait = legitimized_bastard
+	father = 90128
+	875.1.1 = {
+		birth = "875.1.1"
+	}
+	934.1.1 = {
+		death = "934.1.1"
+	}
+}
+90128 = {
+	name = "Ramnulf"
+	# AKA: Rannoux
+	dynasty = 413
+	martial = 7
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = frankish
+	father = 90129
+	mother = 168018
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	890.10.1 = {
+		death = "890.10.1"
+	}
+}
+91125 = {
+	name = "ThE_odE_rade" #Théodorade de Troyes, grand daughter of Aleran, count of Troyes
+	# AKA: Theoderade de Troyes
+	female = yes
+	dynasty = 100130 #Troyes
+	religion = "catholic"
+	culture = frankish
+	866.1.1 = { # A little earlier to make her adult on marriage
+		birth = "868.1.1"
+	}
+	903.1.1 = {
+		death = "903.1.1"
+	}
+}
+40068 = {
+	name = "Sulpice" #Sulpice I de la Marche
+	dynasty = 100145
+	religion = "catholic"
+	culture = frankish
+	884.1.1 = {
+		birth = "884.1.1"
+	}
+	933.1.1 = {
+		death = "933.1.1"
+	}
+}
+138066 = {
+	name = "Hildegaire" #Hildegaire I de Limoges
+	dynasty_house = house_limoges
+	religion = "catholic"
+	culture = frankish
+	father = 40266 #Hildebert I de Limoges
+	886.1.1 = {
+		birth = "886.1.1"
+	}
+	#914 married Thetberge
+	945.1.1 = {
+		death = "945.1.1"
+	}
+}
+40082 = {
+	name = "Guillaume" #Guillaume I de Périgord
+	# AKA: Guillaume
+	dynasty = 541 #Taillefer Périgord is 98
+	religion = "catholic"
+	culture = frankish
+	father = 40080 #Wulgrim I Taillefer
+	mother = 168142
+	864.1.1 = {
+		birth = "864.1.1"
+	}
+	892.1.1 = {
+		add_spouse = 40317 #Regilinde de Toulouse
+	}
+	918.1.1 = {
+		death = "918.1.1"
+	}
+}
+144953 = {
+	name = "Roger"
+	dynasty = 660
+	religion = "catholic"
+	culture = frankish
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	900.11.1 = {
+		death = "900.11.1"
+	}
+}
+144982 = {
+	name = "Gerberga"
+	female = yes
+	dynasty_house = house_nibelunging #Nibelunging
+	religion = "catholic"
+	culture = frankish
+	father = 144983
+	832.1.1 = {
+		birth = "832.1.1"
+	}
+	878.1.1 = {
+		death = "878.1.1"
+	}
+}
+144983 = {
+	name = "Theoderic"
+	dynasty_house = house_nibelunging #Nibelunging
+	religion = "catholic"
+	culture = frankish
+	father = 144984
+	816.1.1 = {
+		birth = "816.1.1"
+	}
+	876.1.1 = {
+		death = "876.1.1"
+	}
+}
+167890 = {
+	name = "Mauring"
+	dynasty = 9561
+	religion = "catholic"
+	culture = frankish
+	father = 167880
+	815.1.1 = {
+		birth = "815.1.1"
+	}
+	872.6.1 = {
+		death = "872.6.1"
+	}
+}
+167924 = {
+	name = "AmE_dE_e"
+	dynasty = 681
+	religion = "catholic"
+	culture = frankish
+	810.1.1 = {
+		birth = "810.1.1"
+	}
+	
+	867.1.4 = {
+		death = "867.1.1"
+	}
+}
+168010 = {
+	name = "Bouchard"
+	dynasty = 9568
+	religion = "catholic"
+	culture = frankish
+	810.1.1 = {
+		birth = "810.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+168018 = {
+	name = "Adaltrud"
+	female = yes
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168020
+	mother = 168024
+	810.1.1 = {
+		birth = "810.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+168027 = {	#Count of Maine, Marquis of Neustria
+	name = "Gauzfrid"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168020
+	mother = 168026
 	818.1.1 = {
 		birth = "818.1.1"
 	}
+	878.1.1 = {
+		death = "878.1.1"
+	}
+}
+168081 = {
+	name = "Liuthard"
+	dynasty = 667
+	religion = "catholic"
+	culture = frankish
+	father = 168079
+	mother = 168080
+	811.1.1 = {
+		birth = "811.1.1"
+	}
+	
+	859.1.3 = {
+		death = "859.1.3"
+	}
+}
+168082 = {
+	name = "Eberhard"
+	dynasty = 667
+	religion = "catholic"
+	culture = frankish
+	father = 168079
+	mother = 168080
+	812.1.1 = {
+		birth = "812.1.1"
+	}
+	
+	871.1.1 = {
+		death = "871.1.1"
+	}
+}
+168170 = {
+	name = "Hilgaud"
+	dynasty = 9574
+	religion = "catholic"
+	culture = frankish
+	815.1.1 = {
+		birth = "815.1.1"
+	}
+	
 	866.1.1 = {
 		death = "866.1.1"
 	}
 }
-7814 = {
-	name = "Ermengarde"
-	female = yes
-	dynasty = 25061
-	martial = 6
-	diplomacy = 6
-	intrigue = 7
-	stewardship = 5
+71910 = {
+	name = "Warner"
+	dynasty = 7389
 	religion = "catholic"
 	culture = frankish
-	father = 30227
-	mother = 161484
+	father = 71906
+	mother = 71907
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	853.1.1 = {
+		death = "853.1.1"
+	}
+}
+163093 = {
+	name = "Matfried"
+	dynasty = 667
+	religion = "catholic"
+	culture = frankish
+	father = 163092
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	882.9.12 = {
+		death = "882.9.12"
+	}
+}
+168023 = {
+	name = "Richilde"
+	female = yes
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168022
+	825.1.1 = {
+		birth = "825.1.1"
+	}
+	875.1.1 = {
+		death = "875.1.1"
+	}
+}
+168028 = {
+	name = "Bilchilde"
+	female = yes
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168020
+	mother = 168026
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	
+	877.1.1 = {
+		death = "877.1.1"
+	}
+}
+168029 = {
+	name = "Gauzlin"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	trait = education_learning_3
+	father = 168020
+	mother = 168026
+	822.1.1 = {
+		birth = "822.1.1"
+	}
+	
+	886.4.16 = {
+		death = "886.4.16"
+	}
+}
+168030 = {
+	name = "Rorgon"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168020
+	mother = 168026
+	824.1.1 = {
+		birth = "824.1.1"
+	}
+	
+	865.1.1 = {
+		death = "865.1.1"
+	}
+}
+168035 = {
+	name = "Gauzbert"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168020
+	mother = 168026
+	826.1.1 = {
+		birth = "826.1.1"
+	}
+	
+	877.1.1 = {
+		death = "877.1.1"
+	}
+}
+168040 = {
+	name = "HervE_"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168039
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	844.1.1 = {
+		death = "844.1.1"
+	}
+}
+168055 = {
+	name = "GE_raud"
+	dynasty = 413
+	religion = "catholic"
+	culture = frankish
+	father = 90130
+	mother = 151301
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	
+	879.1.1 = {
+		death = "879.1.1"
+	}
+}
+168060 = {
+	name = "Tertulle"
+	dynasty = 723
+	religion = "catholic"
+	culture = frankish
+	father = 168059
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+168086 = {
+	name = "Adalhard"
+	dynasty = 541
+	religion = "catholic"
+	culture = frankish
+	father = 168085
+	mother = 168084
+	827.1.1 = {
+		birth = "827.1.1"
+	}
+	
+	890.10.10 = {
+		death = "890.10.10"
+	}
+}
+168087 = {
+	name = "Wulfhard"
+	dynasty = 541
+	religion = "catholic"
+	culture = frankish
+	father = 168085
+	mother = 168084
+	828.1.1 = {
+		birth = "828.1.1"
+	}
+	
+	878.1.1 = {
+		death = "878.1.1"
+	}
+}
+167891 = {
+	name = "Suppo"
+	dynasty = 9561
+	religion = "catholic"
+	culture = frankish
+	father = 167890
+	835.1.1 = {
+		birth = "835.1.1"
+	}
+	854.1.1 = {
+		add_spouse = 167895
+	}
+	879.1.1 = {
+		death = "879.1.1"
+	}
+}
+167894 = {
+	name = "Engelberga"
+	dna = 167894_engelberga
+	female = yes
+	dynasty = 9561
+	religion = "catholic"
+	culture = frankish
+	diplomacy = 8
+	trait = education_diplomacy_3
+	trait = diplomat
+	trait = gregarious
+	trait = diligent
+	trait = humble
+	father = 167881
+	834.1.1 = {
+		birth = "834.1.1"
+	}
+	901.1.1 = {
+		death = "901.1.1"
+	}
+}
+168041 = {
+	name = "Renaud"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168039
 	830.1.1 = {
 		birth = "830.1.1"
+	}
+	885.1.1 = {
+		death = "885.1.1"
+	}
+}
+168083 = {
+	name = "Beggo"
+	dynasty = 667
+	religion = "catholic"
+	culture = frankish
+	father = 168082
+	830.1.1 = {
+		birth = "830.1.1"
+	}
+	
+	861.4.23 = {
+		death = "861.4.23"
+	}
+}
+168088 = {
+	name = "Himmo"
+	dynasty = 541
+	religion = "catholic"
+	culture = frankish
+	father = 168085
+	mother = 168084
+	832.1.1 = {
+		birth = "832.1.1"
+	}
+	
+	882.1.1 = {
+		death = "882.1.1"
+	}
+}
+168089 = {
+	name = "Hildeburg"
+	female = yes
+	dynasty = 541
+	religion = "catholic"
+	culture = frankish
+	father = 168085
+	mother = 168084
+	834.1.1 = {
+		birth = "834.1.1"
+	}
+	
+	884.1.1 = {
+		death = "884.1.1"
+	}
+}
+168142 = {
+	name = "Regelinda"
+	female = yes
+	dynasty = 100217
+
+	religion = "catholic"
+	culture = frankish
+
+	father = 163063
+	mother = 168141
+
+	834.1.1 = {
+		birth = "834.1.1"
 	}
 	880.1.1 = {
 		death = "880.1.1"
 	}
 }
-7907 = {
-	name = "Gisela"
-	female = yes
-	dynasty = 25061
-	martial = 4
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 6
+168171 = {
+	name = "Herluin"
+	dynasty = 9574
 	religion = "catholic"
 	culture = frankish
-	trait = education_intrigue_2
-	father = 90095
-	mother = 7986
-	821.1.1 = {
-		birth = "821.1.1"
+	father = 168170
+	835.1.1 = {
+		birth = "835.1.1"
 	}
-	866.1.1 = {
-		death = "866.1.1"
-	}
-}
-7982 = { #Spouse of Boson 7981
-	name = "Ermengarde"
-	female = yes
-	dynasty = 25061
-	martial = 8
-	diplomacy = 8
-	intrigue = 5
-	stewardship = 6
-	religion = "catholic"
-	culture = frankish
-	trait = education_intrigue_3
-	trait = brave
-	trait = strong
-
-	father = 30228 #(King Louis II of Italy)
-	mother = 167894
-	859.1.1 = {
-		birth = "859.1.1"
-	}
-	880.1.1. = {
-		add_trait = unyielding_defender
-	}
-	897.1.1 = {
-		death = "897.1.1"
-	}
-}
-90095 = {
-	name = "Louis"
-	# AKA: Louis 'le Pieux'
-	dynasty = 25061
-	martial = 8
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	trait = education_martial_3
-	trait = zealous
-	father = 6392
-	mother = 167827
-	778.1.1 = {
-		birth = "778.1.1"
-	}
-	793.1.1 = {
-		add_spouse = 91002
-	}
-	819.1.1 = {
-		add_spouse = 7986
-	}
-	840.6.20 = {
-		death = "840.6.20"
-	}
-}
-90096 = {
-	name = "Pepin"
-	dynasty = 25061
-	martial = 6
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 8
-	religion = "catholic"
-	culture = frankish
-	father = 90095
-	mother = 91002
-	797.1.1 = {
-		birth = "797.1.1"
-	}
-	838.12.13 = {
-		death = "838.12.13"
-	}
-}
-90097 = {
-	name = "Pepin"
-	# AKA: Pepin 'le Jeune'
-	dynasty = 25061
-	martial = 4
-	diplomacy = 5
-	intrigue = 3
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	father = 90096
-	823.1.2 = {
-		birth = "823.1.2"
-	}
-	838.1.1 = {
-		give_nickname = nick_the_young
-	}
-	864.1.2 = {
-		death = "864.1.2"
-	}
-}
-90098 = {
-	name = "Charles"
-	dynasty = 25061
-	martial = 5
-	diplomacy = 6
-	intrigue = 5
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	trait = education_learning_3
-	father = 90096
-	825.1.2 = {
-		birth = "825.1.2"
-	}
-	863.6.4 = {
-		death = "863.6.4"
-	}
-}
-90103 = {
-	name = "Charles"	#Charles of Provence
-	dynasty = 25061
-	martial = 6
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	trait = ill
-	father = 30227
-	mother = 161484
-	845.1.2 = {
-		birth = "845.1.2"
-	}
-	863.1.25 = {
-		death = "863.1.25"
-	}
-}
-#Charles the Bald
-90104 = {
-	name = "Charles"
-	dna = 90104_charles_the_bald
-	# AKA: Charles 'le Chauvre'
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	martial = 6
-	diplomacy = 3
-	intrigue = 7
-	stewardship = 8
-	learning = 8
-	trait = education_learning_3
-	trait = deceitful
-	trait = impatient
-	trait = stubborn
-	sexuality = heterosexual
-	father = 90095
-	mother = 7986
 	
-	823.1.14 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_scripted_appearance
-		}
-	}
-	842.1.1 = {
-		add_spouse = 167830 #(Irminitrude of Orléans)
-		give_nickname = nick_the_bald_ironic
-	}
-	858.12.1 = {
-		set_relation_rival = { target = character:90107 reason = rival_historical } #(Ludwig the German), tried to take his Kingdom title
-	}
-	870.1.1 = {
-		add_spouse = 168164
-	}
-	877.6.10 = {
-		death = yes
+	868.1.1 = {
+		death = "868.1.1"
 	}
 }
-#Judith of Flanders
-90110 = {
-	name = "Judith"
-	dna = 90110_judith
+167901 = {
+	name = "Rothildis"
 	female = yes
-	dynasty = 25061
+	dynasty = 7389
 	religion = "catholic"
 	culture = frankish
-	father = 90104 #(King Charles the Bald)
-	mother = 167830 #(Irminitrude of Orléans)
-	trait = brave
-	trait = ambitious
-	trait = cynical
-	844.1.2 = {
-		birth = "844.1.2"
+	father = 71905
+	845.1.1 = {
+		birth = "845.1.1"
 	}
-	871.1.2 = {
-		death = "871.1.2"
+	884.5.27 = {
+		death = "884.5.27"
 	}
 }
-90111 = {
-	name = "Charles"
-	# AKA: Charles 'le Simple'
-	dynasty = 25061
-	martial = 6
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 5
+167925 = {
+	name = "Anschaire"
+	dynasty = 681
 	religion = "catholic"
 	culture = frankish
-	trait = lazy
-	father = 90123
-	mother = 168091
-	879.1.18 = {
-		birth = "879.1.18"
+	father = 167924
+	840.1.1 = {
+		birth = "840.1.1"
 	}
-	919.10.7 = {
-		add_spouse = 90124
-	}
-	929.1.8 = {
-		death = "929.1.8"
+	
+	902.1.1 = {
+		death = "902.1.1"
 	}
 }
-90112 = {
-	name = "Ermentrude"
+167927 = {
+	name = "Foulques"	#le Vénérable, archbishop of Reims
+	dynasty = 681
+	religion = "catholic"
+	culture = frankish
+	trait = education_learning_2
+	father = 167924
+	844.1.1 = {
+		birth = "844.1.1"
+	}
+	
+	900.6.17 = {
+		death = "900.6.17"
+	}
+}
+168011 = {
+	name = "Bouchard"
+	dynasty = 9568
+	religion = "catholic"
+	culture = frankish
+	father = 168010
+	845.1.1 = {
+		birth = "845.1.1"
+	}
+	905.1.1 = {
+		death = "905.1.1"
+	}
+}
+168036 = {
+	name = "Gauzbert"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168027
+	845.1.1 = {
+		birth = "845.1.1"
+	}
+	
+	914.1.1 = {
+		death = "914.1.1"
+	}
+}
+168037 = {
+	name = "Gauzlin"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168027
+	847.1.1 = {
+		birth = "847.1.1"
+	}
+	
+	914.1.1 = {
+		death = "914.1.1"
+	}
+}
+168042 = {
+	name = "Gauzfrid"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168035
+	846.1.1 = {
+		birth = "846.1.1"
+	}
+	
+	886.1.1 = {
+		death = "886.1.1"
+	}
+}
+168053 = {
+	name = "Gauzbert"
+	dynasty = 413
+	religion = "catholic"
+	culture = frankish
+	father = 90129
+	mother = 168018
+	846.1.1 = {
+		birth = "846.1.1"
+	}
+	892.1.1 = {
+		death = "892.1.1"
+	}
+}
+168054 = {
+	name = "Ebles"
+	dynasty = 413
+	religion = "catholic"
+	culture = frankish
+	trait = education_learning_3
+	father = 90129
+	mother = 168018
+	847.1.1 = {
+		birth = "847.1.1"
+	}
+	892.10.2 = {
+		death = "892.10.2"
+	}
+}
+168058 = {
+	name = "AdE_laI_de" #real name unknown
 	female = yes
-	dynasty = 25061
+	dynasty = 413
 	religion = "catholic"
 	culture = frankish
-	father = 90123 # Louis le Bègue
-	mother = 168091
-	876.1.1 = {
-		birth = "876.1.1"
+	father = 90129
+	mother = 168018
+	848.1.1 = {
+		birth = "848.1.1"
 	}
-	916.1.1 = {
-		death = "916.1.1"
-	}
-}
-90113 = {
-	name = "Cunigunde"
-	female = yes
-	dynasty = 25061
-	martial = 6
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = frankish
-	mother = 90112
+	
 	890.1.1 = {
-		birth = "890.1.1"
-	}
-	930.1.1 = {
-		death = "930.1.1"
+		death = "890.1.1"
 	}
 }
-90123 = {
-	name = "Louis"
-	# AKA: Louis 'le Begue'
-	dna = 90123_louis_the_stammerer
-	dynasty = 25061
+168061 = {
+	name = "Ingelger"
+	dynasty = 723
 	religion = "catholic"
 	culture = frankish
-	trait = content
-	trait = trusting
-	trait = craven
-	trait = stuttering
-	trait = education_learning_4
-	father = 90104 #(King Charles the Bald)
-	mother = 167830 #(Irminitrude of Orléans)
-	843.1.2 = {
-		birth = yes
-	}
-	862.3.1 = {
-		add_spouse = 91385 # Ansgarde de Bourgogne
-		give_nickname = nick_the_stammerer
-	}
-	866.7.1 = {
-		remove_spouse = 91385 # Ansgarde de Bourgogne
-		set_relation_friend = { reason = friend_generic_history target = character:7853 } # Pope Nicholas
-	}
-	875.1.1 = {
-		add_spouse = 168091
-	}
-	879.1.11 = {
-		death = yes
-	}
-}
-90154 = {
-	name = "Louis" # Louis III
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	father = 90123 # Louis le Bègue
-	mother = 91385 # Ansgarde de Bourgogne
-	trait = rowdy
-	863.1.18 = {
-		birth = "863.1.18"
-	}
-	882.8.5 = {
-		death = "882.8.5"
-	}
-}
-90155 = {
-	name = "Carloman" # Carloman II
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	father = 90123 # Louis le Bègue
-	mother = 91385 # Ansgarde de Bourgogne
-	trait = bossy
-	866.1.18 = {
-		birth = "866.1.18"
-	}
-	880.1.1 = {
-		add_trait = lifestyle_hunter
-	}
-	884.12.12 = {
-		death = {
-			death_reason = death_hunting_mistakenly_stabbed
-		}
-	}
-}
-71907 = {
-	name = "Adelaide"
-	dynasty = 25061
-	female = yes
-	religion = "catholic"
-	culture = frankish
-	father = 6394
-	798.1.1 = {
-		birth = "798.1.1"
-	}
-	836.1.1 = {
-		death = "836.1.1"
-	}
-}
-144980 = {
-	name = "Pepin"
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	father = 144981
-	879.1.1 = {
-		birth = "879.1.1"
-	}
-	930.1.1 = {
-		death = "930.1.1"
-	}
-}
-144981 = {
-	name = "Pepin"
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	father = 6398
-	mother = 144982
-	849.1.1 = {
-		birth = "849.1.1"
-	}
-	893.1.28 = {
-		death = "893.1.28"
-	}
-}
-#King Lothaire II
-144998 = {
-	name = Lothaire
-	dna = 144998_king_lothaire
-	dynasty = 25061
-	martial = 6
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 5
-	learning = 7
-	religion = catholic
-	culture = frankish
-	father = 30227
-	mother = 161484
-	trait = cynical
-	trait = temperate
-	trait = calm
-	trait = education_intrigue_3
-	sexuality = heterosexual
-	836.1.1 = {
-		birth = yes
-		effect = {
-			add_character_flag = has_scripted_appearance
-		}
-	}
-	855.8.25 = {
-		set_primary_title_to = title:k_lotharingia
-	}
-	854.1.1 = {
-		add_spouse = 6877 # Teutberga
-		effect = {
-			set_relation_soulmate = character:168314 # Waldrada
-		}
-	}
-	869.5.1 = {
-		remove_spouse = 6877 # Finally granted a divorce by Pope Adrian II
-	}
-	869.8.8 = {
-		death = yes
-	}
-}
-167754 = {
-	name = "Ida"
-	female = yes
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	father = 144999
-	770.1.1 = {
-		birth = "770.1.1"
-	}
-	825.1.1 = {
-		death = "825.1.1"
-	}
-}
-168024 = {
-	name = "Rotrud"
-	female = yes
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	father = 6392
-	mother = 167827
-	775.1.1 = {
-		birth = "775.1.1"
-	}
-	810.6.6 = {
-		death = "810.6.6"
-	}
-}
-163170 = {
-	name = "Cunegundis"
-	female = yes
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	father = 6398
-	mother = 144982
-	853.1.1 = {
-		birth = "853.1.1"
-	}
-	900.1.1 = {
-		death = "900.1.1"
-	}
-}
-163171 = {
-	name = "Adelheid"
-	female = yes
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	father = 6398
-	mother = 144982
-	855.1.1 = {
-		birth = "855.1.1"
+	father = 168060
+	840.1.1 = {
+		birth = "840.1.1"
 	}
 	898.1.1 = {
 		death = "898.1.1"
 	}
 }
-163172 = {
-	name = "Gisele"
-	female = yes
-	dynasty = 25061
+168090 = {
+	name = "Wulfhard"
+	dynasty = 541
 	religion = "catholic"
 	culture = frankish
-	father = 30228 #(King Louis II of Italy)
-	mother = 167894
-	diplomacy = 6
-	stewardship = 4
-	martial = 3
-	intrigue = 2
-	learning = 10
-	trait = humble
-	trait = forgiving
-	trait = temperate
-	trait = devoted
+	father = 168086
+	855.1.1 = {
+		birth = "855.1.1"
+	}
+	
+	893.9.6 = {
+		death = "893.9.6"
+	}
+}
+168091 = {
+	name = "Adelheid"
+	female = yes
+	dynasty = 541
+	religion = "catholic"
+	culture = frankish
+	father = 168086
+	856.1.1 = {
+		birth = "856.1.1"
+	}
+	
+	901.11.9 = {
+		death = "901.11.9"
+	}
+}
+163179 = {
+	name = "Richilde"
+	female = yes
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	religion = "catholic"
+	culture = frankish
+	father = 7979
+	mother = 7978
+	852.1.1 = {
+		birth = "852.1.1"
+	}
+	920.1.1 = {
+		death = "920.1.1"
+	}
+}
+168172 = {
+	name = "Hilgaud"
+	dynasty = 9574
+	religion = "catholic"
+	culture = frankish
+	father = 168171
+	855.1.1 = {
+		birth = "855.1.1"
+	}
+	
+	879.1.1 = {
+		death = "879.1.1"
+	}
+}
+168164 = {
+	name = "Richeut"
+	female = yes
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	religion = "catholic"
+	culture = frankish
+	father = 7979
+	mother = 7978
+	852.1.1 = {
+		birth = "852.1.1"
+	}
+	914.1.1 = {
+		death = "914.1.1"
+	}
+}
+168165 = {
+	name = "Radbert"
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	religion = "catholic"
+	culture = frankish
+	trait = education_learning_2
+	father = 7979
+	mother = 7978
 	853.1.1 = {
 		birth = "853.1.1"
 	}
-	868.4.28 = {
-		death = "868.4.28"
+	879.1.1 = {
+		death = "879.1.1"
 	}
 }
-163175 = {
-	name = "Ermentrude"
-	female = yes
-	dynasty = 25061
+167892 = {
+	name = "Unruoch"
+	dynasty = 9561
 	religion = "catholic"
 	culture = frankish
-	father = 90104 #(King Charles the Bald)
-	mother = 167830 #(Irminitrude of Orléans)
-	850.1.1 = {
-		birth = "850.1.1 "
+	father = 167891
+	mother = 167895
+	855.1.1 = {
+		birth = "855.1.1"
 	}
-	877.1.1 = {
-		death = "877.1.1"
+	890.5.12 = {
+		death = "890.5.12"
 	}
 }
-163176 = {
-	name = "Hildegard"
-	female = yes
-	dynasty = 25061
+168044 = {
+	name = "Gauzbert"
+	dynasty = 9569
 	religion = "catholic"
 	culture = frankish
-	father = 90104 #(King Charles the Bald)
-	mother = 167830 #(Irminitrude of Orléans)
-	851.1.1 = {
-		birth = "851.1.1 "
+	father = 168035
+	855.1.1 = {
+		birth = "855.1.1"
 	}
-	880.1.1 = {
-		death = "880.1.1"
-	}
-}
-163177 = {
-	name = "Gisele"
-	female = yes
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	father = 90104 #(King Charles the Bald)
-	mother = 167830 #(Irminitrude of Orléans)
-	852.1.1 = {
-		birth = "852.1.1 "
-	}
-	874.7.1 = {
-		death = "874.7.1"
-	}
-}
-163178 = {
-	name = "Rotryde"
-	female = yes
-	dynasty = 25061
-	religion = "catholic"
-	culture = frankish
-	father = 90104 #(King Charles the Bald)
-	mother = 167830 #(Irminitrude of Orléans)
-	853.1.1 = {
-		birth = "853.1.1 "
-	}
+	
 	912.1.1 = {
 		death = "912.1.1"
 	}
@@ -1679,161 +3280,1608 @@
 
 
 
-190388 = {
-	name = "Hruodis" #duke of Franconia
-	dynasty = 1044099 #Hetanid
+
+#######################################
+# French before French 
+#######################################
+168080 = {
+	name = "Alpais"
+	female = yes
 	religion = "catholic"
-	culture = "frankish"
-	608.1.1 = {
-		birth = yes
+	culture = frankish
+	trait = bastard
+	father = 90095
+	794.1.1 = {
+		birth = "794.1.1"
 	}
-	651.1.1 = {
-		death = yes
+	852.7.23 = {
+		death = "852.7.23"
 	}
 }
-190389 = {
-	name = "Hetan" #duke of Franconia
-	dynasty = 1044099 #Hetanid
+168139 = {
+	name = "Herbert"
+	dynasty = 100217
 	religion = "catholic"
-	culture = "frankish"
-	father = 190388
-	631.1.1 = {
-		birth = yes
+	culture = frankish
+	father = 168130
+	784.1.1 = {
+		birth = "784.1.1"
 	}
-	677.1.1 = {
-		death = yes
+	843.1.1 = {
+		death = "843.1.1"
 	}
 }
-190390 = {
-	name = "Gozbert" #duke of Franconia
-	dynasty = 1044099 #Hetanid
+90130 = {
+	name = "GE_raud"
+	dynasty = 413
+	martial = 7
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 8
 	religion = "catholic"
-	culture = "frankish"
-	father = 190389
-	652.1.1 = {
-		birth = yes
+	culture = frankish
+	790.1.1 = {
+		birth = "790.1.1"
 	}
-	697.1.1 = {
-		death = yes
+	816.1.1 = {
+		add_spouse = 151301
+	}
+	841.6.25 = {
+		death = "841.6.25"
 	}
 }
-190391 = {
-	name = "Hetan" #duke of Franconia
-	dynasty = 1044099 #Hetanid
+91002 = {
+	name = "Ermengarde" #Ermengarde de Hesbaye, wife of emperor Louis I le Pieux
+	# AKA: Ermengarde de Hesbaye
+	dynasty = 743 #Robertine (dynasty of house Capet)
+	female = yes
+	
 	religion = "catholic"
-	culture = "frankish"
-	father = 190390
-	680.1.1 = {
-		birth = yes
+	culture = frankish
+	
+	father = 91001 #Enguerrand de Hesbaye
+	
+	775.1.1 = {
+		birth = "775.1.1" #c. 775/780
 	}
-	733.1.1 = {
-		death = yes
+	
+	818.10.3 = {
+		death = "818.10.3"
 	}
 }
-190392 = {
-	name = "Thuringus" #duke of Franconia
-	dynasty = 1044099 #Hetanid
+91005 = {
+	name = "Robert" #Robert III de Hesbaye, count of Worms, Obberheingau
+	# AKA: Robert III
+	dynasty = 743 #Robertine (dynasty of house Capet)
+	
 	religion = "catholic"
-	culture = "frankish"
-	father = 190391
-	719.1.1 = {
-		birth = yes
+	culture = frankish
+	
+	father = 91004 #Robert II de Hesbaye
+	
+	790.1.1 = {
+		birth = "790.1.1" #random estimation. count since 812.
 	}
-	770.1.1 = {
-		death = yes
-	}
-}
-190393 = {
-	name = "Ado" #duke of Franconia
-	dynasty = 1044099 #Hetanid
-	religion = "catholic"
-	culture = "frankish"
-	father = 190392
-	756.1.1 = {
-		birth = yes
-	}
+	
 	805.1.1 = {
-		death = yes
+		add_spouse = 91122 #Waldrade, daughter of Adrien d'Orléans
+	}
+	
+	834.1.1 = {
+		death = "834.1.1" #before 834
 	}
 }
-190394 = {
-	name = "Robert"
-	dynasty_house = house_babenberger #babenberger
+144975 = {
+	name = "Arnoul"
 	religion = "catholic"
-	culture = "frankish"
-	father = 33328
-	766.1.1 = {
-		birth = yes
+	culture = frankish
+	father = 90095
+	trait = "bastard"
+	794.1.1 = {
+		birth = "794.1.1"
 	}
+	841.1.1 = {
+		death = "841.1.1"
+	}
+}
+144985 = {
+	name = "Childebrand"
+	dynasty_house = house_nibelunging #Nibelunging
+	religion = "catholic"
+	culture = frankish
+	father = 144986
+	780.1.1 = {
+		birth = "780.1.1"
+	}
+	827.1.1 = {
+		death = "827.1.1"
+	}
+}
+71906 = {
+	name = "Lambert"
+	dynasty = 7389
+	religion = "catholic"
+	culture = frankish
+	father = 168185
+	780.1.1 = {
+		birth = "780.1.1"
+	}
+	814.1.1 = {
+		add_spouse = 71907
+	}
+	836.12.30 = {
+		death = "836.12.30"
+	}
+}
+167764 = {
+	name = "Aeda"
+	female = yes
+	religion = "catholic"
+	culture = frankish
+	trait = bastard
+	father = 6394
+	790.1.1 = {
+		birth = "790.1.1"
+	}
+	810.1.1 = {
+		death = "810.1.1"
+	}
+}
+167880 = {
+	name = "Mauring"
+	dynasty = 9561
+	religion = "catholic"
+	culture = frankish
+	father = 167879
+	780.1.1 = {
+		birth = "780.1.1"
+	}
+	824.9.1 = {
+		death = "824.9.1"
+	}
+}
+168019 = {
+	name = "Gauzbert"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168017
+	772.1.1 = {
+		birth = "772.1.1"
+	}
+	851.1.1 = {
+		death = "851.1.1"
+	}
+}
+168020 = {
+	name = "Rorgon"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168017
+	774.1.1 = {
+		birth = "774.1.1"
+	}
+	795.1.1 = {
+		add_spouse = 168024
+	}
+	816.1.1 = {
+		add_spouse = 168026
+	}
+	839.6.16 = {
+		death = "839.6.16"
+	}
+}
+168021 = {
+	name = "Theodrad"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168019
+	795.1.1 = {
+		birth = "795.1.1"
+	}
+	850.1.1 = {
+		death = "850.1.1"
+	}
+}
+168038 = {
+	name = "HervE_"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168017
+	771.1.1 = {
+		birth = "771.1.1"
+	}
+	821.1.1 = {
+		death = "821.1.1"
+	}
+}
+168039 = {
+	name = "Renaud"
+	dynasty = 9569
+	religion = "catholic"
+	culture = frankish
+	father = 168038
+	795.1.1 = {
+		birth = "795.1.1"
+	}
+	844.1.1 = {
+		death = "844.1.1"
+	}
+}
+#######################################
+# More French Characters
+#######################################
+167889 = {
+	name = "Bertila"
+	female = yes
+	dynasty = 9561
+	religion = "catholic"
+	culture = frankish
+	father = 167882
+	865.1.1 = {
+		birth = "865.1.1"
+	}
+	915.12.1 = {
+		death = "915.12.1"
+	}
+}
+168057 = {
+	name = "Ramnulf"
+	dynasty = 413
+	religion = "catholic"
+	culture = frankish
+	father = 90128
+	860.1.1 = {
+		birth = "860.1.1"
+	}
+	
+	901.1.1 = {
+		death = "901.1.1"
+	}
+}
+163174 = {
+	name = "Irmgard"
+	female = yes
+	religion = "catholic"
+	culture = frankish
+	trait = bastard
+	father = 144998 #(King Lothaire II)
+	mother = 168314
+	865.1.1 = {
+		birth = "863.1.1"
+	}
+	890.8.6 = {
+		death = "890.8.6"
+	}
+}
+168315 = {
+	name = "Gisela"
+	female = yes
+	trait = bastard
+	religion = "catholic"
+	culture = frankish
+	father = 144998 #(King Lothaire II)
+	mother = 168314
+	865.1.1 = {
+		birth = "865.1.1"
+	}
+	908.1.1 = {
+		death = "908.1.1"
+	}
+}
+144971 = {
+	name = "Warner"
+	dynasty = 796
+	religion = "catholic"
+	culture = frankish
+	870.1.1 = {
+		birth = "870.1.1"
+	}
+	897.1.1 = {
+		add_spouse = 144972
+	}
+	924.12.6 = {
+		death = "924.12.6"
+	}
+}
+168173 = {
+	name = "Herluin"
+	dynasty = 9574
+	religion = "catholic"
+	culture = frankish
+	father = 168172
+	875.1.1 = {
+		birth = "875.1.1"
+	}
+	
+	945.7.13 = {
+		death = "945.7.13"
+	}
+}
+168169 = {
+	name = "Gebuin"
+	religion = "catholic"
+	culture = frankish
+	trait = bastard
+	father = 7994
+	870.1.1 = {
+		birth = "870.1.1"
+	}
+	
+	926.1.18 = {
+		death = "926.1.18"
+	}
+}
+1164 = {
+	name = "Louis"
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	martial = 4
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = frankish
+	trait = generous
+	trait = calm
+	trait = gluttonous
+	trait = education_stewardship_2
+	trait = blind
+	father = 7981
+	mother = 7982
+	880.1.1 = {
+		birth = "880.1.1"
+		give_nickname = "nick_the_blind"
+	}
+	905.1.1 = {
+		add_spouse = 1701
+	}
+	928.1.2 = {
+		death = "928.1.2"
+	}
+}
+168167 = {
+	name = "Hugues"
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	religion = "catholic"
+	culture = frankish
+	trait = callous
+	father = 7994
+	mother = 7993
+	894.1.1 = {
+		birth = "894.1.1"
+	}
+	
+	952.12.17 = {
+		death = "952.12.17"
+	}
+}
+168168 = {
+	name = "Boson"
+	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
+	religion = "catholic"
+	culture = frankish
+	father = 7994
+	mother = 7993
+	895.1.1 = {
+		birth = "895.1.1"
+	}
+	
+	935.9.13 = {
+		death = "935.9.13"
+	}
+}
+144984 = {
+	name = "Nibelung"
+	dynasty_house = house_nibelunging #Nibelunging
+	religion = "catholic"
+	culture = frankish
+	father = 144985
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	879.1.1 = {
+		death = "879.1.1"
+	}
+}
+163049 = {
+	name = "Hincmar"
+	religion = "catholic"
+	culture = frankish
+	806.1.1 = {
+		birth = "806.1.1"
+	}
+	882.12.21 = {
+		death = "882.12.21"
+	}
+}
+163066 = {
+	name = "Ekkehard"	#AKA Ecchard, Eccard, Echard
+	dynasty_house = house_nibelunging #Nibelunging
+	religion = "catholic"
+	culture = frankish
+	father = 144985
+	802.1.1 = {
+		birth = "802.1.1"
+	}
+	876.1.1 = {
+		death = "876.1.1"
+	}
+}
+167881 = {
+	name = "Adelchis"
+	dynasty = 9561
+	religion = "catholic"
+	culture = frankish
+	father = 167879
 	805.1.1 = {
-		death = yes
+		birth = "805.1.1"
+	}
+	861.1.1 = {
+		death = "861.1.1"
 	}
 }
-190395 = {
-	name = "Cancor"
-	dynasty_house = house_babenberger #babenberger
+168022 = {
+	name = "Gauzlin"
+	dynasty = 9569
 	religion = "catholic"
-	culture = "frankish"
-	father = 190394
-	786.1.1 = {
-		birth = yes
+	culture = frankish
+	father = 168019
+	800.1.1 = {
+		birth = "800.1.1"
 	}
-	813.1.1 = {
-		death = yes
+	850.1.1 = {
+		death = "850.1.1"
 	}
 }
-190396 = {
-	name = "Robert"
-	dynasty_house = house_babenberger #babenberger
+168025 = {
+	name = "Louis"
+	dynasty = 9569
 	religion = "catholic"
-	culture = "frankish"
-	father = 190394
-	789.1.1 = {
-		birth = yes
+	culture = frankish
+	trait = education_learning_3
+	father = 168020
+	mother = 168024
+	800.1.1 = {
+		birth = "800.1.1"
 	}
-	818.1.1 = {
-		death = yes
+	
+	867.1.1 = {
+		death = "867.1.1"
 	}
 }
-190397 = {
-	name = "Heimerich" #count of nassau till 826
-	dynasty_house = house_babenberger #babenberger
+168026 = {
+	name = "Bilchilde"
+	female = yes
 	religion = "catholic"
-	culture = "frankish"
-	father = 33329
-	781.1.1 = {
-		birth = yes
+	culture = frankish
+	800.1.1 = {
+		birth = "800.1.1"
 	}
-	836.1.1 = {
-		death = yes
+	
+	840.1.1 = {
+		death = "840.1.1"
 	}
 }
-190398 = {
-	name = "Ratolf"
-	dynasty_house = house_babenberger #babenberger
+168059 = {
+	name = "Torquatus"
+	dynasty = 723
 	religion = "catholic"
-	culture = "frankish"
-	father = 190397
-	811.1.1 = {
-		birth = yes
+	culture = frankish
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	850.1.1 = {
+		death = "850.1.1"
+	}
+}
+168084 = {
+	name = "Susanna"
+	female = yes
+	dynasty = 667
+	religion = "catholic"
+	culture = frankish
+	father = 168079
+	805.1.1 = {
+		birth = "805.1.1"
+	}
+	
+	855.1.1 = {
+		death = "855.1.1"
+	}
+}
+168085 = {
+	name = "Wulfhard"
+	dynasty = 541
+	religion = "catholic"
+	culture = frankish
+	father = 190504
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	825.1.1 = {
+		add_spouse = 168084
+	}
+	850.1.1 = {
+		death = "850.1.1"
+	}
+}
+168140 = {
+	name = "Kunigunde"
+	female = yes
+	dynasty = 100217
+	religion = "catholic"
+	culture = frankish
+	father = 168139
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	835.6.15 = {
+		death = "835.6.15"
+	}
+}
+168146 = {
+	name = "Senegunde"
+	female = yes
+	dynasty = 100217
+	religion = "catholic"
+	culture = frankish
+	father = 168139
+	801.1.1 = {
+		birth = "801.1.1"
+	}
+	852.1.1 = {
+		death = "852.1.1"
+	}
+}
+#######################################
+# Franconian Characters
+#######################################
+161553 = {
+	name = "Werner"
+	dynasty_house = house_salian
+	religion = "catholic"
+	culture = frankish
+	father = 168184
+	760.1.1 = {
+		birth = "760.1.1"
+	}
+	788.1.1 = {
+		add_spouse = 168189
+	}
+	814.1.1 = {
+		death = "814.1.1"
+	}
+}
+161554 = {
+	name = "Werner"
+	dynasty_house = house_salian
+	religion = "catholic"
+	culture = frankish
+	father = 161553
+	mother = 168189
+	790.1.1 = {
+		birth = "790.1.1"
+	}
+	830.1.1 = {
+		add_spouse = 161557
+	}
+	837.1.1 = {
+		death = "837.1.1"
+	}
+}
+168224 = {
+	name = "Radulf"
+	dynasty = 227
+	religion = "catholic"
+	culture = frankish
+	father = 190386
+	720.1.1 = {
+		birth = "720.1.1"
+	}
+	775.1.1 = {
+		death = "775.1.1"
+	}
+}
+168225 = {
+	name = "Fastrada"
+	female = yes
+	dynasty = 227
+	religion = "catholic"
+	culture = frankish
+	father = 168224
+	760.1.1 = {
+		birth = "760.1.1"
+	}
+	794.10.10 = {
+		death = "794.10.10"
+	}
+}
+168226 = {
+	name = "Thankulf"
+	dynasty = 227
+	religion = "catholic"
+	culture = frankish
+	father = 168224
+	765.1.1 = {
+		birth = "765.1.1"
+	}
+	815.1.1 = {
+		death = "815.1.1"
+	}
+}
+168227 = {
+	name = "Hadulf"
+	dynasty = 227
+	religion = "catholic"
+	culture = frankish
+	father = 168226
+	790.1.1 = {
+		birth = "790.1.1"
 	}
 	840.1.1 = {
-		death = yes
+		death = "840.1.1"
 	}
 }
-190399 = {
-	name = "Hraban"
-	dynasty_house = house_babenberger #babenberger
+33328 = {
+	name = "Heimrich"
+	dynasty_house = house_babenberger
 	religion = "catholic"
-	culture = "frankish"
-	father = 190398
-	837.1.1 = {
-		birth = yes
+	culture = frankish
+	father = 33327
+	745.1.1 = {
+		birth = "745.1.1"
 	}
-	872.1.1 = {
-		death = yes
+	795.5.5 = {
+		death = "795.5.5"
 	}
 }
+33329 = {
+	name = "Heinrich"
+	dynasty_house = house_babenberger
+	religion = "catholic"
+	culture = frankish
+	father = 33328
+	765.1.1 = {
+		birth = "765.1.1"
+	}
+	812.1.1 = {
+		death = "812.1.1"
+	}
+}
+33330 = {
+	name = "Poppo"
+	dynasty_house = house_babenberger
+	religion = "catholic"
+	culture = frankish
+	father = 33329
+	785.1.1 = {
+		birth = "785.1.1"
+	}
+	839.1.1 = {
+		death = "839.1.1"
+	}
+}
+168186 = {
+	name = "Sigihelm"
+	dynasty = 9573
+	religion = "catholic"
+	culture = frankish
+	710.1.1 = {
+		birth = "710.1.1"
+	}
+	765.1.1 = {
+		death = "765.1.1"
+	}
+}
+168187 = {
+	name = "Albrich"
+	dynasty = 9573
+	religion = "catholic"
+	culture = frankish
+	father = 168186
+	730.1.1 = {
+		birth = "730.1.1"
+	}
+	765.1.1 = {
+		death = "765.1.1"
+	}
+}
+168188 = {
+	name = "Eberhard"
+	dynasty = 9573
+	religion = "catholic"
+	culture = frankish
+	father = 168187
+	750.1.1 = {
+		birth = "750.1.1"
+	}
+	804.1.1 = {
+		death = "804.1.1"
+	}
+}
+168189 = {
+	name = "Engiltrud"
+	female = yes
+	dynasty = 9573
+	religion = "catholic"
+	culture = frankish
+	father = 168188
+	770.1.1 = {
+		birth = "770.1.1"
+	}
+	804.1.1 = {
+		death = "804.1.1"
+	}
+}
+168190 = {
+	name = "Sieghard"
+	dynasty = 9573
+	religion = "catholic"
+	culture = frankish
+	father = 168188
+	775.1.1 = {
+		birth = "775.1.1"
+	}
+	826.1.1 = {
+		death = "826.1.1"
+	}
+}
+167790 = {
+	name = "Unruoch"
+	dynasty = 12110
+	religion = "catholic"
+	culture = frankish
+	father = 167807
+	770.1.1 = {
+		birth = "770.1.1"
+	}	
+	853.1.1 = {
+		death = "853.1.1"
+	}
+}
+167791 = {
+	name = "Berengar"
+	dynasty = 12110
+	religion = "catholic"
+	culture = frankish
+	father = 167790
+	790.1.1 = {
+		birth = "790.1.1"
+	}
+	812.1.1 = {
+		give_nickname = nick_the_wise
+	}
+	837.1.1 = {
+		death = "837.1.1"
+	}
+}
+167807 = {
+	name = "Unruoch"
+	dynasty = 12110
+	religion = "catholic"
+	culture = frankish
+	father = 190360
+	736.1.1 = {
+		birth = "736.1.1"
+	}	
+	810.1.1 = {
+		death = "810.1.1"
+	}
+}
+168300 = {
+	name = "Liutpald"
+	dynasty = 416
+	religion = "catholic"
+	culture = frankish
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	
+	842.1.1 = {
+		death = "842.1.1"
+	}
+}
+168191 = {
+	name = "Sieghard"
+	dynasty = 9573
+	religion = "catholic"
+	culture = frankish
+	father = 168190
+	805.1.1 = {
+		birth = "805.1.1"
+	}
+	861.1.1 = {
+		death = "861.1.1"
+	}
+}
+163062 = {
+	name = "Gerhard"
+	dynasty = 667
+	religion = "catholic"
+	culture = frankish
+	father = 31701
+	809.1.1 = {
+		birth = "809.1.1"
+	}
+	874.2.11 = {
+		death = "874.2.11"
+	}
+}
+7909 = {
+	name = "Eberhard"
+	dynasty = 12110
+	martial = 6
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 4
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = arrogant
+	trait = education_intrigue_1
+	father = 167790
+	815.1.1 = {
+		birth = "815.1.1"
+	}
+	837.1.1 = {
+		add_spouse = 7907
+	}
+	866.12.16 = {
+		death = "866.12.16"
+	}
+}
+7946 = {
+	name = "Gebhard"
+	dynasty_house = house_orleans
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = frankish
+	trait = wrathful
+	trait = education_intrigue_2
+	father = 167829
+	815.1.1 = {
+		birth = "815.1.1"
+	}
+	834.1.1 = {
+		add_spouse = 167811
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+168228 = {
+	name = "Thankulf"
+	dynasty = 227
+	religion = "catholic"
+	culture = frankish
+	father = 168227
+	810.1.1 = {
+		birth = "810.1.1"
+	}
+	873.8.1 = {
+		death = "873.8.1"
+	}
+}
+31702 = {
+	name = "Adalhard" #count of Metz
+	dynasty = 667
+	religion = "catholic"
+	culture = frankish
+	father = 31701
+	810.1.2 = {
+		birth = "810.1.2"
+	}
+	870.1.2 = {
+		death = "870.1.2"
+	}
+}
+163053 = {
+	name = "Bertulf"
+	religion = "catholic"
+	culture = frankish
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	883.1.1 = {
+		death = "883.1.1"
+	}
+}
+167804 = {
+	name = "Lupus"
+	religion = "catholic"
+	trait = education_learning_2
+	culture = frankish
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	875.1.1 = {
+		death = "875.1.1"
+	}
+}
+167836 = {
+	name = "Hesso"		
+	religion = "catholic"	
+	culture = frankish
+	trait = education_learning_2		
+	820.1.1 = {		
+		birth = "820.1.1"
+	}	
+	879.1.1 = {		
+		death = "879.1.1"	
+	}
+}
+168159 = {	
+	name = "Hartmann"	
+	religion = "catholic"	
+	culture = frankish
+	trait = education_learning_3
+	820.1.1 = {		
+		birth = "820.1.1"
+	}	
+	878.1.1 = {		
+		death = "878.1.1"	
+	}
+}
+168160 = {	
+	name = "Heyminus"	
+	religion = "catholic"	
+	culture = frankish
+	trait = education_learning_2
+	820.1.1 = {		
+		birth = "820.1.1"
+	}	
+	870.1.1 = {		
+		death = "870.1.1"	
+	}
+}
+168301 = {
+	name = "Liutpald"
+	dynasty = 416
+	religion = "catholic"
+	culture = frankish
+	father = 168300
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	
+	846.1.1 = {
+		death = "846.1.1"
+	}
+}
+7910 = {
+	name = "Heinrich"
+	dynasty_house = house_babenberger
+	martial = 5
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 4
+	religion = "catholic"
+	culture = frankish
+	trait = chaste
+	trait = cynical
+	trait = education_martial_3
+	father = 33330
+	837.1.1 = {
+		birth = "837.1.1"
+	}
+	850.1.1 = {
+		add_spouse = 7911
+	}
+	886.1.1 = {
+		death = "886.1.1"
+	}
+}
+7911 = {
+	name = "Ingeltrude"
+	female = yes
+	dynasty = 12110
+	martial = 6
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 4
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = arrogant
+	trait = education_intrigue_1
+	father = 7909
+	mother = 7907
+	838.1.1 = {
+		birth = "838.1.1"
+	}
+	870.1.1 = {
+		death = "870.1.1"
+	}
+}
+33428 = {
+	name = "Poppo"
+	dynasty_house = house_babenberger
+	religion = "catholic"
+	culture = frankish
+	father = 33330
+	838.1.1 = {
+		birth = "838.1.1"
+	}
+	855.1.1 = {
+		add_spouse = 168230
+	}
+	906.1.1 = {
+		death = "906.1.1"
+	}
+}
+168231 = {
+	name = "Egino"
+	dynasty_house = house_babenberger
+	religion = "catholic"
+	culture = frankish
+	father = 33330
+	839.1.1 = {
+		birth = "839.1.1"
+	}
+	
+	908.8.3 = {
+		death = "908.8.3"
+	}
+}
+168192 = {
+	name = "Sieghard"
+	dynasty = 9573
+	religion = "catholic"
+	culture = frankish
+	father = 168191
+	835.1.1 = {
+		birth = "835.1.1"
+	}
+	907.1.1 = {
+		death = "907.1.1"
+	}
+}
+7816 = {
+	name = "Judith"
+	female = yes
+	dynasty = 12110
+	martial = 6
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 4
+	religion = "catholic"
+	culture = frankish
+	trait = diligent
+	trait = arrogant
+	trait = education_intrigue_1
+	father = 7909
+	mother = 7907
+	839.1.1 = {
+		birth = "839.1.1"
+	}
+	930.1.1 = {
+		death = "930.1.1"
+	}
+}
+167895 = {
+	name = "Ingeltrude" #real name unknown
+	dynasty = 12110
+	female = yes
+	religion = "catholic"
+	culture = frankish
+	father = 167790
+	830.1.1 = {
+		birth = "830.1.1"
+	}
+	880.1.1 = {
+		death = "880.1.1"
+	}
+}
+7950 = {
+	name = "Udo"
+	dynasty_house = house_orleans
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = frankish
+	trait = wrathful
+	trait = education_intrigue_2
+	father = 7946
+	mother = 167811
+	835.1.1 = {
+		birth = "835.1.1"
+	}
+	880.1.1 = {
+		death = "880.1.1"
+	}
+}
+167824 = {	
+	name = "Waldo"	
+	dynasty_house = house_orleans
+	religion = "catholic"	
+	culture = frankish	
+	father = 7946
+	mother = 167811	
+	839.1.1 = {		
+		birth = "839.1.1"
+	}	
+	879.1.1 = {		
+		death = "879.1.1"	
+	}
+}
+161555 = {
+	name = "Werner"
+	dynasty_house = house_salian
+	religion = "catholic"
+	culture = frankish
+	father = 161554
+	mother = 161557
+	831.1.1 = {
+		birth = "831.1.1"
+	}
+	877.1.20 = {
+		death = "877.1.20"
+	}
+}
+168229 = {
+	name = "Radulf"
+	dynasty = 227
+	religion = "catholic"
+	culture = frankish
+	father = 168228
+	830.1.1 = {
+		birth = "830.1.1"
+	}
+	880.1.1 = {
+		death = "880.1.1"
+	}
+}
+168230 = {
+	name = "Hedwig" #real name unknown
+	female = yes
+	dynasty = 227
+	religion = "catholic"
+	culture = frankish
+	father = 168228
+	835.1.1 = {
+		birth = "835.1.1"
+	}
+	885.1.1 = {
+		death = "885.1.1"
+	}
+}
+168302 = {
+	name = "Liutbert" #real name uncertain
+	dynasty_house = house_babenberg
+	religion = "catholic"
+	culture = frankish
+	father = 168301
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	
+	890.1.1 = {
+		death = "890.1.1"
+	}
+}
+31703 = {
+	name = "Adalhard" #count of Metz
+	dynasty = 667
+	religion = "catholic"
+	culture = frankish
+	father = 31702
+	842.1.2 = {
+		birth = "842.1.2"
+	}
+	890.1.2 = {
+		death = "890.1.2"
+	}
+}
+163181 = {
+	name = "Engeltrudis"
+	female = yes
+	dynasty = 667
+	religion = "catholic"
+	culture = frankish
+	father = 31702
+	844.1.1 = {
+		birth = "844.1.1"
+	}
+	890.1.1 = {
+		death = "890.1.1"
+	}
+}
+71901 = {
+	name = "Berengar"
+	dynasty = 12110
+	religion = "catholic"
+	culture = frankish
+	father = 7909
+	mother = 7907
+	841.1.1 = {
+		birth = "841.1.1"
+	}
+	881.1.1 = {
+		add_spouse = 167889
+	}
+	905.6.1 = {
+		culture = "italian"
+		name = "Berengario"
+	}
+	924.4.7 = {
+		death = "924.4.7"
+	}
+}
+163057 = {
+	name = "Unruoch"
+	dynasty = 12110
+	religion = "catholic"
+	culture = frankish
+	father = 7909
+	mother = 7907
+	trait = content
+	trait = just
+	trait = brave
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	874.1.1 = {
+		death = "874.1.1"
+	}
+}
+167792 = {
+	name = "Adalhard"
+	dynasty = 12110
+	religion = "catholic"
+	culture = frankish
+	father = 7909
+	mother = 7907
+	843.1.1 = {
+		birth = "843.1.1"
+	}
+	874.7.1 = {
+		death = "874.7.1"
+	}
+}
+168065 = {
+	name = "Heylwig"
+	female = yes
+	dynasty = 12110
+	religion = "catholic"
+	culture = frankish
+	father = 7909
+	mother = 7907
+	844.1.1 = {
+		birth = "844.1.1"
+	}
+	895.1.1 = {
+		death = "895.1.1"
+	}
+}
+168183 = {
+	name = "Rudolf"
+	dynasty = 12110
+	religion = "catholic"
+	culture = frankish
+	father = 7909
+	mother = 7907
+	842.1.1 = {
+		birth = "842.1.1"
+	}
+	892.5.1 = {
+		death = "892.5.1"
+	}
+}
+163052 = {
+	name = "Wilibert"
+	religion = "catholic"
+	culture = frankish
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	889.9.11 = {
+		death = "889.9.11"
+	}
+}
+167837 = {
+	name = "Walther"
+	religion = "catholic"
+	culture = frankish
+	trait = education_learning_2		
+	840.1.1 = {		
+		birth = "840.1.1"
+	}
+	910.1.1 = {		
+		death = "910.1.1"	
+	}
+}
+7947 = {
+	name = "Berengar"
+	dynasty_house = house_orleans
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = frankish
+	trait = wrathful
+	trait = education_intrigue_2
+	father = 7946
+	mother = 167811
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	890.1.1 = {
+		death = "890.1.1"
+	}
+}
+163051 = {	
+	name = "Bertolf"	
+	dynasty_house = house_orleans
+	religion = "catholic"	
+	culture = frankish	
+	father = 7946
+	mother = 167811	
+	842.1.1 = {		
+		birth = "842.1.1"
+	}	
+	883.2.10 = {		
+		death = "883.2.10"	
+	}
+}
+7912 = {
+	name = "Hedwig"
+	female = yes
+	dynasty_house = house_babenberger
+	martial = 5
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 4
+	religion = "catholic"
+	culture = frankish
+	trait = chaste
+	trait = cynical
+	trait = education_martial_3
+	father = 7910
+	mother = 7911
+	857.1.1 = {
+		birth = "857.1.1"
+	}
+	886.1.1 = {
+		death = "886.1.1"
+	}
+}
+168221 = {
+	name = "Adalbert"
+	dynasty_house = house_babenberger
+	religion = "catholic"
+	culture = frankish
+	father = 7910
+	mother = 7911
+	855.1.1 = {
+		birth = "855.1.1"
+	}
+	906.9.9 = {
+		death = "906.9.9"
+	}
+}
+168222 = {
+	name = "Adalhard"
+	dynasty_house = house_babenberger
+	religion = "catholic"
+	culture = frankish
+	father = 7910
+	mother = 7911
+	856.1.1 = {
+		birth = "856.1.1"
+	}
+	903.1.1 = {
+		death = "903.1.1"
+	}
+}
+168223 = {
+	name = "Adalbert"
+	dynasty_house = house_babenberger
+	religion = "catholic"
+	culture = frankish
+	father = 33428
+	mother = 168230
+	858.1.1 = {
+		birth = "858.1.1"
+	}
+	915.1.1 = {
+		death = "915.1.1"
+	}
+}
+168193 = {
+	name = "Ratold"
+	dynasty = 9573
+	religion = "catholic"
+	culture = frankish
+	father = 168192
+	855.1.1 = {
+		birth = "855.1.1"
+	}
+	919.1.1 = {
+		death = "919.1.1"
+	}
+}
+168194 = {
+	name = "Sieghard"
+	dynasty = 9573
+	religion = "catholic"
+	culture = frankish
+	father = 168192
+	857.1.1 = {
+		birth = "857.1.1"
+	}
+	923.1.1 = {
+		death = "923.1.1"
+	}
+}
+161525 = {
+	name = "Erenfried"
+	dynasty = 101554
+	religion = "catholic"
+	culture = frankish
+	850.1.1 = {
+		birth = "850.1.1"
+	}
+	904.1.1 = {
+		death = "904.1.1"
+	}
+}
+7951 = {
+	name = "Konrad"
+	dynasty_house = house_konradiner
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = frankish
+	trait = wrathful
+	trait = education_intrigue_2
+	father = 7950
+	855.1.1 = {
+		birth = "855.1.1"
+	}
+	906.2.27 = {
+		death = "906.2.27"
+	}
+}
+7961 = {
+	name = "Gebhard"
+	dynasty_house = house_orleans
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = frankish
+	trait = wrathful
+	trait = education_intrigue_2
+	father = 7950
+	850.1.1 = {
+		birth = "850.1.1"
+	}
+	910.6.22 = {
+		death = "910.6.22"
+	}
+}
+7966 = {
+	name = "Eberhard"
+	dynasty_house = house_konradiner
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = frankish
+	trait = wrathful
+	trait = education_intrigue_2
+	father = 7950
+	852.1.1 = {
+		birth = "852.1.1"
+	}
+	902.1.1 = {
+		death = "902.1.1"
+	}
+}
+7969 = {
+	name = "Luitpold"
+	dynasty_house = house_babenberg
+	martial = 4
+	diplomacy = 3
+	intrigue = 3
+	stewardship = 5
+	religion = "catholic"
+	culture = frankish
+	father = 168302
+	860.1.1 = {
+		birth = "860.1.1"
+	}
+	898.1.1 = {
+		add_spouse = 167851
+	}
+	907.7.4 = {
+		death = "907.7.4"
+	}
+}
+168303 = {
+	name = "Herolt"
+	dynasty_house = house_babenberg
+	religion = "catholic"
+	culture = frankish
+	father = 168302
+	862.1.1 = {
+		birth = "862.1.1"
+	}
+	
+	895.1.1 = {
+		death = "895.1.1"
+	}
+}
+131714 = {
+	name = "Sigebert"
+	dynasty_house = house_chaumontois
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = frankish
+	father = 131715
+	860.1.2 = {
+		birth = "860.1.2"
+	}
+	910.1.2 = {
+		death = "910.1.2"
+	}
+}
+167793 = {
+	name = "Eberhard"
+	dynasty = 12110
+	religion = "catholic"
+	culture = frankish
+	father = 167792
+	862.1.1 = {
+		birth = "862.1.1"
+	}
+	889.1.1 = {
+		death = "889.1.1"
+	}
+}
+#######################################
+# Carolingian Dynasty
+#######################################
+
+#######################################
+# Carolingian Dynasty
+#######################################
+
+#######################################
+# Carolingian Dynasty
+#######################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 190400 = {
 	name = "Emich" #count of leinigen
 	dynasty = 1044100 #Emichid
@@ -1897,60 +4945,7 @@
 		death = yes
 	}
 }
-190405 = {
-	name = "Chrodgang" #archbishop of Metz
-	dynasty_house = house_babenberger #babenberger
-	religion = "catholic"
-	culture = "frankish"
-	father = 33327
-	748.1.1 = {
-		birth = yes
-	}
-	775.1.1 = {
-		death = yes
-	}
-}
-190406 = {
-	name = "Ermbert" #bishop of Worms
-	dynasty_house = house_babenberger #babenberger
-	religion = "catholic"
-	culture = "frankish"
-	father = 33327
-	751.1.1 = {
-		birth = yes
-	}
-	803.1.1 = {
-		death = yes
-	}
-}
-190407 = {
-	name = "Rachilt" #daughter of Cancor of Worms
-	female = yes
-	dynasty_house = house_babenberger #babenberger
-	religion = "catholic"
-	culture = "frankish"
-	father = 33327
-	750.1.1 = {
-		birth = yes
-	}
-	797.1.1 = {
-		death = yes
-	}
-}
-190408 = {
-	name = "Euphemia" #daughter of Cancor of Worms
-	female = yes
-	dynasty_house = house_babenberger #babenberger
-	religion = "catholic"
-	culture = "frankish"
-	father = 33327
-	756.1.1 = {
-		birth = yes
-	}
-	779.1.1 = {
-		death = yes
-	}
-}
+
 190409 = {
 	name = "Anselm"
 	dynasty = 743 #Robertine (dynasty of house Capet)
@@ -2030,23 +5025,6 @@
 		death = yes
 	}
 }
-
-33327 = {
-	name = "Cancor"
-	#Rupert Cancor
-	dynasty_house = house_babenberger
-	religion = "catholic"
-	culture = "frankish"
-	father = 91000
-	mother = 91121
-	722.1.1 = {
-		birth = "722.1.1"
-	}
-	771.1.1 = {
-		death = "782.1.1"
-	}
-}
-
 200143 = {
 	name = "Guilhelm"
 	dynasty_house = house_orleans
@@ -2063,7 +5041,6 @@
 		death = yes
 	}
 }
-
 200146 = {
 	name = "Odelric"
 	dynasty = 1046011
@@ -2082,7 +5059,6 @@
 		death = yes
 	}
 }
-
 200147 = {
 	name = "Ingitrude"
 	female = yes
@@ -2100,14 +5076,6 @@
 		death = yes
 	}
 }
-
-
-
-
-
-
-
-
 190419 = {
 	name = "Plectrudis" #wife of pepin of vermandois
 	female = yes
@@ -2134,8 +5102,6 @@
 		death = yes
 	}
 }
-
-
 190423 = {
 	name = "Godefroi"
 	religion = "catholic"
@@ -2175,8 +5141,6 @@
 		death = yes
 	}
 }
-
-
 190429 = {
 	name = "Bertrada" #wife of pepin king of France
 	female = yes
@@ -2196,14 +5160,6 @@
 		death = yes
 	}
 }
-
-
-
-
-
-
-
-
 190437 = {
 	name = "Audoen" #count of Amiens
 	dynasty_house = house_jerome_karling #De Martel
@@ -2390,9 +5346,6 @@
 		death = yes
 	}
 }
-
-
-
 190511 = {
 	name = "Theoderic" #duke of Lower Burgundy
 	dynasty_house = house_nibelunging #Nibelunging
@@ -2668,7 +5621,6 @@
 	706.1.1 = { add_spouse = 91387 } #Ermengarde
 	750.1.1 = { death = yes } #unknown
 }
-
 91387 = {
 	name = "Ermengarde" #Ermengarde, wife of Riculfe
 	female = yes
@@ -2679,7 +5631,6 @@
 	674.1.1 = { birth = yes } #unknown
 	760.1.1 = { death = yes } #unknown
 }
-
 91388 = {
 	name = "Fulrad" #Fulrad, abbot of Saint-Denis
 	dynasty = 9300 #Riculfids
@@ -2694,7 +5645,6 @@
 	723.1.1 = { trait = education_learning_3 }
 	784.7.16 = { death = yes }
 }
-
 91389 = {
 	name = "Riculfe" #fantasy brother of Fulrad
 	dynasty = 9300 #Riculfids
@@ -2707,7 +5657,6 @@
 	724.1.1 = { add_spouse = 91392 } #fantasy spouse
 	765.1.1 = { death = yes } #down from 790
 }
-
 91390 = {
 	name = "Ermentrude" #Ermentrude, wife of Jérôme, bastard of Charles Martel
 	dynasty = 9300 #Riculfids
@@ -2720,7 +5669,6 @@
 	706.1.1 = { birth = yes } #unknown, changed from 725 beacuse baby
 	785.1.1 = { death = yes }
 }
-
 91391 = {
 	name = "AlpaI_de" #unnamed daughter of Jérôme
 	female = yes
@@ -2750,7 +5698,6 @@
 		death = yes
 	}
 }
-
 91394 = {
 	name = "Nithard" #Nithard, landowner in Saalgau
 	dynasty = 9306 #Nithard-Richard from Middle Rhine
@@ -2768,7 +5715,6 @@
 		death = yes #after 778
 	}
 }
-
 91395 = {
 	name = "Madelgaud" #brother of Nithard
 	dynasty = 9306 #Bivinids/Nithard-Richard from Middle Rhine
@@ -3035,7 +5981,6 @@
 	700.1.1 = { birth = yes } #unknown
 	770.1.1 = { death = yes } #after 28 Aug 765
 }
-
 #- -# Family of the mother of Charlemagne
 91465 = {
 	name = "Charibert" #fantasy great-grand father of Charlemagne
@@ -3089,7 +6034,6 @@
 	680.1.1 = { birth = yes } #unknown
 	750.1.1 = { death = yes } #unknown
 }
-
 #- Historical characters from the very late merovingian era, to be granted counties and baronies in the kingdom of the Franks -#
 91470 = { # set as count of Rennes and Nantes
 	name = "Chiemgaud" #HELMGAUD [Chiemgaud]
@@ -3109,7 +6053,6 @@
 	715.1.1 = { birth = yes } #unknown
 	770.1.1 = { death = yes } #after 8 Jul 753
 }
-
 91472 = {
 	name = "Leudonius" # Bishop LEUDONIUS .
 	dynasty = 9312
@@ -3120,7 +6063,6 @@
 	706.1.1 = { trait = education_learning_2 }
 	760.1.1 = { death = yes } #unknown
 }
-
 91473 = {
 	name = "Milo" # Bishop MILO .
 	dynasty = 9312
@@ -3132,7 +6074,6 @@
 	726.1.1 = { trait = education_learning_2 }
 	770.1.1 = { death = yes } #after 30 Oct 759
 }
-
 91474 = {
 	name = "Wido"
 	dynasty = 9312
@@ -3143,7 +6084,6 @@
 	715.1.1 = { birth = yes } #unknown
 	770.1.1 = { death = yes } #after 8 Jul 753
 }
-
 91475 = { #set in carcassonne
 	name = "Adelard" #ADELARD, count of Cavalonensis (Languedoc)
 	dynasty = 9313
@@ -3153,7 +6093,6 @@
 	720.1.1 = { birth = yes } #unknown
 	780.1.1 = { death = yes } #after 765
 }
-
 91476 = { #set in county of evreux
 	name = "Australdis" #AUSTRALDIS, count
 	dynasty = 9314
@@ -3163,7 +6102,6 @@
 	725.1.1 = { birth = yes } #unknown
 	785.1.1 = { death = yes } #after 765
 }
-
 91477 = { #set in Rouen and Eu
 	name = "Baugulf" #BAUGULF, count
 	dynasty = 9315
@@ -3173,7 +6111,6 @@
 	730.1.1 = { birth = yes } #unknown
 	790.1.1 = { death = yes } #after 26 May 771
 }
-
 91478 = { #set in Vendôme
 	name = "Berengar" #Berengar, count
 	dynasty = 9316
@@ -3183,7 +6120,6 @@
 	720.1.1 = { birth = yes } #unknown
 	780.1.1 = { death = yes } #after [769]
 }
-
 91479 = { # set in Cholet
 	name = "Childerad" #CHILDERAD [Hildrad]
 	dynasty = 9317
@@ -3193,7 +6129,6 @@
 	720.1.1 = { birth = yes } #unknown
 	790.1.1 = { death = yes } #28 Jul 775
 }
-
 91480 = { #set in Chartres
 	name = "Drogo" #DROGO
 	dynasty = 9318
@@ -3203,7 +6138,6 @@
 	715.1.1 = { birth = yes } #unknown
 	775.1.1 = { death = yes } #after 13 Aug 762
 }
-
 91481 = { #set in Blois
 	name = "Engelger" #ENGELGER
 	dynasty = 9319
@@ -3213,7 +6147,6 @@
 	720.1.1 = { birth = yes } #unknown
 	780.1.1 = { death = yes } #after 11 Dec 770
 }
-
 91482 = {#set in Geneve and Neufchâtel
 	name = "FrE_dE_ric" #FREDERIC, count of Transjuranie
 	dynasty = 9320
@@ -3223,7 +6156,6 @@
 	725.1.1 = { birth = yes } #unknown
 	770.1.1 = { death = yes } #after 753
 }
-
 91483 = { #set in Orléans
 	name = "Galimanus" #GALIMANUS, count
 	dynasty = 9321
@@ -3233,7 +6165,6 @@
 	730.1.1 = { birth = yes } #unknown
 	780.1.1 = { death = yes } #after 765
 }
-
 91484 = {#set in Sens
 	name = "Giselhar" #GISELHAR [Gislarius], count of Betoricas
 	dynasty = 9322
@@ -3246,7 +6177,6 @@
 	}
 	775.1.1 = { death = yes } #after 30 Oct 759
 }
-
 91485 = { #set in Berry
 	name = "Herluin" #HERLUIN
 	dynasty = 9323
@@ -3256,7 +6186,6 @@
 	730.1.1 = { birth = yes } #unknown
 	775.1.1 = { death = yes } #after 13 Aug 762
 }
-
 91486 = { #set in Boulogne and Calais
 	name = "Hermeneld" #HERMENELD
 	dynasty = 9324
@@ -3266,7 +6195,6 @@
 	730.1.1 = { birth = yes } #unknown
 	790.1.1 = { death = yes } #after 28 Jul 775
 }
-
 91487 = {  #set in Artois
 	name = "Roding" #RODING [Hruoding]
 	dynasty = 9325
@@ -3276,7 +6204,6 @@
 	720.1.1 = { birth = yes } #unknown
 	780.1.1 = { death = yes } #after 25 May 765
 }
-
 91488 = {  #set in Saint-Pol
 	name = "Troianus" #TROIANUS, a funny name in frankish
 	dynasty = 9326
@@ -3286,7 +6213,6 @@
 	725.1.1 = { birth = yes } #unknown
 	785.1.1 = { death = yes } #after 13 Aug 762
 }
-
 91489 = {  #set in Saint-Omer
 	name = "Unibert" #UNIBERT [Gunbert]
 	dynasty = 9327
@@ -3811,7 +6737,6 @@
 		death = yes
 	}
 }
-
 168683 = {
 	name = "Chlodoald"
 	dynasty = 542
@@ -3826,7 +6751,6 @@
 		death = yes
 	}
 }
-
 168684 = {
 	name = "Gonthier"
 	dynasty = 542
@@ -3841,7 +6765,6 @@
 		death = yes
 	}
 }
-
 168685 = {
 	name = "Caribert"
 	dynasty = 542
@@ -3856,7 +6779,6 @@
 		death = yes
 	}
 }
-
 168686 = {
 	name = "Gontran"
 	dynasty = 542
@@ -3871,7 +6793,6 @@
 		death = yes
 	}
 }
-
 168687 = {
 	name = "Sigebert"
 	dynasty = 542
@@ -3886,7 +6807,6 @@
 		death = yes
 	}
 }
-
 168688 = {
 	name = "Chlodosinde"
 	female = yes
@@ -3902,7 +6822,6 @@
 		death = yes
 	}
 }
-
 168689 = {
 	name = "ChilpE_ric"
 	dynasty = 542
@@ -3919,7 +6838,6 @@
 		}
 	}
 }
-
 168690 = {
 	name = "Chramme"
 	dynasty = 542
@@ -3934,7 +6852,6 @@
 		death = yes
 	}
 }
-
 168691 = {
 	name = "Childebert"
 	dynasty = 542
@@ -3949,11 +6866,6 @@
 		death = yes
 	}
 }
-
-
-
-
-
 168692 = {
 	name = "ThE_odebert"
 	dynasty = 542
@@ -3968,11 +6880,6 @@
 		death = yes
 	}
 }
-
-
-
-
-
 168693 = {
 	name = "ThE_oderic"
 	dynasty = 542
@@ -3987,9 +6894,6 @@
 		death = yes
 	}
 }
-
-
-
 168694 = {
 	name = "Sigebert"
 	dynasty = 542
@@ -4004,9 +6908,6 @@
 		death = yes
 	}
 }
-
-
-
 168695 = {
 	name = "Clotaire"
 	dynasty = 542
@@ -4021,9 +6922,6 @@
 		death = yes
 	}
 }
-
-
-
 168696 = {
 	name = "Dagobert"
 	dynasty = 542
@@ -4038,9 +6936,6 @@
 		death = yes
 	}
 }
-
-
-
 168697 = {
 	name = "Caribert"
 	dynasty = 542
@@ -4055,9 +6950,6 @@
 		death = yes
 	}
 }
-
-
-
 168698 = {
 	name = "ChilpE_ric"
 	dynasty = 542
@@ -4072,9 +6964,6 @@
 		death = yes
 	}
 }
-
-
-
 168699 = {
 	name = "Clovis"
 	dynasty = 542
@@ -4089,10 +6978,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168700 = {
 	name = "Sigebert"
 	dynasty = 542
@@ -4107,9 +6992,6 @@
 		death = yes
 	}
 }
-
-
-
 168701 = {
 	name = "Clotaire"
 	dynasty = 542
@@ -4124,9 +7006,6 @@
 		death = yes
 	}
 }
-
-
-
 168702 = {
 	name = "ChildE_ric"
 	dynasty = 542
@@ -4145,7 +7024,6 @@
 		}
 	}
 }
-
 168703 = {
 	name = "ThE_oderic"
 	dynasty = 542
@@ -4162,9 +7040,6 @@
 		death = yes
 	}
 }
-
-
-
 168704 = {
 	name = "Dagobert"
 	dynasty = 542
@@ -4182,11 +7057,6 @@
 		}
 	}
 }
-
-
-
-
-
 168705 = {
 	name = "Bilhilde"
 	female = yes
@@ -4204,9 +7074,6 @@
 		}
 	}
 }
-
-
-
 168706 = {
 	name = "ChilpE_ric"
 	dynasty = 542
@@ -4222,10 +7089,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168707 = {
 	name = "ChildE_ric"
 	dynasty = 542
@@ -4241,9 +7104,6 @@
 		death = yes
 	}
 }
-
-
-
 168708 = {
 	name = "ThE_oderic"
 	dynasty = 542
@@ -4258,10 +7118,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168709 = {
 	name = "Clovis"
 	dynasty = 542
@@ -4277,10 +7133,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168710 = {
 	name = "Clotaire"
 	dynasty = 542
@@ -4296,9 +7148,6 @@
 		death = yes
 	}
 }
-
-
-
 168711 = {
 	name = "ChildE_bert"
 	dynasty = 542
@@ -4314,10 +7163,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168712 = {
 	name = "Dagobert"
 	dynasty = 542
@@ -4332,10 +7177,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168713 = {
 	name = "ThE_oderic"
 	dynasty = 542
@@ -4364,9 +7205,6 @@
 		death = yes
 	}
 }
-
-
-
 168743 = {
 	name = "Gundioc"
 	dynasty = 9616
@@ -4381,9 +7219,6 @@
 		death = yes
 	}
 }
-
-
-
 168744 = {
 	name = "Gundobad"
 	dynasty = 9616
@@ -4398,9 +7233,6 @@
 		death = yes
 	}
 }
-
-
-
 168745 = {
 	name = "Godegisel"
 	dynasty = 9616
@@ -4415,9 +7247,6 @@
 		death = yes
 	}
 }
-
-
-
 168746 = {
 	name = "ChilpE_ric"
 	dynasty = 9616
@@ -4432,10 +7261,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168747 = {
 	name = "Gondemar"
 	dynasty = 9616
@@ -4450,9 +7275,6 @@
 		death = yes
 	}
 }
-
-
-
 168748 = {
 	name = "Sedeleube"
 	female = yes
@@ -4468,10 +7290,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168749 = {
 	name = "Chrotechildis"
 	female = yes
@@ -4487,9 +7305,6 @@
 		death = yes
 	}
 }
-
-
-
 168750 = {
 	name = "Sigismond"
 	dynasty = 9616
@@ -4506,9 +7321,6 @@
 		death = yes
 	}
 }
-
-
-
 168751 = {
 	name = "Gondemar"
 	dynasty = 9616
@@ -4523,9 +7335,6 @@
 		death = yes
 	}
 }
-
-
-
 168752 = {
 	name = "Gondloque"
 	dynasty = 9616
@@ -4541,10 +7350,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168753 = {
 	name = "Sigeric"
 	dynasty = 9616
@@ -4560,9 +7365,6 @@
 		death = yes
 	}
 }
-
-
-
 168754 = {
 	name = "Suavegotha"
 	dynasty = 9616
@@ -4579,10 +7381,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168755 = {
 	name = "Gebicca"
 	dynasty = 9616
@@ -4596,9 +7394,6 @@
 		death = yes
 	}
 }
-
-
-
 168756 = {
 	name = "Gondemar"
 	dynasty = 9616
@@ -4613,10 +7408,6 @@
 		death = yes
 	}
 }
-
-
-
-
 168757 = {
 	name = "Giselher"
 	dynasty = 9616
@@ -4631,9 +7422,6 @@
 		death = yes
 	}
 }
-
-
-
 168759 = {
 	name = "ChilpE_ric"
 	dynasty = 9616
@@ -4681,7 +7469,6 @@
 		death = yes
 	}
 }
-
 168785 = {
 	name = "Ostrogotha"
 	female = yes
@@ -4697,7 +7484,6 @@
 		death = yes
 	}
 }
-
 168786 = {
 	name = "Athalarich"
 	dynasty = 9617
@@ -4713,7 +7499,6 @@
 		death = yes
 	}
 }
-
 168789 = {
 	name = "Matasuentha"
 	female = yes
@@ -4854,7 +7639,6 @@
 		death = yes
 	}
 }
-
 90094 = {
 	name = "Pepin"
 	# AKA: Pepin 'le Bossu'
@@ -4879,7 +7663,6 @@
 		death = "811.1.2"
 	}
 }
-
 131717 = {
 	name = "Agnerald"
 	dynasty_house = house_chaumontois
@@ -4897,7 +7680,6 @@
 		death = "790.1.2"
 	}
 }
-
 194170 = {
 	name = "Anselm"
 	dynasty_house = house_chaumontois
@@ -4915,7 +7697,6 @@
 		death = yes
 	}
 }
-
 194171 = {
 	name = "Adalbert"
 	dynasty = 1045028
@@ -4929,7 +7710,6 @@
 		death = yes
 	}
 }
-
 194173 = {
 	name = "Gerberga"
 	dynasty = 9322
@@ -4945,9 +7725,6 @@
 		death = yes
 	}
 }
-
-
-
 194175 = {
 	name = "Ida"
 	female = yes
@@ -4960,10 +7737,6 @@
 		death = yes
 	}
 }
-
-
-
-
 131718 = {
 	name = "Arnoul"
 	dynasty_house = house_chaumontois
@@ -4981,11 +7754,6 @@
 		death = "740.1.2"
 	}
 }
-
-
-
-
-
 131716 = {
 	name = "Arnoul"
 	dynasty_house = house_chaumontois
@@ -5039,7 +7807,6 @@
 		death = "775.1.1" #after 770
 	}
 }
-
 91004 = {
 	name = "Robert" #Robert II de Hesbaye, count of Hesbaye, Worms and Oberrheingau.
 	# AKA: Robert II
@@ -5099,7 +7866,6 @@
 		death = "810.1.2"
 	}
 }
-
 144986 = {
 	name = "Childebrand"
 	dynasty_house = house_nibelunging #Nibelunging
@@ -5113,7 +7879,6 @@
 		death = "796.1.1"
 	}
 }
-
 144987 = {
 	name = "Nibelung"
 	dynasty_house = house_nibelunging #Nibelunging
@@ -5127,11 +7892,6 @@
 		death = "786.1.1"
 	}
 }
-
-
-
-
-
 163092 = {
 	name = "Matfried"
 	dynasty = 667
@@ -5188,11 +7948,6 @@
 		death = "804.1.1"
 	}
 }
-
-
-
-
-
 168129 = {
 	name = "Adalelme"
 	dynasty = 100217
@@ -5208,9 +7963,6 @@
 		death = "825.1.1"
 	}
 }
-
-
-
 168130 = {
 	name = "Guillaume"
 	dynasty = 100217
@@ -5226,7 +7978,6 @@
 		death = "815.5.21"
 	}
 }
-
 168184 = {
 	name = "Lambert"
 	dynasty = 7389
@@ -5240,7 +7991,6 @@
 		death = "788.1.1"
 	}
 }
-
 168185 = {
 	name = "Guy"
 	dynasty = 7389
@@ -5269,7 +8019,6 @@
 		death = yes
 	}
 }
-
 168625 = {
 	name = "Waldger"
 	dynasty_house = house_bernhard_karling #Bernhard-Karling
@@ -5284,26 +8033,6 @@
 		death = yes
 	}
 }
-
-#71910 = {
-#	name = "Warner"
-#	dynasty = 7389
-#	religion = "catholic"
-#	culture = frankish
-#
-#	father = 71906
-#	mother = 71907
-#
-#	820.1.1 = {
-#		birth = yes
-#	}
-#	853.1.1 = {
-#		death = {
-#			death_reason = death_execution
-#		}
-#	}
-#}
-
 262155 = {
 	name = "Ide" # Itta Guideschi, wife of Guaimar I of Salerno
 	female = yes
@@ -5324,7 +8053,6 @@
 		death = yes
 	}
 }
-
 91383 = {
 	name = "Hardouin" #  Hardouin Ardoinici
 	dynasty = 680
@@ -5338,7 +8066,6 @@
 		death = yes
 	}
 }
-
 91384 = {
 	name = "Eudes" # Eudes Ardoinici
 	dynasty = 680
@@ -5353,7 +8080,6 @@
 		death = yes
 	}
 }
-
 91385 = {
 	name = "Ansgarde" #  Ansgarde Ardoinici, wife of Louis II of France
 	female = yes
@@ -5369,7 +8095,6 @@
 		death = yes
 	}
 }
-
 167952 = {
 	name = "Hardouin" # Hardouin Ardoinici
 	dynasty = 680
@@ -5385,7 +8110,6 @@
 		death = yes
 	}
 }
-
 167953 = {
 	name = "Roger" # Roger Ardoinici, Count of Cuneo (904-915)
 	dynasty = 680
@@ -5405,7 +8129,6 @@
 		death = yes
 	}
 }
-
 167954 = {
 	name = "ArdoI_n" # Ardoïn Ardonici
 	dynasty = 680
@@ -5424,7 +8147,6 @@
 		death = yes
 	}
 }
-
 163069 = {
 	name = "Odalric" # Odalric d'Asti, Count of Montferrato (860-887)
 	dynasty = 799
@@ -5439,7 +8161,6 @@
 		death = yes
 	}
 }
-
 167912 = {
 	name = "Everard" # Everard di Piacenza, Count of Tortona (880-895)
 	dynasty = 9562
@@ -5458,7 +8179,6 @@
 		death = yes
 	}
 }
-
 167913 = {
 	name = "Sigfried" # Sigifredo di Piacenza, Count of Tortona (895-904)
 	dynasty = 9562
@@ -5478,7 +8198,6 @@
 		death = yes
 	}
 }
-
 167914 = {
 	name = "Wilfred" # Vilfredo di Piacenza, Count of Tortona (904-911)
 	dynasty = 9562
@@ -5498,7 +8217,6 @@
 		death = yes
 	}
 }
-
 167915 = {
 	name = "Giselbert" # Giselberto di Piacenza, Count of Tortona (911-945)
 	dynasty = 9562
@@ -5517,7 +8235,6 @@
 		death = yes
 	}
 }
-
 167968 = {
 	name = "Anthier" # Antiero d'Asti, Count of Montferrato (887-896)
 	dynasty = 799
@@ -5537,7 +8254,6 @@
 		death = yes
 	}
 }
-
 167969 = {
 	name = "Liutfred" # Liutfrido d'Asti, Count of Montferrato (896-905)
 	dynasty = 799
@@ -5556,7 +8272,6 @@
 		death = yes
 	}
 }
-
 167970 = {
 	name = "Godfried" # Gotofredo d'Asti, Count of Montferrato (905-910)
 	dynasty = 799
@@ -5575,7 +8290,6 @@
 		death = yes
 	}
 }
-
 167976 = {
 	name = "Hucbald"
 	dynasty = 9566
@@ -5592,7 +8306,6 @@
 		death = yes
 	}
 }
-
 167980 = {
 	name = "Hucbald"
 	dynasty = 9566
@@ -5608,7 +8321,6 @@
 		death = yes
 	}
 }
-
 frankish0001 = {
 	name = "Konrad" # Corrado Guideschi, name unknown, father of Guido IV of Spoletto
 	dynasty = 7389
@@ -5624,7 +8336,6 @@ frankish0001 = {
 		death = yes
 	}
 }
-
 frankish0002 = {
 	name = "Ida" # Itta Guideschi, wife of Siconulf of Salerno
 	female = yes
@@ -5642,7 +8353,6 @@ frankish0002 = {
 		death = yes
 	}
 }
-
 frankish0003 = {
 	name = "Wicheram" # Wicheram Wicheramingi, Duke of Toscana (797-812)
 	dynasty = wicheramingi
@@ -5656,7 +8366,6 @@ frankish0003 = {
 		death = yes
 	}
 }
-
 235002 = {
 	name = "Burchard" # Burchard Hucberting, Count of Ajaccio and Bastia (774-828)
 	dynasty = 1044121
@@ -5672,7 +8381,6 @@ frankish0003 = {
 		death = yes
 	}
 }
-
 frankish0004 = {
 	name = "Suppo" # Suppo Supponidi, Count of Turin (878-888)
 	dynasty = 9561
@@ -5693,7 +8401,6 @@ frankish0004 = {
 		death = yes
 	}
 }
-
 frankish0005 = {
 	name = "Aureolus" # Conde Aureolo, Duke of Aragón (799-806) & Count of Alto Aragón (799-806)
 	dynasty = frankish_aragon # Frankish Aragón Dynasty
@@ -5708,7 +8415,6 @@ frankish0005 = {
 		death = yes
 	}
 }
-
 frankish0006 = {
 	name = "Romilla" # Romilla Gellones, wife of Duke Bera of Barcelona (70140)
 	female = yes
@@ -5724,7 +8430,6 @@ frankish0006 = {
 		death = yes
 	}
 }
-
 73784 = {
 	name = "Guilhelm" # Guillaume de Septimanie, Duke of Barcelona (848-850) & Count of Barcelona, Empuries & Rousillon (848-850)
 	dynasty = 100217 # Gellones Dynasty
@@ -5747,7 +8452,6 @@ frankish0006 = {
 		death = yes
 	}
 }
-
 163063 = {
 	name = "Bernard" # Bernard de Septimanie, Duke of Barcelona (825-832 & 835-844) & Toulouse (835-864) & Count of Barcelona, Girona, Ibiza, Mallorca & Menorca (825-832 & 835-844) & Toulouse (835-844)
 	dynasty = 100217 # Gellones Dynasty
@@ -5771,7 +8475,6 @@ frankish0006 = {
 		death = yes
 	}
 }
-
 200141 = {
 	name = "Rampon" # Rampon, Count of Barcelona, Duke of Barcelona (820-825) & Count of Barcelona, Girona, Ibiza, Mallorca & Menorca (820-825)
 	dynasty = ramponing
@@ -5786,7 +8489,6 @@ frankish0006 = {
 		death = yes
 	}
 }
-
 200142 = {
 	name = "Aldedramn" # Alderan de Troyes, Duke of Barcelona (850-851) & Count of Barcelona, Empuries & Rousillon (850-851)
 	dynasty_house = house_orleans
@@ -5809,7 +8511,6 @@ frankish0006 = {
 		}
 	}
 }
-
 200144 = {
 	name = "Isembard" # Isembard d'Autun, Duke of Barcelona (851-852) & Count of Barcelona, Empuries & Rousillon (851-852)
 	religion = catholic
@@ -5826,7 +8527,6 @@ frankish0006 = {
 		death = yes
 	}
 }
-
 200145 = {
 	name = "Odelric" # Odelric, Count of Barcelona, Duke of Barcelona (852-860) & Count of Barcelona, Girona, Empuries & Rousillon (852-860)
 	dynasty = 1046011 # Argengau Dynasty
@@ -5848,7 +8548,6 @@ frankish0006 = {
 		death = yes
 	}
 }
-
 200148 = {
 	name = "Hunifred" # Humfrid, Count of Barcelona, Duke of Barceloa (858-866) & Count of Barcelona, Girona, Empuries & Rousillon (858-866)
 	dynasty = 12110 # Unrouchinger Dynasty
@@ -5864,13 +8563,12 @@ frankish0006 = {
 	}
 	840.6.20 = {
 		name = "Humfrid"
-		culture = franconian
+		culture = frankish
 	}
 	866.1.1 = {
 		death = yes
 	}
 }
-
 200152 = {
 	name = "Gaucelm" # Gaucelm de Toulouse, Count of Rousillon (812-832) & Empuries (817-832)
 	dynasty = 100217 # Gellones Dynasty
