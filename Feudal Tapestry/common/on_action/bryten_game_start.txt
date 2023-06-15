@@ -125,7 +125,7 @@ bryten_setup_after_game_start_on_actions = {
 		}
 
 		if = {# Carolingian Empire in 867
-			limit = { game_start_date >= 867.1.1 }
+			limit = { game_start_date = 867.1.1 }
 			title:k_france = { set_de_jure_liege_title = title:e_france	}
 			title:k_burgundy = { set_de_jure_liege_title = title:e_france }
 			title:k_aquitaine = { set_de_jure_liege_title = title:e_france }
@@ -140,7 +140,7 @@ bryten_setup_after_game_start_on_actions = {
 			title:d_corsica = { set_de_jure_liege_title = title:k_italy }
 		}
 		if = {# Byzantine Empire controls Sardinia.
-			limit = { game_start_date >= 867.1.1 }
+			limit = { game_start_date = 867.1.1 }
 			title:d_sardinia = { set_de_jure_liege_title = title:k_sicily }
 		}
 

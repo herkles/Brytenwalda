@@ -62,76 +62,54 @@ tapestry_frankish.001 = {# splitting up the culture
 			add_to_list = frankish_counties
 		}
 
+
+		title:d_anjou = {# if Britanny controls Anjou then Gallo Gets to spread further.
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_county
+					OR = {
+						culture = culture:frankish
+						culture = culture:french
+					}
+					title_province = { geographical_region = custom_anjou }
+					holder = { has_primary_title = title:k_brittany }
+				}
+				set_county_culture = culture:gallo	
+			}
+		}
+		title:d_burgundy = {# if Burgundy is controlled by a burgundian then burgundian spreads northwards.
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_county
+					OR = {
+						culture = culture:frankish
+						culture = culture:french
+					}
+					title_province = { geographical_region = custom_burgundy }
+					holder = { has_culture = culture:burgundian }
+				}
+				set_county_culture = culture:burgundian	
+			}
+		}
+		title:d_lower_lorraine = {# if Burgundy is controlled by a burgundian then burgundian spreads northwards.
+			every_in_de_jure_hierarchy = {
+				limit = {
+					tier = tier_county
+					OR = {
+						culture = culture:frankish
+						culture = culture:franconian
+					}
+					title_province = { geographical_region = ghw_region_germanic }
+					holder = { has_primary_title = title:k_lotharingia }
+				}
+				set_county_culture = culture:lothringian	
+			}
+		}
+
 		# Convert the Frankish counties to the new culture.
 		every_in_list = {
 			list = frankish_counties
-			limit = {
-				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
-				NOT = {
-					holder = {
-						OR = {
-							AND = {
-								is_ai = no
-								culture = culture:frankish
-							}
-							any_liege_or_above = {
-								is_ai = no
-								culture = culture:frankish
-							}
-						}
-					}
-				}
-			}
-
-			# Some of the Unique Options come first if they happend
-			if = {# if Britanny controls Anjou then Gallo Gets to spread further.
-				limit = {
-					title.k_brittany.holder = { completely_controls = title:d_anjou }
-				}
-				convert_county_and_holder_if_in_region_effect = {# 
-					OLD_CULTURE = culture:frankish
-					NEW_CULTURE = culture:gallo
-					REGION = custom_anjou
-				}
-				convert_county_and_holder_if_in_region_effect = {# 
-					OLD_CULTURE = culture:french
-					NEW_CULTURE = culture:gallo
-					REGION = custom_anjou
-				}				
-			}
-			if = {# if Burgundy is controlled by a burgundian then burgundian spreads northwards.
-				limit = {
-					title.d_burgundy.holder = {	has_culture = culture:burgundy }
-				}
-				every_sub_realm_county = {
-					limit = {
-						tier = tier_county
-						culture = { has_cultural_pillar = heritage_frankish }
-						de_jure_liege = title:d_burgundy
-					}
-					custom = burgundian_convert_burgundy_counties
-					set_county_culture = culture:burgundian
-				}				
-			}	
-			if = {# if Lotharingia controls the other side of the Rhine spread Lotharingia instead of Franconian
-				limit = {
-					title.k_lotharingia.holder = {	has_title = title:d_lower_lorraine	}
-				}
-				every_sub_realm_county = {
-					limit = {
-						tier = tier_county
-						culture = { has_cultural_pillar = heritage_frankish }
-						de_jure_liege = title:c_sayn
-						de_jure_liege = title:c_arnsberg
-						de_jure_liege = title:c_mark
-						de_jure_liege = title:c_dortmund
-						de_jure_liege = title:c_bergh
-					}
-					custom = lothringian_convert_rhine_counties
-					set_county_culture = culture:lothringian
-				}				
-			}
-			# Next add make Lotharingian
+			# First make Lotharingian
 			convert_county_and_holder_if_in_region_effect = {
 				OLD_CULTURE = culture:frankish
 				NEW_CULTURE = culture:lorrainian
