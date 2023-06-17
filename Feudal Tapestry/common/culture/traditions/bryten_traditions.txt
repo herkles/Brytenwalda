@@ -1897,18 +1897,95 @@ tradition_frankish_quarrels = {# Frankish Quarrels
 		}
 	}
 }
+tradition_frankish_learning = {# Frankish Renaissance
+	category = societal
 
+	layers = {
+		0 = diplo
+		1 = mena
+		4 = diplomat.dds
+	}
 
+	is_shown = {
+		always = no
+	}
 
+	can_pick = {
+		always = no
+	}
+	
+	parameters = {
+		innovation_from_learning_traits = yes
+		just_trait_more_common = yes
+		just_trait_gives_bonuses = yes
 
+	}
+	character_modifier = {
+		monthly_learning_lifestyle_xp_gain_mult = 0.2
+		learning_per_prestige_level = 1
+		vassal_limit = 15
+		tyranny_gain_mult = 0.25
+	}
 
-
-
-
-
-
-
-
-
-
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						any_in_list = { list = traits this = flag:ethos_courtly }
+						any_in_list = { list = traits this = flag:ethos_communal }
+						any_in_list = { list = traits this = flag:ethos_spiritual }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_courtly_communal_or_spiritual_desc
+				}
+			}
+			if = {
+				limit = {
+					trigger_if = {
+						limit = {
+							scope:character = {
+								is_ai = no
+							}
+						}
+						NOT = {
+							any_ruler = {
+								count >= 3
+								culture = prev
+								primary_title.tier >= tier_county
+								has_trait = poet
+							}
+						}
+					}
+					trigger_else = {
+						always = no
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = rulers_with_poet_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = { # AI should avoid stacking traditions for courtly court positions
+				any_in_list = { list = traits this = flag:tradition_music_theory }
+			}
+			multiply = 0.25
+		}
+	}
+}
 

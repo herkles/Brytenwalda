@@ -200,27 +200,27 @@ reform_carolingian_empire_decision = {# Reforming the Carolingian Empire
 	ai_check_interval = 120
 
 	is_shown = {
-		faith.religion = faith:catholic.religion #Christian
-		is_ruler = yes
+		NOT = { exists = title:e_hre.holder }
+		OR = {
+			culture = { has_cultural_pillar = heritage_frankish }
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			culture = { has_cultural_pillar = heritage_latin }
+			culture = { has_cultural_pillar = heritage_occitan }
+		}
+		root.faith = faith:catholic
+		exists = faith:catholic.religious_head
 		is_landed = yes
-		NOT = {  #Can only do it once.
+		any_sub_realm_county = { title_province = {  geographical_region = world_europe_west } }
+		NOT = {
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
 				target = flag:flag_reformed_carolingian_empire
 			}
 		}
-		is_independent_ruler = yes
-		OR = {
-			culture = { has_cultural_pillar = heritage_frankish }
-		}
-		culture = { has_cultural_pillar = heritage_frankish }
-		capital_province = { geographical_region = world_europe_west }
-		NOT = { exists = title:e_hre } # the HRE must not exist
 	}
 
 	is_valid = {
 		prestige_level >= high_prestige_level
-		has_title = title:e_france
 		#All of starting e_france
 		completely_controls_region = custom_carolingian_francia
 		#Frisia
@@ -231,8 +231,6 @@ reform_carolingian_empire_decision = {# Reforming the Carolingian Empire
 		completely_controls_region = custom_bavaria
 		#Germany
 		completely_controls_region = custom_carolingian_germany
-		#Aragon (except Mallorca) & Navarra
-		completely_controls_region = custom_carolingian_iberia
 		#Northern Italy (except Venice, Sardinia, and Rome)
 		completely_controls_region = custom_northern_italy
 		OR = {# Need the Pope to support you
@@ -245,8 +243,6 @@ reform_carolingian_empire_decision = {# Reforming the Carolingian Empire
 			root = { has_strong_usable_hook = faith.religious_head }	#Or you have a strong hook on them that you can actually use.
 			root = { has_weak_hook = faith.religious_head }	#Or a regular hook, to be fair, provided you meet the other criteria.
 		}
-
-
 	}
 
 	is_valid_showing_failures_only = {
