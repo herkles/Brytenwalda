@@ -540,37 +540,48 @@ on_explicit_claim_lost = {
 	}
 }
 
-# A title change makes the character rank up in the landed tiers (eg Duke -> King)
-# root = character ranking up
+# A title change makes the character rank down in the landed tiers (eg King -> Duke)
+# root = character ranking down
 # scope:title = old primary title
-on_rank_up = { # Will not fire during history execution or for dying characters
+on_rank_down = { # Will not fire during history execution or for dying characters
 	events = {
 	}
 	effect = {
-		add_achievement_flag_effect = { FLAG = achievement_moving_up_in_the_world_flag }
+		if = {
+			limit = {
+				NOR = {
+					has_trait = humble
+					has_trait = content
+					has_trait = generous
+				}
+			}
+			add_character_flag = {
+				flag = make_suicide_available
+				years = 5
+			}
+			set_variable = {
+				name = rank_demoted
+				value = yes
+			}
+		}
 		update_embassies_effect = yes
 		every_ally = {
 			update_embassies_effect = yes
 		}
-		# Make a note of ranking up for stele purposes.
+		# Inform hostage havers
 		if = {
 			limit = {
-				# DLC check.
-				has_fp1_dlc_trigger = yes
-				# Is the culture eligible?
-				fp1_can_raise_stele_trigger = yes
-				# Aaaaand, for balance reasons, were they landed already?
-				exists = scope:title
+				any_home_court_hostage = { count >= 1 }
 			}
-			set_variable = {
-				name = recent_rank_increase
-				value = root.primary_title
-				years = 5
+			save_scope_as = home_court
+			every_home_court_hostage = {
+				save_scope_as = hostage
+				warden = {
+					save_scope_as = warden
+					trigger_event = { id = bp2_hostage_system.0410 days = 5 }
+				}
 			}
 		}
-		# Remove any rank-inappropriate modifiers (e.g., baron buffs).
-		remove_character_modifier = mandate_baronial_troops_trained_modifier
-		remove_character_modifier = mandate_baronial_troops_half_trained_modifier
 	}
 }
 
