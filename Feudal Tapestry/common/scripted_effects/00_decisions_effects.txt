@@ -1,4 +1,8 @@
-﻿reclaim_britannia_decision_effect = {
+﻿#######################################
+#				Modded Stuff		  #
+#######################################
+
+reclaim_britannia_decision_effect = {
 	every_sub_realm_county = {
 		limit = {
 			NOR = {
@@ -26,37 +30,6 @@
 		give_nickname = nick_pendragon
 	}
 }
-
-
-create_holy_order_effect = {
-	if = {
-		limit = {
-			exists = faith.religious_head
-		}
-		faith.religious_head = {
-			add_opinion = {
-				target = root
-				modifier = founded_holy_order_opinion
-			}
-		}
-	}
-	if = {
-		limit = {
-			NOT = { has_character_modifier = founded_holy_order_modifier }
-		}
-		add_character_modifier = {
-			modifier = founded_holy_order_modifier
-			years = 5
-		}
-	}
-	faith = {
-		change_fervor = {
-			value = 10
-			desc = fervor_gain_holy_order_founded
-		}
-	}
-}
-
 embrace_english_culture_effect = {
 	# Scopes saves for localization
 	root = {
@@ -299,6 +272,38 @@ embrace_english_culture_effect = {
 	}
 }
 
+#######################################
+#				Vanilla Stuff		  #
+#######################################
+create_holy_order_effect = {
+	if = {
+		limit = {
+			exists = faith.religious_head
+			NOT = { faith.religious_head = root }
+		}
+		faith.religious_head = {
+			add_opinion = {
+				target = root
+				modifier = founded_holy_order_opinion
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_character_modifier = founded_holy_order_modifier }
+		}
+		add_character_modifier = {
+			modifier = founded_holy_order_modifier
+			years = 5
+		}
+	}
+	faith = {
+		change_fervor = {
+			value = 10
+			desc = fervor_gain_holy_order_founded
+		}
+	}
+}
 form_portugal_decision_effects = {
 	#Create the title and set proper de jure
 	hidden_effect = {
@@ -419,8 +424,6 @@ form_portugal_decision_effects = {
 	#Prestige
 	add_prestige = massive_prestige_gain	
 }
-
-
 declare_canarias_decision_effects = {
 	#Create the title and set proper de jure
 	title:d_canarias = {
@@ -458,9 +461,6 @@ declare_canarias_decision_effects = {
 	#Prestige
 	add_prestige = massive_prestige_gain	
 }
-	
-
-
 unite_the_spanish_thrones_decision_effects = {
 	#Prestige
 	add_prestige = massive_prestige_gain
@@ -500,6 +500,7 @@ unite_the_spanish_thrones_decision_effects = {
 	title:k_andalusia = { add_to_list = spanish_kingdoms }
 	title:k_badajoz = { add_to_list = spanish_kingdoms }
 	title:k_valencia = { add_to_list = spanish_kingdoms }
+	title:k_toledo = { add_to_list = spanish_kingdoms }
 
 	custom_tooltip = unite_the_spanish_thrones_decision_titles_tt
 	hidden_effect = {
@@ -521,7 +522,6 @@ unite_the_spanish_thrones_decision_effects = {
 		}
 	}
 }
-
 unite_africa_decision_effects = {
 	#Prestige
 	add_prestige = massive_prestige_gain
@@ -599,7 +599,6 @@ unite_africa_decision_effects = {
 		}
 	}
 }
-
 avenge_the_battle_of_tours_decision_effects = {
 		
 	give_nickname = nick_the_avenger
@@ -697,7 +696,6 @@ avenge_the_battle_of_tours_decision_effects = {
 		}
 	}
 }
-
 unite_the_western_slavs_decision_effects = {
 	#Prestige
 	add_prestige = massive_prestige_gain
@@ -776,7 +774,6 @@ unite_the_western_slavs_decision_effects = {
 		}
 	}	
 }
-
 unite_the_southern_slavs_decision_effects = {
 	#Prestige
 	add_prestige = massive_prestige_gain
@@ -814,7 +811,6 @@ unite_the_southern_slavs_decision_effects = {
 		}
 	}
 }
-
 unite_the_slavs_decision_effects = {
 	#Prestige
 	add_prestige = massive_prestige_gain
@@ -923,7 +919,6 @@ unite_the_slavs_decision_effects = {
 		}
 	}
 }
-
 unite_india_decision_effect = {
 	#Create the title and make it primary
 	create_title_and_vassal_change = {
@@ -969,7 +964,6 @@ unite_india_decision_effect = {
 		}
 	}
 }
-
 become_saoshyant_decision_effect = {
 	set_nickname_effect = { NICKNAME = nick_the_saoshyant }
 	add_trait = saoshyant
@@ -1006,7 +1000,6 @@ become_saoshyant_decision_effect = {
 		}
 	}
 }
-
 build_grand_church_decision_effect = {
 	#faith = { activate_holy_site = segrada_familia }
 	if = {
@@ -1016,7 +1009,6 @@ build_grand_church_decision_effect = {
 		add_prestige_level = 1
 	}
 }
-
 accept_cannibalism_decision_effect = {
 	custom_tooltip = faith_accept_cannibalism
 	root.faith = {
@@ -1086,7 +1078,6 @@ accept_cannibalism_decision_effect = {
 	}
 	give_nickname = nick_the_devourer
 }
-
 found_university_decision_event_effect = {
 	if = {
 		limit = {
@@ -1106,7 +1097,6 @@ found_university_decision_event_effect = {
 		}
 	}
 }
-
 found_university_decision_effect = {
 	found_university_decision_event_effect = yes
 
@@ -1125,20 +1115,20 @@ found_university_decision_effect = {
 		}
 	}
 }
-
 lunatic_building_decision_effect = {
 	capital_province = {
 		set_variable = { #To unlock the building
 			name = variable_greenhouse
 			value = yes
 		}
-		add_province_modifier = extra_building_slot
-		add_building = special_greenhouse_01
+		add_special_building_slot = special_greenhouse_01
+		add_special_building = special_greenhouse_01
+		#add_province_modifier = extra_building_slot
+		#add_building = special_greenhouse_01
 	}
 	
 	give_nickname = nick_the_glass
 }
-
 found_witch_coven_decision_effects = {
 	save_scope_as = founder
 	custom_tooltip = found_witch_coven_decision_effects.children.tt
@@ -1159,7 +1149,6 @@ found_witch_coven_decision_effects = {
 		add_achievement_flag_effect = { FLAG = volva_achievement_flag }
 	}
 }
-
 convert_whole_realm_to_feudalism_effect = {
 	#TOOLTIP INFO
 	#PLAYER EFFECTS
@@ -1534,8 +1523,6 @@ convert_whole_realm_to_feudalism_effect = {
 ##################################################
 # Add Special Succession Effects
 
-
-
 special_succession_witengamot_effect = {
 	if = {
 		limit = { highest_held_title_tier = tier_empire }
@@ -1581,7 +1568,6 @@ special_succession_witengamot_effect = {
 		}
 	}
 }
-
 special_succession_thing_effect = {
 	if = {
 		limit = { highest_held_title_tier = tier_empire }
@@ -1627,7 +1613,6 @@ special_succession_thing_effect = {
 		}
 	}
 }
-
 special_succession_tanistry_effect = {
 	if = {
 		limit = { highest_held_title_tier = tier_empire }
@@ -1670,6 +1655,51 @@ special_succession_tanistry_effect = {
 				target = root
 			}
 			custom = major_decisions.3100.tt_opinion_tanistry
+		}
+	}
+}
+special_succession_jirga_effect = {
+	if = {
+		limit = { highest_held_title_tier = tier_empire }
+		every_held_title = {
+			limit = {
+				tier = tier_empire
+				NOR = {
+					has_title_law_flag = advanced_succession_law
+					has_title_law_flag = elective_succession_law
+				}
+			}
+			add_title_law = tribal_elective_succession_law
+		}
+		every_vassal = {
+			limit = { special_succession_jirga_trigger = yes }
+			add_opinion = {
+				modifier = implemented_traditional_succession_law_opinion
+				years = 20
+				target = root
+			}
+			custom = major_decisions.3100.tt_opinion_thing
+		}
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_kingdom
+				NOR = {
+					has_title_law_flag = advanced_succession_law
+					has_title_law_flag = elective_succession_law
+				}
+			}
+			add_title_law = tribal_elective_succession_law
+		}
+		every_vassal = {
+			limit = { special_succession_jirga_trigger = yes }
+			add_opinion = {
+				modifier = implemented_traditional_succession_law_opinion
+				years = 20
+				target = root
+			}
+			custom = major_decisions.3100.tt_opinion_jirga
 		}
 	}
 }
@@ -2210,7 +2240,6 @@ launch_hungarian_migration_scripted_effect = {
 		}
 	}
 }
-
 tribal_transfer_liege_title_effect = {
 	create_title_and_vassal_change = {
 		type = usurped
@@ -2246,7 +2275,6 @@ tribal_transfer_liege_title_effect = {
 		}
 	}
 }
-
 tribal_challenger_lost_effect = {
 	if = {
 		limit = {
@@ -2287,8 +2315,8 @@ tribal_challenger_lost_effect = {
 	}
 }
 
-
-
+##################################################
+# DANELAW IS GONE IN THE MOD
 
 ##################################################
 # Found Cadet House Effects
@@ -2302,6 +2330,7 @@ found_cadet_house_decision_effect = {
 		}
 		add_achievement_flag_effect = { FLAG = achievement_a_house_of_my_own_flag }
 	}
+
 	create_cadet_branch = yes
 	add_prestige = $PRESTIGE$
 	hidden_effect = {
@@ -2384,9 +2413,30 @@ found_cadet_house_decision_effect = {
 				add_house_artifact_claim = scope:new_branch_dynasty_banner
 			}
 		}
+
+		# Struggle Catalysts
+		if = {
+			limit = {
+				root =  {
+					exists = house
+					exists = house.house_head
+					any_character_struggle	 = {
+						involvement = involved
+						phase_has_catalyst = catalyst_cadet_branch_created
+					}
+				}
+			}
+			every_character_struggle = {
+				involvement = involved
+				activate_struggle_catalyst = {
+					catalyst = catalyst_cadet_branch_created
+					character = root
+				}
+				log_debug_variable_for_persian_struggle_effect = { VAR = unrest_catalyst_cadet_branch_created }
+			}
+		}
 	}
 }
-
 learn_language_linguist_effect = {
 	hidden_effect = { add_courtier = $LINGUIST$ }
 	$LINGUIST$ = { save_scope_as = selected_linguist }
@@ -2432,7 +2482,6 @@ learn_language_linguist_effect = {
 	    }
 	}
 }
-
 linguist_bonus_culture_effect = {
 	if = {
 		limit = { exists = scope:$CULTURE$ }
@@ -2533,7 +2582,6 @@ linguist_bonus_culture_effect = {
 		}
 	}
 }
-
 linguist_random_realm_effect = {
 	# Save random culture realm to fetch faith
 	if = {
