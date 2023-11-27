@@ -5,7 +5,7 @@
 #############################################
 # New Cultures			
 #############################################
-gallo_roman = {
+gallo_roman = {# Romanized Gauls
 	color = { 0.5 0.1 0.1 }
 	created = 2.1.1 # Conquest of Gaul
 	parents = { roman }
@@ -36,5 +36,57 @@ gallo_roman = {
 		30 = caucasian_dark_hair
 	}
 }
+venetian = {# Venetians
+	color = { 0.5 0.1 0.1 }
+	created = 814.1.1 # Conquest of Gaul
+	parents = { roman }
 
+	ethos = ethos_communal
+	heritage = heritage_latin
+	language = language_latin
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_republican_legacy
+		tradition_maritime_mercantilism
+		tradition_seafaring
+		tradition_court_eunuchs
+	}
+	
+	name_list = name_list_venetian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
 
+	ethnicities = {
+		10 = mediterranean
+	}
+}
+ligurian = {# Ligurian, ie Genoese
+	color = { 0.5 0.1 0.1 }
+	created = 814.1.1 # Conquest of Gaul
+	parents = { roman }
+
+	ethos = ethos_communal
+	heritage = heritage_latin
+	language = language_latin
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_republican_legacy
+		tradition_maritime_mercantilism
+		tradition_seafaring
+		tradition_formation_fighting 
+	}
+	
+	name_list = name_list_ligurian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+
+	ethnicities = {
+		10 = mediterranean
+	}
+}
