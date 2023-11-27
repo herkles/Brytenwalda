@@ -1,7 +1,7 @@
 #k_saxony
 ##d_anhalt ###################################
 ###c_dessau
-3023 = {	#DESSAU
+3023 = {# DESSAU
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -13,7 +13,7 @@
 		religion = catholic
 	}
 }
-3172 = {	#ZERBST
+3172 = {# ZERBST
 	holding = none
 	949.1.1 = {
 		holding = city_holding
@@ -21,23 +21,23 @@
 }
 
 ###c_halberstadt
-2916 = {	#HALBERSTADT
+2916 = {# HALBERSTADT
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2917 = {	#WERNINGERODE
+2917 = {# WERNINGERODE
 	holding = none
 	1110.1.1 = {
 		holding = city_holding
 	}
 }
-2933 = {	#ARNSTEIN
+2933 = {# ARNSTEIN
 	holding = none
 }
 
 ###c_magdeburg
-2906 = {	#MAGDEBURG
+2906 = {# MAGDEBURG
 	culture = polabian
 	religion = catholic
 	holding = tribal_holding
@@ -52,17 +52,17 @@
 		buildings = {
 			curtain_walls_01
 			cereal_fields_01
-			#military_camps_01
+		# military_camps_01
 		}
 	}
 }
-3171 = {	#MOCKERN
+3171 = {# MOCKERN
 	holding = none
 	900.1.1 = {
 		holding = city_holding
 	}
 }
-3176 = {	#GOMMERN
+3176 = {# GOMMERN
 	holding = none
 	940.1.1 = {
 		holding = church_holding
@@ -70,27 +70,27 @@
 }
 
 ###c_blankenburg
-2932 = {	#BLANKENBURG
+2932 = {# BLANKENBURG
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2931 = {	#HOHENSTEIN
+2931 = {# HOHENSTEIN
 	holding = none
 }
 
 ###c_mansfeld
-2936 = {	#MANSFELD
+2936 = {# MANSFELD
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2934 = {	#SANGERHAUSEN
+2934 = {# SANGERHAUSEN
 	holding = city_holding
 }
 
 ###c_mersenburg
-2935 = {	#MERSENBURG
+2935 = {# MERSENBURG
 	culture = polabian
 	religion = catholic
 	holding = castle_holding
@@ -102,37 +102,37 @@
 		buildings = {
 			cereal_fields_01
 			barracks_01
-			#hunting_grounds_01
+		# hunting_grounds_01
 		}
 	}
 }
-3019 = {	#LEIPZIG
+3019 = {# LEIPZIG
 	holding = none
 	1000.1.1 = {
 		holding = city_holding
 	}
 }
-3018 = {	#HALLE
+3018 = {# HALLE
 	holding = church_holding
 }
 
 ##d_angria ###################################
 ###c_minden
-2838 = {	#DIEPHOLZ
+2838 = {# DIEPHOLZ
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2840 = {	#MINDEN
+2840 = {# MINDEN
 	holding = church_holding
 }
-2837 = {	#BRUCHHAUSEN
+2837 = {# BRUCHHAUSEN
 	holding = none
 	1185.1.1 = {
 		holding = city_holding
 	}
 }
-2839 = {	#HOYA
+2839 = {# HOYA
 	holding = none
 	1130.1.1 = {
 		holding = castle_holding
@@ -140,28 +140,28 @@
 }
 
 ###c_lippe
-2844 = {	#LIPPE
+2844 = {# LIPPE
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2909 = {	#SCHWALENBERG
+2909 = {# SCHWALENBERG
 	holding = city_holding
 }
-2910 = {	#EVERSTEIN
+2910 = {# EVERSTEIN
 	holding = none
 }
 
 ###c_bremen
-2793 = {	#BREMEN
+2793 = {# BREMEN
 	culture = saxon
 	religion = catholic
 	holding = church_holding
 }
-2794 = {	#VERDEN
+2794 = {# VERDEN
 	holding = castle_holding
 }
-2796 = {	#ZEVEN
+2796 = {# ZEVEN
 	holding = none
 	985.1.1 = {
 		holding = city_holding
@@ -169,93 +169,99 @@
 }
 
 ###c_wolpe
-2846 = {	#WOLPE
+2846 = {# WOLPE
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2845 = {	#SCHAUENBURG
+2845 = {# SCHAUENBURG
 	holding = none
 }
-2897 = {	#DEPENAU
+2897 = {# DEPENAU
 	holding = none
 }
 
 ###c_hannover
-2898 = {	#HANNOVER
+2898 = {# HANNOVER
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2896 = {	#WUNSDORF
+2896 = {# WUNSDORF
 	holding = none
 }
-2914 = {	#WOLDENBERG
+2914 = {# WOLDENBERG
 	holding = none
 }
 
 ###c_hildesheim
-2913 = {	#HILDESHEIM
+2913 = {# HILDESHEIM
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
+	800.1.1 = {
+		special_building_slot = bryten_building_hildesheim_cathedral_01
+	}
+	872.1.1 = {
+		special_building = bryten_building_hildesheim_cathedral_01
+	}
 }
-2912 = {	#HOMBURG
+2912 = {# HOMBURG
 	holding = none
 }
-2911 = {	#DASSEL
+2911 = {# DASSEL
 	holding = church_holding
 }
 
 ###c_oldenburg
-2438 = {	#OLDENBURG
+2438 = {# OLDENBURG
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2436 = {	#LEER
+2436 = {# LEER
 	holding = church_holding
 }
-2442 = {	#TWISTRINGEN
+2442 = {# TWISTRINGEN
 	holding = none
 }
 
 ##d_westfalen ###################################
 ###c_osnabruck
-2440 = {	#OSNABRUCK
+2440 = {# OSNABRUCK
 	culture = saxon
 	religion = catholic
 	holding = church_holding
 }
-2443 = {	#RAVENSBERG
+2443 = {# RAVENSBERG
 	holding = none
 	1066.1.1 = {
 		holding = castle_holding
 	}
 }
-2444 = {	#VECHTA
+2444 = {# VECHTA
 	holding = none
 	1070.1.1 = {
 		holding = city_holding
 	}
 }
-2445 = {	#CLOPPENBURG
+2445 = {# CLOPPENBURG
 	holding = church_holding
 }
 
 ###c_tecklenburg
-2446 = {	#TECKLENBURG
+2446 = {# TECKLENBURG
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2441 = {	#PEPENBURG
+2441 = {# PEPENBURG
 	holding = none
 }
-2439 = {	#MEPPEN
+2439 = {# MEPPEN
 	holding = church_holding
 }
-2430 = {	#BENTHEIM
+2430 = {# BENTHEIM
 	holding = none
 	1050.1.1 = {
 		holding = city_holding
@@ -263,72 +269,72 @@
 }
 
 ###c_munster
-2670 = {	#MUNSTER
+2670 = {# MUNSTER
 	culture = saxon
 	religion = catholic
 	holding = church_holding
 }
-2671 = {	#WARENDORF
+2671 = {# WARENDORF
 	holding = city_holding
 }
-2672 = {	#AHLEN
+2672 = {# AHLEN
 	holding = city_holding
 }
-2674 = {	#SOEST
+2674 = {# SOEST
 	holding = none
-	#1050
+# 1050
 }
 
 ###c_waldeck
-2850 = {	#WALDECK
+2850 = {# WALDECK
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2849 = {	#WITTENSTEIN
+2849 = {# WITTENSTEIN
 	holding = none
 }
-2843 = {	#BUREN
+2843 = {# BUREN
 	holding = city_holding
-	#1298 castle
+# 1298 castle
 }
 
 ###c_paderborn
-2847 = {	#PADERBORN
+2847 = {# PADERBORN
 	culture = saxon
 	religion = catholic
 	holding = church_holding
 }
-2848 = {	#BRAKEL
+2848 = {# BRAKEL
 	holding = none
 	977.1.1 = {
 		holding = city_holding
 	}
 }
-2841 = {	#WIEDENBRUCK
+2841 = {# WIEDENBRUCK
 	holding = church_holding
 }
-2842 = {	#LIPPSTADT
+2842 = {# LIPPSTADT
 	holding = none
 }
 
 ##d_ostfalen ###################################
 ###c_luneburg
-2893 = {	#LUNEBURG
+2893 = {# LUNEBURG
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2937 = {	#UELZEN
+2937 = {# UELZEN
 	holding = none
 }
-2903 = {	#WALSRODE
+2903 = {# WALSRODE
 	holding = none
 	986.1.1 = {
 		holding = church_holding
 	}
 }
-2904 = {	#CELLE
+2904 = {# CELLE
 	holding = none
 	985.1.1 = {
 		holding = city_holding
@@ -336,12 +342,12 @@
 }
 
 ###c_brunswick
-2901 = {	#BRUNSWICK
+2901 = {# BRUNSWICK
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2902 = {	#WOLFENBUTTEL
+2902 = {# WOLFENBUTTEL
 	holding = none
 	950.1.1 = {
 		holding = city_holding
@@ -349,26 +355,26 @@
 }
 
 ###c_hamburg
-2802 = {	#HAMBURG
+2802 = {# HAMBURG
 	culture = saxon
 	religion = catholic
-	holding = church_holding	#Bishopric of Hamburg
-	845.1.1 = {		#destroyed by vikings, so let's set it up for the Hansa
+	holding = church_holding# Bishopric of Hamburg
+	845.1.1 = {	# destroyed by vikings, so let's set it up for the Hansa
 		holding = city_holding
 	}
 }
-2803 = {	#BUXTEHUDE
+2803 = {# BUXTEHUDE
 	holding = none
 	959.1.1 = {
 		holding = castle_holding
 	}
 }
-2805 = {	#AHRENSBURG
+2805 = {# AHRENSBURG
 	holding = none
 }
 
 ###c_dannenberg
-2894 = {	#DANNENBERG
+2894 = {# DANNENBERG
 	culture = polabian
 	religion = catholic
 	holding = castle_holding
@@ -377,18 +383,15 @@
 		religion = catholic
 	}
 }
-2895 = {	#LUCHOW
+2895 = {# LUCHOW
 	holding = none
-	#1150.1.1 = {
-	#	holding = city_holder
-	#}
 }
-2905 = {	#GIFHORN
+2905 = {# GIFHORN
 	holding = city_holding
 }
 
 ###c_stendal
-2900 = {	#STENDAL
+2900 = {# STENDAL
 	culture = polabian
 	religion = catholic
 	holding = castle_holding
@@ -397,11 +400,11 @@
 		religion = catholic
 	}
 }
-2907 = {	#GARDELEGEN
+2907 = {# GARDELEGEN
 	holding = none
-	#1185
+# 1185
 }
-2899 = {	#WERBEN
+2899 = {# WERBEN
 	holding = none
 	1005.1.1 = {
 		holding = city_holding
@@ -410,7 +413,7 @@
 
 ##d_meissen ###################################
 ###c_meissen
-3027 = {	#MEISSEN
+3027 = {# MEISSEN
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -422,17 +425,17 @@
 		religion = catholic
 	}
 }
-3035 = {	#RADEBEUL
+3035 = {# RADEBEUL
 	968.1.1 = {
 		holding = church_holding
 	}
 }
-3034 = {	#GROSSENHAIN
+3034 = {# GROSSENHAIN
 	holding = none
 }
 
 ###c_dresden
-3030 = {	#DRESDEN
+3030 = {# DRESDEN
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -440,19 +443,18 @@
 		holding = castle_holding
 	}
 }
-3033 = {	#BISCHOFSWERDA
+3033 = {# BISCHOFSWERDA
 	holding = none
 	990.1.1 = {
 		holding = city_holding
 	}
 }
-3028 = {	#FREIBERG
+3028 = {# FREIBERG
 	holding = none
-	#1162
 }
 
 ###c_wolkenstein
-3012 = {	#WOLKENSTEIN
+3012 = {# WOLKENSTEIN
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -464,7 +466,7 @@
 		religion = catholic
 	}
 }
-3013 = {	#WALDENBURG
+3013 = {# WALDENBURG
 	holding = none
 	1170.1.1 = {
 		holding = castle_holding
@@ -472,7 +474,7 @@
 }
 
 ###c_osterland
-3021 = {	#EILENBURG
+3021 = {# EILENBURG
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -484,21 +486,21 @@
 		religion = catholic
 	}
 }
-3015 = {	#COLDITZ
+3015 = {# COLDITZ
 	holding = none
 	1046.1.1 = {
 		holding = city_holding
 	}
 }
-3017 = {	#DEVIN
+3017 = {# DEVIN
 	holding = none
 }
-3016 = {	#LEISNING
+3016 = {# LEISNING
 	holding = none
 }
 
 ###c_naumburg
-3020 = {	#NAUMBURG
+3020 = {# NAUMBURG
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -509,8 +511,9 @@
 		culture = franconian
 		religion = catholic
 	}
+
 }
-3014 = {	#ALTENBURG
+3014 = {# ALTENBURG
 	holding = none
 		975.1.1 = {
 			holding = city_holding
@@ -518,7 +521,7 @@
 }
 
 ###c_vogtland
-3039 = {	#REICHENBACH
+3039 = {# REICHENBACH
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -530,30 +533,30 @@
 		religion = catholic
 	}
 }
-3004 = {	#PLAUEN
+3004 = {# PLAUEN
 	holding = none
 	1150.1.1 = {
 		holding = city_holding
 	}
 }
-3038 = {	#GERA
+3038 = {# GERA
 	holding = none
 	995.1.1 = {
 		holding = church_holding
 	}
 }
-2997 = {	#CHEB
+2997 = {# CHEB
 	holding = none
 	1040.1.1 = {
 		holding = castle_holding
 	}
 }
-3001 = {	#REHAU
+3001 = {# REHAU
 	holding = none
 }
 
 ###c_cottbus
-3181 = {	#COTTBUS
+3181 = {# COTTBUS
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -561,11 +564,11 @@
 		holding = castle_holding
 	}
 }
-3141 = {	#KAMENZ
+3141 = {# KAMENZ
 	holding = none
-	#1175 castle
+# 1175 castle
 }
-3182 = {	#LUBBEN
+3182 = {# LUBBEN
 	holding = none
 	1150.1.1 = {
 		holding = castle_holding
@@ -573,7 +576,7 @@
 }
 
 ###c_gorlitz
-2980 = {	#GORLITZ
+2980 = {# GORLITZ
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -581,19 +584,19 @@
 		holding = castle_holding
 	}
 }
-3032 = {	#BAUTZEN
+3032 = {# BAUTZEN
 	holding = none
 	1000.1.1 = {
 		holding = city_holding
 	}
 }
-3136 = {	#SPREMBERG
+3136 = {# SPREMBERG
 	holding = none
 }
 
 ##d_lausitz ###################################
 ###c_juterbog
-3180 = {	#JUTERBOG
+3180 = {# JUTERBOG
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -601,13 +604,13 @@
 		holding = castle_holding
 	}
 }
-3178 = {	#DAHME
+3178 = {# DAHME
 	holding = none
-	#1186
+# 1186
 }
 
 ###c_wittenberg
-3173 = {	#WITTENBERG
+3173 = {# WITTENBERG
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -619,12 +622,12 @@
 		religion = catholic
 	}
 }
-3174 = {	#BELIZI
+3174 = {# BELIZI
 	holding = none
 }
 
 ###c_brene
-3175 = {	#BRENE
+3175 = {# BRENE
 	culture = polabian
 	religion = slavic_pagan
 	holding = none
@@ -633,12 +636,12 @@
 		holding = city_holding
 	}
 }
-3024 = {	#DUBEN
+3024 = {# DUBEN
 	culture = polabian
 	religion = slavic_pagan
 	holding = none
 }
-3025 = {	#TORGAU
+3025 = {# TORGAU
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -652,7 +655,7 @@
 }
 
 ###c_spreewald
-3140 = {	#SPREEWALD
+3140 = {# SPREEWALD
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -660,13 +663,13 @@
 		holding = castle_holding
 	}
 }
-3159 = {	#STORKOW
+3159 = {# STORKOW
 	holding = none
-	#1209
+# 1209
 }
 
 ###c_naumberg/Lubsko
-3143 = {	#NAUMBERG = LUBSKO
+3143 = {# NAUMBERG = LUBSKO
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
@@ -674,7 +677,7 @@
 		holding = castle_holding
 	}
 }
-3138 = {	#FORST
+3138 = {# FORST
 	holding = none
 	1150.1.1 = {
 		holding = city_holding
@@ -683,11 +686,11 @@
 
 ##d_holstein ###################################
 ###c_lubeck
-2804 = {	#LÜBECK
+2804 = {# LÜBECK
 	culture = polabian
 	religion = slavic_pagan
 	holding = tribal_holding
-	# Christianity only arrived with the Danish king Valdemar I
+#  Christianity only arrived with the Danish king Valdemar I
 	950.1.1 = {
 		holding = castle_holding
 	}
@@ -699,48 +702,48 @@
 		buildings = {
 			curtain_walls_01
 			barracks_01
-			#military_camps_01
+		# military_camps_01
 		}
 	}
 }
-2800 = {	#FEMERA
+2800 = {# FEMERA
 	holding = none
 }
-2801 = {	#KIEL
+2801 = {# KIEL
 	holding = none
-	#1200
+# 1200
 }
 
 ###c_stade
-2795 = {	#STADE
+2795 = {# STADE
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2791 = {	#BEDERKESA
+2791 = {# BEDERKESA
 	holding = none
 }
-2792 = {	#CUXHAVEN
+2792 = {# CUXHAVEN
 	holding = none
 }
 
 ###c_ditmarschen
-2797 = {	#DITMARSCHEN
+2797 = {# DITMARSCHEN
 	culture = saxon
 	religion = catholic
 	holding = castle_holding
 }
-2799 = {	#NEUMUNSTER
+2799 = {# NEUMUNSTER
 	holding = none
-	#1127
+# 1127
 }
-2798 = {	#ITZEHOE
+2798 = {# ITZEHOE
 	holding = city_holding
 }
 
 ##d_thuringia ###################################
 ###c_gottingen
-2918 = {	#GOSLAR
+2918 = {# GOSLAR
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
@@ -752,27 +755,27 @@
 		special_building = rammelsberg_mines_01
 	}
 }
-2920 = {	#GOTTINGEN
+2920 = {# GOTTINGEN
 	holding = city_holding
 }
 
 ###c_gleichenstein
-2919 = {	#GLEICHENSTEIN
+2919 = {# GLEICHENSTEIN
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2928 = {	#EBELEBEN
+2928 = {# EBELEBEN
 	holding = city_holding
 }
-2921 = {	#MUHLHAUSEN
+2921 = {# MUHLHAUSEN
 	holding = church_holding
 }
 
 ###c_orlamunde
-3005 = {	#ORLAMUNDE
+3005 = {# ORLAMUNDE
 	culture = polabian
 	religion = catholic
 	holding = castle_holding
@@ -781,42 +784,49 @@
 		religion = catholic
 	}
 }
-2999 = {	#SCHWARZBURG
+2999 = {# SCHWARZBURG
 	holding = none
 	1070.1.1 = {
 		holding = castle_holding
 	}
 }
-3008 = {	#KAFERNBURG
+3008 = {# KAFERNBURG
 	holding = none
 }
 
 ###c_schmalkalden
-3010 = {	#SCHMALKALDEN
+3010 = {# SCHMALKALDEN
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-3009 = {	#EISENACH
+3009 = {# EISENACH
 	holding = none
+	764.1.1 = {
+		special_building_slot = bryten_building_wartburg_01
+	}
 	1066.1.1 = {
 		holding = city_holding
 	}
+	1080.1.1 = {
+		special_building = bryten_building_wartburg_01
+	}	
+
 }
-3006 = {	#GLEICHEN
+3006 = {# GLEICHEN
 	holding = none
 	950.1.1 = {
 		holding = castle_holding
 	}
 }
-3007 = {	#BEICHTINEN
+3007 = {# BEICHTINEN
 	holding = none
 }
 
 ###c_lobdaburg
-3003 = {	#LOBDABURG
+3003 = {# LOBDABURG
 	culture = polabian
 	religion = catholic
 	holding = castle_holding
@@ -824,14 +834,14 @@
 		culture = franconian
 	}
 }
-3000 = {	#HOF
+3000 = {# HOF
 	holding = none
 }
 
 #k_germany
 ##d_west_franconia ###################################
 ###c_mainz
-2694 = {	#MAINZ
+2694 = {# MAINZ
 	culture = franconian
 	religion = catholic
 	holding = church_holding
@@ -840,25 +850,25 @@
 			temple_02
 			monastic_schools_01
 			pastures_01
-			#hunting_grounds_01
+		# hunting_grounds_01
 		}
 	}
 }
-2693 = {	#WIESBADEN
+2693 = {# WIESBADEN
 	holding = castle_holding
 }
-2692 = {	#KATZENELNBOGEN
+2692 = {# KATZENELNBOGEN
 	holding = none
 	1095.1.1 = {
 		holding = castle_holding
 	}
 }
-2695 = {	#BOPPARD
+2695 = {# BOPPARD
 	holding = city_holding
 }
 
 ###c_frankfurt
-2855 = {	#FRANKFURT
+2855 = {# FRANKFURT
 	culture = frankish
 	religion = catholic
 	holding = castle_holding
@@ -868,204 +878,213 @@
 		buildings = {
 			farm_estates_01
 			cereal_fields_02
-			#military_camps_01
+		# military_camps_01
 		}
 	}
 }
-2854 = {	#LIMBURG
+2854 = {# LIMBURG
 	holding = castle_holding
 }
-2741 = {	#RUSSELSHEIM
+2741 = {# RUSSELSHEIM
 	holding = city_holding
 }
-2863 = {	#HANAU
+2863 = {# HANAU
 	holding = none
-	#1143
+# 1143
 }
-2856 = {	#KRONBERG
+2856 = {# KRONBERG
 	holding = none
-	#1220
+# 1220
 }
 
 ###c_klingenberg
-2862 = {	#KLINGENBERG
+2862 = {# KLINGENBERG
 	culture = frankish
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2864 = {	#GELNHAUSEN
+2864 = {# GELNHAUSEN
 	holding = none
-	#1170
+# 1170
 }
-2866 = {	#RIENECK
+2866 = {# RIENECK
 	holding = city_holding
 }
 
 ###c_erbach
-2737 = {	#ERBACH
+2737 = {# ERBACH
 	culture = frankish
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2742 = {	#SELIGENSTADT
+2742 = {# SELIGENSTADT
 	holding = church_holding
 }
-2735 = {	#WEINHEIM
+2735 = {# WEINHEIM
 	holding = city_holding
 }
 
 ###c_worms
-2731 = {	#WORMS
+2731 = {# WORMS
 	culture = frankish
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2736 = {	#BESENSHEIM
+2736 = {# BESENSHEIM
 	holding = none
+	764.1.1 = {
+		special_building_slot = bryten_building_lorsch_abbey_01
+		special_building = bryten_building_lorsch_abbey_01
+	}
 }
 
 ###c_speyer
-2732 = {	#SPEYER
+2732 = {# SPEYER
 	culture = frankish
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
-
+	800.1.1 = {
+		special_building_slot = bryten_building_speyer_cathedral_01
+	}
+	1061.1.1 = {
+		special_building = bryten_building_speyer_cathedral_01
+	}
 }
-2744 = {	#HOCKENHEIM
+2744 = {# HOCKENHEIM
 	holding = city_holding
 }
-2733 = {	#HEIDELBERG
+2733 = {# HEIDELBERG
 	holding = church_holding
 }
-2724 = {	#WEISSENBURG
+2724 = {# WEISSENBURG
 	holding = none
 }
-2730 = {	#PIRMASENS
+2730 = {# PIRMASENS
 	holding = church_holding
 }
 
 ###c_vaihingen
-2745 = {	#VAIHINGEN
+2745 = {# VAIHINGEN
 	culture = frankish
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2743 = {	#HEILBRONN
+2743 = {# HEILBRONN
 	holding = city_holding
 }
-2772 = {	#LOWENSTEIN
+2772 = {# LOWENSTEIN
 	holding = none
-	#1123
+# 1123
 }
 
 ###c_durne
-2739 = {	#DURNE
+2739 = {# DURNE
 	culture = frankish
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2738 = {	#MOSBACH
+2738 = {# MOSBACH
 	holding = church_holding
 }
-2868 = {	#WERTHEIM
+2868 = {# WERTHEIM
 	holding = city_holding
 }
 
 ###c_kaiserlautern
-2729 = {	#KAISERLAUTERN
+2729 = {# KAISERLAUTERN
 	culture = frankish
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2728 = {	#LETNINGEN
+2728 = {# LETNINGEN
 	holding = none
 }
-2707 = {	#KREUSNACH
+2707 = {# KREUSNACH
 	holding = church_holding
 }
-2727 = {	#ROCKENHAUSEN
+2727 = {# ROCKENHAUSEN
 	holding = none
 }
-2701 = {	#VELDENZ
+2701 = {# VELDENZ
 	holding = none
 }
 
 ##d_east_franconia ###################################
 ###c_wurzburg
-2870 = {	#WURZBURG
+2870 = {# WURZBURG
 	culture = frankish
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2869 = {	#HOCHBERG
+2869 = {# HOCHBERG
 	holding = city_holding
 }
-2871 = {	#HAMMELBURG
+2871 = {# HAMMELBURG
 	holding = castle_holding
 }
 
 ###c_ansbach
-2875 = {	#ANSBACH
+2875 = {# ANSBACH
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2891 = {	#UFFENHEIM
+2891 = {# UFFENHEIM
 	holding = none
 	1103.1.1 = {
 		holding = city_holding
 	}
 }
-2880 = {	#TRUBENDING
+2880 = {# TRUBENDING
 	holding = none
 }
 
 ###c_coburg
-2998 = {	#COBURG
+2998 = {# COBURG
 	culture = franconian
 	religion = catholic
 	holding = church_holding
 	900.1.1 = { culture = franconian }
 
 }
-2995 = {	#LICHTENFELS
+2995 = {# LICHTENFELS
 	holding = castle_holding
 }
 
 ###c_hohenlohe
-2889 = {	#MERGENTHEIM
+2889 = {# MERGENTHEIM
 	culture = frankish
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2872 = {	#WEINSBERG
+2872 = {# WEINSBERG
 	holding = city_holding
 }
-2887 = {	#HALL
+2887 = {# HALL
 	holding = none
 }
 
 ###c_nurnberg
-2877 = {	#NURNBERG
+2877 = {# NURNBERG
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
@@ -1074,15 +1093,15 @@
 	1066.1.1 = {
 		buildings = {
 			curtain_walls_01
-			#hunting_grounds_01
+		# hunting_grounds_01
 			barracks_01
 		}
 	}
 }
-2892 = {	#RIEDFELD
+2892 = {# RIEDFELD
 	holding = none
 }
-2876 = {	#ABENBERG
+2876 = {# ABENBERG
 	holding = none
 	1000.1.1 = {
 		holding = city_holding
@@ -1090,84 +1109,84 @@
 }
 
 ###c_bamberg
-2874 = {	#BAMBERG
+2874 = {# BAMBERG
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2992 = {	#GREIFFENST
+2992 = {# GREIFFENST
 	holding = city_holding
 }
-2873 = {	#CASEL
+2873 = {# CASEL
 	holding = none
 }
-2890 = {	#IPHOFEN
+2890 = {# IPHOFEN
 	holding = church_holding
 }
 
 ###c_nordlingen
-2886 = {	#NORDLINGEN
+2886 = {# NORDLINGEN
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2885 = {	#DILLINGEN
+2885 = {# DILLINGEN
 	holding = none
 }
-2888 = {	#CRAILSHEIM
+2888 = {# CRAILSHEIM
 	holding = city_holding
 }
 
 ###c_wiltberg
-2927 = {	#WILTBERG
+2927 = {# WILTBERG
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2926 = {	#SCHWEINFURT
+2926 = {# SCHWEINFURT
 	holding = city_holding
 }
-2925 = {	#HENNEBERG
+2925 = {# HENNEBERG
 	holding = none
 }
 
 ##d_hesse ###################################
 ###c_kassel
-2860 = {	#KASSEL
+2860 = {# KASSEL
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2858 = {	#ZIEGENHAIN
+2858 = {# ZIEGENHAIN
 	holding = none
 }
-2915 = {	#HOFGEISMAR
+2915 = {# HOFGEISMAR
 	holding = city_holding
 }
-2922 = {	#MUNDEN
+2922 = {# MUNDEN
 	holding = church_holding
 }
 
 ###c_fulda
-2924 = {	#FULDA
+2924 = {# FULDA
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2923 = {	#HERSFELD
+2923 = {# HERSFELD
 	holding = church_holding
 }
-2867 = {	#LAUTERBACH
+2867 = {# LAUTERBACH
 	holding = none
 	900.1.1 = {
 		holding = city_holding
@@ -1175,142 +1194,146 @@
 }
 
 ###c_nassau
-2852 = {	#SIEGEN
+2852 = {# SIEGEN
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2853 = {	#SOLMS
+2853 = {# SOLMS
 	holding = city_holding
 }
-2851 = {	#DIEZ
+2851 = {# DIEZ
 	holding = none
 }
 
 ###c_marburg
-2859 = {	#MARBURG
+2859 = {# MARBURG
 	culture = franconian
 	religion = catholic
 	holding = castle_holding
 	900.1.1 = { culture = franconian }
 
 }
-2861 = {	#NIDDA
+2861 = {# NIDDA
 	holding = none
 }
-2865 = {	#BUDINGEN
+2865 = {# BUDINGEN
 	holding = city_holding
 }
-2857 = {	#WETZLAR
+2857 = {# WETZLAR
 	holding = church_holding
 }
 
 ##d_currezia ###################################
 ###c_grisons
-2055 = {	#CHUR
+2055 = {# CHUR
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2052 = {	#LIECHTENSTEIN = b_farduzes
+2052 = {# LIECHTENSTEIN = b_farduzes
 	holding = none
 }
-2789 = {	#VARES
+2789 = {# VARES
 	holding = none
 }
-2788 = {	#WERDENBURG
+2788 = {# WERDENBURG
 	holding = none
 }
 
 ###c_sankt_gallen
-2053 = {	#SANKT GALLEN
+2053 = {# SANKT GALLEN
 	culture = swabian
 	religion = catholic
 	holding = church_holding
+	747.1.1 = {
+		special_building_slot = bryten_building_saint_gall_abbey_01
+		special_building = bryten_building_saint_gall_abbey_01
+	}	
 }
-2054 = {	#KONSTANZ
+2054 = {# KONSTANZ
 	holding = castle_holding
 }
 
 ###c_zurich
-2051 = {	#ZURICH
+2051 = {# ZURICH
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2461 = {	#SCHWYZ
+2461 = {# SCHWYZ
 	holding = city_holding
 }
-3107 = {	#ENGELBERG
+3107 = {# ENGELBERG
 	holding = none
-	#1122
+# 1122
 }
-2050 = {	#BASEL
+2050 = {# BASEL
 	holding = church_holding
 }
 
 ##d_alsace ###################################
 ###c_strassburg
-2721 = {	#STRASSBURG
+2721 = {# STRASSBURG
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2722 = {	#HAGUENAU
+2722 = {# HAGUENAU
 	holding = none
 	1120.1.1 = {
 		holding = city_holding
 	}
 }
-2723 = {	#LICHTBERG
+2723 = {# LICHTBERG
 	holding = none
 }
 
 ###c_breisgau
-2751 = {	#FREIBURG
+2751 = {# FREIBURG
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2750 = {	#SANKT BLASIEN
+2750 = {# SANKT BLASIEN
 	holding = church_holding
 }
-2752 = {	#OFFENBURG
+2752 = {# OFFENBURG
 	holding = none
-	#1148
+# 1148
 }
-2753 = {	#GEROLDSECK
+2753 = {# GEROLDSECK
 	holding = none
 }
 
 ###c_colmar
-2717 = {	#COLMAR
+2717 = {# COLMAR
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2719 = {	#SELESTAT
+2719 = {# SELESTAT
 	holding = city_holding
 }
 
 ###c_sundgau
-2057 = {	#MONTBELIARD
+2057 = {# MONTBELIARD
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2058 = {	#MULHOUSE
+2058 = {# MULHOUSE
 	holding = city_holding
 }
-2720 = {	#FERRETTE
+2720 = {# FERRETTE
 	holding = none
 	1105.1.1 = {
 		holding = castle_holding
 	}
 }
-2056 = {	#PORRENTRUY
+2056 = {# PORRENTRUY
 	holding = none
 	975.1.1 = {
 		holding = church_holding
@@ -1319,24 +1342,24 @@
 
 ##d_swabia ###################################
 ###c_ulm
-2768 = {	# ULM
+2768 = {#  ULM
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2769 = {	#HELLENSTEIN castle in Heidenheim
+2769 = {# HELLENSTEIN castle in Heidenheim
 	holding = none
 	1150.1.1 = {
 		holding = castle_holding
 	}
 }
-2770 = {	#HELFENSTEIN
+2770 = {# HELFENSTEIN
 	holding = none
 	1066.1.1 = {
 		holding = castle_holding
 	}
 }
-2766 = {	#SCHELKLINGEN
+2766 = {# SCHELKLINGEN
 	holding = none
 	1127.1.1 = {
 		holding = city_holding
@@ -1344,51 +1367,51 @@
 }
 
 ###c_grunningen
-2773 = {	#GRUNNINGEN
+2773 = {# GRUNNINGEN
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2767 = {	#SIGMARINGEN
+2767 = {# SIGMARINGEN
 	holding = none
-	1066.1.1 = {	#1077
+	1066.1.1 = {# 1077
 		holding = city_holding
 	}
 }
-2774 = {	#BERGE
+2774 = {# BERGE
 	holding = none
 }
-2761 = {	#HEILIGENBERG
+2761 = {# HEILIGENBERG
 	holding = none
-	#1083
+# 1083
 }
 
 ###c_wurttemberg
-2748 = {	#WURTTEMBERG
+2748 = {# WURTTEMBERG
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2749 = {	#TUBINGEN
+2749 = {# TUBINGEN
 	holding = city_holding
 }
-2771 = {	#TECK
+2771 = {# TECK
 	holding = none
 }
 
 ###c_baden
-2746 = {	#BADEN
+2746 = {# BADEN
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2755 = {	#SULZ
+2755 = {# SULZ
 	holding = none
 	1050.1.1 = {
 		holding = church_holding
 	}
 }
-2747 = {	#CALW
+2747 = {# CALW
 	holding = none
 	1037.1.1 = {
 		holding = city_holding
@@ -1396,15 +1419,15 @@
 }
 
 ###c_zollern
-2763 = {	#ZOLLERN
+2763 = {# ZOLLERN
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2764 = {	#VEHRINGEN
+2764 = {# VEHRINGEN
 	holding = none
 }
-2765 = {	#REUTLINGEN
+2765 = {# REUTLINGEN
 	holding = none
 	1000.1.1 = {
 		holding = city_holding
@@ -1412,27 +1435,27 @@
 }
 
 ###c_hohenberg
-2759 = {	#HOHENBERG
+2759 = {# HOHENBERG
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2756 = {	#ROTTWEIL
+2756 = {# ROTTWEIL
 	holding = city_holding
 }
 
 ###c_furstenberg
-2757 = {	#FURSTENBERG
+2757 = {# FURSTENBERG
 	culture = swabian
 	religion = catholic
 	holding = castle_holding
 }
-2758 = {	#LUPFEN
+2758 = {# LUPFEN
 	holding = none
 }
-2760 = {	#CLETTGAU
+2760 = {# CLETTGAU
 	holding = none
 }
-2762 = {	#NELLENBURG
+2762 = {# NELLENBURG
 	holding = none
 }

@@ -2215,5 +2215,2078 @@ bryten_building_hill_of_tara_02 = {# The Hill of Tara - modernized with a cathed
 	
 	type = special
 }
+#######################################
+#									  #
+#      French Special Buildings       #
+#									  #
+#######################################
+
+bryten_building_fontenay_abbey_01 = {# Abbey of Fontenay
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_monastic_schools.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.05
+		learning_per_piety_level = 2
+		clergy_opinion = 5
+		religious_vassal_opinion = 10
+		tyranny_gain_mult = -0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_vezelay_abbey_01 = {# Vézelay Abbey
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_monastic_schools.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.05
+		learning_per_piety_level = 2
+		clergy_opinion = 5
+		religious_vassal_opinion = 10
+		tyranny_gain_mult = -0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_pont_gard_01 = {# Pont du Gard
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_qanats.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.05
+		learning_per_piety_level = 2
+		clergy_opinion = 5
+		religious_vassal_opinion = 10
+		tyranny_gain_mult = -0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_amiens_cathedral_01 = {# Amiens Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_notre_dame.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	next_building = bryten_building_amiens_cathedral_02
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.05
+		learning_per_piety_level = 2
+		clergy_opinion = 5
+		religious_vassal_opinion = 10
+		tyranny_gain_mult = -0.2
+	}
+	
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_amiens_cathedral_02 = {# Amiens Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_notre_dame.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		holy_order_hire_cost_mult = -0.15
+		clergy_opinion = 5
+		monthly_county_control_change_factor = 0.05
+	}	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.15
+	}	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_bourges_cathedral_01 = {# Bourges Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_notre_dame.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	next_building = bryten_building_bourges_cathedral_02
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_bourges_cathedral_02 = {# Bourges Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_notre_dame.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		holy_order_hire_cost_mult = -0.15
+		clergy_opinion = 5
+		monthly_county_control_change_factor = 0.05
+	}	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.15
+	}	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_chartres_cathedral_01 = {# Chartres Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cologne_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+
+	next_building = bryten_building_chartres_cathedral_02
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_chartres_cathedral_02 = {# Chartres Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cologne_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		holy_order_hire_cost_mult = -0.15
+		clergy_opinion = 5
+		monthly_county_control_change_factor = 0.05
+	}	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.15
+	}	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_reims_cathedral_01 = {# Reims Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_notre_dame.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	next_building = bryten_building_reims_cathedral_02
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_reims_cathedral_02 = {# Reims Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_notre_dame.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		holy_order_hire_cost_mult = -0.15
+		clergy_opinion = 5
+		monthly_county_control_change_factor = 0.05
+	}	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.15
+	}	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_carnac_stones_01 = {# Carnac Stones
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_megalith.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	province_modifier = {
+		monthly_income = 1
+	}
+	
+	county_modifier = {
+		monthly_county_control_change_add = 0.5
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_rouen_cathedral_01 = {# Rouen Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cologne_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	next_building = bryten_building_reims_cathedral_02
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_rouen_cathedral_02 = {# Rouen Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cologne_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		holy_order_hire_cost_mult = -0.15
+		clergy_opinion = 5
+		monthly_county_control_change_factor = 0.05
+	}	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.15
+	}	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_malo_walls_01 = {# Saint malo Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_palace_of_achen.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	county_modifier = {
+		defender_holding_advantage = 5
+		development_growth_factor = 0.1
+		development_growth = 0.3
+		tax_mult = 0.1
+		hostile_raid_time = 0.5
+	}	
+	province_modifier = {
+		garrison_size = 0.25
+		fort_level = 2
+		travel_danger = -20
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
 
 
+bryten_building_bordeaux_cathedral_01 = {# Bordeaux Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cologne_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	next_building = bryten_building_bordeaux_cathedral_02
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_bordeaux_cathedral_02 = {# Bordeaux Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cologne_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.5
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+		monthly_piety_gain_per_happy_powerful_vassal_add = 0.2
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.2
+	}	
+	province_modifier = {
+		monthly_income = 5
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_caixa_rotllan_01 = {# Caixa de Rotllan
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_megalith.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety_gain_per_knight_add = 0.1
+		knight_effectiveness_mult = 0.1
+	}
+	province_modifier = {
+		monthly_income = 1
+	}
+
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_lyon_cathedral_01 = {# Lyon Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_notre_dame.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.5
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+		monthly_piety_gain_per_happy_powerful_vassal_add = 0.2
+	}	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.2
+	}	
+	province_modifier = {
+		monthly_income = 5
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_sernin_basilica_01 = {# Saint Sernin Basilica
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_palace_of_achen.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+	}
+	province_modifier = {
+		monthly_income = 2
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_albi_cathedral_01 = {# Cathedral Basicalica of Saint Cecilia
+	construction_time = very_slow_construction_time
+
+	type_icon = "alcazar_segovia.dds" 
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		monthly_dynasty_prestige_mult = 0.05
+		monthly_county_control_change_factor = 0.1
+	}
+	province_modifier = {
+		monthly_income = 2
+	}
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_avignon_palace_01 = {# Avignon Palace
+	construction_time = very_slow_construction_time
+
+	type_icon = "compostela.dds"  
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		powerful_vassal_opinion = 5
+		clergy_opinion = 5
+		monthly_prestige_gain_per_happy_powerful_vassal_add = 0.1
+		tyranny_gain_mult = -0.2
+		monthly_dynasty_prestige_mult = 0.05
+	}	
+	county_modifier = {
+		development_growth = 0.3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_cite_carcassonne_01 = {# cite de Carcassonne
+	construction_time = very_slow_construction_time
+
+	type_icon = "toledo.dds" 
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	county_modifier = {
+		defender_holding_advantage = 5
+		development_growth_factor = 0.1
+		development_growth = 0.3
+		tax_mult = 0.1
+		hostile_raid_time = 0.5
+	}
+	
+	province_modifier = {
+		garrison_size = 0.25
+		fort_level = 2
+		travel_danger = -20
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+#######################################
+#									  #
+#      German Special Buildings       #
+#									  #
+#######################################
+bryten_building_speyer_cathedral_01 = {# Speyer Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		monthly_dynasty_prestige_mult = 0.05
+		holy_order_hire_cost_mult = -0.15
+		clergy_opinion = 5
+		monthly_county_control_change_factor = 0.05
+	}	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.2
+		development_growth = 0.15
+	}	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_hildesheim_cathedral_01 = {# Hildesheim Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_palace_of_achen.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 1
+		stewardship_per_piety_level = 1
+		monthly_dynasty_prestige_mult = 0.05
+	}
+	county_modifier = {
+		county_opinion_add = 5
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.3
+	}	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_trier_cathedral_01 = {# Trier Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_temple_of_uppsala.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 1
+		stewardship_per_piety_level = 1
+		monthly_dynasty_prestige_mult = 0.05
+	}
+	county_modifier = {
+		county_opinion_add = 5
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.3
+	}
+	
+	province_modifier = {
+		monthly_income = 2
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_lorsch_abbey_01 = {# Lorsch Abbey
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_monastic_schools.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.05
+		learning_per_piety_level = 2
+		clergy_opinion = 5
+		religious_vassal_opinion = 10
+		tyranny_gain_mult = -0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_wartburg_01 = {# Wartburg
+	construction_time = very_slow_construction_time
+
+	type_icon = "toledo.dds" 
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	county_modifier = {
+		defender_holding_advantage = 5
+		development_growth_factor = 0.1
+		development_growth = 0.3
+		tax_mult = 0.1
+		hostile_raid_time = 0.5
+	}
+	
+	province_modifier = {
+		garrison_size = 0.25
+		fort_level = 2
+		travel_danger = -20
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_saint_gall_abbey_01 = {# Abbey of Saint Gall
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_canterbury_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.05
+		learning_per_piety_level = 2
+		clergy_opinion = 5
+		religious_vassal_opinion = 10
+		tyranny_gain_mult = -0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_bellinzona_01 = {# Castles of Bellinzona
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_walls_of_genoa.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	county_modifier = {
+		defender_holding_advantage = 5
+		development_growth_factor = 0.1
+		development_growth = 0.3
+		hostile_raid_time = 0.5
+	}
+	
+	province_modifier = {
+		garrison_size = 0.25
+		fort_level = 2
+		monthly_income = 3
+		travel_danger = -20
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
