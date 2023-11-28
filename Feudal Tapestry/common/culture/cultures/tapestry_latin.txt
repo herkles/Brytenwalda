@@ -1,7 +1,149 @@
 ﻿#############################################
 # Vanilla Cultures			
 #############################################
+roman = {# Roman; old romans
+	color = { 0.8 0.1 0.1 }
+	
+	ethos = ethos_bellicose
+	heritage = heritage_latin
+	language = language_latin
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_formation_fighting
+		tradition_legalistic
+		tradition_roman_legacy
+		tradition_poetry
+		tradition_hereditary_hierarchy
+		tradition_noble_adoption
+	}
+	
+	name_list = name_list_roman
 
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx } 
+	building_gfx = { mediterranean_building_gfx } 
+	clothing_gfx = { byzantine_clothing_gfx } 
+	clothing_gfx = { western_clothing_gfx } 
+	unit_gfx = { eastern_unit_gfx } 		
+
+	ethnicities = {
+		10 = mediterranean
+	}
+}
+sardinian = {# Sardinian
+	color = { 255 243 224 }
+
+	parents = { roman }
+
+	created = 100.1.1
+	
+	ethos = ethos_communal
+	heritage = heritage_latin
+	language = language_sardinian
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_stalwart_defenders
+		tradition_isolationist
+	}
+	
+	name_list = name_list_sardinian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean
+	}
+}
+sicilian = {# Sicilian
+	color = { 255 183 77 }
+
+	parents = { longobard greek }
+
+	created = 950.1.1
+	
+	ethos = ethos_courtly
+	heritage = heritage_latin
+	language = language_italian
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_gardening
+		tradition_swords_for_hire
+		tradition_maritime_mercantilism
+		tradition_xenophilic
+		tradition_poetry
+	}
+	
+	name_list = name_list_sicilian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean
+	}	
+}
+lombard = {# Lombards - Northern Italy
+	color = { 255 204 128 }
+
+	created = 650.1.1
+
+	parents = { langobard roman }
+	
+	ethos = ethos_bellicose
+	heritage = heritage_latin
+	language = language_italian
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_parochialism
+		tradition_martial_admiration
+		tradition_stand_and_fight
+		tradition_republican_legacy
+	}
+	
+	name_list = name_list_cisalpine
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean
+	}
+}
+italian = {# Italian / Mediano
+	color = { 255 202 40 }
+
+	parents = { roman }
+
+	created = 476.11.4
+	
+	ethos = ethos_spiritual
+	heritage = heritage_latin
+	language = language_italian
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_formation_fighting
+		tradition_republican_legacy
+		tradition_parochialism
+		tradition_family_entrepreneurship
+	}
+	
+	name_list = name_list_italian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean
+	}
+}
 #############################################
 # New Cultures			
 #############################################
@@ -37,8 +179,8 @@ gallo_roman = {# Romanized Gauls
 	}
 }
 venetian = {# Venetians
-	color = { 0.5 0.1 0.1 }
-	created = 814.1.1 # Conquest of Gaul
+	color = { 253 216 53 }
+	created = 726.1.1 
 	parents = { roman }
 
 	ethos = ethos_communal
@@ -64,8 +206,9 @@ venetian = {# Venetians
 	}
 }
 ligurian = {# Ligurian, ie Genoese
-	color = { 0.5 0.1 0.1 }
-	created = 814.1.1 # Conquest of Gaul
+	color = { 255 245 157 }
+
+	created = 935.1.1 
 	parents = { roman }
 
 	ethos = ethos_communal
@@ -86,6 +229,150 @@ ligurian = {# Ligurian, ie Genoese
 	clothing_gfx = { western_clothing_gfx }
 	unit_gfx = { western_unit_gfx }
 
+	ethnicities = {
+		10 = mediterranean
+	}
+}
+longobard = {# Longobards; Italianized Langobards in southern Italy
+	color = { 220 231 117 }
+
+	parents = { langobard roman }
+
+	created = 700.11.4
+	
+	ethos = ethos_courtly
+	heritage = heritage_latin
+	language = language_italian
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_formation_fighting
+		tradition_republican_legacy
+		tradition_poetry
+	}
+	
+	name_list = name_list_italian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean
+	}
+}
+tuscan = {# Tuscan
+	color = { 230 238 156 }
+
+	parents = { roman }
+
+	created = 476.11.4
+	
+	ethos = ethos_communal
+	heritage = heritage_latin
+	language = language_italian
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_republican_legacy
+		tradition_astute_diplomats
+		tradition_city_keepers
+		tradition_poetry
+	}
+	
+	name_list = name_list_italian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean
+	}
+}
+neapolitan = {# neapolitan; mixture of norman and longobards
+	color = { 249 251 231 }
+
+	parents = { norman longobard }
+
+	created = 1059.1.1
+	
+	ethos = ethos_bellicose
+	heritage = heritage_latin
+	language = language_italian
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_swords_for_hire
+		tradition_hereditary_hierarchy
+		tradition_poetry
+		tradition_chivalry
+	}
+	
+	name_list = name_list_sicilian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean
+	}	
+}
+romagnol = {# Tuscan
+	color = { 240 244 195 }
+
+	parents = { roman }
+
+	created = 476.11.4
+	
+	ethos = ethos_communal
+	heritage = heritage_latin
+	language = language_italian
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_republican_legacy
+		tradition_maritime_mercantilism
+		tradition_city_keepers
+		tradition_parochialism
+	}
+	
+	name_list = name_list_italian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean
+	}
+}
+
+ = {# Corsican
+	color = { 236 239 241 }
+
+	parents = { italian }
+
+	created = 1000.1.1
+	
+	ethos = ethos_communal
+	heritage = heritage_latin
+	language = language_sardinian
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_stalwart_defenders
+		tradition_republican_legacy
+		tradition_fishermen
+	}
+	
+	name_list = name_list_sardinian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
 	ethnicities = {
 		10 = mediterranean
 	}
