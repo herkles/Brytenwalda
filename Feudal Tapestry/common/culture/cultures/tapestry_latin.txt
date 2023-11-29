@@ -30,7 +30,7 @@ roman = {# Roman; old romans
 	}
 }
 sardinian = {# Sardinian
-	color = { 255 243 224 }
+	color = { 255 174 66 }
 
 	parents = { roman }
 
@@ -57,7 +57,7 @@ sardinian = {# Sardinian
 	}
 }
 sicilian = {# Sicilian
-	color = { 255 183 77 }
+	color = { 255 228 181 }
 
 	parents = { longobard greek }
 
@@ -87,7 +87,7 @@ sicilian = {# Sicilian
 	}	
 }
 lombard = {# Lombards - Northern Italy
-	color = { 255 204 128 }
+	color = { 223 255 0 }
 
 	created = 650.1.1
 
@@ -116,7 +116,7 @@ lombard = {# Lombards - Northern Italy
 	}
 }
 italian = {# Italian / Mediano
-	color = { 255 202 40 }
+	color = {251 236 93}
 
 	parents = { roman }
 
@@ -179,7 +179,7 @@ gallo_roman = {# Romanized Gauls
 	}
 }
 venetian = {# Venetians
-	color = { 253 216 53 }
+	color = { 248 22 126 }
 	created = 726.1.1 
 	parents = { roman }
 
@@ -206,7 +206,7 @@ venetian = {# Venetians
 	}
 }
 ligurian = {# Ligurian, ie Genoese
-	color = { 255 245 157 }
+	color = { 244 196 48 }
 
 	created = 935.1.1 
 	parents = { roman }
@@ -234,7 +234,7 @@ ligurian = {# Ligurian, ie Genoese
 	}
 }
 longobard = {# Longobards; Italianized Langobards in southern Italy
-	color = { 220 231 117 }
+	color = { 236 255 220 }
 
 	parents = { langobard roman }
 
@@ -262,7 +262,7 @@ longobard = {# Longobards; Italianized Langobards in southern Italy
 	}
 }
 tuscan = {# Tuscan
-	color = { 230 238 156 }
+	color = { 228 208 10 }
 
 	parents = { roman }
 
@@ -291,7 +291,7 @@ tuscan = {# Tuscan
 	}
 }
 neapolitan = {# neapolitan; mixture of norman and longobards
-	color = { 249 251 231 }
+	color = { 250 218 94 }
 
 	parents = { norman longobard }
 
@@ -319,8 +319,8 @@ neapolitan = {# neapolitan; mixture of norman and longobards
 		10 = mediterranean
 	}	
 }
-romagnol = {# Tuscan
-	color = { 240 244 195 }
+romagnol = {# Romagnol
+	color = { 255 253 166 }
 
 	parents = { roman }
 
@@ -348,9 +348,8 @@ romagnol = {# Tuscan
 		10 = mediterranean
 	}
 }
-
- = {# Corsican
-	color = { 236 239 241 }
+corsican = {# Corsican
+	color = { 143 188 143 }
 
 	parents = { italian }
 

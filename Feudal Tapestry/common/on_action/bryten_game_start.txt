@@ -142,7 +142,15 @@ bryten_setup_after_game_start_on_actions = {
 			limit = { game_start_date = 867.1.1 }
 			title:d_sardinia = { set_de_jure_liege_title = title:k_sicily }
 		}
-
-
+		if = {# Holy Roman Empire Rules over Italy after Otto the Great
+			limit = { current_date >= 963.1.1 }
+			title:k_italy = { set_de_jure_liege_title = title:e_hre }
+			title:k_romagna = {	set_de_jure_liege_title = title:e_hre }
+			title:k_sardinia = { set_de_jure_liege_title = title:e_hre }
+		}
+		if = {# Holy Roman Empire includes Burgundy after Conrad II
+			limit = { current_date >= 1033.1.1 }
+			title:k_burgundy = { set_de_jure_liege_title = title:e_hre }
+		}
 	}
 }

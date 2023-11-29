@@ -175,7 +175,6 @@
 	culture = longobard
 	religion = catholic
 	holding = castle_holding
-	1098.1.1 = { culture = neapolitan }
 }
 2593 = {# GAETA
 	holding = city_holding
@@ -196,7 +195,7 @@
 		}
 	}
 	1059.4.1 = {
-		culture = neapolitan
+		culture = longobard
 		religion = catholic
 	}
 	1066.1.1 = {
@@ -295,7 +294,6 @@
 		# barracks_01
 		}
 	}
-	1091.1.1 = { culture = neapolitan	}
 }
 2613 = {# MARATEA
 	holding = city_holding
@@ -312,7 +310,6 @@
 	culture = longobard
 	religion = catholic
 	holding = castle_holding
-	1091.1.1 = { culture = neapolitan	}
 }
 2632 = {# STIGLIANO
 	holding = none
@@ -324,8 +321,10 @@
 	culture = greek
 	religion = orthodox
 	holding = castle_holding
-	1055.1.1 = { culture = neapolitan }
-	1074.1.1 = { religion = catholic }
+	1055.1.1 = { 
+		culture = longobard
+		religion = catholic
+	}
 }
 2626 = {# SQUILLUCE
 	holding = city_holding
@@ -340,7 +339,7 @@
 	religion = orthodox
 	holding = castle_holding
 	1074.1.1 = {
-		culture = neapolitan
+		culture = longobard
 		religion = catholic
 	}
 }
@@ -360,7 +359,7 @@
 	religion = orthodox
 	holding = castle_holding
 	1074.1.1 = {
-		culture = neapolitan
+		culture = longobard
 		religion = catholic
 	}
 }
