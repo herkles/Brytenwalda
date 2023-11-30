@@ -1,0 +1,6579 @@
+﻿#######################################
+# Doria Dynasty
+#######################################
+34878 = {
+	name = "Paolino" # Paolino Doria, first consul of Raffah?
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91420
+	# Leona Savigone
+
+	1266.1.1 = {
+		birth = yes
+	}
+	1316.1.1 = {
+		death = yes
+	}
+}
+7727 = {
+	name = "Aleramo" # Aleramo Aleramicci, Count of Montferrato (967-991)
+	dynasty = 206
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 8
+	religion = "catholic"
+	culture = "ligurian"
+	trait = calm
+	trait = education_martial_3
+
+	father = french0001
+
+	904.1.1 = {
+		birth = yes
+	}
+	#961.7.1 = {
+	#	add_spouse = Gilberga d'Ivrea
+	#}
+	991.1.1 = {
+		death = {
+			death_reason = death_old_age
+		}
+	}
+}
+20314 = {
+	name = "Manfredo" # Manfredo Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91409
+
+	1036.1.1 = {
+		birth = yes
+	}
+	1066.9.14 = {
+		effect = {
+			add_gold = 150
+		}
+	}
+	1089.1.1 = {
+		death = yes
+	}
+}
+31472 = {
+	name = "Ginevra" # Ginevra Doria, spouse of Benedetto of Chios
+	female = yes
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71155
+	mother = 167556
+
+	1282.1.1 = {
+		birth = yes
+	}
+	1332.1.1 = {
+		death = yes
+	}
+}
+71108 = {
+	name = "Caracosa" # Caracosa Doria, wife of Giacomo del Carretto
+	female = yes
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71151
+	mother = 235205
+
+	1222.1.1 = {
+		birth = yes
+	}
+	1246.1.1 = {
+		death = yes
+	}
+}
+71150 = {
+	name = "Manuele" # Manuele Doria, Consul of Genova (1215(2/2))
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91417
+
+	1180.1.1 = {
+		birth = yes
+	}
+	1204.1.1 = {
+		add_spouse = 71149
+	}
+	# spouse Alda Vento
+	1262.4.6 = {
+		death = yes
+	}
+}
+71151 = {
+	name = "NiccolO_" # Niccolò Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 71150
+	mother = 71149
+
+	1205.1.1 = {
+		birth = yes
+	}
+	1221.1.1 = {
+		add_spouse = 235205
+	}
+	1276.1.1 = {
+		death = yes
+	}
+}
+71154 = {
+	name = "Branca" # Branca Doria, Count of Logudoro (1284-1325)
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71151
+	mother = 235205
+
+	1230.1.1 = {
+		birth = yes
+	}
+	1253.1.1 = {
+		add_spouse = sardinian0002
+	}
+	1325.1.1 = {
+		death = {
+			death_reason = death_murder
+		}
+	}
+}
+71155 = {
+	name = "BernabO_" # Bernabò Doria, Diarch of Genova (1306-1310) and Count of Logudoro (1325)
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71154
+	mother = sardinian0002
+
+	1254.1.1 = {
+		birth = yes
+	}
+	1275.1.1 = {
+		add_spouse = 167556
+	}
+	1325.6.1 = {
+		death = yes
+	}
+}
+71156 = {
+	name = "Violanta" # Violanta Doria, wife of Oberto Doria of Genoa
+	female = yes
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71154
+	mother = sardinian0002
+
+	1256.1.1 = {
+		birth = yes
+	}
+	1330.1.1 = {
+		death = yes
+	}
+}
+71158 = {
+	name = "Corrado" # Corrado Doria, Diarch of Genova (1288-1291 & 1296-1298)
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+
+	father = 91431
+	mother = 71156
+
+	1273.1.1 = {
+		birth = yes
+	}
+	1338.1.1 = {
+		death = yes
+	}
+}
+71159 = {
+	name = "Brancaleone" # Brancaleone Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71155 
+	mother = 167556 
+
+	1288.1.1 = {
+		birth = yes
+	}
+	1336.1.1 = {
+		add_spouse = cisalpine0263
+	}
+	1355.1.1 = {
+		death = yes
+	}
+}
+71160 = {
+	name = "Brancaleone" # Brancaleone Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71159 
+	mother = cisalpine0263
+
+	1337.1.1 = {
+		birth = yes
+	}
+	1409.1.1 = {
+		death = yes
+	}
+}
+71161 = {
+	name = "Isabella" # Isabella Doria, wife of Manfredo V of Saluzzo
+	female = yes
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71155
+	mother = 167556 
+
+	1292.1.1 = {
+		birth = yes
+	}
+	1360.1.1 = {
+		death = yes
+	}
+}
+91410 = { 
+	name = "Ansaldo" # Ansaldo Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = cisalpine0038
+	
+	1038.1.1 = {
+		birth = yes
+	}
+	1090.1.1 = {
+		death = yes
+	}
+}
+91411 = { 
+	name = "Martino" # Martino Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91410
+	
+	1075.1.1 = {
+		birth = yes
+	}
+	1130.1.1 = {
+		death = yes
+	}
+}
+91412 = { 
+	name = "Genoaldo" # Genoaldo Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91410
+	
+	1077.1.1 = {
+		birth = yes
+	}
+	1129.1.1 = {
+		death = yes
+	}
+}
+91413 = { 
+	name = "Ansaldo" # Ansaldo Doria, Consul of Genova (1134-1135, 1147-1148, 1154-1155 & 1160-1161)
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91412
+	
+	1101.1.1 = {
+		birth = yes
+	}
+	1129.1.1 = {
+		add_spouse = 73706
+	}
+	1163.1.1 = {
+		death = yes
+	}
+}
+91414 = { 
+	name = "Enrico" # Enrico Doria, Consul of Genova (1156-1157)
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91413
+	mother = 73706
+	
+	1130.1.1 = {
+		birth = yes
+	}
+	1182.7.20 = {
+		death = yes
+	}
+}
+91416 = { 
+	name = "Simone" # Simone Doria, Consul of Genova (1165-1167, 1172(1/2), 1176-1177, 1180-1181, 1185-1186 & 1188-1189)
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91413
+	mother = 73706
+	
+	1133.1.1 = {
+		birth = yes
+	}
+	1189.1.1 = {
+		death = yes
+	}
+}
+91417 = { 
+	name = "NiccolO_" # Niccolò Doria, Consul of Genova (1203-1205, 1207(1/2), 1212(2/3)) and Count of Vecchio (1195-1220)
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91416
+	
+	1160.1.1 = {
+		birth = yes
+	}
+	1224.1.1 = {
+		death = yes
+	}
+}
+91418 = {
+	name = "Galeotto" # Galeotto Doria, Count of Logudoro (1325-1340)
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71155
+	mother = 167556
+
+	1280.1.1 = {
+		birth = yes
+	}
+	# spouse Violante Lomellini
+	1340.1.1 = {
+		death = yes
+	}
+}
+91419 = {
+	name = "Lodisio" # Lodisio Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91418
+	# Violante Lomellini
+
+	1300.1.1 = {
+		birth = yes
+	}
+	# spouse Franscesca Usodi mare
+	1360.1.1 = {
+		death = yes
+	}
+}
+91420 = { 
+	name = "Babilano" # Babilano Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91429
+	
+	1238.1.1 = {
+		birth = yes
+	}
+	# spouse Leona Savigone
+	1300.1.1 = {
+		death = yes
+	}
+}
+91421 = { 
+	name = "Federigo" # Federigo Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91420
+	# Leona Savigone
+	
+	1261.1.1 = {
+		birth = yes
+	}
+	1320.1.1 = {
+		death = yes
+	}
+}
+91422 = { 
+	name = "Percivalle" # Percivalle Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+		
+	father = 91421
+	
+	1283.1.1 = {
+		birth = yes
+	}
+	1339.1.1 = {
+		death = yes
+	}
+}
+91423 = { 
+	name = "Giano" # Giano Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91422
+	
+	1305.1.1 = {
+		birth = yes
+	}
+	1363.1.1 = {
+		death = yes
+	}
+}
+91424 = { 
+	name = "NiccolO_" # Niccolò Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91422
+	
+	1307.1.1 = {
+		birth = yes
+	}
+	1370.1.1 = {
+		death = yes
+	}
+}
+91425 = { 
+	name = "Aleramo" # Aleramo Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91423
+	
+	1328.1.1 = {
+		birth = yes
+	}
+	1389.1.1 = {
+		death = yes
+	}
+}
+91426 = { 
+	name = "Argenta" # Argenta Doria
+	female = yes
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91423
+	
+	1330.1.1 = {
+		birth = yes
+	}
+	1400.1.1 = {
+		death = yes
+	}
+}
+91427 = { 
+	name = "Leonello" # Leonello Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91424
+	
+	1330.1.1 = {
+		birth = yes 
+	}
+	1388.1.1 = {
+		death = yes
+	}
+}
+91428 = { 
+	name = "NiccolO_" # Niccolò Doria
+	dynasty_house = house_doria	
+	religion = "cisalpine"
+	culture = "ligurian"
+		
+	father = 91420
+	# Leona Savigone
+	
+	1263.1.1 = {
+		birth = yes
+	}
+	1329.1.1 = {
+		death = yes
+	}
+}
+91429 = { 
+	name = "Guglielmo" # Guglielmo Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 71150
+	mother = 71149
+	
+	1211.1.1 = {
+		birth = yes
+	}
+	1267.1.1 = {
+		death = yes
+	}
+}
+91430 = { 
+	name = "Ingo" # Ingo Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91417
+	
+	1184.1.1 = {
+		birth = yes
+	}
+	1252.6.15 = {
+		death = yes
+	}
+}
+91431 = { 
+	name = "Pietro" # Pietro Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = cisalpine0249
+	
+	1208.1.1 = {
+		birth = yes
+	}
+	1277.1.1 = {
+		death = yes
+	}
+}
+91432 = { 
+	name = "Oberto" # Oberto Doria, Capitano del Popolo (1265) and Diarch of Genova (1270-1288)
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91431
+	
+	1229.1.1 = {
+		birth = yes
+	}
+	1272.1.1 = {
+		add_spouse = 71156
+	}
+	1306.1.1 = {
+		death = {
+			death_reason = death_old_age
+		}
+	}
+}
+91434 = { 
+	name = "Lamba" # Lamba Doria, Diarch of Genova (1299-1300)
+	dynasty_house = house_doria		
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_4
+		
+	father = 91431
+	
+	1245.1.1 = {
+		birth = yes
+	}
+	# spouse Mabilla Casiccia
+	1323.1.1 = {
+		death = {
+			death_reason = death_old_age
+		}
+	}
+}
+91435 = {
+	name = "Mariano" # Mariano Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71151
+	mother = 235205
+
+	1231.1.1 = {
+		birth = yes
+	}
+	1287.12.23 = {
+		death = yes
+	}
+}
+91436 = { 
+	name = "Cesare" # Cesare Doria-Lamba
+	dynasty_house = house_doria-lamba	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91434
+	
+	1269.1.1 = {
+		birth = yes
+	}
+	# spouse Franca Giudice
+	1328.1.1 = {
+		death = yes
+	}
+}
+91437 = { 
+	name = "Opizzino" # Opizzino Doria-Lamba
+	dynasty_house = house_doria-lamba	
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+		
+	father = 91436
+	# Franca Giudice
+	
+	1293.1.1 = {
+		birth = yes
+	}
+	# spouse Franca Giudice
+	1354.1.1 = {
+		death = yes
+	}
+}
+91438 = { 
+	name = "Bartolomeo" # Bartolomeo Doria-Lamba
+	dynasty_house = house_doria-lamba	
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_3
+		
+	father = 91437
+	# Franca Giudice
+	
+	1316.1.1 = {
+		birth = yes
+	}
+	1392.3.15 = {
+		death = yes
+	}
+}
+91439 = {
+	name = "Saladino" # Saladino Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91435
+
+	1255.1.1 = {
+		birth = yes
+	}
+	1310.1.1 = {
+		death = yes
+	}
+}
+91440 = {
+	name = "NiccolO_" # Niccolò Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91435
+
+	1259.1.1 = {
+		birth = yes
+	}
+	1317.1.1 = {
+		death = yes
+	}
+}
+91441 = {
+	name = "Andrea" # Andrea Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71151
+	mother = 235205
+
+	1224.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+91442 = {
+	name = "NiccolO_" # Niccolò Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71151
+	mother = 235205
+
+	1225.1.1 = {
+		birth = yes
+	}
+	1287.12.23 = {
+		death = yes
+	}
+}
+91443 = {
+	name = "Barisone" # Barisone Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71151
+	mother = 235205
+
+	1226.1.1 = {
+		birth = yes
+	}
+	1287.12.23 = {
+		death = yes
+	}
+}
+91444 = {
+	name = "Gavino" # Gavino Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71151
+	mother = 235205
+
+	1227.1.1 = {
+		birth = yes
+	}
+	1287.12.23 = {
+		death = yes 
+	}
+}
+91445 = {
+	name = "Bonifazio" # Bonifazio Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91442
+
+	1247.1.1 = {
+		birth = yes
+	}
+	1312.1.1 = {
+		death = yes
+	}
+}
+91446 = {
+	name = "Rizzardo" # Rizzardo Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91442
+
+	1249.1.1 = {
+		birth = yes
+	}
+	1315.1.1 = {
+		death = yes
+	}
+}
+91447 = {
+	name = "Sorleone" # Sorleone Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91443
+
+	1249.1.1 = {
+		birth = yes
+	}
+	1314.1.1 = {
+		death = yes
+	}
+}
+91448 = {
+	name = "Marino" # Marino Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91443
+
+	1251.1.1 = {
+		birth = yes
+	}
+	1311.1.1 = {
+		death = yes
+	}
+}
+91449 = {
+	name = "Percivalle" # Percivalle Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91444
+
+	1250.1.1 = {
+		birth = yes
+	}
+	1316.1.1 = {
+		death = yes
+	}
+}
+91450 = {
+	name = "Manuele" # Manuele Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91444
+
+	1256.1.1 = {
+		birth = yes
+	}
+	1318.1.1 = {
+		death = yes
+	}
+}
+91451 = {
+	name = "Adriano" # Adriano Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91444
+
+	1259.1.1 = {
+		birth = yes
+	}
+	1323.1.1 = {
+		death = yes
+	}
+}
+91452 = {
+	name = "Cosimo" # Cosimo Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+
+	father = 91449
+
+	1274.1.1 = {
+		birth = yes
+	}
+	1338.1.1 = {
+		death = yes
+	}
+}
+91453 = {
+	name = "Cosimo" # Cosimo Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = 91452
+
+	1300.1.1 = {
+		birth = yes
+	}
+	1350.3.7 = {
+		death = yes
+	}
+}
+91454 = {
+	name = "Antonio" # Antonio Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91444
+
+	1253.1.1 = {
+		birth = yes
+	}
+	1318.1.1 = {
+		death = yes
+	}
+}
+91455 = {
+	name = "Babilano" # Babilano Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91442
+
+	1251.1.1 = {
+		birth = yes
+	}
+	1320.1.1 = {
+		death = yes
+	}
+}
+91457 = { 
+	name = "Jacopo" # Jacopo Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91433
+
+	1233.1.1 = {
+		birth = yes
+	}
+	1300.1.1 = {
+		death = yes
+	}
+}
+235033 = {
+	name = "Andrea" # Andrea Doria, Consul of Genova (1182-1183)
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91416
+
+	1166.1.1 = {
+		birth = yes
+	}
+	1192.1.1 = {
+		add_spouse = 235201
+	}
+	1235.1.1 = {
+		death = yes
+	}
+}
+463149 = {
+	name = "Valentina" # Valentina Doria, wife of Francesco del Carretto and Stefano Visconti
+	female = yes
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+	father = 71155
+	mother = 167556
+
+	1290.1.1 = {
+		birth = yes
+	}
+	1359.8.27 = {
+		death = yes
+	}
+}
+cisalpine0244 = { 
+	name = "Gulglielmo" # Guglielmo Doria, Consul of Genova (1174-1175, 1179-1180, 1181-1182, 1183-1184 & 1186-1187)
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91413
+	mother = 73706
+	
+	1135.1.1 = {
+		birth = yes
+	}
+	1188.1.1 = {
+		death = yes
+	}
+}
+cisalpine0245 = { 
+	name = "Montanaro" # Montanaro Doria, Consul of Genova (1208(2/3) & 1213(2/2))
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91414
+	
+	1159.1.1 = {
+		birth = yes
+	}
+	1215.1.1 = {
+		death = yes
+	}
+}
+cisalpine0246 = { 
+	name = "Daniele" # Daniele Doria, Consul of Genova (1209(2/2))
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91414
+	
+	1161.1.1 = {
+		birth = yes
+	}
+	1211.1.1 = {
+		death = yes
+	}
+}
+cisalpine0247 = { 
+	name = "Percivalle" # Percivalle Doria, Consul of Genova (1216(2/3))
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = cisalpine0245
+	
+	1184.1.1 = {
+		birth = yes
+	}
+	1262.4.6 = {
+		death = yes
+	}
+}
+cisalpine0248 = { 
+	name = "Enrico" # Enrico Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = cisalpine0246
+	
+	1183.1.1 = {
+		birth = yes
+	}
+	1251.2.19 = {
+		death = yes
+	}
+}
+cisalpine0249 = { 
+	name = "Pietro" # Pietro Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = cisalpine0246
+	
+	1183.1.1 = {
+		birth = yes
+	}
+	1251.2.19 = {
+		death = yes
+	}
+}
+cisalpine0250 = { 
+	name = "Simonetto" # Simonetto Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 235033
+	mother = 235201
+	
+	1198.1.1 = {
+		birth = yes
+	}
+	1254.1.1 = {
+		add_spouse = cisalpine0135
+	}
+	1275.1.1 = {
+		death = yes
+	}
+}
+cisalpine0251 = { 
+	name = "Lanfranco" # Lanfranco Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91430
+	
+	1207.1.1 = {
+		birth = yes
+	}
+	1264.1.1 = {
+		death = yes
+	}
+}
+cisalpine0252 = { 
+	name = "Lanfranco" # Lanfranco Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = 91417
+	
+	1182.1.1 = {
+		birth = yes
+	}
+	1251.2.19 = {
+		death = yes
+	}
+}
+cisalpine0253 = {
+	name = "Simone" # Simone Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = 91431
+	mother = 71156
+
+	1275.1.1 = {
+		birth = yes
+	}
+	1359.5.24 = {
+		death = yes
+	}
+}
+cisalpine0254 = { 
+	name = "Anselino" # Anselino Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = cisalpine0253
+	
+	1299.1.1 = {
+		birth = yes
+	}
+	1359.5.24 = {
+		death = yes
+	}
+}
+cisalpine0255 = { 
+	name = "Ignazio" # Ignazio Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = cisalpine0254
+	
+	1323.1.1 = {
+		birth = yes
+	}
+	1384.3.3 = {
+		death = yes
+	}
+}
+cisalpine0256 = { 
+	name = "Raffaello" # Raffaello Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = cisalpine0254
+	
+	1327.1.1 = {
+		birth = yes
+	}
+	1384.3.3 = {
+		death = yes
+	}
+}
+cisalpine0257 = { 
+	name = "Cassano" # Cassano Doria
+	dynasty_house = house_doria	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = cisalpine0253
+	
+	1301.1.1 = {
+		birth = yes
+	}
+	1384.3.3 = {
+		death = yes
+	}
+}
+cisalpine0258 = { 
+	name = "Acelina" # Acelina Doria
+	dynasty_house = house_doria
+	female = yes	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	father = cisalpine0257
+	
+	1325.1.1 = {
+		birth = yes
+	}
+	1384.3.3 = {
+		death = yes
+	}
+}
+cisalpine0259 = {
+	name = "Raffaello" # Raffaello Doria, Diarch of Genova (1335-1339)
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+
+	father = 91431
+	mother = 71156
+
+	1280.1.1 = {
+		birth = yes
+	}
+	1310.1.1 = {
+		add_spouse = cisalpine0259
+	}
+	1351.6.7 = {
+		death = yes
+	}
+}
+cisalpine0260 = {
+	name = "Ottobono" # Ottobono Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = cisalpine0259
+	mother = cisalpine0349
+
+	1311.1.1 = {
+		birth = yes
+	}
+	1361.1.1 = {
+		death = yes
+	}
+}
+cisalpine0261 = {
+	name = "Corrado" # Corrado Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = cisalpine0259
+	mother = cisalpine0349
+
+	1313.1.1 = {
+		birth = yes
+	}
+	1359.1.1 = {
+		death = yes
+	}
+}
+cisalpine0262 = {
+	name = "Marchisia" # Marchisia Doria
+	dynasty_house = house_doria
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0259
+
+	1330.1.1 = {
+		birth = yes
+	}
+	1390.2.24 = {
+		death = yes
+	}
+}
+cisalpine0263 = {
+	name = "Isotta" # Isotta Malaspina, wife of Brancaleone Doria
+	dynasty_house = house_spino_fiorito
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0042
+	mother = cisalpine0646
+
+	1318.1.1 = {
+		birth = yes
+	}
+	1368.1.1 = {
+		death = yes
+	}
+}
+cisalpine0264 = { 
+	name = "Lamba" # Lamba Doria-Lamba
+	dynasty_house = house_doria-lamba	
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+		
+	father = 91436
+	# Franca Giudice
+	
+	1291.1.1 = {
+		birth = yes
+	}
+	1352.10.31 = {
+		death = yes
+	}
+}
+cisalpine0265 = { 
+	name = "NiccolO_" # Niccolò Doria-Lamba
+	dynasty_house = house_doria-lamba	
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+		
+	father = cisalpine0264
+	
+	1316.1.1 = {
+		birth = yes
+	}
+	1366.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# carretto Dynasty
+#######################################
+71072 = {
+	name = "Enrico" # Enrico del Carretto 'the Brave'
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = faith_warrior
+	trait = brave
+	trait = education_martial_3
+
+	father = 7737
+	mother = 91016
+
+	1115.1.1 = {
+		birth = yes
+	}
+	1147.1.1 = {
+		give_nickname = nick_the_brave
+	}
+	1163.1.1 = {
+		add_spouse = 213522
+	}
+	1185.1.1 = {
+		death = yes
+	}
+}
+71073 = {
+	name = "Ottone" # Ottone del Carretto, Podestà di Genova (1194-1203)
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = 71072
+	mother = 213522
+
+	1170.1.1 = {
+		birth = yes
+	}
+	1237.1.1 = {
+		death = yes
+	}
+}
+71074 = {
+	name = "Ugo" # Ugo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71073
+
+	1188.1.1 = {
+		birth = yes
+	}
+	1227.12.6 = {
+		death = yes
+	}
+}
+71075 = {
+	name = "Ottone" # Ottone del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71074
+
+	1208.1.1 = {
+		birth = yes
+	}
+	1228.7.8 = {
+		death = yes
+	}
+}
+71076 = {
+	name = "Enrico" # Enrico del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71073
+
+	1190.1.1 = {
+		birth = yes
+	}
+	1211.1.1 = {
+		add_spouse = cisalpine0380
+	}
+	1228.8.15 = {
+		death = "1228.8.15"
+	}
+}
+71078 = {
+	name = "Bonifacio" # Bonifacio del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71076
+	mother = cisalpine0380
+
+	1212.1.1 = {
+		birth = yes
+	}
+	1260.1.1 = {
+		add_spouse = 71079
+	}
+	1285.2.1 = {
+		death = yes
+	}
+}
+71080 = {
+	name = "Guglielmo_Danielo" # Guglielmo Danielo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71078
+	mother = 71079
+
+	1261.1.1 = {
+		birth = yes
+	}
+	1285.2.1 = {
+		death = yes
+	}
+}
+71081 = {
+	name = "Ottobuono" # Ottobuono del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71078
+	mother = 71079
+
+	1263.1.1 = {
+		birth = yes
+	}
+	1285.2.1 = {
+		death = yes
+	}
+}
+71082 = {
+	name = "Percivalle" # Percivalle del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71078
+	mother = 71079
+
+	1265.1.1 = {
+		birth = yes
+	}
+	1285.2.1 = {
+		death = yes
+	}
+}
+71083 = {
+	name = "Simonetta" # Simonetta del Carretto
+	dynasty_house = house_carretto
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71078
+	mother = 71079
+
+	1267.1.1 = {
+		birth = yes
+	}
+	1285.2.1 = {
+		death = yes
+	}
+}
+71084 = {
+	name = "Alessina" # Alessina del Carretto
+	female = yes
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71078
+	mother = 71079
+
+	1269.1.1 = {
+		birth = yes
+	}
+	1285.2.1 = {
+		death = yes
+	}
+}
+71085 = {
+	name = "Leo" # Leo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	trait = bastard
+	father = 71078
+
+	1264.1.1 = {
+		birth = yes
+	}
+	1285.2.1 = {
+		death = yes
+	}
+}
+71086 = {
+	name = "Corrado" # Corrado del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	trait = bastard
+	father = 71078
+
+	1266.1.1 = {
+		birth = yes
+	}
+	1310.1.1 = {
+		death = yes
+	}
+}
+71087 = {
+	name = "Ottone" # Ottone del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	trait = bastard
+	father = 71078
+
+	1268.1.1 = {
+		birth = yes
+	}
+	1313.8.1 = {
+		death = yes
+	}
+}
+71088 = {
+	name = "Emanuele" # Emanuele del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	trait = bastard
+	father = 71078
+
+	1270.1.1 = {
+		birth = yes
+	}
+	1285.2.1 = {
+		death = yes
+	}
+}
+71089 = {
+	name = "Luigi" # Luigi del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	trait = bastard
+	father = 71078
+
+	1272.1.1 = {
+		birth = yes
+	}
+	1285.2.1 = {
+		death = yes
+	}
+}
+71090 = {
+	name = "Guglielmo" # Guglielmo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71077
+
+	1220.1.1 = {
+		birth = yes
+	}
+	1285.2.1 = {
+		death = yes
+	}
+}
+71091 = {
+	name = "Enrico" # Enrico del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_3
+
+	father = 71072
+	mother = 213522
+
+	1165.1.1 = {
+		birth = yes
+	}
+	1184.1.1 = {
+		add_spouse = 71092
+	}
+	1216.1.1 = {
+		add_spouse = 71093
+	}
+	1231.1.1 = {
+		death = yes
+	}
+}
+71094 = {
+	name = "Sofia" # Sofia del Carretto, wife of Guglielmo di Ceva
+	female = yes
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71091
+	mother = 71093
+
+	1218.1.1 = {
+		birth = yes
+	}
+	1284.1.1 = {
+		death = yes
+	}
+}
+71095 = {
+	name = "Beatrice" # Beatrice del Carretto 
+	dynasty_house = house_carretto
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71091
+	mother = 71093
+
+	1222.1.1 = {
+		birth = yes
+	}
+	1287.1.1 = {
+		death = yes
+	}
+}
+71107 = {
+	name = "Giacomo" # Giacomo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71091
+	mother = 71093
+
+	1220.1.1 = {
+		birth = yes
+	}
+	1238.1.1 = {
+		add_spouse = 71108
+	}
+	1246.1.1 = {
+		add_spouse = 71109
+	}
+	1268.10.21 = {
+		death = yes
+	}
+}
+71129 = {
+	name = "Ambrogio" # Ambrogio del Carretto, Bishop
+	dynasty_house = house_carretto
+	martial = 5
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = "ligurian"
+	trait = celibate
+	trait = theologian
+	trait = education_learning_2
+
+	father = 71072
+	mother = 213522
+
+	1170.1.1 = {
+		birth = yes
+	}
+	1192.1.1 = {
+		death = yes
+	}
+}
+71130 = {
+	name = "Bonifacio" # Bonifacio del Carretto, Bishop
+	dynasty_house = house_carretto
+	martial = 6
+	diplomacy = 5
+	intrigue = 3
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = celibate
+	trait = theologian
+	trait = education_learning_2
+
+	father = 71072
+	mother = 213522
+
+	1172.1.1 = {
+		birth = yes
+	}
+	1224.1.1 = {
+		death = yes
+	}
+}
+71131 = {
+	name = "Isabella" # Isabella del Carretto, wife of Enrico di Ponzone
+	female = yes
+	dynasty_house = house_carretto
+	martial = 5
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 6
+	religion = "catholic"
+	culture = "ligurian"
+	trait = content
+	trait = scholar
+	trait = education_intrigue_4
+
+	father = 71072
+	mother = 213522
+
+	1169.1.1 = {
+		birth = yes
+	}
+	1191.1.1 = {
+		death = {
+			death_reason = death_childbirth
+		}
+	}
+}
+73708 = {
+	name = "Aurelia" # Aurelia del Carretto, wife of Grimaldo Grimaldi of Genoa
+	dynasty_house = house_carretto
+	female = yes	
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 71072
+	mother = 213522
+	
+	1177.1.1 = {
+		birth = yes
+	}
+	1225.1.1 = {
+		death = yes
+	}
+}
+cisalpine0416 = {
+	name = "Francesco" # Francesco del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 71086
+
+	1289.1.1 = {
+		birth = yes
+	}
+	1339.1.1 = {
+		death = yes
+	}
+}
+cisalpine0417 = {
+	name = "Manfredo" # Manfredo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71087
+
+	1294.1.1 = {
+		birth = yes
+	}
+	1316.1.1 = {
+		add_spouse = cisalpine0368
+	}
+	1334.1.1 = {
+		death = yes
+	}
+}
+cisalpine0419 = {
+	name = "Antonio" # Antonio del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71090
+
+	1253.1.1 = {
+		birth = yes
+	}
+	1292.3.29 = {
+		death = yes
+	}
+}
+cisalpine0420 = {
+	name = "Enrico" # Enrico del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71090
+
+	1256.1.1 = {
+		birth = yes
+	}
+	1310.4.1 = {
+		death = yes
+	}
+}
+cisalpine0421 = {
+	name = "Bonifacio" # Bonifacio del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0420
+
+	1280.1.1 = {
+		birth = yes
+	}
+	1332.1.8 = {
+		death = yes
+	}
+}
+cisalpine0422 = {
+	name = "Giacopo" # Giacopo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0420
+
+	1282.1.1 = {
+		birth = yes
+	}
+	1301.1.1 = {
+		add_spouse = cisalpine0440
+	}
+	1340.5.23 = {
+		death = yes
+	}
+}
+cisalpine0425 = {
+	name = "Manfredo" # Manfredo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 71077
+
+	1222.1.1 = {
+		birth = yes
+	}
+	1262.12.11 = {
+		death = yes
+	}
+}
+cisalpine0426 = {
+	name = "Oddone" # Oddone del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0425
+
+	1246.1.1 = {
+		birth = yes
+	}
+	1260.1.1 = {
+		add_spouse = 167558
+	}
+	1284.3.17 = {
+		death = yes
+	}
+}
+cisalpine0427 = {
+	name = "Ughetto" # Ughetto del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0425
+
+	1248.1.1 = {
+		birth = yes
+	}
+	1284.3.17 = {
+		death = yes
+	}
+}
+cisalpine0428 = {
+	name = "Alberto" # Alberto del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0425
+
+	1250.1.1 = {
+		birth = yes
+	}
+	1266.1.1 = {
+		add_spouse = cisalpine0893
+	}
+	1300.1.1 = {
+		add_spouse = cisalpine0939
+	}
+	1313.7.1 = {
+		death = yes
+	}
+}
+cisalpine0429 = {
+	name = "Francesco" # Francesco del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0428
+	mother = cisalpine0893
+
+	1268.1.1 = {
+		birth = yes
+	}
+	1308.1.1 = {
+		add_spouse = 463149
+	}
+	1313.7.26 = {
+		death = yes
+	}
+}
+cisalpine0430 = {
+	name = "Tiburzia" # Tiburzia del Carretto
+	dynasty_house = house_carretto
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0429
+	mother = 463149
+
+	1310.1.1 = {
+		birth = yes
+	}
+	1324.6.28 = {
+		death = yes
+	}
+}
+cisalpine0431 = {
+	name = "Enrico" # Enrico del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_3
+
+	father = cisalpine0428
+	mother = cisalpine0893
+
+	1270.1.1 = {
+		birth = yes
+	}
+	1340.5.8 = {
+		death = yes
+	}
+}
+cisalpine0432 = {
+	name = "Emanuele" # Emanuele del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0431
+
+	1308.1.1 = {
+		birth = yes
+	}
+	1386.11.5 = {
+		death = yes
+	}
+}
+cisalpine0433 = {
+	name = "Giorgio" # Giorgio del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0432
+
+	1330.1.1 = {
+		birth = yes
+	}
+	1392.3.15 = {
+		death = yes
+	}
+}
+cisalpine0434 = {
+	name = "Corrado" # Corrado del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0432
+
+	1332.1.1 = {
+		birth = yes
+	}
+	1401.12.13 = {
+		death = yes
+	}
+}
+cisalpine0435 = {
+	name = "Aleramo" # Aleramo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = cisalpine0431
+
+	1311.1.1 = {
+		birth = yes
+	}
+	1380.5.21 = {
+		death = yes
+	}
+}
+cisalpine0436 = {
+	name = "Antonio" # Antonio del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0435
+
+	1336.1.1 = {
+		birth = yes
+	}
+	1386.10.20 = {
+		death = yes
+	}
+}
+cisalpine0437 = {
+	name = "Girogio" # Giorgio del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = cisalpine0425
+
+	1277.1.1 = {
+		birth = yes
+	}
+	1355.5.15 = {
+		death = yes
+	}
+}
+cisalpine0438 = {
+	name = "Guglielmo" # Guglielmo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = cisalpine0425
+
+	1279.1.1 = {
+		birth = yes
+	}
+	1340.1.1 = {
+		death = yes
+	}
+}
+cisalpine0439 = {
+	name = "Antonio" # Antonio del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0438
+
+	1330.1.1 = {
+		birth = yes
+	}
+	1345.5.18 = {
+		death = yes
+	}
+}
+cisalpine0440 = {
+	name = "Aliana" # Aliana del Carretto, wife of Giacopo del Carretto
+	dynasty_house = house_carretto
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0425
+
+	1281.1.1 = {
+		birth = yes
+	}
+	1350.2.10 = {
+		death = yes
+	}
+}
+cisalpine0441 = {
+	name = "Isabella" # Isabella del Carretto
+	dynasty_house = house_carretto
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0425
+
+	1283.1.1 = {
+		birth = yes
+	}
+	1324.6.28 = {
+		death = yes
+	}
+}
+cisalpine0871 = {
+	name = "Enrico" # Enrico del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = cisalpine0422
+	mother = cisalpine0440
+
+	1302.1.1 = {
+		birth = yes
+	}
+	1350.3.7 = {
+		death = yes
+	}
+}
+cisalpine0872 = {
+	name = "Antonio" # Antonio del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = cisalpine0422
+	mother = cisalpine0440
+
+	1304.1.1 = {
+		birth = yes
+	}
+	1350.3.7 = {
+		death = yes
+	}
+}
+cisalpine0873 = {
+	name = "Alberto" # Alberto del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0422
+	mother = cisalpine0440
+
+	1306.1.1 = {
+		birth = yes
+	}
+	1350.3.7 = {
+		death = yes
+	}
+}
+cisalpine0874 = {
+	name = "Manfredo" # Manfredo del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = cisalpine0422
+	mother = cisalpine0440
+
+	1302.1.1 = {
+		birth = yes
+	}
+	1350.3.7 = {
+		death = yes
+	}
+}
+cisalpine0875 = {
+	name = "Francesco" # Francesco del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0874
+
+	1326.1.1 = {
+		birth = yes
+	}
+	1388.6.16 = {
+		death = yes
+	}
+}
+cisalpine0876 = {
+	name = "Lodovico" # Lodovico del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0874
+
+	1328.1.1 = {
+		birth = yes
+	}
+	1388.6.16 = {
+		death = yes
+	}
+}
+cisalpine0877 = {
+	name = "Giovanni" # Giovanni del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0874
+
+	1330.1.1 = {
+		birth = yes
+	}
+	1388.6.16 = {
+		death = yes
+	}
+}
+cisalpine0878 = {
+	name = "Francesco" # Francesco del Carretto
+	dynasty_house = house_carretto
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = cisalpine0422
+	mother = cisalpine0440
+
+	1308.1.1 = {
+		birth = yes
+	}
+	1350.3.7 = {
+		death = yes
+	}
+}
+cisalpine0894 = {
+	name = "Isabella" # Isabella del Carretto
+	dynasty_house = house_carretto
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = cisalpine0428
+	mother = cisalpine0893
+
+	1269.1.1 = {
+		birth = yes
+	}
+	1319.1.1 = {
+		death = yes
+	}
+}
+cisalpine0895 = {
+	name = "Menzia" # Menzia del Carretto, spouse of Giorgio di Ceva
+	dynasty_house = house_carretto
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0426
+
+	1263.1.1 = {
+		birth = yes
+	}
+	1306.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# fieschi Dynasty
+#######################################
+70673 = {
+	name = "Giacomina" # Giacomina Fiescho, spouse of Obizzo II of Romagna
+	dynasty_house = house_fieschi
+	female = yes
+	martial = 4
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = honest
+	trait = gluttonous
+	trait = education_diplomacy_3
+
+	father = 70925
+	
+	1245.1.1 = {
+		birth = yes
+	}
+	1287.12.1 = {
+		death = yes
+	}
+}
+70787 = {
+	name = "Isabella" # Isabella Fieschi
+	female = yes
+	dynasty_house = house_fieschi
+	martial = 5
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = diligent
+	trait = cynical
+	trait = education_diplomacy_3
+
+	father = cisalpine0904
+	
+	1290.1.1 = {
+		birth = yes
+	}
+	1326.1.1 = {
+		death = yes
+	}
+}
+70923 = {
+	name = "Beatrice" # Beatrice Fieschi, spouse of Thomas II of Savoy (1251.6.1)
+	female = yes	
+	dynasty_house = house_fieschi
+	martial = 5
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 8
+	learning = 3
+	religion = "catholic"
+	culture = "ligurian"
+	trait = brave
+	trait = education_stewardship_2
+
+	father = 167542
+
+	1225.1.1 = {
+		birth = yes
+	}	
+	1283.7.9 = {
+		death = yes
+	}
+}
+70924 = {
+	name = "Tedisio" # Tedisio Fieschi
+	dynasty_house = house_fieschi
+	martial = 5
+	diplomacy = 4
+	intrigue = 8
+	stewardship = 3
+	learning = 3
+	religion = "catholic"
+	culture = "ligurian"
+	trait = ambitious
+	trait = education_martial_4
+
+	father = 167540
+
+	1190.1.1 = {
+		birth = yes
+	}	
+	1248.2.19 = {
+		death = yes
+	}
+}
+70925 = {
+	name = "NiccolO_" # Niccolò Fieschi
+	dynasty_house = house_fieschi
+	martial = 7
+	diplomacy = 4
+	intrigue = 8
+	stewardship = 4
+	learning = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = deceitful
+	trait = education_stewardship_4
+
+	father = 70924
+	
+	1224.1.1 = {
+		birth = yes
+	}
+	1310.1.1 = {
+		death = yes
+	}
+}
+70998 = {
+	name = "Girola" # Girolama Fieschi 'Girola', spouse of Galvano Lancia
+	dynasty_house = house_fieschi
+	female = yes
+	martial = 7
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 7
+	religion = "catholic"
+	culture = "ligurian"
+	trait = generous
+	trait = education_stewardship_2
+
+	father = 167540
+
+	1205.1.1 = {
+		birth = yes
+	}
+	1231.1.1 = {
+		death = yes
+	}
+}
+71119 = {
+	name = "Leonora" # Leonora Fieschi, spouse of Giorgio di Finale
+	female = yes
+	dynasty_house = house_fieschi
+	martial = 5
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 4
+	religion = "catholic"
+	culture = "ligurian"
+	trait = trusting
+	trait = honest
+	trait = education_learning_2
+
+	father = 167561
+
+	1305.1.1 = {
+		birth = yes
+	}
+	1361.1.1 = {
+		death = yes
+	}
+}
+71829 = {
+	name = "Ottobuono" # Ottobuono Fieschi, Pope Hadrian V (1276)
+	dynasty_house = house_fieschi
+	martial = 4
+	diplomacy = 9
+	intrigue = 6
+	stewardship = 6
+	religion = "catholic"
+	culture = "ligurian"
+	trait = gregarious
+	trait = trusting
+	trait = education_learning_4
+
+	father = 70924
+
+	1206.1.1 = {
+		birth = yes
+	}
+	1276.6.22 = {
+		name = "Hadrianus" # Adopted name Hadrianus V
+	}
+	1276.8.18 = {
+		death = {
+			death_reason = death_old_age
+		}
+	}
+}
+167540 = {
+	name = "Ugo" # Ugo Fieschi
+	dynasty_house = house_fieschi	
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_3
+
+	father = 167569
+
+	1136.1.1 = {
+		birth = yes
+	}
+	1211.8.1 = {
+		death = yes
+	}
+}
+167541 = {
+	name = "Opizzone" # Opizzone Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_intrigue_2
+
+	father = 167540
+
+	1187.1.1 = {
+		birth = yes
+	}
+	1268.1.1 = {
+		death = yes
+	}
+}
+167542 = {
+	name = "Teodoro" # Teodoro Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = 167540
+
+	1204.1.1 = {
+		birth = yes
+	}
+	1254.1.1 = {
+		death = yes
+	}
+}
+167544 = {
+	name = "Enrico" # Enrico Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = celibate
+	trait = education_diplomacy_2
+
+	father = 167541
+
+	1234.1.1 = {
+		birth = yes
+	}
+	1282.1.1 = {
+		death = yes
+	}
+}
+167545 = {
+	name = "Argentina" # Argentina Fieschi, spouse of Corrado Spinola
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = 167541
+
+	1226.1.1 = {
+		birth = yes
+	}
+	1280.1.1 = {
+		death = yes
+	}
+}
+167546 = {
+	name = "Ugolino" # Ugolino Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = 167541
+
+	1231.1.1 = {
+		birth = yes
+	}
+	1281.1.1 = {
+		death = yes
+	}
+}
+167547 = {
+	name = "Tedisio" # Tedisio Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 167542
+
+	1224.1.1 = {
+		birth = yes
+	}
+	1288.1.1 = {
+		death = yes
+	}
+}
+167548 = {
+	name = "Clarisia" # Clarisia Fieschi, spouse of Manuele Zaccaria
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 167547
+
+	1246.1.1 = {
+		birth = yes
+	}
+	1291.5.9 = {
+		death = yes
+	}
+}
+167549 = {
+	name = "Vittoria" # Vittoria Fieschi
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 167547
+
+	1248.1.1 = {
+		birth = yes
+	}
+	1292.1.1 = {
+		death = yes
+	}
+}
+167555 = {
+	name = "Federico" # Federico Fieschi
+	dynasty_house = house_fieschi	
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+
+	father = 70924
+
+	1226.1.1 = {
+		birth = yes
+	}
+	1303.2.6 = {
+		death = yes
+	}
+}
+167556 = {
+	name = "Eliana" # Eliana Fieschi, spouse of Bernabò Doria of Genoa
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = 167555
+
+	1254.1.1 = {
+		birth = yes
+	}
+	1337.1.1 = {
+		death = yes
+	}
+}
+167557 = {
+	name = "Percivalle" # Percivalle Fieschi, Cardinal
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = celibate
+	trait = theologian
+	trait = education_learning_2
+
+	father = 70924
+
+	1226.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+167558 = {
+	name = "Agnese" # Agnese Fieschi, spouse of Oddone del Carretto
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 70924
+
+	1233.1.1 = {
+		birth = yes
+	}
+	1272.1.1 = {
+		death = yes
+	}
+}
+cisalpine0839 = {
+	name = "Maddalena" # Maddalena Fieschi, spouse of Bernardo Rossi 
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 167540
+
+	1185.1.1 = {
+		birth = yes
+	}
+	1235.1.1 = {
+		death = yes
+	}
+}
+cisalpine0840 = {
+	name = "Giacomo" # Giacomo Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+
+	father = 167541
+
+	1225.1.1 = {
+		birth = yes
+	}
+	1285.7.23 = {
+		death = yes
+	}
+}
+cisalpine0841 = {
+	name = "Flisca" # Flisca Fieschi 
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0840
+
+	1248.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+cisalpine0842 = {
+	name = "Opizzo" # Opizzo Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_intrigue_1
+
+	father = cisalpine0840
+
+	1249.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+cisalpine0843 = {
+	name = "Guglielmo" # Giacomo Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = cisalpine0840
+
+	1251.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+cisalpine0844 = {
+	name = "Andrea" # Andrea Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0840
+
+	1252.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+cisalpine0845 = {
+	name = "Manfredo" # Manfredo Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_intrigue_2
+
+	father = cisalpine0840
+
+	1254.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+cisalpine0846 = {
+	name = "Luchino" # Luchino Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = cisalpine0840
+
+	1255.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+cisalpine0847 = {
+	name = "Francesco" # Francesco Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = cisalpine0840
+
+	1257.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+cisalpine0848 = {
+	name = "Claretta" # Claretta Fieschi 
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0840
+
+	1258.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+cisalpine0849 = {
+	name = "Tedisio" # Tedisio Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = 167541
+
+	1232.1.1 = {
+		birth = yes
+	}
+	1250.1.1 = {
+		death = yes
+	}
+}
+cisalpine0850 = {
+	name = "Andrea" # Andrea Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_learning_2
+
+	father = 167541
+
+	1229.1.1 = {
+		birth = yes
+	}
+	1279.1.1 = {
+		death = yes
+	}
+}
+cisalpine0851 = {
+	name = "Piperina" # Piperina Fieschi 
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 167541
+
+	1235.1.1 = {
+		birth = yes
+	}
+	1250.1.1 = {
+		death = yes
+	}
+}
+cisalpine0852 = {
+	name = "Pietro" # Pietro Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = 167546
+
+	1255.1.1 = {
+		birth = yes
+	}
+	1301.1.1 = {
+		death = yes
+	}
+}
+cisalpine0853 = {
+	name = "Giano" # Giano Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = cisalpine0852
+
+	1278.1.1 = {
+		birth = yes
+	}
+	1342.1.1 = {
+		death = yes
+	}
+}
+cisalpine0854 = {
+	name = "Lodovico" # Lodovico Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0853
+
+	1304.1.1 = {
+		birth = yes
+	}
+	1367.1.1 = {
+		death = yes
+	}
+}
+cisalpine0855 = {
+	name = "NiccolO_" # Niccolò Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 167541
+
+	1328.1.1 = {
+		birth = yes
+	}
+	1378.1.1 = {
+		death = yes
+	}
+}
+cisalpine0856 = {
+	name = "Verdina" # Verdina Fieschi 
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 167541
+
+	1237.1.1 = {
+		birth = yes
+	}
+	1250.1.1 = {
+		death = yes
+	}
+}
+cisalpine0857 = {
+	name = "Roberto" # Roberto Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = 167540
+
+	1193.1.1 = {
+		birth = yes
+	}
+	1215.1.1 = {
+		death = yes
+	}
+}
+cisalpine0858 = {
+	name = "Ruffino" # Ruffino Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_intrigue_1
+
+	father = 167540
+
+	1196.1.1 = {
+		birth = yes
+	}
+	1215.1.1 = {
+		death = yes
+	}
+}
+cisalpine0859 = {
+	name = "Margherita" # Margherita Fieschi
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = 167540
+
+	1198.1.1 = {
+		birth = yes
+	}
+	1248.1.1 = {
+		death = yes
+	}
+}
+cisalpine0860 = {
+	name = "Verde" # Verde Fieschi 
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 167540
+
+	1199.1.1 = {
+		birth = yes
+	}
+	1211.1.1 = {
+		death = yes
+	}
+}
+cisalpine0861 = {
+	name = "Ambrogio" # Ambrogio Fieschi 
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 167540
+
+	1201.1.1 = {
+		birth = yes
+	}
+	1215.1.1 = {
+		death = yes
+	}
+}
+cisalpine0862 = {
+	name = "Agnese" # Agnese Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = 167540
+
+	1202.1.1 = {
+		birth = yes
+	}
+	1260.1.1 = {
+		death = yes
+	}
+}
+cisalpine0869 = {
+	name = "Rolando" # Rolando Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 167547
+
+	1254.1.1 = {
+		birth = yes
+	}
+	1269.1.1 = {
+		death = yes
+	}
+}
+cisalpine0870 = {
+	name = "Opizzo" # Opizzo Fieschi, Bishop
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = celibate
+	trait = theologian
+	trait = education_learning_2
+
+	father = 70924
+
+	1227.1.1 = {
+		birth = yes
+	}
+	1291.1.1 = {
+		death = yes
+	}
+}
+cisalpine0893 = {
+	name = "Tiburzia" # Tiburzia Fieschi, spouse of Alberto del Carretto
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_intrigue_1
+
+	father = 70924
+
+	1232.1.1 = {
+		birth = yes
+	}
+	1270.1.1 = {
+		death = yes
+	}
+}
+
+cisalpine0896 = {
+	name = "Pagano" # Pagano Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 70924
+
+	1229.1.1 = {
+		birth = yes
+	}
+	1251.1.1 = {
+		death = yes
+	}
+}
+cisalpine0897 = {
+	name = "Andriola" # Andriola Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = 167555
+
+	1252.1.1 = {
+		birth = yes
+	}
+	1296.1.1 = {
+		death = yes
+	}
+}
+cisalpine0898 = {
+	name = "Emilia" # Emilia Fieschi, spouse of Pietro da Carrara
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = 70924 # No puede ser
+
+	1232.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+cisalpine0899 = {
+	name = "Alagia" # Alagia Fieschi, spouse of Morello Malaspina
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = 70925
+	
+	1265.1.1 = {
+		birth = yes
+	}
+	1344.4.19 = {
+		death = yes
+	}
+}
+cisalpine0900 = {
+	name = "Luca" # Luca Fieschi, Cardinal
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = celibate
+	trait = theologian
+	trait = education_learning_3
+
+	father = 70925
+	
+	1270.1.1 = {
+		birth = yes
+	}
+	1336.1.31 = {
+		death = yes
+	}
+}
+cisalpine0901 = {
+	name = "Brancaleone" # Brancaleone Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = 70925
+	
+	1250.1.1 = {
+		birth = yes
+	}
+	1291.1.1 = {
+		death = yes
+	}
+}
+cisalpine0902 = {
+	name = "Flisca" # Flisca Fieschi, spouse of Alberto Malaspina
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+
+	father = 70925
+	
+	1246.1.1 = {
+		birth = yes
+	}
+	1291.1.1 = {
+		death = yes
+	}
+}
+cisalpine0903 = {
+	name = "Ottobuono" # Ottobuono Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_intrigue_1
+
+	father = 70925
+	
+	1248.1.1 = {
+		birth = yes
+	}
+	1291.1.1 = {
+		death = yes
+	}
+}
+cisalpine0904 = {
+	name = "Carlo" # Carlo Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+
+	father = 70925
+	
+	1256.1.1 = {
+		birth = yes
+	}
+	1328.1.1 = {
+		death = yes
+	}
+}
+cisalpine0905 = {
+	name = "Bianchetta" # Bianchetta Fieschi
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+
+	father = cisalpine0904
+	
+	1275.1.1 = {
+		birth = yes
+	}
+	1335.1.1 = {
+		death = yes
+	}
+}
+cisalpine0906 = {
+	name = "Beatrice" # Beatrice Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = cisalpine0904
+	
+	1276.1.1 = {
+		birth = yes
+	}
+	1323.5.23 = {
+		death = yes
+	}
+}
+cisalpine0907 = {
+	name = "Lucchino" # Lucchino Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = cisalpine0904
+	
+	1278.1.1 = {
+		birth = yes
+	}
+	1336.1.1 = {
+		death = yes
+	}
+}
+cisalpine0908 = {
+	name = "Giovanni" # Giovanni Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0907
+	
+	1325.1.1 = {
+		birth = yes
+	}
+	1381.12.1 = {
+		death = yes
+	}
+}
+cisalpine0909 = {
+	name = "NiccolO_" # Niccolò Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0907
+	
+	1327.1.1 = {
+		birth = yes
+	}
+	1386.1.1 = {
+		death = yes
+	}
+}
+cisalpine0910 = {
+	name = "Carlo" # Carlo Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0907
+	
+	1329.1.1 = {
+		birth = yes
+	}
+	1355.1.1 = {
+		death = yes
+	}
+}
+cisalpine0911 = {
+	name = "Ginella" # Ginella Fieschi, spouse of Pietro Rossi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_intrigue_1
+
+	father = cisalpine0904
+	
+	1289.1.1 = {
+		birth = yes
+	}
+	1336.1.1 = {
+		death = yes
+	}
+}
+cisalpine0912 = {
+	name = "Giovanni" # Giovanni Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0904
+	
+	1279.1.1 = {
+		birth = yes
+	}
+	1339.2.2 = {
+		death = yes
+	}
+}
+cisalpine0939 = {
+	name = "Eliana" # Eliana Fieschi, spouse of Alberto del Carretto
+	dynasty_house = house_fieschi
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0904
+	
+	1284.1.1 = {
+		birth = yes
+	}
+	1305.1.1 = {
+		death = yes
+	}
+}
+cisalpine0940 = {
+	name = "Giovanni" # Giovanni Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0912
+	
+	1335.1.1 = {
+		birth = yes
+	}
+	1383.1.1 = {
+		death = yes
+	}
+}
+cisalpine0941 = {
+	name = "Carlo" # Carlo Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0912
+	
+	1337.1.1 = {
+		birth = yes
+	}
+	1413.1.1 = {
+		death = yes
+	}
+}
+cisalpine0942 = {
+	name = "Antonio" # Antonio Fieschi, Cleric
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = celibate
+	trait = theologian
+	trait = education_learning_2
+
+	father = cisalpine0904
+	
+	1281.1.1 = {
+		birth = yes
+	}
+	1305.1.1 = {
+		death = yes
+	}
+}
+cisalpine0943 = {
+	name = "Gabriele" # Gabriele Fieschi
+	dynasty_house = house_fieschi
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0904
+	
+	1282.1.1 = {
+		birth = yes
+	}
+	1305.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Spinola Dynasty
+#######################################
+31471 = {
+	name = "Giacomina" # Giacomina Spinola, origin unknown, spouse of Paleologo of Chios
+	female = yes
+	dynasty = 50 	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91353 # Corrado Spinola
+	mother = 167545 # Argentina Fieschi, d. of Opizzone Fieeschi and Simona.
+	
+	1264.6.1 = {
+		birth = yes
+	}
+	1314.1.1 = {
+		death = yes
+	}
+}
+cisalpine0084 = {
+	name = "Odoardo" # Odoardo Spinola
+	dynasty = 50
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91351
+	mother = 91352
+	
+	1255.1.1 = {
+		birth = yes
+	}
+	1310.1.1 = {
+		death = yes
+	}
+}
+cisalpine0085 = {
+	name = "Lussemburgo" # Lussemburgo Spinola
+	dynasty = 50
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = cisalpine0084
+	
+	1280.1.1 = {
+		birth = yes
+	}
+	1335.1.1 = {
+		add_spouse = cisalpine0043
+	}
+	1336.1.1 = {
+		death = yes
+	}
+}
+cisalpine0086 = {
+	name = "Spinetta" # Spinetta Spinola
+	dynasty = 50
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = cisalpine0085
+	mother = cisalpine0043
+	
+	1336.1.1 = {
+		birth = yes
+	}
+	1412.1.1 = {
+		death = yes
+	}
+}
+463550 = {
+	name = "Obizzo" # Obizzo Spinola di Lucoli, doge of Genoa
+	# AKA: Obizizzino
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"
+	father = 91353 # Corrado Spinola
+	mother = 167545 # Argentina Fieschi, d. of Opizzone Fieeschi and Simona.
+	
+	1266.1.1 = {
+		birth = yes
+	}
+	1285.1.1 = {
+		add_spouse = 71188 # Violante di Saluzzo, d. of Tommaso I, marchese di Saluzzo and Aloisia di Ceva
+	}
+	1315.1.1 = {
+		death = yes
+	}
+}
+463555 = {
+	name = "Argentina" # Argentina Spinola
+	female = yes
+	dynasty = 50 # Spinola
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 463550 # Obizzo Spinola di Lucoli, doge of Genoa
+	mother = 71188 # Violante di Saluzzo, d. of Tommaso I, marchese di Saluzzo and Aloisia di Ceva
+	
+	1290.1.1 = {
+		birth = "1290.1.1"
+	}
+	# spouse in 1306 Teodoro Paleologo, marchese di Monferrato, s. of emperor Andronikos II & Yolanda/Eirene di Monferrato
+	1354.1.1 = {
+		death = "1354.1.1"
+	}
+}
+70786 = {
+	name = "Caterina" # Caterina Spinola
+	female = yes
+	dynasty = 50
+
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91350 # Oberto Spinola, same as Obizzo ?
+	
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1318.1.1 = {
+		death = "1318.1.1"
+	}
+}
+73430 = {
+	name = "Gherardo" # Gherardo Spinola
+	dynasty = 50
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 91351 # Obizzo Spinola
+	mother = 91352 # Béatrice, daughter of Margherita di Antiochia
+
+	1280.1.1 = {
+		birth = "1280.1.1"
+	}
+	1331.1.1 = {
+		death = "1331.1.1"
+	}
+}
+34877 = {
+	name = "Alberto" # Alberto
+	dynasty = 50 # Spinola
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91367
+	
+	1240.1.1 = {
+		birth = "1240.1.1"
+	}
+	# spouse Constanza Scotti
+	1289.1.1 = {
+		death = "1289.1.1"
+	}
+}
+91353 = {
+	name = "Corrado" # Corrado Spinola
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91351 # Obizzo Spinola
+	mother = 91352 # Béatrice, daughter of Margherita di Antiochia
+	
+	1245.1.1 = {
+		birth = "1245.1.1" # unknown
+	}
+	# spouse Argentina Fieschi, d. of Opizzone Fieschi and Simona.
+	1264.1.1 = {
+		add_spouse = 167545
+	}
+	1320.1.1 = {
+		death = "1320.1.1"
+	}
+}	
+91354 = {
+	name = "Sbaralia" # Sbaralia Spinola
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91353 # Corrado Spinola
+	mother = 167545 # Argentina Fieschi, d. of Opizzone Fieeschi and Simona.
+	
+	1265.1.1 = {
+		birth = "1265.1.1" # unknown
+	}
+	1310.1.1 = {
+		death = "1310.1.1"
+		# death = { #if death reasons are now accepted again, just uncomment
+			  # death_reason = death_battle
+		 # }
+	}
+}	
+91355 = {
+	name = "Aloisia" # name unknown
+	female = yes
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"
+	father = 463550 # Obizzo Spinola di Lucoli, doge of Genoa
+	mother = 71188 # Violante di Saluzzo, d. of Tommaso I, marchese di Saluzzo and Aloisia di Ceva
+	1295.1.1 = {
+		birth = yes
+	}
+	# spouse Filippo di Langusco, count of Pavia
+	1360.1.1 = {
+		death = "1360.1.1"
+	}
+}	
+91356 = {
+	name = "Lucchesio" # Lucchesio Spinola
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 73430 # Gherardo Spinola
+	
+	1323.1.1 = {
+		birth = "1323.1.1"
+	}
+	1390.1.1 = {
+		death = "1390.1.1"
+	}
+}	
+91357 = {
+	name = "Guido" # Guido II Spinola, consul of Genoa in 1201
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91345 # Oberto I Spinola, consul of Genoa
+	# Sybilla della Volta
+	
+	1165.1.1 = {
+		birth = "1165.1.1"
+	}
+	1220.1.1 = {
+		death = "1220.1.1" # after 1203, send in 1210 as ambassador in Pisa
+	}
+}	
+91358 = {
+	name = "NiccolO_" # Niccolò Spinola
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91357 # Guido II Spinola, consul of Genoa 
+	
+	1190.1.1 = {
+		birth = "1190.1.1"
+	}
+	1258.1.1 = {
+		death = "1258.1.1"
+	}
+}	
+91359 = {
+	name = "Giovanni" # Giovanni Spinola
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91358 # Niccolò Spinola
+	
+	1210.1.1 = {
+		birth = "1210.1.1"
+	}
+	1230.1.1 = {
+		add_spouse = 91360 # Aldina
+	}
+	1270.1.1 = {
+		death = "1270.1.1" # after 1258.11.26
+	}
+}	
+91360 = {
+	name = "Aldina" # Aldina
+	female = yes
+	
+	religion = "catholic"
+	culture = "ligurian"
+		
+	1210.1.1 = {
+		birth = "1210.1.1"
+	}
+	# Giovanni Spinola
+	1290.1.1 = {
+		death = "1290.1.1"
+	}
+}	
+91361 = {
+	name = "Enrico" # Enrico Spinola
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"
+	father = 91358 # Niccolò Spinola
+	1220.1.1 = {
+		birth = yes
+	}
+	1240.1.1 = {
+		add_spouse = 91364 # Simonetta
+	}
+	1258.11.26 = {
+		death = yes
+	}
+}	
+91362 = {
+	name = "Bonifazio" # Bonifazio Spinola
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"
+	father = 91358 # Niccolò Spinola
+	1230.1.1 = {
+		birth = "1230.1.1"
+	}
+	1290.1.1 = {
+		death = "1290.1.1" # after 1258.11.26
+	}
+}
+91363 = {
+	name = "Cristiano" # Cristiano Spinola
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"
+	father = 91361 # Enrico Spinola
+	mother = 91364 # Simonetta
+	1280.1.1 = {
+		birth = "1280.1.1"
+	}
+	# spouse Aguigna de Mari
+	1330.1.1 = {
+		death = "1330.1.1"
+	}
+}
+91364 = {
+	name = "Simonetta"
+	female = yes
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	
+	1220.1.1 = {
+		birth = "1220.1.1"
+	}
+	1310.1.1 = {
+		death = "1310.1.1"
+	}
+}
+91365 = {
+	name = "Gabriele" # Gabriele Spinola
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91363 # Cristiano Spinola
+	# Aguigna de Mari
+	
+	1325.1.1 = {
+		birth = "1325.1.1"
+	}
+	# spouse Margarita
+	1395.1.1 = {
+		death = "1395.1.1"
+	}
+}
+91366 = {
+	name = "Giovanni" # Giovanni Podesta
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91357 # Guido II Spinola, consul of Genoa 
+	
+	1193.1.1 = {
+		birth = "1193.1.1"
+	}
+	# spouse Giacoba di San Genesio
+	1268.1.1 = {
+		death = "1268.1.1" # after 1223
+	}
+}	
+91367 = {
+	name = "Guido" # Guido
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91366 # Giovanni Podesta
+	# Giacoba di San Genesio
+	
+	1220.1.1 = {
+		birth = "1220.1.1"
+	}
+	
+	1284.1.1 = {
+		death = "1284.1.1"
+	}
+}	
+91368 = {
+	name = "Giovanni" # Giovanni
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91367 # Guido
+	# Constanza Scotti
+	
+	1240.1.1 = {
+		birth = "1240.1.1"
+	}
+	
+	1300.1.1 = {
+		death = "1300.1.1"
+	}
+}
+91369 = {
+	name = "Cipriano" # Cipriano
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91368  # Giovanni
+	# Constanza Scotti
+	
+	1260.1.1 = {
+		birth = "1260.1.1"
+	}
+	# spouse Giovanna Cibo
+	1320.1.1 = {
+		death = "1320.1.1"
+	}
+}	
+91370 = {
+	name = "Luciano" # Luciano
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91369 # Cipriano
+	# Constanza Scotti
+	
+	1280.1.1 = {
+		birth = "1280.1.1"
+	}
+	# spouse Franca Lomellini
+	1340.1.1 = {
+		death = "1340.1.1"
+	}
+}
+91371 = {
+	name = "Bendiano" # Bendiano
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91368  # Giovanni
+	# Constanza Scotti
+	
+	1265.1.1 = {
+		birth = "1265.1.1"
+	}
+	# spouse Giovanna Cibo
+	1325.1.1 = {
+		death = "1325.1.1"
+	}
+}	
+91372 = {
+	name = "Illario" # Illario
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91371  # Bendiano
+	# Constanza Scotti
+	
+	1285.1.1 = {
+		birth = yes
+	}
+	# spouse Pietra Lomellini
+	1345.1.1 = {
+		death = yes
+	}
+}
+91373 = {
+	name = "Sorleone" # Sorleone
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91367 # Guido
+	# Constanza Scotti
+	
+	1245.1.1 = {
+		birth = "1245.1.1"
+	}
+	# spouse Sobrana della Volta
+	1305.1.1 = {
+		death = "1305.1.1"
+	}
+}	
+91374 = {
+	name = "Giorgio" # Giorgio
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91367 # Guido
+	# Constanza Scotti
+	
+	1250.1.1 = {
+		birth = "1250.1.1"
+	}
+	1270.1.1 = {
+		add_spouse = 91375 # Francesca
+	}
+	1310.1.1 = {
+		death = "1310.1.1"
+	}
+}
+91375 = {
+	name = "Francesca" # Francesca
+	female = yes
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	1252.1.1 = {
+		birth = yes
+	}
+
+	1340.1.1 = {
+		death = yes
+	}
+}
+91376 = {
+	name = "NiccolO_" # Niccolò
+	dynasty = 50 # Spinola
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91367
+	
+	1244.1.1 = {
+		birth = "1244.1.1"
+	}
+	1277.1.1 = {
+		death = "1277.1.1"
+	}
+}
+91377 = {
+	name = "Antonio" # Antonio
+	dynasty = 50 # Spinola
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91376 # Niccolò
+	
+	1267.1.1 = {
+		birth = "1267.1.1"
+	}
+	# spouse Giovanna Savignone
+	1315.1.1 = {
+		death = "1315.1.1"
+	}
+}
+91378 = {
+	name = "Segurano" # Segurano
+	dynasty = 50 # Spinola
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91377 # Antonio
+	# Giovanna Savignone
+	
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	# spouse Manfreda Roccotagliata
+	1360.1.1 = {
+		death = "1360.1.1"
+	}
+}
+91379 = {
+	name = "Lodovico" # Lodovico
+	dynasty = 50 # Spinola
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91378 # Segurano
+	# Manfreda Roccotagliata
+	
+	1330.1.1 = {
+		birth = "1330.1.1"
+	}
+	# spouse Caternia De Caneto
+	1401.1.1 = {
+		death = "1401.1.1"
+	}
+}
+91380 = {
+	name = "Corradina" # Corradina
+	dynasty = 50 # Spinola
+	female = yes
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91345 # Oberto I Spinola, consul of Genoa
+	# Sybilla della Volta
+	
+	1175.1.1 = {
+		birth = "1175.1.1"
+	}
+	# spouse Oberti I Grimaldi
+	1250.1.1 = {
+		death = "1250.1.1"
+	}
+}
+91381 = {
+	name = "Ingo" # Ingo
+	dynasty = 50 # Spinola
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91345 # Oberto I Spinola, consul of Genoa
+	# Sybilla della Volta
+	
+	1175.1.1 = {
+		birth = "1175.1.1" # unknown
+	}
+	# spouse Oberti I Grimaldi
+	1255.1.1 = {
+		death = "1255.1.1" # unknown
+	}
+}
+91382 = {
+	name = "Lanfranco" # Lanfranco
+	dynasty = 50 # Spinola
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91345 # Oberto I Spinola, consul of Genoa
+	# Sybilla della Volta
+	
+	1185.3.5 = {
+		birth = yes # unknown
+	}
+	# spouse Sibilla Zaccaria
+	1260.1.1 = {
+		death = "1260.1.1" # unknown
+	}
+}
+91456 = {
+	name = "Ottobono" # Ottobono
+	dynasty = 50 # Spinola
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	# family ties invented
+	father = 91345 # Oberto I Spinola, consul of Genoa
+	# Sybilla della Volta
+	
+	1170.1.1 = {
+		birth = "1170.1.1" # unknown
+	}
+	# spouse Sibilla Zaccaria
+	1250.1.1 = {
+		death = "1250.1.1" # after 1207
+	}
+}
+180190 = {
+	name = "Contelda"
+	# second wife of Bonifacio I della Gherardesca, Count of Donoratico, daughter of Corradino
+	female = yes
+	dynasty = 50
+	religion = "catholic"
+	culture = "ligurian"
+	father = 91353
+	#mother = 167545 # date's too late
+	trait = "legitimized_bastard" # guess
+	1290.1.1 = {
+		birth = yes
+	}
+	1349.1.1 = {
+		death = yes
+	}
+}
+91340 = {
+	name = "Oberto" # Oberto di Manesseno di Genova
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91339 # Manesseno
+
+	1000.1.1 = {
+		birth = "1000.1.1"
+	}
+	1070.1.1 = {
+		death = "1070.1.1" # unknown
+	}
+}
+91341 = {
+	name = "Belo" # Belo Bozumi
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91340 # Oberto di Manesseno di Genova
+
+	1040.1.1 = {
+		birth = "1040.1.1"
+	}
+	1110.1.1 = {
+		death = "1110.1.1" # unknown
+	}
+}
+91342 = {
+	name = "Guido" # Guido I spinola, consul of Genoa in 1102 and 1110
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91341 # Oberto di Manesseno di Genova
+
+	1070.1.1 = {
+		birth = "1070.1.1" # unknown
+	}
+	1150.1.1 = {
+		death = "1150.1.1" # after 1110
+	}
+}
+91343 = {
+	name = "Guido" # Guido
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91342 # Guido I spinola, consul of Genoa
+
+	1100.1.1 = {
+		birth = "1100.1.1" # circa
+	}
+	1130.1.1 = {
+		add_spouse = 91344 # Alda
+	}
+	1156.1.1 = {
+		death = "1156.1.1"
+	}
+}
+91344 = {
+	name = "Alda" # Alda
+	female = yes
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	1110.1.1 = {
+		birth = "1110.1.1" # unknown
+	}
+	1180.1.1 = {
+		death = "1180.1.1" # unknown
+	}
+}
+91345 = {
+	name = "Oberto" # Oberto I Spinola, consul of Genoa in 1143, 1149, 1154, 1157, 1161 and 1163, 1167 and 1172
+	dynasty = 50 # Spinola
+
+	religion = "catholic"
+	culture = "ligurian"
+	
+	father = 91343 # Guido
+	mother = 91344 # Alda
+
+	1135.1.1 = {
+		birth = "1135.1.1" # 1135/1140
+	}
+		# add_spouse = # Sybilla della Volta  in 1160.1.1
+	1185.1.1 = {
+		death = "1185.1.1" # after 1182.7.20
+	}
+}
+91346 = {
+	name = "Ansaldo" # Ansaldo, consul of Genoa in 1152 and 1159
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"	
+	father = 91343 # Guido
+	mother = 91344 # Alda
+	1130.1.1 = {
+		birth = yes # unknown
+	}
+	1160.1.1 = {
+		death = yes
+	}
+}
+91347 = {
+	name = "Oberto" # Oberto II Spinola, consul of Genoa in 1201
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"	
+	father = 91345 # Oberto I Spinola, consul of Genoa
+	# Sybilla della Volta
+	1162.1.1 = {
+		birth = "1162.1.1" # 1162/1165
+	}
+	1220.1.1 = {
+		death = "1220.1.1" # after 1217.11.1
+	}
+}
+91348 = {
+	name = "Guglielmo" # Guglielmo Spinola, consul of Genoa in 1207 and 1216
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"
+	father = 91347 # Oberto II Spinola, consul of Genoa
+	1200.1.1 = {
+		birth = "1200.1.1"
+	}
+	1250.1.1 = {
+		death = "1250.1.1" # after 1216
+	}
+}
+91349 = {
+	name = "Rinaldo" # Rinaldo Spinola
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"
+	father = 91347 # Oberto II Spinola, consul of Genoa
+	1205.1.1 = {
+		birth = "1205.1.1" # unknown
+	}
+	1255.1.1 = {
+		death = "1255.1.1" # unknown
+	}
+}
+91350 = {
+	name = "Oberto" # Oberto Spinola, same as Obizzo ?
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"
+	father = 91349 # Rinaldo Spinola, consul of Genoa
+	1240.1.1 = {
+		birth = "1240.1.1" # unknown
+	}
+	1310.1.1 = {
+		death = "1310.1.1" # unknown
+	}
+}	
+91351 = {
+	name = "Obizzo" # Obizzo Spinola
+	dynasty = 50 # Spinola
+	religion = "catholic"
+	culture = "ligurian"
+	father = 91349 # Rinaldo Spinola, consul of Genoa
+	1225.1.1 = {
+		birth = "1225.1.1" # unknown
+	}
+	1240.1.1 = {
+		add_spouse = 91352 # Béatrice, daughter of Margherita di Antiochia
+	}
+	1300.1.1 = {
+		death = "1300.1.1" # after 1270
+	}
+}	
+#######################################
+# Boccanegra Dynasty
+#######################################
+144539 = {
+	name = "Guglielmo" #Guglielmo Boccanegra
+	dynasty = 13001
+	religion = "catholic"
+	culture = "ligurian"
+
+	1220.1.1 = {
+		birth = "1220.1.1"
+	}
+	1300.1.1 = {
+		death = "1290.1.1"
+	}
+}
+#######################################
+# Pallavicino Dynasty
+#######################################
+70635 = {
+	name = "Oberto" # Oberto Pallavicino, founder of house Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 8
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = diligent
+	trait = lifestyle_blademaster
+	trait = education_martial_3
+
+	father = 70634
+
+	1080.1.1 = {
+		birth = yes
+	}
+	1148.1.1 = {
+		death = yes
+	}
+}
+70714 = {
+	name = "Guglielmo" # Guglielmo Pallavicino 
+	dynasty_house = house_pallavicino
+	martial = 5
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = "ligurian"
+	trait = arbitrary
+	trait = trusting
+	trait = education_diplomacy_2
+
+	father = 70635
+
+	1106.1.1 = {
+		birth = yes
+	}
+	1162.1.1 = {
+		death = yes
+	}
+}
+70715 = {
+	name = "Alberto" # Alberto Pallavicino 'the Greek'
+	dynasty_house = house_pallavicino
+	martial = 7
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 4
+	religion = "catholic"
+	culture = "ligurian"
+	trait = honest
+	trait = content
+	trait = education_martial_2
+
+	father = 70635
+
+	1107.1.1 = {
+		birth = yes
+	}
+	1148.1.1 = {
+		death = yes
+	}
+}
+70716 = {
+	name = "Oberto" # Oberto Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 6
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 7
+	religion = "catholic"
+	culture = "ligurian"
+	trait = humble
+	trait = wrathful
+	trait = education_stewardship_2
+
+	father = 70714
+
+	1132.1.1 = {
+		birth = yes
+	}
+	1196.1.1 = {
+		death = yes
+	}
+}
+70717 = {
+	name = "Adalberto" # Adalberto Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 6
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 7
+	religion = "catholic"
+	culture = "ligurian"
+	trait = generous
+	trait = greedy
+	trait = education_stewardship_4
+
+	father = 70716
+
+	1155.1.1 = {
+		birth = yes
+	}
+	1212.1.1 = {
+		death = yes
+	}
+}
+70718 = {
+	name = "Oberto" # Oberto Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 5
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 4
+	religion = "catholic"
+	culture = "ligurian"
+	trait = lifestyle_hunter
+	trait = gluttonous
+	trait = education_diplomacy_2
+
+	father = 70717
+
+	1182.1.1 = {
+		birth = yes
+	}
+	1235.1.1 = {
+		death = yes
+	}
+}
+70719 = {
+	name = "Guglielmo" # Guglielmo Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 8
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = deceitful
+	trait = brave
+	trait = education_martial_4
+
+	father = 70716
+
+	1157.1.1 = {
+		birth = yes
+	}
+	1217.1.1 = {
+		death = {
+			death_reason = death_old_age
+		}
+	}
+}
+70720 = {
+	name = "Guido" # Guido Pallavicino, Count of Boeotia (1204-1237)
+	dynasty_house = house_pallavicino
+	martial = 7
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 4
+	religion = "catholic"
+	culture = "ligurian"
+	trait = lustful
+	trait = education_martial_2
+
+	father = 70719
+
+	1176.1.1 = {
+		birth = yes
+	}
+	1199.1.1 = {
+		add_spouse = 31213
+	}
+	1237.5.2 = {
+		death = {
+			death_reason = death_old_age
+		}
+	}
+}
+70721 = {
+	name = "Rubino" # Rubino Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 5
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 8
+	religion = "catholic"
+	culture = "ligurian"
+	trait = content
+	trait = paranoid
+	trait = education_stewardship_4
+
+	father = 70719
+
+	1174.1.1 = {
+		birth = yes
+	}
+	1258.1.1 = {
+		death = {
+			death_reason = death_old_age
+		}
+	}
+}
+70722 = {
+	name = "Ubertino" # Ubertino Pallavicino, Count of Boeotia (1237-1278)
+	dynasty_house = house_pallavicino
+	martial = 7
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = ambitious
+	trait = craven
+	trait = education_martial_2
+
+	father = 70720
+	mother = 31213
+
+	1200.1.1 = {
+		birth = yes
+	}
+	1278.1.1 = {
+		death = yes
+	}
+}
+70723 = {
+	name = "Mabilia" # Mabilia Pallavicino, wife of Azzo II of Ferrara
+	dynasty_house = house_pallavicino
+	female = yes
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = "ligurian"
+	trait = wrathful
+	trait = just
+	trait = education_stewardship_2
+
+	father = 70720
+	mother = 31213
+
+	1202.1.1 = {
+		birth = yes
+	}
+	1264.2.1 = {
+		death = yes
+	}
+}
+70724 = {
+	name = "Isabella" # Isabella Pallavicino, Countes of Boeotia (1278-1286)
+	dynasty_house = house_pallavicino
+	female = yes
+	martial = 4
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 7
+	religion = "catholic"
+	culture = "ligurian"
+	trait = content
+	trait = calm
+	trait = education_stewardship_1
+
+	father = 70720
+	mother = 31213
+
+	1204.1.1 = {
+		birth = yes
+	}
+	1286.1.1 = {
+		death = yes
+	}
+}
+70726 = {
+	name = "Guglielmo" # Guglielmo Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 6
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "ligurian"
+	trait = stuttering
+	trait = temperate
+	trait = education_stewardship_1
+
+	father = 70721
+
+	1205.1.1 = {
+		birth = yes
+	}
+	1271.1.1 = {
+		death = yes
+	}
+}
+70727 = {
+	name = "Tommaso" # Tommaso Pallavicino, Count of Boeotia (1286-1300)
+	dynasty_house = house_pallavicino
+	martial = 7
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = "ligurian"
+	trait = beauty_good_1
+	trait = greedy
+	trait = education_martial_2
+
+	father = 70726
+
+	1230.1.1 = {
+		birth = yes
+	}
+	1300.1.1 = {
+		death = yes
+	}
+}
+70728 = {
+	name = "Alberto" # Alberto Pallavicino, Count of Boeotia (1300-1311)
+	dynasty_house = house_pallavicino
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = intellect_good_3
+	trait = cynical
+	trait = education_diplomacy_2
+
+	father = 70727
+
+	1255.1.1 = {
+		birth = yes
+	}
+	1305.1.1 = {
+		add_spouse = 70734
+	}
+	1311.3.15 = {
+		death = yes
+	}
+}
+70729 = {
+	name = "Guglielma" # Guglielma Pallavicino, Countess of Boeotia (1323-1327)
+	dynasty_house = house_pallavicino
+	female = yes
+	martial = 4
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 7
+	religion = "catholic"
+	culture = "ligurian"
+	trait = honest
+	trait = content
+	trait = education_stewardship_2
+
+	father = 70728
+	mother = 70734
+
+	1307.1.1 = {
+		birth = yes
+	}
+	1358.1.1 = {
+		death = yes
+	}
+}
+70743 = {
+	name = "Guglielmo" # Guglielmo Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 5
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = "ligurian"
+	trait = honest
+	trait = greedy
+	trait = education_diplomacy_1
+
+	father = 70717
+	
+	1180.1.1 = {
+		birth = yes
+	}
+	1234.1.1 = {
+		death = yes
+	}
+}
+70744 = {
+	name = "Oberto" # Oberto (III) Pallavicino, Duke of liguriania (1259-1264), Cremona (1252-1266), Pavia (1254-1257 & 1260-1265) and Brescia (1259-1265)
+	dynasty_house = house_pallavicino
+	martial = 7
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 4
+	religion = "catholic"
+	culture = "ligurian"
+	trait = brave
+	trait = ambitious
+	trait = education_intrigue_3
+
+	father = 70743
+
+	1197.1.1 = {
+		birth = yes
+	}
+	1249.1.1 = {
+		add_spouse = cisalpine0187
+	}
+	1257.1.1 = {
+		add_pressed_claim = title:d_liguriania
+	}
+	1259.1.1 = {
+		remove_claim = title:d_liguriania
+	}
+	1269.5.8 = {
+		death = yes
+	}
+}
+70745 = {
+	name = "Adalberto" # Adalberto Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 5
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 4
+	religion = "catholic"
+	culture = "ligurian"
+	trait = weak
+	trait = scholar
+	trait = education_diplomacy_3
+
+	father = 70718
+
+	1228.1.1 = {
+		birth = yes
+	}
+	1262.1.1 = {
+		death = yes
+	}
+}
+70746 = {
+	name = "Manfredino" # Manfredo Pallavicino 'Manfredino', Podestà of Pavia (1269-1287)
+	dynasty_house = house_pallavicino
+	martial = 6
+	diplomacy = 4
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = arbitrary
+	trait = gregarious
+	trait = education_intrigue_2
+
+	father = 70744
+	mother = cisalpine0187
+
+	1254.1.1 = {
+		birth = yes
+	}
+	1328.1.1 = {
+		death = yes
+	}
+}
+70747 = {
+	name = "Guido" # Guido Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 7
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = deceitful
+	trait = education_martial_2
+
+	father = 70743
+
+	1216.1.1 = {
+		birth = yes
+	}
+	1266.1.1 = {
+		death = yes
+	}
+}
+70748 = {
+	name = "Obertino" # Oberto Pallavicino 'Ubertino', Podestà of Pavia (1301-1302)
+	dynasty_house = house_pallavicino
+	martial = 6
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = diligent
+	trait = sadistic
+	trait = education_diplomacy_2
+
+	father = 70747
+
+	1235.1.1 = {
+		birth = yes
+	}
+	1305.1.1 = {
+		death = yes
+	}
+}
+70749 = {
+	name = "Adalberto" # Adalberto Pallavicino
+	dynasty_house = house_pallavicino
+	martial = 4
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = greedy
+	trait = lifestyle_hunter
+	trait = education_diplomacy_3
+
+	father = 70743
+
+	1210.1.1 = {
+		birth = yes
+	}
+	1270.1.1 = {
+		death = yes
+	}
+}
+70750 = {
+	name = "Guglielmo" # Guglielmo Pallavicini
+	dynasty_house = house_pallavicino
+	martial = 5
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = "ligurian"
+	trait = craven
+	trait = diligent
+	trait = education_diplomacy_2
+
+	father = 70749
+
+	1227.1.1 = {
+		birth = yes
+	}
+	1251.1.1 = {
+		add_spouse = 70666
+	}
+	1284.12.28 = {
+		death = yes
+	}
+}
+cisalpine0001 = {
+	name = "Alberto" # Alberto Pallavicino 
+	dynasty_house = house_pallavicino
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 70635
+
+	1108.1.1 = {
+		birth = yes
+	}
+	1148.1.1 = {
+		death = yes
+	}
+}	
+
+cisalpine0002 = {
+	name = "NiccolO_" # Niccolò Pallavicino 
+	dynasty_house = house_pallavicino_genoa
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = cisalpine0001
+
+	1133.1.1 = {
+		birth = yes
+	}
+	1187.1.1 = {
+		death = yes
+	}
+}
+cisalpine0003 = {
+	name = "NiccolO_" # Niccolò Pallavicino 
+	dynasty_house = house_pallavicino_genoa
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = cisalpine0002
+
+	1162.1.1 = {
+		birth = yes
+	}
+	1214.1.1 = {
+		death = yes
+	}
+}
+cisalpine0004 = {
+	name = "Ansaldo" # Ansaldo Pallavicino 
+	dynasty_house = house_pallavicino_genoa
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0002
+
+	1164.1.1 = {
+		birth = yes
+	}
+	1216.1.1 = {
+		death = yes
+	}
+}
+cisalpine0005 = {
+	name = "Giovanni" # Giovanni Pallavicino 
+	dynasty_house = house_pallavicino_genoa
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+
+	father = cisalpine0003
+
+	1166.1.1 = {
+		birth = yes
+	}
+	1186.1.1 = {
+		add_spouse = 167570
+	}
+	1216.1.1 = {
+		death = yes
+	}
+}
+cisalpine0006 = {
+	name = "Ogerio" # Ogerio Pallavicino 
+	dynasty_house = house_pallavicino_genoa
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = cisalpine0002
+
+	1168.1.1 = {
+		birth = yes
+	}
+	1216.1.1 = {
+		death = yes
+	}
+}
+cisalpine0024 = {
+	name = "Margherita" # Margherita Pallavicino, wife of Alberto della Scala -create-
+	dynasty_house = house_pallavicino
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 70744
+	mother = cisalpine0187
+
+	1258.1.1 = {
+		birth = yes
+	}
+	1306.1.1 = {
+		death = yes
+	}
+}
+cisalpine0191 = {
+	name = "Giovanna" # Giovanna Pallavicino, wife of Salinguerra II of Verona
+	dynasty_house = house_pallavicino
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 70744
+	mother = cisalpine0187
+
+	1250.1.1 = {
+		birth = yes
+	}
+	1300.1.1 = {
+		death = yes
+	}
+}
+cisalpine0192 = {
+	name = "Isabella" # Isabella Pallavicino
+	dynasty_house = house_pallavicino
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 70744
+	mother = cisalpine0187
+
+	1252.1.1 = {
+		birth = yes
+	}
+	1268.1.1 = {
+		death = yes
+	}
+}
+cisalpine0193 = {
+	name = "Maria" # Maria Pallavicino, wife of Guido Guidi
+	dynasty_house = house_pallavicino
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 70744
+	mother = cisalpine0187
+
+	1256.1.1 = {
+		birth = yes
+	}
+	1316.1.1 = {
+		death = yes
+	}
+}
+cisalpine0834 = {
+	name = "Ogerio" # Ogerio Pallavicino 
+	dynasty_house = house_pallavicino_genoa
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_intrigue_1
+
+	father = cisalpine0005
+	mother = 167570
+
+	1187.1.1 = {
+		birth = yes
+	}
+	1237.1.1 = {
+		death = yes
+	}
+}
+cisalpine0835 = {
+	name = "Damiano" # Damiano Pallavicino 
+	dynasty_house = house_pallavicino_genoa
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = cisalpine0834
+
+	1211.1.1 = {
+		birth = yes
+	}
+	1268.1.1 = {
+		death = yes
+	}
+}
+cisalpine0836 = {
+	name = "Giovanni" # Guglielmo Pallavicino 
+	dynasty_house = house_pallavicino_genoa
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = cisalpine0835
+
+	1235.1.1 = {
+		birth = yes
+	}
+	1288.1.1 = {
+		death = yes
+	}
+}
+cisalpine0837 = {
+	name = "Meliaduce" # Meliaduce Pallavicino 
+	dynasty_house = house_pallavicino_genoa
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = cisalpine0835
+
+	1262.1.1 = {
+		birth = yes
+	}
+	1320.1.1 = {
+		death = yes
+	}
+}
+cisalpine0838 = {
+	name = "Damiano" # Damiano Pallavicino 
+	dynasty_house = house_pallavicino_genoa
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = cisalpine0837
+
+	1290.1.1 = {
+		birth = yes
+	}
+	1352.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Zaccaria Dynasty
+#######################################
+31449 = {
+	name = "Fulcone" # Fulcone Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	1215.1.1 = {
+		birth = yes
+	}
+	1275.1.1 = {
+		death = yes
+	}
+}
+31450 = {
+	name = "Manuele" # Manuele Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = 31449
+
+	1238.1.1 = {
+		birth = yes
+	}
+	1268.1.1 = {
+		add_spouse = 167548
+	}
+	1288.1.1 = {
+		death = yes
+	}
+}
+31451 = {
+	name = "Lia" # Lia Zaccaria
+	female = yes
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_2
+
+	father = 31449
+
+	1239.1.1 = {
+		birth = yes
+	}
+	1288.1.1 = {
+		death = yes
+	}
+}
+31452 = {
+	name = "Niccolino" # Niccolino Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = 31449
+
+	1245.1.1 = {
+		birth = yes
+	}
+	1288.1.1 = {
+		death = yes
+	}
+}
+31453 = {
+	name = "Benedetto" # Benedetto (I) Zaccaria, Count of Chios (1304-1307)
+	dynasty = 8733 #Zaccaria
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_3
+
+	father = 31449
+
+	1236.1.1 = {
+		birth = yes
+	}
+	1307.8.1 = {
+		death = yes
+	}
+}
+31454 = {
+	name = "Vinciguerra" # Vinciguerra Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = 31449
+
+	1246.1.1 = {
+		birth = yes
+	}
+	1277.1.1 = {
+		death = yes
+	}
+}
+31460 = {
+	name = "Paleologo" # Paleologo Zaccaria, Count of Chios (1307-1314)
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = 31453
+
+	1260.1.1 = {
+		birth = yes
+	}
+	1280.1.1 = {
+		add_spouse = 31471
+	}
+	1314.1.1 = {
+		death = yes
+	}
+}
+31461 = {
+	name = "Elania" # Elania Zaccaria, spouse of Andriolo Cattaneo
+	female = yes
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 31453
+
+	1261.1.1 = {
+		birth = yes
+	}
+	1331.1.1 = {
+		death = yes
+	}
+}
+31462 = {
+	name = "Manuele" # Manuele Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 31453
+
+	1265.1.1 = {
+		birth = yes
+	}
+	1300.1.1 = {
+		death = yes
+	}
+}
+31463 = {
+	name = "Benedetto" # Benedetto (II) Zaccaria, Count of Chios (1314-1330)
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = 31460
+	mother = 31471
+
+	1281.1.1 = {
+		birth = yes
+	}
+	1298.1.1 = {
+		add_spouse = 31472
+	}
+	1330.1.1 = {
+		death = yes
+	}
+}
+31464 = {
+	name = "Martino" # Martino Zaccaria, Lord of Chios (1330-1331)
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_1
+
+	father = 31460
+	mother = 31471
+
+	1282.1.1 = {
+		birth = yes
+	}
+	1299.1.1 = {
+		add_spouse = cisalpine0288
+	}
+	1345.1.15 = {
+		death = yes
+	}
+}
+31465 = {
+	name = "Giovanni" # Giovanni Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = 31460
+	mother = 31471
+
+	1285.1.1 = {
+		birth = yes
+	}
+	1359.1.1 = {
+		death = yes
+	}
+}
+31467 = {
+	name = "Centurione" # Centurione Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_2
+
+	father = 31464
+	mother = cisalpine0288
+
+	1305.1.1 = {
+		birth = yes
+	}
+	1325.1.1 = {
+		add_spouse = 465555
+	}
+	1382.1.1 = {
+		death = yes
+	}
+}
+31468 = {
+	name = "Manuele" # Manuele Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = 31465
+
+	1310.1.1 = {
+		birth = yes
+	}
+	1350.1.1 = {
+		death = yes
+	}
+}
+70730 = {
+	name = "Bartolomeo" # Bartolomeo Zaccaria
+	dynasty = 8733
+	martial = 7
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 4
+	religion = "catholic"
+	culture = "ligurian"
+	trait = greedy
+	trait = beauty_good_1
+	trait = education_martial_2
+
+	father = 31464
+	mother = cisalpine0288
+
+	1300.1.1 = {
+		birth = yes
+	}
+	1327.1.1 = {
+		add_spouse = 70729
+	}
+	1334.1.1 = {
+		death = yes
+	}
+}
+70731 = {
+	name = "Marulla" # Marulla Zaccaria
+	dynasty = 8733
+	female = yes
+	martial = 4
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "ligurian"
+	trait = weak
+	trait = honest
+	trait = education_diplomacy_3
+
+	father = 70730
+	mother = 70729
+
+	1330.1.1 = {
+		birth = yes
+	}
+	1358.1.1 = {
+		death = yes
+	}
+}
+167550 = {
+	name = "Tedisio" # Tedisio Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_intrigue_1
+
+	father = 31450
+	mother = 167548
+
+	1269.1.1 = {
+		birth = yes
+	}
+	
+	1313.1.1 = {
+		death = yes
+	}
+}
+167551 = {
+	name = "Leonardo" # Leonardo Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_diplomacy_2
+
+	father = 31450
+	mother = 167548
+
+	1270.1.1 = {
+		birth = yes
+	}
+	
+	1291.5.9 = {
+		death = yes
+	}
+}
+167552 = {
+	name = "Odoardo" # Odoardo Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_martial_1
+
+	father = 31450
+	mother = 167548
+
+	1271.1.1 = {
+		birth = yes
+	}
+	
+	1313.1.1 = {
+		death = yes
+	}
+}
+167553 = {
+	name = "Manfredo" # Manfredo Zaccaria
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+	trait = education_stewardship_1
+
+	father = 31450
+	mother = 167548
+
+	1272.1.1 = {
+		birth = yes
+	}
+	
+	1291.5.9 = {
+		death = yes
+	}
+}
+cisalpine0865 = {
+	name = "Andronico" # Andronico Zaccaria 
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 31467
+	mother = 465555
+
+	1326.1.1 = {
+		birth = yes
+	}
+	1401.1.1 = {
+		death = yes
+	}
+}
+cisalpine0866 = {
+	name = "Maria" # Maria Zaccaria 
+	dynasty = 8733
+	female = yes
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 31467
+	mother = 465555
+
+	1329.1.1 = {
+		birth = yes
+	}
+	1404.1.1 = {
+		death = yes
+	}
+}
+cisalpine0867 = {
+	name = "Manuele" # Manuele Zaccaria 
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 31467
+	mother = 465555
+
+	1332.1.1 = {
+		birth = yes
+	}
+	1413.1.1 = {
+		death = yes
+	}
+}
+cisalpine0868 = {
+	name = "Filippo" # Filippo Zaccaria 
+	dynasty = 8733
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 31467
+	mother = 465555
+
+	1334.1.1 = {
+		birth = yes
+	}
+	1402.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Grimaldi Dynasty
+#######################################
+213042 = {
+	name = "Grimaldo"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73701
+	
+	1110.1.1 = 
+	{
+	birth = "1110.1.1"
+	}
+	1185.1.1 = 
+	{
+	death = "1185.1.1"
+	}
+}
+
+213043 = {
+	name = "Oberto"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 213042
+	
+	1140.1.1 = 
+	{
+	birth = "1140.1.1"
+	}
+	1209.1.1 = {
+		add_spouse = 91380
+	}
+	1232.1.1 = 
+	{
+	death = "1232.1.1"
+	}
+}
+
+213044 = {
+	name = "Grimaldina"
+	dynasty = 13016
+	female = yes
+
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 213042
+
+	1148.1.1 = {
+		birth = "1168.1.1"
+	}
+	1218.1.1 = {
+		death = "1218.1.1"
+	}
+}
+
+213045 = {
+	name = "Anna"
+	dynasty = 13016
+	female = yes
+
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 213042
+
+	1150.1.1 = {
+		birth = "1170.1.1"
+	}
+	1220.1.1 = {
+		death = "1220.1.1"
+	}
+}
+73700 = {
+	name = "Oberto"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+	
+	1033.1.1 = 
+	{
+	birth = "1033.1.1"
+	}
+	1105.1.1 = 
+	{
+	death = "1105.1.1"
+	}
+}
+73701 = {
+	name = "Ottone"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73700
+	
+	1070.1.1 = 
+	{
+	birth = "1070.1.1"
+	}
+	1143.1.1 = 
+	{
+	death = "1143.1.1"
+	}
+}
+73702 = {
+	name = "Rubaldo"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73701
+	
+	1100.1.1 = 
+	{
+	birth = "1100.1.1"
+	}
+	1171.1.1 = 
+	{
+	death = "1171.1.1"
+	}
+}
+73703 = {
+	name = "Bellamunto"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73701
+	
+	1102.1.1 = 
+	{
+	birth = "1102.1.1"
+	}
+	1172.1.1 = 
+	{
+	death = "1172.1.1"
+	}
+}
+73704 = {
+	name = "Ottone"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73701
+	
+	1104.1.1 = 
+	{
+	birth = "1104.1.1"
+	}
+	1187.1.1 = 
+	{
+	death = "1187.1.1"
+	}
+}
+73705 = {
+	name = "Bulzaneto"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73701
+	
+	1106.1.1 = 
+	{
+	birth = "1106.1.1"
+	}
+	1175.1.1 = 
+	{
+	death = "1175.1.1"
+	}
+}
+73706 = {
+	name = "Anna"
+	dynasty = 13016
+	female = yes
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73701
+	
+	1108.1.1 = 
+	{
+	birth = "1108.1.1"
+	}
+	1185.1.1 = 
+	{
+	death = "1185.1.1"
+	}
+}
+73707 = {
+	name = "Grimaldo"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 213043
+	
+	1170.1.1 = 
+	{
+	birth = "1170.1.1"
+	}
+	1209.1.1 = {
+		add_spouse = 73708
+	}
+	1257.1.1 = 
+	{
+	death = "1257.1.1"
+	}
+}
+
+73709 = {
+	name = "Luchetto"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73707
+	mother = 73708
+
+	trait = education_martial_3 #Admiral in Genoa
+	
+	1210.1.1 = 
+	{
+	birth = "1210.1.1"
+	}
+	1272.1.1 = 
+	{
+	death = "1272.1.1"
+	}
+}
+73710 = {
+	name = "Filippo"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73709
+	
+	1241.1.1 = 
+	{
+	birth = "1241.1.1"
+	}
+	1300.1.1 = 
+	{
+	death = "1300.1.1"
+	}
+}
+73711 = {
+	name = "Pietro"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73709
+	
+	1242.1.1 = 
+	{
+	birth = "1242.1.1"
+	}
+	1307.1.1 = 
+	{
+	death = "1307.1.1"
+	}
+}
+73712 = {
+	name = "Barnaba"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73709
+	
+	1245.1.1 = 
+	{
+	birth = "1245.1.1"
+	}
+	1306.1.1 = 
+	{
+	death = "1306.1.1"
+	}
+}
+73713 = {
+	name = "Verdina"
+	dynasty = 13016
+	female = yes
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73709
+	
+	1246.1.1 = 
+	{
+	birth = "1246.1.1"
+	}
+	1315.1.1 = 
+	{
+	death = "1315.1.1"
+	}
+}
+73714 = {
+	name = "Lanfranco"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73707
+	mother = 73708
+
+	trait = education_diplomacy_2
+	
+	1215.1.1 = 
+	{
+	birth = "1215.1.1"
+	}
+	1281.1.1 = {
+		add_spouse = 71112
+	}
+	1293.1.1 = 
+	{
+	death = "1293.1.1"
+	}
+}
+73715 = {
+	name = "Raniero"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73714
+
+	trait = education_martial_4 #Admiral of France
+	
+	1272.1.1 = 
+	{
+	birth = "1272.1.1"
+	}
+	1314.1.1 = 
+	{
+	death = "1314.1.1"
+	}
+}
+73716 = {
+	name = "Carlo"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73715
+	
+	1300.1.1 = 
+	{
+	birth = "1300.1.1"
+	}
+	1357.1.1 = 
+	{
+	death = "1357.1.1"
+	}
+}
+73717 = {
+	name = "Antonio"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73715
+	
+	1303.1.1 = 
+	{
+	birth = "1303.1.1"
+	}
+	1329.1.1 = {
+		add_spouse = cisalpine0063
+	}
+	1358.1.1 = 
+	{
+	death = "1358.1.1"
+	}
+}
+73718 = {
+	name = "Marco"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73717
+	mother = cisalpine0063
+	
+	1332.1.1 = 
+	{
+	birth = "1334.1.1"
+	}
+	1374.1.1 = 
+	{
+	death = "1374.1.1"
+	}
+}
+73719 = {
+	name = "Giuliano"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73715
+	
+	1305.1.1 = 
+	{
+	birth = "1305.1.1"
+	}
+	1361.1.1 = 
+	{
+	death = "1361.1.1"
+	}
+}
+73720 = {
+	name = "Andaro"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73714
+	
+	1273.1.1 = 
+	{
+	birth = "1273.1.1"
+	}
+	1318.1.1 = 
+	{
+	death = "1318.1.1"
+	}
+}
+73721 = {
+	name = "Antonio"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73714
+	
+	1274.1.1 = 
+	{
+	birth = "1274.1.1"
+	}
+	1320.1.1 = 
+	{
+	death = "1320.1.1"
+	}
+}
+73722 = {
+	name = "Bartolomeo"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73714
+	
+	1275.1.1 = 
+	{
+	birth = "1275.1.1"
+	}
+	1323.1.1 = 
+	{
+	death = "1323.1.1"
+	}
+}
+73723 = {
+	name = "Antonio"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73707
+	mother = 73708
+
+	trait = education_learning_3 #Bishop
+	
+	1216.1.1 = 
+	{
+	birth = "1216.1.1"
+	}
+	1259.1.1 = 
+	{
+	death = "1259.1.1"
+	}
+}
+73724 = {
+	name = "Guglielmo"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73723
+	
+	trait = bastard
+	
+	1247.1.1 = 
+	{
+	birth = "1247.1.1"
+	}
+	1323.1.1 = 
+	{
+	death = "1323.1.1"
+	}
+}
+73725 = {
+	name = "Antonio"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73724
+	
+	1276.1.1 = 
+	{
+	birth = "1276.1.1"
+	}
+	1310.4.10 = 
+	{
+	death = "1310.4.10"
+	}
+}
+73726 = {
+	name = "Ingo"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 213043
+	mother = 91380
+	
+	1210.1.1 = 
+	{
+	birth = "1210.1.1"
+	}
+	1235.1.1 = 
+	{
+	death = "1235.1.1"
+	}
+}
+73727 = {
+	name = "Luca"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73726
+
+	trait = education_diplomacy_3
+	
+	1228.1.1 = 
+	{
+	birth = "1228.1.1"
+	}
+	1285.1.1 = 
+	{
+	death = "1285.1.1"
+	}
+}
+73728 = {
+	name = "Gabriele"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73727
+	
+	trait = education_martial_3 #Admiral
+	
+	1254.1.1 = 
+	{
+	birth = "1254.1.1"
+	}
+	1271.1.1 = 
+	{
+	death = "1271.1.1"
+	}
+}
+73729 = {
+	name = "Gaspare"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73728
+	
+	1270.1.1 = 
+	{
+	birth = "1270.1.1"
+	}
+	1331.1.1 = 
+	{
+	death = "1331.1.1"
+	}
+}
+73730 = {
+	name = "Antonio"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73729
+
+	trait = education_martial_3 #Admiral
+	
+	1300.1.1 = 
+	{
+	birth = "1300.1.1"
+	}
+	#xxxx.xx.xx = {
+	#	add_spouse = Catarina Doria
+	#}
+	1358.1.1 = 
+	{
+	death = "1358.1.1"
+	}
+}
+73731 = {
+	name = "Luca"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73730
+	#mother = catarina doria
+	
+	1330.1.1 = 
+	{
+	birth = "1330.1.1"
+	}
+	1409.1.1 = 
+	{
+	death = "1409.1.1"
+	}
+}
+73732 = {
+	name = "Marco"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73730
+	#mother = catarina doria
+	
+	1332.1.1 = 
+	{
+	birth = "1332.1.1"
+	}
+	1406.1.1 = 
+	{
+	death = "1406.1.1"
+	}
+}
+73733 = {
+	name = "Rabella"
+	dynasty = 13016
+	female = yes
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73728
+	
+	1271.1.1 = 
+	{
+	birth = "1271.1.1"
+	}
+	1338.1.1 = 
+	{
+	death = "1338.1.1"
+	}
+}
+73734 = {
+	name = "Bovarello"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73726
+
+	trait = education_diplomacy_3
+	
+	1233.1.1 = 
+	{
+	birth = "1233.1.1"
+	}
+	1285.1.1 = 
+	{
+	death = "1285.1.1"
+	}
+}
+73735 = {
+	name = "Oberto"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 213043
+	mother = 91380
+	
+	1211.1.1 = 
+	{
+	birth = "1211.1.1"
+	}
+	1258.1.1 = 
+	{
+	death = "1258.1.1"
+	}
+}
+73736 = {
+	name = "Francesco"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 73735
+	
+	1241.1.1 = 
+	{
+	birth = "1241.1.1"
+	}
+	1295.1.1 = {
+		add_spouse = 71112
+	}
+	1309.1.1 = 
+	{
+	death = "1309.1.1"
+	}
+}
+73737 = {
+	name = "Nicola"
+	dynasty = 13016
+	
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 213043
+	mother = 91380
+	
+	1212.1.1 = 
+	{
+	birth = "1212.1.1"
+	}
+	1256.1.1 = 
+	{
+	death = "1256.1.1"
+	}
+}
+73738 = {
+	name = "Pietro"
+	dynasty = 13016
+
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 213042
+
+	1142.1.1 = {
+		birth = "1142.1.1"
+	}
+	1215.1.1 = {
+		death = "1215.1.1"
+	}
+}
+73739 = {
+	name = "Raimondo"
+	dynasty = 13016
+
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 213042
+
+	1144.1.1 = {
+		birth = "1144.1.1"
+	}
+	1210.1.1 = {
+		death = "1210.1.1"
+	}
+}
+73740 = {
+	name = "Adelasia"
+	dynasty = 13016
+	female = yes
+
+	religion = "catholic"
+	culture = "ligurian"
+
+	father = 213042
+
+	1146.1.1 = {
+		birth = "1146.1.1"
+	}
+	1218.1.1 = {
+		death = "1218.1.1"
+	}
+}
+
+
+#######################################
+# DYNASTY Dynasty
+#######################################
+
+#######################################
+# DYNASTY Dynasty
+#######################################
+
+#######################################
+# DYNASTY Dynasty
+#######################################
+
+#######################################
+# DYNASTY Dynasty
+#######################################
+
+#######################################
+# DYNASTY Dynasty
+#######################################
+
+#######################################
+# Lowborns
+#######################################
+
+
+
+
+
+
