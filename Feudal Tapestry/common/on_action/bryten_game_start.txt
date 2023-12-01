@@ -1,7 +1,7 @@
 ﻿#######################################
 # Game Start Stuff
 #######################################
-on_game_start_after_lobby = {
+on_game_start = {
 	on_actions = {
 		bryten_setup_after_game_start_on_actions
 	}
@@ -10,32 +10,38 @@ on_game_start_after_lobby = {
 bryten_setup_after_game_start_on_actions = {
 	effect = {
 		# Character start up Events
-		if = {# William the Conquer in the Conquer Bookmark
-			limit = { 
-				exists = character:140
-				is_alive = yes
-				is_landed = yes
-				current_date = 1066.12.25 
+		character:140 = {# William the Conquer in the Conquer Bookmark
+			if = {
+				limit = {
+					exists = character:140
+					is_alive = yes
+					is_landed = yes
+					current_date = 1066.12.25
+				}
+				trigger_event = bryten_england.001
 			}
-			character:140 = { trigger_event = bryten_england.001 }
 		}
-		if = {# Alfred is the proper successor
-			limit = { 
-				exists = character:33358
-				is_alive = yes
-				is_landed = yes
-				current_date = 867.1.1
+		character:33358 = {# Alfred is the proper successor
+			if = {
+				limit = {
+					exists = character:33358
+					is_alive = yes
+					is_landed = yes
+					current_date = 867.1.1
+				}
+				trigger_event = bryten_england.500
 			}
-			character:33358 = { trigger_event = bryten_england.500 }
 		}
-		if = {# Ivar is ruling in Dublin
-			limit = { 
-				exists = character:163111
-				is_alive = yes
-				is_landed = yes
-				current_date = 867.1.1
+		character:163111 = {# Ivar is ruling in Dublin
+			if = {
+				limit = {
+					exists = character:163111
+					is_alive = yes
+					is_landed = yes
+					current_date = 867.1.1
+				}
+				trigger_event = bryten_scotland.500
 			}
-			character:163111 = { trigger_event = bryten_scotland.500 }
 		}
 
 		culture:norse = {# Culture spread for the Norse in Britannia

@@ -72,22 +72,6 @@ AngloIndepCounty = {
 	}
 }
 ###########################################################
-# Anglo-Norse Titles
-###########################################################
-
-###########################################################
-# Norman Titles
-###########################################################
-
-###########################################################
-# English Titles
-###########################################################
-
-###########################################################
-# Scottish Titles
-###########################################################
-
-###########################################################
 # Cumbrian Titles
 ###########################################################
 PictishCumbrianIndepCounty = {
@@ -130,7 +114,19 @@ WelshIndepCounty = {
 ###########################################################
 # Cornish Titles
 ###########################################################
-
+CornishIndepCounty = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_duchy
+		}
+		localization_key = county_default_cornish
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_county_cornish
+	}
+}
 ###########################################################
 # Goidelic Titles
 ###########################################################
@@ -206,13 +202,96 @@ IndepCountyGoid = {
 	}
 }
 ###########################################################
-# Gaelic Titles
+# Saxon Titles
 ###########################################################
-
+SaxonIndepCounty = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_duchy
+		}
+		localization_key = county_default_saxon
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_county_saxon
+	}
+}
 ###########################################################
-# Irish Titles
+# Middle High German Titles
 ###########################################################
-
+MiddleHighGermanIndepCounty = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_duchy
+		}
+		localization_key = county_default_middle_high_german
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_county_middle_high_german
+	}
+}
 ###########################################################
-# Norse-Gael Titles
+# Frisian Titles
 ###########################################################
+FrisianIndepCounty = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_duchy
+		}
+		localization_key = county_frisian
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_county_frisian
+	}
+}
+###########################################################
+# Dutch Titles
+###########################################################
+DutchIndepCounty = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_duchy
+		}
+		localization_key = county_default_dutch
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_county_dutch
+	}
+}
+###########################################################
+# Sardinian Titles
+###########################################################
+SardinianIndepCounty = {
+	type = character
+	text = {
+		trigger = {
+			has_primary_title = title:e_byzantium
+		}
+		localization_key = byzantine_county_sardinian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_duchy
+			has_government = feudal_government
+		}
+		localization_key = county_default_sardinian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_duchy
+			has_government = republic_government
+		}
+		localization_key = county_republic_sardinian
+	}
+	text = {
+		fallback = yes
+		localization_key = judicatu_independent
+	}
+}

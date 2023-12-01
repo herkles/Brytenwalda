@@ -91,10 +91,6 @@ DuchyAngloSaxon = {
 	}
 }
 ###########################################################
-# Anglo-Norse Titles
-###########################################################
-
-###########################################################
 # Norman Titles
 ###########################################################
 DukeMaleNorman = {
@@ -1216,10 +1212,6 @@ DuchyScottish = {
 	}
 }
 ###########################################################
-# Cumbrian Titles
-###########################################################
-
-###########################################################
 # Welsh Titles
 ###########################################################
 DukeMaleWelsh = {
@@ -1495,10 +1487,6 @@ DuchyPictish = {
 		fallback = yes
 	}
 }
-###########################################################
-# Goidelic Titles
-###########################################################
-
 ###########################################################
 # Gaelic Titles
 ###########################################################
@@ -1809,5 +1797,4159 @@ DynastDuchyIrish = {
 	}
 }
 ###########################################################
-# Norse-Gael Titles
+# Breton Titles
 ###########################################################
+DukeMaleBreton = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_breton
+	}
+	text = {
+		localization_key = duke_default_male_breton
+		fallback = yes
+	}
+}
+DukeFemaleBreton = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_breton
+	}
+	text = {
+		localization_key = duke_default_female_breton
+		fallback = yes
+	}
+}
+DuchyBreton = {
+	type = character
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_breton
+	}
+	text = {
+		localization_key = duchy_default_breton
+		fallback = yes
+	}
+}
+###########################################################
+# French Titles
+###########################################################
+DukeMaleFrench = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_french
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_male_french_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_french
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_french
+	}
+	text = {
+		trigger = {
+			OR = {
+				any_held_title = {
+					count = 2
+					tier = tier_duchy
+				}
+				AND = {
+					exists = primary_spouse
+						any_held_title = {
+						count = 2
+						tier = tier_duchy
+					}
+				}
+			}
+		}
+		localization_key = grand_duke_male_french
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_male_french_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:d_dauphine
+				AND = {
+					exists = primary_spouse
+					primary_spouse = {
+						has_primary_title = title:d_dauphine
+					}
+				}
+			}
+			OR = {
+				AND = {
+					exists = father
+					father = {
+						highest_held_title_tier >= tier_kingdom
+						primary_heir = root
+					}
+				}
+				AND = {
+					exists = mother
+					mother = {
+						highest_held_title_tier >= tier_kingdom
+						primary_heir = root
+					}
+				}
+				AND = {
+					exists = primary_spouse.father
+					primary_spouse.father = {
+						highest_held_title_tier >= tier_kingdom
+						primary_heir = root
+					}
+				}
+				AND = {
+					exists = primary_spouse.mother
+					primary_spouse.mother = {
+						highest_held_title_tier >= tier_kingdom
+						primary_heir = root
+					}
+				}
+			}
+		}
+		localization_key = dolphin_male_french
+	}
+	text = {
+		localization_key = duke_default_male_french
+		fallback = yes
+	}
+}
+DukeFemaleFrench = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_french
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_female_french_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_french
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_french
+	}
+	text = {
+		trigger = {
+			OR = {
+				any_held_title = {
+					count = 2
+					tier = tier_duchy
+				}
+				AND = {
+					exists = primary_spouse
+						any_held_title = {
+						count = 2
+						tier = tier_duchy
+					}
+				}
+			}
+		}
+		localization_key = grand_duke_female_french
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_female_french_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:d_dauphine
+				AND = {
+					exists = primary_spouse
+					primary_spouse = {
+						has_primary_title = title:d_dauphine
+					}
+				}
+			}
+			OR = {
+				AND = {
+					exists = father
+					father = {
+						highest_held_title_tier >= tier_kingdom
+						primary_heir = root
+					}
+				}
+				AND = {
+					exists = mother
+					mother = {
+						highest_held_title_tier >= tier_kingdom
+						primary_heir = root
+					}
+				}
+				AND = {
+					exists = primary_spouse.father
+					primary_spouse.father = {
+						highest_held_title_tier >= tier_kingdom
+						primary_heir = root
+					}
+				}
+				AND = {
+					exists = primary_spouse.mother
+					primary_spouse.mother = {
+						highest_held_title_tier >= tier_kingdom
+						primary_heir = root
+					}
+				}
+			}
+		}
+		localization_key = dolphin_female_french
+	}
+	text = {
+		localization_key = duke_default_female_french
+		fallback = yes
+	}
+}
+DuchyFrench = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = yes
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_french_male
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = no
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_french_female
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_french
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_french
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			any_held_title = {
+				count = 2
+				tier = tier_duchy
+			}
+		}
+		localization_key = grand_duchy_french
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+			}
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_1
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_1
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_2
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_3
+					liege = {
+						NOT = {
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = independent_duchy_french
+	}
+	text = {
+		localization_key = duchy_default_french
+		fallback = yes
+	}
+}
+###########################################################
+# Occitan Titles
+###########################################################
+DukeMaleOccitan = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_occitan
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_male_occitan_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_occitan
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_occitan
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_male_occitan_independent
+	}
+	text = {
+		localization_key = duke_default_male_occitan
+		fallback = yes
+	}
+}
+DukeFemaleOccitan = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_occitan
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_female_occitan_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_occitan
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_occitan
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_female_occitan_independent
+	}
+	text = {
+		localization_key = duke_default_female_occitan
+		fallback = yes
+	}
+}
+DuchyOccitan = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = yes
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_occitan_male
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = no
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_occitan_female
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_occitan
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_occitan
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			any_held_title = {
+				count = 2
+				tier = tier_duchy
+			}
+		}
+		localization_key = grand_duchy_occitan
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+			}
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_1
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_1
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_2
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_3
+					liege = {
+						NOT = {
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = independent_duchy_occitan
+	}
+	text = {
+		localization_key = duchy_default_occitan
+		fallback = yes
+	}
+}
+###########################################################
+# Saxon Titles
+###########################################################
+DukeMaleSaxon = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_saxon
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_male_saxon_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:d_transylvania
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						has_primary_title = title:d_transylvania
+					}
+				}
+			}
+			exists = liege
+			top_liege.primary_title = {
+				NOT = {
+					has_title_law = princely_elective_succession_law
+				}
+			}
+		}
+		localization_key = vajda_male_saxon
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_saxon
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_saxon
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_male_saxon_independent
+	}
+	text = {
+		localization_key = duke_default_male_saxon
+		fallback = yes
+	}
+}
+DukeFemaleSaxon = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_saxon
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_female_saxon_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:d_transylvania
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						has_primary_title = title:d_transylvania
+					}
+				}
+			}
+			exists = liege
+			top_liege.primary_title = {
+				NOT = {
+					has_title_law = princely_elective_succession_law
+				}
+			}
+		}
+		localization_key = vajda_female_saxon
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_saxon
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_saxon
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_female_saxon_independent
+	}
+	text = {
+		localization_key = duke_default_female_saxon
+		fallback = yes
+	}
+}
+DuchySaxon = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_saxon
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_saxon
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_saxon
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+			}
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_1
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_1
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_2
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_3
+					liege = {
+						NOT = {
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = independent_duchy_saxon
+	}
+	text = {
+		localization_key = duchy_default_saxon
+		fallback = yes
+	}
+}
+###########################################################
+# Middle High German Titles
+###########################################################
+DukeMaleMiddleHighGerman = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_middle_high_german
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_male_middle_high_german_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:d_transylvania
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						has_primary_title = title:d_transylvania
+					}
+				}
+			}
+			exists = liege
+			top_liege.primary_title = {
+				NOT = {
+					has_title_law = princely_elective_succession_law
+				}
+			}
+		}
+		localization_key = vajda_male_middle_high_german
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_middle_high_german
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_middle_high_german
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_male_middle_high_german_independent
+	}
+	text = {
+		localization_key = duke_default_male_middle_high_german
+		fallback = yes
+	}
+}
+DukeFemaleMiddleHighGerman = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_middle_high_german
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_female_middle_high_german_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:d_transylvania
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						has_primary_title = title:d_transylvania
+					}
+				}
+			}
+			exists = liege
+			top_liege.primary_title = {
+				NOT = {
+					has_title_law = princely_elective_succession_law
+				}
+			}
+		}
+		localization_key = vajda_female_middle_high_german
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_middle_high_german
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_middle_high_german
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_female_middle_high_german_independent
+	}
+	text = {
+		localization_key = duke_default_female_middle_high_german
+		fallback = yes
+	}
+}
+DuchyMiddleHighGerman = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_middle_high_german
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_middle_high_german
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_middle_high_german
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+			}
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_1
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_1
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_2
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_3
+					liege = {
+						NOT = {
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = independent_duchy_middle_high_german
+	}
+	text = {
+		localization_key = duchy_default_middle_high_german
+		fallback = yes
+	}
+}
+###########################################################
+# Frisian Titles
+###########################################################
+DukeMaleFrisian = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:d_transylvania
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						has_primary_title = title:d_transylvania
+					}
+				}
+			}
+			exists = liege
+			top_liege.primary_title = {
+				NOT = {
+					has_title_law = princely_elective_succession_law
+				}
+			}
+		}
+		localization_key = vajda_male_frisian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_frisian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_frisian
+	}
+	text = {
+		localization_key = duke_default_male_frisian
+		fallback = yes
+	}
+}
+DukeFemaleFrisian = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:d_transylvania
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						has_primary_title = title:d_transylvania
+					}
+				}
+			}
+			exists = liege
+			top_liege.primary_title = {
+				NOT = {
+					has_title_law = princely_elective_succession_law
+				}
+			}
+		}
+		localization_key = vajda_female_frisian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_frisian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_frisian
+	}
+	text = {
+		localization_key = duke_default_female_frisian
+		fallback = yes
+	}
+}
+DuchyFrisian = {
+	type = character
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_frisian
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_frisian
+	}
+	text = {
+		localization_key = duchy_default_frisian
+		fallback = yes
+	}
+}
+###########################################################
+# Dutch Titles
+###########################################################
+DukeMaleDutch = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_dutch
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = furst_male_dutch
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:d_transylvania
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						has_primary_title = title:d_transylvania
+					}
+				}
+			}
+			exists = liege
+			top_liege.primary_title = {
+				NOT = {
+					has_title_law = princely_elective_succession_law
+				}
+			}
+		}
+		localization_key = vajda_male_dutch
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_dutch
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_dutch
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = furst_male_dutch
+	}
+	text = {
+		localization_key = duke_default_male_dutch
+		fallback = yes
+	}
+}
+DukeFemaleDutch = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_dutch
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = furst_female_dutch
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:d_transylvania
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						has_primary_title = title:d_transylvania
+					}
+				}
+			}
+			exists = liege
+			top_liege.primary_title = {
+				NOT = {
+					has_title_law = princely_elective_succession_law
+				}
+			}
+		}
+		localization_key = vajda_female_dutch
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_dutch
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_dutch
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = furst_female_dutch
+	}
+	text = {
+		localization_key = duke_default_female_dutch
+		fallback = yes
+	}
+}
+DuchyDutch = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_dutch
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_dutch
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_dutch
+	}
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+			}
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_1
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_1
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_2
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_3
+					liege = {
+						NOT = {
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = furstdom_dutch
+	}
+	text = {
+		localization_key = duchy_default_dutch
+		fallback = yes
+	}
+}
+###########################################################
+# Italian Titles
+###########################################################
+DukeMaleItalian = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_italian
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_feudalclan_male_italian_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_italian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_italian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duke_male_italian
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_feudalclan_male_italian_independent
+	}
+	text = {
+		localization_key = duke_default_male_italian
+		fallback = yes
+	}
+}
+DukeFemaleItalian = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_italian
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_feudalclan_female_italian_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_italian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_italian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duke_female_italian
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_feudalclan_female_italian_independent
+	}
+	text = {
+		localization_key = duke_default_female_italian
+		fallback = yes
+	}
+}
+DuchyItalian = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = yes
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_male_italian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = no
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_female_italian
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_italian
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_italian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duchy_italian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			any_held_title = {
+				count = 2
+				tier = tier_duchy
+			}
+		}
+		localization_key = grand_duchy_italian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+			}
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_1
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_1
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_2
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_3
+					liege = {
+						NOT = {
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = independent_duchy_italian
+	}
+	text = {
+		localization_key = duchy_default_italian
+		fallback = yes
+	}
+}
+###########################################################
+# Cisalpine Titles
+###########################################################
+DukeMaleCisalpine = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_cisalpine
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_male_cisalpine_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_italian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_italian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duke_male_italian
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_male_cisalpine_independent
+	}
+	text = {
+		localization_key = duke_default_male_cisalpine
+		fallback = yes
+	}
+}
+DukeFemaleCisalpine = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_cisalpine
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_female_cisalpine_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_italian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_italian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duke_female_italian
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_female_cisalpine_independent
+	}
+	text = {
+		localization_key = duke_default_female_cisalpine
+		fallback = yes
+	}
+}
+DuchyCisalpine = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = yes
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_male_cisalpine
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = no
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_female_cisalpine
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_italian
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_italian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duchy_italian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			any_held_title = {
+				count = 2
+				tier = tier_duchy
+			}
+		}
+		localization_key = grand_duchy_cisalpine
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+			}
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_1
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_1
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_2
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_3
+					liege = {
+						NOT = {
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = independent_duchy_cisalpine
+	}
+	text = {
+		localization_key = duchy_default_cisalpine
+		fallback = yes
+	}
+}
+###########################################################
+# Sardinian Titles
+###########################################################
+DukeMaleSardinian = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_sardinian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_sardinian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_sardinian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duke_male_sardinian
+	}
+	text = {
+		localization_key = duke_default_male_sardinian
+		fallback = yes
+	}
+}
+DukeFemaleSardinian = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_sardinian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_sardinian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_sardinian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duke_female_sardinian
+	}
+	text = {
+		localization_key = duke_default_female_sardinian
+		fallback = yes
+	}
+}
+DuchySardinian = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = yes
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_male_sardinian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = no
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_female_sardinian
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_sardinian
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_sardinian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duchy_sardinian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			any_held_title = {
+				count = 2
+				tier = tier_duchy
+			}
+		}
+		localization_key = grand_duchy_sardinian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+			}
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_1
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_1
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_2
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_3
+					liege = {
+						NOT = {
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = independent_duchy_sardinian
+	}
+	text = {
+		localization_key = duchy_default_sardinian
+		fallback = yes
+	}
+}
+###########################################################
+# Sicilian Titles
+###########################################################
+DukeMaleSicilian = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_sicilian
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_male_sicilian_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_sicilian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_sardinian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duke_male_sardinian
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_male_sicilian_independent
+	}
+	text = {
+		localization_key = duke_default_male_sardinian
+		fallback = yes
+	}
+}
+DukeFemaleSicilian = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_sicilian
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_female_sicilian_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_sardinian
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_sardinian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duke_female_sardinian
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_female_sicilian_independent
+	}
+	text = {
+		localization_key = duke_default_female_sardinian
+		fallback = yes
+	}
+}
+DuchySicilian = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = yes
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_male_sicilian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = no
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurstdom_female_sicilian
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_sardinian
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_sardinian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duchy_sardinian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			any_held_title = {
+				count = 2
+				tier = tier_duchy
+			}
+		}
+		localization_key = grand_duchy_sicilian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+			}
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_1
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_1
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_2
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_3
+					liege = {
+						NOT = {
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = independent_duchy_sicilian
+	}
+	text = {
+		localization_key = duchy_default_sardinian
+		fallback = yes
+	}
+}
+###########################################################
+# Lombard Titles
+###########################################################
+DukeMaleLombard = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_lombard
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_male_lombard_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_male_lombard
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_male_lombard
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duke_male_lombard
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_male_lombard_independent
+	}
+	text = {
+		localization_key = duke_default_male_lombard
+		fallback = yes
+	}
+}
+DukeFemaleLombard = {
+	type = character
+	text = {
+		trigger = {
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_lombard
+	}
+	text = {
+		trigger = {
+			exists = primary_spouse
+			root.primary_spouse = {
+				exists = liege
+				liege.primary_title = {
+					has_title_law = princely_elective_succession_law
+					any_elector = {
+						this = root.primary_spouse
+					}
+				}
+			}
+		}
+		localization_key = duke_female_lombard_independent
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_march_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_march_contract
+					}
+				}
+			}
+		}
+		localization_key = marquess_female_lombard
+	}
+	text = {
+		trigger = {
+			OR = {
+				vassal_contract_has_flag = has_palatinate_contract
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						vassal_contract_has_flag = has_palatinate_contract
+					}
+				}
+			}
+		}
+		localization_key = palatine_female_lombard
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duke_female_lombard
+	}
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					exists = liege
+					liege.primary_title = {
+						has_title_law = princely_elective_succession_law
+					}
+					OR = {
+						AND = {
+							has_realm_law = crown_authority_1
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_1
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_2
+							liege = {
+								NOR = {
+									has_realm_law = crown_authority_2
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+						AND = {
+							has_realm_law = crown_authority_3
+							liege = {
+								NOT = {
+									has_realm_law = crown_authority_3
+								}
+							}
+						}
+					}
+				}
+				AND = {
+					exists = primary_spouse
+					root.primary_spouse = {
+						exists = liege
+						liege.primary_title = {
+							has_title_law = princely_elective_succession_law
+						}
+						OR = {
+							AND = {
+								has_realm_law = crown_authority_1
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_1
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_2
+								liege = {
+									NOR = {
+										has_realm_law = crown_authority_2
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+							AND = {
+								has_realm_law = crown_authority_3
+								liege = {
+									NOT = {
+										has_realm_law = crown_authority_3
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		localization_key = duke_female_lombard_independent
+	}
+	text = {
+		localization_key = duke_default_female_lombard
+		fallback = yes
+	}
+}
+DuchyLombard = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = yes
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_male_lombard
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			is_male = no
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+				any_elector = {
+					this = root
+				}
+			}
+		}
+		localization_key = kurfurst_female_lombard
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_march_contract
+		}
+		localization_key = march_lombard
+	}
+	text = {
+		trigger = {
+			vassal_contract_has_flag = has_palatinate_contract
+		}
+		localization_key = palatinate_lombard
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_duchy_lombard
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier = tier_duchy
+			exists = liege
+			liege.primary_title = {
+				has_title_law = princely_elective_succession_law
+			}
+			OR = {
+				AND = {
+					has_realm_law = crown_authority_1
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_1
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_2
+					liege = {
+						NOR = {
+							has_realm_law = crown_authority_2
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+				AND = {
+					has_realm_law = crown_authority_3
+					liege = {
+						NOT = {
+							has_realm_law = crown_authority_3
+						}
+					}
+				}
+			}
+		}
+		localization_key = independent_duchy_lombard
+	}
+	text = {
+		localization_key = duchy_default_lombard
+		fallback = yes
+	}
+}
+###########################################################
+# CULTURE Titles
+###########################################################
+

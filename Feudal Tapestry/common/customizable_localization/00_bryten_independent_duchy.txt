@@ -24,10 +24,6 @@ AngloSaxonIndepDuchy = {
 	}
 }
 ###########################################################
-# Anglo-Norse Titles
-###########################################################
-
-###########################################################
 # Norman Titles
 ###########################################################
 NormanIndepDuchy = {
@@ -91,10 +87,6 @@ PictishCumbrianIndepDuchy = {
 		localization_key = independent_duchy_pictish_cumbrian
 	}
 }
-###########################################################
-# Welsh Titles
-###########################################################
-
 ###########################################################
 # Cornish Titles
 ###########################################################
@@ -186,13 +178,266 @@ GoidIndepDuchy = {
 	}
 }
 ###########################################################
-# Gaelic Titles
+# Breton Titles
+###########################################################
+BretonIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_breton
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_breton
+	}
+}
+###########################################################
+# Frankish Titles
+###########################################################
+FrankishIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_frankish
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_frankish
+	}
+}
+###########################################################
+# French Titles
+###########################################################
+FrenchIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_french
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_french
+	}
+}
+###########################################################
+# Occitan Titles
+###########################################################
+OccitanIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_occitan
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_occitan
+	}
+}
+###########################################################
+# Saxon Titles
+###########################################################
+SaxonIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_middle_high_german
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_saxon
+	}
+}
+###########################################################
+# Middle High German Titles
+###########################################################
+MiddleHighGermanIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_middle_high_german
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_middle_high_german
+	}
+}
+###########################################################
+# Frisian Titles
+###########################################################
+FrisianIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_frisian
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_frisian
+	}
+}
+###########################################################
+# Dutch Titles
+###########################################################
+DutchIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_dutch
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_dutch
+	}
+}
+###########################################################
+# Italian Titles
+###########################################################
+ItalianIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:e_byzantium
+				has_primary_title = title:e_roman_empire
+			}
+		}
+		localization_key = byzantine_duchy_italian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_italian
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_italian
+	}
+}
+###########################################################
+# Cisalpine Titles
+###########################################################
+CisalpineIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:e_byzantium
+				has_primary_title = title:e_roman_empire
+			}
+		}
+		localization_key = byzantine_duchy_italian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_cisalpine
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_cisalpine
+	}
+}
+###########################################################
+# Sardinian Titles
+###########################################################
+SardinianIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:e_byzantium
+				has_primary_title = title:e_roman_empire
+			}
+		}
+		localization_key = byzantine_duchy_sardinian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_sardinian
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_sardinian
+	}
+}
+###########################################################
+# Sicilian Titles
+###########################################################
+SicilianIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:e_byzantium
+				has_primary_title = title:e_roman_empire
+			}
+		}
+		localization_key = byzantine_duchy_sardinian
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_sardinian
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_sicilian
+	}
+}
+###########################################################
+# Lombard Titles
+###########################################################
+LombardIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:e_byzantium
+				has_primary_title = title:e_roman_empire
+			}
+		}
+		localization_key = byzantine_duchy_lombard
+	}
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_default_lombard
+	}
+	text = {
+		fallback = yes
+		localization_key = independent_duchy_lombard
+	}
+}
+###########################################################
+# CULTURE Titles
 ###########################################################
 
 ###########################################################
-# Irish Titles
+# CULTURE Titles
 ###########################################################
 
 ###########################################################
-# Norse-Gael Titles
+# CULTURE Titles
 ###########################################################

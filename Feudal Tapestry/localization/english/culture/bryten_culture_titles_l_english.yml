@@ -92,7 +92,6 @@
   duke_tribal_male_anglo_saxon: "Héahbrego"
   duke_tribal_female_anglo_saxon: "Héahbregen"
   duchy_tribal_anglo_saxon: "Héahbregadóm"
-
 ###########################################################
 # Norman Titles
 ##########################################################
@@ -222,7 +221,6 @@
   kingdom_republic_norman: "Republique"
 
   barony_tribe_norman: "$barony_castle_norman$"
-
 ###########################################################
 # English Titles
 ##########################################################
@@ -295,7 +293,6 @@
   kingdom_republic_english: "Graunt Commounwelthe"
 
   barony_tribe_english: "$barony_castle_english$"
-
 ###########################################################
 # Welsh Titles 
 ##########################################################
@@ -377,7 +374,63 @@
   duke_tribal_male_welsh: "Rig"
   duke_tribal_female_welsh: "Riges"
   duchy_tribal_male_welsh: "Gint" 
-
+#############################################################
+# Breton
+#############################################################
+   baron_male_breton: "Machtiern"
+   baron_female_breton: "Machriernez"
+   barony_castle_breton: "Plou"
+ 
+   count_feudalclan_male_breton: "Guletic"
+   count_feudalclan_female_breton: "Guleticez"
+   county_breton: "Guleticelez"
+ 
+   duke_male_breton: "[CHARACTER.Custom('DukeMaleBreton')]"
+   duke_female_breton: "[CHARACTER.Custom('DukeFemaleBreton')]"
+   duchy_breton: "[CHARACTER.Custom('DuchyBreton')]"
+   marquess_male_breton: "Markiz"
+   marquess_female_breton: "Markizez"
+   march_breton: "Marz"
+   duke_default_male_breton: "Dug"
+   duke_default_female_breton: "Dugez"
+   duchy_default_breton: "Dugelez"
+ 
+   duke_male_breton_independent: "Toguisoc"
+   duke_female_breton_independent: "Toguisocez"
+   duchy_breton_independent: "[CHARACTER.Custom('BretonIndepDuchy')]"
+   independent_duchy_breton: "Toguisocelez"
+ 
+   king_male_breton: "Ri"
+   king_female_breton: "Roenez"
+   kingdom_breton: "Roentelez"
+ 
+   emperor_male_breton: "Impalazr"
+   emperor_female_breton: "Impalazrez"
+   empire_breton: "Impalazriez"
+ 
+   title_prince_male_breton: "Priñs"
+   title_prince_female_breton: "Priñsez"
+   title_prince_male_breton_empire: "$title_prince_male_breton$"
+   title_prince_female_breton_empire: "$title_prince_female_breton$"
+   queen_mother_breton: "$king_female_breton$"
+   queen_mother_breton_empire: "$emperor_female_breton$"
+   
+   baron_republic_male_breton: "Maer"
+   baron_republic_female_breton: "Maerez"
+   barony_city_breton: "Kêr"
+   count_republic_male_breton: "Uhelvaer"
+   count_republic_female_breton: "Uhelvaerez"
+   county_republic_breton: "Uhelkêr"
+   duke_republic_male_breton: "Leuuit"
+   duke_republic_female_breton: "Leuuitez"
+   duchy_republic_breton: "Guerynelez"
+   king_republic_male_breton: "Primleuuit"
+   king_republic_female_breton: "Primleuuitez"
+   kingdom_republic_breton: "Uheluerynelez"
+ 
+   barony_tribe_breton: "$barony_castle_breton$"
+   count_tribal_male_breton: "Penn"
+   count_tribal_female_breton: "Pennez"
 ###########################################################
 # Cornish Titles
 ##########################################################
@@ -461,7 +514,6 @@
   duke_tribal_male_cornish: "Ruy"
   duke_tribal_female_cornish: "Ruifanes"
   duchy_tribal_cornish: "Ruifanaid"
-
 ###########################################################
 # Cumbrian Titles 
 ##########################################################
@@ -542,7 +594,6 @@
   duke_tribal_male_pictish_cumbrian: "Ri"
   duke_tribal_female_pictish_cumbrian: "Rien"
   duchy_tribal_pictish_cumbrian: "Rigaith"
-
 ###########################################################
 # Scottish(Gaelic) Titles
 ##########################################################
@@ -589,7 +640,6 @@
   duke_tribal_male_gaelic: "Rí" 
   duke_tribal_female_gaelic: "Rígan" 
   duchy_tribal_gaelic: "Rígdacht"
-
 ###########################################################
 # Scottish(Scots) Titles
 ##########################################################
@@ -649,7 +699,6 @@
   kingdom_republic_scottish: "Graunt Comenwele"
 
   barony_tribe_scottish: "$barony_castle_scottish$"
-
 ########################################################### 
 # Goidelic Culture Group
 ##########################################################
@@ -725,7 +774,6 @@
   king_republic_male_goidelic_group: "Arduachtarán"
   king_republic_female_goidelic_group: "Ardbhanuachtarán"
   kingdom_republic_goidelic_group: "Ardphopulacht"
-
 ##########################################################
 # Irish Titles
 ##########################################################
@@ -770,7 +818,6 @@
   duke_default_male_irish: "Rí Cóicid" 
   duke_default_female_irish: "Rígan Cóicid"  
   duchy_default_irish: "Cóiced"
-
 ###########################################################
 # Frankish Titles
 ##########################################################
@@ -810,8 +857,6 @@
   barony_city_frankish: "Stadi"
 
   barony_tribe_frankish: "$barony_castle_frankish$"
-
-
 ###########################################################
 # Occitan Titles
 ###########################################################
@@ -965,7 +1010,6 @@
   kingdom_republic_dutch: "Stêdehanse"
 
   barony_tribe_dutch: "$barony_castle_dutch$"
-
 ###########################################################
 # Frisian Titles
 ###########################################################

@@ -17,14 +17,6 @@ QueenMAngloSaxon = {
 	}
 }
 ###########################################################
-# Anglo-Norse Titles
-###########################################################
-
-###########################################################
-# Norman Titles
-###########################################################
-
-###########################################################
 # English Titles
 ###########################################################
 QueenMEnglish = {
@@ -60,10 +52,6 @@ QueenMScottish = {
 		localization_key =  king_default_female_scottish
 	}
 }
-###########################################################
-# Cumbrian Titles
-###########################################################
-
 ###########################################################
 # Welsh Titles
 ###########################################################
@@ -230,7 +218,6 @@ QueenMGoidelic = {
 ###########################################################
 # Gaelic Titles
 ###########################################################
-
 PrincePictish = {
 	type = character
 	text = {
@@ -276,9 +263,218 @@ PrincessPictish = {
 	}
 }
 ###########################################################
-# Irish Titles
+# French Titles
+###########################################################
+PrinceFrench = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:c_viennois
+				has_primary_title = title:d_dauphine
+			}
+		}
+		localization_key = dolphin_male_french
+	}
+	text = {
+		fallback = yes
+		localization_key =  prince_default_male_french
+	}
+}
+PrincessFrench = {
+	type = character
+	text = {
+		trigger = {
+			OR = {
+				has_primary_title = title:c_viennois
+				has_primary_title = title:d_dauphine
+			}
+		}
+		localization_key = dolphin_female_french
+	}
+	text = {
+		fallback = yes
+		localization_key =  prince_default_female_french
+	}
+}
+###########################################################
+# Saxon Titles
+###########################################################
+QueenMSaxon = {
+	type = character
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_saxon
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_saxon
+	}
+}
+###########################################################
+# Middle High German Titles
+###########################################################
+QueenMMHG = {
+	type = character
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_middle_high_german
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_middle_high_german
+	}
+}
+###########################################################
+# Dutch Titles
+###########################################################
+QueenMDutch = {
+	type = character
+	text = {
+		trigger = {
+			faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_dutch
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_dutch
+	}
+}
+###########################################################
+# Italian Titles
+###########################################################
+QueenMItalian = {
+	type = character
+	text = {
+		trigger = {
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_italian
+	}
+	text = {
+		trigger = {
+			any_child = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = ctp_blank
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_italian
+	}
+}
+###########################################################
+# Cisalpine Titles
+###########################################################
+QueenMCisalpine = {
+	type = character
+	text = {
+		trigger = {
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_italian
+	}
+	text = {
+		trigger = {
+			any_child = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = ctp_blank
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_cisalpine
+	}
+}
+###########################################################
+# Sardinian Titles
+###########################################################
+QueenMSardinian = {
+	type = character
+	text = {
+		trigger = {
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_sardinian
+	}
+	text = {
+		trigger = {
+			any_child = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = ctp_blank
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_sardinian
+	}
+}
+###########################################################
+# Sicilian Titles
+###########################################################
+QueenMSicilian = {
+	type = character
+	text = {
+		trigger = {
+			root.faith = {
+				has_doctrine = tenet_struggle_submission
+			}
+		}
+		localization_key = sultan_female_sardinian
+	}
+	text = {
+		trigger = {
+			any_child = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = ctp_blank
+	}
+	text = {
+		fallback = yes
+		localization_key =  king_default_female_sicilian
+	}
+}
+EmpressMSicilian = {
+	type = character
+	text = {
+		fallback = yes
+		localization_key =  emperor_female_sicilian
+	}
+}
+###########################################################
+# Lombard Titles
 ###########################################################
 
-###########################################################
-# Norse-Gael Titles
-###########################################################

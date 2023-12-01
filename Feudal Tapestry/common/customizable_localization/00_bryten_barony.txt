@@ -41,42 +41,6 @@ BaronyAnglo = {
 	}
 }
 ###########################################################
-# Anglo-Norse Titles
-###########################################################
-
-###########################################################
-# Norman Titles
-###########################################################
-
-###########################################################
-# English Titles
-###########################################################
-
-###########################################################
-# Scottish Titles
-###########################################################
-
-###########################################################
-# Cumbrian Titles
-###########################################################
-
-###########################################################
-# Welsh Titles
-###########################################################
-
-###########################################################
-# Cornish Titles
-###########################################################
-
-###########################################################
-# Goidelic Titles
-###########################################################
-
-###########################################################
-# Gaelic Titles
-###########################################################
-
-###########################################################
 # Irish Titles
 ###########################################################
 DynastyCheckBaronIrishM = {
@@ -132,5 +96,408 @@ BaronFemaleIrish = {
 	}
 }
 ###########################################################
-# Norse-Gael Titles
+# cisalpine Titles
 ###########################################################
+BaronFemaleCisalpine = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_baron_female_italian
+	}
+	text = {
+		localization_key = baron_default_female_cisalpine
+		fallback = yes
+	}
+}
+BaronyCisalpine = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_barony_italian
+	}
+	text = {
+		localization_key = barony_default_cisalpine
+		fallback = yes
+	}
+}
+BaronMaleCisalpine = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_baron_male_italian
+	}
+	text = {
+		localization_key = baron_default_male_cisalpine
+		fallback = yes
+	}
+}
+###########################################################
+# Sardinian Titles
+###########################################################
+BaronMaleSardinian = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_baron_male_sardinian
+	}
+	text = {
+		trigger = {
+			holds_landed_title = yes
+			root.top_liege = {
+				highest_held_title_tier = tier_county
+				OR = {
+					has_primary_title = title:c_cagliari
+					has_primary_title = title:c_arborea
+					has_primary_title = title:c_gallura
+					has_primary_title = title:c_logudoro
+					has_primary_title = title:c_tortoli
+				}
+			}
+		}
+		localization_key = curadore_sardinian
+	}
+	text = {
+		localization_key = baron_male_sardinian_default
+		fallback = yes
+	}
+}
+BaronFemaleSardinian = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_baron_female_sardinian
+	}
+	text = {
+		trigger = {
+			holds_landed_title = yes
+			root.top_liege = {
+				highest_held_title_tier = tier_county
+				OR = {
+					has_primary_title = title:c_cagliari
+					has_primary_title = title:c_arborea
+					has_primary_title = title:c_gallura
+					has_primary_title = title:c_logudoro
+					has_primary_title = title:c_tortoli
+				}
+			}
+		}
+		localization_key = curadore_sardinian
+	}
+	text = {
+		localization_key = baron_female_sardinian_default
+		fallback = yes
+	}
+}
+BaronySardinian = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_barony_sardinian
+	}
+	text = {
+		trigger = {
+			root.top_liege = {
+				highest_held_title_tier = tier_county
+				OR = {
+					has_primary_title = title:c_cagliari
+					has_primary_title = title:c_arborea
+					has_primary_title = title:c_gallura
+					has_primary_title = title:c_logudoro
+					has_primary_title = title:c_tortoli
+				}
+			}
+		}
+		localization_key = curadoria_sardinian
+	}
+	text = {
+		localization_key = barony_feudal_sardinian_default
+		fallback = yes
+	}
+}
+BaronMaleSardinianRepublic = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				highest_held_title_tier = tier_county
+				OR = {
+					has_primary_title = title:c_cagliari
+					has_primary_title = title:c_arborea
+					has_primary_title = title:c_gallura
+					has_primary_title = title:c_logudoro
+					has_primary_title = title:c_tortoli
+				}
+			}
+		}
+		localization_key = curadore_sardinian
+	}
+	text = {
+		localization_key = baron_default_republic_male_sardinian
+		fallback = yes
+	}
+}
+BaronFemaleSardinianRepublic = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				highest_held_title_tier = tier_county
+				OR = {
+					has_primary_title = title:c_cagliari
+					has_primary_title = title:c_arborea
+					has_primary_title = title:c_gallura
+					has_primary_title = title:c_logudoro
+					has_primary_title = title:c_tortoli
+				}
+			}
+		}
+		localization_key = curadore_sardinian
+	}
+	text = {
+		localization_key = baron_default_republic_female_sardinian
+		fallback = yes
+	}
+}
+BaronySardinianRepublic = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				highest_held_title_tier = tier_county
+				OR = {
+					has_primary_title = title:c_cagliari
+					has_primary_title = title:c_arborea
+					has_primary_title = title:c_gallura
+					has_primary_title = title:c_logudoro
+					has_primary_title = title:c_tortoli
+				}
+			}
+		}
+		localization_key = curadoria_sardinian
+	}
+	text = {
+		localization_key = barony_default_republic_sardinian
+		fallback = yes
+	}
+}
+###########################################################
+# Sicilian Titles
+###########################################################
+BaronMaleSicilian = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_baron_male_sardinian
+	}
+	text = {
+		localization_key = baron_male_sicilian_default
+		fallback = yes
+	}
+}
+BaronFemaleSicilian = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_baron_female_sardinian
+	}
+	text = {
+		localization_key = baron_female_sicilian_default
+		fallback = yes
+	}
+}
+BaronySicilian = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_barony_sardinian
+	}
+	text = {
+		localization_key = barony_feudal_sicilian_default
+		fallback = yes
+	}
+}
+###########################################################
+# Lombard Titles
+###########################################################
+BaronMaleLombard = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_baron_male_lombard
+	}
+	text = {
+		localization_key = baron_male_lombard_default
+		fallback = yes
+	}
+}
+BaronFemaleLombard = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_baron_female_lombard
+	}
+	text = {
+		localization_key = baron_female_lombard_default
+		fallback = yes
+	}
+}
+BaronyLombard = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_barony_lombard
+	}
+	text = {
+		localization_key = barony_feudal_lombard_default
+		fallback = yes
+	}
+}
+###########################################################
+# Italian Titles
+###########################################################
+BaronMaleItalian = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_baron_male_italian
+	}
+	text = {
+		localization_key = baron_default_male_italian
+		fallback = yes
+	}
+}
+BaronFemaleItalian = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_baron_female_italian
+	}
+	text = {
+		localization_key = baron_default_female_italian
+		fallback = yes
+	}
+}
+BaronyItalian = {
+	type = character
+	text = {
+		trigger = {
+			root.top_liege = {
+				OR = {
+					has_primary_title = title:e_byzantium
+					has_primary_title = title:e_roman_empire
+				}
+			}
+		}
+		localization_key = byzantine_barony_italian
+	}
+	text = {
+		localization_key = barony_default_italian
+		fallback = yes
+	}
+}
+
+
+
+
+
+
+
+
