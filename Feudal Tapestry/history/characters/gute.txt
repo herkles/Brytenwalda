@@ -1,0 +1,134 @@
+﻿#######################################
+# af Akeback Dynasty
+#######################################
+100539 = {
+	name = "Botair"
+	dynasty = 494
+	martial = 6
+	diplomacy = 4
+	intrigue = 6
+	stewardship = 5
+	religion = "catholic"
+	culture = gute
+	trait = education_martial_2
+	1005.1.1 = {
+		birth = "1005.1.1"
+	}
+	1026.1.1 = {
+		add_spouse = 100534
+	}
+	1055.1.1 = {
+		death = "1055.1.1"
+	}
+}
+100540 = {
+	name = "Olaf"
+	dynasty = 494
+	martial = 4
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 6
+	religion = "catholic"
+	culture = "swedish"
+	trait = cynical
+	trait = education_intrigue_2
+	father = 100539
+	mother = 100534
+	1030.1.1 = {
+		birth = "1030.1.1"
+	}
+	1080.1.1 = {
+		death = "1080.1.1"
+	}
+}
+#######################################
+# Stenkyrka Dynasty
+#######################################
+100532 = {
+	name = "Likair"
+	dynasty = 495
+	martial = 8
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = gute
+	trait = education_learning_2
+	980.1.1 = {
+		birth = "980.1.1"
+	}
+	1001.1.1 = {
+		add_spouse = 100543
+	}
+	1030.1.1 = {
+		death = "1030.1.1"
+	}
+}
+100533 = {
+	name = "Munkair"
+	dynasty = 495
+	martial = 7
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 8
+	religion = "catholic"
+	culture = gute
+	trait = chaste
+	trait = education_learning_2
+	father = 100532
+	mother = 100543
+	1013.1.1 = {
+		birth = "1013.1.1"
+	}
+	1040.1.1 = {
+		add_spouse = 100541
+	}
+	1063.1.1 = {
+		death = "1063.1.1"
+	}
+}
+100534 = {
+	name = "Rodiaud"
+	female = yes
+	dynasty = 495
+	martial = 6
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = gute
+	trait = lustful
+	trait = wrathful
+	trait = education_intrigue_2
+	father = 100532
+	mother = 100543
+	1007.1.1 = {
+		birth = "1007.1.1"
+	}
+	1057.1.1 = {
+		death = "1057.1.1"
+	}
+}
+#######################################
+# Tofta Dynasty
+#######################################
+100543 = {
+	name = "Sigtjaud"
+	female = yes
+	dynasty = 492
+	martial = 7
+	diplomacy = 5
+	intrigue = 7
+	stewardship = 8
+	religion = "catholic"
+	culture = gute
+	trait = greedy
+	trait = humble
+	trait = education_stewardship_3
+	982.1.1 = {
+		birth = "982.1.1"
+	}
+	1031.1.18 = {
+		death = "1031.1.18"
+	}
+}

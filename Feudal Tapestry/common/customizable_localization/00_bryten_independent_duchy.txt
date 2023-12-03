@@ -431,13 +431,34 @@ LombardIndepDuchy = {
 	}
 }
 ###########################################################
-# CULTURE Titles
+# Norse / Norwegian Titles
 ###########################################################
-
+NorthIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_norse_norwegian
+	}
+	text = {
+		fallback = yes
+		localization_key = kingdom_norse_norwegian
+	}
+}
 ###########################################################
-# CULTURE Titles
+# Swedish Titles
 ###########################################################
-
-###########################################################
-# CULTURE Titles
-###########################################################
+SwedishIndepDuchy = {
+	type = character
+	text = {
+		trigger = {
+			highest_held_title_tier >= tier_kingdom
+		}
+		localization_key = duchy_swedish_danish
+	}
+	text = {
+		fallback = yes
+		localization_key = kingdom_swedish_danish
+	}
+}

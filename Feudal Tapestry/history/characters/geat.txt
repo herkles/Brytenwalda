@@ -1,0 +1,359 @@
+﻿#######################################
+# Skogla Dynasty
+#######################################
+102542 = {
+	name = "Ulf"
+	dynasty = 500
+	martial = 6
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 8
+	religion = "norse_pagan"
+	culture = "swedish"
+	trait = just
+	trait = education_diplomacy_3
+	father = 100521
+	mother = 102545
+	1001.1.2 = {
+		birth = "1001.1.2"
+	}
+	1040.1.1 = {
+		death = "1040.1.1"
+	}
+}
+100521 = {
+	name = "RO_gnvaldr"
+	dynasty = 500
+	martial = 5
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 6
+	religion = "norse_pagan"
+	culture = norse
+	trait = chaste
+	trait = education_diplomacy_2
+	father = 100518
+	970.1.2 = {
+		birth = "970.1.2"
+	}
+	1000.1.1 = {
+		add_spouse = 102545 # Ingeborg
+	}
+	1020.1.1 = {
+		add_spouse = 100510
+	}
+	1028.1.12 = {
+		death = "1028.1.12"
+	}
+}
+102543 = {
+	name = "Eilif"
+	dynasty = 500
+	martial = 5
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 7
+	religion = "norse_pagan"
+	culture = norse
+	trait = brave
+	trait = education_martial_2
+	father = 100521
+	mother = 102545
+	1002.1.2 = {
+		birth = "1002.1.2"
+	}
+	1052.10.4 = {
+		death = "1052.10.4"
+	}
+}
+#######################################
+# Stenkiling Dynasty
+#######################################
+100522 = {
+	name = "Stenkil"
+	dynasty_house = house_stenkiling
+	martial = 5
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "swedish"
+	trait = lustful
+	trait = wrathful
+	trait = generous
+	trait = education_martial_2
+	father = 100521
+	mother = 100510
+	
+	1027.1.1 = {
+		birth = yes
+	}
+	1045.1.1 = {
+		add_spouse = 100514 # Maria af Munsö
+	}
+	
+	1066.1.1 = {
+		trait = pneumonic
+	}
+	
+	1066.9.15 = {
+		death = {
+			death_reason = death_pneumonic
+		}
+	}
+}
+100523 = {
+	name = "Halsten"
+	dynasty_house = house_stenkiling
+	martial = 5
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "swedish"
+	trait = calm
+	trait = education_diplomacy_2
+	father = 100522
+	mother = 100514
+	1047.1.2 = {
+		birth = "1047.1.2"
+	}
+	1110.12.1 = {
+		death = "1110.12.1"
+	}
+}
+100524 = {
+	name = "Inge" # "the_Older"
+	dynasty_house = house_stenkiling
+	martial = 5
+	diplomacy = 7
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "swedish"
+	trait = zealous
+	trait = education_diplomacy_2
+	father = 100522
+	mother = 100514
+	1050.1.8 = {
+		birth = "1050.1.8"
+	}
+	1100.1.8 = {
+		death = "1100.1.8"
+	}
+}
+100525 = {
+	name = "Erik"
+	dynasty_house = house_stenkiling
+	martial = 7
+	diplomacy = 3
+	religion = "catholic"
+	culture = "swedish"
+	trait = wrathful
+	trait = brave
+	trait = stubborn
+	trait = education_martial_2
+	father = 100522 # Stenkil - Speculation
+	mother = 100514 # Speculation
+	1046.1.4 = {
+		birth = "1046.1.4"
+	}
+	1067.12.20 = {
+		death = "1067.12.20" # Died in a civil war against 100546 - Erik "Hedningen" ("The_Heathen")
+	}
+}
+100526 = {
+	name = "HA_kan" # "Röde" (Possibly the same person as "Blot-Sven")
+	# AKA: Haakon
+	dynasty_house = house_stenkiling # Speculation
+	martial = 6
+	diplomacy = 3
+	intrigue = 5
+	stewardship = 4
+	religion = "catholic" # Possibly Norse Pagan
+	culture = "swedish"
+	trait = cynical
+	trait = legitimized_bastard
+	trait = education_intrigue_3
+	father = 100522 # Stenkil - Speculation
+	# mother = 100514 # Presumed to have been a Bastard of Stenkil's	
+	1048.6.2 = {
+		birth = "1048.6.2"
+		give_nickname = nick_the_red
+	}
+	1080.12.1 = {
+		death = "1080.12.1"
+	}
+}
+100550 = {
+	name = "Filip"
+	dynasty_house = house_stenkiling
+	martial = 5
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 5
+	religion = "catholic"
+	culture = "swedish"
+	trait = diligent
+	trait = education_diplomacy_2
+	father = 100523
+	
+	1075.1.2 = {
+		birth = "1075.1.2"
+	}
+	1096.1.1 = {
+		add_spouse = 102535 # Ingeberd of Norway
+	}
+	1118.6.6 = {
+		death = "1118.6.6"
+	}
+}
+100551 = {
+	name = "Inge"
+	# AKA: Inge the Younger
+	dynasty_house = house_stenkiling
+	martial = 6
+	diplomacy = 4
+	intrigue = 6
+	stewardship = 6
+	religion = "catholic"
+	culture = "swedish"
+	trait = education_martial_2
+	father = 100523
+	1078.1.2 = {
+		birth = "1078.1.2"
+	}
+	1110.1.1 = {
+		add_spouse = 200601
+	}
+	1125.6.6 = {
+		death = "1125.6.6"
+	}
+}
+100552 = {
+	name = "Ragnvald" # "Knaphövde"
+	# AKA: Ragnvald 'Knaphovde'
+	dynasty_house = house_stenkiling
+	martial = 3
+	diplomacy = 4
+	intrigue = 3
+	stewardship = 6
+	religion = "catholic"
+	culture = "swedish"
+	trait = trusting
+	trait = education_stewardship_2
+	father = 100524 # Possibly
+	
+	1075.1.8 = {
+		birth = "1075.1.8"
+	}
+	1126.6.6 = {
+		death = "1126.6.6"
+	}
+}
+200493 = {
+	name = "Katarina"
+	female = yes
+	dynasty_house = house_stenkiling
+	martial = 4
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 7
+	religion = "catholic"
+	culture = "swedish"
+	father = 100524
+	1090.1.1 = {
+		birth = "1090.1.1"
+	}
+	1145.1.2 = {
+		death = "1145.1.2"
+	}
+}
+200494 = {
+	name = "Margareta" # Fredkulla
+	female = yes
+	dynasty_house = house_stenkiling
+	martial = 4
+	diplomacy = 6
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = "swedish"
+	father = 100524
+	1085.1.1 = {
+		birth = "1085.1.1"
+	}
+	1130.1.1 = {
+		death = "1130.1.1"
+	}
+}
+222575 = {
+	name = "Christina"
+	# AKA: Christina Ingesdottir
+	female = yes
+	dynasty_house = house_stenkiling
+	martial = 5
+	diplomacy = 6
+	intrigue = 8
+	stewardship = 7
+	religion = "orthodox"
+	culture = "swedish"
+	trait = lazy
+	trait = arbitrary
+	trait = education_stewardship_3
+	father = 100524
+	1080.1.2 = {
+		birth = "1080.1.2"
+	}
+	1122.1.3 = {
+		death = "1122.1.3"
+	}
+}
+100554 = {
+	name = "Ingrid" #Ragnvaldsdotter
+	female = yes
+	dynasty_house = house_stenkiling
+	martial = 4
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 4
+	religion = "catholic"
+	culture = "swedish"
+	trait = arrogant
+	trait = deceitful
+	trait = education_intrigue_3
+	father = 100552 # Ragnvald
+	1105.1.1 = {
+		birth = "1105.1.1"
+	}
+	1162.1.1 = {
+		death = "1162.1.1"
+	}
+}
+#######################################
+# DYNSTY Dynasty
+#######################################
+
+#######################################
+# DYNSTY Dynasty
+#######################################
+
+#######################################
+# DYNSTY Dynasty
+#######################################
+
+#######################################
+# DYNSTY Dynasty
+#######################################
+
+#######################################
+# DYNSTY Dynasty
+#######################################
+
+#######################################
+# DYNSTY Dynasty
+#######################################
+
+#######################################
+# DYNSTY Dynasty
+#######################################

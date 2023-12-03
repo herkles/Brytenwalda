@@ -154,6 +154,60 @@ text = {
 	localization_key = knight_dutch
 }
 #####################################
+## West Slavic group
+#####################################
+text = {
+	trigger = {
+		culture = { has_name_list = name_list_pommeranian }
+	}
+	localization_key = knight_pommeranian
+}
+text = {
+	trigger = {
+		culture = { has_name_list = name_list_czech }
+	}
+	localization_key = knight_czech
+}
+text = {
+	trigger = {
+		culture = { has_name_list = name_list_polish }
+	}
+	localization_key = knight_polish
+}
+text = {
+	trigger = {
+		culture = { has_name_list = name_list_polabian }
+	}
+	localization_key = knight_polabian
+}
+text = {
+	trigger = {
+		culture = { has_name_list = name_list_slovien }
+	}
+	localization_key = knight_slovien
+}
+#####################################
+## North Germanic group
+#####################################
+text = {
+	trigger = {
+		OR = {
+			culture = { has_name_list = name_list_norse }
+			culture = { has_name_list = name_list_norwegian }
+		}
+	}
+	localization_key = knight_norse_norwegian
+}
+text = {
+	trigger = {
+		OR = {
+			culture = { has_name_list = name_list_swedish }
+			culture = { has_name_list = name_list_danish }
+		}
+	}
+	localization_key = knight_swedish_danish
+}
+#####################################
 ## Default Fallback
 #####################################
 	text = {
@@ -206,6 +260,12 @@ KnightCultureNoTooltip = {
 	}
 	text = {
 		trigger = {
+			culture = { has_name_list = name_list_breton }
+		}
+		localization_key = knight_no_tooltip_breton
+	}
+	text = {
+		trigger = {
 			OR = {
 				culture = { has_name_list = name_list_cumbrian }
 				culture = { has_name_list = name_list_pictish }	
@@ -224,6 +284,12 @@ KnightCultureNoTooltip = {
 #####################################
 	text = {
 		trigger = {
+			culture = { has_name_list = name_list_frankish }
+		}
+		localization_key = knight_no_tooltip_frankish
+	}
+	text = {
+		trigger = {
 			OR = {
 				culture = { has_name_list = name_list_french }
 				culture = { has_name_list = name_list_norman }
@@ -231,6 +297,126 @@ KnightCultureNoTooltip = {
 		}
 		localization_key = knight_no_tooltip_french_norman
 	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_occitan }
+		}
+		localization_key = knight_no_tooltip_occitan
+	}
+#####################################
+## North Germanic group
+#####################################
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_norse }
+				culture = { has_name_list = name_list_norwegian }
+			}
+		}
+		localization_key = knight_no_tooltip_norse_norwegian
+	}
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_swedish }
+				culture = { has_name_list = name_list_danish }
+			}
+		}
+		localization_key = knight_no_tooltip_swedish_danish
+	}
+#####################################
+## Central Germanic group
+#####################################
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_saxon }
+		}
+		localization_key = knight_no_tooltip_saxon
+	}
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_franconian }
+				culture = { has_name_list = name_list_swabian }
+				culture = { has_name_list = name_list_bavarian }
+			}
+		}
+		localization_key = knight_no_tooltip_old_high_german
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_frisian }
+		}
+		localization_key = knight_no_tooltip_frisian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_dutch }
+		}
+		localization_key = knight_no_tooltip_dutch
+	}
+#####################################
+## Latin group
+#####################################
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_italian }
+		}
+		localization_key = knight_no_tooltip_italian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_cisalpine }
+		}
+		localization_key = knight_no_tooltip_cisalpine
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_sardinian }
+		}
+		localization_key = knight_no_tooltip_sardinian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_sicilian }
+		}
+		localization_key = knight_no_tooltip_sicilian
+	}
+#####################################
+## West Slavic group
+#####################################
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_pommeranian }
+		}
+		localization_key = knight_no_tooltip_pommeranian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_czech }
+		}
+		localization_key = knight_no_tooltip_czech
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_polish }
+		}
+		localization_key = knight_no_tooltip_polish
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_polabian }
+		}
+		localization_key = knight_no_tooltip_polabian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_slovien }
+		}
+		localization_key = knight_no_tooltip_slovien
+	}
+
+
 #####################################
 ## Default Fallback
 #####################################
@@ -385,7 +571,60 @@ KnightCultureNoTooltipLowercase = {
 		}
 		localization_key = knight_no_tooltip_sicilian
 	}
-
+#####################################
+## North Germanic group
+#####################################
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_norse }
+				culture = { has_name_list = name_list_norwegian }
+			}
+		}
+		localization_key = knight_lower_norse_norwegian
+	}
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_swedish }
+				culture = { has_name_list = name_list_danish }
+			}
+		}
+		localization_key = knight_lower_swedish_danish
+	}
+#####################################
+## West Slavic group
+#####################################
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_pommeranian }
+		}
+		localization_key = knight_lower_pommeranian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_czech }
+		}
+		localization_key = knight_lower_czech
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_polish }
+		}
+		localization_key = knight_lower_polish
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_polabian }
+		}
+		localization_key = knight_lower_polabian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_slovien }
+		}
+		localization_key = knight_lower_slovien
+	}
 #####################################
 ## Default Fallback
 #####################################
@@ -541,6 +780,60 @@ KnightCulturePlural = {
 		localization_key = knight_plural_sicilian
 	}
 #####################################
+## North Germanic group
+#####################################
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_norse }
+				culture = { has_name_list = name_list_norwegian }
+			}
+		}
+		localization_key = knight_plural_norse_norwegian
+	}
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_swedish }
+				culture = { has_name_list = name_list_danish }
+			}
+		}
+		localization_key = knight_plural_swedish_danish
+	}
+#####################################
+## West Slavic group
+#####################################
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_pommeranian }
+		}
+		localization_key = knight_plural_pommeranian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_czech }
+		}
+		localization_key = knight_plural_czech
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_polish }
+		}
+		localization_key = knight_plural_polish
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_polabian }
+		}
+		localization_key = knight_plural_polabian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_slovien }
+		}
+		localization_key = knight_plural_slovien
+	}
+#####################################
 ## Default Fallback
 #####################################
 	text = {
@@ -693,6 +986,60 @@ KnightCulturePluralNoTooltip = {
 			culture = { has_name_list = name_list_sicilian }
 		}
 		localization_key = knight_plural_no_tooltip_sicilian
+	}
+#####################################
+## North Germanic group
+#####################################
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_norse }
+				culture = { has_name_list = name_list_norwegian }
+			}
+		}
+		localization_key = knight_plural_no_tooltip_norse_norwegian
+	}
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_swedish }
+				culture = { has_name_list = name_list_danish }
+			}
+		}
+		localization_key = knight_plural_no_tooltip_swedish_danish
+	}
+#####################################
+## West Slavic group
+#####################################
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_pommeranian }
+		}
+		localization_key = knight_plural_no_tooltip_pommeranian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_czech }
+		}
+		localization_key = knight_plural_no_tooltip_czech
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_polish }
+		}
+		localization_key = knight_plural_no_tooltip_polish
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_polabian }
+		}
+		localization_key = knight_plural_no_tooltip_polabian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_slovien }
+		}
+		localization_key = knight_plural_no_tooltip_slovien
 	}
 
 
@@ -852,6 +1199,63 @@ KnightCulturePluralNoTooltipLowercase = {
 		}
 		localization_key = knight_plural_lower_sicilian
 	}
+#####################################
+## North Germanic group
+#####################################
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_norse }
+				culture = { has_name_list = name_list_norwegian }
+			}
+		}
+		localization_key = knight_plural_lower_norse_norwegian
+	}
+	text = {
+		trigger = {
+			OR = {
+				culture = { has_name_list = name_list_swedish }
+				culture = { has_name_list = name_list_danish }
+			}
+		}
+		localization_key = knight_plural_lower_swedish_danish
+	}
+#####################################
+## West Slavic group
+#####################################
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_pommeranian }
+		}
+		localization_key = knight_plural_lower_pommeranian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_czech }
+		}
+		localization_key = knight_plural_lower_czech
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_polish }
+		}
+		localization_key = knight_plural_lower_polish
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_polabian }
+		}
+		localization_key = knight_plural_lower_polabian
+	}
+	text = {
+		trigger = {
+			culture = { has_name_list = name_list_slovien }
+		}
+		localization_key = knight_plural_lower_slovien
+	}
+
+
+
 #####################################
 ## Default Fallback
 #####################################

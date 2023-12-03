@@ -1,25 +1,7 @@
-﻿# Used in definition order
-#############################################
+﻿#############################################
 # Vanilla Divergent Cultures			
 #############################################
 # Vanilla Divergent Cultures; no need to touch
-scanian = {
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_skane = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_skane
-		}
-		any_sub_realm_county = {
-			culture = { has_cultural_pillar = heritage_north_germanic }
-			duchy = title:d_skane
-		}
-		scope:culture = { has_cultural_pillar = heritage_north_germanic }
-	}
-}
 beta_israeli = {
 	trigger = {
 		faith.religion = religion:judaism_religion
@@ -86,32 +68,7 @@ hejazi = {
 		}
 	}
 }
-szekely = {
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_transylvania = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_transylvanian_alps = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_transylvania
-			has_primary_title = title:d_transylvanian_alps
-		}
-		culture = culture:hungarian
-		any_sub_realm_county = {
-			culture = culture:hungarian
-			OR = {
-				duchy = title:d_transylvania
-				duchy = title:d_transylvanian_alps
-			}
-		}
-	}
-}
+
 maithili = {
 	trigger = {
 		OR = {
@@ -342,24 +299,7 @@ kabylian = {
 		}
 	}
 }
-silesian = {
-	trigger = {
-		OR = {
-			culture = culture:polish
-			culture = culture:czech
-		}
-		any_sub_realm_county = {
-			OR = {
-				culture = culture:polish
-				culture = culture:czech
-			}
-			OR = {
-				duchy = title:d_upper_silesia
-				duchy = title:d_lower_silesia
-			}
-		}
-	}
-}
+
 ruthenian = {
 	trigger = {
 		culture = culture:russian
@@ -456,28 +396,6 @@ novgorodian = {
 		}
 	}
 }
-geatish = {
-	trigger = {
-		culture = culture:swedish
-		any_sub_realm_county = {
-			culture = culture:swedish
-			OR = {
-				duchy = title:d_smaland
-				duchy = title:d_vastergotland
-				duchy = title:d_ostergotland
-			}
-		}
-	}
-}
-gutish = {
-	trigger = {
-		culture = culture:swedish
-		any_sub_realm_county = {
-			culture = culture:swedish
-			duchy = title:d_gotland
-		}
-	}
-}
 mervi = {
 	trigger = {
 		culture = { has_cultural_pillar = heritage_iranian }
@@ -499,23 +417,7 @@ parsi = {
 		}
 	}
 }
-icelandic = {
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_iceland = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_iceland
-		}
-		culture = { has_cultural_pillar = heritage_north_germanic }
-		any_sub_realm_county = {
-			culture = { has_cultural_pillar = heritage_north_germanic }
-			duchy = title:d_iceland
-		}
-	}
-}
+
 omani = {
 	trigger = {
 		OR = {
@@ -857,38 +759,9 @@ palestinian = {
 		}
 	}
 }
-upper_saxon = {
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_thuringia = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_anhalt = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_lausitz = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_meissen = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			primary_title = title:d_thuringia
-			primary_title = title:d_anhalt
-			primary_title = title:d_lausitz
-			primary_title = title:d_meissen
-		}
-		culture = culture:saxon
-	}
-}
-# Vanilla Tapestry Cultures		
+#############################################
+# Central Germanic Cultures			
+#############################################
 austrian = {
 	trigger = {
 		OR = {
@@ -927,6 +800,234 @@ austrian = {
 				duchy = title:d_steyermark
 				duchy = title:d_carinthia
 			}
+		}
+	}
+}
+thuringian = {# Thuringian
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_hesse = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_thuringia = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_hesse
+			has_primary_title = title:d_thuringia
+		}
+		culture = { has_cultural_pillar = heritage_central_germanic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			OR = {
+				duchy = title:d_hesse
+				duchy = title:d_thuringia
+			}
+		}
+	}
+}
+tyrolian = {# Tyrolian
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_tyrol = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_salzburg = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_tyrol
+			has_primary_title = title:d_salzburg
+		}
+		culture = { has_cultural_pillar = heritage_central_germanic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			OR = {
+				duchy = title:d_tyrol
+				duchy = title:d_salzburg
+			}
+		}
+	}
+}
+prussisch = {# Germanic Prussian
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_prussia = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_salzburg = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_steyermark = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_carinthia = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_prussia
+			has_primary_title = title:d_masuria
+			has_primary_title = title:d_samogitia
+			has_primary_title = title:d_latgalians
+		}
+		culture = { has_cultural_pillar = heritage_central_germanic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			OR = {
+				duchy = title:d_prussia
+				duchy = title:d_masuria
+				duchy = title:d_samogitia
+				duchy = title:d_latgalians
+			}
+		}
+	}
+}
+pommerisch = {# Germanic Pommerians
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_pommerania = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_nordmark = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_pomerelia = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_ostmark = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_pommerania
+			has_primary_title = title:d_nordmark
+			has_primary_title = title:d_pomerelia
+			has_primary_title = title:d_ostmark
+		}
+		culture = { has_cultural_pillar = heritage_central_germanic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			OR = {
+				duchy = title:d_pommerania
+				duchy = title:d_nordmark
+				duchy = title:d_pomerelia
+				duchy = title:d_ostmark
+			}
+		}
+	}
+}
+balte = {# Baltic Germans
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_esthonia = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_livonia = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_courland = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_esthonia
+			has_primary_title = title:d_livonia
+			has_primary_title = title:d_courland
+		}
+		culture = { has_cultural_pillar = heritage_central_germanic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			OR = {
+				duchy = title:d_esthonia
+				duchy = title:d_livonia
+				duchy = title:d_courland
+			}
+		}
+	}
+}
+meissian = {# Upper Saxons
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_meissen = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_lausitz = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_meissen
+			has_primary_title = title:d_lausitz
+		}
+		culture = { has_cultural_pillar = heritage_central_germanic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			OR = {
+				duchy = title:d_meissen
+				duchy = title:d_lausitz
+			}
+		}
+	}
+}
+#############################################
+# Frankish Cultures			
+#############################################
+picard = {# Picardy
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_flanders = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_flanders
+		}
+		culture = { has_cultural_pillar = heritage_frankish }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_frankish }
+			duchy = title:d_flanders
+		}
+	}
+}
+champagne = {# Champagne dialect
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_champagne = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_champagne
+		}
+		culture = { has_cultural_pillar = heritage_frankish }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_frankish }
+			duchy = title:d_champagne
 		}
 	}
 }
@@ -977,21 +1078,98 @@ walloon = {
 		}
 	}
 }
-flemish = {
+#############################################
+# Italian Cultures			
+#############################################
+dalmatian = {
 	trigger = {
-		culture = culture:dutch
-		any_sub_realm_county = {
-			culture = culture:dutch
-			OR ={
-				duchy = title:d_flanders
-				duchy = title:d_brabant
-				duchy = title:d_luxembourg
-				duchy = title:d_julich
-				duchy = title:d_holland
+		capital_county = {
+			title:k_croatia = {
+				is_de_jure_liege_or_above_target = prev
+			}
+			any_county_province = { is_coastal = yes }
+		}
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_south_slavic
+				has_cultural_pillar = heritage_byzantine
+				has_cultural_pillar = heritage_latin
 			}
 		}
 	}
 }
+romagnol = {
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_romagna = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_emilia = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_romagna
+			has_primary_title = title:d_emilia
+		}
+		culture = { has_cultural_pillar = heritage_latin }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_latin }
+			OR = {
+				duchy = title:d_romagna
+				duchy = title:d_emilia
+			}
+		}
+	}
+}
+neapolitan = {
+	trigger = {
+		capital_county = {
+			title:k_sicily = {
+				is_de_jure_liege_or_above_target = prev
+			}
+			NOT = {
+				title:d_sicily = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+		}
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_berber
+				has_cultural_pillar = heritage_byzantine
+				has_cultural_pillar = heritage_latin
+			}
+		}
+		any_sub_realm_county = {
+			title:d_capua = {
+				is_de_jure_liege_or_above_target = prev
+			}
+		}
+	}
+}
+umbrian = {
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_spoleto = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_spoleto
+		}
+		culture = { has_cultural_pillar = heritage_latin }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_latin }
+			duchy = title:d_spoleto
+		}
+	}
+}
+#############################################
+# Occitan Cultures			
+#############################################
 aquitanian = {
 	trigger = {
 		OR = {
@@ -1051,23 +1229,9 @@ auvergnat = {
 		}
 	}
 }
-umbrian = {
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_spoleto = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_spoleto
-		}
-		culture = { has_cultural_pillar = heritage_latin }
-		any_sub_realm_county = {
-			culture = { has_cultural_pillar = heritage_latin }
-			duchy = title:d_spoleto
-		}
-	}
-}
+#############################################
+# English Cultures			
+#############################################
 new_english = {
 	trigger = {
 		capital_county = {
@@ -1083,26 +1247,133 @@ new_english = {
 		}
 	}
 }
-dalmatian = {
+#############################################
+# Gaelic Cultures			
+#############################################
+manx = {# Manx - gaelic
 	trigger = {
-		capital_county = {
-			title:k_croatia = {
-				is_de_jure_liege_or_above_target = prev
+		OR = {
+			capital_county = {
+				title:d_the_isles = {
+					is_de_jure_liege_or_above_target = prev
+				}
 			}
-			any_county_province = { is_coastal = yes }
+			has_primary_title = title:d_the_isles
 		}
-		culture = {
+		culture = { has_cultural_pillar = heritage_central_germanic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
 			OR = {
-				has_cultural_pillar = heritage_south_slavic
-				has_cultural_pillar = heritage_byzantine
-				has_cultural_pillar = heritage_latin
+				duchy = title:d_the_isles
 			}
 		}
 	}
 }
 #############################################
-# New Divergent Cultures			
+# North Germanic Cultures			
 #############################################
+manskr = {# Manx - Norse
+	trigger = {
+		OR = {
+			capital_county = {
+				title:k_mann_the_isles = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:k_mann_the_isles
+		}
+		culture = { has_cultural_pillar = heritage_north_germanic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			duchy = title:d_the_isles
+		}
+	}
+}
+scanian = {
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_skane = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_skane
+		}
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			duchy = title:d_skane
+		}
+		scope:culture = { has_cultural_pillar = heritage_north_germanic }
+	}
+}
+icelandic = {
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_iceland = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_iceland
+		}
+		culture = { has_cultural_pillar = heritage_north_germanic }
+		any_sub_realm_county = {
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			duchy = title:d_iceland
+		}
+	}
+}
+#############################################
+# West Slavic Cultures			
+#############################################
+silesian = {
+	trigger = {
+		OR = {
+			culture = culture:polish
+			culture = culture:czech
+		}
+		any_sub_realm_county = {
+			OR = {
+				culture = culture:polish
+				culture = culture:czech
+			}
+			OR = {
+				duchy = title:d_upper_silesia
+				duchy = title:d_lower_silesia
+			}
+		}
+	}
+}
+#############################################
+# Hungarian Cultures			
+#############################################
+szekely = {
+	trigger = {
+		OR = {
+			capital_county = {
+				title:d_transylvania = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			capital_county = {
+				title:d_transylvanian_alps = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:d_transylvania
+			has_primary_title = title:d_transylvanian_alps
+		}
+		culture = culture:hungarian
+		any_sub_realm_county = {
+			culture = culture:hungarian
+			OR = {
+				duchy = title:d_transylvania
+				duchy = title:d_transylvanian_alps
+			}
+		}
+	}
+}
+
 
 
 

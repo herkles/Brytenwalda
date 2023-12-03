@@ -744,31 +744,6 @@ swiss = {
 	}
 	hybrid = yes
 }
-alsatian = {
-	trigger = {
-		OR = {
-			AND = {
-				scope:culture = { has_cultural_pillar = heritage_frankish }
-				scope:other_culture = { has_cultural_pillar = heritage_central_germanic }
-			}
-			AND = {
-				scope:culture = { has_cultural_pillar = heritage_central_germanic }
-				scope:other_culture = { has_cultural_pillar = heritage_frankish }
-			}
-		}
-		any_sub_realm_county = {
-			OR = {
-				duchy = title:d_alsace
-				duchy = title:d_upper_lorraine
-			}
-			OR = {
-				culture = scope:culture
-				culture = scope:other_culture
-			}
-		}
-	}
-	hybrid = yes
-}
 vlaemsch = {
 	trigger = {
 		OR = {
@@ -855,4 +830,3 @@ new_english_hybrid = {
 #############################################
 # New Hybrid Cultures			
 #############################################
-
