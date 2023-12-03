@@ -9,7 +9,7 @@
 	intrigue = 5
 	stewardship = 8
 	religion = "norse_pagan"
-	culture = "swedish"
+	culture = "gaet"
 	trait = just
 	trait = education_diplomacy_3
 	father = 100521
@@ -77,7 +77,7 @@
 	intrigue = 5
 	stewardship = 6
 	religion = "catholic"
-	culture = "swedish"
+	culture = "gaet"
 	trait = lustful
 	trait = wrathful
 	trait = generous
@@ -110,7 +110,7 @@
 	intrigue = 5
 	stewardship = 6
 	religion = "catholic"
-	culture = "swedish"
+	culture = "gaet"
 	trait = calm
 	trait = education_diplomacy_2
 	father = 100522
@@ -130,7 +130,7 @@
 	intrigue = 5
 	stewardship = 6
 	religion = "catholic"
-	culture = "swedish"
+	culture = "gaet"
 	trait = zealous
 	trait = education_diplomacy_2
 	father = 100522
@@ -148,7 +148,7 @@
 	martial = 7
 	diplomacy = 3
 	religion = "catholic"
-	culture = "swedish"
+	culture = "gaet"
 	trait = wrathful
 	trait = brave
 	trait = stubborn
@@ -171,7 +171,7 @@
 	intrigue = 5
 	stewardship = 4
 	religion = "catholic" # Possibly Norse Pagan
-	culture = "swedish"
+	culture = "gaet"
 	trait = cynical
 	trait = legitimized_bastard
 	trait = education_intrigue_3
@@ -193,7 +193,7 @@
 	intrigue = 6
 	stewardship = 5
 	religion = "catholic"
-	culture = "swedish"
+	culture = "gaet"
 	trait = diligent
 	trait = education_diplomacy_2
 	father = 100523
@@ -217,7 +217,7 @@
 	intrigue = 6
 	stewardship = 6
 	religion = "catholic"
-	culture = "swedish"
+	culture = "gaet"
 	trait = education_martial_2
 	father = 100523
 	1078.1.2 = {
@@ -239,7 +239,7 @@
 	intrigue = 3
 	stewardship = 6
 	religion = "catholic"
-	culture = "swedish"
+	culture = "gaet"
 	trait = trusting
 	trait = education_stewardship_2
 	father = 100524 # Possibly
@@ -260,7 +260,7 @@
 	intrigue = 5
 	stewardship = 7
 	religion = "catholic"
-	culture = "swedish"
+	culture = "gaet"
 	father = 100524
 	1090.1.1 = {
 		birth = "1090.1.1"
@@ -278,7 +278,7 @@
 	intrigue = 6
 	stewardship = 7
 	religion = "catholic"
-	culture = "swedish"
+	culture = "gaet"
 	father = 100524
 	1085.1.1 = {
 		birth = "1085.1.1"
@@ -297,7 +297,7 @@
 	intrigue = 8
 	stewardship = 7
 	religion = "orthodox"
-	culture = "swedish"
+	culture = "gaet"
 	trait = lazy
 	trait = arbitrary
 	trait = education_stewardship_3
@@ -318,7 +318,7 @@
 	intrigue = 8
 	stewardship = 4
 	religion = "catholic"
-	culture = "swedish"
+	culture = "gaet"
 	trait = arrogant
 	trait = deceitful
 	trait = education_intrigue_3
@@ -331,17 +331,127 @@
 	}
 }
 #######################################
+# Galta Dynasty
+#######################################
+200010 = {
+	name = "Halsten"
+	dynasty = 100295
+	martial = 6
+	diplomacy = 6
+	intrigue = 6
+	stewardship = 5
+	religion = "catholic"
+	culture = "gaet"
+	trait = humble
+	trait = education_martial_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+20008 = {
+	name = "Faste"
+	dynasty = 100295
+	martial = 6
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 8
+	religion = "catholic"
+	culture = "gaet"
+	trait = wrathful
+	trait = education_martial_3
+	1039.1.1 = {
+		birth = "1039.1.1"
+	}
+	1089.1.1 = {
+		death = "1089.1.1"
+	}
+}
+143138 = {
+	name = "Faste"
+	dynasty = 100295
+	religion = "catholic"
+	culture = "gaet"
+	father = 20008
+	1069.1.1 = {
+		birth = "1069.1.1"
+	}
+	1139.1.1 = {
+		death = "1139.1.1"
+	}
+}
+143139 = {
+	name = "Faste"
+	dynasty = 100295
+	religion = "catholic"
+	culture = "gaet"
+	father = 143138
+	1119.1.1 = {
+		birth = "1119.1.1"
+	}
+	1187.1.1 = {
+		death = "1187.1.1"
+	}
+}
+#######################################
 # DYNSTY Dynasty
 #######################################
-
+20007 = {
+	name = "Tyke"
+	dynasty = 100300
+	martial = 8
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = "gaet"
+	trait = humble
+	trait = education_stewardship_3
+	1039.1.1 = {
+		birth = "1039.1.1"
+	}
+	1066.1.1 = {
+		contract_disease_effect = { DISEASE = ill TREATMENT_EVENT = yes }
+	}
+	1089.1.1 = {
+		death = "1089.1.1"
+	}
+}
+200013 = {
+	name = "Bertil"
+	dynasty = 100300
+	martial = 5
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 8
+	religion = "catholic"
+	culture = "gaet"
+	trait = gluttonous
+	trait = education_stewardship_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
 #######################################
-# DYNSTY Dynasty
+# Värending Dynasty
 #######################################
-
-#######################################
-# DYNSTY Dynasty
-#######################################
-
+20020 = {
+	name = "Toke"
+	dynasty = 827 # Värending
+	religion = "norse_pagan"
+	culture = "gaet"
+	1030.1.1 = {
+		birth = "1030.1.1"
+	}
+	1090.1.1 = {
+		death = "1090.1.1"
+	}
+}
 #######################################
 # DYNSTY Dynasty
 #######################################
