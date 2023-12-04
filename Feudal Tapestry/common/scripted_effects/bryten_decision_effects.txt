@@ -1175,4 +1175,251 @@ embrace_brython_culture_effect = {# Embracing brython culture
 		}
 	}
 }
+#######################################
+#									  #
+#         Italian Effects	  	      #
+#									  #
+#######################################
+embrace_tuscan_culture_effect = {
+	# Scopes saves for localization
+	root = { save_scope_as = embracer }
+
+	# Prestige Bonus
+	add_prestige = medium_prestige_gain
+
+	#Convert your, and your whole family's, culture
+	set_culture = culture:tuscan
+	if = {# Convert Every Spouse
+		limit = { any_spouse = { is_landed = no } }
+		every_spouse = {
+			limit = {
+				is_landed = no
+				OR = {
+					culture = culture:italian
+				}
+			}
+			set_culture = culture:tuscan
+		}
+	}
+	if = {# Convert Every close family member
+		limit = {
+			any_close_family_member = {
+				is_landed = no
+				NOT = { is_spouse_of = root }
+			}
+		}
+		every_close_family_member = {
+			limit = {
+				is_landed = no
+				NOT = { is_spouse_of = root }
+			}
+			custom = all_unlanded_family_members
+			set_culture = culture:tuscan
+		}
+	}
+	if = {# Convert Every Child
+		limit = {
+			any_child = {
+				NOT = { is_spouse_of = root }
+			}
+		}
+		every_child = {
+			limit = {
+				NOT = { is_spouse_of = root }
+			}
+			custom = all_children_custom
+			set_culture = culture:tuscan
+		}
+	}
+
+	#Convert appropriate vassals, and their family
+	if = {
+		limit = {
+			any_vassal_or_below = {
+				is_ai = yes
+				OR = {
+					culture = culture:italian
+				}
+				capital_province = { geographical_region = custom_northern_italy }
+			}
+		}
+		every_vassal_or_below = {
+			custom = embrace_english_culture_vassals_custom
+			limit = {
+				capital_province = { geographical_region = custom_northern_italy }
+				is_ai = yes
+				OR = {
+					culture = culture:italian
+				}
+				primary_title = {
+					OR = {
+						de_jure_liege = title:k_pisa
+						de_jure_liege.de_jure_liege = title:k_pisa
+						de_jure_liege.de_jure_liege.de_jure_liege = title:k_pisa
+
+						de_jure_liege = title:d_toscana
+						de_jure_liege.de_jure_liege = title:d_toscana
+						de_jure_liege.de_jure_liege.de_jure_liege = title:d_toscana	
+					}
+				}
+			}
+			set_culture = culture:tuscan
+			hidden_effect = {
+				if = {
+					limit = { any_spouse = { is_landed = no } }
+					every_spouse = {
+						limit = {
+							is_landed = no
+							OR = {
+								culture = culture:italian
+							}
+						}
+						set_culture = culture:tuscan
+					}
+				}
+				if = {
+					limit = {
+						any_close_family_member = {
+							is_landed = no
+							NOT = { is_spouse_of = prev }
+						}
+					}
+					every_close_family_member = {
+						limit = {
+							is_landed = no
+							NOT = { is_spouse_of = prev }
+						}
+						custom = all_unlanded_family_members
+						set_culture = culture:tuscan
+					}
+				}
+				if = {
+					limit = {
+						any_child = {
+							NOT = { is_spouse_of = prev }
+						}
+					}
+					every_child = {
+						limit = {
+							NOT = { is_spouse_of = prev }
+						}
+						custom = all_children_custom
+						set_culture = culture:tuscan
+					}
+				}
+				if = {
+					limit = {
+						any_vassal_or_below = {
+							is_ai = yes
+							OR = {
+								culture = culture:italian
+							}
+							primary_title = {
+								OR = {
+									de_jure_liege = title:k_pisa
+									de_jure_liege.de_jure_liege = title:k_pisa
+									de_jure_liege.de_jure_liege.de_jure_liege = title:k_pisa
+
+									de_jure_liege = title:d_toscana
+									de_jure_liege.de_jure_liege = title:d_toscana
+									de_jure_liege.de_jure_liege.de_jure_liege = title:d_toscana
+								}
+							}
+						}
+					}
+					every_vassal_or_below = {
+						custom = embrace_english_culture_vassals_custom
+						limit = {
+							is_ai = yes
+							OR = {
+								culture = culture:italian
+							}
+							primary_title = {
+								OR = {
+									de_jure_liege = title:k_pisa
+									de_jure_liege.de_jure_liege = title:k_pisa
+									de_jure_liege.de_jure_liege.de_jure_liege = title:k_pisa
+
+									de_jure_liege = title:d_toscana
+									de_jure_liege.de_jure_liege = title:d_toscana
+									de_jure_liege.de_jure_liege.de_jure_liege = title:d_toscana
+								}
+							}
+						}
+						set_culture = culture:tuscan
+						hidden_effect = {
+							if = {
+								limit = { any_spouse = { is_landed = no } }
+								every_spouse = {
+									limit = {
+										is_landed = no
+										OR = {
+											culture = culture:italian
+										}
+									}
+									set_culture = culture:tuscan
+								}
+							}
+							if = {
+								limit = {
+									any_close_family_member = {
+										is_landed = no
+										NOT = { is_spouse_of = prev }
+									}
+								}
+								every_close_family_member = {
+									limit = {
+										is_landed = no
+										NOT = { is_spouse_of = prev }
+									}
+									custom = all_unlanded_family_members
+									set_culture = culture:tuscan
+								}
+							}
+							if = {
+								limit = {
+									any_child = {
+										NOT = { is_spouse_of = prev }
+									}
+								}
+								every_child = {
+									limit = {
+										NOT = { is_spouse_of = prev }
+									}
+									custom = all_children_custom
+									set_culture = culture:tuscan
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Flip Counties
+	every_county_in_region = {
+		region = custom_northern_italy
+		limit = {
+			target_is_de_facto_liege_or_above = root.primary_title
+		}
+		random = {
+			chance = 60
+			set_county_culture = culture:tuscan
+		}
+	}
+
+	culture:tuscan = {
+		custom_tooltip = decision_embrace_english_culture_get_innovations
+		hidden_effect = {
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:italian
+		}
+	}
+}
+
+
+
+
+
 

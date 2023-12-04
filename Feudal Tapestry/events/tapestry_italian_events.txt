@@ -1,0 +1,94 @@
+﻿namespace = tapestry_italian
+
+#######################################
+# Tuscan Culture Forming
+#######################################
+tapestry_italian.001 = {
+	type = character_event
+	title = tapestry_italian.001.t
+	desc = tapestry_italian.001.desc
+	theme = culture_change
+	left_portrait = {
+		character = scope:embracer
+		animation = personality_bold
+	}
+
+	immediate = {
+		save_scope_as = embracer
+		culture = { save_scope_as = embracer_former_culture }
+	}
+
+	option = {
+		name = tapestry_italian.001.a
+		embrace_tuscan_culture_effect = yes
+		hidden_effect = { # Moved here from embrace_english_culture_decision
+			# Send event to other players
+			every_player = {
+				limit = {
+					NOT = { this = root }
+					OR = {
+						primary_title = {
+							OR = {
+								de_jure_liege = title:k_italy
+								de_jure_liege.de_jure_liege = title:k_italy
+								de_jure_liege.de_jure_liege.de_jure_liege = title:k_italy
+							}
+						}
+						culture = { has_cultural_pillar = heritage_latin }
+					}
+				}
+				trigger_event = tapestry_italian.002
+			}
+		}
+	}
+}
+tapestry_italian.002 = {# Players informed
+	type = character_event
+	title = tapestry_italian.001.t
+	desc = tapestry_italian.002.desc
+	theme = culture_change
+	left_portrait = {
+		character = scope:embracer
+		animation = personality_bold
+	}
+
+	option = { # Not italian
+		name = tapestry_italian.002.a
+		trigger = {
+			NOT = { has_culture = scope:embracer.culture }
+		}
+	}
+	option = { # Also norman
+		name = tapestry_italian.002.b
+		trigger = {
+			has_culture = scope:embracer.culture
+		}
+	}
+}
+#######################################
+# Italo-Normans
+#######################################
+
+#######################################
+# Frankish Cultural Split up
+#######################################
+
+#######################################
+# Frankish Cultural Split up
+#######################################
+
+#######################################
+# Frankish Cultural Split up
+#######################################
+
+#######################################
+# Frankish Cultural Split up
+#######################################
+
+#######################################
+# Frankish Cultural Split up
+#######################################
+
+#######################################
+# Frankish Cultural Split up
+#######################################

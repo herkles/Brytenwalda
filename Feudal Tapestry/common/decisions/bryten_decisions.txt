@@ -343,10 +343,6 @@ bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
 	}
 }
 #############################################
-# Pilgrimages Decisions
-#############################################
-
-#############################################
 # Irish Decisions
 #############################################
 strengthen_high_kingship_decision = {
@@ -542,5 +538,91 @@ create_duchy_of_lothian = {# Create the Duchy of Lothian
 	}
 }
 #############################################
-# Welsh Decisions
+# Italian Decisions
 #############################################
+embrace_tuscan_culture_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+
+	ai_check_interval = 36
+
+	desc = embrace_tuscan_culture_decision_desc
+
+	is_shown = {
+		is_landed = yes
+		culture = { has_cultural_pillar = heritage_latin }
+		OR = {# has to have a center of tuscan culture, pisa, florence, or Siena	
+			title:k_pisa = {
+				any_in_de_jure_hierarchy = {
+					root.primary_title = this
+				}
+			}
+			title:c_siena = {
+				any_in_de_jure_hierarchy = {
+					root.primary_title = this
+				}
+			}
+			title:c_firenze = {
+				any_in_de_jure_hierarchy = {
+					root.primary_title = this
+				}
+			}
+			OR = {
+				highest_held_title_tier = tier_duchy
+				highest_held_title_tier = tier_kingdom
+			}
+		}
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:embrace_tuscan_culture_decision
+			}
+		}
+		NOT = { game_start_date >= 1066.09.15 } # it already happened
+		current_date > 950.1.1 # after 950
+	}
+
+	is_valid = {
+		culture = { has_cultural_pillar = heritage_latin }
+		capital_county.duchy = title:d_toscana # needs to be in Tuscany
+		OR = {# has to have a center of tuscan culture, pisa, florence, or Siena
+			title:k_pisa = { title_held_years >= 30 }
+			title:c_siena = { title_held_years >= 30 }
+			title:c_firenze = { title_held_years >= 30 }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	effect = {
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:embrace_tuscan_culture_decision
+		}
+		show_as_tooltip = {	embrace_tuscan_culture_effect = yes	}
+
+		trigger_event = tapestry_italian.001
+	}
+	
+	ai_potential = {
+		is_landed = yes
+		culture = { has_cultural_pillar = heritage_latin }
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:embrace_english_culture_decision
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 80
+		modifier = {# Republics are much more likely to embrace
+			add = 20
+			government_has_flag = government_is_republic
+		}
+	}
+}
