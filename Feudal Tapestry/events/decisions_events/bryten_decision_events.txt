@@ -315,3 +315,228 @@ bryten_decision.0013 = {# Players informed
 
 
 }
+#######################################
+# Holy Wells
+#######################################
+bryten_decision.0014 = {# Well consecration (by Cybrxkhan)
+	type = character_event
+	title = bryten_decision.0014.t
+	desc = bryten_decision.0014.desc
+	theme = faith
+	override_background = { reference = wilderness }
+	
+	right_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	immediate = {
+		capital_county = {
+			save_scope_as = county
+		}
+		random_list = {
+			40 = {
+				modifier = {
+					add = 8
+					piety_level <= 1
+				}
+				modifier = {
+					add = 4
+					piety_level <= 2
+				}
+				add_character_flag = TFE_well_level_1
+			}
+			30 = {
+				modifier = {
+					add = 4
+					piety_level <= 2
+				}
+				modifier = {
+					add = 8
+					piety_level <= 3
+				}
+				modifier = {
+					add = 4
+					piety_level <= 4
+				}
+				add_character_flag = TFE_well_level_2
+			}
+			20 = {
+				modifier = {
+					add = 4
+					piety_level >= 3
+				}
+				modifier = {
+					add = 8
+					piety_level >= 4
+				}
+				modifier = {
+					add = 4
+					piety_level >= 5
+				}
+				add_character_flag = TFE_well_level_3
+			}
+		}
+	}
+	
+	# Ok
+	option = {
+		name = bryten_decision.0014.a
+		if = {
+			limit = {
+				has_character_flag = TFE_well_level_1
+			}
+			scope:county = {
+				add_county_modifier = {
+					modifier = TFE_holy_well_level_1
+					years = 20
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = TFE_well_level_2
+			}
+			scope:county = {
+				add_county_modifier = {
+					modifier = TFE_holy_well_level_2
+					years = 20
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_character_flag = TFE_well_level_3
+			}
+			scope:county = {
+				add_county_modifier = {
+					modifier = TFE_holy_well_level_3
+					years = 20
+				}
+			}
+		}
+		custom_tooltip = bryten_decision.0014.tooltip
+	}
+
+	after = {
+		if = {
+			limit = {
+				has_character_flag = TFE_well_level_1
+			}
+			remove_character_flag = TFE_well_level_1
+		}
+		if = {
+			limit = {
+				has_character_flag = TFE_well_level_2
+			}
+			remove_character_flag = TFE_well_level_2
+		}
+		if = {
+			limit = {
+				has_character_flag = TFE_well_level_3
+			}
+			remove_character_flag = TFE_well_level_3
+		}
+	}
+
+}
+bryten_decision.0015 = {# Visiting the Holy Well (by Cybrxkhan)
+	type = character_event
+	title = bryten_decision.0015.t
+	desc = bryten_decision.0015.desc
+	theme = faith
+	override_background = { reference = wilderness }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	immediate = {
+		var:county_well = {
+			save_scope_as = county
+		}
+	}
+	# Ok
+	option = {
+		name = bryten_decision.0015.a
+		if = {
+			limit = {
+				scope:county = {
+					has_county_modifier = TFE_holy_well_level_3
+				}
+			}
+			add_piety = 150
+			stress_impact = {
+				base = medium_stress_impact_loss
+				zealous = miniscule_stress_impact_loss
+			}
+			random = {
+				chance = 50
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = bryten_decision.0015.toast
+					add_character_modifier = {
+						modifier = TFE_healing_waters_of_a_holy_well
+						years = 10
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:county = {
+					has_county_modifier = TFE_holy_well_level_2
+				}
+			}
+			add_piety = 100
+			stress_impact = {
+				base = minor_stress_impact_loss
+				zealous = miniscule_stress_impact_loss
+			}
+			random = {
+				chance = 35
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = bryten_decision.0015.toast
+					add_character_modifier = {
+						modifier = TFE_healing_waters_of_a_holy_well
+						years = 10
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:county = {
+					has_county_modifier = TFE_holy_well_level_1
+				}
+			}
+			add_piety = 50
+			stress_impact = {
+				base = miniscule_stress_impact_loss
+				zealous = miniscule_stress_impact_loss
+			}
+			random = {
+				chance = 20
+				send_interface_toast = {
+					type = event_toast_effect_good
+					left_icon = ROOT
+					title = bryten_decision.0015.toast
+					add_character_modifier = {
+						modifier = TFE_healing_waters_of_a_holy_well
+						years = 10
+					}
+				}
+			}
+		}
+	}
+
+	after = {
+		scope:story = { end_story = yes }
+	}
+
+}
+
+

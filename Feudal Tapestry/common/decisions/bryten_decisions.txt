@@ -626,3 +626,292 @@ embrace_tuscan_culture_decision = {
 		}
 	}
 }
+#############################################
+# Catholic Religious Decisions
+#############################################
+TFE_consecrate_holy_well = {# Consencrate a Holy Well
+	picture = "gfx/interface/illustrations/decisions/decision_roman_city.dds"
+	ai_check_interval = 64
+	desc = TFE_consecrate_holy_well_desc
+	
+	is_shown = {
+		is_landed = yes
+		NOT = {
+			any_directly_owned_province = {
+				county = {
+					OR = {
+						has_county_modifier = TFE_holy_well_level_1
+						has_county_modifier = TFE_holy_well_level_2
+						has_county_modifier = TFE_holy_well_level_3
+					}
+				}
+			}
+		}
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_west_germanic
+				has_cultural_pillar = heritage_brythonic
+				has_cultural_pillar = heritage_goidelic
+			}
+		}
+	}
+	
+	is_valid = {	
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_west_germanic
+				has_cultural_pillar = heritage_brythonic
+				has_cultural_pillar = heritage_goidelic
+			}
+		}
+		custom_description = {
+			text = TFE_no_holy_well_county
+			NOT = {
+				any_directly_owned_province = {
+					county = {
+						OR = {
+							has_county_modifier = TFE_holy_well_level_1
+							has_county_modifier = TFE_holy_well_level_2
+							has_county_modifier = TFE_holy_well_level_3
+						}
+					}
+				}
+			}	
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = TFE_basic_activity_cost
+		prestige = medium_prestige_value
+	}
+
+	effect = {
+
+		custom_tooltip = TFE_consecrate_holy_well_effect_tooltip_1
+		custom_tooltip = TFE_consecrate_holy_well_effect_tooltip_2
+		custom_tooltip = TFE_consecrate_holy_well_effect_tooltip_3
+
+		trigger_event = { id = bryten_decision.0014	}
+	}
+
+	ai_potential = {
+		short_term_gold >= TFE_basic_activity_cost
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+		modifier = {
+			add = 10
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+	}
+}
+TFE_visit_holy_well = {# Visit a Holy Well
+	picture = "gfx/interface/illustrations/decisions/decision_roman_city.dds"
+
+	ai_check_interval = 64
+
+	cooldown = { days = 3650 } #1825
+	
+	desc = TFE_visit_holy_well_desc
+	
+	is_shown = {
+		is_landed = yes
+		any_directly_owned_province = {
+			county = {
+				OR = {
+					has_county_modifier = TFE_holy_well_level_1
+					has_county_modifier = TFE_holy_well_level_2
+					has_county_modifier = TFE_holy_well_level_3
+				}
+			}
+		}
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_west_germanic
+				has_cultural_pillar = heritage_brythonic
+				has_cultural_pillar = heritage_goidelic
+			}
+		}
+		NOT = {
+			any_owned_story = {
+				story_type = story_TFE_visit_holy_well
+			}
+		}
+	}
+	
+	is_valid = {
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_west_germanic
+				has_cultural_pillar = heritage_brythonic
+				has_cultural_pillar = heritage_goidelic
+			}
+		}
+		custom_description = {
+			text = TFE_yes_holy_well_county
+			any_directly_owned_province = {
+				county = {
+					OR = {
+						has_county_modifier = TFE_holy_well_level_1
+						has_county_modifier = TFE_holy_well_level_2
+						has_county_modifier = TFE_holy_well_level_3
+					}
+				}
+			}	
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = TFE_basic_activity_cost
+	}
+
+	effect = {
+
+		custom_tooltip = TFE_visit_holy_well_effect_tooltip_1
+		custom_tooltip = TFE_visit_holy_well_effect_tooltip_2
+
+		add_character_flag = planning_an_activity
+		if = {
+			limit = {
+				any_directly_owned_province = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_3
+					}
+				}
+			}			
+			random_directly_owned_province = {
+				limit = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_3
+					}
+				}
+				county = {
+					root = {
+						set_variable = {
+							name = county_well
+							value = PREV
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_directly_owned_province = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_2
+					}
+				}
+			}			
+			random_directly_owned_province = {
+				limit = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_2
+					}
+				}
+				county = {
+					root = {
+						set_variable = {
+							name = county_well
+							value = PREV
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_directly_owned_province = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_1
+					}
+				}
+			}			
+			random_directly_owned_province = {
+				limit = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_1
+					}
+				}
+				county = {
+					root = {
+						set_variable = {
+							name = county_well
+							value = PREV
+						}
+					}
+				}
+			}
+		}
+		# Failsafe in case there's no appropriate county
+		else = {
+			root = {
+				set_variable = {
+					name = county_well
+					value = capital_county
+				}
+			}
+		}
+		create_story = story_TFE_visit_holy_well
+	}
+
+	ai_potential = {
+		short_term_gold >= 50
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+		modifier = {
+			add = 10
+			has_trait = diligent
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+	}
+}
+#############################################
+# Norse Decisions
+#############################################
+
+
+
+
+
+
+
+
+
+
+
+

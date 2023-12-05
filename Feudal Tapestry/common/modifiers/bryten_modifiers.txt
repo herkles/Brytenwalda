@@ -1,5 +1,5 @@
 ﻿##########################################
-# Province and County Modifers
+# Norman Conquest Stuff
 ##########################################
 silvatici_bandits = {# Silvatici Bandits
 	icon = outdoors_negative
@@ -19,6 +19,33 @@ harryed_county = {# For the harrying of the North
 	development_growth_factor = -0.1
 	tax_mult = -0.5
 
+}
+##########################################
+# Holy Wells
+##########################################
+TFE_holy_well_level_1 = {# Holy Well Level 1
+	icon = fertility_positive
+	county_opinion_add = 2
+	tax_mult = 0.02
+	monthly_county_control_change_add = 0.1
+}
+TFE_holy_well_level_2 = {# Holy Well Level 2
+	icon = fertility_positive
+	county_opinion_add = 4
+	tax_mult = 0.04
+	monthly_county_control_change_add = 0.2
+}
+TFE_holy_well_level_3 = {# Holy Well Level 3
+	icon = fertility_positive
+	county_opinion_add = 6
+	tax_mult = 0.06
+	monthly_county_control_change_add = 0.3
+}
+TFE_healing_waters_of_a_holy_well = {# Holy Well waters
+	icon = piety_positive
+	negate_health_penalty_add = 0.2
+	stress_gain_mult = -0.1
+	stress_loss_mult = 0.1
 }
 ##########################################
 # Worldy Pilgrimage Modifiers
