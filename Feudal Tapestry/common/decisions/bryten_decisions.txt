@@ -2,7 +2,7 @@
 # Anglo-Saxon England Decisions
 #############################################
 unite_england_decision = {# Unite England
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 	ai_check_interval = 60
 	desc = unite_england_decision_desc
@@ -120,7 +120,7 @@ unite_england_decision = {# Unite England
 	ai_will_do = { base = 100 }
 }
 restore_kingdom_kent_decision = {# Restore the Kingdom of Kent
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 	ai_check_interval = 120
 
@@ -202,7 +202,7 @@ restore_kingdom_kent_decision = {# Restore the Kingdom of Kent
 	}
 }
 restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	major = yes
 	ai_check_interval = 120
 
@@ -292,7 +292,7 @@ restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
 # General England Decisions
 #############################################
 bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
 	ai_check_interval = 64
 	cooldown = { days = 7300 }
 	desc = bryten_build_saint_edmunds_desc
@@ -346,7 +346,7 @@ bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
 # Irish Decisions
 #############################################
 strengthen_high_kingship_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
 	major = yes
 	ai_check_interval = 60
 	desc = strengthen_high_kingship_decision_desc
@@ -405,7 +405,7 @@ strengthen_high_kingship_decision = {
 # Scottish Decisions
 #############################################
 integrate_strathclyde_kingdom = {# Integrate the Kingdom of Strathclyde
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
 	ai_check_interval = 60
 	major = yes
 	desc = integrate_strathclyde_kingdom_desc
@@ -473,7 +473,7 @@ integrate_strathclyde_kingdom = {# Integrate the Kingdom of Strathclyde
 	}
 }
 create_duchy_of_lothian = {# Create the Duchy of Lothian
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
 	ai_check_interval = 60
 	desc = create_duchy_of_lothian_desc
 
@@ -541,7 +541,7 @@ create_duchy_of_lothian = {# Create the Duchy of Lothian
 # Italian Decisions
 #############################################
 embrace_tuscan_culture_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_tuscan.dds"
 	major = yes
 
 	ai_check_interval = 36
@@ -630,7 +630,7 @@ embrace_tuscan_culture_decision = {
 # Catholic Religious Decisions
 #############################################
 TFE_consecrate_holy_well = {# Consencrate a Holy Well
-	picture = "gfx/interface/illustrations/decisions/decision_roman_city.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds.dds"
 	ai_check_interval = 64
 	desc = TFE_consecrate_holy_well_desc
 	
@@ -723,7 +723,7 @@ TFE_consecrate_holy_well = {# Consencrate a Holy Well
 	}
 }
 TFE_visit_holy_well = {# Visit a Holy Well
-	picture = "gfx/interface/illustrations/decisions/decision_roman_city.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds.dds"
 
 	ai_check_interval = 64
 
