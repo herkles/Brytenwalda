@@ -630,7 +630,7 @@ embrace_tuscan_culture_decision = {
 # Catholic Religious Decisions
 #############################################
 TFE_consecrate_holy_well = {# Consencrate a Holy Well
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
 	ai_check_interval = 64
 	desc = TFE_consecrate_holy_well_desc
 	
@@ -685,7 +685,7 @@ TFE_consecrate_holy_well = {# Consencrate a Holy Well
 	}
 
 	cost = {
-		gold = TFE_basic_activity_cost
+		gold = bryten_activity_cost
 		prestige = medium_prestige_value
 	}
 
@@ -699,7 +699,7 @@ TFE_consecrate_holy_well = {# Consencrate a Holy Well
 	}
 
 	ai_potential = {
-		short_term_gold >= TFE_basic_activity_cost
+		short_term_gold >= bryten_activity_cost
 	}
 
 	ai_will_do = {
@@ -723,7 +723,7 @@ TFE_consecrate_holy_well = {# Consencrate a Holy Well
 	}
 }
 TFE_visit_holy_well = {# Visit a Holy Well
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
 
 	ai_check_interval = 64
 
@@ -783,7 +783,7 @@ TFE_visit_holy_well = {# Visit a Holy Well
 	}
 
 	cost = {
-		gold = TFE_basic_activity_cost
+		gold = bryten_activity_cost
 	}
 
 	effect = {
@@ -903,15 +903,253 @@ TFE_visit_holy_well = {# Visit a Holy Well
 #############################################
 # Norse Decisions
 #############################################
+consecrate_sacred_grove = {# Consencrate a Sacred Grove
+	picture = "gfx/interface/illustrations/decisions/decision_sacred_grove.dds"
+	ai_check_interval = 64
+	desc = consecrate_sacred_grove_desc
+	
+	is_shown = {
+		is_landed = yes
+		NOT = {
+			any_directly_owned_province = {
+				county = {
+					OR = {
+						has_county_modifier = sacred_grove_level_1
+						has_county_modifier = sacred_grove_level_2
+						has_county_modifier = sacred_grove_level_3
+					}
+				}
+			}
+		}
+		religion = religion:germanic_religion
+	
+	}
+	
+	is_valid = {
+		religion = religion:germanic_religion
+		custom_description = {
+			text = no_sacred_grove_county
+			NOT = {
+				any_directly_owned_province = {
+					county = {
+						OR = {
+							has_county_modifier = sacred_grove_level_1
+							has_county_modifier = sacred_grove_level_2
+							has_county_modifier = sacred_grove_level_3
+						}
+					}
+				}
+			}	
+		}
+	}
 
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
 
+	cost = {
+		gold = bryten_activity_cost
+		prestige = medium_prestige_value
+	}
 
+	effect = {
 
+		custom_tooltip = consecrate_sacred_grove_effect_tooltip_1
+		custom_tooltip = consecrate_sacred_grove_effect_tooltip_2
+		custom_tooltip = consecrate_sacred_grove_effect_tooltip_3
 
+		trigger_event = { id = bryten_decision.0016	}
+	}
 
+	ai_potential = {
+		short_term_gold >= bryten_activity_cost
+	}
 
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+		modifier = {
+			add = 10
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+	}
+}
+vist_sacred_grove = {# Visit a Sacred Grove
+	picture = "gfx/interface/illustrations/decisions/decision_sacred_grove.dds"
 
+	ai_check_interval = 64
 
+	cooldown = { days = 3650 } #1825
+	
+	desc = vist_sacred_grove_desc
+	
+	is_shown = {
+		is_landed = yes
+		any_directly_owned_province = {
+			county = {
+				OR = {
+					has_county_modifier = TFE_holy_well_level_1
+					has_county_modifier = TFE_holy_well_level_2
+					has_county_modifier = TFE_holy_well_level_3
+				}
+			}
+		}
+		religion = religion:germanic_religion
+		NOT = {
+			any_owned_story = {
+				story_type = story_visit_sacred_grove
+			}
+		}
+	}
+	
+	is_valid = {
+		religion = religion:germanic_religion
+		custom_description = {
+			text = yes_sacred_grove_county
+			any_directly_owned_province = {
+				county = {
+					OR = {
+						has_county_modifier = TFE_holy_well_level_1
+						has_county_modifier = TFE_holy_well_level_2
+						has_county_modifier = TFE_holy_well_level_3
+					}
+				}
+			}	
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = bryten_activity_cost
+	}
+
+	effect = {
+
+		custom_tooltip = vist_sacred_grove_tooltip
+
+		add_character_flag = planning_an_activity
+		if = {
+			limit = {
+				any_directly_owned_province = {
+					county = {
+						has_county_modifier = sacred_grove_level_3
+					}
+				}
+			}			
+			random_directly_owned_province = {
+				limit = {
+					county = {
+						has_county_modifier = sacred_grove_level_3
+					}
+				}
+				county = {
+					root = {
+						set_variable = {
+							name = county_grove
+							value = PREV
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_directly_owned_province = {
+					county = {
+						has_county_modifier = sacred_grove_level_2
+					}
+				}
+			}			
+			random_directly_owned_province = {
+				limit = {
+					county = {
+						has_county_modifier = sacred_grove_level_2
+					}
+				}
+				county = {
+					root = {
+						set_variable = {
+							name = county_grove
+							value = PREV
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_directly_owned_province = {
+					county = {
+						has_county_modifier = sacred_grove_level_1
+					}
+				}
+			}			
+			random_directly_owned_province = {
+				limit = {
+					county = {
+						has_county_modifier = sacred_grove_level_1
+					}
+				}
+				county = {
+					root = {
+						set_variable = {
+							name = county_grove
+							value = PREV
+						}
+					}
+				}
+			}
+		}
+		# Failsafe in case there's no appropriate county
+		else = {
+			root = {
+				set_variable = {
+					name = county_grove
+					value = capital_county
+				}
+			}
+		}
+		create_story = story_visit_sacred_grove
+	}
+
+	ai_potential = {
+		short_term_gold >= 50
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+		modifier = {
+			add = 10
+			has_trait = diligent
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+	}
+}
 
 
 
