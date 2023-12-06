@@ -15,7 +15,7 @@ story_visit_sacred_grove = {
 						has_county_modifier = sacred_grove_level_3
 					}
 				}
-				add_character_flag = TFE_visiting_holy_well_level_3
+				add_character_flag = sacred_grove_level_3
 			}
 			else_if = {
 				limit = {
@@ -23,11 +23,11 @@ story_visit_sacred_grove = {
 						has_county_modifier = sacred_grove_level_2
 					}
 				}
-				add_character_flag = TFE_visiting_holy_well_level_2
+				add_character_flag = sacred_grove_level_2
 			}
 			# Failsafe
 			else = {
-				add_character_flag = TFE_visiting_holy_well_level_1
+				add_character_flag = sacred_grove_level_1
 			}
 			trigger_event = {
 				id = bryten_decision.0017 
@@ -65,21 +65,21 @@ story_visit_sacred_grove = {
 
 			if = {
 				limit = {
-					has_character_flag = TFE_visiting_holy_well_level_3
+					has_character_flag = sacred_grove_level_3
 				}
-				remove_character_flag = TFE_visiting_holy_well_level_3
+				remove_character_flag = sacred_grove_level_3
 			}
 			if = {
 				limit = {
-					has_character_flag = TFE_visiting_holy_well_level_2
+					has_character_flag = sacred_grove_level_2
 				}
-				remove_character_flag = TFE_visiting_holy_well_level_2
+				remove_character_flag = sacred_grove_level_2
 			}
 			if = {
 				limit = {
-					has_character_flag = TFE_visiting_holy_well_level_1
+					has_character_flag = sacred_grove_level_1
 				}
-				remove_character_flag = TFE_visiting_holy_well_level_1
+				remove_character_flag = sacred_grove_level_1
 			}
 			remove_variable = county_grove
 		}	

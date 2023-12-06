@@ -929,13 +929,15 @@ consecrate_sacred_grove = {# Consencrate a Sacred Grove
 		religion = religion:germanic_religion
 		custom_description = {
 			text = no_sacred_grove_county
-			NOT = {
-				any_directly_owned_province = {
-					county = {
-						OR = {
-							has_county_modifier = sacred_grove_level_1
-							has_county_modifier = sacred_grove_level_2
-							has_county_modifier = sacred_grove_level_3
+			trigger_if = {
+				NOT = {
+					any_directly_owned_province = {
+						county = {
+							OR = {
+								has_county_modifier = sacred_grove_level_1
+								has_county_modifier = sacred_grove_level_2
+								has_county_modifier = sacred_grove_level_3
+							}
 						}
 					}
 				}
@@ -999,9 +1001,9 @@ vist_sacred_grove = {# Visit a Sacred Grove
 		any_directly_owned_province = {
 			county = {
 				OR = {
-					has_county_modifier = TFE_holy_well_level_1
-					has_county_modifier = TFE_holy_well_level_2
-					has_county_modifier = TFE_holy_well_level_3
+					has_county_modifier = sacred_grove_level_1
+					has_county_modifier = sacred_grove_level_2
+					has_county_modifier = sacred_grove_level_3
 				}
 			}
 		}
@@ -1017,15 +1019,18 @@ vist_sacred_grove = {# Visit a Sacred Grove
 		religion = religion:germanic_religion
 		custom_description = {
 			text = yes_sacred_grove_county
-			any_directly_owned_province = {
-				county = {
-					OR = {
-						has_county_modifier = TFE_holy_well_level_1
-						has_county_modifier = TFE_holy_well_level_2
-						has_county_modifier = TFE_holy_well_level_3
+			trigger_if = {
+				any_directly_owned_province = {
+					county = {
+						OR = {
+							has_county_modifier = sacred_grove_level_1
+							has_county_modifier = sacred_grove_level_2
+							has_county_modifier = sacred_grove_level_3
+						}
 					}
 				}
-			}	
+			}		
+	
 		}
 	}
 
