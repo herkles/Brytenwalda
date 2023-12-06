@@ -921,12 +921,21 @@ consecrate_sacred_grove = {# Consencrate a Sacred Grove
 				}
 			}
 		}
-		religion = religion:germanic_religion
-	
+		OR = {
+			religion = religion:germanic_religion
+			religion = religion:finno_ugric_religion
+			religion = religion:slavic_religion
+			religion = religion:baltic_religion
+		}	
 	}
 	
 	is_valid = {
-		religion = religion:germanic_religion
+		OR = {
+			religion = religion:germanic_religion
+			religion = religion:finno_ugric_religion
+			religion = religion:slavic_religion
+			religion = religion:baltic_religion
+		}
 		custom_description = {
 			text = no_sacred_grove_county
 			trigger_if = {
@@ -1007,7 +1016,12 @@ vist_sacred_grove = {# Visit a Sacred Grove
 				}
 			}
 		}
-		religion = religion:germanic_religion
+		OR = {
+			religion = religion:germanic_religion
+			religion = religion:finno_ugric_religion
+			religion = religion:slavic_religion
+			religion = religion:baltic_religion
+		}
 		NOT = {
 			any_owned_story = {
 				story_type = story_visit_sacred_grove
@@ -1016,7 +1030,12 @@ vist_sacred_grove = {# Visit a Sacred Grove
 	}
 	
 	is_valid = {
-		religion = religion:germanic_religion
+		OR = {
+			religion = religion:germanic_religion
+			religion = religion:finno_ugric_religion
+			religion = religion:slavic_religion
+			religion = religion:baltic_religion
+		}
 		custom_description = {
 			text = yes_sacred_grove_county
 			trigger_if = {

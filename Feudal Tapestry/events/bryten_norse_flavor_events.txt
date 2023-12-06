@@ -1,8 +1,291 @@
 ﻿namespace = bryten_norse
 
 #######################################
-# Scottish Language
+# Sacred Grove
 #######################################
+bryten_norse.001 = {# what to do with the grove
+	type = character_event
+	title = bryten_norse.001.t
+	desc = bryten_norse.001.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	override_background = { reference = fp1_runestone_circle }
+
+	trigger = {
+		is_landed = yes
+		any_directly_owned_province = {
+			county = {
+				OR = {
+					has_county_modifier = sacred_grove_level_1
+					has_county_modifier = sacred_grove_level_2
+					has_county_modifier = sacred_grove_level_3
+				}
+			}
+		}
+		religion = religion:christianity_religion
+	}
+
+	weight_multiplier = {
+		base = 1
+
+		# Weight up for having piety traits.
+		modifier = {
+			add = 0.5
+			has_trait = zealous
+		}
+		modifier = {
+			add = 0.5
+			has_trait = theologian
+		}
+	}
+
+	immediate = {
+		add_character_flag = {
+			flag = had_event_fp1_yearly_001
+			days = 10950
+		}
+	}
+
+	
+	option = {# Burn it down
+		name = bryten_norse.001.burn
+		add_piety = minor_piety_value
+		every_vassal = {# Zealous Vassals love it
+			limit = { has_vassal_stance = zealot }
+			add_opinion = {
+				modifier = approves_burning_sacred_grove
+				target = root
+				opinion = 40
+			}
+		}
+		every_vassal = {# Pagan vassals are outraged
+			limit = { 
+				OR = {
+					religion = religion:germanic_religion
+					religion = religion:finno_ugric_religion
+					religion = religion:slavic_religion
+					religion = religion:baltic_religion
+				}
+			}
+			add_opinion = {
+				modifier = disaproves_burning_sacred_grove
+				target = root
+				opinion = -40
+			}
+		}
+
+		if = {
+			limit = {
+				any_directly_owned_province = {
+					county = { has_county_modifier = sacred_grove_level_1 }
+				}
+			}
+			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_1 }
+		}
+		if = {
+			limit = {
+				any_directly_owned_province = {
+					county = { has_county_modifier = sacred_grove_level_2 }
+				}
+			}
+			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_2 }
+		}
+		if = {
+			limit = {
+				any_directly_owned_province = {
+					county = { has_county_modifier = sacred_grove_level_3 }
+				}
+			}
+			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_3 }
+		}	
+
+		stress_impact = {
+			zealous = medium_stress_impact_loss
+			wrathful = minor_stress_impact_loss
+			sadistic = minor_stress_impact_loss
+			content = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 0.5
+				ai_energy = 0.5
+				ai_greed = -0.5
+			}
+			modifier = {	# Weight up for stress.
+				add = 50
+				has_trait = profligate
+			}
+			modifier = {	# Weight up for stress.
+				add = 30
+				has_trait = ambitious
+			}
+			modifier = {	# Weight down for stress.
+				add = -30
+				has_trait = content
+			}
+			modifier = {	# Weight down for stress.
+				add = -30
+				has_trait = greedy
+			}
+		}
+	}
+	option = {# Turn it into a Church
+		name = bryten_norse.001.church
+		every_vassal = {# Zealous Vassals love it
+			limit = { has_vassal_stance = zealot }
+			add_opinion = {
+				modifier = approves_church_sacred_grove
+				target = root
+				opinion = 20
+			}
+		}
+		every_vassal = {# Pagan vassals are outraged
+			limit = { 
+				OR = {
+					religion = religion:germanic_religion
+					religion = religion:finno_ugric_religion
+					religion = religion:slavic_religion
+					religion = religion:baltic_religion
+				}
+			}
+			add_opinion = {
+				modifier = disaproves_church_sacred_grove
+				target = root
+				opinion = -20
+			}
+		}
+		add_piety = medium_piety_value
+		remove_short_term_gold = medium_gold_value_check
+
+		# Remove the modifiers
+		if = {
+			limit = {
+				any_directly_owned_province = {
+					county = { has_county_modifier = sacred_grove_level_1 }
+				}
+			}
+			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_1 }
+		}
+		if = {
+			limit = {
+				any_directly_owned_province = {
+					county = { has_county_modifier = sacred_grove_level_2 }
+				}
+			}
+			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_2 }
+		}
+		if = {
+			limit = {
+				any_directly_owned_province = {
+					county = { has_county_modifier = sacred_grove_level_3 }
+				}
+			}
+			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_3 }
+		}	
+		stress_impact = {
+			zealous = minor_stress_impact_loss
+			wrathful = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			just = minor_stress_impact_loss
+			architect = minor_stress_impact_loss
+			administrator = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 0.5
+				ai_vengefulness = 0.5
+				ai_greed = -0.5
+			}
+			modifier = {	# Weight up for stress.
+				add = 50
+				has_trait = profligate
+			}
+			modifier = {	# Weight up for stress.
+				add = 30
+				has_trait = callous
+			}
+			modifier = {	# Weight up for stress.
+				add = 30
+				has_trait = sadistic
+			}
+			modifier = {	# Weight down for stress.
+				add = -30
+				has_trait = compassionate
+			}
+			modifier = {	# Weight down for stress.
+				add = -30
+				has_trait = greedy
+			}
+		}
+	}
+	option = {# Leave it alone
+		name = bryten_norse.001.alone
+		every_vassal = {# Zealous Vassals love it
+			limit = { has_vassal_stance = zealot }
+			add_opinion = {
+				modifier = disaproves_alone_sacred_grove
+				target = root
+				opinion = -15
+			}
+		}
+		every_vassal = {# Pagan vassals are outraged
+			limit = { 
+				OR = {
+					religion = religion:germanic_religion
+					religion = religion:finno_ugric_religion
+					religion = religion:slavic_religion
+					religion = religion:baltic_religion
+				}
+			}
+			add_opinion = {
+				modifier = approves_alone_sacred_grove
+				target = root
+				opinion = 15
+			}
+		}
+
+		stress_impact = {
+			zealous = medium_stress_impact_gain
+			wrathful = minor_stress_impact_gain
+			sadistic = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			just = minor_stress_impact_loss
+			diplomat = minor_stress_impact_loss
+			content = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 0.5
+				ai_sociability = 0.5
+				ai_greed = -0.5
+			}
+			modifier = {	# Weight up for stress.
+				add = 50
+				has_trait = profligate
+			}
+			modifier = {	# Weight up for stress.
+				add = 30
+				has_trait = arrogant
+			}
+			modifier = {	# Weight down for stress.
+				add = -30
+				has_trait = humble
+			}
+			modifier = {	# Weight down for stress.
+				add = -30
+				has_trait = greedy
+			}
+		}
+	}
+}
+
 
 
 
