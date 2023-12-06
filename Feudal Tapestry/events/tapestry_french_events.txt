@@ -1,0 +1,179 @@
+﻿namespace = tapestry_french
+
+#######################################
+# Abby of Cluny
+#######################################
+tapestry_french.001 = {# Founding the Abbey of Cluny 
+	type = character_event
+	title = tapestry_french.001.t
+	desc = tapestry_french.001.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	override_background = { reference = temple_church }
+
+	immediate = {
+		title:b_cluny = { save_scope_as = tapestry_cluny_abbey	}
+		set_global_variable = {
+			name = tapestry_cluny_abbey_founded
+			value = yes
+		}
+	}
+
+	option = {# Ok
+		name = tapestry_french.001.abbey
+		custom_tooltip = tapestry_donate_cluny_available_tooltip
+	}
+		
+}
+tapestry_french.002 = {# Donating to the Abby of Cluny.
+	type = character_event
+	title = tapestry_french.002.t
+	desc = tapestry_french.002.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	override_background = { reference = temple_church }
+
+	immediate = {
+		# For loc
+		title:c_macon = { save_scope_as = cluny_county }
+	}
+	
+	option = {# Small
+		name = tapestry_french.002.a
+		remove_short_term_gold = 50
+		add_piety = 100
+		add_character_modifier = {
+			modifier = bryten_cluny_abbey_donation_small
+			years = 10
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}	
+	option = {# Medium
+		name = tapestry_french.002.b
+		trigger = {
+			OR = {
+				is_ai = no
+				short_term_gold >= 100
+			}
+		}
+		remove_short_term_gold = 100
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_loss
+			generous = miniscule_stress_impact_loss
+			improvident = miniscule_stress_impact_loss
+		}
+		add_piety = 200
+		add_prestige = 50
+		add_character_modifier = {
+			modifier = bryten_cluny_abbey_donation_medium
+			years = 10
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				has_trait = zealous
+				add = 25
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 15
+			}
+			modifier = {
+				has_trait = generous
+				add = 15
+			}
+			modifier = {
+				has_trait = greedy
+				add = -30
+			}
+			modifier = {
+				has_trait = cynical
+				add = -30
+			}
+			ai_value_modifier = {
+				ai_zeal = 2
+				ai_greed = -1
+			}
+		}
+	}	
+	option = {# Large
+		name = tapestry_french.002.c
+		trigger = {
+			OR = {
+				is_ai = no
+				short_term_gold >= 150
+			}
+		}
+		remove_short_term_gold = 150
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_loss
+			generous = minor_stress_impact_loss
+			improvident = minor_stress_impact_loss
+		}
+		add_piety = 300
+		add_prestige = 100
+		if = {
+			limit = { exists = dynasty }
+			dynasty = {
+				add_dynasty_prestige = 25
+			}
+		}
+		add_character_modifier = {
+			modifier = bryten_cluny_abbey_donation_large
+			years = 10
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				has_trait = zealous
+				add = 35
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 20
+			}
+			modifier = {
+				has_trait = generous
+				add = 20
+			}
+			modifier = {
+				has_trait = greedy
+				add = -20
+			}
+			modifier = {
+				has_trait = cynical
+				add = -20
+			}
+			ai_value_modifier = {
+				ai_zeal = 2
+				ai_greed = -1
+			}
+		}
+	}	
+}
+
+#######################################
+# Treaty of Meerssen
+#######################################
+
+
+
+
+
+
+
+
+
+

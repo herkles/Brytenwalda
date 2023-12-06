@@ -158,5 +158,31 @@ bryten_setup_after_game_start_on_actions = {
 			limit = { current_date >= 1033.1.1 }
 			title:k_burgundy = { set_de_jure_liege_title = title:e_hre }
 		}
+
+		# Global Variables
+		if = {# Cluny abbey is founded in 910 
+			limit = { current_date >= 910.1.1 }
+			set_global_variable = {
+				name = tapestry_cluny_abbey_founded
+				value = yes
+			}
+		}
+		if = {# Bury Saint Edmonds is founded in 1020 
+			limit = { current_date >= 1020.1.1 }
+			set_global_variable = {
+				name = bryten_bury_saint_edmunds
+				value = yes
+			}
+		}
+		if = {# Durham builds the Tomb of St. Cuthbert
+			limit = { current_date >= 955.1.1 }
+			set_global_variable = {
+				name = bryten_cuthbert_tomb
+				value = yes
+			}
+		}
+
+
+
 	}
 }

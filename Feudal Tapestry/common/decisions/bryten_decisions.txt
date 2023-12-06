@@ -298,6 +298,7 @@ bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
 	desc = bryten_build_saint_edmunds_desc
 	
 	is_shown = {
+		
 		is_ruler = yes
 		is_landed = yes
 		religion = religion:christianity_religion
@@ -339,6 +340,277 @@ bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
 		modifier = {
 			add = -15
 			has_trait = cynical
+		}
+	}
+}
+TFE_consecrate_holy_well = {# Consencrate a Holy Well
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	ai_check_interval = 64
+	desc = TFE_consecrate_holy_well_desc
+	
+	is_shown = {
+		is_landed = yes
+		NOT = {
+			any_directly_owned_province = {
+				county = {
+					OR = {
+						has_county_modifier = TFE_holy_well_level_1
+						has_county_modifier = TFE_holy_well_level_2
+						has_county_modifier = TFE_holy_well_level_3
+					}
+				}
+			}
+		}
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_west_germanic
+				has_cultural_pillar = heritage_brythonic
+				has_cultural_pillar = heritage_goidelic
+			}
+		}
+	}
+	
+	is_valid = {	
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_west_germanic
+				has_cultural_pillar = heritage_brythonic
+				has_cultural_pillar = heritage_goidelic
+			}
+		}
+		custom_description = {
+			text = TFE_no_holy_well_county
+			NOT = {
+				any_directly_owned_province = {
+					county = {
+						OR = {
+							has_county_modifier = TFE_holy_well_level_1
+							has_county_modifier = TFE_holy_well_level_2
+							has_county_modifier = TFE_holy_well_level_3
+						}
+					}
+				}
+			}	
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = bryten_activity_cost
+		prestige = medium_prestige_value
+	}
+
+	effect = {
+
+		custom_tooltip = TFE_consecrate_holy_well_effect_tooltip_1
+		custom_tooltip = TFE_consecrate_holy_well_effect_tooltip_2
+		custom_tooltip = TFE_consecrate_holy_well_effect_tooltip_3
+
+		trigger_event = { id = bryten_decision.0014	}
+	}
+
+	ai_potential = {
+		short_term_gold >= bryten_activity_cost
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+		modifier = {
+			add = 10
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+	}
+}
+TFE_visit_holy_well = {# Visit a Holy Well
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+
+	ai_check_interval = 64
+
+	cooldown = { days = 3650 } #1825
+	
+	desc = TFE_visit_holy_well_desc
+	
+	is_shown = {
+		is_landed = yes
+		any_directly_owned_province = {
+			county = {
+				OR = {
+					has_county_modifier = TFE_holy_well_level_1
+					has_county_modifier = TFE_holy_well_level_2
+					has_county_modifier = TFE_holy_well_level_3
+				}
+			}
+		}
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_west_germanic
+				has_cultural_pillar = heritage_brythonic
+				has_cultural_pillar = heritage_goidelic
+			}
+		}
+		NOT = {
+			any_owned_story = {
+				story_type = story_TFE_visit_holy_well
+			}
+		}
+	}
+	
+	is_valid = {
+		culture = {
+			OR = {
+				has_cultural_pillar = heritage_west_germanic
+				has_cultural_pillar = heritage_brythonic
+				has_cultural_pillar = heritage_goidelic
+			}
+		}
+		custom_description = {
+			text = TFE_yes_holy_well_county
+			any_directly_owned_province = {
+				county = {
+					OR = {
+						has_county_modifier = TFE_holy_well_level_1
+						has_county_modifier = TFE_holy_well_level_2
+						has_county_modifier = TFE_holy_well_level_3
+					}
+				}
+			}	
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = bryten_activity_cost
+	}
+
+	effect = {
+
+		custom_tooltip = TFE_visit_holy_well_effect_tooltip_1
+		custom_tooltip = TFE_visit_holy_well_effect_tooltip_2
+
+		add_character_flag = planning_an_activity
+		if = {
+			limit = {
+				any_directly_owned_province = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_3
+					}
+				}
+			}			
+			random_directly_owned_province = {
+				limit = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_3
+					}
+				}
+				county = {
+					root = {
+						set_variable = {
+							name = county_well
+							value = PREV
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_directly_owned_province = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_2
+					}
+				}
+			}			
+			random_directly_owned_province = {
+				limit = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_2
+					}
+				}
+				county = {
+					root = {
+						set_variable = {
+							name = county_well
+							value = PREV
+						}
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				any_directly_owned_province = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_1
+					}
+				}
+			}			
+			random_directly_owned_province = {
+				limit = {
+					county = {
+						has_county_modifier = TFE_holy_well_level_1
+					}
+				}
+				county = {
+					root = {
+						set_variable = {
+							name = county_well
+							value = PREV
+						}
+					}
+				}
+			}
+		}
+		# Failsafe in case there's no appropriate county
+		else = {
+			root = {
+				set_variable = {
+					name = county_well
+					value = capital_county
+				}
+			}
+		}
+		create_story = story_TFE_visit_holy_well
+	}
+
+	ai_potential = {
+		short_term_gold >= 50
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+		modifier = {
+			add = 10
+			has_trait = diligent
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
 		}
 	}
 }
@@ -627,253 +899,115 @@ embrace_tuscan_culture_decision = {
 	}
 }
 #############################################
-# Catholic Religious Decisions
+# French Decisions
 #############################################
-TFE_consecrate_holy_well = {# Consencrate a Holy Well
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+bryten_build_cluny_abbey = {# Build the Abbey of Cluny
+	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
 	ai_check_interval = 64
-	desc = TFE_consecrate_holy_well_desc
+	cooldown = { days = 7300 }
+	desc = bryten_build_saint_edmunds_desc
 	
 	is_shown = {
+		is_ruler = yes
 		is_landed = yes
-		NOT = {
-			any_directly_owned_province = {
-				county = {
-					OR = {
-						has_county_modifier = TFE_holy_well_level_1
-						has_county_modifier = TFE_holy_well_level_2
-						has_county_modifier = TFE_holy_well_level_3
-					}
-				}
-			}
-		}
-		culture = {
+		root.faith = faith:catholic
+		NOT = { exists = global_var:tapestry_cluny_abbey_founded }
+		capital_province = {# should be in Western Europe
 			OR = {
-				has_cultural_pillar = heritage_west_germanic
-				has_cultural_pillar = heritage_brythonic
-				has_cultural_pillar = heritage_goidelic
+				geographical_region = world_europe_west_britannia
+				geographical_region = world_europe_north
+				geographical_region = world_europe_west_francia
+				geographical_region = custom_frisia
 			}
 		}
+		any_sub_realm_county = { this = title:c_macon }
 	}
 	
-	is_valid = {	
+	is_valid = {
+		root.faith = faith:catholic
+		any_sub_realm_county = { this = title:c_macon }
 		culture = {
-			OR = {
-				has_cultural_pillar = heritage_west_germanic
-				has_cultural_pillar = heritage_brythonic
-				has_cultural_pillar = heritage_goidelic
-			}
+			has_innovation = innovation_manorialism
 		}
-		custom_description = {
-			text = TFE_no_holy_well_county
-			NOT = {
-				any_directly_owned_province = {
-					county = {
-						OR = {
-							has_county_modifier = TFE_holy_well_level_1
-							has_county_modifier = TFE_holy_well_level_2
-							has_county_modifier = TFE_holy_well_level_3
-						}
-					}
-				}
-			}	
-		}
+		gold >= medium_gold_value
 	}
-
+	
 	is_valid_showing_failures_only = {
 		is_available_adult = yes
 	}
 
-	cost = {
-		gold = bryten_activity_cost
-		prestige = medium_prestige_value
-	}
-
 	effect = {
-
-		custom_tooltip = TFE_consecrate_holy_well_effect_tooltip_1
-		custom_tooltip = TFE_consecrate_holy_well_effect_tooltip_2
-		custom_tooltip = TFE_consecrate_holy_well_effect_tooltip_3
-
-		trigger_event = { id = bryten_decision.0014	}
+		custom_tooltip = bryten_build_cluny_abbey_tooltip
+		trigger_event = { id = tapestry_french.001 }
 	}
+
+	cost = { 
+		gold = { value = medium_gold_value } # Will depend
+	}	
 
 	ai_potential = {
-		short_term_gold >= bryten_activity_cost
+		short_term_gold > standard_activity_cost
 	}
 
 	ai_will_do = {
 		base = 30
 		modifier = {
-			add = 10
+			add = 5
 			has_trait = zealous
 		}
 		modifier = {
-			add = -10
+			add = -15
 			has_trait = cynical
-		}
-		modifier = {
-			add = 10
-			has_trait = ambitious
-		}
-		modifier = {
-			add = -10
-			has_trait = lazy
 		}
 	}
 }
-TFE_visit_holy_well = {# Visit a Holy Well
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+bryten_cluny_abbey_donation = {# Donate to the Abbey of Cluny
+	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
 
 	ai_check_interval = 64
 
-	cooldown = { days = 3650 } #1825
+	cooldown = { days = 5475 }
 	
-	desc = TFE_visit_holy_well_desc
+	desc = bryten_cluny_abbey_donation_desc
 	
 	is_shown = {
-		is_landed = yes
-		any_directly_owned_province = {
-			county = {
-				OR = {
-					has_county_modifier = TFE_holy_well_level_1
-					has_county_modifier = TFE_holy_well_level_2
-					has_county_modifier = TFE_holy_well_level_3
-				}
-			}
-		}
-		culture = {
+		is_landed = yes	
+		highest_held_title_tier > tier_barony
+		root.faith = faith:catholic
+		exists = global_var:tapestry_cluny_abbey_founded
+		capital_province = {# should be in Western Europe
 			OR = {
-				has_cultural_pillar = heritage_west_germanic
-				has_cultural_pillar = heritage_brythonic
-				has_cultural_pillar = heritage_goidelic
-			}
-		}
-		NOT = {
-			any_owned_story = {
-				story_type = story_TFE_visit_holy_well
+				geographical_region = world_europe_west_britannia
+				geographical_region = world_europe_north
+				geographical_region = world_europe_west_francia
+				geographical_region = custom_frisia
 			}
 		}
 	}
 	
 	is_valid = {
-		culture = {
+		root.faith = faith:catholic
+		gold >= 40
+		capital_province = {# should be in Western Europe
 			OR = {
-				has_cultural_pillar = heritage_west_germanic
-				has_cultural_pillar = heritage_brythonic
-				has_cultural_pillar = heritage_goidelic
+				geographical_region = world_europe_west_britannia
+				geographical_region = world_europe_north
+				geographical_region = world_europe_west_francia
+				geographical_region = custom_frisia
 			}
-		}
-		custom_description = {
-			text = TFE_yes_holy_well_county
-			any_directly_owned_province = {
-				county = {
-					OR = {
-						has_county_modifier = TFE_holy_well_level_1
-						has_county_modifier = TFE_holy_well_level_2
-						has_county_modifier = TFE_holy_well_level_3
-					}
-				}
-			}	
 		}
 	}
 
 	is_valid_showing_failures_only = {
-		is_available_adult = yes
-	}
-
-	cost = {
-		gold = bryten_activity_cost
+		bryten_basic_is_available_adult_trigger = yes
 	}
 
 	effect = {
-
-		custom_tooltip = TFE_visit_holy_well_effect_tooltip_1
-		custom_tooltip = TFE_visit_holy_well_effect_tooltip_2
-
-		add_character_flag = planning_an_activity
-		if = {
-			limit = {
-				any_directly_owned_province = {
-					county = {
-						has_county_modifier = TFE_holy_well_level_3
-					}
-				}
-			}			
-			random_directly_owned_province = {
-				limit = {
-					county = {
-						has_county_modifier = TFE_holy_well_level_3
-					}
-				}
-				county = {
-					root = {
-						set_variable = {
-							name = county_well
-							value = PREV
-						}
-					}
-				}
-			}
+		hidden_effect = {
+			title:c_macon = { save_scope_as = cluny_county }
 		}
-		else_if = {
-			limit = {
-				any_directly_owned_province = {
-					county = {
-						has_county_modifier = TFE_holy_well_level_2
-					}
-				}
-			}			
-			random_directly_owned_province = {
-				limit = {
-					county = {
-						has_county_modifier = TFE_holy_well_level_2
-					}
-				}
-				county = {
-					root = {
-						set_variable = {
-							name = county_well
-							value = PREV
-						}
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				any_directly_owned_province = {
-					county = {
-						has_county_modifier = TFE_holy_well_level_1
-					}
-				}
-			}			
-			random_directly_owned_province = {
-				limit = {
-					county = {
-						has_county_modifier = TFE_holy_well_level_1
-					}
-				}
-				county = {
-					root = {
-						set_variable = {
-							name = county_well
-							value = PREV
-						}
-					}
-				}
-			}
-		}
-		# Failsafe in case there's no appropriate county
-		else = {
-			root = {
-				set_variable = {
-					name = county_well
-					value = capital_county
-				}
-			}
-		}
-		create_story = story_TFE_visit_holy_well
+		custom_tooltip = bryten_cluny_abbey_donation_effect_tooltip_1	
+		trigger_event = { id = tapestry_french.002	}
 	}
 
 	ai_potential = {
@@ -884,19 +1018,27 @@ TFE_visit_holy_well = {# Visit a Holy Well
 		base = 30
 		modifier = {
 			add = 10
-			has_trait = zealous
-		}
-		modifier = {
-			add = -10
-			has_trait = cynical
-		}
-		modifier = {
-			add = 10
-			has_trait = diligent
+			has_trait = ambitious
 		}
 		modifier = {
 			add = -10
 			has_trait = lazy
+		}
+		modifier = {
+			add = 10
+			has_trait = generous
+		}
+		modifier = {
+			add = -10
+			has_trait = greedy
+		}
+		modifier = {
+			add = 25
+			has_trait = zealous
+		}
+		modifier = {
+			add = -25
+			has_trait = cynical
 		}
 	}
 }
