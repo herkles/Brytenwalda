@@ -140,8 +140,115 @@ tapestry_frankish.001 = {# splitting up the culture
 #######################################
 # Treaty of Meerssen
 #######################################
+# tapestry_frankish.020 = {# Emperor Lothair dies
+# 	scope = none
+# 	hidden = yes
+	
+# 	trigger = {
+# 		character:144998 = { NOT = { is_alive = yes } }
+# 		is_alive = yes
+# 		Not = { exists = global_var:bryten_lothair_passed_away }
+# 	}
+	
+# 	immediate = {
+# 		character:144998 = {
+# 			save_scope_as = lothair
+# 		}
+# 		set_global_variable = {
+# 			name = bryten_lothair_passed_away
+# 			value = yes
+# 		}
+# 		if = {# Lothair has no children
+# 			limit = {
+# 				NOT = { any_child = { is_heir_of = scope:lothair } }
+# 			}
+# 			set_global_variable = {
+# 				name = bryten_lothair_childless
+# 				value = yes
+# 			}
+# 			character:144998 = { save_scope_as = bryten_lothair_childless }
+# 		}
+# 	}
+
+# 	after = {
+# 		if = {# Childless leads to treaty
+# 			limit = {
+# 				current_date <= 881.1.1 # should be before 880.
+# 				exists = global_var:bryten_lothair_childless
+# 				AND = {# making sure that charles and louis are alive
+# 					character:90107 = { is_alive = yes }
+# 					character:90104 = { is_alive = yes }
+# 				} 
+# 			}
+# 			character:90107 = {
+# 				trigger_event = tapestry_frankish.021
+# 			}
+# 		}		
+# 	}
+# }
+# tapestry_frankish.021 = {# Charles the Bald sends treaty to Louis the German
+# 	type = character_event
+# 	title = tapestry_frankish.021.t
+# 	desc = tapestry_frankish.021.desc
+# 	theme = realm
+# 	left_portrait = {
+# 		character = root
+# 		animation = personality_bold
+# 	}
+
+# 	trigger = {# to make sure that Charles and Louis are alive; just to be safe
+# 		character:90107 = { is_alive = yes }
+# 		character:90104 = { is_alive = yes }
+# 	}
+	
+# 	option = {# Sign the Treaty
+# 		name = tapestry_frankish.021.a
+# 		ai_chance = { base = 95 }
+# 		hidden_effect = {
+# 			character:90104 = { trigger_event = tapestry_frankish.022 }
+# 		}
+# 	}
+# 	option = {# Don't sign the Treaty
+# 		name = tapestry_frankish.021.b
+# 		ai_chance = { base = 5 }
+# 		hidden_effect = {
+# 			character:90104 = { trigger_event = tapestry_frankish.023 }
+# 		}
+# 	}
+
+# }
+# tapestry_frankish.022 = {# the treaty of meerssen is signed
+# 	type = character_event
+# 	title = tapestry_frankish.022.t
+# 	desc = tapestry_frankish.022.desc
+# 	theme = realm
+	
+# 	left_portrait = {
+# 		character = root
+# 		animation = personality_bold
+# 	}
+	
+# 	immediate = { treaty_of_meerssen_scripted_effect = yes }
 
 
+# 	option = { # Ok
+# 		name = tapestry_frankish.022.a
+# 	}
+# }
+# tapestry_frankish.023 = {# the treaty of meerssen isn't signed
+# 	type = character_event
+# 	title = tapestry_frankish.023.t
+# 	desc = tapestry_frankish.023.desc
+# 	theme = realm
+# 	left_portrait = {
+# 		character = root
+# 		animation = personality_bold
+# 	}
+	
+# 	option = { # Ok
+# 		name = tapestry_frankish.023.a
+# 	}
+# }
 
 
 

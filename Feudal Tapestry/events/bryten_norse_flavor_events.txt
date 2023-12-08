@@ -26,6 +26,7 @@ bryten_norse.001 = {# what to do with the grove
 			}
 		}
 		religion = religion:christianity_religion
+		NOT = { has_character_flag = had_event_bryten_norse_001 }
 	}
 
 	weight_multiplier = {
@@ -44,8 +45,20 @@ bryten_norse.001 = {# what to do with the grove
 
 	immediate = {
 		add_character_flag = {
-			flag = had_event_fp1_yearly_001
+			flag = had_event_bryten_norse_001
 			days = 10950
+		}
+		random_directly_owned_province = {
+			limit = {
+				county = {
+					OR = {
+						has_county_modifier = sacred_grove_level_1
+						has_county_modifier = sacred_grove_level_2
+						has_county_modifier = sacred_grove_level_3
+					}
+				}
+			}
+			save_scope_as = bryten_sacred_grove_county
 		}
 	}
 
@@ -83,7 +96,7 @@ bryten_norse.001 = {# what to do with the grove
 					county = { has_county_modifier = sacred_grove_level_1 }
 				}
 			}
-			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_1 }
+			scope:bryten_sacred_grove_county = { remove_county_modifier = sacred_grove_level_1 }
 		}
 		if = {
 			limit = {
@@ -91,7 +104,7 @@ bryten_norse.001 = {# what to do with the grove
 					county = { has_county_modifier = sacred_grove_level_2 }
 				}
 			}
-			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_2 }
+			scope:bryten_sacred_grove_county = { remove_county_modifier = sacred_grove_level_2 }
 		}
 		if = {
 			limit = {
@@ -99,7 +112,7 @@ bryten_norse.001 = {# what to do with the grove
 					county = { has_county_modifier = sacred_grove_level_3 }
 				}
 			}
-			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_3 }
+			scope:bryten_sacred_grove_county = { remove_county_modifier = sacred_grove_level_3 }
 		}	
 
 		stress_impact = {
@@ -168,7 +181,7 @@ bryten_norse.001 = {# what to do with the grove
 					county = { has_county_modifier = sacred_grove_level_1 }
 				}
 			}
-			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_1 }
+			scope:bryten_sacred_grove_county = { remove_county_modifier = sacred_grove_level_1 }
 		}
 		if = {
 			limit = {
@@ -176,7 +189,7 @@ bryten_norse.001 = {# what to do with the grove
 					county = { has_county_modifier = sacred_grove_level_2 }
 				}
 			}
-			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_2 }
+			scope:bryten_sacred_grove_county = { remove_county_modifier = sacred_grove_level_2 }
 		}
 		if = {
 			limit = {
@@ -184,8 +197,9 @@ bryten_norse.001 = {# what to do with the grove
 					county = { has_county_modifier = sacred_grove_level_3 }
 				}
 			}
-			any_directly_owned_province = { remove_county_modifier = sacred_grove_level_3 }
-		}	
+			scope:bryten_sacred_grove_county = { remove_county_modifier = sacred_grove_level_3 }
+		}
+			
 		stress_impact = {
 			zealous = minor_stress_impact_loss
 			wrathful = minor_stress_impact_gain

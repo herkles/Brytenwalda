@@ -1417,8 +1417,181 @@ embrace_tuscan_culture_effect = {
 		}
 	}
 }
+#######################################
+#									  #
+#         Frankish Effects	  	      #
+#									  #
+#######################################
+# treaty_of_meerssen_scripted_effect = {
+# 	# Get the kings
+# 	title:k_east_francia.holder = { save_scope_as = east_francia_king }
+# 	title:k_france.holder = { save_scope_as = west_francia_king }
+# 	title:k_italy.holder = { save_scope_as = italy_king }
+
+# 	# Handle the Italian Counties
+# 	title:c_viennois.holder = { add_to_list = italian_vassals }
+
+# 	# Handle the Italian Counties for if Louis of Italy isn't at war
+# 	if = {
+# 		limit = { scope:italy_king = { is_at_war = no } }
+# 		title:c_lyon.holder = { add_to_list = italian_vassals }
+# 		title:c_viviers.holder = { add_to_list = italian_vassals }
+# 		title:c_besancon.holder = { add_to_list = italian_vassals }
+# 	}
+# 	else = {
+# 		title:c_lyon.holder = { add_to_list = french_vassals }
+# 		title:c_viviers.holder = { add_to_list = french_vassals }
+# 		title:c_besancon.holder = { add_to_list = french_vassals }
+# 	}
+
+# 	# Handle the French Counties
+# 	title:c_luxembourg.holder = { add_to_list = french_vassals }
+# 	title:c_liege.holder = { add_to_list = french_vassals }
+# 	title:c_brabant.holder = { add_to_list = french_vassals }
+# 	title:c_antwerpen.holder = { add_to_list = french_vassals }
+
+# 	# Handle the German Counties
+# 	title:c_cologne.holder = { add_to_list = german_vassals }
+# 	title:c_aachen.holder = { add_to_list = german_vassals }
+# 	title:c_trier.holder = { add_to_list = german_vassals }
+# 	title:c_nedersticht.holder = { add_to_list = german_vassals }
+# 	title:d_holland.holder = { add_to_list = german_vassals }
+# 	title:c_guelders.holder = { add_to_list = german_vassals }
+# 	title:c_zutphen.holder = { add_to_list = german_vassals }
+# 	title:c_dole.holder = { add_to_list = german_vassals }
+# 	title:c_bern.holder = { add_to_list = german_vassals }
+# 	title:c_aargau.holder = { add_to_list = german_vassals }
+# 	title:c_koblenz.holder = { add_to_list = german_vassals }
+# 	title:c_strassburg.holder = { add_to_list = german_vassals }
+# 	title:c_sundgau.holder = { add_to_list = german_vassals }
+# 	title:c_trier.holder = { add_to_list = german_vassals }
+
+# 	# Partioning the direct lands of Lothair
+
+# 	if = {
+# 		limit = { scope:italy_king = { is_at_war = yes } }
+# 		# France gets this
+# 		title:c_vaucouleurs = { add_to_list = french_lothair_land }
+# 		title:c_bar = { add_to_list = french_lothair_land }
+# 		title:c_briey = { add_to_list = french_lothair_land }
+# 		# Germany gets this
+# 		title:c_nancy = { add_to_list = german_lothair_land }
+# 		title:c_neufchateau = { add_to_list = german_lothair_land }
+# 	}
+# 	else_if = {
+# 		limit = { scope:italy_king = { is_at_war = no } }
+# 		title:c_vaucouleurs = { add_to_list = italy_lothair_land }
+# 		title:c_bar = { add_to_list = italy_lothair_land }
+# 		title:c_briey = { add_to_list = italy_lothair_land }
+# 		title:c_nancy = { add_to_list = italy_lothair_land }
+# 		title:c_neufchateau = { add_to_list = italy_lothair_land }
+# 	}
+
+# 	# Now assign the Vassals
+# 	every_in_list = {# Italian Vassals
+# 		list = italian_vassals
+
+# 		create_title_and_vassal_change = {
+# 			type = granted
+# 			save_scope_as = treaty_italy_change
+# 			add_claim_on_loss = no
+# 		}
+# 		change_liege = {
+# 			liege = scope:italy_king
+# 			change = scope:treaty_italy_change
+# 		}
+# 		resolve_title_and_vassal_change = scope:treaty_italy_change
+# 	}
+# 	every_in_list = {# French Vassals
+# 		list = french_vassals
+
+# 		create_title_and_vassal_change = {
+# 			type = granted
+# 			save_scope_as = treaty_france_change
+# 			add_claim_on_loss = no
+# 		}
+# 		change_liege = {
+# 			liege = scope:west_francia_king
+# 			change = scope:treaty_france_change
+# 		}
+# 		resolve_title_and_vassal_change = scope:treaty_france_change
+# 	}
+# 	every_in_list = {# German Vassals
+# 		list = german_vassals
+
+# 		create_title_and_vassal_change = {
+# 			type = granted
+# 			save_scope_as = treaty_german_change
+# 			add_claim_on_loss = no
+# 		}
+# 		change_liege = {
+# 			liege = scope:east_francia_king
+# 			change = scope:treaty_german_change
+# 		}
+# 		resolve_title_and_vassal_change = scope:treaty_german_change
+# 	}
+	
+# 	# Now assign the Vassals
+# 	every_in_list = {# Italian lands
+# 		list = italian_vassals
+
+# 		create_title_and_vassal_change = {
+# 			type = granted
+# 			save_scope_as = treaty_italy_change
+# 			add_claim_on_loss = no
+# 		}
+# 		change_title_holder = {
+# 			liege = scope:italy_king
+# 			change = scope:treaty_italy_change
+# 		}
+# 		resolve_title_and_vassal_change = scope:treaty_italy_change
+# 	}
+# 	every_in_list = {# French lands
+# 		list = french_vassals
+
+# 		create_title_and_vassal_change = {
+# 			type = granted
+# 			save_scope_as = treaty_france_change
+# 			add_claim_on_loss = no
+# 		}
+# 		change_title_holder = {
+# 			liege = scope:west_francia_king
+# 			change = scope:treaty_france_change
+# 		}
+# 		resolve_title_and_vassal_change = scope:treaty_france_change
+# 	}
+# 	every_in_list = {# German lands
+# 		list = german_vassals
+
+# 		create_title_and_vassal_change = {
+# 			type = granted
+# 			save_scope_as = treaty_german_change
+# 			add_claim_on_loss = no
+# 		}
+# 		change_title_holder = {
+# 			liege = scope:east_francia_king
+# 			change = scope:treaty_german_change
+# 		}
+# 		resolve_title_and_vassal_change = scope:treaty_german_change
+# 	}
 
 
+# 	scope:italy_king = {# Louis hates the kings of west and east francia for denying his inheritance
+# 		add_opinion = {
+# 			target = scope:east_francia_king
+# 			modifier = hates_denied_inheritance
+# 		}
+# 		add_opinion = {
+# 			target = scope:west_francia_king
+# 			modifier = hates_denied_inheritance
+# 		}
+# 	}
+
+
+
+
+
+# }
 
 
 
