@@ -82,7 +82,7 @@
  bryten_decision.0014.a:0 "Great to hear!"
  bryten_decision.0014.tooltip:0 "You, and future [rulers|E] of [county.GetNameNoTier], will now be able to take a [decision|E] to $TFE_visit_holy_well$ for as long as this [county|E] has this [county_modifier|E]."
  
-bryten_decision.0015.t:0 "Visiting the Holy Well"
+ bryten_decision.0015.t:0 "Visiting the Holy Well"
  bryten_decision.0015.desc:0 "For as long as anyone can remember, sacred springs and holy wells have played an important role in the folklore and daily life of the [ROOT.Char.GetCulture.GetName] people. Many people visit these wells, springs, or small pools of water scattered about the land for religious reasons. I am no different, as I have decided to visit a holy well of some local renown in [county.GetNameNoTier].\n\nOnce I arrive at the site, though it is relatively small, it is serene and humbling. I feel a sense of spiritual and physical peace that I haven't felt in a while. I pray to [ROOT.Char.GetFaith.PantheonTerm] in the [ROOT.Char.GetFaith.GetAdjective] manner, and leave offerings before I depart."
  bryten_decision.0015.a:0 "It was a wonderful experience, all in all."
  bryten_decision.0015.toast:0 "The holy well's waters bless you"
@@ -101,7 +101,18 @@ bryten_decision.0015.t:0 "Visiting the Holy Well"
  bryten_decision.0017.a:0 "It was a wonderful experience, all in all."
  activity_vist_sacred_grove:0 "Visit to a sacred grove"
  activity_vist_sacred_grove_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Visit to a sacred grove"
+#######################################
+# Creating Gotaland
+#######################################
+ bryten_decision.0018.t:0 "The Kingdom of Gotaland has been created"
+ bryten_decision.0018.desc:0 "The lands of the Geats are now ruling their own kingdom. No longer are we to be ruled by Swedes, Danes, or Norwegians, our ancient lands now have the dignity of a kingdom. The banners of Gotaland now fly throughout my kingdom."
+ bryten_decision.0018.a:1 "Glory to Gotaland!"
 
+ bryten_decision.0019.t:0 "The Kingdom of Gotaland has been created"
+ bryten_decision.0019.start.desc:0 "In Gotaland,"
+ bryten_decision.0019.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', gotaland_creator)] [gotaland_creator.GetTitledFirstName]"
+ bryten_decision.0019.former.desc:0 "[gotaland_creator.GetTitledFirstName]"
+ bryten_decision.0019.former.desc:0 "has been crowned king of Gotaland, uniting the Geats under [gotaland_creator.GetHerHis] Banner. [gotaland_creator.GetHerHis|U] name will surely live on for centuries, but will [gotaland_creator.GetSheHe] be remembered as a hero or a tyrant? Only [ROOT.Char.GetFaith.FateGodName] knows."
 
 
 

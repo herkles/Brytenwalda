@@ -725,4 +725,55 @@ bryten_decision.0017 = {# Visiting a Sacred Grove
 	}
 
 }
+#######################################
+# Forming Gotaland
+#######################################
+bryten_decision.0018 = {# I create Gotaland
+	type = character_event
+	title = bryten_decision.0018.t
+	desc = bryten_decision.0018.desc
+	theme = realm
+	override_background = { reference = fp1_throneroom_nontribal }
 
+	left_portrait = {
+		character = scope:kent_restorer
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		create_kingdom_gotland_decision_scripted_effect = yes
+	}
+	
+	option = {# Long live Gotaland
+		name = bryten_decision.0018.a
+	}
+}
+bryten_decision.0019 = {# Someone has created Gotaland
+	type = character_event
+	title = bryten_decision.0019.t
+	desc = {
+		desc = bryten_decision.0019.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:gotaland_creator }
+				}
+				desc = bryten_decision.0019.relation_former.desc
+			}
+			desc = bryten_decision.0019.former.desc
+		}	
+		desc = bryten_decision.0019.end.desc		
+	}
+	theme = realm
+	override_background = { reference = fp1_throneroom_nontribal }
+
+	left_portrait = {
+		character = scope:gotaland_creator
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}

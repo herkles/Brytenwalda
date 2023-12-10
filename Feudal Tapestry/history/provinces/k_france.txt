@@ -112,7 +112,7 @@
 	religion = catholic
 	holding = castle_holding
 	800.1.1 = {
-		special_building_slot = bryten_building_amiens_cathedral_01		special_building = bryten_building_amiens_cathedral_02
+		special_building_slot = bryten_building_amiens_cathedral_01
 		special_building = bryten_building_amiens_cathedral_01
 	}
 	900.1.1 = { culture = french }
@@ -783,6 +783,13 @@
 }
 2304 = {# CLUNY
 	holding = church_holding
+	800.1.1 = {
+		special_building_slot = bryten_building_cluny_abbey_01
+	}
+	915.1.1 = {
+		special_building = bryten_building_cluny_abbey_01
+	}	
+
 }
 2303 = {# SEMUR EN BRIONNAIS
 	holding = city_holding

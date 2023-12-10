@@ -901,69 +901,8 @@ embrace_tuscan_culture_decision = {
 #############################################
 # French Decisions
 #############################################
-bryten_build_cluny_abbey = {# Build the Abbey of Cluny
-	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
-	ai_check_interval = 64
-	cooldown = { days = 7300 }
-	desc = bryten_build_saint_edmunds_desc
-	
-	is_shown = {
-		is_ruler = yes
-		is_landed = yes
-		root.faith = faith:catholic
-		NOT = { exists = global_var:tapestry_cluny_abbey_founded }
-		capital_province = {# should be in Western Europe
-			OR = {
-				geographical_region = world_europe_west_britannia
-				geographical_region = world_europe_north
-				geographical_region = world_europe_west_francia
-				geographical_region = custom_frisia
-			}
-		}
-		any_sub_realm_county = { this = title:c_macon }
-	}
-	
-	is_valid = {
-		root.faith = faith:catholic
-		any_sub_realm_county = { this = title:c_macon }
-		culture = {
-			has_innovation = innovation_manorialism
-		}
-		gold >= medium_gold_value
-	}
-	
-	is_valid_showing_failures_only = {
-		is_available_adult = yes
-	}
-
-	effect = {
-		custom_tooltip = bryten_build_cluny_abbey_tooltip
-		trigger_event = { id = tapestry_french.001 }
-	}
-
-	cost = { 
-		gold = { value = medium_gold_value } # Will depend
-	}	
-
-	ai_potential = {
-		short_term_gold > standard_activity_cost
-	}
-
-	ai_will_do = {
-		base = 30
-		modifier = {
-			add = 5
-			has_trait = zealous
-		}
-		modifier = {
-			add = -15
-			has_trait = cynical
-		}
-	}
-}
 bryten_cluny_abbey_donation = {# Donate to the Abbey of Cluny
 	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
-
 	ai_check_interval = 64
 
 	cooldown = { days = 5475 }
@@ -974,7 +913,10 @@ bryten_cluny_abbey_donation = {# Donate to the Abbey of Cluny
 		is_landed = yes	
 		highest_held_title_tier > tier_barony
 		root.faith = faith:catholic
-		exists = global_var:tapestry_cluny_abbey_founded
+		custom_description = {
+			text = bryten_cluny_must_be_built
+			title:b_cluny.title_province = { has_special_building = yes }
+		}
 		capital_province = {# should be in Western Europe
 			OR = {
 				geographical_region = world_europe_west_britannia
@@ -988,6 +930,10 @@ bryten_cluny_abbey_donation = {# Donate to the Abbey of Cluny
 	is_valid = {
 		root.faith = faith:catholic
 		gold >= 40
+		custom_description = {
+			text = bryten_cluny_must_be_built
+			title:b_cluny.title_province = { has_special_building = yes }
+		}
 		capital_province = {# should be in Western Europe
 			OR = {
 				geographical_region = world_europe_west_britannia
@@ -1316,6 +1262,80 @@ vist_sacred_grove = {# Visit a Sacred Grove
 		}
 	}
 }
+create_kingdom_gotaland_decision = {# Create the Kingdom of Gotaland
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	major = yes
+	ai_check_interval = 120
 
+	desc = create_kingdom_gotaland_decision_desc
+	selection_tooltip = create_kingdom_gotaland_decision_tooltip
+
+	is_shown = {
+		has_culture = culture:gaet # has to be a geat
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_gotaland_kingdom
+			}
+		}
+		NOT = { highest_held_title_tier >= tier_kingdom }
+		custom_tooltip = {
+			text = capital_in_gothaland_region_tooltip
+			capital_province = { geographical_region = custom_gaetland } 
+		}
+
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = capital_in_gothaland_region_tooltip
+			capital_province = { geographical_region = custom_gaetland } 
+		}
+		is_independent_ruler = yes
+		prestige_level >= high_prestige_level
+		completely_controls = title:d_vastergotland
+		completely_controls = title:d_ostergotland
+		completely_controls = title:d_smaland
+		has_culture = culture:gaet
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			create_kingdom_gotland_decision_scripted_effect = yes
+		}
+		save_scope_as = gotaland_creator
+		trigger_event = { id = bryten_decision.0018 }
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = bryten_decision.0019
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_gotaland_kingdom
+			}
+		}
+	}
+
+	cost = {
+		gold = 300
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
 
 

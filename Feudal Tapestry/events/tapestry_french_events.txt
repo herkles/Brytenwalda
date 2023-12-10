@@ -3,31 +3,6 @@
 #######################################
 # Abby of Cluny
 #######################################
-tapestry_french.001 = {# Founding the Abbey of Cluny 
-	type = character_event
-	title = tapestry_french.001.t
-	desc = tapestry_french.001.desc
-	theme = faith
-	left_portrait = {
-		character = root
-		animation = happiness
-	}
-	override_background = { reference = temple_church }
-
-	immediate = {
-		title:b_cluny = { save_scope_as = tapestry_cluny_abbey	}
-		set_global_variable = {
-			name = tapestry_cluny_abbey_founded
-			value = yes
-		}
-	}
-
-	option = {# Ok
-		name = tapestry_french.001.abbey
-		custom_tooltip = tapestry_donate_cluny_available_tooltip
-	}
-		
-}
 tapestry_french.002 = {# Donating to the Abby of Cluny.
 	type = character_event
 	title = tapestry_french.002.t
@@ -163,7 +138,6 @@ tapestry_french.002 = {# Donating to the Abby of Cluny.
 		}
 	}	
 }
-
 #######################################
 # Treaty of Meerssen
 #######################################

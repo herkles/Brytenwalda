@@ -2367,79 +2367,6 @@ bryten_building_vezelay_abbey_01 = {# Vézelay Abbey
 	
 	type = special
 }
-bryten_building_pont_gard_01 = {# Pont du Gard
-	construction_time = very_slow_construction_time
-
-	type_icon = "icon_building_qanats.dds"
-	
-	can_construct_potential = {
-		building_requirement_tribal = no
-	}
-	
-	can_construct = {
-		OR = {
-			scope:holder = {
-				religion = religion:christianity_religion
-			}
-			custom_description = {
-				text = holy_site_building_trigger
-				barony = {
-					is_holy_site_of = scope:holder.faith
-				}
-			}
-		}
-		scope:holder = {
-			culture = {
-				has_innovation = innovation_crop_rotation
-			}
-		}
-	}
-	
-	is_enabled = {
-		custom_description = {
-			text = holy_site_christian_or_holy_site_trigger
-			OR = {
-				scope:holder = {
-					religion = religion:christianity_religion
-				}
-				custom_description = {
-					text = holy_site_building_trigger
-					barony = {
-						is_holy_site_of = scope:holder.faith
-					}
-				}
-			}
-		}
-	}
-	
-	show_disabled = yes
-	
-	cost_gold = 1000
-
-	character_modifier = {
-		monthly_dynasty_prestige_mult = 0.05
-		learning_per_piety_level = 2
-		clergy_opinion = 5
-		religious_vassal_opinion = 10
-		tyranny_gain_mult = -0.2
-	}
-	
-	county_modifier = {
-		tax_mult = 0.2
-		development_growth_factor = 0.3
-		development_growth = 0.2
-	}
-	
-	province_modifier = {
-		monthly_income = 3
-	}
-	
-	ai_value = {
-		base = 100
-	}
-	
-	type = special
-}
 bryten_building_amiens_cathedral_01 = {# Amiens Cathedral
 	construction_time = very_slow_construction_time
 
@@ -3247,8 +3174,79 @@ bryten_building_malo_walls_01 = {# Saint malo Cathedral
 	
 	type = special
 }
+bryten_building_cluny_abbey_01 = {# Cluny Abbey
+	construction_time = very_slow_construction_time
 
+	type_icon = "icon_building_monastic_schools.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
 
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.05
+		learning_per_piety_level = 2
+		clergy_opinion = 5
+		religious_vassal_opinion = 10
+		tyranny_gain_mult = -0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+#######################################
+#									  #
+#      Occitania Special Buildings       #
+#									  #
+#######################################
 bryten_building_bordeaux_cathedral_01 = {# Bordeaux Cathedral
 	construction_time = very_slow_construction_time
 
@@ -3790,6 +3788,79 @@ bryten_building_cite_carcassonne_01 = {# cite de Carcassonne
 	
 	type = special
 }
+bryten_building_pont_gard_01 = {# Pont du Gard
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_building_qanats.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_dynasty_prestige_mult = 0.05
+		learning_per_piety_level = 2
+		clergy_opinion = 5
+		religious_vassal_opinion = 10
+		tyranny_gain_mult = -0.2
+	}
+	
+	county_modifier = {
+		tax_mult = 0.2
+		development_growth_factor = 0.3
+		development_growth = 0.2
+	}
+	
+	province_modifier = {
+		monthly_income = 3
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
 #######################################
 #									  #
 #      German Special Buildings       #
@@ -3923,8 +3994,7 @@ bryten_building_trier_cathedral_01 = {# Trier Cathedral
 		tax_mult = 0.2
 		development_growth_factor = 0.3
 		development_growth = 0.3
-	}
-	
+	}	
 	province_modifier = {
 		monthly_income = 2
 	}
@@ -4219,3 +4289,143 @@ bryten_building_bellinzona_01 = {# Castles of Bellinzona
 	
 	type = special
 }
+
+bryten_building_paderborn_cathedral_01 = {# Paderborn Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cologne_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	next_building = bryten_building_bordeaux_cathedral_02
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+bryten_building_paderborn_cathedral_02 = {# Paderborn Cathedral
+	construction_time = very_slow_construction_time
+
+	type_icon = "icon_structure_cologne_cathedral.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+	
+	show_disabled = yes
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 10
+		monthly_county_control_change_factor = 0.05
+	}
+	
+	county_modifier = {
+		tax_mult = 0.1
+		development_growth_factor = 0.1
+		development_growth = 0.1
+	}
+	
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
+#######################################
+#									  #
+#      German Special Buildings       #
+#									  #
+#######################################
+
+
+
