@@ -298,7 +298,6 @@ bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
 	desc = bryten_build_saint_edmunds_desc
 	
 	is_shown = {
-		
 		is_ruler = yes
 		is_landed = yes
 		religion = religion:christianity_religion
@@ -308,9 +307,7 @@ bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
 	}
 	
 	is_valid = {
-		culture = {
-			has_innovation = innovation_manorialism
-		}
+		culture = {	has_innovation = innovation_manorialism	}
 		gold >= medium_gold_value
 	}
 	
@@ -611,6 +608,67 @@ TFE_visit_holy_well = {# Visit a Holy Well
 		modifier = {
 			add = -10
 			has_trait = lazy
+		}
+	}
+}
+bryten_cinque_ports_exempt_tax = {# Set up the Cinque ports
+	picture = "gfx/interface/illustrations/decisions/decision_european_port.dds"
+	ai_check_interval = 64
+	cooldown = { days = 3650 }
+	desc = bryten_cinque_ports_exempt_tax_desc
+	
+	is_shown = {
+		has_title = title:k_england
+		is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			is_coastal_county = yes
+		}
+		NOT = { exists = global_var:bryten_cinque_ports_established	}
+	}
+	
+	is_valid = {
+		any_held_title = {
+			tier = tier_county
+			is_coastal_county = yes
+		}
+		OR = {
+			prestige_level >= 2
+			custom_description = {
+				text = "is_king_or_emperor"
+				highest_held_title_tier >= tier_kingdom
+			}
+		}
+		culture = {	has_innovation = innovation_development_02 }
+	}
+	
+	is_valid_showing_failures_only = { is_available_adult = yes }
+
+	effect = {
+		show_as_tooltip = {	bryten_establish_cinque_ports_effect = yes	}
+		trigger_event = { id = bryten_england.200 }
+	}
+
+	cost = { prestige = { value = major_prestige_value } }	
+	ai_potential = { prestige > major_prestige_value }
+
+	ai_will_do = {
+		base = 20
+		modifier = {
+			add = -8
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 8
+			has_trait = just
+		}
+		modifier = {
+			add = -8
+			has_trait = greedy
+		}
+		modifier = {
+			add = 8
+			has_trait = generous
 		}
 	}
 }

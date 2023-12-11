@@ -1794,7 +1794,6 @@ bryten_england.033 = {# Housecarls for Anglo-Saxons
 
 
 }
-
 #######################################
 # Anglo-Norse culture Forming
 #######################################
@@ -3381,6 +3380,32 @@ bryten_england.143 = {# St. Cuthbert's Gospel of John.
 	}
 		
 }
+#######################################
+# Cinque Port Events
+#######################################
+bryten_england.200 = {
+	type = character_event
+	title = bryten_england.200.t
+	desc = bryten_england.200.desc
+	theme = stewardship_wealth_focus
+	override_background = { reference = docks }
+
+	right_portrait = {
+		character = root
+		animation = personality_compassionate
+	}
+
+	immediate = {
+		bryten_establish_cinque_ports_effect = yes
+	}
+
+	option = {
+		name = bryten_england.200.a
+	}
+
+}
+
+
 #######################################
 # Maitance events
 #######################################

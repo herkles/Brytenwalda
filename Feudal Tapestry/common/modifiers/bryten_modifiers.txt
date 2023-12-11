@@ -169,31 +169,21 @@ bryten_saint_andrew_infrastructure_distant_low = {
 	monthly_county_control_change_add = 0.02
 	monthly_county_control_change_factor = 0.02
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+##########################################
+# Cinque Ports
+##########################################
+bryten_cinque_port_modifier = {
+	icon = letter_positive
+	development_growth = 0.1
+	development_growth_factor = 0.1
+	tax_mult = -0.3
+	embarkation_cost_mult = -0.1
+	coastal_sea_travel_danger = -10
+}
+bryten_cinque_port_creator_modifier = {
+	icon = letter_positive
+	county_opinion_add = 3
+}
 
 
 

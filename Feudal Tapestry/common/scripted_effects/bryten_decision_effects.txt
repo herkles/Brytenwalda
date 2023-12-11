@@ -897,6 +897,26 @@ embrace_english_county_culture_effect = {# counts embracing englishness
 		}
 	}
 }
+bryten_establish_cinque_ports_effect = {
+	add_character_modifier = {
+		modifier = bryten_cinque_port_creator_modifier
+		years = 10
+	}
+	stress_impact = {
+		greedy = minor_stress_impact_gain
+		arbitrary = miniscule_stress_impact_gain
+	}
+	title:c_sussex = {
+		add_county_modifier = {	modifier = bryten_cinque_port_modifier }
+	}
+	title:c_kent = { 
+		add_county_modifier = { modifier = bryten_cinque_port_modifier	}
+	}
+}
+
+
+
+
 #######################################
 #									  #
 #         Irish Effects  	      	  #
@@ -972,7 +992,6 @@ integrate_strathclyde_kingdom_effect = {
 		}
 	}
 }
-
 bryten_saint_andrew_infrastructure_close_effect = {
 	if = {
 		limit = { religion = religion:christianity_religion }
@@ -1149,9 +1168,6 @@ bryten_saint_andrew_infrastructure_distant_low_effect = {
 		}
 	}	
 }
-
-
-
 #######################################
 #									  #
 #         Brythonic Effects  	      #
