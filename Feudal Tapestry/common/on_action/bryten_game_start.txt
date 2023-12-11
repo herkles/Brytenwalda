@@ -171,6 +171,15 @@ bryten_setup_after_game_start_on_actions = {
 				value = yes
 			}
 		}
+		if = {# King Edward the Confessor set up the Cinque Ports
+			limit = { current_date >= 1055.1.1 }
+			set_global_variable = {
+				name = bryten_cinque_ports_established
+				value = yes
+			}
+			title:c_sussex = { add_county_modifier = {	modifier = bryten_cinque_port_modifier } }
+			title:c_kent = { add_county_modifier = { modifier = bryten_cinque_port_modifier	} }
+		}		
 
 
 

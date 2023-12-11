@@ -137,35 +137,30 @@ bryten_way_of_saint_andrew_supporter_nonchristian = {
 bryten_saint_andrew_infrastructure_close = {
 	icon = piety_positive
 	tax_mult = 0.12
-	development_growth_factor = 0.15
 	monthly_county_control_change_add = 0.3
 	monthly_county_control_change_factor = 0.2
 }
 bryten_saint_andrew_infrastructure_midrange_high = {
 	icon = piety_positive
 	tax_mult = 0.08
-	development_growth_factor = 0.1
 	monthly_county_control_change_add = 0.15
 	monthly_county_control_change_factor = 0.15
 }
 bryten_saint_andrew_infrastructure_distant_high = {
 	icon = piety_positive
 	tax_mult = 0.06
-	development_growth_factor = 0.08
 	monthly_county_control_change_add = 0.1
 	monthly_county_control_change_factor = 0.1
 }
 bryten_saint_andrew_infrastructure_midrange_low = {
 	icon = piety_positive
 	tax_mult = 0.04
-	development_growth_factor = 0.06
 	monthly_county_control_change_add = 0.05
 	monthly_county_control_change_factor = 0.05
 }
 bryten_saint_andrew_infrastructure_distant_low = {
 	icon = piety_positive
 	tax_mult = 0.02
-	development_growth_factor = 0.04
 	monthly_county_control_change_add = 0.02
 	monthly_county_control_change_factor = 0.02
 }
@@ -177,14 +172,57 @@ bryten_cinque_port_modifier = {
 	development_growth = 0.1
 	development_growth_factor = 0.1
 	tax_mult = -0.3
-	embarkation_cost_mult = -0.1
-	coastal_sea_travel_danger = -10
 }
 bryten_cinque_port_creator_modifier = {
 	icon = letter_positive
 	county_opinion_add = 3
 }
-
+##########################################
+# Way of Saint Olaf
+##########################################
+bryten_way_of_saint_olaf_supporter = {
+	icon = piety_positive
+	monthly_piety = 0.2
+	realm_priest_opinion = 5
+	religious_vassal_opinion = 5
+	religious_head_opinion = 5
+	christianity_religion_opinion = 5
+}
+bryten_way_of_saint_olaf_supporter_nonchristian = {
+	icon = piety_positive
+	monthly_prestige = 0.2
+	christianity_religion_opinion = 5
+}
+bryten_saint_olaf_infrastructure_close = {
+	icon = piety_positive
+	tax_mult = 0.12
+	monthly_county_control_change_add = 0.3
+	monthly_county_control_change_factor = 0.2
+}
+bryten_saint_olaf_infrastructure_midrange_high = {
+	icon = piety_positive
+	tax_mult = 0.08
+	monthly_county_control_change_add = 0.15
+	monthly_county_control_change_factor = 0.15
+}
+bryten_saint_olaf_infrastructure_distant_high = {
+	icon = piety_positive
+	tax_mult = 0.06
+	monthly_county_control_change_add = 0.1
+	monthly_county_control_change_factor = 0.1
+}
+bryten_saint_olaf_infrastructure_midrange_low = {
+	icon = piety_positive
+	tax_mult = 0.04
+	monthly_county_control_change_add = 0.05
+	monthly_county_control_change_factor = 0.05
+}
+bryten_saint_olaf_infrastructure_distant_low = {
+	icon = piety_positive
+	tax_mult = 0.02
+	monthly_county_control_change_add = 0.02
+	monthly_county_control_change_factor = 0.02
+}
 
 
 

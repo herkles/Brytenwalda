@@ -3397,6 +3397,10 @@ bryten_england.200 = {
 
 	immediate = {
 		bryten_establish_cinque_ports_effect = yes
+		set_global_variable = {
+			name = bryten_cinque_ports_established
+			value = yes
+		}
 	}
 
 	option = {
@@ -3404,8 +3408,6 @@ bryten_england.200 = {
 	}
 
 }
-
-
 #######################################
 # Maitance events
 #######################################

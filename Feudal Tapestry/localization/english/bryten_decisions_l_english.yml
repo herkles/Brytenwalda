@@ -52,6 +52,7 @@
   establish_norman_adminstration_tooltip:0 "The Duchy borders will be redrawn from the English Earldoms, and will require different innovations to unlock."
 
   english_adoption_after_1200_tooltip:0 "The current year is after 1200."
+
 #######################################
 # General England
 #######################################
@@ -64,11 +65,6 @@
   bryten_cinque_ports_exempt_tax_desc:0 "In the South East of England, there are a number of towns that are being called the Cinque Ports by the French on the continent. I could promote their economy by exempting them from taxation and granting other privileges which in turn shall promote economic growth in the region, as well as helping with ships in times of war. "
   bryten_cinque_ports_exempt_tax_tooltip:1 "Let us support the towns."
   bryten_cinque_ports_exempt_tax_confirm:0 "Time for some tax cuts!"
-
-
-
-
-
 
 #######################################
 # Gaelic Ireland
@@ -117,6 +113,7 @@
   bryten_saint_andrew_routes_decision_counties.distant.high.tooltip:0 "Gain [GetModifier('bryten_saint_andrew_infrastructure_midrange_low').GetNameWithTooltip] for #V 10#! years" 
   bryten_saint_andrew_routes_decision_counties.distant.low:0 "That are a long distance from St Andrew with low [control|E]"
   bryten_saint_andrew_routes_decision_counties.distant.low.tooltip:0 "Gain [GetModifier('bryten_saint_andrew_infrastructure_distant_low').GetNameWithTooltip] for #V 10#! years" 
+
 #######################################
 # Pilgrimages
 #######################################
@@ -148,6 +145,7 @@
   embrace_tuscan_culture_decision_desc:0 "The lands of Tuscany are a rich and fertile land, the cities of Pisa, Florence, and Siena flow with learning and culture. Wine grows plentiful here. Let us embrace the customs of the people of Tuscany."
   embrace_tuscan_culture_decision_tooltip:0 "The Rise of Tuscany shall begin."
   embrace_tuscan_culture_decision_confirm:0 "Glory to Tuscany"
+
 #######################################
 # Norse decisions
 #######################################
@@ -156,6 +154,34 @@
   create_kingdom_gotaland_decision_confirm:0 "Create Gotaland"
   create_kingdom_gotaland_decision_tooltip:0 "Glory to the Gaets"
   capital_in_gothaland_region_tooltip:0 "Your [realm_capital|E] is in a Geatish Homeland"
+
+  # St olaf Ways
+  bryten_saint_olaf_routes_decision:0 "Support the Way of Saint Olaf"
+  bryten_saint_olaf_routes_decision_tooltip:0 "The Way of Saint Olaf through my lands... could I do something to improve it?"
+  bryten_saint_olaf_routes_decision_desc:0 "The Way of Saint Olaf that goes to the [ROOT.Char.GetFaith.GetReligion.GetAdjective] pilgrimage site of Nidaros passes through my lands. These networks could always use infrastructural improvements. For example, I can fund road repairs so pilgrims travel efficiently, or build hostels that can provide them shelter."
+  bryten_saint_olaf_routes_decision_nonchristian_desc:0 "The Way of Saint Olaf is a pilgrimage route used by the followers of Christ, including those who live in my lands. Though I do not share their beliefs, I want to provide infrastructural improvements to these networks. For example, I can fund road repairs so pilgrims travel efficiently, or build hostels that can provide them shelter."
+
+  bryten_saint_olaf_routes_decision_effect_tooltip_1:0 "The [piety|E] you gain and the cost of this [decision|E] depends on how many [counties|E] you own in [GetGeographicalRegion('custom_scotland_st_olaf_way').GetName] and their level of [control|E]"
+  bryten_saint_olaf_routes_decision_effect_tooltip_2:0 "The [prestige|E] you gain and the cost of this [decision|E] depends on how many [counties|E] you own in [GetGeographicalRegion('custom_scotland_st_olaf_way').GetName] and their level of [control|E]."
+  bryten_saint_olaf_routes_decision_confirm:0 "Let's see what we can do for the pilgrims."
+
+  bryten_saint_olaf_routes_decision_tt:0 "[counties|E] you own in [GetGeographicalRegion('custom_scotland_st_olaf_way').GetName]." 
+  bryten_saint_olaf_routes_decision_non_christian_tt:0 "Christian [counties|E] you own in [GetGeographicalRegion('custom_scotland_st_olaf_way').GetName]" 
+  bryten_saint_olaf_routes_decision_counties.close:0 "That are close to or contains St. olaf" 
+  bryten_saint_olaf_routes_decision_counties.close.tooltip:0 "Gain [GetModifier('bryten_saint_olaf_infrastructure_close').GetNameWithTooltip] for #V 10#! years" 
+  bryten_saint_olaf_routes_decision_counties.midrange.high:0 "That are a moderate distance from St olaf with high [control|E]" 
+
+  bryten_saint_olaf_geographical_req:0 "You own at least one [county|E] in [GetGeographicalRegion('custom_scotland_st_olaf_way').GetName]"
+
+  bryten_saint_olaf_routes_decision_counties.midrange.high.tooltip:0 "Gain [GetModifier('bryten_saint_olaf_infrastructure_midrange_high').GetNameWithTooltip] for #V 10#! years" 
+  bryten_saint_olaf_routes_decision_counties.midrange.low:0 "That are a moderate distance from St olaf with low [control|E]"
+  bryten_saint_olaf_routes_decision_counties.midrange.low.tooltip:0 "Gain [GetModifier('bryten_saint_olaf_infrastructure_distant_high').GetNameWithTooltip] for #V 10#! years"  
+  bryten_saint_olaf_routes_decision_counties.distant.high:0 "That are a long distance from St olaf with high [control|E]" 
+  bryten_saint_olaf_routes_decision_counties.distant.high.tooltip:0 "Gain [GetModifier('bryten_saint_olaf_infrastructure_midrange_low').GetNameWithTooltip] for #V 10#! years" 
+  bryten_saint_olaf_routes_decision_counties.distant.low:0 "That are a long distance from St olaf with low [control|E]"
+  bryten_saint_olaf_routes_decision_counties.distant.low.tooltip:0 "Gain [GetModifier('bryten_saint_olaf_infrastructure_distant_low').GetNameWithTooltip] for #V 10#! years" 
+
+
 
 #######################################
 # Holy Wells
@@ -177,6 +203,7 @@
   TFE_visit_holy_well_effect_tooltip_1:0 "You will lose [stress|E] and earn some [piety|E]; the amount of both depends on the strength of the Holy Well [county_modifier|E]"
   TFE_visit_holy_well_effect_tooltip_2:0 "You have a small chance of gaining the [GetModifier('TFE_healing_waters_of_a_holy_well').GetNameWithTooltip] [character_modifier|E]; the likelikhood of this also depends the strength of the Holy Well [county_modifier|E]"
   TFE_visit_holy_well_confirm:0 "Time to depart for the well!"
+
 #######################################
 # Sacred Groves
 #######################################
@@ -196,6 +223,7 @@
   vist_sacred_grove_desc:0 "There is a sacred grove nearby that is a popular site of veneration among the locals. I should visit it sometime to pray and leave offerings to [ROOT.Char.GetFaith.PantheonTerm]."
   vist_sacred_grove_effect_tooltip_1:0 "You will lose [stress|E] and earn some [piety|E]; the amount of both depends on the strength of the sacred grove [county_modifier|E]"
   vist_sacred_grove_confirm:0 "Time to depart for the sacred grove!"
+
 #######################################
 # Abbey of Cluny
 #######################################
