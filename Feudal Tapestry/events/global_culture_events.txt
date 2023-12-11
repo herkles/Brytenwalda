@@ -838,7 +838,7 @@ scripted_trigger global_culture_3011_valid_for_sicilian_culture_trigger = {
 	exists = holder
 	NOT = { exists = var:had_sicilian_county_conversion }
 	title_province = {
-		geographical_region = special_sicilian_culture_region
+		geographical_region = custom_sicily_island
 	}
 	NOT = { culture = holder.culture }
 	culture = {
@@ -936,7 +936,7 @@ scripted_trigger global_culture_3012_valid_for_sicilian_culture_trigger = {
 	tier = tier_county
 	exists = holder
 	title_province = {
-		geographical_region = special_sicilian_culture_region
+		geographical_region = custom_sicily_island
 	}
 	NOT = { exists = var:had_sicilian_county_conversion }
 	NOT = { culture = holder.culture } # No conversion for counties who match their holder's culture

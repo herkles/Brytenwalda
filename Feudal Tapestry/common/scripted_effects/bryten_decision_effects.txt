@@ -972,6 +972,186 @@ integrate_strathclyde_kingdom_effect = {
 		}
 	}
 }
+
+bryten_saint_andrew_infrastructure_close_effect = {
+	if = {
+		limit = { religion = religion:christianity_religion }
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {	geographical_region = bryten_saint_andrew_region	}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_andrew_infrastructure_close
+				years = 10
+			}
+		}	
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				religion = religion:christianity_religion
+				any_county_province = {	geographical_region = bryten_saint_andrew_region }
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_andrew_infrastructure_close
+				years = 10
+			}
+		}
+	}
+}
+bryten_saint_andrew_infrastructure_midrange_high_effect = {
+	if = {
+		limit = {
+			religion = religion:christianity_religion
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control >= medium_county_control
+				any_county_province = {
+					geographical_region = bryten_close_to_saint_andrew_region
+					NOT = { geographical_region = bryten_saint_andrew_region }
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_andrew_infrastructure_midrange_high
+				years = 10
+			}
+		}
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control >= medium_county_control
+				religion = religion:christianity_religion
+				any_county_province = {
+					geographical_region = bryten_close_to_saint_andrew_region
+					NOT = { geographical_region = bryten_saint_andrew_region }
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_andrew_infrastructure_midrange_high
+				years = 10
+			}
+		}
+	}	
+}
+bryten_saint_andrew_infrastructure_distant_high_effect = {
+	if = {
+		limit = {
+			religion = religion:christianity_religion
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control >= medium_county_control
+				any_county_province = {
+					geographical_region = bryten_distant_from_saint_andrew_region	
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_andrew_infrastructure_distant_high
+				years = 10
+			}
+		}
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control >= medium_county_control
+				religion = religion:christianity_religion
+				any_county_province = {
+					geographical_region = bryten_distant_from_saint_andrew_region	
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_andrew_infrastructure_distant_high
+				years = 10
+			}
+		}
+	}	
+}
+bryten_saint_andrew_infrastructure_midrange_low_effect = {
+	if = {
+		limit = {
+			religion = religion:christianity_religion
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control < medium_county_control
+				any_county_province = {
+					geographical_region = bryten_close_to_saint_andrew_region
+					NOT = { geographical_region = bryten_saint_andrew_region }
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_andrew_infrastructure_midrange_low
+				years = 10
+			}
+		}	
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control < medium_county_control
+				religion = religion:christianity_religion
+				any_county_province = {
+					geographical_region = bryten_close_to_saint_andrew_region
+					NOT = { geographical_region = bryten_saint_andrew_region }
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_andrew_infrastructure_midrange_low
+				years = 10
+			}
+		}	
+	}
+}
+bryten_saint_andrew_infrastructure_distant_low_effect = {
+	if = {
+		limit = {
+			religion = religion:christianity_religion
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control < medium_county_control
+				any_county_province = {
+					geographical_region = bryten_distant_from_saint_andrew_region	
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_andrew_infrastructure_distant_low
+				years = 10
+			}
+		}
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control < medium_county_control
+				religion = religion:christianity_religion
+				any_county_province = {
+					geographical_region = bryten_distant_from_saint_andrew_region	
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_andrew_infrastructure_distant_low
+				years = 10
+			}
+		}
+	}	
+}
+
+
+
 #######################################
 #									  #
 #         Brythonic Effects  	      #

@@ -118,9 +118,57 @@ bryten_cluny_abbey_donation_large = {
 	monthly_piety = 0.6
 	same_faith_opinion = 6
 }
-
-
-
+##########################################
+# Way of Saint Andrew
+##########################################
+bryten_way_of_saint_andrew_supporter = {
+	icon = piety_positive
+	monthly_piety = 0.2
+	realm_priest_opinion = 5
+	religious_vassal_opinion = 5
+	religious_head_opinion = 5
+	christianity_religion_opinion = 5
+}
+bryten_way_of_saint_andrew_supporter_nonchristian = {
+	icon = piety_positive
+	monthly_prestige = 0.2
+	christianity_religion_opinion = 5
+}
+bryten_saint_andrew_infrastructure_close = {
+	icon = piety_positive
+	tax_mult = 0.12
+	development_growth_factor = 0.15
+	monthly_county_control_change_add = 0.3
+	monthly_county_control_change_factor = 0.2
+}
+bryten_saint_andrew_infrastructure_midrange_high = {
+	icon = piety_positive
+	tax_mult = 0.08
+	development_growth_factor = 0.1
+	monthly_county_control_change_add = 0.15
+	monthly_county_control_change_factor = 0.15
+}
+bryten_saint_andrew_infrastructure_distant_high = {
+	icon = piety_positive
+	tax_mult = 0.06
+	development_growth_factor = 0.08
+	monthly_county_control_change_add = 0.1
+	monthly_county_control_change_factor = 0.1
+}
+bryten_saint_andrew_infrastructure_midrange_low = {
+	icon = piety_positive
+	tax_mult = 0.04
+	development_growth_factor = 0.06
+	monthly_county_control_change_add = 0.05
+	monthly_county_control_change_factor = 0.05
+}
+bryten_saint_andrew_infrastructure_distant_low = {
+	icon = piety_positive
+	tax_mult = 0.02
+	development_growth_factor = 0.04
+	monthly_county_control_change_add = 0.02
+	monthly_county_control_change_factor = 0.02
+}
 
 
 

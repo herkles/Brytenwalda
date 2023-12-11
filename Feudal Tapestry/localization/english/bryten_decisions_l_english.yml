@@ -82,6 +82,31 @@
   create_duchy_of_lothian_tooltip:0 "The duchy of Lothian shall be created."
   create_lothian_land_requirement:0 "You control the various counties that make up the duchy of Lothian"
 
+  # St Andrew Ways
+  bryten_saint_andrew_routes_decision:0 "Support the Way of Saint Andrew"
+  bryten_saint_andrew_routes_decision_tooltip:0 "The Way of Saint Andrew through my lands... could I do something to improve it?"
+  bryten_saint_andrew_routes_decision_desc:0 "The Way of Saint Andrew that goes to the [ROOT.Char.GetFaith.GetReligion.GetAdjective] pilgrimage site of St Andrew passes through my lands. These networks could always use infrastructural improvements. For example, I can fund road repairs so pilgrims travel efficiently, or build hostels that can provide them shelter."
+  bryten_saint_andrew_routes_decision_nonchristian_desc:0 "The Way of Saint Andrew is a pilgrimage route used by the followers of Christ, including those who live in my lands. Though I do not share their beliefs, I want to provide infrastructural improvements to these networks. For example, I can fund road repairs so pilgrims travel efficiently, or build hostels that can provide them shelter."
+
+  bryten_saint_andrew_routes_decision_effect_tooltip_1:0 "The [piety|E] you gain and the cost of this [decision|E] depends on how many [counties|E] you own in [GetGeographicalRegion('custom_scotland_st_andrew_way').GetName] and their level of [control|E]"
+  bryten_saint_andrew_routes_decision_effect_tooltip_2:0 "The [prestige|E] you gain and the cost of this [decision|E] depends on how many [counties|E] you own in [GetGeographicalRegion('custom_scotland_st_andrew_way').GetName] and their level of [control|E]."
+  bryten_saint_andrew_routes_decision_confirm:0 "Let's see what we can do for the pilgrims."
+
+  bryten_saint_andrew_routes_decision_tt:0 "[counties|E] you own in [GetGeographicalRegion('custom_scotland_st_andrew_way').GetName]." 
+  bryten_saint_andrew_routes_decision_non_christian_tt:0 "Christian [counties|E] you own in [GetGeographicalRegion('custom_scotland_st_andrew_way').GetName]" 
+  bryten_saint_andrew_routes_decision_counties.close:0 "That are close to or contains St. Andrew" 
+  bryten_saint_andrew_routes_decision_counties.close.tooltip:0 "Gain [GetModifier('bryten_saint_andrew_infrastructure_close').GetNameWithTooltip] for #V 10#! years" 
+  bryten_saint_andrew_routes_decision_counties.midrange.high:0 "That are a moderate distance from St Andrew with high [control|E]" 
+
+  bryten_saint_andrew_geographical_req:0 "You own at least one [county|E] in [GetGeographicalRegion('custom_scotland_st_andrew_way').GetName]"
+
+  bryten_saint_andrew_routes_decision_counties.midrange.high.tooltip:0 "Gain [GetModifier('bryten_saint_andrew_infrastructure_midrange_high').GetNameWithTooltip] for #V 10#! years" 
+  bryten_saint_andrew_routes_decision_counties.midrange.low:0 "That are a moderate distance from St Andrew with low [control|E]"
+  bryten_saint_andrew_routes_decision_counties.midrange.low.tooltip:0 "Gain [GetModifier('bryten_saint_andrew_infrastructure_distant_high').GetNameWithTooltip] for #V 10#! years"  
+  bryten_saint_andrew_routes_decision_counties.distant.high:0 "That are a long distance from St Andrew with high [control|E]" 
+  bryten_saint_andrew_routes_decision_counties.distant.high.tooltip:0 "Gain [GetModifier('bryten_saint_andrew_infrastructure_midrange_low').GetNameWithTooltip] for #V 10#! years" 
+  bryten_saint_andrew_routes_decision_counties.distant.low:0 "That are a long distance from St Andrew with low [control|E]"
+  bryten_saint_andrew_routes_decision_counties.distant.low.tooltip:0 "Gain [GetModifier('bryten_saint_andrew_infrastructure_distant_low').GetNameWithTooltip] for #V 10#! years" 
 #######################################
 # Pilgrimages
 #######################################
@@ -174,5 +199,5 @@
   bryten_cluny_abbey_donation_desc:0 "As a powerful [ROOT.Char.GetFaith.GetAdjective] [ROOT.Char.GetTitleAsNameNoTooltip], it is my duty to protect and aid the monks and nuns who have devoted their lives to Jesus Christ. The Abbey of Cluny in particular is a powerful and influential monastery community with abbeys and monasteries not just at cluny but throughout Europe. As such, I wish to donate to the Abbey of Cluny so that the monks and nuns there can pray for my soul and the souls of my family."
   bryten_cluny_abbey_donation_effect_tooltip_1:0 "You will choose how much to donate to the Abbey of Cluny, determining the boons and [character_modifier|E] you get #weak (Minimum cost: @gold_icon! 50)#!"
   bryten_cluny_abbey_donation_confirm:0 "God Bless us!"
-
+  bryten_cluny_must_be_built:0 "The abbey of Cluny must be built firstg"
 

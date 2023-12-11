@@ -4,11 +4,9 @@
 bryten_treaty_truce_danish_norman = 3650
 bryten_treaty_truce_norman_conquest_scottish = 3650
 
-
-######################
-# DECISION/ACTIVITY VALUES
-######################
-
+#######################################
+# Standard Stuff
+#######################################
 bryten_standard_festival_cooldown_time = {
 	value = 1825
 	if = {
@@ -20,7 +18,6 @@ bryten_standard_festival_cooldown_time = {
 		multiply = 0.5
 	}
 }
-
 # Since the vanilla activity costs are unimmersively inflated at higher levels
 bryten_activity_cost = {
 	value = 25
@@ -66,3 +63,167 @@ bryten_activity_cost = {
 	min = 25
 	max = 100
 }
+
+#######################################
+# Way of Saint Andrew Stuff
+#######################################
+bryten_way_of_saint_andrew_decisions_cooldown_time = {
+	value = 7300
+}
+bryten_saint_andrew_decision_cost_value = {
+	value = 40
+
+	# Every county with good control
+	every_held_title = {
+		limit = {
+			tier = tier_county
+			county_control >= medium_county_control
+			any_county_province = {	geographical_region = custom_scotland_st_andrew_way	}
+		}
+		add = 10
+	}
+
+	# Every county with low control
+	every_held_title = {
+		limit = {
+			tier = tier_county
+			county_control < medium_county_control
+			county_control >= low_county_control
+			any_county_province = {	geographical_region = custom_scotland_st_andrew_way	}
+		}
+		add = 10
+	}
+
+	# Every county with very low control
+	every_held_title = {
+		limit = {
+			tier = tier_county
+			county_control < low_county_control
+			any_county_province = {	geographical_region = custom_scotland_st_andrew_way	}
+		}
+		add = 10
+	}
+	
+	min = 50
+	max = 150
+
+}	
+bryten_saint_andrew_help_piety_reward_value = {
+	value = minor_piety_value
+
+	# Every county in Galicia
+	every_held_title = {
+		limit = {
+			tier = tier_county
+			any_county_province = {	geographical_region = bryten_saint_andrew_region }
+		}
+		add = medium_piety_value
+	}
+	# Every county close to Galicia
+	every_held_title = {
+		limit = {
+			tier = tier_county
+			any_county_province = {
+				geographical_region = bryten_close_to_saint_andrew_region
+				NOT = { geographical_region = bryten_saint_andrew_region }	
+			}
+		}
+		add = minor_piety_value
+	}
+
+	# Every county far from Galicia
+	every_held_title = {
+		limit = {
+			tier = tier_county
+			any_county_province = {
+				geographical_region = bryten_distant_from_saint_andrew_region	
+			}
+		}
+		add = miniscule_piety_value
+	}
+
+}
+bryten_saint_andrew_help_prestige_reward_value = {
+	value = minor_prestige_value
+
+	# Every county in Galicia
+	every_held_title = {
+		limit = {
+			tier = tier_county
+			religion = religion:christianity_religion
+			any_county_province = {
+				geographical_region = bryten_saint_andrew_region	
+			}
+		}
+		add = medium_prestige_value
+	}
+
+	# Every county close to Galicia
+	every_held_title = {
+		limit = {
+			tier = tier_county
+			religion = religion:christianity_religion
+			any_county_province = {
+				geographical_region = bryten_close_to_saint_andrew_region
+				NOT = { geographical_region = bryten_saint_andrew_region }	
+			}
+		}
+		add = minor_prestige_value
+	}
+
+	# Every county far from Galicia
+	every_held_title = {
+		limit = {
+			tier = tier_county
+			religion = religion:christianity_religion
+			any_county_province = {
+				geographical_region = bryten_distant_from_saint_andrew_region	
+			}
+		}
+		add = miniscule_prestige_value
+	}
+}
+bryten_saint_andrew_prayer_decision_piety_cost_value = {
+	value = major_piety_value
+	if = {
+		limit = {
+			piety_level >= 3
+		}
+		multiply = 0.9
+	}
+	if = {
+		limit = {
+			piety_level >= 4
+		}
+		multiply = 0.9
+	}
+	if = {
+		limit = {
+			piety_level >= 5
+		}
+		multiply = 0.9
+	}
+	if = {
+		limit = {
+			piety_level >= 6
+		}
+		multiply = 0.9
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

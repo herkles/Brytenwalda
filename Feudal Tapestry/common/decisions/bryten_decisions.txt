@@ -809,6 +809,189 @@ create_duchy_of_lothian = {# Create the Duchy of Lothian
 		base = 100
 	}
 }
+bryten_saint_andrew_routes_decision = {# Support the Way of Saint Andrew in Scotland
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					religion = religion:christianity_religion
+				}
+				desc = bryten_saint_andrew_routes_decision_desc
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						NOT = { religion = religion:christianity_religion }
+					}
+				}
+				desc = bryten_saint_andrew_routes_decision_nonchristian_desc
+			}
+		}
+	}
+	ai_check_interval = 40
+	
+	cooldown = { days = bryten_way_of_saint_andrew_decisions_cooldown_time }
+
+	is_shown = {
+		is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			any_county_province = {	geographical_region = custom_scotland_st_andrew_way	}
+		}
+		OR = {
+			religion = religion:christianity_religion
+			any_held_title = {
+				tier = tier_county
+				religion = religion:christianity_religion	
+				any_county_province = {	geographical_region = custom_scotland_st_andrew_way	}
+			}
+		}
+	}
+
+	is_valid = {
+		custom_description = {
+			text = bryten_saint_andrew_geographical_req
+			any_held_title = {
+				tier = tier_county
+				any_county_province = {	geographical_region = custom_scotland_st_andrew_way	}
+			}
+		}
+		OR = {
+			religion = religion:christianity_religion
+			custom_description = {
+				text = bryten_saint_andrew_geographical_christian_county_req
+				any_held_title = {
+					tier = tier_county
+					religion = religion:christianity_religion
+					any_county_province = {	geographical_region = custom_scotland_st_andrew_way	}
+				}
+			}
+		}
+		NOR = {
+			has_character_modifier = bryten_way_of_saint_andrew_supporter
+		}
+
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		bryten_basic_is_available_adult_courtier_even_if_sick_trigger = yes
+	}
+
+	cost = { gold = { value = bryten_saint_andrew_decision_cost_value } }
+	
+	ai_potential = { short_term_gold > bryten_saint_andrew_decision_cost_value }
+
+	effect = {
+		show_as_tooltip = {
+			if = {
+				limit = { religion = religion:christianity_religion	}
+				add_piety = bryten_saint_andrew_help_piety_reward_value
+			}
+			else = { add_prestige = bryten_saint_andrew_help_prestige_reward_value }
+		}
+		if = {
+			limit = { religion = religion:christianity_religion }
+			custom_tooltip = bryten_saint_andrew_routes_decision_effect_tooltip_1
+			add_character_modifier = {
+				modifier = bryten_way_of_saint_andrew_supporter
+				years = 10
+			}
+		}
+		else = {
+			custom_tooltip = bryten_saint_andrew_routes_decision_effect_tooltip_2
+			add_character_modifier = {
+				modifier = bryten_way_of_saint_andrew_supporter_nonchristian
+				years = 10
+			}
+		}
+		show_as_tooltip = {
+			if = {
+				limit = { religion = religion:christianity_religion	}
+				random_list = {
+					desc = bryten_saint_andrew_routes_decision_tt
+					100 = {
+						show_chance = no
+						desc = bryten_saint_andrew_routes_decision_counties.close
+						custom_tooltip = bryten_saint_andrew_routes_decision_counties.close.tooltip
+					}
+					100 = {
+						show_chance = no
+						desc = bryten_saint_andrew_routes_decision_counties.midrange.high
+						custom_tooltip = bryten_saint_andrew_routes_decision_counties.midrange.high.tooltip
+					}
+					100 = {
+						show_chance = no
+						desc = bryten_saint_andrew_routes_decision_counties.distant.high
+						custom_tooltip = bryten_saint_andrew_routes_decision_counties.distant.high.tooltip
+					}
+					100 = {
+						show_chance = no
+						desc = bryten_saint_andrew_routes_decision_counties.midrange.low
+						custom_tooltip = bryten_saint_andrew_routes_decision_counties.midrange.low.tooltip
+					}
+					100 = {
+						show_chance = no
+						desc = bryten_saint_andrew_routes_decision_counties.distant.low
+						custom_tooltip = bryten_saint_andrew_routes_decision_counties.distant.low.tooltip
+					}
+				}
+			}
+			else = {
+				random_list = {
+					desc = bryten_saint_andrew_routes_decision_non_christian_tt
+					100 = {
+						show_chance = no
+						desc = bryten_saint_andrew_routes_decision_counties.close
+						custom_tooltip = bryten_saint_andrew_routes_decision_counties.close.tooltip
+					}
+					100 = {
+						show_chance = no
+						desc = bryten_saint_andrew_routes_decision_counties.midrange.high
+						custom_tooltip = bryten_saint_andrew_routes_decision_counties.midrange.high.tooltip
+					}
+					100 = {
+						show_chance = no
+						desc = bryten_saint_andrew_routes_decision_counties.distant.high
+						custom_tooltip = bryten_saint_andrew_routes_decision_counties.distant.high.tooltip
+					}
+					100 = {
+						show_chance = no
+						desc = bryten_saint_andrew_routes_decision_counties.midrange.low
+						custom_tooltip = bryten_saint_andrew_routes_decision_counties.midrange.low.tooltip
+					}
+					100 = {
+						show_chance = no
+						desc = bryten_saint_andrew_routes_decision_counties.distant.low
+						custom_tooltip = bryten_saint_andrew_routes_decision_counties.distant.low.tooltip
+					}
+				}
+			}
+		}		
+		trigger_event = { id = bryten_scotland.010	}
+	}
+
+	ai_will_do = {
+		base = 25
+		modifier = {
+			add = -10
+			has_trait = cynical
+		}
+		modifier = {
+			add = 10
+			has_trait = zealous
+		}
+		modifier = {
+			add = -10
+			has_trait = greedy
+		}
+		modifier = {
+			add = 10
+			has_trait = generous
+		}
+	}
+}
 #############################################
 # Italian Decisions
 #############################################
