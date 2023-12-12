@@ -2400,6 +2400,116 @@ bryten_pilgrimage.149 = {# Departing Saint David's for Home.
 	}
 }
 #######################################
+# Pilgrimage to St. Andrews
+#######################################
+bryten_pilgrimage.150 = {# Arrive in St. Andrews
+	type = activity_event
+	title = bryten_pilgrimage.150.t
+	desc = bryten_pilgrimage.150.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.150.arrival
+
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_pilgrimage.151
+			days = { 2 5 }
+		}
+	}
+
+}
+bryten_pilgrimage.151 = {# Praying in St. Andrews Cathedral
+	type = activity_event
+	title = bryten_pilgrimage.151.t
+	desc = bryten_pilgrimage.151.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.151.andrews
+
+	}
+	
+	after = {
+		trigger_event = {
+			id = bryten_pilgrimage.152
+			days = { 2 5 }
+		}
+	}
+
+}
+bryten_pilgrimage.152 = {#  Visiting the relics of St. Andrews
+	type = activity_event
+	title = bryten_pilgrimage.152.t
+	desc = bryten_pilgrimage.152.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.152.relics
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_pilgrimage.153
+			days = { 2 5 }
+		}
+	}
+}
+bryten_pilgrimage.153 = {# Departing Saint Andrews's for Home.
+	type = activity_event
+	title = bryten_pilgrimage.153.t
+	desc = bryten_pilgrimage.153.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.153.home
+	}
+
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				hidden_effect = { skip_activity_phase = yes }
+			}
+		}
+	}
+}
+#######################################
 # General Destination Events
 #######################################
 scripted_effect pilgrimage_6770_relic_effect = {

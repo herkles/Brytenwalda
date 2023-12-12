@@ -106,6 +106,12 @@ activity_bryten_english_pilgrimage = {
 			}
 			desc = activity_bryten_england_pilgrimage_st_davids_province_desc
 		}
+		triggered_desc = {# For St. Andrews
+			trigger = {
+				barony = title:b_st_andrews
+			}
+			desc = activity_bryten_pilgrimage_st_andrews_province_desc
+		}		
 	}
 	
 	wait_time_before_start = { days = 7 }
@@ -350,27 +356,23 @@ activity_bryten_english_pilgrimage = {
 			
 			on_phase_active = {# For activiating the stuff
 				if = {
-					limit = {
-						this = scope:host
-					}
+					limit = { this = scope:host	}
 					if = {# Visiting Durham
-						limit = {
-							involved_activity.activity_location.barony = title:b_durham
-						}
+						limit = { involved_activity.activity_location.barony = title:b_durham }
 						scope:host = { trigger_event = bryten_pilgrimage.125 }
 					}
 					else_if = {# Visiting Bury St. Edmunds
-						limit = {
-							involved_activity.activity_location.barony = title:b_beodericsworth
-						}
+						limit = { involved_activity.activity_location.barony = title:b_beodericsworth }
 						scope:host = { trigger_event = bryten_pilgrimage.100 }
 					}
 					else_if = {# Visiting St. Davids
-						limit = {
-							involved_activity.activity_location.barony = title:b_st_davids
-						}
+						limit = { involved_activity.activity_location.barony = title:b_st_davids }
 						scope:host = { trigger_event = bryten_pilgrimage.140 }
-					}					
+					}
+					else_if = {# Visiting St. Andrew
+						limit = { involved_activity.activity_location.barony = title:b_st_andrews }
+						scope:host = { trigger_event = bryten_pilgrimage.150 }
+					}
 				}
 			}
 			on_end = {# When the Pilgrimage is over
@@ -441,6 +443,12 @@ activity_bryten_english_pilgrimage = {
 				}
 				barony = title:b_st_davids
 			}
+			trigger_if = {# St. David
+				limit = {
+					exists = barony
+				}
+				barony = title:b_st_andrews
+			}			
 		}
 	}
 	cost = {
@@ -545,38 +553,26 @@ activity_bryten_english_pilgrimage = {
 	##########################	
 	on_complete = {
 		if = {# Did the Durham pilgrimage for the first time
-			limit = { 
-				scope:activity.activity_location.county = title:c_durham
-			}
-			create_character_memory = {
-				type = bryten_english_pilgrimage_durham_host_memory
-			}
-			scope:host = {
-				bryten_english_pilgrimage_durham_host_memory_log_entry_effect = yes
-			}
+			limit = { scope:activity.activity_location.county = title:c_durham }
+			create_character_memory = {	type = bryten_english_pilgrimage_durham_host_memory	}
+			scope:host = { bryten_english_pilgrimage_durham_host_memory_log_entry_effect = yes }
 		}
 		if = {# Did the bury st. Edmunds pilgrimage for the first time
-			limit = { 
-				scope:activity.activity_location.county = title:c_suffolk
-			}
-			create_character_memory = {
-				type = bryten_english_pilgrimage_edmund_host_memory
-			}
-			scope:host = {
-				bryten_english_pilgrimage_edmund_host_memory_log_entry_effect = yes
-			}
+			limit = { scope:activity.activity_location.county = title:c_suffolk	}
+			create_character_memory = {	type = bryten_english_pilgrimage_edmund_host_memory	}
+			scope:host = { bryten_english_pilgrimage_edmund_host_memory_log_entry_effect = yes }
 		}
 		if = {# Did the St. David pilgrimage for the first time
-			limit = { 
-				scope:activity.activity_location.county = title:c_suffolk
-			}
-			create_character_memory = {
-				type = bryten_english_pilgrimage_st_davids_host_memory
-			}
-			scope:host = {
-				bryten_english_pilgrimage_st_davids_host_memory_log_entry_effect = yes
-			}
+			limit = { scope:activity.activity_location.county = title:c_pembrokeshire }
+			create_character_memory = {	type = bryten_english_pilgrimage_st_davids_host_memory }
+			scope:host = { bryten_english_pilgrimage_st_davids_host_memory_log_entry_effect = yes }
 		}
+		if = {# Did the St. Andrew pilgrimage for the first time
+			limit = { scope:activity.activity_location.county = title:c_fife }
+			create_character_memory = {	type = bryten_pilgrimage_st_andrews_host_memory	}
+			scope:host = { bryten_pilgrimage_st_andrews_host_memory_log_entry_effect = yes }
+		}
+
 	}
 	###################
 	# EVENT IMAGES
@@ -766,12 +762,13 @@ activity_bryten_english_pilgrimage = {
 		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_western.dds"
 		environment = "environment_western_holy_site"
 		ambience = "event:/SFX/Events/Backgrounds/temple_christian"
-	}
+	}	
 	background = {# Fall back
 		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_western.dds"
 		environment = "environment_western_holy_site"
 		ambience = "event:/SFX/Events/Backgrounds/temple_christian"
 	}
+	
 	##########################
 	# CHARACTER WINDOW
 	##########################

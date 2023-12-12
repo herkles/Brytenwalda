@@ -25,6 +25,11 @@ bryten_english_pilgrimage_edmund_host_memory_log_entry_effect = {# Memory for St
 		}
 	}
 }
+#######################################
+#									  #
+#     Welsh Pilgrimage Memories     #
+#									  #
+#######################################
 bryten_english_pilgrimage_st_davids_host_memory_log_entry_effect = {#  Memory for St. Davids's
 	scope:activity = {
 		add_activity_log_entry = {
@@ -36,5 +41,19 @@ bryten_english_pilgrimage_st_davids_host_memory_log_entry_effect = {#  Memory fo
 		}
 	}
 }
-
-
+#######################################
+#									  #
+#     Scottish Pilgrimage Memories    #
+#									  #
+#######################################
+bryten_pilgrimage_st_andrews_host_memory_log_entry_effect = {# Memory for Durham
+	scope:activity = {
+		add_activity_log_entry = {
+			key = bryten_pilgrimage_st_andrews_host_memory_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+		}
+	}
+}
