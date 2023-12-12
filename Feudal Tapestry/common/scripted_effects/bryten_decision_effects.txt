@@ -1365,6 +1365,223 @@ embrace_brython_culture_effect = {# Embracing brython culture
 }
 #######################################
 #									  #
+#         	Norse Effects	  	      #
+#									  #
+#######################################
+create_kingdom_gotland_decision_scripted_effect = {# Create the Kingdom of Gothaland
+	# Create the title and make it primary
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:k_gotaland = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+
+	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:k_gotaland
+
+	title:d_vastergotland = { add_to_list = gothic_kingdom }
+	title:d_ostergotland = { add_to_list = gothic_kingdom }
+	title:d_smaland = { add_to_list = gothic_kingdom }
+	if = {# gotland is also controlled by you add it.
+		limit = {
+			this = { completely_controls = title:d_gotland }
+		}
+		title:d_gotland = { add_to_list = gothic_kingdom }
+	}
+
+	every_in_list = {
+		list = gothic_kingdom
+		every_in_de_jure_hierarchy = {
+			limit = { tier = tier_duchy }
+			set_de_jure_liege_title = title:k_gotaland
+		}
+	}
+
+}
+bryten_saint_olaf_infrastructure_close_effect = {
+	if = {
+		limit = { religion = religion:christianity_religion }
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				any_county_province = {	geographical_region = bryten_saint_olaf_region	}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_olaf_infrastructure_close
+				years = 10
+			}
+		}	
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				religion = religion:christianity_religion
+				any_county_province = {	geographical_region = bryten_saint_olaf_region }
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_olaf_infrastructure_close
+				years = 10
+			}
+		}
+	}
+}
+bryten_saint_olaf_infrastructure_midrange_high_effect = {
+	if = {
+		limit = {
+			religion = religion:christianity_religion
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control >= medium_county_control
+				any_county_province = {
+					geographical_region = bryten_close_to_saint_olaf_region
+					NOT = { geographical_region = bryten_saint_olaf_region }
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_olaf_infrastructure_midrange_high
+				years = 10
+			}
+		}
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control >= medium_county_control
+				religion = religion:christianity_religion
+				any_county_province = {
+					geographical_region = bryten_close_to_saint_olaf_region
+					NOT = { geographical_region = bryten_saint_olaf_region }
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_olaf_infrastructure_midrange_high
+				years = 10
+			}
+		}
+	}	
+}
+bryten_saint_olaf_infrastructure_distant_high_effect = {
+	if = {
+		limit = {
+			religion = religion:christianity_religion
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control >= medium_county_control
+				any_county_province = {
+					geographical_region = bryten_distant_from_saint_olaf_region	
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_olaf_infrastructure_distant_high
+				years = 10
+			}
+		}
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control >= medium_county_control
+				religion = religion:christianity_religion
+				any_county_province = {
+					geographical_region = bryten_distant_from_saint_olaf_region	
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_olaf_infrastructure_distant_high
+				years = 10
+			}
+		}
+	}	
+}
+bryten_saint_olaf_infrastructure_midrange_low_effect = {
+	if = {
+		limit = {
+			religion = religion:christianity_religion
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control < medium_county_control
+				any_county_province = {
+					geographical_region = bryten_close_to_saint_olaf_region
+					NOT = { geographical_region = bryten_saint_olaf_region }
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_olaf_infrastructure_midrange_low
+				years = 10
+			}
+		}	
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control < medium_county_control
+				religion = religion:christianity_religion
+				any_county_province = {
+					geographical_region = bryten_close_to_saint_olaf_region
+					NOT = { geographical_region = bryten_saint_olaf_region }
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_olaf_infrastructure_midrange_low
+				years = 10
+			}
+		}	
+	}
+}
+bryten_saint_olaf_infrastructure_distant_low_effect = {
+	if = {
+		limit = {
+			religion = religion:christianity_religion
+		}
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control < medium_county_control
+				any_county_province = {
+					geographical_region = bryten_distant_from_saint_olaf_region	
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_olaf_infrastructure_distant_low
+				years = 10
+			}
+		}
+	}
+	else = {
+		every_held_title = {
+			limit = {
+				tier = tier_county
+				county_control < medium_county_control
+				religion = religion:christianity_religion
+				any_county_province = {
+					geographical_region = bryten_distant_from_saint_olaf_region	
+				}
+			}
+			add_county_modifier = {
+				modifier = bryten_saint_olaf_infrastructure_distant_low
+				years = 10
+			}
+		}
+	}	
+}
+#######################################
+#									  #
 #         Italian Effects	  	      #
 #									  #
 #######################################
@@ -1607,17 +1824,28 @@ embrace_tuscan_culture_effect = {
 }
 #######################################
 #									  #
-#         	Norse Effects	  	      #
+#         Imperial Effects	  	      #
 #									  #
 #######################################
-create_kingdom_gotland_decision_scripted_effect = {# Create the Kingdom of Gothaland
+integrate_sorbia_kingdom_effect = {
+	##Configure the new de jure setup.
+	title:d_meissen = { set_de_jure_liege_title = title:k_east_francia }
+	title:d_lausitz = { set_de_jure_liege_title = title:k_east_francia }
+	hidden_effect = {
+		if = {
+			limit = { has_title = title:k_sorbia }
+			destroy_title = title:k_sorbia
+		}
+	}
+}
+create_kingdom_frisia_decision_scripted_effect = {# Create the Kingdom of Gothaland
 	# Create the title and make it primary
 	create_title_and_vassal_change = {
 		type = created
 		save_scope_as = title_change
 		add_claim_on_loss = no
 	}
-	title:k_gotaland = {
+	title:k_frisia = {
 		change_title_holder = {
 			holder = root
 			change = scope:title_change
@@ -1625,200 +1853,106 @@ create_kingdom_gotland_decision_scripted_effect = {# Create the Kingdom of Gotha
 	}
 
 	resolve_title_and_vassal_change = scope:title_change
-	set_primary_title_to = title:k_gotaland
+	set_primary_title_to = title:k_frisia
 
-	title:d_vastergotland = { add_to_list = gothic_kingdom }
-	title:d_ostergotland = { add_to_list = gothic_kingdom }
-	title:d_smaland = { add_to_list = gothic_kingdom }
-	if = {# gotland is also controlled by you add it.
-		limit = {
-			this = { completely_controls = title:d_gotland }
+	title:d_holland = { add_to_list = frisia_kingdom }
+	title:d_gelre = { add_to_list = frisia_kingdom }
+	title:d_utrecht = { add_to_list = frisia_kingdom }
+	title:d_frisia = { add_to_list = frisia_kingdom }
+
+	every_in_list = {
+		list = frisia_kingdom
+		every_in_de_jure_hierarchy = {
+			limit = { tier = tier_duchy }
+			set_de_jure_liege_title = title:k_frisia
 		}
-		title:d_gotland = { add_to_list = gothic_kingdom }
+	}
+
+}
+create_kingdom_bavaria_decision_scripted_effect = {# Create the Kingdom of Gothaland
+	# Create the title and make it primary
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:k_bavaria = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+
+	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:k_bavaria
+
+	title:d_bavaria = { add_to_list = bavaria_kingdom }
+	title:d_nordgau = { add_to_list = bavaria_kingdom }
+	title:d_salzburg = { add_to_list = bavaria_kingdom }
+	title:d_augsburg = { add_to_list = bavaria_kingdom }
+	title:d_steyermark = { add_to_list = bavaria_kingdom }
+	title:d_osterreich = { add_to_list = bavaria_kingdom }
+	title:d_carinthia = { add_to_list = bavaria_kingdom }
+	title:d_krain = { add_to_list = bavaria_kingdom }
+	title:d_tyrol = { add_to_list = bavaria_kingdom }
+	title:d_istria = { add_to_list = bavaria_kingdom }
+
+	every_in_list = {
+		list = bavaria_kingdom
+		every_in_de_jure_hierarchy = {
+			limit = { tier = tier_duchy }
+			set_de_jure_liege_title = title:k_bavaria
+		}
+	}
+
+}
+create_kingdom_lotharingia_decision_scripted_effect = {# Create the Kingdom of Lotharingia
+	# Create the title and make it primary
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = title_change
+		add_claim_on_loss = no
+	}
+	title:k_lotharingia = {
+		change_title_holder = {
+			holder = root
+			change = scope:title_change
+		}
+	}
+
+	resolve_title_and_vassal_change = scope:title_change
+	set_primary_title_to = title:k_lotharingia
+
+	title:d_luxembourg = { add_to_list = lotharingia_kingdom }
+	title:d_brabant = { add_to_list = lotharingia_kingdom }
+	title:d_julich = { add_to_list = lotharingia_kingdom }
+	title:d_upper_lorraine = { add_to_list = lotharingia_kingdom }
+	title:d_lower_lorraine = { add_to_list = lotharingia_kingdom }
+	title:d_bar = { add_to_list = lotharingia_kingdom }
+	title:d_smaland = { add_to_list = lotharingia_kingdom }
+	if = {# Frisia is also controlled by you add it.
+		limit = { this = { completely_controls = title:k_frisia } }
+		title:d_holland = { add_to_list = lotharingia_kingdom }
+		title:d_gelre = { add_to_list = lotharingia_kingdom }
+		title:d_utrecht = { add_to_list = lotharingia_kingdom }
+		title:d_frisia = { add_to_list = lotharingia_kingdom }
 	}
 
 	every_in_list = {
-		list = gothic_kingdom
+		list = lotharingia_kingdom
 		every_in_de_jure_hierarchy = {
 			limit = { tier = tier_duchy }
-			set_de_jure_liege_title = title:k_gotaland
+			set_de_jure_liege_title = title:k_lotharingia
 		}
 	}
+}
 
-}
-bryten_saint_olaf_infrastructure_close_effect = {
-	if = {
-		limit = { religion = religion:christianity_religion }
-		every_held_title = {
-			limit = {
-				tier = tier_county
-				any_county_province = {	geographical_region = bryten_saint_olaf_region	}
-			}
-			add_county_modifier = {
-				modifier = bryten_saint_olaf_infrastructure_close
-				years = 10
-			}
-		}	
-	}
-	else = {
-		every_held_title = {
-			limit = {
-				tier = tier_county
-				religion = religion:christianity_religion
-				any_county_province = {	geographical_region = bryten_saint_olaf_region }
-			}
-			add_county_modifier = {
-				modifier = bryten_saint_olaf_infrastructure_close
-				years = 10
-			}
-		}
-	}
-}
-bryten_saint_olaf_infrastructure_midrange_high_effect = {
-	if = {
-		limit = {
-			religion = religion:christianity_religion
-		}
-		every_held_title = {
-			limit = {
-				tier = tier_county
-				county_control >= medium_county_control
-				any_county_province = {
-					geographical_region = bryten_close_to_saint_olaf_region
-					NOT = { geographical_region = bryten_saint_olaf_region }
-				}
-			}
-			add_county_modifier = {
-				modifier = bryten_saint_olaf_infrastructure_midrange_high
-				years = 10
-			}
-		}
-	}
-	else = {
-		every_held_title = {
-			limit = {
-				tier = tier_county
-				county_control >= medium_county_control
-				religion = religion:christianity_religion
-				any_county_province = {
-					geographical_region = bryten_close_to_saint_olaf_region
-					NOT = { geographical_region = bryten_saint_olaf_region }
-				}
-			}
-			add_county_modifier = {
-				modifier = bryten_saint_olaf_infrastructure_midrange_high
-				years = 10
-			}
-		}
-	}	
-}
-bryten_saint_olaf_infrastructure_distant_high_effect = {
-	if = {
-		limit = {
-			religion = religion:christianity_religion
-		}
-		every_held_title = {
-			limit = {
-				tier = tier_county
-				county_control >= medium_county_control
-				any_county_province = {
-					geographical_region = bryten_distant_from_saint_olaf_region	
-				}
-			}
-			add_county_modifier = {
-				modifier = bryten_saint_olaf_infrastructure_distant_high
-				years = 10
-			}
-		}
-	}
-	else = {
-		every_held_title = {
-			limit = {
-				tier = tier_county
-				county_control >= medium_county_control
-				religion = religion:christianity_religion
-				any_county_province = {
-					geographical_region = bryten_distant_from_saint_olaf_region	
-				}
-			}
-			add_county_modifier = {
-				modifier = bryten_saint_olaf_infrastructure_distant_high
-				years = 10
-			}
-		}
-	}	
-}
-bryten_saint_olaf_infrastructure_midrange_low_effect = {
-	if = {
-		limit = {
-			religion = religion:christianity_religion
-		}
-		every_held_title = {
-			limit = {
-				tier = tier_county
-				county_control < medium_county_control
-				any_county_province = {
-					geographical_region = bryten_close_to_saint_olaf_region
-					NOT = { geographical_region = bryten_saint_olaf_region }
-				}
-			}
-			add_county_modifier = {
-				modifier = bryten_saint_olaf_infrastructure_midrange_low
-				years = 10
-			}
-		}	
-	}
-	else = {
-		every_held_title = {
-			limit = {
-				tier = tier_county
-				county_control < medium_county_control
-				religion = religion:christianity_religion
-				any_county_province = {
-					geographical_region = bryten_close_to_saint_olaf_region
-					NOT = { geographical_region = bryten_saint_olaf_region }
-				}
-			}
-			add_county_modifier = {
-				modifier = bryten_saint_olaf_infrastructure_midrange_low
-				years = 10
-			}
-		}	
-	}
-}
-bryten_saint_olaf_infrastructure_distant_low_effect = {
-	if = {
-		limit = {
-			religion = religion:christianity_religion
-		}
-		every_held_title = {
-			limit = {
-				tier = tier_county
-				county_control < medium_county_control
-				any_county_province = {
-					geographical_region = bryten_distant_from_saint_olaf_region	
-				}
-			}
-			add_county_modifier = {
-				modifier = bryten_saint_olaf_infrastructure_distant_low
-				years = 10
-			}
-		}
-	}
-	else = {
-		every_held_title = {
-			limit = {
-				tier = tier_county
-				county_control < medium_county_control
-				religion = religion:christianity_religion
-				any_county_province = {
-					geographical_region = bryten_distant_from_saint_olaf_region	
-				}
-			}
-			add_county_modifier = {
-				modifier = bryten_saint_olaf_infrastructure_distant_low
-				years = 10
-			}
-		}
-	}	
-}
+
+
+
+
+
+
+
+
+

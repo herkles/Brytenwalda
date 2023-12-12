@@ -63,6 +63,7 @@
   bryten_decision.0011.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', scottish_king_strathclyde)] [scottish_king_strathclyde.GetTitledFirstName]"
   bryten_decision.0011.former.desc:0 "[scottish_king_strathclyde.GetTitledFirstName]"
   bryten_decision.0011.end.desc:0 "has fully integrated Strathclyde into the kingdom of Scotland."
+
 #######################################
 # Reclaim Britannia
 #######################################
@@ -74,6 +75,7 @@
  bryten_decision.0013.celtic:0 "Britian is brythonic once again!"
  bryten_decision.0013.germanic:0 "A scourge upon the lands..."
  bryten_decision.0013.other:0 "Fascinating developments"
+
 #######################################
 # Holy Wells
 #######################################
@@ -88,6 +90,7 @@
  bryten_decision.0015.toast:0 "The holy well's waters bless you"
  activity_TFE_visit_holy_well:0 "Visit to a Holy Well"
  activity_TFE_visit_holy_well_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Visit to a Holy Well"
+
 #######################################
 # Sacred Groves
 #######################################
@@ -101,6 +104,7 @@
  bryten_decision.0017.a:0 "It was a wonderful experience, all in all."
  activity_vist_sacred_grove:0 "Visit to a sacred grove"
  activity_vist_sacred_grove_name:0 "[ACTIVITY.GetOwner.GetNamePossessiveOrMy|U] Visit to a sacred grove"
+
 #######################################
 # Creating Gotaland
 #######################################
@@ -113,19 +117,54 @@
  bryten_decision.0019.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', gotaland_creator)] [gotaland_creator.GetTitledFirstName]"
  bryten_decision.0019.former.desc:0 "[gotaland_creator.GetTitledFirstName]"
  bryten_decision.0019.end.desc:0 "has been crowned king of Gotaland, uniting the Geats under [gotaland_creator.GetHerHis] Banner. [gotaland_creator.GetHerHis|U] name will surely live on for centuries, but will [gotaland_creator.GetSheHe] be remembered as a hero or a tyrant? Only [ROOT.Char.GetFaith.FateGodName] knows."
+#######################################
+# Integrating Sorbia
+#######################################
+  bryten_decision.0020.t:0 "Straythclyde is Ours"
+  bryten_decision.0020.desc:0 "The sorbian lands have long been a thorn in the empire for a long time. The margraves of Meissen have worked to pacify the land, and now with the Ostsiedlung in full swing, the land can now be considered fully integrated into the Kingdom of Germany."
+  bryten_decision.0020.a:1 "Long Live the Empire"
 
+  bryten_decision.0021.t:0 "Sorbia is part of Germany"
+  bryten_decision.0021.start.desc:0 "The tribal lands of the Sorbs are pacified and now, "
+  bryten_decision.0021.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', german_king_sorbia)] [german_king_sorbia.GetTitledFirstName]"
+  bryten_decision.0021.former.desc:0 "[german_king_sorbia.GetTitledFirstName]"
+  bryten_decision.0021.end.desc:0 "has fully integrated the land into the Kingdom of Germany."
+#######################################
+# Creating Imperial Titles
+#######################################
+ # Kingdom of Frisia
+ bryten_decision.0022.t:0 "The Kingdom of Frisia has been created"
+ bryten_decision.0022.desc:0 "The land of the Frisians is now under my control. No more will foreigners claim that they rule over us, but instead we are now recognized as a power within Europe to be dealt with. My banners fly throughout Frisia, my kingdom."
+ bryten_decision.0022.a:1 "Glory to Frisia!"
 
+ bryten_decision.0023.t:0 "The Kingdom of Gotaland has been created"
+ bryten_decision.0023.start.desc:0 "In Gotaland,"
+ bryten_decision.0023.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', gotaland_creator)] [gotaland_creator.GetTitledFirstName]"
+ bryten_decision.0023.former.desc:0 "[gotaland_creator.GetTitledFirstName]"
+ bryten_decision.0023.end.desc:0 "has been crowned king of Gotaland, uniting the Geats under [gotaland_creator.GetHerHis] Banner. [gotaland_creator.GetHerHis|U] name will surely live on for centuries, but will [gotaland_creator.GetSheHe] be remembered as a hero or a tyrant? Only [ROOT.Char.GetFaith.FateGodName] knows."
 
+ # Kingdom of Bavaria
+ bryten_decision.0024.t:0 "The Kingdom of Bavaria has been created"
+ bryten_decision.0024.desc.east_francia:0 "The Lands of Bavaria have now been declared an independent kingdom, not an integral part of East Francia. No longer is our kingdom bound to the dictates of the King of East Francia. Now my banners fly throughout Bavaria, fly throughout my Kingdom."
+ bryten_decision.0024.desc.germany:0 "The Lands of Bavaria have now been declared an independent kingdom, not an integral part of Germany. No longer is our kingdom bound to the dictates of the King of Germany. Now my banners fly throughout Bavaria, fly throughout my Kingdom."
+ bryten_decision.0024.a:1 "Glory to Bavaria!"
 
+ bryten_decision.0025.t:0 "The Kingdom of Gotaland has been created"
+ bryten_decision.0025.start.desc:0 "In Gotaland,"
+ bryten_decision.0025.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', gotaland_creator)] [gotaland_creator.GetTitledFirstName]"
+ bryten_decision.0025.former.desc:0 "[gotaland_creator.GetTitledFirstName]"
+ bryten_decision.0025.end.desc:0 "has been crowned king of Gotaland, uniting the Geats under [gotaland_creator.GetHerHis] Banner. [gotaland_creator.GetHerHis|U] name will surely live on for centuries, but will [gotaland_creator.GetSheHe] be remembered as a hero or a tyrant? Only [ROOT.Char.GetFaith.FateGodName] knows."
 
+ # Kingdom of Lotharingia
+ bryten_decision.0026.t:0 "The Kingdom of Lotharingia has been created"
+ bryten_decision.0026.desc:0 "Lotharingia has been recreated. It has risen from the ashes of the Carolingian empire and now the banners once again fly. Rival kingdoms thought that they could destroy the kingdom, but they were wrong, and now my banners fly throughout Lotharingia. "
+ bryten_decision.0026.a:1 "Glory to Lotharingia!"
 
-
-
-
-
-
-
-
+ bryten_decision.0027.t:0 "The Kingdom of Gotaland has been created"
+ bryten_decision.0027.start.desc:0 "In Gotaland,"
+ bryten_decision.0027.relation_former.desc:0 "My [ROOT.Char.Custom2('RelationToMe', gotaland_creator)] [gotaland_creator.GetTitledFirstName]"
+ bryten_decision.0027.former.desc:0 "[gotaland_creator.GetTitledFirstName]"
+ bryten_decision.0027.end.desc:0 "has been crowned king of Gotaland, uniting the Geats under [gotaland_creator.GetHerHis] Banner. [gotaland_creator.GetHerHis|U] name will surely live on for centuries, but will [gotaland_creator.GetSheHe] be remembered as a hero or a tyrant? Only [ROOT.Char.GetFaith.FateGodName] knows."
 
 
 

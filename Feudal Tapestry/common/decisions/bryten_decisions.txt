@@ -1754,4 +1754,320 @@ bryten_saint_olaf_routes_decision = {# Support the Way of Saint Olaf in Scandina
 		}
 	}
 }
+#############################################
+# German / Imperial Decisions
+#############################################
+integrate_sorbia_kingdom = {# Integrate Sorbia into Germany
+	picture = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	ai_check_interval = 60
+	major = yes
+	desc = integrate_sorbia_kingdom_desc
+
+	is_shown = {
+		NOT = {# this is a unique decision
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:integrate_sorbia_kingdom
+			}
+		}
+		has_primary_title = title:e_hre # Only the emperor can do it.
+		has_primary_title = title:k_east_francia # He must also be king of germany
+	}
+
+	is_valid = {
+		root.culture = { has_innovation = innovation_east_settling }
+		completely_controls = title:d_meissen
+		completely_controls = title:d_lausitz
+		has_primary_title = title:e_hre # Only the emperor can do it.
+		has_primary_title = title:k_east_francia # He must also be king of germany
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		save_scope_as = german_king_sorbia
+		show_as_tooltip = {	integrate_sorbia_kingdom_effect = yes }
+		trigger_event = { id = bryten_decision.0020	}
+		every_player = {
+			limit = {
+				NOT = { this = scope:german_king_sorbia }
+				is_within_diplo_range = { CHARACTER = scope:german_king_sorbia }
+			}
+			trigger_event = bryten_decision.0021
+		}
+		#Can only be done once
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:integrate_sorbia_kingdom
+			}
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+create_kingdom_of_frisia_decision = {# Create the Kingdom of Frisia
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	major = yes
+	ai_check_interval = 120
+
+	desc = create_kingdom_of_frisia_decision_desc
+	selection_tooltip = create_kingdom_of_frisia_decision_tooltip
+
+	is_shown = {
+		has_culture = culture:frisian # has to be a geat
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_frisia_kingdom
+			}
+		}
+		NOT = { highest_held_title_tier >= tier_kingdom }
+		custom_tooltip = {
+			text = capital_in_frisia_region_tooltip
+			capital_province = { geographical_region = custom_frisia } 
+		}
+
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = capital_in_frisia_region_tooltip
+			capital_province = { geographical_region = custom_frisia } 
+		}
+		is_independent_ruler = yes
+		prestige_level >= high_prestige_level
+		completely_controls = title:k_frisia
+		has_culture = culture:frisian
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {	create_kingdom_frisia_decision_scripted_effect = yes }
+		save_scope_as = frisia_creator
+		trigger_event = { id = bryten_decision.0022 }
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = bryten_decision.0023
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_frisia_kingdom
+			}
+		}
+	}
+
+	cost = { gold = 300 }
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+create_kingdom_bavaria_decision = {# Create the Kingdom of Bavaria
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	major = yes
+	ai_check_interval = 120
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = {	exists = global_var:east_francia_renamed }
+				}
+				desc = create_kingdom_bavaria_decision_desc_east_francia
+			}
+			triggered_desc = {
+				trigger = {
+					exists = global_var:east_francia_renamed
+				}
+				desc = create_kingdom_bavaria_decision_desc_east_francia
+			}
+		}
+	}
+	selection_tooltip = create_kingdom_bavaria_decision_tooltip
+
+	is_shown = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			culture = { has_cultural_pillar = heritage_frankish }
+			culture = { has_cultural_pillar = heritage_latin }
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_bavaria_kingdom
+			}
+		}
+		NOT = { highest_held_title_tier >= tier_kingdom }
+		custom_tooltip = {
+			text = capital_in_bavaria_region_tooltip
+			capital_province = { geographical_region = custom_bavaria } 
+		}
+
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = capital_in_bavaria_region_tooltip
+			capital_province = { geographical_region = custom_bavaria } 
+		}
+		is_independent_ruler = yes
+		prestige_level >= high_prestige_level
+		completely_controls = title:k_bavaria
+		OR = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			culture = { has_cultural_pillar = heritage_frankish }
+			culture = { has_cultural_pillar = heritage_latin }
+		}
+	}
+
+	is_valid_showing_failures_only = { is_available_adult = yes }
+
+	effect = {
+		show_as_tooltip = {	create_kingdom_bavaria_decision_scripted_effect = yes }
+		save_scope_as = bavaria_creator
+		trigger_event = { id = bryten_decision.0024 }
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = bryten_decision.0025
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_bavaria_kingdom
+			}
+		}
+	}
+
+	cost = { gold = 300 }
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+create_kingdom_lotheringia_decision = {# Create the Kingdom of Lotharingia
+	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	major = yes
+	ai_check_interval = 120
+
+	desc = create_kingdom_lotheringia_decision
+	selection_tooltip = create_kingdom_lotheringia_decision_tooltip
+
+	is_shown = {
+		OR = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			culture = { has_cultural_pillar = heritage_frankish }
+			culture = { has_cultural_pillar = heritage_latin }
+		}
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_lotheringia_kingdom
+			}
+		}
+		NOT = { highest_held_title_tier >= tier_kingdom }
+		custom_tooltip = {
+			text = capital_in_lotheringia_region_tooltip
+			capital_province = { geographical_region = custom_lotharingia } 
+		}
+
+	}
+
+	is_valid = {
+		custom_tooltip = {
+			text = capital_in_lotheringia_region_tooltip
+			capital_province = { geographical_region = custom_lotharingia } 
+		}
+		is_independent_ruler = yes
+		prestige_level >= high_prestige_level
+		completely_controls = title:k_lotharingia
+		OR = {
+			culture = { has_cultural_pillar = heritage_central_germanic }
+			culture = { has_cultural_pillar = heritage_frankish }
+			culture = { has_cultural_pillar = heritage_latin }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		show_as_tooltip = {
+			create_kingdom_lotharingia_decision_scripted_effect = yes
+		}
+		save_scope_as = lotheringia_creator
+		trigger_event = { id = bryten_decision.0026 }
+		#Notify other players.
+		every_player = {
+			limit = {
+				NOT = { this = root }
+				is_within_diplo_range = { CHARACTER = root }
+			}
+			trigger_event = bryten_decision.0027
+		}
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:create_lotheringia_kingdom
+			}
+		}
+	}
+
+	cost = {
+		gold = 300
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

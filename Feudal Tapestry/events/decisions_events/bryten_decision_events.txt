@@ -736,7 +736,7 @@ bryten_decision.0018 = {# I create Gotaland
 	override_background = { reference = fp1_throneroom_nontribal }
 
 	left_portrait = {
-		character = scope:kent_restorer
+		character = scope:gotaland_creator
 		animation = personality_bold
 	}
 
@@ -777,3 +777,232 @@ bryten_decision.0019 = {# Someone has created Gotaland
 		name = name_i_see
 	}
 }
+#######################################
+# Integrating Sorbia
+#######################################
+bryten_decision.0020 = {# I intergrated Sorbia into Germany
+	type = character_event
+	title = bryten_decision.0020.t
+	desc = bryten_decision.0020.desc
+	theme = realm
+	left_portrait = {
+		character = scope:german_king_sorbia
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		integrate_sorbia_kingdom_effect = yes
+	}
+	
+	option = {# Long live the Empire!
+		name = bryten_decision.0020.a
+	}
+}
+bryten_decision.0021 = {# Someone intergrated Sorbia
+	type = character_event
+	title = bryten_decision.0021.t
+	desc = {
+		desc = bryten_decision.0021.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_RelationToMe_relation = { CHARACTER = scope:german_king_sorbia }
+				}
+				desc = bryten_decision.0021.relation_former.desc
+			}
+			desc = bryten_decision.0021.former.desc
+		}	
+		desc = bryten_decision.0021.end.desc		
+	}
+	theme = realm
+	left_portrait = {
+		character = scope:german_king_sorbia
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+#######################################
+# Forming Frisia
+#######################################
+bryten_decision.0022 = {# I create Frisia
+	type = character_event
+	title = bryten_decision.0022.t
+	desc = bryten_decision.0022.desc
+	theme = realm
+
+	left_portrait = {
+		character = scope:frisia_creator
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		create_kingdom_frisia_decision_scripted_effect = yes
+	}
+	
+	option = {# Long live Gotaland
+		name = bryten_decision.0022.a
+	}
+}
+bryten_decision.0023 = {# Someone has created Frisia
+	type = character_event
+	title = bryten_decision.0023.t
+	desc = {
+		desc = bryten_decision.0023.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {	has_RelationToMe_relation = { CHARACTER = scope:frisia_creator } }
+				desc = bryten_decision.0023.relation_former.desc
+			}
+			desc = bryten_decision.0023.former.desc
+		}	
+		desc = bryten_decision.0023.end.desc		
+	}
+	theme = realm
+
+	left_portrait = {
+		character = scope:frisia_creator
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+#######################################
+# Forming Bavaria
+#######################################
+bryten_decision.0024 = {# I create Bavaria
+	type = character_event
+	title = bryten_decision.0024.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					exists = global_var:east_francia_renamed
+				}
+				desc = bryten_decision.0024.desc.germany
+			}
+			triggered_desc = {
+				trigger = {
+					NOT = {	exists = global_var:east_francia_renamed }
+				}
+				desc = bryten_decision.0024.desc.east_francia
+			}
+		}
+	}
+	theme = realm
+
+	left_portrait = {
+		character = scope:bavaria_creator
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		create_kingdom_bavaria_decision_scripted_effect = yes
+	}
+	
+	option = {# Long live Gotaland
+		name = bryten_decision.0024.a
+	}
+}
+bryten_decision.0025 = {# Someone has created Bavaria
+	type = character_event
+	title = bryten_decision.0025.t
+	desc = {
+		desc = bryten_decision.0025.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {	has_RelationToMe_relation = { CHARACTER = scope:bavaria_creator }	}
+				desc = bryten_decision.0019.relation_former.desc
+			}
+			desc = bryten_decision.0025.former.desc
+		}	
+		desc = bryten_decision.0025.end.desc		
+	}
+	theme = realm
+
+	left_portrait = {
+		character = scope:bavaria_creator
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+#######################################
+# Forming Lotharingia
+#######################################
+bryten_decision.0025 = {# I create Lotharingia
+	type = character_event
+	title = bryten_decision.0025.t
+	desc = bryten_decision.0025.desc
+	theme = realm
+
+	left_portrait = {
+		character = scope:lotheringia_creator
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		create_kingdom_lotharingia_decision_scripted_effect = yes
+	}
+	
+	option = {# Long live Gotaland
+		name = bryten_decision.0025.a
+	}
+}
+bryten_decision.0027 = {# Someone has created Lotharingia
+	type = character_event
+	title = bryten_decision.0027.t
+	desc = {
+		desc = bryten_decision.0027.start.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_RelationToMe_relation = { CHARACTER = scope:lotheringia_creator } }
+				desc = bryten_decision.0027.relation_former.desc
+			}
+			desc = bryten_decision.0027.former.desc
+		}	
+		desc = bryten_decision.0027.end.desc		
+	}
+	theme = realm
+
+	left_portrait = {
+		character = scope:lotheringia_creator
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
