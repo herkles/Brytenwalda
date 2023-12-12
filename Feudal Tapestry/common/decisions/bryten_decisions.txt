@@ -634,10 +634,7 @@ bryten_cinque_ports_exempt_tax = {# Set up the Cinque ports
 		}
 		OR = {
 			prestige_level >= 2
-			custom_tooltip = {
-				text = "is_king_or_emperor"
-				highest_held_title_tier >= tier_kingdom
-			}
+			highest_held_title_tier >= tier_kingdom
 		}
 		culture = {	has_innovation = innovation_development_02 }
 	}
@@ -1615,7 +1612,7 @@ bryten_saint_olaf_routes_decision = {# Support the Way of Saint Olaf in Scandina
 
 	is_valid = {
 		custom_tooltip = {
-			text = bryten_saint_andrew_geographical_req
+			text = bryten_saint_olaf_geographical_req
 			any_held_title = {
 				tier = tier_county
 				any_county_province = {	geographical_region = custom_scotland_st_olaf_way	}
@@ -1624,7 +1621,7 @@ bryten_saint_olaf_routes_decision = {# Support the Way of Saint Olaf in Scandina
 		OR = {
 			religion = religion:christianity_religion
 			custom_tooltip = {
-				text = bryten_saint_andrew_geographical_christian_county_req
+				text = bryten_saint_olaf_geographical_christian_county_req
 				any_held_title = {
 					tier = tier_county
 					religion = religion:christianity_religion

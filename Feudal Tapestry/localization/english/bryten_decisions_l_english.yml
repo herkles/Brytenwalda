@@ -114,6 +114,14 @@
   bryten_saint_andrew_routes_decision_counties.distant.low:0 "That are a long distance from St Andrew with low [control|E]"
   bryten_saint_andrew_routes_decision_counties.distant.low.tooltip:0 "Gain [GetModifier('bryten_saint_andrew_infrastructure_distant_low').GetNameWithTooltip] for #V 10#! years" 
 
+  bryten_saint_andrew_geographical_req:0 "You own at least one [county|E] in [GetGeographicalRegion('custom_scotland_st_andrew_way').GetName]"
+
+  bryten_saint_andrew_geographical_christian_county_req:0 "As a non-Christian, you own at least one [county|E] in [GetGeographicalRegion('custom_scotland_st_andrew_way').GetName] that follows a Christian [faith|E]"
+
+
+
+
+
 #######################################
 # Pilgrimages
 #######################################
@@ -180,6 +188,12 @@
   bryten_saint_olaf_routes_decision_counties.distant.high.tooltip:0 "Gain [GetModifier('bryten_saint_olaf_infrastructure_midrange_low').GetNameWithTooltip] for #V 10#! years" 
   bryten_saint_olaf_routes_decision_counties.distant.low:0 "That are a long distance from St olaf with low [control|E]"
   bryten_saint_olaf_routes_decision_counties.distant.low.tooltip:0 "Gain [GetModifier('bryten_saint_olaf_infrastructure_distant_low').GetNameWithTooltip] for #V 10#! years" 
+
+  bryten_saint_olaf_geographical_req:0 "You own at least one [county|E] in [GetGeographicalRegion('custom_scotland_st_olaf_way').GetName]"
+
+  bryten_saint_olaf_geographical_christian_county_req:0 "As a non-Christian, you own at least one [county|E] in [GetGeographicalRegion('custom_scotland_st_olaf_way').GetName] that follows a Christian [faith|E]"
+
+
 
 #######################################
 # Holy Wells

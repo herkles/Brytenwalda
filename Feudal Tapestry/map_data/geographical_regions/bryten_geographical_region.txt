@@ -1,6 +1,6 @@
 ﻿
 #######################################
-# Brytenwalda Regions 
+# England Regions 
 #######################################
 custom_england = {# For Norman England
 	duchies = {
@@ -32,11 +32,44 @@ custom_northern_england_saxon = {# Saxon Northern England
 		d_brambugh d_york
 	}
 }
+#######################################
+# Norse Regions 
+#######################################
 custom_norway_islands = {
 	duchies = {
 		d_northern_isles
 	}
 }
+custom_guteland = {
+	duchies = {# gotland
+		d_gotland
+	}
+}
+custom_gaetland = {
+	duchies = {# Gaet territory
+		d_vastergotland	d_ostergotland d_smaland
+	}
+}
+#######################################
+# Scottish Regions 
+#######################################
+custom_scottish_highlands = {
+	duchies = {
+		# Scotland
+		d_albany d_the_isles d_western_isles d_moray
+	}
+}
+#######################################
+# Baltic Regions 
+#######################################
+custom_wendish_lands = {
+	duchies = {# Pomerania
+		d_pommerania d_nordmark d_pomerelia d_ostmark
+	}
+}
+#######################################
+# Welsh / Brythonic Regions 
+#######################################
 custom_brythonic_britian = {
 	duchies = {
 		# England
@@ -51,80 +84,6 @@ custom_britain_byrthon_area = {# area for brython to form
 		c_norfolk c_suffolk c_cambridgeshire c_kent c_surrey c_sussex c_leicestershire c_nottinghamshire c_huntingdonshire c_northamptonshire c_bedford c_buckinghamshire c_lincolnshire c_middlesex c_essex c_hertfordshire
 	}
 }
-custom_scottish_highlands = {
-	duchies = {
-		# Scotland
-		d_albany d_the_isles d_western_isles d_moray
-	}
-}
-custom_wendish_lands = {
-	duchies = {# Pomerania
-		d_pommerania d_nordmark d_pomerelia d_ostmark
-	}
-}
-custom_guteland = {
-	duchies = {# gotland
-		d_gotland
-	}
-}
-custom_gaetland = {
-	duchies = {# Gaet territory
-		d_vastergotland	d_ostergotland d_smaland
-	}
-}
-
-
-
-
-#######################################
-# Way of Saint Regions 
-#######################################
-custom_scotland_st_andrew_way = {
-	duchies = {
-		d_galloway d_lothian d_albany
-	}
-}
-bryten_saint_andrew_region = {
-	duchies = {
-		d_albany
-	}
-}
-bryten_close_to_saint_andrew_region = {
-	duchies = {
-		d_galloway d_lothian
-	}
-}
-bryten_distant_from_saint_andrew_region = {
-	duchies = {
-		d_moray d_western_isles d_the_isles d_northumberland d_york
-	}
-}
-
-custom_scotland_st_olaf_way = {
-	duchies = {
-		#k_norway
-		d_viken d_agder d_vestlandi d_trandalog d_dalir d_halogaland d_jamtland
-		#k_sweden
-		d_ostergotland d_vastergotland d_svealand d_norrland d_smaland d_bergslagen
-	}
-}
-bryten_saint_olaf_region = {
-	duchies = {
-		d_trandalog
-	}
-}
-bryten_close_to_saint_olaf_region = {
-	duchies = {
-		d_viken d_agder d_vestlandi d_dalir d_halogaland d_jamtland
-	}
-}
-bryten_distant_from_saint_olaf_region = {
-	duchies = {
-		d_ostergotland d_vastergotland d_svealand d_norrland d_smaland d_bergslagen
-	}
-}
-
-
 #######################################
 # Frankish spliting Regions 
 #######################################
@@ -171,3 +130,54 @@ custom_sicily_island = {
 		d_sicily
 	}
 }
+#######################################
+# Way of Saint Regions 
+#######################################
+
+# Way of Saint Andrew
+custom_scotland_st_andrew_way = {
+	duchies = {
+		d_galloway d_lothian d_albany
+	}
+}
+bryten_saint_andrew_region = {
+	duchies = {
+		d_albany
+	}
+}
+bryten_close_to_saint_andrew_region = {
+	duchies = {
+		d_galloway d_lothian
+	}
+}
+bryten_distant_from_saint_andrew_region = {
+	duchies = {
+		d_moray d_western_isles d_the_isles d_northumberland d_york
+	}
+}
+# Way of Saint Olaf
+custom_scotland_st_olaf_way = {
+	duchies = {
+		#k_norway
+		d_viken d_agder d_vestlandi d_trandalog d_dalir d_halogaland d_jamtland
+		#k_sweden
+		d_ostergotland d_vastergotland d_svealand d_norrland d_smaland d_bergslagen
+	}
+}
+bryten_saint_olaf_region = {
+	duchies = {
+		d_trandalog
+	}
+}
+bryten_close_to_saint_olaf_region = {
+	duchies = {
+		d_viken d_agder d_vestlandi d_dalir d_halogaland d_jamtland
+	}
+}
+bryten_distant_from_saint_olaf_region = {
+	duchies = {
+		d_ostergotland d_vastergotland d_svealand d_norrland d_smaland d_bergslagen
+	}
+}
+
+
