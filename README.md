@@ -6,11 +6,11 @@ If you find any bugs or issues do let me know and I will try to fix them to the 
 
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up.
 
-## Latest Version: 1.0.0 "Brytenwalda" (Released 07/06/2023)
+## Latest Version: 2.0.0 "Frankia" (Released 12/14/2023)
 
-This is the first release and focuses on the British Isles. The name Brytenwalda means britian rule or possibly wide ruler. The focus here is on improving the content for both 1066 and 867. It isn't strictly an England flavor mod, even if that gets the lion share of content.
+This update expands to the empire of the Franks. This update revises the cultural set up in both 867 and 1066. In 867 The cultural evolution is still on going and in the middle of the divgerence from Frankish to French and Franconian. In 1066 that has already happened. Likewise the Empire in 867 is Frankia while in 1066 the lands part of the Holy Roman Empire are properly part of it. 
 
-as a side note: originally the mod was going to be called Brytenwalda and just be a british isle mod, but I decided to change the name and focus on a grander scope due to how intertwined the realms of Western Europe where with one another.
+Scandinivia also got a cultural update with the inclusion of the Geats and Gotlanders as parts of Norse divergence. 
 
 ## Main Features
 
@@ -23,6 +23,8 @@ as a side note: originally the mod was going to be called Brytenwalda and just b
 - Different de jure set up in 867 and 1066
 - Narrative events for William the conquer's conquest
 - A bookmark where William the conquer is king(december 25th 1066)
+- revision of the cultures of Frankia and Scandinvia; franks now exist in 867
+- Revision of the kingdoms in western europe for both 867 and 1066 to better reflect history
 
 ## Manual Installation Steps
 
