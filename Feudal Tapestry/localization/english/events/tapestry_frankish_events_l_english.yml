@@ -1,22 +1,25 @@
 ﻿l_english:
 
 #######################################
-# Treaty of Meerssen
+# Lothair II trip to rome
 #######################################
-  tapestry_frankish.021.t:0 "Partioning Lothair's realm?"
-  tapestry_frankish.021.desc:0 "A messenger from the court of Charles of western Francia has informed you that Lothair of Lotharingia has died. As such it would be in the interest of Francia as a whole to partion the lands between you and him. Louis the Younger ruling in Italy however is likely to be furious, but the benefits for East Francia could be quite good. Shall you go to Meerssen and sign the treaty?"
-  tapestry_frankish.021.a:1 "Sign the Treaty!"
-  tapestry_frankish.021.b:1 "Don't sign the Treaty!"
+  tapestry_frankish.011.t:0 "Meet with the New Pope"
+  tapestry_frankish.011.desc:0 "News has reached you that Pope Nicholas is no longer alive. You can make the trip down to Rome in order to meet him, but it could be dangerous. Still meeting with Pope [pope.GetFirstName] can mean that you and Waldrada can finally be married and your son can be properly legitimized."
+  tapestry_frankish.011.visit:1 "Let me meet with the Holy Father!"
+  tapestry_frankish.011.stay:1 "Not this time"
 
-  tapestry_frankish.022.t:0 "The Treaty of Meerssen is signed"
-  tapestry_frankish.022.desc:0 "Ludwig the German has agreed to sign the treaty. Lothair II realm is now partitioned between east and west francia. How long the treaty will hold, only God knows."
-  tapestry_frankish.022.a:1 "God bless Francia!"
+  tapestry_frankish.012.t:0 "Meeting with the Pope"
+  tapestry_frankish.012.desc:0 "You have finally arrived in Rome to meet the Holy Father, Pope [pope.GetFirstName]. After a series of long debates you finally have gotten permission from the Holy father to marry Waldrada like the Council of Metz approved of a few years ago. You do owe the Holy Father a big favor for this, but this should help keep your realm secure. \n\nNow you just need to return home. "
+  tapestry_frankish.012.rome:1 "Thank you, your Holiness!"
+  tapestry_frankish.012.rome.tt:0 "You owe the pope a favor for giving you the edict."
 
-  tapestry_frankish.023.t:0 "Ludwig the German refuses"
-  tapestry_frankish.023.desc:0 "Ludwig the German has refused to sign the treaty, allowing Louis of Italy to take full control of Lothar's possessions. This could be complicated for your ambitions. "
-  tapestry_frankish.023.a:1 "Damn him!"
+  tapestry_frankish.013.t:0 "Getting Sick on the way home?"
+  tapestry_frankish.013.desc:0 "As you are on the trip back home, you suddenly find yourself sick. Some sort of fever seems to be coming over and you feel weak. You pray to the Lord and all his saints that this won't be the end of your reign."
+  tapestry_frankish.013.sick:1 "I don't feel so good"
+  tapestry_frankish.013.sick.tt.success:0 "Your prayers have been answered, you survive!"
+  tapestry_frankish.013.sick.tt.failure:0 "You perish and are welcomed to heaven!"
+  tapestry_frankish.013.live:1 "I.. I won't die here!"
 
-
-
-
-
+  tapestry_frankish.014.t:0 "Return Home with the Papal Blessing"
+  tapestry_frankish.014.desc:0 "You finally return home, with the edict from the pope with you. Teutberga is furious at you for the divorce, still you finally are able to be with Waldrada, the love of your heart and the mother of your child. With this papal edict, your son is now your heir. This struggle and controversy has finally been put to rest."
+  tapestry_frankish.014.a:1 "Finally!"

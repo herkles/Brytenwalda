@@ -258,12 +258,8 @@ reform_carolingian_empire_decision = {# Reforming the Carolingian Empire
 
 	effect = {
 		custom_tooltip = reform_carolingian_empire_decision_effect_tooltip
-		show_as_tooltip = {
-			form_carolingian_empire_scripted_effect = yes
-		}
-		trigger_event = {
-			id = middle_europe_decisions.0005
-		}
+		show_as_tooltip = {	form_carolingian_empire_scripted_effect = yes }
+		trigger_event = { id = middle_europe_decisions.0005 }
 		hidden_effect = {
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions

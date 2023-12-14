@@ -930,7 +930,6 @@ found_kingdom_of_livonia_decision_scripted_effect = {
 #############################################
 form_carolingian_empire_scripted_effect = {
 	save_scope_as = scoped_ruler
-
 	create_title_and_vassal_change = {
 		type = created
 		save_scope_as = title_change
@@ -944,10 +943,6 @@ form_carolingian_empire_scripted_effect = {
 	}
 	resolve_title_and_vassal_change = scope:title_change
 
-
-
-
-	title:e_byzantium.holder = { save_scope_as = scoped_emperor }
 	#De jure shifts.
 	hidden_effect = {
 		title:k_france = {
@@ -1032,7 +1027,13 @@ form_carolingian_empire_scripted_effect = {
 			add_culture_tradition = tradition_frankish_learning
 		}
 	}
+	culture = {# Random innovation to reflect the begining of a renaissance, ala ottonian
+		add_random_innovation = culture_group_military
+		add_random_innovation = culture_group_civic
+	}
 
+
+	title:e_byzantium.holder = { save_scope_as = scoped_emperor }
 	scope:scoped_emperor = {
 		add_prestige = major_prestige_loss
 		add_opinion = {
