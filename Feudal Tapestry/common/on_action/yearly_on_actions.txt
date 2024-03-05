@@ -1,5 +1,4 @@
-﻿
-# Called every Jan 1st
+﻿# Called every Jan 1st
 # Root does not exist
 yearly_global_pulse = {
 	effect = {
@@ -68,11 +67,7 @@ yearly_global_pulse = {
 			}
 		}
 		# Mongol Invasion
-		if = {
-			limit = {
-				has_game_rule = never_mongol_invasion
-			}
-		}
+		if = { limit = { has_game_rule = never_mongol_invasion } }
 		else_if = {
 			limit = {
 				has_game_rule = random_mongol_invasion
@@ -292,6 +287,7 @@ yearly_global_pulse = {
 				}
 			}
 		}
+		
 		# Rabbinicism becomes Monogamous
 		if = {
 			limit = {
@@ -353,6 +349,7 @@ yearly_global_pulse = {
 				}
 			}
 		}
+		
 		# The Rise of the Seljuk
 		if = { limit = { has_game_rule = never_seljuk_invasion } }
 		else_if = { # Random Seljuk Invasion
@@ -453,7 +450,6 @@ yearly_global_pulse = {
 				value = yes
 			}
 		}
-
 
 		# New Shifts
 		if = {# Anglo-Saxon -> Scottish Culture Shift
@@ -598,7 +594,7 @@ yearly_global_pulse = {
 				}
 			}
 		}
-		if = {
+		if = {# Frankish culture spliting
 			limit = {
 				current_date < 990.1.1
 				NOT = { has_global_variable = frankish_culture_split }
@@ -645,10 +641,8 @@ yearly_global_pulse = {
 				}
 			}
 		}
-
-
-
 	}
+	
 	on_actions = {
 		inspiration_maintenance_global_pulse
 	}
@@ -1041,6 +1035,35 @@ random_yearly_playable_pulse = {
 		4 = fp2_yearly_events
 		4 = fp3_yearly_events
 		2 = bp1_yearly_events
+	}
+	effect = {
+		# Special Holy Seeds drops
+		if = {
+			limit = {
+				has_dlc_feature = legends
+				OR = {
+					has_trait = theologian
+					has_trait = sayyid
+				}
+				NOT = { has_variable = saintly_deed_var }
+			}
+			random = {
+				chance = 15
+				send_interface_toast = {
+					title = holy_seed_toast_traits
+					left_icon = root
+					set_variable = saintly_deed_var
+					create_legend_seed = {
+						type = holy
+						quality = famed
+						chronicle = saintly_life
+						properties = {
+							religion = root.religion
+						}
+					}
+				}
+			}
+		}
 	}
 	on_actions = {
 		delay = { days = { 45 75 } }

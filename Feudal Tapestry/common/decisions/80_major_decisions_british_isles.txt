@@ -61,6 +61,7 @@ reclaim_britannia_decision = {
 	}
 
 	effect = {
+		gain_heroic_legend_seed_tooltip_effect = yes
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:reclaim_britannia_decision
@@ -221,7 +222,7 @@ england_request_laudabiliter_decision = {
 			has_title = title:e_britannia
 			has_title = title:e_france
 		}
-		has_government = feudal_government
+		government_has_flag = government_is_feudal
 		any_county_in_region = {
 			region = custom_roman_hibernia
 			OR = {
@@ -328,9 +329,9 @@ restore_dumnonia_decision = {
 			}
 		}
 		OR = {
-			has_government = feudal_government
-			has_government = republic_government
-			has_government = clan_government
+			government_has_flag = government_is_feudal
+			government_has_flag = government_is_republic
+			government_has_flag = government_is_clan
 		}
 		highest_held_title_tier <= tier_duchy
 	}
