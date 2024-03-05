@@ -572,7 +572,7 @@ tradition_northumbrian = {# Northumbrian Vengence
 
 	character_modifier = {
 		dread_baseline_add = 10
-		monthly_county_control_change_factor = -0.2
+		monthly_county_control_growth_factor = -0.2
 		opinion_of_liege = -10
 		ai_honor = -20
 	}
@@ -963,7 +963,7 @@ tradition_anglo_saxon = {# Anglo-Saxon Burhs, ShireCourts
 		martial_education_more_valued = yes
 	}
 	county_modifier = {
-		monthly_county_control_change_add = 0.1
+		monthly_county_control_growth_add = 0.1
 	}
 	character_modifier = {
 		defender_advantage = 2
@@ -1169,7 +1169,7 @@ tradition_cornish = {# land's end
 	character_modifier = {
 		same_culture_opinion = 5
 		max_loot_mult = 0.5
-		monthly_county_control_change_add = 0.3
+		monthly_county_control_growth_add = 0.3
 		controlled_province_advantage = 2		
 	}
 	
