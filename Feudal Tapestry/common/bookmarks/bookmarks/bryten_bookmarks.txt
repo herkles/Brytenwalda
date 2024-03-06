@@ -1,4 +1,7 @@
-﻿bm_867_bryten_1 = {# The Heptarchy
+﻿#############################################
+# 867 Bookmarks		
+#############################################
+bm_867_bryten_1 = {# The Heptarchy
 	start_date = 867.1.1
 	is_playable = yes
 	group = bm_group_867
@@ -196,6 +199,77 @@ bm_867_bryten_2 = {# The Celtic Lands
 		animation = personality_bold
 	}
 }
+#############################################
+# 936 Bookmarks		
+#############################################
+bm_936_bryten_1 = {# The Iron Century
+	start_date = 936.8.7
+	is_playable = yes
+	recommended = yes
+	group = bm_group_936
+
+	character = {# Otto I # 1282
+		name = "bookmark_bryten_936_king_otto"
+		dynasty = 669
+		dynasty_splendor_level = 3
+		type = male
+		birth = 912.11.23
+		title = k_east_francia
+		government = feudal_government
+		culture = saxon
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 1282
+		position = { 620 720 }
+		animation = personality_bold
+
+	}	
+}
+#############################################
+# 1000 Bookmarks		
+#############################################
+bm_1000_bryten_1 = {# Renovatio
+	start_date = 1000.12.25
+	is_playable = yes
+	recommended = yes
+	group = bm_group_1000
+
+	character = {# Otto III
+		name = "bookmark_bryten_1000_otto"
+		dynasty = 669
+		dynasty_splendor_level = 3
+		type = male
+		birth = 980.1.2
+		title = e_hre
+		government = feudal_government
+		culture = saxon
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 1288
+		position = { 620 720 }
+
+		animation = personality_bold
+	}	
+	character = {# Henry, Duke of Bavaria(Future Henry II)
+		name = "bookmark_bryten_1000_henry_bavaria" # Henry, future Henry II ID:1296
+		dynasty = 669
+		dynasty_splendor_level = 2
+		type = male
+		history_id = 1296
+		birth = 973.1.2
+		title = d_bavaria
+		government = feudal_government
+		culture = bavarian
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		position = { 1200 490 }
+		
+		animation = personality_content
+	}		
+}
+#############################################
+# 1066 Bookmarks		
+#############################################
 bm_1066_bryten_1 = {# The Norman Conquest
 	start_date = 1066.12.25
 	is_playable = yes
@@ -326,9 +400,3 @@ bm_1066_bryten_1 = {# The Norman Conquest
 	
 	}		
 }
-
-
-
-
-
-
