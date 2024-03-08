@@ -35,13 +35,9 @@
 
 	882.2.8 = {
 		birth = yes
-		give_nickname = nick_al-ikhshid
 	}
 	936.1.1 = {
-		add_prestige = 450
-		add_prestige_experience = 450
 		set_relation_friend = { reason = friend_generic_history target = character:260838 }
-		effect = { learn_language = language_arabic }
 	}
 	946.7.24 = {
 		death = yes
@@ -161,7 +157,6 @@ al_abbas_al_kilabi = {
 	dynasty = 1062487
 	religion = "ashari"
 	culture = bedouin
-	father = 261005
 	901.1.1 = {
 		birth = yes
 	}
@@ -401,6 +396,18 @@ bedouin0152 = {
 		death = yes
 	}
 }
+260822 = {
+	name = "Abdallah"
+	dynasty = 1062412
+	religion = imami
+	culture = "levantine"
+	881.1.1 = {
+		birth = yes
+	}
+	929.1.1 = {
+		death = yes
+	}
+}
 260824 = {
 	name = "Ali"
 	dynasty = 1062412
@@ -411,6 +418,18 @@ bedouin0152 = {
 		birth = yes
 	}
 	967.2.9 = {
+		death = yes
+	}
+}
+260835 = {
+	name = "Akab"
+	dynasty = 1062420
+	religion = "imami"
+	culture = "levantine"
+	869.1.1 = {
+		birth = yes
+	}
+	932.1.1 = {
 		death = yes
 	}
 }
@@ -703,6 +722,31 @@ bedouin0152 = {
 #######################################
 # Persian
 #######################################
+261051 = {
+	name = "Abdallah"
+	dynasty = 1062502
+	religion = maturidi
+	culture = persian
+	858.1.1 = {
+		birth = yes
+	}
+	905.1.1 = {
+		death = yes
+	}
+}
+261052 = {
+	name = "Ali_Yahya"
+	dynasty = 1062502
+	religion = maturidi
+	culture = persian
+	father = 261051
+	889.1.1 = {
+		birth = yes
+	}
+	924.1.1 = {
+		death = yes
+	}
+}
 261053 = {
 	name = "Abu_Makhlad"
 	dynasty = 1062502 
@@ -713,6 +757,75 @@ bedouin0152 = {
 		birth = yes
 	}
 	961.1.1 = {
+		death = yes
+	}
+}
+1059701 = {
+	name = "Reza" #Historical unnamed son of Vandad
+	dynasty = 100685
+	religion = "mazdayasna"
+	culture = "persian"
+	father = 160297
+	782.1.1 = {
+		birth = yes
+	}
+	824.1.1 = {
+		death = yes
+	}
+}
+
+1059702 = {
+	name = "Vinda-Umid" #Historical uncle of Mazyar
+	dynasty = 100685
+	religion = "mazdayasna"
+	culture = "persian"
+	father = 1059701
+	800.1.1 = {
+		birth = yes
+	}
+	826.1.1 = {
+		death = yes
+	}
+}
+
+1059703 = {
+	name = "Gurdzad" #Possible historical member of Karen dynasty
+	dynasty = 100685
+	religion = "mazdayasna"
+	culture = "persian"
+	father = 1059702
+	824.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		death = yes
+	}
+}
+
+1059704 = {
+	name = "Baduspan" #Historical member of Karen dynasty
+	dynasty = 100685
+	religion = "mazdayasna"
+	culture = "persian"
+	father = 1059703
+	846.1.1 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes
+	}
+}
+
+1059705 = {
+	name = "Shahriyar" #Historical member of Karen dynasty
+	dynasty = 100685
+	religion = "mazdayasna"
+	culture = "persian"
+	father = 1059704
+	880.1.1 = {
+		birth = yes
+	}
+	917.1.1 = {
 		death = yes
 	}
 }
@@ -757,6 +870,18 @@ bedouin0152 = {
 		death = yes
 	}
 }
+261043 = {
+	name = "Abdallah"
+	dynasty = 1062499
+	religion = maturidi
+	culture = persian
+	880.1.1 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
 261044 = {
 	name = "Abu_l-Abbas"
 	dynasty = 1062499
@@ -779,6 +904,34 @@ bedouin0152 = {
 		birth = yes
 	}
 	941.1.1 = {
+		death = yes
+	}
+}
+
+
+261024 = {
+	name = "Khalaf"
+	dynasty = 812
+	religion = "ashari"
+	culture = persian
+	father = 163163
+	857.1.1 = {
+		birth = yes
+	}
+	899.1.1 = {
+		death = yes
+	}
+}
+261022 = {
+	name = "Muhammad"
+	dynasty = 812
+	religion = "ashari"
+	culture = persian
+	father = 261024
+	883.1.1 = {
+		birth = yes
+	}
+	915.1.1 = {
 		death = yes
 	}
 }
@@ -872,6 +1025,48 @@ bedouin0152 = {
 #######################################
 # Daylamite
 #######################################
+248690 = {
+	name = "Varud" # fictional father of Tirdah
+	dynasty = 1059973 
+	religion = "mazdayasna"
+	culture = "daylamite"
+	835.1.1 = {
+		birth = yes # maybe
+	}
+	867.1.1 = {
+		death = yes # maybe
+	}
+}
+248691 = {
+	name = "Tirdadh" # historical ruler
+	dynasty = 1059973 
+	religion = "mazdayasna"
+	culture = "daylamite"
+	father = 248690
+	trait = cynical
+	trait = arrogant
+	trait = education_martial_2
+	trait = ambitious
+	848.1.1 = {
+		birth = yes # maybe
+	}
+	900.1.1 = {
+		death = yes # maybe
+	}
+}
+248692 = {
+	name = "Harusindan" # historical ruler
+	dynasty = 1059973 
+	religion = "mazdayasna"
+	culture = "daylamite"
+	father = 248691
+	886.1.1 = {
+		birth = yes # maybe
+	}
+	922.1.1 = {
+		death = yes # maybe
+	}
+}
 248693 = {
 	name = "Siahgil" # historical ruler
 	dynasty = 1059973 
@@ -917,6 +1112,18 @@ bedouin0152 = {
 #######################################
 # Maghrebi
 #######################################
+260924 = {
+	name = "Agathon"
+	dynasty = 1062469
+	religion = "ashari"
+	culture = "maghrebi"
+	870.1.1 = {
+		birth = yes
+	}
+	929.1.1 = {
+		death = yes
+	}
+}
 260925 = {
 	name = "Anthinos"
 	dynasty = 1062469
@@ -946,6 +1153,18 @@ bedouin0152 = {
 #######################################
 # Egyptian
 #######################################
+260918 = {
+	name = "Abanoub"
+	dynasty = 1062467
+	religion = "ashari"
+	culture = "egyptian"
+	868.1.1 = {
+		birth = yes
+	}
+	921.1.1 = {
+		death = yes
+	}
+}
 260919 = {
 	name = "Binyamin"
 	dynasty = 1062467
@@ -1059,6 +1278,18 @@ bedouin0152 = {
 		death = yes
 	}
 }
+260914 = {
+	name = "Hisham"
+	dynasty = 1062466
+	religion = "ashari"
+	culture = "egyptian"
+	884.1.1 = {
+		birth = yes
+	}
+	928.1.1 = {
+		death = yes
+	}
+}
 260915 = {
 	name = "Tajaddin"
 	dynasty = 1062466
@@ -1091,14 +1322,6 @@ bedouin0152 = {
 	culture = "egyptian"
 	915.1.1 = {
 		birth = yes
-	}
-	936.1.1 = {
-		effect = {
-			vassal_contract_set_obligation_level = {
-				type = jizya_special_rights
-				level = 1
-			}
-		}
 	}
 	959.1.1 = {
 		death = yes
@@ -1143,6 +1366,33 @@ bedouin0152 = {
 #######################################
 # Kurdish
 #######################################
+261001 = {
+	name = "Eskander"
+	dynasty = 1062486
+	religion = ashari
+	culture = kurdish
+	894.1.1 = {
+		birth = yes
+	}
+	913.1.1 = {
+		add_spouse = 261002
+	}
+	931.1.1 = {
+		death = yes
+	}
+}
+261002 = {
+	name = "Desmal"
+	female = yes
+	religion = ashari
+	culture = kurdish
+	897.1.1 = {
+		birth = yes
+	}
+	945.1.1 = {
+		death = yes
+	}
+}
 261003 = {
 	name = "Zia"
 	dynasty = 1062486
@@ -1157,6 +1407,33 @@ bedouin0152 = {
 		add_spouse = 261000
 	}
 	961.1.1 = {
+		death = yes
+	}
+}
+260996 = {
+	name = "Darab"
+	dynasty = 1062485
+	religion = imami
+	culture = kurdish
+	881.1.1 = {
+		birth = yes
+	}
+	903.1.1 = {
+		add_spouse = 260997
+	}
+	926.1.1 = {
+		death = yes
+	}
+}
+260997 = {
+	name = "Arezu"
+	female = yes
+	religion = armenian_apostolic
+	culture = kurdish
+	883.1.1 = {
+		birth = yes
+	}
+	945.1.1 = {
 		death = yes
 	}
 }
@@ -1300,10 +1577,7 @@ bedouin0152 = {
 		death = yes
 	}
 }
-10624962 = {
-	name = "dynn_Simjurid"
-	culture = turkish
-}
+
 #######################################
 # Tajik
 #######################################
@@ -1316,6 +1590,19 @@ bedouin0152 = {
 		birth = yes
 	}
 	941.1.1 = {
+		death = yes
+	}
+}
+261016 = {
+	name = "Ahmad"
+	dynasty_house = house_samanid
+	religion = maturidi
+	culture = tajik
+	father = 163157
+	875.1.1 = {
+		birth = yes
+	}
+	914.1.1 = {
 		death = yes
 	}
 }
@@ -1380,9 +1667,6 @@ bedouin0152 = {
 	trait = strong
 	750.1.1 = {
 		birth = yes # maybe
-	}
-	769.1.1 = {
-		employer = 188570 # Bamiyan
 	}
 	805.1.1 = {
 		death = yes

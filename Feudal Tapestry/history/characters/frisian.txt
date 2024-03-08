@@ -178,6 +178,23 @@
 		death = "988.5.6"
 	}
 }
+263007 = {
+	name = "Waltger" #Waltger, count of Teisterbant
+	dynasty_house = house_gerulfing #Gerulf of Holland
+	religion = "catholic"
+	culture = "frisian"
+	father = 31060
+	866.1.1={
+		birth = yes
+	}
+	880.1.1 = {
+		trait = "architect" #Built a lot of
+		trait = "zealous"	#churches
+	}
+	936.10.1={
+		death = yes
+	}
+}
 106551 = {
 	name = "Dirk" #Dirk I
 	dynasty_house = house_gerulfing
@@ -1060,6 +1077,26 @@
 # NAME Dynasty
 #######################################
 
+263005 = {
+	name = "Eberhard" #Eberhard "the Saxon"
+	religion = "catholic"
+	culture = "saxon"
+	father = 167775 #Meginhard II
+	mother = 263004
+	dynasty = 1064000
+	865.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		add_spouse = 263006
+	}
+	898.1.1 = {
+		death = {
+		    death_reason = death_murder_known
+		    killer = 263007
+	    }
+	}
+}
 #######################################
 # NAME Dynasty
 #######################################

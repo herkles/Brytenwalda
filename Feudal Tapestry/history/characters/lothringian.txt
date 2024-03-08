@@ -1549,14 +1549,34 @@
 		914.1.1 = {
 			birth = yes
 		}
-		# TODO: Add Meginhard
-		#930.1.2 = {
-		#	add_spouse = 263009 #Meginhard IV
-		#}
+		930.1.2 = {
+			add_spouse = 263009 #Meginhard IV
+		}
 		970.1.1 = {
 			death = yes
 		}
 	}
+	263009 = {
+		name = "Meginhard" #Meginhard IV
+		religion = "catholic"
+		culture = "frisian"
+		father = 263005 #Eberhard
+		mother = 263006
+		dynasty = 1064000
+		898.1.1 = {
+			birth = yes
+		}
+		915.1.1 = {
+			add_spouse = 263010
+		}
+		930.1.2 = {
+			add_spouse = 263012
+		}
+		955.3.15 = {
+			death = yes
+		}
+	}
+
 #######################################
 # luxemburg Dynasty
 #######################################

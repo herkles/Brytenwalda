@@ -1,18 +1,6 @@
 ﻿#######################################
 # Estonian
 #######################################
-167735 = {
-	name = "Kiurupelg"
-	dynasty = 9536
-	religion = "finnish_pagan"
-	culture = "estonian"
-	840.1.1 = {
-		birth = "840.1.1"
-	}
-	890.1.1 = {
-		death = "890.1.1"
-	}
-}
 260752 = {
 	name = "Kahus"
 	dynasty = 9536
@@ -136,6 +124,21 @@
 		death = yes
 	}
 }
+261273 = {
+	name = "Lible"
+	dynasty = 1062378
+	religion = finnish_pagan
+	culture = estonian
+	874.1.1 = {
+		birth = yes
+	}
+	902.1.1 = {
+		add_spouse = 261274
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
 260757 = {
 	name = "Hurmas"
 	dynasty = 1062378
@@ -150,6 +153,18 @@
 		add_spouse = 261275
 	}
 	945.1.1 = {
+		death = yes
+	}
+}
+261274 = {
+	name = "Ninni"
+	female = yes
+	religion = finnish_pagan
+	culture = estonian
+	885.1.1 = {
+		birth = yes
+	}
+	936.1.1 = {
 		death = yes
 	}
 }
@@ -217,6 +232,30 @@
 #######################################
 # Pommeranian
 #######################################
+261224 = {
+	name = "Rostislav"
+	dynasty = 1062244
+	religion = slavic_pagan
+	culture = pommeranian
+	874.1.1 = {
+		birth = yes
+	}
+	915.1.1 = {
+		death = yes
+	}
+}
+261225 = {
+	name = "Gertruda"
+	female = yes
+	religion = slavic_pagan
+	culture = polabian
+	876.1.1 = {
+		birth = yes
+	}
+	929.1.1 = {
+		death = yes
+	}
+}
 260570 = {
 	name = "GaweL_"
 	dynasty = 1062244
@@ -278,11 +317,41 @@
 		death = yes
 	}
 }
+
+261221 = {
+	name = "S_C_E_pan"
+	dynasty = 1042806#1062242
+	religion = slavic_pagan
+	culture = sorbian
+	father = 184007
+	885.1.1 = {
+		birth = yes
+	}
+	906.1.1 = {
+		add_spouse = 261222
+	}
+	928.1.1 = {
+		death = yes
+	}
+}
+261222 = {
+	name = "BoZ_ena"
+	female = yes
+	dynasty = 1062584
+	religion = slavic_pagan
+	culture = pommeranian
+	888.1.1 = {
+		birth = yes
+	}
+	935.1.1 = {
+		death = yes
+	}
+}
 260568 = {
 	name = "Barnim"
 	dynasty = 1042806
 	religion = slavic_pagan
-	culture = sorbian
+	culture = polabian
 	father = 261221
 	mother = 261222
 	909.1.1 = {

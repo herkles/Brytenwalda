@@ -213,6 +213,9 @@ c_luxembourg = {
 	923.1.1 = {
 		liege = "d_upper_lorraine"
 	}
+	936.1.1 = {
+		holder = 11008
+	}
 	963.1.1 = {
 		liege = "d_luxembourg"
 	}
@@ -297,6 +300,9 @@ c_bouillon = {
 	923.1.1 = {
 		liege = "d_upper_lorraine"
 	}
+	936.1.1 = {
+		holder = 11008
+	}
 	963.1.1 = {
 		liege = "d_luxembourg"
 	}
@@ -377,6 +383,9 @@ c_liege = {
 	}
 	903.1.1 = {
 		liege = "d_lower_lorraine"
+	}
+	936.1.1 = {
+		holder = 260595
 	}
 	#1065.1.1 = {
 	#	liege = e_hre
@@ -483,6 +492,9 @@ c_namur = {
 	}
 	903.1.1 = {
 		liege = "d_lower_lorraine"
+	}
+	936.1.1 = {
+		holder = 7810
 	}
 	998.1.1 = {
 		holder = 90117 # Albert I of Namur
@@ -629,6 +641,9 @@ c_brabant = {
 	}
 	903.1.1 = {
 		liege = "d_lower_lorraine"
+	}
+	936.1.1 = {
+		holder = 168214
 	}
 	1003.1.1 = {
 		holder = 41025
@@ -1099,11 +1114,8 @@ c_cleves = {
 		liege="d_angria"
 		holder = 7908
 	}
-	912.11.12 = {
-		holder = 1280
-	}
-	936.7.2 = {
-		holder = 1282
+	936.1.1 = {
+		holder = 260592
 	}
 	973.5.7 = {
 		holder = 1286
@@ -1115,7 +1127,6 @@ c_cleves = {
 		holder = 1296
 	}
 	1020.1.1 = {
-		liege="d_lower_lorraine"
 		holder = 30056
 	}
 	1051.1.1 = {
@@ -1362,13 +1373,18 @@ c_trier = {
 	903.1.1 = {
 		liege = "d_lower_lorraine"
 	}
+	936.1.1 = {
+		holder = 260590
+		government = theocracy_government
+	}
 	1016.1.1 = {
-			holder = 183189 #Poppo von Babenberg
+		holder = 183189 #Poppo von Babenberg
+		government = feudal_government
 	}
 	1066.6.1 = {
-		government = theocracy_government
 		holder = 33109 #Udo von Nellenburg
-		liege = "e_hre"
+		government = theocracy_government
+		liege = e_hre
 	}
 	1078.11.1 = {
 		holder = 33110 #Egilbert
@@ -1458,6 +1474,9 @@ c_nancy = {
 	930.1.2 = {
 		holder = 31709
 	}
+	936.1.1 = {
+		holder = 7813
+	}
 	944.2.1 = {
 		holder = 31706
 	}
@@ -1540,11 +1559,8 @@ c_metz = {
 	923.1.1 = {
 		liege = "d_upper_lorraine"
 	}
-	929.1.1 = {
-		holder = 165021
-	}
-	930.1.2 = {
-		holder = 31709
+	923.1.1 = {
+		holder = 7813
 	}
 	944.2.10 = {
 		holder = 161538
@@ -1799,11 +1815,8 @@ c_puttlingen = {
 	923.1.1 = {
 		liege = "d_upper_lorraine"
 	}
-	929.1.1 = {
-		holder = 165021
-	}
-	930.1.2 = {
-		holder = 31709
+	923.1.1 = {
+		holder = 7813
 	}
 	944.2.10 = {
 		holder = 161538
@@ -2194,18 +2207,13 @@ c_dortmund = {
 	865.1.1 = {
 		holder = 163052
 	}
-	903.1.1 = {
-		liege = "d_lower_lorraine"
+	936.1.1 = {
+		holder = 260592
+		liege = k_east_francia
 	}
-	924.1.1 = {
-		holder = 161539
-	}
-	953.7.9 = {
-		holder = 1290
-	}
-	
 	969.1.1 = {
 		holder = 168572
+		liege = d_lower_lorraine
 	}
 	1056.1.1 = {
 		holder = 20228
@@ -2304,10 +2312,13 @@ c_arnsberg = {
 		liege = "d_westfalen"
 		holder = 163054
 	}
-	1063.1.1 = {
-		holder = 20218 #Friedrich Wettin
+	936.7.2 = {
+		holder = 1292
+		government = feudal_government
 	}
-	
+	1066.1.1 = {
+		holder = 144218 #Konrad II
+	}
 	1084.4.18 = {
 		holder = 30314 #Erpho von Münster
 	}
@@ -2404,14 +2415,14 @@ c_mark = {
 	865.1.1 = {
 		holder = 163052
 	}
-	903.1.1 = {
-		liege = "d_lower_lorraine"
+	936.7.2 = {
+		holder = 1292
+		liege = k_east_francia
 	}
-	924.1.1 = {
-		holder = 161539
-	}
-	953.7.9 = {
-		holder = 1290
+	
+	969.1.1 = {
+		holder = 168572
+		liege = d_lower_lorraine
 	}
 	
 	969.1.1 = {
@@ -2518,8 +2529,13 @@ c_koblenz = {
 	903.1.1 = {
 		liege = "d_lower_lorraine"
 	}
+	936.1.1 = {
+		holder = 260590
+		government = theocracy_government
+	}
 	1016.1.1 = {
-			holder = 183189 #Poppo von Babenberg
+		holder = 183189 #Poppo von Babenberg
+		government = feudal_government
 	}
 	1066.6.1 = {
 		government = theocracy_government
@@ -2586,9 +2602,15 @@ c_bergh = {
 	865.1.1={
 		holder = 163052
 	}
-	1065.1.1={
+	936.7.2 = {
+		holder = 1292
+		liege = d_angria
+	}
+	1066.1.1={
 		liege = "e_hre"
-		holder= 33175 # Adolf of Berg
+	}
+	1066.1.1={
+		holder=33175
 	}
 	1093.1.1={
 		holder=33174
@@ -2640,6 +2662,10 @@ c_sayn = {
 	}
 	865.1.1 = {
 		liege = d_west_franconia
+	}
+	936.7.2 = {
+		holder = 1292
+		liege = d_angria
 	}
 	937.1.1 = {
 		holder = 163046

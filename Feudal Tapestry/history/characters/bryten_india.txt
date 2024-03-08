@@ -1,0 +1,313 @@
+﻿#######################################
+# Punjabi
+#######################################
+247692 = {
+	name="Ashoka"
+	dynasty = 105848 #Patola Sahi
+	religion="vajrayana"
+	culture="kashmiri"
+	740.1.1={
+		birth=yes
+	}
+	798.1.1={
+		death=yes
+	}
+}
+261112 = {
+	name = "Ali"
+	dynasty = 1042099
+	religion = ashari
+	culture = punjabi
+	father = 188532
+	891.1.1 = {
+		birth = yes
+	}
+	945.1.1 = {
+		death = yes
+	}
+}
+261115 = {
+	name = "Bhaimani"
+	dynasty = 1062546
+	religion = vaishnavism
+	culture = punjabi
+	895.1.1 = {
+		birth = yes
+	}
+	953.1.1 = {
+		death = yes
+	}
+}
+261116 = {
+	name = "Kehar"
+	dynasty = 1062547
+	religion = vaishnavism
+	culture = punjabi
+	900.1.1 = {
+		birth = yes
+	}
+	957.1.1 = {
+		death = yes
+	}
+}
+261103 = {
+	name = "Bhaimani"
+	dynasty = 1062539
+	religion = vaishnavism
+	culture = punjabi
+	904.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = yes
+	}
+}
+261102 = {
+	name = "Akhtar"
+	dynasty = 1062538
+	religion = mahayana
+	culture = afghan
+	904.1.1 = {
+		birth = yes
+	}
+	957.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Afghan
+#######################################
+247693 = {
+	name="Prithvi"
+	dynasty = 105848 #Patola Sahi
+	religion="vajrayana"
+	culture="kashmiri"
+	father=247692
+	760.1.1={
+		birth=yes
+	}
+	824.1.1={
+		death=yes
+	}
+}
+247694 = {
+	name="Padam"
+	dynasty = 105848 #Patola Sahi
+	religion="vajrayana"
+	culture="kashmiri"
+	father=247693
+	782.1.1={
+		birth=yes
+	}
+	830.1.1={
+		death=yes
+	}
+}
+247695 = {
+	name="Shribadat"
+	dynasty = 105848 #Patola Sahi
+	religion="vajrayana"
+	culture="kashmiri"
+	father=247694
+	800.1.1={
+		birth=yes
+	}
+	846.1.1={
+		death=yes
+	}
+}
+247696 = {
+	name="Nur_Bakht"
+	female=yes
+	dynasty = 105848 #Patola Sahi
+	religion="vajrayana"
+	culture="kashmiri"
+	father=247695
+	830.1.1={
+		birth=yes
+	}
+	880.1.1={
+		death=yes
+	}
+}
+261111 = {
+	name = "Dadvar"
+	dynasty = 1062544
+	religion = ashari
+	culture = afghan
+	910.1.1 = {
+		birth = yes
+	}
+	961.1.1 = {
+		death = yes
+	}
+}
+
+261032 = {
+	name = "Kamaluka"
+	dynasty = 1043006
+	religion = shaivism
+	culture = afghan
+	father = 175060
+	863.1.1 = {
+		birth = yes
+	}
+	921.1.1 = {
+		death = yes
+	}
+}
+261033 = {
+	name = "Bhimadeva"
+	dynasty = 1043006
+	religion = shaivism
+	culture = afghan
+	father = 261032
+	902.1.1 = {
+		birth = yes
+	}
+	964.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Sogdian
+#######################################
+247697 = {
+	name="Azur_Jamshid"
+	dynasty = 105849 #Kayani
+	religion="khurmazta"
+	culture="sogdian"
+	830.1.1={
+		birth=yes
+	}
+	846.1.1={
+		add_spouse=247696
+	}
+	870.1.1={
+		death=yes
+	}
+}
+247698 = {
+	name="Garg"
+	dynasty = 105849 #Kayani
+	religion="vajrayana"
+	culture="sogdian"
+	father=247697
+	mother=247696
+	860.1.1={
+		birth=yes
+	}
+	928.1.1={
+		death=yes
+	}
+}
+247699 = {
+	name="Sau_Malik"
+	dynasty = 105849 #Kayani
+	religion="vajrayana"
+	culture="sogdian"
+	father=247698
+	876.1.1={
+		birth=yes
+	}
+	936.1.1={
+		death=yes
+	}
+}
+247700 = {
+	name="Shah_Malik"
+	dynasty = 105849 #Kayani
+	religion="vajrayana"
+	culture="sogdian"
+	father=247699
+	892.1.1={
+		birth=yes
+	}
+	942.1.1={
+		death=yes
+	}
+}
+#######################################
+# Kannujji
+#######################################
+261125 = {
+	name = "Ajmal"
+	dynasty = 1062556
+	religion = vaishnavism
+	culture = hindustani
+	904.1.1 = {
+		birth = yes
+	}
+	953.1.1 = {
+		death = yes
+	}
+}
+
+#######################################
+# Sindhi
+#######################################
+
+178200 = {
+	name="Anokhi" # Fictional - Wife of previous
+	dynasty = 1041116
+	father = 178016
+	female = yes
+	culture=punjabi
+	religion = ashari
+	856.5.3={
+		birth="856.5.3"
+	}
+	870.5.3={
+		add_spouse = 178017
+	}
+	895.3.12={
+		death="895.3.12"
+	}
+}
+178201 = {
+	name="Har_Rai" # Fictional - Son of previous - Title holder
+	dynasty = 1041117
+	father = 178017
+	mother = 178200
+	culture=punjabi
+	religion = ashari
+	872.8.4={
+		birth=yes
+	}
+	940.6.6={
+		death=yes
+	}
+}
+178216 = {
+	name="Chanesar" # Fictional - title holder.
+	dynasty = 1041116
+	religion="smartism"
+	culture="sindhi"
+	925.6.2={
+		birth=yes
+	}
+	973.5.1={
+		death=yes
+	}
+}
+
+#######################################
+# Rajasthani
+#######################################
+261129 = {
+	name = "Bhaadar"
+	dynasty = 1062559
+	religion = svetambara
+	culture = rajput
+	906.1.1 = {
+		birth = yes
+	}
+	959.1.1 = {
+		death = yes
+	}
+}
+
+#######################################
+# CULTURE
+#######################################
+

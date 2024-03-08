@@ -5432,6 +5432,46 @@
 		death = "958.1.1"
 	}
 }
+aribo_father_of_chadalhoch = {
+	name = "Aribo"
+	dynasty = 9554
+	religion = "catholic"
+	culture = bavarian
+	father = 32000
+	885.1.1 = {
+		birth = yes
+	}
+	936.1.1 = { #940?
+		death = yes
+	}
+}
+
+chadalhoch = {
+	name = "Chadalhoch"
+	dynasty = 9554
+	religion = "catholic"
+	culture = bavarian
+	father = aribo_father_of_chadalhoch
+	903.1.1 = {
+		birth = yes
+	}
+	951.1.1 = {
+		death = "951.1.1"
+	}
+}
+aribo_i = {
+	name = "Aribo"
+	dynasty = 9554
+	religion = "catholic"
+	culture = bavarian
+	father = chadalhoch
+	936.1.1 = { #940?
+		birth = yes
+	}
+	1001.1.1 = {
+		death = yes
+	}
+}
 
 168313 = {
 	name = "Aribo"
