@@ -6,13 +6,9 @@ k_bohemia = {
 	867.1.1 = {
 		de_jure_liege = e_west_slavia
 	}
-	898.1.1 = {
-	#	liege = "e_hre"
-		de_jure_liege = e_hre
-	}
-	
 	1045.1.1 = {
 		liege = "e_hre"
+		de_jure_liege = e_hre
 	}
 	1198.9.1 = {
 		holder = 212855
@@ -1382,8 +1378,6 @@ d_moravia = {
 		holder = 462614
 	}
 }
-
-
 c_olomouc = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 10 }
@@ -1409,6 +1403,7 @@ c_olomouc = {
 	}
 	871.12.1 = {
 		holder = 187007
+		liege = "d_bohemia"
 	}
 	#907.7.4 = {
 	#	holder = 0
@@ -1504,8 +1499,6 @@ c_olomouc = {
 		holder = 96053
 	}
 }
-
-
 c_opava = {
 	741.1.1 = {
 		liege = "d_moravia"
@@ -1528,6 +1521,7 @@ c_opava = {
 	}
 	871.12.1 = {
 		holder = 187007
+		liege = "d_bohemia"
 	}
 	#907.7.4 = {
 	#	holder = 0
@@ -1634,8 +1628,6 @@ c_opava = {
 		holder = 462614
 	}
 }
-
-
 c_prerov = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 9 }
@@ -1667,13 +1659,11 @@ c_prerov = {
 	}
 	871.12.1 = {
 		holder = 187003
+		liege = "d_bohemia"
 	}
 	894.1.1 = {
 		holder = 187006
 	}
-	#907.7.4 = {
-	#	holder = 0
-	#}
 	1061.1.1 = {
 		holder = 212892
 	}
@@ -1765,8 +1755,6 @@ c_prerov = {
 		holder = 96053
 	}
 }
-
-
 c_brno = {
 	741.1.1 = {
 		liege = "d_moravia"
@@ -1795,13 +1783,11 @@ c_brno = {
 	}
 	871.12.1 = {
 		holder = 187003
+		liege = "d_bohemia"
 	}
 	894.1.1 = {
 		holder = 187006
 	}
-	#907.7.4 = {
-	#	holder = 0
-	#}
 	1061.1.1 = {
 		holder = 526
 	}
@@ -1903,8 +1889,6 @@ c_brno = {
 		holder = 462614
 	}
 }
-
-
 c_jihlava = {
 	741.1.1 = {
 		liege = "d_moravia"
@@ -1933,18 +1917,13 @@ c_jihlava = {
 	}
 	871.12.1 = {
 		holder = 187003
+		liege = "d_bohemia"
 	}
 	894.1.1 = {
 		holder = 187006
 	}
-	#907.7.4 = {
-	#	holder = 0
-	#}
 	1061.1.1 = {
 		holder = 526
-	}
-	1066.1.1 = {
-		liege = "d_bohemia"
 	}
 	1092.9.6 = {
 		holder = 96012
@@ -2041,8 +2020,6 @@ c_jihlava = {
 		holder = 462614
 	}
 }
-
-
 c_znojmo = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 9 }
@@ -2081,6 +2058,7 @@ c_znojmo = {
 	}
 	871.1.1 = {
 		holder = 187004
+		liege = "d_bohemia"
 	}
 	871.12.1 = {
 		holder = 187003

@@ -952,6 +952,9 @@ c_lancashire = {
 		liege = "k_northumbria"
 		holder = 163121
 	}
+	936.1.1 = {
+		liege = "k_england"
+	}
 	1066.1.1 = {
 		liege = "d_york"
 		holder = 90027
@@ -1002,6 +1005,9 @@ c_westmorland = {
 	862.1.1 = {
 		liege = "k_northumbria"
 		holder = 163122
+	}
+	936.1.1 = {
+		liege = "k_england"
 	}
 	1055.1.1 = {
 		holder = 124 #Tostig Godwinson
@@ -1077,9 +1083,9 @@ c_north_riding = {
 		liege = "d_york"
 		holder = 163112
 	}
-	#875.1.1 = {
-	#	holder = 0
-	#}
+	936.1.1 = {
+		liege = "k_england"
+	}
 	1055.1.1 = {
 		holder = 124 #Tostig Godwinson
 	}
@@ -1152,9 +1158,9 @@ c_east_riding = {
 		liege = "d_york"
 		holder = 163112
 	}
-	#875.1.1 = {
-	#	holder = 0
-	#}
+	936.1.1 = {
+		liege = "k_england"
+	}
 	1055.1.1 = {
 		holder = 124 #Tostig Godwinson
 	}
@@ -1227,9 +1233,9 @@ c_west_riding = {
 		liege = "d_york"
 		holder = 163112
 	}
-	#875.1.1 = {
-	#	holder = 0
-	#}
+	936.1.1 = {
+		liege = "k_england"
+	}
 	1055.1.1 = {
 		holder = 124 #Tostig Godwinson
 	}
@@ -4030,12 +4036,6 @@ d_cornwall = {
 		de_jure_liege = k_england
 
 	}
-	910.1.1 = {# Hoel
-		holder = 159461 #Hoel
-	}
-	927.1.1 = {# Conan
-		holder = 159466 #Conan
-	}
 	940.1.1 = {
 		holder = 0
 	}
@@ -4135,6 +4135,10 @@ c_devon = {
 	875.1.1 = {
 		holder =  7627 #Alfred the Great
 	}
+	936.1.1 = {
+		holder =  33350 #Alfred the Great
+	}
+
 	1002.1.1 = {
 		holder = 259 # Emma of Normandy
 		liege = "k_england"
@@ -4275,6 +4279,7 @@ c_cornwall = {
 	}
 	927.1.1 = {
 		holder = 159466 #Conan
+		liege = "k_england"
 	}
 	940.1.1 = {
 		liege = "k_england"

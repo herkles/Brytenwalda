@@ -253,6 +253,79 @@ bm_936_bryten_1 = {# The Iron Century
 		position = { 1175 500 }
 		animation = personality_bold
 	}
+}
+bm_936_bryten_2 = {# The Founding of England
+	start_date = 936.8.7
+	is_playable = yes
+	group = bm_group_936
+
+	character = {# Aethelstan of England # 33350
+	
+		name = "bookmark_bryten_936_aethelstan"
+		dynasty = 669
+		dynasty_splendor_level = 1
+		type = male
+		birth = 893.1.1
+		title = k_england
+		government = feudal_government
+		culture = west_saxon
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 1282
+		position = { 410 230 }
+		animation = personality_bold
+	}
+}
+bm_936_bryten_3 = {# The Slavic Lands
+	start_date = 936.8.7
+	is_playable = yes
+	group = bm_group_936
+	
+	character = {# siemomysl # 752
+		name = "bookmark_bryten_936_siemomysl"
+		dynasty = 669
+		dynasty_splendor_level = 1
+		type = male
+		birth = 930.1.1
+		title = d_wielkopolska
+		government = tribal_government
+		culture = polish
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 752
+		position = { 410 230 }
+		animation = personality_bold
+	}
+	character = {# Boleslav # 508
+		name = "bookmark_bryten_936_boleslav"
+		dynasty = 669
+		dynasty_splendor_level = 1
+		type = male
+		birth = 915.1.1
+		title = d_bohemia
+		government = feudal_government
+		culture = czech
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 508
+		position = { 910 270 }
+		animation = personality_callous
+	}
+	character = {# Igor # 600
+		name = "bookmark_bryten_936_igor"
+		dynasty = 681
+		dynasty_splendor_level = 1
+		type = male
+		birth = 875.1.1
+		title = k_ruthenia
+		government = feudal_government
+		culture = norse
+		religion = norse_pagan
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 600
+		position = { 1175 500 }
+		animation = personality_bold
+	}
 
 }
 #############################################
