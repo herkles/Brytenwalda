@@ -67,12 +67,14 @@ d_holland = {
 	}
 	896.1.1 = {
 		holder = 106551 #Dirk I
+		liege = k_east_francia
 	}
 	939.1.1 = {
 		holder = 106550 #Dirk II
 	}
 	988.5.6 = {
 		holder = 40712 #Arnulf I
+		liege = e_hre
 	}
 	993.1.20 = {
 		holder = 40713 #Dirk III
@@ -140,8 +142,9 @@ c_holland = {
 	}
 	
 	896.1.1 = {
-		holder = 106551 #Dirk I
+		holder = 263007 #Dirk I's brother
 	}
+
 	939.1.1 = {
 		holder = 106550 #Dirk II
 	}
@@ -282,7 +285,7 @@ c_zeeland = {
 		holder = 31060 #Gerolf I
 	}
 	896.1.1 = {
-		holder = 106551 #Dirk I
+		holder = 263007 #Dirk I
 	}
 	939.1.1 = {
 		holder = 106550 #Dirk II
@@ -362,8 +365,12 @@ c_guelders = {
 		holder = 167770
 	}
 	
-	923.1.1 = {
+	1057.1.1 = {
 		liege = "d_lower_lorraine"
+	}
+	936.1.1 = {
+		holder = 260592
+		liege = k_east_francia
 	}
 	1057.1.11 = {
 		holder = 106540
@@ -418,9 +425,15 @@ c_arnhem = {
 	923.1.1 = {
 		liege = "d_lower_lorraine"
 	}
+	936.1.1 = {
+		holder = 260593
+		liege = k_east_francia
+		government = theocracy_government
+	}
 	1057.1.11 = {
 		holder = 106540
 		liege = e_hre
+		government = feudal_government
 	}
 	1082.10.19 = {
 		holder = 41720
@@ -553,6 +566,10 @@ c_nedersticht = {
 	923.1.1 = {
 		liege="d_lower_lorraine"
 	}
+	936.1.1 = {
+		holder = 260593
+		liege = k_east_francia
+	}
 	995.1.1 = {
 		holder = 168218
 	}
@@ -652,8 +669,12 @@ c_oversticht = {
 		liege = k_lotharingia
 	}
 	
-	923.1.1 = {
+	1066.1.1 = {
 		liege="d_lower_lorraine"
+	}
+	936.1.1 = {
+		holder = 263009
+		liege = k_east_francia
 	}
 	995.1.1 = {
 		holder = 168218
@@ -750,8 +771,12 @@ c_groningen = {
 		liege = k_lotharingia
 	}
 	
-	923.1.1 = {
+	1066.1.1 = {
 		liege="d_lower_lorraine"
+	}
+	936.1.1 = {
+		holder = 263009
+		liege = k_east_francia
 	}
 	995.1.1 = {
 		holder = 168218
@@ -843,6 +868,34 @@ c_groningen = {
 	}
 
 }
+d_frisia = {
+	1003.1.2 = {
+		holder = 106512
+		liege = e_hre
+	}
+	1038.1.24 = {
+		holder = 144956
+	}
+	1057.6.26 = {
+		holder = 106510 #Ekbert I von Braunschweig
+	}
+	1066.1.1 = {
+		holder = 0
+	}
+	1068.1.1 = {
+		holder = 106515 #Ekbert II von Braunschweig
+	}
+	1090.7.3 = {
+		holder = 30670 #Konrad von Hildesheim
+	}
+	1099.4.13 = {
+		holder = 112603 #Heinrich von Nordheim
+	}
+	1101.1.1 = {
+		holder = 0
+	}
+}
+
 c_dokkum = {
 	769.1.1 = {
 		holder = 6392
@@ -859,6 +912,9 @@ c_dokkum = {
 	
 	885.1.1 = {
 		holder = 31060 #Gerolf I
+	}
+	936.1.1 = {
+		holder = 106551
 	}
 	1003.1.2 = {
 		holder = 106512
@@ -985,6 +1041,9 @@ c_ostfriesland = {
 	880.1.1 = {
 		holder = 168336
 	}
+	936.1.1 = {
+		holder = 167759
+	}
 	1059.6.29 = {
 		holder = 1416
 	}
@@ -1050,6 +1109,9 @@ c_frisia = {
 	
 	885.1.1 = {
 		holder = 31060 #Gerolf I
+	}
+	936.1.1 = {
+		holder = 106551
 	}
 	1003.1.2 = {
 		holder = 106512

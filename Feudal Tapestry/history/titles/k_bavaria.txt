@@ -2165,6 +2165,10 @@ c_leuchtenburg = {
 	918.12.23 = {
 		liege = e_hre
 	}
+	936.1.1 = {
+		holder = 260577
+		liege = d_east_franconia
+	}
 	937.7.14={
 		holder = 7970
 	}
@@ -2176,6 +2180,9 @@ c_leuchtenburg = {
 	}
 	955.1.1={
 		holder = 1294
+	}
+	962.2.2={
+		liege = e_hre
 	}
 	976.1.1={
 		holder = 7965
@@ -2336,11 +2343,14 @@ c_parsberg = {
 	899.8.12={
 		holder = 7949 #Louis IV the Child
 	}
-	907.1.1={
-		holder = 10097
+	936.1.1 = {
+		holder = 260586
+		government = republic_government
+		liege = d_bavaria
 	}
-	918.12.23 = {
-		liege = e_hre
+	937.7.14={
+		holder = 7970
+		government = feudal_government
 	}
 	937.7.14={
 		holder = 7970
@@ -2356,6 +2366,7 @@ c_parsberg = {
 	}
 	976.1.1={
 		holder = 7965
+		liege = e_hre
 	}
 	983.1.1={
 		holder = 7972
@@ -2513,14 +2524,15 @@ c_hohenburg = {
 	899.8.12={
 		holder = 7949 #Louis IV the Child
 	}
-	907.1.1={
-		holder = 10097
-	}
-	918.12.23 = {
-		liege = e_hre
+	936.1.1 = {
+		holder = 260586
+		government = republic_government
+		liege = d_bavaria
 	}
 	937.7.14={
 		holder = 7970
+		government = feudal_government
+
 	}
 	938.1.1={
 		holder = 7971
@@ -2533,6 +2545,7 @@ c_hohenburg = {
 	}
 	976.1.1={
 		holder = 7965
+		liege = e_hre
 	}
 	983.1.1={
 		holder = 7972
@@ -2727,15 +2740,19 @@ d_salzburg = {
 c_salzburg = {
 	753.1.1 = {
 		holder = 190368 #Fagulf
+		liege = k_bavaria
 	}
 	859.1.1 = {
 		government = theocracy_government
 		holder = 163056
 		liege = "d_bavaria"
 	}
+	936.1.1 = {
+		holder = 260584
+	}
 	1066.1.1 = {
 		holder = 20259
-		liege = k_bavaria
+		liege = "e_hre"
 	}
 	1090.1.1 = {
 		holder = 33410
@@ -2786,15 +2803,27 @@ c_salzburg = {
 c_berchtesgaden = {
 	753.1.1 = {
 		holder = 190368 #Fagulf
+		liege = k_bavaria
 	}
 	859.1.1 = {
 		government = theocracy_government
 		holder = 163056
 		liege = "d_bavaria"
 	}
+	907.1.1 = {
+		holder = aribo_father_of_chadalhoch
+		government = feudal_government
+	}
+	936.1.1 = {
+		holder = chadalhoch
+	}
+	951.1.1 = {
+		holder = aribo_i
+	}
 	1066.1.1 = {
 		holder = 20259
-		liege = k_bavaria
+		government = theocracy_government
+		liege = d_bavaria
 	}
 	1090.1.1 = {
 		holder = 33410
@@ -2841,10 +2870,14 @@ c_berchtesgaden = {
 c_hallstatt = {
 	753.1.1 = {
 		holder = 190368 #Fagulf
+		liege = k_bavaria
 	}
 	859.1.1 = {
 		holder = 163056
 		liege = "d_bavaria"
+	}
+	936.1.1 = {
+		holder = 260588
 	}
 	1066.1.1 = {
 		liege = d_steyermark
@@ -2903,6 +2936,10 @@ c_linz = {
 		holder = 163056
 		liege = k_bavaria
 	}
+	936.1.1 = {
+		holder = 260588
+		liege = d_bavaria
+	}
 	1066.1.1 = {
 		liege = d_steyermark
 		holder = 260007
@@ -2957,9 +2994,12 @@ c_schaumberg = {
 		holder = 163056
 		liege = "d_bavaria"
 	}
+	936.1.1 = {
+		holder = 260584
+	}
 	1066.1.1 = {
 		holder = 20259
-		liege = k_bavaria
+		liege = d_bavaria
 	}
 	1090.1.1 = {
 		holder = 33410
@@ -3034,14 +3074,13 @@ c_augsburg = {
 	895.1.1 = {
 		liege = "d_bavaria"
 	}
-	899.1.1 = {
-		holder = 7969
-	}
-	907.1.1 = {
-		holder = 10097
+	936.1.1 = {
+		holder = 260582
+		government = theocracy_government
 	}
 	937.7.14 = {
 		holder = 7970
+		government = feudal_government
 	}
 	938.1.1 = {
 		holder = 7971
@@ -3148,11 +3187,8 @@ c_alpsee = {
 		liege = "d_bavaria"
 	}
 	
-	907.3.19 = {
-		holder = 10097
-	}
-	937.7.14 = {
-		holder = 7970
+	936.1.1 = {
+		holder = 260583
 	}
 	938.1.1 = {
 		holder = 7971
@@ -3270,14 +3306,13 @@ c_kempten = {
 	895.1.1 = {
 		liege = "d_bavaria"
 	}
-	899.1.1 = {
-		holder = 7969
-	}
-	907.1.1 = {
-		holder = 10097
+	936.1.1 = {
+		holder = 260582
+		government = theocracy_government
 	}
 	937.7.14 = {
 		holder = 7970
+		government = feudal_government
 	}
 	938.1.1 = {
 		holder = 7971
@@ -3393,9 +3428,16 @@ c_ravensburg = {
 	876.8.28 = {
 		liege = k_east_francia
 	}
+	936.1.1 = {
+		holder = 260579
+		liege = d_bavaria
+		government = theocracy_government
+	}
 	1018.1.1 = {
 		liege = "d_swabia"
+		government = feudal_government
 	}
+
 	1018.1.1 = {
 		holder = 30750
 	}
@@ -3489,14 +3531,13 @@ c_burgau = {
 	895.1.1 = {
 		liege = "d_bavaria"
 	}
-	899.1.1 = {
-		holder = 7969
-	}
-	907.1.1 = {
-		holder = 10097
+	936.1.1 = {
+		holder = 260582
+		government = theocracy_government
 	}
 	937.7.14 = {
 		holder = 7970
+		government = feudal_government
 	}
 	938.1.1 = {
 		holder = 7971
@@ -3700,6 +3741,10 @@ c_graz = {
 	930.1.2 = {
 		holder = 32002
 	}
+	936.1.1 = {
+		holder = 260633
+		liege = d_carinthia
+	}
 	976.1.2 = {
 		holder = 32003
 	}
@@ -3823,8 +3868,14 @@ c_pitten = {
 	930.1.2 = {
 		holder = 32002
 	}
+	936.1.1 = {
+		holder = 260654
+		liege = d_gyor
+		government = tribal_government
+	}
 	976.1.2 = {
 		holder = 32003
+		government = feudal_government
 	}
 	1020.5.3 = {
 		holder = 32005
@@ -3943,6 +3994,10 @@ c_liebnitz = {
 	
 	930.1.2 = {
 		holder = 32002
+	}
+	936.1.1 = {
+		holder = 260633
+		liege = d_carinthia
 	}
 	976.1.2 = {
 		holder = 32003
@@ -4063,12 +4118,14 @@ c_murzzuschlag = {
 	907.1.2 = {
 		holder = 32001
 	}
-	
-	930.1.2 = {
-		holder = 32002
+	936.1.1 = {
+		holder = 260654
+		liege = d_gyor
+		government = tribal_government
 	}
 	976.1.2 = {
 		holder = 32003
+		government = feudal_government
 	}
 	1020.5.3 = {
 		holder = 32005
@@ -4136,8 +4193,14 @@ c_murzzuschlag = {
 
 
 d_osterreich = {
+	936.1.1 = {
+		holder = 260666
+		liege = k_hungary
+		government = tribal_government
+	}
 	976.1.1 = {
 		liege = k_east_francia
+		government = feudal_government
 	}
 	976.1.1 = {
 		holder = 10084
@@ -4254,17 +4317,8 @@ c_vienna = {
 	907.1.1 = {
 		holder = 10097
 	}
-	937.7.14 = {
-		holder = 7970
-	}
-	938.1.1 = {
-		holder = 7971
-	}
-	948.1.1 = {
-		holder = 1292
-	}
-	955.1.1 = {
-		holder = 1294
+	936.1.1 = {
+		holder = 260666
 	}
 	976.1.1 = {
 		liege = "d_osterreich"
@@ -4378,17 +4432,8 @@ c_hohenau = {
 	907.1.1 = {
 		holder = 10097
 	}
-	937.7.14 = {
-		holder = 7970
-	}
-	938.1.1 = {
-		holder = 7971
-	}
-	948.1.1 = {
-		holder = 1292
-	}
-	955.1.1 = {
-		holder = 1294
+	936.1.1 = {
+		holder = 260666
 	}
 	976.1.1 = {
 		liege = "d_osterreich"
@@ -4502,17 +4547,9 @@ c_sankt_polten = {
 	907.1.1 = {
 		holder = 10097
 	}
-	937.7.14 = {
-		holder = 7970
-	}
-	938.1.1 = {
-		holder = 7971
-	}
-	948.1.1 = {
-		holder = 1292
-	}
-	955.1.1 = {
-		holder = 1294
+	936.1.1 = {
+		holder = 260589
+		liege = d_osterreich
 	}
 	976.1.1 = {
 		liege = "d_osterreich"
@@ -4629,20 +4666,14 @@ c_freistadt = {
 	907.1.1 = {
 		holder = 10097
 	}
-	937.7.14 = {
-		holder = 7970
-	}
-	938.1.1 = {
-		holder = 7971
-	}
-	948.1.1 = {
-		holder = 1292
-	}
-	955.1.1 = {
-		holder = 1294
+	936.1.1 = {
+		holder = 260667
+		liege = d_osterreich
+		government = tribal_government
 	}
 	976.1.1 = {
 		liege = "d_osterreich"
+		government = feudal_government
 	}
 	976.1.1 = {
 		holder = 10084
@@ -4756,17 +4787,9 @@ c_amstetten = {
 	907.1.1 = {
 		holder = 10097
 	}
-	937.7.14 = {
-		holder = 7970
-	}
-	938.1.1 = {
-		holder = 7971
-	}
-	948.1.1 = {
-		holder = 1292
-	}
-	955.1.1 = {
-		holder = 1294
+	936.1.1 = {
+		holder = 260589
+		liege = d_osterreich
 	}
 	976.1.1 = {
 		liege = "d_osterreich"
@@ -4884,20 +4907,14 @@ c_krems = {
 	907.1.1 = {
 		holder = 10097
 	}
-	937.7.14 = {
-		holder = 7970
-	}
-	938.1.1 = {
-		holder = 7971
-	}
-	948.1.1 = {
-		holder = 1292
-	}
-	955.1.1 = {
-		holder = 1294
+	936.1.1 = {
+		holder = 260667
+		liege = d_osterreich
+		government = tribal_government
 	}
 	976.1.1 = {
 		liege = "d_osterreich"
+		government = feudal_government
 	}
 	976.1.1 = {
 		holder = 10084
@@ -5019,14 +5036,8 @@ c_innsbruck = {
 	895.1.1 = {
 		liege = "d_bavaria"
 	}
-	895.1.1 = {
-		holder = 7969
-	}
-	899.8.12 = {
-		holder = 7949 #Louis IV the Child
-	}
-	907.1.1 = {
-		holder = 10097
+	936.1.1 = {
+		holder = 260583
 	}
 	937.7.14 = {
 		holder = 7970
@@ -5156,8 +5167,8 @@ c_brixen = {
 		liege = "d_bavaria"
 	}
 	
-	907.3.19 = {
-		holder = 10097
+	936.1.1 = {
+		holder = 260583
 	}
 	937.7.14 = {
 		holder = 7970
@@ -5412,7 +5423,10 @@ d_carinthia = {
 	907.1.1 = {
 		holder = 0
 	}
-	
+	936.1.1 = {
+		holder = 32002
+		liege = k_east_francia
+	}
 	976.1.1 = {
 		liege = "k_east_francia"
 	}
@@ -5522,8 +5536,11 @@ c_karnten = {
 	863.1.1 = {
 		holder = 168302
 	}
+	930.1.2 = {
+		holder = 32002
+	}
 	1000.4.14 = {
-	liege = "d_carinthia"
+		liege = "d_carinthia"
 	}
 	1000.4.14 = {
 		holder = 1618
@@ -5596,6 +5613,9 @@ c_kammersberg = {
 	}
 	863.1.1 = {
 		holder = 168302
+	}
+	930.1.2 = {
+		holder = 32002
 	}
 	1000.4.14 = {
 	liege = "d_carinthia"
@@ -5670,6 +5690,9 @@ c_knittelfeld = {
 	}
 	863.1.1 = {
 		holder = 168302
+	}
+	930.1.2 = {
+		holder = 32002
 	}
 	1000.4.14 = {
 	liege = "d_carinthia"
@@ -5751,6 +5774,9 @@ c_villach = {
 	}
 	863.1.1 = {
 		holder = 168302
+	}
+	930.1.2 = {
+		holder = 32002
 	}
 	1000.4.14 = {
 	liege = "d_carinthia"
@@ -6163,6 +6189,11 @@ c_pula = {
 	}
 	863.1.1 = {
 		holder = 163057
+		liege = k_italy
+	}
+	936.1.1 = {
+		holder = 260632
+		liege = k_croatia
 	}
 	1012.1.1 = {
 		holder = 7310
