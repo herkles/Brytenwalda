@@ -1543,7 +1543,7 @@
 		religion = "catholic"
 		culture = lothringian
 		female = yes
-		father = 40705 #Wigeric
+		father = 40705 #Wigeric 
 		mother = 90113
 		dynasty_house = house_wigeriche
 		914.1.1 = {
@@ -1563,7 +1563,7 @@
 		father = 263005 #Eberhard
 		mother = 263006
 		dynasty = 1064000
-		898.1.1 = {
+		897.1.1 = {
 			birth = yes
 		}
 		915.1.1 = {
@@ -1576,7 +1576,21 @@
 			death = yes
 		}
 	}
-
+	263006 = {
+		name = "Wiltrud"
+		religion = "catholic"
+		culture = "frisian"
+		female = yes
+		865.1.1 = {
+			birth = yes
+		}
+		890.1.1 = {
+			add_spouse = 263005
+		}
+		940.1.1 = {
+			death = yes
+		}
+	}
 #######################################
 # luxemburg Dynasty
 #######################################

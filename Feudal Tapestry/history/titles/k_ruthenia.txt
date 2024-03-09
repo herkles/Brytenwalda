@@ -44,7 +44,6 @@ k_ruthenia = {
 	}
 }
 
-
 d_kiev = {
 	###Pre-Kievan Rus'
 	579.1.2 = {
@@ -251,8 +250,6 @@ d_kiev = {
 	}
 
 }
-
-
 c_kiev = {
 	867.1.1 = { change_development_level = 4 }
 	1066.1.1 = { change_development_level = 15 }
@@ -455,8 +452,6 @@ c_kiev = {
 	}
 
 }
-
-
 c_zhytomyr = {
 	###Pre-Kievan Rus'
 	750.1.1 = {
@@ -659,8 +654,6 @@ c_zhytomyr = {
 	}
 
 }
-
-
 c_zvyahel = {
 	###Pre-Kievan Rus'
 	750.1.1 = {
@@ -863,8 +856,6 @@ c_zvyahel = {
 	}
 
 }
-
-
 c_chornobyl = {
 	###Pre-Kievan Rus'
 	750.1.1 = {
@@ -1067,8 +1058,6 @@ c_chornobyl = {
 	}
 
 }
-
-
 c_ushytsia = {
 	###Pre-Kievan Rus'
 	500.1.1 = {
@@ -1271,8 +1260,6 @@ c_ushytsia = {
 	}
 
 }
-
-
 c_korsun = {
 	###Pre-Kievan Rus'
 	750.1.1 = {
@@ -1479,7 +1466,6 @@ c_korsun = {
 
 }
 
-
 d_turov = {
 	#Pre-creation
 	867.1.1 = {
@@ -1578,8 +1564,6 @@ d_turov = {
 	}
 
 }
-
-
 c_turov = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 8 }
@@ -1680,8 +1664,6 @@ c_turov = {
 	}
 
 }
-
-
 c_korosten = {
 	###Independent Drevlians / pre-Kievan Rus'
 	850.1.1 = {
@@ -1703,13 +1685,13 @@ c_korosten = {
 	}
 	
 	#Drevlians stop paying tribute after Oleg's death
-	912.1.1 = {
-		liege = 0
-	}
+
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
-	
+	945.1.1 = {
+		liege = 0
+	}	
 	#Olga of Kiev M-m-m-m-m-monster frags Drevlians and makes them tributaries again
 	946.1.1 = {
 		liege = d_kiev
@@ -1855,8 +1837,6 @@ c_korosten = {
 	}
 
 }
-
-
 c_dubrovytsia = {
 	###Independent Drevlians / pre-Kievan Rus'
 	850.1.1 = {
@@ -2031,7 +2011,6 @@ c_dubrovytsia = {
 
 }
 
-
 d_pereyaslavl = {
 	#Pre-creation
 	867.1.1 = {
@@ -2120,8 +2099,6 @@ d_pereyaslavl = {
 		holder = 222700	#Vladimir III Glebovich
 	}
 }
-
-
 c_pereyaslavl = {
 	867.1.1 = {	change_development_level = 3 }
 	1066.1.1 = { change_development_level = 8 }
@@ -2236,8 +2213,6 @@ c_pereyaslavl = {
 		holder = 222700	#Vladimir III Glebovich
 	}
 }
-
-
 c_hradyzk = {
 	###Pre Kievan Rus
 	800.1.1 = {
@@ -2349,8 +2324,6 @@ c_hradyzk = {
 		holder = 222700	#Vladimir III Glebovich
 	}
 }
-
-
 c_romen = {
 	###Pre Kievan Rus
 	800.1.1 = {
@@ -2462,8 +2435,6 @@ c_romen = {
 		holder = 222700	#Vladimir III Glebovich
 	}
 }
-
-
 c_voin = {
 	###Pre Kievan Rus
 	800.1.1 = {
@@ -2576,7 +2547,6 @@ c_voin = {
 	}
 }
 
-
 d_chernigov = {
 	#988 Chernigov principality's startdate
 	988.1.2 = {
@@ -2647,8 +2617,6 @@ d_chernigov = {
 		holder = 222600		#Yaroslav II Vsevolodovich
 	}
 }
-
-
 c_chernigov = {
 	###Pre Kievan Rus
 	800.1.1 = {
@@ -2748,8 +2716,6 @@ c_chernigov = {
 		holder = 222600		#Yaroslav II Vsevolodovich
 	}
 }
-
-
 c_starodub = {
 	###Pre Kievan Rus
 	800.1.1 = {
@@ -2849,8 +2815,6 @@ c_starodub = {
 		holder = 222600		#Yaroslav II Vsevolodovich
 	}
 }
-
-
 c_novgorod_seversky = {
 	###Pre Kievan Rus
 	800.1.1 = {
@@ -2870,24 +2834,22 @@ c_novgorod_seversky = {
 	865.4.16 = {
 		holder = 6860		#Berimir Seversky, fictional
 	}
-	
+	900.1.1 = {
+		holder = 6860
+	}
+	902.1.1 = {
+		holder = 160089
+	}
+	910.1.1 = {
+		holder = 1601003
+	}
+	951.1.1 = {
+		holder = 1601005
+	}
+	990.1.1 = {
+		holder = 1601007
+	}	
 	###Kievan Rus in 882
-	884.1.1 = {		#Severians annexed by Oleg
-		holder = 40606	#Oleg/Helgi the Seer
-		liege = k_ruthenia
-	}
-	912.1.2 = {
-		holder = 600	#Igor/Helgi, son of Rurik
-	}
-	945.1.2 = {
-		holder = 602	#Sviatoslav I, w/ some regency by St Olga
-	}
-	972.1.2 = {
-		holder = 604	#Yaropolk I
-	}
-	980.1.2 = {
-		holder = 608	#Vladimir the Great
-	}
 	
 	#988 Chernigov principality's startdate
 	988.1.2 = {
@@ -2950,8 +2912,6 @@ c_novgorod_seversky = {
 		holder = 222630		# Igor Svyatoslavich (baptism name Yury)
 	}
 }
-
-
 c_putyvl = {
 	###Pre Kievan Rus
 	800.1.1 = {
@@ -2969,29 +2929,23 @@ c_putyvl = {
 		liege = e_caspian-pontic_steppe
 	}
 	865.4.16 = {
-		holder = 160112		#Kreslav Seversky, fictional
+		holder = 6860		#Berimir Seversky, fictional
 	}
-	
-	###Kievan Rus in 882
-	884.1.1 = {		#Severians annexed by Oleg
-		holder = 40606	#Oleg/Helgi the Seer
-		liege = k_ruthenia
+	900.1.1 = {
+		holder = 6860
 	}
-	912.1.2 = {
-		holder = 600	#Igor/Helgi, son of Rurik
+	902.1.1 = {
+		holder = 160089
 	}
-	935.1.1 = {
-		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	910.1.1 = {
+		holder = 1601003
 	}
-	945.1.2 = {
-		holder = 602	#Sviatoslav I, w/ some regency by St Olga
+	951.1.1 = {
+		holder = 1601005
 	}
-	972.1.2 = {
-		holder = 604	#Yaropolk I
-	}
-	980.1.2 = {
-		holder = 608	#Vladimir the Great
-	}
+	990.1.1 = {
+		holder = 1601007
+	}	
 	
 	#988 Chernigov principality's startdate
 	988.1.2 = {
@@ -3056,8 +3010,6 @@ c_putyvl = {
 		holder = 222630		# Igor Svyatoslavich (baptism name Yury)
 	}
 }
-
-
 c_kursk = {
 	###Pre Kievan Rus
 	799.1.1 = {
@@ -3072,20 +3024,20 @@ c_kursk = {
 	860.1.1 = {
 		holder = 6834		#Zhavoronok Vyatich
 	}
-	
-	###Kievan Rus in 882
 	890.1.1 = {
-		holder = 160059		#Vladislav Vyatich
+		holder = 160060
+		liege = 0
 	}
-	900.1.1 = {
-		holder = 40606	#Oleg/Helgi the Seer
-		liege = k_ruthenia
+	905.1.1 = {
+		holder = 1601022
 	}
-	912.1.2 = {
-		holder = 600	#Igor/Helgi, son of Rurik
-	}
+	940.1.1 = {
+		holder = 1601023
+	}		
+	###Kievan Rus in 882
 	945.1.2 = {
 		holder = 602	#Sviatoslav I, w/ some regency by St Olga
+		liege = k_ruthenia
 	}
 	972.1.2 = {
 		holder = 604	#Yaropolk I
@@ -3162,7 +3114,6 @@ d_karachev = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 5 }
 }
-
 c_karachev = {
 	###Pre Kievan Rus
 	799.1.1 = {
@@ -3176,27 +3127,28 @@ c_karachev = {
 	}
 	860.1.1 = {
 		holder = 6834		#Zhavoronok Vyatich
+	}	
+	900.1.1 = {
+		holder = 6860
+		liege = 0
 	}
-	
+	902.1.1 = {
+		holder = 160090
+	}
+	910.1.1 = {
+		holder = 1601004
+	}
+	956.1.1 = {
+		holder = 1601006
+	}
+	997.1.1 = {
+		holder = 1601008
+	}
+
 	###Kievan Rus in 882
-	882.1.2 = {
-		holder = 40606	#Oleg/Helgi the Seer
-		liege = k_ruthenia
-	}
-	912.1.2 = {
-		holder = 600	#Igor/Helgi, son of Rurik
-	}
-	945.1.2 = {
-		holder = 602	#Sviatoslav I, w/ some regency by St Olga
-	}
-	972.1.2 = {
-		holder = 604	#Yaropolk I
-	}
-	980.1.2 = {
-		holder = 608	#Vladimir the Great
-	}
 	1015.7.15 = {
 		holder = 610	#Sviatopolk the Accursed
+		liege = k_ruthenia
 	}
 	1016.1.2 = {
 		holder = 612	#Yaroslav the Wise
@@ -3239,8 +3191,6 @@ c_karachev = {
 		holder = 302260		#Simeon Kromsky, fictional
 	}
 }
-
-
 c_kozelsk = {
 	###Pre Kievan Rus
 	799.1.1 = {
@@ -3254,29 +3204,31 @@ c_kozelsk = {
 	861.1.1 = {
 		holder = 302243		#Volodar Vyatich
 	}
-	
+
+	900.1.1 = {
+		holder = 6860
+		liege = 0
+	}
+	902.1.1 = {
+		holder = 160090
+	}
+	910.1.1 = {
+		holder = 1601004
+	}
+	956.1.1 = {
+		holder = 1601006
+	}
+	997.1.1 = {
+		holder = 1601008
+	}	
+
 	###Kievan Rus in 882
-	882.1.2 = {
-		holder = 40606	#Oleg/Helgi the Seer
-		liege = k_ruthenia
-	}
-	912.1.2 = {
-		holder = 600	#Igor/Helgi, son of Rurik
-	}
-	945.1.2 = {
-		holder = 602	#Sviatoslav I, w/ some regency by St Olga
-	}
-	972.1.2 = {
-		holder = 604	#Yaropolk I
-	}
-	980.1.2 = {
-		holder = 608	#Vladimir the Great
-	}
 	1015.7.15 = {
 		holder = 610	#Sviatopolk the Accursed
 	}
 	1016.1.2 = {
 		holder = 612	#Yaroslav the Wise
+		liege = k_ruthenia
 	}
 	1018.1.2 = {
 		holder = 610	#Sviatopolk the Accursed
@@ -3316,8 +3268,6 @@ c_kozelsk = {
 		holder = 302260		#Simeon Kromsky, fictional
 	}
 }
-
-
 c_sevsk = {
 	###Pre Kievan Rus
 	799.1.1 = {
@@ -3332,32 +3282,29 @@ c_sevsk = {
 	860.1.1 = {
 		holder = 6834		#Zhavoronok Vyatich
 	}
-	
-	###Kievan Rus in 882
-	890.1.1 = {
-		holder = 160059		#Vladislav Vyatich
-	}
 	900.1.1 = {
-		holder = 40606	#Oleg/Helgi the Seer
-		liege = k_ruthenia
+		holder = 6860
+		liege = 0
 	}
-	912.1.2 = {
-		holder = 600	#Igor/Helgi, son of Rurik
+	902.1.1 = {
+		holder = 160090
 	}
-	945.1.2 = {
-		holder = 602	#Sviatoslav I, w/ some regency by St Olga
+	910.1.1 = {
+		holder = 1601004
 	}
-	972.1.2 = {
-		holder = 604	#Yaropolk I
+	956.1.1 = {
+		holder = 1601006
 	}
-	980.1.2 = {
-		holder = 608	#Vladimir the Great
-	}
-	
+	997.1.1 = {
+		holder = 1601008
+	}		
+	###Kievan Rus in 882
+
 	#988 Chernigov principality's startdate
 	988.1.2 = {
 		holder = 608		#Vladimir the Great
 		liege = d_chernigov
+		
 	}
 	1015.7.15 = {
 		holder = 612		#Yaroslav the Wise
@@ -3422,7 +3369,6 @@ d_novosil = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 5 }
 }
-
 c_novosil = {
 	###Pre Kievan Rus
 	809.3.16 = {
@@ -3437,17 +3383,21 @@ c_novosil = {
 	853.9.15 = {
 		holder = 302238	#fictional Mikikor Meshchersky
 	}
-	
+
+	890.1.1 = {
+		holder = 160060
+		liege = 0
+	}
+	905.1.1 = {
+		holder = 1601022
+	}
+	940.1.1 = {
+		holder = 1601023
+	}	
 	###Kievan Rus in 882
-	882.1.2 = {
-		holder = 40606	#Oleg/Helgi the Seer
-		liege = k_ruthenia
-	}
-	912.1.2 = {
-		holder = 600	#Igor/Helgi, son of Rurik
-	}
 	945.1.2 = {
 		holder = 602	#Sviatoslav I, w/ some regency by St Olga
+		liege = k_ruthenia
 	}
 	972.1.2 = {
 		holder = 604	#Yaropolk I
@@ -3499,8 +3449,6 @@ c_novosil = {
 		holder = 302260		#Simeon Kromsky, fictional
 	}
 }
-
-
 c_odoyev = {
 	###Pre Kievan Rus
 	809.3.16 = {
@@ -3515,17 +3463,20 @@ c_odoyev = {
 	853.9.15 = {
 		holder = 302238	#fictional Mikikor Meshchersky
 	}
-	
+	890.1.1 = {
+		holder = 160060
+		liege = 0
+	}
+	905.1.1 = {
+		holder = 1601022
+	}
+	940.1.1 = {
+		holder = 1601023
+	}		
 	###Kievan Rus in 882
-	882.1.2 = {
-		holder = 40606	#Oleg/Helgi the Seer
-		liege = k_ruthenia
-	}
-	912.1.2 = {
-		holder = 600	#Igor/Helgi, son of Rurik
-	}
 	945.1.2 = {
 		holder = 602	#Sviatoslav I, w/ some regency by St Olga
+		liege = k_ruthenia
 	}
 	972.1.2 = {
 		holder = 604	#Yaropolk I

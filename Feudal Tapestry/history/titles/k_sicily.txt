@@ -46,7 +46,6 @@ k_sicily = {
 	}
 }
 
-
 d_sicily = {
 	867.1.1 = { change_development_level = 8 }
 	1066.1.1 = { change_development_level = 11 }
@@ -76,14 +75,8 @@ d_sicily = {
 	885.1.1 = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
 	}
-#	890.1.1 = {
-#		holder = maghrebi0004 # Sawada ibn Muhammad (2nd time)
-#	}
-#	892.1.1 = {
-#		holder = 0
-#	}
 	910.1.1 = {
-		liege = k_egypt
+		liege = k_africa
 	}
 	# Kalbid
 	948.1.1 = {
@@ -145,8 +138,6 @@ d_sicily = {
 		de_jure_liege = k_trinacria
 	}
 }
-
-
 c_palermo = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
@@ -173,9 +164,6 @@ c_palermo = {
 	885.1.1 = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
 	}
-#	890.1.1 = {
-#		holder = maghrebi0004 # Sawada ibn Muhammad (2nd time)
-#	}
 	# Kalbids
 	948.1.1 = {
 		holder = 159183 # al-Hasan of Sicily
@@ -281,7 +269,6 @@ c_palermo = {
 		holder = 461500 # Federigo II de Trinacria
 	}
 }
-
 c_messina = {
 	536.1.1 = {
 		liege = d_sicily
@@ -304,9 +291,7 @@ c_messina = {
 	885.1.1 = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
 	}
-#	890.1.1 = {
-#		holder = maghrebi0004 # Sawada ibn Muhammad (2nd time)
-#	}
+
 	948.1.1 = {
 		holder = 159183 # al-Hasan of Sicily
 	}
@@ -410,7 +395,6 @@ c_messina = {
 		holder = 461500 # Federigo II of Trinacria
 	}
 }
-
 c_siracusa = {
 	536.1.1 = {
 		liege = d_sicily
@@ -430,9 +414,7 @@ c_siracusa = {
 	885.1.1 = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
 	}
-#	890.1.1 = {
-#		holder = maghrebi0004 # Sawada ibn Muhammad (2nd time)
-#	}
+
 	948.1.1 = {
 		holder = 159183 # al-Hasan of Sicily
 	}
@@ -529,7 +511,6 @@ c_siracusa = {
 	}
 
 }
-
 c_agrigento = {
 	536.1.1 = {
 		liege = d_sicily
@@ -647,7 +628,6 @@ c_agrigento = {
 		holder = 461502 # Pietro II of Trinacria
 	}
 }
-
 c_malta = {
 	536.1.1 = {
 		liege = d_sicily
@@ -677,10 +657,6 @@ c_malta = {
 	885.1.1 = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
 	}
-#	890.1.1 = {
-#		holder = maghrebi0004 # Sawada ibn Muhammad (2nd time)
-#	}
-	# Kalbid
 	948.1.1 = {
 		holder = 159183 # al-Hasan of Sicily
 	}
@@ -940,7 +916,6 @@ d_benevento = {
 		de_jure_liege = k_naples
 	}
 }
-
 c_benevento = {
 	571.1.1 = {
 		liege = d_benevento
@@ -1151,7 +1126,6 @@ c_benevento = {
 		holder = 73491 # Arnaldo de Brussaco, Bishop of Benevento
 	}
 }
-
 b_isernia = {
 	# TODO: Should be a temple lease
 	1053.1.1 = {
@@ -1215,7 +1189,6 @@ b_isernia = {
 		holder = 73491 # Arnaldo de Brussaco, Bishop of Benevento
 	}
 }
-
 c_foggia = {
 	571.1.1 = {
 		liege = d_benevento
@@ -1572,8 +1545,6 @@ d_capua = {
 		de_jure_liege = k_naples
 	}
 }
-
-
 c_capua = {
 	768.1.1 = {
 		liege = d_benevento
@@ -1778,7 +1749,6 @@ c_capua = {
 		holder = 461700 # Robert I of Naples
 	}
 }
-
 c_napoli = {
 	867.1.1 = { change_development_level = 13 }
 	1066.1.1 = { change_development_level = 20 }
@@ -1977,7 +1947,6 @@ c_napoli = {
 		holder = 461700 # Robert I of Naples
 	}
 }
-
 b_amalfi = {
 	751.1.1 = {
 		holder = 145889 # Leon Amalfinos
@@ -2185,7 +2154,6 @@ d_apulia = {
 		de_jure_liege = k_naples
 	}
 }
-
 c_apulia = {
 	867.1.1 = { change_development_level = 10 }
 	1066.1.1 = { change_development_level = 13 }
@@ -2296,7 +2264,6 @@ c_apulia = {
 		holder = 461700 # Robert I of Naples
 	}
 }
-
 c_bari = {
 	742.1.1 = {
 		liege = d_benevento
@@ -2392,7 +2359,6 @@ c_bari = {
 	}
 
 }
-
 c_lecce = {
 	536.1.1 = {
 		liege = e_byzantium
@@ -2533,7 +2499,6 @@ d_salerno = {
 		de_jure_liege = k_naples
 	}
 }
-
 c_salerno = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
@@ -2683,7 +2648,6 @@ c_salerno = {
 		holder = 469513 # Andre of Calabria
 	}
 }
-
 c_camarda = { # Principality of Taranto
 	763.1.1 = {
 		liege = d_benevento
@@ -2700,6 +2664,9 @@ c_camarda = { # Principality of Taranto
 	857.1.1 = {
 		holder = 163094 # Sawdan of Bari
 		liege = d_apulia
+	}
+	936.1.1 = {
+		liege = e_byzantium
 	}
 	1057.1.1 = {
 		holder = 1134 # Abelard de Hauteville
@@ -2770,7 +2737,6 @@ c_camarda = { # Principality of Taranto
 	}
 }
 
-
 d_calabria = {
 	536.1.1 = {
 		liege = e_byzantium
@@ -2809,7 +2775,6 @@ d_calabria = {
 		holder = 469513 # André
 	}
 }
-
 c_cosenza = {
 	536.1.1 = {
 		liege = d_calabria
@@ -2885,8 +2850,6 @@ c_cosenza = {
 		holder = 32570 # Guglielmo I
 	}
 }
-
-
 c_rossano = { # County of Catanzaro
 	740.1.1 = {
 		liege = d_benevento
@@ -2951,8 +2914,6 @@ c_rossano = { # County of Catanzaro
 		holder = 32555 # Pietro III
 	}
 }
-
-
 c_reggio_calabria = {
 	536.1.1 = {
 		liege = d_calabria
