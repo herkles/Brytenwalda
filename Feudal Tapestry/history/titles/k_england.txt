@@ -708,6 +708,10 @@ c_northumberland = {
 	862.1.1 = {
 		holder = 163103
 	}
+	936.1.1 = {
+		holder = 260539
+		liege = k_england
+	}
 	1041.1.1 = {
 		holder = 196 #Siward
 	}
@@ -786,6 +790,10 @@ c_durham = {
 	862.1.1 = {
 		liege = "k_northumbria"
 		holder = 163120
+	}
+	936.1.1 = {
+		holder = 260539
+		liege = k_england
 	}
 	1066.1.1 = {
 		liege = "d_york"
@@ -954,7 +962,8 @@ c_lancashire = {
 		holder = 163121
 	}
 	936.1.1 = {
-		liege = "k_england"
+		holder = 260540
+		liege = k_england
 		de_jure_liege = k_england
 	}
 	1066.1.1 = {
@@ -1009,9 +1018,15 @@ c_westmorland = {
 		holder = 163122
 	}
 	936.1.1 = {
-		liege = "k_england"
+		holder = 260533
+		liege = k_strathclyde
 		de_jure_liege = k_england
+
 	}
+	939.1.1 = {
+	 	liege = "k_england"
+	 	de_jure_liege = k_england
+	 }
 	1055.1.1 = {
 		holder = 124 #Tostig Godwinson
 	}
@@ -1085,6 +1100,9 @@ c_north_riding = {
 	866.11.1 = {
 		liege = "d_york"
 		holder = 163112
+	}
+	936.1.1 = {
+		holder = 33350
 	}
 	936.1.1 = {
 		liege = "k_england"
@@ -1161,8 +1179,12 @@ c_east_riding = {
 		holder = 163112
 	}
 	936.1.1 = {
+		holder = 260524
+	}
+	936.1.1 = {
 		liege = "k_england"
 		de_jure_liege = k_england
+		liege = k_england
 	}
 	1055.1.1 = {
 		holder = 124 #Tostig Godwinson
@@ -1237,6 +1259,7 @@ c_west_riding = {
 		holder = 163112
 	}
 	936.1.1 = {
+		holder = 260524
 		liege = "k_england"
 		de_jure_liege = k_england
 	}
@@ -1352,6 +1375,10 @@ c_norfolk = {
 		de_jure_liege = d_norfolk
 
 	}
+	936.1.1 = {
+		holder = 260527
+		liege = k_england
+	}
 	879.1.1 = {
 		holder = 168650
 		liege = "k_england"
@@ -1421,9 +1448,12 @@ c_suffolk = {
 		holder = 163064
 		de_jure_liege = d_norfolk
 	}
-	
 	879.1.1 = {
 		holder = 168650
+	}
+	936.1.1 = {
+		holder = 260527
+		liege = k_england
 	}
 	1045.1.1 = {
 		holder = 122
@@ -1487,10 +1517,13 @@ c_cambridgeshire = {
 	855.1.8 = {
 		holder = 163064
 		de_jure_liege = d_norfolk
-	}
-	
+	}	
 	879.1.1 = {
 		holder = 168650
+	}
+	936.1.1 = {
+		holder = 260527
+		liege = k_england
 	}
 	1045.1.1 = {
 		holder = 122
@@ -1572,6 +1605,10 @@ c_wiltshire = {
 		de_jure_liege = d_somerset
 		holder = bryten_wessex_10
 	}
+	936.1.1 = {
+		holder = 260534
+		liege = k_england
+	}
 	1066.1.5 = {
 		holder = 122 # Harold Godwinson
 	}
@@ -1618,6 +1655,12 @@ c_berkshire = {
 		liege = "k_wessex"
 		de_jure_liege = d_somerset
 		holder = bryten_wessex_01
+	}
+	899.10.27 = {
+		holder = 100 # Edward the Elder
+	}
+	924.8.3 = {
+		holder = 33350 # Aethelstan the Glorious
 	}
 	1066.1.5 = {
 		holder = 122 # Harold Godwinson
@@ -1673,6 +1716,9 @@ c_hampton = {
 		liege = "k_england"
 		de_jure_liege = d_somerset
 		holder = 33358
+	}
+	924.8.3 = {
+		holder = 33350 # Aethelstan the Glorious
 	}
 	1066.1.5 = {
 		holder = 122 #Harold Godwinson's heir
@@ -1741,6 +1787,10 @@ c_isle_of_wight = {
 		liege = "k_england"
 		de_jure_liege = d_somerset
 		holder = 33358
+	}
+	936.1.1 = {
+		holder = 260531
+		liege = k_england
 	}
 	1065.12.10 = {
 		liege = "k_england"
@@ -1814,6 +1864,10 @@ c_dorset = {
 		de_jure_liege = d_somerset
 		holder = bryten_wessex_05
 	}
+	936.1.1 = {
+		holder = 260536
+		liege = k_england
+	}
 	1066.1.5 = {
 		liege = "k_england"
 		holder = 115 #Eadmund (Harold Godwinson's 2nd son) - no real historical evidence but we needed to give this title to someone to get Harold's domain size down.
@@ -1860,6 +1914,10 @@ c_somerset = {
 		liege = "k_wessex"
 		de_jure_liege = d_somerset
 		holder = bryten_wessex_04
+	}
+	936.1.1 = {
+		holder = 260535
+		liege = k_england
 	}
 	1066.1.5 = {
 		liege = "k_england"
@@ -1974,13 +2032,16 @@ c_kent = {
 	840.1.1 = {
 		holder = bryten_wessex_20
 		de_jure_liege = d_canterbury
-
 	}
 	882.1.1 = {
 		holder = bryten_wessex_23
 	}
 	899.1.1 = {
 		holder = bryten_wessex_24
+	}
+	936.1.1 = 	{
+		holder = 260530
+		liege = k_england
 	}
 	1066.1.5 = {
 		holder = 130
@@ -2195,6 +2256,9 @@ c_surrey = {
 		de_jure_liege = d_canterbury
 		holder = 33358
 	}
+	936.1.1 = 	{
+		holder = 260530
+	}
 	1066.1.1 = {
 		liege = "d_canterbury"
 	}
@@ -2233,6 +2297,9 @@ c_sussex = {
 		liege = "k_wessex"
 		de_jure_liege = d_canterbury
 		holder = bryten_wessex_12
+	}
+	936.1.1 = 	{
+		holder = 260530
 	}
 	1066.1.1 = {
 		liege = "d_canterbury"
@@ -2320,6 +2387,9 @@ c_cheshire = {
 		holder = 163102
 		de_jure_liege = d_mercia
 	}
+	936.1.1 = {
+		holder = 260537
+	}
 	1066.1.1 = {
 		liege = "d_mercia"
 	}
@@ -2388,6 +2458,9 @@ c_derby = {
 		holder = 163102
 		de_jure_liege = d_five_burhs
 	}
+	936.1.1 = {
+		holder = 260537
+	}
 	1066.1.1 = {
 		liege = "d_mercia"
 	}
@@ -2455,6 +2528,10 @@ c_gloucestershire = {
 		de_jure_liege = d_somerset
 		liege = "k_england"
 	}	
+	936.1.1 = {
+		holder = 260534
+		liege = k_england
+	}
 	1066.1.1 = {
 		liege = "d_mercia"
 	}
@@ -2529,6 +2606,9 @@ c_oxfordshire = {
 		de_jure_liege = d_somerset
 		liege = "k_england"
 	}	
+	924.8.3 = {
+		holder = 33350 # Aethelstan the Glorious
+	}
 	1066.1.5 = {
 		holder = 122 # Harold Godwinson
 	}
@@ -2915,6 +2995,10 @@ c_leicestershire = {
 		holder = 205112
 		liege = "k_mercia"
 	}
+	936.1.1 = {
+		holder = 252380
+		liege = k_england
+	}
 	1066.1.1 = {
 		liege = "k_england"
 	}
@@ -2964,6 +3048,9 @@ c_nottinghamshire = {
 	}
 	879.1.1 = {
 		holder = 306021 #Æthelwulf Mucel
+	}
+	936.1.1 = {
+		holder = 252380
 	}
 	1066.1.1 = {
 		liege = "k_england"
@@ -3015,6 +3102,9 @@ c_huntingdonshire = {
 		de_jure_liege = d_norfolk
 		liege = "k_england"
 	}	
+	936.1.1 = {
+		holder = 260527
+	}
 	1066.1.1 = {
 		liege = "k_england"
 	}
@@ -3078,6 +3168,10 @@ c_northamptonshire = {
 	865.1.1 = {
 		liege = "k_mercia"
 		holder = 205112
+	}
+	936.1.1 = {
+		holder = 260538
+		liege = k_england
 	}
 	1066.1.1 = {
 		liege = "k_england"
@@ -3143,6 +3237,9 @@ c_bedford = {
 	927.1.1 = {
 		de_jure_liege = d_norfolk
 		liege = "k_england"
+	}
+	936.1.1 = {
+		holder = 260538
 	}	
 	1066.1.1 = {
 		liege = "k_england"
@@ -3219,6 +3316,9 @@ c_buckinghamshire = {
 		de_jure_liege = d_norfolk
 		liege = "k_england"
 	}	
+	924.8.3 = {
+		holder = 33350 # Aethelstan the Glorious
+	}
 	939.10.28 = {
 		holder = 102 # Edmund the Magnificent
 	}
@@ -3313,8 +3413,8 @@ c_lincolnshire = {
 	879.1.1 = {
 		holder = 306021 #Æthelwulf Mucel
 	}
-	1055.1.1 = {
-
+	936.1.1 = {
+		holder = 252380
 	}
 	1055.1.1 = {
 		holder = 124 #Tostig Godwinson
@@ -3422,6 +3522,9 @@ c_middlesex = {
 	924.8.3 = {
 		holder = 33350 # Aethelstan the Glorious
 	}
+	924.8.3 = {
+		holder = 33350 # Aethelstan the Glorious
+	}
 	927.1.1 = {
 		de_jure_liege = d_norfolk
 		liege = "k_england"
@@ -3518,6 +3621,9 @@ c_essex = {
 		de_jure_liege = d_norfolk
 		liege = "k_england"
 	}	
+	936.1.1 = {
+		holder = 260527
+	}
 	1066.1.1 = {
 		liege = "d_norfolk"
 	}
@@ -3609,6 +3715,9 @@ c_hertfordshire = {
 	927.1.1 = {
 		de_jure_liege = d_norfolk
 		liege = "k_england"
+	}
+	936.1.1 = {
+		holder = 260527
 	}	
 	939.10.28 = {
 		holder = 102 # Edmund the Magnificent
@@ -4137,9 +4246,9 @@ c_devon = {
 		holder =  7627 #Alfred the Great
 	}
 	936.1.1 = {
-		holder =  33350 #Alfred the Great
+		holder = 260536
+		liege = k_england
 	}
-
 	1002.1.1 = {
 		holder = 259 # Emma of Normandy
 		liege = "k_england"

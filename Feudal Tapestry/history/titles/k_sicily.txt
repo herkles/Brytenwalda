@@ -76,6 +76,10 @@ d_sicily = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
 	}
 	910.1.1 = {
+		liege = k_egypt
+	}
+	936.1.1 = {
+		holder = 260852
 		liege = k_africa
 	}
 	# Kalbid
@@ -165,6 +169,10 @@ c_palermo = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
 	}
 	# Kalbids
+	936.1.1 = {
+		holder = 260852
+		liege = k_africa
+	}
 	948.1.1 = {
 		holder = 159183 # al-Hasan of Sicily
 	}
@@ -291,9 +299,16 @@ c_messina = {
 	885.1.1 = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
 	}
-
+	936.1.1 = {
+		holder = 260639
+	}
+	938.1.1 = {
+		holder = 262247
+		liege = d_calabria
+	}
 	948.1.1 = {
 		holder = 159183 # al-Hasan of Sicily
+		liege = d_sicily
 	}
 	954.1.1 = {
 		holder = 159184 # Ahmad I of Sicily
@@ -414,7 +429,10 @@ c_siracusa = {
 	885.1.1 = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
 	}
-
+	936.1.1 = {
+		holder = 260852
+		liege = k_africa
+	}
 	948.1.1 = {
 		holder = 159183 # al-Hasan of Sicily
 	}
@@ -530,7 +548,10 @@ c_agrigento = {
 	890.1.1 = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
 	}
-	# Kalbid
+	936.1.1 = {
+		holder = 260639
+		liege = d_sicily
+	}
 	948.1.1 = {
 		holder = 159183 # al-Hasan of Sicily
 	}
@@ -656,6 +677,10 @@ c_malta = {
 	}
 	885.1.1 = {
 		holder = maghrebi0004 # Sawada ibn Muhammad
+	}
+	936.1.1 = {
+		holder = 260852
+		liege = d_sicily
 	}
 	948.1.1 = {
 		holder = 159183 # al-Hasan of Sicily
@@ -1287,6 +1312,7 @@ c_foggia = {
 	}
 	936.1.1 = {
 		holder = 235097 # Ambrosio of Agugliastra
+		liege = d_apulia
 	}
 	944.12.16 = {
 		holder = 1708 # Konstantinos VII (2nd time)
@@ -1815,7 +1841,7 @@ c_napoli = {
 	}
 	821.8.1 = {
 		holder = 145884 # Stephanos III Neapolites
-		liege = e_byzantium
+		liege = 0
 	}
 	832.6.1 = {
 		holder = 145885 # Bonos Vonos
@@ -2102,8 +2128,13 @@ d_apulia = {
 	871.1.1 = {
 		holder = 0
 	}
+	936.1.1 = {
+		holder = 260636
+		liege = e_byzantium
+	}
 	1042.1.1 = {
 		holder = 1122 # William I de Hauteville 'Iron Arm'
+		liege = 0
 	}
 	1046.7.1 = {
 		holder = 1124 # Drogo
@@ -2181,6 +2212,10 @@ c_apulia = {
 	}
 	853.12.1 = {
 		holder = 163071 # Adelchis of Benevento
+	}
+	936.1.1 = {
+		holder = 200308
+		liege = d_apulia
 	}
 	1042.1.1 = {
 		liege = d_apulia
@@ -2279,6 +2314,10 @@ c_bari = {
 		liege = d_apulia
 		holder = 163094 # Sawdan, Emir of Bari
 	}
+	936.1.1 = {
+		holder = 260636
+		liege = d_apulia
+	}
 	1054.1.1 = {
 		holder = 171155 # Geoffroy de Conversano
 		liege = d_apulia
@@ -2368,6 +2407,10 @@ c_lecce = {
 	}
 	855.1.1 = {
 		holder = 145128 # Isidoros
+	}
+	936.1.1 = {
+		holder = 260637
+		liege = d_apulia
 	}
 	1065.1.1 = {
 		liege = d_apulia
@@ -2666,7 +2709,7 @@ c_camarda = { # Principality of Taranto
 		liege = d_apulia
 	}
 	936.1.1 = {
-		liege = e_byzantium
+		holder = 262225
 	}
 	1057.1.1 = {
 		holder = 1134 # Abelard de Hauteville
@@ -2748,6 +2791,13 @@ d_calabria = {
 		holder = 0
 		liege = 0
 	}
+	936.1.1 = {
+		holder = 262246
+		liege = e_byzantium
+	}
+	1066.1.1 = {
+		holder = 0
+	}
 	 1101.6.22 = {
 		holder = 127070 # Simon of Sicily
 	}
@@ -2786,8 +2836,13 @@ c_cosenza = {
 		liege = d_apulia
 		holder = 163094 # Sawdan of Bari
 	}
+	936.1.1 = {
+		holder = 260638
+		liege = d_calabria
+	}
 	1057.1.1 = {
 		holder = 1132 # Roger I of Sicily
+		liege = d_apulia
 	}
 	1071.1.1 = {
 		liege = d_sicily
@@ -2867,8 +2922,13 @@ c_rossano = { # County of Catanzaro
 		liege = d_apulia
 		holder = 163094 # Sawdan of Bari
 	}
+	936.1.1 = {
+		holder = 262246
+		liege = d_calabria
+	}
 	1057.1.1 = {
 		holder = 1128 # Robert of Apulia
+		liege = d_apulia
 	}
 	1085.7.17 = {
 		holder = 85005 # Radulf de Hauteville
@@ -2925,8 +2985,13 @@ c_reggio_calabria = {
 		liege = d_apulia
 		holder = 163094 # Sawdan of Bari
 	}
+	936.1.1 = {
+		holder = 262246
+		liege = d_calabria
+	}
 	1057.1.1 = {
 		holder = 1132 # Roger I of Sicily
+		liege = d_apulia
 	}
 	1071.1.1 = {
 		liege = d_sicily

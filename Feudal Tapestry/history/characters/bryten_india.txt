@@ -171,6 +171,32 @@
 		death = yes
 	}
 }
+261322 = {
+	name=Barak # historical
+	dynasty = 1062596
+	religion=shaivism
+	culture=afghan
+	trait=education_martial_2
+	916.1.1={
+		birth=yes # maybe
+	}
+	963.1.1={
+		death=yes # maybe
+	}
+}
+1059732 = {
+	name="Firuz" # fictional
+	dynasty = 1062597
+	religion=shaivism
+	culture=afghan
+	trait=education_martial_2
+	917.1.1={
+		birth=yes # maybe
+	}
+	961.1.1={
+		death=yes # maybe
+	}
+}
 #######################################
 # Sogdian
 #######################################
@@ -216,17 +242,29 @@
 		death=yes
 	}
 }
-247700 = {
-	name="Shah_Malik"
-	dynasty = 105849 #Kayani
-	religion="vajrayana"
-	culture="sogdian"
-	father=247699
-	892.1.1={
-		birth=yes
+261065 = {
+	name = "Farzad"
+	dynasty = 1062506
+	religion = maturidi
+	culture = sogdian
+	878.1.1 = {
+		birth = yes
 	}
-	942.1.1={
-		death=yes
+	929.1.1 = {
+		death = yes
+	}
+}
+261066 = {
+	name = "Barak"
+	dynasty = 1062506
+	religion = maturidi
+	culture = sogdian
+	father = 261065
+	905.1.1 = {
+		birth = yes
+	}
+	956.1.1 = {
+		death = yes
 	}
 }
 #######################################
@@ -293,6 +331,68 @@
 	}
 }
 
+261106 = {
+	name = "Abdullah"
+	dynasty = 1043005
+	religion = ashari
+	culture = sindhi
+	father = 175050
+	858.1.1 = {
+		birth = yes
+	}
+	913.1.1 = {
+		death = yes
+	}
+}
+261107 = {
+	name = "Umar"
+	dynasty = 1043005
+	religion = ashari
+	culture = sindhi
+	father = 261106
+	891.1.1 = {
+		birth = yes
+	}
+	943.1.1 = {
+		death = yes
+	}
+}
+261104 = {
+	name = "Junah"
+	dynasty = 1062540
+	religion = ashari
+	culture = sindhi
+	894.1.1 = {
+		birth = yes
+	}
+	948.1.1 = {
+		death = yes
+	}
+}
+261109 = {
+	name = "Hamir"
+	dynasty = 1062542
+	religion = ashari
+	culture = sindhi
+	908.1.1 = {
+		birth = yes
+	}
+	948.1.1 = {
+		death = yes
+	}
+}
+261105 = {
+	name = "Thakur"
+	dynasty = 1062541
+	religion = ashari
+	culture = sindhi
+	904.1.1 = {
+		birth = yes
+	}
+	961.1.1 = {
+		death = yes
+	}
+}
 #######################################
 # Rajasthani
 #######################################
@@ -310,21 +410,8 @@
 }
 
 #######################################
-# CULTURE
+# Sogdian
 #######################################
-247699 = {
-	name="Sau_Malik"
-	dynasty = 105849 #Kayani
-	religion="vajrayana"
-	culture="sogdian"
-	father=247698
-	876.1.1={
-		birth=yes
-	}
-	936.1.1={
-		death=yes
-	}
-}
 247700 = {
 	name="Shah_Malik"
 	dynasty = 105849 #Kayani
@@ -407,6 +494,63 @@
 	}
 }
 #######################################
+# Marathi
+#######################################
+261117 = {
+	name = "Mankoji"
+	dynasty = 1062548
+	religion = vaishnavism
+	culture = marathi
+	909.1.1 = {
+		birth = yes
+	}
+	939.1.1 = {
+		death = yes
+	}
+}
+261118 = {
+	name = "Moropant"
+	dynasty = 1062549
+	religion = digambara
+	culture = marathi
+	899.1.1 = {
+		birth = yes
+	}
+	951.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Telugu
+#######################################
+261122 = {
+	name = "Fath"
+	dynasty = 1062553
+	religion = "shaivism"
+	culture = telugu
+	902.1.1 = {
+		birth = yes
+	}
+	961.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# kannada
+#######################################
+261119 = {
+	name = "Sharva"
+	dynasty = 1062550
+	religion = digambara
+	culture = kannada
+	900.1.1 = {
+		birth = yes
+	}
+	948.1.1 = {
+		death = yes
+	}
+}
+#######################################
 # CULTURE
 #######################################
 
@@ -414,7 +558,17 @@
 # CULTURE
 #######################################
 
+#######################################
+# CULTURE
+#######################################
 
+#######################################
+# CULTURE
+#######################################
+
+#######################################
+# CULTURE
+#######################################
 
 
 

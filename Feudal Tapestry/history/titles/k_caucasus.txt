@@ -915,30 +915,6 @@ c_maghas = {
 	}
 }
 
-d_zichia = {
-	1.1.1 = {
-		name = c_zichia
-		de_jure_liege = k_caucasus
-	}
-	936.1.1 = {
-		holder = hapach
-		liege = 0
-	}
-	1150.1.1 = {
-		holder = abdunkhan
-		government = feudal_government
-		liege = 0
-	}
-	1200.1.1 = {
-		holder = tukar
-		liege = 0
-	}
-	1333.1.1 = {
-		holder = verzacht
-		liege = 0
-	}
-}
-
 c_zichia = {
 	#Alans tributaries to Khazars
 	741.1.1 = {
@@ -960,7 +936,6 @@ c_zichia = {
 	}
 	936.1.1 = {
 		holder = hapach
-		liege = 0
 	}
 	#Khazars pwned by Svyatoslav of the Rus (965)
 	#Alans become independent from Khazars around that period
@@ -1317,45 +1292,4 @@ c_samiran = { #Shamkhalate (Kumykia)
 		holder = akhsuvar_shamkhal
 	}
 	
-}
-
-c_durdzuketia = {
-	1187.1.1 = { change_development_level = 9 }
-	1337.1.1 = { change_development_level = 12 }
-	867.1.1 = {
-		holder = chechen_867
-		liege = e_caspian-pontic_steppe
-	}
-	900.1.1 = {
-		holder = chechen_867_son
-	}
-	920.1.1 = {
-		holder = chechen_936
-		liege = 0
-	}
-	1066.1.1 = {
-		holder = chechen_1066
-	}
-	1100.1.1 = {
-		holder = chechen_1066_son
-	}
-	1130.1.1 = {
-		holder = chechen_1066_grandson
-	}
-	1170.1.1 = {
-		holder = chechen_1187
-	}
-	1200.1.1 = {
-		holder = xasi_i
-	}
-	1241.1.1 = {
-		holder = xovr_i
-	}
-	1252.1.1 = {
-		holder = chechen_1337_father
-	}
-	1278.2.1 = {
-		holder = chechen_1337
-		liege = e_golden_horde
-	}
 }

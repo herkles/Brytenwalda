@@ -350,6 +350,7 @@ c_brie_francaise = {
 	}
 	1180.9.18 = {
 		holder = 205506 # Philippe II Auguste
+		liege=k_france
 	}
 	1223.7.14 = {
 		holder = 455402 #Louis VIII le Lion
@@ -648,6 +649,7 @@ c_beaumont = {
 	}
 	1180.9.18 = {
 		holder = 205506 # Philippe II Auguste
+		liege=k_france
 	}
 	1223.7.14 = {
 		holder = 455402 #Louis VIII le Lion
@@ -664,7 +666,7 @@ c_beaumont = {
 	1314.11.29 = {
 		holder = 455836 # Louis V le Hutin
 	}
-	1316.6.5 = { #in fact 1316.11.5
+	1316.11.5 = { #in fact 1316.11.5
 		holder = 70137 # Jean Ier le Posthume
 	}
 	1316.11.19 = { #corrected from 1316.6.5
@@ -687,7 +689,9 @@ c_clermont = {
 	859.1.1 = {
 		holder = 303409	#Béranger II of Amiens
 	}
-	
+	936.1.1 = {
+		holder = 40399
+	}
 	#Start of History
 	1000.1.1 = {
 		holder = 303410	#Baudoin Ie
@@ -756,6 +760,9 @@ c_tourraine = {
 	}
 	902.1.1 = {
 		holder = 6442	#Robert I of France
+	}
+	929.1.1 = {
+		holder = 1799
 	}
 	#Thibaud l'ancien in between
 	943.1.1 = {
@@ -847,12 +854,33 @@ c_blois = {
 		liege = k_france
 		holder = 163065 #Eudes
 	}
+	936.1.1 = {
+		holder = 382
+		liege = d_anjou
+	}
+	
+	#Thibaldiens / House of Blois
+	975.1.17 = {
+		holder = 384	#Eudes I Thibaldien
+	}	
+	
+	987.1.1 = {		#End of the march of Neustria
+		liege = k_france
+	}	
+	
+	996.1.2 = {
+		holder = 388	#Thibaud II
+	}
+	1004.1.2 = {
+		holder = 390	#Eudes II
+	}
 	1037.11.15 = {
 		liege = "d_champagne"
 		holder = 394 #Thibaut I de Blois
 	}
 	1089.9.30 = {
 		holder = 205897 #Étienne-Henri I de Blois
+		liege = k_france
 	}
 	1102.5.19 = {
 		holder = 91331 #Guillaume de Blois
@@ -969,9 +997,11 @@ c_anjou = {
 	}
 	929.1.1 = {
 		holder = 1799 #Foulques I le Roux
+		liege = d_anjou
 	}
 	942.1.1 = {
 		holder = 370 #Foulque II le Bon
+		liege = k_france
 	}
 	958.11.11 = {
 		holder = 372 #Geoffroy I Grisegonelle
@@ -1047,9 +1077,11 @@ c_saumur = {
 	}
 	929.1.1 = {
 		holder = 1799 #Foulques I le Roux
+		liege = d_anjou
 	}
 	942.1.1 = {
 		holder = 370 #Foulque II le Bon
+		liege = k_france
 	}
 	958.11.11 = {
 		holder = 372 #Geoffroy I Grisegonelle
@@ -1143,9 +1175,11 @@ c_maine = {
 	}
 	931.3.26 = {
 		holder = 144951	#Hughes II
+		liege = d_anjou
 	}
 	992.1.1 = {
 		holder = 1354	#Hughes III
+		liege = k_france
 	}
 	1016.7.6 = {
 		holder = 1358	#Herbet I "Eveille-Chien" / "Wakedog"
@@ -1255,9 +1289,11 @@ c_sable = {
 	}
 	931.3.26 = {
 		holder = 144951	#Hughes II
+		liege = d_anjou
 	}
 	992.1.1 = {
 		holder = 1354	#Hughes III
+		liege = k_france
 	}
 	1016.7.6 = {
 		holder = 1358	#Herbet I "Eveille-Chien" / "Wakedog"
@@ -1625,9 +1661,9 @@ c_bayeux = {
 		holder = 168041
 		liege = "d_normandy"	#as March of Neustria against the Normands/Vikings
 	}
-	932.1.1 = {
-		holder = 244 #Guillaume I Longue Épée
-	}	
+	936.1.1 = {
+		holder = 260556
+	}
 	1049.1.1 = {
 		liege = "d_normandy"
 		holder = 148 #Odo de Bayeux
@@ -1710,11 +1746,14 @@ c_avranches = {
 		holder = 168041
 		liege = "d_normandy"	#as March of Neustria against the Normands/Vikings
 	}
-	867.8.1 = {	#Treaty of Compiègne
+	867.8.1 = {	#Treaty of Compigne
 		liege = "d_brittany"
 		holder = 163105 # Solomon of Brittany takes it
 	}
-	
+	936.1.1 = {
+		holder = 260555 #Guillaume I Longue pe
+		liege = d_normandy
+	}	
 	1056.1.1 = {
 		liege = "d_normandy"
 		holder = 150 #Robert de Conteville
@@ -1796,8 +1835,9 @@ c_alencon = {
 		holder = 168041
 		liege = "d_normandy"	#as March of Neustria against the Normands/Vikings
 	}
-	932.1.1 = {
-		holder = 244 #Guillaume I Longue Épée
+	936.1.1 = {
+		holder = 260555 #Guillaume I Longue pe
+		liege = d_normandy
 	}
 	989.1.1 = {
 		liege = "d_normandy"
@@ -1870,6 +1910,9 @@ c_lisieux = {
 		holder = 168041
 		liege = "d_normandy"	#as March of Neustria against the Normands/Vikings
 	}
+	927.1.1 = {
+		holder = 244 #Guillaume I Longue pe
+	}
 	989.1.1 = {
 		liege = "d_normandy"
 		holder = 260 #Robert le Danois
@@ -1940,6 +1983,9 @@ c_eu = {
 	866.7.2 = {
 		holder = 168171
 		liege = "d_normandy"	#as March of Neustria against the Normands/Vikings
+	}
+	927.1.1 = {
+		holder = 244 #Guillaume I Longue pe
 	}
 	#de Normandie
 	996.1.1 = {
@@ -2094,9 +2140,14 @@ c_montargis = {
 		holder = 90104 #Charles II le Chauve
 		liege = k_france
 	}
-	
-	1066.1.1 = {	#Don't know when exactly she "started", so we default to 1066
+	936.1.15 = {
+		holder = 90120
+	}
+	1060.1.1 = {	#Don't know when exactly she "started", so we default to 1066
 		holder = 90068	#Hildegarde Herou
+	}
+	1065.1.2 = {
+		holder = 231010
 	}
 }
 c_vendome = {
@@ -2195,12 +2246,32 @@ c_chartres = {
 	}
 
 	#882-886 Hasting/Hastein viking ruler
+	931.3.26={
+		holder = 144951
+	}
+	936.1.1 = {
+		holder = 261392
+	}
+	#Thibaud l'ancien in between
+	943.1.1 = {
+		holder = 382	#Thibaut le Tricheur
+	}
 	
-	#House of Blois
-	#960 - Thibaud I of Blois
-	#976 - Eudes I of Blois
-	#995 - Thibaut II of Blois
-	#1004 - Eudes II of Blois
+	#Thibaldiens / House of Blois
+	975.1.17 = {
+		holder = 384	#Eudes I Thibaldien
+	}	
+	
+	987.1.1 = {		#End of the march of Neustria
+		liege = k_france
+	}	
+	
+	996.1.2 = {
+		holder = 388	#Thibaud II
+	}
+	1004.1.2 = {
+		holder = 390	#Eudes II
+	}
 	1037.11.15 = {
 		liege = "d_champagne"
 		holder = 394 #Thibaut III de Blois
@@ -2250,14 +2321,27 @@ c_sancerre = {
 		holder = 90104 #Charles II le Chauve
 		liege = "k_france"
 	}
-	
-	#960 - Thibaud le Tricheur
-	#975 - Eudes I
-	#996 - Thibaud II	
-	1004.1.1 = {
-		holder = 390 #Eudes II de Blois
-		liege = d_champagne
+	936.1.1 = {
+		holder = 382
+		liege = d_anjou
 	}
+	975.1.17 = {
+		holder = 384	#Eudes I Thibaldien
+	}	
+	
+	987.1.1 = {		#End of the march of Neustria
+		liege = d_champagne
+	}	
+	
+	996.1.2 = {
+		holder = 388	#Thibaud II
+	}
+	1004.1.2 = {
+		holder = 390	#Eudes II
+	}
+	1037.11.15 = {
+		holder = 394 	#Thibaut III
+	}	
 	1066.1.1 = {
 		holder = 394 #Thibaut III de Blois
 	}
@@ -2444,10 +2528,17 @@ c_langres = {
 	887.1.1 = {
 		holder = 303415	#Milon II Milonid
 	}
+	894.1.1 = {
+		holder = 40320
+	}
 	#894 - Manasses I de Chalon
-	
+	932.1.1 = {
+		holder = heric
+		government = theocracy_government
+	}
 	1040.1.1 = {	#No data, random guess
 		holder = 303416	#Guy I de Saulx
+		government = feudal_government
 	}
 	1060.1.1 = {
 		holder = 303417	#Guy II de Saulx
@@ -2908,6 +2999,9 @@ c_boulogne = {
 		holder = 10069
 	}
 	971.1.1 = {
+		holder = arnulf_iii_of_boulogne
+	}
+	990.1.1 = {
 		holder = 10067
 	}
 	1025.1.1 = {
@@ -3149,6 +3243,15 @@ c_chalon = {
 	880.1.1 = {
 		liege = d_burgundy
 	}
+	894.1.1 = {
+		holder = 40320
+	}
+	918.1.2 = {
+		holder = 40322
+	}
+	956.4.8 = {
+		holder = lambert_de_chalon
+	}
 	987.1.1 = {
 		holder = 40332	#Hughes Ie de Chalon
 	}
@@ -3176,8 +3279,12 @@ c_auxerre = {
 		holder = 7994	#Richard the Justicar
 		liege = d_burgundy
 	}
-	921.1.1 = {
-		holder = 7995	#Raoul/Rudolph of France
+	923.1.1 = {
+		holder = 168167 # Hugh 'the Black'
+	}
+	# Chalon
+	952.12.17 = {
+		holder = 40322 #Gilbert
 	}
 	
 	#House of Nevers
@@ -3251,6 +3358,13 @@ c_avalois = {
 	886.5.12 = {
 		liege = d_burgundy
 	}
+	923.1.1 = {
+		holder = 168167 # Hugh 'the Black'
+	}
+	# Chalon
+	952.12.17 = {
+		holder = 40322 #Gilbert
+	}
 	#1008 - Evrard
 	#1011 - Hermann
 	#1037 - Geoffrey
@@ -3267,6 +3381,16 @@ c_macon = {
 		holder = 163066	#Ecchard of Mâcon
 		#Technically should only be from 876-876, but can't find info on his predecessor, Eudes I, son of Arduin I
 		liege = k_france
+	}
+	932.1.1 = {
+		holder = aubry_i_de_macon
+		liege = d_burgundy
+	}
+	943.1.1 = {
+		holder = lietald_ii_de_macon
+	}
+	965.1.1 = {
+		holder = aubry_ii_de_macon
 	}
 
 	982.1.1 = {
@@ -3697,7 +3821,8 @@ c_troyes = {
 		holder = 7995 #Raoul (Rudolph)
 	}
 	936.1.15 = {
-		holder = 90120 #Louis IV d'Outre-mer
+		holder = 40322
+		liege = d_burgundy
 	}
 	954.11.12 = {
 		holder = 90125 #Lothaire
@@ -3917,7 +4042,9 @@ c_meaux = {
 		liege = k_france
 	}
 	#877 - Thibert / Teutbert / Théodebert Nibelungen ?
-	
+	907.1.1 = {
+		holder = 6402
+	}
 	943.1.1 = {
 		holder = 6404 #Robert de Vermandois
 	}
@@ -3947,6 +4074,10 @@ c_chalons = {
 	857.1.1 = {
 		holder = 303406	#Erchenrad bishop of Chalons in 857-868
 		liege = k_france
+	}
+	912.1.1 = {
+		holder = bovo
+		government = theocracy_government
 	}
 	1066.1.1 = {
 		holder = 161295	#Roger/Rogier III de Hainaut
@@ -3990,8 +4121,12 @@ c_sens = {
 	866.1.1 = {
 		holder = 168244	#Welf, son of Rudolf
 	}
+	936.1.1 = {
+		holder = 144969
+	}
 	939.1.1 = {
 		holder = 144969	#Fromond Ie de Sens
+		liege = k_france
 	}
 	948.1.1 = {
 		holder = 144968	#Renard Ie de Sens

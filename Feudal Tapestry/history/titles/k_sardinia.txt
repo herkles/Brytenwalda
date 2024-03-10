@@ -22,7 +22,6 @@ d_corsica = {
 		holder = 0
 	}
 }
-
 c_ajaccio = {
 	767.1.1 = {
 		liege = k_italy
@@ -55,6 +54,7 @@ c_ajaccio = {
 	}
 	930.1.1 = {
 		holder = 167906 # Lambert of Tuscany
+		liege = d_toscana
 	}
 	1012.1.1 = {
 		holder = 235006 # Guglielmo di Massa
@@ -96,32 +96,7 @@ c_ajaccio = {
 	1239.1.1 = {
 		holder = 71297 # Guglielmo III
 	}
-#	1242.1.1 = {
-#		holder = # Ansaldo de Mari
-#	}
-	1245.1.1 = {
-		holder = 235069 # Sinoncello I di Cinarca
-	}
-	1254.1.1 = {
-		holder = 70668 # Isnardo Malaspina
-		liege = d_genoa
-	}
-	1275.6.1 = {
-		holder = italian0009 # Sinoncello II
-	}
-	1325.1.1 = {
-		holder = 463400
-	}
-	1334.1.1 = {
-		holder = 71158 # Corrado Doria of Genoa
-	}
-#	1335.1.1 = {
-#		holder =
-#	}
-
 }
-
-
 c_bastia = {
 	767.1.1 = {
 		liege = k_italy
@@ -154,6 +129,7 @@ c_bastia = {
 	}
 	930.1.1 = {
 		holder = 167906 # Lambert of Tuscany
+		liege = d_toscana
 	}
 	1012.1.1 = {
 		holder = 235006 # Guglielmo di Massa
@@ -195,9 +171,6 @@ c_bastia = {
 	1239.1.1 = {
 		holder = 71297 # Guglielmo III
 	}
-#	1242.1.1 = {
-#		holder = # Ansaldo de Mari
-#	}
 	1245.1.1 = {
 		holder = 235069 # Sinoncello I di Cinarca
 	}
@@ -216,8 +189,6 @@ c_bastia = {
 	}
 
 }
-
-
 c_vecchio = {
 	767.1.1 = {
 		liege = k_italy
@@ -244,6 +215,7 @@ c_vecchio = {
 	}
 	928.1.1 = {
 		holder = 235037 # Guglielmo
+		liege = d_toscana
 	}
 	962.1.1 = {
 		liege = d_corsica
@@ -355,7 +327,6 @@ k_sardinia = {
 		holder = 460500 # Pere IV of Aragon
 	}
 }
-
 d_sardinia = {
 	533.1.1 = {
 		liege = "e_byzantium"
@@ -378,12 +349,25 @@ d_sardinia = {
 	807.1.1 = {
 		holder = 184008 # Nicholas
 	}
-	843.1.1 = {
-		liege = 0
+	864.1.1 = {
+		holder = 235092 # Gobleno
+	}
+	870.1.1 = {
+		holder = 75001 # Felice
+	}
+	900.1.1 = {
+		holder = 235106 # Torchitorio di Gunale
+	}
+	945.1.1 = {
+		holder = 235096 # Salusio di Lacon
+	}
+	949.1.1 = {
+		holder = 235107 # Ugone
+	}
+	954.1.1 = {
 		holder = 0
 	}
 }
-
 c_cagliari = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 10 }
@@ -412,7 +396,7 @@ c_cagliari = {
 	807.1.1 = {
 		holder = 184008 # Nicholas
 	}
-	843.1.1 = {
+	954.1.1 = {
 		liege = 0
 	}
 	864.1.1 = {
@@ -507,7 +491,6 @@ c_cagliari = {
 		holder = 460500
 	}
 }
-
 c_arborea = {
 	533.1.1 = {
 		liege = "d_sardinia"
@@ -530,7 +513,7 @@ c_arborea = {
 	807.1.1 = {
 		holder= 184008 # Nicholas
 	}
-	843.1.1 = {
+	954.1.1 = {
 		liege = 0
 	}
 	864.1.1 = {
@@ -656,7 +639,6 @@ c_arborea = {
 		holder = 144538 # Pietro III
 	}
 }
-
 c_gallura = {
 	533.1.1 = {
 		liege = "d_sardinia"
@@ -682,7 +664,7 @@ c_gallura = {
 	817.1.1 = {
 		holder = 75003 # Prospero
 	}
-	843.1.1 = {
+	954.1.1 = {
 		liege = 0
 	}
 	867.1.1 = {
@@ -777,7 +759,6 @@ c_gallura = {
 		holder = 460500
 	}
 }
-
 c_logudoro = {
 	533.1.1 = {
 		liege = "d_sardinia"
@@ -803,7 +784,7 @@ c_logudoro = {
 	817.1.1 = {
 		holder = 75003 # Prospero
 	}
-	843.1.1 = {
+	954.1.1 = {
 		liege = 0
 	}
 	867.1.1 = {
@@ -898,7 +879,6 @@ c_logudoro = {
 		holder = 91418 # Galeotto
 	}
 }
-
 c_tortoli = {
 	533.1.1 = {
 		liege = "d_sardinia"
@@ -924,7 +904,7 @@ c_tortoli = {
 	807.1.1 = {
 		holder = 184008 # Nicholas
 	}
-	843.1.1 = {
+	954.1.1 = {
 		liege = 0
 	}
 	864.1.1 = {

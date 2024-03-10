@@ -1377,6 +1377,10 @@ c_isle_of_man = {
 		liege = 0
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	936.1.1 = {
+		holder = 214902
+		liege = d_western_isles
+	}
 	1066.1.1 = {
 		holder = 131524
 	}
@@ -1714,6 +1718,10 @@ c_carrick = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	936.1.1 = {
+		holder = 166438
+		liege = d_galloway
+	}
 	1066.1.1 = {
 		liege = "d_western_isles"
 	}
@@ -1780,6 +1788,10 @@ c_ayrshire = {
 	}
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	936.1.1 = {
+		holder = 166438
+		liege = d_galloway
 	}
 	1058.1.1 = {
 		holder = 984 # Malcolm Canmore
@@ -2223,8 +2235,13 @@ d_western_isles = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	936.1.1 = {
+		holder = 214904
+		government = tribal_government
+	}
 	1066.1.1 = {
 		holder = 5788
+		government = feudal_government
 	}
 	1099.1.1 = {
 		liege = "k_norway"
@@ -2422,8 +2439,15 @@ c_inner_hebrides = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	936.1.1 = {
+		holder = 166390
+		government = theocracy_government
+		liege = d_western_isles
+	}
 	1066.1.1 = {
 		holder = 5788
+		government = feudal_government
+		liege = k_scotland
 	}
 	1099.1.1 = {
 		liege = "k_norway"
@@ -2625,6 +2649,9 @@ c_outer_hebrides = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	
 	}
+	936.1.1 = {
+		holder = 214904
+	}
 	1066.1.1 = {
 		holder = 131526
 	}
@@ -2816,6 +2843,9 @@ c_argyll = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	936.1.1 = {
+		holder = 214904
+	}
 	1066.1.2 = {
 		holder = 131104
 	}
@@ -2912,12 +2942,17 @@ c_lothian = {
 	862.1.1 = {
 		holder = 163103
 	}
+	936.1.1 = {
+		holder = 260542
+		liege = k_england
+	}
 	1066.1.1 = {
 		liege = "d_lothian"
 		de_jure_liege = d_lothian
 	}
 	1066.1.1 = {
 		holder = 85018
+		liege = k_scotland
 	}
 	1070.1.1 = {
 		liege = "k_scotland"
@@ -2980,6 +3015,10 @@ c_dunbar = {
 	862.1.1 = {
 		holder = 163103
 	}
+	936.1.1 = {
+		holder = 260541
+		liege = k_england
+	}
 	1066.1.1 = {
 		liege = "d_lothian"
 		de_jure_liege = d_lothian
@@ -3022,9 +3061,12 @@ c_teviotdale = {
 	862.1.1 = {
 		holder = 163103
 	}
-	973.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
-		de_jure_liege = d_lothian
+	}
+	936.1.1 = {
+		holder = 260542
+		liege = k_england
 	}
 	1066.1.2 = {
 		liege = "d_lothian"
@@ -3074,11 +3116,14 @@ c_linlithgowshire = {
 		government = tribal_government
 		de_jure_liege = d_albany
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
-	973.1.1 = {
-		de_jure_liege = d_lothian
+	936.1.1 = {
+		holder = 6026
+	}
+	1058.1.1 = {
+		holder = 984 # Malcolm Canmore
 	}
 	1058.1.1 = {
 		holder = 984 # Malcolm Canmore
@@ -3326,8 +3371,11 @@ d_moray = {
 	858.1.2 = {
 		holder = 6024
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	936.1.1 = {
+		holder = 974
 	}
 	1005.7.1 = {
 		holder = 5998 #Findl·ech mac Ruaidri
@@ -3453,8 +3501,11 @@ c_moray = {
 	858.1.2 = {
 		holder = 6024
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	936.1.1 = {
+		holder = 974
 	}
 	1005.7.1 = {
 		holder = 5998 #Findl·ech mac Ruaidri
@@ -3529,8 +3580,13 @@ c_ross = {
 	858.1.1 = {
 		holder = 183521
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	936.1.1 = {
+		holder = 102507
+		liege = d_northern_isles
+		government = tribal_government
 	}
 	1005.7.1 = {
 		holder = 5998 #Findl·ech mac Ruaidri
@@ -3593,8 +3649,11 @@ c_buchan = {
 	858.1.1 = {
 		holder = 183525
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	936.1.1 = {
+		holder = 974
 	}
 	1066.1.1 = {
 		liege = "k_scotland"
@@ -3651,6 +3710,11 @@ c_sutherland = {
 	}
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	936.1.1 = {
+		holder = 102507
+		liege = d_northern_isles
+		government = tribal_government
 	}
 	1058.1.2 = {
 		holder = 6008 #M√°el-Snechtai mac Lulaigh
@@ -3718,6 +3782,11 @@ c_caithness = {
 	}
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	936.1.1 = {
+		holder = 102507
+		liege = d_northern_isles
+		government = tribal_government
 	}
 	1066.1.1 = {
 		liege = "d_northern_isles"
@@ -3835,9 +3904,12 @@ c_inverness = {
 	858.1.2 = {
 		holder = 6024
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	936.1.1 = {
+		holder = 974
+	}	
 	1005.7.1 = {
 		holder = 5998 #Findl√°ech mac Ruaidri
 	}

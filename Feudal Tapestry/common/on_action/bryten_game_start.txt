@@ -125,8 +125,8 @@ bryten_setup_after_game_start_on_actions = {
 			}
 		}
 		# Border Set up
-		if = {# Carolingian Empire in 867
-			limit = { game_start_date = 867.1.1 }
+		if = {# Carolingian Empire before the founding of the Holy Roman Empire
+			limit = { game_start_date <= 962.2.2 }
 			title:k_france = { set_de_jure_liege_title = title:e_france	}
 			title:k_burgundy = { set_de_jure_liege_title = title:e_france }
 			title:k_aquitaine = { set_de_jure_liege_title = title:e_france }
@@ -148,8 +148,8 @@ bryten_setup_after_game_start_on_actions = {
 			title:d_frisia = { set_de_jure_liege_title = title:k_lotharingia }
 		}
 		if = {# Byzantine Empire controls Sardinia.
-			limit = { game_start_date = 867.1.1 }
-			title:d_sardinia = { set_de_jure_liege_title = title:k_sicily }
+			limit = { game_start_date <= 962.1.1 }
+			title:d_sardinia = { set_de_jure_liege_title = title:e_byzantium }
 		}
 		if = {# Holy Roman Empire Rules over Italy after Otto the Great
 			limit = { current_date >= 963.1.1 }

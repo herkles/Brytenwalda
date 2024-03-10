@@ -102,6 +102,12 @@ d_bohemia = {
 		holder = 168536
 	}
 	1003.1.1 = {
+		holder = 512
+	}
+	1003.6.1 = {
+		holder = 756
+	}
+	1004.1.1 = {
 		holder = 514
 	}
 	1012.1.1 = {
@@ -233,7 +239,7 @@ c_praha = {
 	921.1.1 = {
 		holder = 506
 	}
-	935.1.1 = {
+	935.9.28 = {
 		holder = 508
 	}
 	972.1.1 = {
@@ -364,6 +370,10 @@ c_litomerice = {
 	877.1.1 = {
 		holder = 500
 	}
+	936.1.1 = {
+		liege = "d_bohemia"
+		holder = 273025
+	}
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
@@ -480,7 +490,7 @@ c_zatec = {
 	921.1.1 = {
 		holder = 506
 	}
-	935.1.1 = {
+	935.9.28 = {
 		holder = 508
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
@@ -622,6 +632,9 @@ c_plzen = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	936.1.1 = {
+		holder = 508
+	}
 	1066.1.1 = {
 		holder = 530
 	}
@@ -732,7 +745,7 @@ c_doudleby = {
 	921.1.1 = {
 		holder = 506
 	}
-	935.1.1 = {
+	935.9.28 = {
 		holder = 508
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
@@ -860,20 +873,9 @@ c_boleslav = {
 	851.1.1 = {
 		holder = 168351
 	}
-	873.1.1 = {
-		holder = 500
-	}
-	894.1.1 = {
-		holder = 502
-	}
-	915.1.1 = {
-		holder = 504
-	}
-	921.1.1 = {
-		holder = 506
-	}
-	935.1.1 = {
-		holder = 508
+	936.1.1 = {
+		liege = "d_bohemia"
+		holder = 273025
 	}
 	972.1.1 = {
 		holder = 510
@@ -1127,21 +1129,18 @@ c_caslav = {
 	851.1.1 = {
 		holder = 168351
 	}
-	873.1.1 = {
-		holder = 500
+	907.7.4 = {
+		liege = "d_bohemia"
 	}
-	894.1.1 = {
-		holder = 502
+	910.1.1 = {
+		holder = 168358
 	}
-	915.1.1 = {
-		holder = 504
-	}
-	921.1.1 = {
-		holder = 506
-	}
-	935.1.1 = {
-		holder = 508
+	935.9.28 = {
+		#holder = 508
 		government = feudal_government #Ahistorical, just for ease of bookmarks.
+	}
+	937.1.1 = {
+		holder = 508
 	}
 	972.1.1 = {
 		holder = 510
@@ -1287,10 +1286,10 @@ d_moravia = {
 	907.7.4 = {
 		holder = 0
 		liege = 0
+		de_jure_liege = k_bohemia
 	}
 	1019.1.1 = {
 		liege = "e_hre"
-		de_jure_liege = k_bohemia
 	}
 	1019.1.1 = {
 		holder = 518
@@ -1378,9 +1377,9 @@ c_olomouc = {
 	}
 	871.12.1 = {
 		holder = 187007
-		liege = "d_bohemia"
 	}
 	936.1.1 = {
+		holder = 260635
 		liege = "d_bohemia"
 	}
 	1061.1.1 = {
@@ -1499,7 +1498,7 @@ c_opava = {
 		liege = "d_bohemia"
 	}
 	936.1.1 = {
-		liege = "d_bohemia"
+		holder = 260635
 	}
 	1061.1.1 = {
 		holder = 526
@@ -1634,13 +1633,12 @@ c_prerov = {
 	}
 	871.12.1 = {
 		holder = 187003
-		liege = "d_bohemia"
 	}
 	894.1.1 = {
 		holder = 187006
 	}
 	936.1.1 = {
-		liege = "d_bohemia"
+		holder = 260635
 	}
 	1061.1.1 = {
 		holder = 212892
@@ -1767,7 +1765,7 @@ c_brno = {
 		holder = 187006
 	}
 	936.1.1 = {
-		liege = "d_bohemia"
+		holder = 260634
 	}
 	1061.1.1 = {
 		holder = 526
@@ -1898,16 +1896,18 @@ c_jihlava = {
 	}
 	871.12.1 = {
 		holder = 187003
-		liege = "d_bohemia"
 	}
 	894.1.1 = {
 		holder = 187006
 	}
 	936.1.1 = {
-		liege = "d_bohemia"
+		holder = 260634
 	}
 	1061.1.1 = {
 		holder = 526
+	}
+	1066.1.1 = {
+		liege = "d_bohemia"
 	}
 	1092.9.6 = {
 		holder = 96012
@@ -2042,7 +2042,6 @@ c_znojmo = {
 	}
 	871.1.1 = {
 		holder = 187004
-		liege = "d_bohemia"
 	}
 	871.12.1 = {
 		holder = 187003
@@ -2051,7 +2050,7 @@ c_znojmo = {
 		holder = 187006
 	}
 	936.1.1 = {
-		liege = "d_bohemia"
+		holder = 260634
 	}
 	1061.1.1 = {
 		holder = 526

@@ -1957,11 +1957,101 @@ bryten_norse_01 = {
 #######################################
 # House NAME
 #######################################
-
+260602 = {
+	name = "RO_gnvaldr"
+	dynasty = 1062258
+	religion = norse_pagan
+	culture = norse
+	889.1.1 = {
+		birth = yes
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+261303 = {
+	name = "HA__kon"
+	dynasty = 1062258
+	religion = norse_pagan
+	culture = norse
+	father = 260602
+	912.1.1 = {
+		birth = yes
+	}
+	937.1.1 = {
+		death = yes
+	}
+}
+260533 = {
+	name = "Grimr"
+	dynasty = 1062212
+	religion = norse_pagan
+	culture = norse
+	903.1.1 = {
+		birth = yes
+	}
+	951.1.1 = {
+		death = yes
+	}
+}
 #######################################
 # House NAME
 #######################################
-
+214902 = {
+	name="RO_gnvaldr" # Ragnall Guthfrithson
+	dynasty_house = house_british_isles_ivaring
+	religion=norse_pagan
+	culture=norse
+	father = 214901
+	907.1.1={
+		birth=yes
+	}
+	944.1.1={
+		death=yes
+	}
+}
+214904 = {
+	name="O_lafr" # Olaf Guthfrithson
+	dynasty_house = house_british_isles_ivaring
+	religion=norse_pagan
+	culture=norse
+	father = 214901
+	911.1.1={
+		birth=yes
+	}
+	931.1.1 = {
+		add_spouse = 261158
+	}
+	941.1.1={
+		death=yes
+	}
+}
+261158 = {
+	name = "Beata"
+	female = yes
+	dynasty = 1062567
+	religion = norse_pagan
+	culture = norse
+	913.1.1 = {
+		birth = yes
+	}
+	941.1.1 = {
+		death = yes
+	}
+}
+214901 = {
+	name="GuT_friT_" # Gofraid ua Ímair
+	dynasty_house = house_british_isles_ivaring
+	religion=norse_pagan
+	culture=norse
+	father = 40608 # conjecture
+	886.1.1={
+		birth=yes
+	}
+	934.1.1={
+		death=yes
+	}
+}
 #######################################
 # House NAME
 #######################################

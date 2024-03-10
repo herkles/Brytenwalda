@@ -658,8 +658,48 @@
 		death = yes
 	}
 }
+
+1601022 = {
+	name="Zhavoronok"
+	dynasty=1029118
+	religion="slavic_pagan"
+	culture="russian"	
+	father=160060
+	886.1.1={
+		birth=yes
+	}
+	940.1.1={
+		death=yes
+	}
+}
+1601003 = {
+	name="Berimir" #placeholder
+	dynasty=1029138	
+	religion="slavic_pagan"
+	culture="russian"
+	father=160089
+	895.1.1={
+		birth = yes
+	}
+	951.1.1={
+		death = yes
+	}
+}
+1601004 = {
+	name="Tatimir" #placeholder
+	dynasty=1029138	
+	religion="slavic_pagan"
+	culture="russian"
+	father=160090
+	898.1.1={
+		birth = yes
+	}
+	956.1.1={
+		death = yes
+	}
+}
 #######################################
-# CULTURE
+# Volhynian
 #######################################
 260770 = {
 	name = "JaropolkU_"
@@ -678,7 +718,7 @@
 	name = "Grigorii2"
 	dynasty = 2001039
 	religion = slavic_pagan
-	culture = "krivich"
+	culture = "russian"
 	mother = 302216
 	914.1.1 = {
 		birth = yes
@@ -728,11 +768,190 @@
 	name = "VolodarI_"
 	dynasty = 1062358
 	religion = slavic_pagan
-	culture = "krivich"
+	culture = "russian"
 	893.1.1 = {
 		birth = yes
 	}
 	945.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Khazar
+#######################################
+260704 = {
+	name = "Yavantey"
+	dynasty = 1062330
+	religion = kabarism
+	culture = khazar
+	906.1.1 = {
+		birth = yes
+	}
+	958.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Alan
+#######################################
+260992 = {
+	name = "Ber"
+	dynasty = 1029056
+	religion = orthodox
+	culture = alan
+	father = 183223
+	895.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = yes
+	}
+}
+260993 = {
+	name = "Basil"
+	dynasty = 1029056
+	religion = orthodox
+	culture = alan
+	father = 183223
+	899.1.1 = {
+		birth = yes
+	}
+	956.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Pecheneg
+#######################################
+260696 = {
+	name = "Ipaos"
+	dynasty = 1062322
+	religion = tengri_pagan
+	culture = pecheneg
+	895.1.1 = {
+		birth = yes
+	}
+	947.1.1 = {
+		death = yes
+	}
+}
+
+#######################################
+# Circassian
+#######################################
+hapach = {
+	name = "Hapach"
+	dynasty = hapachid
+	religion = orthodox
+	culture = Alan
+	900.1.1 = { #Fictional date
+		birth = yes
+	}
+	950.1.1 = { #Fictional date
+		death = yes
+	}
+}
+#######################################
+# Avar
+#######################################
+avaz_avar = {
+	name = "Awaz"
+	culture = "avar"
+	religion = "orthodox"
+	dynasty = sarir_avar
+	
+	850.1.1 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes
+	}
+}
+buht_yisho_i_avar = {
+	name = "Bukht-Yisho"
+	culture = "avar"
+	religion = "orthodox"
+	dynasty = sarir_avar
+	father = avaz_avar
+	
+	890.1.1 = {
+		birth = yes
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+pilan_shah_avar = {
+	name = "Pilan-shah"
+	culture = "avar"
+	religion = "orthodox"
+	dynasty = sarir_avar
+	father = buht_yisho_i_avar
+	
+	915.1.1 = {
+		birth = yes
+	}
+	936.1.1 = {
+		add_spouse = 260995
+	}
+	980.1.1 = {
+		death = yes
+	}
+}
+260995 = {
+	name = "Natia"
+	female = yes
+	dynasty = 1029056
+	religion = orthodox
+	culture = alan
+	father = 260992
+	918.1.1 = {
+		birth = yes
+	}
+	962.1.1 = {
+		death = yes
+	}
+}
+buht_yisho_ii_avar = {
+	name = "Bukht-Yisho"
+	culture = "avar"
+	religion = "orthodox"
+	dynasty = sarir_avar
+	father = pilan_shah_avar
+	mother = 260995
+	
+	960.1.1 = {
+		birth = yes
+	}
+	1030.1.1 = {
+		death = yes
+	}
+}
+piruzha_avar = {
+	name = "Piruzha"
+	culture = "avar"
+	religion = "orthodox"
+	dynasty = sarir_avar
+	father = buht_yisho_ii_avar
+	
+	1010.1.1 = {
+		birth = yes
+	}
+	1060.1.1 = {
+		death = yes
+	}
+}
+tokku_avar = {
+	name = "Tokku"
+	culture = "avar"
+	religion = "orthodox"
+	dynasty = sarir_avar
+	father = piruzha_avar
+	
+	1040.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
 		death = yes
 	}
 }
@@ -751,3 +970,39 @@
 #######################################
 # CULTURE
 #######################################
+
+#######################################
+# CULTURE
+#######################################
+
+#######################################
+# CULTURE
+#######################################
+
+#######################################
+# CULTURE
+#######################################
+
+#######################################
+# CULTURE
+#######################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
