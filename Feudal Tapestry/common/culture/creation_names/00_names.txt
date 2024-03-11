@@ -299,57 +299,6 @@ kabylian = {
 		}
 	}
 }
-
-ruthenian = {
-	trigger = {
-		culture = culture:russian
-		any_sub_realm_county = {
-			culture = culture:russian
-			OR = {
-				duchy = title:d_kiev
-				duchy = title:d_halych
-				duchy = title:d_cherven_cities
-				duchy = title:d_volhynia
-				duchy = title:d_turov
-				duchy = title:d_pinsk
-				duchy = title:d_minsk
-				duchy = title:d_grodno
-				duchy = title:d_chernigov
-				duchy = title:d_pereyaslavl
-				duchy = title:d_yedisan
-				duchy = title:d_levedia
-				duchy = title:d_voronezh
-				duchy = title:d_khopyor
-				duchy = title:d_don_valley
-			}
-		}
-	}
-}
-belarusian = { #Aka white ruthenian
-	trigger = {
-		culture = culture:russian
-		any_sub_realm_county = {
-			culture = culture:russian
-			OR = {
-				duchy = title:d_pinsk
-				duchy = title:d_minsk
-				duchy = title:d_grodno
-			}
-		}
-	}
-}
-red_ruthenian = {
-	trigger = {
-		culture = culture:russian
-		any_sub_realm_county = {
-			culture = culture:russian
-			OR = {
-				duchy = title:d_halych
-				duchy = title:d_cherven_cities
-			}
-		}
-	}
-}
 munda = {
 	trigger = {
 		culture = culture:bengali

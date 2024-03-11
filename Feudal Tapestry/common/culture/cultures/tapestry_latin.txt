@@ -378,5 +378,31 @@ siqilliyyan = {# Sicilian but arabic
 		10 = mediterranean
 	}
 }
+dalmatian = {# Dalmatian
+	color = { 0.6 0.7 0.77 }
+	parents = { roman }
+	created = 480.1.1
 
+	ethos = ethos_communal
+	heritage = heritage_latin
+	language = language_latin
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_republican_legacy
+		tradition_formation_fighting
+		tradition_seafaring
+		tradition_maritime_mercantilism
+	}
+	
+	name_list = name_list_italian
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+
+	ethnicities = {
+		10 = mediterranean
+	}
+}
 

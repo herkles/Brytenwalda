@@ -115,13 +115,15 @@ d_sjaelland = {
 	860.1.1 = {
 		holder = 163110
 	}
-	917.1.1 = {
-		holder = 0
+	936.1.1 = {
+		holder = 101500
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
-
+	1066.1.1 = {
+		holder = 0
+	}
 }
 
 
@@ -148,7 +150,7 @@ c_sjaelland = {
 	934.1.1 = {
 		holder = 101500 # Gorm the Old
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	958.1.1 = {
@@ -251,7 +253,10 @@ c_fyn = {
 	860.1.1 = {
 		holder = 163110
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 101500
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	1066.1.1 = {
@@ -321,13 +326,10 @@ c_lolland_falster = {
 	917.1.1 = {
 		liege = "k_denmark"
 	}
-	917.1.1 = {
-		holder = 101549 # Hardeknud
+	936.1.1 = {
+		holder = 261187
 	}
-	934.1.1 = {
-		holder = 101500 # Gorm the Old
-	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	958.1.1 = {
@@ -416,7 +418,13 @@ c_lolland_falster = {
 d_skane = {
 	867.1.1 = {	change_development_level = 4 }
 	1066.1.1 = { change_development_level = 12 }
-	
+	936.1.1 = {
+		holder = 260561
+		liege = k_denmark
+	}
+	1066.1.1 = {
+		holder = 0
+	}
 	1104.1.1 = {
 		liege = "k_denmark"
 	}
@@ -485,13 +493,14 @@ c_skane = {
 		holder = 168635
 	}
 	917.1.1 = {
-		liege = "k_denmark"
+		liege = "d_skane"
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	938.1.1 = {
 		holder = 168638
+		liege = k_denmark
 	}
 	961.1.1 = {
 		holder = 168639
@@ -590,10 +599,13 @@ c_halland = {
 		liege = "d_sjaelland"
 		holder = 6843
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
-	
+	936.1.1 = {
+		holder = 261199
+		liege = d_skane
+	}
 	1051.1.1 = {
 		liege = "k_denmark"
 		holder = 102504 #Finn Arneson of Norway
@@ -692,7 +704,10 @@ c_bornholm = {
 		liege = "d_sjaelland"
 		holder = 6841
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 260561
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	1066.1.1 = {
@@ -753,8 +768,12 @@ c_blekinge = {
 		liege = "d_sjaelland"
 		holder = 6842
 	}
-	935.1.1 = {
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	936.1.1 = {
+		holder = 260562
+		liege = d_smaland
 	}
 	1066.1.1 = {
 		liege = "k_denmark"
@@ -830,7 +849,11 @@ d_jylland = {
 	860.1.1 = {
 		holder = 163113 # Bagsecg
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 101502
+		liege = k_denmark
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	1066.1.1 = {
@@ -912,7 +935,11 @@ c_aarhus = {
 	860.1.1 = {
 		holder = 163113
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 101502
+		liege = d_jylland
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	#1066.1.1 = {
@@ -994,7 +1021,11 @@ c_viborg = {
 	860.1.1 = {
 		holder = 163113
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 101502
+		liege = d_jylland
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	#1066.1.1 = {
@@ -1073,7 +1104,11 @@ c_ringkobing = {
 	860.1.1 = {
 		holder = 163113
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 101502
+		liege = d_jylland
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	#1066.1.1 = {
@@ -1152,7 +1187,11 @@ c_aalborg = {
 	860.1.1 = {
 		holder = 163113
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 101502
+		liege = d_jylland
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	#1066.1.1 = {
@@ -1237,7 +1276,10 @@ c_slesvig = {
 	860.1.1 = {
 		holder = 163113
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 101500
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	1066.1.1 = {
@@ -1316,7 +1358,10 @@ c_vorbasse = {
 	860.1.1 = {
 		holder = 163113
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 101500
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	1066.1.1 = {
@@ -1402,7 +1447,10 @@ c_ribe = {
 	860.1.1 = {
 		holder = 163113
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 101500
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	1066.1.1 = {
@@ -1531,7 +1579,12 @@ c_lubeck = {
 	866.1.1 = {
 		holder = 184001
 	}
-	935.1.1 = {
+	936.1.1 = {
+		holder = 1410
+		liege = d_nordmark
+		government = feudal_government
+	}
+	937.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
 	
@@ -1714,6 +1767,10 @@ c_stade = {
 	865.2.3 = {
 		liege = "d_angria"
 		holder = 163117
+		government = feudal_government
+	}
+	936.1.1 = {
+		holder = 167759
 	}
 	1043.4.15 = {
 		holder = 20251 #Adalbert Goseck
