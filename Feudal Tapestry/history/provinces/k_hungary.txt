@@ -2,7 +2,7 @@
 ##d_visegrad ###################################
 ###c_visegrad
 3803 = {	#Buda
-	culture = avar
+	culture = slovien
 	religion = tengri_pagan
 	holding = tribal_holding
 	
@@ -96,7 +96,7 @@
 
 ###c_szekesfehervar
 3805 = {	#Szekesfehervar
-	culture = avar
+	culture = slovien
 	religion = catholic
 	holding = tribal_holding
 	
@@ -232,7 +232,7 @@
 
 ###c_tolna
 3839 = {	#Tolna
-	culture = avar
+	culture = slovien
 	religion = catholic
 	holding = tribal_holding
 	
@@ -259,7 +259,7 @@
 
 ###c_baranya
 3842 = {	#Baranyavar
-	culture = avar
+	culture = slovien
 	religion = catholic
 	holding = tribal_holding
 	
@@ -410,7 +410,7 @@
 
 ###c_zolyom
 3856 = {	#Zolyom
-	culture = slovien
+	culture = nitran
 	religion = catholic
 	holding = castle_holding
 }
@@ -742,9 +742,6 @@
 	religion = orthodox
 	holding = tribal_holding
 	
-	890.1.1 = {
-		religion = catholic
-	}
 	935.1.1 = {
 		holding = castle_holding
 		#Date used to switch ti feudal_government in title history
@@ -773,9 +770,6 @@
 	religion = orthodox
 	holding = tribal_holding
 	
-	890.1.1 = {
-		religion = catholic
-	}
 	935.1.1 = {
 		holding = castle_holding
 		#Date used to switch ti feudal_government in title history
@@ -804,9 +798,6 @@
 	religion = orthodox
 	holding = tribal_holding
 	
-	890.1.1 = {
-		religion = catholic
-	}
 	935.1.1 = {
 		holding = castle_holding
 		#Date used to switch ti feudal_government in title history
@@ -918,14 +909,15 @@
 	holding = tribal_holding
 	
 	890.1.1 = {
-		religion = catholic
+		religion = orthodox
 	}
 	935.1.1 = {
 		holding = castle_holding
 		#Date used to switch ti feudal_government in title history
 	}
-	950.1.1 = {
+	1000.1.1 = {
 		culture = hungarian
+		religion = catholic
 	}
 }
 3932 = {	#Harszoc
@@ -1146,15 +1138,11 @@
 	holding = tribal_holding
 	
 	890.1.1 = {
-		religion = catholic
+		religion = orthodox
 	}
 	937.1.1 = {
 		holding = castle_holding
 		#Date used to switch ti feudal_government in title history
-	}
-	936.1.1 = {
-		culture = mogyer
-		religion = magyar_pagan
 	}
 	1000.1.1 = {
 		culture = hungarian
@@ -1213,7 +1201,9 @@
 	culture = avar
 	religion = tengri_pagan
 	holding = tribal_holding
-	
+	890.1.1 = {
+		religion = orthodox
+	}	
 	890.1.1 = {
 		religion = magyar_pagan
 		culture = mogyer
@@ -1221,6 +1211,10 @@
 	935.1.1 = {
 		holding = castle_holding
 		#Date used to switch ti feudal_government in title history
+	}
+	1000.1.1 = {
+		culture = hungarian
+		religion = catholic
 	}
 }
 3883 = {	#Ersomlyo
@@ -1238,12 +1232,15 @@
 	holding = tribal_holding
 	
 	890.1.1 = {
-		religion = magyar_pagan
-		culture = mogyer
+		religion = orthodox
 	}
 	935.1.1 = {
 		holding = castle_holding
 		#Date used to switch ti feudal_government in title history
+	}
+	1000.1.1 = {
+		culture = hungarian
+		religion = catholic
 	}
 }
 3878 = {	#Pancsova	AKA Pancevo
