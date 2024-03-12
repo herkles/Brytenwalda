@@ -1906,25 +1906,36 @@ c_carcassonne = {
 		liege = "k_lotharingia"
 		holder = 91475 #ADELARD, count of Cavalonensis (Languedoc)
 	}
-	815.1.1 = {
-		holder = 190556 #Bernard
+	790.1.1 = {
+		holder = visigothic0018 # Bello de Carcassone
 	}
-	844.1.1 = {
-		holder = 190557 #Bernard
+	812.1.1 = {
+		holder = visigothic0020 # Gisclafred de Carcassone
 	}
-	865.4.16 = {
-		holder = 168118	#Gartzia = Olibia II of Carcassonne ?
-		liege = "d_toulouse"
+	821.1.1 = {
+		holder = visigothic0021 # Olibia I de Carcassone
 	}
-	876.1.1 = {
-		holder = 127025	#Acfred I
+	837.5.10 = {
+		holder = occitan0097 # Olibia II de Carcassone
+		liege = d_barcelona
 	}
-	900.1.1 = {
-		de_jure_liege = k_france
+	872.1.1 = {
+		holder = 190557 # Bernard
+		liege = d_toulouse
 	}
-	#906 - Bencio
-	#908 - Acfred II
-	935.1.1 = {
+	873.6.1 = {
+		holder = occitan0097 # Olibia II de Carcassone (restored)
+	}
+	879.1.1 = {
+		holder = 127025	# Acfred I de Carcassone
+	}
+	906.2.18 = {
+		holder = occitan0099 # Bencio de Carcassone
+	}
+	908.1.1 = {
+		holder = occitan0100 # Acfred II de Carcassone
+	}
+	933.1.1 = {
 		holder = 40180	#Arnaud I de Comminges
 	}
 	957.11.27 = {
@@ -2243,6 +2254,9 @@ c_bigorre = {
 	836.1.1 = {
 		holder = 190501 #Guillaume
 	}
+	865.1.1 = {
+		holder = 168124 # Donat-Loup de Bigorre
+	}
 	866.1.1 = {
 		liege = "d_gascogne"
 		holder = 138162 #Loup Centule I de B�arn
@@ -2454,39 +2468,49 @@ c_comminges = {
 	759.1.1 = {
 		holder = 190494 #Artgarius
 	}
-	759.1.1 = {
+	768.1.1 = {
+		holder = 168104	# Duke Loup II of Gascogne
 		liege = d_gascogne
 	}
-	768.1.1 = {
-		holder = 168104 #Lope II de Vasconia
+	778.1.1 = {
+		holder = 168106 # Duke Sanche I of Gascogne
+	} 
+	812.1.1 = {
+		holder = basque0099 # Duke Aznar-Sanche of Armagnac
 	}
-	801.1.1 = {
-		holder = 31701
-		liege = "k_aquitaine"
+	820.1.1 = {
+		liege = d_armagnac
 	}
-	810.1.2 = {
-		holder = 31702
+	836.1.1 = {
+		holder = 168143 # Duke Sanche Sanche of Armagnac
 	}
-	864.1.1 = {
-		holder = 163060
+	848.1.1 = {
+		liege = d_gascogne
+	}
+	855.1.1 = {
+		holder = 168118 # Garcia-Sanche de Comminges
+	}
+	890.1.1 = {
+		holder = 168119 # Aznar II de Comminges
 	}
 	900.1.1 = {
 		de_jure_liege = k_france
 	}
 	905.1.1 = {
-		holder = 168120 # Lope Aznar I 
+		holder = 168120 # Loup Aznar de Comminges 
 	}
 	935.1.1 = {
-		holder = 40180
+		holder = 138188 # Aznar III de Comminges
+	}
+	946.1.1 = {
+		holder = 40180 # Arnaut I
 	}
 	957.1.1 = {
 		holder = 40182 #Roger I the Old Carcassone
 	}
 	988.1.1 = {
-		liege = "d_gascogne"
 		holder = 138192 # Arnaut II Comminges
 	}
-
 	1011.7.29 = {
 		holder = 138193 # Rogier II Comminges
 	}
@@ -2503,19 +2527,19 @@ c_comminges = {
 		holder = 40018 #Bernard III
 	}
 	1110.7.28 = {
-		holder = 205671 #Géraud III
+		holder = 205671 #G??raud III
 	}
 	1156.9.1 = {
 		holder = 205670 #Bernard IV
 	}
 	1193.1.1 = {
-		holder = 205673 #Géraud IV
+		holder = 205673 #G??raud IV
 	}
 	1215.6.8 = {
 		liege = "k_france"
 	}
 	1215.6.8 = {
-		holder = 138120 #Géraud V de lomagne
+		holder = 138120 #G??raud V de lomagne
 	}
 	1219.9.30 = {
 		holder = 138124 #Bernard V de lomagne
@@ -2530,7 +2554,7 @@ c_comminges = {
 		holder = 138121 #Mascarose II de lomagne
 	}
 	1254.9.15 = {
-		holder = 138130 #Géraud VI de lomagne
+		holder = 138130 #G??raud VI de lomagne
 	}
 	1280.1.1 = {
 		liege = "k_france"

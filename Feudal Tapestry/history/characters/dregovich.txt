@@ -1,7 +1,276 @@
 ﻿#######################################
 # House NAME
 #######################################
-
+6825 = {
+	name = "Yaropolk"
+	religion = "slavic_pagan"
+	culture = dregovich
+	trait = content
+	trait = cynical
+	dynasty = 1029117
+	father = 160064
+	841.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+6868 = {
+	name = "Vsebor"
+	dynasty = 1029117
+	religion = "slavic_pagan"
+	culture = dregovich
+	trait = content
+	father = 160064
+	845.1.1 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+159720 = {
+	name = "Bogdan"
+	religion = "slavic_pagan"
+	culture = dregovich
+	dynasty = 1029117
+	trait = content
+	trait = craven
+	trait = cynical
+	father = 160064
+	840.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160064 = {
+	name = "Dobromir"
+	religion = "slavic_pagan"
+	culture = dregovich
+	dynasty = 1029117
+	father = 194135
+	816.1.1 = {
+		birth = "816.1.1"
+	}
+	860.1.1 = {
+		death = "860.1.1"
+	}
+}
+160101 = {
+	name = "Bryacheslav"
+	religion = "slavic_pagan"
+	culture = dregovich
+	dynasty = 1029117
+	father = 159720
+	860.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160102 = {
+	name = "Venceslav"
+	religion = "slavic_pagan"
+	culture = dregovich
+	dynasty = 1029117
+	father = 159720
+	861.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160103 = {
+	name = "Yaroslav"
+	religion = "slavic_pagan"
+	culture = dregovich
+	dynasty = 1029117
+	father = 6825
+	860.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160104 = {
+	name = "Budimir"
+	religion = "slavic_pagan"
+	culture = dregovich
+	dynasty = 1029117
+	father = 6825
+	861.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160137 = {
+	name = "Rostislav"
+	religion = "slavic_pagan"
+	culture = dregovich
+	dynasty = 1029117
+	father = 6868
+	862.1.1 = {
+		birth = yes
+	}
+	905.1.1 = {
+		death = yes
+	}
+}
+160138 = {
+	name = "Kazimir"
+	religion = "slavic_pagan"
+	culture = dregovich
+	dynasty = 1029117
+	father = 6868
+	863.1.1 = {
+		birth = yes
+	}
+	905.1.1 = {
+		death = yes
+	}
+}
+194134 = {
+	name = "Igor"
+	religion = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029117
+	738.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+194135 = {
+	name = "Igor"
+	religion = "slavic_pagan"
+	culture = "ilmenian"
+	dynasty = 1029117
+	father = 194134
+	764.1.1 = {
+		birth = yes
+	}
+	822.1.1 = {
+		death = yes
+	}
+}
+302200 = {
+	name = Voislav
+	dynasty = 1029117	#Dregovich
+	religion = slavic_pagan
+	culture = dregovich
+	836.3.20 = {
+		birth = 836.3.20
+	}
+	858.5.12 = {
+		add_spouse = 302201
+	}
+	901.4.15 = {
+		death = 901.4.15
+	}
+}
+302201 = {
+	name = Liubava
+	female = yes
+	religion = slavic_pagan
+	culture = dregovich
+	841.7.28 = {
+		birth = 841.7.28
+	}
+	892.11.17 = {
+		death = 892.11.17
+	}
+}
+302202 = {
+	name = Tatyana
+	female = yes
+	dynasty = 1029117	#Dregovich
+	religion = slavic_pagan
+	culture = dregovich
+	father = 302200
+	mother = 302201
+	859.9.13 = {
+		birth = 859.9.13
+	}
+	892.11.17 = {
+		death = 892.11.17
+	}
+}
+302203 = {
+	name = Varvara
+	female = yes
+	dynasty = 1029117	#Dregovich
+	religion = slavic_pagan
+	culture = dregovich
+	father = 302200
+	mother = 302201
+	862.4.28 = {
+		birth = 862.4.28
+	}
+	929.11.8 = {
+		death = 929.11.8
+	}
+}
+302204 = {
+	name = Premyslava
+	female = yes
+	dynasty = 1029117	#Dregovich
+	religion = slavic_pagan
+	culture = dregovich
+	mother = 302203
+	893.1.14 = {
+		birth = 893.1.14
+	}
+	959.4.1 = {
+		death = 959.4.1
+	}
+}
+302205 = {
+	name = Sudislav
+	dynasty = 1029117	#Dregovich
+	religion = slavic_pagan
+	culture = dregovich
+	mother = 302204
+	918.10.1 = {
+		birth = 918.10.1
+	}
+	978.7.6 = {
+		death = 978.7.6
+	}
+}
+302206 = {
+	name = Voislav
+	dynasty = 1029117	#Dregovich
+	religion = slavic_pagan
+	culture = dregovich
+	father = 302205
+	948.6.3 = {
+		birth = 948.6.3
+	}
+	988.3.12 = {
+		death = 988.3.12
+	}
+}
+302207 = {
+	name = Ivan
+	dynasty = 1029117	#Dregovich
+	religion = orthodox
+	culture = dregovich
+	1044.3.5 = {
+		birth = 1044.3.5
+	}
+	1104.8.30 = {
+		death = 1104.8.30
+	}
+}
 #######################################
 # House NAME
 #######################################

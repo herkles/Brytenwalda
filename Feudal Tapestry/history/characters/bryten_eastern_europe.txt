@@ -511,23 +511,6 @@
 		death = yes
 	}
 }
-260568 = {
-	name = "Barnim"
-	dynasty = 1042806
-	religion = slavic_pagan
-	culture = polabian
-	father = 261221
-	mother = 261222
-	909.1.1 = {
-		birth = yes
-	}
-	933.1.1 = {
-		add_spouse = 261220
-	}
-	952.1.1 = {
-		death = yes
-	}
-}
 261220 = {
 	name = "Kornelia"
 	female = yes
@@ -718,6 +701,7 @@
 		death = yes
 	}
 }
+
 1601004 = {
 	name="Tatimir" #placeholder
 	dynasty=1029138	
@@ -731,6 +715,64 @@
 		death = yes
 	}
 }
+
+
+1601023 = {
+	name="Andrei" #placeholder
+	religion="slavic_pagan"
+	culture="russian"
+	898.1.1={
+		birth = yes
+	}
+	956.1.1={
+		death = yes
+	}
+}
+1601005 = {
+	name="Sviatoslav" #placeholder
+	religion="slavic_pagan"
+	culture="russian"
+	898.1.1={
+		birth = yes
+	}
+	956.1.1={
+		death = yes
+	}
+}
+1601006 = {
+	name="Nikita" #placeholder
+	religion="slavic_pagan"
+	culture="russian"
+	898.1.1={
+		birth = yes
+	}
+	956.1.1={
+		death = yes
+	}
+}
+1601007 = {
+	name="Igor" #placeholder
+	religion="slavic_pagan"
+	culture="russian"
+	898.1.1={
+		birth = yes
+	}
+	956.1.1={
+		death = yes
+	}
+}
+1601008 = {
+	name="Vasilko" #placeholder
+	religion="slavic_pagan"
+	culture="russian"
+	898.1.1={
+		birth = yes
+	}
+	956.1.1={
+		death = yes
+	}
+}
+
 #######################################
 # krivich
 #######################################
@@ -1017,6 +1059,21 @@ tokku_avar = {
 		death = yes
 	}
 }
+261227 = {
+	name = "Malgorzata"
+	female = yes
+	dynasty = 1062244
+	religion = slavic_pagan
+	culture = pommeranian
+	father = 261224
+	mother = 261225
+	908.1.1 = {
+		birth = yes
+	}
+	974.1.1 = {
+		death = yes
+	}
+}
 260766 = {
 	name = "Kugis"
 	dynasty = 9540
@@ -1033,19 +1090,6 @@ tokku_avar = {
 		death = yes
 	}
 }
-261237 = {
-	name = "Kenna"
-	female = yes
-	religion = baltic_pagan
-	culture = prussian
-	870.1.1 = {
-		birth = yes
-	}
-	941.1.1 = {
-		death = yes
-	}
-}
-
 260768 = {
 	name = "Nomedas"
 	dynasty = 9540
@@ -1060,23 +1104,6 @@ tokku_avar = {
 		add_spouse = 261240
 	}
 	949.1.1 = {
-		death = yes
-	}
-}
-
-260766 = {
-	name = "Kugis"
-	dynasty = 9540
-	religion = baltic_pagan
-	culture = prussian
-	father = 167741
-	865.1.1 = {
-		birth = yes
-	}
-	890.1.1 = {
-		add_spouse = 261237
-	}
-	918.1.1 = {
 		death = yes
 	}
 }
@@ -1104,7 +1131,6 @@ tokku_avar = {
 		death = yes
 	}
 }
-
 #######################################
 # latgalian
 #######################################
@@ -1243,6 +1269,18 @@ tokku_avar = {
 		death = yes
 	}
 }
+261264 = {
+	name = "Bitens"
+	female = yes
+	religion = baltic_pagan
+	culture = latgalian
+	899.1.1 = {
+		birth = yes
+	}
+	964.1.1 = {
+		death = yes
+	}
+}
 261262 = {
 	name = "Kage"
 	dynasty = 1062375
@@ -1284,6 +1322,22 @@ tokku_avar = {
 		add_spouse = 261251
 	}
 	953.1.1 = {
+		death = yes
+	}
+}
+
+261251 = {
+	name = "Daira"
+	female = yes
+	dynasty = 1062377
+	religion = baltic_pagan
+	culture = latgalian
+	father = 261248
+	mother = 261249
+	916.1.1 = {
+		birth = yes
+	}
+	978.1.1 = {
 		death = yes
 	}
 }
@@ -1376,31 +1430,7 @@ tokku_avar = {
 #######################################
 # ilmenian
 #######################################
-302219 = {
-	name = IngvarI_
-	dynasty = 2001041	#Pskovych
-	religion = slavic_pagan
-	culture = ilmenian
-	831.7.23 = {
-		birth = 831.7.23
-	}
-	882.4.10 = {
-		death = 882.4.10
-	}
-}
-302220 = {
-	name = BorisU_
-	dynasty = 2001041	#Pskovych
-	religion = slavic_pagan
-	culture = ilmenian
-	father = 302219
-	854.11.2 = {
-		birth = 854.11.2
-	}
-	913.4.13 = {
-		death = 903.4.13
-	}
-}
+
 #######################################
 # Russian
 #######################################
@@ -1430,19 +1460,6 @@ tokku_avar = {
 	}
 }
 
-302220 = {
-	name = BorisU_
-	dynasty = 2001041	#Pskovych
-	religion = slavic_pagan
-	culture = ilmenian
-	father = 302219
-	854.11.2 = {
-		birth = 854.11.2
-	}
-	913.4.13 = {
-		death = 903.4.13
-	}
-}
 260718 = {
 	name = "Gavrilo"
 	dynasty = 1062343 

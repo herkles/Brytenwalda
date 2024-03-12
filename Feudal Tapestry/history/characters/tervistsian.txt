@@ -1,7 +1,59 @@
 ﻿#######################################
 # House NAME
 #######################################
-
+256043 = {			#fictional, d_moldova & d
+	name = Mstislav
+	dynasty = 1061020	#Dniprich
+	religion = "slavic_pagan"
+	culture = tervistsian
+	840.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+302151 = {		#Podolians tribe
+	name = Vasilko
+	dynasty = 2001034	#Podolianiv
+	religion = slavic_pagan
+	culture = tervistsian
+	846.10.11 = {
+		birth = 846.10.11
+	}
+	865.8.4 = {
+		add_spouse = 302152
+	}
+	901.4.19 = {
+		death = 901.4.19
+	}
+}
+302152 = {		#Podolians tribe
+	name = Yekaterina
+	female = yes
+	religion = slavic_pagan
+	culture = tervistsian
+	848.1.22 = {
+		birth = 848.1.22
+	}
+	910.2.10 = {
+		death = 910.2.10
+	}
+}
+302153 = {		#Podolians tribe
+	name = Svetozar
+	dynasty = 2001034	#Podolianiv
+	religion = slavic_pagan
+	culture = tervistsian
+	father = 302151
+	mother = 302152
+	866.1.12 = {
+		birth = 866.1.12
+	}
+	917.5.7 = {
+		death = 917.5.7
+	}
+}
 #######################################
 # House NAME
 #######################################

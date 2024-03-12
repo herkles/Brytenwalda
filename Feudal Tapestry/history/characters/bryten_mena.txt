@@ -962,6 +962,201 @@ ali_ibn_husain_ibn_ismail = {#Caliphal governor of Medina
 	}
 }
 
+
+alqasim_ibn_ubaydallah_ibn_tahir = {
+	name = "Al-Qasim"
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = ubaydallah_ibn_tahir_ibn_yahya
+	trait = sayyid
+	
+	920.1.1 = { #Fictional date
+		birth = yes
+	}
+	980.1.1 = { #Fictional date
+		death = yes
+	}
+}
+daud_ibn_alqasim = {
+	name = "Da_ud"
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = alqasim_ibn_ubaydallah_ibn_tahir
+	trait = sayyid
+	
+	950.1.1 = { #Fictional date
+		birth = yes
+	}
+	1012.1.1 = { #Maybe
+		death = yes
+	}
+}
+
+hani_ibn_daud_ibn_alqasim = {
+	name = "Hani_"
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = daud_ibn_alqasim
+	trait = sayyid
+	
+	971.1.1 = { #Fictional date
+		birth = yes
+	}
+	1015.1.1 = { #Fictional date
+		death = yes
+	}
+}
+muhanna_ibn_daud_ibn_alqasim = {
+	name = "Muhanna"
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = daud_ibn_alqasim
+	trait = sayyid
+	
+	970.1.1 = { #Fictional date
+		birth = yes
+	}
+	1017.1.1 = {
+		death = yes
+	}	
+}
+abul_ghana_ibn_muhanna_ibn_daud = { #Co-ruler with Hashim ibn al-Hasan and Al-Husayn ibn Muhanna
+	name = "Ubayd-Allah" #Abu'l-Ghana' im 'Ubayd Allah
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = muhanna_ibn_daud_ibn_alqasim
+	trait = sayyid
+	
+	1002.1.1 = { #Fictional date
+		birth = yes
+	}
+	1018.1.1 = {
+		death = {
+			death_reason = death_murder
+		}
+	}	
+}
+al_husayn_ibn_muhanna_ibn_daud = {
+	name = "Al-Husayn"
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = muhanna_ibn_daud_ibn_alqasim
+	trait = sayyid
+	
+	1015.1.1 = { #Fictional date
+		birth = yes
+	}
+	1066.1.1 = {
+		effect = {
+			vassal_contract_set_obligation_level = {
+				type = jizya_special_rights
+				level = 1
+			}
+		}
+	}
+	1080.1.1 = { #Fictional date
+		death = yes
+	}	
+}
+al_hasan_ibn_daud_ibn_alqasim = {
+	name = "Al-Hasan"
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = daud_ibn_alqasim
+	trait = sayyid
+	
+	972.1.1 = {
+		birth = yes
+	}
+	1036.1.1 = { #Fictional date
+		death = yes
+	}
+}
+hashim_ibn_hasan_ibn_daud = { #Co-ruler with Ubayd Allah ibn Muhanna and Al-Husayn ibn Muhanna
+	name = "Hashim"
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = al_hasan_ibn_daud_ibn_alqasim
+	trait = sayyid
+	
+	1000.1.1 = { #Fictional date
+		birth = yes
+	}
+	1060.1.1 = {#Fictional date
+		death = yes
+	}
+}
+
+umara_ibn_muhanna = {
+	name = "Umara"
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = muhanna_ibn_daud_ibn_alqasim
+	trait = sayyid
+	
+	1001.1.1 = { #Fictional date
+		birth = yes
+	}
+	1050.1.1 = { #Fictional date
+		death = yes
+	}	
+}
+mansur_ibn_umara_ibn_muhanna = {
+	name = "Umara"
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = umara_ibn_muhanna
+	trait = sayyid
+	
+	1040.1.1 = { #Fictional date
+		birth = yes
+	}
+	1081.1.1 = {
+		effect = {
+			vassal_contract_set_obligation_level = {
+				type = jizya_special_rights
+				level = 1
+			}
+		}
+	}
+	1103.1.1 = {
+		death = yes
+	}	
+}
+
+muhanna_ibn_alhusayn_ibn_muhanna = {
+	name = "Muhanna"
+	dynasty_house = house_husaynid
+	religion = "ismaili"
+	culture = "bedouin"
+	father = al_husayn_ibn_muhanna_ibn_daud
+	trait = sayyid
+	1065.1.1 = { #Fictional date
+		birth = yes
+	}
+	1120.1.1 = { #?
+		death = yes
+	}
+}
+
+
+
+
+
+
+
+
+
 #######################################
 # Levantines
 #######################################
@@ -2338,6 +2533,20 @@ ali_ibn_husain_ibn_ismail = {#Caliphal governor of Medina
 #######################################
 # Tajik
 #######################################
+261018 = {
+	name = "Nuh"
+	dynasty_house = house_samanid
+	religion = maturidi
+	culture = tajik
+	father = 261017
+	925.1.1 = {
+		birth = yes
+	}
+	954.1.1 = {
+		death = yes
+	}
+}
+
 261037 = {
 	name = "Abu_Bakr"
 	dynasty = 1062498
