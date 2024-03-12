@@ -241,24 +241,44 @@ c_castellon = {
 	936.1.1 = {
 		holder = 73843
 	}
-	1016.7.1 = {
-		holder = 73687 # Ali Hammudid
+	1008.1.1 = {
+		holder = levantine0101 # Walih Musa ibn Ahmad of Murcia
+		liege = d_murcia
 	}
-	1018.3.22 = {
-		holder = 73678 # Abd al-Rahman IV Umayyad
+	1009.3.3 = {
+		holder = andalusian0101 # Emir Labib of Valencia
+		liege = 0
 	}
-	1018.6.1 = {
-		holder = 73689 # al-Qasim Hammudid
-	}	
-	1021.1.1 = {
-		holder = 45025 # Abd al-Aziz Amirid
+	1009.7.1 = {
+		holder = 73184 # Emir Mundir I of Zaragoza
+		liege = d_aragon
+	}
+	1010.1.1 = {
+		holder = andalusian0101 # Emir Labib of Valencia
+		liege = 0
+	}
+	1016.1.1 = {
 		liege = d_valencia
 	}
-	1061.1.1 = {
-		holder = 45026 # Abd al-Malik I Amirid
+	1021.1.1 = {
+		liege = 0
 	}
-	1065.1.1 = {
-		liege = d_toledo
+	1038.1.1 = {
+		holder = andalusian0102 # Sheik Muqatil of Tarragona
+	}
+	1053.1.1 = {
+		holder = andalusian0103 # Sheik Ya'la of Tarragona
+	}
+	1057.1.1 = {
+		holder = andalusian0104 # Sheik Nabil of Tarragona
+	}
+	1060.1.1 = {
+		holder = 3934 # Emir al-Muqtadir of Zaragoza
+		liege = d_aragon
+	}
+	1065.1.1 = { #to make the 1066 bookmark unchanged after FP2 history pass 
+		holder = andalusian0059 #Wali Rawas of Valencia, didn't hold it historically 
+		liege = d_toledo 
 	}
 	1069.1.1 = {
 		holder = 3928 # Abu Bakr Amirid
@@ -384,24 +404,25 @@ c_teruel = {
 	936.1.1 = {
 		holder = 73843
 	}
-	1016.7.1 = {
-		holder = 73687 # Ali Hammudid
+	990.1.1 = {
+		holder = baranis0064 # Qasim
+		liege = k_andalusia
 	}
-	1018.3.22 = {
-		holder = 73678 # Abd al-Rahman IV Umayyad
+	1009.1.1 = {
+		holder = baranis0065 # Nizam al-Dawla I
 	}
-	1018.6.1 = {
-		holder = 73689 # al-Qasim Hammudid
-	}	
-	1021.1.1 = {
-		holder = 45025 # Abd al-Aziz Amirid
-		liege = d_valencia
+	1030.1.1 = {
+		holder = baranis0066 # Yumm al-Dawla
 	}
-	1061.1.1 = {
-		holder = 45026 # Abd al-Malik I Amirid
+	1042.1.1 = {
+		holder = baranis0067 # Adud al-Dawla
 	}
-	1065.1.1 = {
-		liege = d_toledo
+	1043.1.1 = {
+		holder = baranis0069 # Muhammad ibn Ahmad
+	}
+	1043.7.1 = {
+		holder = baranis0070 # Nizam al-Dawla II
+		liege = d_toledo 
 	}
 	1069.1.1 = {
 		holder = 3928 # Abu Bakr Amirid
@@ -529,24 +550,24 @@ c_denia = {
 	936.1.1 = {
 		holder = 73795
 	}
-	1016.7.1 = {
-		holder = 73687 # Ali Hammudid
+
+	1008.1.1 = {
+		holder = levantine0101 # Walih Musa ibn Ahmad of Murcia
+		liege = d_murcia
 	}
-	1018.3.22 = {
-		holder = 73678 # Abd al-Rahman IV Umayyad
+	1009.1.1 = {
+		holder = 85008 # Emir Muyahid al-Amiri of Mallorca
+		liege = 0
 	}
-	1018.6.1 = {
-		holder = 73689 # al-Qasim Hammudid
+	1015.1.1 = {
+		liege = d_mallorca
 	}
-	1021.1.1 = {
-		holder = 45025 # Abd al-Aziz Amirid
-		liege = d_valencia
+	1045.7.15 = {
+		holder = 20869 # Emir Ali Imad al-Dawla of Mallorca
 	}
-	1061.1.1 = {
-		holder = 45026 # Abd al-Malik I Amirid
-	}
-	1065.1.1 = {
-		liege = d_toledo
+	1065.1.1 = { #fix for re-balance after FP2 history pass
+		holder = andalusian0059 #Wali Raws of Burjanna (not historical holder)
+		liege = d_toledo 
 	}
 	1069.1.1 = {
 		holder = 3928 # Abu Bakr Amirid
@@ -567,7 +588,6 @@ c_denia = {
 		holder = 107590 # Rodrigo Díaz de Vivar
 		liege = 0
 	}
-
 	1096.1.1 = {
 		liege = k_castille
 	}
@@ -649,16 +669,28 @@ c_alicante = {
 		holder = 73903 # Ali Nadirid
 	}
 	789.1.1 = {
-		holder = 73904 # Ghalib Nadirid
+		holder = 73904 # Ghalib ibn Ali
 	}
 	812.1.1 = {
-		holder = 73905 # Talib Nadirid
+		holder = 73905 # Talib ibn Ghalib
 	}
 	852.1.1 = {
-		holder = 73906 # Abd al-Yabbar Nadirid
+		holder = 73906 # Abd al-Yabbar ibn Talib
 	}
-	936.1.1 = {
-		holder = 73795
+	858.1.1 = {
+		holder = 73900 # Marwan ibn Abd al-Malik
+	}
+	887.1.1 = {
+		holder = 73899 # Walid ibn Marwan
+	}
+	927.1.1 = {
+		holder = 73916 # Muhammad ibn Walid
+	}
+	943.1.1 = {
+		holder = 73917 # Walid ibn Muhammad
+	}
+	980.1.1 = {
+		holder = 73918 # Abd al-Malik ibn Walid
 	}
 	1038.1.1 = {
 		holder = 45027 # Abu Bakr Tahirid
@@ -889,6 +921,7 @@ c_murcia = {
 	}
 	918.1.1 = {
 		holder = 73795 # Tayyib ibn Muhammad
+		liege = k_andalusia
 	}
 	939.1.1 = {
 		holder = 73796 # Abd al-Rahman ibn Tayyib
@@ -1487,7 +1520,7 @@ c_menorca = {
 	1045.1.1 = {
 		holder = 20869 # Ali Amirid
 	}
-	1076.1.1 = {
+	1046.1.1 = {
 		holder = 33053 # Abdallah Aglabid
 	}
 	1093.1.1 = {

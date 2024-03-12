@@ -134,7 +134,7 @@
 ##d_slavonia ###################################
 ###c_zagreb
 461 = {		#Zagreb
-	culture = croatian
+	culture = slovien
 	religion = catholic
 	holding = castle_holding
 }
@@ -156,7 +156,7 @@
 
 ###c_zagorje
 458 = {		#Istria / Krapina
-	culture = croatian
+	culture = slovien
 	religion = catholic
 	holding = castle_holding
 }
@@ -178,7 +178,7 @@
 
 ###c_pozega
 3529 = {	#Požega
-	culture = croatian
+	culture = slovien
 	religion = catholic
 	holding = castle_holding
 }
@@ -192,7 +192,7 @@
 
 ###c_vukovar
 3610 = {	#Vakovo
-	culture = croatian
+	culture = slovien
 	religion = catholic
 	holding = castle_holding
 }
@@ -291,13 +291,10 @@
 ##d_lower_bosna ###################################
 ###c_vodica / krajina
 3519 = {	#Vodicevo
-	culture = croatian
+	culture = slovien
 	religion = bosnian_church
 	holding = castle_holding
-	950.1.1 = {
-		culture = bosnian
-		#Dating somewhat arbitrary, but basically the proto-form existed for about a generation before the eleventh century.
-	}
+
 }
 3518 = {	#Dubica
 	holding = none
@@ -308,13 +305,9 @@
 
 ###c_vrbas
 3516 = {	#Vrbaški Grad / b_banjaluka
-	culture = croatian
+	culture = slovien
 	religion = bosnian_church
 	holding = castle_holding
-	950.1.1 = {
-		culture = bosnian
-		#Dating somewhat arbitrary, but basically the proto-form existed for about a generation before the eleventh century.
-	}
 }
 3515 = {	#Gradiška
 	holding = city_holding
@@ -335,7 +328,6 @@
 		#Serbs convert in 870
 	}
 	950.1.1 = {
-		culture = bosnian
 		religion = bosnian_church
 		#Dating somewhat arbitrary, but basically the proto-form existed for about a generation before the eleventh century.
 	}
@@ -364,7 +356,6 @@
 		#Serbs convert in 870
 	}
 	950.1.1 = {
-		culture = bosnian
 		religion = bosnian_church
 		#Dating somewhat arbitrary, but basically the proto-form existed for about a generation before the eleventh century.
 	}
@@ -382,8 +373,6 @@
 ##d_usora ###################################
 ###c_zachlumia
 466 = {		#Zachlumia
-	#culture = bosnian
-	#religion = bosnian_church
 	culture = zachlumian
 	religion = slavic_pagan
 	holding = castle_holding
@@ -463,7 +452,6 @@
 	950.1.1 = {
 		#Slower spread out to the culture from the Dinaric Alps.
 		religion = bosnian_church
-		culture = bosnian
 	}
 }
 3553 = {	#Omiš

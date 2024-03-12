@@ -147,10 +147,10 @@ bryten_setup_after_game_start_on_actions = {
 			title:d_utrecht = { set_de_jure_liege_title = title:k_lotharingia }
 			title:d_frisia = { set_de_jure_liege_title = title:k_lotharingia }
 		}
-		if = {# Byzantine Empire controls Sardinia.
-			limit = { game_start_date <= 962.1.1 }
-			title:d_sardinia = { set_de_jure_liege_title = title:e_byzantium }
-		}
+		# if = {# Byzantine Empire controls Sardinia.
+		# 	limit = { game_start_date <= 962.1.1 }
+		# 	title:d_sardinia = { set_de_jure_liege_title = title:e_byzantium }
+		# }
 		if = {# Holy Roman Empire Rules over Italy after Otto the Great
 			limit = { current_date >= 963.1.1 }
 			title:k_italy = { set_de_jure_liege_title = title:e_hre }
@@ -199,8 +199,6 @@ bryten_setup_after_game_start_on_actions = {
 			title:d_meissen = { set_de_jure_liege_title = title:k_sorbia }
 			title:d_lausitz = { set_de_jure_liege_title = title:k_sorbia }
 		}
-
-
 		# Global Variables
 		if = {# Bury Saint Edmonds is founded in 1020 
 			limit = { current_date >= 1020.1.1 }
@@ -224,9 +222,6 @@ bryten_setup_after_game_start_on_actions = {
 			}
 			title:c_sussex = { add_county_modifier = {	modifier = bryten_cinque_port_modifier } }
 			title:c_kent = { add_county_modifier = { modifier = bryten_cinque_port_modifier	} }
-		}		
-
-
-
+		}
 	}
 }
