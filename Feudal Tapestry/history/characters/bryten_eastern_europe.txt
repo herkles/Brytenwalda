@@ -999,8 +999,6 @@ tokku_avar = {
 #######################################
 # latgalian
 #######################################
-
-
 261254 = {
 	name = "Kiten"
 	dynasty = 1062376
@@ -1190,7 +1188,6 @@ tokku_avar = {
 		death = yes
 	}
 }
-
 261251 = {
 	name = "Daira"
 	female = yes
@@ -1293,15 +1290,49 @@ tokku_avar = {
 	}
 }
 #######################################
-# ilmenian
+# mordvin
 #######################################
-
+1233697 = {
+	name="Varmanpaz"
+    dynasty=1000053379 # Mok�a
+	religion="finnish_pagan"
+	culture="mordvin"
+	852.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+1233698 = {
+	name="Tul"
+    dynasty=1000053379 # Mok�a
+	religion="finnish_pagan"
+	culture="mordvin"
+        father=1233697
+	885.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = yes
+	}
+}
+1233699 = {
+	name="Varmanpaz"
+    dynasty=1000053379 # Mok�a
+	religion="finnish_pagan"
+	culture="mordvin"
+    father=1233698
+	920.1.1 = {
+		birth = yes
+	}
+	970.1.1 = {
+		death = yes
+	}
+}
 #######################################
 # Russian
 #######################################
-
-
-
 260729 = {
 	name = "VsevolodU_"
 	dynasty = 1062350

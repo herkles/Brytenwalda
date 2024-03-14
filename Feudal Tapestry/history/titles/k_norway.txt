@@ -235,8 +235,39 @@ c_vingulmork = {
 	867.1.1 = {
 		holder = 144000
 	}
+
+	934.1.1 = {
+		liege = k_norway
+		holder = 144003 # Tryggve Olafsson
+	}
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	963.1.1 = {
+		holder = 102508 # Harald Greycloak
+	}
+	970.1.1 = {
+		liege = k_denmark
+		holder = 102526 # Harald Grenske
+	}
+	995.1.1 = {
+		liege = k_norway
+		holder = 144004 # Olof I
+	}
+	1000.1.1 = {
+		holder = 101505 # Sweyn Forkbeard
+	}
+	1015.1.1 = {
+		holder = 102527 # Olof The Saint
+	}
+	1028.1.1 = {
+		holder = 102518 # Haakon Eiriksson of the Lade Family
+	}
+	1030.7.29 = {
+		holder = 101514 # Svein Knutsson, son of Canute the Great and Ælfgifu. Ruled Norway alongside his mother as regent, after the death of Haakon Eiriksson of the Lade Earls at sea in 1029-30, thereby ending the family
+	}
+	1035.1.1 = {
+		holder = 102529 # Magnus the Good
 	}
 	1047.1.1 = {
 		liege = "k_norway"
@@ -317,6 +348,40 @@ c_vestfold = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+	927.1.1 = {
+		holder = 144006 # Gudrödr Björnsson, Petty-King in the Westfold, father of Harald Grenske
+	}
+	961.1.1 = {
+		holder = 102508 # Harald Greycloak
+	}
+	970.1.1 = {
+		liege = k_denmark
+		holder = 102526 # Harald Grenske
+	}
+	995.1.1 = {
+		liege = k_norway
+		holder = 144004 # Olof I
+	}
+	1000.1.1 = {
+		holder = 101505 # Sweyn Forkbeard
+	}
+	1015.1.1 = {
+		holder = 102527 # Olof The Saint
+	}
+	1017.1.1 = {
+		liege = d_dalir
+		holder = 102522 # Ivar the White
+	}
+	1027.1.1 = {
+		liege = k_norway
+		holder = 1228065
+	}
+	1037.1.1 = {
+		liege = d_dalir
+		holder = 102547
+	}
+
 	1066.1.1 = {
 		holder = 102534
 	}
@@ -384,14 +449,15 @@ c_telemark = {
 		change_development_level = 2
 	}
 	
+
+
+
 	1001.1.1 = {
 		change_development_level = 7
-	}
-	
+	}	
 	1101.1.1 = {
 		change_development_level = 12
-	}
-	
+	}	
 	755.1.1 = {
 		holder = 194023
 		#liege = d_sjaelland
@@ -403,6 +469,56 @@ c_telemark = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+	882.1.1 = {
+		liege = d_viken
+	}
+	900.1.1 = {
+		holder = 1228001 # Aasgrim Gylde
+	}
+	# claimed by Harald, and handed to Bjørn. Linked with Vestfold from here.
+	925.1.1 = {
+		holder = 144005 # Bjørn Farmann
+	}
+	927.1.1 = {
+		holder = 144002 # Olaf Haraldsson Geirstadalf
+	}
+	934.1.1 = {
+		liege = k_norway
+		holder = 144006 # Gudrød Bjørnsson
+	}
+	# Vestfold and Telemark reclaimed by the crown
+	968.1.1 = {
+		holder = 102508 # Harald Gråfeld
+		government = feudal_government	
+	}
+	970.1.1 = {
+		liege = k_denmark
+		holder = 102526 # Harald Grenske
+	}
+	995.1.1 = {
+		liege = k_norway
+		holder = 144004 # Olof I
+	}
+	1000.1.1 = {
+		holder = 101505 # Sweyn Forkbeard
+	}
+	1015.1.1 = {
+		holder = 102527 # Olof The Saint
+	}
+	1028.1.1 = {
+		holder = 102518 # Haakon Eiriksson of the Lade Family
+	}
+	1030.7.29 = {
+		holder = 101514 # Svein Knutsson, son of Canute the Great and Ælfgifu. Ruled Norway alongside his mother as regent, after the death of Haakon Eiriksson of the Lade Earls at sea in 1029-30, thereby ending the family
+	}
+	1034.1.1 = {
+		holder = 1228072 # Eiliv of Bratsberg
+	}
+	1062.1.1 = {
+		holder = 1228071 # Dag Eilivsson of Bratsberg
+	}
+
 	1066.1.1 = {
 		liege = "k_norway"
 	}
@@ -493,15 +609,12 @@ c_nedenes = {
 	21.1.1 = {
 		change_development_level = 2
 	}
-	
 	1001.1.1 = {
 		change_development_level = 7
-	}
-	
+	}	
 	1101.1.1 = {
 		change_development_level = 12
 	}
-	
 	760.1.1 = {
 		holder = 194023
 		#liege = d_sjaelland
@@ -513,6 +626,42 @@ c_nedenes = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	
+	927.1.1 = {
+		liege = k_norway
+		holder = 144006 # Gudrödr Björnsson, Petty-King in the Westfold, father of Harald Grenske
+	}
+	961.1.1 = {
+		holder = 102508 # Harald Greycloak
+		government = feudal_government
+	}
+	970.1.1 = {
+		liege = k_denmark
+		holder = 102526 # Harald Grenske
+	}
+	995.1.1 = {
+		liege = k_norway
+		holder = 144004 # Olof I
+	}
+	1000.1.1 = {
+		holder = 101505 # Sweyn Forkbeard
+	}
+	1015.1.1 = {
+		holder = 102527 # Olof The Saint
+	}
+	1028.1.1 = {
+		holder = 102518 # Haakon Eiriksson of the Lade Family
+	}
+	1030.7.29 = {
+		holder = 101514 # Svein Knutsson, son of Canute the Great and Ælfgifu. Ruled Norway alongside his mother as regent, after the death of Haakon Eiriksson of the Lade Earls at sea in 1029-30, thereby ending the family
+	}
+	1035.1.1 = {
+		holder = 102529 # Magnus the Good
+	}
+	1047.10.25 = {
+		holder = 102531 # Harald Hardråde
+	}	
+	
 	1066.1.1 = {
 		liege = "k_norway"
 	}
@@ -602,12 +751,10 @@ c_nedenes = {
 c_agdeside = {
 	21.1.1 = {
 		change_development_level = 2
-	}
-	
+	}	
 	1001.1.1 = {
 		change_development_level = 7
-	}
-	
+	}	
 	1101.1.1 = {
 		change_development_level = 12
 	}
@@ -623,6 +770,42 @@ c_agdeside = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+	927.1.1 = {
+		liege = k_norway
+		holder = 144006 # Gudrödr Björnsson, Petty-King in the Westfold, father of Harald Grenske
+	}
+	961.1.1 = {
+		holder = 102508 # Harald Greycloak
+		government = feudal_government
+	}
+	970.1.1 = {
+		liege = k_denmark
+		holder = 102526 # Harald Grenske
+	}
+	995.1.1 = {
+		liege = k_norway
+		holder = 144004 # Olof I
+	}
+	1000.1.1 = {
+		holder = 101505 # Sweyn Forkbeard
+	}
+	1015.1.1 = {
+		holder = 102527 # Olof The Saint
+	}
+	1028.1.1 = {
+		holder = 102518 # Haakon Eiriksson of the Lade Family
+	}
+	1030.7.29 = {
+		holder = 101514 # Svein Knutsson, son of Canute the Great and Ælfgifu. Ruled Norway alongside his mother as regent, after the death of Haakon Eiriksson of the Lade Earls at sea in 1029-30, thereby ending the family
+	}
+	1035.1.1 = {
+		holder = 102529 # Magnus the Good
+	}
+	1047.10.25 = {
+		holder = 102531 # Harald Hardråde
+	}
+
 	1066.1.1 = {
 		liege = "k_norway"
 	}
@@ -819,15 +1002,13 @@ c_hordalandi = {
 	21.1.1 = {
 		change_development_level = 2
 	}
-	
 	1001.1.1 = {
 		change_development_level = 7
-	}
-	
+	}	
 	1101.1.1 = {
 		change_development_level = 12
 	}
-	
+		
 	764.1.1 = {
 		holder = 194012
 		government = tribal_government
@@ -838,6 +1019,44 @@ c_hordalandi = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+	931.1.1 = {
+		holder = 102507 # Eric Bloodaxe
+	}
+	934.1.1 = {
+		holder = 144001 # Haakon the Good
+	}
+	961.1.1 = {
+		holder = 102508 # Harald Greycloak
+	}
+	970.1.1 = {
+		holder = 1290038 # Thorolv Skjalg Ogmundsson, Lord of Hordaland
+	}
+	970.1.1 = {
+		liege = d_trondelag
+	}
+	979.1.1 = {
+		holder = 102565 # Erling Skjalgsson, Lord of Hordaland
+	}
+	995.1.1 = {
+		liege = k_norway
+	}
+	996.1.1 = {
+		liege = d_vestlandi
+	}
+	1018.1.1 = {
+		holder = 1290079 # Aslak Fitjaskalle, Lord of Hordaland
+	}
+	1028.1.22 = {
+		liege = k_norway
+	}
+	1029.1.1 = {
+		holder = 1290073 # Erlend of Gjerde, Lord of Gjerde
+	}
+	1030.7.29 = {
+		holder = 1290074 # Svein Erlendsson of Gjerde, Lord of Gjerde
+	}
+
 	1066.1.1 = {
 		liege = "k_norway"
 	}
@@ -918,12 +1137,10 @@ c_hordalandi = {
 c_sogn = {
 	21.1.1 = {
 		change_development_level = 2
-	}
-	
+	}	
 	1001.1.1 = {
 		change_development_level = 7
-	}
-	
+	}	
 	1101.1.1 = {
 		change_development_level = 12
 	}
@@ -937,6 +1154,35 @@ c_sogn = {
 	}
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	936.1.1 = {
+		liege = k_norway
+		holder = 1290096 # Thord Brynjulfsson, Lendmann of Aurland
+	}
+	952.1.1 = {
+		holder = 1290097 # Arinbjörn Herse
+	}
+	970.1.1 = {
+		liege = d_trondelag
+	}
+	979.1.1 = {
+		holder = 102559 # Rannveig Tordsdatter
+		government = feudal_government
+	}
+	995.1.1 = {
+		liege = k_norway
+	}
+	996.1.1 = {
+		liege = d_vestlandi
+	}
+	1005.1.1 = {
+		holder = 102560 # Helgi Rannveigsdatter
+	}
+	1028.1.22 = {
+		liege = k_norway
+	}
+	1045.1.8 = {
+		holder = 102563
 	}
 	1066.1.1 = {
 		liege = "k_norway"
@@ -1134,12 +1380,10 @@ b_eynafylki = {	#Fictional, to allow character placement.
 c_norwegian_more = {
 	21.1.1 = {
 		change_development_level = 2
-	}
-	
+	}	
 	1001.1.1 = {
 		change_development_level = 7
-	}
-	
+	}	
 	1101.1.1 = {
 		change_development_level = 12
 	}
@@ -1148,9 +1392,6 @@ c_norwegian_more = {
 		holder = 194013
 		government = tribal_government
 	}
-	#770.1.1 = {
-	#	holder = 0
-	#}
 	867.1.1 = {
 		#holder = 186004
 		holder = 280021
@@ -1158,6 +1399,42 @@ c_norwegian_more = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+	932.1.1 = {
+		liege = k_norway
+		holder = 102507 # Eric Bloodaxe
+	}
+	934.1.1 = {
+		liege = d_trondelag
+		holder = 1290125 # Asbjörn av Austrått
+	}
+	970.1.1 = {
+		holder = 1290124 # Jarn-Skjegge Asbjörnsson av Austrått
+	}
+	997.1.1 = {
+		liege = k_norway
+		holder = 144004 # Olof I, the King returns and the Lade brothers has to go into exile
+		government = feudal_government
+	}
+	1000.1.1 = {
+		liege = d_trandalog
+		holder = 102514 # Svein Haakonsson of Lade. Was awarded Ranrike, Jämtland and Møre in the settlement following the Battle of Svolder
+	}
+	1015.1.1 = {
+		liege = k_norway
+		holder = 102527 # Olof The Saint
+	}
+	1020.1.1 = {
+		holder = 102504 # Finn Arneson of Giske
+	}
+	1028.1.1 = {
+		liege = d_halogaland
+	}
+	1030.7.29 = {
+		liege = k_norway
+	}
+
+
 	1047.1.1 = {
 		liege = k_norway
 		holder = 102531 # Harald Hardråde
@@ -1243,11 +1520,9 @@ c_firdafylki = {
 	21.1.1 = {
 		change_development_level = 2
 	}
-	
 	1001.1.1 = {
 		change_development_level = 7
-	}
-	
+	}	
 	1101.1.1 = {
 		change_development_level = 12
 	}
@@ -1262,6 +1537,38 @@ c_firdafylki = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+	936.1.1 = {
+		liege = k_norway
+		holder = 1290096 # Thord Brynjulfsson, Lendmann of Aurland
+	}
+	952.1.1 = {
+		holder = 1290097 # Arinbjörn Herse
+	}
+	970.1.1 = {
+		liege = d_trondelag
+	}
+	979.1.1 = {
+		holder = 102559 # Rannveig Tordsdatter
+	}
+	995.1.1 = {
+		liege = k_norway
+	}
+	996.1.1 = {
+		liege = d_vestlandi
+		government = feudal_government
+	}
+	1005.1.1 = {
+		holder = 102560 # Helgi Rannveigsdatter
+	}
+	1028.1.22 = {
+		liege = k_norway
+	}
+	1045.1.8 = {
+		holder = 102563
+	}
+
+
 	1066.1.1 = {
 		liege = "k_norway"
 	}
@@ -1435,15 +1742,15 @@ c_hedmork = {
 	21.1.1 = {
 		change_development_level = 2
 	}
-	
+	936.1.1 = {
+		holder = 144008
+	}	
 	1001.1.1 = {
 		change_development_level = 7
-	}
-	
+	}	
 	1101.1.1 = {
 		change_development_level = 12
-	}
-	
+	}	
 	760.1.1 = {
 		holder = 194014
 		government = tribal_government
@@ -1458,6 +1765,44 @@ c_hedmork = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+	936.1.1 = {
+		liege = k_norway
+		holder = 1290102 # Ring Haraldsson
+	}
+	960.1.1 = {
+		holder = 1290099 # Dag Ringsson
+	}
+	970.1.1 = {
+		liege = 0
+	
+	}
+	995.1.1 = {
+		
+		liege = k_norway
+	}
+	998.1.1 = {
+		holder = 1290100 # Rørek Dagsson
+	}
+	1000.1.1 = {
+		liege = d_trondelag
+	}
+	1015.1.1 = {
+		liege = k_norway
+	}
+	1021.1.1 = {
+		liege = d_dalir
+		holder = 102522 # Ivar the White
+	}
+	1027.1.1 = {
+		liege = k_norway
+		holder = 1228065 # Kalv Arnesson
+	}
+	1037.1.1 = {
+		liege = d_dalir
+		holder = 102547
+	}
+
 	1040.1.1 = {
 		holder = 102547
 	}
@@ -1541,11 +1886,45 @@ c_gudbrandsdalir = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	934.1.1 = {
+		holder = 144001 # Haakon the Good
+	}
+	952.1.1 = {
+		holder = 1290072 # Gudbrand Kula, Chieftain of the Upplands
+	}
+	965.1.1 = {
+		holder = 1290107 # Dale-Gudbrand, Hersir of the Gudbrandsvalley
+	}
+	970.1.1 = {
+		liege = d_trondelag
+	}
+	995.1.1 = {
+		liege = k_norway
+	}
+	1000.1.1 = {
+		liege = d_trondelag
+	}
+	1015.1.1 = {
+		liege = k_norway
+	}
+	1017.1.1 = {
+		liege = d_dalir
+	}
+	1021.1.1 = {
+		holder = 102522 # Ivar the White
+	}
+	1027.1.1 = {
+		liege = k_norway
+		holder = 1290082 # Tord Guttormsson of Steig, Chieftain the Gudbrandsvalley and according to Snorre, the most powerful man in the Northern party of the Valley
+	}
+	1037.1.1 = {
+		liege = d_dalir
+	}
+
+
+
 	1040.1.1 = {
 		holder = 102547
-	}
-	1050.1.1 = {
-		
 	}
 	1055.1.1 = {
 		holder = 144248
@@ -1627,6 +2006,26 @@ c_eystridalir = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+	930.1.1 = {
+		holder = 1290136
+	}
+	949.1.1 = {
+		holder = 1290109
+	}
+	990.1.1 = {
+		holder = 1228171
+	}
+	1000.1.1 = {
+		liege = d_trandalog
+	}
+	1015.1.1 = {
+		liege = k_norway
+	}
+	1022.1.1 = {
+		holder = 1228076
+	}
+
 	1040.1.1 = {
 		liege = "d_trandalog"
 	}
@@ -1713,6 +2112,30 @@ c_gauldala = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	917.1.1 = {
+		holder = 1228055 # Sigurd Haakonsson of Lade, Jarl of Lade
+	}
+	962.1.1 = {
+		holder = 1228056 # Haakon Sigurdsson of Lade, Jarl of Lade
+	}
+	995.1.1 = {
+		liege = k_norway
+		holder = 144004 # Olof I, the King returns and the Lade brothers has to go into exile
+	}
+	1000.1.1 = {
+		liege = d_trondelag
+		holder = 102554 # Einar Thambarskelfir
+	}
+	1015.1.1 = {
+		liege = k_norway
+	}
+	1017.1.1 = {
+		holder = 102527 # Olof The Saint
+	}
+	1023.1.1 = {
+		holder = 102554 # Einar Thambarskelfir
+	}
+
 	1047.1.1 = {
 		liege = k_norway
 		holder = 102531 # Harald Hardråde
@@ -1882,6 +2305,47 @@ c_vastvag = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+
+	917.1.1 = {
+		holder = 1228055 # Sigurd Haakonsson of Lade, Jarl of Lade
+	}
+	962.1.1 = {
+		holder = 1228056
+	}
+	972.1.1 = {
+		holder = 1290042 # Tore of Bjarkøy 
+	}
+	991.1.1 = {
+		holder = 1290039 # Tore Hund of Bjarkøy 
+		government = feudal_government
+	}
+	995.1.1 = {
+		liege = k_norway
+	}
+	1000.1.1 = {
+		liege = d_trondelag
+	}
+	1015.1.1 = {
+		liege = k_norway
+	}
+	1028.1.1 = {
+		liege = d_trondelag
+	}
+	1030.7.29 = {
+		liege = k_norway
+	}
+	1031.1.1 = {
+		holder = 1290044 # Sigurd Toresson of Bjarkøy
+	}
+	1040.1.1 = {
+		holder = 1290045 # Ragnhild Sigurdsdatter of Bjarkøy
+	}
+	1058.1.1 = {
+		holder = 1290047 # Jon Arnesson of Giske-Bjarkøy
+	}
+
+
 	1066.1.1 = {
 		liege = "d_trandalog"
 	}
@@ -1970,6 +2434,43 @@ c_bothin = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+
+	935.1.1 = {
+		holder = 1290118 # Finn Eyvindsson
+	}
+	946.1.1 = {
+		holder = 1290049 # Eystein of Tjøtta/Eystein Skaldaspillir
+	}
+	992.1.1 = {
+		holder = 1228168 # Hårek of Tjøtta
+	}
+	995.1.1 = {
+		liege = k_norway
+	}
+	1000.1.1 = {
+		liege = d_trondelag
+		government = feudal_government
+	}
+	1015.1.1 = {
+		liege = k_norway
+	}
+	1028.1.1 = {
+		liege = d_trondelag
+	}
+	1030.7.29 = {
+		liege = k_norway
+	}
+	1036.1.1 = {
+		holder = 1228073 # Åsmund Grankjellson of Dønna
+	}
+	1052.1.1 = {
+		holder = 1290051 # Einar "Fluga" Håreksson of Tjøtta
+	}
+
+
+
+
 	1066.1.1 = {
 		liege = "d_halogaland"
 	}
@@ -2059,6 +2560,36 @@ c_namdalfylki = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+	917.1.1 = {
+		holder = 1228055 # Sigurd Haakonsson Jarl of Lade
+	}
+	962.1.1 = {
+		holder = 1228056 # Haakon Sigurdsson
+	}
+	992.1.1 = {
+		holder = 1228168 # Hårek of Tjøtta
+	}
+	995.1.1 = {
+		liege = k_norway
+	}
+	1000.1.1 = {
+		liege = d_trondelag
+	}
+	1015.1.1 = {
+		liege = k_norway
+	}
+	1028.1.1 = {
+		liege = d_trondelag
+	}
+	1030.7.29 = {
+		liege = k_norway
+	}
+	1036.1.1 = {
+		holder = 1228073 # Åsmund Grankjellson of Dønna
+	}
+
+
 	1047.1.1 = {
 		liege = k_norway
 		holder = 102531 # Harald Hardråde
@@ -2196,9 +2727,26 @@ c_vestisland = {
 	867.1.1 = {
 		holder = 168609 #Aud the Deep-minded, early Icelandic settler and credited as the one who brought Christianity to Iceland
 	}
-	#935.1.1 = {
-	#	government = feudal_government	#Ahistorical, just for ease of bookmarks.
-	#}
+
+	930.1.1 = {
+		liege = "d_iceland"
+		holder = 1290003
+	}
+	981.1.1 = {
+		holder = 1290002
+		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	1022.1.1 = {
+		holder = 1228170
+	}
+	1033.1.1={
+		holder = 1228083
+	}
+	1053.1.1={
+		holder = 1228136
+	}
+
+
 	1066.1.1 = {
 		liege = "d_iceland"
 	}
@@ -2244,11 +2792,40 @@ c_sudurland = {
 	867.1.1 = {
 		holder = 168609 #Aud the Deep-minded, early Icelandic settler and credited as the one who brought Christianity to Iceland
 	}
-	#935.1.1 = {
-	#	government = feudal_government	#Ahistorical, just for ease of bookmarks.
-	#}
+
+	
+	930.1.1={
+		liege = d_iceland
+		holder = 1290012
+	}
+	949.1.1={
+		holder = 1290011
+	}
+	969.1.1={
+		holder = 1290016
+	}
+	984.1.1={
+		holder = 1290005
+	}
+	1001.1.1={
+		holder = 1290008
+	}
+	1004.1.1 = {
+		holder = 1228169
+	}
+	1030.1.1 = {
+		holder = 1228170
+	}
+	1033.1.1 = {
+		holder = 1228081
+	}
+	1053.1.1 = {
+		holder = 1228083
+	}
+
 	1066.1.1 = {
 		liege = "d_iceland"
+		government = feudal_government
 	}
 	1066.1.1 = {
 		holder = 20580
@@ -2292,9 +2869,22 @@ c_austisland = {
 	867.1.1 = {
 		holder = 180257
 	}
-	#935.1.1 = {
-	#	government = feudal_government	#Ahistorical, just for ease of bookmarks.
-	#}
+	
+	930.1.1 = {
+		liege = "d_iceland"
+		holder = 1290015
+	}
+	964.1.1 = {
+		holder = 1228160
+	}
+	1010.1.1 = {
+		holder = 1228161
+	}
+	1055.1.1 = {
+		holder = 1228082
+	}
+
+
 	1066.1.1 = {
 		liege = "d_iceland"
 	}
@@ -2337,11 +2927,29 @@ c_nordrland = {
 	867.1.1 = {
 		holder = 180257
 	}
-	#935.1.1 = {
-	#	government = feudal_government	#Ahistorical, just for ease of bookmarks.
-	#}
+
+	930.1.1={
+		liege = d_iceland
+		holder = 1290010
+	}
+	975.1.1={
+		holder = 1290005
+	}
+	1001.1.1={
+		holder = 1290004
+	}
+	1031.1.1 = {
+		holder = 1228081
+	}
+	1053.1.1={
+		holder = 1228140
+	}
+
+
+
 	1066.1.1 = {
 		liege = "d_iceland"
+		government = feudal_government
 	}
 	1066.1.1 = {
 		holder = 20579
@@ -2686,6 +3294,10 @@ c_shetland = {
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+
+
+
+
 	1066.1.1 = {
 		liege = "d_northern_isles"
 	}
@@ -2768,6 +3380,23 @@ c_jamtfir = {
 	867.1.1 = {
 		holder = 186015
 	}
+
+
+	932.1.1 = {
+		holder = 1290138
+	}
+	957.1.1 = {
+		holder = 1290137
+	}
+	985.1.1 = {
+		holder = 1290110
+	}
+	1002.1.1 = {
+		holder = 1228172
+	}
+	1036.1.1 = {
+		holder = 102575
+	}
 	1020.1.1 = {
 		government = feudal_government
 	}
@@ -2823,6 +3452,24 @@ c_morarna = {
 	867.1.1 = {
 		holder = 186015
 	}
+
+	932.1.1 = {
+		holder = 1290138
+	}
+	957.1.1 = {
+		holder = 1290137
+	}
+	985.1.1 = {
+		holder = 1290110
+	}
+	1002.1.1 = {
+		holder = 1228172
+	}
+	1036.1.1 = {
+		holder = 102575
+	}
+
+
 	1020.1.1 = {
 		government = feudal_government
 	}
@@ -2878,6 +3525,25 @@ c_helgum = {
 	867.1.1 = {
 		holder = 186015
 	}
+
+	932.1.1 = {
+		holder = 1290138
+	}
+	957.1.1 = {
+		holder = 1290137
+	}
+	985.1.1 = {
+		holder = 1290110
+	}
+	1002.1.1 = {
+		holder = 1228172
+	}
+	1036.1.1 = {
+		holder = 102575
+	}
+
+
+
 	1020.1.1 = {
 		government = feudal_government
 	}
@@ -2933,6 +3599,27 @@ c_harjadalen = {
 	867.1.1 = {
 		holder = 186015
 	}
+
+	930.1.1 = {
+		holder = 1290136
+	}
+	949.1.1 = {
+		holder = 1290109
+	}
+	990.1.1 = {
+		holder = 1228171
+	}
+	1000.1.1 = {
+		liege = d_trandalog
+	}
+	1015.1.1 = {
+		liege = k_norway
+	}
+	1022.1.1 = {
+		holder = 1228076
+	}
+
+
 	1020.1.1 = {
 		government = feudal_government
 	}
