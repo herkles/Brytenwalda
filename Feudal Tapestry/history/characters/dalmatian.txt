@@ -23,9 +23,97 @@
 		death = yes
 	}
 }
+
+1232951 = {
+	name="Paladen" 
+	dynasty=1000103023
+	religion="catholic"
+	culture="dalmatian"
+	830.1.1={
+		birth="830.1.1"
+	}
+	852.1.1={
+		add_spouse=1232952
+	}
+	865.1.1 = {
+		employer = 1233508
+	}
+	888.1.1={
+		death="888.1.1"
+	}
+}
+#Wife of House founder
+1232952 = {
+	name="Alecuandra"
+	female = yes
+	religion="catholic"
+	culture="dalmatian"
+	838.1.1={
+		birth="838.1.1"
+	}
+	890.1.1={
+		death="890.1.1"
+	}
+}
+1232953 = {
+	name="Basile" 
+	dynasty=1000103023
+	religion="catholic"
+	culture="dalmatian"
+	father=1232951
+    mother=1232952
+	870.1.1={
+		birth="870.1.1"
+	}
+	903.1.1={
+		add_spouse=1232954
+	}
+	949.1.1={
+		death="949.1.1"
+	}
+}
+1232954 = {
+	name="Giulia"
+	female = yes
+	religion="catholic"
+	culture="lombard"
+	877.1.1={
+		birth="877.1.1"
+	}
+	950.1.1={
+		death="950.1.1"
+	}
+}
+#######################################
+# NAME Dynasty
+#######################################
+1600257 = {
+	name="Grigori" #placeholder
+	dynasty=1000103060
+	religion="catholic"
+	culture="dalmatian"
+
+	899.1.1={
+		birth=yes
+	}
+	967.1.1={
+		death=yes
+	}
+}
+#######################################
+# NAME Dynasty
+#######################################
+
+#######################################
+# NAME Dynasty
+#######################################
+
 #######################################
 # NAME Dynasty
 #######################################
 
 
+#######################################
+# NAME Dynasty
+#######################################
 

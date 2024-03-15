@@ -1,0 +1,291 @@
+﻿
+#######################################
+# castilian
+#######################################
+1235112 = {
+	name="Flain"
+	dynasty=1000053242
+	religion="catholic"
+	culture="castilian"
+	trait="education_martial_2"
+	
+	902.1.1 = {
+		birth=yes
+	}
+	950.1.1 = {
+		death=yes
+	}
+}
+#######################################
+# andalusian
+#######################################
+260607 = {
+	name = "Fadl"
+	dynasty = 1062260
+	religion = "muwalladi"
+	culture = andalusian
+	904.1.1 = {
+		birth = yes
+	}
+	955.1.1 = {
+		death = yes
+	}
+}
+andalusian0139 = {
+	name = "Batul" # Batul, fictional wife of Count Sabariquh of Cuellar (73990)
+	female = yes
+	religion = mozarabic_church
+	culture = mozarab
+	trait = education_stewardship_1
+
+	845.1.1 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+andalusian0140 = {
+	name = "Amrus" # Amrus, placheolder Count of Cuellar (891-916)
+	dynasty = 12314 # Siqubiyyah Dynasty
+	religion = mozarabic_church
+	culture = mozarab
+
+	father = 73990 # Count Sabariquh of Cuellar
+	mother = andalusian0139 # Countess Batul
+
+	866.1.1 = {
+		birth = yes
+	}
+	882.1.1 = {
+		trait = education_martial_1
+	}
+	916.1.1 = {
+		death = yes
+	}
+}
+andalusianMB1 = {
+	name = "Balashk" 
+	dynasty = 12314 # Siqubiyyah Dynasty
+	religion = mozarabic_church
+	culture = andalusian
+	father = andalusian0140
+	898.1.1 = {
+		birth = yes
+	}
+	965.1.1 = {
+		death = yes
+	}
+}
+
+1230002={
+	name="Salim"
+	dynasty=12294
+	religion="muwalladi"
+	culture="baranis"
+	770.1.1 = { #?
+		birth=yes
+	}
+	820.1.1 = { #?
+		death=yes
+	}
+}
+1230003={
+	name="Mantil"
+	dynasty=12294
+	religion="muwalladi"
+	culture="baranis"
+	father=1230002
+	800.1.1 = { #?
+		birth=yes
+	}
+	850.1.1 = { #?
+		death=yes
+	}
+}
+1230004={
+	name="Ubayd-Allah"
+	dynasty=12294
+	religion="muwalladi"
+	culture="baranis"
+	father=1230003 #?
+	825.1.1 = { #?
+		birth=yes
+	}
+	873.1.1 = { #?
+		death=yes
+	}
+}
+1230005={
+	name="Muhammad"
+	dynasty=12294
+	religion="muwalladi"
+	culture="baranis"
+	father=1230004
+	850.1.1 = { #?
+		birth=yes
+	}
+	900.1.1 = { #?
+		death=yes
+	}
+}
+1230006 = {
+	name="Abd-Allah" #governor of Madrid ca. 929
+	dynasty=12294
+	religion="muwalladi"
+	culture="baranis"
+	father=1230005
+	880.1.1 = { #?
+		birth=yes
+	}
+	933.1.1 = { #?
+		death=yes
+	}
+}
+1235123 = {
+	name="Ahmad" #Ahmad b. Ya´la, member of an old established Mawali family. Loyal agent of Cordoba, installed alongside Qand in the Middle March between the siege of Cordoba in 932 and the rise of Ghalib. Mentioned in Hugh Kennedy´s Muslim Spain and Portugal, A Political History
+	dynasty=1000053021
+	religion="muwalladi"
+	culture="andalusian"
+	
+	906.1.1 = {		
+		birth=yes
+	}
+	956.1.1 = {
+		death=yes
+	}
+}
+
+
+
+
+1230007={
+	name="Yahya"
+	dynasty=12294
+	religion="muwalladi"
+	culture="andalusian"
+	father=1230003 #?
+	835.1.1 = { #?
+		birth=yes
+	}
+	885.1.1 = { #?
+		death=yes
+	}
+}
+1230008={
+	name="Abd-Allah"
+	dynasty=12294
+	religion="muwalladi"
+	culture="andalusian"
+	father=1230007
+	865.1.1 = { #?
+		birth=yes
+	}
+	915.1.1 = { #?
+		death=yes
+	}
+}
+1230009={
+	name="Ahmad" #governor of Madrid ca. 936
+	dynasty=12294
+	religion="muwalladi"
+	culture="andalusian"
+	father=1230008
+	895.1.1 = { #?
+		birth=yes
+	}
+	936.11.1 = { #month unknown
+		death={ death_reason=death_battle } #died in an ambush by Christians
+	}
+}
+#######################################
+# Saqlabi
+#######################################
+1235122 = {
+	name="Qand" #Saqlabi (Slave). Qand is persian for sugar or candy, so i´m making him Persian. Loyal agent of Cordoba, installed alongside Ahmad b. Yala in the Middle March between the siege of Cordoba in 932 and the rise of Ghalib. Mentioned in Hugh Kennedy´s Muslim Spain and Portugal, A Political History
+	dynasty=1000101921
+	martial=7
+	religion="muwalladi"
+	culture="persian" # Most likely a Persian Saqlabi
+	
+	910.1.1 = {
+		culture="andalusian"		
+		birth=yes
+	}
+	957.1.1 = {
+		death=yes
+	}
+}
+#######################################
+# mozarab
+#######################################
+Teodomiro1 = {
+	name = "NuN_o" # 
+	dynasty_house = house_tudmir # House of Teodomiro
+	religion = mozarabic_church
+	culture = andalusian
+	father = 200064 # 
+	759.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		death = yes
+	}
+}
+
+Teodomiro2 = {
+	name = "Sunyer" # 
+	dynasty_house = house_tudmir # House of Teodomiro
+	religion = mozarabic_church
+	culture = andalusian
+	father = Teodomiro1 # 
+	790.1.1 = {
+		birth = yes
+	}
+	870.1.1 = {
+		death = yes
+	}
+}
+
+Teodomiro3 = {
+	name = "C_ulema" # 
+	dynasty_house = house_tudmir # House of Teodomiro
+	religion = mozarabic_church
+	culture = andalusian
+	father = Teodomiro2 # 
+	835.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+Teodomiro4 = {
+	name = "Lubb" # 
+	dynasty_house = house_tudmir # House of Teodomiro
+	religion = mozarabic_church
+	culture = andalusian
+	father = Teodomiro3 # 
+	874.1.1 = {
+		birth = yes
+	}
+	944.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# CULTURE
+#######################################
+
+#######################################
+# CULTURE
+#######################################
+
+#######################################
+# CULTURE
+#######################################
+
+#######################################
+# CULTURE
+#######################################

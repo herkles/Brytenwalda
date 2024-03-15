@@ -7334,3 +7334,79 @@
 		death = yes
 	}
 }
+
+swedishregnal001 = {
+	name = "Refil" # pere de Erik III
+	martial = 4
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 5
+	religion = "norse_pagan"
+	culture = norse
+	trait = education_martial_3
+	father = 163108 #Björn Ironside
+	dynasty_house = house_munso #Munsö
+	844.1.1 = {
+		birth = yes
+		add_trait = bastard
+		give_nickname = nick_the_bastard
+	}
+	866.3.1 = {
+		add_trait = viking
+	}
+	883.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
+swedishregnal002 = {
+	name = "Eirikr" # III
+	dynasty_house = house_munso #Munsö
+	religion = "norse_pagan"
+	culture = norse 
+	father = swedishregnal001 #Refil
+	866.1.1 = {
+		birth = yes
+	}	
+	902.12.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+1234030 = {
+	name="Olve"
+	dynasty=100291
+	religion="norse_pagan"
+	culture="norse"
+	father=1234031
+	929.1.1={
+		birth=yes
+	}
+	984.1.1={
+		death=yes
+	}
+}
+1234031 = {
+	name="Gorm"
+	dynasty=100291
+	religion="norse_pagan"
+	culture="norse"
+	887.1.1={
+		birth=yes
+	}
+	948.1.1={
+		death=yes
+	}
+}
+
+
+
+
+
+
+
+
+

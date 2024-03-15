@@ -74,8 +74,6 @@
 		death = yes
 	}
 }
-
-
 #######################################
 # Afghan
 #######################################
@@ -282,11 +280,9 @@
 		death = yes
 	}
 }
-
 #######################################
 # Sindhi
 #######################################
-
 178200 = {
 	name="Anokhi" # Fictional - Wife of previous
 	dynasty = 1041116
@@ -330,7 +326,6 @@
 		death=yes
 	}
 }
-
 261106 = {
 	name = "Abdullah"
 	dynasty = 1043005
@@ -393,7 +388,6 @@
 		death = yes
 	}
 }
-
 261108 = {
 	name = "Muhammad"
 	dynasty = 1043005
@@ -407,7 +401,6 @@
 		death = yes
 	}
 }
-
 #######################################
 # Rajasthani
 #######################################
@@ -423,7 +416,6 @@
 		death = yes
 	}
 }
-
 #######################################
 # Sogdian
 #######################################
@@ -566,20 +558,459 @@
 	}
 }
 #######################################
-# CULTURE
+# burmese
 #######################################
+pyu110 = {
+    name = "Badon"
+	religion = ari
+	culture = burmese
+
+	845.1.1 = {
+	    birth = yes
+	}
+	900.1.1 = {
+	    death = yes
+	}
+}
+pyu003 = {
+	name = "Tet" #Fictional
+	dynasty = pyud003 #Taungdwin
+	religion = theravada
+	culture = burmese
+
+	835.1.1 = {
+		birth = yes
+	}
+	893.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Mon
+#######################################
+monMB267 =	{
+	name = Theinga
+	religion = theravada
+	culture = burmese	
+	740.1.1	 = {	birth = yes	}
+	820.1.1	 = {	death = yes	}
+}										
+monMB268 =	{
+	name = Kyawhtin
+	religion = theravada
+	culture	= burmese	
+	780.1.1 = {	birth =	yes	}
+	840.1.1	= {	death =	yes	}
+	father = monMB267	
+}
+monMB269 = {
+	name = Thihathu
+	religion = theravada
+	culture = burmese	
+	820.1.1	 = { birth = yes	}
+	860.1.1	 = { death = yes	}
+	father = monMB268	
+}						
+
+monMB270 =	{
+	name =	Deippa
+	religion = theravada
+	culture	= burmese
+	father = monMB269
+	845.1.1	= {	birth =	yes	}
+	900.1.1	= {	death =	yes	}
+}	
+monMB271 =	{
+	name = Okkar
+	religion = theravada
+	culture = burmese	
+	860.1.1	 = {	birth = yes	}
+	930.1.1	 = {	death = yes	}
+	father = monMB270
+}							
+monMB272 = {
+	name = Ananda_Thuriya
+	religion = theravada
+	culture = burmese	
+	885.1.1	 = {	birth = yes	}
+	955.1.1	 = {	death = yes	}
+	father = monMB271
+}								
 
 #######################################
 # CULTURE
 #######################################
 
-#######################################
-# CULTURE
-#######################################
+# Kings of Jaintia
+# Ancestry was supposed to be matrilineal, traced from king to sister's son
+# Everything in here may or may not be fictional
 
+khasi001 = {
+	name = "Urmi_Rani"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+
+	499.1.1 = {
+		birth = yes
+	}
+	# Reigned 520
+	550.1.1 = {
+		death = yes
+	}
+}
+khasi002 = {
+	name = "Krishak_Pator"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi001
+
+	519.1.1 = {
+		birth = yes
+	}
+	# Reigned 550
+	570.1.1 = {
+		death = yes
+	}
+}
+khasi003 = {
+	name = "Hatak"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi002
+
+	547.1.1 = {
+		birth = yes
+	}
+	# Reigned 570
+	600.1.1 = {
+		death = yes
+	}
+}
+khasi004 = {
+	name = "Guhak"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi003
+
+	571.1.1 = {
+		birth = yes
+	}
+	# Reigned 600
+	630.1.1 = {
+		death = yes
+	}
+}
+khasi005 = {
+	name = "Jayanta"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi004
+
+	593.1.1 = {
+		birth = yes
+	}
+	# Reigned 630
+	660.1.1 = {
+		death = yes
+	}
+}
+khasi006 = {
+	name = "Joymalla"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi005
+
+	640.1.1 = {
+		birth = yes
+	}
+	# Reigned 660
+	690.1.1 = {
+		death = yes
+	}
+}
+khasi006M = {
+	name = "Krishak_Pator"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi006
+
+	665.1.1 = {
+		birth = yes
+	}
+	720.1.1 = {
+		death = yes
+	}
+}
+khasi006M1 = {
+	name = "Bhimbal"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi006M
+
+	690.1.1 = {
+		birth = yes
+	}
+	755.1.1 = {
+		death = yes
+	}
+}
+khasi006M2 = {
+	name = "Bancharu"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi006M1
+
+	722.1.1 = {
+		birth = yes
+	}
+	799.1.1 = {
+		death = yes
+	}
+}
+khasi006M3 = {
+	name = "Jayanta"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi006M2
+
+	756.1.1 = {
+		birth = yes
+	}
+	810.1.1 = {
+		death = yes
+	}
+}
+khasi006M4 = {
+	name = "Urmi_Rani"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi006M3
+
+	783.1.1 = {
+		birth = yes
+	}
+	833.1.1 = {
+		death = yes
+	}
+}
+khasi006M5 = {
+	name = "Badajied"
+	dynasty = khasid001
+	religion = sedism
+	culture = assamese
+	father = khasi006M4
+
+	805.1.1 = {
+		birth = yes
+	}
+	866.1.1 = {
+		death = yes
+	}
+}
+khasi007 = {
+	name = "Mahabal" # ???
+	dynasty = khasid001 # Syiem (King) Sutnga
+	religion = sedism
+	culture = assamese
+
+	father = khasi006M5
+	
+	835.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+khasi008 = {
+	name = "Jamlalynti" # Fictional
+	dynasty = khasid001 # Syiem (King) Sutnga
+	religion = sedism
+	culture = assamese
+	father = khasi007
+
+	870.1.1 = {
+		birth = yes
+	}
+	930.1.1 = {
+		death = yes
+	}
+}
+khasi009 = {
+	name = "Badajied" # Fictional
+	dynasty = khasid001 # Syiem (King) Sutnga
+	religion = sedism
+	culture = assamese
+	father = khasi008
+
+	900.1.1 = {
+		birth = yes
+	}
+	960.1.1 = {
+		death = yes
+	}
+}
+khasi010 = {
+	name = "Rishan-bor" # Fictional
+	dynasty = khasid001 # Syiem (King) Sutnga
+	religion = sedism
+	culture = assamese
+	father = khasi009
+
+	930.1.1 = {
+		birth = yes
+	}
+	990.1.1 = {
+		death = yes
+	}
+}
+khasi011 = {
+	name = "Nehborlang" # Fictional
+	dynasty = khasid001 # Syiem (King) Sutnga
+	religion = sedism
+	culture = assamese
+	father = khasi010
+
+	960.1.1 = {
+		birth = yes
+	}
+	1020.1.1 = {
+		death = yes
+	}
+}
+khasi013 = {
+	name = "Mehunlang" # Fictional
+	dynasty = khasid001 # Syiem (King) Sutnga
+	religion = sedism
+	culture = assamese
+	father = khasi011
+
+	990.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		death = yes
+	}
+}
+khasi014 = {
+	name = "Omelawanbantei" # Fictional
+	dynasty = khasid001 # Syiem (King) Sutnga
+	religion = sedism
+	culture = assamese
+	father = khasi013
+
+	1020.1.1 = {
+		birth = yes
+	}
+	1080.1.1 = {
+		death = yes
+	}
+}
+khasi015 = {
+	name = "Bancharu"
+	dynasty = khasid001 # Syiem (King) Sutnga
+	religion = sedism
+	culture = assamese
+	father = khasi014
+
+	1040.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+khasi016 = {
+	name = "Kamadeva"
+	dynasty = khasid001 # Syiem (King) Sutnga
+	religion = sedism
+	culture = assamese
+	father = khasi015
+
+	1060.1.1 = {
+		birth = yes
+	}
+	# Reigned 1100-1120
+	1120.1.1 = {
+		death = yes
+	}
+}
+khasi017 = {
+	name = "Bhimbal"
+	dynasty = khasid001 # Syiem (King) Sutnga
+	religion = sedism
+	culture = assamese
+	father = khasi016
+
+	1090.1.1 = {
+		birth = yes
+	}
+	# Reigned 1120-???
+	1121.1.1 = { # Fictional
+		death = yes
+	}
+}
 #######################################
 # CULTURE
 #######################################
+monMB172 = {
+	name = Susenpha
+	religion = sedism
+	culture = bengali
+	740.1.1	 = {	birth = yes	}
+	820.1.1	 = {	death = yes	}
+}									
+monMB173 = {	
+	name = Dhamma
+	religion = sedism
+	culture = bengali	
+	780.1.1	 = {	birth = yes	}
+	840.1.1	 = {	death = yes	}
+	father = monMB172
+}					
+monMB174 = {
+	name = Timgyadeva
+	religion = sedism
+	culture = bengali	
+	820.1.1	 = {	birth = yes	}	
+	860.1.1	 = {	death = yes	}		
+	father = monMB173
+}							
+monMB175 = {	
+	name = Virabahu
+	religion = sedism
+	culture = bengali	
+	845.1.1	 = {	birth = yes	}
+	900.1.1	 = {	death = yes	}
+	father = monMB174	
+}						
+monMB176 = {
+	name = Jayapala
+	religion = sedism
+	culture = bengali
+	860.1.1	 = {	birth = yes	}
+	930.1.1	 = {	death = yes	}
+	father = monMB175
+}					
+monMB177 = {	
+	name = Suhung
+	religion = sedism
+	culture = bengali	
+	885.1.1	 = {	birth = yes	}
+	955.1.1	 = {	death = yes	}
+	father = monMB176	
+}					
 
 #######################################
 # CULTURE

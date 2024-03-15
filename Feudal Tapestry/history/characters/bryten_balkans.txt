@@ -150,7 +150,6 @@
 		death = yes
 	}
 }
-
 262333 = {
 	name = "Presian"
 	dynasty = 1063569
@@ -194,6 +193,24 @@
 		death = yes
 	}
 }
+
+262334 = {
+	name = "Georgi"
+	dynasty = 1063569
+	religion = orthodox
+	culture = bulgarian
+	father = 262333
+	trait = shrewd
+	874.1.1 = {
+		birth = yes
+	}
+	950.1.1 = {
+		death = yes
+	}
+}
+
+
+
 #######################################
 # dalmatians
 #######################################
@@ -606,6 +623,35 @@
 		death = yes
 	}
 }
+1233323 = {
+	name = "Ond" # One of the seven tribe leaders (Ond). Possibly fictional, but probably not (due to indirect evidence)
+	dynasty = "1022387" # Kér
+	religion = "magyar_pagan"
+	culture = "mogyer"
+	847.1.1 = {
+		birth = yes
+	}
+	911.1.1 = {
+		death = yes
+	}
+}
+1062702 = { # Possibly fictional, but probably not (due to indirect evidence)
+	name = "Etel" 
+	dynasty = "1022387" # Kér
+	religion = "magyar_pagan"
+	culture = "mogyer"
+	father = 1233323
+	885.1.1 = {
+		birth = yes
+	}
+	945.1.1 = {
+		death = yes
+	}
+}
+
+
+
+
 #######################################
 # Pecheneg
 #######################################
