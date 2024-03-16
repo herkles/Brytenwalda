@@ -473,18 +473,6 @@ SEAsiaMMBB281 =  {
 	955.1.1	= { death = yes	}
 	father	= SEAsiaMMBB280
 }
-186001 = {
-	name = "A_mmot"
-	dynasty = 837
-	religion = "finnish_pagan"
-	culture = "sami"
-	850.1.1 = {
-		birth = yes
-	}
-	900.1.1 = {
-		death = yes
-	}
-}
 186001M	 = {
 	name = UksA_hkkA_	
 	religion = finnish_pagan	
@@ -1355,6 +1343,29 @@ SEAsiaMMBB281 =  {
 		death = yes
 	}
 }
+936_mordvinian_001 = {
+	name="Varmanpaz"
+	religion="finnish_pagan"
+	culture="mordvin"
+	920.1.1 = {
+		birth = yes
+	}
+	970.1.1 = {
+		death = yes
+	}
+}
+936_mordvinian_002 = {
+	name="Tul"
+	religion="finnish_pagan"
+	culture="mordvin"
+	920.1.1 = {
+		birth = yes
+	}
+	970.1.1 = {
+		death = yes
+	}
+}
+
 #######################################
 # Russian
 #######################################
@@ -1421,19 +1432,7 @@ SEAsiaMMBB281 =  {
 #######################################
 # komi
 #######################################
-302320 = {
-	name = "Kya"
-	dynasty = 2001061	#Palniks
-	religion = siberian_pagan
-	culture = komi
-	father = 302319M3
-	1050.1.1 = {
-		birth = yes
-	}
-	1115.1.1 = {
-		death = yes
-	}
-}
+
 302319M = {
 	name = "Varmanpaz"
 	dynasty = 2001061	#Palniks
@@ -1501,24 +1500,8 @@ SEAsiaMMBB281 =  {
 302320 = {
 	name = "Kya"
 	dynasty = 2001061	#Palniks
-	religion="siberian_pagan"
-	culture="komi"
-	father = 302319M3
-	1050.1.1 = {
-		birth = yes
-	}
-	1115.1.1 = {
-		death = yes
-	}
-}
-
-
-
-302320 = {
-	name = "Kya"
-	dynasty = 2001061	#Palniks
-	religion = udmurt_pagan
-	culture = udmurt
+	religion = siberian_pagan
+	culture = komi
 	father = 302319M3
 	1050.1.1 = {
 		birth = yes
@@ -1752,8 +1735,8 @@ SEAsiaMMBB281 =  {
 }
 1233777 = {
 	name="Oajá"
-	religion="bjarmian_pagan"
-	culture="bjarmian"
+	religion="finnish_pagan"
+	culture="samoyed"
         female=yes
 	886.1.1={
 		birth = yes

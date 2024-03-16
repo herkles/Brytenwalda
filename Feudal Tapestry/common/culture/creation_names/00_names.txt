@@ -1275,24 +1275,7 @@ icelandic = {
 #############################################
 # West Slavic Cultures			
 #############################################
-silesian = {
-	trigger = {
-		OR = {
-			culture = culture:polish
-			culture = culture:czech
-		}
-		any_sub_realm_county = {
-			OR = {
-				culture = culture:polish
-				culture = culture:czech
-			}
-			OR = {
-				duchy = title:d_upper_silesia
-				duchy = title:d_lower_silesia
-			}
-		}
-	}
-}
+
 #############################################
 # Hungarian Cultures			
 #############################################

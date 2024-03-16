@@ -124,6 +124,75 @@ bryten_setup_after_game_start_on_actions = {
 				add_culture_tradition = tradition_fyrd_huscarl
 			}
 		}
+		if = {# As the viking age begins so too does Viking Spirit
+			limit = { game_start_date <= 999.1.1 }
+			set_global_variable = {
+				name = bryten_viking_spirit_diminished
+				value = yes
+			}
+			culture:norse = {
+				add_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:swedish = {
+				add_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:norwegian = {
+				add_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:danish = {
+				add_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:gaet = {
+				add_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:gute = {
+				add_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:icelandic = {
+				add_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:varangian = {
+				add_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:norse_gael = {
+				add_culture_tradition = tradition_bryten_viking_spirit
+			}
+		}		
+		if = {# As the viking age ends so too does Viking Spirit
+			limit = { game_start_date >= 1000.1.1 }
+			set_global_variable = {
+				name = bryten_viking_spirit_diminished
+				value = yes
+			}
+			culture:norse = {
+				remove_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:swedish = {
+				remove_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:norwegian = {
+				remove_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:danish = {
+				remove_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:gaet = {
+				remove_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:gute = {
+				remove_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:icelandic = {
+				remove_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:varangian = {
+				remove_culture_tradition = tradition_bryten_viking_spirit
+			}
+			culture:norse_gael = {
+				remove_culture_tradition = tradition_bryten_viking_spirit
+			}
+			
+		}
 		# Border Set up
 		if = {# Carolingian Empire before the founding of the Holy Roman Empire
 			limit = { game_start_date <= 962.2.2 }

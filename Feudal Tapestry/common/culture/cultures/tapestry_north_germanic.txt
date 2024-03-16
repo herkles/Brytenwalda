@@ -47,9 +47,7 @@ norse = {# Norse
 	}
 }
 swedish = {# Swedish
-	color = { 70 130 180 }
-	created = 1000.1.1
-	parents = { norse }
+	color = { 115 147 179 }
 	
 	ethos = ethos_bellicose
 	heritage = heritage_north_germanic
@@ -57,7 +55,6 @@ swedish = {# Swedish
 	martial_custom = martial_custom_male_only
 	traditions = {
 		tradition_things
-		tradition_zealous_people
 	}	
 	dlc_tradition = {# Coastal Warriors
 		trait = tradition_fp1_coastal_warriors
@@ -90,9 +87,7 @@ swedish = {# Swedish
 	}
 }
 norwegian = {# Norwegian
-	color = { 162 162 208 }
-	created = 1000.1.1
-	parents = { norse }
+	color = { 0 71 171 }
 	
 	ethos = ethos_bellicose
 	heritage = heritage_north_germanic
@@ -100,7 +95,8 @@ norwegian = {# Norwegian
 	martial_custom = martial_custom_male_only
 	traditions = {
 		tradition_things
-		tradition_fishermen
+		tradition_seafaring
+		tradition_bryten_fjord_dwellers
 	}	
 	dlc_tradition = {# Coastal Warriors
 		trait = tradition_fp1_coastal_warriors
@@ -133,10 +129,8 @@ norwegian = {# Norwegian
 	}
 }
 danish = {# Danish
-	color = { 102 153 204 }
-	created = 1000.1.1
-	parents = { norse }
-	
+	color = { 111 143 175 }
+
 	ethos = ethos_bellicose
 	heritage = heritage_north_germanic
 	language = language_norse
@@ -176,12 +170,10 @@ danish = {# Danish
 	}
 }
 #############################################
-# New Cultures			
+# New Cultures		
 #############################################
 gaet = {# Gaets
-	color = { 119 139 165 }
-	created = 1000.1.1
-	parents = { norse }
+	color = { 167 199 231 }
 	
 	ethos = ethos_bellicose
 	heritage = heritage_north_germanic
@@ -225,9 +217,7 @@ gaet = {# Gaets
 	}
 }
 gute = {# Gutes
-	color = { 0 147 175 }
-	created = 1000.1.1
-	parents = { norse }
+	color = { 182 208 226 }
 	
 	ethos = ethos_bellicose
 	heritage = heritage_north_germanic
@@ -236,6 +226,92 @@ gute = {# Gutes
 	traditions = {
 		tradition_things
 		tradition_maritime_mercantilism
+	}	
+	dlc_tradition = {# Coastal Warriors
+		trait = tradition_fp1_coastal_warriors
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_hird
+	}
+	dlc_tradition = {# Performative Honour
+		trait = tradition_fp1_performative_honour
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_poetry
+	}
+	dlc_tradition = {# Northern Stories
+		trait = tradition_fp1_northern_stories
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_runestones
+	}
+	
+	name_list = name_list_swedish
+	
+	coa_gfx = { swedish_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	
+	ethnicities = {
+		70 = caucasian_northern_blond
+		15 = caucasian_northern_ginger
+		10 = caucasian_northern_brown_hair
+		5 = caucasian_northern_dark_hair
+	}
+}
+icelandic = {# Icelandic
+	color = { 135 206 235 }
+	created = 874.1.1 # settlement of Iceland
+	parents = { norse }
+	
+	ethos = ethos_communal
+	heritage = heritage_north_germanic
+	language = language_norse
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_things
+		tradition_fishermen
+	}	
+	dlc_tradition = {# Coastal Warriors
+		trait = tradition_fp1_coastal_warriors
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_hird
+	}
+	dlc_tradition = {# Performative Honour
+		trait = tradition_fp1_performative_honour
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_poetry
+	}
+	dlc_tradition = {# Northern Stories
+		trait = tradition_fp1_northern_stories
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_runestones
+	}
+	
+	name_list = name_list_norse
+	
+	coa_gfx = { swedish_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { northern_unit_gfx }
+	
+	ethnicities = {
+		70 = caucasian_northern_blond
+		15 = caucasian_northern_ginger
+		10 = caucasian_northern_brown_hair
+		5 = caucasian_northern_dark_hair
+	}
+}
+varangian = {# varangian; ie the Rus before slavicization
+	color = { 70 130 180 }
+	created = 850.1.1 # coming to the east
+	parents = { norse }
+	
+	ethos = ethos_bellicose
+	heritage = heritage_north_germanic
+	language = language_norse
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_things
+		tradition_zealous_people
 	}	
 	dlc_tradition = {# Coastal Warriors
 		trait = tradition_fp1_coastal_warriors
