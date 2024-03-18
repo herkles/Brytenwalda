@@ -1,0 +1,291 @@
+﻿
+
+#######################################
+# Rurikids
+#######################################
+40605 = {
+	name = "Rurik" # Rurik, legendary founder of Rus. Probably known as Hrörekr by his Norse contemporaries.
+	dna = 40605_rurik_rurikid
+	dynasty = 705
+	religion = "norse_pagan"
+	culture = varangian
+	diplomacy = 12
+	martial = 8
+	stewardship = 8
+	intrigue = 6
+	learning = 3
+	trait = gregarious
+	trait = ambitious
+	trait = just
+	trait = intellect_good_1
+	trait = education_martial_4
+	trait = brave
+	sexuality = heterosexual
+	mother = 40697
+	830.1.1 = {
+		birth = yes
+		effect = {
+			add_character_flag = has_scripted_appearance
+		}	
+	}
+	866.1.1 = {
+		add_spouse = 6863
+
+		effect = {
+			give_nickname = nick_troublemaker
+			add_gold = 500
+		}
+		# Give Viking adventurer some adventuring troops.
+		effect = {
+			if = {
+				limit = { has_fp1_dlc_trigger = yes }
+				spawn_army = {
+					name = event_troop_default_name
+					levies = 600
+					men_at_arms = {
+						type = huscarl
+						stacks = 2
+					}
+					men_at_arms = {
+						type = varangian_veterans
+						stacks = 2
+					}
+					location = province:2157
+					origin = province:2157
+					inheritable = no
+				}
+			}
+			else = {
+				spawn_army = {
+					name = event_troop_default_name
+					levies = 600
+					men_at_arms = {
+						type = huscarl
+						stacks = 4
+					}
+					location = province:2157
+					origin = province:2157
+					inheritable = no
+				}
+			}
+		}
+	}
+	879.1.2 = {
+		death = yes
+	}
+}
+600 = {
+	name = "Yngvar" # AKA Igor, son of Rurik
+	dynasty = 705
+	religion = norse_pagan
+	culture = varangian
+	father = 40605
+	mother = 6863
+	875.1.1 = {
+		birth = yes
+	}
+	903.1.1 = {
+		add_spouse = 601
+	}
+	945.1.1 = {
+		death = yes
+	}
+}
+40606 = {
+	name = "Helgi"		#Oleg the Seer
+	dynasty = 705
+	religion = slavic_pagan
+	culture = varangian
+	father = 40605 #Rurik (wasn't actually his son but his "kinsman" who ruled between Rurik and Rurik's son Yngvar)
+	diplomacy = 9
+	martial = 9
+	learning = 9
+	trait = intellect_good_1
+	trait = arrogant
+	trait = education_martial_3
+	trait = greedy
+	trait = stubborn
+	trait = legitimized_bastard #fiction
+	850.1.1 = {
+		birth = yes
+	}
+	866.1.1 = {
+		effect = {
+			give_nickname = nick_the_seer
+			random = {
+				chance = 33
+				give_witch_secret_or_trait_effect = yes
+			}
+		}
+	}	
+	912.1.1 = {
+		death = yes
+	}
+}
+601 = {
+	name = "Olga"	#Saint Olga
+	female = yes
+	religion = "slavic_pagan"
+	culture = "varangian"
+	890.6.5 = {
+		birth = "890.6.5"
+	}
+	959.10.12 = {
+		religion = orthodox
+	}
+	969.7.11 = {
+		death = "969.7.11"
+	}
+}
+1761 = {
+	name = "Eudokia"
+	# AKA: Eudocia
+	female = yes
+	dynasty = 1022158
+	martial = 4
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 5
+	religion = "orthodox"
+	culture = "varangian"
+	trait = lustful
+	trait = greedy
+	trait = education_diplomacy_1
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	882.1.1 = {
+		death = "882.1.1"
+	}
+}
+#######################################
+# Tofta Dynasty
+#######################################
+6811 = {
+	name = "Dyre" # Ruler of Kiev (Askold/Hoskuldr)
+	dynasty = bryten_dynasty_dyre
+	religion = "norse_pagan"
+	culture = varangian
+	martial = 9
+	diplomacy = 9
+	stewardship = 6
+	trait = cynical
+	trait = greedy
+	trait = gregarious
+	trait = education_diplomacy_4
+	trait = intellect_good_3
+	trait = bastard
+	trait = disinherited
+	father = 163112 # "Halfdan" # Ragnarsson 'Hvitserk', not certain. Other suggestion is Björn Ironside
+	845.1.1 = {
+		give_nickname = nick_the_stranger # Oskyldr -> Askold
+		birth = yes
+	}
+	863.1.1 = {
+		add_spouse = 6872
+	}
+	867.1.1 = {
+		effect = {
+			add_gold = 500
+			# Give Viking adventurer some adventuring troops.
+			if = {
+				limit = { has_fp1_dlc_trigger = yes }
+				spawn_army = {
+					name = event_troop_default_name
+					levies = 600
+					men_at_arms = {
+						type = huscarl
+						stacks = 2
+					}
+					men_at_arms = {
+						type = varangian_veterans
+						stacks = 2
+					}
+					location = province:2157
+					origin = province:2157
+					inheritable = no
+				}
+			}
+			else = {
+				spawn_army = {
+					name = event_troop_default_name
+					levies = 600
+					men_at_arms = {
+						type = huscarl
+						stacks = 4
+					}
+					location = province:2157
+					origin = province:2157
+					inheritable = no
+				}
+			}
+		}
+	}
+	882.1.1 = {
+		death = yes
+	}
+}
+6871 = {
+	name = "Halfdan"
+	dynasty = bryten_dynasty_dyre
+	religion = norse_pagan
+	culture = varangian
+	father = 6811
+	mother = 6872
+	864.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+6872 = {
+	name = "Sif"
+	female = yes
+	religion = norse_pagan
+	culture = varangian
+	847.1.1 = {
+		birth = yes
+	}
+	893.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Tofta Dynasty
+#######################################
+609 = {
+	name = "Rogneda"
+	# AKA: Ragnhild
+	female = yes
+	dynasty = 1029118
+	religion = "orthodox"
+	culture = varangian
+	father = 302199
+	960.1.2 = {
+		birth = "960.1.2"
+	}
+	1002.1.2 = {
+		death = "1002.1.2"
+	}
+}
+302199 = {
+	name = Rogvolod		#Ragnvald of Polotsk
+	dynasty = 1029118
+	religion = slavic_pagan
+	culture = varangian	#originally from Sweden, but no mention of when (or even if) he slavicized
+	920.1.2 = {
+		birth = 920.1.2
+	}
+	978.6.15 = {
+		death = 978.6.15
+	}
+}
+#######################################
+# Tofta Dynasty
+#######################################
+
+
+
+
+

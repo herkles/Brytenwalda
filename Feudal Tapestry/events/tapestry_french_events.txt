@@ -143,6 +143,22 @@ tapestry_french.002 = {# Donating to the Abby of Cluny.
 #######################################
 
 
+#######################################
+# French 936 Events
+#######################################
+tapestry_french.030 = {# Hugh the great holds power in France
+	hidden = yes
+
+	immediate = {
+		start_diarchy = regency
+		# Historic setup stuff.
+		## Fatimids start basically completely screwed.
+		if = {
+			limit = { this = character:90120 }
+			set_diarchy_swing = 100
+		}
+	}
+}
 
 
 

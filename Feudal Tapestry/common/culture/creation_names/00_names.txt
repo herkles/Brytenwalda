@@ -1030,23 +1030,6 @@ walloon = {
 #############################################
 # Italian Cultures			
 #############################################
-dalmatian = {
-	trigger = {
-		capital_county = {
-			title:k_croatia = {
-				is_de_jure_liege_or_above_target = prev
-			}
-			any_county_province = { is_coastal = yes }
-		}
-		culture = {
-			OR = {
-				has_cultural_pillar = heritage_south_slavic
-				has_cultural_pillar = heritage_byzantine
-				has_cultural_pillar = heritage_latin
-			}
-		}
-	}
-}
 romagnol = {
 	trigger = {
 		OR = {

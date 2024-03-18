@@ -207,6 +207,8 @@ bm_936_bryten_1 = {# The Iron Century
 	is_playable = yes
 	recommended = yes
 	group = bm_group_936
+	
+	weight = { value = 100 }
 
 	character = {# Otto I # 1282
 		name = "bookmark_bryten_936_king_otto"
@@ -233,24 +235,24 @@ bm_936_bryten_1 = {# The Iron Century
 		government = feudal_government
 		culture = saxon
 		religion = catholic
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
 		history_id = 261394
 		position = { 910 270 }
-		animation = personality_bold
+		animation = personality_vengeful
 	}
-	character = {# Berengar # 1108
-		name = "bookmark_bryten_936_berengar"
-		dynasty = 681
-		dynasty_splendor_level = 3
+	character = {# Duke of Lotharingia # 7813
+		name = "bookmark_bryten_936_giselbert"
+		dynasty = 7198
+		dynasty_splendor_level = 1
 		type = male
-		birth = 900.1.1
-		title = d_lombardia
+		birth = 879.1.1
+		title = d_lower_lorraine
 		government = feudal_government
-		culture = saxon
+		culture = lothringian
 		religion = catholic
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
-		history_id = 1108
-		position = { 1175 500 }
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 7813
+		position = { 300 500 }
 		animation = personality_bold
 	}
 }
@@ -260,9 +262,8 @@ bm_936_bryten_2 = {# The Founding of England
 	group = bm_group_936
 
 	character = {# Aethelstan of England # 33350
-	
 		name = "bookmark_bryten_936_aethelstan"
-		dynasty = 669
+		dynasty_house = house_british_isles_wessex
 		dynasty_splendor_level = 1
 		type = male
 		birth = 893.1.1
@@ -271,8 +272,53 @@ bm_936_bryten_2 = {# The Founding of England
 		culture = west_saxon
 		religion = catholic
 		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
-		history_id = 1282
+		history_id = 33350
 		position = { 410 230 }
+		animation = personality_bold
+	}
+	character = {# Owain king of Strathclyde # 166438
+		name = "bookmark_bryten_936_owain"
+		dynasty = 816
+		dynasty_splendor_level = 1
+		type = male
+		birth = 895.1.1
+		title = k_strathclyde
+		government = feudal_government
+		culture = cumbrian
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 166438
+		position = { 700 477 }
+		animation = personality_bold
+	}
+	character = {# Constantine king of Scotland # 6026
+		name = "bookmark_bryten_936_constantine"
+		dynasty_house = house_british_isles_ailpin
+		dynasty_splendor_level = 1
+		type = male
+		birth = 871.1.2
+		title = k_scotland
+		government = feudal_government
+		culture = gaelic
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 6026
+		position = { 887 350 }
+		animation = personality_bold
+	}
+	character = {# Olaf king of Dublin # bryten_ivaring_01
+		name = "bookmark_bryten_936_olaf"
+		dynasty_house = house_british_isles_ivaring
+		dynasty_splendor_level = 1
+		type = male
+		birth = 915.1.1
+		title = c_dublin
+		government = feudal_government
+		culture = norse_gael
+		religion = norse_pagan
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = bryten_ivaring_01
+		position = { 800 600 }
 		animation = personality_bold
 	}
 }
@@ -328,9 +374,72 @@ bm_936_bryten_3 = {# The Slavic Lands
 	}
 
 }
-#############################################
-# 1000 Bookmarks		
-#############################################
+bm_936_bryten_4 = {# The Matter of France
+	start_date = 936.8.7
+	is_playable = yes
+	group = bm_group_936
+		
+	character = {# Louis King of France # 90120
+		name = "bookmark_bryten_936_louis"
+		dynasty = 25061
+		dynasty_splendor_level = 2
+		type = male
+		birth = 921.1.11
+		title = k_france
+		government = feudal_government
+		culture = french
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_HARD"
+		history_id = 90120
+		position = { 800 825 }
+		animation = beg
+	}
+	character = {# Hughe the Great, Regent # 166438
+		name = "bookmark_bryten_936_hughe"
+		dynasty = 743
+		dynasty_splendor_level = 1
+		type = male
+		birth = 900.1.1
+		title = c_ile_de_france
+		government = feudal_government
+		culture = french
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 6444
+		position = { 900 477 }
+		animation = personality_bold
+	}
+	character = {# William Longsword of Normandy # 6026
+		name = "bookmark_bryten_936_william"
+		dynasty = 752
+		dynasty_splendor_level = 1
+		type = male
+		birth = 914.1.2
+		title = d_normandy
+		government = feudal_government
+		culture = norman
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
+		history_id = 244
+		position = { 320 620 }
+		animation = aggressive_sword
+	}
+	character = {# Sanche Duke of Gascony # 7562
+		name = "bookmark_bryten_936_sanche"
+		dynasty = 388
+		dynasty_splendor_level = 1
+		type = male
+		birth = 890.1.1
+		title = d_gascogne
+		government = feudal_government
+		culture = gascon
+		religion = catholic
+		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_MEDIUM"
+		history_id = 7562
+		position = { 500 825 }
+		animation = personality_bold
+	}
+}
 #############################################
 # 1066 Bookmarks		
 #############################################

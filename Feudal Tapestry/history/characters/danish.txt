@@ -1,4 +1,1614 @@
-﻿100553 = {
+﻿#######################################
+# House Gorm
+#######################################
+
+101500 = {
+	name = "Gorm" # the Old
+	dynasty_house = house_af_gorm
+	martial = 7
+	diplomacy = 4
+	intrigue = 8
+	stewardship = 5
+	religion = "norse_pagan"
+	culture = danish
+	trait = wrathful
+	trait = zealous	
+	trait = education_martial_3
+	father = 101549 # Hardeknud
+	877.1.1 = {
+		birth = "877.1.1"
+	}
+	899.1.1 = {
+		add_spouse = 101501
+	}
+	932.1.1 = {
+		give_nickname = nick_the_old
+	}
+	958.12.1 = {
+		death = "958.12.1"
+	}
+}
+
+101502 = {
+	name = "Haraldr" # Blåtand
+	dynasty_house = house_af_gorm
+	martial = 5
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 4
+	religion = "norse_pagan"
+	culture = danish
+	trait = just
+	trait = cynical
+	trait = education_stewardship_3
+	father = 101500 # Gorm the Old
+	mother = 101501 # Thyra Dannebod
+	920.1.1 = {
+		give_nickname = nick_bluetooth
+		birth = "920.1.1"
+	}
+	965.1.1 = {
+		religion = "catholic"
+		add_spouse = 101552 # Tove
+	}
+	979.1.1 = {
+		add_spouse = 101503 # Gyrid Olavsdottir
+	}
+	986.11.1 = {
+		death = "986.11.1"
+	}
+}
+101505 = {
+	name = "Sveinn" # Tveskæg
+	dynasty_house = house_af_gorm
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 6
+	religion = "catholic"
+	culture = danish
+	trait = ambitious
+	trait = education_martial_3
+	father = 101502 # Harald Blåtand
+	960.1.1 = {
+		birth = "960.1.1"
+	}
+	986.11.1 = {
+		trait = kinslayer_3
+	}
+	987.1.1 = {
+		add_spouse = 755 #Swietoslawa Gunnhild
+	}
+	997.1.1 = {
+		remove_spouse = 755 #Swietoslawa Gunnhild
+	}
+	997.1.2 = {
+		add_spouse = 100519 #Sigrid Storråde
+	}
+	1014.2.3 = {
+		death = "1014.2.3"
+	}
+}
+101506 = {
+	name = "T_hyra"
+	female = yes
+	dynasty_house = house_af_gorm
+	martial = 6
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = danish
+	trait = greedy
+	trait = clubfooted
+	trait = education_intrigue_2
+	father = 101502 #Harald Blåtand
+	950.1.1 = {
+		birth = "950.1.1"
+	}
+	1000.1.1 = {
+		death = "1000.1.1"
+	}
+}
+101507 = {
+	name = "Haraldr"
+	dynasty_house = house_af_gorm
+	martial = 5
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 6
+	religion = "catholic"
+	culture = danish
+	trait = humble
+	trait = content
+	trait = education_stewardship_2
+	father = 101505 # Svend Tveskæg
+	mother = 755 # Swietoslawa Gunnhild
+	989.1.1 = {
+		birth = "989.1.1"
+	}
+	1018.1.1 = {
+		death = "1018.1.1"
+	}
+}
+101508 = {
+	name = "Gyda"
+	female = yes
+	dynasty_house = house_af_gorm
+	martial = 8
+	diplomacy = 8
+	intrigue = 4
+	stewardship = 8
+	religion = "catholic"
+	culture = danish
+	trait = education_intrigue_2
+	trait = legitimized_bastard
+	father = 101505 # Svend Tveskæg
+	978.1.1 = {
+		birth = "978.1.1"
+	}
+	1020.1.1 = {
+		death = "1020.1.1"
+	}
+}
+101509 = {
+	name = "Estrid"
+	female = yes
+	dynasty_house = house_af_gorm
+	martial = 4
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = danish
+	trait = education_intrigue_1
+	father = 101505 #Svend Tveskæg
+	mother = 100519 # Sigrid Storråde
+	997.1.2 = {
+		birth = "997.1.2"
+	}
+	1057.1.1 = {
+		death = "1057.1.1"
+	}
+}
+
+101504 = {
+	name = "Gunnhildr"
+	female = yes
+	dynasty_house = house_af_gorm
+	martial = 6
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 4
+	religion = "norse_pagan"
+	culture = danish
+	trait = humble
+	trait = education_learning_2
+	father = 101500 #Gorm
+	mother = 101501 #Thyra
+	910.1.1 = {
+		birth = "910.1.1"
+	}
+	980.1.1 = {
+		death = "980.1.1"
+	}
+}
+
+451000 = {
+	name = "Ylva"
+	female = yes
+	dynasty_house = house_af_gorm
+	martial = 6
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 4
+	religion = "catholic"
+	culture = danish
+	trait = education_diplomacy_3
+	trait = wrathful
+	trait = gregarious
+	father = 101502 #Harald Blåtand
+	971.1.1 = {
+		birth = "971.1.1"
+	}
+	1059.1.1 = {
+		death = "1059.1.1"
+	}
+}
+#######################################
+# House gormson
+#######################################
+260561 = {
+	name = "Valtoke"
+	dynasty = 1062235
+	religion = norse_pagan
+	culture = danish
+	father = 101500
+	trait = bastard_founder
+	912.1.1 = {
+		birth = yes
+	}
+	928.1.1 = {
+		add_spouse = 261211
+	}
+	985.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House akra
+#######################################
+101501 = {
+	name = "T_yra" #Dannebod
+	female = yes
+	dynasty = 9552
+	martial = 5
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 6
+	religion = "norse_pagan"
+	culture = danish
+	trait = education_diplomacy_3
+	father = 168634
+	874.1.1 = {
+		birth = "874.1.1"
+	}
+	935.1.8 = {
+		death = "935.1.8"
+	}
+}
+167776 = {
+	name = "Halfdan"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 168647
+	750.1.1 = {
+		birth = "750.1.1"
+	}
+	
+	800.1.1 = {
+		death = "800.1.1"
+	}
+}
+167777 = {
+	name = "Haraldr"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167776
+	780.1.1 = {
+		birth = "780.1.1"
+	}
+	826.1.1 = {
+		religion = "catholic"
+	}
+	
+	852.1.1 = {
+		death = "852.1.1"
+	}
+}
+167778 = {
+	name = "Anulo"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167776
+	782.1.1 = {
+		birth = "783.1.1"
+	}
+	
+	812.1.1 = {
+		death = "812.1.1"
+	}
+}
+167779 = {
+	name = "Ragnfrid"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167776
+	786.1.1 = {
+		birth = "786.1.1"
+	}
+	
+	814.1.1 = {
+		death = "814.1.1"
+	}
+}
+167780 = {
+	name = "Hemming"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167776
+	790.1.1 = {
+		birth = "790.1.1"
+	}
+	
+	
+	837.1.1 = {
+		death = "837.1.1"
+	}
+}
+167781 = {
+	name = "GuT_frith"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167777
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	826.1.1 = {
+		religion = "catholic"
+	}
+	
+	856.1.1 = {
+		death = "856.1.1"
+	}
+}
+167782 = {
+	name = "HrO_rekr" # Rurik of Dorestad
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167780
+	820.1.1 = {
+		birth = "820.1.1"
+	}
+	864.1.1 = {
+		religion = catholic
+	}
+	873.1.1 = {
+		death = "873.1.1"
+	}
+}
+167783 = {
+	name = "Haraldr"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167780
+	822.1.1 = {
+		birth = "822.1.1"
+	}
+	
+	853.1.1 = {
+		death = "853.1.1"
+	}
+}
+168343 = {
+	name = "HroT_ulfr"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167783
+	842.1.1 = {
+		birth = "842.1.1"
+	}
+	873.6.1 = {
+		death = "873.6.1"
+	}
+}
+168631 = {
+	name = "Halfdan"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167777
+	800.1.1 = {
+		birth = yes
+	}
+	819.1.1 = {
+		death = yes
+	}
+}
+168632 = {
+	name = "T_yra"
+	female = yes
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167777
+	812.1.1 = {
+		birth = yes
+	}
+	862.1.1 = {
+		death = yes
+	}
+}
+168633 = {
+	name = "SigfriT_"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167777
+	825.1.1 = {
+		birth = yes
+	}
+	
+	
+	885.1.1 = {
+		death = yes
+	}
+}
+168634 = {
+	name = "Haraldr"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 168633
+	855.1.1 = {
+		birth = yes
+	}
+	
+	
+	915.1.1 = {
+		death = yes
+	}
+}
+168635 = {
+	name = "Gorm"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 168633
+	870.1.1 = {
+		birth = yes
+	}
+	
+	
+	938.1.1 = {
+		death = yes
+	}
+}
+168636 = {
+	name = "Hrolfr"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167777
+	828.1.1 = {
+		birth = yes
+	}
+	873.1.1 = {
+		death = yes
+	}
+}
+168637 = {
+	name = "Halfdan"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 167777
+	830.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+168638 = {
+	name = "SigfriT_"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 168635
+	900.1.1 = {
+		birth = yes
+	}
+	
+	
+	961.1.1 = {
+		death = yes
+	}
+}
+168639 = {
+	name = "Haraldr"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 168638
+	930.1.1 = {
+		birth = yes
+	}
+	
+	965.1.1 = {
+		religion = catholic
+	}
+	985.1.1 = {
+		death = yes
+	}
+}
+168640 = {
+	name = "Sigvard"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 168639
+	962.1.1 = {
+		birth = yes
+	}
+	
+	965.1.1 = {
+		religion = catholic
+	}
+	1002.1.1 = {
+		death = yes
+	}
+}
+168641 = {
+	name = "T_orgil"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 168639
+	964.1.1 = {
+		birth = yes
+	}
+	
+	965.1.1 = {
+		religion = catholic
+	}
+	1025.1.1 = {
+		death = yes
+	}
+}
+168646 = {
+	name = "Gunnor"
+	female = yes
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	father = 168634
+	903.1.1 = {
+		birth = yes
+	}
+	953.1.1 = {
+		death = yes
+	}
+}
+168647 = {
+	name = "Haraldr"
+	dynasty = 9552
+	religion = "norse_pagan"
+	culture = danish
+	710.1.1 = {
+		birth = yes
+	}
+	770.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House Sigurd
+#######################################
+163109 = {
+	name = "Ragnarr" # Lodbrok
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	father = 194004 # Sigurd Ring
+	mother = 194056 # Alfhild of Alfheim
+	religion = "norse_pagan"
+	culture = danish
+	martial = 9
+	stewardship = 7
+	diplomacy = 5
+	intrigue = 5
+	learning = 3
+	
+	795.6.6 = {
+		birth = yes
+	}
+	800.1.1 = {
+		trait = wrathful
+		trait = lifestyle_hunter
+		trait = strong
+		trait = brave
+		trait = viking
+		trait = education_martial_3
+	}
+	775.1.1 = {
+		add_spouse = 306002 #Lagertha
+	}
+	780.1.1 = {
+		remove_spouse = 306002
+	}
+	818.1.1 = {
+		add_spouse = 6836
+		give_nickname = nick_lodbrok
+	}
+	860.1.1 = {
+		death = {
+			death_reason = death_execution
+			killer = 163103 # Aella of Northumberland
+		}
+	}
+}
+
+163110 = {
+	name = "Sigurdr" # Snake-in-the-eye
+	dna = 163110_sigurdr_snake_in_the_eye
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok (aka this Sigurdr's granddad)
+	religion = "norse_pagan"
+	culture = danish
+	
+	martial = 6
+	stewardship = 8
+	diplomacy = 8
+	intrigue = 5
+	learning = 3
+	trait = patient
+	trait = lifestyle_hunter
+	trait = gregarious
+	trait = viking
+	trait = zealous
+	trait = education_stewardship_3
+	sexuality = heterosexual
+	
+	father = 163109 #Ragnarr Lodbrok
+	mother = 6836 #Auslaug
+	
+	840.1.1 = {
+		birth = yes
+		give_nickname = nick_snake_in_the_eye
+		effect = {
+			add_character_flag = has_scripted_appearance
+		}	
+	}
+	856.1.1 = {
+		add_spouse = 6861
+	}
+	860.1.1 = {
+		effect = {
+			set_relation_rival = character:163103 # Aella of Northumberland, killed father
+		}
+	}
+	
+	867.1.1 = {
+		effect = {
+			break_alliance = character:163103  # Aella of Northumberland, killed father
+		}
+	}
+	
+	917.1.1 = {
+		death = yes
+	}
+}
+101549 = {
+	name = "Knud"  #Harthacnut I of Denmark
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	martial = 7
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 4
+	religion = "norse_pagan"
+	culture = danish
+	trait = brave
+	father = 163110 #Sigurdr Snake-in-the-eye
+	mother = 6861 #Blaeja
+	858.1.1 = {
+		birth = "858.1.1"
+	}
+	866.1.1 = {
+		effect = {
+			set_relation_friend = character:306012
+		}
+	}
+	934.1.1 = {
+		death = "934.1.1"
+	}
+}
+306012 = {
+	name = "Alof"
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	female = yes
+	religion = "norse_pagan"
+	culture = danish
+	father = 163110 #Sigurdr Snake-in-the-eye
+	mother = 6861 #Blaeja
+	trait = charming
+	trait = gregarious
+	860.1.1 = {
+		birth = "858.1.1"
+	}
+	930.1.1 = {
+		death = "934.1.1"
+	}
+}
+306013 = {
+	name = "T_ora"
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	female = yes
+	religion = "norse_pagan"
+	culture = danish
+	father = 163110 #Sigurdr Snake-in-the-eye
+	mother = 6861 #Blaeja
+	864.1.1 = {
+		birth = "858.1.1"
+	}
+	934.1.1 = {
+		death = "934.1.1"
+	}
+}
+
+194004 = {
+	name = Sigurdr  # Sigurd Ring
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	father = 194028
+	religion = norse_pagan
+	culture = danish
+	trait = intellect_good_1
+	trait = brave
+	trait = education_martial_3
+	730.12.12 = {
+		birth = yes
+	}
+	750.1.1 = {
+		give_nickname = nick_ring
+	}
+	766.1.1 = {
+		add_spouse = 194056 # Alfhild
+	}
+	800.2.5 = {
+		death = yes
+	}
+}
+
+194028 = {
+	name = "Randver"
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	religion = norse_pagan
+	culture = danish
+	father = 194029
+	700.1.1 = {
+		birth = yes
+	}
+	761.1.1 = {
+		death = yes
+	}
+}
+194029 = {
+	name = "Valdar"
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	religion = norse_pagan
+	culture = danish
+	father = 194030
+	668.1.1 = {
+		birth = yes
+	}
+	729.1.1 = {
+		death = yes
+	}
+}
+194030 = {
+	name = "Olafr"
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	religion = norse_pagan
+	culture = danish
+	father = 194031
+	640.1.1 = {
+		birth = yes
+	}
+	700.1.1 = {
+		death = yes
+	}
+}
+194031 = {
+	name = "Ingjald"
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	religion = norse_pagan
+	culture = danish
+	father = 194032
+	620.1.1 = {
+		birth = yes
+	}
+	680.1.1 = {
+		death = yes
+	}
+}
+194032 = {
+	name = "Anundr"
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	religion = norse_pagan
+	culture = danish
+	570.1.1 = {
+		birth = yes
+	}
+	650.1.1 = {
+		death = yes
+	}
+}
+194033 = {
+	name = "Ingild"
+	dynasty = 490 #af Sigurd, father of Ragnarr Lodbrok
+	religion = norse_pagan
+	culture = danish
+	female = yes
+	father = 194029
+	700.1.1 = {
+		birth = yes
+	}
+	720.1.1 = {
+		add_spouse = 194003
+	}
+	776.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House Falk
+#######################################
+6843 = {
+	name = "Arni"
+	dynasty = 835
+	religion = "norse_pagan"
+	culture = danish
+	845.1.1 = {
+		birth = yes
+	}
+	895.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House Bleik
+#######################################
+6842 = {
+	name = "Frirek"
+	dynasty = 834
+	religion = "norse_pagan"
+	culture = danish
+	837.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House Hammer
+#######################################
+6841 = {
+	name = "Holmger"
+	dynasty = 833
+	religion = "norse_pagan"
+	culture = danish
+	838.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+#######################################
+# House Jute
+#######################################
+
+6865 = {
+	name = "Frirek"
+	dynasty = 818 # Jute
+	religion = "norse_pagan"
+	culture = danish
+	father = 163113
+	855.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+6866 = {
+	name = "Eirikr" # Hårik II of Denmark
+	dynasty = 818 # Jute
+	religion = "norse_pagan"
+	culture = danish
+	810.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+6867 = {
+	name = "Elin"
+	dynasty = 818 # Jute
+	female = yes
+	religion = "norse_pagan"
+	culture = danish
+	father = 6866
+	844.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+163113 = {
+	name = "Bagsecg"
+	dynasty = 818
+	religion = "norse_pagan"
+	culture = danish
+	martial = 7
+	stewardship = 4
+	diplomacy = 4
+	intrigue = 4
+	learning = 3
+	trait = wrathful
+	trait = lifestyle_hunter
+	trait = arrogant
+	trait = honest
+	trait = education_martial_3
+	father = 6866
+	830.1.1 = {
+		birth = "830.1.1"
+	}
+	866.1.1 = {
+		add_spouse = 6864 # A daughter of Ivar the Boneless
+	}
+	880.1.1 = {
+		death = "880.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+180680 = {
+	name = "Oda"
+	# Archbishop of Canterbury, Bishop of Ramsbury
+	religion = "catholic"
+	culture = "danish"
+	trait = education_learning_4
+	875.1.1 = {
+		birth = yes
+	}
+	958.6.2 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+6836 = {
+	name = "Aslaug" # Aka Kraka or Randalin
+	female = yes
+	religion = "norse_pagan"
+	culture = "danish"
+	diplomacy = 7
+	martial = 7
+	stewardship = 7
+	intrigue = 5
+	learning = 7
+	trait = beauty_good_2
+	trait = intellect_good_1
+	trait = zealous
+	trait = temperate
+	trait = education_stewardship_4
+	802.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		effect = {
+			add_trait = lifestyle_mystic
+			add_trait_xp = {
+                trait = lifestyle_mystic
+                value = {
+                    integer_range = {
+                        min = small_lifestyle_random_xp_low
+                        max = small_lifestyle_random_xp_high
+                    }
+                }
+            }
+        }
+	}
+	875.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+163112 = {
+	name = "Halfdan" # Ragnarsson 'Hvitserk'
+	dna = 163112_halfdan_whiteshirt
+	dynasty_house = house_hvitserk
+	religion = "norse_pagan"
+	culture = danish
+	martial = 7
+	stewardship = 6
+	diplomacy = 4
+	intrigue = 5
+	learning = 3
+	trait = ambitious
+	trait = lifestyle_hunter
+	trait = wrathful
+	trait = callous
+	trait = viking
+	trait = education_martial_3
+	sexuality = heterosexual
+	father = 163109 #Ragnarr Lodbrok
+	mother = 6836 #Auslaug
+	828.1.1 = {
+		give_nickname = nick_whiteshirt
+		birth = yes
+		effect = {
+			add_character_flag = has_scripted_appearance
+		}	
+	}
+	843.1.1 = {
+		add_spouse = 306009 #Fictional wife
+	}
+	860.1.1 = {
+		effect = {
+			set_relation_rival = character:163103 # Aella of Northumberland, killed father
+		}
+	}
+	865.1.1 = {
+		effect = {
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1250
+				location = province:1595
+				origin = province:1595
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1250
+				location = province:1595
+				origin = province:1595
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1250
+				location = province:1595
+				origin = province:1595
+			}
+			spawn_army = {
+				name = event_troop_default_name
+				levies = 1250
+				location = province:1595
+				origin = province:1595
+			}
+		}
+	}
+	866.11.2 = {
+		effect = {
+			add_gold = 500
+		}
+	}
+	875.1.1 = {
+		death = yes
+	}
+}
+306010 = { #Fictional daughter of Halfdan
+	name = Saga
+	female = yes
+	dynasty_house = house_hvitserk
+	religion = "norse_pagan"
+	culture = danish
+	trait = honest
+	trait = ambitious
+	trait = patient
+	trait = intellect_good_1
+	father = 163112 # "Halfdan" # Ragnarsson 'Hvitserk'
+	mother = 306009 #Fictional wife of Halfdan
+	845.1.1 = {
+		birth = yes
+	}
+	855.1.1 = {
+		effect = {
+			set_relation_friend = character:163112 #His favorite
+			give_nickname = nick_the_truthspeaker
+		}
+	}
+	910.1.1 = {
+		death = yes
+	}
+}
+40607 = {
+	name = "Ragnarr" # Fictional son of Halfdan Hvitserk's
+	dynasty_house = house_hvitserk
+	religion = "norse_pagan"
+	culture = danish
+	father = 163112 # "Halfdan" # Ragnarsson 'Hvitserk'
+	mother = 306009 #Fictional wife of Halfdan
+	trait = legitimized_bastard
+	trait = education_martial_2
+	846.1.1 = {
+		birth = yes
+	}
+	864.1.1 = {
+		add_spouse = 6867
+	}
+	893.1.1 = {
+		death = yes
+	}
+}
+168335 = {
+	name = "SigfriT_" #Fictional son
+	dynasty_house = house_hvitserk
+	religion = "norse_pagan"
+	culture = danish
+	father = 163112 # "Halfdan" # Ragnarsson 'Hvitserk'
+	mother = 306009 #Fictional wife of Halfdan
+	trait = legitimized_bastard
+	843.1.1 = {
+		birth = yes
+	}
+	
+	888.1.1 = {
+		death = yes
+	}
+}
+168336 = {
+	name = "GuT_friT_" #the Seaking
+	dynasty_house = house_hvitserk
+	religion = "norse_pagan"
+	culture = danish
+	father = 163112 # "Halfdan" # Ragnarsson 'Hvitserk' (fictionally - Gudfrid existed but wasn't Halfdan's son)
+	mother = 306009 #Fictional wife of Halfdan
+	trait = legitimized_bastard
+	844.1.1 = {
+		birth = yes
+	}
+	882.1.1 = {
+		religion = "catholic"
+	}
+	882.1.1 = {
+		add_spouse = 168315 #Gisela Karling
+	}
+	885.1.1 = {
+		death = yes
+	}
+}
+168337 = {
+	name = "RO_gnhildr"
+	female = yes
+	dynasty_house = house_hvitserk
+	religion = "catholic"
+	culture = danish
+	father = 168336
+	mother = 168315
+	883.1.1 = {
+		birth = yes
+	}
+	
+	933.1.1 = {
+		death = yes
+	}
+}
+168338 = {
+	name = "SigfriT_"
+	dynasty_house = house_hvitserk
+	religion = "norse_pagan"
+	culture = danish
+	father = 40607
+	mother = 6867
+	874.1.1 = {
+		birth = yes
+	}
+	
+	900.1.1 = {
+		death = yes
+	}
+}
+168339 = {
+	name = "Halfdan"
+	dynasty_house = house_hvitserk
+	religion = "norse_pagan"
+	culture = danish
+	father = 40607
+	mother = 6867
+	881.1.1 = {
+		birth = yes
+	}
+	
+	910.8.5 = { #battle of Tettenhall
+		death = yes
+	}
+}
+168340 = {
+	name = "Audgisl"
+	dynasty_house = house_hvitserk
+	religion = "norse_pagan"
+	culture = danish
+	father = 40607
+	mother = 6867
+	882.1.1 = {
+		birth = yes
+	}
+	
+	910.8.5 = { #battle of Tettenhall
+		death = yes
+	}
+}
+168341 = {
+	name = "Ivar"
+	dynasty_house = house_hvitserk
+	religion = "norse_pagan"
+	culture = danish
+	father = 40607
+	mother = 6867
+	883.1.1 = {
+		birth = yes
+	}
+	
+	910.8.5 = { #battle of Tettenhall
+		death = yes
+	}
+}
+168342 = {
+	name = "Ragnarr"
+	dynasty_house = house_hvitserk
+	religion = "norse_pagan"
+	culture = danish
+	father = 168338
+	895.1.1 = {
+		birth = yes
+	}
+	
+	932.1.1 = {
+		death = yes
+	}
+}
+306009 = { #Fictional wife of Halfdan
+	name = IngjerT_r
+	female = yes
+	religion = "norse_pagan"
+	culture = danish
+	trait = temperate
+	trait = diligent
+	trait = shy
+	825.1.1 = {
+		birth = yes
+	}
+	885.1.1 = {
+		death = yes
+	}
+}
+163119 = {
+	name = "Ubbe" # Ragnarsson
+	dynasty_house = house_ubbing
+	religion = "norse_pagan"
+	culture = danish
+	martial = 6
+	stewardship = 4
+	diplomacy = 5
+	intrigue = 4
+	learning = 2
+	trait = lifestyle_hunter
+	trait = brave
+	trait = viking
+	trait = education_martial_2
+	father = 163109 #Ragnarr Lodbrok
+	
+	827.1.1 = {
+		birth = yes
+	}
+	866.11.1 = {
+		employer = 163112
+	}
+	878.6.6 = {
+		death = yes # Battle of Cynwit
+	}
+}
+#######################################
+# House Thyli
+#######################################
+186503 = {
+	name = "Hrafna-FlO_ki"
+	dynasty = 1043503
+	religion = "norse_pagan"
+	culture = "danish"
+	829.1.1 = {
+		birth = "829.1.1"
+	}
+	871.1.1 = {
+		death = "871.1.1"
+	}
+}
+#######################################
+# Leonese Norse
+#######################################
+303404 = {	#fictional placeholder for viking slavers in French Leon
+	name = "Olafr"
+	religion = "norse_pagan"
+	culture = "danish"
+	832.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		# Give them a small army to keep Wessex's grubby English mitts off of an area they wouldn't touch till the late 12th century.
+		spawn_army = {
+			name = event_troop_default_name
+			levies = 400
+			men_at_arms = {
+				type = huscarl
+				stacks = 2
+			}
+			location = province:2157
+			origin = province:2157
+			inheritable = no
+		}
+	}
+	887.1.1 = {
+		death = yes
+	}
+}
+303405 = {	#fictional placeholder for viking slavers in French Leon
+	name = "Hakon"
+	religion = "norse_pagan"
+	culture = "danish"
+	863.1.1 = {
+		birth = yes
+	}
+	937.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House Holming
+#######################################
+6827 = {
+	name = "Egill"
+	dynasty = 828
+	religion = "norse_pagan"
+	culture = "danish"
+	trait = content
+	838.1.1 = {
+		birth = yes
+	}
+	885.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+186016 = {
+	name = "Olafr"
+	dynasty = 1043308
+	religion = "norse_pagan"
+	culture = "danish"
+	840.1.1 = {
+		birth = "840.1.1"
+	}
+	882.1.1 = {
+		death = "882.1.1"
+	}
+}
+#######################################
+# House Gyldir
+#######################################
+1228000 = { 
+	name="Ulfr" #Ulv Gylde Chief of Telemark.
+    dynasty=1000053392 # Gyldir
+	religion="norse_pagan"
+	culture = danish
+	840.1.1={
+		birth = yes
+	}
+	900.1.1={
+		death = yes
+	}
+}
+1228001 = { 
+	name="Aasgrim" # Son of Ulv.
+    dynasty=1000053392 # Gyldir
+	religion="norse_pagan"
+	culture = danish
+    father=1228000
+	875.1.1={
+		birth = yes
+	}
+	925.1.1={
+		death=yes # murderd by Tororms of Tromøy, on behest of Harald beauty_good_1hair
+	}
+}
+#######################################
+# House NAME
+#######################################
+186013 = {
+	name = "Eirikr"
+	dynasty = 1043305
+	religion = "norse_pagan"
+	culture = "danish"
+	850.1.1 = {
+		birth = "850.1.1"
+	}
+	872.1.1 = {
+		death = "872.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+6836 = {
+	name = "Aslaug" # Aka Kraka or Randalin
+	female = yes
+	religion = "norse_pagan"
+	culture = "danish"
+	diplomacy = 7
+	martial = 7
+	stewardship = 7
+	intrigue = 5
+	learning = 7
+	trait = beauty_good_2
+	trait = intellect_good_1
+	trait = zealous
+	trait = temperate
+	trait = education_stewardship_4
+	802.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		effect = {
+			add_trait = lifestyle_mystic
+			add_trait_xp = {
+                trait = lifestyle_mystic
+                value = {
+                    integer_range = {
+                        min = small_lifestyle_random_xp_low
+                        max = small_lifestyle_random_xp_high
+                    }
+                }
+            }
+        }
+	}
+	875.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House Knytling - Knut the great
+#######################################
+101510 = {# Knud
+	name = "Knud" # The Great
+	dynasty_house = house_knytling # Knud is first Knytling
+	martial = 9
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 8
+	religion = "catholic"
+	culture = danish
+	trait = greedy
+	trait = education_martial_4
+	father = 101505 # Svend Tveskæg
+	mother = 755 # Swietoslawa Gunnhild
+	995.1.1 = {
+		birth = "995.1.1"
+	}
+	1013.12.24 = {
+		add_spouse = 135 #Ældgyth
+	}
+	1017.1.2 = {
+		add_spouse = 259 # Emma of Normandy
+	}
+	1030.1.1 = {
+		give_nickname = nick_the_great
+	}
+	1035.11.12 = {
+		death = "1035.11.12"
+	}
+}
+101511 = {# Knud Hardeknud
+	name = "Knud" # III - Hardeknud
+	# AKA: Hardeknud
+	dynasty_house = house_knytling
+	martial = 8
+	diplomacy = 8
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = danish
+	trait = wrathful
+	trait = greedy
+	trait = education_diplomacy_2
+	father = 101510 # Knud the Great
+	mother = 259 # Emma of Normandy
+	1018.1.1 = {
+		birth = "1018.1.1"
+		give_nickname = nick_hardeknud
+	}
+	1042.6.8 = {
+		death = "1042.6.8"
+	}
+}
+101513 = {# Haraldr
+	name = "Haraldr"
+	dynasty_house = house_knytling
+	martial = 6
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 6
+	religion = "catholic"
+	culture = danish
+	trait = education_intrigue_2
+	trait = lifestyle_hunter
+	father = 101510 #Knud The Great
+	mother = 135 #Ældgyth
+	1015.1.1 = {
+		birth = "1015.1.1"
+	}
+	1040.3.17 = {
+		death = "1040.3.17"
+	}
+}
+101514 = {# Sveinn
+	name = "Sveinn"
+	dynasty_house = house_knytling
+	martial = 8
+	diplomacy = 6
+	intrigue = 6
+	stewardship = 6
+	religion = "catholic"
+	culture = danish
+	trait = education_intrigue_1
+	father = 101510 #Knud The Great
+	mother = 135 #Ældgyth
+	1016.1.1 = {
+		birth = "1016.1.1"
+	}
+	1035.1.29 = {
+		death = "1035.1.29"
+	}
+}
+161260 = {# Aelfwine
+	name = "E_lfwine"
+	dynasty_house = house_knytling
+	religion = "catholic"
+	culture = anglo_saxon
+	trait = legitimized_bastard
+	trait = chaste
+	trait = education_learning_1
+	father = 101513
+	1036.12.6 = {
+		birth = "1036.12.6"
+	}
+	1040.3.17 = {
+		add_pressed_claim = title:k_england
+	}
+	1060.1.1 = {
+		employer = 336
+	}
+	1083.7.4 = {
+		death = "1083.7.4"
+	}
+}
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+
+
+
+
+
+
+
+
+
+
+
+100553 = {
 	name = "Magnus" # son of the Danish Prince Henrik Skadelår
 	dynasty_house = house_estrid
 	martial = 5

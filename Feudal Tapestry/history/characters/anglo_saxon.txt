@@ -5320,7 +5320,7 @@
 		name = "Byrhthelm"
 		# Archbishop of Canterbury, Bishop of Wells
 		religion = "catholic"
-		culture = anglo_saxon
+		culture = mercian
 		trait = education_learning_4
 		910.1.1 = {
 			birth = yes
@@ -5346,7 +5346,7 @@
 		name = "E_thelgar"
 		# Archbishop of Canterbury, Bishop of Selsey
 		religion = "catholic"
-		culture = anglo_saxon
+		culture = mercian
 		trait = education_learning_4
 		915.1.1 = {
 			birth = yes
@@ -5359,7 +5359,7 @@
 		name = "Sigeric"
 		# Archbishop of Canterbury, Bishop of Ramsbury
 		religion = "catholic"
-		culture = anglo_saxon
+		culture = mercian
 		trait = education_learning_4
 		930.1.1 = {
 			birth = yes
@@ -7202,7 +7202,7 @@
 	name = "Oswulf" # Son of Ealdred I of Bamburgh
 	dynasty = 744
 	religion = catholic
-	culture = anglo_saxon
+	culture = northumbrian
 	903.1.1 = {
 		birth = yes
 	}
@@ -7210,35 +7210,13 @@
 		death = yes
 	}
 }
-260540 = {
-	name = "Balthere"
-	dynasty = 1062219
-	religion = catholic
-	culture = anglo_saxon
-	913.1.1 = {
-		birth = yes
-	}
-	964.1.1 = {
-		death = yes
-	}
-}
-260524 = {
-	name = "Cenfus"
-	dynasty = 1062208
-	religion = catholic
-	culture = anglo_saxon
-	901.1.1 = {
-		birth = yes
-	}
-	968.1.1 = {
-		death = yes
-	}
-}
+
+
 260527 = {
 	name = "E_thelstan" # Half King, East Anglia
 	dynasty = 1062210
 	religion = catholic
-	culture = anglo_saxon
+	culture = west_saxon
 	father = 260526
 	mother = 260529
 	885.1.1 = {
@@ -7252,7 +7230,7 @@
 	name = "E_thelfrith"
 	dynasty = 1062210
 	religion = catholic
-	culture = anglo_saxon	
+	culture = west_saxon	
 	846.1.1 = {
 		birth = yes
 	}
@@ -7268,7 +7246,7 @@
 	female = yes
 	dynasty_house = house_british_isles_wessex
 	religion = catholic
-	culture = anglo_saxon
+	culture = west_saxon
 	father = 33355
 	852.1.1 = {
 		birth = yes
@@ -7281,7 +7259,7 @@
 	name = "Wulfgar"
 	dynasty = 1062213
 	religion = catholic
-	culture = anglo_saxon
+	culture = west_saxon
 	911.1.1 = {
 		birth = yes
 	}
@@ -7297,7 +7275,7 @@
 	female = yes
 	dynasty = 1062214
 	religion = catholic
-	culture = anglo_saxon
+	culture = west_saxon
 	914.1.1 = {
 		birth = yes
 	}
@@ -7309,7 +7287,7 @@
 	name = "Eadric" # Hampshire
 	dynasty = 1062210
 	religion = catholic
-	culture = anglo_saxon
+	culture = west_saxon
 	father = 260526
 	mother = 260529
 	890.1.1 = {
@@ -7323,7 +7301,7 @@
 	name = "Alpsius" # Duke of Devon
 	dynasty = 1062215
 	religion = catholic
-	culture = anglo_saxon
+	culture = west_saxon
 	889.1.1 = {
 		birth = yes
 	}
@@ -7335,7 +7313,7 @@
 	name = "E_thelwald" # Kent
 	dynasty = 1062210
 	religion = catholic
-	culture = anglo_saxon
+	culture = west_saxon
 	father = 260526
 	mother = 260529
 	888.1.1 = {
@@ -7349,7 +7327,7 @@
 	name = "Eastmund"
 	dynasty = 1062216
 	religion = catholic
-	culture = anglo_saxon
+	culture = mercian
 	905.1.1 = {
 		birth = yes
 	}
@@ -7362,7 +7340,7 @@
 	dynasty = 1047004
 	female = yes
 	religion="catholic"
-	culture="anglo_saxon"
+	culture="mercian"
 	father=205088
 	mother=252377
 	888.1.1={
@@ -7372,23 +7350,12 @@
 		death=yes
 	}
 }
-260538 = {
-	name = "E_lfric"
-	dynasty = 1062217
-	religion = catholic
-	culture = anglo_saxon
-	908.1.1 = {
-		birth = yes
-	}
-	953.1.1 = {
-		death = yes
-	}
-}
+
 260542 = {
 	name = "Reinhold"
 	dynasty = 1062221
 	religion = catholic
-	culture = anglo_saxon
+	culture = northumbrian
 	899.1.1 = {
 		birth = yes
 	}
@@ -7403,7 +7370,7 @@
 	name = "SE_bert"
 	dynasty = 1062220
 	religion = catholic
-	culture = anglo_saxon
+	culture = northumbrian
 	904.1.1 = {
 		birth = yes
 	}
@@ -7415,7 +7382,7 @@
 	name = "E_lfstan" # E_lfstan Ealdorman of Southern Mercia 915 or 930?- 934. Also Earldorman of Wessex?
 	dynasty = 1000100013
 	religion = catholic
-	culture = anglo_saxon
+	culture = mercian
 	father = 260526
 	mother = 260529
 	885.1.1 = {
@@ -7428,20 +7395,9 @@
 
 
 #######################################
-# Other Characters
+# Anglo Norse
 #######################################
-1226356 = {
-	name="Ealhhelm" # Father of E_lfhere, Ealdorman of south west Mercia(more or less the same as Hwicce)940-955
-	dynasty=1000100014
-	religion="catholic"
-	culture="anglo_norse"
-	900.1.1 = {
-		birth = yes
-	}
-	955.1.1 = {
-		death = yes
-	}
-}
+
 
 
 

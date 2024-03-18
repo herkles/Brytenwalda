@@ -655,49 +655,6 @@ aromanian = {
 	}
 	hybrid = yes
 }
-dalmatian_hybrid = {
-	trigger = {
-		capital_county = {
-			# Is in the Balkans but not Greece, Bulgaria, or Romania
-			title_province = {
-				geographical_region = custom_south_slavia
-			}
-			NOR = {
-				title:k_dacia = {
-					is_de_jure_liege_or_above_target = prev
-				}
-				title:k_moldavia = {
-					is_de_jure_liege_or_above_target = prev
-				}
-				title:k_bulgaria = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-		}
-		scope:culture = {
-			OR = {
-				has_cultural_pillar = heritage_south_slavic
-				has_cultural_pillar = heritage_byzantine
-				has_cultural_pillar = heritage_latin
-			}
-		}
-		scope:other_culture = {
-			OR = {
-				has_cultural_pillar = heritage_south_slavic
-				has_cultural_pillar = heritage_byzantine
-				has_cultural_pillar = heritage_latin
-			}
-		}
-		any_sub_realm_county = {
-			OR = {
-				culture = scope:culture
-				culture = scope:other_culture
-			}
-			any_county_province = { is_coastal = yes }
-		}
-	}
-	hybrid = yes
-}
 parsi_hybrid = {
 	trigger = {
 		capital_county = {

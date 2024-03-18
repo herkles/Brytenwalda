@@ -55,6 +55,18 @@ bryten_setup_after_game_start_on_actions = {
 			}
 		}
 
+
+		# Hugh the great, defacto Ruler of France in 936
+		character:90120 = { designate_diarch = character:6444 }
+		remove_generated_diarch_consequences_effect = {
+			NEW_DIARCH = character:6444
+			LIEGE = character:90120
+		}
+		if = {
+			limit = { exists = character:90120 }
+			character:90120 = { trigger_event = tapestry_french.030 }
+		}
+
 		# cultural acceptance stuff
 		if = {# setting up the pilgrimage stuff for 1066 start date
 			limit = { game_start_date >= 1000.1.1 }
