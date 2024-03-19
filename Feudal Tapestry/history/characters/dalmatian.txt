@@ -100,6 +100,414 @@
 		death=yes
 	}
 }
+1600256 = {
+	name="Andro" #placeholder father of Grgur
+	dynasty=1000103060
+	religion="catholic"
+	culture="dalmatian"
+	father=1600257
+	941.1.1={
+		birth=yes
+	}
+	993.1.1={
+		death=yes
+	}
+}
+1600250 = {
+	name="Grigori"
+	dynasty=1000103060
+	religion="catholic"
+	culture="dalmatian"
+	father=1600256
+	974.1.1={
+		birth=yes
+	}
+	1035.1.1={
+		death=yes
+	}
+}
+
+1600251 = {
+	name="Andro" #placeholder son
+	dynasty=1000103060
+	religion="catholic"
+	culture="dalmatian"
+	father=1600250
+	1003.1.1={
+		birth=yes
+	}
+	1066.1.1={
+		death=yes
+	}
+}
+1600252 = {
+	name="Dragos" #placeholder son
+	dynasty=1000103060
+	religion="catholic"
+	culture="dalmatian"
+	father=1600251
+	1040.1.1={
+		birth=yes
+	}
+	1102.1.1={
+		death=yes
+	}
+}
+
+
+
+
+
+
+
+
+#######################################
+# NAME Dynasty
+#######################################
+260394 = {
+	name = "Calenda"
+	religion = catholic
+	culture = dalmatian
+	dynasty = 1022229
+	732.1.1 = {
+		birth = yes
+	}
+	790.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# NAME Dynasty
+#######################################
+1233508 = {
+	name="Aliau"
+	dynasty=1000103024
+	religion="catholic"
+	culture="dalmatian"
+	846.1.1={
+		birth="846.1.1"
+	}
+    865.1.1={
+		add_spouse=1233509
+	}
+	927.1.1={
+		death="927.1.1"
+	}
+}
+#Wife of House founder
+1233509 = {
+	name="Eudokia"
+	female = yes
+	religion="orthodox"
+	culture="greek"
+	848.1.1={
+		birth="848.1.1"
+	}
+	925.1.1={
+		death="925.1.1"
+	}
+}
+#######################################
+# NAME Dynasty
+#######################################
+1232955 = {
+	name="Tuone" 
+	dynasty=1000103023
+	religion="catholic"
+	culture="dalmatian"
+	father=1232953
+    mother=1232954
+	909.1.1={
+		birth="909.1.1"
+	}
+	992.1.1={
+		death="992.1.1"
+	}
+}
+
+#######################################
+# NAME Dynasty
+#######################################
+1232982 = {
+	name="Buartol" 
+	dynasty=1000103025
+	religion="catholic"
+	culture="dalmatian"
+	840.1.1={
+		birth="840.1.1"
+	}
+	865.1.1={
+		add_spouse=1232983
+	}
+	865.1.1 = {
+		employer = 1233508
+	}
+	918.1.1={
+		death="918.1.1"
+	}
+}
+1232983 = {
+	name="Catriana"
+	female = yes
+	religion="catholic"
+	culture="dalmatian"
+	844.1.1={
+		birth="844.1.1"
+	}
+	920.1.1={
+		death="920.1.1"
+	}
+}
+1232984 = {
+	name="Taumas" 
+	dynasty=1000103025
+	religion="catholic"
+	culture="dalmatian"
+	father=1232982
+	mother=1232983
+	880.1.1={
+		birth="880.1.1"
+	}
+	910.1.1={
+		add_spouse=1232985
+	}
+	933.1.1 = {
+		employer = 1232953
+	}
+	953.1.1={
+		death="953.1.1"
+	}
+}
+1232985 = {
+	name="Andreja"
+	female = yes
+	religion="catholic"
+	culture="dalmatian"
+	890.1.1={
+		birth="890.1.1"
+	}
+	961.1.1={
+		death="961.1.1"
+	}
+}
+1232986 = {
+	name="Vittaur" 
+	dynasty=1000103025
+	religion="catholic"
+	culture="dalmatian"
+	father=1232984
+	mother=1232985
+	920.1.1={
+		birth="920.1.1"
+	}
+	951.1.1={
+		add_spouse=1232987
+	}
+	999.1.1={
+		death="999.1.1"
+	}
+}
+1232987 = {
+	name="Sofija"
+	female = yes
+	
+	religion="catholic"
+	culture="croatian"
+	932.1.1={
+		birth="932.1.1"
+	}
+	1005.1.1={
+		death="1005.1.1"
+	}
+}
+1232988 = {
+	name="Silvano" 
+	dynasty=1000103025
+	religion="catholic"
+	culture="dalmatian"
+	father=1232986
+	mother=1232987
+	958.1.1={
+		birth="958.1.1"
+	}
+	988.1.1={
+		add_spouse=1232989
+	}
+	1038.1.1={
+		death="1038.1.1"
+	}
+}
+1232989 = {
+	name="Tatjana"
+	female = yes
+	religion="catholic"
+	culture="croatian"
+	968.1.1={
+		birth="968.1.1"
+	}
+	1039.1.1={
+		death="1039.1.1"
+	}
+}
+#######################################
+# NAME Dynasty
+#######################################
+1233532 = {
+	name="Bunedec"
+	dynasty=1000103022
+	religion="catholic"
+	culture="dalmatian"
+	842.1.1={
+		birth="842.1.1"
+	}
+    866.1.1={
+		add_spouse=1233533
+	}
+	865.1.1 = {
+		employer = 1233508
+	}
+	925.1.1={
+		death="925.1.1"
+	}
+}
+1233533 = {
+	name="Anna"
+	female = yes
+	religion="orthodox"
+	culture="greek"
+	842.1.1={
+		birth="842.1.1"
+	}
+	911.1.1={
+		death="911.1.1"
+	}
+}
+1233534 = {
+	name="Clemiant"
+	dynasty=1000103022
+	religion="catholic"
+	culture="dalmatian"
+	father=1233532
+	mother=1233533
+	881.1.1={
+		birth="881.1.1"
+	}
+    913.1.1={
+		add_spouse=1233535
+	}
+	933.1.1 = {
+		employer = 1232953
+	}
+	957.1.1={
+		death="957.1.1"
+	}
+}
+1233535 = {
+	name="Marija"
+	female = yes
+	religion="catholic"
+	culture="croatian"
+	890.1.1={
+		birth="890.1.1"
+	}
+	961.1.1={
+		death="961.1.1"
+	}
+}
+1233536 = {
+	name="Bunedec"
+	dynasty=1000103022
+	religion="catholic"
+	culture="frisian"
+	father=1233534
+	mother=1233535
+	923.1.1={
+		birth="923.1.1"
+	}
+    957.1.1={
+		add_spouse=1233537
+	}
+	992.1.2 = {
+		employer = 1232986
+	}
+	1001.1.1={
+		death="1001.1.1"
+	}
+}
+1233537 = {
+	name="Lucija"
+	female = yes
+	
+	religion="catholic"
+	culture="croatian"
+	929.1.1={
+		birth="929.1.1"
+	}
+	999.1.1={
+		death="999.1.1"
+	}
+}
+1233538 = {
+	name="Cúsmas"
+	dynasty=1000103022
+	religion="catholic"
+	culture="dalmatian"
+	father=1233536
+	mother=1233537
+	959.1.1={
+		birth="959.1.1"
+	}
+    990.1.1={
+		add_spouse=1233539
+	}
+	1030.1.1={
+		death="1030.1.1"
+	}
+}
+#Wife of House Leader 1001
+1233539 = {
+	name="Maria"
+	female = yes
+	
+	religion="orthodox"
+	culture="greek"
+	963.1.1={
+		birth="963.1.1"
+	}
+	1042.1.1={
+		death="1042.1.1"
+	}
+}
+
+1233540 = {
+	name="Pitro"
+	dynasty=1000103022
+	religion="catholic"
+	culture="dalmatian"
+	father=1233538
+	mother=1233539
+	999.1.1={
+		birth="999.1.1"
+	}
+    1033.1.1={
+		add_spouse=1233541
+	}
+	1077.1.1={
+		death="1077.1.1"
+	}
+}
+1233541 = {
+	name="Antonella"
+	female = yes
+	religion="catholic"
+	culture="italian"
+	1006.1.1={
+		birth="1006.1.1"
+	}
+	1079.1.1={
+		death="1079.1.1"
+	}
+}
 #######################################
 # NAME Dynasty
 #######################################
@@ -112,8 +520,22 @@
 # NAME Dynasty
 #######################################
 
+#######################################
+# NAME Dynasty
+#######################################
 
 #######################################
 # NAME Dynasty
 #######################################
+
+#######################################
+# NAME Dynasty
+#######################################
+
+#######################################
+# NAME Dynasty
+#######################################
+
+
+
 

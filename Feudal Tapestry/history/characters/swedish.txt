@@ -486,6 +486,69 @@
 		death = "1042.1.1"
 	}
 }
+swedishregnal003 = {
+	name = "BjO_rn" # III
+	dynasty = 502 #Munsö #Munsö
+	religion = "norse_pagan"
+	culture = svear
+	father = 163107 #Eirik IV
+	trait = lisping
+	921.1.1 = {
+		birth = yes
+	}	
+	965.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+swedishregnal004 = {
+	name = "Olafr" # 
+	dynasty_house = house_munso #Munsö
+	religion = "norse_pagan"
+	culture = svear
+	father = swedishregnal003 #Bjorn III
+	942.1.1 = {
+		birth = yes
+	}	
+	970.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+swedishregnal007 = {
+	name = "Eirikr" #V
+	dynasty = 502 #Munsö #Munsö
+	religion = "norse_pagan"
+	culture = svear
+	father = 163107 #ring
+	939.1.1 = {
+		birth = yes
+	}	
+	968.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
+swedishregnal008 = {
+	name = "Emundr" # II
+	dynasty = 502 #Munsö #Munsö
+	religion = "norse_pagan"
+	culture = svear
+	father = swedishregnal007 #Eric V
+	954.1.1 = {
+		birth = yes
+	}	
+	969.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
 #######################################
 # Beorn Dynasty
 #######################################
@@ -877,13 +940,25 @@
 		death=yes
 	}
 }
-
+1234029 = {
+	name="Sigurdr"
+	dynasty=100291
+	religion="norse_pagan"
+	culture="svear"
+	father=1234030
+	952.1.1={
+		birth=yes
+	}
+	1006.1.1={
+		death=yes
+	}
+}
 #######################################
 # House NAME
 #######################################
 260553 = {
 	name = "Ring"
-	dynasty_house = house_munso
+	dynasty = 502 #Munsö
 	religion = norse_pagan
 	culture = swedish
 	father = 100501
@@ -899,7 +974,7 @@
 }
 260554 = {
 	name = "Emundr"
-	dynasty_house = house_munso
+	dynasty = 502 #Munsö
 	religion = norse_pagan
 	culture = swedish
 	father = 260553
@@ -950,10 +1025,35 @@
 		death = yes
 	}
 }
+
 #######################################
 # House NAME
 #######################################
-
+1234024 = {
+	name="Björn"
+	dynasty=491
+	religion="norse_pagan"
+	culture="swedish"
+	963.1.1={
+		birth=yes
+	}
+	1019.1.1={
+		death=yes
+	}
+}
+1234011 = {
+	name="Helgi"
+	dynasty=491
+	religion="norse_pagan"
+	culture="swedish"
+	father = 1234024	
+	1000.1.1={
+		birth=yes
+	}
+	1056.1.1={
+		death=yes
+	}
+}
 #######################################
 # House NAME
 #######################################
@@ -985,7 +1085,7 @@
 100514 = {
 	name = "Ingrid"
 	female = yes
-	dynasty_house = house_munso
+	dynasty = 502 #Munsö
 	martial = 5
 	diplomacy = 6
 	intrigue = 5
@@ -1242,7 +1342,7 @@
 100546 = {
 	name = "Erik" # Hedningen
 	# AKA: Erik Hedningen
-	dynasty_house = house_munso
+	dynasty = 502 #Munsö
 	martial = 6
 	diplomacy = 8
 	intrigue = 6
@@ -5054,7 +5154,7 @@
 101503 = {
 	name = "Gyrid" #Olavsdottir
 	female = yes
-	dynasty_house = house_munso
+	dynasty = 502 #Munsö
 	martial = 7
 	diplomacy = 7
 	intrigue = 4
@@ -7224,7 +7324,7 @@
 183000 = {
 	name = "Holmfrid"
 	female = yes
-	dynasty_house = house_munso
+	dynasty = 502 #Munsö
 	martial = 3
 	diplomacy = 5
 	intrigue = 6
@@ -8329,7 +8429,7 @@ swedishregnal001 = {
 	culture = swedish
 	trait = education_martial_3
 	father = 163108 #Björn Ironside
-	dynasty_house = house_munso #Munsö
+	dynasty = 502 #Munsö #Munsö
 	844.1.1 = {
 		birth = yes
 		add_trait = bastard
@@ -8347,7 +8447,7 @@ swedishregnal001 = {
 
 swedishregnal002 = {
 	name = "Eirikr" # III
-	dynasty_house = house_munso #Munsö
+	dynasty = 502 #Munsö #Munsö
 	religion = "norse_pagan"
 	culture = swedish 
 	father = swedishregnal001 #Refil

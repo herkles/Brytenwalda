@@ -15913,13 +15913,161 @@ franconian0002 = {
 		death=yes 
 	}
 }
+1604591 = {
+	name="Poppo" #Poppo, Bishop of Würzburg 941-961
+	dynasty_house = house_babenberger	
+	religion="catholic"
+	culture="franconian"
+	father=1604594	
+	902.1.1 = {
+		birth=yes
+	}
+	961.2.14 = {
+		death=yes 
+	}
+}
+1604594 = {
+	name="Heinrich" #placeholder connection between Heinrich Babenberg and Poppo of Würzburg and Heinrich of Trier
+	dynasty_house = house_babenberger
+	religion="catholic"
+	culture="franconian"  
+	father=1604593
+	876.1.1 = {
+		birth=yes
+	}
+	919.1.1 = {
+		death=yes
+	}
+}
+1604593 = {
+	name="Heinrich" #son of Heinrich Babenberg, Count of Franconia marchlands
+	dynasty_house = house_babenberger
+	religion="catholic"
+	culture="franconian"  
+	father=7910
+	mother=7911
+	858.1.1 = {
+		birth=yes
+	}
+	902.5.1 = {
+		death=yes
+	}
+}
+1604573 = { 
+	name="Hugo" # Bishop of Würzburg 983-990
+	religion="catholic"
+	culture="franconian"  # german
+	942.1.1={
+		birth = yes
+	}
+	990.1.1={
+		death = yes	
+	}
+}
+1604572 = { 
+	name="Bernward" # Bishop of Würzburg 990-995
+	religion="catholic"
+	culture="franconian"  # german
+	948.1.1={
+		birth = yes
+	}
+	995.1.1={
+		death = yes	
+	}
+}
+1604559 = {
+	name="Meginhard" # Bishop of Würzburg 1018-1034
+	religion="catholic"
+	culture="franconian"  
+	988.1.1 = {
+		birth=yes
+	}
+	1034.4.14 = {
+		death=yes
+	}
+}
 
 
 
 
 
 
+40705 = {
+	name = "Wigeric"
+	dynasty_house = house_Wigeriche
+	martial = 6
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = ripuarian
+	trait = education_martial_2
+	father = 131714
+	886.1.1 = {
+		birth = "886.1.1"
+	}
+	906.1.1 = {
+		add_spouse = 90113
+	}
+	919.1.1 = {
+		death = "919.1.1"
+	}
+}
 
+40706 = {
+	name = "Gotzelo"
+	dynasty_house = house_Wigeriche
+	martial = 6
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = ripuarian
+	trait = education_martial_2
+	father = 40705
+	mother = 90113
+	914.1.1 = {
+		birth = "914.1.1"
+	}
+	930.1.1 = {
+		add_spouse = 131713
+	}
+	942.10.19 = {
+		death = "942.10.19"
+	}
+}
+144992 = {
+	name = "Gottfried"
+	dynasty_house = house_Wigeriche
+	religion = "catholic"
+	culture = ripuarian
+	father = 40706
+	mother = 131713
+	932.1.1 = {
+		birth = "932.1.1"
+	}
+	963.1.1 = {
+		add_spouse = 1411
+	}
+	995.9.3 = {
+		death = "995.9.3"
+	}
+}
+1236520 = {
+	name="Regilind"
+	female=yes
+	dynasty_house = house_Wigeriche
+	religion="catholic"
+	culture="ripuarian" #German
+	father=144992
+	mother=1411
+	986.1.1 = {
+		birth=yes
+	}
+	1050.2.1 = {
+		death=yes
+	}
+}
 
 
 

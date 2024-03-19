@@ -19,6 +19,19 @@
 #######################################
 # andalusian
 #######################################
+1230012={
+	name="Ahmad" #governor of Madrid in 937
+	dynasty=12294
+	religion="muwalladi"
+	culture="andalusian"
+	father=1230011
+	906.1.1 = { #?
+		birth=yes
+	}
+	955.1.1 = { #?
+		death=yes
+	}
+}
 260607 = {
 	name = "Fadl"
 	dynasty = 1062260
@@ -44,7 +57,19 @@ andalusianMB1 = {
 		death = yes
 	}
 }
-
+andalusianMB2 = {
+	name = "Gurg" 
+	dynasty = 12314 # Siqubiyyah Dynasty
+	religion = mozarabic_church
+	culture = andalusian
+	father = andalusianMB1
+	939.1.1 = {
+		birth = yes
+	}
+	1002.8.10 = {
+		death = yes
+	}
+}
 1230002={
 	name="Salim"
 	dynasty=12294
@@ -122,10 +147,6 @@ andalusianMB1 = {
 		death=yes
 	}
 }
-
-
-
-
 1230007={
 	name="Yahya"
 	dynasty=12294
@@ -165,6 +186,17 @@ andalusianMB1 = {
 		death={ death_reason=death_battle } #died in an ambush by Christians
 	}
 }
+1235142 = {	
+	name="Sa'ada" # fata governor of Toledo ca. 974 mentioned in Hugh Kennedy's _Muslim Spain and Portugal_
+	religion="muwalladi"
+	culture="andalusian"	
+	944.1.1 = {	#?	
+		birth=yes
+	}		
+	990.1.1 = { #?
+		death=yes
+	}
+}
 #######################################
 # Saqlabi
 #######################################
@@ -183,6 +215,42 @@ andalusianMB1 = {
 		death=yes
 	}
 }
+1235086={
+	name="Abd-al-Rahman"
+	dynasty=1000053002
+	religion=muwalladi
+	culture=khazar #since his son had the nisba "al-Siqlabi", supposing him to be of Saqaliba origin
+
+	878.1.1={
+		birth = yes
+		culture=andalusian
+	}
+	935.1.1={
+		death = yes
+	}
+}
+1235087={
+	name="Ghalib" #Ghalib b. Abd al-Rahman al-Siqlabi al-Nasrani, governor of Toledo (based in Medinaceli) and the Middle March/Upper Frontier 940s-950s
+	dynasty=1000053002
+	martial=8
+	religion=muwalladi
+	culture=khazar
+	father=1235086
+	trait="education_martial_4" #arguably the most successful Andalusian Umayyad military leader
+	trait="strong" #lived a very long life
+	trait="brave" #renowned for courage in battle even in his later years
+	901.1.1={ #nearly 80 years old by 981
+		birth = yes
+		culture=andalusian
+	}
+	981.7.10={
+		death = {
+			death_reason=death_battle
+			killer=3206
+		}
+	}
+}
+
 #######################################
 # mozarab
 #######################################

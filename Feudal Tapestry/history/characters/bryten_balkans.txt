@@ -1,6 +1,19 @@
 ﻿#######################################
 # Bulgarians
 #######################################
+1501221 = {
+	name="Stazis" #Stazis, recorded as Ichirgu-boil during the council of Constantinople in 870
+	dynasty=1000101424	
+	religion="orthodox"
+	culture="bulgarian"
+
+	830.1.1={
+		birth=yes
+	}
+	879.1.1={
+		death=yes
+	}
+}
 260683 = {
 	name = "Dionisiy"
 	dynasty = 1062309
@@ -649,6 +662,26 @@
 	}
 }
 
+
+1233291 = { # Csaba, father of Samuel Aba
+	name = "Caba"
+    dynasty = 19000 # Aba
+	religion = "magyar_pagan"
+	culture = "mogyer"
+	trait = "content" # Did not take Koppany's side against István despite being both a pagan (allegedly, could've also been Jewish) and a powerful lord
+    father = 1233292
+	956.1.1 = {
+		birth = yes
+	}
+	1000.12.25 = {
+		name = "Csaba"
+		religion = "catholic"
+		culture = "hungarian"
+	}
+	1007.1.1 = {
+		death = yes
+	}
+}
 
 936_hungarian_001 = {
 	name = "Jelek"

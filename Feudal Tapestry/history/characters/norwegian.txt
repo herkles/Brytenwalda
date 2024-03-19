@@ -650,6 +650,35 @@
 		death=yes
 	}
 }
+1290099 = {
+	name="Dag" # Dag of Hedmark, Petty-King and father of Ring and Rørek
+	dynasty=1000053624
+	religion="norse_pagan"
+	culture=norwegian
+	father=1290102	
+	936.1.1={
+		birth=yes
+	}	
+	998.1.1={
+		death=yes
+	}
+}
+1290100 = {
+	name="Rørek" # Rørek Dagsson, Petty-King of Hedmark, was later blind by Olav the Holy
+	dynasty=1000053624
+	religion="norse_pagan"
+	culture=norwegian
+	father=1290099	
+	962.1.1={
+		birth=yes
+	}	
+	1019.1.1={
+		add_trait="blind"
+	}
+	1021.1.1={
+		death=yes
+	}	
+}
 #######################################
 # House Trøndelag
 #######################################
@@ -1130,7 +1159,7 @@
 	}
 }
 #######################################
-# House NAME
+# House Lade
 #######################################
 186003 = {
 	name = "Hakon"
@@ -1158,6 +1187,23 @@
 		add_spouse = 1290069
 	}
 	962.1.1={
+		death = yes
+	}
+}
+1228056 = { 
+	name="Haakon" # Haakon Sigurdsson, Jarl of Lade
+    dynasty=1043302
+	religion="norse_pagan"
+	culture=norwegian
+    father=1228055
+	mother=1290069
+	935.1.12={
+		birth = yes
+	}
+	960.1.1 = {
+		add_spouse = 102511
+	}
+	995.1.1={
 		death = yes
 	}
 }
@@ -1246,6 +1292,70 @@
 		death=yes
 	}
 }
+1290049 = {
+	name="Eyvind" #Eyvind Skaldeplayer/Skaldespillir
+	dynasty=1000053616
+	religion="norse_pagan"
+	culture=norwegian
+	father=1290118
+	920.1.1={
+		birth=yes
+	}	
+	992.1.1={
+		death=yes
+	}
+}
+1228168 = {
+	name="Hårek" #Hårek of Tjøtta. Viking Chief of Tjøtta and one of the richest men in Halogaland. Led the Peasant army to victory at Stiklestad in 1030
+	dynasty=1000053616
+	religion="norse_pagan"
+	culture=norwegian
+	father=1290049
+	965.1.1={
+		birth=yes
+	}
+	998.1.1={
+		religion="catholic"
+	}
+	1009.1.1={
+		add_spouse=1290070
+	}	
+	1036.1.1={
+		death=yes
+	}
+}
+1290070 = {
+	name="Rögnhild" #Ragnhild Arnesdatter, only daughter of Arne Arnmodsson, married to Hårek of Tjøtta
+	female=yes
+	dynasty=453
+	religion="norse_pagan"
+	culture=norwegian
+	father=102548
+	mother=102549
+	994.1.1={
+		birth=yes
+	}
+	1000.1.1 ={
+		religion = catholic
+	}	
+	1056.1.1={
+		death=yes
+	}
+}
+1290051 = {
+	name="Einar" # Einar "Fluga" Håreksson of Tjøtta. One of Hårek's two sons. Probably regained Tjøtta and primacy in southern Hålogaland upon the death of Åsmund Grankjellson
+	dynasty=1000053616 #av Tjøtta	
+	religion="catholic"
+	culture="norwegian"
+	father=1228168
+	mother=1290070	
+	1011.1.1={
+		birth=yes
+	}
+	1066.1.1={
+		death=yes
+	}
+}
 #######################################
 # House de Crepon
 #######################################
@@ -1325,6 +1435,532 @@
 #######################################
 # House NAME
 #######################################
+1290138 = {
+	name="Eyvind"
+	dynasty=444
+	religion="norse_pagan"
+	culture = norwegian
+	897.1.1={
+		birth=yes
+	}
+	957.1.1={
+		death=yes
+	}
+}
+1290137 = {
+	name="Björn"
+	dynasty=444
+	religion="norse_pagan"
+	culture="norwegian"
+	father=1290138
+	924.1.1={
+		birth=yes
+	}
+	985.1.1={
+		death=yes
+	}
+}
+1290110 = {
+	name="Austmod"
+	dynasty=444
+	religion="norse_pagan"
+	culture="norwegian"
+	father=1290137
+	947.1.1={
+		birth=yes
+	}
+	999.1.1={
+		religion="catholic"
+	}
+	1002.1.1={
+		death=yes
+	}
+}
+1228172 = {
+	name="Gudfast"
+	dynasty=444
+	religion="norse_pagan"
+	culture="norwegian"
+	father=norwegian	
+	981.1.1={
+		birth=yes
+	}
+	999.1.1={
+		religion="catholic"
+	}	
+	1036.1.1={
+		death=yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+1290107 = {
+	name="Gudbrand" # Dale-Gudbrand, Hersir of the Gudbrandvalley. Mentioned in both the Haakon-Jarl's Saga and Separate Saga of St. Olaf. Apparently married to Earl Haakon against Harald Greycloak and present at the Christianization of the Valley in 1021, where he must have been a very old man.
+	dynasty=1000053626
+	religion="norse_pagan"
+	culture=norwegian	
+
+	946.1.1={
+		birth=yes
+	}
+	1021.1.1={
+		death=yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+1290076 = {
+	name="Horda-Kåre" # Horda-Kåre, powerful Chieftain in Hordaland during Harald beauty_good_1hair's reign
+	dynasty=446
+	religion="norse_pagan"
+	culture="norwegian"
+	870.1.1={
+		birth=yes
+	}	
+	924.1.1={
+		death=yes
+	}
+}
+1290075 = {
+	name="Ogmund" # Ogmund Horda-Kåresson grandfather of Erling Skjalgsson and Sigrid Skjalsdatter
+	dynasty=446
+	religion="norse_pagan"
+	culture="norwegian"
+	father=1290076
+	891.1.1={
+		birth=yes
+	}	
+	942.1.1={
+		death=yes
+	}
+}
+1290038 = {
+	name="Thorolv" # Thorolv Skjalg Ogmundsson father of Erling Skjalgsson and Sigrid Skjalsdatter
+	dynasty=446
+	religion="norse_pagan"
+	culture=norwegian
+	father=1290075	
+	930.1.1={
+		birth=yes
+	}	
+	979.1.1={
+		death=yes
+	}
+}
+
+
+1290077 = {
+	name="Olmod" # Olmod "The Old" Horda-Kåresson grandfather of Aslak Fitjaskalle
+	dynasty=446
+	religion="norse_pagan"
+	culture="norwegian"
+	father=1290076
+	897.1.1={
+		birth=yes
+	}	
+	966.1.1={
+		death=yes
+	}
+}
+1290078 = {
+	name="Askjell" # Askjell Olmodsson, father of Aslak Fitjaskalle
+	dynasty=446
+	religion="norse_pagan"
+	culture="norwegian"
+	father=1290077
+	934.1.1={
+		birth=yes
+	}	
+	988.1.1={
+		death=yes
+	}
+}
+1290079 = {
+	name="Aslak" # Aslak Fitjaskalle. Chieftain of Hordaland. Was appointed part of Erlings former demesne. Part of why the relationship between Erling and the King soured. Later Killed Erling during the Battle of the Boknafjord
+	dynasty=446
+	religion="norse_pagan"
+	culture="norwegian"
+	trait="education_martial_2"	
+	trait="strong"
+	father=1290078
+	981.1.1={
+		birth=yes
+	}
+	996.1.1={
+		religion="catholic"
+	}	
+	1031.1.1={
+		death=yes
+	}
+}
+
+#######################################
+# House
+#######################################
+1290042 = {
+	name="Thorir" # Tore of Bjarkøy, father of Tore Hund, Sigurd Toresson and Sigrid Toresdatter
+	dynasty=1000053615
+	religion="norse_pagan"
+	culture=norwegian
+	940.1.1={
+		birth=yes
+	}	
+	991.1.1={
+		death=yes
+	}
+}
+1290039 = {
+	name="Thorir" # Tore Hund of Bjarkøy. Eldest son of his father, named Tore as well. Chieftain based out of Bjarkøy, while his brother Sigurd was based out of Trondenes
+	dynasty=1000053615
+	religion="norse_pagan"
+	culture=norwegian
+	father=1290042	
+	984.1.1={
+		birth=yes
+	}
+	1016.1.1={
+		religion="catholic"
+	}	
+	1033.1.1={
+		death=yes
+	}
+}
+1290044 = {
+	name="Sigurd" # Sigurd Toresson, son of Tore Hund and Ranveig. Led a less dramatic life than his father apparently. Whether he became a Christian like his father before he died is still iffy. Married Aud Snorresdottir from Iceland, whom he had a daughter named Ragnhild with
+	dynasty=1000053615
+	religion="norse_pagan"
+	culture=norwegian
+	father=1290039	
+	1005.1.1={
+		birth=yes
+	}
+	1016.1.1={
+		religion="catholic"
+	}		
+	1040.1.1={
+		death=yes
+	}
+}
+1290045 = {
+	name="Rögnhild" # Ragnhild Sigurdsdatter, married to Jon Arnesson of Giske, leading to the Giske-Bjarkøy line taking over Bjarkøy from the elder line
+	female=yes
+	dynasty=1000053615
+	religion="catholic"
+	culture=norwegian
+	father=1290044
+	1035.1.1={
+		birth=yes
+	}	
+	1079.1.1={
+		death=yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+102548 = {
+	name = "Arne"
+	dynasty = 453
+	martial = 7
+	diplomacy = 8
+	intrigue = 4
+	stewardship = 8
+	religion = "catholic"
+	culture = norwegian
+	trait = wrathful
+	trait = education_diplomacy_2
+	963.1.2 = {
+		birth = "963.1.2"
+	}
+	980.1.2 = {
+		add_spouse = 102549
+	}
+	1024.1.2 = {
+		death = "1024.1.2"
+	}
+}
+102549 = {
+	name = "T_ora"
+	female = yes
+	dynasty = 452
+	martial = 7
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 7
+	religion = "catholic"
+	culture = norwegian
+	trait = just
+	trait = stuttering
+	trait = education_intrigue_2
+	950.1.2 = {
+		birth = "950.1.2"
+	}
+	1016.1.26 = {
+		death = "1016.1.26"
+	}
+}
+102550 = {
+	name = "T_orberg"
+	dynasty = 453
+	martial = 4
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = norwegian
+	trait = clubfooted
+	trait = education_martial_2
+	father = 102548
+	mother = 102549
+	991.1.2 = {
+		birth = "965.1.2"
+	}
+	1007.1.2 = {
+		add_spouse = 102566
+	}
+	1028.1.22 = {
+		death = "1028.1.22"
+	}
+}
+102552 = {
+	name = "Ogmundr"
+	dynasty = 453
+	martial = 7
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 6
+	religion = "catholic"
+	culture = norwegian
+	trait = education_intrigue_2
+	father = 102550
+	mother = 102566
+	1020.1.2 = {
+		birth = "1020.1.2"
+	}
+	1050.1.2 = {
+		death = "1050.1.2"
+	}
+}
+1228065 = {
+	name="Kalv"
+	dynasty=453
+	religion="norse_pagan"
+	culture=norwegian
+	father=102548
+	mother=102549
+	990.1.2={
+		birth=yes
+	}
+	1000.1.1 ={
+		religion = catholic
+	}
+	1024.1.1={
+		add_spouse = 1290041 # Sigrid Toresdatter av Bjarkøy
+	}	
+	1051.1.1={
+		death=yes
+	}
+}
+1290041 = {
+	name="Sigrid" # Sigrid Toresdatter of Bjarkøy. Daughter of Tore of Bjarkøy. Married to Olve Grjotgardsson of Egge, whom she had to sons with. Later King Olav earned her undying emnity by killing her husband and her sons. She later turned Kalv Arnesson against the King, after he became her second husband.
+	female=yes
+	dynasty=1000053615
+	religion="norse_pagan"
+	culture=norwegian
+	father=1290042	
+	986.1.1={
+		birth=yes
+	}
+	1039.1.1={
+		death=yes
+	}
+}
+1290046 = {
+	name="Arne" # Arne Arnesson of Giske, younger son of Arne Arnmodsson
+	dynasty=453
+	religion="catholic"
+	culture=norwegian
+	father=102548
+	mother=102549
+	1001.1.1={
+		birth=yes
+	}	
+	1035.1.1={
+		death=yes
+	}
+}
+1290047 = {
+	name="Jon" #Jon Arnesson of Giske, married to Ragnhild Sigurdsdatter of Bjarkøy
+	dynasty=453
+	religion="catholic"
+	culture=norwegian
+	father=1290046
+
+	1033.1.1={
+		birth=yes
+	}	
+	1058.1.1={
+		add_spouse=1290045
+	}	
+	1097.1.1={
+		death=yes
+	}
+}
+
+#######################################
+# House NAME
+#######################################
+1290098 = {
+	name="Guttorm" # Guttorm of the Gudbrandsvalley
+	dynasty=1000053620
+	religion="norse_pagan"
+	culture=norwegian
+	967.1.1={
+		birth=yes
+	}
+	1020.1.1={
+		religion="catholic"
+	}	
+	1021.1.1={
+		death=yes
+	}
+}
+1290082 = {
+	name="Tord" # Tord Guttormsson of the Gudbrandsvalley
+	dynasty=1000053620
+	religion="norse_pagan"
+	culture=norwegian
+	father=1290098	
+	1002.1.1={
+		birth=yes
+	}
+	1020.1.1={
+		religion="catholic"
+	}	
+	1047.1.1={
+		death=yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+1290073 = {
+	name="Erlend" # Progenitor of the Gjerde and later the Stødle/Studla family. One of the peasant leaders at Stiklestad, died in the battle
+	dynasty=1000053618
+	religion="norse_pagan"
+	culture="norwegian"
+	981.1.1={
+		birth=yes
+	}
+	996.1.1={
+		religion="catholic"
+	}	
+	1030.7.29={
+		death = yes
+	}
+}
+1290074 = {
+	name="Svein" # Little mentioned son of Erlend, Svein Sveinsson of Gjerde
+	dynasty=1000053618
+	religion="catholic"
+	culture="norwegian"
+	father=1290073
+	1005.1.1={
+		birth=yes
+	}	
+	1051.1.1={
+		death=yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+1228072 = {
+	name="Eilifr"
+	dynasty=1000053613
+	religion="catholic"
+	culture=norwegian
+
+	1016.1.1={
+		birth=yes
+	}
+	1062.1.1={
+		death=yes
+	}
+}
+1228071 = {
+	name="Dag" #Chieftain out of Bratsberg
+	dynasty=1000053613
+	religion="catholic"
+	culture=norwegian
+	father=1228072
+	1046.1.1={
+		birth=yes
+	}
+	1090.1.1={
+		add_spouse = 1290091 # Ragnhild Skoftesdatter
+	}	
+	1107.1.1={
+		death=yes
+	}
+}
+
+1290091 = {
+	name="Rögnhild" # Ragnhild Skoftesdatter of Giske, married to Dag Eilivsson and mother of (Vatn)Orm Dagsson, Gregorius Dagsson and Gyrid Dagsdatter
+	female=yes
+	dynasty=453
+	religion="catholic"
+	culture="norwegian"
+	father=102553
+	mother=102557
+	1075.1.1={
+		birth=yes
+	}
+	1137.1.1={
+		death=yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+1228073 = {
+	name="Asmund"
+	dynasty=1000053614
+	religion="catholic"
+	culture=norwegian
+	father=1228074
+	1007.1.1={
+		birth=yes
+	}
+	1052.1.1={
+		death=yes
+	}
+}
+1228074 = {
+	name="Grankjell"
+	dynasty=1000053614
+	religion="catholic"
+	culture=norwegian
+
+	977.1.1={
+		birth=yes
+	}
+	1000.1.1 ={
+		religion = catholic
+	}
+	1028.1.1={
+		death=yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
 
 #######################################
 # House NAME
@@ -1373,8 +2009,23 @@
 		death=yes
 	}
 }
+1290124 = {
+	name="Skjegge" # Jarn-Skjegge Asbjörnsson, Norwegian Chieftain/Nobleman in Trøndelag, one of the staunchest proponents of Paganism opposing Olafr Tryggvessons christianization
+	dynasty=1000100941
+	religion="norse_pagan"
+	culture=norwegian
+	trait=zealous #staunch pagan
+	trait=gregarious #managed to speak himself to the support of the Pagan peasants against christianization
+	father=1290125
+	950.1.1={
+		birth=yes
+	}
+	997.1.1={
+		death=yes
+	}
+}
 1290125 = {
-	name="Asbjörn" # Asbjörn, Norwegian Chieftain/Nobleman in Trøndelag, father of Skjegge, placeholder of Nordmøre
+	name="Asbjorn" # Asbjörn, Norwegian Chieftain/Nobleman in Trøndelag, father of Skjegge, placeholder of Nordmøre
 	dynasty=1000100941
 	religion="norse_pagan"
 	culture = norwegian
@@ -1397,18 +2048,7 @@
 		death = yes
 	}
 }
-1290138 = {
-	name="Eyvind"
-	dynasty=444
-	religion="norse_pagan"
-	culture = norwegian
-	897.1.1={
-		birth=yes
-	}
-	957.1.1={
-		death=yes
-	}
-}
+
 306002 = {
 	name = "Hlathgerth"
 	female = yes
@@ -1425,6 +2065,96 @@
 		death = yes
 	}
 }
+1290109 = { 
+	name="Haakon" # Placeholder
+	dynasty=1193
+	religion="norse_pagan"
+	culture="norwegian"
+	father=1290136
+	933.1.1={
+		birth = yes
+	}
+	990.1.1={
+		death = yes
+	}
+}
+1228171 = { 
+	name="Finn" # Placeholder
+    dynasty=1193
+	religion="norse_pagan"
+	culture="norwegian"
+	father=1290109	
+	974.1.1={
+		birth = yes
+	}
+	999.1.1={
+		religion="catholic"
+	}
+	1022.1.1={
+		death = yes
+	}
+}
+
+1228076 = { 
+	name="Haakon" # Placeholder
+    dynasty=1193
+	religion="catholic"
+	culture=norwegian
+	father=1228171	
+	1005.1.1={
+		birth = yes
+	}
+	1064.1.1={
+		death = yes
+	}
+}
+1290097 = {
+	name="Arinbjörn" # Arinbjörn Herse, Chieftain in Firdafylki
+	dynasty=1000053623
+	religion="norse_pagan"
+	culture=norwegian
+	904.1.1={
+		birth=yes
+	}	
+	979.1.1={
+		death=yes
+	}
+}
+1290072 = {
+	name="Gudbrand" # Gudbrand Kula, father of Åsta Gudbrandsdatter, Chieftain in the Gudbrandsvalley and most likely of the entire Upplands
+	dynasty=1000053617
+	martial=6
+	diplomacy=6
+	intrigue=5
+	stewardship=5
+	religion="norse_pagan"
+	culture="norwegian"
+	923.1.1={
+		birth=yes
+	}
+	985.1.1={
+		death=yes
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2434,34 +3164,9 @@
 }
 
 
-
-
-
-
-
-
-
 #######################################
 # House Yingling
 #######################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 101545 = {
 	name = "Thorgunna"

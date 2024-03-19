@@ -190,7 +190,6 @@
 	dynasty = 1000100925
 	religion = norse_pagan
 	culture = icelandic
-
 	909.1.1 = {
 		birth = yes
 	}
@@ -198,6 +197,39 @@
 		death = yes
 	}
 }
+1290002 = {
+	name = "Þorgestr" #Iceland: Steinsson
+	dynasty = 1000100925
+	religion = norse_pagan
+	culture = icelandic
+	father = 1290003
+	947.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		religion = catholic
+	}
+	1022.1.1 = {
+		death = yes
+	}
+}
+
+1228170 = {
+	name="Steinn" #Steinn Thorgestsson from Breidabolstad on the Snæfellsness. Lawspeaker between 1031-1033.
+	dynasty=1000100925
+	religion="norse_pagan"
+	culture="icelandic"
+	father = 1290002
+	978.1.1={
+		birth=yes
+	}	
+	1033.1.1 = {
+		death = yes
+	}
+}
+
+
+
 1290012 = {
 	name = "Hrafn" #Iceland: Hængsson
 	dynasty = 1000100933
@@ -211,7 +243,7 @@
 	}
 }
 1290010 = {
-	name = "Þorkell" #Iceland: ?
+	name = "thorkell" #Iceland: ?
 	dynasty = 1000100923
 	religion = norse_pagan
 	culture = icelandic
@@ -220,6 +252,51 @@
 	}
 	975.1.1 = {
 		death = yes
+	}
+}
+1290005 = {
+	name = "Þorgeirr" #Iceland: Þorkelsson
+	dynasty = 1000100923
+	religion = norse_pagan
+	culture = icelandic
+	father = 1290010
+	940.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		religion = catholic
+	}
+	1001.1.1 = {
+		death = yes
+	}
+}
+1290004 = {
+	name = "Tjörvi" #Iceland: Þorgeirsson
+	dynasty = 1000100923
+	religion = norse_pagan
+	culture = icelandic
+	father = 1290005
+	972.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		religion = catholic
+	}
+	1031.1.1 = {
+		death = yes
+	}
+}
+1228081 = {
+	name="Þorkell"
+	dynasty=1000100923
+	religion="catholic"
+	culture="icelandic"
+	father = 1290004
+	1004.1.1={
+		birth=yes
+	}
+	1053.1.1={
+		death=yes
 	}
 }
 #######################################
@@ -349,7 +426,7 @@
 	}
 }
 1290015 = {
-	name = "Þorsteinn" #Iceland: Ingolfsson
+	name = "thorsteinn" #Iceland: Ingolfsson
 	dynasty = 1043504
 	religion = norse_pagan
 	culture = icelandic
@@ -359,6 +436,19 @@
 	}
 	944.1.1={
 		death=yes
+	}
+}
+1290016 = {
+	name = "Þorkell" #Iceland: 'máni' Þorsteinsson
+	dynasty = 1043504
+	religion = norse_pagan
+	culture = icelandic
+	father = 1290015
+	925.1.1 = {
+		birth = yes
+	}
+	984.1.1 = {
+		death = yes
 	}
 }
 #######################################
@@ -405,6 +495,238 @@
 		death = "898.1.1"
 	}
 }
+1290013 = {
+	name = "Oleifr" #Iceland: 'hjalta'
+	dynasty = 1000100935
+	religion = norse_pagan
+	culture = icelandic
+	873.1.1 = {
+		birth = yes
+	}
+	927.1.1 = {
+		death = yes
+	}
+}
+1290011 = {
+	name = "Þórarinn" #Iceland: 'Ragabróðir' Óleifsson
+	dynasty = 1000100935
+	religion = norse_pagan
+	culture = icelandic
+	father = 1290013
+	897.1.1 = {
+		birth = yes
+	}
+	969.1.1 = {
+		death = yes
+	}
+}
+1290014 = { 
+	name = "Özurr" #Iceland: ?
+	dynasty = 485
+	religion = norse_pagan
+	culture = icelandic
+	915.1.1 = {
+		birth = yes
+	}
+	964.1.1 = {
+		death = yes
+	}
+}
+1228160 = { 
+	name="Þórðr" #Iceland: 'Freysgoði' Özurarson
+	dynasty = 485
+	religion = norse_pagan
+	culture = icelandic
+	father = 1290014
+	952.1.1 = {
+		birth = yes
+	}
+	1010.1.1 = {
+		death = yes
+	}
+}
+1228161 = { 
+	name="Flosi" #Clan founder, was dead by now norse
+	dynasty= 485 #Svinfellingar
+	religion="norse_pagan"
+	culture="icelandic"
+	father = 1228160
+	994.1.1={
+		birth=yes
+	}
+	1000.1.1 ={
+		religion = catholic
+	}
+	1055.1.1={
+		death=yes
+	}
+}
+1228082 = {
+	name = "Kolbeinn" #Iceland: Lawspeaker Flosason
+	dynasty = 485 
+	religion = catholic
+	culture = norse
+	father = 1228161
+	1012.1.1 = {
+		birth = yes
+	}
+	1035.1.1={
+		culture=norse
+	}
+	1071.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+1290008 = {
+	name = "Grímr" #Iceland: Svertingsson
+	dynasty = 1000100934
+	religion = norse_pagan
+	culture = icelandic
+	father = 1290009
+	934.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		religion = catholic
+	}
+	1004.1.1 = {
+		death = yes
+	}
+}
+1290009 = {
+	name = "Svertingr" #Iceland: Hrolleifsson
+	dynasty = 1000100934
+	religion = norse_pagan
+	culture = icelandic
+	907.1.1 = {
+		birth = yes
+	}
+	955.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+1290007 = {
+	name = "Eyvindr" #Iceland: ?
+	dynasty = 1000100924
+	religion = norse_pagan
+	culture = icelandic
+	910.1.1 = {
+		birth = yes
+	}
+	971.1.1 = {
+		death = yes
+	}
+}
+1290006 = {
+	name = "Þóroddr" #Iceland: Eyvindarson
+	dynasty = 1000100924
+	religion = norse_pagan
+	culture = icelandic
+	father = 1290007
+	947.1.1 = {
+		birth = yes
+	}
+	999.1.1 = {
+		death = yes
+	}
+}
+1228169 = {
+	name="Skafti" #Skafti Thoroddson, longtime Lawspeaker between 1004-1030
+	dynasty=1000100924
+	religion="norse_pagan"
+	culture="icelandic"
+	father = 1290006
+	963.1.1={
+		birth=yes
+	}
+	1000.1.1={
+		religion="catholic"
+	}	
+	1030.1.1={
+		death=yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+1228083 = {
+	name = "Gellir" #Iceland: Lawspeaker Bölverksson
+	dynasty = 1000100914 
+	religion = catholic
+	culture = icelandic
+
+	1001.1.1 = {
+		birth = yes
+	}
+	1074.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+1228136 = {
+	name = "Gil" #Sturlunga Patriarch
+	dynasty = 484
+	religion = catholic
+	culture = icelandic
+
+	1037.1.1={
+		birth=yes
+	}
+	1080.1.1={
+		death=yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+1228140 = {
+	name="Asbjorn" # Iceland: Arnórsson
+	dynasty=478
+	religion="catholic"
+	culture="icelandic"
+	1036.1.1={
+		birth=yes
+	}
+	1111.1.1={
+		death=yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
 #######################################
 # House NAME
 #######################################

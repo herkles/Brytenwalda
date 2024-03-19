@@ -16578,7 +16578,6 @@ heric = {
 	866.7.2 = {
 		death = {
 			death_reason = death_battle
-			killer = 6878 # Hastein the Viking
 		}
 	}
 }
@@ -32778,10 +32777,44 @@ arnulf_iii_of_boulogne = {
 		death = yes
 	}
 }
+1226511 = {
+	name="Achard" # 948/969
+	religion="catholic"
+	culture="french"
+    trait=education_learning_1
+	905.1.1 = {
+		birth = yes
+	}
+	969.1.1 = {
+		death = yes
+	}
+}
+900028 = {
+	name="Etienne" 
+	dynasty=1000036007
+	culture = french
+	religion="catholic"
+	903.1.1 = {
+		birth=yes
+	}
+	972.1.1 = {
+		death=yes
+	}
+}
 
-
-
-
+Porcien1 = {
+	name="Roger" 
+	dynasty=1000036007
+	culture = french
+	religion="catholic"
+	father = 900028
+	965.1.1 = {
+		birth=yes
+	}
+	1053.1.1 = {
+		death=yes
+	}
+}
 
 
 

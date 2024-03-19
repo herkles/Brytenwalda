@@ -9966,3 +9966,135 @@ bavarian0004 = {
 		death = yes
 	}
 }
+
+
+
+
+
+1228421 = {
+	name="Aribo"  #Count of Leoben
+	dynasty=9554
+	religion="catholic"
+	culture="bavarian"  # melted from: german
+	father=32000
+
+	888.1.1 = {
+		birth=yes
+	}
+	934.1.1 = {
+		death=yes
+	}
+}
+1228422 = {
+	name="Chadalhoh"  #Count of Isengau
+	dynasty=9554
+	religion="catholic"
+	culture="bavarian"  # melted from: german
+	father=1228421
+
+	907.1.1 = {
+		birth=yes
+	}
+	959.1.1 = {
+		death=yes
+	}
+}
+1228423 = {
+	name="Aribo"  #Count of Chiemgau and Leobengau, Count Palatine of Bavaria from 985 to his death
+	dynasty=9554
+	religion="catholic"
+	culture="bavarian"  # melted from: german
+	father=1228422
+
+	942.1.1 = {
+		birth=yes
+	}
+	975.1.1={
+		add_spouse = "1228420"
+	}	
+	1001.1.1 = {
+		death=yes
+	}
+}
+
+1228428 = { 
+	name="Arnold" # Count of Wels-Lambach, progenitor of his family. Married a daughter of Aribo I (Hiltburg)
+	dynasty = 1000101001 # Wels-Lambach 
+	religion="catholic"
+	culture="bavarian"  # german
+	959.1.1={
+		birth = yes
+	}
+	991.1.1={
+		add_spouse = "1228429"
+	}	
+	1020.1.1={
+		death = yes
+	}
+}
+1228429 = {
+	name="Hiltburg"  #wife of Arnold I von Wels-Lambach
+	female=yes
+	dynasty=9554
+	religion="catholic"
+	culture="bavarian"  # melted from: german
+	father=1228423
+	mother=1228420
+
+	976.1.1 = {
+		birth=yes
+	}	
+	1022.1.1 = {
+		death=yes
+	}
+}
+1228411 = { 
+	name="Arnold" # Markgraf of Kärnten
+	dynasty = 1000101001 # Wels-Lambach 
+	religion="catholic"
+	culture="bavarian"  # german
+	father=1228428
+	mother=1228429	
+	992.1.1={
+		birth = yes
+	}
+	1009.1.1={
+		add_spouse = "1236520"
+	}	
+	1055.3.3={
+		death = yes
+	}
+}
+
+1228431 = { 
+	name="Adalbero" # Bishop of Würzburg 1045
+	dynasty = 1000101001 # Wels-Lambach 
+	religion="catholic"
+	culture="bavarian"  # german
+    father= 1228411 # (Margrave of Carinthia)
+    mother= 1236520 # Regilla de Verdun
+	1024.1.1={
+		birth = yes
+	}
+	1090.10.6={
+		name = "Saint Adalbero"
+		trait = "saint"		
+		death = yes
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

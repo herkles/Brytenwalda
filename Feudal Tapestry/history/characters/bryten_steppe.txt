@@ -1,6 +1,19 @@
 ﻿#######################################
 # Khazar 
 #######################################
+1233292 = { # Semi-mythological grandfather of Samuel Aba, unrelated to the Örs clan (but still a khazar, supposedly)
+	name = "Pata" 
+    dynasty = 19000 # Aba
+	religion = "tengri_pagan"
+	culture = "khazar"
+	924.1.1 = {
+		birth = yes
+	}
+
+	988.1.1 = {
+		death = yes
+	}
+}
 260703 = {
 	name = "Kisa"
 	dynasty = 1062329
@@ -82,6 +95,70 @@
 		death="960.1.1"
 	}
 }
+1233374 = {
+	name="Karan"
+	dynasty=1029157
+	religion="ashari"
+	culture=bolghar
+	father=1233373
+	929.1.1={
+		birth="929.1.1"
+	}
+	984.1.1={
+		death="984.1.1"
+	}
+}
+1233375 = {
+	name="Isperikh"
+	dynasty=1029157
+	religion="ashari"
+	culture=bolghar
+	father=1233374
+	953.1.1={
+		birth="953.1.1"
+	}
+	1015.1.1={
+		death="1015.1.1"
+	}
+}
+1233376 = {
+	name="Irkhan"
+	dynasty=1029157
+	religion="ashari"
+	culture=bolghar
+	father=1233375
+	981.1.1={
+		birth="981.1.1"
+	}
+	1037.1.1={
+		death="960.1.1"
+	}
+}
+1233377 = {
+	name="Savin"
+	dynasty=1029157
+	religion="ashari"
+	culture=bolghar
+	father=1233376
+	1004.1.1={
+		birth="1004.1.1"
+	}
+	1063.1.1={
+		death="1063.1.1"
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 #######################################
 # Khazar
 #######################################
@@ -151,6 +228,48 @@
 		death = yes
 	}
 }
+1233622 = {
+	name="Velmayka"
+    dynasty=12271 # Burtas
+	religion="tengri_pagan"
+	culture="alan"
+    father=1233621
+	935.1.1 = {
+		birth = yes
+	}
+	990.1.1 = {
+		death = yes
+	}
+}
+1233623 = {
+	name="Tylze"
+    dynasty=12271 # Burtas
+	religion="tengri_pagan"
+	culture="alan"
+    father=1233622
+	972.1.1 = {
+		birth = yes
+	}
+	1022.1.1 = {
+		death = yes
+	}
+}
+
+1233624 = {
+	name="Velmayka"
+    dynasty=12271 # Burtas
+	religion="tengri_pagan"
+	culture="alan"
+    father=1233623
+	1003.1.1 = {
+		birth = yes
+	}
+	1060.1.1 = {
+		death = yes
+	}
+}
+
+
 1233621 = {
 	name="Tylze"
     dynasty=12271 # Burtas
@@ -180,6 +299,21 @@
 #######################################
 # Pecheneg
 #######################################
+1232018 = {
+	name="Karamas" # chieftan attested 1047-1049, RL tribal relation unknown.
+	dynasty=1000100510
+	religion="tengri_pagan"
+	culture="pecheneg"
+	1023.1.1={
+		birth = yes
+	}
+	1045.1.1={
+		religion="orthodox"
+	}
+	1087.6.1={
+		death = yes
+	}
+}
 260696 = {
 	name = "Ipaos"
 	dynasty = 1062322
@@ -316,6 +450,52 @@ tokku_avar = {
 # kirghiz
 #######################################
 
+
+
+
+
+
+
+
+991kirghiz2 = {
+	name = "Inek"
+	dynasty = 1062521
+	religion = tengri_pagan
+	culture = kirghiz
+	father = 261083
+	935.1.1 = {
+		birth = yes
+	}
+	1002.1.1 = {
+		death = yes
+	}
+}
+997kirghiz = {
+	name = "Kozel"
+	dynasty = 1062523
+	religion = manichean
+	culture = kirghiz
+	father = 261085
+	940.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		death = yes
+	}
+}
+997kirghiz3 = {
+	name = "Kozel"
+	dynasty = 1062522
+	religion = manichean
+	culture = kirghiz
+	father = 261084
+	930.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		death = yes
+	}
+}
 936Kirghiz1 = {
 	name = "EldeC_yuk" # fictional
 	dynasty = 1051109 # Kiliçli
@@ -352,6 +532,33 @@ tokku_avar = {
 		birth = yes
 	}
 	965.4.28 = {
+		death = yes
+	}
+}
+80000022 = {
+	name = "Sugr"
+	dynasty = 2001156	#dynn_Enisey_Kyrgyz
+	religion = tengri_pagan
+	culture = kirghiz
+	father = 80000021
+	950.2.13 = {
+		birth = yes
+	}
+	1005.4.28 = {
+		death = yes
+	}
+}
+
+80000023 = {
+	name = "Kozel"
+	dynasty = 2001156	#dynn_Enisey_Kyrgyz
+	religion = tengri_pagan
+	culture = kirghiz
+	father = 80000022
+	990.2.13 = {
+		birth = yes
+	}
+	1060.4.28 = {
 		death = yes
 	}
 }
@@ -452,16 +659,162 @@ tokku_avar = {
 	religion="tengri_pagan"
 	culture="kipchak"
 	father = 1229721
-  900.1.1={
+  	900.1.1={
 		birth="900.1.1"
 	}
 	960.1.1={
 		death="960.1.1"
 	}
+}
+1229723 = {
+	name="Ilbar"  #Placeholder
+	dynasty=1000101595
+	religion="tengri_pagan"
+	culture="kipchak"
+	father = 1229722
+  	933.1.1={
+		birth="933.1.1"
+	}
+	990.1.1={
+		death="990.1.1"
+	}
+}  
+1229724 = {
+	name="Etrek" #Placeholder
+	dynasty=1000101595
+	religion="tengri_pagan"
+	culture="kipchak"
+	father = 1229723
+  	966.1.1={
+		birth="966.1.1"
+	}
+	1030.1.1={
+		death="1030.1.1"
+	}
 } 
+1229725 = {
+	name="Abar"   #Placeholder
+	dynasty=1000101595
+	religion="tengri_pagan"
+	culture="kipchak"
+	father = 1229724
+	999.1.1={
+		birth="999.1.1"
+	}
+	1058.1.1={
+		death="1058.1.1"
+	}
+} 
+
+
 #######################################
 # buryat
 #######################################
+997Buryat = {
+	name = "Gunga"
+	dynasty = 2001151	#Bulagad
+	religion = tengri_pagan
+	culture = buryat
+	father = 936Buryat
+	934.11.6 = {
+		birth = yes
+	}
+	1010.7.1 = {
+		death = yes
+	}
+}
+997Khori = {
+	name = "Tolui"
+	dynasty = 2001143		#dynn_Khori_Tumed
+	religion = siberian_pagan
+	culture = buryat
+	father = 303082
+	928.2.20 = {
+		birth = yes
+	}
+	1003.4.1 = {
+		death = yes
+	}
+}
+
+997Khori2 = {
+	name = "Eshegen"
+	dynasty = 2001143		#dynn_Khori_Tumed
+	religion = tengri_pagan
+	culture = tumed
+	father = 997Khori
+	968.2.20 = {
+		birth = yes
+	}
+	1039.4.1 = {
+		death = yes
+	}
+}
+997Abazaj = {
+	name = "Bek"
+	dynasty = 2001147	#Abazaj
+	religion = siberian_pagan
+	culture = buryat
+	father = 303157
+	918.2.23 = {
+		birth = yes
+	}
+	1000.7.16 = {
+		death = yes
+	}
+}
+997Yrkhu = {
+	name = "Khotsa"
+	dynasty = 2001148	#Yrkhu
+	religion = siberian_pagan
+	culture = buryat
+	father = 303165
+	918.5.17 = {
+		birth = yes
+	}
+	1000.10.19 = {
+		death = yes
+	}
+}
+997Sono = {
+	name = "Tseden"
+	dynasty = 2001149	#Sono
+	religion = siberian_pagan
+	culture = buryat
+	father = 303173
+	930.12.8 = {
+		birth = yes
+	}
+	1000.7.10 = {
+		death = yes
+	}
+}
+997Khongodor = {
+	name = "Bulgan"
+	dynasty = 2001152	#Khongodor
+	religion = siberian_pagan
+	culture = buryat
+	father = 303198
+	915.10.28 = {
+		birth = yes
+	}
+	1000.12.29 = {
+		death = yes
+	}
+}
+997Hengelder = {
+	name = "Eshegen"
+	dynasty = 2001146	#Hengelder
+	religion = siberian_pagan
+	culture = buryat
+	father = 8000008
+	915.10.30 = {
+		birth = yes
+	}
+	1000.6.19 = {
+		death = yes
+	}
+}
 8000007 = {
 	name = "Aldar"
 	dynasty = 2001146	#Hengelder
@@ -534,6 +887,38 @@ Yukaghir6 = {
 	955.1.1	 = { death = yes }		
 	father = Yukaghir5		
 }
+Yukaghir7 =  {
+	name = Sening
+	religion = tengri_pagan	
+	culture = buryat
+	905.1.1 = {	birth = yes }
+	980.1.1 = {	death = yes }
+	father = Yukaghir6
+}
+Yukaghir8 = {
+	name = Balma
+	religion = tengri_pagan
+	culture = yukaghir
+	930.1.1 = {	birth = yes }
+	1005.1.1 = { death = yes }
+	father = Yukaghir7
+}
+Yukaghir9 = {
+	name = Sulams
+	religion = tengri_pagan
+	culture = yukaghir
+	960.1.1	 = { birth = yes }
+	1040.1.1 = { death = yes }
+	father = Yukaghir8		
+}
+Yukaghir10 = {
+	name = Tolget
+	religion = tengri_pagan	
+	culture = yukaghir
+	990.1.1	 = { birth = yes }
+	1070.1.1 = { death = yes }	
+	father = Yukaghir9		
+}
 
 
 
@@ -547,6 +932,19 @@ Yukaghir6 = {
 		birth = yes
 	}
 	960.8.21 = {
+		death = yes
+	}
+}
+997Buryat2 = {
+	name = "Geleg"
+	dynasty = 2001150	#Bajandaj
+	religion = tengri_pagan
+	culture = buryat
+	father = 936Buryat2
+	928.11.26 = {
+		birth = yes
+	}
+	1002.8.21 = {
 		death = yes
 	}
 }
@@ -606,8 +1004,73 @@ Barga1 = {
 #######################################
 # bolghar
 #######################################
+1233361 = {
+	name="Telec"
+	dynasty=1029159
+	religion="tengri_pagan"
+	culture=bolghar
+	father=1233360
+	927.1.1={
+		birth = yes
+	}
+	960.1.1={ #Bashkir conversion at some point to Islam under Volga Bulgar influence
+		religion="ashari"
+	}
+	983.1.1={
+		death = yes
+	}
+}
+1233362 = {
+	name="Aydar"
+	dynasty=1029159
+	religion="tengri_pagan"
+	culture=bolghar
+	father=1233361
+	951.1.1={
+		birth = yes
+	}
+	960.1.1={ #Bashkir conversion at some point to Islam under Volga Bulgar influence
+		religion="ashari"
+	}
+	1003.1.1={
+		death = yes
+	}
+}
+1233363 = {
+	name="Omurtag"
+	dynasty=1029159
+	religion="ashari"
+	culture=bolghar
+	father=1233362
+	979.1.1={
+		birth = yes
+	}
+	1037.1.1={
+		death = yes
+	}
+}
+1233364 = {
+	name="Isperikh"
+	dynasty=1029159
+	religion="ashari"
+	culture=bolghar
+	father=1233363
+	1009.1.1={
+		birth = yes
+	}
+	1073.1.1={
+		death = yes
+	}
+}
+
+
+
+
+
+
+
 1233372 = {
-	name="Timëreç"
+	name="Timerec"
 	dynasty=1029157
 	religion="tengri_pagan"
 	culture=bolghar
@@ -808,6 +1271,32 @@ Balormaa4 = {
 		death = yes
 	}
 }
+Mergid1 = {
+	name = "Bedugun"
+	dynasty = 2001144	#Mergid
+	religion = tengri_pagan
+	culture = mongol
+	father = 80000025
+	941.1.1 = {
+		birth = yes
+	}
+	1008.1.1 = {
+		death = yes
+	}
+}
+Mergid2 = {
+	name = "Jebe"
+	dynasty = 2001144	#Mergid
+	religion = tengri_pagan
+	culture = mongol
+	father = Mergid1
+	987.1.1 = {
+		birth = yes
+	}
+	1039.9.17 = {
+		death = yes
+	}
+}
 261080 = {
 	name =  "Khaidu"
 	dynasty = 1062518
@@ -822,7 +1311,91 @@ Balormaa4 = {
 				  
 	}
 	
-  }
+}
+1410938= { #Placeholder character for Merkids
+	dynasty = 1000049254 #Uduyid
+	name = "Higechi_name" #fictional
+	culture = mongol #merkid
+	religion = tengri_pagan
+	#birth and death dates unknown
+	830.1.1={
+		birth=yes
+	}
+	880.1.1={
+		death=yes
+	}
+}
+1410939= { #Placeholder character for Merkids
+	dynasty = 1000049254 #Uduyid
+	name = "Chilaghun_name" #fictional
+	culture = mongol #merkid
+	religion = tengri_pagan
+	father = 1410938
+	#birth and death dates unknown
+	860.1.1={
+		birth=yes
+	}
+	910.1.1={
+		death=yes
+	}
+}
+1410940= { #Placeholder character for Merkids
+	dynasty = 1000049254 #Uduyid
+	name = "Orda_name" #fictional
+	culture = mongol #merkid
+	religion = tengri_pagan
+	father = 1410939
+	#birth and death dates unknown
+	890.1.1={
+		birth=yes
+	}
+	950.1.1={
+		death=yes
+	}
+}
+1410941= { #Placeholder character for Merkids
+	dynasty = 1000049254 #Uduyid
+	name = "Taghachar" #fictional
+	culture = mongol #merkid
+	religion = tengri_pagan
+	father = 1410940
+	#birth and death dates unknown
+	923.1.1={
+		birth=yes
+	}
+	977.1.1={
+		death=yes
+	}
+}
+1410942= { #Placeholder character for Merkids
+	dynasty = 1000049254 #Uduyid
+	name = "Toghril" #fictional
+	culture = mongol #merkid
+	religion = tengri_pagan
+	father = 1410941
+	#birth and death dates unknown
+	955.1.1={
+		birth=yes
+	}
+	1001.1.1={
+		death=yes
+	}
+}
+1410943= { #Placeholder character for Merkids
+	dynasty = 1000049254 #Uduyid
+	name = "Abatai_name" #fictional
+	culture = mongol #merkid
+	religion = tengri_pagan
+	father = 1410942
+	#birth and death dates unknown
+	980.1.1={
+		birth=yes
+	}
+	1032.1.1={
+		death=yes
+	}
+}
+
 #######################################
 # kerait
 #######################################
@@ -876,9 +1449,28 @@ NSteppeMB34	= {
 	dynasty = 2001102
 	culture	= kerait
 	885.1.1	= { birth = yes	}
-	955.1.1	 = { death = yes	}
+	955.1.1	 = { death = yes }
 	father = NSteppeMB33	
 }
+NSteppeMB36 = {	
+	name = Ilig
+	religion = tengri_pagan
+	dynasty = 2001102
+	culture = qun
+	905.1.1	 = { birth = yes }
+	980.1.1	 = { death = yes }
+	father = NSteppeMB34	
+}
+NSteppeMB37	= {
+	name = Turghun
+	religion = tengri_pagan
+	dynasty = 2001102
+	culture = qun
+	930.1.1 = {	birth =	yes	}
+	1005.1.1 = { death = yes }
+	father = NSteppeMB36	
+}
+
 Khereid = {
 	name = "Tooril"
 	dynasty = 1041002		#Khereid
@@ -948,6 +1540,275 @@ Khereid5 = {
 #######################################
 # kimek
 #######################################
+1233047 = {
+	name="Aepa" # fictional.
+    dynasty=1000101589 #Ay-Opa
+	religion="tengri_pagan"
+	culture="kimek"
+	1010.1.1={
+		birth = yes
+	}
+	1040.1.1={
+		add_spouse=1233048
+	}
+	1065.1.1={
+		death = yes
+	}
+}
+1233048 = {
+	name="Ayasun" # fictional
+	female=yes
+	religion="tengri_pagan"
+	culture="kimek"
+	1015.1.1={
+		birth = yes
+	}
+	1075.1.1={
+		death = yes
+	}
+}
+
+
+
+
+
+1229710 = {
+	name="Menglig Tegin"
+	dynasty = 852 # Kimak
+	religion="tengri_pagan"
+	culture="kimek"
+	father = 188782
+	820.1.1={
+		birth = yes
+	}
+	882.1.1={
+		death = yes
+	}
+} 
+1229711 = {
+	name="Boko Tegin"
+	dynasty = 852 # Kimak
+	religion="tengri_pagan"
+	culture="kimek"
+	father = 1229710
+	849.1.1={
+		birth = yes
+	}
+	912.1.1={
+		death="912.1.1"
+	}
+} 
+1229712 = {
+	name="Karacik"
+	female=yes
+	dynasty = 852 # Kimak
+	religion="tengri_pagan"
+	culture="kimek"
+	father = 1229710
+	850.1.1={
+		birth="850.1.1"
+	}
+	866.1.1={
+		add_spouse=1231980 
+	}
+	912.1.1={
+		death="912.1.1"
+	}
+} 
+1233007 = {
+	name="Qoçqar" # fictional
+	dynasty = 852 # Kimak
+	religion="tengri_pagan"
+	culture="kimek"
+	father = 1229711
+	870.1.1={
+		birth = yes
+	}
+	910.1.1={
+		add_spouse=1233008
+	}
+	960.1.1={
+		death = yes
+	}
+}
+1233008 = {
+	name="Bozçin" #fictional
+	female=yes
+	religion="tengri_pagan"
+	culture="kimek"
+	890.1.1={
+		birth = yes
+	}
+	961.1.1={
+		death = yes
+	}
+}
+
+
+
+1233009 = {
+	name="Esen" # fictional
+	dynasty = 852 # Kimak
+	religion="tengri_pagan"
+	culture="kimek"
+	father = 1233007
+        mother= 1233008
+	911.1.1={
+		birth = yes
+	}
+	939.1.1={
+		add_spouse=1233010
+	}
+	978.1.1={
+		death = yes
+	}
+}
+1233010 = {
+	name="Gulçiçek" # fictional
+	female=yes
+	religion="tengri_pagan"
+	culture="kimek"
+	920.1.1={
+		birth = yes
+	}
+	988.1.1={
+		death = yes
+	}
+} 
+1233011 = {
+	name="Qoçqar" # fictional
+	dynasty = 852 # Kimak
+	religion="tengri_pagan"
+	culture="kimek"
+	father = 1233009
+    mother= 1233010
+	940.1.1={
+		birth = yes
+	}
+	969.1.1={
+		add_spouse=1233012
+	}
+	1010.1.1={
+		death = yes
+	}
+}
+1233012 = {
+	name="Asli" # fictional
+	female=yes
+	religion="tengri_pagan"
+	culture="kimek"
+	950.1.1={
+		birth = yes
+	}
+	1011.1.1={
+		death = yes
+	}
+}  
+1233013 = {
+	name="Esen" # fictional
+	dynasty = 852 # Kimak
+	religion="tengri_pagan"
+	culture="kimek"
+	father = 1233011
+    mother= 1233012
+	975.1.1={
+		birth = yes
+	}
+	1000.1.1={
+		add_spouse=1233014
+	}
+	1030.1.1={
+		death = yes
+	}
+}
+1233014 = {
+	name="Gundes" # fictional
+	female=yes
+	religion="tengri_pagan"
+	culture="kimek"
+	982.1.1={
+		birth = yes
+	}
+	1032.1.1={
+		death = yes
+	}
+}
+
+1233015 = {
+	name="Qoçqar" # fictional
+	dynasty = 852 # Kimak
+	religion="tengri_pagan"
+	culture="kimek"
+	father = 1233013
+    mother= 1233014
+	1009.1.1={
+		birth = yes
+	}
+	1038.1.1={
+		add_spouse=1233016
+	}
+	1065.1.1={
+		death = yes
+	}
+}
+1233016 = {
+	name="Gulçiçek" # fictional
+	female=yes
+	religion="tengri_pagan"
+	culture="kimek"
+	1016.1.1={
+		birth = yes
+	}
+	1066.1.1={
+		death = yes
+	}
+}
+
+
+
+
+
+
+
+Imak1 = {
+	name = "Togli"
+	dynasty = 2001108	#Imak
+	religion = tengri_pagan
+	culture = kimek
+	father = 302709
+	899.1.30 = {
+		birth = yes
+	}
+	955.11.19 = {
+		death = yes
+	}
+}
+Imak2 = {
+	name = "Kobyak"
+	dynasty = 2001108	#Imak
+	religion = tengri_pagan
+	culture = kimek
+	father = Imak1
+	938.1.30 = {
+		birth = yes
+	}
+	1000.11.19 = {
+		death = yes
+	}
+}
+Imak3 = {
+	name = "Uzur"
+	dynasty = 2001108	#Imak
+	religion = tengri_pagan
+	culture = kimek
+	father = Imak2
+	987.1.30 = {
+		birth = yes
+	}
+	1030.1.1 = {
+		death = yes
+	}
+}
 80000018 = {
 	name = "Sokal"	#
 	dynasty = 2001092	#Paikiv
@@ -963,6 +1824,20 @@ Khereid5 = {
 		death = yes
 	}
 }
+80000017 = {
+	name = "Hulyen"	#
+	dynasty = 2001092	#Paikiv
+	religion = tengri_pagan
+	culture = kimek
+	father = 80000018
+	975.6.11 = {
+		birth = yes
+	}
+	1050.10.19 = {
+		death = yes
+	}
+}
+
 #######################################
 # oirat
 #######################################
@@ -981,9 +1856,23 @@ Khereid5 = {
 		death = yes
 	}
 }
+3030112 = {
+	name = "Chon"
+	dynasty = 2001136	#dynn_Oirat
+	religion = tengri_pagan
+	culture = oirat
+	father = 3030111
+	970.10.17 = {
+		birth = yes
+	}
+	1040.5.15 = {
+		death = yes
+	}
+}
 #######################################
 # uyghur
 #######################################
+
 936Uyghur2 = {
 	name = "Uzluk"	#fictional
 	dynasty = 2001135	#Bögün
@@ -994,6 +1883,45 @@ Khereid5 = {
 		birth = yes
 	}
 	960.9.15 = {
+		death = yes
+	}
+}
+Jirkin2 = {
+	name = "Yula_Mangus"
+	dynasty = 2001154	#Jirkin
+	religion = tengri_pagan
+	culture = uyghur
+	father = Jirkin1
+	919.1.1 = {
+		birth = yes
+	}
+	995.1.1 = {
+		death = yes
+	}
+}
+Jirkin3 = {
+	name = "Taibuka"
+	dynasty = 2001154	#Jirkin
+	religion = tengri_pagan
+	culture = uyghur
+	father = Jirkin2
+	947.1.1 = {
+		birth = yes
+	}
+	1011.1.1 = {
+		death = yes
+	}
+}
+Jirkin4 = {
+	name = "Taibuka"
+	dynasty = 2001154	#Jirkin
+	religion = tengri_pagan
+	culture = uyghur
+	father = Jirkin3
+	991.1.1 = {
+		birth = yes
+	}
+	1065.2.22 = {
 		death = yes
 	}
 }
@@ -1107,7 +2035,7 @@ Jirkin1 = {
 	}
 }
 1227683 = {
-	name="Asýka"
+	name="Asyka"
     dynasty=1000053370 # Polum
 	religion="siberian_pagan"
 	culture="khanty"
@@ -1120,6 +2048,64 @@ Jirkin1 = {
 		death = yes
 	}
 }
+1227684 = {
+	name="Yuzmonapu"
+    dynasty=1000053370 # Polum
+	religion="siberian_pagan"
+	culture="khanty"
+    father=1227683
+	937.1.1 = {
+		birth = yes
+	}
+	986.1.1 = {
+		death = yes
+	}
+}
+1227685 = {
+	name="Asýka"
+    dynasty=1000053370 # Polum
+	religion="siberian_pagan"
+	culture="khanty"
+    father=1227684
+	961.1.1 = {
+		birth = yes
+	}
+	1013.1.1 = {
+		death = yes
+	}
+}
+1227686 = {
+	name="Yuzmonapu"
+    dynasty=1000053370 # Polum
+	religion="siberian_pagan"
+	culture="khanty"
+    father=1227685
+	991.1.1 = {
+		birth = yes
+	}
+	1054.1.1 = {
+		death = yes
+	}
+}
+1227687 = {
+	name="Asýka"
+    dynasty=1000053370 # Polum
+	religion="siberian_pagan"
+	culture="khanty"
+    father=1227686
+	1033.1.1 = {
+		birth = yes
+	}
+	1091.1.1 = {
+		death = yes
+	}
+}
+
+
+
+
+
+
 Bardaki1 = {
 	name = "Rayda"
 	dynasty = 2001082	#Bardaki
@@ -1133,6 +2119,45 @@ Bardaki1 = {
 		death = yes
 	}
 }
+Bardaki2 = {
+	name = "Syrka"
+	dynasty = 2001082	#Bardaki
+	religion = siberian_pagan
+	culture = khanty
+	father = Bardaki1
+	931.1.1 = {
+		birth = yes
+	}
+	1008.1.1 = {
+		death = yes
+	}
+}
+Bardaki3 = {
+	name = "Syrka"
+	dynasty = 2001082	#Bardaki
+	religion = siberian_pagan
+	culture = khanty
+	father = Bardaki2
+	969.1.1 = {
+		birth = yes
+	}
+	1054.1.1 = {
+		death = yes
+	}
+}
+Bardaki4 = {
+	name = "Vokan"
+	dynasty = 2001082	#Bardaki
+	religion = siberian_pagan
+	culture = khanty
+	father = Bardaki3
+	999.1.1 = {
+		birth = yes
+	}
+	1057.1.2 = {
+		death = yes
+	}
+}
 261077 = {
 	name = "Velmyaka"
 	religion = finnish_pagan
@@ -1142,6 +2167,19 @@ Bardaki1 = {
 		birth = yes
 	}
 	959.1.1 = {
+		death = yes
+	}
+}
+997khanty1 = {
+	name = "Sanaan"
+	religion = finnish_pagan
+	culture = khanty
+	dynasty = 1062515
+	father = 261077
+	945.1.1 = {
+		birth = yes
+	}
+	1001.1.1 = {
 		death = yes
 	}
 }
@@ -1238,11 +2276,19 @@ Karagas2 = {
 		death = yes
 	}
 }
-
-
-
-
-
+Karagas3 = {
+	name = "Borbak_gU_ren"
+	dynasty = 2001140	#dynn_Karagas
+	religion = tengri_pagan
+	culture = uriankhai
+	father = Karagas2
+	988.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		death = yes
+	}
+}
 
 Tuva1 = {
 	name = "Ay_dash"
@@ -1257,9 +2303,124 @@ Tuva1 = {
 		death = yes
 	}
 }
+Tuva2 = {
+	name = "Kongar_ool"
+	dynasty = 2001141	#dynn_Tuva
+	religion = tengri_pagan
+	culture = uriankhai
+	father = Tuva1
+	930.1.11 = {
+		birth = yes
+	}
+	1010.1.1 = {
+		death = yes
+	}
+}
+Tuva3 = {
+	name = "Sary_ool"
+	dynasty = 2001141	#dynn_Tuva
+	religion = tengri_pagan
+	culture = uriankhai
+	father = Tuva2
+	984.1.11 = {
+		birth = yes
+	}
+	1045.1.1 = {
+		death = yes
+	}
+}
 #######################################
 # cuman
 #######################################
+1233085 = {
+	name="Terter" # fictional.
+    dynasty=698 #Terteroba
+	religion="tengri_pagan"
+	culture="cuman"
+	990.1.1={
+		birth = yes
+	}
+	1008.1.1={
+		add_spouse=1233086
+	}
+	1030.1.1={
+		death = yes
+	}
+}
+1233086 = {
+	name="Yildiz" # fictional
+	female=yes
+	religion="tengri_pagan"
+	culture="cuman"
+	981.1.1={
+		birth = yes
+	}
+	1035.1.1={
+		death = yes
+	}
+}
+1233087 = {
+	name="Sokal" # Led the Cuman vanguard against the Russians in 1061.
+    dynasty=698 #Terteroba # clan unknown
+	religion="tengri_pagan"
+	culture="cuman"
+    father=1233085
+    mother=1233086
+	1010.1.1={
+		birth = yes
+	}
+	1039.1.1={
+		add_spouse=1233088
+	}
+	1065.1.1={
+		death = yes
+	}
+}
+1233088 = {
+	name="Sirma" # fictional
+	female=yes
+	religion="tengri_pagan"
+	culture="cuman"
+	1020.1.1={
+		birth = yes
+	}
+	1070.1.1={
+		death = yes
+	}
+}
+1233089 = {
+	name="Togortac" # aka Tugorkhan
+    dynasty=698 #Terteroba # clan unknown
+	religion="tengri_pagan"
+	culture="cuman"
+    father=1233087 # link is fictional
+    mother=1233088
+    trait="wrathful"
+	trait="education_martial_3"
+	1040.1.1={
+		birth = yes
+	}
+	1060.1.1={
+		add_spouse=1233090
+	}
+	1096.7.19={
+	death = yes
+	}
+} 
+1233090 = {
+	name="Irge" # fictional
+	female=yes
+	religion="tengri_pagan"
+	culture="cuman"
+	1043.1.1={
+		birth = yes
+	}
+	1115.1.1={
+		death = yes
+	}
+}
+
+
 Cuman9362 = {
 	name = "Sokal"	# fictional
 	dynasty = 1042045
@@ -1276,8 +2437,150 @@ Cuman9362 = {
 #######################################
 # Turkish
 #######################################
+1231994 = {  
+	name="Inal" 
+	dynasty=1000100516 # Celbir
+	religion="tengri_pagan"
+	culture="turkish"
+	father=1231993
+	969.1.1={
+		birth = yes
+	}
+	1032.1.1={
+		death = yes
+	}
+}
+1231993 = { 
+	name="Celbir" 
+	dynasty=1000100516 # Celbir
+	religion="tengri_pagan"
+	culture="turkish"
+	937.1.1={
+		birth = yes
+	}
+	988.1.1={
+		death = yes
+	}
+}
+1231867 = { # fictional.
+	name="Qataghan" 
+	dynasty=1000100511 # Uzlar/Uzes
+	religion="tengri_pagan"
+	culture="turkish"
+    father=1231864
+    mother=1231865
+	917.1.1={
+		birth = yes
+	}
+	940.1.1={
+		add_spouse=1231868
+	}
+	960.1.1={
+		death = yes
+	}
+}
+1231868 = {  #fictional.
+	name="Sumru" 
+	religion="tengri_pagan"
+	culture="turkish"
+    female = yes
+	925.1.1={
+		birth = yes
+	}
+	980.1.1={
+		death = yes
+	}
+}
+1231869 = { # fictional.
+	name="Etrek" 
+	dynasty=1000100511 # Uzlar/Uzes
+	religion="tengri_pagan"
+	culture="turkish"
+    father=1231867
+       mother=1231868
+	941.1.1={
+		birth = yes
+	}
+	968.1.1={
+		add_spouse=1231870
+	}
+	1010.1.1={
+		death = yes
+	}
+}
+1231870 = {  #fictional.
+	name="Hatice" 
+	religion="tengri_pagan"
+	culture="turkish"
+        female = yes
+	949.1.1={
+		birth = yes
+	}
+	1000.1.1={
+		death = yes
+	}
+}
+1231871 = { # fictional.
+	name="Qataghan" 
+	dynasty=1000100511 # Uzlar/Uzes
+	religion="tengri_pagan"
+	culture="turkish"
+    father=1231869
+    mother=1231870
+	970.1.1={
+		birth = yes
+	}
+	998.1.1={
+		add_spouse=1231872
+	}
+	1035.1.1={
+		death = yes
+	}
+}
+1231872 = {  #fictional.
+	name="Canan" 
+	religion="tengri_pagan"
+	culture="turkish"
+    female = yes
+	982.1.1={
+		birth = yes
+	}
+	1030.1.1={
+		death = yes
+	}
+}
+1231873 = { # fictional.
+	name="Etrek" 
+	dynasty=1000100511 # Uzlar/Uzes
+	religion="tengri_pagan"
+	culture="turkish"
+    father=1231871
+    mother=1231872
+	999.1.1={
+		birth = yes
+	}
+	1020.1.1={
+		add_spouse=1231874
+	}
+	1060.1.1={
+		death = yes
+	}
+}
+1231874 = {  #fictional.
+	name="Emine" 
+	religion="tengri_pagan"
+	culture="turkish"
+    female = yes
+	1000.1.1={
+		birth = yes
+	}
+	1060.1.1={
+		death = yes
+	}
+}
+
 1231947 = { 
-	name="Teçül" 
+	name="Tecul" 
 	dynasty=1000100513 # Teküle
 	religion="tengri_pagan"
 	culture = turkish
@@ -1304,7 +2607,7 @@ Cuman9362 = {
 	}
 }
 1232023 = { # fictional.
-	name="Topçak" 
+	name="Topcak" 
 	dynasty=1000100517 # Topçak
 	religion="tengri_pagan"
 	culture = turkish
@@ -1315,7 +2618,112 @@ Cuman9362 = {
 		death = yes
 	}
 }
+1231949 = { 
+	name="Itemer" 
+	dynasty=1000100513 # Teküle
+	religion="tengri_pagan"
+	culture="turkish"
+    father=1231947
+    mother=1231948
+	957.1.1={
+		birth = yes
+	}
+	980.1.1={
+		add_spouse=1231950
+	}
+	1024.1.1={
+		death = yes
+	}
+}
+1231950 = { 
+	name="Gulay" 
+	religion="tengri_pagan"
+	culture="turkish"
+    female = yes
+	962.1.1={
+		birth = yes
+	}
+	1028.1.1={
+		death = yes
+	}
+}
+1231999 = { 
+	name="Tatran" 
+	dynasty=1000100515 # Tatran
+	religion="tengri_pagan"
+	culture="turkish"
+	938.1.1={
+		birth = yes
+	}
+	990.1.1={
+		death = yes
+	}
+}
+1232008 = {  
+	name="Kurboga"
+	dynasty=1000100515 # Tatran
+	religion="tengri_pagan"
+	culture="turkish"
+	father=1231999
+	969.1.1={
+		birth = yes
+	}
+	1023.1.1={
+		death = yes
+	}
+}
 
+
+1231996 = {  
+	name="Mogut"
+	dynasty=1000100514 # Mogut
+	religion="tengri_pagan"
+	culture="turkish"
+	938.1.1={
+		birth = yes
+	}
+	982.1.1={
+		death = yes
+	}
+}
+1231997 = { 
+	name="Hizir" 
+	dynasty=1000100514 # Mogut
+	religion="tengri_pagan"
+	culture="turkish"
+    father=1231996
+	970.1.1={
+		birth = yes
+	}
+	1026.1.1={
+		death = yes
+	}
+}
+1232010 = {  
+	name="Ül’ber"
+	dynasty=1000100519 # Ül’ber
+	religion="tengri_pagan"
+	culture="turkish"
+	915.1.1={
+		birth = yes
+	}
+	986.1.1={
+		death = yes
+	}
+}
+1232011 = { 
+	name="Hizir" 
+	dynasty=1000100519 # Ül’ber
+	religion="tengri_pagan"
+	culture="turkish"
+    father=1232010
+	968.1.1={
+		birth = yes
+	}
+	1020.1.1={
+		death = yes
+	}
+}
 
 #######################################
 # Han

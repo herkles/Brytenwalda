@@ -419,11 +419,18 @@ SEAsiaMMBB280 =  {
 	860.1.1	 = { birth = yes	}	930.1.1	 = { death = yes	}
 	father = SEAsiaMMBB279		
 }
+
+
+
+
+
+
 SEAsiaMMBB300 =  {
 	name = UksA_hkkA_
 	religion = finnish_pagan
 	culture =	sami		
-	740.1.1	 = { birth = yes	}	820.1.1	 = { death = yes	}	
+	740.1.1	 = { birth = yes	}
+	820.1.1	 = { death = yes	}	
 }						
 SEAsiaMMBB301 =  {
 	name = Orddot
@@ -465,6 +472,42 @@ SEAsiaMMBB305 =  {
 	955.1.1	 = { death = yes	}
 	father = SEAsiaMMBB304
 }
+SEAsiaMMBB306 =  {
+	name = A_mmot
+	religion = finnish_pagan
+	culture = sami
+	905.1.1	 = { birth = yes }
+	980.1.1	 = { death = yes }
+	father = SEAsiaMMBB305
+}
+SEAsiaMMBB307 =  {	
+	name = Mohkku
+	religion = finnish_pagan
+	culture = sami
+	930.1.1	 = { birth = yes }
+	1005.1.1 = { death = yes }
+	father = SEAsiaMMBB306		
+}	
+SEAsiaMMBB308 =  {
+	name = UksA_hkkA_	
+	religion = finnish_pagan
+	culture	= sami
+	960.1.1	= {	birth = yes	}
+	1040.1.1 = {	death = yes	}
+	father = SEAsiaMMBB307		
+}	
+SEAsiaMMBB309 =  {
+	name = Orddot
+	religion = finnish_pagan
+	culture	= sami
+	990.1.1	= {	birth = yes }
+	1070.1.1 = { death = yes }
+	father = SEAsiaMMBB308		
+}	
+
+
+
+
 SEAsiaMMBB281 =  {
 	name = Aimo
 	religion = finnish_pagan
@@ -473,17 +516,52 @@ SEAsiaMMBB281 =  {
 	955.1.1	= { death = yes	}
 	father	= SEAsiaMMBB280
 }
-186001M	 = {
+SEAsiaMMBB282 = {
+	name = A_mmot
+	religion = finnish_pagan
+	culture = sami
+	905.1.1	 = { birth = yes	}
+	980.1.1	 = { death = yes	}
+	father = SEAsiaMMBB281		
+}
+SEAsiaMMBB283 = {
+	name = Mohkku
+	religion = finnish_pagan
+	culture = sami
+	930.1.1	 = {	birth = yes	}
+	1005.1.1 = {	death = yes	}
+	father = SEAsiaMMBB282		
+}	
+SEAsiaMMBB284 =  {
 	name = UksA_hkkA_	
-	religion = finnish_pagan	
-	dynasty = 837		
+	religion = finnish_pagan		
 	culture = sami		
-	820.1.1	 = { birth = yes }	
-	860.1.1	 = { death = yes }		
+	960.1.1	 = { birth = yes }	
+	1040.1.1 = { death = yes }		
+	father = SEAsiaMMBB283		
+}	
+SEAsiaMMBB285 =  {
+	name = Mohkku		
+	religion = finnish_pagan
+	culture = sami		
+	990.1.1	 = { birth = yes }	
+	1070.1.1 = { death = yes }		
+	father = SEAsiaMMBB284		
+}	
+
+
+
+186001M	 = {
+	name = UksA_hkkA_
+	religion = finnish_pagan
+	dynasty = 837
+	culture = sami
+	820.1.1	 = { birth = yes }
+	860.1.1	 = { death = yes }
 	father = 186001		
 }
 186001M2 = {
-	name = Njuolla		
+	name = Njuolla
 	religion = finnish_pagan	
 	dynasty = 837		
 	culture = sami		
@@ -492,8 +570,8 @@ SEAsiaMMBB281 =  {
 	father = 186001M		
 }
 186001M3 = {
-	name = Mohkku		
-	religion = finnish_pagan	
+	name = Mohkku
+	religion = finnish_pagan
 	dynasty = 837		
 	culture = sami		
 	860.1.1	 = { birth = yes }	
@@ -501,13 +579,49 @@ SEAsiaMMBB281 =  {
 	father = 186001M2	
 }
 186001M4 = {
-	name = Njuolla		
+	name = Njuolla
+	religion = finnish_pagan	
+	dynasty = 837
+	culture = sami		
+	885.1.1	 = { birth = yes }	
+	955.1.1	 = { death = yes }
+	father = 186001M3	
+}
+186001M5 = {
+	name = Viggu
+	religion = finnish_pagan
+	dynasty = 837
+	culture = sami
+	905.1.1	 = { birth = yes }
+	980.1.1	 = { death = yes }
+	father = 186001M4	
+}
+186001M6 = {
+	name = Aimo
+	religion = finnish_pagan
+	dynasty = 837
+	culture = sami
+	930.1.1	 = { birth = yes }
+	1005.1.1 = { death = yes }
+	father = 186001M5	
+}
+186001M7 = {
+	name = Orddot		
 	religion = finnish_pagan	
 	dynasty = 837		
 	culture = sami		
-	885.1.1	 = { birth = yes	}	
-	955.1.1	 = { death = yes	}	
-	father = 186001M3	
+	960.1.1	 = { birth = yes }	
+	1040.1.1 = { death = yes }		
+	father = 186001M6	
+}
+186001M8 = {	
+	name = Baeivi		
+	religion = finnish_pagan	
+	dynasty = 837		
+	culture = sami		
+	990.1.1	 = { birth = yes }	
+	1070.1.1 = { death = yes }		
+	father = 186001M7	
 }
 
 
@@ -1268,6 +1382,58 @@ SEAsiaMMBB281 =  {
 #######################################
 # mordvin
 #######################################
+1233640 = {
+	name="Megurka"
+    dynasty=1000053376 # Erzyat
+	religion="finnish_pagan"
+	culture="mordvin"
+    father=1233639
+	1035.1.1 = {
+		birth = yes
+	}
+	1101.1.1 = {
+		death = yes
+	}
+}
+1233639 = {
+	name="Kunava"
+    dynasty=1000053376 # Erzyat
+	religion="finnish_pagan"
+	culture="mordvin"
+    father=1233638
+	1000.1.1 = {
+		birth = yes
+	}
+	1054.1.1 = {
+		death = yes
+	}
+}
+1233638 = {
+	name="Megurka"
+    dynasty=1000053376 # Erzyat
+	religion="finnish_pagan"
+	culture="mordvin"
+    father=1233637
+	963.1.1 = {
+		birth = yes
+	}
+	1019.1.1 = {
+		death = yes
+	}
+}
+1233637 = {
+	name="Kunava"
+    dynasty=1000053376 # Erzyat
+	religion="finnish_pagan"
+	culture="mordvin"
+        father=1233636
+	924.1.1 = {
+		birth = yes
+	}
+	986.1.1 = {
+		death = yes
+	}
+}
 1233697 = {
 	name="Varmanpaz"
     dynasty=1000053379 # Mok�a
@@ -1306,6 +1472,46 @@ SEAsiaMMBB281 =  {
 		death = yes
 	}
 }
+1233700 = {
+	name="Tul"
+    dynasty=1000053379 # Mokša
+	religion="finnish_pagan"
+	culture="mordvin"
+    father=1233699
+	950.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		death = yes
+	}
+}
+1233701 = {
+	name="Varmanpaz"
+    dynasty=1000053379 # Mokša
+	religion="finnish_pagan"
+	culture="mordvin"
+    father=1233700
+	985.1.1 = {
+		birth = yes
+	}
+	1035.1.1 = {
+		death = yes
+	}
+}
+1233702 = {
+	name="Tul"
+    dynasty=1000053379 # Mokša
+	religion="finnish_pagan"
+	culture="mordvin"
+    father=1233701
+	1020.1.1 = {
+		birth = yes
+	}
+	1080.1.1 = {
+		death = yes
+	}
+}
+
 936_mordvinian_001 = {
 	name="Varmanpaz"
 	religion="finnish_pagan"
@@ -1338,7 +1544,71 @@ SEAsiaMMBB281 =  {
 #######################################
 # komi
 #######################################
-
+1233728 = {
+	name="Hirvi"
+    dynasty=1000100691 # Perym
+	religion="siberian_pagan"
+	culture="komi"
+    father=1233727
+	1022.1.1 = {
+		birth = yes
+	}
+	1081.1.1 = {
+		death = yes
+	}
+}
+1233727 = {
+	name="Artukka"
+    dynasty=1000100691 # Perym
+	religion="siberian_pagan"
+	culture="komi"
+    father=1233726
+	986.1.1 = {
+		birth = yes
+	}
+	1041.1.1 = {
+		death = yes
+	}
+}
+1233726 = {
+	name="Hirvi"
+    dynasty=1000100691 # Perym
+	religion="siberian_pagan"
+	culture="komi"
+    father=1233725
+	948.1.1 = {
+		birth = yes
+	}
+	1004.1.1 = {
+		death = yes
+	}
+}
+1233725 = {
+	name="Artukka"
+    dynasty=1000100691 # Perym
+	religion="siberian_pagan"
+	culture="komi"
+    father=1233724
+	922.1.1 = {
+		birth = yes
+	}
+	966.1.1 = {
+		death = yes
+	}
+}
+302320 = {
+	name = "Kya"
+	dynasty = 2001061	#Palniks
+	religion = siberian_pagan
+	culture = komi
+	father = 302319M3
+	1050.1.1 = {
+		birth = yes
+	}
+	1115.1.1 = {
+		death = yes
+	}
+}
 302319M = {
 	name = "Varmanpaz"
 	dynasty = 2001061	#Palniks
@@ -1419,6 +1689,219 @@ SEAsiaMMBB281 =  {
 #######################################
 # Mari
 #######################################
+1227636 = {
+	name="Reko"
+    dynasty=1000053368 # Vütla
+	religion="finnish_pagan"
+	culture="merya"
+    father=1227635
+	995.1.1 = {
+		birth = yes
+	}
+	1060.1.1 = {
+		death = yes
+	}
+}
+1227635 = {
+	name="Uro"
+    dynasty=1000053368 # Vütla
+	religion="finnish_pagan"
+	culture="merya"
+    father=1227634
+	965.1.1 = {
+		birth = yes
+	}
+	1010.1.1 = {
+		death = yes
+	}
+}
+1227634 = {
+	name="Reko"
+    dynasty=1000053368 # Vütla
+	religion="finnish_pagan"
+	culture="merya"
+    father=1227633
+	925.1.1 = {
+		birth = yes
+	}
+	980.1.1 = {
+		death = yes
+	}
+}
+1233768 = {
+	name="Lávrrahaš"
+	dynasty=1029143 #Tšuudi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=160133
+	889.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = yes
+	}
+}
+1233769 = {
+	name="Kettu"
+	dynasty=1029143 #Tšuudi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233768
+	917.1.1 = {
+		birth = yes
+	}
+	979.1.1 = {
+		death = yes
+	}
+}
+1233770 = {
+	name="Lávrrahaš"
+	dynasty=1029143 #Tšuudi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233769
+	953.1.1 = {
+		birth = yes
+	}
+	1014.1.1 = {
+		death = yes
+	}
+}
+1233771 = {
+	name="Kettu"
+	dynasty=1029143 #Tšuudi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233770
+	992.1.1 = {
+		birth = yes
+	}
+	1056.1.1 = {
+		death = yes
+	}
+}
+
+1233772 = {
+	name="Lávrrahaš"
+	dynasty=1029143 #Tšuudi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233771
+	1043.1.1 = {
+		birth = yes
+	}
+	1105.1.1 = {
+		death = yes
+	}
+}
+1233651 = {
+	name="Tietävä"
+    dynasty=1000053374 # Yum
+	religion="finnish_pagan"
+	culture="mari"
+    father=1233650
+	921.1.1 = {
+		birth = yes
+	}
+	981.1.1 = {
+		death = yes
+	}
+}
+1233652 = {
+	name="Kupias"
+    dynasty=1000053374 # Yum
+	religion="finnish_pagan"
+	culture="mari"
+    father=1233651
+	960.1.1 = {
+		birth = yes
+	}
+	1017.1.1 = {
+		death = yes
+	}
+}
+1233653 = {
+	name="Tietävä"
+    dynasty=1000053374 # Yum
+	religion="finnish_pagan"
+	culture="mari"
+    father=1233652
+	999.1.1 = {
+		birth = yes
+	}
+	1048.1.1 = {
+		death = yes
+	}
+}
+1233654 = {
+	name="Kupias"
+    dynasty=1000053374 # Yum
+	religion="finnish_pagan"
+	culture="mari"
+    father=1233653
+	1030.1.1 = {
+		birth = yes
+	}
+	1092.1.1 = {
+		death = yes
+	}
+}
+
+
+1233716 = {
+	name="Sotijalo"
+    dynasty=1000100690 # Nörö
+	religion="finnish_pagan"
+	culture="mari"
+    father=1233715
+	921.1.1 = {
+		birth = yes
+	}
+	981.1.1 = {
+		death = yes
+	}
+}
+1233717 = {
+	name="Paaso"
+    dynasty=1000100690 # Nörö
+	religion="finnish_pagan"
+	culture="mari"
+    father=1233716
+	960.1.1 = {
+		birth = yes
+	}
+	1017.1.1 = {
+		death = yes
+	}
+}
+1233718 = {
+	name="Sotijalo"
+    dynasty=1000100690 # Nörö
+	religion="finnish_pagan"
+	culture="mari"
+    father=1233717
+	999.1.1 = {
+		birth = yes
+	}
+	1048.1.1 = {
+		death = yes
+	}
+}
+1233719 = {
+	name="Paaso"
+    dynasty=1000100690 # Nörö
+	religion="finnish_pagan"
+	culture="mari"
+    father=1233718
+	1030.1.1 = {
+		birth = yes
+	}
+	1092.1.1 = {
+		death = yes
+	}
+}
+
+
 1233714 = {
 	name="Sotijalo"
     dynasty=1000100690 # Nörö
@@ -1445,7 +1928,7 @@ SEAsiaMMBB281 =  {
 	}
 }
 1233713 = {
-	name="Tietävä"
+	name="Tietava"
     dynasty=1000053374 # Yum
 	religion="finnish_pagan"
 	culture="mari"
@@ -1472,8 +1955,127 @@ SEAsiaMMBB281 =  {
 #######################################
 # vepsian
 #######################################
+
+
+1233762 = {
+	name="Ukko"
+	dynasty=1029143 #Tšuudi
+	religion="finnish_pagan"
+	culture="vepsian"
+        father=1233761
+	1013.1.1 = {
+		birth = yes
+	}
+	1074.1.1 = {
+		death = yes
+	}
+}
+1233761 = {
+	name="Miemo"
+	dynasty=1029143 #Tšuudi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233760
+	970.1.1 = {
+		birth = yes
+	}
+	1035.1.1 = {
+		death = yes
+	}
+}
+1233760 = {
+	name="Ukko"
+	dynasty=1029143 #Tšuudi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233759
+	925.1.1 = {
+		birth = yes
+	}
+	1000.1.1 = {
+		death = yes
+	}
+}
+1233739 = {
+	name="Terätautia"
+    dynasty=1000100692 #Lyydi
+	religion="finnish_pagan"
+	culture="vepsian"
+	850.1.1 = {
+		birth = yes
+	}
+	897.1.1 = {
+		death = yes
+	}
+}
+1233740 = {
+	name="Koveri"
+    dynasty=1000100692 #Lyydi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233739
+	881.1.1 = {
+		birth = yes
+	}
+	941.1.1 = {
+		death = yes
+	}
+}
+1233741 = {
+	name="Terätautia"
+    dynasty=1000100692 #Lyydi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233740
+	924.1.1 = {
+		birth = yes
+	}
+	969.1.1 = {
+		death = yes
+	}
+}
+1233742 = {
+	name="Koveri"
+    dynasty=1000100692 #Lyydi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233741
+	952.1.1 = {
+		birth = yes
+	}
+	1011.1.1 = {
+		death = yes
+	}
+}
+1233743 = {
+	name="Terätautia"
+    dynasty=1000100692 #Lyydi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233742
+	986.1.1 = {
+		birth = yes
+	}
+	1041.1.1 = {
+		death = yes
+	}
+}
+1233744 = {
+	name="Koveri"
+    dynasty=1000100692 #Lyydi
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233743
+	1022.1.1 = {
+		birth = yes
+	}
+	1082.1.1 = {
+		death = yes
+	}
+}
+
 1233800 = {
-	name="Algebæivi"
+	name="Algebe_ivi"
     dynasty=1000100695 # Toimit
 	religion="finnish_pagan"
 	culture="vepsian"
@@ -1485,7 +2087,7 @@ SEAsiaMMBB281 =  {
 	}
 }
 1233801 = {
-	name="Bijáš"
+	name="Bijas"
     dynasty=1000100695 # Toimit
 	religion="finnish_pagan"
 	culture="vepsian"
@@ -1498,7 +2100,7 @@ SEAsiaMMBB281 =  {
 	}
 }
 1233802 = {
-	name="Algebæivi"
+	name="Algebe_ivi"
     dynasty=1000100695 # Toimit
 	religion="finnish_pagan"
 	culture="vepsian"
@@ -1510,9 +2112,53 @@ SEAsiaMMBB281 =  {
 		death = yes
 	}
 }
+1233803 = {
+	name="Bijáš"
+    dynasty=1000100695 # Toimit
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233802
+	955.1.1 = {
+		birth = yes
+	}
+	1013.1.1 = {
+		death = yes
+	}
+}
+1233804 = {
+	name="Algebæivi"
+    dynasty=1000100695 # Toimit
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233803
+	992.1.1 = {
+		birth = yes
+	}
+	1051.1.1 = {
+		death = yes
+	}
+}
+1233805 = {
+	name="Bijáš"
+    dynasty=1000100695 # Toimit
+	religion="finnish_pagan"
+	culture="vepsian"
+    father=1233804
+	1033.1.1 = {
+		birth = yes
+	}
+	1098.1.1 = {
+		death = yes
+	}
+}
+
+
+
+
+
 
 1233739 = {
-	name="Terätautia"
+	name="Teratautia"
         dynasty=1000100692 #Lyydi
 	religion="finnish_pagan"
 	culture="vepsian"
@@ -1537,7 +2183,7 @@ SEAsiaMMBB281 =  {
 	}
 }
 1233768 = {
-	name="Lávrrahaš"
+	name="Lavrrahas"
 	dynasty=1029143 #Tšuudi
 	religion="finnish_pagan"
 	culture="vepsian"
@@ -1593,6 +2239,229 @@ SEAsiaMMBB281 =  {
 #######################################
 # samoyed
 #######################################
+302863 = {
+	name = Seitek
+	dynasty = 2001120	#fictional Karakar
+	religion = kuptyng
+	culture = samoyed
+	835.3.12 = {
+		birth = yes
+	}
+	892.7.11 = {
+		death = yes
+	}
+}
+302864 = {
+	name = Karacik
+	female = yes
+	religion = kuptyng
+	culture = samoyed
+	838.4.29 = {
+		birth = yes
+	}
+	901.11.3 = {
+		death = yes
+	}
+}
+302865 = {
+	name = Togli
+	dynasty = 2001120	#fictional Karakar
+	religion = kuptyng
+	culture = samoyed
+	father = 302863
+	mother = 302864
+	856.8.20 = {
+		birth = yes
+	}
+	915.1.15 = {
+		death = yes
+	}
+}
+936Samoyed1 = {
+	name = Seitek
+	dynasty = 2001120	#fictional Karakar
+	religion = kuptyng
+	culture = samoyed
+	father = 302865
+	889.8.20 = {
+		birth = yes
+	}
+	950.1.15 = {
+		death = yes
+	}
+}
+997Samoyed1 = {
+	name = Uzur
+	dynasty = 2001120	#fictional Karakar
+	religion = finnish_pagan
+	culture = samoyed
+	father = 936Samoyed1
+	938.8.20 = {
+		birth = yes
+	}
+	1002.1.15 = {
+		death = yes
+	}
+}
+1233778 = {
+	name="Attan" 
+	dynasty=1000100694 # Bjarmit
+	religion="finnish_pagan"
+	culture="samoyed"
+	trait="education_martial_3"
+    father=1233776
+    mother=1233777
+	909.1.1={
+		birth = yes
+	}
+	927.1.1={
+		add_spouse=1233779
+	}
+	968.1.1={
+		death = yes
+	}
+}
+1233780 = {
+	name="Juffe" 
+	dynasty=1000100694 # Bjarmit
+	religion="finnish_pagan"
+	culture="samoyed"
+	trait="education_martial_3"
+    father=1233778
+    mother=1233779
+	934.1.1={
+		birth = yes
+	}
+	961.1.1={
+		add_spouse=1233781
+	}
+	990.1.1={
+		death = yes
+	}
+}
+1233781 = {
+	name="Ibbá"
+	religion="finnish_pagan"
+	culture="samoyed"
+    female=yes
+	936.1.1={
+		birth = yes
+	}
+	1000.1.1={
+		death = yes
+	}
+}
+1233782 = {
+	name="Attan" 
+	dynasty=1000100694 # Bjarmit
+	religion="finnish_pagan"
+	culture="samoyed"
+	trait="education_martial_3"
+    father=1233780
+    mother=1233781
+	962.1.1={
+		birth = yes
+	}
+	990.1.1={
+		add_spouse=1233783
+	}
+	1018.1.1={
+		death = yes
+	}
+}
+1233784 = {
+	name="Ealjá" 
+	dynasty=1000100694 # Bjarmit
+	religion="finnish_pagan"
+	culture="bjarmian"
+	trait="education_martial_3"
+    father=1233782
+    mother=1233783
+	991.1.1={
+		birth = yes
+	}
+	1011.1.1={
+		add_spouse=1233785
+	}
+	1049.1.1={
+		death = yes
+	}
+}
+1233785 = {
+	name="Sáddja"
+	religion="tengri_pagan"
+	culture="bjarmian"
+    female=yes
+	993.1.1={
+		birth = yes
+	}
+	1057.1.1={
+		death = yes
+	}
+}
+1233786 = {
+	name="Attan" 
+	dynasty=1000100694 # Bjarmit
+	religion="finnish_pagan"
+	culture="bjarmian"
+	trait="education_martial_3"
+    father=1233784
+    mother=1233785
+	1012.1.1={
+		birth = yes
+	}
+	1043.1.1={
+		add_spouse=1233787
+	}
+	1060.1.1={
+		death = yes
+	}
+}
+1233787 = {
+	name="A_lgen"
+	religion="tengri_pagan"
+	culture="bjarmian"
+    female=yes
+	1019.1.1={
+		birth = yes
+	}
+	1067.1.1={
+		death = yes
+	}
+}
+1233788 = {
+	name="Juffe"
+	dynasty=1000100694 # Bjarmit
+	religion="finnish_pagan"
+	culture="bjarmian"
+	trait="education_martial_3"
+    father=1233786
+    mother=1233787
+	1047.1.1={
+		birth = yes
+	}
+	1067.1.1={
+		add_spouse=1233789
+	}
+	1094.1.1={
+		death = yes
+	}
+}
+1233789 = {
+	name="Sikká"
+	religion="finnish_pagan"
+	culture="bjarmian"
+    female=yes
+	1046.1.1={
+		birth = yes
+	}
+	1094.1.1={
+		death = yes
+	}
+}
+
+
+
 1233774 = {
 	name="Attan" 
 	dynasty=1000100694 # Bjarmit
@@ -1610,7 +2479,7 @@ SEAsiaMMBB281 =  {
 	}
 }
 1233775 = {
-	name="Isá"
+	name="Isa"
 	religion="finnish_pagan"
 	culture="samoyed"
         female=yes
@@ -1640,7 +2509,7 @@ SEAsiaMMBB281 =  {
 	}
 }
 1233777 = {
-	name="Oajá"
+	name="Oaja"
 	religion="finnish_pagan"
 	culture="samoyed"
         female=yes
@@ -1664,6 +2533,19 @@ SEAsiaMMBB281 =  {
 		birth = yes
 	}
 	960.3.19 = {
+		death = yes
+	}
+}
+80000019 = {
+	name = "Gzi"
+	dynasty = 2001077	#Laktanid
+	religion = tengri_pagan
+	culture = laktan
+	father = 80000020
+	950.5.16 = {
+		birth = yes
+	}
+	1025.3.19 = {
 		death = yes
 	}
 }
