@@ -69,6 +69,23 @@
 #######################################
 # Stenkiling Dynasty
 #######################################
+100510 = {
+	name = "Astrid"
+	female = yes
+	martial = 6
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = gaet
+	trait = education_diplomacy_2
+	1000.1.2 = {
+		birth = "1000.1.2"
+	}
+	1058.1.7 = {
+		death = "1058.1.7"
+	}
+}
 100522 = {
 	name = "Stenkil"
 	dynasty_house = house_stenkiling
@@ -886,6 +903,33 @@
 		death = "890.1.1"
 	}
 }
+194051 = {
+	name = "HO_gne"
+	dynasty = 821
+	religion = norse_pagan
+	culture = gaet
+	father = 194005
+	760.1.1 = {
+		birth = yes
+	}
+	835.1.1 = {
+		death = yes
+	}
+}
+194052 = {
+	name = "Hildur"
+	dynasty = 821
+	religion = norse_pagan
+	culture = gaet
+	father = 194051
+	802.1.1 = {
+		birth = yes
+	}
+	855.1.1 = {
+		death = yes
+	}
+}
+
 #######################################
 # House NAME
 #######################################

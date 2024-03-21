@@ -1570,8 +1570,6 @@ tradition_bryten_fjord_dwellers = {# Norwegian Fjord Dwellers
 
 	ai_will_do = { value = 100 }
 }
-
-
 #############################################
 # Occitan traditions			
 #############################################
@@ -2117,4 +2115,197 @@ tradition_frankish_learning = {# Frankish Renaissance
 		}
 	}
 }
+#############################################
+# West Slavic traditions			
+#############################################
 
+
+#############################################
+# East Slavic traditions		
+#############################################
+tradition_portage = {# River goods transfer in volga region
+    category = regional
+
+	layers = {
+		0 = steward
+		1 = mediterranean
+		4 = ship.dds
+	}
+	
+	is_shown = {
+		any_culture_county = {
+			title_province = {
+				geographical_region = dlc_fp1_achievement_vladimirs_second_choice
+			}
+		}
+	}
+	
+	can_pick = {
+		any_culture_county = {
+			percent >= 0.5
+			any_county_province = {
+				geographical_region = dlc_fp1_achievement_vladimirs_second_choice
+			}
+		}
+	}
+    
+    parameters = {
+		can_travel_along_rivers = yes
+		wanderers_gain_extra_economic_skills = yes
+		more_likely_to_leave_court = yes
+    }
+
+    character_modifier = {
+		sea_travel_danger = low_sea_danger_reduction
+		diplomatic_range_mult = 0.15
+		opinion_of_different_culture = 15
+    }    
+
+	county_modifier = {
+		tax_mult = 0.15
+		development_growth_factor = 0.1
+	}
+	
+	culture_modifier = {
+		cultural_acceptance_gain_mult = 0.2
+	}
+
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_bureaucratic = { is_in_list = traits }
+						culture_pillar:ethos_courtly = { is_in_list = traits }
+						culture_pillar:ethos_egalitarian = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bureaucratic_courtly_or_egalitarian_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+
+    ai_will_do = { value = 100 }
+}
+tradition_pravda_russkaya = {# Old Russian Law
+    category = regional
+
+	layers = {
+		0 = diplo
+		1 = mediterranean
+		4 = quill.dds
+	}
+	
+	is_shown = {
+		AND = {
+			any_culture_county = {
+				title_province = {
+					geographical_region = dlc_fp1_achievement_vladimirs_second_choice
+				}
+			}
+			OR = {
+				this = culture:russian
+				any_parent_culture_or_above = {
+						this = culture:russian
+				}
+			}
+		}
+	}
+	
+    can_pick = {
+
+    }
+    
+    parameters = {
+		cheaper_to_change_laws = yes
+		just_trait_more_common = yes
+		just_trait_gives_bonuses = yes
+		vassals_more_likely_accept_punishments = yes
+		has_access_to_trials_by_combat = yes
+    }
+
+	culture_modifier = {
+		cultural_acceptance_gain_mult = 0.15
+	}
+	
+	character_modifier = {
+		title_creation_cost_mult = -0.25
+		vassal_limit = 20
+		tyranny_gain_mult = 0.25
+
+		ai_honor = 10
+		ai_rationality = 5
+	}
+
+	county_modifier = {
+		county_opinion_add = 10
+		monthly_county_control_growth_add = 0.3
+	}
+
+    cost = {
+        prestige = {
+            add = {
+                value = tradition_base_cost
+                desc = BASE
+                format = "BASE_VALUE_FORMAT"
+            }
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_communal = { is_in_list = traits }
+						culture_pillar:ethos_egalitarian = { is_in_list = traits }
+						culture_pillar:ethos_courtly = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_communal_egalitarian_or_courtly_desc
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_innovation = innovation_baliffs
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = lacks_baliffs_innovation_desc
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_innovation = innovation_development_02
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = lacks_development_02_innovation_desc
+				}
+			}
+            
+            multiply = tradition_replacement_cost_if_relevant
+        }
+    }
+
+    ai_will_do = { value = 100 }
+}
+#############################################
+# South Slavic traditions			
+#############################################
+
+
+#############################################
+# Hungarian traditions			
+#############################################

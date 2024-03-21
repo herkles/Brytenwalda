@@ -127,7 +127,6 @@ slovien = {# Slovien
 	language = language_slavonic
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_hussar
 		tradition_pastoralists
 		tradition_esteemed_hospitality
 		tradition_forest_fighters
@@ -157,6 +156,7 @@ carantanian = {# Carantanian
 	traditions = {
 		tradition_mountaineer_ruralism
 		tradition_martial_admiration
+		tradition_astute_diplomats
 	}
 	name_list = name_list_carantanian
 	
@@ -175,34 +175,7 @@ carantanian = {# Carantanian
 #############################################
 # New Cultures			
 #############################################
-sorbian = {# Sorbian
-	color = { 204 119 34 }
-
-	
-	ethos = ethos_stoic
-	heritage = heritage_west_slavic
-	language = language_lechitic
-	martial_custom = martial_custom_male_only
-	traditions = {
-		tradition_staunch_traditionalists
-		tradition_hussar
-		tradition_stalwart_defenders
-	}
-	
-	name_list = name_list_polabian
-	
-	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
-	building_gfx = { western_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { eastern_unit_gfx }
-
-	ethnicities = {
-		45 = slavic_blond
-		5 = slavic_ginger
-		35 = slavic_brown_hair
-		15 = slavic_dark_hair
-	}	
-}
+# Polish Cultures			
 vistulan = {# Vistulan
 	color = { 144 47 55 }
 	
@@ -284,6 +257,7 @@ silesian = {# Silesian
 		15 = slavic_dark_hair
 	}
 }
+# Czech/Slovak Cultures			
 moravian = {# Moravian
 	color = { 152 133 88 }
 	ethos = ethos_bureaucratic
@@ -340,5 +314,30 @@ nitran = {# nitrans
 		15 = slavic_dark_hair
 	}
 }
+# Other West Slavic Cultures			
+sorbian = {# Sorbian
+	color = { 204 119 34 }
+	ethos = ethos_stoic
+	heritage = heritage_west_slavic
+	language = language_lechitic
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_xenophilic
+		tradition_hard_working
+		tradition_stalwart_defenders
+	}
+	
+	name_list = name_list_polabian
+	
+	coa_gfx = { polish_coa_gfx west_slavic_group_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
 
-
+	ethnicities = {
+		45 = slavic_blond
+		5 = slavic_ginger
+		35 = slavic_brown_hair
+		15 = slavic_dark_hair
+	}	
+}

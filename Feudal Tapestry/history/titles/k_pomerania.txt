@@ -84,7 +84,6 @@ c_stettin = {
 	###867 Pomeranian tribes
 	500.1.1 = {
 		liege = 0
-
 		government = tribal_government
 	}
 	867.1.1 = {
@@ -97,7 +96,6 @@ c_stettin = {
 	1066.1.1 = {
 		holder = 30522 #Siemomysl
 		liege = d_pommerania
-		government = feudal_government
 	}
 	1068.1.1 = {
 		holder = 30523 #Swantibor
@@ -146,7 +144,7 @@ c_kolobrzeg = {
 	###1066
 	1066.1.1 = {
 		holder = 30522 #Siemomysl
-	liege = d_pommerania
+		liege = d_pommerania
 	}
 	1068.1.1 = {
 		holder = 30523 #Swantibor
@@ -495,6 +493,9 @@ d_nordmark = {
 	966.1.1 = {
 		holder = 161119 #Mistivoj Nakonid
 	}
+	983.1.1 = {# Great Slav Uprising makes it indepedent
+		liege = 0
+	}
 	995.1.1 = {
 		holder = 161121  #Mscislaw Nakonid
 	}
@@ -579,10 +580,12 @@ c_mecklenburg = {
 		holder = 1410
 		liege = d_nordmark
 	}
+	985.8.25 = {
+		liege = d_ostmark
+	}
 	#1066
 	1043.1.1 = {
 		holder = 8410 #Gottschalk Nakonid
-	liege = d_nordmark
 	}
 	1066.6.7 = {
 		holder = 20584 #Kruto Wizlawid
@@ -691,12 +694,9 @@ c_wolgast = {
 		holder = 161118
 		liege = d_nordmark
 	}
-	###1043.1.1
-	1043.1.1 = {
-		liege = "d_nordmark"
-	government = feudal_government
-	}
-	
+	985.8.25 = {
+		liege = d_ostmark
+	}	
 	1043.1.1 = {
 		holder = 20584 #Kruto Wizlawid
 	}
@@ -752,12 +752,9 @@ c_rugen = {
 		liege = d_nordmark
 	}
 	###1043
-	1043.1.1 = {
-		liege = "d_nordmark"
-
-		government = feudal_government
-	}
-	
+	985.8.25 = {
+		liege = d_ostmark
+	}	
 	1043.1.1 = {
 		holder = 20584 #Kruto Wizlawid
 	}
@@ -828,6 +825,9 @@ c_rostock = {
 	936.1.1 = {
 		holder = 161118
 		liege = d_nordmark
+	}
+	985.8.25 = {
+		liege = d_ostmark
 	}
 	###1043
 	1043.1.1 = {
@@ -906,7 +906,6 @@ c_werle = {
 	}
 	#1035 Lutici become tributaries to the HRE
 	1035.1.24 = {
-		government = feudal_government
 		holder = 303440	#Kornel Lutici
 	}
 	1064.9.2 = {
@@ -1399,7 +1398,6 @@ d_ostmark = {
 	}
 	#1035 Lutici become tributaries to the HRE
 	1035.1.24 = {
-		government = feudal_government
 		holder = 303440	#Kornel Lutici
 	}
 	1064.9.2 = {
@@ -1500,7 +1498,6 @@ c_brandenburg = {
 	}
 	#1035 Lutici become tributaries to the HRE
 	1035.1.24 = {
-		government = feudal_government
 		holder = 303440	#Kornel Lutici
 	}
 	1064.9.2 = {
@@ -1588,7 +1585,6 @@ c_ruppin = {
 	}
 	#1035 Lutici become tributaries to the HRE
 	1035.1.24 = {
-		government = feudal_government
 		holder = 303440	#Kornel Lutici
 	}
 	1064.9.2 = {
@@ -1670,7 +1666,6 @@ c_berlin = {
 	}
 	#1035 Lutici become tributaries to the HRE
 	1035.1.24 = {
-		government = feudal_government
 		holder = 303440	#Kornel Lutici
 	}
 	1064.9.2 = {
@@ -1757,7 +1752,6 @@ c_havelberg = {
 	}
 	#1035 Lutici become tributaries to the HRE
 	1035.1.24 = {
-		government = feudal_government
 		holder = 303440	#Kornel Lutici
 	}
 	1064.9.2 = {
@@ -1824,9 +1818,7 @@ c_prenzlau = {
 	#1066
 	1066.1.1 = {
 		holder = 30522 #Siemomysl
-	liege = d_pommerania
-
-		government = feudal_government
+		liege = d_pommerania
 	}
 	1068.1.1 = {
 		holder = 30523 #Swantibor

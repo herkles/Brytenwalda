@@ -171,6 +171,26 @@
 		death = "995.1.9"
 	}
 }
+102501 = {
+	name = "Asta"
+	female = yes
+	dynasty = 476
+	martial = 6
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = norwegian
+	trait = lustful
+	trait = generous
+	trait = education_intrigue_2
+	970.1.2 = {
+		birth = "970.1.2"
+	}
+	1020.1.2 = {
+		death = "1020.1.2"
+	}
+}
 102527 = {
 	name = "Olafr" # den helige
 	dynasty = 499
@@ -1088,7 +1108,7 @@
 	}
 }
 #######################################
-# House NAME
+# House Hjort
 #######################################
 168649 = {
 	name = "RO_gnhildr"
@@ -1249,7 +1269,7 @@
 	}
 }
 #######################################
-# House NAME
+# Wives and Spouses without Dynasties
 #######################################
 6862 = {
 	name = "RO_gnhildr"
@@ -1263,8 +1283,12 @@
 		death = yes
 	}
 }
+
+
+
+
 #######################################
-# House NAME
+# House Tjøtta
 #######################################
 1290054 = {
 	name="Eyvind" #Eyvind Lambe, father of Njål Finnson and Øyvind Skaldespillir
@@ -1413,27 +1437,58 @@
 #######################################
 # House NAME
 #######################################
-102541 = {
-	name = "Astrid"
-	female = yes
-	dynasty = 459
-	martial = 4
-	diplomacy = 8
-	intrigue = 5
-	stewardship = 6
+102504 = {
+	name = "Finn"
+	dynasty = 475
+	martial = 8
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 4
 	religion = "catholic"
 	culture = norwegian
-	trait = chaste
-	trait = education_intrigue_2
-	928.1.2 = {
-		birth = "928.1.2"
+	trait = just
+	trait = humble
+	trait = education_learning_3
+	father = 102548
+	mother = 102549
+	999.1.2 = {
+		birth = "999.1.2"
 	}
-	980.1.2 = {
-		death = "980.1.2"
+	1020.1.2 = {
+		add_spouse = 102503
+	}
+	1062.1.1 = {
+		death = "1062.1.1"
+	}
+}
+102505 = {
+	name = "IngebjO_rg"
+	dna = 102505_queen_ingebjorg
+	# AKA: Ingebjorg
+	female = yes
+	dynasty = 475
+	martial = 6
+	diplomacy = 4
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = "norwegian"
+	trait = arrogant
+	trait = education_stewardship_3
+	father = 102504
+	mother = 102503
+	1027.1.2 = {
+		birth = "1027.1.2"
+		effect = {
+			add_character_flag = has_scripted_appearance
+		}	
+	}
+	1069.1.2 = {
+		death = "1069.1.2"
 	}
 }
 #######################################
-# House NAME
+# House av Freysey
 #######################################
 1290138 = {
 	name="Eyvind"
@@ -1448,7 +1503,7 @@
 	}
 }
 1290137 = {
-	name="Björn"
+	name="BjO_rn"
 	dynasty=444
 	religion="norse_pagan"
 	culture="norwegian"
@@ -1493,7 +1548,7 @@
 	}
 }
 #######################################
-# House NAME
+# House av Hundþorp
 #######################################
 1290107 = {
 	name="Gudbrand" # Dale-Gudbrand, Hersir of the Gudbrandvalley. Mentioned in both the Haakon-Jarl's Saga and Separate Saga of St. Olaf. Apparently married to Earl Haakon against Harald Greycloak and present at the Christianization of the Valley in 1021, where he must have been a very old man.
@@ -1509,10 +1564,10 @@
 	}
 }
 #######################################
-# House NAME
+# House av Sola
 #######################################
 1290076 = {
-	name="Horda-Kåre" # Horda-Kåre, powerful Chieftain in Hordaland during Harald beauty_good_1hair's reign
+	name="Horda_Ka_re" # Horda-Kåre, powerful Chieftain in Hordaland during Harald beauty_good_1hair's reign
 	dynasty=446
 	religion="norse_pagan"
 	culture="norwegian"
@@ -1549,8 +1604,6 @@
 		death=yes
 	}
 }
-
-
 1290077 = {
 	name="Olmod" # Olmod "The Old" Horda-Kåresson grandfather of Aslak Fitjaskalle
 	dynasty=446
@@ -1595,9 +1648,8 @@
 		death=yes
 	}
 }
-
 #######################################
-# House
+# av Bjarkøy
 #######################################
 1290042 = {
 	name="Thorir" # Tore of Bjarkøy, father of Tore Hund, Sigurd Toresson and Sigrid Toresdatter
@@ -1958,6 +2010,704 @@
 # House NAME
 #######################################
 
+
+
+
+102510 = {
+	name = "Hakon"
+	dynasty = 471
+	martial = 5
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 8
+	religion = "catholic"
+	culture = norwegian
+	trait = education_martial_3
+	937.1.2 = {
+		birth = "937.1.2"
+	}
+	995.1.11 = {
+		death = "995.1.11"
+	}
+}
+102512 = {
+	name = "Bergljot"
+	female = yes
+	dynasty = 471
+	martial = 8
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 8
+	religion = "catholic"
+	culture = norwegian
+	trait = wrathful
+	trait = cynical
+	trait = education_learning_2
+	father = 102510
+	mother = 102511
+	990.1.2 = {
+		birth = "990.1.2"
+	}
+	1050.1.13 = {
+		death = "1050.1.13"
+	}
+}
+102513 = {
+	name = "RO_gnhildr"
+	female = yes
+	dynasty = 471
+	martial = 4
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 5
+	religion = "catholic"
+	culture = norwegian
+	trait = education_intrigue_1
+	father = 102510
+	mother = 102511
+	983.1.2 = {
+		birth = "983.1.2"
+	}
+	1050.1.6 = {
+		death = "1050.1.6"
+	}
+}
+102514 = {
+	name = "Sveinn"
+	dynasty = 471
+	martial = 8
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 4
+	religion = "catholic"
+	culture = norwegian
+	trait = education_intrigue_1
+	father = 102510
+	mother = 102511
+	970.1.2 = {
+		birth = "970.1.2"
+	}
+	990.1.2 = {
+		add_spouse = 100505 # Holmfrid Eriksdotter
+	}
+	1015.1.2 = {
+		death = "1015.1.2"
+	}
+}
+102515 = {
+	name = "Sigrid"
+	female = yes
+	dynasty = 471
+	martial = 8
+	diplomacy = 4
+	intrigue = 8
+	stewardship = 5
+	religion = "catholic"
+	culture = norwegian
+	trait = arrogant
+	trait = brave
+	trait = education_diplomacy_2
+	father = 102514
+	mother = 100505
+	995.1.2 = {
+		birth = "995.1.2"
+	}
+	1052.1.10 = {
+		death = "1052.1.10"
+	}
+}
+102516 = {
+	name = "Gunnhildr"
+	female = yes
+	dynasty = 471
+	martial = 5
+	diplomacy = 8
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = norwegian
+	trait = education_intrigue_1
+	father = 102514
+	mother = 100505
+	1000.1.2 = {
+		birth = "1000.1.2"
+	}
+	1054.1.2 = {
+		death = "1054.1.2"
+	}
+}
+102517 = {
+	name = "Eirikr"
+	dynasty = 471
+	martial = 4
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 4
+	religion = "catholic"
+	culture = norwegian
+	trait = legitimized_bastard
+	trait = calm
+	trait = arrogant
+	trait = education_intrigue_2
+	father = 102510
+	mother = 102511
+	963.1.1 = {
+		birth = "963.1.1"
+	}
+	996.1.1 = {
+		add_spouse = 101508
+	}
+	1024.1.1 = {
+		death = "1024.1.1"
+	}
+}
+102518 = {
+	name = "Hakon"
+	dynasty = 471
+	martial = 5
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 8
+	religion = "catholic"
+	culture = norwegian
+	trait = craven
+	trait = education_learning_3
+	father = 102517
+	mother = 101508
+	997.1.1 = {
+		birth = "997.1.1"
+	}
+	1015.1.1 = {
+		add_spouse = 102520
+	}
+	1030.7.29 = {
+		death = "1030.7.29"
+	}
+}
+102519 = {
+	name = "Bodil"
+	female = yes
+	dynasty = 471
+	martial = 8
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = norwegian
+	trait = diligent
+	trait = education_learning_2
+	father = 102518
+	mother = 102520
+	1016.1.1 = {
+		birth = "1016.1.1"
+	}
+	1066.1.1 = {
+		death = "1066.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+102521 = {
+	name = "Skage"
+	dynasty = 100273
+	martial = 6
+	diplomacy = 6
+	intrigue = 8
+	stewardship = 5
+	religion = "catholic"
+	culture = norwegian
+	trait = education_intrigue_1
+	965.1.2 = {
+		birth = "965.1.2"
+	}
+	999.1.1 = {
+		add_spouse = 102513
+	}
+	1015.1.2 = {
+		death = "1015.1.2"
+	}
+}
+102522 = {
+	name = "Ivar"
+	dynasty = 100273
+	martial = 5
+	diplomacy = 4
+	intrigue = 6
+	stewardship = 8
+	religion = "catholic"
+	culture = norwegian
+	trait = calm
+	trait = education_learning_2
+	father = 102521
+	mother = 102513
+	1000.1.2 = {
+		birth = "1000.1.2"
+	}
+	1027.1.2 = {
+		death = "1027.1.2"
+	}
+}
+#######################################
+# House NAME
+#######################################
+102554 = {
+	name = "Einarr"
+	dynasty = 451
+	martial = 7
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 4
+	religion = "catholic"
+	culture = norwegian
+	trait = chaste
+	trait = arrogant
+	trait = cynical
+	trait = lifestyle_hunter
+	trait = education_martial_2
+	father = 183900 #Eindride av Gimse
+	980.1.1 = {
+		birth = "980.1.1"
+	}
+	997.1.2 = {
+		add_spouse = 102512
+	}
+	1050.1.1 = {
+		death = "1050.1.1"
+	}
+}
+102555 = {
+	name = "Alov"
+	female = yes
+	dynasty = 451
+	martial = 7
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 5
+	religion = "catholic"
+	culture = norwegian
+	trait = arbitrary
+	trait = education_diplomacy_2
+	father = 102554
+	mother = 102512
+	1007.1.1 = {
+		birth = "1007.1.1"
+	}
+	1029.1.27 = {
+		death = "1029.1.27"
+	}
+}
+
+183900 = {
+	name = "Eindride"
+	dynasty = 451
+	religion = "norse_pagan"
+	culture = norwegian
+	trait = education_stewardship_3
+	950.1.1 = {
+		birth = "950.1.1"
+	}
+	1000.1.1 = {
+		death = "1000.1.1"
+	}
+}
+183901 = {
+	name = "Eindride"
+	dynasty = 451
+	religion = "catholic"
+	culture = norwegian
+	trait = education_martial_2
+	father = 102554
+	mother = 102512
+	1006.1.2 = {
+		birth = "1006.1.1"
+	}
+	1050.1.2 = {
+		death = "1050.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+
+102560 = {
+	name = "Helgi"
+	dynasty = 447
+	martial = 6
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 8
+	religion = "catholic"
+	culture = norwegian
+	trait = honest
+	trait = brave
+	trait = education_intrigue_2
+	mother = 102559
+	993.1.2 = {
+		birth = "993.1.2"
+	}
+	1045.1.8 = {
+		death = "1045.1.8"
+	}
+}
+102561 = {
+	name = "T_ord"
+	dynasty = 447
+	martial = 5
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = norwegian
+	trait = calm
+	trait = greedy
+	trait = honest
+	trait = education_intrigue_1
+	mother = 102559
+	999.1.2 = {
+		birth = "999.1.2"
+	}
+	1054.1.14 = {
+		death = "1054.1.14"
+	}
+}
+102559 = {
+	name = "Rannveig"
+	female = yes
+	dynasty = 447
+	martial = 7
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 6
+	religion = "catholic"
+	culture = norwegian
+	trait = honest
+	trait = calm
+	trait = clubfooted
+	trait = education_diplomacy_3
+	973.1.2 = {
+		birth = "973.1.2"
+	}
+	1027.1.2 = {
+		death = "1027.1.2"
+	}
+}
+#######################################
+# House NAME
+#######################################
+102541 = {
+	name = "Astrid"
+	female = yes
+	dynasty = 459
+	martial = 4
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = norwegian
+	trait = chaste
+	trait = education_intrigue_2
+	928.1.2 = {
+		birth = "928.1.2"
+	}
+	980.1.2 = {
+		death = "980.1.2"
+	}
+}
+#######################################
+# House NAME
+#######################################
+102565 = {
+	name = "Erling"
+	dynasty = 446
+	martial = 5
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 5
+	religion = "catholic"
+	culture = norwegian
+	trait = education_learning_3
+	965.1.2 = {
+		birth = "965.1.2"
+	}
+	976.1.2 = {
+		add_spouse = 102544
+	}
+	1028.1.22 = {
+		death = "1028.1.22"
+	}
+}
+102566 = {
+	name = "RO_gnhildr"
+	female = yes
+	dynasty = 446
+	martial = 8
+	diplomacy = 8
+	intrigue = 4
+	stewardship = 8
+	religion = "catholic"
+	culture = norwegian
+	trait = arbitrary
+	trait = education_stewardship_3
+	father = 102565
+	mother = 102544
+	990.1.2 = {
+		birth = "990.1.2"
+	}
+	1040.1.2 = {
+		death = "1040.1.2"
+	}
+}
+102567 = {
+	name = "Aslak"
+	dynasty = 446
+	martial = 7
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = norwegian
+	trait = honest
+	trait = education_diplomacy_2
+	father = 102565
+	mother = 102544
+	992.1.2 = {
+		birth = "992.1.2"
+	}
+	1011.1.2 = {
+		add_spouse = 102515
+	}
+	1034.1.1 = {
+		death = "1034.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+161306 = {
+	name = "Hallad"
+	religion = "norse_pagan"
+	culture = norwegian
+	trait = bastard
+	father = 161302
+	870.1.1 = {
+		birth = "870.1.1"
+	}
+	910.1.1 = {
+		death = "910.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+186501 = {
+	name = "Einarr"
+	dynasty = 1043501
+	religion = "norse_pagan"
+	culture = "norwegian"
+	803.1.1 = {
+		birth = "803.1.1"
+	}
+	874.1.1 = {
+		death = "874.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+186502 = {
+	name = "T_orgil"
+	dynasty = 1043502
+	religion = "norse_pagan"
+	culture = "norwegian"
+	816.1.1 = {
+		birth = "816.1.1"
+	}
+	881.1.1 = {
+		death = "881.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+194008 = {
+	name = "Geir"
+	dynasty = 1045010
+	religion = "norse_pagan"
+	culture = norwegian
+	735.1.1 = {
+		birth = yes
+	}
+	810.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+194009 = {
+	name = "Alfr"
+	dynasty = 1045022
+	religion = norse_pagan
+	culture = norwegian
+	730.1.1 = {
+		birth = yes
+	}
+	749.1.1 = {
+		add_spouse = 194057
+		capital = c_vingulmork
+	}
+	790.1.1 = {
+		death = yes
+	}
+}
+194057 = {
+	name = "RO_gnfriT_"
+	female = yes
+	religion = norse_pagan
+	culture = norwegian
+	730.1.1 = {
+		birth = yes
+	}
+	780.1.1 = {
+		death = yes
+	}
+}
+194056 = {
+	name = "Alfhildr"
+	female = yes
+	dynasty = 1045022
+	religion = norse_pagan
+	culture = norwegian
+	father = 194009
+	mother = 194057
+	760.1.1 = {
+		birth = yes
+	}
+	810.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+194012 = {
+	name = "Hrafn"
+	dynasty = 1045011
+	religion = norse_pagan
+	culture = norwegian
+	744.1.1 = {
+		birth = yes
+	}
+	788.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+194013 = {
+	name = "Grimr"
+	dynasty = 1045012
+	religion = norse_pagan
+	culture = norwegian
+	733.1.1 = {
+		birth = yes
+	}
+	790.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+194016 = {
+	name = "O_rvar"
+	dynasty = 1045013
+	religion = norse_pagan
+	culture = norwegian
+	733.1.1 = {
+		birth = yes
+	}
+	791.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+194018 = {
+	name = "Ormr"
+	dynasty = 1045015
+	religion = norse_pagan
+	culture = norwegian
+	740.1.1 = {
+		birth = yes
+	}
+	795.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+194021 = {
+	name = "Steinn"
+	dynasty = 1045017
+	religion = norse_pagan
+	culture = norwegian
+	740.1.1 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+194023 = {
+	name = "Tjudmund"
+	dynasty = 1175
+	religion = norse_pagan
+	culture = norwegian
+	739.1.1 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+194044 = {
+	name = "Eirikr"
+	dynasty = 1045008
+	religion = norse_pagan
+	culture = norwegian
+	745.1.1 = {
+		birth = yes
+	}
+	820.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House NAME
+#######################################
+194045 = {
+	name = "FroT_i"
+	dynasty = 1045009
+	religion = norse_pagan
+	culture = norwegian
+	742.1.1 = {
+		birth = yes
+	}
+	820.1.1 = {
+		death = yes
+	}
+}
 #######################################
 # House NAME
 #######################################
@@ -1993,6 +2743,116 @@
 #######################################
 # House NAME
 #######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+#######################################
+# House NAME
+#######################################
+
+
 
 #######################################
 # Other Characters
@@ -2109,7 +2969,7 @@
 	}
 }
 1290097 = {
-	name="Arinbjörn" # Arinbjörn Herse, Chieftain in Firdafylki
+	name="Arinbjo_rn" # Arinbjörn Herse, Chieftain in Firdafylki
 	dynasty=1000053623
 	religion="norse_pagan"
 	culture=norwegian
@@ -3162,12 +4022,50 @@
 		death = "1357.1.1"
 	}
 }
-
-
 #######################################
 # House Yingling
 #######################################
-
+101543 = {
+	name = "Vagn"
+	dynasty = 100304
+	martial = 8
+	diplomacy = 5
+	intrigue = 7
+	stewardship = 8
+	religion = "catholic"
+	culture = norwegian
+	trait = wrathful
+	trait = education_learning_3
+	985.1.2 = {
+		birth = "985.1.2"
+	}
+	1025.1.2 = {
+		add_spouse = 101544
+	}
+	1050.1.31 = {
+		death = "1050.1.31"
+	}
+}
+101544 = {
+	name = "IngibjO_rg"
+	# AKA: Ingebjorg
+	female = yes
+	dynasty = 479
+	martial = 7
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 7
+	religion = "catholic"
+	culture = norwegian
+	trait = just
+	trait = education_learning_3
+	1000.1.2 = {
+		birth = "1000.1.2"
+	}
+	1058.1.2 = {
+		death = "1058.1.2"
+	}
+}
 101545 = {
 	name = "Thorgunna"
 	female = yes
@@ -3275,8 +4173,6 @@
 		death = yes
 	}
 }
-
-
 102538 = {
 	name = "PAAl"
 	dynasty = 461
@@ -3353,6 +4249,27 @@
 		death = yes
 	}
 }
+
+102546 = {
+	name = "Eilif"
+	dynasty = 455
+	martial = 8
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 4
+	religion = "catholic"
+	culture = norwegian
+	trait = education_martial_2
+	991.1.2 = {
+		birth = "991.1.2"
+	}
+	1017.1.2 = {
+		add_spouse = 102513
+	}
+	1041.1.2 = {
+		death = "1041.1.2"
+	}
+}
 102547 = {
 	name = "Ormr"
 	dynasty = 455
@@ -3420,6 +4337,27 @@
 	}
 	1103.1.2 = {
 		death = yes
+	}
+}
+102556 = {
+	name = "T_ord"
+	dynasty = 448
+	martial = 5
+	diplomacy = 4
+	intrigue = 8
+	stewardship = 6
+	religion = "catholic"
+	culture = norwegian
+	trait = temperate
+	trait = education_stewardship_3
+	1000.1.2 = {
+		birth = "1000.1.1"
+	}
+	1020.1.2 = {
+		add_spouse = 102555
+	}
+	1030.1.2 = {
+		death = "1030.1.1"
 	}
 }
 102557 = {
@@ -3610,6 +4548,44 @@
 		death = yes
 	}
 }
+102572 = {
+	name = "Hafgrimr"
+	dynasty = 445
+	martial = 7
+	diplomacy = 6
+	intrigue = 8
+	stewardship = 4
+	religion = "catholic"
+	culture = norwegian
+	trait = ill
+	trait = education_martial_2
+	950.1.2 = {
+		birth = "950.1.2"
+	}
+	1010.1.2 = {
+		death = "1010.1.2"
+	}
+}
+102573 = {
+	name = "O_ssur"
+	# AKA: Ossur
+	dynasty = 445
+	martial = 7
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = norwegian
+	trait = diligent
+	trait = education_martial_3
+	father = 102572
+	985.1.2 = {
+		birth = "985.1.2"
+	}
+	1018.1.2 = {
+		death = "1018.1.2"
+	}
+}
 102574 = {
 	name = "Leivur"
 	dynasty = 445
@@ -3671,7 +4647,6 @@
 		death = yes
 	}
 }
-
 144248 = {
 	name = "Ogmund"
 	dynasty = 455
@@ -3920,7 +4895,6 @@
 		death = "1200.1.1"
 	}
 }
-
 202006 = {
 	name = "Kaare"
 	dynasty = 468
@@ -4275,7 +5249,6 @@
 		death = "1133.1.1"
 	}
 }
-
 202028 = {
 	name = "SE_mund"
 	# AKA: Saemund
@@ -6875,6 +7848,59 @@
 	}
 	1100.1.1 = {
 		death = "1100.1.1"
+	}
+}
+
+166046 = {
+	name = "DufT_akr"
+	dynasty_house = house_irakonungr
+	religion = "catholic"
+	culture = norwegian
+	father = 166034
+	937.1.1 = {
+		birth = "937.1.1"
+	}
+	970.1.1 = {
+		death = "970.1.1"
+	}
+}
+166047 = {
+	name = "Vilbaldr"
+	dynasty_house = house_irakonungr
+	religion = "catholic"
+	culture = norwegian
+	father = 166046
+	960.1.1 = {
+		birth = "960.1.1"
+	}
+	1018.1.1 = {
+		death = "1018.1.1"
+	}
+}
+166048 = {
+	name = "Askell" # "Hnokkan"
+	dynasty_house = house_irakonungr
+	religion = "catholic"
+	culture = norwegian
+	father = 166046
+	965.1.1 = {
+		birth = "965.1.1"
+	}
+	998.1.1 = {
+		death = "998.1.1"
+	}
+}
+166049 = {
+	name = "Bjollok"
+	dynasty_house = house_irakonungr
+	religion = "catholic"
+	culture = norwegian
+	father = 166047
+	992.1.1 = {
+		birth = "992.1.1"
+	}
+	1049.1.1 = {
+		death = "1049.1.1"
 	}
 }
 166050 = {

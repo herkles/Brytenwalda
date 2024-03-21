@@ -1,15 +1,117 @@
-﻿#######################################
+﻿
+
+#######################################
+#Legendary early Kiev rulers
+#######################################
+302185 = {			#Completely fictional, so Kyi can have proper brothers and sister
+	name = Kuar		#Name based on the possible original Armenian version of Kyi's legend, because why not
+	religion = slavic_pagan
+	culture = polyan
+	526.1.16 = {
+		birth = 526.1.16
+	}
+	549.1.16 = {
+		add_spouse = 302186
+	}
+	564.2.20 = {
+		death = 564.2.20
+	}
+}
+302186 = {
+	name = Dessenka	#Completely fictional, so Kyi can have proper brothers and sister
+	female = yes
+	religion = slavic_pagan
+	culture = polyan
+	530.4.9 = {
+		birth = 530.4.9
+	}
+	556.11.7 = {
+		death = 556.11.7
+	}
+}
+302187 = {
+	name = Kyi		#Legendary 1st ruler of Kiev
+	dynasty = 2001036	#Kyivy
+	religion = slavic_pagan
+	culture = polyan
+	father = 302185
+	mother = 302186
+	550.8.24 = {
+		birth = 550.8.24
+	}
+	632.11.15 = {
+		death = 632.11.15
+	}
+}
+302188 = {
+	name = Shchek	#Kyi's brother
+	dynasty = 2001036	#Kyivy
+	religion = slavic_pagan
+	culture = polyan
+	father = 302185
+	mother = 302186
+	551.7.16 = {
+		birth = 551.7.16
+	}
+	618.3.10 = {
+		death = 618.3.10
+	}
+}
+302189 = {
+	name = Khoryv	#Kyi's brother
+	dynasty = 2001036	#Kyivy
+	religion = slavic_pagan
+	culture = polyan
+	father = 302185
+	mother = 302186
+	554.1.22 = {
+		birth = 554.1.22
+	}
+	599.5.14 = {
+		death = 599.5.14
+	}
+}
+302190 = {
+	name = Lybid	#Kyi's sister
+	female = yes
+	dynasty = 2001036	#Kyivy
+	religion = slavic_pagan
+	culture = polyan
+	father = 302185
+	mother = 302186
+	556.11.7 = {
+		birth = 556.11.7
+	}
+	645.12.12 = {
+		death = 645.12.12
+	}
+}
+#######################################
 # House NAME
 #######################################
 
 #######################################
 # House NAME
 #######################################
-
-#######################################
-# House NAME
-#######################################
-
+20451 = {
+	name = "Simeon"
+	dynasty = 100580
+	martial = 7
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 8
+	religion = "orthodox"
+	culture = "polyan"
+	trait = greedy
+	trait = clubfooted
+	trait = education_intrigue_2
+	1039.1.1 = {
+		birth = "1039.1.1"
+	}
+	1089.1.1 = {
+		death = "1089.1.1"
+	}
+}
 #######################################
 # House NAME
 #######################################

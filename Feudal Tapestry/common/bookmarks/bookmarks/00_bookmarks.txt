@@ -90,7 +90,7 @@ bm_867_persia = {
 		}
 	}
 
-	# Abu'l-Abbas Muhammad ibn Abdallah ibn Tahir ) ID: 1000230509
+	# Abu_l_Abbas Muhammad ibn Abdallah ibn Tahir ) ID: 1000230509
 	character = {
 		name = "bookmark_persia_muhammad_ibn_abdallah"
 		dynasty = 811
@@ -645,36 +645,6 @@ bm_867_adventurers = {
 	is_playable = yes
 	recommended = yes
 	group = bm_group_867
-
-	# Jarl Haesteinn (Nantes/Montaigu, Brittany) ID: 6878
-	character = {
-		name = "bookmark_adventurers_jarl_haesteinn"
-		dynasty = 1059
-		dynasty_splendor_level = 1
-		type = male
-		birth = 815.1.1
-		title = c_montaigu
-		government = feudal_government
-		culture = norse
-		religion = norse_pagan
-		difficulty = "BOOKMARK_CHARACTER_DIFFICULTY_EASY"
-		history_id = 6878
-		position = { 320 400 }
-		
-		animation = personality_rational
-
-		# Ragnarr, son and heir, ID: 6880
-		character = {
-			name = "bookmark_adventurers_jarl_haesteinn_alt_ragnarr"
-			relation = "BOOKMARK_RELATION_SON"
-			dynasty = 1059
-			type = male
-			birth = 860.1.1
-			culture = norse
-			religion = norse_pagan
-			history_id = 6880
-		}
-	}
 
 	# Rurik Rurikid (Duke of Novgorod, Russia) ID: 40605
 	character = {

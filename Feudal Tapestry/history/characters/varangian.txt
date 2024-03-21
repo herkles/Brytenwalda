@@ -3,6 +3,55 @@
 #######################################
 # Rurikids
 #######################################
+40697 = {
+	name = "Umila" #Fictional mother of Rurik
+	female = yes
+   	dynasty = norse_roden #Fictional dynasty for Rurik's family, to have them in a single dynasty, but keep Rurik as the founder of the Rurikid dynasty.
+	religion = "norse_pagan"
+   	culture = swedish
+   	803.1.1 = {
+	   birth = yes
+   	}
+   	855.1.1 = {
+	   death = yes
+   	}
+}
+302221 = { #Brother of Rurik Rurikd
+   name = "SignjO_tr"	#Sineus
+   dynasty = norse_roden
+   religion = norse_pagan
+   culture = varangian
+   trait = deceitful
+   trait = gregarious
+   trait = ambitious
+   mother = 40697
+   833.1.1 = {
+	   birth = yes
+	   effect = { give_nickname = nick_blue_snake }
+   }
+   862.1.2 = {
+	   death = yes
+   }
+}
+302222 = { #Brother of Rurik Rurikd
+   name = "T_O_rvar"		#Truvor
+   dynasty = norse_roden
+   religion = norse_pagan
+   trait = just
+   trait = compassionate
+   trait = ambitious
+   mother = 40697
+   culture = varangian
+   834.1.1 = {
+	   birth = yes
+	   effect = {
+		   give_nickname = nick_the_loyal
+	   }
+   }
+   862.1.2 = {
+	   death = yes
+   }
+}
 40605 = {
 	name = "Rurik" # Rurik, legendary founder of Rus. Probably known as Hrörekr by his Norse contemporaries.
 	dna = 40605_rurik_rurikid
@@ -158,6 +207,87 @@
 		death = "882.1.1"
 	}
 }
+602 = {
+	name = "Sviatoslav"	#Svyatoslav, son of Igor & St Olga
+	dynasty = 705
+	religion = "norse_pagan"
+	culture = "varangian"
+	trait = education_martial_2
+	father = 600
+	mother = 601
+	942.1.2 = {
+		birth = "942.1.2"
+	}
+	957.1.2 = {
+		add_spouse = 599
+	}
+	972.1.2 = {
+		death = "972.1.2"
+	}
+}
+604 = {
+	name = "Yaropolk"	#Yaropolk I
+	dynasty = 705
+	religion = "norse_pagan"
+	culture = "varangian"
+	father = 602
+	mother = 599
+	958.1.2 = {
+		birth = "958.1.2"
+	}
+	978.1.2 = {
+		death = "978.1.2"
+	}
+}
+606 = {
+	name = "Oleg"
+	dynasty = 705
+	religion = "orthodox"
+	culture = "varangian"
+	father = 602
+	mother = 599
+	959.1.2 = {
+		birth = "959.1.2"
+	}
+	977.1.2 = {
+		death = "977.1.2"
+	}
+}
+608 = {
+	name = "Vladimir"	#Vladimir the Great
+	dynasty = 705
+	martial = 6
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 7
+	religion = "slavic_pagan"
+	culture = "varangian"
+	trait = greedy
+	trait = zealous
+	trait = legitimized_bastard
+	trait = education_martial_3
+	father = 602
+	mother = 603
+	960.1.2 = {
+		birth = yes
+	}
+	977.1.2 = {
+		add_spouse = 609
+	}
+	989.1.2 = {
+		remove_spouse = 609
+	}
+	989.5.19 = {
+		religion = orthodox
+		add_spouse = 41100
+	}
+	1015.7.15 = {
+		give_nickname = nick_the_great
+		death = yes
+	}
+}
+
+
 #######################################
 # Tofta Dynasty
 #######################################
