@@ -8002,7 +8002,6 @@
 #######################################
 # House Vologdovich
 #######################################
-
 302417 = {
 	name = "Briachislav"
 	religion = orthodox
@@ -8018,7 +8017,6 @@
 		death = yes
 	}
 }
-
 302419 = {
 	name = "Ivan"
 	father = 302417
@@ -8101,9 +8099,1143 @@
 	}
 }
 #######################################
+# House Zalesky
+#######################################
+302264 = {
+	name = "Stepan"
+	religion = "orthodox"
+	culture = ruthene
+	dynasty = 2001050	#Zalesky
+	998.11.25 = {
+		birth = yes
+	}
+	1052.6.22 = {
+		death = yes
+	}
+}
+302265 = {
+	name = "Iliya"
+	religion = "orthodox"
+	culture = ruthene
+	dynasty = 2001050	#Zalesky
+	father = 302264
+	1018.3.27 = {
+		birth = yes
+	}
+	1059.5.15 = {
+		death = yes
+	}
+}
+302266 = {
+	name = "Lev"
+	religion = "orthodox"
+	culture = ruthene
+	dynasty = 2001050	#Zalesky
+	father = 302265
+	1041.1.9 = {
+		birth = yes
+	}
+	1099.10.28 = {
+		death = yes
+	}
+}
+#######################################
+# House Boryantinskiy
+#######################################
+90139 = {
+	name = "Antonius"
+	dynasty = 20081
+	martial = 4
+	diplomacy = 6
+	intrigue = 6
+	stewardship = 9
+	religion = "orthodox"
+	culture = "ruthene"
+	trait = education_learning_3
+	trait = zealous
+	trait = humble
+	983.1.2 = {
+		birth = "983.1.2"
+	}
+	1033.1.2 = {
+		death = "1033.1.2"
+	}
+}
+90140 = {
+	name = "Theodosius"
+	dynasty = 20081
+	martial = 4
+	diplomacy = 6
+	intrigue = 6
+	stewardship = 9
+	religion = "orthodox"
+	culture = "ruthene"
+	trait = education_learning_3
+	trait = zealous
+	trait = just
+	trait = temperate
+	1036.1.2 = {
+		birth = "1036.1.2"
+	}
+	1086.1.2 = {
+		death = "1086.1.2"
+	}
+}
+#######################################
+# House Potymokin
+#######################################
+20424 = {
+	name = "Georgii"
+	dynasty = 100575
+	martial = 4
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 5
+	religion = "orthodox"
+	culture = "ruthene"
+	trait = greedy
+	trait = zealous
+	trait = education_diplomacy_2
+	1039.1.1 = {
+		birth = "1039.1.1"
+	}
+	1089.1.1 = {
+		death = "1089.1.1"
+	}
+}
+#######################################
+# House Bogolyubsky
+#######################################
+20453 = {
+	name = "Igor"
+	dynasty = 100577
+	martial = 5
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 7
+	religion = "orthodox"
+	culture = "ruthene"
+	trait = temperate
+	trait = education_learning_2
+	1039.1.1 = {
+		birth = "1039.1.1"
+	}
+	1089.1.1 = {
+		death = "1089.1.1"
+	}
+}
+#######################################
+# House Shchenya
+#######################################
+20454 = {
+	name = "Oleg"
+	dynasty = 100581
+	martial = 6
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 5
+	religion = "orthodox"
+	culture = "ruthene"
+	trait = just
+	trait = greedy
+	trait = arrogant
+	trait = honest
+	trait = education_martial_3
+	1039.1.1 = {
+		birth = "1039.1.1"
+	}
+	1089.1.1 = {
+		death = "1089.1.1"
+	}
+}
+#######################################
+# House Radvila
+#######################################
+20468 = {
+	name = "Trifon"
+	dynasty = 100418
+	martial = 8
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 6
+	religion = "orthodox"
+	culture = "ruthene"
+	trait = deceitful
+	trait = education_martial_2
+	1039.1.1 = {
+		birth = "1039.1.1"
+	}
+	1089.1.1 = {
+		death = "1089.1.1"
+	}
+}
+#######################################
+# House Vyschatich
+#######################################
+90135 = {
+	name = "Vyshata"
+	dynasty = 20080
+	martial = 6
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 4
+	religion = "orthodox"
+	culture = "ruthene"
+	trait = education_martial_2
+	trait = wrathful
+	trait = brave
+	1012.1.2 = {
+		birth = "1012.1.2"
+	}
+	1062.1.2 = {
+		death = "1062.1.2"
+	}
+}
+90136 = {
+	name = "Ivan"
+	dynasty = 20080
+	martial = 6
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 4
+	religion = "orthodox"
+	culture = "ruthene"
+	trait = education_martial_3
+	trait = temperate
+	trait = zealous
+	father = 90135
+	1042.1.2 = {
+		birth = "1042.1.2"
+	}
+	1092.1.2 = {
+		death = "1092.1.2"
+	}
+}
+90137 = {
+	name = "Putyata"
+	dynasty = 20080
+	martial = 6
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 4
+	religion = "orthodox"
+	culture = "ruthene"
+	trait = education_martial_3
+	trait = deceitful
+	trait = cynical
+	father = 90135
+	1050.1.2 = {
+		birth = "1050.1.2"
+	}
+	1100.1.2 = {
+		death = "1100.1.2"
+	}
+}
+#######################################
 # House NAME
 #######################################
-
+218003 = {
+	name = "Aleksii"
+	dynasty = 100468
+	martial = 5
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = ruthene
+	trait = wrathful
+	trait = greedy
+	trait = education_intrigue_1
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+219012 = {
+	name = "Alexii"
+	dynasty = 100505
+	martial = 4
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 8
+	religion = "orthodox"
+	culture = ruthene
+	trait = wrathful
+	trait = honest
+	trait = education_intrigue_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222020 = {
+	name = "Mstislav"
+	dynasty = 100410
+	martial = 6
+	diplomacy = 4
+	intrigue = 7
+	stewardship = 8
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_martial_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472300 = {
+	name = "Mstislav"
+	dynasty = 100410
+	martial = 6
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 6
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_diplomacy_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222021 = {
+	name = "Mikhail"
+	dynasty = 100393
+	martial = 6
+	diplomacy = 4
+	intrigue = 8
+	stewardship = 4
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_learning_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472305 = {
+	name = "Grigorii"
+	dynasty = 100393
+	martial = 5
+	diplomacy = 4
+	intrigue = 6
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = wrathful
+	trait = honest
+	trait = education_intrigue_1
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222022 = {
+	name = "Alexei"
+	dynasty = 100394
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 6
+	religion = "orthodox"
+	culture = ruthene
+	trait = ill
+	trait = education_martial_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472306 = {
+	name = "Zhiroslav"
+	dynasty = 100394
+	martial = 8
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 8
+	religion = "orthodox"
+	culture = ruthene
+	trait = just
+	trait = education_martial_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222023 = {
+	name = "Kos_ma"
+	dynasty = 100395
+	martial = 6
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 7
+	religion = "orthodox"
+	culture = ruthene
+	trait = chaste
+	trait = deceitful
+	trait = education_learning_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472307 = {
+	name = "Radoslav"
+	dynasty = 100395
+	martial = 7
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = just
+	trait = inbred
+	trait = education_intrigue_1
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222024 = {
+	name = "Mikhail"
+	dynasty = 100396
+	martial = 6
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = calm
+	trait = education_intrigue_1
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472308 = {
+	name = "Vladimir"
+	dynasty = 100396
+	martial = 8
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_diplomacy_3
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222025 = {
+	name = "Zhiroslav"
+	dynasty = 100397
+	martial = 8
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 6
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_learning_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472309 = {
+	name = "Voislav"
+	dynasty = 100397
+	martial = 8
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = calm
+	trait = temperate
+	trait = education_martial_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222026 = {
+	name = "Alexandrii"
+	dynasty = 100398
+	martial = 4
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 8
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_intrigue_1
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472310 = {
+	name = "Fedor"
+	dynasty = 100398
+	martial = 4
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 8
+	religion = "orthodox"
+	culture = ruthene
+	trait = honest
+	trait = education_diplomacy_3
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222027 = {
+	name = "Grigorii"
+	dynasty = 100399
+	martial = 5
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = lazy
+	trait = cynical
+	trait = education_diplomacy_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472311 = {
+	name = "Iaropolk"
+	dynasty = 100399
+	martial = 5
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 6
+	religion = "orthodox"
+	culture = ruthene
+	trait = deceitful
+	trait = education_learning_3
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222029 = {
+	name = "Stepan"
+	dynasty = 100403
+	martial = 7
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 8
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_intrigue_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472312 = {
+	name = "Iurii"
+	dynasty = 100403
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = arbitrary
+	trait = brave
+	trait = education_intrigue_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222030 = {
+	name = "Iurii"
+	dynasty = 100409
+	martial = 5
+	diplomacy = 4
+	intrigue = 7
+	stewardship = 4
+	religion = "orthodox"
+	culture = ruthene
+	trait = wrathful
+	trait = education_learning_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472313 = {
+	name = "Tvorimir"
+	dynasty = 100409
+	martial = 8
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 8
+	religion = "orthodox"
+	culture = ruthene
+	trait = chaste
+	trait = wrathful
+	trait = deceitful
+	trait = education_stewardship_3
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222031 = {
+	name = "Domazhir"
+	dynasty = 100412
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 6
+	religion = "orthodox"
+	culture = ruthene
+	trait = just
+	trait = education_learning_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472315 = {
+	name = "Voislav"
+	dynasty = 100412
+	martial = 8
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 8
+	religion = "orthodox"
+	culture = ruthene
+	trait = generous
+	trait = greedy
+	trait = education_martial_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+222034 = {
+	name = "Fedor"
+	dynasty = 100415
+	martial = 4
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 7
+	religion = "orthodox"
+	culture = ruthene
+	trait = lustful
+	trait = calm
+	trait = greedy
+	trait = education_intrigue_2
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1200.1.1 = {
+		death = "1200.1.1"
+	}
+}
+472317 = {
+	name = "Tvorimir"
+	dynasty = 100415
+	martial = 8
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 7
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_intrigue_1
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+468830 = {
+	name = "Kazimierz"
+	dynasty = 33
+	martial = 5
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_learning_2
+	1280.1.2 = {
+		birth = "1280.1.2"
+	}
+	1330.1.2 = {
+		death = "1330.1.2"
+	}
+}
+#######################################
+# House NAME
+#######################################
+468850 = {
+	name = "Nikola"
+	dynasty = 32
+	martial = 5
+	diplomacy = 4
+	intrigue = 6
+	stewardship = 7
+	religion = "orthodox"
+	culture = ruthene
+	trait = lazy
+	trait = humble
+	trait = zealous
+	trait = education_learning_3
+	1285.1.2 = {
+		birth = "1285.1.2"
+	}
+	1335.1.2 = {
+		death = "1335.1.2"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472000 = {
+	name = "Kos_ma"
+	dynasty = 100404
+	martial = 6
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 4
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_diplomacy_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472001 = {
+	name = "Radoslav"
+	dynasty = 100405
+	martial = 7
+	diplomacy = 4
+	intrigue = 7
+	stewardship = 7
+	religion = "orthodox"
+	culture = ruthene
+	trait = lazy
+	trait = generous
+	trait = zealous
+	trait = temperate
+	trait = education_stewardship_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472002 = {
+	name = "Radoslav"
+	dynasty = 100406
+	martial = 7
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 4
+	religion = "orthodox"
+	culture = ruthene
+	trait = chaste
+	trait = lazy
+	trait = generous
+	trait = education_martial_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472003 = {
+	name = "Georgii"
+	dynasty = 100407
+	martial = 4
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = just
+	trait = education_intrigue_1
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472101 = {
+	name = "Zdislav"
+	dynasty = 100544
+	martial = 8
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 8
+	religion = "orthodox"
+	culture = ruthene
+	trait = cynical
+	trait = inbred
+	trait = education_martial_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472102 = {
+	name = "Gleb"
+	dynasty = 100546
+	martial = 5
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 8
+	religion = "orthodox"
+	culture = ruthene
+	trait = calm
+	trait = education_martial_3
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472250 = {
+	name = "Mikhail"
+	dynasty = 100554
+	martial = 6
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 6
+	religion = "orthodox"
+	culture = ruthene
+	trait = honest
+	trait = education_learning_3
+	1250.1.1 = {
+		birth = "1250.1.1"
+	}
+	1300.1.1 = {
+		death = "1300.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472318 = {
+	name = "Voislav"
+	dynasty = 100402
+	martial = 8
+	diplomacy = 6
+	intrigue = 8
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = cynical
+	trait = hunchbacked
+	trait = education_intrigue_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472319 = {
+	name = "Zdislav"
+	dynasty = 100400
+	martial = 8
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 5
+	religion = "orthodox"
+	culture = ruthene
+	trait = just
+	trait = calm
+	trait = brave
+	trait = education_diplomacy_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472320 = {
+	name = "Grigorii"
+	dynasty = 100401
+	martial = 5
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 7
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_intrigue_1
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472400 = {
+	name = "Sviatopolk"
+	dynasty = 100567
+	martial = 7
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 6
+	religion = "orthodox"
+	culture = ruthene
+	trait = honest
+	trait = education_martial_3
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+472865 = {
+	name = "Xenia"
+	# AKA: Ksyenia
+	female = yes
+	dynasty = 101802
+	religion = "orthodox"
+	culture = ruthene
+	1240.1.2 = {
+		birth = "1240.1.2"
+	}
+	1313.1.2 = {
+		death = "1313.1.2"
+	}
+}
+#######################################
+# House NAME
+#######################################
+475400 = {
+	name = "Demetru"
+	dynasty = 100512
+	martial = 6
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = ruthene
+	trait = gluttonous
+	trait = education_learning_2
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+475430 = {
+	name = "Gojslav"
+	dynasty = 100545
+	martial = 4
+	diplomacy = 4
+	intrigue = 7
+	stewardship = 4
+	religion = "catholic"
+	culture = ruthene
+	trait = wrathful
+	trait = honest
+	trait = education_learning_3
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1350.1.1 = {
+		death = "1350.1.1"
+	}
+}
+#######################################
+# House NAME
+#######################################
+90145 = {
+	name = "Leontius"
+	dynasty = 100574
+	martial = 5
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 7
+	religion = "orthodox"
+	culture = ruthene
+	trait = education_learning_3
+	trait = calm
+	1016.1.2 = {
+		birth = "1016.1.2"
+	}
+	1066.1.2 = {
+		death = "1066.1.2"
+	}
+}
+#######################################
+# House Kromsky
+#######################################
+302259 = {
+	name = "Ivan"
+	religion = "orthodox"
+	culture = ruthene
+	dynasty = 2001048	#Kromsky
+	1128.4.14 = {
+		birth = yes
+	}
+	1184.6.1 = {
+		death = yes
+	}
+}
+302260 = {
+	name = "Simeon"
+	religion = "orthodox"
+	culture = ruthene
+	dynasty = 2001048	#Kromsky
+	father = 302259
+	1158.12.2 = {
+		birth = yes
+	}
+	1224.4.19 = {
+		death = yes
+	}
+}
 #######################################
 # House NAME
 #######################################
@@ -8131,9 +9263,180 @@
 		death = "1069.1.2"
 	}
 }
+222601 = {
+	name = "Yefrosinia"
+	# AKA: Eufrosinia
+	female = yes
+	religion = "orthodox"
+	culture = ruthene
+	1151.1.4 = {
+		birth = "1151.1.4"
+	}
+	1202.1.4 = {
+		death = "1202.1.4"
+	}
+}
+222683 = {
+	name = "Fevronia"
+	female = yes
+	religion = "orthodox"
+	culture = ruthene
+	1150.1.2 = {
+		birth = "1150.1.2"
+	}
+	1200.1.2 = {
+		death = "1200.1.2"
+	}
+}
+472807 = {
+	name = "Maria"
+	female = yes
+	dynasty = 13
+	religion = "orthodox"
+	culture = ruthene
+	1311.1.2 = {
+		birth = "1311.1.2"
+	}
+	1361.1.2 = {
+		death = "1361.1.2"
+	}
+}
+472841 = {
+	name = "Yelena"
+	female = yes
+	religion = "orthodox"
+	culture = ruthene
+	1290.1.2 = {
+		birth = "1290.1.2"
+	}
+	1331.1.2 = {
+		death = "1331.1.2"
+	}
+}
+472842 = {
+	name = "Ulyana"
+	# AKA: Yulyana
+	female = yes
+	religion = "orthodox"
+	culture = ruthene
+	1300.1.2 = {
+		birth = "1300.1.2"
+	}
+	1350.1.2 = {
+		death = "1350.1.2"
+	}
+}
+472872 = {
+	name = "Yelena"
+	# AKA: Yelyena
+	female = yes
+	religion = "orthodox"
+	culture = ruthene
+	1310.1.2 = {
+		birth = "1310.1.2"
+	}
+	1360.1.2 = {
+		death = "1360.1.2"
+	}
+}
+472911 = {
+	name = "Yelena"
+	# AKA: Elyena
+	female = yes
+	religion = "orthodox"
+	culture = ruthene
+	1300.1.2 = {
+		birth = "1300.1.2"
+	}
+	1350.1.2 = {
+		death = "1350.1.2"
+	}
+}
+472913 = {
+	name = "Yelena"
+	female = yes
+	religion = "orthodox"
+	culture = ruthene
+	1270.1.2 = {
+		birth = "1270.1.2"
+	}
+	1320.1.2 = {
+		death = "1320.1.2"
+	}
+}
+168530 = {
+	name = "Sofia" #real name unknown
+	female = yes
+	religion = "orthodox"
+	culture = ruthene
+	trait = bastard
+	father = 608
+	990.1.1 = {
+		birth = yes
+	}
+	1051.1.1 = {
+		death = yes
+	}
+}
 #######################################
-# House NAME
+# Other Characters
 #######################################
-
-
-
+90138 = {
+	name = "Nestor"
+	martial = 4
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 6
+	religion = "orthodox"
+	culture = "ruthene"
+	trait = education_learning_2
+	trait = calm
+	1056.1.2 = {
+		birth = "1056.1.2"
+	}
+	1106.1.2 = {
+		death = "1106.1.2"
+	}
+}
+20870 = {
+	name = "Ayyub"
+	dynasty = 101018
+	martial = 5
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 4
+	religion = "ashari"
+	culture = ruthene
+	trait = education_learning_2
+	1039.1.1 = {
+		birth = "1039.1.1"
+	}
+	1089.1.1 = {
+		death = "1089.1.1"
+	}
+}
+473502 = {
+	name = "Olga"
+	female = yes
+	religion = "orthodox"
+	culture = ruthene
+	1275.1.2 = {
+		birth = "1275.1.2"
+	}
+	1344.1.2 = {
+		death = "1344.1.2"
+	}
+}
+473511 = {
+	name = "Maria"
+	# AKA: Marija
+	female = yes
+	religion = "orthodox"
+	culture = ruthene
+	1310.1.2 = {
+		birth = "1310.1.2"
+	}
+	1360.1.2 = {
+		death = "1360.1.2"
+	}
+}

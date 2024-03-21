@@ -485,7 +485,6 @@ d_nordmark = {
 	936.1.1 = {
 		holder = 1410
 		liege = k_east_francia
-		government = feudal_government
 	}
 	954.1.1 = {
 		holder = 161118 #Nakon Nakonid
@@ -526,6 +525,7 @@ d_nordmark = {
 	1129.7.1 = {
 		holder = 201513 #Knud Lavard
 		liege = "e_hre"
+		government = feudal_government
 	}
 	1131.1.13 = {
 		liege = 0
@@ -573,9 +573,6 @@ c_mecklenburg = {
 	866.1.1 = {
 		holder = 184001
 	}
-	935.1.1 = {
-		government = feudal_government	#Ahistorical, just for ease of bookmarks.
-	}
 	936.1.1 = {
 		holder = 1410
 		liege = d_nordmark
@@ -604,6 +601,7 @@ c_mecklenburg = {
 	}
 	1129.7.1 = {
 		holder = 201513 #Knud Lavard
+		government = feudal_government
 	}
 	1131.1.13 = {
 		holder = 452005 #Niklot
@@ -621,10 +619,8 @@ c_mecklenburg = {
 		holder = 452001 #Johann I Niklotid
 	}
 	
-	1264.8.1 =
-	
-	{
-	holder = 452000 #Heinrich I Niklotid
+	1264.8.1 = {
+		holder = 452000 #Heinrich I Niklotid
 	}
 	
 	1302.1.19 = {
@@ -753,7 +749,7 @@ c_rugen = {
 	}
 	###1043
 	985.8.25 = {
-		liege = d_ostmark
+		liege = d_nordmark
 	}	
 	1043.1.1 = {
 		holder = 20584 #Kruto Wizlawid
@@ -1130,8 +1126,8 @@ c_slupsk = {
 	###1066
 	1066.1.1 = {
 		liege = d_pommerania
-	holder = 30523
-	government = feudal_government
+		holder = 30523
+		government = feudal_government
 	}
 	1092.1.1 = {
 		holder = 30524 #Gwienomir

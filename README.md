@@ -1,6 +1,6 @@
-# Feudal Tapestry - A western Europe Overhaul
+# Feudal Tapestry - An Europe Overhaul
 
-Feudal Tapestry is a western european overhaul mod focusing on improving the historical flavor of Western Europe. From cultures to events to activities to titles, I hope to try and make Western Europe more flavorful and better.
+Feudal Tapestry is a european overhaul mod focusing on improving the historical flavor of Europe. From cultures to events to activities to titles, I hope to try and make Europe more flavorful and better.
 
 If you find any bugs or issues do let me know and I will try to fix them to the best of my ability. If you have ideas or suggestions for improvement do let me know, as I welcome all feedback provided that it is constructive feedback.
 

@@ -1,0 +1,167 @@
+﻿# Tavastian, Laurin Lähde shrine
+########################################
+#### South Finnic: Estonian
+########################################
+harja = {
+	county = c_reval
+	barony = b_reval
+	character_modifier = {
+		name = holy_site_harja_effect_name
+		domain_tax_mult = 0.02
+		learning_per_piety_level = 1
+	}
+}
+kuremae = {
+	county = c_narva
+	#barony = b_narva
+	character_modifier = {
+		name = holy_site_kuremae_effect_name
+		councillor_opinion = 5
+		levy_size = 0.1
+	}
+}
+puhajarv = {
+	county = c_dorpat
+	barony = b_tartu
+	character_modifier = {
+		name = holy_site_puhajarv_effect_name
+		hard_casualty_modifier = -0.1
+		health = 0.1
+	}
+}
+########################################
+#### South Finnic: Osilian
+########################################
+ebavere = {
+	county = c_narva
+	barony = b_wesenburg
+	character_modifier = {
+		name = holy_site_ebavere_effect_name
+		fertility = 0.1
+		same_faith_opinion = 5
+	}
+}
+kaali = {
+	county = c_osel
+	#barony = b_maasilinna
+	character_modifier = {
+		name = holy_site_kaali_effect_name
+		cultural_head_fascination_mult = 0.05
+		monthly_prestige_gain_mult = 0.2
+	}
+}
+taaralinn = {
+	county = c_dorpat
+	barony = b_tartu
+	character_modifier = {
+		name = holy_site_taaralinn_effect_name
+		close_relative_opinion = 5
+		men_at_arms_maintenance = -0.1
+	}
+}
+turaida = {
+	county = c_metsepole
+	barony = b_valmiera
+	character_modifier = {
+		name = holy_site_turaida_effect_name
+		attacker_advantage = 5
+		prowess = 2
+	}
+}
+########################################
+#### East Baltic: Latvian
+########################################
+aglona = {
+	county = c_lotigola
+	character_modifier = {
+		name = holy_site_aglona_effect_name
+		enemy_hard_casualty_modifier = 0.1
+		same_culture_opinion = 5
+	}
+}
+elkukalni = {
+	county = c_palanga
+	character_modifier = {
+		name = holy_site_elkukalni_effect_name
+		hills_advantage = 5
+		monthly_county_control_change_factor = 0.1
+	}
+}
+pokaini = {
+	county = c_zemigalians
+	character_modifier = {
+		name = holy_site_pokaini_effect_name
+		forest_advantage = 5
+		retreat_losses = -0.1
+	}
+}
+########################################
+#### East Baltic: Lithuanian
+########################################
+kukaveitis = {
+	county = c_kernave
+	barony = b_kernave
+	character_modifier = {
+		name = holy_site_kukaveitis_effect_name
+		monthly_piety_gain_mult = 0.1
+		short_reign_duration_mult = -0.25
+	}
+}
+palemono_kalnas = {
+	county = c_gaizuva
+	barony = b_veliuona
+	character_modifier = {
+		name = holy_site_palemono_kalnas_effect_name
+		dynasty_opinion = 5
+		men_at_arms_maintenance = -0.1
+	}
+}
+stelmuze = {
+	county = c_selpils
+	character_modifier = {
+		name = holy_site_stelmuze_effect_name
+		intrigue_per_prestige_level = 1
+		knight_effectiveness_mult = 0.2
+	}
+}
+########################################
+#### West Baltic: Prussian
+########################################
+rambynas = {
+	county = c_memel
+	barony = b_taurage
+	character_modifier = {
+		name = holy_site_rambynas_effect_name
+		hard_casualty_modifier = -0.1
+		prowess_per_prestige_level = 1
+	}
+}
+romowe = {
+	county = c_konigsberg
+	barony = b_konigsberg
+	character_modifier = {
+		name = holy_site_romowe_effect_name
+		controlled_province_advantage = 5
+		same_faith_opinion = 5
+	}
+}
+########################################
+#### West Baltic: Sudovian
+########################################
+naura = {
+	county = c_volkovysk
+	character_modifier = {
+		name = holy_site_naura_effect_name
+		monthly_prestige_gain_mult = 0.2
+		prowess = 2
+	}
+}
+sventakupselai = {
+	county = c_angerburg
+	barony = b_suvalkai
+	character_modifier = {
+		name = holy_site_sventakupsela_effect_name
+		martial_per_piety_level = 1
+		personal_scheme_power_mult = 0.1
+	}
+}

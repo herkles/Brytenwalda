@@ -68,7 +68,6 @@ hejazi = {
 		}
 	}
 }
-
 maithili = {
 	trigger = {
 		OR = {
@@ -336,15 +335,6 @@ pontic = {
 		}
 	}
 }
-novgorodian = {
-	trigger = {
-		culture = culture:russian
-		any_sub_realm_county = {
-			culture = culture:russian
-			duchy = title:d_novgorod
-		}
-	}
-}
 mervi = {
 	trigger = {
 		culture = { has_cultural_pillar = heritage_iranian }
@@ -366,7 +356,6 @@ parsi = {
 		}
 	}
 }
-
 omani = {
 	trigger = {
 		OR = {
@@ -1238,26 +1227,42 @@ scanian = {
 		scope:culture = { has_cultural_pillar = heritage_north_germanic }
 	}
 }
-icelandic = {
+#############################################
+# South Slavic Cultures			
+#############################################
+bosnian = {
 	trigger = {
 		OR = {
 			capital_county = {
-				title:d_iceland = {
-					is_de_jure_liege_or_above_target = prev
+				OR = {
+					title:d_bosna = {
+						is_de_jure_liege_or_above_target = prev
+					}
+					title:d_lower_bosna = {
+						is_de_jure_liege_or_above_target = prev
+					}
 				}
 			}
-			has_primary_title = title:d_iceland
+			has_primary_title = title:d_bosna
 		}
-		culture = { has_cultural_pillar = heritage_north_germanic }
+		culture = { has_cultural_pillar = heritage_south_slavic }
 		any_sub_realm_county = {
-			culture = { has_cultural_pillar = heritage_north_germanic }
-			duchy = title:d_iceland
+			culture = { has_cultural_pillar = heritage_south_slavic }
+			OR = {
+				duchy = title:d_bosna
+				duchy = title:d_lower_bosna
+			}
 		}
 	}
 }
 #############################################
+# East Slavic Cultures			
+#############################################
+
+#############################################
 # West Slavic Cultures			
 #############################################
+
 
 #############################################
 # Hungarian Cultures			
