@@ -2309,3 +2309,80 @@ tradition_pravda_russkaya = {# Old Russian Law
 #############################################
 # Hungarian traditions			
 #############################################
+
+#############################################
+# Vlach traditions			
+#############################################
+tradition_fierce_independence = {
+	category = regional
+
+	layers = {
+		0 = diplo
+		1 = mediterranean
+		4 = speech.dds
+	}
+	
+	is_shown = {
+		has_cultural_pillar = heritage_vlach
+	}
+	
+	can_pick = {
+
+	}
+	
+	parameters = {
+		doesnt_care_about_culture_faith_in_factions = yes
+		expensive_convert_to_local_culture = yes
+		harder_to_hybridize = yes
+	}
+	
+	culture_modifier = {
+		cultural_acceptance_gain_mult = 0.25
+	}
+	
+	character_modifier = {
+		monthly_county_control_growth_factor = 0.25
+		ignore_negative_opinion_of_culture = yes
+		ai_boldness = 10
+	}
+	
+	county_modifier = {
+		monthly_county_control_decline_factor = 0.5
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_stoic = { is_in_list = traits }
+						culture_pillar:ethos_communal = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_stoic_or_communal_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+		if = {
+			limit = {
+				scope:character = {
+					has_government = tribal_government
+				}
+			}
+			multiply = 0
+		}
+	}
+}

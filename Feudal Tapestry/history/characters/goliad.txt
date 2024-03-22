@@ -1,29 +1,57 @@
 ﻿#######################################
-# House Luks
+# House Paskevich
 #######################################
-167744  = {
-	name = "Kugis"
-	dynasty = 9542
+90146 = {
+	name = "Kicha"
+	dynasty = 100574
+	martial = 5
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 7
 	religion = "baltic_pagan"
-	culture = "galindian"
-	835.1.1 = {
-		birth = "835.1.1"
+	culture = "goliad"
+	trait = education_learning_4
+	trait = wrathful
+	trait = deceitful
+	trait = cynical
+	1022.1.2 = {
+		birth = "1022.1.2"
 	}
-	880.1.1 = {
-		death = "880.1.1"
+	1072.1.2 = {
+		death = "1072.1.2"
 	}
 }
-167745 = {
-	name = "Sergonis"
-	dynasty = 9542
+90147 = {
+	name = "Kruglets"
+	dynasty = 100574
+	martial = 5
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 7
 	religion = "baltic_pagan"
-	culture = "galindian"
-	father = 167744
-	855.1.1 = {
-		birth = "855.1.1"
+	culture = "goliad"
+	trait = education_learning_2
+	father = 90146
+	1056.1.2 = {
+		birth = "1056.1.2"
 	}
-	900.1.1 = {
-		death = "900.1.1"
+	1106.1.2 = {
+		death = "1106.1.2"
+	}
+}
+#######################################
+# House Goliad
+#######################################
+302224 = {
+	name = "Alyok"
+	religion = "baltic_pagan"
+	culture = "goliad"
+	dynasty = 2001043
+	843.5.12 = {
+		birth = yes
+	}
+	902.6.1 = {
+		death = yes
 	}
 }
 #######################################

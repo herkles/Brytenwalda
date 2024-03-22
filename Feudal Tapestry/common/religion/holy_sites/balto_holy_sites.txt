@@ -60,7 +60,7 @@ taaralinn = {
 	}
 }
 turaida = {
-	county = c_metsepole
+	county = c_talava
 	barony = b_valmiera
 	character_modifier = {
 		name = holy_site_turaida_effect_name
@@ -83,15 +83,13 @@ elkukalni = {
 	county = c_palanga
 	character_modifier = {
 		name = holy_site_elkukalni_effect_name
-		hills_advantage = 5
-		monthly_county_control_change_factor = 0.1
+		same_culture_opinion = 5
 	}
 }
 pokaini = {
 	county = c_zemigalians
 	character_modifier = {
 		name = holy_site_pokaini_effect_name
-		forest_advantage = 5
 		retreat_losses = -0.1
 	}
 }
