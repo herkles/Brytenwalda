@@ -8842,7 +8842,14 @@ e_britannia = {
 #       The Kingdom of Germany     	  #
 #									  #
 #######################################
-
+k_swabia = {# Swabian Kingdom, created via Thankmar's Old Ways Victory
+	color = { 210 210 210 }
+	capital = c_ulm
+}
+k_franconia = {# Franconian Kingdom, created via Thankmar's Old Ways Victory
+	color = { 170 170 170 }
+	capital = c_frankfurt
+}
 #######################################
 #									  #
 #         The Kingdom of italy	      #
@@ -8870,11 +8877,10 @@ k_gotaland = {# Gotaland Kingdom, created via decision
 #       The Balkans and Greeks 		  #
 #									  #
 #######################################
-	e_bulgaria = {# The First Empire of Bulgaria
-		color = { 113 88 101 }
-		capital = c_turnovo # Turnovo
-		
-	}
+e_bulgaria = {# The First Empire of Bulgaria
+	color = { 113 88 101 }
+	capital = c_turnovo # Turnovo
+}
 
 
 

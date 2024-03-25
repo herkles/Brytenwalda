@@ -59,7 +59,7 @@ alan = {
 	history_loc_override = scythian_heritage_loc
 	
 	ethos = ethos_communal
-	heritage = heritage_byzantine
+	heritage = heritage_caucasian
 	language = language_scythian
 	martial_custom = martial_custom_male_only
 	traditions = {
@@ -159,6 +159,33 @@ arberian = {
 		10 = mediterranean_byzantine
 	}
 }
+crimean_gothic = {
+	color = { 0.625 0.43 0.625 }
+
+	parents = { gothic }
+	created = 500.1.1
+	
+	ethos = ethos_communal
+	heritage = heritage_east_germanic
+	language = language_gothic
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_staunch_traditionalists
+		tradition_loyal_soldiers
+		tradition_hit_and_run
+	}
+	
+	name_list = name_list_crimean_gothic
+	
+	coa_gfx = { byzantine_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { byzantine_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean_byzantine
+	}
+}
 # South Caucasian			
 abkhaz = {
 	color = { 0.752 0.317 0.784 }
@@ -210,21 +237,19 @@ lazi = {
 	}
 }
 # North Caucasian			
-dagestani = {
-	color = { 0.760 0.745 0.501 }
+avaric = {
+	color = { 0.7 0.5 0.7 }
 	
 	ethos = ethos_stoic
-	heritage = heritage_caucasian 
+	heritage = heritage_caucasian
 	language = language_avaric
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_caucasian_wolves
-		tradition_staunch_traditionalists
-		tradition_mountain_homes 
+		tradition_mountaineers
+		tradition_collective_lands
+		tradition_agrarian
 	}
-	
 	name_list = name_list_alan
-
 	
 	coa_gfx = { byzantine_group_coa_gfx western_coa_gfx }
 	building_gfx = { mediterranean_building_gfx }
@@ -236,20 +261,17 @@ dagestani = {
 	}
 }
 chechen = {
-	color = { 0.7 0.5 0.7 }
-	created = 100.1.1
+	color = { 0.760 0.745 0.501 }
 
-	history_loc_override = scythian_heritage_loc
-	
 	ethos = ethos_communal
-	heritage = heritage_byzantine
-	language = language_scythian
+	heritage = heritage_caucasian
+	language = language_nakh
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_horse_lords
-		tradition_mountaineers
-		tradition_steppe_tolerance
-		tradition_wedding_ceremonies
+		tradition_stalwart_defenders
+		tradition_storytellers
+		tradition_hill_dwellers
+		tradition_isolationist
 	}
 	
 	name_list = name_list_alan
@@ -263,21 +285,17 @@ chechen = {
 		10 = mediterranean_byzantine
 	}
 }
-avaric = {
+lezgin = {
 	color = { 0.7 0.5 0.7 }
-	created = 100.1.1
 
-	history_loc_override = scythian_heritage_loc
-	
 	ethos = ethos_communal
-	heritage = heritage_byzantine
-	language = language_scythian
+	heritage = heritage_caucasian
+	language = language_lezgian
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_horse_lords
-		tradition_mountaineers
-		tradition_steppe_tolerance
-		tradition_wedding_ceremonies
+		tradition_caucasian_wolves
+		tradition_highland_warriors
+		tradition_hill_dwellers
 	}
 	
 	name_list = name_list_alan
@@ -291,24 +309,20 @@ avaric = {
 		10 = mediterranean_byzantine
 	}
 }
-ingush = {
-	color = { 0.7 0.5 0.7 }
-	created = 100.1.1
-
-	history_loc_override = scythian_heritage_loc
+circassian = {
+	color = { 0.75 0.3 0.7 }
 	
 	ethos = ethos_communal
-	heritage = heritage_byzantine
-	language = language_scythian
+	heritage = heritage_caucasian 
+	language = language_circassian
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_horse_lords
-		tradition_mountaineers
-		tradition_steppe_tolerance
-		tradition_wedding_ceremonies
+		tradition_caucasian_wolves
+		tradition_mystical_ancestors
+		tradition_horse_breeder
 	}
 	
-	name_list = name_list_alan
+	name_list = name_list_circassian
 	
 	coa_gfx = { byzantine_group_coa_gfx western_coa_gfx }
 	building_gfx = { mediterranean_building_gfx }
@@ -319,6 +333,3 @@ ingush = {
 		10 = mediterranean_byzantine
 	}
 }
-
-
-

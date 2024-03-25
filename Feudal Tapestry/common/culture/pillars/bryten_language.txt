@@ -46,8 +46,7 @@ language_arpitan = {
 			multiply = 10
 		}
 	}
-	
-	color = english
+	color = { 0.2 0.6 1.0 }
 }
 language_arberian = {
 	type = language
@@ -64,7 +63,7 @@ language_arberian = {
 		}
 	}
 	
-	color = english
+	color = georgian
 }
 
 language_dniepr_baltic = {
@@ -81,8 +80,7 @@ language_dniepr_baltic = {
 			multiply = 10
 		}
 	}
-	
-	color = english
+	color = { 155 155 90 }
 }
 language_pruthenic_baltic = {
 	type = language
@@ -98,8 +96,7 @@ language_pruthenic_baltic = {
 			multiply = 10
 		}
 	}
-	
-	color = english
+	color = { 173 173 150 }
 }
 language_livonian = {
 	type = language
@@ -119,14 +116,102 @@ language_livonian = {
 }
 
 
-
-
-
-
-
-
-
-
+language_gothic = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_gothic
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_gothic }
+			multiply = 10
+		}
+	}
+	color = { 0.7 0.65 0.6 }
+}
+language_circassian = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_circassian
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_circassian }
+			multiply = 10
+		}
+	}
+	color = georgian
+}
+language_abazgi = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_abazgi
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_abazgi }
+			multiply = 10
+		}
+	}
+	color = georgian
+}
+language_nakh = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_nakh
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_nakh }
+			multiply = 10
+		}
+	}
+	color = georgian
+}
+language_avaric = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_avaric
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_avaric }
+			multiply = 10
+		}
+	}
+	color = georgian
+}
+language_lezgian = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_lezgian
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_lezgian }
+			multiply = 10
+		}
+	}
+	color = georgian
+}
 
 
 

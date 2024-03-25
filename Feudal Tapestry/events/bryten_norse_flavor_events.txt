@@ -452,58 +452,13 @@ bryten_norse.010 = {
 #######################################
 # Viking / Norse Stuff
 #######################################
-bryten_norse.020 = {# Viking Spirit is Diminished
+bryten_norse.020 = {# Viking Spirit is Diminished - for Varangians
 	type = character_event
 	title = bryten_norse.020.t
 	desc = bryten_norse.020.desc
 	theme = culture_change
 
-	trigger = {
-		not = { exists = global_var:bryten_viking_spirit_diminished }
-		has_title = title:k_england
-		title:k_england = { title_held_years >= 20 }
-		culture = { has_cultural_pillar = heritage_north_germanic }
-
-	}
-
-	immediate = {
-		set_global_variable = {
-			name = bryten_viking_spirit_diminished
-			value = yes
-		}
-	}
-
-	option = {
+	option = {# And so the spirit fades but the memory does not
 		name = bryten_norse.020.a
-		culture:norse = {
-			remove_culture_tradition = tradition_bryten_viking_spirit
-		}
-		culture:swedish = {
-			remove_culture_tradition = tradition_bryten_viking_spirit
-		}
-		culture:norwegian = {
-			remove_culture_tradition = tradition_bryten_viking_spirit
-		}
-		culture:danish = {
-			remove_culture_tradition = tradition_bryten_viking_spirit
-		}
-		culture:gaet = {
-			remove_culture_tradition = tradition_bryten_viking_spirit
-		}
-		culture:gute = {
-			remove_culture_tradition = tradition_bryten_viking_spirit
-		}
-		culture:icelandic = {
-			remove_culture_tradition = tradition_bryten_viking_spirit
-		}
-		culture:varangian = {
-			remove_culture_tradition = tradition_bryten_viking_spirit
-		}
-		culture:norse_gael = {
-			remove_culture_tradition = tradition_bryten_viking_spirit
-		}
 	}
-
-
 }
-

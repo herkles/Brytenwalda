@@ -35,37 +35,6 @@ yearly_global_pulse = {
 				#}
 			}
 		}
-		# Norse culture split.
-		if = {
-			limit = {
-				current_date < 990.1.1
-				NOT = { has_global_variable = norse_culture_split }
-				current_date >= 950.1.1
-			}
-			random = {
-				chance = 10
-				modifier = {
-					add = 20 # 30% chance
-					current_date >= 960.1.1
-				}
-				modifier = {
-					add = 30 # 60% chance
-					current_date >= 970.1.1
-				}
-				modifier = {
-					add = 40 # 100% chance
-					current_date >= 980.1.1
-				}
-				set_global_variable = {
-					name = norse_culture_split
-					value = yes
-				}
-				trigger_event = {
-					id = global_culture.0011
-					days = { 60 300 }
-				}
-			}
-		}
 		# Mongol Invasion
 		if = { limit = { has_game_rule = never_mongol_invasion } }
 		else_if = {
@@ -286,8 +255,7 @@ yearly_global_pulse = {
 					}
 				}
 			}
-		}
-		
+		}		
 		# Rabbinicism becomes Monogamous
 		if = {
 			limit = {
@@ -348,8 +316,7 @@ yearly_global_pulse = {
 					}
 				}
 			}
-		}
-		
+		}		
 		# The Rise of the Seljuk
 		if = { limit = { has_game_rule = never_seljuk_invasion } }
 		else_if = { # Random Seljuk Invasion
@@ -433,7 +400,6 @@ yearly_global_pulse = {
 				}
 			}
 		}
-
 		# Zanj Rebellion
 		if = {
 			limit = { 
@@ -450,7 +416,6 @@ yearly_global_pulse = {
 				value = yes
 			}
 		}
-
 		# New Shifts
 		if = {# Anglo-Saxon -> Scottish Culture Shift
 			limit = {
@@ -641,6 +606,77 @@ yearly_global_pulse = {
 				}
 			}
 		}
+
+		# Viking Spirit is Diminished
+		if = {
+			limit = {
+				current_date > "980.01.01"
+				NOT = { exists = global_var:bryten_viking_spirit_diminished }
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 867
+				modifier = {
+					add = 2 # 2% chance per year
+					current_date >= 990.1.1
+				}
+				modifier = {
+					add = 8 # 10% chance per year
+					current_date >= 1000.1.1
+				}
+				modifier = {
+					add = 15 # 25% chance per year
+					current_date >= 1010.1.1
+				}
+				modifier = {
+					add = 15 # 25% chance per year
+					current_date >= 1020.1.1
+				}
+				modifier = {# Norse Paganism being unreformed increases it.
+					add = 3 # 25% chance per year
+					faith:norse_pagan = { has_doctrine_parameter = unreformed }
+				}
+				modifier = {# Scandinavia follows Christianity or Islam
+					add = 15 # 25% chance per year
+					any_county_in_region = {
+						region = ghw_region_scandinavia
+						count >= 28
+						OR = {
+							has_religion = religion:islam_religion
+							has_religion = religion:christianity_religion
+						}
+					}
+				}
+				modifier = {# Rus follows Christianity or Islam
+					add = 3 # 25% chance per year
+					any_county_in_region = {
+						region = ghw_region_russia
+						count >= 28
+						OR = {
+							has_religion = religion:islam_religion
+							has_religion = religion:christianity_religion
+						}
+					}
+				}
+				set_global_variable = {
+					name = bryten_viking_spirit_diminished
+					value = yes
+				}
+				culture:norse = { remove_culture_tradition = tradition_bryten_viking_spirit	}
+				culture:swedish = { remove_culture_tradition = tradition_bryten_viking_spirit }
+				culture:norwegian = { remove_culture_tradition = tradition_bryten_viking_spirit }
+				culture:danish = { remove_culture_tradition = tradition_bryten_viking_spirit }
+				culture:gaet = { remove_culture_tradition = tradition_bryten_viking_spirit }
+				culture:gute = { remove_culture_tradition = tradition_bryten_viking_spirit }
+				culture:icelandic = { remove_culture_tradition = tradition_bryten_viking_spirit }
+				culture:varangian = { remove_culture_tradition = tradition_bryten_viking_spirit }
+				culture:norse_gael = { remove_culture_tradition = tradition_bryten_viking_spirit }
+				every_player = {# Let north german Players know that the spirit is gone.
+					limit = { culture = { has_cultural_pillar = heritage_north_germanic } }
+					trigger_event = bryten_norse.020
+				}
+			}
+		}	
+
 	}
 	
 	on_actions = {

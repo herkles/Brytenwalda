@@ -1,0 +1,969 @@
+﻿namespace = tapestry_hre
+
+#######################################
+# Otto the Great Events
+#######################################
+tapestry_hre.001 = {# Choice given to Otto about invading Lorraine.
+	type = character_event
+	title = tapestry_hre.001.t
+	desc = tapestry_hre.001.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		this = character:1282 # triggers for Otto
+		character:7813 = {# we want to make sure Giselbert is alive
+			is_alive = yes
+		}
+		OR = {# either after Thankmars rebellion or 940
+			current_year >= 940
+			has_global_variable = otto_thankmars_rebellion_event
+		}
+		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
+		d_upper_lorraine = {# Lorraine must not be your vassal
+			holder_scope = {
+				NOR = {
+					character = ROOT
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.001.war
+		ai_chance = { base = 100 }
+		add_unpressed_claim = title:d_upper_lorraine
+		add_unpressed_claim = title:d_lower_lorraine
+		hidden_effect = {
+			scope:gislebert = {
+				trigger_event = {
+					id = tapestry_hre.002
+					days = { 5 10 }
+				}
+			}
+		}
+	}
+	option = {# Interesting
+		name = tapestry_hre.001.no_war
+		ai_chance = { base = 0 }
+	}
+}
+tapestry_hre.002 = {# Giselbert is informed about Otto's attack.
+	type = character_event
+	title = tapestry_hre.002.t
+	desc = tapestry_hre.002.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:k_east_francia.holder = { save_scope_as = otto }
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.002.a
+		scope:otto = {
+			add_opinion = { 
+				target = root
+				modifier = hate_opinion
+				opinion = -40
+			}
+		}
+	}
+
+}
+tapestry_hre.003 = {# Thankmar is given the chance of rebelling against Otto.
+	type = character_event
+	title = tapestry_hre.003.t
+	desc = tapestry_hre.003.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		current_year >= 940
+		Not = { has_global_variable = thankmar_rebel_event } # only trigger once
+		this = character:261394 # triggers for Thankmar
+		character:1282 = {# we want to make sure Otto is alive
+			is_alive = yes
+		}
+	}
+	
+	immediate = {
+		title:k_east_francia.holder = { save_scope_as = otto }
+		character:261394 = { save_scope_as = thankmar}
+		set_global_variable = {
+			name = thankmar_rebel_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.003.rebel
+		ai_chance = { base = 99 }
+		add_character_flag = temp_no_claim_war_cost
+		start_war = {
+			cb = thankmar_rebellion_cb
+			target = character:1282
+			claimant = scope:thankmar
+			target_title = title:k_east_francia
+		}
+		remove_character_flag = temp_no_claim_war_cost
+		hidden_effect = {
+			set_global_variable = {
+				name = thankmar_rebels_against_otto
+				value = yes
+			}
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.003.no_rebel
+		ai_chance = { base = 1 }
+	}
+
+	after = {
+		hidden_effect = {
+			if = {
+				limit = { has_global_variable = thankmar_rebel_event }
+				scope:otto = {# Otto is alerted of the rebellion
+					trigger_event = {
+						id = tapestry_hre.005
+						days = { 5 10 }
+					}
+					every_vassal = {# vassals are allowed to join Thankmar's rebellion
+						limit = {
+							government_has_flag = government_is_feudal
+							highest_held_title_tier <= tier_county
+						}
+						trigger_event = {
+							id = tapestry_hre.004
+							days = { 5 10 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+tapestry_hre.004 = {# Dukes are invited to join the rebellion.
+	type = character_event
+	title = tapestry_hre.004.t
+	desc = tapestry_hre.004.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		save_scope_as = rebelious_lord
+		character:261394 = { save_scope_as = thankmar}
+		random_character_war = {
+			limit = { primary_attacker = scope:thankmar }
+			save_scope_as = thankmar_invansion
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.004.rebel
+		hidden_effect = {
+			create_title_and_vassal_change = {
+				type = swear_fealty
+				save_scope_as = lord_joins_thankmar
+			}
+			scope:rebelious_lord = { 
+				change_liege = {
+					liege = scope:thankmar
+					change = scope:york_swaps_sides
+				}
+			}
+			resolve_title_and_vassal_change = scope:lord_joins_thankmar
+		}
+
+		ai_chance = {
+			base = 2
+			ai_value_modifier = {
+				ai_honor = -0.25
+			}
+			modifier = {	# Weight up for disloyal.
+				add = 1.5
+				has_trait = disloyal
+			}
+			modifier = {	# Weight up for ambitious.
+				add = 1.5
+				has_trait = ambitious
+			}
+			modifier = {	# Weight up for dukes.
+				add = 1.5
+				highest_held_title_tier = tier_duchy
+			}
+		}
+
+
+	}
+	option = {# Interesting
+		name = tapestry_hre.004.no_rebel
+		ai_chance = {
+			base = 98
+			ai_value_modifier = {
+				ai_honor = 0.5
+			}
+			modifier = {	# Weight up for loyal.
+				add = 1.5
+				has_trait = loyal
+			}
+			modifier = {	# Weight up for content.
+				add = 1.5
+				has_trait = content
+			}
+			modifier = {	# Weight up for counts.
+				add = 1.5
+				highest_held_title_tier = tier_county
+			}
+		}
+	}
+}
+tapestry_hre.005 = {# Otto is informed of Thankmar's betrayal.
+	type = character_event
+	title = tapestry_hre.005.t
+	desc = tapestry_hre.005.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Interesting
+		name = tapestry_hre.005.a
+	}
+
+}
+tapestry_hre.006 = {# Thankmar won his rebellion.
+	type = character_event
+	title = tapestry_hre.006.t
+	desc = tapestry_hre.006.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Interesting
+		name = tapestry_hre.006.legacy
+		ai_chance = { base = 75 }
+		add_prestige = medium_prestige_gain
+
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.006.old_ways
+		custom_tooltip = tapestry_hre.006.old_ways.tt 
+		add_prestige = major_prestige_gain
+		ai_chance = { base = 25 }
+		hidden_effect = {
+			thankmar_restored_old_kingdoms_effect = yes
+		}
+	}
+
+}
+tapestry_hre.007 = {# A return to the old ways.
+	type = character_event
+	title = tapestry_hre.007.t
+	desc = tapestry_hre.007.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.007.a
+
+	}
+
+}
+tapestry_hre.008 = {# Otto won against Thankmar's rebellion.
+	type = character_event
+	title = tapestry_hre.008.t
+	desc = tapestry_hre.008.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Interesting
+		name = tapestry_hre.008.coronation
+		add_prestige = medium_prestige_gain
+	}
+
+}
+tapestry_hre.009 = {# Choice given to Otto about enforcing his rights on the Italian lands.
+	type = character_event
+	title = tapestry_hre.009.t
+	desc = tapestry_hre.009.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		this = character:1282 # triggers for Otto
+		character:7813 = {# we want to make sure Giselbert is alive
+			is_alive = yes
+		}
+		current_year >= 940
+		NOR = {# can't either be the emperor or own the Kingdom of Italy. 
+			has_title = title:k_italy
+			has_title = title:e_hre
+		}
+		is_at_war = no # Otto needs to be at peace to plan his ambitions southward
+		Not = { has_global_variable = otto_italian_campaign_event } # only trigger once
+	}
+	
+	immediate = {
+		title:k_italy.holder = { save_scope_as = italian_king }
+		character:140 = { save_scope_as = otto }		
+
+		set_global_variable = {
+			name = otto_italian_campaign_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.009.war
+		ai_chance = { base = 100 }
+
+		add_character_flag = temp_no_claim_war_cost
+		start_war = {
+			cb = otto_italian_invansion_cb
+			target = scope:italian_king
+			claimant = scope:otto
+			target_title = title:k_italy
+		}
+		remove_character_flag = temp_no_claim_war_cost
+		hidden_effect = {
+			scope:italian_king = {
+				trigger_event = {
+					id = tapestry_hre.010
+					days = { 5 10 }
+				}
+			}
+		}
+
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.009.war
+		ai_chance = { base = 0 }
+	}
+
+}
+tapestry_hre.010 = {# Italians informed about Otto's attack.
+	type = character_event
+	title = tapestry_hre.010.t
+	desc = tapestry_hre.010.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.010.a
+	}
+
+}
+#######################################
+# Great Slav Uprising
+#######################################
+# Background Events leading up to the Rising
+tapestry_hre.011 = {# Conversion Policy.
+	type = character_event
+	title = tapestry_hre.011.t
+	desc = tapestry_hre.011.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		this = character:1282 # triggers for Otto
+		character:7813 = {# we want to make sure Giselbert is alive
+			is_alive = yes
+		}
+		OR = {# either after Thankmars rebellion or 940
+			current_year >= 940
+			has_global_variable = otto_thankmars_rebellion_event
+		}
+		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
+		d_upper_lorraine = {# Lorraine must not be your vassal
+			holder_scope = {
+				NOR = {
+					character = ROOT
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gero }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Conversion by the sword
+		name = tapestry_hre.011.war
+		ai_chance = { base = 100 } # its in Gero's nature
+		every_county_in_region = {
+			region = custom_europe_eastern_germany
+			limit = {
+				target_is_de_facto_liege_or_above = root.primary_title
+				NOT = { has_religion = religion:christianity_religion }
+			}
+			add_county_modifier = {
+				modifier = bryten_conversian_by_sword
+				years = 20
+			}
+		}
+		hidden_effect = {
+			set_global_variable = {
+				name = conversian_by_sword_variable
+				value = yes
+			}
+			scope:gero = {
+				trigger_event = {
+					id = tapestry_hre.012
+					days = { 5 10 }
+				}
+			}
+			scope:gero = {
+				trigger_event = {
+					id = tapestry_hre.013
+					days = { 5 10 }
+				}
+			}
+
+		}
+	}
+	option = {# Interesting
+		name = tapestry_hre.011.no_war
+		ai_chance = { base = 0 }
+
+		stress_impact = {
+			base = major_stress_impact_gain
+		}
+	}
+}
+tapestry_hre.012 = {# Slavic Raids.
+	type = character_event
+	title = tapestry_hre.012.t
+	desc = tapestry_hre.012.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Interesting
+		name = tapestry_hre.012.a
+	}
+}
+tapestry_hre.013 = {# German Raids.
+	type = character_event
+	title = tapestry_hre.013.t
+	desc = tapestry_hre.013.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Interesting
+		name = tapestry_hre.013.a
+	}
+}
+tapestry_hre.014 = {# An Officials death.
+	type = character_event
+	title = tapestry_hre.014.t
+	desc = tapestry_hre.014.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		current_year >= 939
+		has_global_variable = conversian_by_sword_variable
+		Not = { has_global_variable = slavic_rising_officer_killed } # only trigger once
+		has_title = title:d_ostmark # for the ruler of Ostmark; should be gero but it can happen after wards if he dies quickly
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = slavic_rising_officer_killed
+			value = yes
+		}
+	}
+
+	option = {# Murder Banquet!
+		name = tapestry_hre.014.murder
+		ai_chance = { base = 100 }
+		stress_impact = {
+			vengeful = medium_stress_impact_loss
+		}
+		hidden_effect = {
+			trigger_event = {
+				id = tapestry_hre.015
+				days = { 10 15 }
+			}
+		}
+	}
+	option = {# That will upset them more
+		name = tapestry_hre.014.no_murder
+		ai_chance = { base = 0 }
+		stress_impact = {
+			vengeful = major_stress_impact_gain
+		}
+	}
+}
+tapestry_hre.015 = {# Gero's Banquet.
+	type = character_event
+	title = tapestry_hre.015.t
+	desc = tapestry_hre.015.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		title:k_east_francia.holder = { save_scope_as = german_king }
+		set_global_variable = {
+			name = slavic_rising_murder_banquet
+			value = yes
+		}
+	}
+	
+	option = {# Interesting
+		name = tapestry_hre.015.a
+		
+		hidden_effect = {
+			every_vassal = {
+				limit = {
+					AND = {
+						religion = religion:slavic_religion
+						OR = {
+							has_culture = culture:polabian
+							has_culture = culture:sorbian
+						}
+					}
+				}
+				add_opinion = {
+					target = root
+					modifier = bryten_murderous_banquet
+					opinion = -75
+				}
+			}
+			every_courtier_and_guest = {
+				limit = {
+					AND = {
+						religion = religion:slavic_religion
+						OR = {
+							has_culture = culture:polabian
+							has_culture = culture:sorbian
+						}
+					}
+				}
+				add_opinion = {
+					target = root
+					modifier = bryten_murderous_banquet
+					opinion = -75
+				}
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			every_player = {
+				limit = {
+					AND = {
+						religion = religion:slavic_religion
+						OR = {
+							has_culture = culture:polabian
+							has_culture = culture:sorbian
+						}
+					}
+				}
+				trigger_event = tapestry_hre.016
+			}	
+		}
+	}
+}
+tapestry_hre.016 = {# The slavs are alerted.
+	type = character_event
+	title = tapestry_hre.016.t
+	desc = tapestry_hre.016.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		this = character:1282 # triggers for Otto
+		character:7813 = {# we want to make sure Giselbert is alive
+			is_alive = yes
+		}
+		OR = {# either after Thankmars rebellion or 940
+			current_year >= 940
+			has_global_variable = otto_thankmars_rebellion_event
+		}
+		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
+		d_upper_lorraine = {# Lorraine must not be your vassal
+			holder_scope = {
+				NOR = {
+					character = ROOT
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.016.a
+	}
+}
+# The Rising itself
+tapestry_hre.017 = {# The slavs Rise Up.
+	hidden = yes
+
+	trigger = {
+		current_date >= 980.1.1
+		NOT = { exists = global_var:great_slav_rising } # only fire once
+		exists = global_var:conversian_by_sword_variable
+		not = {
+
+		}
+	}
+	
+	immediate = {
+		set_global_variable = {
+			name = great_slav_rising
+			value = yes
+		}
+		create_character = {
+			template = bryten_polobian_rising_leader
+			location = title:c_mecklenburg.title_province
+			save_scope_as = polobian_rebel_leader
+		}
+		create_character = {
+			template = bryten_sorbian_rising_leader
+			location = title:c_meissen.title_province
+			save_scope_as = sorbian_rebel_leader
+		}				
+		start_slav_rising_polabian_effect = {
+			TARGET_COUNTY = title:c_mecklenburg
+			REBEL_LEADER = scope:polobian_rebel_leader
+		}
+		start_slav_rising_sorbian_effect = {
+			TARGET_COUNTY = title:c_meissen
+			REBEL_LEADER = scope:sorbian_rebel_leader
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			every_ruler = {
+				limit = {
+					is_landed = yes
+					AND = {
+						religion = religion:slavic_religion
+						OR = {
+							has_culture = culture:polabian
+							has_culture = culture:sorbian
+						}
+					}
+					NOT = { this = root }
+					capital_province = { geographical_region = custom_europe_eastern_germany }
+				}
+				trigger_event = tapestry_hre.019
+			}
+		}
+	}
+}
+tapestry_hre.018 = {# Alerting Slavic pagan rulers - they join in
+	type = character_event
+	title = tapestry_hre.018.t
+	desc = tapestry_hre.018.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+
+	}
+
+	option = {# Join the Rebellion!
+		name = tapestry_hre.018.war
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			if = {# Polabians join the Polabian side
+				limit = { has_culture = culture:polabian }
+				random_character_war = { # We need to locate the war we just created, since we can't save it on creation
+					limit = {
+						using_cb = bryten_slav_rising_polobain_war
+						primary_attacker = scope:polobian_rebel_leader # root
+						primary_defender = scope:recipient
+					}
+					add_attacker = scope:actor
+				}
+			}
+			if = {# sorbian join the sorbian side
+				limit = { has_culture = culture:sorbian }
+				random_character_war = { # We need to locate the war we just created, since we can't save it on creation
+					limit = {
+						using_cb = bryten_slav_rising_sorbian_war
+						primary_attacker = scope:sorbian_rebel_leader # root
+						primary_defender = scope:recipient
+					}
+					add_attacker = scope:actor
+				}
+			}
+		}
+	}
+	option = {# Don't Join
+		name = tapestry_hre.018.no_war
+		ai_chance = { base = 0 }
+	}
+}
+tapestry_hre.019 = {# Alerting the German Marcher Lords.
+	type = character_event
+	title = tapestry_hre.019.t
+	desc = tapestry_hre.019.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		this = character:1282 # triggers for Otto
+		character:7813 = {# we want to make sure Giselbert is alive
+			is_alive = yes
+		}
+		OR = {# either after Thankmars rebellion or 940
+			current_year >= 940
+			has_global_variable = otto_thankmars_rebellion_event
+		}
+		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
+		d_upper_lorraine = {# Lorraine must not be your vassal
+			holder_scope = {
+				NOR = {
+					character = ROOT
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.019.war
+		ai_chance = { base = 100 }
+	}
+	option = {# Interesting
+		name = tapestry_hre.019.no_war
+		ai_chance = { base = 0 }
+	}
+}
+tapestry_hre.020 = {# Alerting the German Emperor/King.
+	type = character_event
+	title = tapestry_hre.020.t
+	desc = tapestry_hre.020.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		this = character:1282 # triggers for Otto
+		character:7813 = {# we want to make sure Giselbert is alive
+			is_alive = yes
+		}
+		OR = {# either after Thankmars rebellion or 940
+			current_year >= 940
+			has_global_variable = otto_thankmars_rebellion_event
+		}
+		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
+		d_upper_lorraine = {# Lorraine must not be your vassal
+			holder_scope = {
+				NOR = {
+					character = ROOT
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.020.war
+		ai_chance = { base = 100 }
+	}
+	option = {# Interesting
+		name = tapestry_hre.020.no_war
+		ai_chance = { base = 0 }
+	}
+}
+# The Aftermath
+tapestry_hre.021 = {# The Slavs Win.
+	type = character_event
+	title = tapestry_hre.021.t
+	desc = tapestry_hre.021.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		this = character:1282 # triggers for Otto
+		character:7813 = {# we want to make sure Giselbert is alive
+			is_alive = yes
+		}
+		OR = {# either after Thankmars rebellion or 940
+			current_year >= 940
+			has_global_variable = otto_thankmars_rebellion_event
+		}
+		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
+		d_upper_lorraine = {# Lorraine must not be your vassal
+			holder_scope = {
+				NOR = {
+					character = ROOT
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.021.war
+		ai_chance = { base = 100 }
+	}
+	option = {# Interesting
+		name = tapestry_hre.021.no_war
+		ai_chance = { base = 0 }
+	}
+}
+tapestry_hre.022 = {# The Germans Win.
+	type = character_event
+	title = tapestry_hre.022.t
+	desc = tapestry_hre.022.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		this = character:1282 # triggers for Otto
+		character:7813 = {# we want to make sure Giselbert is alive
+			is_alive = yes
+		}
+		OR = {# either after Thankmars rebellion or 940
+			current_year >= 940
+			has_global_variable = otto_thankmars_rebellion_event
+		}
+		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
+		d_upper_lorraine = {# Lorraine must not be your vassal
+			holder_scope = {
+				NOR = {
+					character = ROOT
+					is_vassal_or_below_of = ROOT
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.022.war
+		ai_chance = { base = 100 }
+	}
+	option = {# Interesting
+		name = tapestry_hre.022.no_war
+		ai_chance = { base = 0 }
+	}
+}

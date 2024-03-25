@@ -1,0 +1,113 @@
+﻿#######################################
+# Great Slav Uprising characters
+#######################################
+bryten_polobian_rising_leader = {# Polobian rising Leader
+	#General
+	age = { 30 60 }
+	faith = faith:slavic_pagan
+	culture = culture:polabian
+	gender = male
+
+
+
+	#Education
+	random_traits_list = {
+		education_martial_2 = {
+			weight = { base = 30 }
+		}
+		education_martial_3 = {
+			weight = { base = 20 }
+		}
+		education_martial_4 = {
+			weight = { base = 10}
+		}
+	}
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		impatient = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		fickle = {}
+		vengeful = {}
+	}
+	#Misc
+	random_traits_list = {
+		berserker = {}
+		adventurer = {}
+		viking = {}
+		varangian = {}
+		strong = {}
+		shrewd = {}
+		tourney_participant = {}
+	}
+	random_traits = yes
+	#Skills
+	diplomacy = { min_template_average_skill max_template_decent_skill }
+	martial = { min_template_decent_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_low_skill max_template_decent_skill }
+	learning = { min_template_low_skill max_template_decent_skill }
+	prowess = { min_template_decent_skill max_template_high_skill }
+	after_creation = {
+		add_random_tourney_participant_level_effect = yes
+	}
+}
+bryten_sorbian_rising_leader = {# Sorbian Rising Leader
+	#General
+	age = { 30 60 }
+	faith = faith:slavic_pagan
+	culture = culture:sorbian
+	gender = male
+
+	#Education
+	random_traits_list = {
+		education_martial_2 = {
+			weight = { base = 30 }
+		}
+		education_martial_3 = {
+			weight = { base = 20 }
+		}
+		education_martial_4 = {
+			weight = { base = 10}
+		}
+	}
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		impatient = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		fickle = {}
+		vengeful = {}
+	}
+	#Misc
+	random_traits_list = {
+		berserker = {}
+		adventurer = {}
+		viking = {}
+		varangian = {}
+		strong = {}
+		shrewd = {}
+		tourney_participant = {}
+	}
+	random_traits = yes
+	#Skills
+	diplomacy = { min_template_average_skill max_template_decent_skill }
+	martial = { min_template_decent_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_low_skill max_template_decent_skill }
+	learning = { min_template_low_skill max_template_decent_skill }
+	prowess = { min_template_decent_skill max_template_high_skill }
+}
+

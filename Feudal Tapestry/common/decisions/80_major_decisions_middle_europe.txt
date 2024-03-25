@@ -283,6 +283,9 @@ reform_carolingian_empire_decision = {# Reforming the Carolingian Empire
 		base = 100
 	}
 }
+#############################################
+# 		Holy Roman Empire Decisions			#
+#############################################
 restore_holy_roman_empire_decision = {# Restore the Holy Roman Empire
 	picture = "gfx/interface/illustrations/decisions/decision_charlemagne.dds"
 	major = yes
@@ -333,13 +336,13 @@ restore_holy_roman_empire_decision = {# Restore the Holy Roman Empire
 				has_title = title:k_east_francia #Gotta be King of the Germans.
 				has_title = title:k_france #Gotta be King of the Germans.
 			}
-			custom_description = {	#And have some additional royal dignity for good measure.
-				text = decision_refound_hre_own_three_kingdoms.tt
-				any_held_title = {
-					tier = tier_kingdom
-					count >= 3
-				}
-			}
+			# custom_description = {	#And have some additional royal dignity for good measure.
+			# 	text = decision_refound_hre_own_three_kingdoms.tt
+			# 	any_held_title = {
+			# 		tier = tier_kingdom
+			# 		count >= 3
+			# 	}
+			# }
 			sub_realm_size >= 140	#Plus your various kingdoms should be ruling something.
 		}
 		#HoF preference conditions.

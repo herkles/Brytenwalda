@@ -190,27 +190,6 @@ kurlander = {
 	}
 	hybrid = yes
 }
-livonian = {
-	trigger = {
-		OR = {
-			AND = {
-				scope:culture = { has_cultural_pillar = heritage_balto_finnic }
-				scope:other_culture = { has_cultural_pillar = heritage_baltic }
-			}
-			AND = {
-				scope:culture = { has_cultural_pillar = heritage_baltic }
-				scope:other_culture = { has_cultural_pillar = heritage_balto_finnic }
-			}
-		}
-		any_sub_realm_county = {
-			OR = {
-				culture = scope:culture
-				culture = scope:other_culture
-			}
-		}
-	}
-	hybrid = yes
-}
 moroccan_hybrid = {
 	trigger = {
 		OR = {

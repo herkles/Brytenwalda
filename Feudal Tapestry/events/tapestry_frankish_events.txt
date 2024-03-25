@@ -181,7 +181,7 @@ tapestry_frankish.011 = {# Head to Italy to Meet with the new Pope?
 		character:7853 = {# Pope Nicholas well must not be Pope, so new pope 
 			NOT = { has_title = title:k_papal_state	}
 		}
-		has_global_variable = lothair_travel_decision # Needs William to be king
+		Not = { has_global_variable = lothair_travel_decision } # only trigger once
 	}
 	
 	immediate = {
