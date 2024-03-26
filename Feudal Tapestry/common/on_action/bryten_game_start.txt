@@ -51,19 +51,6 @@ bryten_setup_after_game_start_on_actions = {
 			}
 		}
 
-		culture:norse = {# Culture spread for the Norse in Britannia
-			if = {
-				limit = { has_game_rule = bryten_british_culture_spreads_on  }
-				set_variable = {
-					name = ng_culture
-					value = culture:norse_gael
-				}
-				set_variable = {
-					name = an_culture
-					value = culture:anglo_norse
-				}
-			}
-		}
 		# Hugh the great, defacto Ruler of France in 936
 		character:90120 = { designate_diarch = character:6444 }
 		remove_generated_diarch_consequences_effect = {
