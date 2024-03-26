@@ -40,6 +40,17 @@ bryten_setup_after_game_start_on_actions = {
 				trigger_event = bryten_scotland.500
 			}
 		}
+		title:d_meissen.holder = {# Gero gets the choice for conversion policy
+			if = {
+				limit = {
+					is_alive = yes
+					is_landed = yes
+					current_date = 936.8.7
+				}
+				trigger_event = tapestry_hre.011
+			}
+		}
+
 		culture:norse = {# Culture spread for the Norse in Britannia
 			if = {
 				limit = { has_game_rule = bryten_british_culture_spreads_on  }
