@@ -284,7 +284,12 @@ radimich = {# Radimich
 }
 # Kyivan Rus Cultures
 novgorodian = {# Novgorodian
-	color = { 86 130 3 }	
+	color = { 86 130 3 }
+
+	created = 989.5.19
+	parents = { ilmenian varangian }
+	history_loc_override = bryten_novgorodian_history_loc
+
 	ethos = ethos_communal
 	heritage = heritage_east_slavic
 	language = language_east_slavic
@@ -312,7 +317,13 @@ novgorodian = {# Novgorodian
 	}
 }
 ruthene = {# Rus/Ruthene/Ruthenians around kyiv
-	color = { 34 139 34 }	
+	color = { 34 139 34 }
+	
+	created = 989.5.19
+	parents = { polyan varangian }
+	history_loc_override = bryten_kyivan_history_loc
+
+
 	ethos = ethos_communal
 	heritage = heritage_east_slavic
 	language = language_east_slavic

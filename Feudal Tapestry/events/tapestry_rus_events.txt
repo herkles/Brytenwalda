@@ -1,0 +1,1055 @@
+﻿namespace = tapestry_rus
+#######################################
+# 936 Igor and Olga stuff
+#######################################
+# Igor and Tribute
+tapestry_rus.001 = {# Tribute to the Drevilians - Igor View.
+	type = character_event
+	title = tapestry_rus.001.t
+	desc = tapestry_rus.001.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Interesting
+		name = tapestry_rus.001.a
+	}
+
+	after = {
+		scope:drevilian_ruler = {
+			trigger_event = {
+				id = tapestry_rus.002
+				days = { 5 6 }
+			}
+		}
+	}
+}
+tapestry_rus.002 = {# Tribute to the Drevilians - Dreveilian View..
+	type = character_event
+	title = tapestry_rus.002.t
+	desc = tapestry_rus.002.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.002.war
+	}
+
+}
+tapestry_rus.003 = {# Potential birth of Sviatoslav I of Kyiv.
+	hidden = yes	
+
+	trigger = {
+		this = character:600 # triggers for Igor
+		character:601 = { is_alive = yes } # we want to make sure Olga is alive
+		any_spouse = { this = character:601 } # Igor needs to have Olga as his wife
+		current_year >= 944 # random chance but just to be sure. 
+		character:601 = { is_pregnant = no } # Olga can't already be pregnant
+		any_child = { is_male = yes	}# if Igor has a male son no need for this	
+		Not = { has_global_variable = olga_pregnant_sviatoslav } # only trigger once	
+	}
+	
+	immediate = {
+		character:601 = { save_scope_as = olga }
+		character:600 = { save_scope_as = igor }
+		scope:olga = { make_pregnant = { father = scope:igor } }
+		set_global_variable = {
+			name = olga_pregnant_sviatoslav
+			value = yes
+		}
+	}
+}
+tapestry_rus.004 = {# Igor collecting taxes.
+	type = character_event
+	title = tapestry_rus.004.t
+	desc = tapestry_rus.004.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		this = character:600 # triggers for Otto
+		OR = {# either after Thankmars rebellion or 940
+			current_year >= 940
+			has_global_variable = otto_thankmars_rebellion_event
+		}
+		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.004.war
+		ai_chance = { base = 100 }
+	}
+
+	after = {
+		scope:drevilian_ruler = {
+			trigger_event = {
+				id = tapestry_rus.005
+				days = { 15 20 }
+			}
+		}
+	}
+
+}
+tapestry_rus.005 = {# Drevilian can murder him.
+	type = character_event
+	title = tapestry_rus.005.t
+	desc = tapestry_rus.005.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	
+	immediate = {
+		character:600 = { save_scope_as = igor }
+	}
+
+	option = {# Murder!
+		name = tapestry_rus.005.murder
+		ai_chance = { base = 100 }
+
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.006
+					days = { 1 2 }
+				}
+			}
+		}
+	}
+	option = {# Don't Murder!
+		name = tapestry_rus.005.no_murder
+		ai_chance = { base = 0 }
+		pay_short_term_gold = {
+			target = scope:igor
+			gold = major_gold_value
+		}
+	}
+}
+tapestry_rus.006 = {# Igor is murdered.
+	type = character_event
+	title = tapestry_rus.006.t
+	desc = tapestry_rus.006.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+		
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.006.war
+		character:600 = { save_scope_as = igor }
+		scope:igor = {
+			death = {
+				death_reason = death_igor_murder # Unique description to describe how the primary chronicle describes his death
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.007
+					days = { 30 60 }
+				}
+			}
+		}
+	}
+}
+# Olga's Revenge
+tapestry_rus.007 = {# Sending Emissaries to Olga.
+	type = character_event
+	title = tapestry_rus.007.t
+	desc = tapestry_rus.007.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.007.a
+		ai_chance = { base = 100 }
+	}
+
+	after = {
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.008
+					days = { 10 20 }
+				}
+			}
+		}
+	}
+}
+tapestry_rus.008 = {# Emissaries are sent and killed.
+	type = character_event
+	title = tapestry_rus.008.t
+	desc = tapestry_rus.008.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.008.war
+		ai_chance = { base = 100 }
+	}
+
+	after = {
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.009
+					days = { 30 60 }
+				}
+			}
+		}
+	}
+}
+tapestry_rus.009 = {# Sending the Honor Guard.
+	type = character_event
+	title = tapestry_rus.009.t
+	desc = tapestry_rus.009.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.009.a
+	}
+
+	after = {
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.010
+					days = { 30 60 }
+				}
+			}
+		}
+	}
+}
+tapestry_rus.010 = {# Honorguard sent to Olga.
+	type = character_event
+	title = tapestry_rus.010.t
+	desc = tapestry_rus.010.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.010.war
+		ai_chance = { base = 100 }
+	}
+
+	after = {
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.011
+					days = { 30 60 }
+				}
+			}
+		}
+	}
+}
+tapestry_rus.011 = {# Olga is coming to our lands.
+	type = character_event
+	title = tapestry_rus.011.t
+	desc = tapestry_rus.011.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.011.war
+		ai_chance = { base = 100 }
+	}
+
+	after = {
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.012
+					days = { 30 60 }
+				}
+			}
+		}
+	}
+}
+tapestry_rus.012 = {# Olga Arrives at the Drevillians.
+	type = character_event
+	title = tapestry_rus.012.t
+	desc = tapestry_rus.012.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Drink and be Merry
+		name = tapestry_rus.012.a
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.013
+					days = { 30 60 }
+				}
+			}
+		}
+	}
+	option = {# Try to Arrest Her
+		name = tapestry_rus.012.b
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.017
+					days = { 10 15 }
+				}
+			}
+		}
+	}
+}
+tapestry_rus.013 = {# Olga slaughters the Drevilians.
+	type = character_event
+	title = tapestry_rus.013.t
+	desc = tapestry_rus.013.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.013.war
+		ai_chance = { base = 100 }
+	}
+
+	after = {
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.014
+					days = { 30 60 }
+				}
+			}
+		}
+	}
+
+}
+tapestry_rus.014 = {# Olga reaches Korosten
+	type = character_event
+	title = tapestry_rus.014.t
+	desc = tapestry_rus.014.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# A simple tribute
+		name = tapestry_rus.014.war
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.015
+					days = { 10 15 }
+				}
+			}
+		}
+	}
+}
+tapestry_rus.015 = {# Olga's offer.
+	type = character_event
+	title = tapestry_rus.015.t
+	desc = tapestry_rus.015.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# We agree to the tribute
+		name = tapestry_rus.015.war
+		ai_chance = { base = 100 }
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.016
+					days = { 10 15 }
+				}
+			}
+		}
+	}
+	option = {# We can't trust her!
+		name = tapestry_rus.015.no_war
+		ai_chance = { base = 0 }
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.015
+					days = { 10 15 }
+				}
+			}
+		}
+	}
+}
+tapestry_rus.016 = {# Korosten is set on fire.
+	type = character_event
+	title = tapestry_rus.016.t
+	desc = tapestry_rus.016.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.016.war
+		ai_chance = { base = 100 }
+	}
+	option = {# Interesting
+		name = tapestry_rus.016.no_war
+		ai_chance = { base = 0 }
+	}
+}
+
+tapestry_rus.017 = {# Olga is able to escape
+	type = character_event
+	title = tapestry_rus.017.t
+	desc = tapestry_rus.017.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Prepare the Armies
+		name = tapestry_rus.017.war
+		ai_chance = { base = 100 }
+	}
+
+	after = {
+		hidden_effect = {
+			scope:igor = {
+				trigger_event = {
+					id = tapestry_rus.018
+					days = { 10 20 }
+				}
+			}
+		}
+	}
+
+}
+tapestry_rus.018 = {# War between Kyiv and the Drevilians
+	type = character_event
+	title = tapestry_rus.017.t
+	desc = tapestry_rus.017.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		set_global_variable = {
+			name = otto_traitor_lorraine_event
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.017.war
+		add_character_flag = temp_no_claim_war_cost
+		start_war = {
+			cb = drevilian_rebellion_cb
+			target = character:140
+			claimant = scope:godwine_head
+			target_title = title:k_england
+		}
+
+	}
+}
+# 936 Igor and Olga stuff
+tapestry_rus.019 = {# Olga goes to Constinople.
+	type = character_event
+	title = tapestry_rus.017.t
+	desc = tapestry_rus.017.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		character:601 = {# we want to make sure Olga is alive
+			is_alive = yes
+		}
+		current_year >= 959
+		OR = {
+			this = character:601 # If somehow Olga is alive herself
+			any_spouse = { this = character:601 }
+			mother = { this = character:601 }
+		}
+	}
+	
+
+	option = {# Interesting
+		name = tapestry_rus.017.a
+	}
+
+	after = {
+		trigger_event = {
+			id = tapestry_rus.018
+			days = { 30 60 }
+		}
+	}
+}
+tapestry_rus.020 = {# Olga is Baptized - Her view.
+	type = character_event
+	title = tapestry_rus.018.t
+	desc = tapestry_rus.018.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	
+	immediate = {
+		character:601 = { save_scope_as = olga }
+		title:e_byzantium.holder = { save_scope_as = emperor }
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.018.a
+		scope:olga = {
+			if = {
+				limit = { NOT = { root.faith = faith:orthodox } }
+				set_character_faith = faith:orthodox
+			}
+		}
+	}
+
+	after = {
+		scope:emperor = {
+			trigger_event = {
+				id = tapestry_rus.021
+				days = { 5 6 }
+			}
+		}
+		trigger_event = {
+			id = tapestry_rus.022
+			days = { 30 60 }
+		}
+	}
+}
+tapestry_rus.021 = {# Olga is Baptized - ruler of the Byzantines.
+	type = character_event
+	title = tapestry_rus.019.t
+	desc = tapestry_rus.019.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Interesting
+		name = tapestry_rus.019.a
+	}
+}
+tapestry_rus.022 = {# Olga returns to Kyiv.
+	type = character_event
+	title = tapestry_rus.020.t
+	desc = tapestry_rus.020.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		set_global_variable = {
+			name = olga_has_converted
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.020.a
+	}
+}
+tapestry_rus.023 = {# Olga supports Church building.
+	type = character_event
+	title = tapestry_rus.021.t
+	desc = tapestry_rus.021.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		character:601 = {# we want to make sure Giselbert is alive
+			is_alive = yes
+		}
+		has_global_variable = olga_has_converted
+		Not = { has_global_variable = olga_supports_churches } # only trigger once
+
+	}
+	
+	immediate = {
+		set_global_variable = {
+			name = olga_supports_churches
+			value = yes
+		}
+		random_held_county = {
+			limit = { not = { has_faith = faith:orthodox } }
+			save_scope_as = possible_church_land
+		}
+	}
+
+	option = {# Interesting
+		name = tapestry_rus.021.war
+		ai_chance = { base = 100 }
+	}
+}
+#######################################
+# Rus Culture Forming
+#######################################
+tapestry_rus.030 = {# Rus Culture forming
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:ilmenian = { save_scope_as = ilmenian }
+		culture:polyan = { save_scope_as = polyan }
+		culture:severian = { save_scope_as = severian }
+		culture:krivich = { save_scope_as = krivich }
+		culture:vyatichi = { save_scope_as = vyatichi }
+		culture:dregovich = { save_scope_as = dregovich }
+		culture:drevlian = { save_scope_as = drevlian }
+		culture:radimich = { save_scope_as = radimich }
+
+		# The two Rus Cultures - Novgorod and Kyiv
+		culture:ruthene = {# Kyivan
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:polyan
+			# Save scope for player notification events.
+			save_scope_as = ruthene
+		}
+		culture:novgorodian = {# Novgorodian
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:ilmenian
+			# Save scope for player notification events.
+			save_scope_as = novgorodian
+		}
+
+		# All east slavic counties in novgorod area will convert to and Novgordian
+		culture:ilmenian = {
+			every_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_novgorod_conversion_area
+					}
+				}
+				add_to_list = novgorod_counties
+			}
+		}
+		culture:radimich = {
+			every_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_novgorod_conversion_area
+					}
+				}
+				add_to_list = novgorod_counties
+			}
+		}
+		culture:krivich = {
+			every_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_novgorod_conversion_area
+					}
+				}
+				add_to_list = novgorod_counties
+			}
+		}		
+		# All east slavic counties in novgorod area will convert to and Novgordian
+		culture:polyan = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = custom_kyivan_conversion_area }
+				}
+				add_to_list = kyivan_counties
+			}
+		}
+		culture:severian = {
+			every_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_kyivan_conversion_area
+					}
+				}
+				add_to_list = kyivan_counties
+			}
+		}
+		culture:vyatichi = {
+			every_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_kyivan_conversion_area
+					}
+				}
+				add_to_list = kyivan_counties
+			}
+		}
+		culture:radimich = {
+			every_culture_county = {
+				limit = {
+					title_province = {
+						geographical_region = custom_kyivan_conversion_area
+					}
+				}
+				add_to_list = kyivan_counties
+			}
+		}
+		# Convert the area around kyiv and chergnov Kyivan
+		every_in_list = {
+			list = kyivan_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_north_germanic }
+								capital_province = { geographical_region = custom_kyivan_conversion_area }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_north_germanic }
+								capital_province = { geographical_region = custom_kyivan_conversion_area }
+							}
+							AND = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_east_slavic }
+								capital_province = { geographical_region = custom_kyivan_conversion_area }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_east_slavic }
+								capital_province = { geographical_region = custom_kyivan_conversion_area }
+							}
+						}
+					}
+				}
+			}				
+			# All England counties in England become anglo_saxon_counties
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:polyan
+				NEW_CULTURE = culture:ruthene
+				REGION = custom_kyivan_conversion_area
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:severian
+				NEW_CULTURE = culture:ruthene
+				REGION = custom_kyivan_conversion_area
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:vyatichi
+				NEW_CULTURE = culture:ruthene
+				REGION = custom_kyivan_conversion_area
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:radimich
+				NEW_CULTURE = culture:ruthene
+				REGION = custom_kyivan_conversion_area
+			}
+		}		
+		# Convert the area around Novgorod to Novogorodian
+		every_in_list = {
+			list = novgorod_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_north_germanic }
+								capital_province = { geographical_region = custom_novgorod_conversion_area }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_north_germanic }
+								capital_province = { geographical_region = custom_novgorod_conversion_area }
+							}
+							AND = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_east_slavic }
+								capital_province = { geographical_region = custom_novgorod_conversion_area }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								culture = { has_cultural_pillar = heritage_east_slavic }
+								capital_province = { geographical_region = custom_novgorod_conversion_area }
+							}
+						}
+					}
+				}
+			}
+						
+			# All England counties in England become anglo_saxon_counties
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:ilmenian
+				NEW_CULTURE = culture:novgorodian
+				REGION = custom_novgorod_conversion_area
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:radimich
+				NEW_CULTURE = culture:novgorodian
+				REGION = custom_novgorod_conversion_area
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:krivich
+				NEW_CULTURE = culture:novgorodian
+				REGION = custom_novgorod_conversion_area
+			}
+		}
+		# Rulers get the next decision
+		every_ruler = {
+			limit = {
+				OR = {
+					culture = { has_cultural_pillar = heritage_east_slavic }
+					culture = { has_cultural_pillar = heritage_north_germanic }
+				}
+				is_landed = yes
+				NOT = { is_independent_ruler = yes }
+				NOR = {
+					culture = culture:ruthene
+					culture = culture:novgorodian
+				}
+				OR = {
+					capital_province = { geographical_region = custom_novgorod_conversion_area }
+					capital_province = { geographical_region = custom_kyivan_conversion_area }
+				}
+			}
+			trigger_event = tapestry_rus.031
+		}
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = kyivan_counties
+						holder = {
+							is_within_diplo_range = { CHARACTER = scope:player }
+						}
+					}
+				}
+				trigger_event = tapestry_rus.032
+			}
+		}
+	}
+}
+tapestry_rus.031 = {# realms along the ruler Ruled Realms 
+	type = character_event
+	title = tapestry_rus.031.t
+	desc = tapestry_rus.031.desc
+	theme = culture_change
+
+	immediate = {
+		# Determine what the player's target culture is (based off of religion and capital region)
+		if = {# Novgorodian
+			limit = { capital_province = { geographical_region = custom_novgorod_conversion_area } }
+			culture:novgorodian = { save_scope_as = my_new_culture }
+		}
+		else_if = {# Kyivan
+			limit = { capital_province = { custom_kyivan_conversion_area = custom_norwegian } }
+			culture:ruthene = { save_scope_as = my_new_culture }
+		}
+		culture = { save_scope_as = old_culture }
+	}
+
+	option = {	# Accept the culture conversion.
+		name = tapestry_rus.031.a
+		if = {
+			limit = {
+				capital_province = {
+					OR = {
+						geographical_region = custom_kyivan_conversion_area
+						geographical_region = custom_novgorod_conversion_area
+					}
+				}
+			}
+			convert_player_realm_from_old_culture_to_new_effect = {
+				OLD_CULTURE = scope:old_culture
+				NEW_CULTURE = scope:my_new_culture
+			}
+		}
+	}
+}
+tapestry_rus.032 = {# Let other players know that Rus has been created
+	type = character_event
+	title = tapestry_rus.032.t
+	desc = tapestry_rus.032.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = tapestry_rus.032.a
+	}
+}
+#######################################
+# Baptism of the Rus 
+#######################################
+
+#######################################
+# Rus Event chain
+#######################################
+
+#######################################
+# Rus Event chain
+#######################################
+
+#######################################
+# Rus Event chain
+#######################################

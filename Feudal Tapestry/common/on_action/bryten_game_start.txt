@@ -50,6 +50,19 @@ bryten_setup_after_game_start_on_actions = {
 				trigger_event = tapestry_hre.011
 			}
 		}
+		character:600 = {# Igor's Tribute over the Drevilians
+			if = {
+				limit = {
+					is_alive = yes
+					is_landed = yes
+					current_date = 936.8.7
+				}
+				trigger_event = tapestry_rus.001
+			}
+		}
+
+
+
 
 		# Hugh the great, defacto Ruler of France in 936
 		character:90120 = { designate_diarch = character:6444 }

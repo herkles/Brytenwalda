@@ -1945,7 +1945,7 @@ create_kingdom_lotharingia_decision_scripted_effect = {# Create the Kingdom of L
 		}
 	}
 }
-reestablish_saxon_adminstration_effects = {
+thankmar_restored_old_kingdoms_effect = {
 	title:d_angria.holder = { save_scope_as = saxon_king }
 	title:d_bavaria.holder = { save_scope_as = bavarian_king }
 	title:d_swabia.holder = { save_scope_as = swabian_king }
@@ -2153,7 +2153,7 @@ start_slav_rising_polabian_effect = {# Starts the Rising for Polobians
 	#Declare the war.
 	scope:polobian_rebel_leader = {
 		start_war = {
-			cb = 	
+			cb = bryten_slav_rising_polobain_war
 			target = scope:target_county.holder.top_liege
 			target_title = scope:target_county.duchy
 		}

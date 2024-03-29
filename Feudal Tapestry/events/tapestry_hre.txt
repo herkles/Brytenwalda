@@ -23,7 +23,7 @@ tapestry_hre.001 = {# Choice given to Otto about invading Lorraine.
 			has_global_variable = otto_thankmars_rebellion_event
 		}
 		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
-		d_upper_lorraine = {# Lorraine must not be your vassal
+		title:d_upper_lorraine = {# Lorraine must not be your vassal
 			holder_scope = {
 				NOR = {
 					character = ROOT
@@ -266,20 +266,18 @@ tapestry_hre.006 = {# Thankmar won his rebellion.
 		animation = personality_bold
 	}
 	
-	option = {# Interesting
+	option = {# Legacy
 		name = tapestry_hre.006.legacy
 		ai_chance = { base = 75 }
 		add_prestige = medium_prestige_gain
 
 	}
-
-	option = {# Interesting
+	option = {# Old Ways
 		name = tapestry_hre.006.old_ways
-		custom_tooltip = tapestry_hre.006.old_ways.tt 
 		add_prestige = major_prestige_gain
 		ai_chance = { base = 25 }
 		hidden_effect = {
-			thankmar_restored_old_kingdoms_effect = yes
+			trigger_event = tapestry_hre.010 
 		}
 	}
 
@@ -295,7 +293,7 @@ tapestry_hre.007 = {# A return to the old ways.
 	}
 	
 	immediate = {
-
+		thankmar_restored_old_kingdoms_effect = yes
 	}
 
 	option = {# Interesting
@@ -315,7 +313,7 @@ tapestry_hre.008 = {# Otto won against Thankmar's rebellion.
 	}
 	
 	option = {# Interesting
-		name = tapestry_hre.008.coronation
+		name = tapestry_hre.008.a
 		add_prestige = medium_prestige_gain
 	}
 
@@ -421,13 +419,12 @@ tapestry_hre.011 = {# Conversion Policy.
 	}
 
 	option = {# Conversion by the sword
-		name = tapestry_hre.011.war
+		name = tapestry_hre.011.a
 		ai_chance = { base = 100 } # its in Gero's nature
 		every_county_in_region = {
 			region = custom_europe_eastern_germany
 			limit = {
 				target_is_de_facto_liege_or_above = root.primary_title
-				NOT = { has_religion = religion:christianity_religion }
 			}
 			add_county_modifier = {
 				modifier = bryten_conversian_by_sword
@@ -463,7 +460,7 @@ tapestry_hre.011 = {# Conversion Policy.
 		}
 	}
 	option = {# Interesting
-		name = tapestry_hre.011.no_war
+		name = tapestry_hre.011.b
 		ai_chance = { base = 0 }
 
 		stress_impact = {
@@ -525,7 +522,7 @@ tapestry_hre.014 = {# An Officials death.
 	}
 
 	option = {# Murder Banquet!
-		name = tapestry_hre.014.murder
+		name = tapestry_hre.014.a
 		ai_chance = { base = 100 }
 		stress_impact = {
 			vengeful = medium_stress_impact_loss
@@ -538,7 +535,7 @@ tapestry_hre.014 = {# An Officials death.
 		}
 	}
 	option = {# That will upset them more
-		name = tapestry_hre.014.no_murder
+		name = tapestry_hre.014.b
 		ai_chance = { base = 0 }
 		stress_impact = {
 			vengeful = major_stress_impact_gain
@@ -582,7 +579,7 @@ tapestry_hre.015 = {# Gero's Banquet.
 					opinion = -75
 				}
 			}
-			every_courtier_and_guest = {
+			every_courtier_or_guest = {
 				limit = {
 					AND = {
 						religion = religion:slavic_religion
@@ -688,7 +685,7 @@ tapestry_hre.017 = {# The slavs Rise Up.
 					NOT = { this = root }
 					capital_province = { geographical_region = custom_europe_eastern_germany }
 				}
-				trigger_event = tapestry_hre.019
+				trigger_event = tapestry_hre.018
 			}
 			every_ruler = {# Marcher Lords are alerted
 				limit = {
@@ -719,7 +716,7 @@ tapestry_hre.018 = {# Alerting Slavic pagan rulers - they join in
 	}
 
 	option = {# Join the Rebellion!
-		name = tapestry_hre.018.war
+		name = tapestry_hre.018.a
 		ai_chance = { base = 100 }
 		hidden_effect = {
 			if = {# Polabians join the Polabian side
@@ -735,7 +732,7 @@ tapestry_hre.018 = {# Alerting Slavic pagan rulers - they join in
 		}
 	}
 	option = {# Don't Join
-		name = tapestry_hre.018.no_war
+		name = tapestry_hre.018.b
 		ai_chance = { base = 0 }
 	}
 }
@@ -782,9 +779,7 @@ tapestry_hre.020 = {# The Slavs Win
 				target_is_de_facto_liege_or_above = root.primary_title
 				NOT = { has_religion = religion:christianity_religion }
 			}
-			remove_county_modifier = {
-				modifier = bryten_conversian_by_sword
-			}
+			remove_county_modifier = bryten_conversian_by_sword
 		}
 	}
 }

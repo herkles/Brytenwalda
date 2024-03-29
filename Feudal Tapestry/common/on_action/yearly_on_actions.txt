@@ -606,7 +606,52 @@ yearly_global_pulse = {
 				}
 			}
 		}
-
+		if = {# Rus Cultures Forming
+			limit = {
+				NOT = { has_global_variable = rus_culture_formed }
+				title:k_ruthenia = { is_title_created = yes } # England must be created first
+				current_date >= 950.1.1
+			}
+			random = {
+				chance = 0
+				modifier = {
+					add = 10 # 20% chance
+					current_date >= 960.1.1
+				}
+				modifier = {
+					add = 10 # 30% chance
+					current_date >= 970.1.1
+				}
+				modifier = {
+					add = 10 # 40% chance
+					current_date >= 980.1.1
+				}
+				modifier = {
+					add = 10 # 50% chance
+					current_date >= 990.1.1
+				}
+				modifier = {
+					add = 10 # 60% chance
+					current_date >= 1000.1.1
+				}
+				modifier = {
+					add = 20 # 80% chance
+					current_date >= 1010.1.1
+				}
+				modifier = {
+					add = 20 # 100% chance
+					current_date >= 1020.1.1
+				}
+				set_global_variable = {
+					name = rus_culture_formed
+					value = yes
+				}
+				trigger_event = {
+					id = tapestry_rus.030
+					days = { 60 300 }
+				}
+			}
+		}
 		# Viking Spirit is Diminished
 		if = {
 			limit = {
@@ -641,8 +686,8 @@ yearly_global_pulse = {
 						region = ghw_region_scandinavia
 						count >= 28
 						OR = {
-							has_religion = religion:islam_religion
-							has_religion = religion:christianity_religion
+							religion = religion:islam_religion
+							religion = religion:christianity_religion
 						}
 					}
 				}
@@ -652,8 +697,8 @@ yearly_global_pulse = {
 						region = ghw_region_russia
 						count >= 28
 						OR = {
-							has_religion = religion:islam_religion
-							has_religion = religion:christianity_religion
+							religion = religion:islam_religion
+							religion = religion:christianity_religion
 						}
 					}
 				}
