@@ -3,7 +3,7 @@
 # 936 Igor and Olga stuff
 #######################################
 # Igor and Tribute
-tapestry_rus.001 = {# Tribute to the Drevilians - Igor View.
+tapestry_rus.001 = {# Tribute of the Drevilians - Igor View.
 	type = character_event
 	title = tapestry_rus.001.t
 	desc = tapestry_rus.001.desc
@@ -13,6 +13,10 @@ tapestry_rus.001 = {# Tribute to the Drevilians - Igor View.
 		animation = personality_bold
 	}
 	
+	immediate = {
+		title:d_turov.holder = { save_scope_as = drevilian_ruler }
+	}
+
 	option = {# Interesting
 		name = tapestry_rus.001.a
 	}
@@ -26,7 +30,7 @@ tapestry_rus.001 = {# Tribute to the Drevilians - Igor View.
 		}
 	}
 }
-tapestry_rus.002 = {# Tribute to the Drevilians - Dreveilian View..
+tapestry_rus.002 = {# Tribute of the Drevilians - Dreveilian View..
 	type = character_event
 	title = tapestry_rus.002.t
 	desc = tapestry_rus.002.desc
@@ -37,7 +41,7 @@ tapestry_rus.002 = {# Tribute to the Drevilians - Dreveilian View..
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.002.war
+		name = tapestry_rus.002.a
 	}
 
 }
@@ -64,7 +68,7 @@ tapestry_rus.003 = {# Potential birth of Sviatoslav I of Kyiv.
 		}
 	}
 }
-tapestry_rus.004 = {# Igor collecting taxes.
+tapestry_rus.004 = {# Igor collecting Tribute.
 	type = character_event
 	title = tapestry_rus.004.t
 	desc = tapestry_rus.004.desc
@@ -84,7 +88,7 @@ tapestry_rus.004 = {# Igor collecting taxes.
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		title:d_turov.holder = { save_scope_as = drevilian_ruler }
 		set_global_variable = {
 			name = otto_traitor_lorraine_event
 			value = yes
@@ -92,7 +96,7 @@ tapestry_rus.004 = {# Igor collecting taxes.
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.004.war
+		name = tapestry_rus.004.a
 		ai_chance = { base = 100 }
 	}
 
@@ -154,15 +158,11 @@ tapestry_rus.006 = {# Igor is murdered.
 	}
 		
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:k_ruthenia.holder = { save_scope_as = olga }
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.006.war
+		name = tapestry_rus.006.a
 		character:600 = { save_scope_as = igor }
 		scope:igor = {
 			death = {
@@ -173,7 +173,7 @@ tapestry_rus.006 = {# Igor is murdered.
 
 	after = {
 		hidden_effect = {
-			scope:igor = {
+			scope:olga = {
 				trigger_event = {
 					id = tapestry_rus.007
 					days = { 30 60 }
@@ -194,7 +194,7 @@ tapestry_rus.007 = {# Sending Emissaries to Olga.
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
+		title:k_ruthenia.holder = { save_scope_as = olga }
 		set_global_variable = {
 			name = otto_traitor_lorraine_event
 			value = yes
@@ -208,7 +208,7 @@ tapestry_rus.007 = {# Sending Emissaries to Olga.
 
 	after = {
 		hidden_effect = {
-			scope:igor = {
+			scope:olga = {
 				trigger_event = {
 					id = tapestry_rus.008
 					days = { 10 20 }
@@ -228,21 +228,17 @@ tapestry_rus.008 = {# Emissaries are sent and killed.
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:d_turov.holder = { save_scope_as = drevilian_ruler }
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.008.war
+		name = tapestry_rus.008.a
 		ai_chance = { base = 100 }
 	}
 
 	after = {
 		hidden_effect = {
-			scope:igor = {
+			scope:drevilian_ruler = {
 				trigger_event = {
 					id = tapestry_rus.009
 					days = { 30 60 }
@@ -262,11 +258,7 @@ tapestry_rus.009 = {# Sending the Honor Guard.
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:k_ruthenia.holder = { save_scope_as = olga }
 	}
 
 	option = {# Interesting
@@ -275,7 +267,7 @@ tapestry_rus.009 = {# Sending the Honor Guard.
 
 	after = {
 		hidden_effect = {
-			scope:igor = {
+			scope:olga = {
 				trigger_event = {
 					id = tapestry_rus.010
 					days = { 30 60 }
@@ -295,21 +287,17 @@ tapestry_rus.010 = {# Honorguard sent to Olga.
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:d_turov.holder = { save_scope_as = drevilian_ruler }
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.010.war
+		name = tapestry_rus.010.a
 		ai_chance = { base = 100 }
 	}
 
 	after = {
 		hidden_effect = {
-			scope:igor = {
+			scope:drevilian_ruler = {
 				trigger_event = {
 					id = tapestry_rus.011
 					days = { 30 60 }
@@ -329,21 +317,17 @@ tapestry_rus.011 = {# Olga is coming to our lands.
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:d_turov.holder = { save_scope_as = drevilian_ruler }
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.011.war
+		name = tapestry_rus.011.a
 		ai_chance = { base = 100 }
 	}
 
 	after = {
 		hidden_effect = {
-			scope:igor = {
+			scope:drevilian_ruler = {
 				trigger_event = {
 					id = tapestry_rus.012
 					days = { 30 60 }
@@ -363,18 +347,14 @@ tapestry_rus.012 = {# Olga Arrives at the Drevillians.
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:k_ruthenia.holder = { save_scope_as = olga }
 	}
 
 	option = {# Drink and be Merry
 		name = tapestry_rus.012.a
 		ai_chance = { base = 100 }
 		hidden_effect = {
-			scope:igor = {
+			scope:olga = {
 				trigger_event = {
 					id = tapestry_rus.013
 					days = { 30 60 }
@@ -386,7 +366,7 @@ tapestry_rus.012 = {# Olga Arrives at the Drevillians.
 		name = tapestry_rus.012.b
 		ai_chance = { base = 0 }
 		hidden_effect = {
-			scope:igor = {
+			scope:olga = {
 				trigger_event = {
 					id = tapestry_rus.017
 					days = { 10 15 }
@@ -406,15 +386,11 @@ tapestry_rus.013 = {# Olga slaughters the Drevilians.
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:d_turov.holder = { save_scope_as = drevilian_ruler }
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.013.war
+		name = tapestry_rus.013.a
 		ai_chance = { base = 100 }
 	}
 
@@ -441,18 +417,14 @@ tapestry_rus.014 = {# Olga reaches Korosten
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:d_turov.holder = { save_scope_as = drevilian_ruler }
 	}
 
 	option = {# A simple tribute
-		name = tapestry_rus.014.war
+		name = tapestry_rus.014.a
 		ai_chance = { base = 100 }
 		hidden_effect = {
-			scope:igor = {
+			scope:drevilian_ruler = {
 				trigger_event = {
 					id = tapestry_rus.015
 					days = { 10 15 }
@@ -472,33 +444,25 @@ tapestry_rus.015 = {# Olga's offer.
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:k_ruthenia.holder = { save_scope_as = olga }
+		title:d_turov.holder = { save_scope_as = drevilian_ruler }
+
 	}
 
 	option = {# We agree to the tribute
-		name = tapestry_rus.015.war
+		name = tapestry_rus.015.a
 		ai_chance = { base = 100 }
 		hidden_effect = {
-			scope:igor = {
+			scope:drevilian_ruler = {
 				trigger_event = {
 					id = tapestry_rus.016
-					days = { 10 15 }
+					days = { 10 11 }
 				}
 			}
-		}
-	}
-	option = {# We can't trust her!
-		name = tapestry_rus.015.no_war
-		ai_chance = { base = 0 }
-		hidden_effect = {
-			scope:igor = {
+			scope:olga = {
 				trigger_event = {
-					id = tapestry_rus.015
-					days = { 10 15 }
+					id = tapestry_rus.016
+					days = { 10 11 }
 				}
 			}
 		}
@@ -514,24 +478,12 @@ tapestry_rus.016 = {# Korosten is set on fire.
 		animation = personality_bold
 	}
 	
-	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
-	}
 
 	option = {# Interesting
-		name = tapestry_rus.016.war
-		ai_chance = { base = 100 }
+		name = tapestry_rus.016.a
 	}
-	option = {# Interesting
-		name = tapestry_rus.016.no_war
-		ai_chance = { base = 0 }
-	}
+
 }
-
 tapestry_rus.017 = {# Olga is able to escape
 	type = character_event
 	title = tapestry_rus.017.t
@@ -551,7 +503,7 @@ tapestry_rus.017 = {# Olga is able to escape
 	}
 
 	option = {# Prepare the Armies
-		name = tapestry_rus.017.war
+		name = tapestry_rus.017.a
 		ai_chance = { base = 100 }
 	}
 
@@ -586,7 +538,7 @@ tapestry_rus.018 = {# War between Kyiv and the Drevilians
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.017.war
+		name = tapestry_rus.017.a
 		add_character_flag = temp_no_claim_war_cost
 		start_war = {
 			cb = drevilian_rebellion_cb
@@ -600,8 +552,19 @@ tapestry_rus.018 = {# War between Kyiv and the Drevilians
 # 936 Igor and Olga stuff
 tapestry_rus.019 = {# Olga goes to Constinople.
 	type = character_event
-	title = tapestry_rus.017.t
-	desc = tapestry_rus.017.desc
+	title = tapestry_rus.019.t
+	desc = {
+		first_valid = {
+			triggered_desc = {# Emperor isn't married
+				trigger = { scope:emperor = { is_married = no } }
+				desc = tapestry_rus.019.desc.not_married
+			}
+			triggered_desc = {# Emperor is married
+				trigger = { scope:emperor = { is_married = yes } }
+				desc = tapestry_rus.019.desc.not_married
+			}
+		}
+	}
 	theme = realm
 	left_portrait = {
 		character = root
@@ -618,24 +581,63 @@ tapestry_rus.019 = {# Olga goes to Constinople.
 			any_spouse = { this = character:601 }
 			mother = { this = character:601 }
 		}
+	}	
+	immediate = {
+		character:601 = { save_scope_as = olga }
+		title:e_byzantium.holder = { save_scope_as = emperor }
 	}
-	
 
 	option = {# Interesting
-		name = tapestry_rus.017.a
+		name = tapestry_rus.019.a
 	}
 
 	after = {
-		trigger_event = {
-			id = tapestry_rus.018
-			days = { 30 60 }
+		scope:emperor = {
+			trigger_event = {
+				id = tapestry_rus.020
+				days = { 5 6 }
+			}
 		}
 	}
 }
-tapestry_rus.020 = {# Olga is Baptized - Her view.
+tapestry_rus.020 = {# Olga is Baptized - ruler of the Byzantines.
 	type = character_event
-	title = tapestry_rus.018.t
-	desc = tapestry_rus.018.desc
+	title = tapestry_rus.020.t
+	desc = {
+		first_valid = {
+			triggered_desc = {# Emperor isn't married
+				trigger = { scope:emperor = { is_married = no } }
+				desc = tapestry_rus.020.desc.not_married
+			}
+			triggered_desc = {# Emperor is married
+				trigger = { scope:emperor = { is_married = yes } }
+				desc = tapestry_rus.020.desc.not_married
+			}
+		}
+	}
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Interesting
+		name = tapestry_rus.020.a
+	}
+
+	after = {
+		scope:olga = {
+			trigger_event = {
+				id = tapestry_rus.021
+				days = { 5 6 }
+			}
+		}
+	}
+}
+tapestry_rus.021 = {# Olga is Baptized - Her view.
+	type = character_event
+	title = tapestry_rus.021.t
+	desc = tapestry_rus.021.desc
 	theme = realm
 	left_portrait = {
 		character = root
@@ -649,7 +651,7 @@ tapestry_rus.020 = {# Olga is Baptized - Her view.
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.018.a
+		name = tapestry_rus.021.a
 		scope:olga = {
 			if = {
 				limit = { NOT = { root.faith = faith:orthodox } }
@@ -661,20 +663,31 @@ tapestry_rus.020 = {# Olga is Baptized - Her view.
 	after = {
 		scope:emperor = {
 			trigger_event = {
-				id = tapestry_rus.021
+				id = tapestry_rus.022
 				days = { 5 6 }
 			}
 		}
 		trigger_event = {
-			id = tapestry_rus.022
+			id = tapestry_rus.023
 			days = { 30 60 }
 		}
 	}
 }
-tapestry_rus.021 = {# Olga is Baptized - ruler of the Byzantines.
+tapestry_rus.022 = {# Olga is Baptized - ruler of the Byzantines.
 	type = character_event
-	title = tapestry_rus.019.t
-	desc = tapestry_rus.019.desc
+	title = tapestry_rus.022.t
+	desc = {
+		first_valid = {
+			triggered_desc = {# Emperor isn't married
+				trigger = { scope:emperor = { is_married = no } }
+				desc = tapestry_rus.022.desc.not_married
+			}
+			triggered_desc = {# Emperor is married
+				trigger = { scope:emperor = { is_married = yes } }
+				desc = tapestry_rus.022.desc.not_married
+			}
+		}
+	}
 	theme = realm
 	left_portrait = {
 		character = root
@@ -682,13 +695,13 @@ tapestry_rus.021 = {# Olga is Baptized - ruler of the Byzantines.
 	}
 	
 	option = {# Interesting
-		name = tapestry_rus.019.a
+		name = tapestry_rus.022.a
 	}
 }
-tapestry_rus.022 = {# Olga returns to Kyiv.
+tapestry_rus.023 = {# Olga returns to Kyiv.
 	type = character_event
-	title = tapestry_rus.020.t
-	desc = tapestry_rus.020.desc
+	title = tapestry_rus.023.t
+	desc = tapestry_rus.023.desc
 	theme = realm
 	left_portrait = {
 		character = root
@@ -697,19 +710,19 @@ tapestry_rus.022 = {# Olga returns to Kyiv.
 	
 	immediate = {
 		set_global_variable = {
-			name = olga_has_converted
+			name = olga_has_returned
 			value = yes
 		}
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.020.a
+		name = tapestry_rus.023.a
 	}
 }
-tapestry_rus.023 = {# Olga supports Church building.
+tapestry_rus.024 = {# Olga supports Church building.
 	type = character_event
-	title = tapestry_rus.021.t
-	desc = tapestry_rus.021.desc
+	title = tapestry_rus.024.t
+	desc = tapestry_rus.024.desc
 	theme = realm
 	left_portrait = {
 		character = root
@@ -717,10 +730,10 @@ tapestry_rus.023 = {# Olga supports Church building.
 	}
 	
 	trigger = {
-		character:601 = {# we want to make sure Giselbert is alive
+		character:601 = {# we want to make sure Olga is alive
 			is_alive = yes
 		}
-		has_global_variable = olga_has_converted
+		has_global_variable = olga_has_returned # She first needs to return to Kyiv.
 		Not = { has_global_variable = olga_supports_churches } # only trigger once
 
 	}
@@ -730,15 +743,24 @@ tapestry_rus.023 = {# Olga supports Church building.
 			name = olga_supports_churches
 			value = yes
 		}
-		random_held_county = {
-			limit = { not = { has_faith = faith:orthodox } }
-			save_scope_as = possible_church_land
+		random_realm_county = {
+			limit = { kingdom = title:k_ruthenia }
+			random_county_province = {
+				limit = { has_holding = no }
+				save_scope_as = norman_church_province
+			}
 		}
 	}
 
 	option = {# Interesting
-		name = tapestry_rus.021.war
-		ai_chance = { base = 100 }
+		name = tapestry_rus.024.a
+		remove_short_term_gold = hold_court_holding_cost_cheaper_value
+		scope:norman_church_province = {
+			begin_create_holding = {
+				type = church_holding
+				refund_cost = { gold = hold_court_holding_cost_cheaper_value }
+			}
+		}
 	}
 }
 #######################################

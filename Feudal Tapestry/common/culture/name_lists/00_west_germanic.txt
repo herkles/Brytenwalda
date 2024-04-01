@@ -105,204 +105,592 @@
 name_list_anglo_saxon = {
 
 	cadet_dynasty_names = {
-		"dynn_Hayles"
-		{ "dynnp_of" "dynn_Norfolk" }
-		"dynn_Rose"
-		"dynn_Dodington"
-		"dynn_Stawell"
-		"dynn_Huntingdon"
-		"dynn_Lockhart"
-		"dynn_Wuffing"
-		"dynn_Henry"
-		"dynn_Hastings"
-		"dynn_Puttoc"
-		{ "dynnp_of" "dynn_Anglo-Saxony" }
-		{ "dynnp_of" "dynn_Northampton" }
-		"dynn_A_theling"
-		"dynn_Moore"
-		"dynn_Fysche"
-		"dynn_Dall"
-		"dynn_Slee"
-		"dynn_Kiil"
-		"dynn_Mel"
-		"dynn_Holter"
-		"dynn_Randolph"
-		"dynn_Percy"
-		"dynn_Despencer"
-		"dynn_Bacon"
-		"dynn_Reresby"
-		"dynn_Cornwallis"
-		"dynn_Clifford"
-		"dynn_Carew"
-		"dynn_Maddock"
-		"dynn_Fortescue"
-		{ "dynnp_de" "dynn_Ros" }
-		"dynn_Howard"
-		"dynn_Maudit"
-		"dynn_Berkeley"
-		"dynn_Barton"
-		"dynn_Colvile"
-		"dynn_Grey"
-		"dynn_Darcy"
-		{ "dynnp_de" "dynn_Garlande" }
-		"dynn_Perry"
-		"dynn_Bethell"
-		"dynn_Perry"
-		"dynn_Borthwick"
-		{ "dynnp_de" "dynn_London" }
-		{ "dynnp_of" "dynn_Hereford" }
-		{ "dynnp_of" "dynn_Gloucester" }
-		{ "dynnp_of" "dynn_Oxford" }
-		{ "dynnp_of" "dynn_Salisbury" }
-		{ "dynnp_of" "dynn_Surrey" }
-		{ "dynnp_of" "dynn_Sussex" }
-		{ "dynnp_of" "dynn_Hampshire" }
-		{ "dynnp_of" "dynn_Dorset" }
-		{ "dynnp_of" "dynn_Somerset" }
-		{ "dynnp_of" "dynn_Devon" }
-		{ "dynnp_of" "dynn_Exeter" }
-		{ "dynnp_of" "dynn_Cumberland" }
-		{ "dynnp_of" "dynn_York" }
-		{ "dynnp_of" "dynn_Lancaster" }
-		{ "dynnp_of" "dynn_Chester" }
-		{ "dynnp_of" "dynn_Lincoln" }
-		{ "dynnp_of" "dynn_Leicester" }
-		{ "dynnp_of" "dynn_Derby" }
-		{ "dynnp_of" "dynn_Shrewsbury" }
-		{ "dynnp_of" "dynn_Northampton" }
-		{ "dynnp_of" "dynn_Bedford" }
-		{ "dynnp_of" "dynn_Norfolk" }
-		{ "dynnp_of" "dynn_Suffolk" }
-		"dynn_Crawford"
-		"dynn_Tynedale"
-		"dynn_Pudsey"
-		"dynn_Marshal"
-		"dynn_Rowe"
-		{ "dynnp_de" "dynn_Criel" }
-		"dynn_Ciesla"
-		"dynn_Ross"
-		"dynn_Wuffing"
-		"dynn_Beorming"
-		"dynn_Eorling"
-		"dynn_A_bbing"
-		"dynn_A_lling"
-		"dynn_Wintaling"
+		"dynn_Ecgwynningas"
+		"dynn_Heluningas"
+		"dynn_Eanwiningas"
+		"dynn_RE_dwulfingas"
+		"dynn_E_bbingas"
+		"dynn_Accingas"
+		"dynn_Acwulfingas"
+		"dynn_E_T_elmE_ringas"
+		"dynn_E_ficingas"
+		"dynn_E_scwulfingas"
+		"dynn_E_staningas"
+		"dynn_Ecgmundingas"
+		"dynn_E_T_elbeorhtingas"
+		"dynn_Ealdwiningas"
+		"dynn_Ealdwulfingas"
+		"dynn_E_lfgaringas"
+		"dynn_E_lfgeatingas"
+		"dynn_E_lfheahingas"
+		"dynn_E_lfhelmingas"
+		"dynn_E_lfheringas"
+		"dynn_E_lfnoD_ingas"
+		"dynn_E_lfrE_dingas"
+		"dynn_E_lfricingas"
+		"dynn_E_lfstaningas"
+		"dynn_E_lfwealdingas"
+		"dynn_E_lfweardingas"
+		"dynn_E_lfwiningas"
+		"dynn_E_lfmE_ringas"
+		"dynn_Osbeorhtingas"
+		"dynn_OsfriT_ingas"
+		"dynn_Osweardingas"
+		"dynn_Oswulfingas"
+		"dynn_E_T_elbealdingas"
+		"dynn_E_T_elfriT_ingas"
+		"dynn_E_T_elheardingas"
+		"dynn_E_T_elheahingas"
+		"dynn_E_T_elhelmingas"
+		"dynn_E_T_elhuningas"
+		"dynn_E_T_elmodingas"
+		"dynn_E_T_elmundingas"
+		"dynn_E_T_elnoD_ingas"
+		"dynn_E_T_elrE_dingas"
+		"dynn_E_T_elricingas"
+		"dynn_E_T_elsigingas"
+		"dynn_E_T_elstaningas"
+		"dynn_E_T_elwigingas"
+		"dynn_E_T_elwulfingas"
+		"dynn_Eadbeorhtingas"
+		"dynn_EadfriT_ingas"
+		"dynn_EadmE_ringas"
+		"dynn_Bealdwiningas"
+		"dynn_Beagmundingas"
+		"dynn_BeorhtfriT_ingas"
+		"dynn_Beorhthelmingas"
+		"dynn_Beorhtmundingas"
+		"dynn_BeorhtnoD_ingas"
+		"dynn_Beorhtre_dingas"
+		"dynn_Beorhtricingas"
+		"dynn_Beorhtsigingas"
+		"dynn_Beorhtstaningas"
+		"dynn_Beorhtweardingas"
+		"dynn_Beorhtwiningas"
+		"dynn_Beornheahingas"
+		"dynn_BeornnoD_ingas"
+		"dynn_Beornheardingas"
+		"dynn_Beorhtwealdingas"
+		"dynn_Beorhtwulfingas"
+		"dynn_BeorhtmE_ringas"
+		"dynn_BeornfriT_ingas"
+		"dynn_Beornhelmingas"
+		"dynn_Beornwulfingas"
+		"dynn_Beornwealdingas"
+		"dynn_Bruningas"
+		"dynn_Brungaringas"
+		"dynn_Bruningingas"
+		"dynn_Brunstaningas"
+		"dynn_Brunwiningas"
+		"dynn_Burgheardingas"
+		"dynn_Ceawliningas"
+		"dynn_Cenbeorhtingas"
+		"dynn_CenfriT_ingas"
+		"dynn_Cenheardingas"
+		"dynn_Centwiningas"
+		"dynn_Cenwealdingas"
+		"dynn_Cenwulfingas"
+		"dynn_Ceolbeorhtingas"
+		"dynn_Ceolheardingas"
+		"dynn_Ceolmundingas"
+		"dynn_Ceolstaningas"
+		"dynn_Ceolwealdingas"
+		"dynn_Ceolwulfingas"
+		"dynn_Cnapingas"
+		"dynn_Colgrimingas"
+		"dynn_Colmanningas"
+		"dynn_Cynebeorhtingas"
+		"dynn_Cynemundingas"
+		"dynn_CuT_beorhtingas"
+		"dynn_CuT_heardingas"
+		"dynn_CuT_rE_dingas"
+		"dynn_CuT_winingas"
+		"dynn_CuT_wulfingas"
+		"dynn_CynefriT_ingas"
+		"dynn_Cyneheardingas"
+		"dynn_Cynehelmingas"
+		"dynn_Cynesigingas"
+		"dynn_Cynestaningas"
+		"dynn_Cynewealdingas"
+		"dynn_Cyneweardingas"
+		"dynn_Cynewiningas"
+		"dynn_Cynewulfingas"
+		"dynn_Cynricingas"
+		"dynn_Cyppingingas"
+		"dynn_Doddingas"
+		"dynn_Duddingas"
+		"dynn_Dunningingas"
+		"dynn_Dunstaningas"
+		"dynn_Deormanningas"
+		"dynn_Deormodingas"
+		"dynn_Deorsigingas"
+		"dynn_Deorwulfingas"
+		"dynn_Eadbealdingas"
+		"dynn_Eadhelmingas"
+		"dynn_EadnoD_ingas"
+		"dynn_EadrE_dingas"
+		"dynn_Eadsigingas"
+		"dynn_Eadstaningas"
+		"dynn_Eadwigingas"
+		"dynn_Eadwealdingas"
+		"dynn_Ealdbeorhtingas"
+		"dynn_Ealdhuningas"
+		"dynn_EaldrE_dingas"
+		"dynn_Ealdwigingas"
+		"dynn_EalhfriT_ingas"
+		"dynn_Ealhheardingas"
+		"dynn_Ealhheringas"
+		"dynn_Ealhmundingas"
+		"dynn_Ealhsigingas"
+		"dynn_Ealhstaningas"
+		"dynn_Eanbeorhtingas"
+		"dynn_EanfriT_ingas"
+		"dynn_Eanmundingas"
+		"dynn_EanrE_dingas"
+		"dynn_Eanwulfingas"
+		"dynn_Eardwulfingas"
+		"dynn_Earnwigingas"
+		"dynn_Ecgbrandingas"
+		"dynn_EcgfriT_ingas"
+		"dynn_Ecglafingas"
+		"dynn_Eadgaringas"
+		"dynn_Eadmundingas"
+		"dynn_Eadweardingas"
+		"dynn_Eadwiningas"
+		"dynn_Ecgbeorhtingas"
+		"dynn_Ecgheardingas"
+		"dynn_Ecgwealdingas"
+		"dynn_Ecgwulfingas"
+		"dynn_E_lfwigingas"
+		"dynn_E_llingas"
+		"dynn_Eoformundingas"
+		"dynn_Farmanningas"
+		"dynn_ForT_rE_dingas"
+		"dynn_FriT_uricingas"
+		"dynn_FriT_egistingas"
+		"dynn_FriT_uwealdingas"
+		"dynn_GlE_dwiningas"
+		"dynn_Godingas"
+		"dynn_Godemanningas"
+		"dynn_GodfriT_ingas"
+		"dynn_Godheringas"
+		"dynn_Godingingas"
+		"dynn_Godmanningas"
+		"dynn_Godricingas"
+		"dynn_Godwigingas"
+		"dynn_Godwiningas"
+		"dynn_Goldstaningas"
+		"dynn_Goldwiningas"
+		"dynn_Gospatricingas"
+		"dynn_Herewealdingas"
+		"dynn_Headdingas"
+		"dynn_Herebeorhtingas"
+		"dynn_HerefriT_ingas"
+		"dynn_Heremodingas"
+		"dynn_Herewulfingas"
+		"dynn_Hunbeorhtingas"
+		"dynn_HunfriT_ingas"
+		"dynn_Huningas"
+		"dynn_Hunlafingas"
+		"dynn_HunrE_dingas"
+		"dynn_Hunwiningas"
+		"dynn_HwE_tmanningas"
+		"dynn_Hwitingas"
+		"dynn_LeomE_ringas"
+		"dynn_Lufingas"
+		"dynn_Lullingas"
+		"dynn_Lyfingingas"
+		"dynn_Manningingas"
+		"dynn_Merewiningas"
+		"dynn_MorcE_ringas"
+		"dynn_Oddingas"
+		"dynn_Ordgaringas"
+		"dynn_OrdmE_ringas"
+		"dynn_Eadwaceringas"
+		"dynn_Ordbeorhtingas"
+		"dynn_Ordhelmingas"
+		"dynn_OrdnoD_ingas"
+		"dynn_Ordricingas"
+		"dynn_Osmundingas"
+		"dynn_Oswealdingas"
+		"dynn_Oswigingas"
+		"dynn_Hringwulfingas"
+		"dynn_HroD_garingas"
+		"dynn_SE_mE_ringas"
+		"dynn_SE_ricingas"
+		"dynn_SE_weardingas"
+		"dynn_SE_wulfingas"
+		"dynn_SeaxfriT_ingas"
+		"dynn_Sidemanningas"
+		"dynn_Sidewiningas"
+		"dynn_Sigebealdingas"
+		"dynn_Sigebeorhtingas"
+		"dynn_SigerE_dingas"
+		"dynn_SigestE_fingas"
+		"dynn_Sigewulfingas"
+		"dynn_SigefriT_ingas"
+		"dynn_Sigegaringas"
+		"dynn_Sigehelmingas"
+		"dynn_Sigemundingas"
+		"dynn_Sigericingas"
+		"dynn_Sigeweardingas"
+		"dynn_Sigewealdingas"
+		"dynn_Stanheardingas"
+		"dynn_SwiT_huningas"
+		"dynn_SwiT_wulfingas"
+		"dynn_Tidbealdingas"
+		"dynn_Tidbeorhtingas"
+		"dynn_Tidwulfingas"
+		"dynn_Torhthelmingas"
+		"dynn_UhtrE_dingas"
+		"dynn_Wulfgaringas"
+		"dynn_Wulfricingas"
+		"dynn_Wighelmingas"
+		"dynn_Wigmundingas"
+		"dynn_Wigmundingas"
+		"dynn_WE_rfriT_ingas"
+		"dynn_WE_rheardingas"
+		"dynn_WE_rstaningas"
+		"dynn_WE_rwulfingas"
+		"dynn_Wealdhelmingas"
+		"dynn_Wealdheringas"
+		"dynn_Wealhheringas"
+		"dynn_Wicgingas"
+		"dynn_Wigbeorhtingas"
+		"dynn_WigfriT_ingas"
+		"dynn_Wigheardingas"
+		"dynn_Wigstaningas"
+		"dynn_Wihtbrordingas"
+		"dynn_Wihtgaringas"
+		"dynn_Wihtmundingas"
+		"dynn_WihtrE_dingas"
+		"dynn_Wihtsigingas"
+		"dynn_WilfriT_ingas"
+		"dynn_Wilstaningas"
+		"dynn_Winingas"
+		"dynn_WinemE_ringas"
+		"dynn_Winemanningas"
+		"dynn_Wistaningas"
+		"dynn_Wudumanningas"
+		"dynn_Wulfbealdingas"
+		"dynn_Wulfbeorhtingas"
+		"dynn_Wulfbeorningas"
+		"dynn_WulffriT_ingas"
+		"dynn_Wulfgeatingas"
+		"dynn_Wulfheardingas"
+		"dynn_WulfhEahingas"
+		"dynn_Wulfhelmingas"
+		"dynn_Wulfhuningas"
+		"dynn_Wulflafingas"
+		"dynn_WulfnoD_ingas"
+		"dynn_WulfrE_dingas"
+		"dynn_Wulfsigingas"
+		"dynn_Wulfstaningas"
+		"dynn_Wulfweardingas"
+		"dynn_Wulfwiningas"
+		"dynn_Wynnhelmingas"
+		"dynn_Wynnsigingas"
+		"dynn_Wynnstaningas"
+		"dynn_T_eodric"
+		"dynn_T_eodE_ingas"
 	}
-
 	dynasty_names = {
-		"dynn_Hayles"
-		{ "dynnp_of" "dynn_Norfolk" }
-		"dynn_Rose"
-		"dynn_Dodington"
-		"dynn_Stawell"
-		"dynn_Huntingdon"
-		"dynn_Lockhart"
-		"dynn_Wuffing"
-		"dynn_Henry"
-		"dynn_Hastings"
-		"dynn_Puttoc"
-		{ "dynnp_of" "dynn_Anglo-Saxony" }
-		{ "dynnp_of" "dynn_Northampton" }
-		"dynn_A_theling"
-		"dynn_Moore"
-		"dynn_Fysche"
-		"dynn_Dall"
-		"dynn_Slee"
-		"dynn_Kiil"
-		"dynn_Mel"
-		"dynn_Holter"
-		"dynn_Randolph"
-		"dynn_Percy"
-		"dynn_Despencer"
-		"dynn_Bacon"
-		"dynn_Reresby"
-		"dynn_Cornwallis"
-		"dynn_Clifford"
-		"dynn_Carew"
-		"dynn_Maddock"
-		"dynn_Fortescue"
-		{ "dynnp_de" "dynn_Ros" }
-		"dynn_Howard"
-		"dynn_Maudit"
-		"dynn_Berkeley"
-		"dynn_Barton"
-		"dynn_Colvile"
-		"dynn_Grey"
-		"dynn_Darcy"
-		{ "dynnp_de" "dynn_Garlande" }
-		"dynn_Perry"
-		"dynn_Bethell"
-		"dynn_Perry"
-		"dynn_Borthwick"
-		{ "dynnp_de" "dynn_London" }
-		{ "dynnp_of" "dynn_Hereford" }
-		{ "dynnp_of" "dynn_Gloucester" }
-		{ "dynnp_of" "dynn_Oxford" }
-		{ "dynnp_of" "dynn_Salisbury" }
-		{ "dynnp_of" "dynn_Surrey" }
-		{ "dynnp_of" "dynn_Sussex" }
-		{ "dynnp_of" "dynn_Hampshire" }
-		{ "dynnp_of" "dynn_Dorset" }
-		{ "dynnp_of" "dynn_Somerset" }
-		{ "dynnp_of" "dynn_Devon" }
-		{ "dynnp_of" "dynn_Exeter" }
-		{ "dynnp_of" "dynn_Cumberland" }
-		{ "dynnp_of" "dynn_York" }
-		{ "dynnp_of" "dynn_Lancaster" }
-		{ "dynnp_of" "dynn_Chester" }
-		{ "dynnp_of" "dynn_Lincoln" }
-		{ "dynnp_of" "dynn_Leicester" }
-		{ "dynnp_of" "dynn_Derby" }
-		{ "dynnp_of" "dynn_Shrewsbury" }
-		{ "dynnp_of" "dynn_Northampton" }
-		{ "dynnp_of" "dynn_Bedford" }
-		{ "dynnp_of" "dynn_Norfolk" }
-		{ "dynnp_of" "dynn_Suffolk" }
-		"dynn_Crawford"
-		"dynn_Tynedale"
-		"dynn_Pudsey"
-		"dynn_Marshal"
-		"dynn_Rowe"
-		{ "dynnp_de" "dynn_Criel" }
-		"dynn_Ciesla"
-		"dynn_Ross"
-		"dynn_Wuffing"
-		"dynn_Beorming"
-		"dynn_Eorling"
-		"dynn_A_bbing"
-		"dynn_A_lling"
-		"dynn_Wintaling"
+		"dynn_Ecgwynningas"
+		"dynn_Heluningas"
+		"dynn_Eanwiningas"
+		"dynn_RE_dwulfingas"
+		"dynn_E_bbingas"
+		"dynn_Accingas"
+		"dynn_Acwulfingas"
+		"dynn_E_T_elmE_ringas"
+		"dynn_E_ficingas"
+		"dynn_E_scwulfingas"
+		"dynn_E_staningas"
+		"dynn_Ecgmundingas"
+		"dynn_E_T_elbeorhtingas"
+		"dynn_Ealdwiningas"
+		"dynn_Ealdwulfingas"
+		"dynn_E_lfgaringas"
+		"dynn_E_lfgeatingas"
+		"dynn_E_lfheahingas"
+		"dynn_E_lfhelmingas"
+		"dynn_E_lfheringas"
+		"dynn_E_lfnoD_ingas"
+		"dynn_E_lfrE_dingas"
+		"dynn_E_lfricingas"
+		"dynn_E_lfstaningas"
+		"dynn_E_lfwealdingas"
+		"dynn_E_lfweardingas"
+		"dynn_E_lfwiningas"
+		"dynn_E_lfmE_ringas"
+		"dynn_Osbeorhtingas"
+		"dynn_OsfriT_ingas"
+		"dynn_Osweardingas"
+		"dynn_Oswulfingas"
+		"dynn_E_T_elbealdingas"
+		"dynn_E_T_elfriT_ingas"
+		"dynn_E_T_elheardingas"
+		"dynn_E_T_elheahingas"
+		"dynn_E_T_elhelmingas"
+		"dynn_E_T_elhuningas"
+		"dynn_E_T_elmodingas"
+		"dynn_E_T_elmundingas"
+		"dynn_E_T_elnoD_ingas"
+		"dynn_E_T_elrE_dingas"
+		"dynn_E_T_elricingas"
+		"dynn_E_T_elsigingas"
+		"dynn_E_T_elstaningas"
+		"dynn_E_T_elwigingas"
+		"dynn_E_T_elwulfingas"
+		"dynn_Eadbeorhtingas"
+		"dynn_EadfriT_ingas"
+		"dynn_EadmE_ringas"
+		"dynn_Bealdwiningas"
+		"dynn_Beagmundingas"
+		"dynn_BeorhtfriT_ingas"
+		"dynn_Beorhthelmingas"
+		"dynn_Beorhtmundingas"
+		"dynn_BeorhtnoD_ingas"
+		"dynn_Beorhtre_dingas"
+		"dynn_Beorhtricingas"
+		"dynn_Beorhtsigingas"
+		"dynn_Beorhtstaningas"
+		"dynn_Beorhtweardingas"
+		"dynn_Beorhtwiningas"
+		"dynn_Beornheahingas"
+		"dynn_BeornnoD_ingas"
+		"dynn_Beornheardingas"
+		"dynn_Beorhtwealdingas"
+		"dynn_Beorhtwulfingas"
+		"dynn_BeorhtmE_ringas"
+		"dynn_BeornfriT_ingas"
+		"dynn_Beornhelmingas"
+		"dynn_Beornwulfingas"
+		"dynn_Beornwealdingas"
+		"dynn_Bruningas"
+		"dynn_Brungaringas"
+		"dynn_Bruningingas"
+		"dynn_Brunstaningas"
+		"dynn_Brunwiningas"
+		"dynn_Burgheardingas"
+		"dynn_Ceawliningas"
+		"dynn_Cenbeorhtingas"
+		"dynn_CenfriT_ingas"
+		"dynn_Cenheardingas"
+		"dynn_Centwiningas"
+		"dynn_Cenwealdingas"
+		"dynn_Cenwulfingas"
+		"dynn_Ceolbeorhtingas"
+		"dynn_Ceolheardingas"
+		"dynn_Ceolmundingas"
+		"dynn_Ceolstaningas"
+		"dynn_Ceolwealdingas"
+		"dynn_Ceolwulfingas"
+		"dynn_Cnapingas"
+		"dynn_Colgrimingas"
+		"dynn_Colmanningas"
+		"dynn_Cynebeorhtingas"
+		"dynn_Cynemundingas"
+		"dynn_CuT_beorhtingas"
+		"dynn_CuT_heardingas"
+		"dynn_CuT_rE_dingas"
+		"dynn_CuT_winingas"
+		"dynn_CuT_wulfingas"
+		"dynn_CynefriT_ingas"
+		"dynn_Cyneheardingas"
+		"dynn_Cynehelmingas"
+		"dynn_Cynesigingas"
+		"dynn_Cynestaningas"
+		"dynn_Cynewealdingas"
+		"dynn_Cyneweardingas"
+		"dynn_Cynewiningas"
+		"dynn_Cynewulfingas"
+		"dynn_Cynricingas"
+		"dynn_Cyppingingas"
+		"dynn_Doddingas"
+		"dynn_Duddingas"
+		"dynn_Dunningingas"
+		"dynn_Dunstaningas"
+		"dynn_Deormanningas"
+		"dynn_Deormodingas"
+		"dynn_Deorsigingas"
+		"dynn_Deorwulfingas"
+		"dynn_Eadbealdingas"
+		"dynn_Eadhelmingas"
+		"dynn_EadnoD_ingas"
+		"dynn_EadrE_dingas"
+		"dynn_Eadsigingas"
+		"dynn_Eadstaningas"
+		"dynn_Eadwigingas"
+		"dynn_Eadwealdingas"
+		"dynn_Ealdbeorhtingas"
+		"dynn_Ealdhuningas"
+		"dynn_EaldrE_dingas"
+		"dynn_Ealdwigingas"
+		"dynn_EalhfriT_ingas"
+		"dynn_Ealhheardingas"
+		"dynn_Ealhheringas"
+		"dynn_Ealhmundingas"
+		"dynn_Ealhsigingas"
+		"dynn_Ealhstaningas"
+		"dynn_Eanbeorhtingas"
+		"dynn_EanfriT_ingas"
+		"dynn_Eanmundingas"
+		"dynn_EanrE_dingas"
+		"dynn_Eanwulfingas"
+		"dynn_Eardwulfingas"
+		"dynn_Earnwigingas"
+		"dynn_Ecgbrandingas"
+		"dynn_EcgfriT_ingas"
+		"dynn_Ecglafingas"
+		"dynn_Eadgaringas"
+		"dynn_Eadmundingas"
+		"dynn_Eadweardingas"
+		"dynn_Eadwiningas"
+		"dynn_Ecgbeorhtingas"
+		"dynn_Ecgheardingas"
+		"dynn_Ecgwealdingas"
+		"dynn_Ecgwulfingas"
+		"dynn_E_lfwigingas"
+		"dynn_E_llingas"
+		"dynn_Eoformundingas"
+		"dynn_Farmanningas"
+		"dynn_ForT_rE_dingas"
+		"dynn_FriT_uricingas"
+		"dynn_FriT_egistingas"
+		"dynn_FriT_uwealdingas"
+		"dynn_GlE_dwiningas"
+		"dynn_Godingas"
+		"dynn_Godemanningas"
+		"dynn_GodfriT_ingas"
+		"dynn_Godheringas"
+		"dynn_Godingingas"
+		"dynn_Godmanningas"
+		"dynn_Godricingas"
+		"dynn_Godwigingas"
+		"dynn_Godwiningas"
+		"dynn_Goldstaningas"
+		"dynn_Goldwiningas"
+		"dynn_Gospatricingas"
+		"dynn_Herewealdingas"
+		"dynn_Headdingas"
+		"dynn_Herebeorhtingas"
+		"dynn_HerefriT_ingas"
+		"dynn_Heremodingas"
+		"dynn_Herewulfingas"
+		"dynn_Hunbeorhtingas"
+		"dynn_HunfriT_ingas"
+		"dynn_Huningas"
+		"dynn_Hunlafingas"
+		"dynn_HunrE_dingas"
+		"dynn_Hunwiningas"
+		"dynn_HwE_tmanningas"
+		"dynn_Hwitingas"
+		"dynn_LeomE_ringas"
+		"dynn_Lufingas"
+		"dynn_Lullingas"
+		"dynn_Lyfingingas"
+		"dynn_Manningingas"
+		"dynn_Merewiningas"
+		"dynn_MorcE_ringas"
+		"dynn_Oddingas"
+		"dynn_Ordgaringas"
+		"dynn_OrdmE_ringas"
+		"dynn_Eadwaceringas"
+		"dynn_Ordbeorhtingas"
+		"dynn_Ordhelmingas"
+		"dynn_OrdnoD_ingas"
+		"dynn_Ordricingas"
+		"dynn_Osmundingas"
+		"dynn_Oswealdingas"
+		"dynn_Oswigingas"
+		"dynn_Hringwulfingas"
+		"dynn_HroD_garingas"
+		"dynn_SE_mE_ringas"
+		"dynn_SE_ricingas"
+		"dynn_SE_weardingas"
+		"dynn_SE_wulfingas"
+		"dynn_SeaxfriT_ingas"
+		"dynn_Sidemanningas"
+		"dynn_Sidewiningas"
+		"dynn_Sigebealdingas"
+		"dynn_Sigebeorhtingas"
+		"dynn_SigerE_dingas"
+		"dynn_SigestE_fingas"
+		"dynn_Sigewulfingas"
+		"dynn_SigefriT_ingas"
+		"dynn_Sigegaringas"
+		"dynn_Sigehelmingas"
+		"dynn_Sigemundingas"
+		"dynn_Sigericingas"
+		"dynn_Sigeweardingas"
+		"dynn_Sigewealdingas"
+		"dynn_Stanheardingas"
+		"dynn_SwiT_huningas"
+		"dynn_SwiT_wulfingas"
+		"dynn_Tidbealdingas"
+		"dynn_Tidbeorhtingas"
+		"dynn_Tidwulfingas"
+		"dynn_Torhthelmingas"
+		"dynn_UhtrE_dingas"
+		"dynn_Wulfgaringas"
+		"dynn_Wulfricingas"
+		"dynn_Wighelmingas"
+		"dynn_Wigmundingas"
+		"dynn_Wigmundingas"
+		"dynn_WE_rfriT_ingas"
+		"dynn_WE_rheardingas"
+		"dynn_WE_rstaningas"
+		"dynn_WE_rwulfingas"
+		"dynn_Wealdhelmingas"
+		"dynn_Wealdheringas"
+		"dynn_Wealhheringas"
+		"dynn_Wicgingas"
+		"dynn_Wigbeorhtingas"
+		"dynn_WigfriT_ingas"
+		"dynn_Wigheardingas"
+		"dynn_Wigstaningas"
+		"dynn_Wihtbrordingas"
+		"dynn_Wihtgaringas"
+		"dynn_Wihtmundingas"
+		"dynn_WihtrE_dingas"
+		"dynn_Wihtsigingas"
+		"dynn_WilfriT_ingas"
+		"dynn_Wilstaningas"
+		"dynn_Winingas"
+		"dynn_WinemE_ringas"
+		"dynn_Winemanningas"
+		"dynn_Wistaningas"
+		"dynn_Wudumanningas"
+		"dynn_Wulfbealdingas"
+		"dynn_Wulfbeorhtingas"
+		"dynn_Wulfbeorningas"
+		"dynn_WulffriT_ingas"
+		"dynn_Wulfgeatingas"
+		"dynn_Wulfheardingas"
+		"dynn_WulfhEahingas"
+		"dynn_Wulfhelmingas"
+		"dynn_Wulfhuningas"
+		"dynn_Wulflafingas"
+		"dynn_WulfnoD_ingas"
+		"dynn_WulfrE_dingas"
+		"dynn_Wulfsigingas"
+		"dynn_Wulfstaningas"
+		"dynn_Wulfweardingas"
+		"dynn_Wulfwiningas"
+		"dynn_Wynnhelmingas"
+		"dynn_Wynnsigingas"
+		"dynn_Wynnstaningas"
+		"dynn_T_eodric"
+		"dynn_T_eodE_ingas"
 	}
 	
 	male_names = {
-		Arncytel Balthere Beorhtfrith Beorhthelm BeorhtmE_r Beorhtnoth Beorhtric Beorhtsige 
-		Beorhtwine Beorn BeornrE_d Beornwulf Burgheard Byrhtnoth Cearl Cenfus CenrE_d Cenwulf 
-		Ceolwulf Cerdic Copsige Cuthberht CuthrE_d Cynehelm Cynewulf Cytelbearn Eadberht 
-		Eadfrith Eadgar Eadmund EadmE_r Eadric EadrE_d Eadsige Eadulf Eadweald Eadweard Eadwig 
-		Eadwine Eadwulf Ealdhun Ealdmund EaldrE_d Ealdwine Ealdwulf Eanberht Eanfrith Eanhere 
-		Eardwulf Eastmund Ecgberht Ecgfrith Gamall Godwine Gospatric Guthfrith Guthmund Gyrth 
-		Hacon Harold Heahberht Hereberht Hereweald Hereweard Hlothere Hrodberht InwE_r Leofheah 
-		Leofhelm Leofric Leofweald Leofwine Maccus Morcar ME_rleswegn Offa Onlaf Ordgar Oscytel 
-		Oshere Osmund Osric OsrE_d Osulf Osweald Oswine Oswulf Petre RE_dwulf RE_genweald Scule 
-		Sigeberht Sigehelm Sigeric SigerE_d Sighere Siweard Stigand Swegn Swithelm SwithrE_d 
-		SwE_frE_d SE_bert SE_lrE_d SE_weald SE_xbald SE_xrE_d ThorE_d Thurcytel Thurfrith Tostig 
-		UhtrE_d Ulf Ulfcytel Waltheof Werestan Wiglaf WihtrE_d Wistan Wulf Wulfgar Wulfgeat Wulfhelm 
-		Wulfhere WulfmE_r Wulfnoth Wulfstan E_lfgar E_lfmE_r E_lfnoth E_lfric E_lfrE_d E_lfsige 
-		E_lfstan E_lfwald E_lfweard E_lfwig E_lfwine E_lle E_thelbald E_thelberht E_thelfrith 
-		E_thelhere E_thelmE_r E_thelric E_thelrE_d E_thelsige E_thelstan E_thelweald E_thelweard 
-		E_thelwine E_thelwold E_thelwulf Eormenred Eorcenberht Eormenric Eadbald RE_dwald
+		Acwulf E_bba E_fic E_lfgar E_lfgeat E_lfheah E_lfhelm E_lfhere E_lfmE_r E_lfnoD_ E_lfrE_d E_lfric E_lfsige E_lfstan E_lfweald E_lfweard E_lfwig E_lfwine E_lla E_scwulf E_stan E_T_elbeald E_T_elbeorht E_T_elfriT_ E_T_elhEah E_T_elheard E_T_elhelm E_T_elhelm E_T_elhun E_T_elhun E_T_elmE_r E_T_elmod E_T_elmund E_T_elnoD_ E_T_elrE_d E_T_elric E_T_elsige E_T_elstan E_T_elweald E_T_elweard E_T_elwig E_T_elwine E_T_elwulf Beagmund Bealdwine BeorhtfriT_ Beorhthelm Beorhthelm BeorhtmE_r Beorhtmund Beorhtmund BeorhtnoD_ BeorhtnoD_ BeorhtrE_d Beorhtric Beorhtsige Beorhtstan Beorhtweald Beorhtweard Beorhtwine Beorhtwulf Beorn BeornfriT_ Beornheah Beornheard Beornhelm BeornnoD_ Beornweald Beornwulf Brun Bruning Brunstan Brunwine Burgheard Ceawlin Cenbeorht CenfriT_ Cenheard CenrE_d Centwine Cenweald Cenwulf Ceolbeorht Ceolheard Ceolmund Ceolstan Ceolweald Ceolwulf Cerdic Cnapa Colgrim Colmann CuT_beorht CuT_heard CuT_rE_d CuT_wine CuT_wulf Cynebeorht CynefriT_ Cyneheard Cynehelm Cynemund Cynesige Cynestan Cyneweald Cyneweard Cynewine Cynewulf Cynric Cypping Deormann Deormod Deorsige Deorwulf Dodda Dudda Dunning Dunstan Eadbeald Eadbeorht EadfriT_ Eadgar Eadhelm EadmE_r Eadmund EadnoD_ EadrE_d Eadric Eadsige Eadstan Eadwacer Eadweald Eadweard Eadwig Eadwine Eadwulf Ealdbeorht Ealdhun EaldrE_d Ealdwig Ealdwine Ealdwulf EalhfriT_ Ealhheard Ealhhelm Ealhhere Ealhmund Ealhsige Ealhstan Eanbeorht EanfriT_ Eanmund EanrE_d Eanwulf Eardwulf Earnwig Ecgbeorht Ecgbrand EcgfriT_ Ecgheard Ecglaf Ecgmund Ecgweald Ecgwulf Eoformund Farmann ForT_rE_d FriT_egist FriT_uric FriT_uweald GlE_dwine Goda Godemann GodfriT_ Godhere Goding Godleof Godmann Godric Godwig Godwine Goldstan Goldwine Gospatric Headda Heahbeorht HeahfriT_ Heahstan Herebeorht HerefriT_ Heremod Hereweald Herewulf Hringwulf HroD_gar Huna Hunbeorht HunfriT_ Hunlaf HunrE_d Hunwine HwE_tmann Hwita LeofT_egn LeodmE_r Leodwine Leofa Leofcild Leofgar Leofgeat Leofhelm Leofing Leofmann LeofnoD_ LeofrE_d Leofric Leofsige Leofstan Leofsunu Leofweald Leofweard Leofwig Leofwine LeomE_r Lufa Lulla Lulling Lyfing Manning Merewine MorcE_r Odda Offa Ordbeorht Ordgar Ordheah Ordhelm OrdmE_r OrdnoD_ Ordric Osbeorht OsfriT_ Osmund Osweald Osweard Oswig Oswulf SE_mE_r SE_ric SE_weald SE_weard SE_wine SE_wulf SeaxfriT_ Sidemann Sidewine Sigebeald Sigebeorht SigefriT_ Sigegar Sigehelm Sigemund SigerE_d Sigeric SigestE_f Sigeweald Sigeweard Sigewulf Stanheard Swetmann SwiT_hun SwiT_wulf Tidbeald Tidbeorht Tidwulf Torhthelm UhtrE_d Wada WE_rfriT_ WE_rheard WE_rmund WE_rstan WE_rwulf Wealdhelm Wealdhere Wealhhere Wicga Wigbeorht WigfriT_ Wigheard Wighelm Wiglaf Wigmund Wigstan Wihtbrord Wihtgar Wihtmund WihtrE_d Wihtsige WilfriT_ Wilgrip Wilstan Wine WinemE_r Winemann Wistan Wudumann Wulfbeald Wulfbeorht Wulfbeorn WulffriT_ Wulfgar Wulfgeat Wulfheah Wulfheard Wulfhelm Wulfhere Wulfhun Wulflaf WulfmE_r WulfnoD_ WulfrE_d Wulfric Wulfsige Wulfstan Wulfweard Wulfwig Wulfwine Wynnhelm Wynnsige Wynnstan T_EodrE_d T_Eodric
 	}
 	female_names = {
-		Agatha Balthild BeorhtflE_d Beorhtgifu Beorhtgyth Beorhtwaru Beorhtwynn BeornflE_d Beorngyth BlE_ja BurgflE_d CeolflE_d Cristina
-		Cuthburg Cwenburg Cyneburg Cynegyth Cynehild Cyneswith Cynethryth Eadburg EadflE_d Eadgifu Eadgyth Eadhburh Eadhild Ealdgyth
-		EalhflE_d Ealhswith Eanswith Ecgfrida Ecgwyn Godgifu Gunhilda Gytha Helga Heregyth Hereswith Hextilda Hungifu Judith
-		LeofflE_d Leofgifu Leofrun Leofwaru Leofwynn Margaret Maud Mildrith Octreda SifflE_d Sigrid SE_thryth WulfflE_d Wulfgifu
-		Wulfgyth Wulfhild Wulfrun Wulfthryth Wulfwaru Wulfwynn WynnflE_d WE_rburg E_bba E_lfflE_d E_lfgifu E_lfgyth E_lflE_da E_lfrida
-		E_lfswith E_lfthryth E_lfwynn E_thelburg E_thelflE_d E_thelgifu E_thelhild E_thelrE_da E_thelswith E_thelthryth
-		E_thelburh Seaxburh Wihtburh
+		E_bbe E_lfflE_d E_lfgifu E_lfgyD_ E_lfhild E_lfrun E_lfswiT_ E_lfwaru E_lfwynn E_lfT_ryD_ E_T_elburg E_T_elflE_d E_T_elgifu E_T_elgyD_ E_T_elhild E_T_elrun E_T_elswiT_ E_T_elwynn E_T_elT_ryD_ Agatha Alwynn Anna Beaghild BealdgyD_ Bealdhild Bebbe BeorhtflE_d Beorhtgifu Beorhthild Beorhtwynn BeorhtT_ryD_ BliT_T_ryD_ Burgwynn ByrhflE_d Ceolburg Ceolwynn Cristina CuT_burg CwEnburg Cwenhild CwenT_ryD_ Cyneburg CynegyD_ CyneswiT_ CyneT_ryD_ DE_glufu Eadburg EadflE_d Eadgifu EadgyD_ Eadhild Eadwynn Eafe EaldgyD_ Ealhburg EalhswiT_ EalhT_ryD_ EanflE_d Eastorhild Ecgburg Emma EngelgyD_ FriT_burg FriT_ugyD_ Gode Godgifu GodgyD_ Godhyse Godleofu Godrun Goldgifu Goldrun Heahburg HelmgyD_ HereswiT_ HildgyD_ Hringwaru Hungifu HungyD_ Leofcwen LeofdE_g Leofe LeofflE_d Leofgifu LeofgyD_ Leofhild Leofhyse Leofrun Leofsidu LeofswiT_ Leofwaru Leofwynn Leohtgifu Lufu Lufucild Mildburg MildgyD_ MildT_ryD_ Modgifu NoD_gyD_ Osburg Osgifu OsgyD_ Oswaru Oswynn OsT_ryD_ RicT_ryD_ SE_burg SE_flE_d SE_gifu SE_lufu SE_T_ryD_ Seaxburg Seleburg SeleT_ryD_ SifflE_d Sigeburg SigegyD_ Sigewaru Stanhild Tidburg Wacerhild WE_rburg WeorD_gifu Wihtburg WihtflE_d Wihtgifu WulfflE_d Wulfgifu WulfgyD_ Wulfhild Wulfrun WulfswiT_ Wulfwaru Wulfwynn WulfT_ryD_ WynnflE_d Wynngifu WynnT_ryD_
 	}
-
-	dynasty_of_location_prefix = "dynnp_of"
 
 	patronym_suffix_male = "dynnpat_suf_son"
 	patronym_suffix_female = "dynnpat_suf_sdohtor"
@@ -548,230 +936,30 @@ name_list_scottish = {
 name_list_anglo_norse = {
 
 	cadet_dynasty_names = {
-		"dynn_Hayles"
-		{ "dynnp_of" "dynn_Norfolk" }
-		"dynn_Rose"
-		"dynn_Dodington"
-		"dynn_Stawell"
-		"dynn_Huntingdon"
-		"dynn_Lockhart"
-		"dynn_Wuffing"
-		"dynn_Henry"
-		"dynn_Hastings"
-		"dynn_Puttoc"
-		{ "dynnp_of" "dynn_Anglo-Saxony" }
-		{ "dynnp_of" "dynn_Northampton" }
-		"dynn_A_theling"
-		"dynn_Moore"
-		"dynn_Fysche"
-		"dynn_Dall"
-		"dynn_Slee"
-		"dynn_Kiil"
-		"dynn_Mel"
-		"dynn_Holter"
-		"dynn_Randolph"
-		"dynn_Percy"
-		"dynn_Despencer"
-		"dynn_Bacon"
-		"dynn_Reresby"
-		"dynn_Cornwallis"
-		"dynn_Clifford"
-		"dynn_Carew"
-		"dynn_Maddock"
-		"dynn_Fortescue"
-		{ "dynnp_de" "dynn_Ros" }
-		"dynn_Howard"
-		"dynn_Maudit"
-		"dynn_Berkeley"
-		"dynn_Barton"
-		"dynn_Colvile"
-		"dynn_Grey"
-		"dynn_Darcy"
-		{ "dynnp_de" "dynn_Garlande" }
-		"dynn_Perry"
-		"dynn_Bethell"
-		"dynn_Perry"
-		"dynn_Borthwick"
-		{ "dynnp_de" "dynn_London" }
-		{ "dynnp_of" "dynn_Hereford" }
-		{ "dynnp_of" "dynn_Gloucester" }
-		{ "dynnp_of" "dynn_Oxford" }
-		{ "dynnp_of" "dynn_Salisbury" }
-		{ "dynnp_of" "dynn_Surrey" }
-		{ "dynnp_of" "dynn_Sussex" }
-		{ "dynnp_of" "dynn_Hampshire" }
-		{ "dynnp_of" "dynn_Dorset" }
-		{ "dynnp_of" "dynn_Somerset" }
-		{ "dynnp_of" "dynn_Devon" }
-		{ "dynnp_of" "dynn_Exeter" }
-		{ "dynnp_of" "dynn_Cumberland" }
-		{ "dynnp_of" "dynn_York" }
-		{ "dynnp_of" "dynn_Lancaster" }
-		{ "dynnp_of" "dynn_Chester" }
-		{ "dynnp_of" "dynn_Lincoln" }
-		{ "dynnp_of" "dynn_Leicester" }
-		{ "dynnp_of" "dynn_Derby" }
-		{ "dynnp_of" "dynn_Shrewsbury" }
-		{ "dynnp_of" "dynn_Northampton" }
-		{ "dynnp_of" "dynn_Bedford" }
-		{ "dynnp_of" "dynn_Norfolk" }
-		{ "dynnp_of" "dynn_Suffolk" }
-		"dynn_Crawford"
-		"dynn_Tynedale"
-		"dynn_Pudsey"
-		"dynn_Marshal"
-		"dynn_Rowe"
-		{ "dynnp_de" "dynn_Criel" }
-		"dynn_Ciesla"
-		"dynn_Ross"
-		"dynn_Wuffing"
-		"dynn_Beorming"
-		"dynn_Eorling"
-		"dynn_A_bbing"
-		"dynn_A_lling"
-		"dynn_Wintaling"
+		# Anglo-Saxon Dynasty Names
+			Aculfingas E_bbaingas E_ficingas E_lfgaringas E_lfgeatingas E_lfhEahingas E_lfhelmingas E_lfhereingas E_lfmE_ringas E_lfnoD_ingas E_lfrE_dingas E_lfricingas E_lfsigeingas E_lfstaningas E_lfwoldingas E_lfwardingas E_lfwigingas E_lfwineingas E_llaingas E_sculfingas E_staningas E_T_elbaldingas E_T_elbrihtingas E_T_elfriT_ingas E_T_elhEahingas E_T_elhardingas E_T_elhelmingas E_T_elhelmingas E_T_elhuningas E_T_elhuningas E_T_elmE_ringas E_T_elmodingas E_T_elmundingas E_T_elnoD_ingas E_T_elrE_dingas E_T_elricingas E_T_elsigeingas E_T_elstaningas E_T_elwoldingas E_T_elwardingas E_T_elwigingas E_T_elwineingas E_T_elulfingas Beagmundingas baldwineingas brihtfriT_ingas brihthelmingas brihthelmingas brihtmE_ringas brihtmundingas brihtmundingas brihtnoD_ingas brihtnoD_ingas brihtrE_dingas brihtricingas brihtsigeingas brihtstaningas brihtwoldingas brihtwardingas brihtwineingas brihtulfingas Beorningas BeornfriT_ingas Beornheahingas Beornhardingas Beornhelmingas BeornnoD_ingas Beornwoldingas Beornulfingas Bruningas Bruningingas Brunstaningas Brunwineingas Burghardingas Ceawliningas Cenbrihtingas CenfriT_ingas Cenhardingas CenrE_dingas Centwineingas Cenwoldingas Cenulfingas Ceolbrihtingas Ceolhardingas Ceolmundingas Ceolstaningas Ceolwoldingas Ceolulfingas Cerdicingas Cnapaingas Colgrimingas Colmanningas CuT_brihtingas CuT_hardingas CuT_rE_dingas CuT_wineingas CuT_ulfingas Cynebrihtingas CynefriT_ingas Cynehardingas Cynehelmingas Cynemundingas Cynesigeingas Cynestaningas Cynewoldingas Cynewardingas Cynewineingas Cyneulfingas Cynricingas Cyppingingas Deormanningas Deormodingas Deorsigeingas Deorulfingas Doddaingas Duddaingas Dunningingas Dunstaningas Eadbaldingas Eadbrihtingas EadfriT_ingas Eadgaringas Eadhelmingas EadmE_ringas Eadmundingas EadnoD_ingas EadrE_dingas Eadricingas Eadsigeingas Eadstaningas Eadwaceringas Eadwoldingas Eadwardingas Eadwigingas Eadwineingas Eadulfingas Ealdbrihtingas Ealdhuningas EaldrE_dingas Ealdwigingas Ealdwineingas Ealdulfingas EalhfriT_ingas Ealhhardingas Ealhhelmingas Ealhhereingas Ealhmundingas Ealhsigeingas Ealhstaningas Eanbrihtingas EanfriT_ingas Eanmundingas EanrE_dingas Eanulfingas Eardulfingas Earnwigingas Ecgbrihtingas Ecgbrandingas EcgfriT_ingas Ecghardingas Ecglafingas Ecgmundingas Ecgwoldingas Ecgulfingas Eoformundingas Farmanningas ForT_rE_dingas FriT_egistingas FriT_uricingas FriT_uwoldingas GlE_dwineingas Godaingas Godemanningas GodfriT_ingas Godhereingas Godingingas Godleofingas Godmanningas Godricingas Godwigingas Godwineingas Goldstaningas Goldwineingas Gospatricingas Headdaingas Heahbrihtingas HeahfriT_ingas Heahstaningas Herebrihtingas HerefriT_ingas Heremodingas Herewoldingas Hereulfingas Hringulfingas HroD_garingas Hunaingas Hunbrihtingas HunfriT_ingas Hunlafingas HunrE_dingas Hunwineingas HwE_tmanningas Hwitaingas LeofT_egningas LeodmE_ringas Leodwineingas Leofaingas Leofcildingas Leofgaringas Leofgeatingas Leofhelmingas Leofingingas Leofmanningas LeofnoD_ingas LeofrE_dingas Leofricingas Leofsigeingas Leofstaningas Leofsunuingas Leofwoldingas Leofwardingas Leofwigingas Leofwineingas LeomE_ringas Lufaingas Lullaingas Lullingingas Lyfingingas Manningingas Merewineingas MorcE_ringas Oddaingas Offaingas Ordbrihtingas Ordgaringas Ordheahingas Ordhelmingas OrdmE_ringas OrdnoD_ingas Ordricingas Osbrihtingas OsfriT_ingas Osmundingas Oswoldingas Oswardingas Oswigingas Osulfingas SE_mE_ringas SE_ricingas SE_woldingas SE_wardingas SE_wineingas SE_ulfingas SeaxfriT_ingas Sidemanningas Sidewineingas Sigebaldingas Sigebrihtingas SigefriT_ingas Sigegaringas Sigehelmingas Sigemundingas SigerE_dingas Sigericingas SigestE_fingas Sigewoldingas Sigewardingas Sigeulfingas Stanhardingas Swetmanningas SwiT_huningas SwiT_ulfingas Tidbaldingas Tidbrihtingas Tidulfingas Torhthelmingas UhtrE_dingas Wadaingas WE_rfriT_ingas WE_rhardingas WE_rmundingas WE_rstaningas WE_rulfingas woldhelmingas woldhereingas Wealhhereingas Wicgaingas Wigbrihtingas WigfriT_ingas Wighardingas Wighelmingas Wiglafingas Wigmundingas Wigstaningas Wihtbrordingas Wihtgaringas Wihtmundingas WihtrE_dingas Wihtsigeingas WilfriT_ingas Wilgripingas Wilstaningas Wineingas WinemE_ringas Winemanningas Wistaningas Wudumanningas Wulfbaldingas Wulfbrihtingas Wulfbeorningas WulffriT_ingas Wulfgaringas Wulfgeatingas Wulfheahingas Wulfhardingas Wulfhelmingas Wulfhereingas Wulfhuningas Wulflafingas WulfmE_ringas WulfnoD_ingas WulfrE_dingas Wulfricingas Wulfsigeingas Wulfstaningas Wulfwardingas Wulfwigingas Wulfwineingas Wynnhelmingas Wynnsigeingas Wynnstaningas T_eodrE_dingas T_eodricingas
+		# Germanic Dynasty Names
+			E_gilingas E_gnereingas E_lafingas E_ledgrimingas Atfaraingas BaldemE_ringas Ballungingas Banwiduingas Barcwiduingas Bardingas Beadulfingas Bearnaingas Bearnwardingas Bergfinningas Bergwiduingas BergT_uringas Berncytelingas Bernwardingas Boddaingas Bondaingas Botberningas Botfusingas Botgaringas Botmundingas Botrafingas Botstaningas Botwiduingas Bragaingas Brordingas Bruncilingas Brunmanningas Brynulfingas BurgfE_stingas Burggaringas Burgulfingas Byulfingas Ceotwigingas Colingas Colberningas Colbrandingas Colfidingas Colfinningas Colswegeningas Crumingas Cwigberningas Cytelberningas CytelfE_stingas Cytelhasingas Cytelheafdeingas Cytellogingas Cytelmundingas Dagingas Dagfinningas Dallaingas Deorgaringas Deorwigingas Dyraingas Eadcilingas Eadfinningas Eadgislingas Eadgrimingas EadhwE_tingas Eadwiduingas Earnstaningas Eastmodingas Ellidagrimingas Eohingas Eohberningas Eohcilingas Eohcilingas Eohereingas Eohfreaingas EohfriT_ingas Eohstaningas Eohulfingas Eongaringas Erwineingas ET_aingas FE_stberningas FE_stereingas FE_stgaringas FE_stmundingas FE_ststedeingas FE_stulfingas FE_stT_egningas Falcaingas Farberningas Farulfingas FarT_egningas Finnberningas Finngaringas Finnulfingas Finnwardingas Finnwiduingas Folkstaningas Folkwiduingas Forcyningas Freaberningas Freagaringas Frearicingas Freastaningas Freawiduingas Fullhygaingas Gandalfingas Gangulfingas Garalfingas Garberningas Gardearfingas Garelmingas GarfE_stingas GarhwE_tingas Garlafingas GarmE_ringas Garmundingas Garneotingas Garstaningas Garwiduingas GarT_eofingas Gatiringas Geafwoldingas Geardereingas Geflogingas Gefulfingas Giestingas GinnfE_stingas Gislaingas Gismundingas Gnupingas GodfE_stingas Godgiestingas Godneotingas GodwE_ringas GodT_ornningas Gormingas Gotingas Gotereingas Gotredingas Gotricingas Gotulfingas Gotwiduingas Greneadingas Greotgeardingas Grimcilingas Gripingas Gunnberningas Gunncilingas Gunndearfingas GunnfriT_ingas Gunnfusingas GunnhwE_tingas Gunnlafingas Gunnlogingas GunnmE_ringas Gunnmundingas Gunnrafingas GunnwE_ringas Gunnwardingas Gunnwiduingas Gunnwoldingas Gutiringas GuT_hrE_fningas HE_lfusingas Hafgrimingas Haflidaingas HafT_uringas Hagbardingas Hagenaingas Hagnwiduingas Hagstaningas Halladingas Hallberningas HallfriT_ingas Hallgaringas Hallstaningas Hallwardingas Hamcilingas Hamundingas HardE_nnaingas Hardbrihtingas Hardgaringas Hardmanningas Hardstaningas Hardwigingas Haricingas Haulfingas Hawardingas Hecgberningas Hecgstaningas Hecgulfingas Hecgwiduingas Hecgwoldingas Hedenberningas HedenfE_stingas Hedengaringas Helgaingas Helgulfingas Helmereingas HelmfE_stingas Helmgaringas Helmgrimingas Helmulfingas Helmwiduingas Hemmingingas Heorlafingas Heorulfingas Heorwardingas HerefE_stingas Herelogingas Herewardingas Hlifstaningas Hlifundingas Hnacaingas Holmingas Holmberningas Holmdearfingas Holmdoringas HolmfE_stingas Holmgaringas Holmgotingas Holmlogingas Holmstaningas Holmwiduingas Holtaingas Hosculdingas HraD_ereingas HraD_mE_ringas HrE_fningas HrE_fncilingas Hranaingas HroD_berningas HroD_fusingas HroD_gislingas HroD_gotingas HroD_hwE_tingas HroD_logingas HroD_mE_ringas HroD_mundingas Hrollafingas Hromundingas Hrosscilingas Hultricingas Hundulfingas Hunwiduingas HunT_eofingas Hwitcaringas Igberningas Igcilingas Igearingas Igguatingas Igilberningas IgilfE_stingas Iglacingas Iglafingas Igmundingas Igstaningas Igulfingas Igwindingas Iolgaringas Islafingas Iwereingas Lacingas Lacfrodingas Lacnaringas Leodberningas Licnberningas LicnhwE_tingas Licnmundingas Licnrafingas Licnwiduingas Lingormingas LoD_mundingas Macingas Micaingas Munaningas Mundgaringas NE_rfiringas Narfaingas Nefberningas Nefgaringas Neridingas NorT_manningas Oblodingas OD_cilingas OD_incaringas OD_ulfingas OD_wE_ringas OfriT_ingas Olwoldingas Omuningas Ondotingas Onesigingas Ormingas Ormgaringas Ormulfingas Osbrandingas Osdearfingas Osgislingas Osgrimingas Osmodingas Osniciningas Ospacingas Osuringas Osyrgingas Otamingas Otrocingas OT_yrmingas Rafingas Ragnberningas RagnfE_stingas Ragniingas Ragnwiduingas Rasculfingas Rascwiduingas RauD_berningas RauD_ulfingas RedT_ealfingas Reyrcytelingas Ricingas RichwE_tingas Riculfingas Ricwiduingas Ricwineingas RoghwE_tingas Runaingas RunfE_stingas Runwiduingas SE_berningas SE_dearfingas SE_fusingas SE_garingas SE_grimingas SE_mundingas SE_rafingas SE_T_uringas Salgeardingas Scagaingas Scealgingas Scealmingas Scearphedeningas Sceoldingas Scofteingas Sealfigingas Seaxaingas Seaxulfingas Sibbaingas Sigeberningas Sigecytelingas Sigedaningas Sigedearfingas SigefE_stingas Sigefusingas SigehwE_tingas SigemE_ringas Sigeneotingas Sigerafingas Sigewardingas Sigewiduingas SigeT_uringas SigeT_urD_ingas SigeT_urningas Solvigingas Sorcwiringas Staningas Stanberningas Stancilingas Stanereingas Stanulfingas StanT_uringas Stigingas Stodberningas Sturlaingas Styringas Styrberningas Styremanningas StyrfE_stingas Styrlogingas Styrmiringas Sumarlidaingas SunnhwE_tingas Sunnwiduingas Swaraldingas SwawE_ringas Sweartabrandingas Sweartgaringas Sweartheafdeingas Swegenberningas Swerriringas Swipdagingas Tidcymaingas Tokaingas Tolkingas Trocingas Troculfingas Trocwigingas Tykaingas Unnaringas Unnulfingas Unnwoldingas WE_gningas Wamodingas Wealdaingas Wealdricingas Wealhberningas Wealhgotingas Wesetaingas Westereingas Westgaringas Westlidaingas WestmE_ringas Westmanningas Westmundingas Wiberningas Wicereingas Widberningas WidfE_stingas Widfaraingas Widhygsaingas Wielmingas WifE_stingas Wigaringas Wigberningas Wigdearfingas WigfE_stingas Wigfusingas Wigislingas Wiglacingas Wiglundringas WigmE_ringas Wigotingas Wigrimingas Wigstearcingas Wigulfingas Wigulfingas Wilmundingas Wimundingas Wineotingas Winterlidaingas Wulfhedeningas WulfhwE_tingas Wulfwiduingas Wulfwoldingas Yngaingas Yngealdingas Yngeberningas YngefE_stingas YngemE_ringas Yngemundingas Yngewoldingas Yngulfingas YrlE_ndingas T_ancbrandingas T_ealfaingas T_ealfereingas T_eodaingas T_eodelmingas T_eodereingas T_eodmE_ringas T_eodulfingas T_eostereingas T_eostulfingas T_regeningas T_rostingas T_uringas T_uralfingas T_urberningas T_urD_ingas T_urereingas T_urfinningas T_urgaringas T_urgiestingas T_urgislingas T_urhallingas T_uriringas T_urlacingas T_urlafingas T_urleotingas T_urmodingas T_urneotingas T_urordingas T_urormingas T_urwE_ringas T_urwardingas T_urwiduingas T_urwoldingas E_gilingas E_gnereingas E_lafingas E_ledgrimingas Atfaraingas BaldemE_ringas Ballungingas Banwiduingas Barcwiduingas Bardingas Beadulfingas Bearnaingas Bearnwardingas Bergfinningas Bergwiduingas BergT_uringas Berncytelingas Bernwardingas Boddaingas Bondaingas Botberningas Botfusingas Botgaringas Botmundingas Botrafingas Botstaningas Botwiduingas Bragaingas Brordingas Bruncilingas Brunmanningas Brynulfingas BurgfE_stingas Burggaringas Burgulfingas Byulfingas Ceotwigingas Colingas Colberningas Colbrandingas Colfidingas Colfinningas Colswegeningas Crumingas Cwigberningas Cytelberningas CytelfE_stingas Cytelhasingas Cytelheafdeingas Cytellogingas Cytelmundingas Dagingas Dagfinningas Dallaingas Deorgaringas Deorwigingas Dyraingas Eadcilingas Eadfinningas Eadgislingas Eadgrimingas EadhwE_tingas Eadwiduingas Earnstaningas Eastmodingas Ellidagrimingas Eohingas Eohberningas Eohcilingas Eohcilingas Eohereingas Eohfreaingas EohfriT_ingas Eohstaningas Eohulfingas Eongaringas Erwineingas ET_aingas FE_stberningas FE_stereingas FE_stgaringas FE_stmundingas FE_ststedeingas FE_stulfingas FE_stT_egningas Falcaingas Farberningas Farulfingas FarT_egningas Finnberningas Finngaringas Finnulfingas Finnwardingas Finnwiduingas Folkstaningas Folkwiduingas Forcyningas Freaberningas Freagaringas Frearicingas Freastaningas Freawiduingas Fullhygaingas Gandalfingas Gangulfingas Garalfingas Garberningas Gardearfingas Garelmingas GarfE_stingas GarhwE_tingas Garlafingas GarmE_ringas Garmundingas Garneotingas Garstaningas Garwiduingas GarT_eofingas Gatiringas Geafwoldingas Geardereingas Geflogingas Gefulfingas Giestingas GinnfE_stingas Gislaingas Gismundingas Gnupingas GodfE_stingas Godgiestingas Godneotingas GodwE_ringas GodT_ornningas Gormingas Gotingas Gotereingas Gotredingas Gotricingas Gotulfingas Gotwiduingas Greneadingas Greotgeardingas Grimcilingas Gripingas Gunnberningas Gunncilingas Gunndearfingas GunnfriT_ingas Gunnfusingas GunnhwE_tingas Gunnlafingas Gunnlogingas GunnmE_ringas Gunnmundingas Gunnrafingas GunnwE_ringas Gunnwardingas Gunnwiduingas Gunnwoldingas Gutiringas GuT_hrE_fningas HE_lfusingas Hafgrimingas Haflidaingas HafT_uringas Hagbardingas Hagenaingas Hagnwiduingas Hagstaningas Halladingas Hallberningas HallfriT_ingas Hallgaringas Hallstaningas Hallwardingas Hamcilingas Hamundingas HardE_nnaingas Hardbrihtingas Hardgaringas Hardmanningas Hardstaningas Hardwigingas Haricingas Haulfingas Hawardingas Hecgberningas Hecgstaningas Hecgulfingas Hecgwiduingas Hecgwoldingas Hedenberningas HedenfE_stingas Hedengaringas Helgaingas Helgulfingas Helmereingas HelmfE_stingas Helmgaringas Helmgrimingas Helmulfingas Helmwiduingas Hemmingingas Heorlafingas Heorulfingas Heorwardingas HerefE_stingas Herelogingas Herewardingas Hlifstaningas Hlifundingas Hnacaingas Holmingas Holmberningas Holmdearfingas Holmdoringas HolmfE_stingas Holmgaringas Holmgotingas Holmlogingas Holmstaningas Holmwiduingas Holtaingas Hosculdingas HraD_ereingas HraD_mE_ringas HrE_fningas HrE_fncilingas Hranaingas HroD_berningas HroD_fusingas HroD_gislingas HroD_gotingas HroD_hwE_tingas HroD_logingas HroD_mE_ringas HroD_mundingas Hrollafingas Hromundingas Hrosscilingas Hultricingas Hundulfingas Hunwiduingas HunT_eofingas Hwitcaringas Igberningas Igcilingas Igearingas Igguatingas Igilberningas IgilfE_stingas Iglacingas Iglafingas Igmundingas Igstaningas Igulfingas Igwindingas Iolgaringas Islafingas Iwereingas Lacingas Lacfrodingas Lacnaringas Leodberningas Licnberningas LicnhwE_tingas Licnmundingas Licnrafingas Licnwiduingas Lingormingas LoD_mundingas Macingas Micaingas Munaningas Mundgaringas NE_rfiringas Narfaingas Nefberningas Nefgaringas Neridingas NorT_manningas Oblodingas OD_cilingas OD_incaringas OD_ulfingas OD_wE_ringas OfriT_ingas Olwoldingas Omuningas Ondotingas Onesigingas Ormingas Ormgaringas Ormulfingas Osbrandingas Osdearfingas Osgislingas Osgrimingas Osmodingas Osniciningas Ospacingas Osuringas Osyrgingas Otamingas Otrocingas OT_yrmingas Rafingas Ragnberningas RagnfE_stingas Ragniingas Ragnwiduingas Rasculfingas Rascwiduingas RauD_berningas RauD_ulfingas RedT_ealfingas Reyrcytelingas Ricingas RichwE_tingas Riculfingas Ricwiduingas Ricwineingas RoghwE_tingas Runaingas RunfE_stingas Runwiduingas SE_berningas SE_dearfingas SE_fusingas SE_garingas SE_grimingas SE_mundingas SE_rafingas SE_T_uringas Salgeardingas Scagaingas Scealgingas Scealmingas Scearphedeningas Sceoldingas Scofteingas Sealfigingas Seaxaingas Seaxulfingas Sibbaingas Sigeberningas Sigecytelingas Sigedaningas Sigedearfingas SigefE_stingas Sigefusingas SigehwE_tingas SigemE_ringas Sigeneotingas Sigerafingas Sigewardingas Sigewiduingas SigeT_uringas SigeT_urD_ingas SigeT_urningas Solvigingas Sorcwiringas Staningas Stanberningas Stancilingas Stanereingas Stanulfingas StanT_uringas Stigingas Stodberningas Sturlaingas Styringas Styrberningas Styremanningas StyrfE_stingas Styrlogingas Styrmiringas Sumarlidaingas SunnhwE_tingas Sunnwiduingas Swaraldingas SwawE_ringas Sweartabrandingas Sweartgaringas Sweartheafdeingas Swegenberningas Swerriringas Swipdagingas Tidcymaingas Tokaingas Tolkingas Trocingas Troculfingas Trocwigingas Tykaingas Unnaringas Unnulfingas Unnwoldingas WE_gningas Wamodingas Wealdaingas Wealdricingas Wealhberningas Wealhgotingas Wesetaingas Westereingas Westgaringas Westlidaingas WestmE_ringas Westmanningas Westmundingas Wiberningas Wicereingas Widberningas WidfE_stingas Widfaraingas Widhygsaingas Wielmingas WifE_stingas Wigaringas Wigberningas Wigdearfingas WigfE_stingas Wigfusingas Wigislingas Wiglacingas Wiglundringas WigmE_ringas Wigotingas Wigrimingas Wigstearcingas Wigulfingas Wigulfingas Wilmundingas Wimundingas Wineotingas Winterlidaingas Wulfhedeningas WulfhwE_tingas Wulfwiduingas Wulfwoldingas Yngaingas Yngealdingas Yngeberningas YngefE_stingas YngemE_ringas Yngemundingas Yngewoldingas Yngulfingas YrlE_ndingas T_ancbrandingas T_ealfaingas T_ealfereingas T_eodaingas T_eodelmingas T_eodereingas T_eodmE_ringas T_eodulfingas T_eostereingas T_eostulfingas T_regeningas T_rostingas T_uringas T_uralfingas T_urberningas T_urD_ingas T_urereingas T_urfinningas T_urgaringas T_urgiestingas T_urgislingas T_urhallingas T_uriringas T_urlacingas T_urlafingas T_urleotingas T_urmodingas T_urneotingas T_urordingas T_urormingas T_urwE_ringas T_urwardingas T_urwiduingas T_urwoldingas
 	}
-
 	dynasty_names = {
-		"dynn_Hayles"
-		{ "dynnp_of" "dynn_Norfolk" }
-		"dynn_Rose"
-		"dynn_Dodington"
-		"dynn_Stawell"
-		"dynn_Huntingdon"
-		"dynn_Lockhart"
-		"dynn_Wuffing"
-		"dynn_Henry"
-		"dynn_Hastings"
-		"dynn_Puttoc"
-		{ "dynnp_of" "dynn_Anglo-Saxony" }
-		{ "dynnp_of" "dynn_Northampton" }
-		"dynn_A_theling"
-		"dynn_Moore"
-		"dynn_Fysche"
-		"dynn_Dall"
-		"dynn_Slee"
-		"dynn_Kiil"
-		"dynn_Mel"
-		"dynn_Holter"
-		"dynn_Randolph"
-		"dynn_Percy"
-		"dynn_Despencer"
-		"dynn_Bacon"
-		"dynn_Reresby"
-		"dynn_Cornwallis"
-		"dynn_Clifford"
-		"dynn_Carew"
-		"dynn_Maddock"
-		"dynn_Fortescue"
-		{ "dynnp_de" "dynn_Ros" }
-		"dynn_Howard"
-		"dynn_Maudit"
-		"dynn_Berkeley"
-		"dynn_Barton"
-		"dynn_Colvile"
-		"dynn_Grey"
-		"dynn_Darcy"
-		{ "dynnp_de" "dynn_Garlande" }
-		"dynn_Perry"
-		"dynn_Bethell"
-		"dynn_Perry"
-		"dynn_Borthwick"
-		{ "dynnp_de" "dynn_London" }
-		{ "dynnp_of" "dynn_Hereford" }
-		{ "dynnp_of" "dynn_Gloucester" }
-		{ "dynnp_of" "dynn_Oxford" }
-		{ "dynnp_of" "dynn_Salisbury" }
-		{ "dynnp_of" "dynn_Surrey" }
-		{ "dynnp_of" "dynn_Sussex" }
-		{ "dynnp_of" "dynn_Hampshire" }
-		{ "dynnp_of" "dynn_Dorset" }
-		{ "dynnp_of" "dynn_Somerset" }
-		{ "dynnp_of" "dynn_Devon" }
-		{ "dynnp_of" "dynn_Exeter" }
-		{ "dynnp_of" "dynn_Cumberland" }
-		{ "dynnp_of" "dynn_York" }
-		{ "dynnp_of" "dynn_Lancaster" }
-		{ "dynnp_of" "dynn_Chester" }
-		{ "dynnp_of" "dynn_Lincoln" }
-		{ "dynnp_of" "dynn_Leicester" }
-		{ "dynnp_of" "dynn_Derby" }
-		{ "dynnp_of" "dynn_Shrewsbury" }
-		{ "dynnp_of" "dynn_Northampton" }
-		{ "dynnp_of" "dynn_Bedford" }
-		{ "dynnp_of" "dynn_Norfolk" }
-		{ "dynnp_of" "dynn_Suffolk" }
-		"dynn_Crawford"
-		"dynn_Tynedale"
-		"dynn_Pudsey"
-		"dynn_Marshal"
-		"dynn_Rowe"
-		{ "dynnp_de" "dynn_Criel" }
-		"dynn_Ciesla"
-		"dynn_Ross"
-		"dynn_Wuffing"
-		"dynn_Beorming"
-		"dynn_Eorling"
-		"dynn_A_bbing"
-		"dynn_A_lling"
-		"dynn_Wintaling"
+		# Anglo-Saxon Dynasty Names
+		Aculfingas E_bbaingas E_ficingas E_lfgaringas E_lfgeatingas E_lfhEahingas E_lfhelmingas E_lfhereingas E_lfmE_ringas E_lfnoD_ingas E_lfrE_dingas E_lfricingas E_lfsigeingas E_lfstaningas E_lfwoldingas E_lfwardingas E_lfwigingas E_lfwineingas E_llaingas E_sculfingas E_staningas E_T_elbaldingas E_T_elbrihtingas E_T_elfriT_ingas E_T_elhEahingas E_T_elhardingas E_T_elhelmingas E_T_elhelmingas E_T_elhuningas E_T_elhuningas E_T_elmE_ringas E_T_elmodingas E_T_elmundingas E_T_elnoD_ingas E_T_elrE_dingas E_T_elricingas E_T_elsigeingas E_T_elstaningas E_T_elwoldingas E_T_elwardingas E_T_elwigingas E_T_elwineingas E_T_elulfingas Beagmundingas baldwineingas brihtfriT_ingas brihthelmingas brihthelmingas brihtmE_ringas brihtmundingas brihtmundingas brihtnoD_ingas brihtnoD_ingas brihtrE_dingas brihtricingas brihtsigeingas brihtstaningas brihtwoldingas brihtwardingas brihtwineingas brihtulfingas Beorningas BeornfriT_ingas Beornheahingas Beornhardingas Beornhelmingas BeornnoD_ingas Beornwoldingas Beornulfingas Bruningas Bruningingas Brunstaningas Brunwineingas Burghardingas Ceawliningas Cenbrihtingas CenfriT_ingas Cenhardingas CenrE_dingas Centwineingas Cenwoldingas Cenulfingas Ceolbrihtingas Ceolhardingas Ceolmundingas Ceolstaningas Ceolwoldingas Ceolulfingas Cerdicingas Cnapaingas Colgrimingas Colmanningas CuT_brihtingas CuT_hardingas CuT_rE_dingas CuT_wineingas CuT_ulfingas Cynebrihtingas CynefriT_ingas Cynehardingas Cynehelmingas Cynemundingas Cynesigeingas Cynestaningas Cynewoldingas Cynewardingas Cynewineingas Cyneulfingas Cynricingas Cyppingingas Deormanningas Deormodingas Deorsigeingas Deorulfingas Doddaingas Duddaingas Dunningingas Dunstaningas Eadbaldingas Eadbrihtingas EadfriT_ingas Eadgaringas Eadhelmingas EadmE_ringas Eadmundingas EadnoD_ingas EadrE_dingas Eadricingas Eadsigeingas Eadstaningas Eadwaceringas Eadwoldingas Eadwardingas Eadwigingas Eadwineingas Eadulfingas Ealdbrihtingas Ealdhuningas EaldrE_dingas Ealdwigingas Ealdwineingas Ealdulfingas EalhfriT_ingas Ealhhardingas Ealhhelmingas Ealhhereingas Ealhmundingas Ealhsigeingas Ealhstaningas Eanbrihtingas EanfriT_ingas Eanmundingas EanrE_dingas Eanulfingas Eardulfingas Earnwigingas Ecgbrihtingas Ecgbrandingas EcgfriT_ingas Ecghardingas Ecglafingas Ecgmundingas Ecgwoldingas Ecgulfingas Eoformundingas Farmanningas ForT_rE_dingas FriT_egistingas FriT_uricingas FriT_uwoldingas GlE_dwineingas Godaingas Godemanningas GodfriT_ingas Godhereingas Godingingas Godleofingas Godmanningas Godricingas Godwigingas Godwineingas Goldstaningas Goldwineingas Gospatricingas Headdaingas Heahbrihtingas HeahfriT_ingas Heahstaningas Herebrihtingas HerefriT_ingas Heremodingas Herewoldingas Hereulfingas Hringulfingas HroD_garingas Hunaingas Hunbrihtingas HunfriT_ingas Hunlafingas HunrE_dingas Hunwineingas HwE_tmanningas Hwitaingas LeofT_egningas LeodmE_ringas Leodwineingas Leofaingas Leofcildingas Leofgaringas Leofgeatingas Leofhelmingas Leofingingas Leofmanningas LeofnoD_ingas LeofrE_dingas Leofricingas Leofsigeingas Leofstaningas Leofsunuingas Leofwoldingas Leofwardingas Leofwigingas Leofwineingas LeomE_ringas Lufaingas Lullaingas Lullingingas Lyfingingas Manningingas Merewineingas MorcE_ringas Oddaingas Offaingas Ordbrihtingas Ordgaringas Ordheahingas Ordhelmingas OrdmE_ringas OrdnoD_ingas Ordricingas Osbrihtingas OsfriT_ingas Osmundingas Oswoldingas Oswardingas Oswigingas Osulfingas SE_mE_ringas SE_ricingas SE_woldingas SE_wardingas SE_wineingas SE_ulfingas SeaxfriT_ingas Sidemanningas Sidewineingas Sigebaldingas Sigebrihtingas SigefriT_ingas Sigegaringas Sigehelmingas Sigemundingas SigerE_dingas Sigericingas SigestE_fingas Sigewoldingas Sigewardingas Sigeulfingas Stanhardingas Swetmanningas SwiT_huningas SwiT_ulfingas Tidbaldingas Tidbrihtingas Tidulfingas Torhthelmingas UhtrE_dingas Wadaingas WE_rfriT_ingas WE_rhardingas WE_rmundingas WE_rstaningas WE_rulfingas woldhelmingas woldhereingas Wealhhereingas Wicgaingas Wigbrihtingas WigfriT_ingas Wighardingas Wighelmingas Wiglafingas Wigmundingas Wigstaningas Wihtbrordingas Wihtgaringas Wihtmundingas WihtrE_dingas Wihtsigeingas WilfriT_ingas Wilgripingas Wilstaningas Wineingas WinemE_ringas Winemanningas Wistaningas Wudumanningas Wulfbaldingas Wulfbrihtingas Wulfbeorningas WulffriT_ingas Wulfgaringas Wulfgeatingas Wulfheahingas Wulfhardingas Wulfhelmingas Wulfhereingas Wulfhuningas Wulflafingas WulfmE_ringas WulfnoD_ingas WulfrE_dingas Wulfricingas Wulfsigeingas Wulfstaningas Wulfwardingas Wulfwigingas Wulfwineingas Wynnhelmingas Wynnsigeingas Wynnstaningas T_eodrE_dingas T_eodricingas
+		# Germanic Dynasty Names
+			E_gilingas E_gnereingas E_lafingas E_ledgrimingas Atfaraingas BaldemE_ringas Ballungingas Banwiduingas Barcwiduingas Bardingas Beadulfingas Bearnaingas Bearnwardingas Bergfinningas Bergwiduingas BergT_uringas Berncytelingas Bernwardingas Boddaingas Bondaingas Botberningas Botfusingas Botgaringas Botmundingas Botrafingas Botstaningas Botwiduingas Bragaingas Brordingas Bruncilingas Brunmanningas Brynulfingas BurgfE_stingas Burggaringas Burgulfingas Byulfingas Ceotwigingas Colingas Colberningas Colbrandingas Colfidingas Colfinningas Colswegeningas Crumingas Cwigberningas Cytelberningas CytelfE_stingas Cytelhasingas Cytelheafdeingas Cytellogingas Cytelmundingas Dagingas Dagfinningas Dallaingas Deorgaringas Deorwigingas Dyraingas Eadcilingas Eadfinningas Eadgislingas Eadgrimingas EadhwE_tingas Eadwiduingas Earnstaningas Eastmodingas Ellidagrimingas Eohingas Eohberningas Eohcilingas Eohcilingas Eohereingas Eohfreaingas EohfriT_ingas Eohstaningas Eohulfingas Eongaringas Erwineingas ET_aingas FE_stberningas FE_stereingas FE_stgaringas FE_stmundingas FE_ststedeingas FE_stulfingas FE_stT_egningas Falcaingas Farberningas Farulfingas FarT_egningas Finnberningas Finngaringas Finnulfingas Finnwardingas Finnwiduingas Folkstaningas Folkwiduingas Forcyningas Freaberningas Freagaringas Frearicingas Freastaningas Freawiduingas Fullhygaingas Gandalfingas Gangulfingas Garalfingas Garberningas Gardearfingas Garelmingas GarfE_stingas GarhwE_tingas Garlafingas GarmE_ringas Garmundingas Garneotingas Garstaningas Garwiduingas GarT_eofingas Gatiringas Geafwoldingas Geardereingas Geflogingas Gefulfingas Giestingas GinnfE_stingas Gislaingas Gismundingas Gnupingas GodfE_stingas Godgiestingas Godneotingas GodwE_ringas GodT_ornningas Gormingas Gotingas Gotereingas Gotredingas Gotricingas Gotulfingas Gotwiduingas Greneadingas Greotgeardingas Grimcilingas Gripingas Gunnberningas Gunncilingas Gunndearfingas GunnfriT_ingas Gunnfusingas GunnhwE_tingas Gunnlafingas Gunnlogingas GunnmE_ringas Gunnmundingas Gunnrafingas GunnwE_ringas Gunnwardingas Gunnwiduingas Gunnwoldingas Gutiringas GuT_hrE_fningas HE_lfusingas Hafgrimingas Haflidaingas HafT_uringas Hagbardingas Hagenaingas Hagnwiduingas Hagstaningas Halladingas Hallberningas HallfriT_ingas Hallgaringas Hallstaningas Hallwardingas Hamcilingas Hamundingas HardE_nnaingas Hardbrihtingas Hardgaringas Hardmanningas Hardstaningas Hardwigingas Haricingas Haulfingas Hawardingas Hecgberningas Hecgstaningas Hecgulfingas Hecgwiduingas Hecgwoldingas Hedenberningas HedenfE_stingas Hedengaringas Helgaingas Helgulfingas Helmereingas HelmfE_stingas Helmgaringas Helmgrimingas Helmulfingas Helmwiduingas Hemmingingas Heorlafingas Heorulfingas Heorwardingas HerefE_stingas Herelogingas Herewardingas Hlifstaningas Hlifundingas Hnacaingas Holmingas Holmberningas Holmdearfingas Holmdoringas HolmfE_stingas Holmgaringas Holmgotingas Holmlogingas Holmstaningas Holmwiduingas Holtaingas Hosculdingas HraD_ereingas HraD_mE_ringas HrE_fningas HrE_fncilingas Hranaingas HroD_berningas HroD_fusingas HroD_gislingas HroD_gotingas HroD_hwE_tingas HroD_logingas HroD_mE_ringas HroD_mundingas Hrollafingas Hromundingas Hrosscilingas Hultricingas Hundulfingas Hunwiduingas HunT_eofingas Hwitcaringas Igberningas Igcilingas Igearingas Igguatingas Igilberningas IgilfE_stingas Iglacingas Iglafingas Igmundingas Igstaningas Igulfingas Igwindingas Iolgaringas Islafingas Iwereingas Lacingas Lacfrodingas Lacnaringas Leodberningas Licnberningas LicnhwE_tingas Licnmundingas Licnrafingas Licnwiduingas Lingormingas LoD_mundingas Macingas Micaingas Munaningas Mundgaringas NE_rfiringas Narfaingas Nefberningas Nefgaringas Neridingas NorT_manningas Oblodingas OD_cilingas OD_incaringas OD_ulfingas OD_wE_ringas OfriT_ingas Olwoldingas Omuningas Ondotingas Onesigingas Ormingas Ormgaringas Ormulfingas Osbrandingas Osdearfingas Osgislingas Osgrimingas Osmodingas Osniciningas Ospacingas Osuringas Osyrgingas Otamingas Otrocingas OT_yrmingas Rafingas Ragnberningas RagnfE_stingas Ragniingas Ragnwiduingas Rasculfingas Rascwiduingas RauD_berningas RauD_ulfingas RedT_ealfingas Reyrcytelingas Ricingas RichwE_tingas Riculfingas Ricwiduingas Ricwineingas RoghwE_tingas Runaingas RunfE_stingas Runwiduingas SE_berningas SE_dearfingas SE_fusingas SE_garingas SE_grimingas SE_mundingas SE_rafingas SE_T_uringas Salgeardingas Scagaingas Scealgingas Scealmingas Scearphedeningas Sceoldingas Scofteingas Sealfigingas Seaxaingas Seaxulfingas Sibbaingas Sigeberningas Sigecytelingas Sigedaningas Sigedearfingas SigefE_stingas Sigefusingas SigehwE_tingas SigemE_ringas Sigeneotingas Sigerafingas Sigewardingas Sigewiduingas SigeT_uringas SigeT_urD_ingas SigeT_urningas Solvigingas Sorcwiringas Staningas Stanberningas Stancilingas Stanereingas Stanulfingas StanT_uringas Stigingas Stodberningas Sturlaingas Styringas Styrberningas Styremanningas StyrfE_stingas Styrlogingas Styrmiringas Sumarlidaingas SunnhwE_tingas Sunnwiduingas Swaraldingas SwawE_ringas Sweartabrandingas Sweartgaringas Sweartheafdeingas Swegenberningas Swerriringas Swipdagingas Tidcymaingas Tokaingas Tolkingas Trocingas Troculfingas Trocwigingas Tykaingas Unnaringas Unnulfingas Unnwoldingas WE_gningas Wamodingas Wealdaingas Wealdricingas Wealhberningas Wealhgotingas Wesetaingas Westereingas Westgaringas Westlidaingas WestmE_ringas Westmanningas Westmundingas Wiberningas Wicereingas Widberningas WidfE_stingas Widfaraingas Widhygsaingas Wielmingas WifE_stingas Wigaringas Wigberningas Wigdearfingas WigfE_stingas Wigfusingas Wigislingas Wiglacingas Wiglundringas WigmE_ringas Wigotingas Wigrimingas Wigstearcingas Wigulfingas Wigulfingas Wilmundingas Wimundingas Wineotingas Winterlidaingas Wulfhedeningas WulfhwE_tingas Wulfwiduingas Wulfwoldingas Yngaingas Yngealdingas Yngeberningas YngefE_stingas YngemE_ringas Yngemundingas Yngewoldingas Yngulfingas YrlE_ndingas T_ancbrandingas T_ealfaingas T_ealfereingas T_eodaingas T_eodelmingas T_eodereingas T_eodmE_ringas T_eodulfingas T_eostereingas T_eostulfingas T_regeningas T_rostingas T_uringas T_uralfingas T_urberningas T_urD_ingas T_urereingas T_urfinningas T_urgaringas T_urgiestingas T_urgislingas T_urhallingas T_uriringas T_urlacingas T_urlafingas T_urleotingas T_urmodingas T_urneotingas T_urordingas T_urormingas T_urwE_ringas T_urwardingas T_urwiduingas T_urwoldingas E_gilingas E_gnereingas E_lafingas E_ledgrimingas Atfaraingas BaldemE_ringas Ballungingas Banwiduingas Barcwiduingas Bardingas Beadulfingas Bearnaingas Bearnwardingas Bergfinningas Bergwiduingas BergT_uringas Berncytelingas Bernwardingas Boddaingas Bondaingas Botberningas Botfusingas Botgaringas Botmundingas Botrafingas Botstaningas Botwiduingas Bragaingas Brordingas Bruncilingas Brunmanningas Brynulfingas BurgfE_stingas Burggaringas Burgulfingas Byulfingas Ceotwigingas Colingas Colberningas Colbrandingas Colfidingas Colfinningas Colswegeningas Crumingas Cwigberningas Cytelberningas CytelfE_stingas Cytelhasingas Cytelheafdeingas Cytellogingas Cytelmundingas Dagingas Dagfinningas Dallaingas Deorgaringas Deorwigingas Dyraingas Eadcilingas Eadfinningas Eadgislingas Eadgrimingas EadhwE_tingas Eadwiduingas Earnstaningas Eastmodingas Ellidagrimingas Eohingas Eohberningas Eohcilingas Eohcilingas Eohereingas Eohfreaingas EohfriT_ingas Eohstaningas Eohulfingas Eongaringas Erwineingas ET_aingas FE_stberningas FE_stereingas FE_stgaringas FE_stmundingas FE_ststedeingas FE_stulfingas FE_stT_egningas Falcaingas Farberningas Farulfingas FarT_egningas Finnberningas Finngaringas Finnulfingas Finnwardingas Finnwiduingas Folkstaningas Folkwiduingas Forcyningas Freaberningas Freagaringas Frearicingas Freastaningas Freawiduingas Fullhygaingas Gandalfingas Gangulfingas Garalfingas Garberningas Gardearfingas Garelmingas GarfE_stingas GarhwE_tingas Garlafingas GarmE_ringas Garmundingas Garneotingas Garstaningas Garwiduingas GarT_eofingas Gatiringas Geafwoldingas Geardereingas Geflogingas Gefulfingas Giestingas GinnfE_stingas Gislaingas Gismundingas Gnupingas GodfE_stingas Godgiestingas Godneotingas GodwE_ringas GodT_ornningas Gormingas Gotingas Gotereingas Gotredingas Gotricingas Gotulfingas Gotwiduingas Greneadingas Greotgeardingas Grimcilingas Gripingas Gunnberningas Gunncilingas Gunndearfingas GunnfriT_ingas Gunnfusingas GunnhwE_tingas Gunnlafingas Gunnlogingas GunnmE_ringas Gunnmundingas Gunnrafingas GunnwE_ringas Gunnwardingas Gunnwiduingas Gunnwoldingas Gutiringas GuT_hrE_fningas HE_lfusingas Hafgrimingas Haflidaingas HafT_uringas Hagbardingas Hagenaingas Hagnwiduingas Hagstaningas Halladingas Hallberningas HallfriT_ingas Hallgaringas Hallstaningas Hallwardingas Hamcilingas Hamundingas HardE_nnaingas Hardbrihtingas Hardgaringas Hardmanningas Hardstaningas Hardwigingas Haricingas Haulfingas Hawardingas Hecgberningas Hecgstaningas Hecgulfingas Hecgwiduingas Hecgwoldingas Hedenberningas HedenfE_stingas Hedengaringas Helgaingas Helgulfingas Helmereingas HelmfE_stingas Helmgaringas Helmgrimingas Helmulfingas Helmwiduingas Hemmingingas Heorlafingas Heorulfingas Heorwardingas HerefE_stingas Herelogingas Herewardingas Hlifstaningas Hlifundingas Hnacaingas Holmingas Holmberningas Holmdearfingas Holmdoringas HolmfE_stingas Holmgaringas Holmgotingas Holmlogingas Holmstaningas Holmwiduingas Holtaingas Hosculdingas HraD_ereingas HraD_mE_ringas HrE_fningas HrE_fncilingas Hranaingas HroD_berningas HroD_fusingas HroD_gislingas HroD_gotingas HroD_hwE_tingas HroD_logingas HroD_mE_ringas HroD_mundingas Hrollafingas Hromundingas Hrosscilingas Hultricingas Hundulfingas Hunwiduingas HunT_eofingas Hwitcaringas Igberningas Igcilingas Igearingas Igguatingas Igilberningas IgilfE_stingas Iglacingas Iglafingas Igmundingas Igstaningas Igulfingas Igwindingas Iolgaringas Islafingas Iwereingas Lacingas Lacfrodingas Lacnaringas Leodberningas Licnberningas LicnhwE_tingas Licnmundingas Licnrafingas Licnwiduingas Lingormingas LoD_mundingas Macingas Micaingas Munaningas Mundgaringas NE_rfiringas Narfaingas Nefberningas Nefgaringas Neridingas NorT_manningas Oblodingas OD_cilingas OD_incaringas OD_ulfingas OD_wE_ringas OfriT_ingas Olwoldingas Omuningas Ondotingas Onesigingas Ormingas Ormgaringas Ormulfingas Osbrandingas Osdearfingas Osgislingas Osgrimingas Osmodingas Osniciningas Ospacingas Osuringas Osyrgingas Otamingas Otrocingas OT_yrmingas Rafingas Ragnberningas RagnfE_stingas Ragniingas Ragnwiduingas Rasculfingas Rascwiduingas RauD_berningas RauD_ulfingas RedT_ealfingas Reyrcytelingas Ricingas RichwE_tingas Riculfingas Ricwiduingas Ricwineingas RoghwE_tingas Runaingas RunfE_stingas Runwiduingas SE_berningas SE_dearfingas SE_fusingas SE_garingas SE_grimingas SE_mundingas SE_rafingas SE_T_uringas Salgeardingas Scagaingas Scealgingas Scealmingas Scearphedeningas Sceoldingas Scofteingas Sealfigingas Seaxaingas Seaxulfingas Sibbaingas Sigeberningas Sigecytelingas Sigedaningas Sigedearfingas SigefE_stingas Sigefusingas SigehwE_tingas SigemE_ringas Sigeneotingas Sigerafingas Sigewardingas Sigewiduingas SigeT_uringas SigeT_urD_ingas SigeT_urningas Solvigingas Sorcwiringas Staningas Stanberningas Stancilingas Stanereingas Stanulfingas StanT_uringas Stigingas Stodberningas Sturlaingas Styringas Styrberningas Styremanningas StyrfE_stingas Styrlogingas Styrmiringas Sumarlidaingas SunnhwE_tingas Sunnwiduingas Swaraldingas SwawE_ringas Sweartabrandingas Sweartgaringas Sweartheafdeingas Swegenberningas Swerriringas Swipdagingas Tidcymaingas Tokaingas Tolkingas Trocingas Troculfingas Trocwigingas Tykaingas Unnaringas Unnulfingas Unnwoldingas WE_gningas Wamodingas Wealdaingas Wealdricingas Wealhberningas Wealhgotingas Wesetaingas Westereingas Westgaringas Westlidaingas WestmE_ringas Westmanningas Westmundingas Wiberningas Wicereingas Widberningas WidfE_stingas Widfaraingas Widhygsaingas Wielmingas WifE_stingas Wigaringas Wigberningas Wigdearfingas WigfE_stingas Wigfusingas Wigislingas Wiglacingas Wiglundringas WigmE_ringas Wigotingas Wigrimingas Wigstearcingas Wigulfingas Wigulfingas Wilmundingas Wimundingas Wineotingas Winterlidaingas Wulfhedeningas WulfhwE_tingas Wulfwiduingas Wulfwoldingas Yngaingas Yngealdingas Yngeberningas YngefE_stingas YngemE_ringas Yngemundingas Yngewoldingas Yngulfingas YrlE_ndingas T_ancbrandingas T_ealfaingas T_ealfereingas T_eodaingas T_eodelmingas T_eodereingas T_eodmE_ringas T_eodulfingas T_eostereingas T_eostulfingas T_regeningas T_rostingas T_uringas T_uralfingas T_urberningas T_urD_ingas T_urereingas T_urfinningas T_urgaringas T_urgiestingas T_urgislingas T_urhallingas T_uriringas T_urlacingas T_urlafingas T_urleotingas T_urmodingas T_urneotingas T_urordingas T_urormingas T_urwE_ringas T_urwardingas T_urwiduingas T_urwoldingas
 	}
 	
 	male_names = {
 		# Anglo-Saxon Names 
-		Arncytel Balthere Beorhtfrith Beorhthelm BeorhtmE_r Beorhtnoth Beorhtric 
-		Beorhtsige Beorhtwine Beorn BeornrE_d Beornwulf Burgheard Byrhtnoth Cearl 
-		Cenfus CenrE_d Cenwulf Ceolwulf Cerdic Copsige Cuthberht CuthrE_d Cynehelm 
-		Cynewulf Cytelbearn Eadberht Eadfrith Eadgar Eadmund EadmE_r Eadric EadrE_d 
-		Eadsige Eadulf Eadweald Eadweard Eadwig Eadwine Eadwulf Ealdhun Ealdmund 
-		EaldrE_d Ealdwine Ealdwulf Eanberht Eanfrith Eanhere Eardwulf Eastmund Ecgberht 
-		Ecgfrith Gamall Godwine Gospatric Guthfrith Guthmund Gyrth Hacon Harold Heahberht
-		Hereberht Hereweald Hereweard Hlothere Hrodberht InwE_r Leofheah Leofhelm Leofric 
-		Leofweald Leofwine Maccus Morcar ME_rleswegn Offa Onlaf Ordgar Oscytel Oshere Osmund 
-		Osric OsrE_d Osulf Osweald Oswine Oswulf Petre RE_dwulf RE_genweald Scule Sigeberht 
-		Sigehelm Sigeric SigerE_d Sighere Siweard Stigand Swegn Swithelm SwithrE_d SwE_frE_d 
-		SE_bert SE_lrE_d SE_weald SE_xbald SE_xrE_d ThorE_d Thurcytel Thurfrith Tostig UhtrE_d 
-		Ulf Ulfcytel Waltheof Werestan Wiglaf WihtrE_d Wistan Wulf Wulfgar Wulfgeat Wulfhelm Wulfhere 
-		WulfmE_r Wulfnoth Wulfstan E_lfgar E_lfmE_r E_lfnoth E_lfric E_lfrE_d E_lfsige E_lfstan E_lfwald 
-		E_lfweard E_lfwig E_lfwine E_lle E_thelbald E_thelberht E_thelfrith E_thelhere E_thelmE_r E_thelric 
-		E_thelrE_d E_thelsige E_thelstan E_thelweald E_thelweard E_thelwine E_thelwold E_thelwulf Eormenred 
-		Eorcenberht Eormenric Eadbald RE_dwald
-		# Norse Names 
-		Anundr Arnfast A_li A_lfr A_lfgeir AndrE_s ArnbjO_rn ArngrI_mr A_rni A_sbjO_rn 
-		A__ke A_skell Baldr Bersi BjO_rn Bragi BuT_li BA_rD_r Birgir BU_i BO_D_var 
-		BO_tO_lfr BrynjO_lfr BergT_O_r Dan Dagr DY_ri Egill Einarr EilI_fr Emundr 
-		EirI_kr Eysteinn Einar Freyr Fasti FriT_rI_kr FrIrekr FrO_T_i FO_lki Flosi 
-		Geirr GuT_mundr GuT_rO_T_r Gunnarr GandA_lfr GnU_pa Gormr GrI_mr GuT_frI_T_r 
-		Grettir Haraldr Haukr Helgi Hrafn HA__kon Hallsteinn Hemingr HO_lmgeirr HrO_lfr 
-		Hrani HA_steinn HjA_lmar HrO_T_geirr HrO_D_O_lfr HrE_rekr HY_singr HalfdA_n 
-		HerjO_lfr HO_rD_r HO_gni HU_nT_jO_fr Hordaknutr IngO_lfr Ingimar Ingjaldr I_var 
-		JA_tvarD_r JO_rundr Karl Kjartan KolbjO_rn Ketill Ketilmundr KnU_tr Kollr KA_ri 
-		Kolbeinn LjO_tr MagnU_s NjA_ll Oddr Ormr O_rvar O_nundr O_feigr O_lafr O_ttar 
-		O_lvir O_gmundr Refr Ragnarr RO_gnvaldr Refill RI_kU_lfr Snorri SigurT_r StarkaT_r 
-		Steinn Sturla StyrbjO_rn SumarliT_i Suni Sveinn Sverker SE_mundr SO_lvi SkU_li 
-		SigrbjO_rn Sigtryggr StyrkA_r SO_rkvir SkarphE_D_inn SkjO_ldr Tolir T_orbjO_rn 
-		T_orbrandr T_orsteinn Tyke T_iO_D_mundr TO_ki T_orfinnr T_orD_r T_orgils T_O_rO_lfr 
-		TO_sti T_jO_stO_lfr Tryggvi U_lfr U_lfhE_D_inn U_lfkell Vagn VE_mundr Valdemar VigfU_s 
-		ValT_jO_fr Yngvar
+		Aculf E_bba E_fic E_lfgar E_lfgeat E_lfhEah E_lfhelm E_lfhere E_lfmE_r E_lfnoD_ E_lfrE_d E_lfric E_lfsige E_lfstan E_lfwold E_lfward E_lfwig E_lfwine E_lla E_sculf E_stan E_T_elbald E_T_elbriht E_T_elfriT_ E_T_elhEah E_T_elhard E_T_elhelm E_T_elhelm E_T_elhun E_T_elhun E_T_elmE_r E_T_elmod E_T_elmund E_T_elnoD_ E_T_elrE_d E_T_elric E_T_elsige E_T_elstan E_T_elwold E_T_elward E_T_elwig E_T_elwine E_T_elulf Beagmund baldwine brihtfriT_ brihthelm brihthelm brihtmE_r brihtmund brihtmund brihtnoD_ brihtnoD_ brihtrE_d brihtric brihtsige brihtstan brihtwold brihtward brihtwine brihtulf Beorn BeornfriT_ Beornheah Beornhard Beornhelm BeornnoD_ Beornwold Beornulf Brun Bruning Brunstan Brunwine Burghard Ceawlin Cenbriht CenfriT_ Cenhard CenrE_d Centwine Cenwold Cenulf Ceolbriht Ceolhard Ceolmund Ceolstan Ceolwold Ceolulf Cerdic Cnapa Colgrim Colmann CuT_briht CuT_hard CuT_rE_d CuT_wine CuT_ulf Cynebriht CynefriT_ Cynehard Cynehelm Cynemund Cynesige Cynestan Cynewold Cyneward Cynewine Cyneulf Cynric Cypping Deormann Deormod Deorsige Deorulf Dodda Dudda Dunning Dunstan Eadbald Eadbriht EadfriT_ Eadgar Eadhelm EadmE_r Eadmund EadnoD_ EadrE_d Eadric Eadsige Eadstan Eadwacer Eadwold Eadward Eadwig Eadwine Eadulf Ealdbriht Ealdhun EaldrE_d Ealdwig Ealdwine Ealdulf EalhfriT_ Ealhhard Ealhhelm Ealhhere Ealhmund Ealhsige Ealhstan Eanbriht EanfriT_ Eanmund EanrE_d Eanulf Eardulf Earnwig Ecgbriht Ecgbrand EcgfriT_ Ecghard Ecglaf Ecgmund Ecgwold Ecgulf Eoformund Farmann ForT_rE_d FriT_egist FriT_uric FriT_uwold GlE_dwine Goda Godemann GodfriT_ Godhere Goding Godleof Godmann Godric Godwig Godwine Goldstan Goldwine Gospatric Headda Heahbriht HeahfriT_ Heahstan Herebriht HerefriT_ Heremod Herewold Hereulf Hringulf HroD_gar Huna Hunbriht HunfriT_ Hunlaf HunrE_d Hunwine HwE_tmann Hwita LeofT_egn LeodmE_r Leodwine Leofa Leofcild Leofgar Leofgeat Leofhelm Leofing Leofmann LeofnoD_ LeofrE_d Leofric Leofsige Leofstan Leofsunu Leofwold Leofward Leofwig Leofwine LeomE_r Lufa Lulla Lulling Lyfing Manning Merewine MorcE_r Odda Offa Ordbriht Ordgar Ordheah Ordhelm OrdmE_r OrdnoD_ Ordric Osbriht OsfriT_ Osmund Oswold Osward Oswig Osulf SE_mE_r SE_ric SE_wold SE_ward SE_wine SE_ulf SeaxfriT_ Sidemann Sidewine Sigebald Sigebriht SigefriT_ Sigegar Sigehelm Sigemund SigerE_d Sigeric SigestE_f Sigewold Sigeward Sigeulf Stanhard Swetmann SwiT_hun SwiT_ulf Tidbald Tidbriht Tidulf Torhthelm UhtrE_d Wada WE_rfriT_ WE_rhard WE_rmund WE_rstan WE_rulf woldhelm woldhere Wealhhere Wicga Wigbriht WigfriT_ Wighard Wighelm Wiglaf Wigmund Wigstan Wihtbrord Wihtgar Wihtmund WihtrE_d Wihtsige WilfriT_ Wilgrip Wilstan Wine WinemE_r Winemann Wistan Wudumann Wulfbald Wulfbriht Wulfbeorn WulffriT_ Wulfgar Wulfgeat Wulfheah Wulfhard Wulfhelm Wulfhere Wulfhun Wulflaf WulfmE_r WulfnoD_ WulfrE_d Wulfric Wulfsige Wulfstan Wulfward Wulfwig Wulfwine Wynnhelm Wynnsige Wynnstan T_eodrE_d T_eodric
+		# Norse Names
+		E_gil E_gnere E_laf E_ledgrim Atfara BaldemE_r Ballung Banwidu Barcwidu Bard Beadulf Bearna Bearnward Bergfinn Bergwidu BergT_ur Berncytel Bernward Bodda Bonda Botbern Botfus Botgar Botmund Botraf Botstan Botwidu Braga Brord Bruncil Brunmann Brynulf BurgfE_st Burggar Burgulf Byulf Ceotwig Col Colbern Colbrand Colfid Colfinn Colswegen Crum Cwigbern Cytelbern CytelfE_st Cytelhas Cytelheafde Cytellog Cytelmund Dag Dagfinn Dalla Deorgar Deorwig Dyra Eadcil Eadfinn Eadgisl Eadgrim EadhwE_t Eadwidu Earnstan Eastmod Ellidagrim Eoh Eohbern Eohcil Eohcil Eohere Eohfrea EohfriT_ Eohstan Eohulf Eongar Erwine ET_a FE_stbern FE_stere FE_stgar FE_stmund FE_ststede FE_stulf FE_stT_egn Falca Farbern Farulf FarT_egn Finnbern Finngar Finnulf Finnward Finnwidu Folkstan Folkwidu Forcyn Freabern Freagar Frearic Freastan Freawidu Fullhyga Gandalf Gangulf Garalf Garbern Gardearf Garelm GarfE_st GarhwE_t Garlaf GarmE_r Garmund Garneot Garstan Garwidu GarT_eof Gatir Geafwold Geardere Geflog Gefulf Giest GinnfE_st Gisla Gismund Gnup GodfE_st Godgiest Godneot GodwE_r GodT_ornn Gorm Got Gotere Gotred Gotric Gotulf Gotwidu Grenead Greotgeard Grimcil Grip Gunnbern Gunncil Gunndearf GunnfriT_ Gunnfus GunnhwE_t Gunnlaf Gunnlog GunnmE_r Gunnmund Gunnraf GunnwE_r Gunnward Gunnwidu Gunnwold Gutir GuT_hrE_fn HE_lfus Hafgrim Haflida HafT_ur Hagbard Hagena Hagnwidu Hagstan Hallad Hallbern HallfriT_ Hallgar Hallstan Hallward Hamcil Hamund HardE_nna Hardbriht Hardgar Hardmann Hardstan Hardwig Haric Haulf Haward Hecgbern Hecgstan Hecgulf Hecgwidu Hecgwold Hedenbern HedenfE_st Hedengar Helga Helgulf Helmere HelmfE_st Helmgar Helmgrim Helmulf Helmwidu Hemming Heorlaf Heorulf Heorward HerefE_st Herelog Hereward Hlifstan Hlifund Hnaca Holm Holmbern Holmdearf Holmdor HolmfE_st Holmgar Holmgot Holmlog Holmstan Holmwidu Holta Hosculd HraD_ere HraD_mE_r HrE_fn HrE_fncil Hrana HroD_bern HroD_fus HroD_gisl HroD_got HroD_hwE_t HroD_log HroD_mE_r HroD_mund Hrollaf Hromund Hrosscil Hultric Hundulf Hunwidu HunT_eof Hwitcar Igbern Igcil Igear Igguat Igilbern IgilfE_st Iglac Iglaf Igmund Igstan Igulf Igwind Iolgar Islaf Iwere Lac Lacfrod Lacnar Leodbern Licnbern LicnhwE_t Licnmund Licnraf Licnwidu Lingorm LoD_mund Mac Mica Munan Mundgar NE_rfir Narfa Nefbern Nefgar Nerid NorT_mann Oblod OD_cil OD_incar OD_ulf OD_wE_r OfriT_ Olwold Omun Ondot Onesig Orm Ormgar Ormulf Osbrand Osdearf Osgisl Osgrim Osmod Osnicin Ospac Osur Osyrg Otam Otroc OT_yrm Raf Ragnbern RagnfE_st Ragni Ragnwidu Rasculf Rascwidu RauD_bern RauD_ulf RedT_ealf Reyrcytel Ric RichwE_t Riculf Ricwidu Ricwine RoghwE_t Runa RunfE_st Runwidu SE_bern SE_dearf SE_fus SE_gar SE_grim SE_mund SE_raf SE_T_ur Salgeard Scaga Scealg Scealm Scearpheden Sceold Scofte Sealfig Seaxa Seaxulf Sibba Sigebern Sigecytel Sigedan Sigedearf SigefE_st Sigefus SigehwE_t SigemE_r Sigeneot Sigeraf Sigeward Sigewidu SigeT_ur SigeT_urD_ SigeT_urn Solvig Sorcwir Stan Stanbern Stancil Stanere Stanulf StanT_ur Stig Stodbern Sturla Styr Styrbern Styremann StyrfE_st Styrlog Styrmir Sumarlida SunnhwE_t Sunnwidu Swarald SwawE_r Sweartabrand Sweartgar Sweartheafde Swegenbern Swerrir Swipdag Tidcyma Toka Tolk Troc Troculf Trocwig Tyka Unnar Unnulf Unnwold WE_gn Wamod Wealda Wealdric Wealhbern Wealhgot Weseta Westere Westgar Westlida WestmE_r Westmann Westmund Wibern Wicere Widbern WidfE_st Widfara Widhygsa Wielm WifE_st Wigar Wigbern Wigdearf WigfE_st Wigfus Wigisl Wiglac Wiglundr WigmE_r Wigot Wigrim Wigstearc Wigulf Wigulf Wilmund Wimund Wineot Winterlida Wulfheden WulfhwE_t Wulfwidu Wulfwold Ynga Yngeald Yngebern YngefE_st YngemE_r Yngemund Yngewold Yngulf YrlE_nd T_ancbrand T_ealfa T_ealfere T_eoda T_eodelm T_eodere T_eodmE_r T_eodulf T_eostere T_eostulf T_regen T_rost T_ur T_uralf T_urbern T_urD_ T_urere T_urfinn T_urgar T_urgiest T_urgisl T_urhall T_urir T_urlac T_urlaf T_urleot T_urmod T_urneot T_urord T_urorm T_urwE_r T_urward T_urwidu T_urwold
+		
 	}
 	female_names = {
 		# Anglo-Saxon Names 
-		Agatha Balthild BeorhtflE_d Beorhtgifu Beorhtgyth Beorhtwaru Beorhtwynn BeornflE_d 
-		Beorngyth BlE_ja BurgflE_d CeolflE_d Cristina Cuthburg Cwenburg Cyneburg Cynegyth 
-		Cynehild Cyneswith Cynethryth Eadburg EadflE_d Eadgifu Eadgyth Eadhburh Eadhild 
-		Ealdgyth EalhflE_d Ealhswith Eanswith Ecgfrida Ecgwyn Godgifu Gunhilda Gytha Helga 
-		Heregyth Hereswith Hextilda Hungifu Judith LeofflE_d Leofgifu Leofrun Leofwaru Leofwynn
-		Margaret Maud Mildrith Octreda SifflE_d Sigrid SE_thryth WulfflE_d Wulfgifu Wulfgyth 
-		Wulfhild Wulfrun Wulfthryth Wulfwaru Wulfwynn WynnflE_d WE_rburg E_bba E_lfflE_d 
-		E_lfgifu E_lfgyth E_lflE_da E_lfrida E_lfswith E_lfthryth E_lfwynn E_thelburg 
-		E_thelflE_d E_thelgifu E_thelhild E_thelrE_da E_thelswith E_thelthryth E_thelburh Seaxburh Wihtburh
+			E_bbe E_D_elburg E_D_elflE_d E_D_elgifu E_D_elgyD_ E_D_elhild E_D_elrun E_D_elswiT_ E_D_elwynn E_D_elT_ryD_ E_lfflE_d E_lfgifu E_lfgyD_ E_lfhild E_lfrun E_lfswiT_ E_lfwaru E_lfwynn E_lfT_ryD_ Agatha AldgyD_ Alwynn Anna BaldgyD_ Baldhild Beaghild Bebbe BliT_T_ryD_ BrihtflE_d Brihtgifu Brihthild Brihtwaru Brihtwynn BrihtT_ryD_ Burgwynn ByrhflE_d Ceolburg Ceolwynn Christina Cuneburg CunegyD_ CuneswiT_ CuneT_ryD_ CuT_burg CwO_nburg CwO_nhild CwO_nT_ryD_ DE_glufu Eadburg EadflE_d Eadgifu EadgyD_ Eadhild Eadwynn Eafe Ealhburg EalhswiT_ EalhT_ryD_ EanflE_d Eastorhild Ecgburg Emma EngelgyD_ FriT_burg FriT_ugyD_ GOde Godgifu GodgyD_ Godhyse Godleofu Godrun Goldgifu Goldrun Hehburg HelmgyD_ Heluna HereswiT_ HildgyD_ Hringwaru Hungifu HungyD_ Leofcwen LeofdE_g Leofe LeofflE_d Leofgifu LeofgyD_ Leofhild Leofhyse Leofrun Leofsidu LeofswiT_ Leofwaru Leofwynn Leohtgifu Lufu Lufucild Mildburg MildgyD_ MildT_ryD_ MOdgifu NOD_gyD_ Osburg Osgifu OsgyD_ Oswaru Oswynn OsT_ryD_ RicT_ryD_ SE_burg SE_flE_d SE_gifu SE_lufu SE_T_ryD_ Seaxburg Seleburg SeleT_ryD_ SifflE_d Sigeburg SigegyD_ Sigewaru  Tidburg Wacerhild WE_rburg WeorD_gifu Wihtburg WihtflE_d Wihtgifu WulfflE_d Wulfgifu WulfgyD_ Wulfhild Wulfrun WulfswiT_ Wulfwaru Wulfwynn WulfT_ryD_ WynnflE_d Wynngifu WynnT_ryD_
 		# Norse Names 
-		A_lfrhildr AlfrI_D_r A_lvO_r A__sa A_slaug A__sta A_strI_D_r AuT_r BjO_rg Bodil BO_thildr BergT_O_ra
-		CecilI_a DrI_fa Dalla ED_la Freyja Freydi_s GerT_r GlO_D_ GrI_ma Gunnhildr Gurli GuD_rU_n GrY_la 
-		GyrI_D_r GyT_a HafrI_D_r Halla HO_lmfrI_D_r Huld Iliana Inga IngfrI_D_r IngibjO_rg IngjerT_r 
-		IngirI_D_r JO_runn KrA_ka ME_r MA_lmfrI_D_r RI_kiza RO_gnfrI_D_r Ragnhildr SA_ga SI_g Sif SigrI_D_r
-		Skuld Svanhildr SignY_ SkjaldvO_r T_O_ra T_O_rdI_s T_yri T_O_runn T_uriD_r U_lfhildr Unnr VigdI__s 
-		Ylva Yrsa Y_r
+			AD_isle E_D_ele E_D_elhE_d E_D_eline E_gilaf E_lfE_d E_lfdis E_lfife E_lfrede E_se E_tte E_T_elind Afaswet AfriT_ Aldis AlfriT_ AlmwE_ge Alof Alwig AlT_ryD_ Amalberg Amode Audelind Badny Badwild BeaghE_d Begge Beorg Bere Bergdis Berghild Bergleot BergT_ure BerT_e Birne Borghild Bot Botey BotfriT_ BothE_d Bothild Botwig Brigitte Brihtrede Bryngeard Brynhild Ceolware Colbrun Colfinne Colgrime Conisse Cristrun CytelE_lf CytelfriT_ Cytellog DaghE_d DagmE_r Dagny Dagrun Dalle Deorfinne Deorhild Dierwif Dis DisE_lf Domhild Drife Droplog Drot EadE_lf Eadbeorg EadfriT_ Eadgeard Eadgud Eadhelge Earnbeorg Earndis Earndis Earne EarnfriT_ Earngunn EarnhE_d Earnkatle Earnlaf Earnlog Earnwig EarnT_ore EarnT_ryD_ EarT_ryD_r ED_le Egbeorg Egdis Ege Egfure Egild Eglog Egware EgT_ore Eilif Eirny Emble Engilburg EoforfE_st EoforfriT_ Eoforgeard Eohdis EohfE_st EohfriT_ Eolin Eore EorhE_d Eorhild Eorlind Eormenburg Eormengeard Eormenswet Eorun Esje ET_e ET_elhild FE_ste FE_sthE_d FE_stny FE_stwig Feolmod Feorlaf Finne Folke Folkwig Freadis Freageard Frealog FriT_E_lf FriT_e FriT_geard FriT_run FriT_uswiT_ GE_rburg Garbeorg Gardis Gare GarfriT_ Garhild GarloD_ Garlog Garny Garunn Geaflog Geard Gillog Ginne Ginnlog Gisla Gislog Gode Godhild Gothild Grime Grimhild Groe GudE_lf Gudbeorg Gudde Gudfinne Gudlaf Gudlog Gudmod Gudny Gudrun Gudware Gudwig Gulle Gulleg Gullog Gunn GunnE_lf GunnhE_d Gunnlog Gunnore Gunnud GunnT_ryD_ GuT_rede GyD_e GyD_log GyriD_r HE_d HE_le HE_lswet HE_lswiT_ HE_lwid HE_lwif HE_lwig HafT_ore Halge Hallbeorg Hallbere Halldis Halle Hallgeard Hallgrime Hallkatle HallwE_ge Hallware Hamlog Haurlog HaT_emod HeaD_uwid HeaD_uwif HeaD_uwig Hedendis HedenfE_st Hedengunn Hedenwi Helmburg Helmdis Helmgeard Heordis Hereburg HerefriT_ Heregeard Heregunn Hereware HereT_ryD_ Hilde Hildebeorg Hildegeard Hilderid HimelT_ryD_ Hlad Hladgunn Hlif Hlifeg Hlifhild Holmdis Holme HolmfriT_ Holmgeard Holmlog Holmwig HrE_fnhild Hrefne HroD_e HroD_geard HroD_geard HroD_hE_d HroD_log HroD_ny HroD_swiT_ HroD_wig Hulde Hungeard ID_un IgulfriT_ IngriD_ Isgeard Iutte Jarngeard Kare Katle Lacny Leodburg Leodhild Leodwif Leofwine Leot Leotunn Licnvi LofnhE_d LofthE_ne Loge ME_gine ME_ginswiT_ ME_r ME_ve Magnhild Mahtild MalfriT_ MalmfriT_ Marswet MeaD_wE_ge MoD_e MohE_d Mundgeard Naume Nerad NiD_beorg Olaf Olhild Olof Olog Olrun Ondot Ordbeorg OrdfriT_ Ordgeard Ordlaf Ordlog Ordny Ormhild OsE_lf Osdis Ose OsfriT_ Osgeard Osgote Oshild Osk Oskatle Oslaf Oslog Osmod Osny Oste Ostrid Oswig Otkatle RE_gengeard RE_genlind RE_genswiT_ RE_genwif RE_gnE_lf RE_gnbeorg RE_gne RE_gnfriT_ RE_gnfriT_ RE_gnhE_d RE_gnhild RE_gnwE_ge RE_gnware RE_gnwig Randalin Randwig RannwE_ge Regnlaf Ricgard Richild Ricisse Riclind Ricwig Rjupe Rote Rune RunfriT_ SE_hild SE_un SE_ware Salve SalwE_ge Salware Sandig Scirlog Sefe Selebeorg Seledis Selegeard SigefriT_ Sigegun Sigelog Sigeny Sigerun SigewE_ge SigeT_ryD_ Sigge Sigunn SnE_log Snotre Some Stanbeorg Stane StanfriT_ Stanhild Stanlog Stanun Stanware StynfriT_ Sunnife Swale Swane Swanhild Swanlog Swete Sylge TidfriT_ Torfe Underlog Unn Ursule WE_lgeard Walburg Wealdis Wendlagisl WendlamoD_ WiE_lfr Wibeorg Widis WifriT_ Wigdis Wigeard Wigunn Wilburg Wilgeard Willaburg Willageard Wilog Winy Wulfgeard WulfhE_d Ylfe Ynge Yngebeorg Yngeg Yngegeard Yngegunn Yngelaf Yngelog Yngemod YngeT_ure Yngun Yngwild Yrse T_eodberg T_eodburg T_eodgeard T_eodhild T_eodmod T_raslog T_ryD_ T_ryD_hild T_ryD_run T_urarne T_urbeorg T_urdis T_ure T_urelf T_urfid T_urfinne T_urfriT_ T_urgeard T_urgrime T_urgunn T_urhE_d T_urhalle T_urhild T_urkatle T_urlaf T_urleot T_urlog T_urny T_urodde T_urunn T_urwE_ge T_urware T_urwig T_yrne 
 	}
 
 	dynasty_of_location_prefix = "dynnp_of"

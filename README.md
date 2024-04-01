@@ -41,4 +41,6 @@ NOTE: If you are re-installing a mod, delete the old version of the mod first be
 
 - Cybrxkhan
 - Community Title Project
+- Name Project Expanded
 - The CK3 Modding discord for all their help and support.
+

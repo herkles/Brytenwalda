@@ -65,7 +65,6 @@ language_arberian = {
 	
 	color = georgian
 }
-
 language_dniepr_baltic = {
 	type = language
 	is_shown = {
@@ -114,8 +113,6 @@ language_livonian = {
 	}
 	color = english
 }
-
-
 language_gothic = {
 	type = language
 	is_shown = {
@@ -212,7 +209,22 @@ language_lezgian = {
 	}
 	color = georgian
 }
-
+language_laz = {
+	type = language
+	is_shown = {
+		language_is_shown_trigger = {
+			LANGUAGE = language_laz
+		}
+	}
+	ai_will_do = {
+		value = 10
+		if = {
+			limit = { has_cultural_pillar = language_laz }
+			multiply = 10
+		}
+	}
+	color = georgian
+}
 
 
 

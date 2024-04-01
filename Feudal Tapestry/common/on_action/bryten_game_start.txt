@@ -60,10 +60,6 @@ bryten_setup_after_game_start_on_actions = {
 				trigger_event = tapestry_rus.001
 			}
 		}
-
-
-
-
 		# Hugh the great, defacto Ruler of France in 936
 		character:90120 = { designate_diarch = character:6444 }
 		remove_generated_diarch_consequences_effect = {
@@ -129,13 +125,10 @@ bryten_setup_after_game_start_on_actions = {
 		}
 		if = {# slovien become south slavic as they are cut off from the north.
 			limit = { game_start_date >= 1000.1.1 }
-
 			culture:slovien = {
-				remove_culture_pillar = heritage_west_slavic
 				set_culture_pillar = heritage_south_slavic
 			}
 		}
-
 		# traditions
 		if = {# Anglo-Saxons have housecarls thanks to cnut
 			limit = { game_start_date >= 1016.1.1 }
@@ -291,6 +284,63 @@ bryten_setup_after_game_start_on_actions = {
 			limit = { current_date >= 843.1.1 }
 			title:d_meissen = { set_de_jure_liege_title = title:k_sorbia }
 			title:d_lausitz = { set_de_jure_liege_title = title:k_sorbia }
+		}
+		if = {# Kyivan Rus set up in 936 and 1066
+			limit = { current_date >= 936.1.1 }
+			title:d_grodno = { set_de_jure_liege_title = title:k_ruthenia }
+			title:d_pinsk = { set_de_jure_liege_title = title:k_ruthenia }
+			title:d_minsk = { set_de_jure_liege_title = title:k_ruthenia }
+			title:d_polotsk = { set_de_jure_liege_title = title:k_ruthenia }
+			title:d_smolensk = { set_de_jure_liege_title = title:k_ruthenia }
+			title:d_novgorod = { set_de_jure_liege_title = title:k_ruthenia }
+			title:d_vepsia = { set_de_jure_liege_title = title:k_ruthenia }
+			title:d_luki = { set_de_jure_liege_title = title:k_ruthenia }
+		}
+		if = {# East Slavic Tribes in 867 and 936
+			limit = { current_date <= 985.1.1 }
+			# Drevilian
+			title:c_turov = { set_de_jure_liege_title = title:d_turov }
+			title:c_korosten = { set_de_jure_liege_title = title:d_turov }
+			title:c_dubrovytsia = { set_de_jure_liege_title = title:d_turov }
+			title:c_pinsk = { set_de_jure_liege_title = title:d_turov }
+			title:d_turov = { set_title_name = d_drevilian }
+			# Illmenian
+			title:c_novgorod = { set_de_jure_liege_title = title:d_novgorod }
+			title:c_rusa = { set_de_jure_liege_title = title:d_novgorod }
+			title:c_pskov = { set_de_jure_liege_title = title:d_novgorod }
+			title:c_sebezh = { set_de_jure_liege_title = title:d_novgorod }
+			title:c_luki = { set_de_jure_liege_title = title:d_novgorod }
+			title:d_novgorod = { set_title_name = d_ilmenian }
+			# Krivichian
+			title:c_polotsk = { set_de_jure_liege_title = title:d_polotsk }
+			title:c_lukoml = { set_de_jure_liege_title = title:d_polotsk }
+			title:c_vitebsk = { set_de_jure_liege_title = title:d_polotsk }
+			title:c_gnezdovo = { set_de_jure_liege_title = title:d_polotsk }
+			title:c_toropets = { set_de_jure_liege_title = title:d_polotsk }
+			title:d_polotsk = { set_title_name = d_krivichian }
+			# Dregovich
+			title:c_minsk = { set_de_jure_liege_title = title:d_minsk }
+			title:c_slutsk = { set_de_jure_liege_title = title:d_minsk }
+			title:c_kletsk = { set_de_jure_liege_title = title:d_minsk }
+			title:d_minsk = { set_title_name = d_dregovich }
+			# Radmochi
+			title:c_chernigov = { set_de_jure_liege_title = title:d_chernigov }
+			title:c_orsha = { set_de_jure_liege_title = title:d_chernigov }
+			title:c_roslavl = { set_de_jure_liege_title = title:d_chernigov }
+			title:c_starodub = { set_de_jure_liege_title = title:d_chernigov }
+			title:c_babruysk = { set_de_jure_liege_title = title:d_chernigov }
+			title:d_chernigov = { set_title_name = d_radimichi }
+			# severian Tribe
+			title:c_kursk = { set_de_jure_liege_title = title:d_pereyaslavl }
+			title:c_novgorod_seversky = { set_de_jure_liege_title = title:d_pereyaslavl }
+			title:c_putyvl = { set_de_jure_liege_title = title:d_pereyaslavl }
+			title:d_pereyaslavl = { set_title_name = d_severian }
+			# vyatichi Tribe
+			title:c_mozhaysk = { set_de_jure_liege_title = title:d_karachev }
+			title:c_smolensk = { set_de_jure_liege_title = title:d_pereyaslavl }
+			title:d_karachev = { set_title_name = d_vyatichi }
+
+
 		}
 		# Global Variables
 		if = {# Bury Saint Edmonds is founded in 1020 

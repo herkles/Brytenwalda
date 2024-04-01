@@ -9,7 +9,15 @@ k_ruthenia = {
 	}
 	912.1.2 = {
 		holder = 600	#Igor/Helgi, son of Rurik
+		name = kyrivan_rus
+		effect = {
+			set_global_variable = {
+				name = ruthenia_renamed
+				value = yes
+			}
+		}
 	}
+	
 	945.1.2 = {
 		holder = 602	#Sviatoslav I, w/ some regency by St Olga
 	}
