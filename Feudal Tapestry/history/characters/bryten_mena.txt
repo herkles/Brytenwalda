@@ -1,6 +1,45 @@
 ﻿#######################################
 # karluk
 #######################################
+1230286 = {
+	name="Khurtegin" #ruler of Uzgend in Ibn Khurradadbih's time (880s)
+	dynasty=1000101779
+	religion="tengri_pagan"
+	culture="karluk" #clearly of some Turkic origin
+	836.1.1={ #?
+		birth = yes
+	}
+	889.1.1={ #?
+		death = yes
+	}
+}
+1230287 = {
+	name="Sunqurtegin" #S.k.r.tegin
+	dynasty=1000101779
+	religion="tengri_pagan"
+	culture="karluk"
+	father=1230286 #?
+	865.1.1={ #?
+		birth = yes
+	}
+	915.1.1={ #?
+		death = yes
+	}
+}
+1231633 = {
+	name="Malik" #b. S.k.r.tegin, governor of Uzgend and later (entire?) Ferghana
+	dynasty=1000101779
+	religion="ashari"
+	culture="karluk"
+	father=1230287
+	895.1.1={ #?
+		birth = yes
+		culture="turkish"
+	}
+	954.1.1={ #or after?
+		death = yes
+	}
+}
 1600035 = {
 	name="Bakr" #Bakr b. Malik al-Farghani, oghuz general, replaced Abu 'Ali al-Chaghani as a short-lived governor of Khorasan. Killed by his own oghuz guard after a year or two
 	dynasty=1000101779
@@ -13,6 +52,21 @@
 	}
 	957.1.1={
 		death={ death_reason=death_murder}
+	}
+}
+
+
+1230252 = {
+	name="Toghan_Tegin"
+	dynasty=1042185
+	religion="tengri_pagan"
+	culture="karluk"
+	father=194383
+	870.1.2={
+		birth="880.1.2"
+	}
+	940.1.2={
+		death="940.1.2"
 	}
 }
 1230289 = {
@@ -164,19 +218,7 @@
 		death = yes
 	}
 }
-1230252 = {
-	name="Toghan_Tegin"
-	dynasty=1042185
-	religion="tengri_pagan"
-	culture="karluk"
-	father=194383
-	880.1.2={
-		birth="880.1.2"
-	}
-	940.1.2={
-		death="940.1.2"
-	}
-}
+
 #######################################
 # Bedouin
 #######################################
@@ -653,7 +695,7 @@ al_abbas_al_kilabi = {
 
 al_husayn_al_asghar_ibn_ali_zayn = {
 	name = "Al-Husayn"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	father = 33913
@@ -668,7 +710,7 @@ al_husayn_al_asghar_ibn_ali_zayn = {
 }
 ubayd_allah_ibn_al_husayn_al_asghar = {
 	name = "Ubayd-Allah"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	father = al_husayn_al_asghar_ibn_ali_zayn
@@ -683,7 +725,7 @@ ubayd_allah_ibn_al_husayn_al_asghar = {
 }
 jafar_ibn_ubayd_allah= {
 	name = "Ja_far"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	father = ubayd_allah_ibn_al_husayn_al_asghar
@@ -698,7 +740,7 @@ jafar_ibn_ubayd_allah= {
 }
 al_hasan_ibn_jafar_in_ubaydallah = {
 	name = "Al-Hasan"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	father = jafar_ibn_ubayd_allah
@@ -713,7 +755,7 @@ al_hasan_ibn_jafar_in_ubaydallah = {
 }
 yahya_ibn_al_hasan_ibn_jafar = {
 	name = "Yahya"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	trait = sayyid
@@ -731,7 +773,7 @@ yahya_ibn_al_hasan_ibn_jafar = {
 }
 tahir_ibn_yahya_ibn_al_hasan = {
 	name = "Tahir"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	father = yahya_ibn_al_hasan_ibn_jafar
@@ -746,7 +788,7 @@ tahir_ibn_yahya_ibn_al_hasan = {
 }
 alhasan_ibn_tahir = {
 	name = "Al-Hasan"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	father = tahir_ibn_yahya_ibn_al_hasan
@@ -761,7 +803,7 @@ alhasan_ibn_tahir = {
 }
 ubaydallah_ibn_tahir_ibn_yahya = {
 	name = "Ubayd-Allah"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	father = tahir_ibn_yahya_ibn_al_hasan
@@ -776,7 +818,7 @@ ubaydallah_ibn_tahir_ibn_yahya = {
 }
 abu_jafar_muslim_ibn_ubaydallah_ibn_tahir = {
 	name = "Abu_Ja_far_Muslim"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	father = ubaydallah_ibn_tahir_ibn_yahya
@@ -791,7 +833,7 @@ abu_jafar_muslim_ibn_ubaydallah_ibn_tahir = {
 }
 tahir_ibn_muslim = {
 	name = "Tahir"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	father = abu_jafar_muslim_ibn_ubaydallah_ibn_tahir
@@ -806,7 +848,7 @@ tahir_ibn_muslim = {
 }
 al_hasan_ibn_tahir_ibn_muslim = {
 	name = "Al-Hasan"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = bedouin
 	father = abu_jafar_muslim_ibn_ubaydallah_ibn_tahir
@@ -1061,7 +1103,7 @@ ali_ibn_husain_ibn_ismail = {#Caliphal governor of Medina
 
 alqasim_ibn_ubaydallah_ibn_tahir = {
 	name = "Al-Qasim"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = ubaydallah_ibn_tahir_ibn_yahya
@@ -1076,7 +1118,7 @@ alqasim_ibn_ubaydallah_ibn_tahir = {
 }
 daud_ibn_alqasim = {
 	name = "Da_ud"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = alqasim_ibn_ubaydallah_ibn_tahir
@@ -1092,7 +1134,7 @@ daud_ibn_alqasim = {
 
 hani_ibn_daud_ibn_alqasim = {
 	name = "Hani_"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = daud_ibn_alqasim
@@ -1107,7 +1149,7 @@ hani_ibn_daud_ibn_alqasim = {
 }
 muhanna_ibn_daud_ibn_alqasim = {
 	name = "Muhanna"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = daud_ibn_alqasim
@@ -1122,7 +1164,7 @@ muhanna_ibn_daud_ibn_alqasim = {
 }
 abul_ghana_ibn_muhanna_ibn_daud = { #Co-ruler with Hashim ibn al-Hasan and Al-Husayn ibn Muhanna
 	name = "Ubayd-Allah" #Abu'l-Ghana' im 'Ubayd Allah
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = muhanna_ibn_daud_ibn_alqasim
@@ -1139,7 +1181,7 @@ abul_ghana_ibn_muhanna_ibn_daud = { #Co-ruler with Hashim ibn al-Hasan and Al-Hu
 }
 al_husayn_ibn_muhanna_ibn_daud = {
 	name = "Al-Husayn"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = muhanna_ibn_daud_ibn_alqasim
@@ -1154,7 +1196,7 @@ al_husayn_ibn_muhanna_ibn_daud = {
 }
 al_hasan_ibn_daud_ibn_alqasim = {
 	name = "Al-Hasan"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = daud_ibn_alqasim
@@ -1169,7 +1211,7 @@ al_hasan_ibn_daud_ibn_alqasim = {
 }
 hashim_ibn_hasan_ibn_daud = { #Co-ruler with Ubayd Allah ibn Muhanna and Al-Husayn ibn Muhanna
 	name = "Hashim"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = al_hasan_ibn_daud_ibn_alqasim
@@ -1185,7 +1227,7 @@ hashim_ibn_hasan_ibn_daud = { #Co-ruler with Ubayd Allah ibn Muhanna and Al-Husa
 
 umara_ibn_muhanna = {
 	name = "Umara"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = muhanna_ibn_daud_ibn_alqasim
@@ -1200,7 +1242,7 @@ umara_ibn_muhanna = {
 }
 mansur_ibn_umara_ibn_muhanna = {
 	name = "Umara"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = umara_ibn_muhanna
@@ -1224,7 +1266,7 @@ mansur_ibn_umara_ibn_muhanna = {
 
 muhanna_ibn_alhusayn_ibn_muhanna = {
 	name = "Muhanna"
-	dynasty_house = house_husaynid
+	dynasty = 589
 	religion = "ismaili"
 	culture = "bedouin"
 	father = al_husayn_ibn_muhanna_ibn_daud
@@ -1305,7 +1347,32 @@ muhanna_ibn_alhusayn_ibn_muhanna = {
 }
 
 
-
+bryten_bedouin_001 = {# fictional
+	name = "Abdullah"
+	dynasty = 1042152 # Dabbid
+	religion = "ashari"
+	culture = "bedouin"
+	father = bedouin0061
+	885.1.1={
+		birth=yes
+	}
+	940.1.1={
+		death = yes
+	}
+}
+145706_son = {
+	name = "Hamza"
+	dynasty = 1022251
+	religion = "ashari"
+	culture = "bedouin"
+	father = 145706
+	875.1.1 = {
+		birth = "875.1.1"
+	}
+	950.1.1 = {
+		death = "950.1.1"
+	}
+}
 #######################################
 # Omani
 #######################################
@@ -3165,6 +3232,20 @@ muhanna_ibn_alhusayn_ibn_muhanna = {
 	}
 	965.1.1 = { #?
 		death=yes
+	}
+}
+
+1230146 = {
+	name="Qochqar" #Placeholder Yabghu of Jand and Yangikent
+	dynasty_house = house_oghuzqayi 
+	religion="tengri_pagan"
+	culture="turkish"
+	father=1231981
+	882.1.1={
+		birth = yes
+	}
+	946.1.1={
+		death = yes
 	}
 }
 1600009 = {

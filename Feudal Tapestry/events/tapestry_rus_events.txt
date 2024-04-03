@@ -79,18 +79,15 @@ tapestry_rus.004 = {# Igor collecting Tribute.
 	}
 	
 	trigger = {
-		this = character:600 # triggers for Otto
-		OR = {# either after Thankmars rebellion or 940
-			current_year >= 940
-			has_global_variable = otto_thankmars_rebellion_event
-		}
-		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
+		this = character:600 # triggers for Igor
+		current_year >= 940
+		Not = { has_global_variable = igor_collecting_event } # only trigger once
 	}
 	
 	immediate = {
 		title:d_turov.holder = { save_scope_as = drevilian_ruler }
 		set_global_variable = {
-			name = otto_traitor_lorraine_event
+			name = igor_collecting_event
 			value = yes
 		}
 	}
@@ -1021,7 +1018,7 @@ tapestry_rus.031 = {# realms along the ruler Ruled Realms
 			culture:novgorodian = { save_scope_as = my_new_culture }
 		}
 		else_if = {# Kyivan
-			limit = { capital_province = { custom_kyivan_conversion_area = custom_norwegian } }
+			limit = { capital_province = { geographical_region = custom_kyivan_conversion_area } }
 			culture:ruthene = { save_scope_as = my_new_culture }
 		}
 		culture = { save_scope_as = old_culture }

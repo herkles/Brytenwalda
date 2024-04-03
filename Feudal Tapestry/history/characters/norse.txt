@@ -31,7 +31,67 @@
 #######################################
 # Characters
 #######################################
-
+6878 = {
+	name = HE_steinn
+	dna = 6878_jarl_haesteinn
+	dynasty = 1059
+	religion = norse_pagan
+	culture = norse
+	diplomacy = 9
+	martial = 9
+	stewardship = 5
+	intrigue = 7
+	learning = 4
+	health = 6.5
+	trait = lustful
+	trait = ambitious
+	trait = intellect_good_1
+	trait = greedy
+	trait = viking
+	trait = adventurer
+	trait = whole_of_body
+	trait = education_martial_4
+	sexuality = heterosexual
+	disallow_random_traits = yes
+	815.1.1 = {
+		birth = yes
+		effect = {
+			add_character_flag = has_scripted_appearance
+			# Sort his perk tree out.
+			if = {
+				limit = { NOT = { has_perk = anatomical_studies_perk } }
+				add_perk = anatomical_studies_perk
+			}
+			if = {
+				limit = { NOT = { has_perk = restraint_perk } }
+				add_perk = restraint_perk
+			}
+			if = {
+				limit = { NOT = { has_perk = know_thyself_perk } }
+				add_perk = know_thyself_perk
+			}
+			if = {
+				limit = { NOT = { has_perk = wash_your_hands_perk } }
+				add_perk = wash_your_hands_perk
+			}
+			if = {
+				limit = { NOT = { has_perk = iron_constitution_perk } }
+				add_perk = iron_constitution_perk
+			}
+			if = {
+				limit = { NOT = { has_perk = healthy_perk } }
+				add_perk = healthy_perk
+			}
+			if = {
+				limit = { NOT = { has_perk = whole_of_body_perk } }
+				add_perk = whole_of_body_perk
+			}
+		}	
+	}
+	896.1.1 = {
+		death = yes
+	}
+}
 
 
 

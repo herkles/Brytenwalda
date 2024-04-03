@@ -19,6 +19,44 @@
 #######################################
 # andalusian
 #######################################
+1230002 = {
+	name="Salim"
+	dynasty=12294
+	religion="muwalladi"
+	culture="andalusian"
+	770.1.1 = { #?
+		birth=yes
+	}
+	820.1.1 = { #?
+		death=yes
+	}
+}
+1230010={
+	name="Abi_Isa"
+	dynasty=12294
+	religion="muwalladi"
+	culture="andalusian"
+	father=1230004 #?
+	852.1.1 = { #?
+		birth=yes
+	}
+	915.1.1 = { #?
+		death=yes
+	}
+}
+1230011={
+	name="Abd-Allah"
+	dynasty=12294
+	religion="muwalladi"
+	culture="andalusian"
+	father=1230010
+	880.1.1 = { #?
+		birth=yes
+	}
+	934.1.1 = { #?
+		death=yes
+	}
+}
 1230012={
 	name="Ahmad" #governor of Madrid in 937
 	dynasty=12294
@@ -49,7 +87,7 @@ andalusianMB1 = {
 	dynasty = 12314 # Siqubiyyah Dynasty
 	religion = mozarabic_church
 	culture = andalusian
-	father = andalusian0140
+	mother = andalusian0140
 	898.1.1 = {
 		birth = yes
 	}
@@ -70,18 +108,7 @@ andalusianMB2 = {
 		death = yes
 	}
 }
-1230002={
-	name="Salim"
-	dynasty=12294
-	religion="muwalladi"
-	culture="baranis"
-	770.1.1 = { #?
-		birth=yes
-	}
-	820.1.1 = { #?
-		death=yes
-	}
-}
+
 1230003={
 	name="Mantil"
 	dynasty=12294

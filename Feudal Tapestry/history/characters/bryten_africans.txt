@@ -53,7 +53,6 @@ somali0098_father = {
 		death = yes
 	}
 }
-
 somali0130_son = {
 	name = "Gedir"
 	dynasty = somalidyn021 #Abgal
@@ -93,7 +92,6 @@ somali0131_father = {
 		death = yes
 	}
 }
-
 somali0091_son = {
 	name = "Yuusuf"
 	dynasty = somalidyn002
@@ -295,6 +293,20 @@ somali0111_grandson = {
 		death = "966.1.1"
 	}
 }
+bryten_ethiopian_001 = {
+	name = "Merkourios"
+	dynasty = 1022240
+	religion = "ashari"
+	culture = "ethiopian"
+	father = 145633
+	890.1.1 = {
+		birth = "890.1.1"
+	}
+	966.1.1 = {
+		death = "966.1.1"
+	}
+}
+
 #######################################
 # Mossi
 #######################################
@@ -499,7 +511,21 @@ hawwara005 = {
 		death="900.1.1"
 	}
 }
-
+1228237 = {
+	name="Silya"  #placeholder
+  	female=yes
+	religion = "ibadi"
+	culture="butr"
+	848.1.1={
+		birth="848.1.1"
+	}
+	865.1.1={
+		add_spouse=1228233
+	}
+	906.1.1={
+		death="906.1.1"
+	}
+}
 1228854 = {
 	name="Ambay"  #placeholder
 	dynasty = 1069092
@@ -832,6 +858,116 @@ akpoto0001 = {
 		birth=yes
 	}
 	994.1.1 = {
+		death=yes
+	}
+}
+
+
+kutama003 = {
+	name = "Kuta_m" #semi-historical ancestor according to Ibn Khaldun
+	dynasty=1027008
+	religion = ashari
+	culture = baranis #kutama
+	723.1.1 = {
+		birth = yes
+	}
+	767.1.1 = {
+		death = yes
+	}
+}
+kutama004 = {
+	name = "Gharsen" #AKA Garsan - semi-historical ancestor according to Ibn Khaldun
+	dynasty=1027008
+	religion = ashari
+	culture = baranis #kutama
+	father = kutama003
+	746.1.1 = {
+		birth = yes
+	}
+	803.1.1 = {
+		death = yes
+	}
+}
+kutama006 = {
+	name = "Yanna_wa"
+	dynasty=1027008
+	religion = ashari
+	culture = baranis #kutama
+	father = kutama004
+	770.1.1 = {
+		birth = yes
+	}
+	815.1.1 = {
+		death = yes
+	}
+}
+kutama007 = {
+	name = "Lahi_sa" # b. Yannāwa b. Gharsen
+	dynasty=1027008
+	religion = ashari
+	culture = baranis #kutama
+	father = kutama006
+	792.1.1 = {
+		birth = yes
+	}
+	850.1.1 = {
+		death = yes
+	}
+}
+1236403 = {
+	name="Yunus"
+	dynasty=1027008
+	religion="ibadi"
+	culture = baranis
+	
+	father = kutama007
+	
+	831.1.1 = { #?
+		birth=yes
+	}
+	885.1.1 = { #?
+		death=yes
+	}
+}
+1236404 = {
+	name="Abu_Musa"
+	dynasty=1027008
+	religion="ibadi"
+	culture = baranis
+	father=1236403
+	855.1.1 = { #?
+		birth=yes
+	}
+	893.1.1 = {
+		religion="ismaili"
+	}
+	911.1.1 = {
+		death=yes
+	}
+}
+1600504 = {
+	name="Fallah"
+	dynasty=1027008
+	religion="ismaili"
+	culture = baranis
+	father=1236404 #placeholder connection to tie it together	
+	886.1.1 = {
+		birth=yes
+	}
+	945.1.1 = {
+		death=yes
+	}
+}
+1600576 = {
+	name="Yakhluf"
+	dynasty=1027008
+	religion="ismaili"
+	culture = baranis
+	father=1600504	#placeholder connection to tie it together
+	913.1.1 = {
+		birth=yes
+	}
+	968.1.1 = {
 		death=yes
 	}
 }

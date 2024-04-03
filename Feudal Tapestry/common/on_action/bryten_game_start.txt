@@ -10,6 +10,18 @@ on_game_start = {
 bryten_setup_after_game_start_on_actions = {
 	effect = {
 		# Character start up Events
+		character:6878 = {# kill haestin
+			if = {
+				limit = {
+					is_alive = yes
+					is_landed = yes
+				}
+				death = { death_reason = death_disappearance }
+			}
+		}
+
+
+
 		character:140 = {# William the Conquer in the Conquer Bookmark
 			if = {
 				limit = {
@@ -337,7 +349,7 @@ bryten_setup_after_game_start_on_actions = {
 			title:d_pereyaslavl = { set_title_name = d_severian }
 			# vyatichi Tribe
 			title:c_mozhaysk = { set_de_jure_liege_title = title:d_karachev }
-			title:c_smolensk = { set_de_jure_liege_title = title:d_pereyaslavl }
+			title:c_smolensk = { set_de_jure_liege_title = title:d_karachev }
 			title:d_karachev = { set_title_name = d_vyatichi }
 
 

@@ -276,6 +276,7 @@
 #######################################
 # House Palniks
 #######################################
+
 302319 = {
 	name = "Kuaz"
 	dynasty = 2001061	#Palniks
@@ -288,18 +289,7 @@
 		death = yes
 	}
 }
-302320 = {
-	name = "Kya"
-	dynasty = 2001061	#Palniks
-	religion = komi_pagan
-	culture = komi
-	1050.1.2 = {
-		birth = yes
-	}
-	1115.1.2 = {
-		death = yes
-	}
-}
+
 302321 = {
 	name = "Chichayka"
 	dynasty = 2001061	#Palniks
@@ -597,6 +587,7 @@
 		death = yes
 	}
 }
+
 302320 = {
 	name = "Kya"
 	dynasty = 2001061	#Palniks
@@ -610,6 +601,21 @@
 		death = yes
 	}
 }
+bryten_komi_001 = {
+	name = "Gazheg"
+	dynasty = 2001061
+	religion = komi_pagan
+	culture = komi
+	father = 302319
+	860.1.2 = {
+		birth = yes
+	}
+	950.1.1 = {
+		death = yes
+	}
+}
+
+
 #######################################
 # House Perym
 #######################################

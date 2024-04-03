@@ -20,17 +20,10 @@ tapestry_hre.001 = {# Choice given to Otto about invading Lorraine.
 		}
 		OR = {# either after Thankmars rebellion or 940
 			current_year >= 940
-			has_global_variable = otto_thankmars_rebellion_event
+			has_global_variable = thankmar_rebel_event
 		}
 		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
-		title:d_upper_lorraine = {# Lorraine must not be your vassal
-			holder_scope = {
-				NOR = {
-					character = ROOT
-					is_vassal_or_below_of = ROOT
-				}
-			}
-		}
+		scope:gislebert = { NOT = { is_vassal_or_below_of = root } }
 	}
 	
 	immediate = {
@@ -125,12 +118,6 @@ tapestry_hre.003 = {# Thankmar is given the chance of rebelling against Otto.
 			target_title = title:k_east_francia
 		}
 		remove_character_flag = temp_no_claim_war_cost
-		hidden_effect = {
-			set_global_variable = {
-				name = thankmar_rebels_against_otto
-				value = yes
-			}
-		}
 	}
 
 	option = {# Interesting
@@ -514,7 +501,6 @@ tapestry_hre.014 = {# An Officials death.
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
 		set_global_variable = {
 			name = slavic_rising_officer_killed
 			value = yes
@@ -552,13 +538,6 @@ tapestry_hre.015 = {# Gero's Banquet.
 		animation = personality_bold
 	}
 
-	immediate = {
-		set_global_variable = {
-			name = slavic_rising_murder_banquet
-			value = yes
-		}
-	}
-	
 	option = {# Interesting
 		name = tapestry_hre.015.a
 		
@@ -764,12 +743,19 @@ tapestry_hre.020 = {# The Slavs Win
 
 	option = {# Interesting
 		name = tapestry_hre.020.a
-		change_fervor = {# Slavic faith gains favor for the war
-			value = minor_fervor_gain
-			desc = bryten_slavic_rising_favor_slavs_gain
+		faith = {# Slavic faith gains favor for the war
+			change_fervor = {
+				value = minor_fervor_gain
+				desc = bryten_slavic_rising_favor_slavs_gain
+			}
 		}
 		every_held_county = {
-			limit = { culture = { has_cultural_pillar = heritage_west_slavic } }
+			limit = { 
+				OR = {
+					culture = culture:polabian
+					culture = culture:sorbian
+				}
+			}
 			set_county_faith = faith:slavic_pagan
 		}
 		add_piety = medium_piety_gain
@@ -777,7 +763,7 @@ tapestry_hre.020 = {# The Slavs Win
 			region = custom_europe_eastern_germany
 			limit = {
 				target_is_de_facto_liege_or_above = root.primary_title
-				NOT = { has_religion = religion:christianity_religion }
+				NOT = { religion = religion:christianity_religion }
 			}
 			remove_county_modifier = bryten_conversian_by_sword
 		}
@@ -796,9 +782,11 @@ tapestry_hre.021 = {# The Germans Win.
 
 	option = {# Interesting
 		name = tapestry_hre.021.a
-		change_fervor = {# Slavic faith gains favor for the war
-			value = minor_fervor_gain
-			desc = bryten_slavic_rising_favor_christian_gain
+		faith = {# Catholicism gains favor for stopping them.
+			change_fervor = {
+				value = minor_fervor_gain
+				desc = bryten_slavic_rising_favor_christian_gain
+			}
 		}
 		add_piety = medium_piety_gain
 	}
