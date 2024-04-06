@@ -738,7 +738,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 	selection_tooltip = establish_norman_culture_decision_tooltip
 
 	is_shown = {
-		culture = culture:norse
+		has_cultural_pillar = heritage_north_germanic
 		any_sub_realm_county = {
 			target_is_de_jure_liege_or_above = title:d_normandy
 			culture = culture:french
@@ -752,7 +752,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 	}
 
 	is_valid = {
-		culture = culture:norse
+		has_cultural_pillar = heritage_north_germanic
 		completely_controls = title:d_normandy
 	}
 
@@ -779,7 +779,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 						title_province = { geographical_region = custom_normandy_and_adjacent }
 						OR = {
 							culture = culture:french
-							culture = culture:norse
+							has_cultural_pillar = heritage_north_germanic
 						}
 					}
 					add_to_list = norman_counties
@@ -790,7 +790,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 			every_in_list = {
 				list = norman_counties
 				merge_cultures_in_region_effect = {
-					OLD_CULTURE_1 = culture:norse
+					OLD_CULTURE_1 = root.culture
 					OLD_CULTURE_2 = culture:french
 					NEW_CULTURE = culture:norman
 					REGION = custom_normandy_and_adjacent
@@ -799,7 +799,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 
 			# Send all players in the game a notification event about the flip.
 			save_scope_as = norman_founder
-			culture:norse = {save_scope_as = old_culture_1}
+			root.culture = {save_scope_as = old_culture_1}
 			culture:french = {save_scope_as = old_culture_2}
 			culture:norman = {
 				reset_culture_creation_date = yes
@@ -813,7 +813,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 						NOT = { this = root }
 						OR = {
 							culture = culture:french
-							culture = culture:norse
+							has_cultural_pillar = heritage_north_germanic
 						}
 						exists = capital_province
 						capital_province = { geographical_region = custom_normandy_and_adjacent }
@@ -853,7 +853,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 					limit = {
 						OR = {
 							culture = culture:french
-							culture = culture:norse
+							has_cultural_pillar = heritage_north_germanic
 						}
 					}
 					set_culture = culture:norman

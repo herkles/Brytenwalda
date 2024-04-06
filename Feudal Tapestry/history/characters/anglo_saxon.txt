@@ -5451,7 +5451,25 @@
 		}
 	}
 #
+#######################################
+# Archbishops of York
+#######################################
+	bryten_york_bishop_001 = {# Wulfhere - archbishop during the norse invansions
+		name = "Wulfhere"
+		# Archbishop of york
+		religion = "catholic"
+		culture = northumbrian
+		trait = education_learning_4
+		834.1.1 = {
+			birth = yes
+		}
+		900.1.1 = {
+			death = yes
+		}
+	}
 
+
+	
 #######################################
 # Other Priests and Monks
 #######################################
@@ -7221,8 +7239,6 @@
 		death = yes
 	}
 }
-
-
 260527 = {
 	name = "E_thelstan" # Half King, East Anglia
 	dynasty = 1062210

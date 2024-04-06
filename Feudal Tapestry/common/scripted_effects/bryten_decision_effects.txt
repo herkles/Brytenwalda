@@ -2161,18 +2161,22 @@ start_slav_rising_polabian_effect = {# Starts the Rising for Polobians
 	# Setup event troops.
 	scope:polobian_rebel_leader = {
 		spawn_army = {
-			levies = zanj_rebellion_strength_score_levy
-			men_at_arms = {
-				type = pikemen_unit
-				stacks = zanj_rebellion_strength_score_pikemen
-			}
-			men_at_arms = {
-				type = bowmen
-				stacks = zanj_rebellion_strength_score_bowmen
-			}
-			men_at_arms = {
+			levies = 2400
+			men_at_arms = {# Light Footmen
 				type = light_footmen
-				stacks = zanj_rebellion_strength_score_skirmishers
+				stacks = 2
+			}
+			men_at_arms = {# Bowmen
+				type = bowmen
+				stacks = 1
+			}
+			men_at_arms = {# Hussar
+				type = hussar
+				stacks = 2
+			}
+			men_at_arms = {# Bowmen
+				type = bowmen
+				stacks = 1
 			}
 			location = province:2807
 			origin = province:2807

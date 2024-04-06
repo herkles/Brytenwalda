@@ -119,34 +119,6 @@ new_troy_london = {
 		original_region = geographical_region:troy_region
 	}
 }
-scota = { # Scots claiming ancestry from Ancient Egypt
-	type = heroic
-	quality = famed
-	is_shown = {
-		has_dlc_feature = legends
-		NOT = {
-			has_global_variable = scota_legend
-		}
-		has_title = title:k_scotland
-		culture = {
-			OR = {
-				has_cultural_pillar = heritage_west_germanic
-				has_cultural_pillar = heritage_goidelic
-			}
-		}
-	}
-	is_valid = {
-		is_landed = yes
-		prestige_level >= high_prestige_level
-	}
-
-	chronicle = ancient_people
-	chronicle_properties = {
-		culture = culture:ancient_egyptian
-		title = title:k_scotland
-		original_region = geographical_region:ghw_region_egypt_et_al
-	}
-}
 edward_the_martyr = {
 	type = holy
 	quality = famed
@@ -214,6 +186,7 @@ sceafa = { # Claims to be descended from Noah
 		highest_held_title_tier >= tier_kingdom
 		piety_level >= high_piety_level
 	}
+
 	chronicle = saintly_descent
 	chronicle_properties = {
 		ancestor_flag = flag:noah # this felt very weird to type out
@@ -393,7 +366,10 @@ hieros_gamos_skirnismal = { # Fjolnir Yngling descended from Freyr and Gerdr
 		}
 		dynasty = dynasty:499
 		OR = { # You must still be in an era where Nordic gods are still seen as kinda cool
-			culture = culture:norse
+			AND = {
+				culture = culture:norwegian
+				culture = {	NOT = { has_cultural_era_or_later = culture_era_high_medieval }	}
+			}
 			religion = religion:germanic_religion
 		}
 	}
@@ -406,6 +382,139 @@ hieros_gamos_skirnismal = { # Fjolnir Yngling descended from Freyr and Gerdr
 	chronicle_properties = {
 		god = flag:germanic_high_god_name
 		title = title:k_norway
+	}
+}
+gothic_kings = {
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = gothic_kings_legend
+		}
+		OR = {
+			culture = { has_cultural_tradition = tradition_visigothic_codes }
+			culture = { has_cultural_pillar = heritage_north_germanic }
+			AND = {
+				culture = { has_cultural_pillar = heritage_byzantine }
+				capital_county = { duchy = title:d_crimea }
+			}
+		}
+	}
+	is_valid = {
+		is_landed = yes
+		highest_held_title_tier >= tier_kingdom
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ancient_people
+	chronicle_properties = {
+		culture = culture:gothic
+		title = title:e_spain
+		original_region = geographical_region:world_steppe_west
+	}
+}
+#############################################
+# 		  Slavic Legends 				    #
+#############################################
+the_wheelwright = {
+	type = heroic
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = the_wheelwright_legend
+		}
+		dynasty = dynasty:699
+	}
+	is_valid = {
+		is_landed = yes
+		dynasty = dynasty:699
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ancestral_glory
+	chronicle_properties = {
+		ancestor = character:82233
+		title = title:k_poland
+	}
+}
+premysl = { # Descent from Premysl of Bohemia
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = premysl_legend
+		}
+		dynasty = dynasty:506
+	}
+	is_valid = {
+		is_landed = yes
+		highest_held_title_tier >= tier_duchy
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ancestral_glory
+	chronicle_properties = {
+		ancestor = character:168345
+		title = title:k_bohemia
+	}
+}
+sons_of_rurik = {
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = sons_of_rurik_legend
+		}
+		dynasty = dynasty:705
+		exists = character:40605
+		character:40605 = { is_alive = no }
+	}
+	is_valid = {
+		is_landed = yes
+		highest_held_title_tier >= tier_kingdom
+		prestige_level >= medium_prestige_level
+	}
+
+	chronicle = ancestral_glory
+	chronicle_properties = {
+		ancestor = character:40605
+		title = title:e_russia
+	}
+}
+#############################################
+# 		  Hungarian Legends 				#
+#############################################
+hunnic_heritage = { # MY nomadic people *totally* are the Huns guys
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = hunnic_heritage_legend
+		}
+		NOT = { culture = culture:hunnic }
+		OR = {
+			culture = { has_cultural_pillar = heritage_hunnic } #Custom cultures and such
+			culture = { has_cultural_pillar = heritage_magyar }
+			culture = { has_cultural_pillar = heritage_mongolic }
+			culture = { has_cultural_pillar = heritage_turkic }
+		}
+	}
+	is_valid = {
+		is_landed = yes
+		highest_held_title_tier >= tier_kingdom
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ancient_people
+	chronicle_properties = {
+		culture = culture:hunnic
+		title = title:e_caspian-pontic_steppe
+		original_region = geographical_region:world_steppe_west
 	}
 }
 #############################################
@@ -492,28 +601,6 @@ sons_of_david = {
 		original_region = geographical_region:world_middle_east_jerusalem
 	}
 }
-the_wheelwright = {
-	type = heroic
-	quality = famed
-	is_shown = {
-		has_dlc_feature = legends
-		NOT = {
-			has_global_variable = the_wheelwright_legend
-		}
-		dynasty = dynasty:699
-	}
-	is_valid = {
-		is_landed = yes
-		dynasty = dynasty:699
-		prestige_level >= high_prestige_level
-	}
-
-	chronicle = ancestral_glory
-	chronicle_properties = {
-		ancestor = character:82233
-		title = title:k_poland
-	}
-}
 saman_khudah = {
 	type = heroic
 	quality = famed
@@ -591,60 +678,6 @@ descendants_of_brahman = {
 		title = title:e_deccan
 	}
 }
-gothic_kings = {
-	type = legitimizing
-	quality = famed
-	is_shown = {
-		has_dlc_feature = legends
-		NOT = {
-			has_global_variable = gothic_kings_legend
-		}
-		OR = {
-			culture = { has_cultural_tradition = tradition_visigothic_codes }
-			culture = { has_cultural_pillar = heritage_north_germanic }
-			AND = {
-				culture = { has_cultural_pillar = heritage_byzantine }
-				capital_county = { duchy = title:d_crimea }
-			}
-		}
-	}
-	is_valid = {
-		is_landed = yes
-		highest_held_title_tier >= tier_kingdom
-		prestige_level >= high_prestige_level
-	}
-
-	chronicle = ancient_people
-	chronicle_properties = {
-		culture = culture:gothic
-		title = title:e_spain
-		original_region = geographical_region:world_steppe_west
-	}
-}
-sons_of_rurik = {
-	type = legitimizing
-	quality = famed
-	is_shown = {
-		has_dlc_feature = legends
-		NOT = {
-			has_global_variable = sons_of_rurik_legend
-		}
-		dynasty = dynasty:705
-		exists = character:40605
-		character:40605 = { is_alive = no }
-	}
-	is_valid = {
-		is_landed = yes
-		highest_held_title_tier >= tier_kingdom
-		prestige_level >= medium_prestige_level
-	}
-
-	chronicle = ancestral_glory
-	chronicle_properties = {
-		ancestor = character:40605
-		title = title:e_russia
-	}
-}
 yazdagird_iii = {
 	type = legitimizing
 	quality = famed
@@ -718,7 +751,7 @@ pyusawhti = { # Burmese legend claiming ancestry from a dragon goddess
 	}
 }
 menelik_i = { # Supposed son of Solomon and the Queen of Sheba
-	type = holy
+	type = legitimizing
 	quality = famed
 	is_shown = {
 		has_dlc_feature = legends
@@ -793,57 +826,6 @@ roman_heritage = { # Erm, my family are *actually* Roman nobles erm
 		original_region = geographical_region:custom_roman_full_borders
 	}
 }
-hunnic_heritage = { # MY nomadic people *totally* are the Huns guys
-	type = legitimizing
-	quality = famed
-	is_shown = {
-		has_dlc_feature = legends
-		NOT = {
-			has_global_variable = hunnic_heritage_legend
-		}
-		NOT = { culture = culture:hunnic }
-		OR = {
-			culture = { has_cultural_pillar = heritage_hunnic } #Custom cultures and such
-			culture = { has_cultural_pillar = heritage_magyar }
-			culture = { has_cultural_pillar = heritage_mongolic }
-			culture = { has_cultural_pillar = heritage_turkic }
-		}
-	}
-	is_valid = {
-		is_landed = yes
-		highest_held_title_tier >= tier_kingdom
-		prestige_level >= high_prestige_level
-	}
-
-	chronicle = ancient_people
-	chronicle_properties = {
-		culture = culture:hunnic
-		title = title:e_caspian-pontic_steppe
-		original_region = geographical_region:world_steppe_west
-	}
-}
-premysl = { # Descent from Premysl of Bohemia
-	type = legitimizing
-	quality = famed
-	is_shown = {
-		has_dlc_feature = legends
-		NOT = {
-			has_global_variable = premysl_legend
-		}
-		dynasty = dynasty:506
-	}
-	is_valid = {
-		is_landed = yes
-		highest_held_title_tier >= tier_duchy
-		prestige_level >= high_prestige_level
-	}
-
-	chronicle = ancestral_glory
-	chronicle_properties = {
-		ancestor = character:168345
-		title = title:k_bohemia
-	}
-}
 borjigin = { # Alan Gua was impregnated by a ray of light
 	type = legitimizing
 	quality = famed
@@ -916,7 +898,6 @@ shibi_chakravarti = { # Chola claiming descent from the legendary king Shibi
 	}
 }
 #Dynasty perk
-
 #############################################
 # 		  Generic Legends	 				#
 #############################################

@@ -19,9 +19,6 @@ bryten_setup_after_game_start_on_actions = {
 				death = { death_reason = death_disappearance }
 			}
 		}
-
-
-
 		character:140 = {# William the Conquer in the Conquer Bookmark
 			if = {
 				limit = {
@@ -81,6 +78,18 @@ bryten_setup_after_game_start_on_actions = {
 		if = {
 			limit = { exists = character:90120 }
 			character:90120 = { trigger_event = tapestry_french.030 }
+		}
+		# Set Frankish Elective in 887
+		if = {# Election of Odo begins the Election period
+			limit = { game_start_date >= 888.2.29 }
+			title:k_france = {
+				add_title_law = bryten_frankish_elective
+			}
+		}
+		if = {# Philip II abolishes it in 1187
+			limit = { game_start_date >= 888.2.29 }
+			add_realm_law_skip_effects = single_heir_succession_law
+			title:k_france = { remove_title_law = bryten_frankish_elective }
 		}
 		# cultural acceptance stuff
 		if = {# setting up the pilgrimage stuff for 1066 start date
