@@ -56,12 +56,11 @@ sardinian = {# Sardinian
 		10 = mediterranean
 	}
 }
-sicilian = {# Sicilian
+sicilian = {# Siculo-Normans / Italo-Norman
 	color = { 255 228 181 }
-	parents = { longobard greek }
-	history_loc_override = bryten_sicilian_history_loc
+	parents = { longobard norman }
 
-	created = 950.1.1
+	created = 1043.1.1 # Norman Conquest of Southern Italy
 	
 	ethos = ethos_courtly
 	heritage = heritage_latin
@@ -290,35 +289,6 @@ tuscan = {# Tuscan
 		10 = mediterranean
 	}
 }
-pugliese = {# Pugliese; mixture of norman and longobards
-	color = { 250 218 94 }
-
-	parents = { norman longobard }
-
-	created = 1059.1.1 # when Robert became duke
-	
-	ethos = ethos_bellicose
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	traditions = {
-		tradition_swords_for_hire
-		tradition_hereditary_hierarchy
-		tradition_poetry
-		tradition_chivalry
-	}
-	
-	name_list = name_list_sicilian
-	
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	
-	ethnicities = {
-		10 = mediterranean
-	}	
-}
 corsican = {# Corsican
 	color = { 143 188 143 }
 
@@ -349,29 +319,27 @@ corsican = {# Corsican
 }
 siqilliyyan = {# Sicilian but arabic
 	color = { 147 197 114 }
-	parents = { maghrebi longobard }
-	history_loc_override = bryten_sicilian_history_loc
+	parents = { maghrebi greek }
 
-	created = 850.1.1
+	created = 856.1.1
 	
-	ethos = ethos_courtly
-	heritage = heritage_latin
+	ethos = ethos_spiritual
+	heritage = heritage_arabic
 	language = language_arabic
 	martial_custom = martial_custom_male_only
 	traditions = {
 		tradition_gardening
-		tradition_swords_for_hire
-		tradition_maritime_mercantilism
-		tradition_xenophilic
+		tradition_mubarizuns
 		tradition_poetry
+		tradition_xenophilic
 	}
 	
 	name_list = name_list_maghrebi
 	
 	coa_gfx = { arabic_group_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { iberian_muslim_clothing_gfx dde_abbasid_clothing_gfx mena_clothing_gfx }
-	unit_gfx = { iberian_muslim_unit_gfx }
+	building_gfx = {  arabic_group_building_gfx mena_building_gfx }
+	clothing_gfx = { dde_abbasid_clothing_gfx mena_clothing_gfx } 
+	unit_gfx = { mena_unit_gfx } 
 
 	ethnicities = {
 		10 = arab

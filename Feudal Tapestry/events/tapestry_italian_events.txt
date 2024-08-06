@@ -66,9 +66,150 @@ tapestry_italian.002 = {# Players informed
 	}
 }
 #######################################
-# Italo-Normans
+# Italo-Norman Forming
 #######################################
+tapestry_italian.040 = {# Sicilian Culture forming
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:norman = { save_scope_as = norman }
+		culture:sicilian = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:longobard
+			get_all_innovations_from = culture:norman
 
+			# Save scope for player notification events.
+			save_scope_as = sicilian
+		}
+
+		# Norman counties in Southern italy will convert to Sicilian
+		culture:norman = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = custom_sicily }
+				}
+				add_to_list = sicilian_counties
+			}
+		}
+		# Convert the norse counties to anglo-norse
+		every_in_list = {
+			list = sicilian_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								has_culture	= culture:norman
+								capital_province = { geographical_region = custom_sicily }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								has_culture	= culture:norman
+								capital_province = { geographical_region = custom_sicily }
+							}
+						}
+					}
+				}
+			}
+						
+			# All Norman counties in Sicily become sicilian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:norman
+				NEW_CULTURE = culture:sicilian
+				REGION = custom_sicily
+			}
+		}
+
+		# Norman Rulers get the next decision
+		every_ruler = {
+			limit = {
+				AND = {
+					has_culture	= culture:norman
+					is_landed = yes			
+					capital_province = { geographical_region = custom_sicily }
+				}
+			}
+			trigger_event = tapestry_italian.041
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = sicilian_counties
+						holder = { is_within_diplo_range = { CHARACTER = scope:player } }
+					}
+				}
+				trigger_event = tapestry_italian.042
+			}
+		}
+	}
+}
+tapestry_italian.041 = {# Norman Ruled Realms in Southern Italy
+	type = character_event
+	title = tapestry_italian.041.t
+	desc = tapestry_italian.041.desc
+	theme = culture_change
+
+	trigger = {# safety checks
+		has_culture	= culture:norman
+		is_landed = yes		
+		capital_province = { geographical_region = custom_sicily }
+	}
+	
+	option = {# Embrace Sicilian
+		name = tapestry_italian.041.embrace
+		show_as_tooltip = {
+			set_culture = culture:sicilian
+			every_in_list = {
+				list = anglo_saxon_counties
+				limit = {
+					holder.top_liege = root.top_liege
+					has_culture = culture:norman
+				}
+				set_county_culture = culture:sicilian
+			}
+		}
+		# Convert the norman counties to Sicilian
+		every_in_list = {
+			list = anglo_saxon_counties
+			limit = {
+				holder.top_liege = root.top_liege
+				has_culture = culture:norman
+			}	
+			# All Norman counties in Southern Italy become Sicilian
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:norman
+					NEW_CULTURE = culture:sicilian
+					REGION = custom_sicily
+				}
+			}
+		}
+	}
+}
+tapestry_italian.042 = {# Let other players know that Sicilian has been created
+	type = character_event
+	title = tapestry_italian.042.t
+	desc = tapestry_italian.042.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = tapestry_italian.042.a
+	}
+}
 #######################################
 # Frankish Cultural Split up
 #######################################

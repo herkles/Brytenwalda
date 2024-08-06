@@ -738,7 +738,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 	selection_tooltip = establish_norman_culture_decision_tooltip
 
 	is_shown = {
-		has_cultural_pillar = heritage_north_germanic
+		culture = { has_cultural_pillar = heritage_north_germanic }
 		any_sub_realm_county = {
 			target_is_de_jure_liege_or_above = title:d_normandy
 			culture = culture:french
@@ -752,7 +752,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 	}
 
 	is_valid = {
-		has_cultural_pillar = heritage_north_germanic
+		culture = { has_cultural_pillar = heritage_north_germanic }
 		completely_controls = title:d_normandy
 	}
 
@@ -779,7 +779,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 						title_province = { geographical_region = custom_normandy_and_adjacent }
 						OR = {
 							culture = culture:french
-							has_cultural_pillar = heritage_north_germanic
+							culture = { has_cultural_pillar = heritage_north_germanic }
 						}
 					}
 					add_to_list = norman_counties
@@ -813,7 +813,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 						NOT = { this = root }
 						OR = {
 							culture = culture:french
-							has_cultural_pillar = heritage_north_germanic
+							culture = { has_cultural_pillar = heritage_north_germanic }
 						}
 						exists = capital_province
 						capital_province = { geographical_region = custom_normandy_and_adjacent }
@@ -853,7 +853,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 					limit = {
 						OR = {
 							culture = culture:french
-							has_cultural_pillar = heritage_north_germanic
+							culture = { has_cultural_pillar = heritage_north_germanic }
 						}
 					}
 					set_culture = culture:norman

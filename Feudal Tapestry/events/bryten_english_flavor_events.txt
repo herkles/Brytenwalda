@@ -1846,7 +1846,7 @@ bryten_england.040 = {# Anglo-Norse Culture forming
 						OR = {
 							AND = {
 								is_ai = no
-								has_cultural_pillar = heritage_north_germanic
+								culture = { has_cultural_pillar = heritage_north_germanic }
 								capital_province = { geographical_region = custom_england }
 							}
 							any_liege_or_above = {
@@ -1881,7 +1881,7 @@ bryten_england.040 = {# Anglo-Norse Culture forming
 		every_ruler = {
 			limit = {
 				AND = {
-					has_cultural_pillar = heritage_north_germanic
+					culture = { has_cultural_pillar = heritage_north_germanic }
 					is_landed = yes
 					OR = {# Must own one of the Kingdoms
 						has_title = title:k_northumbria
@@ -1920,7 +1920,7 @@ bryten_england.041 = {# Norse Ruled Realms
 	theme = culture_change
 
 	trigger = {# safety checks
-		has_cultural_pillar = heritage_north_germanic
+	culture = { has_cultural_pillar = heritage_north_germanic }
 		is_landed = yes
 		OR = {# Must own one of the Kingdoms
 			has_title = title:k_northumbria
@@ -1935,7 +1935,7 @@ bryten_england.041 = {# Norse Ruled Realms
 		if = {# For Northumbria
 			limit = { 
 				has_title = title:k_northumbria
-				has_cultural_pillar = heritage_north_germanic
+				culture = { has_cultural_pillar = heritage_north_germanic }
 			}
 			# All coastal Northumbrian counties in England will convert to Anglo-Norse
 			every_sub_realm_county = {
@@ -1960,7 +1960,7 @@ bryten_england.041 = {# Norse Ruled Realms
 		if = {# For Mercia
 			limit = { 
 				has_title = title:k_mercia 
-				has_cultural_pillar = heritage_north_germanic
+				culture = { has_cultural_pillar = heritage_north_germanic }
 			}
 			# All coastal Mercian counties in England will convert to Anglo-Norse
 			every_sub_realm_county = {
@@ -1985,7 +1985,7 @@ bryten_england.041 = {# Norse Ruled Realms
 		if = {# For East Anglia
 			limit = { 
 				has_title = title:k_east_anglia 
-				has_cultural_pillar = heritage_north_germanic 
+				culture = { has_cultural_pillar = heritage_north_germanic }
 			}
 
 			# All coastal East Anglian counties in England will convert to Anglo-Norse
@@ -2011,7 +2011,7 @@ bryten_england.041 = {# Norse Ruled Realms
 		if = {# For Wessex
 			limit = {
 				has_title = title:k_wessex
-				has_cultural_pillar = heritage_north_germanic
+				culture = { has_cultural_pillar = heritage_north_germanic }
 			}
 			# All coastal west_saxon counties in England will convert to Anglo-Norse
 			every_sub_realm_county = {
@@ -2718,7 +2718,7 @@ bryten_england.102 = {# Meeting with Ceolwulf
 	trigger = {
 		is_at_war = no # Won't happen if it is during the war against Northumbria
 		has_title = title:k_northumbria # the Norse must be kings of Northumbria first
-		has_cultural_pillar = heritage_north_germanic # It must be for the norse Kings, not Alle and his dynasty
+		culture = { has_cultural_pillar = heritage_north_germanic } # It must be for the norse Kings, not Alle and his dynasty
 		current_date >= 869.1.1 # Give it a couple of years after the war with Northumbria
 		NOT = { exists = global_var:great_heathen_army_looks_south } # only fire once
 		character:205112 = { is_alive = yes }
@@ -3421,7 +3421,7 @@ bryten_england.150 = {# Dealing with the Archbishop of Jorvik
 	trigger = {
 		is_at_war = no # Won't happen if it is during the war against Northumbria
 		has_title = title:k_northumbria # the Norse must be kings of Northumbria first
-		has_cultural_pillar = heritage_north_germanic # It must be for the norse Kings, not Alle and his dynasty
+		culture = { has_cultural_pillar = heritage_north_germanic } # It must be for the norse Kings, not Alle and his dynasty
 		not = {	exists = global_var:bryten_wulfhere_fate } # Fire Only Once
 	}
 
@@ -3437,7 +3437,7 @@ bryten_england.150 = {# Dealing with the Archbishop of Jorvik
 		name = bryten_england.150.tax
 		scope:wulfhere = {
 			pay_short_term_gold = {
-				target = scope:root
+				target = root
 				gold = minor_gold_value_negative
 			}
 		}
@@ -3467,12 +3467,6 @@ bryten_england.150 = {# Dealing with the Archbishop of Jorvik
 				opinion = 25
 			}
 		}
-		hidden_effect = {
-			set_global_variable = {
-				name = bryten_wulfhere_fate_advice
-				value = yes
-			}
-		}
 	}
 	option = {# We don't need you
 		name = bryten_england.150.exile
@@ -3500,7 +3494,7 @@ bryten_england.151 = {# Policy Towards Christians
 	trigger = {
 		is_at_war = no # Won't happen if it is during the war against Northumbria
 		has_title = title:k_northumbria # the Norse must be kings of Northumbria first
-		has_cultural_pillar = heritage_north_germanic # It must be for the norse Kings, not Alle and his dynasty
+		culture = { has_cultural_pillar = heritage_north_germanic } # It must be for the norse Kings, not Alle and his dynasty
 		not = {	exists = global_var:bryten_northumbrian_church_fate } # Fire Only Once
 	}
 
@@ -3514,7 +3508,7 @@ bryten_england.151 = {# Policy Towards Christians
 	option = {# Loot them and reward your followers!
 		name = bryten_england.151.loot
 		every_courtier_or_guest = {
-			limit = { has_cultural_pillar = heritage_north_germanic }
+			limit = { culture = { has_cultural_pillar = heritage_north_germanic } }
 			add_gold = medium_gold_value
 			add_opinion = {
 				target = root
@@ -3523,7 +3517,7 @@ bryten_england.151 = {# Policy Towards Christians
 			}
 		}
 		every_vassal = {
-			limit = { has_cultural_pillar = heritage_north_germanic }
+			limit = { culture = { has_cultural_pillar = heritage_north_germanic } }
 			add_gold = medium_gold_value
 			add_opinion = {
 				target = root
@@ -3586,7 +3580,7 @@ bryten_england.152 = {# People Converting to Christianity
 		is_at_war = no # Won't happen if it is during the war against Northumbria
 		has_title = title:k_northumbria # the Norse must be kings of Northumbria first
 		OR = {
-			has_cultural_pillar = heritage_north_germanic # It must be for the norse Kings, not Alle and his dynasty
+			culture = { has_cultural_pillar = heritage_north_germanic } # It must be for the norse Kings, not Alle and his dynasty
 			has_culture = culture:anglo_norse
 		}
 		not = {	exists = global_var:bryten_northumbrian_conversion } # Fire Only Once
@@ -3679,7 +3673,7 @@ bryten_england.153 = {# Syncretic Beliefs
 		is_at_war = no # Won't happen if it is during the war against Northumbria
 		has_title = title:k_northumbria # the Norse must be kings of Northumbria first
 		OR = {
-			has_cultural_pillar = heritage_north_germanic # It must be for the norse Kings, not Alle and his dynasty
+			culture = { has_cultural_pillar = heritage_north_germanic } # It must be for the norse Kings, not Alle and his dynasty
 			has_culture = culture:anglo_norse
 		}
 		exists = global_var:bryten_northumbrian_conversion # Fire Only Once

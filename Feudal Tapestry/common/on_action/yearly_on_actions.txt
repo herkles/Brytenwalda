@@ -528,10 +528,10 @@ yearly_global_pulse = {
 				NOT = { has_global_variable = bryten_anglo_norse_created }
 
 				OR = {# For the culture to form the norse have to have control of at least one english kingdom
-					title:k_northumbria.holder = { has_cultural_pillar = heritage_north_germanic }
-					title:k_east_anglia.holder = { has_cultural_pillar = heritage_north_germanic }
-					title:k_mercia.holder = { has_cultural_pillar = heritage_north_germanic }
-					title:k_wessex.holder = { has_cultural_pillar = heritage_north_germanic }
+					title:k_northumbria.holder = { culture = { has_cultural_pillar = heritage_north_germanic } }
+					title:k_east_anglia.holder = { culture = { has_cultural_pillar = heritage_north_germanic } }
+					title:k_mercia.holder = { culture = { has_cultural_pillar = heritage_north_germanic } }
+					title:k_wessex.holder = { culture = { has_cultural_pillar = heritage_north_germanic } }
 				}
 				current_date >= 867.1.1
 			}
@@ -652,6 +652,48 @@ yearly_global_pulse = {
 				}
 			}
 		}
+		if = {# Sicilian Culture Forming
+			limit = {
+				NOT = { exists = global_var:bryten_sicilian_created }
+				title:k_england = { is_title_created = yes } # England must be created first
+				current_date >= 1000.1.1
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 936
+				modifier = {
+					add = 2 # 2% chance per year
+					current_date >= 1010.1.1
+				}
+				modifier = {
+					add = 8 # 10% chance per year
+					current_date >= 1020.1.1
+				}
+				modifier = {
+					add = 15 # 25% chance per year
+					current_date >= 1030.1.1
+				}
+				modifier = {
+					add = 15 # 25% chance per year
+					current_date >= 1040.1.1
+				}
+				modifier = {
+					add = 3 # 25% chance per year
+					culture = { has_innovation = innovation_chronicle_writing }
+				}
+				modifier = {
+					add = 3 # 25% chance per year
+					culture = { has_innovation = innovation_baliffs }
+				}
+				set_global_variable = {
+					name = bryten_sicilian_created
+					value = yes
+				}
+				trigger_event = {
+					id = tapestry_italian.040
+					days = { 60 300 }
+				}
+			}
+		}		
 		# Viking Spirit is Diminished
 		if = {
 			limit = {
@@ -891,8 +933,6 @@ yearly_playable_pulse = {
 three_year_playable_pulse = {
 	random_events = {
 		800 = 0
-		200 = global_culture.3011
-		600 = global_culture.3012
 	}
 }
 

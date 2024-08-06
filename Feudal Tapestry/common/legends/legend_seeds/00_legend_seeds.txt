@@ -193,6 +193,34 @@ sceafa = { # Claims to be descended from Noah
 		religion = root.religion
 	}
 }
+scota = { # Scots claiming ancestry from Ancient Egypt
+	type = legitimizing
+	quality = famed
+	is_shown = {
+		has_dlc_feature = legends
+		NOT = {
+			has_global_variable = scota_legend
+		}
+		has_title = title:k_scotland
+		culture = {
+			OR = {
+				culture = culture:scottish
+				culture = culture:gaelic
+			}
+		}
+	}
+	is_valid = {
+		is_landed = yes
+		prestige_level >= high_prestige_level
+	}
+
+	chronicle = ancient_people
+	chronicle_properties = {
+		culture = culture:ancient_egyptian
+		title = title:k_scotland
+		original_region = geographical_region:ghw_region_egypt_et_al
+	}
+}
 #############################################
 # 		  Frankish Legends	 				#
 #############################################
