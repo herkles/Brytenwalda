@@ -4423,9 +4423,73 @@ bryten_building_paderborn_cathedral_02 = {# Paderborn Cathedral
 }
 #######################################
 #									  #
-#      German Special Buildings       #
+#      Italian Special Buildings      #
 #									  #
 #######################################
+bryten_building_milano_church_01 = {# The Basilica of Sant'Eustorgio
+	construction_time = very_slow_construction_time
 
+	type_icon = "icon_structure_palace_of_achen.dds"
+	
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	
+	can_construct = {
+		OR = {
+			scope:holder = {
+				religion = religion:christianity_religion
+			}
+			custom_description = {
+				text = holy_site_building_trigger
+				barony = {
+					is_holy_site_of = scope:holder.faith
+				}
+			}
+		}
+		scope:holder = {
+			culture = {
+				has_innovation = innovation_crop_rotation
+			}
+		}
+	}
+	
+	is_enabled = {
+		custom_description = {
+			text = holy_site_christian_or_holy_site_trigger
+			OR = {
+				scope:holder = {
+					religion = religion:christianity_religion
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
 
+	show_disabled = yes
+	
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.25
+		clergy_opinion = 5
+	}
+	
+	county_modifier = {
+		development_growth_factor = 0.05
+		development_growth = 0.05
+	}
+	
+
+	ai_value = {
+		base = 100
+	}
+	
+	type = special
+}
 

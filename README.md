@@ -6,11 +6,20 @@ If you find any bugs or issues do let me know and I will try to fix them to the 
 
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up.
 
-## Latest Version: 2.0.0 "Frankia" (Released 12/14/2023)
+## Latest Version: 3.0.0 "Iron Century" (Released 12/14/2023)
 
-This update expands to the empire of the Franks. This update revises the cultural set up in both 867 and 1066. In 867 The cultural evolution is still on going and in the middle of the divgerence from Frankish to French and Franconian. In 1066 that has already happened. Likewise the Empire in 867 is Frankia while in 1066 the lands part of the Holy Roman Empire are properly part of it. 
+The update brings the 10th century bookmark from CK2, the Iron Century to the mod. With the rise of Otto the Great, Kyivian Rus, the Capetians, England and more. 
 
-Scandinivia also got a cultural update with the inclusion of the Geats and Gotlanders as parts of Norse divergence. 
+With the expansion east ward to the edge of Europe, the cultures of the Slavs have been redrawn based on the various tribal polities that existed in this era. The various pagan faiths of various uralic and baltic peoples have been added. 
+
+### Change Log
+
+- Updated the Holy Sites for Catholicsim
+- Expanded the cultures of the Slavic tribes better fitting for the 9th, 10th, and 11th centuries
+- added 936 as a bookmark with events for the Iron Century
+- added various pagan faiths to eastern europe
+- added some new caucasian cultures
+
 
 ## Main Features
 
@@ -25,6 +34,7 @@ Scandinivia also got a cultural update with the inclusion of the Geats and Gotla
 - A bookmark where William the conquer is king(december 25th 1066)
 - revision of the cultures of Frankia and Scandinvia; franks now exist in 867
 - Revision of the kingdoms in western europe for both 867 and 1066 to better reflect history
+- 936 Bookmark
 
 ## Manual Installation Steps
 
