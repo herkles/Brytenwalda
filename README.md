@@ -6,14 +6,14 @@ If you find any bugs or issues do let me know and I will try to fix them to the 
 
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up.
 
-## Latest Version: 3.0.0 "Iron Century" (Released 12/14/2023)
+## Latest Version: 3.0.0 "Iron Century" (Released 08/08/2024)
 
 The update brings the 10th century bookmark from CK2, the Iron Century to the mod. With the rise of Otto the Great, Kyivian Rus, the Capetians, England and more. 
 
-With the expansion east ward to the edge of Europe, the cultures of the Slavs have been redrawn based on the various tribal polities that existed in this era. The various pagan faiths of various uralic and baltic peoples have been added. 
+With the expansion east ward to the edge of Europe, the cultures of the Slavs have been redrawn based on the various tribal polities that existed in this era. The various pagan faiths of various uralic and baltic peoples have been added. The caucauses also had their cultures expanded. 
 
 ### Change Log
-
+- Updated to the latest version of the game
 - Updated the Holy Sites for Catholicsim
 - Expanded the cultures of the Slavic tribes better fitting for the 9th, 10th, and 11th centuries
 - added 936 as a bookmark with events for the Iron Century
