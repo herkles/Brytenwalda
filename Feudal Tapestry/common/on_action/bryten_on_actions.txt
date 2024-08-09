@@ -12,8 +12,9 @@ yearly_playable_pulse = {
 }
 three_year_playable_pulse = {
 	on_actions = {
-		delay = { days = 39 }
+		delay = { days = { 13 333 } }
 		bryten_events_tri_yearly_pulse
+		bryten_events_norse_flavor_pulse
 	}
 }
 five_year_playable_pulse = {
@@ -166,7 +167,37 @@ bryten_events_historical_pulse = {# for Historical Events
 		100 = tapestry_rus.024	# Olga supports Church building
 	}
 }
-
-
+#######################################
+# Norse Flavor Events
+#######################################
+bryten_events_norse_flavor_pulse = {
+	trigger = {
+		basic_is_valid_for_yearly_events_trigger = yes
+		religion = religion:germanic_religion
+	}
+	random_events = {
+		chance_of_no_event = {
+			value = 30
+		}
+		
+		1500 = 0
+		
+		10 = bryten_norse.050		# Make an offering of a shield and helmet to the waters
+		10 = bryten_norse.051		# Servant caught trying to curse another through Odin
+		10 = bryten_norse.052		# Come across a tiny shrine to Eir on the road
+		10 = bryten_norse.053		# Make an offering to Frigg or not?
+		10 = bryten_norse.055		# Worship Ullr
+		10 = bryten_norse.056		# Idunn and Apples
+		10 = bryten_norse.057		# Eye irritation - ask for help from Odin
+		10 = bryten_norse.058		# Folklore about Thor helping protect a town
+		10 = bryten_norse.059		# Dedicate an altar to the Land Wights
+		10 = bryten_norse.060		# Dreamt of Aegir
+		10 = bryten_norse.061		# Shrine to Frey
+		10 = bryten_norse.062		# Statues of Thor and Sif given as gifts
+		10 = bryten_norse.063		# Boar feast
+		10 = bryten_norse.064		# Sacred tree nearby should be given offerings
+		10 = bryten_norse.065		# Offering to Thor by throwing a little stone hammer into a river
+	}
+}
 
 

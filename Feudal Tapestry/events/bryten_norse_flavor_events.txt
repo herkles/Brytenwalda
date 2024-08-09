@@ -462,3 +462,1004 @@ bryten_norse.020 = {# Viking Spirit is Diminished - for Varangians
 		name = bryten_norse.020.a
 	}
 }
+#######################################
+# Norse Pagan Flavor
+#######################################
+bryten_norse.050 = {# Make an offering of a shield and helmet to the waters
+	type = character_event
+	title = bryten_norse.050.t
+	desc = bryten_norse.050.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	left_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+	}	
+
+	option = {# Do the Offering
+		name = bryten_norse.050.a
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 30
+			}
+		}
+		remove_short_term_gold = 30
+		add_character_modifier = {
+			modifier = bryten_norse_war_gods_blessing
+			years = 8
+		}		
+	}
+	option = {# Don't do the Offering
+		name = bryten_norse.050.b
+		stress_impact = {
+			zealous = miniscule_stress_impact_gain
+			brave = miniscule_stress_impact_gain
+		}
+	}
+
+}
+bryten_norse.051 = {# Servant caught trying to curse another through Odin
+	type = character_event
+	title = bryten_norse.051.t
+	desc = bryten_norse.051.desc
+	theme = secret
+	override_background = { reference = fp1_viking_feast }
+
+	trigger = {
+		religion = religion:germanic_religion
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = callous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = -0.2
+			has_trait = just
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+	}
+	
+	immediate = {
+		play_music_cue = mx_cue_secret 
+	}	
+
+	option = {# Not my problem
+		name = bryten_norse.051.a
+		add_prestige = 25
+		add_piety = -50
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+	}
+	option = {# Do something about it
+		name = bryten_norse.051.b
+		add_piety = 25
+		add_prestige = -50
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+		}
+	}
+
+}
+bryten_norse.052 = {# Come across a tiny shrine to Eir on the road
+	type = character_event
+	title = bryten_norse.052.t
+	desc = bryten_norse.052.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	right_portrait = root
+	
+	trigger = {
+		religion = religion:germanic_religion
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	option = {# At
+		name = bryten_norse.052.a
+		add_character_modifier = {
+			modifier = bryten_norse_eir_blessing
+			years = 4
+		}
+	}
+
+}
+bryten_norse.053 = {# Make an offering to Frigg or not?
+	type = character_event
+	title = bryten_norse.053.t
+	desc = bryten_norse.053.desc
+	theme = faith
+	override_background = { reference = fp1_tribal_temple }
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	trigger = {
+		religion = religion:germanic_religion
+
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = trusting
+		}
+		modifier = {
+			add = -0.2
+			has_trait = paranoid
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	option = {# No need
+		name = bryten_norse.053.a
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+		}
+	}
+	option = {# Small offering
+		name = bryten_norse.053.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 30
+			}
+		}
+		remove_short_term_gold = 30
+		custom_tooltip = bryten_norse.053.tooltip
+		hidden_effect = {
+			random_list = {
+				70 = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = bryten_norse.053.message.small
+						add_character_modifier = {
+							modifier = bryten_norse_frigg_blessing_minor
+							years = 8
+						}
+					}
+				}
+				20 = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = bryten_norse.053.message.medium
+						add_character_modifier = {
+							modifier = bryten_norse_frigg_blessing_decent
+							years = 8
+						}
+					}
+				}
+				10 = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = bryten_norse.053.message.large
+						add_character_modifier = {
+							modifier = bryten_norse_frigg_blessing_major
+							years = 8
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {# Medium Offering
+		name = bryten_norse.053.c
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 60
+			}
+		}
+		remove_short_term_gold = 60
+		custom_tooltip = bryten_norse.053.tooltip
+		hidden_effect = {
+			random_list = {
+				50 = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = bryten_norse.053.message.small
+						add_character_modifier = {
+							modifier = bryten_norse_frigg_blessing_minor
+							years = 8
+						}
+					}
+				}
+				30 = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = bryten_norse.053.message.medium
+						add_character_modifier = {
+							modifier = bryten_norse_frigg_blessing_decent
+							years = 8
+						}
+					}
+				}
+				20 = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = bryten_norse.053.message.large
+						add_character_modifier = {
+							modifier = bryten_norse_frigg_blessing_major
+							years = 8
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {# Large Offering
+		name = bryten_norse.053.d
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 90
+			}
+		}
+		remove_short_term_gold = 90
+		custom_tooltip = bryten_norse.053.tooltip
+		hidden_effect = {
+			random_list = {
+				30 = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = bryten_norse.053.message.small
+						add_character_modifier = {
+							modifier = bryten_norse_frigg_blessing_minor
+							years = 8
+						}
+					}
+				}
+				40 = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = bryten_norse.053.message.medium
+						add_character_modifier = {
+							modifier = bryten_norse_frigg_blessing_decent
+							years = 8
+						}
+					}
+				}
+				30 = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = bryten_norse.053.message.large
+						add_character_modifier = {
+							modifier = bryten_norse_frigg_blessing_major
+							years = 8
+						}
+					}
+				}
+			}
+		}
+	}
+}
+bryten_norse.055 = {# Worship Ullr
+	type = character_event
+	title = bryten_norse.055.t
+	desc = bryten_norse.055.desc
+	override_background = { reference = fp1_viking_feast }
+
+	theme = hunt_activity
+
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	option = {# At
+		name = bryten_norse.055.a
+		add_piety = 25
+		add_character_modifier = {
+			modifier = bryten_offering_to_ullr
+			years = 10
+		}
+	}
+}
+bryten_norse.056 = {# Idunn and Apples
+	type = character_event
+	title = bryten_norse.056.t
+	desc = bryten_norse.056.desc
+	theme = faith
+	override_background = { reference = fp1_viking_feast }
+
+	right_portrait = root
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	option = {# At
+		name = bryten_norse.056.a
+		add_piety = 25
+	}
+}
+bryten_norse.057 = {# Eye irritation - ask for help from Odin
+	type = character_event
+	title = bryten_norse.057.t
+	desc = bryten_norse.057.desc
+	theme = unfriendly
+	override_background = { reference = fp1_viking_feast }
+
+	left_portrait = {
+		character = root
+		animation = grief
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = wrathful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = 0.2
+			has_trait = deceitful
+		}
+		modifier = {
+			add = -0.2
+			has_trait = honest
+		}
+	}
+	
+	immediate = {
+		add_character_modifier = {
+			modifier = bryten_norse_eye_irritation
+			years = 8
+		}	
+	}
+
+
+	option = {# At
+		name = bryten_norse.057.a
+		stress_impact = {
+			base = minor_stress_impact_gain
+			impatient = minor_stress_impact_gain
+		}
+	}
+	option = {# At
+		name = bryten_norse.057.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 25
+			}
+		}
+		remove_short_term_gold = 25
+		custom_tooltip = bryten_norse.057.tooltip
+		hidden_effect = {
+			random_list = {
+				70 = {
+					send_interface_toast = {
+						type = event_toast_effect_good
+						left_icon = ROOT
+						title = bryten_norse.057.message.positive
+						remove_character_modifier = bryten_norse_eye_irritation
+					}
+				}
+				70 = {
+					send_interface_toast = {
+						type = event_toast_effect_bad
+						left_icon = ROOT
+						title = bryten_norse.057.message.negative
+						stress_impact = {
+							base = minor_stress_impact_gain
+							impatient = minor_stress_impact_gain
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+bryten_norse.058 = {# Folklore about Thor helping protect a town
+	type = character_event
+	title = bryten_norse.058.t
+	desc = bryten_norse.058.desc
+	theme = faith
+	override_background = { reference = alley_day }
+	
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = content
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	option = {# At
+		name = bryten_norse.058.a
+		add_prestige = 25
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			trusting = minor_stress_impact_gain
+		}
+	}
+	option = {# At
+		name = bryten_norse.058.b
+		add_piety = 25
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			arrogant = minor_stress_impact_gain
+		}
+	}
+
+}
+bryten_norse.059 = {# Dedicate an altar to the Land Wights
+	type = character_event
+	title = bryten_norse.059.t
+	desc = bryten_norse.059.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	trigger = {
+		religion = religion:germanic_religion
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+
+	option = {# At
+		name = bryten_norse.059.a
+		add_prestige = 25
+		add_piety = 25
+		add_character_modifier = {
+			modifier = bryten_altar_land_wights
+			years = 8
+		}
+	}
+}
+bryten_norse.060 = {# Dreamt of Aegir
+	type = character_event
+	title = bryten_norse.060.t
+	desc = bryten_norse.060.desc
+	theme = faith
+	override_background = { reference = fp1_ocean_norse }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	trigger = {
+		religion = religion:germanic_religion
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = just
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arbitrary
+		}
+		modifier = {
+			add = 0.2
+			has_trait = diligent
+		}
+		modifier = {
+			add = -0.2
+			has_trait = lazy
+		}
+	}
+	
+	immediate = {
+		add_character_modifier = {
+			modifier = bryten_norse_aegir_dream
+			years = 8
+		}	
+	}
+
+	option = {# At
+		name = bryten_norse.060.a
+		add_piety = 25
+
+	}
+}
+bryten_norse.061 = {# Shrine to Frey
+	type = character_event
+	title = bryten_norse.061.t
+	desc = bryten_norse.061.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	trigger = {
+		religion = religion:germanic_religion
+
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = brave
+		}
+		modifier = {
+			add = -0.2
+			has_trait = craven
+		}
+		modifier = {
+			add = 0.2
+			has_trait = calm
+		}
+		modifier = {
+			add = -0.2
+			has_trait = wrathful
+		}
+	}
+
+	option = {# At
+		name = bryten_norse.061.a
+		add_character_modifier = {
+			modifier = bryten_norse_frey_blessing
+			years = 5
+		}	
+	}
+}
+bryten_norse.062 = {# Statues of Thor and Sif given as gifts
+	type = character_event
+	title = bryten_norse.062.t
+	desc = bryten_norse.062.desc
+	theme = friendly
+	override_icon = { reference = "gfx/interface/icons/event_types/type_faith.dds" }
+	
+	right_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	trigger = {
+		religion = religion:germanic_religion
+
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = callous
+		}
+	}
+
+	option = {# At
+		name = bryten_norse.062.a
+		add_character_modifier = {
+			modifier = bryten_norse_thor_sif_statue
+			years = 10
+		}
+	}
+}
+bryten_norse.063 = {# Boar feast
+	type = character_event
+	title = bryten_norse.063.t
+	desc = bryten_norse.063.desc
+	theme = feast_activity
+	override_background = { reference = fp1_viking_feast }
+
+	right_portrait = {
+		character = root
+		animation = personality_forgiving
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = gregarious
+		}
+		modifier = {
+			add = -0.2
+			has_trait = shy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = gluttonous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = temperate
+		}
+		modifier = {
+			add = 0.2
+			has_trait = humble
+		}
+		modifier = {
+			add = -0.2
+			has_trait = arrogant
+		}
+	}
+	
+	immediate = {
+		add_character_modifier = {
+			modifier = bryten_norse_sacred_boar_feast
+			years = 4
+		}	
+	}
+
+	option = {# At
+		name = bryten_norse.063.a
+		stress_impact = {
+			base = minor_stress_impact_loss
+			gluttonous = minor_stress_impact_loss
+			gregarious = minor_stress_impact_loss
+		}
+	}
+	option = {# At
+		name = bryten_norse.063.b
+		add_piety = 25
+		stress_impact = {
+			zealous = minor_stress_impact_loss
+		}
+	}
+
+}
+bryten_norse.064 = {# Sacred tree nearby should be given offerings
+	type = character_event
+	title = bryten_norse.064.t
+	desc = bryten_norse.064.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	right_portrait = root
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = content
+		}
+		modifier = {
+			add = -0.2
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = compassionate
+		}
+		modifier = {
+			add = -0.2
+			has_trait = sadistic
+		}
+	}
+
+	option = {# At
+		name = bryten_norse.064.a
+		add_piety = 25
+	}
+	option = {# At
+		name = bryten_norse.064.b
+		trigger = {
+			OR = {
+				is_ai = no
+				gold >= 50
+			}
+		}
+		remove_short_term_gold = 50
+		add_piety = 50
+		add_character_modifier = {
+			modifier = bryten_norse_sacred_tree
+			years = 10
+		}
+	}
+
+}
+bryten_norse.065 = {# Offering to Thor by throwing a little stone hammer into a river
+	type = character_event
+	title = bryten_norse.065.t
+	desc = bryten_norse.065.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 0.2
+			has_trait = zealous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = cynical
+		}
+		modifier = {
+			add = 0.2
+			has_trait = generous
+		}
+		modifier = {
+			add = -0.2
+			has_trait = greedy
+		}
+		modifier = {
+			add = 0.2
+			has_trait = patient
+		}
+		modifier = {
+			add = -0.2
+			has_trait = impatient
+		}
+	}
+
+	option = {# At
+		name = bryten_norse.065.a
+		add_piety = 25
+		add_prestige = 25
+	}
+}
+
+
+
+

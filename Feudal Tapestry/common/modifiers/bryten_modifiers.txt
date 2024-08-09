@@ -28,7 +28,6 @@ bryten_taxing_churches = {
 	county_opinion_add = -15
 	tax_mult = 0.2
 }
-
 ##########################################
 # Holy Wells
 ##########################################
@@ -241,4 +240,69 @@ bryten_conversian_by_sword = {# Harsh Conversion of the Slavs
 	county_opinion_add = -30
 	tax_mult = -0.1
 }
-
+##########################################
+# Norse Flavor Modifiers
+##########################################
+bryten_norse_war_gods_blessing = {
+	icon = martial_positive
+	martial = 1
+	monthly_piety = 0.2
+}
+bryten_norse_eir_blessing = {
+	icon = health_positive
+	negate_health_penalty_add = 0.2
+	monthly_piety = 0.1
+}
+bryten_norse_frigg_blessing_minor = {
+	icon = piety_positive
+	health = 0.1
+	monthly_piety = 0.1
+}
+bryten_norse_frigg_blessing_decent = {
+	icon = piety_positive
+	health = 0.4
+	monthly_piety = 0.2
+}
+bryten_norse_frigg_blessing_major = {
+	icon = piety_positive
+	health = 0.7
+	monthly_piety = 0.4
+}
+bryten_offering_to_ullr = {
+	icon = hunt_positive
+	prowess = 1
+	monthly_piety = 0.2
+}
+bryten_norse_eye_irritation = {
+	icon = health_negative
+	health = -0.2
+	stress_gain_mult = 0.15
+	stress_loss_mult = -0.15
+}
+bryten_altar_land_wights = {
+	icon = piety_positive
+	fertility = 0.02
+	monthly_piety = 0.2
+}
+bryten_norse_aegir_dream = {
+	icon = piety_positive
+	monthly_piety = 0.3
+}
+bryten_norse_frey_blessing = {
+	icon = horse_positive
+	monthly_piety = 0.2
+}
+bryten_norse_thor_sif_statue = {
+	icon = piety_positive
+	stewardship = 1
+}
+bryten_norse_sacred_boar_feast = {
+	icon = feast_positive
+	monthly_prestige = 0.3
+	monthly_piety = 0.3
+}
+bryten_norse_sacred_tree = {
+	icon = social_positive
+	stewardship_per_piety_level = 1
+	monthly_piety = 0.4
+}
