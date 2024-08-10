@@ -945,6 +945,14 @@ on_game_start = {
 				add_legitimacy = major_legitimacy_gain
 			}
 		}
+		# Make catholicism not have kent
+		if = {
+			limit = {
+				current_date <= 1173.1.1
+			}
+			faith:catholic = { deactivate_holy_site = kent }
+		}
+
 	}
 }
 

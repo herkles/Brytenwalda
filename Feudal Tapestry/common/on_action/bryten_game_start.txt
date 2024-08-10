@@ -87,7 +87,7 @@ bryten_setup_after_game_start_on_actions = {
 			}
 		}
 		if = {# Philip II abolishes it in 1187
-			limit = { game_start_date >= 888.2.29 }
+			limit = { game_start_date >= 1178.1.1 }
 			add_realm_law_skip_effects = single_heir_succession_law
 			title:k_france = { remove_title_law = feudal_elective_succession_law }
 		}
@@ -387,5 +387,10 @@ bryten_setup_after_game_start_on_actions = {
 			title:c_sussex = { add_county_modifier = {	modifier = bryten_cinque_port_modifier } }
 			title:c_kent = { add_county_modifier = { modifier = bryten_cinque_port_modifier	} }
 		}
+		# # Holy Site for Kent in 1171 and after
+		# if = {
+		# 	limit = { game_start_date >= 1066.1.1 }
+		# 	faith:catholic = { activate_holy_site = kent }	
+		# }
 	}
 }
