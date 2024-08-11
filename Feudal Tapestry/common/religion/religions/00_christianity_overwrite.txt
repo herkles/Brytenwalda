@@ -242,6 +242,7 @@
 	piety_icon_group = "christian"
 
 	faiths = {
+		# Imperial Denominations
 		catholic = {
 			color = { 0.8 0.8 0.6 }
 			religious_head = k_papal_state
@@ -316,7 +317,6 @@
 				WaterGodHerHim = CHARACTER_HERHIM_HIM
 			}
 		}
-
 		orthodox = {
 			color = { 0.7 0 0.5 }
 			religious_head = k_orthodox
@@ -389,7 +389,152 @@
 				ReligiousHeadTitleName = orthodox_religious_head_title_name				
 			}			
 		}
+		bosnian_church = {
+			color = { 153 117 134 }
+			icon = bosnian_church
+			graphical_faith = "catholic_gfx"
+			
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = visoki
+			holy_site = ragusa
+			holy_site = esztergom
 
+			#Special Tolerance
+			#It should be noted that the Krstjani were never *really* ecumenical. Just isolated rural Christians, mostly forgotten by both the Orthodox and Catholic churches. When they started to become relevant, passive tolerance of them faded into persecution rather quickly.
+			#This is reflected in-game by a decision that allows them to be accused of heresy by other ecumenical Christians if they ever become more than just a backwater curiosity. If successful, their "ecumenism" is stripped.
+			doctrine = special_doctrine_ecumenical_christian
+
+			#Main Group
+			doctrine = doctrine_no_head
+			doctrine = doctrine_pluralism_pluralistic
+
+			#Crimes
+			#Generally quite bad at enforcing religious dictats from Rome: many things are shunned, few things are criminal.
+			doctrine = doctrine_homosexuality_shunned
+			doctrine = doctrine_adultery_men_shunned
+			doctrine = doctrine_adultery_women_shunned
+			doctrine = doctrine_kinslaying_shunned
+			doctrine = doctrine_deviancy_shunned
+			doctrine = doctrine_witchcraft_shunned	#Mostly for being rural and having an unfortunate habit of taking in travelling heretics.
+
+			#Clerical Functions
+			doctrine = doctrine_clerical_function_alms_and_pacification
+			
+			#Tenets
+			doctrine = tenet_mendicant_preachers
+			doctrine = tenet_pastoral_isolation
+			doctrine = tenet_monasticism
+
+			localization = {
+				#Represents the peculiar Bosnian ecclesiastic setup as best as possible.
+				HouseOfWorship = bosnian_house_of_worship
+				HouseOfWorship2 = bosnian_house_of_worship_2
+				HouseOfWorship3 = bosnian_house_of_worship_3
+				HouseOfWorshipPlural = bosnian_house_of_worship_plural
+				ReligiousHeadName = bosnian_religious_head_title
+				ReligiousHeadTitleName = bosnian_religious_head_title_name
+				DevoteeMale = bosnian_devotee_male
+				DevoteeMalePlural = bosnian_devotee_male_plural
+				DevoteeFemale = bosnian_devotee_female
+				DevoteeFemalePlural = bosnian_devotee_female_plural
+				DevoteeNeuter = bosnian_devotee_neuter
+				DevoteeNeuterPlural = bosnian_devotee_neuter_plural
+				PriestMale = bosnian_priest_male
+				PriestMalePlural = bosnian_priest_male_plural
+				PriestFemale = bosnian_priest_female
+				PriestFemalePlural = bosnian_priest_female_plural
+				PriestNeuter = bosnian_priest_neuter
+				PriestNeuterPlural = bosnian_priest_neuter_plural
+				AltPriestTermPlural = bosnian_priest_alternate_plural
+				BishopMale = bosnian_bishop_male
+				BishopMalePlural = bosnian_bishop_male_plural
+				BishopFemale = bosnian_bishop_female
+				BishopFemalePlural = bosnian_bishop_female_plural
+				BishopNeuter = bosnian_bishop_neuter
+				BishopNeuterPlural = bosnian_bishop_neuterplural
+			}
+		}		
+		iconoclast = {
+			color = { 0.5 0.2 0.4 }
+			icon = christianity_iconoclasm
+			religious_head = d_iconoclast
+
+			#Shared with Orthodox
+			holy_site = jerusalem
+			holy_site = constantinople
+			holy_site = rome
+			holy_site = alexandria
+			holy_site = antioch
+
+			#Tenets
+			doctrine = tenet_communion
+			doctrine = tenet_pentarchy
+			doctrine = tenet_aniconism
+
+			localization = {
+				# Patriarchs instead of Popes
+				ReligiousHeadName = orthodox_religious_head_title
+				ReligiousHeadTitleName = orthodox_religious_head_title_name		
+			}
+		}
+		mozarabic_church = {
+			color = { 124 255 142 }
+			icon = fp2_mozarabic
+			graphical_faith = "catholic_gfx"
+			religious_head = k_papal_state
+			
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = santiago
+			holy_site = toledo_mozarabic
+			holy_site = cordoba
+
+			#Special Tolerance
+			doctrine = special_doctrine_ecumenical_christian
+
+			#Main Group
+			doctrine = doctrine_pluralism_pluralistic
+
+			#Crimes
+			# More used to Andalusian-Muwalladi norms than some Catholic ones.
+			doctrine = doctrine_homosexuality_accepted
+			doctrine = doctrine_deviancy_shunned
+
+			#Clerical Functions
+			doctrine = doctrine_clerical_function_alms_and_pacification
+			
+			#Tenets
+			doctrine = tenet_adaptive
+			doctrine = tenet_communion
+			doctrine = tenet_rite
+		}
+		adoptionist = {
+			color = { 255 51 51 }
+			icon = fp2_adoptionist
+			graphical_faith = "catholic_gfx"
+			
+			holy_site = lyon
+			holy_site = rome
+			holy_site = santiago
+			holy_site = toledo_mozarabic
+			holy_site = carthage_adoptionist
+
+			#Main Group
+			doctrine = doctrine_pluralism_fundamentalist
+			
+			#Tenets
+			doctrine = tenet_religious_legal_pronouncements
+			doctrine = tenet_communion
+			doctrine = tenet_literalism
+
+			localization = {
+				# Since the Elipandic school wouldn't want their own papacy, we restrict Adoptionists to an arch-bishop.
+				ReligiousHeadName = adoptionist_religious_head_title
+				ReligiousHeadTitleName = adoptionist_religious_head_title_name
+			}
+		}
+		# Non-Chalcedonian Denominations
 		coptic = {
 			color = { 210 235 87 }
 			religious_head = d_coptic_papacy
@@ -462,7 +607,6 @@
 				ReligiousHeadTitleName = coptic_religious_head_title_name
 			}			
 		}
-
 		armenian_apostolic = {
 			color = { 0.8 0.4 0.1 }
 			religious_head = d_apostolic_church
@@ -533,35 +677,90 @@
 				ReligiousHeadTitleName = apostolic_religious_head_title_name
 			}
 		}
+		# DKFDFJ Denominations
+		# Nestorian Denominations
+		nestorian = {
+			color = { 0.8 0.3 0.5 }
+			religious_head = d_patriarchate_in_the_east
 
-		conversos = {
-			color = { 0.4 0.5 0.8 }
-			icon = conversos
-			religious_head = k_papal_state
-			
 			holy_site = jerusalem
-			holy_site = rome
-			holy_site = santiago
-			holy_site = toledo
-			holy_site = cordoba
+			holy_site = baghdad
+			holy_site = farz
+			holy_site = antioch
+			holy_site = kerala
 
-			# Tenets
-			doctrine = tenet_communion
-			doctrine = tenet_communal_identity
-			doctrine = tenet_jewish_syncretism
-
-			# Main Group
+			#Main Group
 			doctrine = doctrine_pluralism_pluralistic
 
-			#Crimes
-			doctrine = doctrine_adultery_men_crime
-			doctrine = doctrine_adultery_women_crime
-			doctrine = doctrine_kinslaying_extended_family_crime
+			#Tenets
+			doctrine = tenet_eastern_syncretism
+			doctrine = tenet_monasticism
+			doctrine = tenet_mendicant_preachers
 
-			#Special Tolerance
-			doctrine = special_doctrine_ecumenical_christian	
+			holy_order_names = {
+				{ name = "holy_order_order_of_saint_addai" }
+			}
+
+			localization = { # Utilizes the 'West Christian' Saints, shared by Catholics and Orthodox
+				# Patriarchs instead of Popes
+				ReligiousHeadName = nestorian_religious_head_title
+				ReligiousHeadTitleName = nestorian_religious_head_title_name				
+			}	
 		}
+		# Proto-Prostant Denominations
+		waldensian = {
+			color = { 0.4 0.2 0.5 }
+			icon = christianity_waldensian
+			graphical_faith = "catholic_gfx"
 
+			#Shared with Catholics
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = cologne
+			holy_site = santiago
+			# holy_site = kent
+
+			#Main Group
+			doctrine = doctrine_pluralism_pluralistic
+			doctrine = doctrine_theocracy_lay_clergy
+			doctrine = doctrine_pilgrimage_forbidden
+
+			# Special Doctrines
+			doctrine = unavailable_doctrine
+
+			#Tenets
+			doctrine = tenet_vows_of_poverty
+			doctrine = tenet_mendicant_preachers
+			doctrine = tenet_aniconism
+		}
+		lollard = {
+			color = { 0.5 0.8 0.8 }
+			icon = christianity_lollard
+			graphical_faith = "catholic_gfx"
+
+			#Shared with Catholics
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = cologne
+			holy_site = santiago
+			# holy_site = kent
+
+			#Main Gorup
+			doctrine = doctrine_theocracy_lay_clergy
+			doctrine = doctrine_pilgrimage_forbidden
+
+			#Clerical Functions
+			doctrine = doctrine_clerical_marriage_allowed
+
+			#Tenets
+			doctrine = tenet_pacifism
+			doctrine = tenet_aniconism
+			doctrine = tenet_literalism
+
+			# Special Doctrines
+			doctrine = unavailable_doctrine
+		}
+		# Gnostic Denominations
 		cathar = {
 			color = { 0.5 0.5 0.9 }
 			icon = christianity_cathar
@@ -595,6 +794,9 @@
 			doctrine = tenet_pacifism
 			doctrine = tenet_gnosticism
 
+			# Special Doctrines
+			doctrine = unavailable_doctrine
+
 			#Unique Localization
 			localization = {
 				PriestMale = cathar_priest_male
@@ -605,81 +807,6 @@
 				PriestNeuterPlural = cathar_priest_neuter_plural
 			}
 		}
-
-		waldensian = {
-			color = { 0.4 0.2 0.5 }
-			icon = christianity_waldensian
-			graphical_faith = "catholic_gfx"
-
-			#Shared with Catholics
-			holy_site = jerusalem
-			holy_site = rome
-			holy_site = cologne
-			holy_site = santiago
-			# holy_site = kent
-
-			#Main Group
-			doctrine = doctrine_pluralism_pluralistic
-			doctrine = doctrine_theocracy_lay_clergy
-			doctrine = doctrine_pilgrimage_forbidden
-
-
-
-			#Tenets
-			doctrine = tenet_vows_of_poverty
-			doctrine = tenet_mendicant_preachers
-			doctrine = tenet_aniconism
-		}
-
-		lollard = {
-			color = { 0.5 0.8 0.8 }
-			icon = christianity_lollard
-			graphical_faith = "catholic_gfx"
-
-			#Shared with Catholics
-			holy_site = jerusalem
-			holy_site = rome
-			holy_site = cologne
-			holy_site = santiago
-			# holy_site = kent
-
-			#Main Gorup
-			doctrine = doctrine_theocracy_lay_clergy
-			doctrine = doctrine_pilgrimage_forbidden
-
-			#Clerical Functions
-			doctrine = doctrine_clerical_marriage_allowed
-
-			#Tenets
-			doctrine = tenet_pacifism
-			doctrine = tenet_aniconism
-			doctrine = tenet_literalism
-		}
-
-		iconoclast = {
-			color = { 0.5 0.2 0.4 }
-			icon = christianity_iconoclasm
-			religious_head = d_iconoclast
-
-			#Shared with Orthodox
-			holy_site = jerusalem
-			holy_site = constantinople
-			holy_site = rome
-			holy_site = alexandria
-			holy_site = antioch
-
-			#Tenets
-			doctrine = tenet_communion
-			doctrine = tenet_pentarchy
-			doctrine = tenet_aniconism
-
-			localization = {
-				# Patriarchs instead of Popes
-				ReligiousHeadName = orthodox_religious_head_title
-				ReligiousHeadTitleName = orthodox_religious_head_title_name		
-			}
-		}
-
 		bogomilist = {
 			color = { 0.7 0 0.2 }
 			icon = christianity_bogomilist
@@ -719,7 +846,6 @@
 				ReligiousHeadTitleName = orthodox_religious_head_title_name						
 			}
 		}
-
 		paulician  = {
 			color = { 0.6 0.1 0.4 }
 			icon = christianity_paulicanism
@@ -753,36 +879,6 @@
 				ReligiousHeadTitleName = orthodox_religious_head_title_name						
 			}
 		}
-
-		nestorian = {
-			color = { 0.8 0.3 0.5 }
-			religious_head = d_patriarchate_in_the_east
-
-			holy_site = jerusalem
-			holy_site = baghdad
-			holy_site = farz
-			holy_site = antioch
-			holy_site = kerala
-
-			#Main Group
-			doctrine = doctrine_pluralism_pluralistic
-
-			#Tenets
-			doctrine = tenet_eastern_syncretism
-			doctrine = tenet_monasticism
-			doctrine = tenet_mendicant_preachers
-
-			holy_order_names = {
-				{ name = "holy_order_order_of_saint_addai" }
-			}
-
-			localization = { # Utilizes the 'West Christian' Saints, shared by Catholics and Orthodox
-				# Patriarchs instead of Popes
-				ReligiousHeadName = nestorian_religious_head_title
-				ReligiousHeadTitleName = nestorian_religious_head_title_name				
-			}	
-		}
-
 		messalian = {
 			color = { 0.6 0.1 0.4 }
 			icon = christianity_messalian
@@ -828,6 +924,38 @@
 			}
 		}
 
+
+
+
+		conversos = {
+			color = { 0.4 0.5 0.8 }
+			icon = conversos
+			religious_head = k_papal_state
+			
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = santiago
+			holy_site = toledo
+			holy_site = cordoba
+
+			# Tenets
+			doctrine = tenet_communion
+			doctrine = tenet_communal_identity
+			doctrine = tenet_jewish_syncretism
+
+			# Main Group
+			doctrine = doctrine_pluralism_pluralistic
+
+			#Crimes
+			doctrine = doctrine_adultery_men_crime
+			doctrine = doctrine_adultery_women_crime
+			doctrine = doctrine_kinslaying_extended_family_crime
+
+			#Special Tolerance
+			doctrine = special_doctrine_ecumenical_christian	
+			doctrine = unavailable_doctrine
+
+		}
 		adamites = {
 			color = { 0.6 0.8 0.6 }
 			icon = adamites	
@@ -869,8 +997,11 @@
 			doctrine = tenet_natural_primitivism
 			doctrine = tenet_sanctity_of_nature
 			doctrine = tenet_communal_identity
-		}
 
+			# Special Doctrine
+			doctrine = unavailable_doctrine
+
+		}
 		insular_celtic = {
 			color = { 0.5 0.5 0.3 }
 			icon = insular_celtic
@@ -885,6 +1016,7 @@
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
+			doctrine = unavailable_doctrine
 
 			#Main Group
 			doctrine = doctrine_pluralism_pluralistic #Mostly to keep them from forcing Catholics out of Britain.
@@ -990,129 +1122,5 @@
 			}
 		}
 
-		bosnian_church = {
-			color = { 153 117 134 }
-			icon = bosnian_church
-			graphical_faith = "catholic_gfx"
-			
-			holy_site = jerusalem
-			holy_site = rome
-			holy_site = visoki
-			holy_site = ragusa
-			holy_site = esztergom
-
-			#Special Tolerance
-			#It should be noted that the Krstjani were never *really* ecumenical. Just isolated rural Christians, mostly forgotten by both the Orthodox and Catholic churches. When they started to become relevant, passive tolerance of them faded into persecution rather quickly.
-			#This is reflected in-game by a decision that allows them to be accused of heresy by other ecumenical Christians if they ever become more than just a backwater curiosity. If successful, their "ecumenism" is stripped.
-			doctrine = special_doctrine_ecumenical_christian
-
-			#Main Group
-			doctrine = doctrine_no_head
-			doctrine = doctrine_pluralism_pluralistic
-
-			#Crimes
-			#Generally quite bad at enforcing religious dictats from Rome: many things are shunned, few things are criminal.
-			doctrine = doctrine_homosexuality_shunned
-			doctrine = doctrine_adultery_men_shunned
-			doctrine = doctrine_adultery_women_shunned
-			doctrine = doctrine_kinslaying_shunned
-			doctrine = doctrine_deviancy_shunned
-			doctrine = doctrine_witchcraft_shunned	#Mostly for being rural and having an unfortunate habit of taking in travelling heretics.
-
-			#Clerical Functions
-			doctrine = doctrine_clerical_function_alms_and_pacification
-			
-			#Tenets
-			doctrine = tenet_mendicant_preachers
-			doctrine = tenet_pastoral_isolation
-			doctrine = tenet_monasticism
-
-			localization = {
-				#Represents the peculiar Bosnian ecclesiastic setup as best as possible.
-				HouseOfWorship = bosnian_house_of_worship
-				HouseOfWorship2 = bosnian_house_of_worship_2
-				HouseOfWorship3 = bosnian_house_of_worship_3
-				HouseOfWorshipPlural = bosnian_house_of_worship_plural
-				ReligiousHeadName = bosnian_religious_head_title
-				ReligiousHeadTitleName = bosnian_religious_head_title_name
-				DevoteeMale = bosnian_devotee_male
-				DevoteeMalePlural = bosnian_devotee_male_plural
-				DevoteeFemale = bosnian_devotee_female
-				DevoteeFemalePlural = bosnian_devotee_female_plural
-				DevoteeNeuter = bosnian_devotee_neuter
-				DevoteeNeuterPlural = bosnian_devotee_neuter_plural
-				PriestMale = bosnian_priest_male
-				PriestMalePlural = bosnian_priest_male_plural
-				PriestFemale = bosnian_priest_female
-				PriestFemalePlural = bosnian_priest_female_plural
-				PriestNeuter = bosnian_priest_neuter
-				PriestNeuterPlural = bosnian_priest_neuter_plural
-				AltPriestTermPlural = bosnian_priest_alternate_plural
-				BishopMale = bosnian_bishop_male
-				BishopMalePlural = bosnian_bishop_male_plural
-				BishopFemale = bosnian_bishop_female
-				BishopFemalePlural = bosnian_bishop_female_plural
-				BishopNeuter = bosnian_bishop_neuter
-				BishopNeuterPlural = bosnian_bishop_neuterplural
-			}
-		}
-
-		mozarabic_church = {
-			color = { 124 255 142 }
-			icon = fp2_mozarabic
-			graphical_faith = "catholic_gfx"
-			religious_head = k_papal_state
-			
-			holy_site = jerusalem
-			holy_site = rome
-			holy_site = santiago
-			holy_site = toledo_mozarabic
-			holy_site = cordoba
-
-			#Special Tolerance
-			doctrine = special_doctrine_ecumenical_christian
-
-			#Main Group
-			doctrine = doctrine_pluralism_pluralistic
-
-			#Crimes
-			# More used to Andalusian-Muwalladi norms than some Catholic ones.
-			doctrine = doctrine_homosexuality_accepted
-			doctrine = doctrine_deviancy_shunned
-
-			#Clerical Functions
-			doctrine = doctrine_clerical_function_alms_and_pacification
-			
-			#Tenets
-			doctrine = tenet_adaptive
-			doctrine = tenet_communion
-			doctrine = tenet_rite
-		}
-
-		adoptionist = {
-			color = { 255 51 51 }
-			icon = fp2_adoptionist
-			graphical_faith = "catholic_gfx"
-			
-			holy_site = lyon
-			holy_site = rome
-			holy_site = santiago
-			holy_site = toledo_mozarabic
-			holy_site = carthage_adoptionist
-
-			#Main Group
-			doctrine = doctrine_pluralism_fundamentalist
-			
-			#Tenets
-			doctrine = tenet_religious_legal_pronouncements
-			doctrine = tenet_communion
-			doctrine = tenet_literalism
-
-			localization = {
-				# Since the Elipandic school wouldn't want their own papacy, we restrict Adoptionists to an arch-bishop.
-				ReligiousHeadName = adoptionist_religious_head_title
-				ReligiousHeadTitleName = adoptionist_religious_head_title_name
-			}
-		}
 	}
 }
