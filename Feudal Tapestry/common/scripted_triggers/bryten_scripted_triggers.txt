@@ -2,7 +2,6 @@
 	basic_is_valid_for_yearly_events_trigger = yes
 	is_adult = yes
 }
-
 bryten_basic_is_available_adult_courtier_even_if_sick_trigger = { # Basically the above, without the landed title requirement
 	is_alive = yes
 	is_imprisoned = no
@@ -22,11 +21,9 @@ bryten_basic_is_available_adult_courtier_even_if_sick_trigger = { # Basically th
 	NOT = { has_trait = incapable }
 	is_adult = yes
 }
-
 is_brytenwalda_loaded = {
 	always = yes
 }
-
 is_on_a_british_pilgrimage_trigger = {
 	exists = involved_activity
 	involved_activity = { has_activity_type = activity_bryten_english_pilgrimage }
@@ -38,7 +35,6 @@ is_on_a_british_pilgrimage_trigger = {
 		}
 	}
 }
-
 bryten_activity_has_pious_pilgrimage_type_trigger = {
 	has_activity_type = activity_bryten_english_pilgrimage
 	has_activity_option = {
@@ -53,5 +49,10 @@ bryten_activity_has_worldly_pilgrimage_type_trigger = {
 		option = bryten_english_pilgrimage_type_worldy
 	}
 }
-
+can_join_clergy = {
+	trigger_if = {
+		limit = { faith ?= { has_doctrine_parameter = sinful_characters_no_priesthood_active } }
+		num_sinful_traits = 0
+	}
+}
 
