@@ -762,7 +762,53 @@ yearly_global_pulse = {
 					trigger_event = bryten_norse.020
 				}
 			}
-		}	
+		}
+		# Bogomilism happening
+		if = {# Frankish culture spliting
+			limit = {
+				current_date < 900.1.1
+				NOT = { has_global_variable = bogomilism_spawned }
+			}
+			random = {
+				chance = 10
+				modifier = {
+					add = 10 # 20% chance
+					current_date >= 910.1.1
+				}
+				modifier = {
+					add = 10 # 30% chance
+					current_date >= 920.1.1
+				}
+				modifier = {
+					add = 10 # 40% chance
+					current_date >= 930.1.1
+				}
+				modifier = {
+					add = 10 # 50% chance
+					current_date >= 940.1.1
+				}
+				modifier = {
+					add = 10 # 60% chance
+					current_date >= 950.1.1
+				}
+				modifier = {
+					add = 20 # 80% chance
+					current_date >= 960.1.1
+				}
+				modifier = {
+					add = 20 # 100% chance
+					current_date >= 970.1.1
+				}
+				trigger_event = {
+					id = bryten_heresy.001
+					days = { 60 300 }
+				}
+			}
+		}			
+		
+
+
+
 
 	}
 	

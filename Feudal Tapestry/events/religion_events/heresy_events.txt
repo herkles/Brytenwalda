@@ -104,8 +104,6 @@ heresy.0001 = {
 				save_scope_as = heretic_capital
 			}
 		}
-
-
 		#Once we have a heresiarch, look for a valid heretical faith to them to convert to.
 		if = {
 			limit = {
@@ -139,12 +137,7 @@ heresy.0001 = {
 						is_in_family = rf_abrahamic
 					}
 					if = {
-						limit = {
-							this = religion:christianity_religion
-						}
-						faith:mandeaism = {
-							add_to_list = potential_heresies
-						}
+						limit = { this = religion:christianity_religion }
 						faith:priscillianism = {
 							add_to_list = potential_heresies
 						}
@@ -154,9 +147,7 @@ heresy.0001 = {
 
 					}
 					else_if = {
-						limit = {
-							this = religion:islam_religion
-						}
+						limit = { this = religion:islam_religion }
 						faith:manichean = {
 							add_to_list = potential_heresies
 						}
@@ -171,7 +162,7 @@ heresy.0001 = {
 						limit = {
 							this = religion:judaism_religion
 						}
-						faith:conversos = {
+						faith:pasagian = {
 							add_to_list = potential_heresies
 						}
 						faith:sethianism = {
@@ -409,6 +400,14 @@ heresy.0001 = {
 							}
 						}
 					}
+
+					# We don't want unavailable faiths to pop up via heresy outbreak
+					modifier = {
+						factor = 0
+						has_doctrine = unavailable_doctrine
+					}
+
+
 				}
 
 				save_scope_as = heretic_faith

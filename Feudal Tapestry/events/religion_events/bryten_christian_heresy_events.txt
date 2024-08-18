@@ -1,0 +1,132 @@
+﻿namespace = bryten_heresy
+
+#######################################
+# Bogomilism 
+#######################################
+bryten_heresy.001 = {# Bogomil begins preaching
+	hidden = yes
+
+	immediate = {
+		create_character = {# Bogomil
+			name = "Bogomil"
+			gender = male
+			location = title:b_skopje
+			age = 32
+			faith = faith:bogomilist
+			culture = culture:bulgarian
+			trait = heresiarch
+			trait = education_learning_3
+			save_scope_as = bogomil_founder
+		}
+		create_character = {# Jeremiah
+			name = "Jeremiah"
+			gender = male
+			location = title:b_skopje
+			age = 18
+			faith = faith:bogomilist
+			culture = culture:bulgarian
+			trait = heresiarch
+			trait = education_learning_3
+			save_scope_as = bogomil_jeremiah
+		}		
+		set_global_variable = {
+			name = bogomilism_spawned
+			value = yes
+		}
+		# Unlock Bogomilism to convert to and be a heresy more generally
+		faith:bogomilist = { remove_doctrine = unavailable_doctrine }
+		every_county_in_region = {# Convert counties in the Balkans from Orthodoxy to Bogomilism
+			region = custom_bogomilist_region
+			random = {
+				chance = 5
+				set_county_faith = faith:bogomilist
+				add_county_modifier = {
+					modifier = bogomilism_rebellious_people
+					years = 10
+				}
+			}
+		}
+		every_ruler = {# give people the ability to convert
+			limit = { capital_province = { geographical_region = custom_bogomilist_region } }
+			trigger_event = {
+				id = bryten_heresy.002
+				days = { 30 50 }
+			}
+		}
+		
+	}
+}
+bryten_heresy.002 = {# Bogomil preaches
+	type = character_event
+	title = bryten_heresy.002.t
+	desc = bryten_heresy.002.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	immediate = {
+
+	}
+
+	option = {# Condemn the heretic
+		name = bryten_heresy.002.a
+		ai_chance = { base = 89	}
+		every_vassal = {# Zealous Vassals love it
+			limit = { has_vassal_stance = zealot }
+			add_opinion = {
+				modifier = approves_heretic_condemnation
+				target = root
+				opinion = 40
+			}
+		}
+	}
+	option = {# Let him preach
+		name = bryten_heresy.002.a
+		ai_chance = { base = 20	} # rare 
+		every_vassal = {# Zealous Vassals hate it
+			limit = { has_vassal_stance = zealot }
+			add_opinion = {
+				modifier = disapproves_heretic_toleration
+				target = root
+				opinion = -40
+			}
+		}
+		every_held_title = {# Bogomilist counties are really happy
+			limit = {
+				tier = tier_county
+				has_county_modifier = bogomilism_rebellious_people
+			}
+			remove_county_modifier = bogomilism_rebellious_people
+		}	
+		hidden_effect = {
+			random = {# convert more areas to Bogomilism
+				chance = 5
+				every_held_title = {
+					limit = {
+						tier = tier_county
+						NOT = { faith = faith:bogomilist }
+					}
+					set_county_faith = faith:bogomilist
+				}
+			}			
+		}
+
+	}
+	option = {# he is interesting ideas
+		name = bryten_heresy.002.a
+		ai_chance = { base = 01	} # super rare mainly for players
+		faith:bogomilist = { change_fervor = { value = 5	} }
+		set_character_faith_with_conversion = faith:bogomilist
+		every_held_title = {# Bogomilist counties are really happy
+			limit = {
+				tier = tier_county
+				has_county_modifier = bogomilism_rebellious_people
+			}
+			remove_county_modifier = bogomilism_rebellious_people
+		}
+	}	
+}

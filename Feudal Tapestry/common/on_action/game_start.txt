@@ -945,12 +945,123 @@ on_game_start = {
 				add_legitimacy = major_legitimacy_gain
 			}
 		}
+
+
+
+
+
+		#####################################
+		# Holy Site stuff
+		#####################################
 		# Make catholicism not have kent
 		if = {
-			limit = {
-				current_date <= 1173.1.1
-			}
+			limit = { current_date <= 1173.1.1 }
 			faith:catholic = { deactivate_holy_site = kent }
+		}
+
+		#####################################
+		# faith unlocking historical
+		#####################################		
+		# Bogomilism is active after the 9th century
+		if = {
+			limit = { game_start_date >= 960.1.1 }
+			faith:bogomilist = { remove_doctrine = unavailable_doctrine }			
+			set_global_variable = {
+				name = bogomilism_spawned
+				value = yes
+			}
+		}
+		# Catharism is active after 1143
+		if = {
+			limit = { game_start_date >= 1143.1.1 }
+			faith:cathar = { remove_doctrine = unavailable_doctrine }			
+			set_global_variable = {
+				name = catharism_spawned
+				value = yes
+			}
+		}		
+		# Waldensian is active after the 9th century
+		if = {
+			limit = { game_start_date >= 1173.1.1 }
+			faith:waldensian = { remove_doctrine = unavailable_doctrine }			
+			set_global_variable = {
+				name = waldensian_spawned
+				value = yes
+			}
+		}
+		# lollard is active after the 14th century
+		if = {
+			limit = { game_start_date >= 1387.1.1 }
+			faith:lollard = { remove_doctrine = unavailable_doctrine }			
+			set_global_variable = {
+				name = lollardy_spawned
+				value = yes
+			}
+		}
+		# Arnoldism is active after the 12th century
+		if = {
+			limit = { game_start_date >= 1148.1.1 }
+			faith:arnoldism = {	remove_doctrine = unavailable_doctrine }			
+			set_global_variable = {
+				name = arnoldism_spawned
+				value = yes
+			}
+		}
+		# joachimites is active after the 13th century
+		if = {
+			limit = { game_start_date >= 1202.1.1 }
+			faith:joachimites = { remove_doctrine = unavailable_doctrine }			
+			set_global_variable = {
+				name = joachimites_spawned
+				value = yes
+			}
+		}
+		# fraticellism is active after the 13th century
+		if = {
+			limit = { game_start_date >= 1278.1.1 }
+			faith:fraticelli = { remove_doctrine = unavailable_doctrine }			
+			set_global_variable = {
+				name = fraticelli_spawned
+				value = yes
+			}
+		}
+		# henricians is active after the 12th century
+		if = {
+			limit = { game_start_date >= 1135.1.1 }
+			faith:henricians = { remove_doctrine = unavailable_doctrine }			
+			set_global_variable = {
+				name = henricians_spawned
+				value = yes
+			}
+		}
+		# petrobrusian is active after the 12th century
+		if = {
+			limit = { game_start_date >= 1120.1.1 }
+			faith:petrobrusian = { remove_doctrine = unavailable_doctrine }			
+			set_global_variable = {
+				name = petrobrusian_spawned
+				value = yes
+			}
+		}
+		# pasagian is active after the 11th century
+		if = {
+			limit = { game_start_date >= 1050.1.1 }
+			faith:pasagian = {
+				remove_doctrine = unavailable_doctrine
+			}			
+			set_global_variable = {
+				name = pasagianism_spawned
+				value = yes
+			}
+		}
+		# josephines is active after the 12th century
+		if = {
+			limit = { game_start_date >= 1173.1.1 }
+			faith:josephines = { remove_doctrine = unavailable_doctrine }			
+			set_global_variable = {
+				name = josephines_spawned
+				value = yes
+			}
 		}
 
 	}
