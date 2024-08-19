@@ -847,7 +847,7 @@ yearly_global_pulse = {
 				}
 			}
 		}		
-		if = {# Catharism Spreading
+		if = {# Waldensian Spreading
 			limit = {
 				current_date < 1000.1.1
 				NOT = { has_global_variable = waldensian_spawned }
@@ -880,15 +880,263 @@ yearly_global_pulse = {
 				}
 				modifier = {
 					add = 20 # 100% chance
-					current_date >= 1200.1.1
+					current_date >= 1110.1.1
 				}
 				trigger_event = {
-					id = bryten_heresy.025
+					id = bryten_heresy.050
 					days = { 60 300 }
 				}
 			}
 		}
 
+		if = {# lollard Spreading
+			limit = {
+				current_date < 1270.1.1
+				has_global_variable = bryten_english_created
+				NOT = { has_global_variable = lollard_spawned }
+			}
+			random = {
+				chance = 10
+				modifier = {
+					add = 10 # 20% chance
+					current_date >= 1270.1.1
+				}
+				modifier = {
+					add = 10 # 30% chance
+					current_date >= 1280.1.1
+				}
+				modifier = {
+					add = 10 # 40% chance
+					current_date >= 1290.1.1
+				}
+				modifier = {
+					add = 10 # 50% chance
+					current_date >= 1300.1.1
+				}
+				modifier = {
+					add = 10 # 60% chance
+					current_date >= 1310.1.1
+				}
+				modifier = {
+					add = 20 # 80% chance
+					current_date >= 1320.1.1
+				}
+				modifier = {
+					add = 20 # 100% chance
+					current_date >= 1330.1.1
+				}
+				trigger_event = {
+					id = bryten_heresy.076
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# arnoldism Spreading
+			limit = {
+				current_date < 1100.1.1
+				NOT = { has_global_variable = arnoldism_spawned }
+			}
+			random = {
+				chance = 10
+				modifier = {
+					add = 10 # 20% chance
+					current_date >= 1100.1.1
+				}
+				modifier = {
+					add = 10 # 30% chance
+					current_date >= 1110.1.1
+				}
+				modifier = {
+					add = 10 # 40% chance
+					current_date >= 1120.1.1
+				}
+				modifier = {
+					add = 10 # 50% chance
+					current_date >= 1130.1.1
+				}
+				modifier = {
+					add = 10 # 60% chance
+					current_date >= 1140.1.1
+				}
+				modifier = {
+					add = 20 # 80% chance
+					current_date >= 1150.1.1
+				}
+				modifier = {
+					add = 20 # 100% chance
+					current_date >= 1160.1.1
+				}
+				trigger_event = {
+					id = bryten_heresy.101
+					days = { 60 300 }
+				}
+			}
+		}		
+		if = {# joachimites Spreading
+			limit = {
+				current_date < 1150.1.1
+				NOT = { has_global_variable = joachimites_spawned }
+			}
+			random = {
+				chance = 10
+				modifier = {
+					add = 10 # 20% chance
+					current_date >= 1150.1.1
+				}
+				modifier = {
+					add = 10 # 30% chance
+					current_date >= 1160.1.1
+				}
+				modifier = {
+					add = 10 # 40% chance
+					current_date >= 1170.1.1
+				}
+				modifier = {
+					add = 10 # 50% chance
+					current_date >= 1180.1.1
+				}
+				modifier = {
+					add = 10 # 60% chance
+					current_date >= 1190.1.1
+				}
+				modifier = {
+					add = 20 # 80% chance
+					current_date >= 1200.1.1
+				}
+				modifier = {
+					add = 20 # 100% chance
+					current_date >= 1210.1.1
+				}
+				trigger_event = {
+					id = bryten_heresy.126
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# fraticelli Spreading
+			limit = {
+				current_date < 1200.1.1
+				has_global_variable = fransican_order_formed
+				NOT = { has_global_variable = fraticelli_spawned }
+			}
+			random = {
+				chance = 10
+				modifier = {
+					add = 10 # 20% chance
+					current_date >= 1200.1.1
+				}
+				modifier = {
+					add = 10 # 30% chance
+					current_date >= 1210.1.1
+				}
+				modifier = {
+					add = 10 # 40% chance
+					current_date >= 1220.1.1
+				}
+				modifier = {
+					add = 10 # 50% chance
+					current_date >= 1230.1.1
+				}
+				modifier = {
+					add = 10 # 60% chance
+					current_date >= 1240.1.1
+				}
+				modifier = {
+					add = 20 # 80% chance
+					current_date >= 1250.1.1
+				}
+				modifier = {
+					add = 20 # 100% chance
+					current_date >= 1260.1.1
+				}
+				trigger_event = {
+					id = bryten_heresy.151
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# henricians Spreading
+			limit = {
+				current_date < 1050.1.1
+				NOT = { has_global_variable = henricians_spawned }
+			}
+			random = {
+				chance = 10
+				modifier = {
+					add = 10 # 20% chance
+					current_date >= 1050.1.1
+				}
+				modifier = {
+					add = 10 # 30% chance
+					current_date >= 1060.1.1
+				}
+				modifier = {
+					add = 10 # 40% chance
+					current_date >= 1070.1.1
+				}
+				modifier = {
+					add = 10 # 50% chance
+					current_date >= 1080.1.1
+				}
+				modifier = {
+					add = 10 # 60% chance
+					current_date >= 1090.1.1
+				}
+				modifier = {
+					add = 20 # 80% chance
+					current_date >= 1100.1.1
+				}
+				modifier = {
+					add = 20 # 100% chance
+					current_date >= 1110.1.1
+				}
+				trigger_event = {
+					id = bryten_heresy.176
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# petrobrusian Spreading
+			limit = {
+				current_date < 1060.1.1
+				NOT = { has_global_variable = petrobrusian_spawned }
+			}
+			random = {
+				chance = 10
+				modifier = {
+					add = 10 # 20% chance
+					current_date >= 1060.1.1
+				}
+				modifier = {
+					add = 10 # 30% chance
+					current_date >= 1070.1.1
+				}
+				modifier = {
+					add = 10 # 40% chance
+					current_date >= 1080.1.1
+				}
+				modifier = {
+					add = 10 # 50% chance
+					current_date >= 1090.1.1
+				}
+				modifier = {
+					add = 10 # 60% chance
+					current_date >= 1100.1.1
+				}
+				modifier = {
+					add = 20 # 80% chance
+					current_date >= 1110.1.1
+				}
+				modifier = {
+					add = 20 # 100% chance
+					current_date >= 1120.1.1
+				}
+				trigger_event = {
+					id = bryten_heresy.201
+					days = { 60 300 }
+				}
+			}
+		}
 
 
 	}

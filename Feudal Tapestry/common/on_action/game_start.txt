@@ -1043,26 +1043,6 @@ on_game_start = {
 				value = yes
 			}
 		}
-		# pasagian is active after the 11th century
-		if = {
-			limit = { game_start_date >= 1050.1.1 }
-			faith:pasagian = {
-				remove_doctrine = unavailable_doctrine
-			}			
-			set_global_variable = {
-				name = pasagianism_spawned
-				value = yes
-			}
-		}
-		# josephines is active after the 12th century
-		if = {
-			limit = { game_start_date >= 1173.1.1 }
-			faith:josephines = { remove_doctrine = unavailable_doctrine }			
-			set_global_variable = {
-				name = josephines_spawned
-				value = yes
-			}
-		}
 
 	}
 }
