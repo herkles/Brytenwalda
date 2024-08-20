@@ -21,6 +21,16 @@ chartres = {
 		sway_scheme_power_mult = 0.1
 	}
 }
+
+assisi_catholic = {
+	county = c_spoleto
+	barony = b_assissi
+	
+	character_modifier = {
+		name = holy_site_assisi_catholic_name
+		county_opinion_add = 5
+	}
+}
 ##########################
 # Heretical Holy Sites 
 ##########################
@@ -29,9 +39,9 @@ brescia = {
 	barony = b_brescia
 	
 	character_modifier = {
-		name = holy_site_chartres_name
-		religious_vassal_opinion = 5
-		sway_scheme_power_mult = 0.1
+		name = holy_site_brescia_name
+		monthly_piety_gain_mult = 0.05
+		learning_per_piety_level = 1
 	}
 }
 lausanne = {
@@ -39,9 +49,9 @@ lausanne = {
 	barony = b_lausanne
 	
 	character_modifier = {
-		name = holy_site_chartres_name
-		religious_vassal_opinion = 5
-		sway_scheme_power_mult = 0.1
+		name = holy_site_lausanne_name
+		monthly_piety_gain_mult = 0.05
+		learning_per_piety_level = 1
 	}
 }
 leicester = {
@@ -49,9 +59,8 @@ leicester = {
 	barony = b_leicester
 	
 	character_modifier = {
-		name = holy_site_chartres_name
-		religious_vassal_opinion = 5
-		sway_scheme_power_mult = 0.1
+		name = holy_site_leicester_name
+		county_opinion_add = 10
 	}
 }
 oxford = {
@@ -59,9 +68,9 @@ oxford = {
 	barony = b_oxford
 	
 	character_modifier = {
-		name = holy_site_chartres_name
-		religious_vassal_opinion = 5
-		sway_scheme_power_mult = 0.1
+		name = holy_site_oxford_name
+		monthly_piety_gain_mult = 0.05
+		learning_per_piety_level = 1
 	}
 }
 kent_lollard = {
@@ -69,7 +78,7 @@ kent_lollard = {
 	barony = b_canterbury
 	
 	character_modifier = {
-		name = holy_site_chartres_name
+		name = holy_site_kent_lollard_name
 		religious_vassal_opinion = 5
 		sway_scheme_power_mult = 0.1
 	}
@@ -79,7 +88,7 @@ assisi = {
 	barony = b_assissi
 	
 	character_modifier = {
-		name = holy_site_chartres_name
+		name = holy_site_assisi_name
 		religious_vassal_opinion = 5
 		sway_scheme_power_mult = 0.1
 	}
@@ -89,9 +98,8 @@ cosenza = {
 	barony = b_cosenza
 	
 	character_modifier = {
-		name = holy_site_chartres_name
-		religious_vassal_opinion = 5
-		sway_scheme_power_mult = 0.1
+		name = holy_site_cosenza_name
+		county_opinion_add = 5
 	}
 }
 chatillon = {
@@ -99,9 +107,8 @@ chatillon = {
 	barony = b_chatillon
 	
 	character_modifier = {
-		name = holy_site_chartres_name
-		religious_vassal_opinion = 5
-		sway_scheme_power_mult = 0.1
+		name = holy_site_chatillon_name
+		monthly_lifestyle_xp_gain_mult = 0.15
 	}
 }
 toulouse = {
@@ -109,9 +116,9 @@ toulouse = {
 	barony = b_toulouse
 	
 	character_modifier = {
-		name = holy_site_chartres_name
-		religious_vassal_opinion = 5
-		sway_scheme_power_mult = 0.1
+		name = holy_site_toulouse_name
+		development_growth_factor = 0.1
+		cultural_head_fascination_mult = 0.1
 	}
 }
 beziers = {
@@ -119,7 +126,7 @@ beziers = {
 	barony = b_beziers
 	
 	character_modifier = {
-		name = holy_site_chartres_name
+		name = holy_site_beziers_name
 		religious_vassal_opinion = 5
 		sway_scheme_power_mult = 0.1
 	}
@@ -129,9 +136,9 @@ skopje = {
 	barony = b_skopje
 	
 	character_modifier = {
-		name = holy_site_chartres_name
-		religious_vassal_opinion = 5
-		sway_scheme_power_mult = 0.1
+		name = holy_site_skopje_name
+		development_growth_factor = 0.1
+		cultural_head_fascination_mult = 0.1
 	}
 }
 tephrice = {
@@ -139,9 +146,9 @@ tephrice = {
 	barony = b_tephrice
 	
 	character_modifier = {
-		name = holy_site_chartres_name
-		religious_vassal_opinion = 5
-		sway_scheme_power_mult = 0.1
+		name = holy_site_tephrice_name
+		learning_per_piety_level = 1
+		monthly_piety_gain_mult = 0.2
 	}
 }
 samosata = {
@@ -149,8 +156,8 @@ samosata = {
 	barony = b_samosata
 	
 	character_modifier = {
-		name = holy_site_chartres_name
-		religious_vassal_opinion = 5
-		sway_scheme_power_mult = 0.1
+		name = holy_site_samosata_name
+		clergy_opinion = 10
+		monthly_prestige_gain_mult = 0.2
 	}
 }

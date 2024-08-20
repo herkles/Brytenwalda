@@ -144,7 +144,6 @@ heresy.0001 = {
 						faith:cainitism = {
 							add_to_list = potential_heresies
 						}
-
 					}
 					else_if = {
 						limit = { this = religion:islam_religion }
@@ -162,7 +161,10 @@ heresy.0001 = {
 						limit = {
 							this = religion:judaism_religion
 						}
-						faith:pasagian = {
+						faith:pasagian = {# A Judaizing Chrisitan sect; given to Jews for their ties to Judaism
+							add_to_list = potential_heresies
+						}
+						faith:josephines = {# A Judaizing Chrisitan sect; given to Jews for their ties to Judaism
 							add_to_list = potential_heresies
 						}
 						faith:sethianism = {
@@ -217,7 +219,6 @@ heresy.0001 = {
 
 				weight = {
 					base = 50
-
 					# Preferred heresies get another bonus.
 					modifier = {
 						factor = 5			
@@ -241,26 +242,10 @@ heresy.0001 = {
 						}
 						factor = 0
 					}
-
 					# Certain Faiths should be much more rare in general.
 					# Uncommon Faiths
-					modifier = {
-						factor = 0.5
-						OR = {
-							#Dualist
-							this = faith:mandeaism
-							this = faith:sabianism
-						}
-					}
+
 					#Rare Faiths
-					modifier = {
-						factor = 0.1
-						OR = {
-							this = faith:sethianism
-							this = faith:priscillianism
-							this = faith:cainitism
-						}
-					}
 
 					# Lollards more likely in England.
 					modifier = {
@@ -268,10 +253,7 @@ heresy.0001 = {
 						this = faith:lollard
 						scope:heretic_capital = {
 							title_province = {
-								OR = {
-									geographical_region = custom_netherlands
-									geographical_region = world_europe_west_britannia
-								}
+								geographical_region = world_europe_west_britannia
 							}
 						}
 					}
@@ -301,7 +283,6 @@ heresy.0001 = {
 							}
 						}
 					}
-
 					# Paulicians more likely in Anatolia
 					modifier = {
 						factor = regional_heresy_factor
@@ -359,7 +340,6 @@ heresy.0001 = {
 							}
 						}
 					}
-
 					# FP3 - Khurramism more likely in Iran
 					modifier = {
 						factor = regional_heresy_factor
@@ -400,13 +380,71 @@ heresy.0001 = {
 							}
 						}
 					}
-
+					# Mod - petrobrusian more likely in France
+					modifier = {
+						factor = regional_heresy_factor
+						this = faith:petrobrusian
+						scope:heretic_capital = {
+							title_province = {
+								geographical_region = world_europe_west_francia
+							}
+						}
+					}
+					# Mod - henricians more likely in France
+					modifier = {
+						factor = regional_heresy_factor
+						this = faith:henricians
+						scope:heretic_capital = {
+							title_province = {
+								geographical_region = world_europe_west_francia
+							}
+						}
+					}
+					# Mod - joachimites more likely in Italy
+					modifier = {
+						factor = regional_heresy_factor
+						this = faith:joachimites
+						scope:heretic_capital = {
+							title_province = {
+								geographical_region = world_europe_south_italy
+							}
+						}
+					}					
+					# Mod - arnoldism more likely in Italy
+					modifier = {
+						factor = regional_heresy_factor
+						this = faith:arnoldism
+						scope:heretic_capital = {
+							title_province = {
+								geographical_region = world_europe_south_italy
+							}
+						}
+					}
+					# Mod - pasagian more likely in Italy
+					modifier = {
+						factor = regional_heresy_factor
+						this = faith:pasagian
+						scope:heretic_capital = {
+							title_province = {
+								geographical_region = world_europe_south_italy
+							}
+						}
+					}
+					# Mod - josephines more likely in Italy
+					modifier = {
+						factor = regional_heresy_factor
+						this = faith:josephines
+						scope:heretic_capital = {
+							title_province = {
+								geographical_region = world_europe_south_italy
+							}
+						}
+					}					
 					# We don't want unavailable faiths to pop up via heresy outbreak
 					modifier = {
 						factor = 0
 						has_doctrine = unavailable_doctrine
 					}
-
 
 				}
 

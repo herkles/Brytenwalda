@@ -42,8 +42,46 @@
 			piety_level_impact_mult = 1
 		}
 	}
+	tenet_apostolic_poverty = {
+		icon = core_tenet_vows_of_poverty
+		piety_cost = {
+			if = {
+				limit = { religion_tag = christianity_religion }
+				value = faith_tenet_cost_low
+			}
+			# Multiplier for keeping same tenet
+			if = {
+				limit = { has_doctrine = tenet_apostolic_poverty }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
 
+		can_pick = {
+			religion_tag = christianity_religion
+		}
 
+		parameters = {
+			vows_of_poverty_active = yes
+		}
+		clergy_modifier = {
+			county_opinion_add_even_if_baron = 10
+			domain_tax_mult_even_if_baron = -0.10
+		}
+		traits = {
+			virtues = {
+				generous = 2
+				temperate
+				improvident = 2
+			}
+			sins = {
+				gluttonous
+				greedy = 2
+				lifestyle_reveler
+				profligate = 2
+				avaricious
+			}
+		}
+	}
 	############################
 	# Christian Faith Tenets   #
 	############################
@@ -3262,7 +3300,7 @@
 		}
 	}
 	#############################
-	# FP3 Tenets 		#        
+	# FP3 Tenets 			    #        
 	#############################
 	tenet_fp3_fedayeen = {
 		icon = core_tenet_assassin

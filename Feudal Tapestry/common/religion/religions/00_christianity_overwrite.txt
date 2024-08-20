@@ -254,7 +254,10 @@
 			holy_site = santiago # the Most famous catholic pilgrimage site in the Middle ages in Western Europe
 			holy_site = milan # Site of the relics of the three magi, before Barbarosa took them to Cologne.
 			holy_site = chartres # The site of the Sancta Camisa that the Blessed Virgin Mary wore when she was giving birth to Jesus; given to the cathedral by Charles the Bald. 
+			
+			# special Holy Sites
 			holy_site = kent # The site of Thomas Beckett, not before 21 Feb. 1173
+			holy_site = assisi_catholic # Assisi for if the Fraticelli win 
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
@@ -329,7 +332,6 @@
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
-
 			#Tenets
 			doctrine = tenet_communion
 			doctrine = tenet_pentarchy
@@ -534,6 +536,75 @@
 				ReligiousHeadTitleName = adoptionist_religious_head_title_name
 			}
 		}
+		fraticelli = {# the Fraticelli movement
+			color = { 0.5 0.8 0.8 }
+			icon = fraticelli
+			graphical_faith = "catholic_gfx"
+
+			#Shared with Catholics
+			holy_site = jerusalem
+			holy_site = rome
+			holy_site = assisi
+			holy_site = lyon
+			holy_site = milan
+
+			#Clerical Functions
+			doctrine = doctrine_clerical_function_alms_and_pacification
+
+			#Tenets
+			doctrine = tenet_rite
+			doctrine = tenet_apostolic_poverty
+			doctrine = tenet_monasticism
+
+			# Special Doctrines
+			doctrine = unavailable_doctrine
+			doctrine = special_doctrine_ecumenical_christian
+
+			localization = { # Utilizes the 'West Christian' Saints, shared by Catholics and Orthodox
+			#FertilityGod
+			FertilityGodName = west_christian_fertility_god_name
+			FertilityGodNamePossessive = west_christian_fertility_god_name_possessive
+			FertilityGodSheHe = CHARACTER_SHEHE_SHE
+			FertilityGodHerHis = CHARACTER_HERHIS_HER
+			FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+			#WealthGod
+			WealthGodName = west_christian_wealth_god_name
+			WealthGodNamePossessive = west_christian_wealth_god_name_possessive
+			WealthGodSheHe = CHARACTER_SHEHE_HE
+			WealthGodHerHis = CHARACTER_HERHIS_HIS
+			WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+			#HouseholdGod
+			HouseholdGodName = west_christian_household_god_name
+			HouseholdGodNamePossessive = west_christian_household_god_name_possessive
+			HouseholdGodSheHe = CHARACTER_SHEHE_HE
+			HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+			HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+			#KnowledgeGod
+			KnowledgeGodName = west_christian_knowledge_god_name
+			KnowledgeGodNamePossessive = west_christian_knowledge_god_name_possessive
+			KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
+			KnowledgeGodHerHis = CHARACTER_HERHIS_HER
+			KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+
+			#WarGod
+			WarGodName = west_christian_war_god_name
+			WarGodNamePossessive = west_christian_war_god_name_possessive
+			WarGodSheHe = CHARACTER_SHEHE_HE
+			WarGodHerHis = CHARACTER_HERHIS_HIS
+			WarGodHerHim = CHARACTER_HERHIM_HIM
+
+			#WaterGod
+			WaterGodName = west_christian_water_god_name
+			WaterGodNamePossessive = west_christian_water_god_name_possessive
+			WaterGodSheHe = CHARACTER_SHEHE_HE
+			WaterGodHerHis = CHARACTER_HERHIS_HIS
+			WaterGodHerHim = CHARACTER_HERHIM_HIM
+		}
+
+		}
 		# Non-Chalcedonian Denominations
 		coptic = {# the Coptic church in Egypt
 			color = { 210 235 87 }
@@ -687,6 +758,8 @@
 			holy_site = farz
 			holy_site = antioch
 			holy_site = kerala
+
+			# Special
 
 			#Main Group
 			doctrine = doctrine_pluralism_pluralistic
@@ -857,31 +930,7 @@
 			# Special Doctrines
 			doctrine = unavailable_doctrine
 		}				
-		fraticelli = {# the Fraticelli movement
-			color = { 0.5 0.8 0.8 }
-			icon = fraticelli
-			graphical_faith = "catholic_gfx"
-
-			#Shared with Catholics
-			holy_site = jerusalem
-			holy_site = rome
-			holy_site = assisi
-			holy_site = lyon
-			holy_site = milan
-
-			#Main Gorup
-			doctrine = doctrine_pluralism_fundamentalist
-			#Clerical Functions
-			doctrine = doctrine_clerical_function_alms_and_pacification
-
-			#Tenets
-			doctrine = tenet_asceticism
-			doctrine = tenet_vows_of_poverty
-			doctrine = tenet_monasticism
-
-			# Special Doctrines
-			doctrine = unavailable_doctrine
-		}		
+		
 		henricians = {# The followers of Henry of Lausanne
 			color = { 0.5 0.8 0.8 }
 			icon = henricians

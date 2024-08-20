@@ -211,9 +211,48 @@ tapestry_italian.042 = {# Let other players know that Sicilian has been created
 	}
 }
 #######################################
-# Frankish Cultural Split up
+# St. Francis of Assisi
 #######################################
+tapestry_italian.050 = {# St. Francis begins preaching
+	hidden = yes
 
+	trigger = {
+		current_date >= 1180.1.1
+		catholic = { exists = faith.religious_head }
+	}
+	
+	immediate = {
+		set_global_variable = {
+			name = fransican_order_formed
+			value = yes
+		}
+		every_player = {# Let catholic Player know that the Fransican Order is now founded
+			limit = { faith = faith:catholic }
+			trigger_event = {
+				id = tapestry_italian.051
+				days = { 30 50 }
+			}
+		}
+		
+	}
+}
+tapestry_italian.051 = {# The Fransican Order
+	type = character_event
+	title = tapestry_italian.051.t
+	desc = tapestry_italian.051.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = {# New Order woo
+		name = tapestry_italian.051.a
+	}
+	
+}
 #######################################
 # Frankish Cultural Split up
 #######################################

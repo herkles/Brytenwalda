@@ -2185,8 +2185,40 @@ start_slav_rising_polabian_effect = {# Starts the Rising for Polobians
 		}
 	}
 }
-
-
+#######################################
+#									  #
+#         Christianity Effects	      #
+#									  #
+#######################################
+fraticelli_victory_decision_effects = {# Fraticelli is victorious
+	every_county = {# Convert all counties to Catholic
+		limit = { faith = faith:fraticelli }
+		set_county_faith = faith:catholic
+	}
+	every_living_character = {# all Fraticelli people become Catholic
+		limit = { faith = faith:fraticelli }
+		set_character_faith = faith:catholic
+	}
+	faith:fraticelli = {# Fraticelli is now unavailable
+		add_doctrine = unavailable_doctrine
+	}
+	faith:catholic = {# Catholic now has Alms and Pacification instead of control
+		remove_doctrine = doctrine_clerical_function_taxation
+		add_doctrine = doctrine_clerical_function_alms_and_pacification
+	}
+	faith:catholic = {# Assisi is now a Holy Site for Catholicism
+		activate_holy_site = assisi_catholic 
+	}
+	faith:catholic = {# Catholic now has a special apostolic poverty doctrine
+		add_doctrine = has_apostolic_poverty
+	}
+	faith:catholic = {
+		change_fervor = {
+			value = medium_fervor_gain
+			desc = fervor_gain_fraticelli_victory
+		}
+	}
+}
 
 
 

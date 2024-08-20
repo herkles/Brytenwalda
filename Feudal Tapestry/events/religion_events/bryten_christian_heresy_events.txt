@@ -888,6 +888,40 @@ bryten_heresy.151 = {# Convert to fraticelli?
 		}
 	}	
 }
+bryten_heresy.152 = {# Catholicism is Fraticelli
+	type = character_event
+	title = bryten_heresy.152.t
+	desc = bryten_heresy.152.desc
+	theme = faith
+	left_portrait = {
+		character = scope:pope
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_positive_effect"
+		fraticelli_victory_decision_effects = yes
+	}
+	
+	option = {# Glory be to God
+		name = bryten_heresy.152.a
+		give_nickname = nick_the_apostle
+	}
+}
+bryten_heresy.153 = {# Fraticelli is victorious
+	type = character_event
+	title = bryten_heresy.153.t
+	desc = bryten_heresy.153.desc
+	theme = faith
+	left_portrait = {
+		character = scope:pope
+		animation = personality_bold
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
 #######################################
 # henricians 
 #######################################

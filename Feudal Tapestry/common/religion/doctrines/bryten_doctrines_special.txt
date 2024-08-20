@@ -5,3 +5,36 @@ unavailable = {
 
 	unavailable_doctrine = { visible = no }
 }
+### Christian Apostolic Poverty
+has_apostolic_poverty = {
+	group = "special"
+	
+	is_available_on_create = {
+		has_doctrine = special_doctrine_has_apostolic_poverty
+	}
+
+	special_doctrine_has_apostolic_poverty = {
+		parameters = {
+			vows_of_poverty_active = yes
+
+		}
+		clergy_modifier = {
+			county_opinion_add_even_if_baron = 10
+			domain_tax_mult_even_if_baron = -0.10
+		}
+		traits = {
+			virtues = {
+				generous = 2
+				temperate
+				improvident = 2
+			}
+			sins = {
+				gluttonous
+				greedy = 2
+				lifestyle_reveler
+				profligate = 2
+				avaricious
+			}
+		}
+	}
+}
