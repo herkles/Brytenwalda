@@ -775,7 +775,7 @@ bryten_heresy.126 = {# Convert to joachimites?
 #######################################
 # fraticelli 
 #######################################
-bryten_heresy.150 = {# Waldo begins preaching
+bryten_heresy.150 = {# Fraticelli begins preaching
 	hidden = yes
 
 	immediate = {
@@ -813,8 +813,8 @@ bryten_heresy.150 = {# Waldo begins preaching
 }
 bryten_heresy.151 = {# Convert to fraticelli?
 	type = character_event
-	title = bryten_heresy.126.t
-	desc = bryten_heresy.126.desc
+	title = bryten_heresy.151.t
+	desc = bryten_heresy.151.desc
 	theme = faith
 	override_background = { reference = wilderness_forest }
 	
@@ -828,7 +828,7 @@ bryten_heresy.151 = {# Convert to fraticelli?
 	}
 
 	option = {# Condemn the heretics
-		name = bryten_heresy.126.a
+		name = bryten_heresy.151.a
 		ai_chance = { base = 89	}
 		every_vassal = {# Zealous Vassals love it
 			limit = { has_vassal_stance = zealot }
@@ -840,7 +840,7 @@ bryten_heresy.151 = {# Convert to fraticelli?
 		}
 	}
 	option = {# Let him preach
-		name = bryten_heresy.126.b
+		name = bryten_heresy.151.b
 		ai_chance = { base = 20	} # rare 
 		every_vassal = {# Zealous Vassals hate it
 			limit = { has_vassal_stance = zealot }
@@ -875,7 +875,7 @@ bryten_heresy.151 = {# Convert to fraticelli?
 
 	}
 	option = {# he is interesting ideas
-		name = bryten_heresy.126.c
+		name = bryten_heresy.151.c
 		ai_chance = { base = 01	} # super rare mainly for players
 		faith:bogomilist = { change_fervor = { value = 5	} }
 		set_character_faith_with_conversion = faith:fraticelli
@@ -921,6 +921,326 @@ bryten_heresy.153 = {# Fraticelli is victorious
 	option = {
 		name = name_i_see
 	}
+}
+
+
+bryten_heresy.154 = {# Which Path to take
+	type = character_event
+	title = bryten_heresy.154.t
+	desc = bryten_heresy.154.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	immediate = { play_music_cue = "mx_cue_faith_conversion" }
+
+	option = {# Support the Radicals - Heretical Path
+		name = bryten_heresy.154.a
+		hidden_effect = {
+			trigger_event = {
+				id = bryten_heresy.155
+				days = { 2 3 }
+			}
+		}
+	}
+	option = {# Support the ecumenicals - New Branch Path
+		name = bryten_heresy.154.b
+		hidden_effect = {
+			trigger_event = {
+				id = bryten_heresy.156
+				days = { 2 3 }
+			}
+		}
+
+	}
+}
+bryten_heresy.155 = {# Heretical Breaking
+	type = character_event
+	title = bryten_heresy.155.t
+	desc = bryten_heresy.155.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	immediate = { play_music_cue = "mx_cue_faith_conversion" }
+
+	option = {# Communal Property
+		name = bryten_heresy.155.a
+		ai_chance = { base = 50	}
+		show_as_tooltip = { bryten_fraticelli_heretic_path_communal_scripted_effect = yes }
+		# Flag our choice.
+		save_scope_value_as = {
+			name = bryten_fraticelli_choice
+			value = flag:communal_heretic
+		}
+
+		stress_impact = {
+			humble = minor_stress_impact_loss
+			zealous = medium_stress_impact_loss
+		}
+	}
+	option = {# Pacifism
+		name = bryten_heresy.155.b
+		ai_chance = { base = 25	} # rare 
+		show_as_tooltip = { bryten_fraticelli_heretic_path_pacifism_scripted_effect = yes }
+		# Flag our choice.
+		save_scope_value_as = {
+			name = bryten_fraticelli_choice
+			value = flag:pacifist_heretic
+		}
+
+		stress_impact = {
+			compassionate = minor_stress_impact_loss
+			callous = medium_stress_impact_gain
+			sadistic = medium_stress_impact_gain
+		}
+
+	}
+	option = {# Mendicant Preachers
+		name = bryten_heresy.155.c
+		ai_chance = { base = 25	} 
+		show_as_tooltip = { bryten_fraticelli_heretic_path_missionary_scripted_effect = yes }
+		# Flag our choice.
+		save_scope_value_as = {
+			name = bryten_fraticelli_choice
+			value = flag:missionary_heretic
+		}
+
+		stress_impact = {
+			lifestyle_traveler = minor_stress_impact_loss
+			pilgrim = minor_stress_impact_loss
+		}
+	}
+	
+	after = {
+		bryten_fraticelli_heretic_path_hof_ecumenical_scripted_effect = yes
+		# Now take care of notification events for players.
+		every_player = {
+			limit = { religion:christianity_religion}
+			trigger_event = bryten_heresy.157
+		}
+		# And finally, actually apply the effects.
+		if = {
+			limit = {
+				exists = scope:bryten_fraticelli_choice
+				scope:bryten_fraticelli_choice = flag:communal_heretic
+			}
+			bryten_fraticelli_heretic_path_communal_scripted_effect = yes
+		}
+		if = {
+			limit = {
+				exists = scope:bryten_fraticelli_choice
+				scope:bryten_fraticelli_choice = flag:pacifist_heretic
+			}
+			bryten_fraticelli_heretic_path_pacifism_scripted_effect = yes
+		}
+		if = {
+			limit = {
+				exists = scope:bryten_fraticelli_choice
+				scope:bryten_fraticelli_choice = flag:missionary_heretic
+			}
+			bryten_fraticelli_heretic_path_missionary_scripted_effect = yes
+		}
+		every_county = {# Random chance of converting fraticelli's to convert back to catholicism due to radicalism
+			limit = { faith = faith:fraticelli }
+			random = {
+				chance = 10
+				set_county_faith = faith:catholic
+			}
+		}		
+	}
+}
+bryten_heresy.156 = {# New Branch
+	type = character_event
+	title = bryten_heresy.156.t
+	desc = bryten_heresy.156.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	immediate = { play_music_cue = "mx_cue_faith_conversion" }
+
+	option = {# Pentarchy
+		name = bryten_heresy.156.a
+		ai_chance = { base = 25	} 
+		show_as_tooltip = { bryten_fraticelli_schismatic_path_pentarchy_scripted_effect = yes }
+		# Flag our choice.
+		save_scope_value_as = {
+			name = bryten_fraticelli_choice
+			value = flag:pentarchy_ecumenical
+		}
+
+		stress_impact = {
+			lifestyle_traveler = minor_stress_impact_loss
+			pilgrim = minor_stress_impact_loss
+		}
+	}
+	option = {# communion
+		name = bryten_heresy.156.b
+		ai_chance = { base = 25	} 
+		show_as_tooltip = { bryten_fraticelli_schismatic_path_communion_scripted_effect = yes }
+		# Flag our choice.
+		save_scope_value_as = {
+			name = bryten_fraticelli_choice
+			value = flag:communion_ecumenical
+		}
+
+		stress_impact = {
+			lifestyle_traveler = minor_stress_impact_loss
+			pilgrim = minor_stress_impact_loss
+		}
+
+	}
+	option = {# Armed Pilgrimages
+		name = bryten_heresy.156.c
+		ai_chance = { base = 25	} 
+		show_as_tooltip = { bryten_fraticelli_schismatic_path_crusade_scripted_effect = yes }
+		# Flag our choice.
+		save_scope_value_as = {
+			name = bryten_fraticelli_choice
+			value = flag:pilgrim_ecumenical
+		}
+
+		stress_impact = {
+			lifestyle_traveler = minor_stress_impact_loss
+			pilgrim = minor_stress_impact_loss
+		}
+	}	
+
+	after = {
+		bryten_fraticelli_schismatic_path_hof_ecumenical_scripted_effect = yes
+		# Now take care of notification events for players.
+		every_player = {
+			limit = { religion:christianity_religion}
+			trigger_event = bryten_heresy.157
+		}
+		# And finally, actually apply the effects.
+		if = {
+			limit = {
+				exists = scope:bryten_fraticelli_choice
+				scope:bryten_fraticelli_choice = flag:pentarchy_ecumenical
+			}
+			bryten_fraticelli_schismatic_path_pentarchy_scripted_effect = yes
+		}
+		if = {
+			limit = {
+				exists = scope:bryten_fraticelli_choice
+				scope:bryten_fraticelli_choice = flag:communion_ecumenical
+			}
+			bryten_fraticelli_schismatic_path_communion_scripted_effect = yes
+		}
+		if = {
+			limit = {
+				exists = scope:bryten_fraticelli_choice
+				scope:bryten_fraticelli_choice = flag:pilgrim_ecumenical
+			}
+			bryten_fraticelli_schismatic_path_crusade_scripted_effect = yes
+		}
+		every_county = {# Random chance of converting fraticelli's to convert back to catholicism due to radicalism
+			limit = { faith = faith:fraticelli }
+			random = {
+				chance = 10
+				set_county_faith = faith:catholic
+			}
+		}		
+	}	
+
+}
+bryten_heresy.157 = {# Let everyone know
+	type = character_event
+	title = bryten_heresy.157.t
+	desc = {
+		first_valid = {
+			triggered_desc = {# Radical - Fraticelli
+				trigger = {
+					AND = {
+						OR = {
+							scope:bryten_fraticelli_choice = flag:communal_heretic
+							scope:bryten_fraticelli_choice = flag:pacifist_heretic
+							scope:bryten_fraticelli_choice = flag:missionary_heretic
+						}
+						faith = faith:fraticelli 
+					}
+				}
+				desc = bryten_heresy.157.desc.Radical_fraticelli
+			}		
+			triggered_desc = {# Ecumenical - Fraticelli
+				trigger = { 
+					AND = {
+						OR = {
+							scope:bryten_fraticelli_choice = flag:pentarchy_ecumenical
+							scope:bryten_fraticelli_choice = flag:communion_ecumenical
+							scope:bryten_fraticelli_choice = flag:pilgrim_ecumenical
+						}
+						faith = faith:fraticelli 
+					}
+				}
+				desc = bryten_heresy.157.desc.ecumenical_fraticelli
+			}			
+
+			triggered_desc = {# Radical
+				trigger = { 
+					OR = {
+						scope:bryten_fraticelli_choice = flag:communal_heretic
+						scope:bryten_fraticelli_choice = flag:pacifist_heretic
+						scope:bryten_fraticelli_choice = flag:missionary_heretic
+					}
+					NOT = { faith = faith:fraticelli }
+				}
+				desc = bryten_heresy.157.desc.Radical
+			}
+			triggered_desc = {# Ecumenical - Catholic
+				trigger = {
+					AND = {
+						OR = {
+							scope:bryten_fraticelli_choice = flag:pentarchy_ecumenical
+							scope:bryten_fraticelli_choice = flag:communion_ecumenical
+							scope:bryten_fraticelli_choice = flag:pilgrim_ecumenical
+						}
+						faith = faith:catholic 
+					}	
+				}
+				desc = bryten_heresy.157.desc.ecumenical_catholic
+			}
+			triggered_desc = {# Ecumenical - Not Catholic
+				trigger = { 
+					AND = {
+						OR = {
+							scope:bryten_fraticelli_choice = flag:pentarchy_ecumenical
+							scope:bryten_fraticelli_choice = flag:communion_ecumenical
+							scope:bryten_fraticelli_choice = flag:pilgrim_ecumenical
+						}
+						Not = { faith = faith:catholic }
+					}
+					NOT = { faith = faith:fraticelli }
+				}
+				desc = bryten_heresy.157.desc.ecumenical_not_catholic
+			}
+		}
+	}
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = {# Condemn the heretics
+		name = name_i_see
+	}	
 }
 #######################################
 # henricians 

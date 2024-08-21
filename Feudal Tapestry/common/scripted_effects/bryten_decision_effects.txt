@@ -2187,7 +2187,7 @@ start_slav_rising_polabian_effect = {# Starts the Rising for Polobians
 }
 #######################################
 #									  #
-#         Christianity Effects	      #
+#         Fraticelli Effects	      #
 #									  #
 #######################################
 fraticelli_victory_decision_effects = {# Fraticelli is victorious
@@ -2219,8 +2219,97 @@ fraticelli_victory_decision_effects = {# Fraticelli is victorious
 		}
 	}
 }
+bryten_fraticelli_heretic_path_hof_ecumenical_scripted_effect = {
+	# Sort the HoF situation.
+	hidden_effect = {
+		# Create & swap-in the title.
+		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:religious_leader }
+		# & send out some visual notifications.
+		every_player = {
+			limit = { faith = scope:religious_leader.faith }
+			send_interface_toast = {
+				title = bryten_fraticelli_heretic_path.tt.new_hof_id
+				left_icon = scope:religious_leader.faith.religious_head
+			}
+		}
+	}
+	custom_tooltip = bryten_fraticelli_heretic_path.tt.you_gain_a_hof
+	# Remove ecumenism.
+	faith = { remove_doctrine = special_doctrine_ecumenical_christian}
+}
+bryten_fraticelli_heretic_path_communal_scripted_effect = {
+	# Set the doctrinal alterations.
+	faith = {
+		# First, we remove the Rite tenet & replace it with Armed Pilgrimages.
+		remove_doctrine = tenet_rite
+		add_doctrine = tenet_communal_identity
+		# Then we switch on over from Pluralist to Fundamentalist.
+		remove_doctrine = doctrine_pluralism_righteous
+		add_doctrine = doctrine_pluralism_fundamentalist
+	}
+}
+bryten_fraticelli_heretic_path_pacifism_scripted_effect = {
+	# Set the doctrinal alterations.
+	faith = {
+		# First, we remove the Rite tenet & replace it with Armed Pilgrimages.
+		remove_doctrine = tenet_rite
+		add_doctrine = tenet_pacifism
+		# Then we switch on over from Pluralist to Fundamentalist.
+		remove_doctrine = doctrine_pluralism_righteous
+		add_doctrine = doctrine_pluralism_fundamentalist
+	}
+}
+bryten_fraticelli_heretic_path_missionary_scripted_effect = {
+	# Set the doctrinal alterations.
+	faith = {
+		# First, we remove the Rite tenet & replace it with Armed Pilgrimages.
+		remove_doctrine = tenet_rite
+		add_doctrine = tenet_mendicant_preachers
+		# Then we switch on over from Pluralist to Fundamentalist.
+		remove_doctrine = doctrine_pluralism_righteous
+		add_doctrine = doctrine_pluralism_fundamentalist
+	}
+}
 
-
-
+bryten_fraticelli_schismatic_path_hof_ecumenical_scripted_effect = {
+	# Sort the HoF situation.
+	hidden_effect = {
+		# Create & swap-in the title.
+		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:religious_leader }
+		# & send out some visual notifications.
+		every_player = {
+			limit = { faith = scope:religious_leader.faith }
+			send_interface_toast = {
+				title = bryten_fraticelli_heretic_path.tt.new_hof_id
+				left_icon = scope:religious_leader.faith.religious_head
+			}
+		}
+	}
+	custom_tooltip = bryten_fraticelli_heretic_path.tt.you_gain_a_hof
+}
+bryten_fraticelli_schismatic_path_pentarchy_scripted_effect = {
+	# Set the doctrinal alterations.
+	faith = {
+		# First, we remove the Rite tenet & replace it with Armed Pilgrimages.
+		remove_doctrine = tenet_rite
+		add_doctrine = tenet_pentarchy
+	}
+}
+bryten_fraticelli_schismatic_path_communion_scripted_effect = {
+	# Set the doctrinal alterations.
+	faith = {
+		# First, we remove the Rite tenet & replace it with Armed Pilgrimages.
+		remove_doctrine = tenet_rite
+		add_doctrine = tenet_communion
+	}
+}
+bryten_fraticelli_schismatic_path_crusade_scripted_effect = {
+	# Set the doctrinal alterations.
+	faith = {
+		# First, we remove the Rite tenet & replace it with Armed Pilgrimages.
+		remove_doctrine = tenet_rite
+		add_doctrine = tenet_armed_pilgrimages
+	}
+}
 
 

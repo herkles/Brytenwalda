@@ -55,4 +55,63 @@ can_join_clergy = {
 		num_sinful_traits = 0
 	}
 }
+bryten_fraticili_owns_important_site_valid_trigger = {
+	OR = {# The different ancient sites to hold
+		title:c_toledo.holder = {# Syracuse
+			OR = {
+				this = root
+				liege = root
+				top_liege = root
+			}
+			faith = faith:fraticelli
+		}
+		title:c_toledo.holder = {# Parlemo
+			OR = {
+				this = root
+				liege = root
+				top_liege = root
+			}
+			faith = faith:fraticelli
+		}
+		title:c_toledo.holder = {# Aquelia
+			OR = {
+				this = root
+				liege = root
+				top_liege = root
+			}
+			faith = faith:fraticelli
+		}
+		title:c_toledo.holder = {# 
+			OR = {
+				this = root
+				liege = root
+				top_liege = root
+			}
+			faith = faith:fraticelli
+		}
+		title:c_toledo.holder = {
+			OR = {
+				this = root
+				liege = root
+				top_liege = root
+			}
+			faith = faith:fraticelli
+		}
+		
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
 

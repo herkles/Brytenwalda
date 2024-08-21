@@ -2143,7 +2143,125 @@ bryten_fraticelli_victory = {
 		base = 100
 	}
 }
+bryten_fraticelli_break_with_rome_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+	major = yes
 
+	ai_check_interval = 120
+
+	desc = bryten_fraticelli_break_with_rome_decision_desc
+	selection_tooltip = bryten_fraticelli_break_with_rome_decision_tooltip
+
+	is_shown = {
+		# Standard filter checks.
+		is_landed = yes
+		exists = dynasty
+		# Must be Mozarabic, and neither decision has been taken yet.
+		faith = faith:fraticelli
+		NOR = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_fraticelli_broke_with_rome_flag
+				mozarabic_broke_with_rome
+			}
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_fraticelli_victory_flag
+			}
+		}
+		# The Pope must exist.
+		exists = faith.religious_head
+	}
+
+	is_valid = {
+		# Requires a solid piety level.
+		piety_level >= very_high_piety_level
+		# Needs a solid chunk of Mozarabic counties.
+		custom_description = {
+			text = bryten_fraticelli_county_count.need_at_least_twenty_same_faith_counties
+			any_sub_realm_county = {
+				count >= bryten_fraticelli_county_count
+				faith = root.faith
+			}
+		}
+
+		faith.religious_head = {
+			opinion = {
+				target = root
+				value < 0
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		is_available = yes
+		is_independent_ruler = yes
+		is_at_war = no
+		is_imprisoned = no		
+	}
+
+	effect = {
+		save_scope_as = religious_leader
+		faith.religious_head = { save_scope_as = pope }
+		# Keep the Pope forever, but stay ecumenical.
+		custom_tooltip = bryten_fraticelli_break_with_rome_decision.tt.hof_and_ecumenism_warning
+		# Send the event.
+		trigger_event = iberia_north_africa.0111
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_fraticelli_broke_with_rome_flag
+			}
+		}
+	}
+
+	cost = { piety = 1500 }
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 0
+
+		# The AI will only consider this if they match certain trait requirements.
+		modifier = {
+			add = 25
+			has_trait = zealous
+		}
+		modifier = {
+			add = 25
+			has_trait = theologian
+		}
+		modifier = {
+			add = 25
+			has_trait = scholar
+		}
+		# Or else they're just sufficiently nerdy.
+		modifier = {
+			add = 25
+			learning >= extremely_high_skill_rating
+		}
+		# Plus, relations with the Pope are clinchers...
+		## ... either positively...
+		modifier = {
+			add = 100
+			AND = {
+				exists = faith.religious_head
+				faith.religious_head = { has_any_good_relationship_with_root_trigger = yes }
+			}
+		}
+		## ... or negatively.
+		modifier = {
+			add = -100
+			AND = {
+				exists = faith.religious_head
+				faith.religious_head = { has_any_bad_relationship_with_root_trigger = yes }
+			}
+		}
+	}
+}
 
 
 
