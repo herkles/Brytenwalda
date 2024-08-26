@@ -192,10 +192,6 @@ tapestry_rus.007 = {# Sending Emissaries to Olga.
 	
 	immediate = {
 		title:k_ruthenia.holder = { save_scope_as = olga }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
 	}
 
 	option = {# Interesting
@@ -492,11 +488,7 @@ tapestry_rus.017 = {# Olga is able to escape
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:k_ruthenia.holder = { save_scope_as = igor }
 	}
 
 	option = {# Prepare the Armies
@@ -527,11 +519,9 @@ tapestry_rus.018 = {# War between Kyiv and the Drevilians
 	}
 	
 	immediate = {
-		title:d_upper_lorraine.holder = { save_scope_as = gislebert }
-		set_global_variable = {
-			name = otto_traitor_lorraine_event
-			value = yes
-		}
+		title:k_ruthenia.holder = { save_scope_as = olga }
+		title:d_turov.holder = { save_scope_as = drevilian_ruler }
+
 	}
 
 	option = {# Interesting
@@ -539,9 +529,9 @@ tapestry_rus.018 = {# War between Kyiv and the Drevilians
 		add_character_flag = temp_no_claim_war_cost
 		start_war = {
 			cb = drevilian_rebellion_cb
-			target = character:140
-			claimant = scope:godwine_head
-			target_title = title:k_england
+			target = scope:olga
+			claimant = scope:drevilian_ruler
+			target_title = title:k_ruthenia
 		}
 
 	}
@@ -744,7 +734,7 @@ tapestry_rus.024 = {# Olga supports Church building.
 			limit = { kingdom = title:k_ruthenia }
 			random_county_province = {
 				limit = { has_holding = no }
-				save_scope_as = norman_church_province
+				save_scope_as = olga_church_province
 			}
 		}
 	}
@@ -752,7 +742,7 @@ tapestry_rus.024 = {# Olga supports Church building.
 	option = {# Interesting
 		name = tapestry_rus.024.a
 		remove_short_term_gold = hold_court_holding_cost_cheaper_value
-		scope:norman_church_province = {
+		scope:olga_church_province = {
 			begin_create_holding = {
 				type = church_holding
 				refund_cost = { gold = hold_court_holding_cost_cheaper_value }
