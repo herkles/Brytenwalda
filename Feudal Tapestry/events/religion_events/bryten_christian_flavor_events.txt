@@ -1,0 +1,280 @@
+﻿namespace = bryten_christian
+
+##############################################
+# Make vow to the Virigin Mary
+##############################################
+bryten_christian.001 = {# Make a vow to the Virign Mary
+	type = character_event
+	title = bryten_christian.001.t
+	desc = bryten_christian.001.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	
+	
+	option = {# Go and make a vow
+		name = bryten_christian.001.a
+		hidden_effect = {
+			trigger_event = {
+				id = bryten_christian.002
+				days = { 1 5 }
+			}
+		}	
+	}
+	option = {# Don't make a vow
+		name = bryten_christian.001.b
+		hidden_effect = {
+			remove_character_flag = flag_bryten_christian_took_mary_vow
+		}
+	}	
+
+}
+bryten_christian.002 = {# What sort of Vow do you make?
+	type = character_event
+	title = bryten_christian.002.t
+	desc = bryten_christian.002.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	
+	option = {# Vow to be Chaste and Virtuous
+		name = bryten_christian.002.a
+		hidden_effect = {
+			add_character_flag = bryten_vow_chaste_flag
+		}	
+	}
+	option = {# Vow to be Humble
+		name = bryten_christian.002.b
+		hidden_effect = {
+			add_character_flag = bryten_vow_humble_flag
+		}		
+	}
+	option = {# vow to be charitable
+		name = bryten_christian.002.c
+		hidden_effect = {
+			add_character_flag = bryten_vow_charitable_flag
+		}		
+	}	
+	option = {# Vow to be temperate
+		name = bryten_christian.002.d
+		hidden_effect = {
+			add_character_flag = bryten_vow_temperate_flag
+		}	
+	}
+}
+bryten_christian.003 = {# Keeping vow after baby is born
+	type = character_event
+	title = bryten_christian.003.t
+	desc = bryten_christian.003.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	
+	option = {# Keep vow
+		name = bryten_christian.003.a
+		add_piety = minor_piety_gain
+		if = {# Chaste Vow
+			limit = { has_character_flag = bryten_vow_chaste_flag }
+			add_character_modifier = {
+				modifier = bryten_vow_chaste_modifier
+				months = 2
+			}
+			stress_impact = {
+				lustful = medium_stress_gain
+				chaste = minior_stress_loss
+				temperate = miniscule_stress_loss
+				zealous = miniscule_stress_loss
+				rakish = minior_stress_gain
+			}
+		}
+		if = {# Humble Vow
+			limit = { has_character_flag = bryten_vow_humble_flag }
+			add_character_modifier = {
+				modifier = bryten_vow_humble_modifier
+				months = 2
+			}
+			stress_impact = {
+				arrogant = medium_stress_gain
+				humble = minior_stress_loss
+				temperate = miniscule_stress_loss
+				zealous = miniscule_stress_loss
+			}
+		}
+		if = {# Charitable Vow
+			limit = { has_character_flag = bryten_vow_charitable_flag }
+			add_character_modifier = {
+				modifier = bryten_vow_charitable_modifier
+				months = 2
+			}
+			stress_impact = {
+				greedy = minor_stress_gain
+				generous = minior_stress_loss
+				improvident = miniscule_stress_loss
+				profligate = miniscule_stress_gain	
+				zealous = miniscule_stress_loss			
+			}
+		}
+		if = {# Temperate Vow
+			limit = { has_character_flag = bryten_vow_temperate_flag }
+			add_character_modifier = {
+				modifier = bryten_vow_temperate_modifier
+				months = 2
+			}
+			stress_impact = {
+				gluttonous = minor_stress_gain
+				temperate = minior_stress_loss
+				drunkard = miniscule_stress_gain
+				hashishiyah = miniscule_stress_gain	
+				rakish = miniscule_stress_gain	
+				zealous = miniscule_stress_loss
+			}
+		}
+	}
+	option = {# Don't Keep vow
+		name = bryten_christian.003.b	
+		add_piety = medium_piety_loss
+		stress_impact = {
+			honest = minor_stress_gain
+			zealous = minor_stress_gain
+			holy_warrior = minor_stress_gain
+			faith_warrior = minor_stress_gain
+			base = miniscule_stress_gain
+		}
+		hidden_effect = {
+			if = {# always get this if your child is naturally born sickly
+				limit = { has_character_flag = birth_child_will_become_sickly }
+				add_character_flag = bryten_broke_virgin_vow_punishment_flag
+			}			
+			else_if = {# random chance for child to catch illness
+				limit = { NOT = { has_character_flag = birth_child_will_become_sickly } }
+				random_list = {
+					70 = { }
+					30 = { add_character_flag = bryten_broke_virgin_vow_punishment_flag }
+				}
+			}
+
+		}
+	}
+	
+	after = {
+		if = {
+			limit = { has_character_flag = bryten_broke_virgin_vow_punishment_flag }
+			trigger_event = {
+				id = bryten_christian.004
+				days = { 10 30 }
+			}
+		}
+		remove_character_flag = bryten_vow_chaste_flag
+		remove_character_flag = bryten_vow_humble_flag
+		remove_character_flag = bryten_vow_charitable_flag
+		remove_character_flag = bryten_vow_temperate_flag
+		remove_character_flag = flag_bryten_christian_took_mary_vow
+	}
+
+}
+bryten_christian.004 = {# Breaking the Vow and bad stuff happens
+	type = character_event
+	title = bryten_christian.004.t
+	desc = bryten_christian.004.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	
+	immediate = {
+		scope:child = {
+			add_trait = sickly
+		}
+	}
+	
+	option = {# Virgin Mary please save me
+		name = bryten_christian.004.a	
+	}
+	
+	after = {# Maintance
+		remove_character_flag = bryten_broke_virgin_vow_punishment_flag
+	}
+
+}
+##############################################
+# Laying in and Churching
+##############################################
+bryten_christian.005 = {# Laying In
+	type = character_event
+	title = bryten_christian.005.t
+	desc = bryten_christian.005.desc
+	theme = faith
+	override_background = { reference = bedchamber }
+	
+	option = {# Begin Laying in.
+		name = bryten_christian.005.a
+		add_trait = bryten_laying_in
+		hidden_effect = {
+			trigger_event = {
+				id = bryten_christian.006
+				days = 40
+			}
+		}
+	}
+	
+}
+bryten_christian.006 = {# The Churching begins
+	type = character_event
+	title = bryten_christian.006.t
+	desc = bryten_christian.006.desc
+	theme = faith
+	override_background = { reference = temple_church }
+		
+	immediate = {
+		remove_trait = bryten_laying_in
+	}
+	
+	option = {# The Laying in is over, the Churching begins
+		name = bryten_christian.006.a	
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_christian.007
+			days = { 1 2 }
+		}
+	}
+}
+bryten_christian.007 = {# The Blessing at the Church
+	type = character_event
+	title = bryten_christian.007.t
+	desc = bryten_christian.007.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	
+	
+	immediate = {
+		primary_partner = { save_scope_as = husband }
+	}
+	
+	option = {# Thank God
+		name = bryten_christian.007.a	
+		add_piety = minor_piety_gain
+	}
+	
+	after = {
+		scope:husband = {
+			trigger_event = {
+				id = bryten_christian.008
+				days = { 1 2 }
+			}
+		}
+	}
+
+}
+bryten_christian.008 = {# Husband hears about the Churching
+	type = character_event
+	title = bryten_christian.008.t
+	desc = bryten_christian.008.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	
+	option = {# Thank God
+		name = bryten_christian.008.a	
+	}
+	
+
+}
+
+
+

@@ -2261,8 +2261,59 @@ bryten_fraticelli_break_with_rome_decision = {
 		}
 	}
 }
+#############################################
+# Christian Flavor Decisions
+#############################################
+bryten_pregnancy_mary_vow_decision = {
+	picture = "gfx/interface/illustrations/decisions/bryten_mary_vow_decision.dds"
 
+	desc = bryten_pregnancy_mary_vow_decision_desc
+	selection_tooltip = bryten_pregnancy_mary_vow_decision_tooltip
 
+	is_shown = { 
+		religion = religion:christianity_religion
+		# While we could do this for every christian lady, we want only those that can be played
+		is_ruler = yes
+		is_landed = yes
+		has_trait = pregnant
+		is_female = yes
+	}
+
+	is_valid = {
+		religion = religion:christianity_religion
+		has_trait = pregnant
+		is_ruler = yes
+		is_landed = yes
+		is_female = yes
+
+		custom_description = {
+			text = bryten_pregnancy_took_mary_vow
+			NOT = { has_character_flag = flag_bryten_pregnancy_took_mary_vow }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		bryten_basic_is_available_adult_courtier_even_if_sick_trigger = yes
+	}
+
+	effect = {
+		custom_tooltip = bryten_pregnancy_mary_vow_decision_effect.tt
+		trigger_event = bryten_christian.001
+		add_character_flag = { flag = flag_bryten_pregnancy_took_mary_vow }
+	}
+
+	ai_check_interval = 60
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+		ai_value_modifier = { ai_zeal = 1 }		
+	}
+}
 
 
 
