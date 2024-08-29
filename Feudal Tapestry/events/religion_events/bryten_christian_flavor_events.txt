@@ -275,6 +275,586 @@ bryten_christian.008 = {# Husband hears about the Churching
 	
 
 }
+##############################################
+# Monastic Flavor
+##############################################
+bryten_christian.010 = {# Monks make fantastic beer
+	type = character_event
+	title = bryten_christian.010.t
+	desc = bryten_christian.010
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:monk
+		animation = happiness
+	}
+
+	trigger = {
+		is_commanding_army = no
+		is_adult = yes
+		is_imprisoned = no
+		has_religion = religion:christianity_religion
+	}
+
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			age = { 25 35 }
+			gender = male
+			trait = education_learning_3
+			trait = devoted
+			faith = root.faith
+			culture = root.culture
+			learning = { 10 12 }
+			save_scope_as = monk
+		}
+	}
+	
+	option = {# Visit the Monastary
+		name = bryten_christian.010.a
+		if = {
+			limit = { NOT = { has_trait = drunkard } }
+			random = {
+				chance = 20
+				add_trait = drunkard
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title =  bryten_christian.010.a.drunkard 
+					left_icon = root
+				}
+			}
+		}
+	}
+	option = {# Thanks but No Thanks
+		name = bryten_christian.010.b
+		if = {
+			limit = { NOT = { has_trait = temperate } }
+			random = {
+				chance = 20
+				add_trait = temperate
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title =  bryten_christian.010.b.temperate
+					left_icon = root
+				}
+			}
+		}
+
+	}
+
+	after = {
+		hidden_effect = {
+			scope:monk = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+}
+bryten_christian.011 = {# Monks have healing herbs 
+	type = character_event
+	title = bryten_christian.011.t
+	desc = bryten_christian.011
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:monk
+		animation = happiness
+	}
+	trigger = {
+		is_commanding_army = no
+		is_adult = yes
+		is_imprisoned = no
+		piety_level >= 1
+		OR = {
+			has_trait = ill
+		}
+		has_religion = religion:christianity_religion
+	}
+
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			age = { 25 35 }
+			gender = male
+			trait = education_learning_3
+			trait = devoted
+			faith = root.faith
+			culture = root.culture
+			learning = { 10 12 }
+			save_scope_as = monk
+		}
+	}
+	
+	option = {# Thank them
+		name = bryten_christian.011.a
+		ai_chance = {
+			base = 80
+		}
+		random = {
+			chance = 30
+			remove_trait = ill
+		}
+	}
+	option = {# These herbs smell funny
+		name = bryten_christian.011.b
+		if = {
+			limit = { NOT = { has_trait = paranoid } }
+			add_trait = paranoid
+		}
+
+	}
+
+	after = {
+		hidden_effect = {
+			scope:monk = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+}
+bryten_christian.012 = {# Monks make great wine  
+	type = character_event
+	title = bryten_christian.012.t
+	desc = bryten_christian.012
+
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:monk
+		animation = happiness
+	}
+	trigger = {
+		is_commanding_army = no
+		is_adult = yes
+		is_imprisoned = no
+		has_religion = religion:christianity_religion
+	}
+
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			age = { 25 35 }
+			gender = male
+			trait = education_learning_3
+			trait = devoted
+			faith = root.faith
+			culture = root.culture
+			learning = { 10 12 }
+			save_scope_as = monk
+		}
+	}
+	
+	option = {# Visit the Monastary
+		name = bryten_christian.012.a
+		ai_chance = {
+			base = 50
+		}
+		random = {
+			chance = 50
+			add_learning_skill = 1
+		}
+		if = {
+			limit = { NOT = { has_trait = drunkard } }
+			random = {
+				chance = 20
+				add_trait = drunkard
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = bryten_christian.012.a.drunkard
+					left_icon = root
+				}
+			}
+		}
+	}
+	option = {# Thanks but no Thanks
+		name = bryten_christian.012.christian
+		ai_chance = {
+			base = 50
+		}
+		if = {
+			limit = { NOT = { has_trait = temperate } }
+			random = {
+				chance = 20
+				add_trait = temperate
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = bryten_christian.012.b.temperate
+					left_icon = root
+				}
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			scope:monk = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+}
+bryten_christian.013 = {# Monk is fantastic painter 
+	type = character_event
+	title = bryten_christian.013.t
+	desc = bryten_christian.013
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:monk
+		animation = happiness
+	}
+	trigger = {
+		is_commanding_army = no
+		is_adult = yes
+		is_imprisoned = no
+		has_religion = religion:christianity_religion
+		NOT = { has_trait = blind }
+	}
+
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			age = { 25 35 }
+			gender = male
+			trait = education_learning_3
+			trait = devoted
+			faith = root.faith
+			culture = root.culture
+			learning = { 10 12 }
+			save_scope_as = monk
+		}
+	}
+	
+	option = {# Buy the Painting
+		name = bryten_christian.013.a
+		remove_short_term_gold = 10
+		add_prestige = 30
+	}
+	option = {# very nice
+		name = bryten_christian.013.christian
+		trigger = {  religion = religion:christianity_religion }
+
+	}
+
+	after = {
+		hidden_effect = {
+			scope:monk = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+}
+bryten_christian.014 = {# Monks produce beautiful books 
+	type = character_event
+	title = bryten_christian.014.t
+	desc = bryten_christian.014
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:monk
+		animation = happiness
+	}
+
+	trigger = {
+		is_commanding_army = no
+		is_adult = yes
+		is_imprisoned = no
+		has_religion = religion:christianity_religion
+		NOT = { has_trait = blind }
+	}
+
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			age = { 25 35 }
+			gender = male
+			trait = education_learning_3
+			trait = devoted
+			faith = root.faith
+			culture = root.culture
+			learning = { 10 12 }
+			save_scope_as = monk
+		}
+	}
+	
+	option = {# I will buy the Book
+		name = bryten_christian.014.a
+		remove_short_term_gold = 30
+		add_prestige = 30
+		random = {
+			chance = 20
+			add_learning_skill = 1
+		}
+	}
+	option = {# Books aren't for me
+		name = bryten_christian.014.christian
+
+	}
+
+	after = {
+		hidden_effect = {
+			scope:monk = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+}
+bryten_christian.015 = {# Local monks come to visit often 
+	type = character_event
+	title = bryten_christian.015.t
+	desc = bryten_christian.015
+
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:monk
+		animation = happiness
+	}
+	trigger = {
+		is_commanding_army = no
+		is_adult = yes
+		is_imprisoned = no
+		has_religion = religion:christianity_religion
+	}
+
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			age = { 25 35 }
+			gender = male
+			trait = education_learning_3
+			trait = devoted
+			faith = root.faith
+			culture = root.culture
+			learning = { 10 12 }
+			save_scope_as = monk
+		}
+	}
+	
+	option = {# Wonderful come again
+		name = bryten_christian.015.a
+		add_piety = 20
+		random = {
+			chance = 30
+			add_learning_skill = 1
+		}
+	}
+	option = {# the Monks are tedious
+		name = bryten_christian.015.b
+		random_list = {
+			20 = {
+				if = {
+					limit = { NOT = { has_trait = cynical } }
+					add_trait = cynical
+				}
+			}
+			80 = {
+
+			}
+		}
+
+	}
+
+	after = {
+		hidden_effect = {
+			scope:monk = {
+				death = {
+					death_reason = death_vanished
+				}
+			}
+		}
+	}
+
+}
+bryten_christian.016 = {# Donate to local monastery
+	type = character_event
+	title = bryten_christian.016.t
+	desc = bryten_christian.016
+
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:monk
+		animation = happiness
+	}
+	trigger = {
+		has_title = title:c_northumberland
+		not = {	exists = global_var:bryten_monks_take_cuthbert } # Fire Only Once
+		current_date <= 900.1.1 # The monks left in the 9th century
+	}
+
+	immediate = {
+		create_character = {
+			location = root.capital_province
+			age = { 25 35 }
+			gender = male
+			trait = education_learning_3
+			trait = devoted
+			faith = root.faith
+			culture = root.culture
+			learning = { 10 12 }
+			save_scope_as = monk
+		}
+	}
+	
+	option = { # Ok
+		name = bryten_christian.016.pagan
+		trigger = { NOT = { religion = religion:christianity_religion} }
+	}
+	option = { # Ok
+		name = bryten_christian.016.christian
+		trigger = {  religion = religion:christianity_religion }
+
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_england.141
+			years = 7
+		}
+	}
+
+}
+bryten_christian.017 = {# Donate to local monastery 
+	type = character_event
+	title = bryten_christian.017.t
+	desc = bryten_christian.017
+
+	theme = friendly
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:child_for_the_church
+	}
+	trigger = {
+		is_commanding_army = no
+		is_adult = yes
+		is_imprisoned = no
+		has_religion = religion:christianity_religion
+		any_child = {
+			is_ruler = no
+			age >= 13
+			NOT = { age >= 16 }
+			NOT = { has_trait = cynical }
+			NOT = { is_clergy = yes }
+		}
+	}
+
+	immediate = {
+		save_scope_as = parent_of_child
+		random_child = {
+			limit = {
+				is_ruler = no
+				age >= 13
+				NOT = { age >= 16 }
+				NOT = { has_trait = cynical }
+				NOT = { is_clergy = yes }
+			}
+			save_scope_as = child_for_the_church
+		}
+	}
+	
+	option = { # Ok
+		name = bryten_christian.017.pagan
+		scope:child_for_the_church = {
+			send_child_to_clergy_effect_for_events = yes
+
+			if = {
+				limit = {
+					scope:parent_of_child.top_liege = {
+						any_vassal_or_below = {
+							has_government = theocracy_government
+							primary_title.tier > tier_barony
+							faith = scope:parent_of_child.faith
+						}
+					}
+				}
+				scope:parent_of_child.top_liege = {
+					random_vassal_or_below = {
+						limit = {
+							has_government = theocracy_government
+							primary_title.tier > tier_barony
+							faith = scope:parent_of_child.faith
+						}
+						save_scope_as = theocratic_travel_target
+					}
+				}
+				visit_court_of = scope:theocratic_travel_target
+				set_relation_guardian = scope:theocratic_travel_target 
+			}
+			else_if = {
+				limit = {
+					exists = scope:parent_of_child.capital_province
+				}
+				move_to_pool_at = scope:parent_of_child.capital_province
+			}
+
+			add_opinion = {
+				target = ROOT
+				opinion = 50
+				modifier = grateful_opinion
+			}
+		}
+	}
+	option = { # Ok
+		name = bryten_christian.017.b
+		scope:child_for_the_church = {
+			add_stress = major_stress_loss
+			add_opinion = {
+				target = ROOT
+				opinion = -150
+				modifier = angry_opinion
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
 
 
 
