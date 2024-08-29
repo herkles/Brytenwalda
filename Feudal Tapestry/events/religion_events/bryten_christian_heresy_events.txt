@@ -135,7 +135,7 @@ bryten_heresy.002 = {# Bogomil preaches
 			value = 5
 			desc = bryten_fervor_gain_heretical_lord 
 		} }
-		set_character_faith_with_conversion = faith:bogomilist
+		set_character_faith = faith:bogomilist
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
 				tier = tier_county
@@ -254,7 +254,7 @@ bryten_heresy.026 = {# Convert to Catharism?
 				desc = bryten_fervor_gain_heretical_lord	
 			} 
 		}
-		set_character_faith_with_conversion = faith:cathar
+		set_character_faith = faith:cathar
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
 				tier = tier_county
@@ -393,7 +393,7 @@ bryten_heresy.051 = {# Convert to Waldensian?
 				desc = bryten_fervor_gain_heretical_lord	
 			} 
 		}
-		set_character_faith_with_conversion = faith:waldensian
+		set_character_faith = faith:waldensian
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
 				tier = tier_county
@@ -531,7 +531,7 @@ bryten_heresy.076 = {# Convert to lollard?
 				desc = bryten_fervor_gain_heretical_lord
 			} 
 		}
-		set_character_faith_with_conversion = faith:lollard
+		set_character_faith = faith:lollard
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
 				tier = tier_county
@@ -544,7 +544,7 @@ bryten_heresy.076 = {# Convert to lollard?
 #######################################
 # arnoldism 
 #######################################
-bryten_heresy.100 = {# Waldo begins preaching
+bryten_heresy.100 = {# Arnold begins preaching
 	hidden = yes
 
 	immediate = {
@@ -671,7 +671,7 @@ bryten_heresy.101 = {# Convert to arnoldism?
 
 			} 
 		}
-		set_character_faith_with_conversion = faith:arnoldism
+		set_character_faith = faith:arnoldism
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
 				tier = tier_county
@@ -684,7 +684,7 @@ bryten_heresy.101 = {# Convert to arnoldism?
 #######################################
 # joachimites 
 #######################################
-bryten_heresy.125 = {# Waldo begins preaching
+bryten_heresy.125 = {# Joachimites begins preaching
 	hidden = yes
 
 	immediate = {
@@ -811,7 +811,7 @@ bryten_heresy.126 = {# Convert to joachimites?
 
 			} 
 		}
-		set_character_faith_with_conversion = faith:joachimites
+		set_character_faith = faith:joachimites
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
 				tier = tier_county
@@ -834,6 +834,7 @@ bryten_heresy.150 = {# Fraticelli begins preaching
 		}
 		# Unlock Bogomilism to convert to and be a heresy more generally
 		faith:fraticelli = { remove_doctrine = unavailable_doctrine }
+		faith:fraticelli = { set_religious_head_title = title:k_papal_state }
 		every_county_in_region = {# Convert counties in the Balkans from Orthodoxy to Bogomilism
 			region = world_europe_south_italy
 			limit = {# this should only apply to Ecumenical faiths, ie catholic and Orthodox mainly.
@@ -932,7 +933,7 @@ bryten_heresy.151 = {# Convert to fraticelli?
 				desc = bryten_fervor_gain_heretical_lord
 			} 
 		}
-		set_character_faith_with_conversion = faith:fraticelli
+		set_character_faith = faith:fraticelli
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
 				tier = tier_county
@@ -1301,6 +1302,137 @@ bryten_heresy.157 = {# Let everyone know
 		name = name_i_see
 	}	
 }
+# Fraticelli Pope Condemns it
+bryten_heresy.158 = {# The Pope fully condemns Fraticellism and threatens excommunication
+	hidden = yes
+
+	trigger = {
+		current_year >= 1323
+		NOT = { has_global_variable = fraticelli_condemned_heretics }
+		exists = catholic.faith.religious_head
+		NOR = {# Reasons why the Pope won't condemn the Fraticelli
+			AND = {# if Catholicism has low fervor and Fraticelli has high fervor then the pope isn't condeming them
+				faith:fraticelli = { fervor > medium_fervor_value }
+				faith:catholic = { fervor < medium_fervor_value }
+			}
+			faith.religious_head = faith:fraticelli # if the Pope is a Fraticelli member they obviously won't condemn it.
+			any_ruler = {# A fraticelli ruler with a strong hook on the Pope the pope won't do it.
+				limit = {faith = faith:fraticelli }
+				has_strong_usable_hook = faith.religious_head
+			}
+		}
+	}
+
+	immediate = {
+
+		catholic.faith.religious_head = { save_scope_as = pope }
+		set_global_variable = {# Fraticelli are condemend as Heretics
+			name = fraticelli_condemned_heretics
+			value = yes
+		}
+		# Fraticelli is now disconnected from the papacy and is more heretical.
+		faith:fraticelli = { remove_religious_head_title = yes }
+		every_county_in_region = {# Convert counties in the Balkans from Orthodoxy to Bogomilism
+			region = world_europe
+			limit = {# A large number of provinces convert back as they don't want to be heretics.
+				faith = { faith = faith:fraticelli }
+			}
+			random = {
+				chance = 40
+				set_county_faith = faith:catholic
+			}
+		}
+		every_ruler = {# give people the ability to convert back
+			limit = { faith = faith:fraticelli }
+			trigger_event = {
+				id = bryten_heresy.159
+				days = { 30 50 }
+			}
+		}
+		
+	}
+}
+bryten_heresy.159 = {# Convert to fraticelli?
+	type = character_event
+	title = bryten_heresy.159.t
+	desc = bryten_heresy.159.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = {# Side with the Pope
+		name = bryten_heresy.159.a
+		ai_chance = { base = 70	}
+		set_character_faith = faith:catholic
+		reverse_add_opinion = {
+			target = scope:pope
+			modifier = relieved_opinion
+			opinion = 30
+		}
+		every_vassal = {# Zealous Vassals hate it
+			limit = { faith = faith:fraticelli }
+			add_opinion = {
+				modifier = hate_opinion
+				target = root
+				opinion = -50
+			}
+		}
+		every_vassal = {# Zealous Vassals hate it
+			limit = { faith = faith:fraticelli }
+			add_opinion = {
+				modifier = hate_opinion
+				target = root
+				opinion = -50
+			}
+		}
+		
+		stress_impact = {
+			greedy = major_stress_impact_loss
+			cynical = major_stress_impact_loss
+			generous = medium_stress_impact_gain
+			improvident = major_stress_impact_gain
+			zealous = medium_stress_impact_gain
+		}
+	}
+	option = {# Stick with Fraticelli despite things
+		name = bryten_heresy.159.b
+		ai_chance = { base = 30	} # rare 
+		add_piety = medium_piety_gain
+		reverse_add_opinion = {
+			target = scope:pope
+			modifier = hate_opinion
+			opinion = -50
+		}
+		every_vassal = {# Catholic Vassals hate it
+			limit = { faith = faith:catholic }
+			add_opinion = {
+				modifier = did_not_listen_to_pope
+				target = root
+				opinion = -30
+			}
+		}
+		every_courtier_or_guest = {# Catholic guests/Courtiers hate it
+			limit = { faith = faith:catholic }
+			add_opinion = {
+				modifier = did_not_listen_to_pope
+				target = root
+				opinion = -30
+			}
+		}
+		stress_impact = {
+			greedy = major_stress_impact_gain
+			cynical = major_stress_impact_gain
+			generous = medium_stress_impact_loss
+			improvident = major_stress_impact_loss
+			zealous = medium_stress_impact_loss
+		}
+
+	}
+}
 #######################################
 # henricians 
 #######################################
@@ -1429,7 +1561,7 @@ bryten_heresy.176 = {# Convert to henricians?
 				desc = bryten_fervor_gain_heretical_lord
 			} 
 		}
-		set_character_faith_with_conversion = faith:henricians
+		set_character_faith = faith:henricians
 		every_held_title = {# henricians counties are really happy
 			limit = {
 				tier = tier_county
@@ -1567,7 +1699,7 @@ bryten_heresy.201 = {# Convert to petrobrusian?
 				desc = bryten_fervor_gain_heretical_lord	
 			} 
 		}
-		set_character_faith_with_conversion = faith:petrobrusian
+		set_character_faith = faith:petrobrusian
 		every_held_title = {# Petrobrusians counties are really happy
 			limit = {
 				tier = tier_county
