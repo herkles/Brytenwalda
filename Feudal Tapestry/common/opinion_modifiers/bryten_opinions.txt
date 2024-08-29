@@ -3,13 +3,11 @@
 	decaying = yes
 	years = 20
 }
-
 norman_rightful_king = {
 	opinion = 40
 	decaying = yes
 	years = 20
 }
-
 helped_me_agaisnt_tyrant_opinion = {
 	opinion = 40
 	decaying = yes
@@ -26,7 +24,6 @@ disaproves_burning_sacred_grove = {
 	decaying = yes
 	years = 10
 }
-
 approves_church_sacred_grove = {
 	opinion = 20
 	decaying = yes
@@ -37,7 +34,6 @@ disaproves_church_sacred_grove = {
 	decaying = yes
 	years = 10
 }
-
 approves_alone_sacred_grove = {
 	opinion = 15
 	decaying = yes
@@ -52,7 +48,23 @@ disaproves_alone_sacred_grove = {
 hates_denied_inheritance = {
 	opinion = -50
 }
-
 bryten_murderous_banquet = {
 	opinion = -75
 }
+
+approves_heretic_condemnation = {
+	opinion = 20
+	monthly_change = 0.2
+	decaying = yes
+}
+disapproves_heretic_toleration = {
+	opinion = -20
+	monthly_change = 0.2
+	decaying = yes
+}
+brought_heretics_to_my_notice_opinion = {
+	opinion = 20
+	monthly_change = 0.2
+	decaying = yes
+}
+

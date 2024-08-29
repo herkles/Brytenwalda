@@ -303,7 +303,6 @@ on_game_start = {
 		title:b_bologna.title_province = { add_special_building_slot = generic_university }
 		title:b_salamanca.title_province = { add_special_building_slot = generic_university }
 		title:b_madrid.title_province = { add_special_building_slot = generic_university }
-		title:b_oxford.title_province = { add_special_building_slot = generic_university }
 		title:b_cambridge.title_province = { add_special_building_slot = generic_university }
 		title:b_padua.title_province = { add_special_building_slot = generic_university }
 		title:b_coimbra.title_province = { add_special_building_slot = generic_university }
@@ -995,7 +994,7 @@ on_game_start = {
 			limit = { game_start_date >= 1387.1.1 }
 			faith:lollard = { remove_doctrine = unavailable_doctrine }			
 			set_global_variable = {
-				name = lollardy_spawned
+				name = lollard_spawned
 				value = yes
 			}
 		}
@@ -1043,8 +1042,7 @@ on_game_start = {
 				name = petrobrusian_spawned
 				value = yes
 			}
-		}
-
+		}		
 	}
 }
 

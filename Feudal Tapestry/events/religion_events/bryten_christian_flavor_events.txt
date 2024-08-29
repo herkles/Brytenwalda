@@ -23,7 +23,7 @@ bryten_christian.001 = {# Make a vow to the Virign Mary
 	option = {# Don't make a vow
 		name = bryten_christian.001.b
 		hidden_effect = {
-			remove_character_flag = flag_bryten_christian_took_mary_vow
+			remove_character_flag = flag_bryten_took_mary_vow
 		}
 	}	
 
@@ -78,10 +78,10 @@ bryten_christian.003 = {# Keeping vow after baby is born
 			}
 			stress_impact = {
 				lustful = medium_stress_gain
-				chaste = minior_stress_loss
+				chaste = minor_stress_loss
 				temperate = miniscule_stress_loss
 				zealous = miniscule_stress_loss
-				rakish = minior_stress_gain
+				rakish = minor_stress_gain
 			}
 		}
 		if = {# Humble Vow
@@ -92,7 +92,7 @@ bryten_christian.003 = {# Keeping vow after baby is born
 			}
 			stress_impact = {
 				arrogant = medium_stress_gain
-				humble = minior_stress_loss
+				humble = minor_stress_loss
 				temperate = miniscule_stress_loss
 				zealous = miniscule_stress_loss
 			}
@@ -105,7 +105,7 @@ bryten_christian.003 = {# Keeping vow after baby is born
 			}
 			stress_impact = {
 				greedy = minor_stress_gain
-				generous = minior_stress_loss
+				generous = minor_stress_loss
 				improvident = miniscule_stress_loss
 				profligate = miniscule_stress_gain	
 				zealous = miniscule_stress_loss			
@@ -119,7 +119,7 @@ bryten_christian.003 = {# Keeping vow after baby is born
 			}
 			stress_impact = {
 				gluttonous = minor_stress_gain
-				temperate = minior_stress_loss
+				temperate = minor_stress_loss
 				drunkard = miniscule_stress_gain
 				hashishiyah = miniscule_stress_gain	
 				rakish = miniscule_stress_gain	
@@ -165,7 +165,7 @@ bryten_christian.003 = {# Keeping vow after baby is born
 		remove_character_flag = bryten_vow_humble_flag
 		remove_character_flag = bryten_vow_charitable_flag
 		remove_character_flag = bryten_vow_temperate_flag
-		remove_character_flag = flag_bryten_christian_took_mary_vow
+		remove_character_flag = flag_bryten_took_mary_vow
 	}
 
 }

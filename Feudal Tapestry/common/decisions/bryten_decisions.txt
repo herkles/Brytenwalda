@@ -2134,9 +2134,7 @@ bryten_fraticelli_victory = {
 				target = flag:bryten_fraticelli_victory_flag
 			}
 		}
-
-
-		trigger_event = bryten_heresy.152
+		trigger_event = { id = bryten_heresy.152 }
 	}
 
 	ai_will_do = {
@@ -2176,7 +2174,7 @@ bryten_fraticelli_break_with_rome_decision = {
 		# Requires a solid piety level.
 		piety_level >= very_high_piety_level
 		# Needs a solid chunk of Mozarabic counties.
-		custom_description = {
+		custom_tooltip = {
 			text = bryten_fraticelli_county_count.need_at_least_twenty_same_faith_counties
 			any_sub_realm_county = {
 				count >= bryten_fraticelli_county_count
@@ -2206,7 +2204,7 @@ bryten_fraticelli_break_with_rome_decision = {
 		# Keep the Pope forever, but stay ecumenical.
 		custom_tooltip = bryten_fraticelli_break_with_rome_decision.tt.hof_and_ecumenism_warning
 		# Send the event.
-		trigger_event = iberia_north_africa.0111
+		trigger_event = { id = bryten_heresy.154 }
 		hidden_effect = {
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
@@ -2277,6 +2275,8 @@ bryten_pregnancy_mary_vow_decision = {
 		is_landed = yes
 		has_trait = pregnant
 		is_female = yes
+		# can't have taken a vow already.
+		NOT = { has_character_flag = flag_bryten_took_mary_vow }
 	}
 
 	is_valid = {
@@ -2285,11 +2285,6 @@ bryten_pregnancy_mary_vow_decision = {
 		is_ruler = yes
 		is_landed = yes
 		is_female = yes
-
-		custom_description = {
-			text = bryten_pregnancy_took_mary_vow
-			NOT = { has_character_flag = flag_bryten_pregnancy_took_mary_vow }
-		}
 	}
 
 	is_valid_showing_failures_only = {
@@ -2298,9 +2293,8 @@ bryten_pregnancy_mary_vow_decision = {
 	}
 
 	effect = {
-		custom_tooltip = bryten_pregnancy_mary_vow_decision_effect.tt
-		trigger_event = bryten_christian.001
-		add_character_flag = { flag = flag_bryten_pregnancy_took_mary_vow }
+		trigger_event = { id = bryten_christian.001 }
+		add_character_flag = { flag = flag_bryten_took_mary_vow }
 	}
 
 	ai_check_interval = 60

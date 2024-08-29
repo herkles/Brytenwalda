@@ -7,10 +7,14 @@ bryten_heresy.001 = {# Bogomil begins preaching
 	hidden = yes
 
 	immediate = {
+		random_county_in_region = {
+			region = custom_bogomilist_region
+			save_scope_as = bogomilism_county
+		}
 		create_character = {# Bogomil
 			name = "Bogomil"
 			gender = male
-			location = title:b_skopje
+			location = scope:bogomilism_county.title_province
 			age = 32
 			faith = faith:bogomilist
 			culture = culture:bulgarian
@@ -22,7 +26,7 @@ bryten_heresy.001 = {# Bogomil begins preaching
 		create_character = {# Jeremiah
 			name = "Jeremiah"
 			gender = male
-			location = title:b_skopje
+			location = scope:bogomilism_county.title_province
 			age = 18
 			faith = faith:bogomilist
 			culture = culture:bulgarian
@@ -127,7 +131,10 @@ bryten_heresy.002 = {# Bogomil preaches
 	option = {# he is interesting ideas
 		name = bryten_heresy.002.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { change_fervor = { value = 5	} }
+		faith:bogomilist = { change_fervor = { 
+			value = 5
+			desc = bryten_fervor_gain_heretical_lord 
+		} }
 		set_character_faith_with_conversion = faith:bogomilist
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
@@ -241,7 +248,12 @@ bryten_heresy.026 = {# Convert to Catharism?
 	option = {# he is interesting ideas
 		name = bryten_heresy.026.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { change_fervor = { value = 5	} }
+		faith:bogomilist = { 
+			change_fervor = { 
+				value = 5
+				desc = bryten_fervor_gain_heretical_lord	
+			} 
+		}
 		set_character_faith_with_conversion = faith:cathar
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
@@ -259,10 +271,14 @@ bryten_heresy.050 = {# Waldo begins preaching
 	hidden = yes
 
 	immediate = {
-		create_character = {# Bogomil
+		random_county_in_region = {
+			region = custom_waldensian_region
+			save_scope_as = Waldenism_county
+		}
+		create_character = {# Waldo
 			name = "Peter"
 			gender = male
-			location = title:b_lyon
+			location = scope:Waldenism_county.title_province
 			age = 30
 			faith = faith:waldensian
 			culture = culture:occitan
@@ -307,8 +323,8 @@ bryten_heresy.050 = {# Waldo begins preaching
 }
 bryten_heresy.051 = {# Convert to Waldensian?
 	type = character_event
-	title = bryten_heresy.026.t
-	desc = bryten_heresy.026.desc
+	title = bryten_heresy.051.t
+	desc = bryten_heresy.051.desc
 	theme = faith
 	override_background = { reference = wilderness_forest }
 	
@@ -322,7 +338,7 @@ bryten_heresy.051 = {# Convert to Waldensian?
 	}
 
 	option = {# Condemn the heretics
-		name = bryten_heresy.026.a
+		name = bryten_heresy.051.a
 		ai_chance = { base = 89	}
 		every_vassal = {# Zealous Vassals love it
 			limit = { has_vassal_stance = zealot }
@@ -334,7 +350,7 @@ bryten_heresy.051 = {# Convert to Waldensian?
 		}
 	}
 	option = {# Let him preach
-		name = bryten_heresy.026.b
+		name = bryten_heresy.051.b
 		ai_chance = { base = 20	} # rare 
 		every_vassal = {# Zealous Vassals hate it
 			limit = { has_vassal_stance = zealot }
@@ -369,9 +385,14 @@ bryten_heresy.051 = {# Convert to Waldensian?
 
 	}
 	option = {# he is interesting ideas
-		name = bryten_heresy.026.c
+		name = bryten_heresy.051.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { change_fervor = { value = 5	} }
+		faith:bogomilist = { 
+			change_fervor = { 
+				value = 5
+				desc = bryten_fervor_gain_heretical_lord	
+			} 
+		}
 		set_character_faith_with_conversion = faith:waldensian
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
@@ -389,17 +410,20 @@ bryten_heresy.075 = {# Waldo begins preaching
 	hidden = yes
 
 	immediate = {
+		random_county_in_region = {
+			region = custom_lollard_region
+			save_scope_as = lollardy_county
+		}
 		create_character = {# Bogomil
-			name = "Peter"
+			name = "John"
 			gender = male
-			location = title:b_lyon
+			location = scope:lollardy_county.title_province
 			age = 30
 			faith = faith:lollard
 			culture = culture:english
 			trait = heresiarch
 			trait = generous
 			trait = theologian
-			trait = improvident
 			trait = education_learning_4
 			save_scope_as = lollard_founder
 		}
@@ -407,7 +431,7 @@ bryten_heresy.075 = {# Waldo begins preaching
 			name = lollard_spawned
 			value = yes
 		}
-		# Unlock Bogomilism to convert to and be a heresy more generally
+		# Unlock Lollardy to convert to and be a heresy more generally
 		faith:lollard = { remove_doctrine = unavailable_doctrine }
 		every_county_in_region = {# Convert counties in the Balkans from Orthodoxy to Bogomilism
 			region = custom_lollard_region
@@ -428,7 +452,7 @@ bryten_heresy.075 = {# Waldo begins preaching
 		every_ruler = {# give people the ability to convert
 			limit = { capital_province = { geographical_region = custom_lollard_region } }
 			trigger_event = {
-				id = bryten_heresy.051
+				id = bryten_heresy.076
 				days = { 30 50 }
 			}
 		}
@@ -501,7 +525,12 @@ bryten_heresy.076 = {# Convert to lollard?
 	option = {# he is interesting ideas
 		name = bryten_heresy.076.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { change_fervor = { value = 5	} }
+		faith:bogomilist = { 
+			change_fervor = { 
+				value = 5	
+				desc = bryten_fervor_gain_heretical_lord
+			} 
+		}
 		set_character_faith_with_conversion = faith:lollard
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
@@ -519,10 +548,14 @@ bryten_heresy.100 = {# Waldo begins preaching
 	hidden = yes
 
 	immediate = {
-		create_character = {# Bogomil
+		random_county_in_region = {
+			region = custom_arnoldism_region
+			save_scope_as = arnoldism_county
+		}
+		create_character = {# Arnold
 			name = "Arnold"
 			gender = male
-			location = title:b_lyon
+			location = scope:arnoldism_county.title_province
 			age = 30
 			faith = faith:arnoldism
 			culture = culture:occitan
@@ -558,7 +591,7 @@ bryten_heresy.100 = {# Waldo begins preaching
 		every_ruler = {# give people the ability to convert
 			limit = { capital_province = { geographical_region = custom_arnoldism_region } }
 			trigger_event = {
-				id = bryten_heresy.051
+				id = bryten_heresy.101
 				days = { 30 50 }
 			}
 		}
@@ -631,7 +664,13 @@ bryten_heresy.101 = {# Convert to arnoldism?
 	option = {# he is interesting ideas
 		name = bryten_heresy.101.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { change_fervor = { value = 5	} }
+		faith:bogomilist = { 
+			change_fervor = { 
+				value = 5	
+				desc = bryten_fervor_gain_heretical_lord
+
+			} 
+		}
 		set_character_faith_with_conversion = faith:arnoldism
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
@@ -649,10 +688,14 @@ bryten_heresy.125 = {# Waldo begins preaching
 	hidden = yes
 
 	immediate = {
-		create_character = {# Bogomil
+		random_county_in_region = {
+			region = custom_joachimites_region
+			save_scope_as = joachmism_county
+		}
+		create_character = {# Joachim
 			name = "Joachim"
 			gender = male
-			location = title:b_lyon
+			location = scope:joachmism_county.title_province
 			age = 30
 			faith = faith:joachimites
 			culture = culture:occitan
@@ -688,7 +731,7 @@ bryten_heresy.125 = {# Waldo begins preaching
 		every_ruler = {# give people the ability to convert
 			limit = { capital_province = { geographical_region = custom_joachimites_region } }
 			trigger_event = {
-				id = bryten_heresy.051
+				id = bryten_heresy.126
 				days = { 30 50 }
 			}
 		}
@@ -761,7 +804,13 @@ bryten_heresy.126 = {# Convert to joachimites?
 	option = {# he is interesting ideas
 		name = bryten_heresy.126.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { change_fervor = { value = 5	} }
+		faith:bogomilist = { 
+			change_fervor = { 
+				value = 5 
+				desc = bryten_fervor_gain_heretical_lord
+
+			} 
+		}
 		set_character_faith_with_conversion = faith:joachimites
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
@@ -786,7 +835,7 @@ bryten_heresy.150 = {# Fraticelli begins preaching
 		# Unlock Bogomilism to convert to and be a heresy more generally
 		faith:fraticelli = { remove_doctrine = unavailable_doctrine }
 		every_county_in_region = {# Convert counties in the Balkans from Orthodoxy to Bogomilism
-			region = custom_fraticelli_region
+			region = world_europe_south_italy
 			limit = {# this should only apply to Ecumenical faiths, ie catholic and Orthodox mainly.
 				faith = {
 					has_doctrine = special_doctrine_ecumenical_christian
@@ -802,9 +851,9 @@ bryten_heresy.150 = {# Fraticelli begins preaching
 			}
 		}
 		every_ruler = {# give people the ability to convert
-			limit = { capital_province = { geographical_region = custom_fraticelli_region } }
+			limit = { capital_province = { geographical_region = world_europe_south_italy } }
 			trigger_event = {
-				id = bryten_heresy.051
+				id = bryten_heresy.151
 				days = { 30 50 }
 			}
 		}
@@ -877,7 +926,12 @@ bryten_heresy.151 = {# Convert to fraticelli?
 	option = {# he is interesting ideas
 		name = bryten_heresy.151.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { change_fervor = { value = 5	} }
+		faith:bogomilist = { 
+			change_fervor = { 
+				value = 5	
+				desc = bryten_fervor_gain_heretical_lord
+			} 
+		}
 		set_character_faith_with_conversion = faith:fraticelli
 		every_held_title = {# Bogomilist counties are really happy
 			limit = {
@@ -908,16 +962,21 @@ bryten_heresy.152 = {# Catholicism is Fraticelli
 		name = bryten_heresy.152.a
 		give_nickname = nick_the_apostle
 	}
+
+	after = {
+		hidden_effect = {
+			every_player = {
+				limit = { religion = religion:christianity_religion }
+				trigger_event = { id = bryten_heresy.153 }
+			}
+		}
+	}
 }
 bryten_heresy.153 = {# Fraticelli is victorious
 	type = character_event
 	title = bryten_heresy.153.t
 	desc = bryten_heresy.153.desc
 	theme = faith
-	left_portrait = {
-		character = scope:pope
-		animation = personality_bold
-	}
 	
 	option = {
 		name = name_i_see
@@ -1024,8 +1083,8 @@ bryten_heresy.155 = {# Heretical Breaking
 		bryten_fraticelli_heretic_path_hof_ecumenical_scripted_effect = yes
 		# Now take care of notification events for players.
 		every_player = {
-			limit = { religion:christianity_religion}
-			trigger_event = bryten_heresy.157
+			limit = { religion = religion:christianity_religion }
+			trigger_event = { id = bryten_heresy.157 }
 		}
 		# And finally, actually apply the effects.
 		if = {
@@ -1122,9 +1181,9 @@ bryten_heresy.156 = {# New Branch
 	after = {
 		bryten_fraticelli_schismatic_path_hof_ecumenical_scripted_effect = yes
 		# Now take care of notification events for players.
-		every_player = {
-			limit = { religion:christianity_religion}
-			trigger_event = bryten_heresy.157
+		every_player = {	
+			limit = { religion = religion:christianity_religion }
+			trigger_event = { id = bryten_heresy.157 }
 		}
 		# And finally, actually apply the effects.
 		if = {
@@ -1249,10 +1308,14 @@ bryten_heresy.175 = {# Waldo begins preaching
 	hidden = yes
 
 	immediate = {
-		create_character = {# Bogomil
+		random_county_in_region = {
+			region = custom_henricians_region
+			save_scope_as = henricianism_county
+		}
+		create_character = {# Henry
 			name = "Henry"
 			gender = male
-			location = title:b_lyon
+			location = scope:henricianism_county.title_province
 			age = 30
 			faith = faith:henricians
 			culture = culture:occitan
@@ -1288,7 +1351,7 @@ bryten_heresy.175 = {# Waldo begins preaching
 		every_ruler = {# give people the ability to convert
 			limit = { capital_province = { geographical_region = custom_henricians_region } }
 			trigger_event = {
-				id = bryten_heresy.051
+				id = bryten_heresy.176
 				days = { 30 50 }
 			}
 		}
@@ -1360,7 +1423,12 @@ bryten_heresy.176 = {# Convert to henricians?
 	option = {# he is interesting ideas
 		name = bryten_heresy.176.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:henricians = { change_fervor = { value = 5	} }
+		faith:henricians = { 
+			change_fervor = { 
+				value = 5	
+				desc = bryten_fervor_gain_heretical_lord
+			} 
+		}
 		set_character_faith_with_conversion = faith:henricians
 		every_held_title = {# henricians counties are really happy
 			limit = {
@@ -1378,10 +1446,14 @@ bryten_heresy.200 = {# Peter of Bruys begins preaching
 	hidden = yes
 
 	immediate = {
-		create_character = {# Bogomil
+		random_county_in_region = {
+			region = custom_petrobrusian_region
+			save_scope_as = petrobrusian_county
+		}
+		create_character = {# Peter
 			name = "Peter"
 			gender = male
-			location = title:b_lyon
+			location = scope:petrobrusian_county.title_province
 			age = 30
 			faith = faith:petrobrusian
 			culture = culture:french
@@ -1489,7 +1561,12 @@ bryten_heresy.201 = {# Convert to petrobrusian?
 	option = {# he is interesting ideas
 		name = bryten_heresy.201.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:petrobrusian = { change_fervor = { value = 5	} }
+		faith:petrobrusian = { 
+			change_fervor = { 
+				value = 5
+				desc = bryten_fervor_gain_heretical_lord	
+			} 
+		}
 		set_character_faith_with_conversion = faith:petrobrusian
 		every_held_title = {# Petrobrusians counties are really happy
 			limit = {

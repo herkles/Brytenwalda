@@ -2210,7 +2210,7 @@ fraticelli_victory_decision_effects = {# Fraticelli is victorious
 		activate_holy_site = assisi_catholic 
 	}
 	faith:catholic = {# Catholic now has a special apostolic poverty doctrine
-		add_doctrine = has_apostolic_poverty
+		add_doctrine = special_doctrine_has_apostolic_poverty
 	}
 	faith:catholic = {
 		change_fervor = {
@@ -2233,7 +2233,6 @@ bryten_fraticelli_heretic_path_hof_ecumenical_scripted_effect = {
 			}
 		}
 	}
-	custom_tooltip = bryten_fraticelli_heretic_path.tt.you_gain_a_hof
 	# Remove ecumenism.
 	faith = { remove_doctrine = special_doctrine_ecumenical_christian}
 }
@@ -2285,7 +2284,6 @@ bryten_fraticelli_schismatic_path_hof_ecumenical_scripted_effect = {
 			}
 		}
 	}
-	custom_tooltip = bryten_fraticelli_heretic_path.tt.you_gain_a_hof
 }
 bryten_fraticelli_schismatic_path_pentarchy_scripted_effect = {
 	# Set the doctrinal alterations.

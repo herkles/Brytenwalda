@@ -29,7 +29,8 @@
 			# You need a priesthood (obviously)
 			custom_description = {
 				text = requires_doctrine_theocracy_temporal_trigger
-				flag:doctrine_theocracy_temporal = { is_in_list = selected_doctrines }
+				doctrine:doctrine_theocracy_temporal = { is_in_list = selected_doctrines }
+
 			}
 		}
 
