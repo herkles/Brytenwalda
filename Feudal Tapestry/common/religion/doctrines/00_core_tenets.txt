@@ -83,6 +83,55 @@
 			}
 		}
 	}
+	tenet_chaste_marriages = {
+		icon = core_tenet_chaste_marriages
+		piety_cost = {
+			if = {
+				limit = {
+					OR = {
+						religion_tag = christianity_religion
+						religion_tag = dualism_religion
+						religion_tag = buddhism_religion
+						religion_tag = jainism_religion
+					}
+				}
+				value = faith_tenet_cost_mid
+			}
+			else = {
+				value = faith_tenet_cost_high
+			}
+
+			# Multiplier for keeping same tenet
+			if = {
+				limit = { has_doctrine = tenet_chaste_marriages }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+
+		is_shown = {
+			always = yes
+		}
+
+		can_pick = {
+			custom_description = {
+				text = incompatible_tenet_hedonistic_trigger
+				NOT = { flag:tenet_hedonistic = { is_in_list = selected_doctrines } }
+			}
+		}
+
+		parameters = {
+			bryten_enables_adoption = yes
+		}
+		character_modifier = {
+			fertility = -0.9
+			monthly_piety = 1
+			spouse_opinion = 20
+		}
+		traits = {
+			virtues = { chaste celibate }
+			sins = { lustful }
+		}
+	}
 	############################
 	# Christian Faith Tenets   #
 	############################
@@ -1471,7 +1520,11 @@
 				}
 				triggered_desc = {
 					trigger = {
-						religion_tag = judaism_religion
+						OR = {
+							religion_tag = judaism_religion
+							faith = faith:pasagian
+							faith = faith:josephines
+						}
 					}
 					desc = tenet_religious_legal_pronouncements_halakha
 				}
@@ -2811,17 +2864,19 @@
 	}
 	tenet_jewish_syncretism = {
 		icon = core_tenet_jewish_syncretism
-
 		piety_cost = {
 			if = {
 				limit = {
 					OR = {
-						religion_tag = judaism_religion
-						religion_tag = christianity_religion
+						religion_tag = islam_religion
 						religion_tag = dualism_religion
 					}
 				}
 				value = faith_tenet_cost_low
+			}
+			else_if = {# its high for Christians to reflect that most didn't become Judaizing sects
+				limit = { OR = { religion_tag = christianity_religion } }
+				value = faith_tenet_cost_high
 			}
 			else = {
 				value = faith_tenet_cost_mid
@@ -2849,6 +2904,28 @@
 			}
 		}
 
+		name = {
+			first_valid = {
+				triggered_desc = {
+					trigger = {
+						religion_tag = christianity_religion
+					}
+					desc = tenet_bryten_judaizer_name
+				}
+				desc = tenet_jewish_syncretism_name
+			}
+		}
+
+		desc = {
+			first_valid = {
+				triggered_desc = {
+					trigger = {	religion_tag = christianity_religion }
+					desc = tenet_bryten_judaizer_desc
+				}
+				desc = tenet_jewish_syncretism_desc
+			}
+		}
+
 		parameters = {
 			hostility_override_special_doctrine_is_jewish_faith = 2
 			# This parameter is empty; the syncretic religious trigger checks against the doctrine, as that's much clearer in tooltips and allows us to use a unified syncretic trigger per-religion rather than having bitty situational triggers.
@@ -2856,7 +2933,6 @@
 			jewish_syncretic_actor_opinion_active = yes
 			opinion_of_jewish_syncretic_recipient_opinion_active = 30 #Sync this to syncretic_mutual_opinion_bonus_value
 		}
-
 		traits = {
 			virtues = { patient }
 			sins = { cynical greedy }

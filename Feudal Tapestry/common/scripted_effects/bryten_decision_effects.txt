@@ -2309,5 +2309,48 @@ bryten_fraticelli_schismatic_path_crusade_scripted_effect = {
 		add_doctrine = tenet_armed_pilgrimages
 	}
 }
-
-
+#######################################
+#									  #
+#      Christian Flavor Effects	      #
+#									  #
+#######################################
+send_child_to_clergy_effect_for_events = {
+	add_trait = devoted
+	add_piety_level = 1
+	if = {
+		limit = { is_ruler = yes }
+		depose = yes
+	}
+	if = {
+		limit = {
+			is_married = yes
+		}
+		every_spouse = {
+			divorce = scope:recipient
+		}
+	}
+	if = {
+		limit = {
+			exists = betrothed
+		}
+		break_betrothal = betrothed
+	}
+	if = {
+		limit = {
+			is_concubine = yes
+		}
+		this.concubinist = {
+			remove_concubine = scope:recipient
+		}
+	}
+	if = {
+		limit = {
+			number_of_concubines > 0
+		}
+		every_concubine = {
+			scope:recipient = {
+				remove_concubine = prev
+			}
+		}
+	}
+}

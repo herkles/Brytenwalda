@@ -5,7 +5,7 @@ unavailable = {
 
 	unavailable_doctrine = { visible = no }
 }
-### Christian Apostolic Poverty
+### Christian doctrines
 has_apostolic_poverty = {
 	group = "special"
 	
@@ -38,3 +38,23 @@ has_apostolic_poverty = {
 		}
 	}
 }
+christian_monasticism = {
+	group = "special"
+	
+	is_available_on_create = {
+		has_doctrine = special_doctrine_christian_monasticism
+	}
+
+	special_doctrine_christian_monasticism = {
+		parameters = {
+			take_vows_active = yes
+		}
+		traits = {
+			virtues = { temperate }
+			sins = { gluttonous }
+		}
+	}
+}
+
+
+

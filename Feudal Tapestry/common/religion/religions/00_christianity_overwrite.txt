@@ -320,7 +320,7 @@
 				WaterGodHerHim = CHARACTER_HERHIM_HIM
 			}
 		}
-		orthodox = {# The Church in 
+		orthodox = {# The Church in Constantinople
 			color = { 0.7 0 0.5 }
 			religious_head = k_orthodox
 			
@@ -332,6 +332,8 @@
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
+			doctrine = special_doctrine_christian_monasticism
+
 			#Tenets
 			doctrine = tenet_communion
 			doctrine = tenet_pentarchy
@@ -494,6 +496,7 @@
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
+			doctrine = special_doctrine_christian_monasticism
 
 			#Main Group
 			doctrine = doctrine_pluralism_pluralistic
@@ -548,10 +551,7 @@
 			holy_site = lyon
 			holy_site = milan
 
-			#
-
-
-
+			
 			#Clerical Functions
 			doctrine = doctrine_clerical_function_alms_and_pacification
 
@@ -609,7 +609,7 @@
 			}
 
 		}
-		# Non-Chalcedonian Denominations
+		# Miaphysite Denominations
 		coptic = {# the Coptic church in Egypt
 			color = { 210 235 87 }
 			religious_head = d_coptic_papacy
@@ -933,8 +933,7 @@
 
 			# Special Doctrines
 			doctrine = unavailable_doctrine
-		}				
-		
+		}
 		henricians = {# The followers of Henry of Lausanne
 			color = { 0.5 0.8 0.8 }
 			icon = henricians
@@ -1023,10 +1022,11 @@
 			#Tenets
 			doctrine = tenet_reincarnation
 			doctrine = tenet_pacifism
-			doctrine = tenet_gnosticism
+			doctrine = tenet_chaste_marriages
 
 			# Special Doctrines
 			doctrine = unavailable_doctrine
+			doctrine = special_doctrine_is_gnostic_faith
 
 			#Unique Localization
 			localization = {
@@ -1060,9 +1060,10 @@
 			
 			# Special Doctrines
 			doctrine = unavailable_doctrine
+			doctrine = special_doctrine_is_gnostic_faith
 
 			#Tenets
-			doctrine = tenet_gnosticism
+			doctrine = tenet_communal_possessions
 			doctrine = tenet_pacifism
 			doctrine = tenet_mendicant_preachers
 
@@ -1084,7 +1085,7 @@
 			color = { 0.6 0.1 0.4 }
 			icon = christianity_paulicanism
 
-			#Shared with Armenian?
+			# Holy Site
 			holy_site = jerusalem
 			holy_site = constantinople
 			holy_site = tephrice
@@ -1097,6 +1098,9 @@
 			#Clerical Functions
 			doctrine = doctrine_clerical_function_recruitment
 			doctrine = doctrine_pilgrimage_forbidden
+
+			# Special Doctrines
+			doctrine = special_doctrine_is_gnostic_faith
 
 			#Tenets
 			doctrine = tenet_gnosticism
@@ -1141,6 +1145,9 @@
 			#Clerical Functions
 			doctrine = doctrine_clerical_gender_either
 			doctrine = doctrine_clerical_marriage_allowed
+
+			# Special Doctrines
+			doctrine = special_doctrine_is_gnostic_faith
 
 			#Tenets
 			doctrine = tenet_divine_marriage
@@ -1187,12 +1194,13 @@
 			#Clerical Functions
 			doctrine = doctrine_clerical_function_alms_and_pacification
 
+			# Special Doctrines
+			doctrine = special_doctrine_is_gnostic_faith
+
 			#Tenets
 			doctrine = tenet_jewish_syncretism
 			doctrine = tenet_literalism
-			doctrine = tenet_gnosticism
-
-			# Special Doctrines
+			doctrine = tenet_religious_legal_pronouncements
 
 		}	
 		josephines = {# A group of heretics condemend by Pope Lucius III
@@ -1226,9 +1234,8 @@
 			#Tenets
 			doctrine = tenet_jewish_syncretism
 			doctrine = tenet_asceticism
-			doctrine = tenet_gnosticism
+			doctrine = tenet_religious_legal_pronouncements
 
-			# Special Doctrines
 		}					
 	}
 }
