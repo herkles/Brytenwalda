@@ -281,7 +281,7 @@ bryten_christian.008 = {# Husband hears about the Churching
 bryten_christian.010 = {# Monks make fantastic beer
 	type = character_event
 	title = bryten_christian.010.t
-	desc = bryten_christian.010
+	desc = bryten_christian.010.desc
 	theme = friendly
 	left_portrait = {
 		character = root
@@ -359,7 +359,7 @@ bryten_christian.010 = {# Monks make fantastic beer
 bryten_christian.011 = {# Monks have healing herbs 
 	type = character_event
 	title = bryten_christian.011.t
-	desc = bryten_christian.011
+	desc = bryten_christian.011.desc
 	theme = friendly
 	left_portrait = {
 		character = root
@@ -427,7 +427,7 @@ bryten_christian.011 = {# Monks have healing herbs
 bryten_christian.012 = {# Monks make great wine  
 	type = character_event
 	title = bryten_christian.012.t
-	desc = bryten_christian.012
+	desc = bryten_christian.012.desc
 
 	theme = friendly
 	left_portrait = {
@@ -482,7 +482,7 @@ bryten_christian.012 = {# Monks make great wine
 		}
 	}
 	option = {# Thanks but no Thanks
-		name = bryten_christian.012.christian
+		name = bryten_christian.012.b
 		ai_chance = {
 			base = 50
 		}
@@ -514,7 +514,7 @@ bryten_christian.012 = {# Monks make great wine
 bryten_christian.013 = {# Monk is fantastic painter 
 	type = character_event
 	title = bryten_christian.013.t
-	desc = bryten_christian.013
+	desc = bryten_christian.013.desc
 	theme = friendly
 	left_portrait = {
 		character = root
@@ -552,8 +552,7 @@ bryten_christian.013 = {# Monk is fantastic painter
 		add_prestige = 30
 	}
 	option = {# very nice
-		name = bryten_christian.013.christian
-		trigger = {  religion = religion:christianity_religion }
+		name = bryten_christian.013.b
 
 	}
 
@@ -571,7 +570,7 @@ bryten_christian.013 = {# Monk is fantastic painter
 bryten_christian.014 = {# Monks produce beautiful books 
 	type = character_event
 	title = bryten_christian.014.t
-	desc = bryten_christian.014
+	desc = bryten_christian.014.desc
 	theme = friendly
 	left_portrait = {
 		character = root
@@ -614,7 +613,7 @@ bryten_christian.014 = {# Monks produce beautiful books
 		}
 	}
 	option = {# Books aren't for me
-		name = bryten_christian.014.christian
+		name = bryten_christian.014.b
 
 	}
 
@@ -632,7 +631,7 @@ bryten_christian.014 = {# Monks produce beautiful books
 bryten_christian.015 = {# Local monks come to visit often 
 	type = character_event
 	title = bryten_christian.015.t
-	desc = bryten_christian.015
+	desc = bryten_christian.015.desc
 
 	theme = friendly
 	left_portrait = {
@@ -702,7 +701,7 @@ bryten_christian.015 = {# Local monks come to visit often
 bryten_christian.016 = {# Donate to local monastery
 	type = character_event
 	title = bryten_christian.016.t
-	desc = bryten_christian.016
+	desc = bryten_christian.016.desc
 
 	theme = friendly
 	left_portrait = {
@@ -734,12 +733,10 @@ bryten_christian.016 = {# Donate to local monastery
 	}
 	
 	option = { # Ok
-		name = bryten_christian.016.pagan
-		trigger = { NOT = { religion = religion:christianity_religion} }
+		name = bryten_christian.016.a
 	}
 	option = { # Ok
-		name = bryten_christian.016.christian
-		trigger = {  religion = religion:christianity_religion }
+		name = bryten_christian.016.b
 
 	}
 
@@ -754,7 +751,7 @@ bryten_christian.016 = {# Donate to local monastery
 bryten_christian.017 = {# Donate to local monastery 
 	type = character_event
 	title = bryten_christian.017.t
-	desc = bryten_christian.017
+	desc = bryten_christian.017.desc
 
 	theme = friendly
 	left_portrait = {
@@ -793,7 +790,7 @@ bryten_christian.017 = {# Donate to local monastery
 	}
 	
 	option = { # Ok
-		name = bryten_christian.017.pagan
+		name = bryten_christian.017.a
 		scope:child_for_the_church = {
 			send_child_to_clergy_effect_for_events = yes
 
@@ -847,9 +844,166 @@ bryten_christian.017 = {# Donate to local monastery
 	}
 }
 ##############################################
-# Monastic Flavor
+# Bosnian Church orientation
 ##############################################
+bryten_christian.020 = {# Bosnian Church orientation decision event
+	type = character_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_catholic
+				}
+				desc = bryten_christian.020.t.catholic
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_orthodox
+				}
+				desc = bryten_christian.020.t.orthodox
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_gnostic
+				}
+				desc = bryten_christian.020.t.gnostic
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_none
+				}
+				desc = bryten_christian.020.t.none
+			}
+			desc = bryten_christian.020.t.backup
+		}
+	}
+	desc = {
+		desc = bryten_christian.020.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_catholic
+				}
+				desc = bryten_christian.020.desc.catholic
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_orthodox
+				}
+				desc = bryten_christian.020.desc.orthodox
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_gnostic
+				}
+				desc = bryten_christian.020.desc.gnostic
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_none
+				}
+				desc = bryten_christian.020.desc.none
+			}
+		}
+	}
+	theme = faith
 
+	right_portrait = {
+		character = scope:sardinia_leader
+		animation = war_over_win
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+		if = {# Catholic
+			limit = {
+				has_global_variable = bryten_bosnian_church_orientation_catholic
+			}
+			bryten_bosnian_church_orientation_catholic_effects = yes
+		}			
+		else_if = {# Orthodox
+			limit = {
+				has_global_variable = bryten_bosnian_church_orientation_orthodox
+			}
+			bryten_bosnian_church_orientation_orthodox_effects = yes
+
+		}			
+		else_if = {# Orthodox
+			limit = {
+				has_global_variable = bryten_bosnian_church_orientation_gnostic
+			}
+			bryten_bosnian_church_orientation_gnostic_effects = yes
+
+		}			
+		else_if = {# None
+			limit = {
+				has_global_variable = bryten_bosnian_church_orientation_none
+			}
+			bryten_bosnian_church_orientation_none_effects = yes
+
+		}			
+	}
+	
+	option = {# Good
+		name = bryten_christian.020.a
+	}
+	
+	after = {
+		hidden_effect = {
+			every_player = {
+				limit = { religion = religion:christianity_religion }
+				trigger_event = { id = bryten_christian.021 }
+			}
+		}
+	}
+}
+bryten_christian.021 = {# Bosnian orientation decision event
+	type = character_event
+	title = bryten_christian.021.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_catholic
+				}
+				desc = bryten_christian.021.desc.catholic
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_orthodox
+				}
+				desc = bryten_christian.021.desc.orthodox
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_gnostic
+				}
+				desc = bryten_christian.021.desc.gnostic
+			}
+			triggered_desc = {
+				trigger = {
+					has_global_variable = bryten_bosnian_church_orientation_none
+				}
+				desc = bryten_christian.021.desc.none
+			}
+		}
+	}
+	theme = faith
+
+	right_portrait = {
+		character = scope:sardinia_leader
+		animation = thinking
+	}
+
+	# Latin
+	option = {
+		name = bryten_christian.021.a
+	}
+
+
+
+
+}
 
 
 

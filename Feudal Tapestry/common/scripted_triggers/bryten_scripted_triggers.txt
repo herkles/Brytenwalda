@@ -2,6 +2,28 @@
 	basic_is_valid_for_yearly_events_trigger = yes
 	is_adult = yes
 }
+bryten_is_available_adult_even_if_sick_trigger = { # Without smallpox/bubonic plague requirement
+	is_alive = yes
+	custom_description = {
+		text = ALREADY_IN_ACTIVITY
+		NOR = {
+			exists = involved_activity
+			has_variable = homage_liege_scope
+			has_character_flag = meditation_character_flag
+			has_character_flag = petition_liege_character_flag
+			has_character_flag = holding_court_character_flag
+			is_being_visited_on_tour_strict = yes
+		}
+	}
+	is_in_army = no
+	is_imprisoned = no
+	#has_contagious_deadly_disease_trigger = no
+	NOT = { has_trait = incapable }
+	custom_description = {
+		text = ALREADY_PLANNING_ACTIVITY
+		NOT = { has_character_flag = planning_an_activity }
+	}
+}
 bryten_basic_is_available_adult_courtier_even_if_sick_trigger = { # Basically the above, without the landed title requirement
 	is_alive = yes
 	is_imprisoned = no

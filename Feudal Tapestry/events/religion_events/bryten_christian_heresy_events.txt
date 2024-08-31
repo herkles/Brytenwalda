@@ -1035,7 +1035,7 @@ bryten_heresy.155 = {# Heretical Breaking
 	option = {# Communal Property
 		name = bryten_heresy.155.a
 		ai_chance = { base = 50	}
-		show_as_tooltip = { bryten_fraticelli_heretic_path_communal_scripted_effect = yes }
+		bryten_fraticelli_heretic_path_communal_scripted_effect = yes 
 		# Flag our choice.
 		save_scope_value_as = {
 			name = bryten_fraticelli_choice
@@ -1050,7 +1050,7 @@ bryten_heresy.155 = {# Heretical Breaking
 	option = {# Pacifism
 		name = bryten_heresy.155.b
 		ai_chance = { base = 25	} # rare 
-		show_as_tooltip = { bryten_fraticelli_heretic_path_pacifism_scripted_effect = yes }
+		 bryten_fraticelli_heretic_path_pacifism_scripted_effect = yes
 		# Flag our choice.
 		save_scope_value_as = {
 			name = bryten_fraticelli_choice
@@ -1067,7 +1067,7 @@ bryten_heresy.155 = {# Heretical Breaking
 	option = {# Mendicant Preachers
 		name = bryten_heresy.155.c
 		ai_chance = { base = 25	} 
-		show_as_tooltip = { bryten_fraticelli_heretic_path_missionary_scripted_effect = yes }
+		bryten_fraticelli_heretic_path_missionary_scripted_effect = yes
 		# Flag our choice.
 		save_scope_value_as = {
 			name = bryten_fraticelli_choice
@@ -1309,7 +1309,7 @@ bryten_heresy.158 = {# The Pope fully condemns Fraticellism and threatens excomm
 	trigger = {
 		current_year >= 1323
 		NOT = { has_global_variable = fraticelli_condemned_heretics }
-		faith = faith:catholic = { exists = faith.religious_head }
+		faith:catholic = { exists = faith.religious_head }
 		NOR = {# Reasons why the Pope won't condemn the Fraticelli
 			AND = {# if Catholicism has low fervor and Fraticelli has high fervor then the pope isn't condeming them
 				faith:fraticelli = { fervor > medium_fervor_value }
@@ -1318,14 +1318,17 @@ bryten_heresy.158 = {# The Pope fully condemns Fraticellism and threatens excomm
 			root.faith.religious_head = { faith = faith:fraticelli }
 			faith.religious_head = faith:fraticelli # if the Pope is a Fraticelli member they obviously won't condemn it.
 			any_ruler = {# A fraticelli ruler with a strong hook on the Pope the pope won't do it.
-				limit = {faith = faith:fraticelli }
-				has_strong_usable_hook = faith.religious_head
+				AND = {
+ 					has_faith = faith:fraticelli
+					 has_strong_usable_hook = faith.religious_head
+
+				}
 			}
 		}
 	}
 
 	immediate = {
-		faith = faith:catholic = { save_scope_as = pope  }
+		root.faith.religious_head =  { save_scope_as = pope }
 		set_global_variable = {# Fraticelli are condemend as Heretics
 			name = fraticelli_condemned_heretics
 			value = yes

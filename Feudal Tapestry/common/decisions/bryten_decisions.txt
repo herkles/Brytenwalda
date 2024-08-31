@@ -2173,7 +2173,7 @@ bryten_fraticelli_break_with_rome_decision = {
 	is_valid = {
 		# Requires a solid piety level.
 		piety_level >= very_high_piety_level
-		# Needs a solid chunk of Mozarabic counties.
+		# Needs a solid chunk of Fraticelli counties.
 		custom_tooltip = {
 			text = bryten_fraticelli_county_count.need_at_least_twenty_same_faith_counties
 			any_sub_realm_county = {
@@ -2308,11 +2308,373 @@ bryten_pregnancy_mary_vow_decision = {
 		ai_value_modifier = { ai_zeal = 1 }		
 	}
 }
+bryten_bosnian_church_decide_orientation = {
+	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	major = yes
+	desc = bryten_bosnian_church_decide_orientation_desc
 
+	ai_check_interval = 40
+	
+	is_shown = {
+		faith = faith:bosnian_church
+		is_landed = yes
+		NOT = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_bosnian_church_decided
+			}
+		}
+	}
+	is_valid = {
+		faith = faith:bosnian_church
 
+		prestige_level >= 3
+		piety_level >= 3
+		# Needs a solid chunk of Bosnian counties.
+		custom_tooltip = {
+			text = bryten_bosnian_church_count.need_at_least_twelve_same_faith_counties
+			any_sub_realm_county = {
+				count >= bryten_bosnian_church_county_count
+				faith = root.faith
+			}
+		}
+	}
+	is_valid_showing_failures_only = {
+		is_adult = yes
+		bryten_is_available_adult_even_if_sick_trigger = yes
+	}
+	widget = {
+		gui = "decision_view_widget_generic_multichoice_with_effects"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "CHOOSE_BOSNIAN_CHURCH_ORIENTATION"
+		show_from_start = yes
+		
+		### Catholic
+		item = {
+			value = choose_catholic
+			is_valid = {
+				faith.religion = religion:christianity_religion
+			}
+			current_description = choose_catholic_desc
+			localization = choose_catholic_name
+			icon = "gfx/interface/icons/faith/catholic.dds"
+			ai_chance = {
+				value = 0
+				if = {
+					limit = {
+						any_consort = { faith = faith:catholic }
+					}
+					add = 20
+				}
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							faith = faith:catholic
+						}
+					}
+					add = 10
+				}
+				if = {
+					limit = {
+						exists = title:k_papal_state.holder
+						opinion = {
+							target = title:k_papal_state.holder
+							value > 0
+						}
+					}
+					add = 10
+				}
+				if = {
+					limit = {
+						OR = {
+							top_liege = { has_title = title:e_hre }
+							top_liege = { has_title = title:k_papal_state }
+						}						
+					}
+					add = 20
+				}
+			}
+		}
+		# Orthodox
+		item = {
+			value = choose_orthodox
+			is_valid = {
+				faith.religion = religion:christianity_religion
+			}
+			current_description = choose_orthodox_desc
+			localization = choose_orthodox_name
+			icon = "gfx/interface/icons/faith/orthodox.dds"
+			ai_chance = {
+				value = 0
+				if = {
+					limit = { any_consort = { faith = faith:orthodox } }
+					add = 20
+				}
+				if = {
+					limit = { any_sub_realm_county = { faith = faith:orthodox } }
+					add = 10
+				}
+				if = {
+					limit = {
+						exists = title:e_byzantium.holder
+						opinion = {
+							target = title:e_byzantium.holder
+							value > 0
+						}
+					}
+					add = 10
+				}
+				if = {
+					limit = {
+						OR = {
+							has_title = title:e_byzantium
+							top_liege = { has_title = title:e_byzantium }
+							top_liege = { has_title = title:k_orthodox }
+							has_title = title:e_roman_empire
+							top_liege = { has_title = title:e_roman_empire }
+						}						
+					}
+					add = 20
+				}
+			}
+		}
+		# Gnosticism
+		item = {
+			value = choose_gnostic
+			is_valid = {
 
+			}
+			current_description = choose_gnostic_desc
+			localization = choose_gnostic_name
+			icon = "gfx/interface/icons/faith/christianity_bogomilist.dds"
+			ai_chance = {
+				value = 0
+				if = {
+					limit = {
+						NOR = {
+							any_consort = { faith = faith:catholic }
+							any_consort = { faith = faith:orthodox }
+						}
+					}
+					add = 20
+				}
+				if = {
+					limit = {
+						OR = {
+							any_consort = { faith = faith:bogomilist }
+							any_consort = { faith = faith:paulician }
+						}
+					}
+					add = 10
+				}
+				if = {
+					limit = {
+						exists = title:k_orthodox.holder
+						opinion = {
+							target = title:k_orthodox.holder
+							value < 0
+						}
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						exists = title:e_byzantium.holder
+						opinion = {
+							target = title:e_byzantium.holder
+							value < 0
+						}
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						NOR = {
+							has_title = title:e_hre
+							top_liege = { has_title = title:e_hre }
+							top_liege = { has_title = title:k_papal_state }
+							has_title = title:e_byzantium
+							top_liege = { has_title = title:e_byzantium }
+							top_liege = { has_title = title:k_orthodox }
+							has_title = title:e_roman_empire
+							top_liege = { has_title = title:e_roman_empire }
+						}						
+					}
+					add = 5
+				}
+			}
+		}
+		# none Catholic nor Orthodox nor North African
+		item = {
+			value = choose_none
+			is_valid = {
 
+			}
+			current_description = choose_none_desc
+			localization = choose_none_name
+			icon = "gfx/interface/icons/message_feed/heresy.dds"
+			ai_chance = {
+				value = 0
+				if = {
+					limit = {
+						NOR = {
+							any_consort = { faith = faith:catholic }
+							any_consort = { faith = faith:orthodox }
+						}
+					}
+					add = 20
+				}
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							religion = religion:christianity_religion
+							NOR = {
+								faith = faith:catholic
+								faith = faith:orthodox
+							}
+						}
+					}
+					add = 10
+				}
+				if = {
+					limit = {
+						exists = title:k_orthodox.holder
+						opinion = {
+							target = title:k_orthodox.holder
+							value < 0
+						}
+					}
+					add = 10
+				}
+				if = {
+					limit = {
+						exists = title:e_byzantium.holder
+						opinion = {
+							target = title:e_byzantium.holder
+							value < 0
+						}
+					}
+					add = 10
+				}
+				if = {
+					limit = {
+						NOR = {
+							has_title = title:e_hre
+							top_liege = { has_title = title:e_hre }
+							top_liege = { has_title = title:k_papal_state }
+							has_title = title:e_byzantium
+							top_liege = { has_title = title:e_byzantium }
+							top_liege = { has_title = title:k_orthodox }
+							has_title = title:e_roman_empire
+							top_liege = { has_title = title:e_roman_empire }
+						}						
+					}
+					add = 10
+				}
+			}
+		}
+	}
 
+	cost = {
+		gold = { value = major_gold_value }
+	}
+	
+	ai_potential = {
+		short_term_gold > major_gold_value
+	}
 
+	effect = {
+		save_scope_as = bosnian_leader
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:bryten_bosnian_church_decided
+		}
+		if = {# choose Catholic
+			limit = { scope:choose_catholic = yes }	
+			set_global_variable = {
+				name = bryten_bosnian_church_orientation_catholic
+				value = yes
+			}
+			custom_tooltip = bryten_bosnian_church_decide_orientation_effect_tooltip.catholic.1
+			custom_tooltip = bryten_bosnian_church_decide_orientation_effect_tooltip.catholic.2
 
+			faith:catholic = {
+				change_fervor = {
+					value = 10
+					desc = bryten_fervor_gain_bosnia_fervor
+				}
+			}
+
+		}
+		else_if = {# Choose Orthodox
+			limit = { scope:choose_orthodox = yes }
+			
+			set_global_variable = {
+				name = bryten_bosnian_church_orientation_orthodox
+				value = yes
+			}
+			custom_tooltip = bryten_bosnian_church_decide_orientation_effect_tooltip.orthodox.1
+			custom_tooltip = bryten_bosnian_church_decide_orientation_effect_tooltip.orthodox.2
+
+			faith:orthodox = {
+				change_fervor = {
+					value = 10
+					desc = bryten_fervor_gain_bosnia_fervor
+				}
+			}
+		}
+		else_if = {# Chose Gnostic
+			limit = { scope:choose_gnostic = yes }
+			
+			set_global_variable = {
+				name = bryten_bosnian_church_orientation_gnostic
+				value = yes
+			}
+
+			custom_tooltip = bryten_bosnian_church_decide_orientation_effect_tooltip.gnostic.1
+			custom_tooltip = bryten_bosnian_church_decide_orientation_effect_tooltip.gnostic.2
+			
+		}
+		else_if = {# chose none
+			limit = { scope:choose_none = yes }			
+			set_global_variable = {
+				name = bryten_bosnian_church_orientation_none
+				value = yes
+			}
+			custom_tooltip = bryten_bosnian_church_decide_orientation_effect_tooltip.none.1
+			custom_tooltip = bryten_bosnian_church_decide_orientation_effect_tooltip.none.2
+
+			faith:bosnian_church = {
+				change_fervor = {
+					value = 10
+					desc = bryten_fervor_gain_bosnia_fervor_indepedent
+				}
+			}
+		}
+		trigger_event = bryten_christian.020
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = diligent
+		}
+		modifier = {
+			add = -30
+			# Give player a chance to do it
+			current_date <= 1000.1.1
+		}
+		modifier = {
+			add = -20
+			# Give player a chance to do it
+			current_date <= 1100.1.1
+		}
+		modifier = {
+			add = -10
+			# Give player a chance to do it
+			current_date <= 1150.1.1
+		}
+	}
+}
 

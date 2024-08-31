@@ -186,8 +186,6 @@
 
   bryten_saint_olaf_geographical_christian_county_req:0 "As a non-Christian, you own at least one [county|E] in [GetGeographicalRegion('custom_scotland_st_olaf_way').GetName] that follows a Christian [faith|E]"
 
-
-
 #######################################
 # Holy Wells
 #######################################
@@ -300,11 +298,35 @@
   bryten_pregnancy_mary_vow_decision_confirm:0 "Make a vow"
   bryten_pregnancy_mary_vow_decision_tooltip:0 "You shall make a vow to Mary"
 
-
-
-
-
-
+#######################################
+# Bosnian Choose Orientation
+#######################################
+ bryten_bosnian_church_decide_orientation:0 "Determine the Bosnian Church's Orientation"
+ bryten_bosnian_church_decide_orientation_tooltip:0 "The Latin West and Greek East have long competed for influence among the Bosnians; the church needs to decide where its allegiances lie."
+ bryten_bosnian_church_decide_orientation_desc:0 "For generations, the Bosnian Church has awkwardly straddled between the worlds of the Latin West and the Greek east, sitting where east and west meet in the Balkans. It is time for the church to determine where it looks to for spiritual leadership."
+ bryten_bosnian_church_decide_orientation_confirm:0 "Glory be to God!"
+ bryten_bosnian_church_decide_orientation_effect_tooltip.catholic.1:0 "The Pope shall become the head of the faith for the Bosnian Church."
+ bryten_bosnian_church_decide_orientation_effect_tooltip.catholic.2:0 "New Holy sites associated with Catholicism shall open up for the church to make pilgrimage to."
+ bryten_bosnian_church_decide_orientation_effect_tooltip.orthodox.1:0 "The Ecumenical Patriarch shall become the head of the faith for the Bosnian Church."
+ bryten_bosnian_church_decide_orientation_effect_tooltip.orthodox.2:0 "New Holy sites associated with Orthodoxy shall open up for the church to make pilgrimage to."
+ bryten_bosnian_church_decide_orientation_effect_tooltip.gnostic.1:0 "The Faith shall become a gnostic faith. "
+ bryten_bosnian_church_decide_orientation_effect_tooltip.gnostic.2:0 "New Holy Sites shall open up for the church to make pilgrimages to."
+ bryten_bosnian_church_decide_orientation_effect_tooltip.none.1:0 "You shall have your own head of faith."
+ bryten_bosnian_church_decide_orientation_effect_tooltip.none.2:0 "The church shall side with neither east or west."
+ CHOOSE_BOSNIAN_CHURCH_ORIENTATION:0 "$bryten_bosnian_church_decide_orientation_confirm$"
+ choose_catholic_name: "Latin West"
+ choose_catholic_desc: "$choose_catholic_name$"
+ choose_catholic_tooltip: "The church's fate lies with the Latin West and the Pope. The pope is the rightful leader of the Church. By aligning with the pope we shall improve our ties with the latin west and other catholic rulers."
+ choose_orthodox_name: "Greek East"
+ choose_orthodox_desc: "$choose_orthodox_name$"
+ choose_orthodox_tooltip: "The church's fate lies with the Greek East and the Ecumenical Patriarch of Constantinople. By aligning ourselves with the Greek east, we shall improve our ties with the Patriarch and other Orthodox rulers. "
+ choose_gnostic_name: "Gnosticism"
+ choose_gnostic_desc: "$choose_gnostic_name$"
+ choose_gnostic_tooltip: "The Balkans is a haven for gnostic sects. Many have made their home in our mountains and we have thus shared economic, cultural, and even political ties with the various gnostic groups. Perhaps there is something to gnosticism."
+ choose_none_name: "None"
+ choose_none_desc: "$choose_none_name$"
+ choose_none_tooltip: "The church of Bosnia stands by itself, resolute in the truth of her teachings. We are good christians, we don't need the greedy lackeys of the Pope or Patriarch telling us that we are heretics, and we don't need the gnostic heretics telling us what to do either."
+ bryten_bosnian_church_count.need_at_least_twelve_same_faith_counties:0 "You must hold at least [EmptyScope.ScriptValue('bryten_bosnian_church_count')|0] same-[faith|E] [counties|E]"
 
 
 

@@ -2311,6 +2311,79 @@ bryten_fraticelli_schismatic_path_crusade_scripted_effect = {
 }
 #######################################
 #									  #
+#          Bosnian Effects	          #
+#									  #
+#######################################
+bryten_bosnian_church_orientation_catholic_effects = {
+	# Set the doctrinal alterations.
+	faith = {
+
+		# First, we remove the Pastroal Isolation tenet & replace it with Communion.
+		remove_doctrine = tenet_pastoral_isolation
+		add_doctrine = tenet_communion
+		# Then we switch on over from Pluralist to righteous.
+		remove_doctrine = doctrine_pluralism_pluralistic
+		add_doctrine = doctrine_pluralism_righteous
+		# We switch from no head of faith to spritual
+		remove_doctrine = doctrine_no_head
+		add_doctrine = doctrine_spiritual_head
+		# The pope is now the head of the Church
+		set_religious_head_title = title:k_papal_state
+	}
+}
+bryten_bosnian_church_orientation_orthodox_effects = {
+	# Set the doctrinal alterations.
+	faith = {
+		# First, we remove the Pastroal Isolation tenet & replace it with Communion.
+		remove_doctrine = tenet_pastoral_isolation
+		add_doctrine = tenet_communion
+		# Then we switch on over from Pluralist to righteous.
+		remove_doctrine = doctrine_pluralism_pluralistic
+		add_doctrine = doctrine_pluralism_righteous
+		# We switch from no head of faith to spritual
+		remove_doctrine = doctrine_no_head
+		add_doctrine = doctrine_spiritual_head
+		# The Ecumenical Patriarch is now the head of the Church
+		set_religious_head_title = title:k_orthodox
+	}
+}
+bryten_bosnian_church_orientation_gnostic_effects = {
+	# Set the doctrinal alterations.
+	faith = {
+		# First, we remove the Pastroal Isolation tenet & replace it with Asceticism.
+		remove_doctrine = tenet_pastoral_isolation
+		add_doctrine = tenet_asceticism
+		# add the gnostic doctrine and remove ecumenical since we are now gnostic
+		remove_doctrine = special_doctrine_ecumenical_christian
+		add_doctrine = special_doctrine_is_gnostic_faith
+		# Then we switch on over from Pluralist to righteous.
+		remove_doctrine = doctrine_pluralism_pluralistic
+		add_doctrine = doctrine_pluralism_righteous
+		# We switch from no head of faith to spritual
+		remove_doctrine = doctrine_no_head
+		add_doctrine = doctrine_spiritual_head
+		# Set up new head of faith
+		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:bosnian_leader }
+	}
+}
+bryten_bosnian_church_orientation_none_effects = {
+	# Set the doctrinal alterations.
+	faith = {
+		# First, we remove the Pastroal Isolation tenet & replace it with Communion.
+		remove_doctrine = tenet_pastoral_isolation
+		add_doctrine = tenet_cthonic_redoubts
+		# Then we switch on over from Pluralist to righteous.
+		remove_doctrine = doctrine_pluralism_pluralistic
+		add_doctrine = doctrine_pluralism_righteous
+		# We switch from no head of faith to spritual
+		remove_doctrine = doctrine_no_head
+		add_doctrine = doctrine_spiritual_head
+		# Set up new head of faith
+		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:bosnian_leader }
+	}
+}
+#######################################
+#									  #
 #      Christian Flavor Effects	      #
 #									  #
 #######################################

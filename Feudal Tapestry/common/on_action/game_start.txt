@@ -959,6 +959,14 @@ on_game_start = {
 		# Catholicism doesn't start with Assisi
 		faith:catholic = { deactivate_holy_site = assisi_catholic }
 
+		# Bosnian Church doesn't start with the other Holy sites
+		faith:bosnian_church = { deactivate_holy_site = rome_bosnian }
+		faith:bosnian_church = { deactivate_holy_site = milan_bosnian }
+		faith:bosnian_church = { deactivate_holy_site = constantinople_bosnian }
+		faith:bosnian_church = { deactivate_holy_site = antioch_bosnian }
+		faith:bosnian_church = { deactivate_holy_site = tephrice_bosnian }
+		faith:bosnian_church = { deactivate_holy_site = skopje_bosnian }
+
 		#####################################
 		# faith unlocking historical
 		#####################################		

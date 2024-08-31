@@ -21,7 +21,6 @@ chartres = {
 		sway_scheme_power_mult = 0.1
 	}
 }
-
 assisi_catholic = {
 	county = c_spoleto
 	barony = b_assissi
@@ -29,6 +28,69 @@ assisi_catholic = {
 	character_modifier = {
 		name = holy_site_assisi_catholic_name
 		county_opinion_add = 5
+	}
+}
+##########################
+# Bosnian Holy Sites 
+##########################
+# Catholic
+rome_bosnian = {
+	county = c_roma
+	barony = b_vaticano
+	
+	character_modifier = {
+		name = holy_site_rome_effect_name
+		development_growth_factor = 0.1
+		stewardship = 1
+	}
+}
+milan_bosnian = {
+	county = c_lombardia
+	barony = b_milano
+
+	character_modifier = {
+		name = holy_site_milan_name
+		cultural_head_fascination_mult = 0.05
+		monthly_county_control_growth_factor = 0.05
+	}
+}
+# Orthodox
+constantinople_bosnian = {
+	county = c_byzantion
+
+	character_modifier = {
+		name = holy_site_constantinople_effect_name
+		cultural_head_fascination_mult = 0.15
+	}
+}
+antioch_bosnian = {
+	county = c_antiocheia
+	character_modifier = {
+		name = holy_site_antioch_effect_name
+		martial_per_piety_level = 1
+		knight_effectiveness_mult = 0.1
+	}
+}
+# Gnostic
+tephrice_bosnian = {
+	county = c_satala
+	barony = b_tephrice
+	
+	character_modifier = {
+		name = holy_site_tephrice_name
+		learning_per_piety_level = 1
+		monthly_piety_gain_mult = 0.2
+	}
+}
+# Other
+skopje_bosnian = {
+	county = c_skopje
+	barony = b_skopje
+	
+	character_modifier = {
+		name = holy_site_skopje_name
+		development_growth_factor = 0.1
+		cultural_head_fascination_mult = 0.1
 	}
 }
 ##########################

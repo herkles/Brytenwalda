@@ -115,7 +115,7 @@
 		can_pick = {
 			custom_description = {
 				text = incompatible_tenet_hedonistic_trigger
-				NOT = { flag:tenet_hedonistic = { is_in_list = selected_doctrines } }
+				NOT = { doctrine:tenet_hedonistic = { is_in_list = selected_doctrines } }
 			}
 		}
 

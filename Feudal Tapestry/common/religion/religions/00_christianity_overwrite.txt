@@ -398,11 +398,20 @@
 			icon = bosnian_church
 			graphical_faith = "catholic_gfx"
 			
+			# The main Sites pre-orientation
 			holy_site = jerusalem
-			holy_site = rome
 			holy_site = visoki
 			holy_site = ragusa
-			holy_site = esztergom
+			# Catholic
+			holy_site = rome_bosnian
+			holy_site = milan_bosnian
+			# Orthodox
+			holy_site = constantinople_bosnian
+			holy_site = antioch_bosnian
+			# Gnostic
+			holy_site = tephrice_bosnian
+			# No one
+			holy_site = skopje_bosnian
 
 			#Special Tolerance
 			#It should be noted that the Krstjani were never *really* ecumenical. Just isolated rural Christians, mostly forgotten by both the Orthodox and Catholic churches. When they started to become relevant, passive tolerance of them faded into persecution rather quickly.
@@ -426,7 +435,7 @@
 			doctrine = doctrine_clerical_function_alms_and_pacification
 			
 			#Tenets
-			doctrine = tenet_mendicant_preachers
+			doctrine = tenet_communal_identity
 			doctrine = tenet_pastoral_isolation
 			doctrine = tenet_monasticism
 
@@ -1103,7 +1112,7 @@
 			doctrine = special_doctrine_is_gnostic_faith
 
 			#Tenets
-			doctrine = tenet_gnosticism
+			doctrine = tenet_asceticism
 			doctrine = tenet_aniconism
 			doctrine = tenet_unrelenting_faith
 

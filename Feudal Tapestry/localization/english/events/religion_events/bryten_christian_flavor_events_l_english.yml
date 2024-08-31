@@ -61,6 +61,8 @@ bryten_christian.008.a:0 "I am happy for her."
   bryten_christian.012.desc:0 "Such a wonderful bouquet. The complex blend of flavors spreads over my tongue just as the warmth spreads in my belly. These monks certainly know how to make a fine wine!"
   bryten_christian.012.a:0 "I must visit the monastery more often"
   bryten_christian.012.b:0 "Thanks but no thanks"
+  bryten_christian.012.b.temperate:0 "You become Temperate"
+  bryten_christian.012.a.drunkard:0 "You become a Drunkard"
 
   bryten_christian.013.t:0 "Monastic Paintings" 
   bryten_christian.013.desc:0 "As I strolled past the monastery one day, I couldn't help but be drawn to a monk sitting in a field, his brushstrokes quick and sure as he brought his canvas to life. I was enthralled by the artistry on display - the composition was impeccable, the colors vibrant and striking. It was as if this monk were a true prodigy of the artistic world, his gift for creating beauty simply breathtaking."
@@ -86,13 +88,27 @@ bryten_christian.008.a:0 "I am happy for her."
   bryten_christian.017.desc:0 "During the last year or so, your [child_for_the_church.Custom('GetDaughterSon')] [child_for_the_church.GetFirstName] has been spending a lot of time with younger members of a local monastic order. You have also noticed that [child_for_the_church.GetSheHe] spends many hours per week in pious prayer. Then one day, [child_for_the_church.GetSheHe] approaches you asking for your permission to dedicate [child_for_the_church.GetHerHis] life to Christ."
   bryten_christian.017.a:0 "Very well, if it's what [child_for_the_church.GetSheHe] really wants."
   bryten_christian.017.b:0 "Absolutely not!"
+##############################################
+# Bosnian Church Flavor
+##############################################
+  bryten_christian.020.t.catholic:0 "The Bosnian Church - Catholicism"
+  bryten_christian.020.t.orthodox:0 "The Bosnian Church - Orthodox"
+  bryten_christian.020.t.gnostic:0 "The Bosnian Church - Gnosticism"
+  bryten_christian.020.t.none:0 "The Bosnian Church - Independent"
+  bryten_christian.020.t.backup:0 "The Bosnian Church"
+  bryten_christian.020.desc:0 "Since christianity came to the region and was adopted by the people of Bosnia, we have been torn between east and west. Even though we have been isolated the Latin West and Greek East have vied for influence as have gnostic sects.\n\n[bosnian_leader.GetTitledFirstName], who has much influence over the island, understands that the future of the bosnian church depends on how it orients itself vis a vis the rest of Christendom.\n\n"
+  bryten_christian.020.desc.catholic:0 "[bosnian_leader.GetFirstNameNoTooltip] and other leaders in the Bosnian Church have made overtures to [GetFaithByKey('catholic').GetAdjective] ecclesiastical authorities, supporting their efforts to strengthen the Church in the region. By orienting the church towards the Latin West, we can stave off the accusations of heresy."
+  bryten_christian.020.desc.orthodox:0 "[bosnian_leader.GetFirstNameNoTooltip] and other leaders in the Bosnian Church have made overtures to [GetFaithByKey(orthodox).GetAdjective] ecclesiastical authorities, supporting their efforts to strengthen the Church in the region. By orienting the church towards the Greek East, we can stave off the accusations of heresy."
+  bryten_christian.020.desc.gnostic:0 "Even though we have been called heretics by both the [GetFaithByKey('catholic').GetAdjective] and [GetFaithByKey('catholic').GetAdjective] ecclesiastical authorities, a fair number of gnostic heretics have made their homes in our lands. By embracing Gnosticism, these ties will grow stronger and to the benefit of the Bosnian Church."
+  bryten_christian.020.desc.none:0 "[bosnian_leader.GetFirstNameNoTooltip] and other leaders in the Bosnian Church know their teachings better than others. We don't need to tie ourselves to the Latin West or Greek East, and we certainly don't need gnostic heretics influencing our church. "
+  bryten_christian.020.a:0 "Glory be to God!"
 
-  
- 
-
-
-
-
+  bryten_christian.021.t:0 "The Bosnian Church and its Orientation"
+  bryten_christian.021.desc.catholic:0 "The Christian community in Bosnia has long been torn between east and west, and today it has come out supporting the Holy Father in Rome supporting the Latin West and the Catholic Liturgy. "
+  bryten_christian.021.desc.orthodox:0 "The Christian community in Bosnia has long been torn between east and west, and today it has come out supporting the Ecumenical Patriarch in Constantinople and supporting the Greek East and Orthodox Liturgy."
+  bryten_christian.021.desc.gnostic:0 "The Christian community in Bosnia has long been torn between east and west, and today it has come out supporting gnostics and the various gnostic sects in the region. Sects that are declared heretical by both east and west."
+  bryten_christian.021.desc.none:0 "The Christian community in Bosnia has long been torn between east and west, and today it has come out supporting itself. The church is trying to walk the path between east and west, scorning heretics and following their path, the path of good christians."
+  bryten_christian.021.a:0 "I see"
 
 
 
