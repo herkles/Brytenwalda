@@ -15,6 +15,8 @@ With the expansion east ward to the edge of Europe, the cultures of the Slavs ha
 ### Change Log
 - New Christian Heresies and heretical events
 - Heresies are to appear in a more historicalish fashion
+- Bosnia Church can decide which way to go
+- Fraticelli can try and reform the church
 - bug fixes with the Olga event chain
 
 

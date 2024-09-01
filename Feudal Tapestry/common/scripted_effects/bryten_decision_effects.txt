@@ -2317,7 +2317,6 @@ bryten_fraticelli_schismatic_path_crusade_scripted_effect = {
 bryten_bosnian_church_orientation_catholic_effects = {
 	# Set the doctrinal alterations.
 	faith = {
-
 		# First, we remove the Pastroal Isolation tenet & replace it with Communion.
 		remove_doctrine = tenet_pastoral_isolation
 		add_doctrine = tenet_communion
@@ -2329,6 +2328,18 @@ bryten_bosnian_church_orientation_catholic_effects = {
 		add_doctrine = doctrine_spiritual_head
 		# The pope is now the head of the Church
 		set_religious_head_title = title:k_papal_state
+	}
+	scope:pope = {
+		add_opinion = {
+			target = root
+			modifier = supported_latin_rite_opinion
+		}
+	}
+	scope:patriarch = {
+		add_opinion = {
+			target = root
+			modifier = opposed_greek_rite_opinion
+		}
 	}
 }
 bryten_bosnian_church_orientation_orthodox_effects = {
@@ -2345,6 +2356,18 @@ bryten_bosnian_church_orientation_orthodox_effects = {
 		add_doctrine = doctrine_spiritual_head
 		# The Ecumenical Patriarch is now the head of the Church
 		set_religious_head_title = title:k_orthodox
+	}
+	scope:pope = {
+		add_opinion = {
+			target = root
+			modifier = opposed_latin_rite_opinion
+		}
+	}
+	scope:patriarch = {
+		add_opinion = {
+			target = root
+			modifier = supported_greek_rite_opinion
+		}
 	}
 }
 bryten_bosnian_church_orientation_gnostic_effects = {
@@ -2365,6 +2388,18 @@ bryten_bosnian_church_orientation_gnostic_effects = {
 		# Set up new head of faith
 		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:bosnian_leader }
 	}
+	scope:pope = {
+		add_opinion = {
+			target = root
+			modifier = openly_became_heretic_opinion
+		}
+	}
+	scope:patriarch = {
+		add_opinion = {
+			target = root
+			modifier = openly_became_heretic_opinion
+		}
+	}
 }
 bryten_bosnian_church_orientation_none_effects = {
 	# Set the doctrinal alterations.
@@ -2380,6 +2415,18 @@ bryten_bosnian_church_orientation_none_effects = {
 		add_doctrine = doctrine_spiritual_head
 		# Set up new head of faith
 		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:bosnian_leader }
+	}
+	scope:pope = {
+		add_opinion = {
+			target = root
+			modifier = opposed_latin_rite_opinion
+		}
+	}
+	scope:patriarch = {
+		add_opinion = {
+			target = root
+			modifier = opposed_greek_rite_opinion
+		}
 	}
 }
 #######################################

@@ -2354,6 +2354,8 @@ bryten_bosnian_church_decide_orientation = {
 			value = choose_catholic
 			is_valid = {
 				faith.religion = religion:christianity_religion
+				NOT = {	is_at_war_with = title:k_papal_state.holder } # can't be at war with the Pope
+				faith:catholic = { exists = faith.religious_head }# Pope must exist
 			}
 			current_description = bryten_choose_catholic_desc
 			localization = bryten_choose_catholic_name
@@ -2400,6 +2402,8 @@ bryten_bosnian_church_decide_orientation = {
 			value = choose_orthodox
 			is_valid = {
 				faith.religion = religion:christianity_religion
+				NOT = {	is_at_war_with = title:k_orthodox.holder } # can't be at war with the Patriarch
+				faith:orthodox = { exists = faith.religious_head }# Patriarch must exist
 			}
 			current_description = bryten_choose_orthodox_desc
 			localization = bryten_choose_orthodox_name
@@ -2585,6 +2589,9 @@ bryten_bosnian_church_decide_orientation = {
 
 	effect = {
 		save_scope_as = bosnian_leader
+		title:k_papal_state.holder = { save_scope_as = pope }
+		title:k_orthodox.holder = { save_scope_as = patriarch }
+
 		add_to_global_variable_list = {
 			name = unavailable_unique_decisions
 			target = flag:bryten_bosnian_church_decided
@@ -2651,6 +2658,9 @@ bryten_bosnian_church_decide_orientation = {
 				}
 			}
 		}
+
+
+
 		trigger_event = bryten_christian.020
 	}
 

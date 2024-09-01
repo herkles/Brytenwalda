@@ -1,4 +1,7 @@
-﻿no_banish_normans = {
+﻿#######################################
+# Norman Conquest Opinions	      
+#######################################
+no_banish_normans = {
 	opinion = -20
 	decaying = yes
 	years = 20
@@ -13,7 +16,9 @@ helped_me_agaisnt_tyrant_opinion = {
 	decaying = yes
 	years = 20
 }
-
+#######################################
+# Norse Sacred Grove Opinions	      
+#######################################
 approves_burning_sacred_grove = {
 	opinion = 40
 	decaying = yes
@@ -44,14 +49,18 @@ disaproves_alone_sacred_grove = {
 	decaying = yes
 	years = 10
 }
-
+#######################################
+# Other Opinions	      
+#######################################
 hates_denied_inheritance = {
 	opinion = -50
 }
 bryten_murderous_banquet = {
 	opinion = -75
 }
-
+#######################################
+# Heretic Opinions
+#######################################
 approves_heretic_condemnation = {
 	opinion = 20
 	monthly_change = 0.2
@@ -72,3 +81,37 @@ did_not_listen_to_pope = {
 	monthly_change = 0.1
 	decaying = yes
 }
+#######################################
+# Bosnian Opinions
+#######################################
+opposed_latin_rite_opinion = {
+	opinion = -30
+	decaying = yes
+	years = 20
+}
+supported_latin_rite_opinion = {
+	opinion = 25
+	decaying = yes
+	years = 20
+}
+opposed_greek_rite_opinion = {
+	opinion = -30
+	decaying = yes
+	years = 20
+}
+supported_greek_rite_opinion = {
+	opinion = 25
+	decaying = yes
+	years = 20
+}
+openly_became_heretic_opinion = {
+	opinion = -40
+	years = 20
+}
+
+
+
+
+
+
+
