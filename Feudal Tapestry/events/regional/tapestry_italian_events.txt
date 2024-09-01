@@ -218,6 +218,8 @@ tapestry_italian.050 = {# St. Francis begins preaching
 
 	trigger = {
 		current_date >= 1180.1.1
+		NOT = { has_global_variable = fransican_order_formed }
+
 	}
 	
 	immediate = {
@@ -253,9 +255,74 @@ tapestry_italian.051 = {# The Fransican Order
 	
 }
 #######################################
-# Frankish Cultural Split up
+# Cadavar Synod shennigans
 #######################################
+tapestry_italian.075 = {# Check if the pope is bad
+	hidden = yes
 
+	trigger = {
+		current_date < 900.1.1 # can't happen after the historical date
+		NOT = { has_global_variable = cadevar_synod_happened }
+		title:k_papal_state.holder = {# get a naughty pope
+			is_capable_adult_ai = yes
+			num_sinful_traits >= 1
+		}
+	}
+	
+	immediate = {
+		title:k_papal_state.holder = { 
+			save_scope_as = pope_one
+			add_character_flag = cadevar_synod_pope_condemned
+		}
+	}
+
+}
+tapestry_italian.076 = {# Cadevar Synod - Hidden as it is for the AI
+	hidden = yes
+
+	immediate = {
+		set_global_variable = {
+			name = cadevar_synod_happened
+			value = yes
+		}
+		scope:pope_one = { give_nickname = nick_the_accursed } # Papacy is declared Null. 
+		title:c_roma = {# Romans despise all of this and get revolty
+			add_country_modifier = rebellious_people
+		}
+		title:k_papal_state.holder = { save_scope_as = pope_two }
+		every_player = {# Let catholic Player know that the Fransican Order is now founded
+			limit = { 
+				OR = {
+					faith = faith:catholic # catholic rulers get to decide if they stay quiet or call it out
+					capital_province = { geographical_region = world_europe_south_italy } # capital in Italy gets to comment
+				}
+			}
+			trigger_event = {
+				id = tapestry_italian.077
+				days = { 10 15 }
+			}
+		}
+	}
+}
+tapestry_italian.077 = {# Letting everyone know about the Cadevar Synod
+	type = character_event
+	title = tapestry_italian.077.t
+	desc = tapestry_italian.077.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = scope:pope_two
+		animation = personality_zealous
+	}
+	left_portrait = {
+		character = scope:pope_one
+	}
+	option = {# Side with the pope. Condemn the old pope!
+		name = tapestry_italian.077.a
+	}
+
+}
 #######################################
 # Frankish Cultural Split up
 #######################################
