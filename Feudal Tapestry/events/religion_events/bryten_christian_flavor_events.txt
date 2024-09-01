@@ -298,27 +298,77 @@ bryten_christian.010 = {# Monks make fantastic beer
 		is_imprisoned = no
 		has_religion = religion:christianity_religion
 	}
-
 	immediate = {
-		create_character = {
-			location = root.capital_province
-			age = { 25 35 }
-			gender = male
-			trait = education_learning_3
-			trait = devoted
-			faith = root.faith
-			culture = root.culture
-			learning = { 10 12 }
-			save_scope_as = monk
+		if = {# first check if we do have a monk direct vassal
+			any_vassal = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# second check if we do have a monk vassal(any is acceptable
+			any_vassal_or_below = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# third check if we do have a monk courtier
+			any_courtier = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# if we don't have one then we create one. 
+			create_character = {
+				location = root.capital_province
+				age = { 25 35 }
+				gender = male
+				trait = education_learning_3
+				trait = devoted
+				faith = root.faith
+				culture = root.culture
+				learning = { 10 12 }
+				save_scope_as = monk
+				add_character_flag = monk_vanishing
+			}
 		}
 	}
-	
+
+	weight_multiplier = {
+		base = 1
+		modifier = {# More common in Northern Europe
+			add = 0.2
+			capital_province = { geographical_region = bryten_custom_northern_europe }
+		}
+		modifier = {# Less common in southern Europe
+			add = -0.2
+			OR = {
+				capital_province = { geographical_region = material_woods_mediterranean }
+				capital_province = { geographical_region = world_europe_west_francia }
+			}
+		}
+	}
+
+
 	option = {# Visit the Monastary
 		name = bryten_christian.010.a
+		if = {# the monk likes sharring beer with you.
+			limit = { NOT = { scope:monk = { has_character_flag = monk_vanishing }} }
+
+			scope:monk = {
+				add_opinion = {
+					target = root
+					modifier = friendliness_opinion
+					opinion = 25
+				}			
+			}
+		}
 		if = {
 			limit = { NOT = { has_trait = drunkard } }
 			random = {
-				chance = 20
+				chance = 10
 				add_trait = drunkard
 				send_interface_toast = {
 					type = event_toast_effect_bad
@@ -327,9 +377,33 @@ bryten_christian.010 = {# Monks make fantastic beer
 				}
 			}
 		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			# traits that lose stress
+			lifestyle_reveler = minor_stress_impact_loss
+			drunkard = minor_stress_impact_loss
+			gregarious = minor_stress_impact_loss
+			humble = minor_stress_impact_loss
+			# traits that gain Stress
+			temperate = minor_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			reclusive = minor_stress_impact_gain
+		}
 	}
 	option = {# Thanks but No Thanks
 		name = bryten_christian.010.b
+		if = {# the monk likes sharring beer with you.
+			limit = { NOT = { scope:monk = { has_character_flag = monk_vanishing }} }
+
+			scope:monk = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -25
+
+				}			
+			}
+		}
 		if = {
 			limit = { NOT = { has_trait = temperate } }
 			random = {
@@ -342,14 +416,25 @@ bryten_christian.010 = {# Monks make fantastic beer
 				}
 			}
 		}
-
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			# traits that gain Stress
+			lifestyle_reveler = minor_stress_impact_gain
+			drunkard = minor_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+			# traits that lose stress
+			temperate = minor_stress_impact_loss
+			shy = minor_stress_impact_loss
+			reclusive = minor_stress_impact_loss
+		}
 	}
 
 	after = {
 		hidden_effect = {
 			scope:monk = {
-				death = {
-					death_reason = death_vanished
+				if = {
+					limit = {has_character_flag = monk_vanishing }
+					death = { death_reason = death_vanished	}
 				}
 			}
 		}
@@ -369,6 +454,7 @@ bryten_christian.011 = {# Monks have healing herbs
 		character = scope:monk
 		animation = happiness
 	}
+
 	trigger = {
 		is_commanding_army = no
 		is_adult = yes
@@ -379,23 +465,57 @@ bryten_christian.011 = {# Monks have healing herbs
 		}
 		has_religion = religion:christianity_religion
 	}
-
 	immediate = {
-		create_character = {
-			location = root.capital_province
-			age = { 25 35 }
-			gender = male
-			trait = education_learning_3
-			trait = devoted
-			faith = root.faith
-			culture = root.culture
-			learning = { 10 12 }
-			save_scope_as = monk
+		if = {# first check if we do have a monk direct vassal
+			any_vassal = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# second check if we do have a monk vassal(any is acceptable
+			any_vassal_or_below = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# third check if we do have a monk courtier
+			any_courtier = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# if we don't have one then we create one. 
+			create_character = {
+				location = root.capital_province
+				age = { 25 35 }
+				gender = male
+				trait = education_learning_3
+				trait = devoted
+				faith = root.faith
+				culture = root.culture
+				learning = { 10 12 }
+				save_scope_as = monk
+				add_character_flag = monk_vanishing
+			}
 		}
 	}
 	
 	option = {# Thank them
 		name = bryten_christian.011.a
+		if = {# the monk likes sharring beer with you.
+			limit = { NOT = { scope:monk = { has_character_flag = monk_vanishing }} }
+
+			scope:monk = {
+				add_opinion = {
+					target = root
+					modifier = friendliness_opinion
+					opinion = 25
+				}			
+			}
+		}
 		ai_chance = {
 			base = 80
 		}
@@ -403,21 +523,50 @@ bryten_christian.011 = {# Monks have healing herbs
 			chance = 30
 			remove_trait = ill
 		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			# traits that gain Stress
+			paranoid = minor_stress_impact_gain
+			# traits that lose stress
+			lifestyle_physician = miniscule_stress_impact_loss
+			lifestyle_herbalist = miniscule_stress_impact_loss
+			lifestyle_gardener = miniscule_stress_impact_loss
+		}
 	}
 	option = {# These herbs smell funny
 		name = bryten_christian.011.b
+		if = {# the monk likes sharring beer with you.
+			limit = { NOT = { scope:monk = { has_character_flag = monk_vanishing }} }
+
+			scope:monk = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -25
+				}			
+			}
+		}
 		if = {
 			limit = { NOT = { has_trait = paranoid } }
 			add_trait = paranoid
 		}
-
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			# traits that gain Stress
+			lifestyle_physician = miniscule_stress_impact_gain
+			lifestyle_herbalist = miniscule_stress_impact_gain
+			lifestyle_gardener = miniscule_stress_impact_gain
+			# traits that lose stress
+			paranoid = minor_stress_impact_losss
+		}
 	}
 
 	after = {
 		hidden_effect = {
 			scope:monk = {
-				death = {
-					death_reason = death_vanished
+				if = {
+					limit = {has_character_flag = monk_vanishing }
+					death = { death_reason = death_vanished	}
 				}
 			}
 		}
@@ -438,29 +587,78 @@ bryten_christian.012 = {# Monks make great wine
 		character = scope:monk
 		animation = happiness
 	}
+
 	trigger = {
 		is_commanding_army = no
 		is_adult = yes
 		is_imprisoned = no
 		has_religion = religion:christianity_religion
 	}
-
 	immediate = {
-		create_character = {
-			location = root.capital_province
-			age = { 25 35 }
-			gender = male
-			trait = education_learning_3
-			trait = devoted
-			faith = root.faith
-			culture = root.culture
-			learning = { 10 12 }
-			save_scope_as = monk
+		if = {# first check if we do have a monk direct vassal
+			any_vassal = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# second check if we do have a monk vassal(any is acceptable
+			any_vassal_or_below = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# third check if we do have a monk courtier
+			any_courtier = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# if we don't have one then we create one. 
+			create_character = {
+				location = root.capital_province
+				age = { 25 35 }
+				gender = male
+				trait = education_learning_3
+				trait = devoted
+				faith = root.faith
+				culture = root.culture
+				learning = { 10 12 }
+				save_scope_as = monk
+				add_character_flag = monk_vanishing
+			}
+		}
+	}
+	weight_multiplier = {
+		base = 1
+		modifier = {# More common in Northern Europe
+			add = -0.2
+			capital_province = { geographical_region = bryten_custom_northern_europe }
+		}
+		modifier = {# Less common in southern Europe
+			add = 0.2
+			OR = {
+				capital_province = { geographical_region = material_woods_mediterranean }
+				capital_province = { geographical_region = world_europe_west_francia }
+			}
 		}
 	}
 	
 	option = {# Visit the Monastary
 		name = bryten_christian.012.a
+		if = {# the monk likes sharring beer with you.
+			limit = { NOT = { scope:monk = { has_character_flag = monk_vanishing }} }
+
+			scope:monk = {
+				add_opinion = {
+					target = root
+					modifier = friendliness_opinion
+					opinion = 25
+				}			
+			}
+		}
 		ai_chance = {
 			base = 50
 		}
@@ -468,21 +666,32 @@ bryten_christian.012 = {# Monks make great wine
 			chance = 50
 			add_learning_skill = 1
 		}
-		if = {
-			limit = { NOT = { has_trait = drunkard } }
-			random = {
-				chance = 20
-				add_trait = drunkard
-				send_interface_toast = {
-					type = event_toast_effect_bad
-					title = bryten_christian.012.a.drunkard
-					left_icon = root
-				}
-			}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			# traits that lose stress
+			lifestyle_reveler = minor_stress_impact_loss
+			drunkard = minor_stress_impact_loss
+			gregarious = minor_stress_impact_loss
+			# traits that gain Stress
+			temperate = minor_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			reclusive = minor_stress_impact_gain
 		}
 	}
 	option = {# Thanks but no Thanks
 		name = bryten_christian.012.b
+		if = {# the monk likes sharring beer with you.
+			limit = { NOT = { scope:monk = { has_character_flag = monk_vanishing }} }
+
+			scope:monk = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -25
+				}			
+			}
+		}
+
 		ai_chance = {
 			base = 50
 		}
@@ -498,13 +707,26 @@ bryten_christian.012 = {# Monks make great wine
 				}
 			}
 		}
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			# traits that gain Stress
+			lifestyle_reveler = minor_stress_impact_gain
+			drunkard = minor_stress_impact_gain
+			gregarious = miniscule_stress_impact_gain
+			# traits that lose stress
+			temperate = minor_stress_impact_loss
+			shy = minor_stress_impact_loss
+			reclusive = minor_stress_impact_loss
+		}
+
 	}
 
 	after = {
 		hidden_effect = {
 			scope:monk = {
-				death = {
-					death_reason = death_vanished
+				if = {
+					limit = {has_character_flag = monk_vanishing }
+					death = { death_reason = death_vanished	}
 				}
 			}
 		}
@@ -532,35 +754,74 @@ bryten_christian.013 = {# Monk is fantastic painter
 		NOT = { has_trait = blind }
 	}
 
+
 	immediate = {
-		create_character = {
-			location = root.capital_province
-			age = { 25 35 }
-			gender = male
-			trait = education_learning_3
-			trait = devoted
-			faith = root.faith
-			culture = root.culture
-			learning = { 10 12 }
-			save_scope_as = monk
+		if = {# first check if we do have a monk direct vassal
+			any_vassal = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# second check if we do have a monk vassal(any is acceptable
+			any_vassal_or_below = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# third check if we do have a monk courtier
+			any_courtier = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# if we don't have one then we create one. 
+			create_character = {
+				location = root.capital_province
+				age = { 25 35 }
+				gender = male
+				trait = education_learning_3
+				trait = devoted
+				faith = root.faith
+				culture = root.culture
+				learning = { 10 12 }
+				save_scope_as = monk
+				add_character_flag = monk_vanishing
+			}
 		}
 	}
 	
 	option = {# Buy the Painting
 		name = bryten_christian.013.a
 		remove_short_term_gold = 10
-		add_prestige = 30
+		stress_impact = {
+			# traits that gain Stress
+			greedy = miniscule_stress_impact_gain
+			# traits that lose stress
+			profligate = miniscule_stress_impact_losss
+			improvident = miniscule_stress_impact_losss
+			generous = miniscule_stress_impact_losss		}
 	}
-	option = {# very nice
+	option = {# don't buy
 		name = bryten_christian.013.b
-
+		stress_impact = {
+			# traits that gain Stress
+			generous = miniscule_stress_impact_gain
+			improvident = miniscule_stress_impact_gain
+			profligate = miniscule_stress_impact_gain
+			# traits that lose stress
+			greedy = miniscule_stress_impact_losss
+		}
 	}
 
 	after = {
 		hidden_effect = {
 			scope:monk = {
-				death = {
-					death_reason = death_vanished
+				if = {
+					limit = {has_character_flag = monk_vanishing }
+					death = { death_reason = death_vanished	}
 				}
 			}
 		}
@@ -589,39 +850,86 @@ bryten_christian.014 = {# Monks produce beautiful books
 		NOT = { has_trait = blind }
 	}
 
+
 	immediate = {
-		create_character = {
-			location = root.capital_province
-			age = { 25 35 }
-			gender = male
-			trait = education_learning_3
-			trait = devoted
-			faith = root.faith
-			culture = root.culture
-			learning = { 10 12 }
-			save_scope_as = monk
+		if = {# first check if we do have a monk direct vassal
+			any_vassal = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# second check if we do have a monk vassal(any is acceptable
+			any_vassal_or_below = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# third check if we do have a monk courtier
+			any_courtier = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# if we don't have one then we create one. 
+			create_character = {
+				location = root.capital_province
+				age = { 25 35 }
+				gender = male
+				trait = education_learning_3
+				trait = devoted
+				faith = root.faith
+				culture = root.culture
+				learning = { 10 12 }
+				save_scope_as = monk
+				add_character_flag = monk_vanishing
+			}
 		}
 	}
 	
 	option = {# I will buy the Book
 		name = bryten_christian.014.a
 		remove_short_term_gold = 30
-		add_prestige = 30
 		random = {
 			chance = 20
 			add_learning_skill = 1
 		}
+
+		stress_impact = {
+			# traits that gain Stress
+			greedy = miniscule_stress_impact_gain
+			dull = miniscule_stress_impact_gain
+			# traits that lose stress
+			profligate = miniscule_stress_impact_losss
+			improvident = miniscule_stress_impact_losss
+			generous = miniscule_stress_impact_losss
+			shrewd = miniscule_stress_impact_losss
+	
+		}
 	}
 	option = {# Books aren't for me
 		name = bryten_christian.014.b
+		stress_impact = {
+			# traits that gain Stress
+			generous = miniscule_stress_impact_gain
+			improvident = miniscule_stress_impact_gain
+			profligate = miniscule_stress_impact_gain
+			shrewd = miniscule_stress_impact_gain
+			# traits that lose stress
+			greedy = miniscule_stress_impact_losss
+			dull = miniscule_stress_impact_losss
+		}
 
 	}
 
 	after = {
 		hidden_effect = {
 			scope:monk = {
-				death = {
-					death_reason = death_vanished
+				if = {
+					limit = {has_character_flag = monk_vanishing }
+					death = { death_reason = death_vanished	}
 				}
 			}
 		}
@@ -649,49 +957,111 @@ bryten_christian.015 = {# Local monks come to visit often
 		has_religion = religion:christianity_religion
 	}
 
+
 	immediate = {
-		create_character = {
-			location = root.capital_province
-			age = { 25 35 }
-			gender = male
-			trait = education_learning_3
-			trait = devoted
-			faith = root.faith
-			culture = root.culture
-			learning = { 10 12 }
-			save_scope_as = monk
+		if = {# first check if we do have a monk direct vassal
+			any_vassal = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# second check if we do have a monk vassal(any is acceptable
+			any_vassal_or_below = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# third check if we do have a monk courtier
+			any_courtier = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# if we don't have one then we create one. 
+			create_character = {
+				location = root.capital_province
+				age = { 25 35 }
+				gender = male
+				trait = education_learning_3
+				trait = devoted
+				faith = root.faith
+				culture = root.culture
+				learning = { 10 12 }
+				save_scope_as = monk
+				add_character_flag = monk_vanishing
+			}
 		}
 	}
 	
 	option = {# Wonderful come again
 		name = bryten_christian.015.a
+		if = {# the monk it that you spent time with them.
+			limit = { NOT = { scope:monk = { has_character_flag = monk_vanishing }} }
+
+			scope:monk = {
+				add_opinion = {
+					target = root
+					modifier = friendliness_opinion
+					opinion = 25
+				}			
+			}
+		}
 		add_piety = 20
 		random = {
 			chance = 30
 			add_learning_skill = 1
 		}
+		stress_impact = {
+			# traits that gain Stress
+			reclusive = miniscule_stress_impact_gain
+			shy = miniscule_stress_impact_gain
+			# traits that lose stress
+			gregarious = miniscule_stress_impact_losss
+			diplomat = miniscule_stress_impact_losss
+		}
 	}
 	option = {# the Monks are tedious
 		name = bryten_christian.015.b
+		if = {# disappointed that you don't want to spend time with them.
+			limit = { NOT = { scope:monk = { has_character_flag = monk_vanishing	}} }
+			scope:monk = {
+				add_opinion = {
+					target = root
+					modifier = disappointed_opinion
+					opinion = -25
+				}			
+			}
+		}
 		random_list = {
-			20 = {
+			5 = {
 				if = {
 					limit = { NOT = { has_trait = cynical } }
 					add_trait = cynical
 				}
 			}
-			80 = {
+			95 = {
 
 			}
 		}
-
+		stress_impact = {
+			# traits that gain Stress
+			gregarious = miniscule_stress_impact_gain
+			diplomat = miniscule_stress_impact_gain
+			# traits that lose stress
+			reclusive = miniscule_stress_impact_losss
+			shy = miniscule_stress_impact_losss
+		}
 	}
 
 	after = {
 		hidden_effect = {
 			scope:monk = {
-				death = {
-					death_reason = death_vanished
+				if = {
+					limit = {has_character_flag = monk_vanishing }
+					death = { death_reason = death_vanished	}
 				}
 			}
 		}
@@ -718,37 +1088,101 @@ bryten_christian.016 = {# Donate to local monastery
 		current_date <= 900.1.1 # The monks left in the 9th century
 	}
 
+
 	immediate = {
-		create_character = {
-			location = root.capital_province
-			age = { 25 35 }
-			gender = male
-			trait = education_learning_3
-			trait = devoted
-			faith = root.faith
-			culture = root.culture
-			learning = { 10 12 }
-			save_scope_as = monk
+		if = {# first check if we do have a monk direct vassal
+			any_vassal = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# second check if we do have a monk vassal(any is acceptable
+			any_vassal_or_below = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# third check if we do have a monk courtier
+			any_courtier = {
+				is_available_ai_adult = yes
+				religion = religion:christianity_religion
+				has_trait = devoted # got to be a monk
+			}
+		}
+		else_if = {# if we don't have one then we create one. 
+			create_character = {
+				location = root.capital_province
+				age = { 25 35 }
+				gender = male
+				trait = education_learning_3
+				trait = devoted
+				faith = root.faith
+				culture = root.culture
+				learning = { 10 12 }
+				save_scope_as = monk
+				add_character_flag = monk_vanishing
+			}
 		}
 	}
 	
 	option = { # Ok
 		name = bryten_christian.016.a
+		if = {# the monk likes sharring beer with you.
+			limit = { NOT = { scope:monk = { has_character_flag = monk_vanishing }} }
+
+			scope:monk = {
+				add_opinion = {
+					target = root
+					modifier = pious_opinion
+					opinion = 25
+				}			
+			}
+		}
+		stress_impact = {
+			# traits that gain Stress
+			greedy = miniscule_stress_impact_gain
+			# traits that lose stress
+			improvident = miniscule_stress_impact_losss
+			generous = miniscule_stress_impact_losss
+		}
 	}
 	option = { # Ok
 		name = bryten_christian.016.b
+		if = {# the monk likes sharring beer with you.
+			limit = { NOT = { scope:monk = { has_character_flag = monk_vanishing }} }
 
+			scope:monk = {
+				add_opinion = {
+					target = root
+					modifier = impious_opinion
+					opinion = -25
+				}			
+			}
+		}
+		stress_impact = {
+			# traits that gain Stress
+			improvident = miniscule_stress_impact_gain
+			generous = miniscule_stress_impact_gain
+			# traits that lose stress
+			greedy = miniscule_stress_impact_losss
+		}
 	}
 
 	after = {
-		trigger_event = {
-			id = bryten_england.141
-			years = 7
+		hidden_effect = {
+			scope:monk = {
+				if = {
+					limit = {has_character_flag = monk_vanishing }
+					death = { death_reason = death_vanished	}
+				}
+			}
 		}
 	}
 
 }
-bryten_christian.017 = {# Donate to local monastery 
+bryten_christian.017 = {# Child wants to be a monk/nun
 	type = character_event
 	title = bryten_christian.017.t
 	desc = bryten_christian.017.desc
@@ -830,6 +1264,7 @@ bryten_christian.017 = {# Donate to local monastery
 				modifier = grateful_opinion
 			}
 		}
+
 	}
 	option = { # Ok
 		name = bryten_christian.017.b
@@ -843,7 +1278,6 @@ bryten_christian.017 = {# Donate to local monastery
 		}
 	}
 }
-
 ##############################################
 # Bosnian Church orientation
 ##############################################
