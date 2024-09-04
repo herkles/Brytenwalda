@@ -8,6 +8,98 @@
   bryten_heresy.002.a:0 "Condemn this heretic!"
   bryten_heresy.002.b:0 "Let's leave them alone. They are just peasants!"
   bryten_heresy.002.c:0 "Bogomil speaks the truth"
+
+
+
+  # The Bogomil Council
+  bryten_heresy.003.t:0 "The Council of [council_2_venue.GetNameNoTierNoTooltip]"
+  bryten_heresy.003.desc:0 "A nascent faith calls for debate, and so [bogomil_priest.GetFirstName] has gathered a conclave of influential clerics sympathetic to our cause. There are many points of theology to discuss to hash out as we turn Bogomilism from a movement into something more organized and formalized."
+  bryten_heresy.003.a:0 "Naturally, I'll take a leading role in the discussions."
+  bryten_heresy.003.a.tt:0 "You engage in [learning|E] duels to make your points"
+  bryten_heresy.003.b:0 "My influence will be more felt than seen..."
+  bryten_heresy.003.b.tt:0 "You spend [piety_i]#N [EmptyScope.ScriptValue('bryten_heresy_conclave_cost_value')|0]#! [piety|E] per firm choice #WEAK but cannot spend $game_concept_piety$ you don't have#!"
+  bryten_heresy.003.c:0 "This is a matter for the clergy alone."
+  bryten_heresy.003.c.tt:0 "The conclave will be decided without your input"
+
+  bryten_heresy.004.t:0 "$bryten_heresy.003.t.council$ - Christological"
+  bryten_heresy.004.desc:0 "The first matter that the council is debating is the particularities of Gnostic Christology for the Church. The clergy have a number of different opinions on the matter but three matters have emerged. The first is a Monarchianist doctrine of christology, a more nuanced position on dualism. /n/nThe second position focuses much more on the dualistic nature of the world. Jesus came to free us from Satanail who rules the world, a force of pure evil./n/nA third faction focuses on a form of modalism that is easier to digest to the many faithful who believe themselves to be trinitarians. "
+  bryten_heresy.004.a:0 "The situation is nuanced..."
+  bryten_heresy.004.a.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.004.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.004.b:0 "Good and Evil! right and Wrong!"
+  bryten_heresy.004.b.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.004.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.004.c:0 "God has three different Modes."
+  bryten_heresy.004.c.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.004.c.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.004.d:0 "I have no opinion on this matter."
+
+  bryten_heresy.005.t:0 "$bryten_heresy.003.t.council$ - Priesthood"
+  bryten_heresy.005.desc:0 "The conclave's discussions have turned towards the issue of the priesthood. There will need to be some structure but the question is how it shall be organized. One faction believes we shall have our own patriarch to guide the faith. Other clergy spoke out against this saying that while a priesthood is important, no one man should govern the church. Finally a third faction says that anyone can be a priest and to say otherwise is to go against God and is heresy."
+  bryten_heresy.005.a:0 "A Patriarch to guide the Church"
+  bryten_heresy.005.a.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.005.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.005.b:0 "Priests are equal"
+  bryten_heresy.005.b.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.005.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.005.c:0 "Anyone can become a priest."
+  bryten_heresy.005.c.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.005.c.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.005.d:0 "This seems circumstantial..."
+
+  bryten_heresy.006.t:0 "$bryten_heresy.003.t.council$ - Matters of wealth"
+  bryten_heresy.006.desc:0 "The conclave's discussions have turned towards the issue of the wealth of the Church. The Bogomilist was formed in opposition to the simony and greed of the Church. The question of how to handle wealth has caused debates and heated arguments. The first faction argues that the wealth of the church should belong to the whole church not to a few. /n/nWhile the second faction argues that the priests should live like Jesus in poverty, wealth even shared, is a material force corrupting the soul./n/nThe third faction believes that engaging in actions like simony and other sinful actions should prevent you from ever being chosen as a community's apostles, to lead the faith one must be pure!"
+  bryten_heresy.006.a:0 "The richness of the church belongs to all"
+  bryten_heresy.006.a.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.006.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.006.b:0 "wealth is a corrupting force!"
+  bryten_heresy.006.b.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.006.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.006.c:0 "The Clergy should be of pure heart and mind!"
+  bryten_heresy.006.c.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.006.c.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.006.d:0 "I shall leave this for the clergy to dcide"
+
+  bryten_heresy.007.t:0 "$bryten_heresy.003.t.council$ - Peace"
+  bryten_heresy.007.desc:0 "The conclave draws to a fiery conclusion, with minor brawls and passionate arguments alike rippling through [council_2_venue.GetNameNoTier], as all three ecclesiastic cliques fight both literally and metaphorically for their beliefs.\n\nThe heart of this final #EMP lively#! debate is the matter of peace. One group of theologians believes that violence is a corrupting force that draws us further from God. but this is disputed by other factions who believe that we should take up arms to protect the faith. While another says that we should take up the sword to defend the church as a whole against all who threaten her."
+  bryten_heresy.007.a:0 "Protecting Pilgrims is vital"
+  bryten_heresy.007.a.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.007.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.007.b:0 "Violence is a corrupting force"
+  bryten_heresy.007.b.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.007.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.007.c:0 "Take up the sword to defend the church!"
+  bryten_heresy.007.c.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.007.c.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.007.d:0 "Have we shattered along dogmatic lines so quickly?"
+
+  bryten_heresy.008.t:0 "$bryten_heresy.003.t.council$ - Conclusion"
+  bryten_heresy.008.desc.intro:0 "On this day, the #EMP new#! [bogomil_council_host.GetFaith.GetAdjective] creed is born!/n/n"
+  bryten_heresy.008.desc.righteous:0 "The Bogomilist Church follows a Monarchianist doctrine of Gnosticism,"
+  bryten_heresy.008.desc.fundamentalist:0 "The Bogomilist Church follows absoulte dualism, "
+  bryten_heresy.008.desc.pluralist:0 "The Bogomilist Church follows a doctrine of modalism,"
+  bryten_heresy.008.desc.hof:0 "with a patriarch to guide her,"
+  bryten_heresy.008.desc.priests:0 "With councils of Priests to guide her,"
+  bryten_heresy.008.desc.lay:0 "With priests chosen from among the community to guide her,"
+  bryten_heresy.008.desc.share:0 "With the wealth of the church belonging to all,"
+  bryten_heresy.008.desc.shun:0 "With the Principal of Apostolic Poverty, like it did the ancient apostles "
+  bryten_heresy.008.desc.pure:0 "Where vices like simony are forever banned from happening,"
+  bryten_heresy.008.desc.armed:0 "And with the church willing to defend holy pilgrims."
+  bryten_heresy.008.desc.pacifism:0 "And with the Church pledging to peace and against the sin of killing."
+  bryten_heresy.008.desc.unrelenting:0 "And with the church defending herself from the forces of Satanail"
+  bryten_heresy.008.desc.outro:0 "\n\nNo longer are we the mere dream of a lone, wandering cleric. Now we are a living, vibrant community, and one that all of Christendom shall surely soon embrace."
+  bryten_heresy.008.a:0 "Glory be to god!"
+
+  bryten_heresy.009.t:0 "$bryten_heresy.003.t.council$ "
+  bryten_heresy.009.desc:0 "News has reached you about a council of heretics held at [council_2_venue.GetNameNoTierNoTooltip]. A gathering of so-called Bogomil heretics came to debate their theology. Well it doesn't matter what they decided, they are heretics damned to the fires of hell and they will be dealt with and the people will be led to the true and proper teachings. 
+  bryten_heresy.009.a:0 "Condemn these heretics!"
+# Bogomil Flavor Events
+
+
+
+
+
+
 #######################################
 # Cathar heresy Events
 #######################################

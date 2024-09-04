@@ -72,16 +72,10 @@ bryten_heresy.002 = {# Bogomil preaches
 	type = character_event
 	title = bryten_heresy.002.t
 	desc = bryten_heresy.002.desc
-	theme = faith
-	override_background = { reference = wilderness_forest }
-	
+	theme = faith	
 	left_portrait = {
 		character = root
 		animation = personality_zealous
-	}
-	
-	immediate = {
-
 	}
 
 	option = {# Condemn the heretic
@@ -145,6 +139,1596 @@ bryten_heresy.002 = {# Bogomil preaches
 		}
 	}	
 }
+# Council: Council gathers from all over
+bryten_heresy.003 = {# council: Clergy gather from all over
+	type = character_event
+	title = bryten_heresy.003.t
+	desc = bryten_heresy.003.desc
+	theme = learning
+	left_portrait = {
+		character = scope:bogomil_council_host
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:bogomil_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# You are a heresiarch
+		add_trait = heresiarch
+		# Sort our locale.
+		## First, whether this is a repeater.
+		scope:council_1_venue = {
+			## Preferring to chill at scope:bogomil_priest's place.
+			if = {
+				limit = { holder = scope:bogomil_priest }
+				save_scope_as = council_2_venue
+			}
+			## But otherwise we take your capital.
+			else = {
+				scope:bogomil_council_host.capital_barony = { save_scope_as = council_2_venue }
+			}
+		}
+		scope:council_2_venue = { save_scope_as = background_temple_scope }
+		scope:bogomil_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = bogomil_priest_at_council
+			}
+		}
+
+		set_global_variable = {
+			name = bryten_bogomilism_council_began
+			value = yes
+		}
+	}
+
+	
+	option = {# Naturally, I'll take a leading role in the discussions.
+		name = bryten_heresy.003.a
+
+		# You'll engage in learning debates.
+		custom_tooltip = bryten_heresy.003.a.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:debate
+		}
+		stress_impact = {
+			gregarious = miniscule_stress_impact_loss
+			shy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# My influence will be more felt than seen...
+		name = bryten_heresy.003.b
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:piety
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# This is a matter for the clergy alone.
+		name = bryten_heresy.003.c
+		custom_tooltip = bryten_heresy.003.c.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:defaulted
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_loss
+			arrogant = major_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 100
+		}
+	}
+
+
+	after = {
+		trigger_event = {
+			id = bryten_heresy.004
+			days = {5 10}
+		}
+	}
+}
+# Council: How Gnostic are you
+scripted_effect bryten_heresy_council_bogomil_monarchianism_effect = {
+	faith:bogomilist = { add_doctrine = doctrine_pluralism_righteous }
+}
+scripted_effect bryten_heresy_council_bogomil_dualism_effect = {
+	faith:bogomilist = {
+		hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
+		add_doctrine = doctrine_pluralism_fundamentalist
+	}
+}
+scripted_effect bryten_heresy_council_bogomil_trinity_effect = {
+	show_as_tooltip = {
+		faith:bogomilist = {
+			hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
+			add_doctrine = doctrine_pluralism_pluralistic
+		}
+	}
+}
+bryten_heresy.004 = {# Council: How Gnostic are you
+	type = character_event
+	title = bryten_heresy.004.t
+	desc = bryten_heresy.004.desc
+	theme = diplomacy
+	left_portrait = {
+		character = scope:bogomil_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:bogomil_priest_at_council
+		animation = personality_bold
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:bogomil_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:bogomil_priest_at_council }
+			clear_saved_scope = bogomil_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:bogomil_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = bogomil_priest_at_council
+			}
+		}
+	}
+
+	option = {# Monarchianism
+		name = bryten_heresy.004.a
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+		if = {# going against Jeremiah himself is  costly
+				limit = { scope:bogomil_priest = {
+					AND = {
+						has_character_flag = bogomil_priest_is_jeremiah 
+						scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_trinity 
+					} 
+				}
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_jeremiah_cost_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_monarchianism_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.004.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.004.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_monarchianism_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.004.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.004.a.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Monarchianism.
+						if = {
+							limit = { scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_monarchianism }
+							bryten_heresy_council_bogomil_monarchianism_effect = yes
+						}
+						## Dualism.
+						if = {
+							limit = { scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_dualism }
+							bryten_heresy_council_bogomil_dualism_effect = yes
+						}
+						## Trinitarians.
+						if = {
+							limit = { scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_trinity }
+							bryten_heresy_council_bogomil_trinity_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# Absolute Dualism
+		name = bryten_heresy.004.b
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+		if = {# going against Bogomil himself is supper costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_bogomil }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		if = {# Piety path.
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_dualism_effect = yes
+		}
+		if = {# Debate path.
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.004.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.004.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_dualism_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.004.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.004.b.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Monarchianism.
+						if = {
+							limit = { scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_monarchianism }
+							bryten_heresy_council_bogomil_monarchianism_effect = yes
+						}
+						## Trinitarians.
+						if = {
+							limit = { scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_trinity }
+							bryten_heresy_council_bogomil_trinity_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# Close to Trinitarianism
+		name = bryten_heresy.004.c
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+		if = {# going against Bogomil himself is supper costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_bogomil }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		if = {# going against Jeremiah himself is costly
+				limit = { scope:bogomil_priest = {
+					AND = {
+						has_character_flag = bogomil_priest_is_jeremiah 
+						scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_monarchianism 
+					} 
+				}
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_jeremiah_cost_value
+				multiply = -1
+			}
+		}
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_trinity_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.004.c.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.004.c.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_trinity_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.004.c.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.004.c.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Monarchianism.
+						if = {
+							limit = { scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_monarchianism }
+							bryten_heresy_council_bogomil_monarchianism_effect = yes
+						}
+						## Felicians.
+						if = {
+							limit = { scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_dualism }
+							bryten_heresy_council_bogomil_dualism_effect = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# I have no opinion on this matter.
+		name = bryten_heresy.004.d
+
+		# We take scope:bogomil_priest's preference.
+		## Monararchianism.
+		if = {
+			limit = { scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_monarchianism }
+			bryten_heresy_council_bogomil_monarchianism_effect = yes
+		}
+		## Dualism.
+		if = {
+			limit = { scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_dualism }
+			bryten_heresy_council_bogomil_dualism_effect = yes
+		}
+		## Trinity.
+		if = {
+			limit = { scope:bogomil_council_stance_gnostic = flag:bogomil_council_stance_trinity }
+			bryten_heresy_council_bogomil_trinity_effect = yes
+		}
+
+		# We don't charge stress for the opt-outs, not least because their results are variable.
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.005
+			days = {5 10}
+		}
+	}
+}
+# Council: priesthood
+scripted_effect bryten_heresy_council_bogomil_hof_effect = {
+	faith:bogomilist = { 
+		hidden_effect = { remove_doctrine = doctrine_theocracy_lay_clergy }
+		add_doctrine = doctrine_theocracy_temporal
+		add_doctrine = doctrine_spiritual_head
+		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:bogomil_council_host }
+	}
+}
+scripted_effect bryten_heresy_council_bogomil_spiritual_effect = {
+	faith:bogomilist = { 
+		hidden_effect = { remove_doctrine = doctrine_theocracy_lay_clergy }
+		add_doctrine = doctrine_theocracy_temporal 
+	}
+}
+scripted_effect bryten_heresy_council_bogomil_lay_priests_effect = {
+	faith:bogomilist = { 
+		add_doctrine = doctrine_theocracy_lay_clergy 
+	}
+}
+bryten_heresy.005 = {# Council: priesthood
+	type = character_event
+	title = bryten_heresy.005.t
+	desc = bryten_heresy.005.desc
+	theme = martial
+	left_portrait = {
+		character = scope:bogomil_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:bogomil_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:bogomil_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:bogomil_priest_at_council }
+			clear_saved_scope = bogomil_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:bogomil_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = bogomil_priest_at_council
+			}
+		}
+	}
+
+	option = {# spritual + Head of Faith
+		name = bryten_heresy.005.a
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+		if = {# going against Bogomil himself is supper costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_bogomil }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		if = {# going against Jeremiah himself is costly
+				limit = { scope:bogomil_priest = {
+					AND = {
+						has_character_flag = bogomil_priest_is_jeremiah 
+						scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_priests 
+					} 
+				}
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_jeremiah_cost_value
+				multiply = -1
+			}
+		}
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_hof_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.005.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.005.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_hof_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.005.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.005.a.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## spiritual.
+						if = {
+							limit = { scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_priests }
+							bryten_heresy_council_bogomil_spiritual_effect = yes
+						}
+						## lay priests.
+						if = {
+							limit = { scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_lay_clergy }
+							bryten_heresy_council_bogomil_lay_priests_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# Spiritual without HoF
+		name = bryten_heresy.005.b
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+
+		if = {# going against Bogomil himself is supper costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_bogomil }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		if = {# going against Jeremiah himself is costly
+				limit = { scope:bogomil_priest = {
+					AND = {
+						has_character_flag = bogomil_priest_is_jeremiah 
+						scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_patriarch 
+					} 
+				}
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_jeremiah_cost_value
+				multiply = -1
+			}
+		}
+		
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_spiritual_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.005.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.005.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_spiritual_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.005.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.005.b.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Spiritual + HoF.
+						if = {
+							limit = { scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_patriarch }
+							bryten_heresy_council_bogomil_hof_effect = yes
+						}
+						## Lay priests.
+						if = {
+							limit = { scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_lay_clergy }
+							bryten_heresy_council_bogomil_lay_priests_effect = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# Lay priesthood
+		name = bryten_heresy.005.c
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+
+		if = {# going against Bogomil himself is supper costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_bogomil }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		if = {# going against Jeremiah himself is costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_jeremiah }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_lay_priests_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.005.c.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.005.c.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_lay_priests_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.005.c.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.005.c.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Spiritual HoF.
+						if = {
+							limit = { scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_patriarch }
+							bryten_heresy_council_bogomil_spiritual_effect = yes
+						}
+						## Felicians.
+						if = {
+							limit = { scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_priests }
+							bryten_heresy_council_bogomil_hof_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# The clergy decide
+		name = bryten_heresy.005.d
+
+		# We take scope:bogomil_priest's preference.
+		## Patriarch.
+		if = {
+			limit = { scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_patriarch }
+			bryten_heresy_council_bogomil_hof_effect = yes
+		}
+		## Spiritual.
+		if = {
+			limit = { scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_priests }
+			bryten_heresy_council_bogomil_spiritual_effect = yes
+		}
+		## Lay Priest.
+		if = {
+			limit = { scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_lay_clergy }
+			bryten_heresy_council_bogomil_lay_priests_effect = yes
+		}
+		# We don't charge stress for the opt-outs, not least because their results are variable.
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.006
+			days = {5 10}
+		}
+	}
+}
+# Council: wealth
+scripted_effect bryten_heresy_council_bogomil_share_effect = {
+	faith:bogomilist = { 
+		add_doctrine = tenet_communal_possessions }
+}
+scripted_effect bryten_heresy_council_bogomil_shun_effect = {
+	faith:bogomilist = { 
+		hidden_effect = { remove_doctrine = tenet_communal_possessions }
+		add_doctrine = tenet_apostolic_poverty 
+	}
+}
+scripted_effect bryten_heresy_council_bogomil_pure_effect = {
+	faith:bogomilist = { 
+		hidden_effect = { remove_doctrine = tenet_communal_possessions }
+		add_doctrine = tenet_pure_priesthood 
+	}
+}
+bryten_heresy.006 = {# Council: wealth
+	type = character_event
+	title = bryten_heresy.006.t
+	desc = bryten_heresy.006.desc
+	theme = martial
+	left_portrait = {
+		character = scope:bogomil_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:bogomil_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:bogomil_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:bogomil_priest_at_council }
+			clear_saved_scope = bogomil_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:bogomil_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = bogomil_priest_at_council
+			}
+		}
+	}
+
+	option = {# Share Wealth
+		name = bryten_heresy.006.a
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_share_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.006.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.006.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_share_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.006.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.006.a.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Shun.
+						if = {
+							limit = { scope:bogomil_council_stance_wealth = flag:bogomil_council_stance_shun_wealth }
+							bryten_heresy_council_bogomil_shun_effect = yes
+						}
+						## Pure.
+						if = {
+							limit = { scope:bogomil_council_stance_wealth = flag:bogomil_council_stance_pure_priests }
+							bryten_heresy_council_bogomil_pure_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# Shun Wealth
+		name = bryten_heresy.006.b
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+
+		if = {# going against Bogomil himself is supper costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_bogomil }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		if = {# going against Jeremiah himself is costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_jeremiah }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_shun_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.006.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.006.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_shun_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.006.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.006.b.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Share Wealth.
+						if = {
+							limit = { scope:bogomil_council_stance_wealth = flag:bogomil_council_stance_share_wealth }
+							bryten_heresy_council_bogomil_share_effect = yes
+						}
+						## Pure Priests.
+						if = {
+							limit = { scope:bogomil_council_stance_wealth = flag:bogomil_council_stance_pure_priests }
+							bryten_heresy_council_bogomil_pure_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# Pure Priesthood
+		name = bryten_heresy.006.c
+		trigger = {# Error checking, no lay clergy and pure
+			OR = {
+				not = {	scope:conclave_engagement = flag:defaulted 	}
+				NOT = {	faith:bogomilist = { has_doctrine = doctrine_theocracy_lay_clergy } }
+			}
+		}
+
+		if = {# going against Bogomil himself is supper costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_bogomil }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		if = {# going against Jeremiah himself is costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_jeremiah }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_pure_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.006.c.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.006.c.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_pure_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.006.c.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.006.c.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Share.
+						if = {
+							limit = { scope:bogomil_council_stance_wealth = flag:bogomil_council_stance_share_wealth }
+							bryten_heresy_council_bogomil_share_effect = yes
+						}
+						## Shun.
+						if = {
+							limit = { scope:bogomil_council_stance_wealth = flag:bogomil_council_stance_shun_wealth }
+							bryten_heresy_council_bogomil_shun_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# The Clergy decide
+		name = bryten_heresy.006.d
+
+		# We take scope:bogomil_priest's preference.
+		if = {# Share Wealth
+			limit = { scope:bogomil_council_stance_wealth = flag:bogomil_council_stance_share_wealth }
+			bryten_heresy_council_bogomil_share_effect = yes
+		}
+		if = {# Shun Wealth
+			limit = { scope:bogomil_council_stance_wealth = flag:bogomil_council_stance_shun_wealth }
+			bryten_heresy_council_bogomil_shun_effect = yes
+		}
+		if = {# Pure Priest
+			limit = { scope:bogomil_council_stance_wealth = flag:bogomil_council_stance_pure_priests }
+			bryten_heresy_council_bogomil_pure_effect = yes
+		}
+
+		# We don't charge stress for the opt-outs, not least because their results are variable.
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 100
+		}
+	}
+
+	trigger_event = {
+		id = bryten_heresy.007
+		days = { 5 10 }
+	}
+}
+# Council: pacifism
+scripted_effect bryten_heresy_council_bogomil_armed_effect = {
+	faith:bogomilist = { 
+		add_doctrine = tenet_armed_pilgrimages 
+	}
+}
+scripted_effect bryten_heresy_council_bogomil_pacifism_effect = {
+	faith:bogomilist = { 
+		hidden_effect = { remove_doctrine = tenet_armed_pilgrimages }
+		add_doctrine = tenet_pacifism 
+	}
+}
+scripted_effect bryten_heresy_council_bogomil_unrelenting_effect = {
+	faith:bogomilist = { 
+		hidden_effect = { remove_doctrine = tenet_armed_pilgrimages }
+		add_doctrine = tenet_unrelenting_faith 
+	}
+}
+bryten_heresy.007 = {# Council: Pacifism
+	type = character_event
+	title = bryten_heresy.007.t
+	desc = bryten_heresy.007.desc
+	theme = martial
+	left_portrait = {
+		character = scope:bogomil_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:bogomil_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:bogomil_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:bogomil_priest_at_council }
+			clear_saved_scope = bogomil_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:bogomil_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = bogomil_priest_at_council
+			}
+		}
+	}
+
+	option = {# Armed Pilgirmages
+		name = bryten_heresy.007.a
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_armed_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.007.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.007.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_armed_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.007.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.007.a.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Pacifism.
+						if = {
+							limit = { scope:bogomil_council_stance_peace = flag:bogomil_council_stance_pacifism }
+							bryten_heresy_council_bogomil_pacifism_effect = yes
+						}
+						## Unrelenting Faith.
+						if = {
+							limit = { scope:bogomil_council_stance_peace = flag:bogomil_council_stance_unrelenting }
+							bryten_heresy_council_bogomil_unrelenting_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# Pacifism
+		name = bryten_heresy.007.b
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+
+
+		if = {# going against Bogomil himself is supper costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_bogomil }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		if = {# going against Jeremiah himself is costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_jeremiah }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_pacifism_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.007.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.007.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_pacifism_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.007.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.007.b.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Armed Pilgrimages.
+						if = {
+							limit = { scope:bogomil_council_stance_peace = flag:bogomil_council_stance_protect }
+							bryten_heresy_council_bogomil_armed_effect = yes
+						}
+						## Unrelenting Faith.
+						if = {
+							limit = { scope:bogomil_council_stance_peace = flag:bogomil_council_stance_unrelenting }
+							bryten_heresy_council_bogomil_unrelenting_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# Unrelenting Faith
+		name = bryten_heresy.007.c
+		trigger = { not = {	scope:conclave_engagement = flag:defaulted 	} }
+
+
+		if = {# going against Bogomil himself is supper costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_bogomil }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+		if = {# going against Jeremiah himself is costly
+			limit = { scope:bogomil_priest = { has_character_flag = bogomil_priest_is_jeremiah }
+			}
+			add_piety = {
+				value = bryten_bogomil_council_oppose_bogomil_cost_value
+				multiply = -1
+			}
+		}
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_bogomil_unrelenting_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.007.c.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.007.c.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_bogomil_unrelenting_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.007.c.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.007.c.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:bogomil_priest's preference.
+						## Armed Pilgrimages.
+						if = {
+							limit = { scope:bogomil_council_stance_peace = flag:bogomil_council_stance_protect }
+							bryten_heresy_council_bogomil_armed_effect = yes
+						}
+						## Pacifism.
+						if = {
+							limit = { scope:bogomil_council_stance_peace = flag:bogomil_council_stance_pacifism }
+							bryten_heresy_council_bogomil_pacifism_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 0
+		}
+	}
+	option = {# Clergy Decide
+		name = bryten_heresy.007.d
+
+		if = {# Armed Pilgrimages
+			limit = { scope:bogomil_council_stance_peace = flag:bogomil_council_stance_protect }
+			bryten_heresy_council_bogomil_armed_effect = yes
+		}
+		if = {# Pacifism
+			limit = { scope:bogomil_council_stance_peace = flag:bogomil_council_stance_pacifism }
+			bryten_heresy_council_bogomil_pacifism_effect = yes
+		}
+		if = {# Unrelenting Faith
+			limit = { scope:bogomil_council_stance_peace = flag:bogomil_council_stance_unrelenting }
+			bryten_heresy_council_bogomil_unrelenting_effect = yes
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:bogomil_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.008
+			days = {5 10}
+		}
+	}
+}
+# council results
+bryten_heresy.008 = {# The church council arrives at their final important doctrinal conclusions.
+	type = character_event
+	title = bryten_heresy.008.t
+	desc = {
+		desc = bryten_heresy.008.desc.intro
+		first_valid = {# Gnostic
+			triggered_desc = {
+				trigger = {	faith:bogomilist = { has_doctrine = doctrine_pluralism_pluralistic } }
+				desc = bryten_heresy.008.desc.pluralist
+			}
+			triggered_desc = {
+				trigger = {
+					faith:bogomilist = { has_doctrine = doctrine_pluralism_righteous }
+				}
+				desc = bryten_heresy.008.desc.righteous
+			}
+			triggered_desc = {
+				trigger = {
+					faith:bogomilist = { has_doctrine = doctrine_pluralism_fundamentalist }
+				}
+				desc = bryten_heresy.008.desc.fundamentalist
+			}
+		}
+		first_valid = {# Priesthood
+			triggered_desc = {
+				trigger = {	faith:bogomilist = { has_doctrine = doctrine_spiritual_head } }
+				desc = bryten_heresy.008.desc.hof
+			}
+			triggered_desc = {
+				trigger = {
+					faith:bogomilist = { 
+						NOT = {	has_doctrine = doctrine_spiritual_head }
+						has_doctrine = doctrine_theocracy_temporal 
+					}
+				}
+				desc = bryten_heresy.008.desc.priests
+			}
+			triggered_desc = {
+				trigger = {	faith:bogomilist = { has_doctrine = doctrine_theocracy_lay_clergy }	}
+				desc = bryten_heresy.008.desc.lay
+			}
+		}
+		first_valid = {# Wealth
+			triggered_desc = {
+				trigger = {	faith:bogomilist = { has_doctrine = tenet_communal_possessions } }
+				desc = bryten_heresy.008.desc.share
+			}
+			triggered_desc = {
+				trigger = {	faith:bogomilist = { has_doctrine = tenet_apostolic_poverty } }
+				desc = bryten_heresy.008.desc.shun
+			}
+			triggered_desc = {
+				trigger = {	faith:bogomilist = { has_doctrine = tenet_pure_priesthood }	}
+				desc = bryten_heresy.008.desc.pure
+			}
+		}
+		first_valid = {# Peace
+			triggered_desc = {
+				trigger = {	faith:bogomilist = { has_doctrine = tenet_armed_pilgrimages } }
+				desc = bryten_heresy.008.desc.armed
+			}
+			triggered_desc = {
+				trigger = {	faith:bogomilist = { has_doctrine = tenet_pacifism } }
+				desc = bryten_heresy.008.desc.pacifism
+			}
+			triggered_desc = {
+				trigger = {	faith:bogomilist = { has_doctrine = tenet_unrelenting_faith }	}
+				desc = bryten_heresy.008.desc.unrelenting
+			}
+		}
+		# Outro.
+		desc = bryten_heresy.008.desc.outro
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:bogomil_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:bogomil_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Music!
+		play_music_cue = "mx_cue_sacredrite"
+		faith:bogomilist = {# the Council is over and now is formulized
+			remove_doctrine = heretic_movement_doctrine
+			change_fervor = { 
+				value = 50
+				desc = bryten_fervor_gain_bogomil_council	
+			} 
+		}
+		# Now let's display our choices.
+		faith:bogomilist = {
+			show_as_tooltip = {
+				# Gnosticism.
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_pluralistic }
+					add_doctrine = doctrine_pluralism_pluralistic
+				}
+				# Priesthood.
+				if = {
+					limit = { has_doctrine = doctrine_spiritual_head }
+					add_doctrine = doctrine_theocracy_temporal
+					add_doctrine = doctrine_spiritual_head
+				}
+				if = {
+					limit = { 
+						has_doctrine = doctrine_theocracy_temporal 
+						NOT = { has_doctrine = doctrine_spiritual_head }
+					}
+					add_doctrine = doctrine_theocracy_temporal
+				}
+				if = {
+					limit = { has_doctrine = doctrine_theocracy_lay_clergy }
+					add_doctrine = doctrine_theocracy_lay_clergy
+				}
+				# Wealth.
+				if = {
+					limit = { has_doctrine = tenet_communal_possessions }
+					add_doctrine = tenet_communal_possessions
+				}
+				if = {
+					limit = { has_doctrine = tenet_apostolic_poverty }
+					add_doctrine = tenet_apostolic_poverty
+				}
+				if = {
+					limit = { has_doctrine = tenet_pure_priesthood }
+					add_doctrine = tenet_pure_priesthood
+				}
+				# Pacifism.
+				if = {
+					limit = { has_doctrine = tenet_armed_pilgrimages }
+					add_doctrine = tenet_armed_pilgrimages
+				}
+				if = {
+					limit = { has_doctrine = tenet_pacifism }
+					add_doctrine = tenet_pacifism
+				}
+				if = {
+					limit = { has_doctrine = tenet_unrelenting_faith }
+					add_doctrine = tenet_unrelenting_faith
+				}
+			}
+
+
+		}
+
+		set_global_variable = {
+			name = bryten_bogomilism_council_completed
+			value = yes
+		}
+
+	}
+
+	option = {
+		name = bryten_heresy.008.a
+		add_piety = major_piety_gain
+
+	}
+
+	after = {
+		# Clean up the story.
+		every_player = {# letting players know that the Bogomil church has been formalized
+			trigger_event = {
+				id = bryten_heresy.009
+				days = {5 10}
+			}
+		}
+	}
+}
+bryten_heresy.009 = {# Bogomil Council(let players know)
+	type = character_event
+	title = bryten_heresy.009.t
+	desc = bryten_heresy.009.desc
+	theme = faith	
+
+
+	option = {# Condemn the heretic
+		name = bryten_heresy.009.a
+	}
+	
+}
 #######################################
 # Catharism 
 #######################################
@@ -190,7 +1774,7 @@ bryten_heresy.026 = {# Convert to Catharism?
 	title = bryten_heresy.026.t
 	desc = bryten_heresy.026.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -224,7 +1808,7 @@ bryten_heresy.026 = {# Convert to Catharism?
 				opinion = -40
 			}
 		}
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# Cathar counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -237,7 +1821,7 @@ bryten_heresy.026 = {# Convert to Catharism?
 				every_held_title = {
 					limit = {
 						tier = tier_county
-						NOT = { faith = faith:bogomilist }
+						NOT = { faith = faith:cathar }
 					}
 					set_county_faith = faith:cathar
 				}
@@ -248,14 +1832,14 @@ bryten_heresy.026 = {# Convert to Catharism?
 	option = {# he is interesting ideas
 		name = bryten_heresy.026.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { 
+		faith:cathar = { 
 			change_fervor = { 
 				value = 5
 				desc = bryten_fervor_gain_heretical_lord	
 			} 
 		}
 		set_character_faith = faith:cathar
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# Cathar counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -326,7 +1910,7 @@ bryten_heresy.051 = {# Convert to Waldensian?
 	title = bryten_heresy.051.t
 	desc = bryten_heresy.051.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -360,7 +1944,7 @@ bryten_heresy.051 = {# Convert to Waldensian?
 				opinion = -40
 			}
 		}
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# Waldenisans counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -387,14 +1971,14 @@ bryten_heresy.051 = {# Convert to Waldensian?
 	option = {# he is interesting ideas
 		name = bryten_heresy.051.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { 
+		faith:waldensian = { 
 			change_fervor = { 
 				value = 5
 				desc = bryten_fervor_gain_heretical_lord	
 			} 
 		}
 		set_character_faith = faith:waldensian
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# waldensian counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -406,7 +1990,7 @@ bryten_heresy.051 = {# Convert to Waldensian?
 #######################################
 # lollard 
 #######################################
-bryten_heresy.075 = {# Waldo begins preaching
+bryten_heresy.075 = {# John Wycliff begins preaching
 	hidden = yes
 
 	immediate = {
@@ -464,7 +2048,7 @@ bryten_heresy.076 = {# Convert to lollard?
 	title = bryten_heresy.076.t
 	desc = bryten_heresy.076.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -498,7 +2082,7 @@ bryten_heresy.076 = {# Convert to lollard?
 				opinion = -40
 			}
 		}
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# lollard counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -525,14 +2109,14 @@ bryten_heresy.076 = {# Convert to lollard?
 	option = {# he is interesting ideas
 		name = bryten_heresy.076.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { 
+		faith:lollard = { 
 			change_fervor = { 
 				value = 5	
 				desc = bryten_fervor_gain_heretical_lord
 			} 
 		}
 		set_character_faith = faith:lollard
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# lollard counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -603,7 +2187,7 @@ bryten_heresy.101 = {# Convert to arnoldism?
 	title = bryten_heresy.101.t
 	desc = bryten_heresy.101.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -637,7 +2221,7 @@ bryten_heresy.101 = {# Convert to arnoldism?
 				opinion = -40
 			}
 		}
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# lollard counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -664,7 +2248,7 @@ bryten_heresy.101 = {# Convert to arnoldism?
 	option = {# he is interesting ideas
 		name = bryten_heresy.101.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { 
+		faith:arnoldism = { 
 			change_fervor = { 
 				value = 5	
 				desc = bryten_fervor_gain_heretical_lord
@@ -672,7 +2256,7 @@ bryten_heresy.101 = {# Convert to arnoldism?
 			} 
 		}
 		set_character_faith = faith:arnoldism
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# arnoldism counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -743,7 +2327,7 @@ bryten_heresy.126 = {# Convert to joachimites?
 	title = bryten_heresy.126.t
 	desc = bryten_heresy.126.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -777,7 +2361,7 @@ bryten_heresy.126 = {# Convert to joachimites?
 				opinion = -40
 			}
 		}
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# joachimites counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -804,7 +2388,7 @@ bryten_heresy.126 = {# Convert to joachimites?
 	option = {# he is interesting ideas
 		name = bryten_heresy.126.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { 
+		faith:joachimites = { 
 			change_fervor = { 
 				value = 5 
 				desc = bryten_fervor_gain_heretical_lord
@@ -812,7 +2396,7 @@ bryten_heresy.126 = {# Convert to joachimites?
 			} 
 		}
 		set_character_faith = faith:joachimites
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# joachimites counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -866,7 +2450,7 @@ bryten_heresy.151 = {# Convert to fraticelli?
 	title = bryten_heresy.151.t
 	desc = bryten_heresy.151.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -900,7 +2484,7 @@ bryten_heresy.151 = {# Convert to fraticelli?
 				opinion = -40
 			}
 		}
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# fraticelli counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -927,14 +2511,14 @@ bryten_heresy.151 = {# Convert to fraticelli?
 	option = {# he is interesting ideas
 		name = bryten_heresy.151.c
 		ai_chance = { base = 01	} # super rare mainly for players
-		faith:bogomilist = { 
+		faith:fraticelli = { 
 			change_fervor = { 
 				value = 5	
 				desc = bryten_fervor_gain_heretical_lord
 			} 
 		}
 		set_character_faith = faith:fraticelli
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# fraticelli counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -989,7 +2573,7 @@ bryten_heresy.154 = {# Which Path to take
 	title = bryten_heresy.154.t
 	desc = bryten_heresy.154.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -1023,7 +2607,7 @@ bryten_heresy.155 = {# Heretical Breaking
 	title = bryten_heresy.155.t
 	desc = bryten_heresy.155.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -1123,7 +2707,7 @@ bryten_heresy.156 = {# New Branch
 	title = bryten_heresy.156.t
 	desc = bryten_heresy.156.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -1291,7 +2875,7 @@ bryten_heresy.157 = {# Let everyone know
 		}
 	}
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -1360,7 +2944,7 @@ bryten_heresy.159 = {# Convert to fraticelli?
 	title = bryten_heresy.159.t
 	desc = bryten_heresy.159.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -1498,7 +3082,7 @@ bryten_heresy.176 = {# Convert to henricians?
 	title = bryten_heresy.176.t
 	desc = bryten_heresy.176.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -1532,7 +3116,7 @@ bryten_heresy.176 = {# Convert to henricians?
 				opinion = -40
 			}
 		}
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# henricians counties are really happy
 			limit = {
 				tier = tier_county
 				has_county_modifier = rebellious_people
@@ -1634,7 +3218,7 @@ bryten_heresy.201 = {# Convert to petrobrusian?
 	title = bryten_heresy.201.t
 	desc = bryten_heresy.201.desc
 	theme = faith
-	override_background = { reference = wilderness_forest }
+	
 	
 	left_portrait = {
 		character = root
@@ -1668,7 +3252,7 @@ bryten_heresy.201 = {# Convert to petrobrusian?
 				opinion = -40
 			}
 		}
-		every_held_title = {# Bogomilist counties are really happy
+		every_held_title = {# petrobrusian counties are really happy
 			limit = {
 				tier = tier_county
 				faith = faith:petrobrusian

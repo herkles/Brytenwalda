@@ -2,7 +2,6 @@
 unavailable = {
 	group = "special"
 	is_available_on_create = { always = no }
-
 	unavailable_doctrine = { visible = no }
 }
 ### Christian doctrines
@@ -55,6 +54,24 @@ christian_monasticism = {
 		}
 	}
 }
+heretic_movement = {# Heretic Movement
+	group = "not_creatable"
+	is_available_on_create = {
+		# Goes away on reformation
+		always = no
+	}
+	heretic_movement_doctrine = {
+		parameters = {
+			hostility_same_religion = 2
+			unattractive_for_character_conversions = yes
+		}
 
+		character_modifier = {
+			clan_government_vassal_opinion = -20
+			feudal_government_vassal_opinion = -20
+			republic_government_vassal_opinion = -20
+		}
+	}
+}
 
 

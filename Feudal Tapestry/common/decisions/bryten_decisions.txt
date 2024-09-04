@@ -2056,7 +2056,7 @@ create_kingdom_lotheringia_decision = {# Create the Kingdom of Lotharingia
 # Fraticelli Decisions
 #############################################
 bryten_fraticelli_victory = {
-	picture = "gfx/interface/illustrations/decisions/decision_iranian_court.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
 	major = yes
 	desc = bryten_fraticelli_victory_desc
 
@@ -2142,7 +2142,7 @@ bryten_fraticelli_victory = {
 	}
 }
 bryten_fraticelli_break_with_rome_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_invite_knights.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
 	major = yes
 
 	ai_check_interval = 120
@@ -2260,6 +2260,371 @@ bryten_fraticelli_break_with_rome_decision = {
 	}
 }
 #############################################
+# Heretic Decisions
+#############################################
+bryten_bogomil_council_decision = {
+	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	desc = bryten_bogomil_council_decision_desc
+	selection_tooltip = bryten_bogomil_council_decision_tooltip
+	major = yes
+
+	sort_order = 80
+
+	is_shown = {
+		has_faith = faith:bogomilist
+		is_landed = yes
+		NOR = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_bogomilism_council_began
+			}
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_bogomilism_council_completed
+			}
+		}
+	}
+	is_valid = {
+		# got to be a kingdom or Empire
+		highest_held_title_tier >= tier_kingdom
+		# got to be somewhat prestigious
+		prestige_level >= 3
+		# Got to be some what pious
+		piety_level >= 3
+		is_independent_ruler = yes
+		custom_tooltip = {# Needs a solid chunk of Bosnian counties.
+			text = bryten_heretic_count.need_at_least_twelve_same_faith_counties
+			any_sub_realm_county = {
+				count >= bryten_heretic_church_county_count
+				faith = root.faith
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		# Not at war
+		is_at_war = no
+	}
+
+	effect = {
+		save_scope_as = bogomil_council_host
+		trigger_event = { 
+			id = bryten_heresy.003 
+			days = 1
+		}
+		hidden_effect = {
+			# Get the Bogomil priest
+			if = {# First Bogomil is chosen because he is the founder and it is bogomilism after all.
+				limit = { scope:bogomil_founder = { is_alive = yes } }
+				save_scope_as = bogomil_priest
+				add_character_flag = bogomil_priest_is_bogomil
+			}
+			else_if = {# Second Jeremiah is chosen because he is second to Bogomil after all.
+				limit = { scope:bogomil_jeremiah = { is_alive = yes } }
+				save_scope_as = bogomil_priest
+				add_character_flag = bogomil_priest_is_jeremiah
+			}
+			else_if = {# Third get your court chaplain.
+				limit = {
+					exists = cp:councillor_court_chaplain
+					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
+					faith = faith:bogomilist
+				}
+				cp:councillor_court_chaplain = { save_scope_as = bogomil_priest }
+			}
+			else = {# Create Bogomil preacher just to be safe
+				create_character = {
+					location = scope:bogomil_council_host.capital_province
+					template = bogomil_preacher_template
+					culture = scope:bogomil_council_host.culture
+					faith = faith:bogomilist
+					save_scope_as = bogomil_priest
+				}
+			}
+			# Get the various positions
+			if = {# Bogomil already has positions as he is the founder
+				limit = {
+					scope:bogomil_priest = { has_character_flag = bogomil_priest_is_bogomil	}
+				}
+				save_scope_value_as = {# Bogomil favors monarchianism
+					name = bogomil_council_stance_gnostic
+					value = flag:bogomil_council_stance_monarchianism
+				}
+				save_scope_value_as = {# Bogomil favors lay clergy
+					name = bogomil_council_stance_clergy
+					value = flag:bogomil_council_stance_lay_clergy
+				}
+				save_scope_value_as = {# Bogomil favors share the wealth
+					name = bogomil_council_stance_wealth
+					value = flag:bogomil_council_stance_share_wealth
+				}
+				save_scope_value_as = {# Bogomil favors share the defending pilgrims and missionaries
+					name = bogomil_council_stance_peace
+					value = flag:bogomil_council_stance_protect
+				}
+			}
+			else_if = {# Jeremiah already has positions as he is the founder
+				limit = {
+					scope:bogomil_priest = { has_character_flag = bogomil_priest_is_jeremiah }
+				}
+				random_list = {# Random list as there is some things that suggest Jeremiah might have been more Trinitarian/Standard then Bogomil.
+					75 = { 
+						save_scope_value_as = {# Jeremiah favors Monarchianism
+							name = bogomil_council_stance_gnostic
+							value = flag:bogomil_council_stance_monarchianism
+						}
+					}
+					25 = { 
+						save_scope_value_as = {# Jeremiah favors Trinity
+							name = bogomil_council_stance_gnostic
+							value = flag:bogomil_council_stance_trinity
+						}
+					}
+				}
+				random_list = {# Jeremiah was a priest so 50/50 if he decides to have the bogomil patriarchate or not
+					40 = {# Spiritual HoF
+						save_scope_value_as = {
+							name = bogomil_council_stance_clergy
+							value = flag:bogomil_council_stance_patriarch
+						}						
+					}
+					40 = {# Spiritual but no HoF
+						save_scope_value_as = {
+							name = bogomil_council_stance_clergy
+							value = flag:bogomil_council_stance_priests
+						}
+					}
+					20 = {# Lay Clergy
+						save_scope_value_as = {
+							name = bogomil_council_stance_clergy
+							value = flag:bogomil_council_stance_lay_clergy
+						}
+					}
+				}
+				save_scope_value_as = {# Bogomil favors share the wealth
+					name = bogomil_council_stance_wealth
+					value = flag:bogomil_council_stance_share_wealth
+				}
+				save_scope_value_as = {# Jeremiah favors share the defending pilgrims and missionaries
+					name = bogomil_council_stance_peace
+					value = flag:bogomil_council_stance_protect
+				}
+			}
+			else = {# for others who aren't those two
+				scope:bogomil_priest = {
+					random_list = {# choice for Gnosticism
+						40 = {
+							save_scope_value_as = {# Priest favors monarchianism
+								name = bogomil_council_stance_gnostic
+								value = flag:bogomil_council_stance_monarchianism
+							}						
+						}
+						40 = {
+							save_scope_value_as = {# Priest favors Dualism
+								name = bogomil_council_stance_gnostic
+								value = flag:bogomil_council_stance_dualism
+							}
+						}
+						20 = {
+							save_scope_value_as = {# Priest favors trinity
+								name = bogomil_council_stance_gnostic
+								value = flag:bogomil_council_stance_trinity
+							}
+						}
+					}
+					random_list = {# choice for Priesthood
+						20 = {# Spiritual HoF
+							save_scope_value_as = {
+								name = bogomil_council_stance_clergy
+								value = flag:bogomil_council_stance_patriarch
+							}						
+						}
+						40 = {# Spiritual but no HoF
+							save_scope_value_as = {
+								name = bogomil_council_stance_clergy
+								value = flag:bogomil_council_stance_priests
+							}
+						}
+						40 = {# Lay Clergy
+							save_scope_value_as = {
+								name = bogomil_council_stance_clergy
+								value = flag:bogomil_council_stance_lay_clergy
+							}
+						}
+					}
+					random_list = {# choice for Wealth
+						40 = {# Share Wealth
+							save_scope_value_as = {
+								name = bogomil_council_stance_wealth
+								value = flag:bogomil_council_stance_share_wealth
+							}
+							modifier = {
+								factor = 1.5
+								scope:bogomil_priest = {
+									has_trait = peasant_leader
+								}
+							}
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = heresiarch
+								}
+							}	
+						}
+						40 = {# Shun Wealth
+							save_scope_value_as = {
+								name = bogomil_council_stance_wealth
+								value = flag:bogomil_council_stance_shun_wealth
+							}
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = generous
+								}
+							}	
+							modifier = {
+								factor = -1.5
+								scope:bogomil_priest = {
+									has_trait = greedy
+								}
+							}	
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = improvident
+								}
+							}	
+						}
+						20 = {# Pure Priesthood
+							save_scope_value_as = {# Priest favors trinity
+								name = bogomil_council_stance_wealth
+								value = flag:bogomil_council_stance_pure_priests
+							}
+							modifier = {# Obviously they don't want this if they are sinful as they lose their stuff
+								factor = -5
+								scope:bogomil_priest = {
+									num_sinful_traits > 0
+								}
+							}	
+							modifier = {# bonus for virteous traits
+								factor = 1
+								scope:bogomil_priest = {
+									num_virtuous_traits >= 1
+								}
+							}
+							modifier = {# For the AI to make sure things are comitable. so they won't pick pure if they chose lay
+								factor = 0
+								scope:bogomil_priest = {
+									scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_lay_clergy
+								}
+							}
+							modifier = {# For the AI to make sure things are comitable. so they won't pick pure if they chose lay
+								factor = -100
+								scope:bogomil_priest = {
+									scope:bogomil_council_stance_clergy = flag:bogomil_council_stance_lay_clergy
+								}
+							}
+						}
+					}
+					random_list = {# choice for Peace
+						40 = {# Armed Pilgrimages
+							save_scope_value_as = {# Priest favors monarchianism
+								name = bogomil_council_stance_peace
+								value = flag:bogomil_council_stance_protect
+							}	
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = holy_warrior
+								}
+							}							
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = pilgrim
+								}
+							}							
+						}
+						40 = {# Pacifism
+							save_scope_value_as = {
+								name = bogomil_council_stance_peace
+								value = flag:bogomil_council_stance_pacifism
+							}
+							modifier = {
+								factor = -1
+								scope:bogomil_priest = {
+									has_trait = holy_warrior
+								}
+							}							
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = compassionate
+								}
+							}							
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = forgiving
+								}
+							}
+							modifier = {
+								factor = -1
+								scope:bogomil_priest = {
+									has_trait = vengeful
+								}
+							}
+						}
+						20 = {# Unrelenting Faith
+							save_scope_value_as = {
+								name = bogomil_council_stance_peace
+								value = flag:bogomil_council_stance_unrelenting
+							}
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = holy_warrior
+								}
+							}							
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = vengeful
+								}
+							}							
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = sadistic
+								}
+							}
+							modifier = {
+								factor = 1
+								scope:bogomil_priest = {
+									has_trait = callous
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	cost = {
+		gold = council_of_toledo_gold_cost_value
+		piety = council_of_toledo_piety_cost_value
+	}
+
+	ai_check_interval = 60
+	ai_potential = {
+		is_ruler = yes
+		short_term_gold >= council_of_toledo_gold_cost_value
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+#############################################
 # Christian Flavor Decisions
 #############################################
 bryten_pregnancy_mary_vow_decision = {
@@ -2327,7 +2692,7 @@ bryten_bosnian_church_decide_orientation = {
 	}
 	is_valid = {
 		faith = faith:bosnian_church
-
+		is_independent_ruler = yes
 		prestige_level >= 3
 		piety_level >= 3
 		# Needs a solid chunk of Bosnian counties.

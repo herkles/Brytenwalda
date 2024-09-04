@@ -110,4 +110,34 @@ bryten_sorbian_rising_leader = {# Sorbian Rising Leader
 	learning = { min_template_low_skill max_template_decent_skill }
 	prowess = { min_template_decent_skill max_template_high_skill }
 }
+#######################################
+# Heretic Characters
+#######################################
+bogomil_preacher_template = {# Backup Bogomil preacher for the council
+	age = { 30 60 }
+	random_traits_list = {
+		count = 1
+		education_learning_3 = {}
+		education_learning_4 = {}
+		education_learning_5 = {}
+	}
+	random_traits = yes
+	
+	faith = faith:bogomilist
+	culture = root.culture
+	gender = male
+	trait = heresiarch
+
+	learning = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+
+	after_creation = {
+		add_character_flag = {
+			flag = need_priest_outfit
+		}
+	}
+}
+
 
