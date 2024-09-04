@@ -2314,6 +2314,11 @@ bryten_bogomil_council_decision = {
 		}
 		hidden_effect = {
 			# Get the Bogomil priest
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_bogomilism_council_began
+			}
+
 			if = {# First Bogomil is chosen because he is the founder and it is bogomilism after all.
 				limit = { scope:bogomil_founder = { is_alive = yes } }
 				save_scope_as = bogomil_priest

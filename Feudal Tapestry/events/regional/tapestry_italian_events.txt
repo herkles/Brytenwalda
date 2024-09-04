@@ -287,7 +287,10 @@ tapestry_italian.076 = {# Cadevar Synod - Hidden as it is for the AI
 		}
 		scope:pope_one = { give_nickname = nick_the_accursed } # Papacy is declared Null. 
 		title:c_roma = {# Romans despise all of this and get revolty
-			add_country_modifier = rebellious_people
+			add_county_modifier = {
+				modifier = rebellious_people
+				years = 5
+			}
 		}
 		title:k_papal_state.holder = { save_scope_as = pope_two }
 		every_player = {# Let catholic Player know that the Fransican Order is now founded
@@ -315,7 +318,7 @@ tapestry_italian.077 = {# Letting everyone know about the Cadevar Synod
 		character = scope:pope_two
 		animation = personality_zealous
 	}
-	left_portrait = {
+	right_portrait = {
 		character = scope:pope_one
 	}
 	option = {# Side with the pope. Condemn the old pope!

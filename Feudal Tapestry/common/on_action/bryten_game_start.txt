@@ -10,6 +10,61 @@ on_game_start = {
 bryten_setup_after_game_start_on_actions = {
 	effect = {
 		# Character start up Events
+		if = {# William the Conquer in the bookmark
+			limit = {
+				character:140 ?= { 
+					is_alive = yes
+					is_landed = yes
+					current_date = 1066.12.25
+				}
+			}
+			character:140 ?= { trigger_event = bryten_england.001 }
+		}
+		if = {# Alfred is the proper successor
+			limit = {
+				character:33358 ?= { 
+					is_alive = yes
+					is_landed = yes
+					current_date = 867.1.1
+				}
+			}
+			character:33358 ?= { trigger_event = bryten_england.500 }
+		}
+		if = {# Ivar is ruling in Dublin
+			limit = {
+				character:163111 ?= { 
+					is_alive = yes
+					is_landed = yes
+					current_date = 867.1.1
+				}
+			}
+			character:163111 ?= { trigger_event = bryten_scotland.500 }
+		}
+		if = {# Igor's Tribute over the Drevilians
+			limit = {
+				character:600 ?= { 
+					is_alive = yes
+					is_landed = yes
+					current_date = 936.8.7
+				}
+			}
+			character:600 ?= { trigger_event = tapestry_rus.001 }
+		}
+		if = {# Hugh the great, defacto Ruler of France in 936
+			limit = {
+				character:90120 ?= { 
+					is_alive = yes
+					current_date = 936.8.7
+				}
+			}
+			character:90120 = { designate_diarch = character:6444 }
+			remove_generated_diarch_consequences_effect = {
+				NEW_DIARCH = character:6444
+				LIEGE = character:90120
+			}
+			character:90120 ?= { trigger_event = tapestry_french.030 }
+		}
+		# Other Character stuff
 		character:6878 = {# kill haestin
 			if = {
 				limit = {
@@ -17,36 +72,6 @@ bryten_setup_after_game_start_on_actions = {
 					is_landed = yes
 				}
 				death = { death_reason = death_disappearance }
-			}
-		}
-		character:140 = {# William the Conquer in the Conquer Bookmark
-			if = {
-				limit = {
-					is_alive = yes
-					is_landed = yes
-					current_date = 1066.12.25
-				}
-				trigger_event = bryten_england.001
-			}
-		}
-		character:33358 = {# Alfred is the proper successor
-			if = {
-				limit = {
-					is_alive = yes
-					is_landed = yes
-					current_date = 867.1.1
-				}
-				trigger_event = bryten_england.500
-			}
-		}
-		character:163111 = {# Ivar is ruling in Dublin
-			if = {
-				limit = {
-					is_alive = yes
-					is_landed = yes
-					current_date = 867.1.1
-				}
-				trigger_event = bryten_scotland.500
 			}
 		}
 		title:d_meissen.holder = {# Gero gets the choice for conversion policy
@@ -58,26 +83,6 @@ bryten_setup_after_game_start_on_actions = {
 				}
 				trigger_event = tapestry_hre.011
 			}
-		}
-		character:600 = {# Igor's Tribute over the Drevilians
-			if = {
-				limit = {
-					is_alive = yes
-					is_landed = yes
-					current_date = 936.8.7
-				}
-				trigger_event = tapestry_rus.001
-			}
-		}
-		# Hugh the great, defacto Ruler of France in 936
-		character:90120 = { designate_diarch = character:6444 }
-		remove_generated_diarch_consequences_effect = {
-			NEW_DIARCH = character:6444
-			LIEGE = character:90120
-		}
-		if = {
-			limit = { exists = character:90120 }
-			character:90120 = { trigger_event = tapestry_french.030 }
 		}
 		# Set Frankish Elective in 887
 		if = {# Election of Odo begins the Election period

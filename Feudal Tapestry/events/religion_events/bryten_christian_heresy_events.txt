@@ -178,11 +178,6 @@ bryten_heresy.003 = {# council: Clergy gather from all over
 				save_scope_as = bogomil_priest_at_council
 			}
 		}
-
-		set_global_variable = {
-			name = bryten_bogomilism_council_began
-			value = yes
-		}
 	}
 
 	
@@ -1216,11 +1211,14 @@ bryten_heresy.006 = {# Council: wealth
 			base = 100
 		}
 	}
-
-	trigger_event = {
-		id = bryten_heresy.007
-		days = { 5 10 }
+	
+	after = {
+		trigger_event = {
+			id = bryten_heresy.007
+			days = { 5 10 }
+		}
 	}
+
 }
 # Council: pacifism
 scripted_effect bryten_heresy_council_bogomil_armed_effect = {
@@ -1693,11 +1691,11 @@ bryten_heresy.008 = {# The church council arrives at their final important doctr
 
 
 		}
-
-		set_global_variable = {
-			name = bryten_bogomilism_council_completed
-			value = yes
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:bryten_bogomilism_council_completed
 		}
+
 
 	}
 

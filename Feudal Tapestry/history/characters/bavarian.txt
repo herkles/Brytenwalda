@@ -10048,6 +10048,50 @@ bavarian0004 = {
 		death=yes
 	}
 }
+1228420 = { 
+	name="Adela" # Wife of Aribo I, sister of Hartwig of Salzburg
+	dynasty=1000101010
+	female=yes
+	religion="catholic"
+	culture="bavarian"  # german
+	father=1228418
+	mother=1228419
+	960.1.1={
+		birth = yes
+	}
+	1020.9.7={
+		death = yes
+	}
+}
+1228419 = {
+	name="Wichburg"
+	dynasty_house = house_babenberg
+	female=yes
+	religion="catholic"
+	culture="bavarian"  # melted from: german
+	father=7970
+	932.1.1 = {
+		birth=yes
+	}
+	981.1.1 = {
+		death=yes
+	}
+}
+1228418 = { 
+	name="Hartwig" # Count Palatine of Bavaria between 977-985 married to Wichburg daughter of Duke Eberhard of Bavaria
+	dynasty=1000101010
+	religion="catholic"
+	culture="bavarian"  # german
+	920.1.1={
+		birth = yes
+	}
+	956.1.1={
+		add_spouse = "1228419"
+	}	
+	985.1.1={
+		death = yes
+	}
+}
 1228411 = { 
 	name="Arnold" # Markgraf of Kärnten
 	dynasty = 1000101001 # Wels-Lambach 

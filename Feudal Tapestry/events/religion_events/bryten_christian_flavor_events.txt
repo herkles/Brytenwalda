@@ -300,24 +300,33 @@ bryten_christian.010 = {# Monks make fantastic beer
 	}
 	immediate = {
 		if = {# first check if we do have a monk direct vassal
-			any_vassal = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# second check if we do have a monk vassal(any is acceptable
-			any_vassal_or_below = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal_or_below = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# third check if we do have a monk courtier
-			any_courtier = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_courtier = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# if we don't have one then we create one. 
@@ -331,8 +340,8 @@ bryten_christian.010 = {# Monks make fantastic beer
 				culture = root.culture
 				learning = { 10 12 }
 				save_scope_as = monk
-				add_character_flag = monk_vanishing
 			}
+			scope:monk = {	add_character_flag = monk_vanishing	}
 		}
 	}
 
@@ -467,24 +476,33 @@ bryten_christian.011 = {# Monks have healing herbs
 	}
 	immediate = {
 		if = {# first check if we do have a monk direct vassal
-			any_vassal = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# second check if we do have a monk vassal(any is acceptable
-			any_vassal_or_below = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal_or_below = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# third check if we do have a monk courtier
-			any_courtier = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_courtier = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# if we don't have one then we create one. 
@@ -498,8 +516,8 @@ bryten_christian.011 = {# Monks have healing herbs
 				culture = root.culture
 				learning = { 10 12 }
 				save_scope_as = monk
-				add_character_flag = monk_vanishing
 			}
+			scope:monk = {	add_character_flag = monk_vanishing	}
 		}
 	}
 	
@@ -557,7 +575,7 @@ bryten_christian.011 = {# Monks have healing herbs
 			lifestyle_herbalist = miniscule_stress_impact_gain
 			lifestyle_gardener = miniscule_stress_impact_gain
 			# traits that lose stress
-			paranoid = minor_stress_impact_losss
+			paranoid = minor_stress_loss
 		}
 	}
 
@@ -596,24 +614,33 @@ bryten_christian.012 = {# Monks make great wine
 	}
 	immediate = {
 		if = {# first check if we do have a monk direct vassal
-			any_vassal = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# second check if we do have a monk vassal(any is acceptable
-			any_vassal_or_below = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal_or_below = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# third check if we do have a monk courtier
-			any_courtier = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_courtier = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# if we don't have one then we create one. 
@@ -627,8 +654,8 @@ bryten_christian.012 = {# Monks make great wine
 				culture = root.culture
 				learning = { 10 12 }
 				save_scope_as = monk
-				add_character_flag = monk_vanishing
 			}
+			scope:monk = {	add_character_flag = monk_vanishing	}
 		}
 	}
 	weight_multiplier = {
@@ -757,24 +784,33 @@ bryten_christian.013 = {# Monk is fantastic painter
 
 	immediate = {
 		if = {# first check if we do have a monk direct vassal
-			any_vassal = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# second check if we do have a monk vassal(any is acceptable
-			any_vassal_or_below = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal_or_below = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# third check if we do have a monk courtier
-			any_courtier = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_courtier = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# if we don't have one then we create one. 
@@ -788,8 +824,8 @@ bryten_christian.013 = {# Monk is fantastic painter
 				culture = root.culture
 				learning = { 10 12 }
 				save_scope_as = monk
-				add_character_flag = monk_vanishing
 			}
+			scope:monk = {	add_character_flag = monk_vanishing	}
 		}
 	}
 	
@@ -800,9 +836,10 @@ bryten_christian.013 = {# Monk is fantastic painter
 			# traits that gain Stress
 			greedy = miniscule_stress_impact_gain
 			# traits that lose stress
-			profligate = miniscule_stress_impact_losss
-			improvident = miniscule_stress_impact_losss
-			generous = miniscule_stress_impact_losss		}
+			profligate = miniscule_stress_loss
+			improvident = miniscule_stress_loss
+			generous = miniscule_stress_loss		
+		}
 	}
 	option = {# don't buy
 		name = bryten_christian.013.b
@@ -812,7 +849,7 @@ bryten_christian.013 = {# Monk is fantastic painter
 			improvident = miniscule_stress_impact_gain
 			profligate = miniscule_stress_impact_gain
 			# traits that lose stress
-			greedy = miniscule_stress_impact_losss
+			greedy = miniscule_stress_loss
 		}
 	}
 
@@ -853,24 +890,33 @@ bryten_christian.014 = {# Monks produce beautiful books
 
 	immediate = {
 		if = {# first check if we do have a monk direct vassal
-			any_vassal = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# second check if we do have a monk vassal(any is acceptable
-			any_vassal_or_below = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal_or_below = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# third check if we do have a monk courtier
-			any_courtier = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_courtier = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# if we don't have one then we create one. 
@@ -884,8 +930,8 @@ bryten_christian.014 = {# Monks produce beautiful books
 				culture = root.culture
 				learning = { 10 12 }
 				save_scope_as = monk
-				add_character_flag = monk_vanishing
 			}
+			scope:monk = {	add_character_flag = monk_vanishing	}
 		}
 	}
 	
@@ -902,10 +948,10 @@ bryten_christian.014 = {# Monks produce beautiful books
 			greedy = miniscule_stress_impact_gain
 			dull = miniscule_stress_impact_gain
 			# traits that lose stress
-			profligate = miniscule_stress_impact_losss
-			improvident = miniscule_stress_impact_losss
-			generous = miniscule_stress_impact_losss
-			shrewd = miniscule_stress_impact_losss
+			profligate = miniscule_stress_loss
+			improvident = miniscule_stress_loss
+			generous = miniscule_stress_loss
+			shrewd = miniscule_stress_loss
 	
 		}
 	}
@@ -918,8 +964,8 @@ bryten_christian.014 = {# Monks produce beautiful books
 			profligate = miniscule_stress_impact_gain
 			shrewd = miniscule_stress_impact_gain
 			# traits that lose stress
-			greedy = miniscule_stress_impact_losss
-			dull = miniscule_stress_impact_losss
+			greedy = miniscule_stress_loss
+			dull = miniscule_stress_loss
 		}
 
 	}
@@ -960,24 +1006,33 @@ bryten_christian.015 = {# Local monks come to visit often
 
 	immediate = {
 		if = {# first check if we do have a monk direct vassal
-			any_vassal = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# second check if we do have a monk vassal(any is acceptable
-			any_vassal_or_below = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal_or_below = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# third check if we do have a monk courtier
-			any_courtier = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_courtier = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# if we don't have one then we create one. 
@@ -991,8 +1046,8 @@ bryten_christian.015 = {# Local monks come to visit often
 				culture = root.culture
 				learning = { 10 12 }
 				save_scope_as = monk
-				add_character_flag = monk_vanishing
 			}
+			scope:monk = {	add_character_flag = monk_vanishing	}
 		}
 	}
 	
@@ -1019,8 +1074,8 @@ bryten_christian.015 = {# Local monks come to visit often
 			reclusive = miniscule_stress_impact_gain
 			shy = miniscule_stress_impact_gain
 			# traits that lose stress
-			gregarious = miniscule_stress_impact_losss
-			diplomat = miniscule_stress_impact_losss
+			gregarious = miniscule_stress_loss
+			diplomat = miniscule_stress_loss
 		}
 	}
 	option = {# the Monks are tedious
@@ -1051,8 +1106,8 @@ bryten_christian.015 = {# Local monks come to visit often
 			gregarious = miniscule_stress_impact_gain
 			diplomat = miniscule_stress_impact_gain
 			# traits that lose stress
-			reclusive = miniscule_stress_impact_losss
-			shy = miniscule_stress_impact_losss
+			reclusive = miniscule_stress_loss
+			shy = miniscule_stress_loss
 		}
 	}
 
@@ -1091,24 +1146,33 @@ bryten_christian.016 = {# Donate to local monastery
 
 	immediate = {
 		if = {# first check if we do have a monk direct vassal
-			any_vassal = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# second check if we do have a monk vassal(any is acceptable
-			any_vassal_or_below = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_vassal_or_below = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# third check if we do have a monk courtier
-			any_courtier = {
-				is_available_ai_adult = yes
-				religion = religion:christianity_religion
-				has_trait = devoted # got to be a monk
+			random_courtier = {
+				limit = {
+					is_available_ai_adult = yes
+					religion = religion:christianity_religion
+					has_trait = devoted # got to be a monk
+				}
+				save_scope_as = monk
 			}
 		}
 		else_if = {# if we don't have one then we create one. 
@@ -1122,8 +1186,8 @@ bryten_christian.016 = {# Donate to local monastery
 				culture = root.culture
 				learning = { 10 12 }
 				save_scope_as = monk
-				add_character_flag = monk_vanishing
 			}
+			scope:monk = {	add_character_flag = monk_vanishing	}
 		}
 	}
 	
@@ -1144,8 +1208,8 @@ bryten_christian.016 = {# Donate to local monastery
 			# traits that gain Stress
 			greedy = miniscule_stress_impact_gain
 			# traits that lose stress
-			improvident = miniscule_stress_impact_losss
-			generous = miniscule_stress_impact_losss
+			improvident = miniscule_stress_loss
+			generous = miniscule_stress_loss
 		}
 	}
 	option = { # Ok
@@ -1166,7 +1230,7 @@ bryten_christian.016 = {# Donate to local monastery
 			improvident = miniscule_stress_impact_gain
 			generous = miniscule_stress_impact_gain
 			# traits that lose stress
-			greedy = miniscule_stress_impact_losss
+			greedy = miniscule_stress_loss
 		}
 	}
 
