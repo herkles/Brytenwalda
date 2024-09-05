@@ -1804,6 +1804,24 @@
 			NOT = { religion_tag = zoroastrianism_religion }
 		}
 
+		name = {
+			first_valid = {
+				triggered_desc = {
+					trigger = { faith = faith:cathar }
+					desc = tenet_pacifism_cathar_name
+				}
+				desc = tenet_dharmic_pacifism_name
+			}
+		}
+		desc = {
+			first_valid = {
+				triggered_desc = {
+					trigger = {	faith = faith:cathar }
+					desc = tenet_pacifism_cathar_desc
+				}
+				desc = tenet_dharmic_pacifism_desc
+			}
+		}
 		piety_cost = {
 			if = {
 				limit = {
@@ -1824,7 +1842,6 @@
 				multiply = faith_unchanged_doctrine_cost_mult
 			}
 		}
-
 		can_pick = {
 			custom_description = {
 				text = incompatible_tenet_human_sacrifice_trigger
@@ -1847,13 +1864,12 @@
 			holy_wars_forbidden = yes
 			pacifist_opinion_active = yes
 			opinion_of_pacifist_opinion_active = 10
+			reincarnation_events_active = yes
 		}
-
 		traits = {
 			virtues = { calm }
 			sins = { wrathful }
 		}
-		
 		character_modifier = {
 			domain_limit = 1
 			ai_war_chance = -0.25

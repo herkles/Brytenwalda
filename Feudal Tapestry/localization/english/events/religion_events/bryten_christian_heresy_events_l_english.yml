@@ -71,7 +71,7 @@
   bryten_heresy.007.c:0 "Take up the sword to defend the church!"
   bryten_heresy.007.c.tt.success:0 "You sway the [bogomil_council_host.GetFaith.PriestNeuterPlural]"
   bryten_heresy.007.c.tt.failure:0 "The clergy jeer at you"
-  bryten_heresy.007.d:0 "Have we shattered along dogmatic lines so quickly?"
+  bryten_heresy.007.d:0 "I shall leave this for the clergy to dcide"
 
   bryten_heresy.008.t:0 "$bryten_heresy.003.t.council$ - Conclusion"
   bryten_heresy.008.desc.intro:0 "On this day, the #EMP new#! [bogomil_council_host.GetFaith.GetAdjective] creed is born!/n/n"
@@ -116,6 +116,100 @@
   bryten_heresy.051.a:0 "Condemn this heretic!"
   bryten_heresy.051.b:0 "Let's leave them alone. They are just peasants!"
   bryten_heresy.051.c:0 "Peter speaks the truth"
+
+
+
+  # The Waldensian Council
+  bryten_heresy.052.t:0 "The Council of [council_2_venue.GetNameNoTierNoTooltip]"
+  bryten_heresy.052.desc:0 "A nascent faith calls for debate, and so [waldensian_priest.GetFirstName] has gathered a conclave of influential clerics sympathetic to our cause. There are many points of theology to discuss to hash out as we turn our movement into something more organized and formalized."
+  bryten_heresy.052.a:0 "Naturally, I'll take a leading role in the discussions."
+  bryten_heresy.052.a.tt:0 "You engage in [learning|E] duels to make your points"
+  bryten_heresy.052.b:0 "My influence will be more felt than seen..."
+  bryten_heresy.052.b.tt:0 "You spend [piety_i]#N [EmptyScope.ScriptValue('bryten_heresy_conclave_cost_value')|0]#! [piety|E] per firm choice #WEAK but cannot spend $game_concept_piety$ you don't have#!"
+  bryten_heresy.052.c:0 "This is a matter for the clergy alone."
+  bryten_heresy.052.c.tt:0 "The conclave will be decided without your input"
+
+  bryten_heresy.053.t:0 "$bryten_heresy.052.t.council$ - Priesthood"
+  bryten_heresy.053.desc:0 "TThe conclave's discussions have turned towards the issue of the priesthood. There will need to be some structure but the question is how it shall be organized. One faction believes we shall have our own patriarch to guide the faith. Other clergy spoke out against this saying that while a priesthood is important, no one man should govern the church. Finally a third faction says that anyone can be a priest and to say otherwise is to go against God and is heresy."
+  bryten_heresy.053.a:0 "A Patriarch to guide the Church"
+  bryten_heresy.053.a.tt.success:0 "You sway the [waldensian_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.053.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.053.b:0 "Priests are equal"
+  bryten_heresy.053.b.tt.success:0 "You sway the [waldensian_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.053.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.053.c:0 "Anyone can become a priest."
+  bryten_heresy.053.c.tt.success:0 "You sway the [waldensian_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.053.c.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.053.d:0 "I have no opinion on this matter."
+
+  bryten_heresy.054.t:0 "$bryten_heresy.052.t.council$ - Female Preaching"
+  bryten_heresy.054.desc:0 "The conclave's discussions have turned towards the issue of female preaching. One faction believes that women should be allowed to preach and spread the gospel. While others angrily shout that women are not allowed by the gospel to preach."
+  bryten_heresy.054.a:0 "Women can not be Clergy"
+  bryten_heresy.054.a.tt.success:0 "You sway the [waldensian_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.054.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.054.b:0 "Women can be clergy"
+  bryten_heresy.054.b.tt.success:0 "You sway the [waldensian_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.054.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.054.d:0 "This seems circumstantial..."
+
+  bryten_heresy.055.t:0 "$bryten_heresy.052.t.council$ - Divorce"
+  bryten_heresy.055.desc:0 "The conclave's discussions have turned towards the issue of divorce. One faction believes that divorce is prohibited and that second marriages are forbidden by the Bible. While another faction believes that it is allowed in exceptional circumstances."
+  bryten_heresy.055.a:0 "Divorce is Forbidden"
+  bryten_heresy.055.a.tt.success:0 "You sway the [waldensian_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.055.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.055.b:0 "Divorce is possible"
+  bryten_heresy.055.b.tt.success:0 "You sway the [waldensian_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.055.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.055.d:0 "I shall leave this for the clergy to dcide"
+
+  bryten_heresy.056.t:0 "$bryten_heresy.052.t.council$ - Pilgrimage"
+  bryten_heresy.056.desc:0 "The conclave draws to a fiery conclusion, with minor brawls and passionate arguments alike rippling through [council_2_venue.GetNameNoTier], as ecclesiastic cliques fight both literally and metaphorically for their beliefs.\n\nThe heart of this final #EMP lively#! debate is the matter of Pilgrimages. Two camps have emerged. The first believes that visiting the places of holy men and women is good, especially going to Jerusalem and following literally in the footsteps of Jesus Christ. However the other camp shouts at them that all this does is encourage wealth and sin, that the pilgrimages only lead to greed and are not what our lord and saviour want."
+  bryten_heresy.056.a:0 "Pilgrimages are sinful"
+  bryten_heresy.056.a.tt.success:0 "You sway the [waldensian_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.056.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.056.b:0 "Pilgrimages are fine"
+  bryten_heresy.056.b.tt.success:0 "You sway the [waldensian_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.056.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.056.d:0 "I shall leave this for the clergy to dcide"
+
+  bryten_heresy.057.t:0 "$bryten_heresy.052.t.council$ - Conclusion"
+  bryten_heresy.057.desc.intro:0 "On this day, the #EMP new#! [waldensian_council_host.GetFaith.GetAdjective] creed is born!/n/n"
+  bryten_heresy.057.desc.hof:0 "with a patriarch to guide her,"
+  bryten_heresy.057.desc.priests:0 "With councils of Priests to guide her,"
+  bryten_heresy.057.desc.lay:0 "With priests chosen from among the community to guide her,"
+  
+  bryten_heresy.057.desc.male_only:0 "With the clergy being for just men,"
+  bryten_heresy.057.desc.female_clergy:0 "With women allowing to be part of the clergy,"
+
+  bryten_heresy.057.desc.divorce_banned:0 "with Divorce being banned,"
+  bryten_heresy.057.desc.divorce_allowed:0 "With Divorce being allowed in special circumstances,"
+
+  bryten_heresy.057.desc.pilgrimage_forbidden:0 "With pilgrimages being discouraged,"
+  bryten_heresy.057.desc.pilgrimage_allowed:0 "With pilgrimages being allowed, "
+
+  bryten_heresy.057.desc.outro:0 "\n\nNo longer are we the mere dream of a lone, wandering cleric. Now we are a living, vibrant community, and one that all of Christendom shall surely soon embrace."
+  bryten_heresy.057.a:0 "Glory be to god!"
+
+  bryten_heresy.058.t:0 "$bryten_heresy.052.t.council$ "
+  bryten_heresy.058.desc:0 "News has reached you about a council of heretics held at [council_2_venue.GetNameNoTierNoTooltip]. A gathering of so-called waldensian heretics came to debate their theology. Well it doesn't matter what they decided, they are heretics damned to the fires of hell and they will be dealt with and the people will be led to the true and proper teachings. 
+  bryten_heresy.058.a:0 "Condemn these heretics!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #######################################
 # lollard heresy Events
 #######################################

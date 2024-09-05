@@ -139,5 +139,30 @@ bogomil_preacher_template = {# Backup Bogomil preacher for the council
 		}
 	}
 }
+heretic_preacher_template = {# Backup Bogomil preacher for the council
+	age = { 30 60 }
+	random_traits_list = {
+		count = 1
+		education_learning_3 = {}
+		education_learning_4 = {}
+		education_learning_5 = {}
+	}
+	random_traits = yes
+	
+	faith = root.faith # use the root faith in this case as it's a Priest
+	culture = root.culture
+	gender = male
+	trait = heresiarch
 
+	learning = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+
+	after_creation = {
+		add_character_flag = {
+			flag = need_priest_outfit
+		}
+	}
+}
 
