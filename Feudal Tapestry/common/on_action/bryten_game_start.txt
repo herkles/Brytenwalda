@@ -155,6 +155,25 @@ bryten_setup_after_game_start_on_actions = {
 				set_culture_pillar = heritage_south_slavic
 			}
 		}
+		if = {# Normans quite like the Sicilians
+			limit = { game_start_date >= 1066.1.1 }
+			culture:norman = {
+				change_cultural_acceptance = {
+					target = culture:sicilian
+					value = 75
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			every_child = {# Sicilian children in 1066 know Norman
+				limit = {
+					AND = {
+						has_culture = culture:sicilian
+						any_parent = {	has_culture = culture:norman }
+					}
+				}
+				learn_language = language_french
+			}
+		}
 		# traditions
 		if = {# Anglo-Saxons have housecarls thanks to cnut
 			limit = { game_start_date >= 1016.1.1 }

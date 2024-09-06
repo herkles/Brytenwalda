@@ -1015,15 +1015,6 @@ on_game_start = {
 				value = yes
 			}
 		}
-		# joachimites is active after the 13th century
-		if = {
-			limit = { game_start_date >= 1202.1.1 }
-			faith:joachimites = { remove_doctrine = unavailable_doctrine }			
-			set_global_variable = {
-				name = joachimites_spawned
-				value = yes
-			}
-		}
 		# fraticellism is active after the 13th century
 		if = {
 			limit = { game_start_date >= 1278.1.1 }

@@ -2320,12 +2320,26 @@ bryten_bogomil_council_decision = {
 			}
 
 			if = {# First Bogomil is chosen because he is the founder and it is bogomilism after all.
-				limit = { scope:bogomil_founder = { is_alive = yes } }
+				limit = { 
+					scope:bogomil_founder = { 
+						AND = {
+							is_alive = yes 
+							is_employer_of = scope:bogomil_council_host
+						}
+					}
+				}
 				save_scope_as = bogomil_priest
 				add_character_flag = bogomil_priest_is_bogomil
 			}
 			else_if = {# Second Jeremiah is chosen because he is second to Bogomil after all.
-				limit = { scope:bogomil_jeremiah = { is_alive = yes } }
+				limit = { 
+					scope:bogomil_jeremiah = { 
+						AND = {
+							is_alive = yes 
+							is_employer_of = scope:bogomil_council_host
+						}
+					}
+				}
 				save_scope_as = bogomil_priest
 				add_character_flag = bogomil_priest_is_jeremiah
 			}
@@ -2629,9 +2643,6 @@ bryten_bogomil_council_decision = {
 		base = 100
 	}
 }
-
-
-
 bryten_waldensian_council_decision = {
 	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
 	desc = bryten_waldensian_council_decision_desc
@@ -2690,7 +2701,14 @@ bryten_waldensian_council_decision = {
 			}
 
 			if = {# First Peter Waldo is chosen because he is the founder and it is waldensian after all.
-				limit = { scope:waldensian_founder = { is_alive = yes } }
+				limit = { 
+					scope:waldensian_founder = { 
+						AND = {
+							is_alive = yes 
+							is_employer_of = scope:waldensian_council_host
+						}
+					}
+				}
 				save_scope_as = waldensian_priest
 				add_character_flag = waldensian_priest_is_peter
 			}
@@ -2873,7 +2891,14 @@ bryten_lollard_council_decision = {
 			}
 
 			if = {# First John Wycliff is chosen because he is the founder and it is lollard after all.
-				limit = { scope:lollard_founder = { is_alive = yes } }
+				limit = { 
+					scope:lollard_founder = { 
+						AND = {
+							is_alive = yes 
+							is_employer_of = scope:lollard_council_host
+						}
+					}
+				}
 				save_scope_as = lollard_priest
 				add_character_flag = lollard_priest_is_wycliff
 			}
@@ -3056,7 +3081,14 @@ bryten_arnoldism_council_decision = {
 			}
 
 			if = {# First Arnold of Brescia is chosen because he is the founder and it is arnoldism after all.
-				limit = { scope:arnoldism_founder = { is_alive = yes } }
+				limit = {
+					scope:arnoldism_founder = { 
+						AND = {
+							is_alive = yes 
+							is_employer_of = scope:arnoldism_council_host
+						}
+					}						
+				}
 				save_scope_as = arnoldism_priest
 				add_character_flag = arnoldism_priest_is_arnold
 			}
@@ -3239,7 +3271,15 @@ bryten_henricians_council_decision = {
 			}
 
 			if = {# First Henry of Lusanne is chosen because he is the founder and it is henricians after all.
-				limit = { scope:henricians_founder = { is_alive = yes } }
+				limit = { 
+					scope:henricians_founder = { 
+						AND = {
+							is_alive = yes 
+							is_employer_of = scope:henricians_council_host
+
+						}
+					} 
+				}
 				save_scope_as = henricians_priest
 				add_character_flag = henricians_priest_is_henry
 			}
@@ -3422,7 +3462,14 @@ bryten_petrobrusian_council_decision = {
 			}
 
 			if = {# First Peter of Bruys is chosen because he is the founder and it is petrobrusian after all.
-				limit = { scope:petrobrusian_founder = { is_alive = yes } }
+				limit = { 
+					scope:petrobrusian_founder = { 
+						AND = {
+							is_alive = yes 
+							is_employer_of = scope:petrobrusian_council_host
+						}
+					}				
+				}
 				save_scope_as = petrobrusian_priest
 				add_character_flag = petrobrusian_priest_is_peter
 			}

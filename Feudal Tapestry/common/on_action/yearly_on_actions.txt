@@ -971,47 +971,6 @@ yearly_global_pulse = {
 				}
 			}
 		}		
-		if = {# joachimites Spreading
-			limit = {
-				current_date < 1150.1.1
-				NOT = { has_global_variable = joachimites_spawned }
-			}
-			random = {
-				chance = 10
-				modifier = {
-					add = 10 # 20% chance
-					current_date >= 1150.1.1
-				}
-				modifier = {
-					add = 10 # 30% chance
-					current_date >= 1160.1.1
-				}
-				modifier = {
-					add = 10 # 40% chance
-					current_date >= 1170.1.1
-				}
-				modifier = {
-					add = 10 # 50% chance
-					current_date >= 1180.1.1
-				}
-				modifier = {
-					add = 10 # 60% chance
-					current_date >= 1190.1.1
-				}
-				modifier = {
-					add = 20 # 80% chance
-					current_date >= 1200.1.1
-				}
-				modifier = {
-					add = 20 # 100% chance
-					current_date >= 1210.1.1
-				}
-				trigger_event = {
-					id = bryten_heresy.125
-					days = { 60 300 }
-				}
-			}
-		}
 		if = {# fraticelli Spreading
 			limit = {
 				current_date < 1200.1.1
