@@ -1885,6 +1885,1252 @@ bryten_heresy.026 = {# Convert to Catharism?
 		}
 	}	
 }
+# Council: Council gathers from all over
+bryten_heresy.027 = {# council: Clergy gather from all over
+	type = character_event
+	title = bryten_heresy.027.t
+	desc = bryten_heresy.027.desc
+	theme = learning
+	left_portrait = {
+		character = scope:cathar_council_host
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:cathar_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# You are a heresiarch
+		add_trait = heresiarch
+		# Sort our locale.
+		## First, whether this is a repeater.
+		scope:council_1_venue = {
+			## Preferring to chill at scope:cathar_priest's place.
+			if = {
+				limit = { holder = scope:cathar_priest }
+				save_scope_as = council_2_venue
+			}
+			## But otherwise we take your capital.
+			else = {
+				scope:cathar_council_host.capital_barony = { save_scope_as = council_2_venue }
+			}
+		}
+		scope:council_2_venue = { save_scope_as = background_temple_scope }
+		scope:cathar_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = cathar_priest_at_council
+			}
+		}
+	}
+
+	
+	option = {# Naturally, I'll take a leading role in the discussions.
+		name = bryten_heresy.027.a
+
+		# You'll engage in learning debates.
+		custom_tooltip = bryten_heresy.027.a.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:debate
+		}
+		stress_impact = {
+			gregarious = miniscule_stress_impact_loss
+			shy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# My influence will be more felt than seen...
+		name = bryten_heresy.027.b
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:piety
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# This is a matter for the clergy alone.
+		name = bryten_heresy.027.c
+		custom_tooltip = bryten_heresy.027.c.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:defaulted
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_loss
+			arrogant = major_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 100
+		}
+	}
+
+
+	after = {
+		trigger_event = {
+			id = bryten_heresy.028
+			days = {5 10}
+		}
+	}
+}
+# Council: How Gnostic are you
+scripted_effect bryten_heresy_council_cathar_monarchianism_effect = {
+	faith:cathar = { add_doctrine = doctrine_pluralism_righteous }
+}
+scripted_effect bryten_heresy_council_cathar_dualism_effect = {
+	faith:cathar = {
+		hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
+		add_doctrine = doctrine_pluralism_fundamentalist
+	}
+}
+scripted_effect bryten_heresy_council_cathar_trinity_effect = {
+	show_as_tooltip = {
+		faith:cathar = {
+			hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
+			add_doctrine = doctrine_pluralism_pluralistic
+		}
+	}
+}
+bryten_heresy.028 = {# Council: How Gnostic are you
+	type = character_event
+	title = bryten_heresy.028.t
+	desc = bryten_heresy.028.desc
+	theme = diplomacy
+	left_portrait = {
+		character = scope:cathar_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:cathar_priest_at_council
+		animation = personality_bold
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:cathar_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:cathar_priest_at_council }
+			clear_saved_scope = cathar_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:cathar_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = cathar_priest_at_council
+			}
+		}
+	}
+
+	option = {# Monarchianism
+		name = bryten_heresy.028.a
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:cathar_council_stance_gnostic = flag:cathar_council_stance_monarchianism }
+			}
+		}
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_cathar_monarchianism_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.028.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.028.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_monarchianism_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.028.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.028.a.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:cathar_priest's preference.
+						## Dualism.
+						if = {
+							limit = { scope:cathar_council_stance_gnostic = flag:cathar_council_stance_dualism }
+							bryten_heresy_council_cathar_dualism_effect = yes
+						}
+						## Trinitarians.
+						if = {
+							limit = { scope:cathar_council_stance_gnostic = flag:cathar_council_stance_trinity }
+							bryten_heresy_council_cathar_trinity_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# Absolute Dualism
+		name = bryten_heresy.028.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:cathar_council_stance_gnostic = flag:cathar_council_stance_dualism }
+			}
+		}
+
+		if = {# Piety path.
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_cathar_dualism_effect = yes
+		}
+		if = {# Debate path.
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.028.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.028.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_dualism_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.028.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.028.b.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:cathar_priest's preference.
+						## Monarchianism.
+						if = {
+							limit = { scope:cathar_council_stance_gnostic = flag:cathar_council_stance_monarchianism }
+							bryten_heresy_council_cathar_monarchianism_effect = yes
+						}
+						## Trinitarians.
+						if = {
+							limit = { scope:cathar_council_stance_gnostic = flag:cathar_council_stance_trinity }
+							bryten_heresy_council_cathar_trinity_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# Close to Trinitarianism
+		name = bryten_heresy.028.c
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:cathar_council_stance_gnostic = flag:cathar_council_stance_trinity }
+			} 
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_cathar_trinity_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.028.c.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.028.c.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_trinity_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.028.c.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.028.c.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:cathar_priest's preference.
+						## Monarchianism.
+						if = {
+							limit = { scope:cathar_council_stance_gnostic = flag:cathar_council_stance_monarchianism }
+							bryten_heresy_council_cathar_monarchianism_effect = yes
+						}
+						## Felicians.
+						if = {
+							limit = { scope:cathar_council_stance_gnostic = flag:cathar_council_stance_dualism }
+							bryten_heresy_council_cathar_dualism_effect = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# I have no opinion on this matter.
+		name = bryten_heresy.028.d
+
+		# We take scope:cathar_priest's preference.
+		## Monararchianism.
+		if = {
+			limit = { scope:cathar_council_stance_gnostic = flag:cathar_council_stance_monarchianism }
+			bryten_heresy_council_cathar_monarchianism_effect = yes
+		}
+		## Dualism.
+		if = {
+			limit = { scope:cathar_council_stance_gnostic = flag:cathar_council_stance_dualism }
+			bryten_heresy_council_cathar_dualism_effect = yes
+		}
+		## Trinity.
+		if = {
+			limit = { scope:cathar_council_stance_gnostic = flag:cathar_council_stance_trinity }
+			bryten_heresy_council_cathar_trinity_effect = yes
+		}
+
+		# We don't charge stress for the opt-outs, not least because their results are variable.
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.029
+			days = {5 10}
+		}
+	}
+}
+# Council: priesthood
+scripted_effect bryten_heresy_council_cathar_scholar_effect = {
+	faith:cathar = { 
+		hidden_effect = { remove_doctrine = tenet_pure_priesthood }
+		add_doctrine = tenet_literalism
+	}
+}
+scripted_effect bryten_heresy_council_cathar_mystical_effect = {
+	faith:cathar = { 
+		hidden_effect = { remove_doctrine = tenet_pure_priesthood }
+		add_doctrine = tenet_esotericism 
+	}
+}
+scripted_effect bryten_heresy_council_cathar_pure_effect = {
+	faith:cathar = { 
+		add_doctrine = tenet_pure_priesthood 
+	}
+}
+bryten_heresy.029 = {# Council: priesthood
+	type = character_event
+	title = bryten_heresy.029.t
+	desc = bryten_heresy.029.desc
+	theme = martial
+	left_portrait = {
+		character = scope:cathar_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:cathar_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:cathar_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:cathar_priest_at_council }
+			clear_saved_scope = cathar_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:cathar_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = cathar_priest_at_council
+			}
+		}
+	}
+
+	option = {# Scholarly
+		name = bryten_heresy.029.a
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:cathar_council_stance_clergy = flag:cathar_council_stance_scholarly }
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_cathar_scholar_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.029.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.029.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_scholar_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.029.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.029.a.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:cathar_priest's preference.
+						## spiritual.
+						if = {
+							limit = { scope:cathar_council_stance_clergy = flag:cathar_council_stance_mystical }
+							bryten_heresy_council_cathar_mystical_effect = yes
+						}
+						## lay priests.
+						if = {
+							limit = { scope:cathar_council_stance_clergy = flag:cathar_council_stance_pure }
+							bryten_heresy_council_cathar_pure_effect = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# Mystical
+		name = bryten_heresy.029.b
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:cathar_council_stance_clergy = flag:cathar_council_stance_mystical }
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_cathar_mystical_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.029.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.029.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_mystical_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.029.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.029.b.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:cathar_priest's preference.
+						## Spiritual + HoF.
+						if = {
+							limit = { scope:cathar_council_stance_clergy = flag:cathar_council_stance_scholarly }
+							bryten_heresy_council_cathar_scholar_effect = yes
+						}
+						## Lay priests.
+						if = {
+							limit = { scope:cathar_council_stance_clergy = flag:cathar_council_stance_pure }
+							bryten_heresy_council_cathar_pure_effect = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# Pure
+		name = bryten_heresy.029.c
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:cathar_council_stance_clergy = flag:cathar_council_stance_pure }
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_cathar_pure_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.029.c.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.029.c.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_pure_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.029.c.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.029.c.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:cathar_priest's preference.
+						## Spiritual HoF.
+						if = {
+							limit = { scope:cathar_council_stance_clergy = flag:cathar_council_stance_scholarly }
+							bryten_heresy_council_cathar_scholar_effect = yes
+						}
+						## Felicians.
+						if = {
+							limit = { scope:cathar_council_stance_clergy = flag:cathar_council_stance_mystical }
+							bryten_heresy_council_cathar_mystical_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# The clergy decide
+		name = bryten_heresy.029.d
+
+		# We take scope:cathar_priest's preference.
+		## Patriarch.
+		if = {
+			limit = { scope:cathar_council_stance_clergy = flag:cathar_council_stance_scholarly }
+			bryten_heresy_council_cathar_scholar_effect = yes
+		}
+		## Spiritual.
+		if = {
+			limit = { scope:cathar_council_stance_clergy = flag:cathar_council_stance_mystical }
+			bryten_heresy_council_cathar_mystical_effect = yes
+		}
+		## Lay Priest.
+		if = {
+			limit = { scope:cathar_council_stance_clergy = flag:cathar_council_stance_pure }
+			bryten_heresy_council_cathar_pure_effect = yes
+		}
+		# We don't charge stress for the opt-outs, not least because their results are variable.
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.030
+			days = {5 10}
+		}
+	}
+}
+# Council: Divorce
+scripted_effect bryten_heresy_council_cathar_no_divorce = {
+	faith:cathar = { 
+		add_doctrine = doctrine_divorce_disallowed }
+}
+scripted_effect bryten_heresy_council_cathar_approve_divorce = {
+	faith:cathar = { 
+		add_doctrine = doctrine_divorce_approval 
+	}
+}
+bryten_heresy.030 = {# Council: Divorce
+	type = character_event
+	title = bryten_heresy.030.t
+	desc = bryten_heresy.030.desc
+	theme = martial
+	left_portrait = {
+		character = scope:cathar_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:cathar_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:cathar_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:cathar_priest_at_council }
+			clear_saved_scope = cathar_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:cathar_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = cathar_priest_at_council
+			}
+		}
+	}
+
+	option = {# No Divorce
+		name = bryten_heresy.030.a
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:cathar_council_stance_divorce = flag:cathar_council_stance_no_divorce	}
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_cathar_no_divorce = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.030.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.030.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_no_divorce = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.030.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.030.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_approve_divorce = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# Allow Divorce
+		name = bryten_heresy.030.b
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:cathar_council_stance_divorce = flag:cathar_council_stance_yes_divorce }
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_cathar_approve_divorce = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.030.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.030.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_approve_divorce = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.030.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.030.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_no_divorce = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# The Clergy decide
+		name = bryten_heresy.030.d
+
+		# We take scope:cathar_priest's preference.
+		if = {# No Divorce
+			limit = { scope:cathar_council_stance_divorce = flag:cathar_council_stance_no_divorce }
+			bryten_heresy_council_cathar_no_divorce = yes
+		}
+		if = {# Allow Divorce
+			limit = { scope:cathar_council_stance_divorce = flag:cathar_council_stance_yes_divorce }
+			bryten_heresy_council_cathar_approve_divorce = yes
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 100
+		}
+	}
+	
+	after = {
+		trigger_event = {
+			id = bryten_heresy.031
+			days = { 5 10 }
+		}
+	}
+
+}
+# Council: Pilgrimage
+scripted_effect bryten_heresy_council_cathar_no_pilgrimage = {
+	faith:cathar = { 
+		add_doctrine = doctrine_pilgrimage_forbidden 
+	}
+}
+scripted_effect bryten_heresy_council_cathar_yes_pilgrimage = {
+	faith:cathar = { 
+		hidden_effect = { remove_doctrine = doctrine_pilgrimage_forbidden }
+		add_doctrine = doctrine_pilgrimage_encouraged 
+	}
+}
+bryten_heresy.031 = {# Council: Pilgrimage
+	type = character_event
+	title = bryten_heresy.031.t
+	desc = bryten_heresy.031.desc
+	theme = martial
+	left_portrait = {
+		character = scope:cathar_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:cathar_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:cathar_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:cathar_priest_at_council }
+			clear_saved_scope = cathar_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:cathar_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = cathar_priest_at_council
+			}
+		}
+	}
+
+	option = {# No Pilgrimage
+		name = bryten_heresy.031.a
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:cathar_council_stance_pilgrimage = flag:cathar_council_stance_forbid_pilgriamge }
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_cathar_no_pilgrimage = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.031.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.031.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_no_pilgrimage = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.031.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.031.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_yes_pilgrimage = yes
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# Yes Pilgrimage
+		name = bryten_heresy.031.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:cathar_council_stance_pilgrimage = flag:cathar_council_stance_allow_pilgrimage }
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_cathar_yes_pilgrimage = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.031.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.031.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_yes_pilgrimage = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.031.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.031.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_cathar_no_pilgrimage = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 0
+		}
+	}
+	option = {# Clergy Decide
+		name = bryten_heresy.031.d
+
+		if = {# No Pilgrimages
+			limit = { scope:cathar_council_stance_pilgrimage = flag:cathar_council_stance_forbid_pilgriamge }
+			bryten_heresy_council_cathar_no_pilgrimage = yes
+		}
+		if = {# Yes Pilgrimages
+			limit = { scope:cathar_council_stance_pilgrimage = flag:cathar_council_stance_allow_pilgrimage }
+			bryten_heresy_council_cathar_yes_pilgrimage = yes
+		}
+		ai_chance = {
+			# The AI should just let the scope:cathar_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.032
+			days = {5 10}
+		}
+	}
+}
+# council results
+bryten_heresy.032 = {# The church council arrives at their final important doctrinal conclusions.
+	type = character_event
+	title = bryten_heresy.032.t
+	desc = {
+		desc = bryten_heresy.032.desc.intro
+		first_valid = {# Gnostic
+			triggered_desc = {
+				trigger = {	faith:cathar = { has_doctrine = doctrine_pluralism_pluralistic } }
+				desc = bryten_heresy.032.desc.pluralist
+			}
+			triggered_desc = {
+				trigger = {
+					faith:cathar = { has_doctrine = doctrine_pluralism_righteous }
+				}
+				desc = bryten_heresy.032.desc.righteous
+			}
+			triggered_desc = {
+				trigger = {
+					faith:cathar = { has_doctrine = doctrine_pluralism_fundamentalist }
+				}
+				desc = bryten_heresy.032.desc.fundamentalist
+			}
+		}
+		first_valid = {# Priesthood
+			triggered_desc = {
+				trigger = {	faith:cathar = { has_doctrine = tenet_literalism } }
+				desc = bryten_heresy.032.desc.scholar
+			}
+			triggered_desc = {
+				trigger = { faith:cathar = { has_doctrine = tenet_esotericism } }
+				desc = bryten_heresy.032.desc.mystical
+			}
+			triggered_desc = {
+				trigger = {	faith:cathar = { has_doctrine = tenet_pure_priesthood } }
+				desc = bryten_heresy.032.desc.pure
+			}
+		}
+		first_valid = {# Divorce
+			triggered_desc = {# No Divorce
+				trigger = {	faith:cathar = { has_doctrine = doctrine_divorce_disallowed } }
+				desc = bryten_heresy.032.desc.divorce_banned
+			}
+			triggered_desc = {# Yes Divorce
+				trigger = {	faith:cathar = { has_doctrine = doctrine_divorce_approval } }
+				desc = bryten_heresy.032.desc.divorce_allowed
+			}
+		}
+		first_valid = {# Pilgrimage
+			triggered_desc = {# No Pilgrimage
+				trigger = {	faith:cathar = { has_doctrine = doctrine_pilgrimage_forbidden } }
+				desc = bryten_heresy.032.desc.pilgrimage_forbidden
+			}
+			triggered_desc = {# Yes Pilgrimage
+				trigger = {	faith:cathar = { has_doctrine = doctrine_pilgrimage_encouraged } }
+				desc = bryten_heresy.032.desc.pilgrimage_allowed
+			}
+		}
+		# Outro.
+		desc = bryten_heresy.032.desc.outro
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:cathar_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:cathar_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Music!
+		play_music_cue = "mx_cue_sacredrite"
+		faith:cathar = {# the Council is over and now is formulized
+			remove_doctrine = heretic_movement_doctrine
+			change_fervor = { 
+				value = 50
+				desc = bryten_fervor_gain_cathar_council	
+			} 
+		}
+		# Now let's display our choices.
+		faith:cathar = {
+			show_as_tooltip = {
+				# Gnosticism.
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_pluralistic }
+					add_doctrine = doctrine_pluralism_pluralistic
+				}
+				# Priesthood.
+				if = {
+					limit = { has_doctrine = doctrine_spiritual_head }
+					add_doctrine = doctrine_theocracy_temporal
+					add_doctrine = doctrine_spiritual_head
+				}
+				if = {
+					limit = { 
+						has_doctrine = doctrine_theocracy_temporal 
+						NOT = { has_doctrine = doctrine_spiritual_head }
+					}
+					add_doctrine = doctrine_theocracy_temporal
+				}
+				if = {
+					limit = { has_doctrine = doctrine_theocracy_lay_clergy }
+					add_doctrine = doctrine_theocracy_lay_clergy
+				}
+				# Wealth.
+				if = {
+					limit = { has_doctrine = tenet_communal_possessions }
+					add_doctrine = tenet_communal_possessions
+				}
+				if = {
+					limit = { has_doctrine = tenet_apostolic_poverty }
+					add_doctrine = tenet_apostolic_poverty
+				}
+				if = {
+					limit = { has_doctrine = tenet_pure_priesthood }
+					add_doctrine = tenet_pure_priesthood
+				}
+				# Pacifism.
+				if = {
+					limit = { has_doctrine = tenet_armed_pilgrimages }
+					add_doctrine = tenet_armed_pilgrimages
+				}
+				if = {
+					limit = { has_doctrine = tenet_pacifism }
+					add_doctrine = tenet_pacifism
+				}
+				if = {
+					limit = { has_doctrine = tenet_unrelenting_faith }
+					add_doctrine = tenet_unrelenting_faith
+				}
+			}
+
+
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:bryten_cathar_council_completed
+		}
+
+
+	}
+
+	option = {
+		name = bryten_heresy.032.a
+		add_piety = major_piety_gain
+
+	}
+
+	after = {
+		# Clean up the story.
+		every_player = {# letting players know that the cathar church has been formalized
+			trigger_event = {
+				id = bryten_heresy.033
+				days = {5 10}
+			}
+		}
+	}
+}
+bryten_heresy.033 = {# cathar Council(let players know)
+	type = character_event
+	title = bryten_heresy.033.t
+	desc = bryten_heresy.033.desc
+	theme = faith	
+
+
+	option = {# Condemn the heretic
+		name = bryten_heresy.033.a
+	}
+	
+}
 #######################################
 # Waldensian 
 #######################################

@@ -74,15 +74,15 @@ bryten_setup_after_game_start_on_actions = {
 				death = { death_reason = death_disappearance }
 			}
 		}
-		title:d_meissen.holder = {# Gero gets the choice for conversion policy
-			if = {
-				limit = {
+		if = {# Gero gets the choice for conversion policy
+			limit = {
+				character:168562 ?= { 
 					is_alive = yes
 					is_landed = yes
 					current_date = 936.8.7
 				}
-				trigger_event = tapestry_hre.011
 			}
+			character:168562 ?= { trigger_event = tapestry_hre.011 }
 		}
 		# Set Frankish Elective in 887
 		if = {# Election of Odo begins the Election period

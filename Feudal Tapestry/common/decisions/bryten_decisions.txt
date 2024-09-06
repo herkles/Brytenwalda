@@ -2318,7 +2318,6 @@ bryten_bogomil_council_decision = {
 				name = unavailable_unique_decisions
 				target = flag:bryten_bogomilism_council_began
 			}
-
 			if = {# First Bogomil is chosen because he is the founder and it is bogomilism after all.
 				limit = { 
 					scope:bogomil_founder = { 
@@ -3574,6 +3573,166 @@ bryten_petrobrusian_council_decision = {
 								name = petrobrusian_council_stance_pilgrimage
 								value = flag:petrobrusian_council_stance_allow_pilgrimage
 							}
+						}
+					}
+				}
+			}
+		}
+	}
+	cost = {
+		gold = council_of_toledo_gold_cost_value
+		piety = council_of_toledo_piety_cost_value
+	}
+
+	ai_check_interval = 60
+	ai_potential = {
+		is_ruler = yes
+		short_term_gold >= council_of_toledo_gold_cost_value
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+bryten_cathar_council_decision = {
+	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	desc = bryten_cathar_council_decision_desc
+	selection_tooltip = bryten_cathar_council_decision_tooltip
+	major = yes
+
+	sort_order = 80
+
+	is_shown = {
+		has_faith = faith:cathar
+		is_landed = yes
+		NOR = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_cathar_council_began
+			}
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_cathar_council_completed
+			}
+		}
+	}
+	is_valid = {
+		# got to be a kingdom or Empire
+		highest_held_title_tier >= tier_kingdom
+		# got to be somewhat prestigious
+		prestige_level >= 3
+		# Got to be some what pious
+		piety_level >= 3
+		is_independent_ruler = yes
+		custom_tooltip = {# Needs a solid chunk of Bosnian counties.
+			text = bryten_heretic_count.need_at_least_twelve_same_faith_counties
+			any_sub_realm_county = {
+				count >= bryten_heretic_church_county_count
+				faith = root.faith
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		# Not at war
+		is_at_war = no
+	}
+
+	effect = {
+		save_scope_as = cathar_council_host
+		trigger_event = { 
+			id = bryten_heresy.027 
+			days = 1
+		}
+		hidden_effect = {
+			# Get the cathar priest
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_cathar_council_began
+			}
+			if = {# Second get your court chaplain.
+				limit = {
+					exists = cp:councillor_court_chaplain
+					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
+					faith = faith:cathar
+				}
+				cp:councillor_court_chaplain = { save_scope_as = cathar_priest }
+			}
+			else = {# Create cathar preacher just to be safe
+				create_character = {
+					location = scope:cathar_council_host.capital_province
+					template = heretic_preacher_template
+					culture = scope:cathar_council_host.culture
+					faith = faith:cathar
+					save_scope_as = cathar_priest
+				}
+			}
+			# Get the various positions
+			scope:cathar_priest = {
+				random_list = {# choice for Gnosticism
+					40 = {
+						save_scope_value_as = {# Priest favors monarchianism
+							name = cathar_council_stance_gnostic
+							value = flag:cathar_council_stance_monarchianism
+						}						
+					}
+					40 = {
+						save_scope_value_as = {# Priest favors Dualism
+							name = cathar_council_stance_gnostic
+							value = flag:cathar_council_stance_dualism
+						}
+					}
+					20 = {
+						save_scope_value_as = {# Priest favors trinity
+							name = cathar_council_stance_gnostic
+							value = flag:cathar_council_stance_trinity
+						}
+					}
+				}
+				random_list = {# choice for priesthood
+					30 = {# Scholarly Priesthood
+						save_scope_value_as = {
+							name = cathar_council_stance_clergy
+							value = flag:cathar_council_stance_scholarly
+						}						
+					}
+					40 = {# Mystical Priesthood
+						save_scope_value_as = {
+							name = cathar_council_stance_clergy
+							value = flag:cathar_council_stance_mystical
+						}
+					}
+					30 = {# Pure Priesthood
+						save_scope_value_as = {
+							name = cathar_council_stance_clergy
+							value = flag:cathar_council_stance_pure
+						}
+					}
+				}
+				random_list = {# choice for divorce
+					60 = {# no divorce
+						save_scope_value_as = {
+							name = cathar_council_stance_divorce
+							value = flag:cathar_council_stance_no_divorce
+						}
+					}
+					40 = {# allow divorce
+						save_scope_value_as = {
+							name = cathar_council_stance_divorce
+							value = flag:cathar_council_stance_yes_divorce
+						}	
+					}
+				}
+				random_list = {# choice for pilgrimage
+					80 = {# Forbiden
+						save_scope_value_as = {# Priest favors monarchianism
+							name = cathar_council_stance_pilgrimage
+							value = flag:cathar_council_stance_forbid_pilgriamge
+						}							
+					}
+					20 = {# allow
+						save_scope_value_as = {
+							name = cathar_council_stance_pilgrimage
+							value = flag:cathar_council_stance_allow_pilgrimage
 						}
 					}
 				}

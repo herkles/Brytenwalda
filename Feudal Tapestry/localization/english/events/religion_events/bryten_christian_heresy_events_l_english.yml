@@ -9,8 +9,6 @@
   bryten_heresy.002.b:0 "Let's leave them alone. They are just peasants!"
   bryten_heresy.002.c:0 "Bogomil speaks the truth"
 
-
-
   # The Bogomil Council
   bryten_heresy.003.t:0 "The Council of [council_2_venue.GetNameNoTierNoTooltip]"
   bryten_heresy.003.desc:0 "A nascent faith calls for debate, and so [bogomil_priest.GetFirstName] has gathered a conclave of influential clerics sympathetic to our cause. There are many points of theology to discuss to hash out as we turn Bogomilism from a movement into something more organized and formalized."
@@ -108,6 +106,89 @@
   bryten_heresy.026.a:0 "Condemn these heretics!"
   bryten_heresy.026.b:0 "Let's leave them alone. They are just peasants!"
   bryten_heresy.026.c:0 "The Cathars speak the truth"
+
+  # The cathar Council
+  bryten_heresy.027.t:0 "The Council of [council_2_venue.GetNameNoTierNoTooltip]"
+  bryten_heresy.027.desc:0 "A nascent faith calls for debate, and so [cathar_priest.GetFirstName] has gathered a conclave of influential clerics sympathetic to our cause. There are many points of theology to discuss to hash out as we turn catharism from a movement into something more organized and formalized."
+  bryten_heresy.027.a:0 "Naturally, I'll take a leading role in the discussions."
+  bryten_heresy.027.a.tt:0 "You engage in [learning|E] duels to make your points"
+  bryten_heresy.027.b:0 "My influence will be more felt than seen..."
+  bryten_heresy.027.b.tt:0 "You spend [piety_i]#N [EmptyScope.ScriptValue('bryten_heresy_conclave_cost_value')|0]#! [piety|E] per firm choice #WEAK but cannot spend $game_concept_piety$ you don't have#!"
+  bryten_heresy.027.c:0 "This is a matter for the clergy alone."
+  bryten_heresy.027.c.tt:0 "The conclave will be decided without your input"
+
+  bryten_heresy.028.t:0 "$bryten_heresy.027.t.council$ - Christological"
+  bryten_heresy.028.desc:0 "The first matter that the council is debating is the particularities of Gnostic Christology for the Church. The clergy have a number of different opinions on the matter but three matters have emerged. The first is a Monarchianist doctrine of christology, a more nuanced position on dualism. /n/nThe second position focuses much more on the dualistic nature of the world. Jesus came to free us from Satanail who rules the world, a force of pure evil./n/nA third faction focuses on a form of modalism that is easier to digest to the many faithful who believe themselves to be trinitarians. "
+  bryten_heresy.028.a:0 "The situation is nuanced..."
+  bryten_heresy.028.a.tt.success:0 "You sway the [cathar_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.028.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.028.b:0 "Good and Evil! right and Wrong!"
+  bryten_heresy.028.b.tt.success:0 "You sway the [cathar_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.028.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.028.c:0 "God has three different Modes."
+  bryten_heresy.028.c.tt.success:0 "You sway the [cathar_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.028.c.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.028.d:0 "I have no opinion on this matter."
+
+  bryten_heresy.029.t:0 "$bryten_heresy.027.t.council$ - Matters of the Priesthood"
+  bryten_heresy.029.desc:0 "The conclave's discussions have now turned towards the priesthood. Heated debates have emerged over the nature of the priesthood. One faction believes that the priest must be learned men and know the bible, and to debate it well. While another shouts at them that just memorizing the same passage over and over isn't as valuable as experience with the divine. The final faction argues that the priesthood should be free from sin and both knowledge and mystical understanding will come to them. "
+  bryten_heresy.029.a:0 "A scholarly priesthood."
+  bryten_heresy.029.a.tt.success:0 "You sway the [cathar_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.029.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.029.b:0 "A Mystical Priesthood"
+  bryten_heresy.029.b.tt.success:0 "You sway the [cathar_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.029.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.029.c:0 "The Clergy should be of pure heart and mind!"
+  bryten_heresy.029.c.tt.success:0 "You sway the [cathar_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.029.c.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.029.d:0 "I shall leave this for the clergy to dcide"
+
+  bryten_heresy.030.t:0 "$bryten_heresy.027.t.council$ - Divorce"
+  bryten_heresy.030.desc:0 "The conclave's discussions have turned towards the issue of divorce. One faction believes that divorce is prohibited and that second marriages are forbidden by the Bible. While another faction believes that it is allowed in exceptional circumstances."
+  bryten_heresy.030.a:0 "Divorce is Forbidden"
+  bryten_heresy.030.a.tt.success:0 "You sway the [cathar_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.030.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.030.b:0 "Divorce is possible"
+  bryten_heresy.030.b.tt.success:0 "You sway the [cathar_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.030.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.030.d:0 "I shall leave this for the clergy to dcide"
+
+  bryten_heresy.031.t:0 "$bryten_heresy.027.t.council$ - Pilgrimage"
+  bryten_heresy.031.desc:0 "The conclave draws to a fiery conclusion, with minor brawls and passionate arguments alike rippling through [council_2_venue.GetNameNoTier], as ecclesiastic cliques fight both literally and metaphorically for their beliefs.\n\nThe heart of this final #EMP lively#! debate is the matter of Pilgrimages. Two camps have emerged. The first believes that visiting the places of holy men and women is good, especially going to Jerusalem and following literally in the footsteps of Jesus Christ. However the other camp shouts at them that all this does is encourage wealth and sin, that the pilgrimages only lead to greed and are not what our lord and saviour want."
+  bryten_heresy.031.a:0 "Pilgrimages are sinful"
+  bryten_heresy.031.a.tt.success:0 "You sway the [cathar_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.031.a.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.031.b:0 "Pilgrimages are fine"
+  bryten_heresy.031.b.tt.success:0 "You sway the [cathar_council_host.GetFaith.PriestNeuterPlural]"
+  bryten_heresy.031.b.tt.failure:0 "The clergy jeer at you"
+  bryten_heresy.031.d:0 "I shall leave this for the clergy to dcide"
+
+  bryten_heresy.032.t:0 "$bryten_heresy.027.t.council$ - Conclusion"
+  bryten_heresy.032.desc.intro:0 "On this day, the #EMP new#! [cathar_council_host.GetFaith.GetAdjective] creed is born!/n/n"
+  bryten_heresy.032.desc.righteous:0 "The Cathar Church follows a Monarchianist doctrine of Gnosticism,"
+  bryten_heresy.032.desc.fundamentalist:0 "The Cathar Church follows absoulte dualism, "
+  bryten_heresy.032.desc.pluralist:0 "The Cathar Church follows a doctrine of modalism,"
+
+  bryten_heresy.032.desc.scholar:0 "with a scholarly priesthood to guide her,"
+  bryten_heresy.032.desc.mystical:0 "with a mystical priesthood to guide her,"
+  bryten_heresy.032.desc.pure:0 "with a pure priesthood to guide her,"
+  
+  bryten_heresy.032.desc.male_only:0 "With the clergy being for just men,"
+  bryten_heresy.032.desc.female_clergy:0 "With women allowing to be part of the clergy,"
+
+  bryten_heresy.032.desc.divorce_banned:0 "with Divorce being banned,"
+  bryten_heresy.032.desc.divorce_allowed:0 "With Divorce being allowed in special circumstances,"
+
+  bryten_heresy.032.desc.pilgrimage_forbidden:0 "With pilgrimages being discouraged,"
+  bryten_heresy.032.desc.pilgrimage_allowed:0 "With pilgrimages being allowed, "
+
+  bryten_heresy.032.desc.outro:0 "\n\nNo longer are we the mere dream of a lone, wandering cleric. Now we are a living, vibrant community, and one that all of Christendom shall surely soon embrace."
+  bryten_heresy.032.a:0 "Glory be to god!"
+
+  bryten_heresy.033.t:0 "$bryten_heresy.027.t.council$ "
+  bryten_heresy.033.desc:0 "News has reached you about a council of heretics held at [council_2_venue.GetNameNoTierNoTooltip]. A gathering of so-called cathar heretics came to debate their theology. Well it doesn't matter what they decided, they are heretics damned to the fires of hell and they will be dealt with and the people will be led to the true and proper teachings. 
+  bryten_heresy.033.a:0 "Condemn these heretics!"
+
 #######################################
 # Waldensian heresy Events
 #######################################
