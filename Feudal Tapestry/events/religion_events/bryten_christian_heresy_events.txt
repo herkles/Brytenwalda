@@ -3206,12 +3206,6 @@ bryten_heresy.058 = {# waldensian Council(let players know)
 		name = bryten_heresy.058.a
 	}
 }
-
-
-
-
-
-
 #######################################
 # lollard 
 #######################################
@@ -3349,6 +3343,1188 @@ bryten_heresy.076 = {# Convert to lollard?
 			remove_county_modifier = rebellious_people
 		}
 	}	
+}
+# Council: Council gathers from all over
+bryten_heresy.077 = {# council: Clergy gather from all over
+	type = character_event
+	title = bryten_heresy.077.t
+	desc = bryten_heresy.077.desc
+	theme = learning
+	left_portrait = {
+		character = scope:lollard_council_host
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:lollard_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# You are a heresiarch
+		add_trait = heresiarch
+		# Sort our locale.
+		## First, whether this is a repeater.
+		scope:council_1_venue = {
+			## Preferring to chill at scope:lollard_priest's place.
+			if = {
+				limit = { holder = scope:lollard_priest }
+				save_scope_as = council_2_venue
+			}
+			## But otherwise we take your capital.
+			else = {
+				scope:lollard_council_host.capital_barony = { save_scope_as = council_2_venue }
+			}
+		}
+		scope:council_2_venue = { save_scope_as = background_temple_scope }
+		scope:lollard_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = lollard_priest_at_council
+			}
+		}
+	}
+
+	
+	option = {# Naturally, I'll take a leading role in the discussions.
+		name = bryten_heresy.077.a
+
+		# You'll engage in learning debates.
+		custom_tooltip = bryten_heresy.077.a.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:debate
+		}
+		stress_impact = {
+			gregarious = miniscule_stress_impact_loss
+			shy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# My influence will be more felt than seen...
+		name = bryten_heresy.077.b
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:piety
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# This is a matter for the clergy alone.
+		name = bryten_heresy.077.c
+		custom_tooltip = bryten_heresy.077.c.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:defaulted
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_loss
+			arrogant = major_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 100
+		}
+	}
+
+
+	after = {
+		trigger_event = {
+			id = bryten_heresy.078
+			days = {5 10}
+		}
+	}
+}
+# Council: The priesthood
+scripted_effect bryten_heresy_council_lollard_hof_effect = {
+	faith:lollard = { 
+		hidden_effect = { remove_doctrine = doctrine_theocracy_lay_clergy }
+		add_doctrine = doctrine_theocracy_temporal
+		add_doctrine = doctrine_spiritual_head
+		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:lollard_council_host }
+	}
+}
+scripted_effect bryten_heresy_council_lollard_spiritual_effect = {
+	faith:lollard = { 
+		hidden_effect = { remove_doctrine = doctrine_theocracy_lay_clergy }
+		add_doctrine = doctrine_theocracy_temporal 
+	}
+}
+scripted_effect bryten_heresy_council_lollard_lay_priests_effect = {
+	faith:lollard = { 
+		add_doctrine = doctrine_theocracy_lay_clergy 
+	}
+}
+bryten_heresy.078 = {# Council: priesthood
+	type = character_event
+	title = bryten_heresy.078.t
+	desc = bryten_heresy.078.desc
+	theme = diplomacy
+	left_portrait = {
+		character = scope:lollard_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:lollard_priest_at_council
+		animation = personality_bold
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:lollard_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:lollard_priest_at_council }
+			clear_saved_scope = lollard_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:lollard_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = lollard_priest_at_council
+			}
+		}
+	}
+
+	option = {# Spiritual + Hof
+		name = bryten_heresy.078.a
+		trigger = { 
+			OR = {
+				not = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:lollard_council_stance_clergy = flag:lollard_council_stance_hof	}
+			}
+		}
+		if = {# going against John Wycliff himself is costly
+				limit = { scope:lollard_priest = { has_character_flag = lollard_priest_is_wycliff }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_lollard_hof_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.078.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.078.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_hof_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.078.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.078.a.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:lollard_priest's preference.
+						## Spiritual.
+						if = {
+							limit = { scope:lollard_council_stance_clergy = flag:lollard_council_stance_spiritual }
+							bryten_heresy_council_lollard_spiritual_effect = yes
+						}
+						## Lay Clergy.
+						if = {
+							limit = { scope:lollard_council_stance_clergy = flag:lollard_council_stance_lay_clergy }
+							bryten_heresy_council_lollard_lay_priests_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# Spiritual
+		name = bryten_heresy.078.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:lollard_council_stance_clergy = flag:lollard_council_stance_spiritual }
+			}
+		}
+
+		if = {# going against John Wycliff himself is costly
+				limit = { scope:lollard_priest = { has_character_flag = lollard_priest_is_wycliff }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		if = {# Piety path.
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_lollard_spiritual_effect = yes
+		}
+		if = {# Debate path.
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.078.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.078.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_spiritual_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.078.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.078.b.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:lollard_priest's preference.
+						## Spiritual + Hof.
+						if = {
+							limit = { scope:lollard_council_stance_clergy = flag:lollard_council_stance_hof }
+							bryten_heresy_council_lollard_hof_effect = yes
+						}
+						## Lay Clergy.
+						if = {
+							limit = { scope:lollard_council_stance_clergy = flag:lollard_council_stance_lay_clergy }
+							bryten_heresy_council_lollard_lay_priests_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# Lay Clergy
+		name = bryten_heresy.078.c
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:lollard_council_stance_clergy = flag:lollard_council_stance_lay_clergy	}
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_lollard_lay_priests_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.078.c.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.078.c.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_lay_priests_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.078.c.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.078.c.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:lollard_priest's preference.
+						## Spiritual + Hof.
+						if = {
+							limit = { scope:lollard_council_stance_clergy = flag:lollard_council_stance_hof }
+							bryten_heresy_council_lollard_hof_effect = yes
+						}
+						## Spiritual.
+						if = {
+							limit = { scope:lollard_council_stance_clergy = flag:lollard_council_stance_spiritual }
+							bryten_heresy_council_lollard_spiritual_effect = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# I have no opinion on this matter.
+		name = bryten_heresy.078.d
+
+		# We take scope:lollard_priest's preference.
+		## Spiritual + Hof.
+		if = {
+			limit = { scope:lollard_council_stance_clergy = flag:lollard_council_stance_hof }
+			bryten_heresy_council_lollard_hof_effect = yes
+		}
+		## Spiritual.
+		if = {
+			limit = { scope:lollard_council_stance_clergy = flag:lollard_council_stance_spiritual }
+			bryten_heresy_council_lollard_spiritual_effect = yes
+		}
+		## Lay Clergy.
+		if = {
+			limit = { scope:lollard_council_stance_clergy = flag:lollard_council_stance_lay_clergy }
+			bryten_heresy_council_lollard_lay_priests_effect = yes
+		}
+
+		# We don't charge stress for the opt-outs, not least because their results are variable.
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.079
+			days = {5 10}
+		}
+	}
+}
+# Council: Female Clergy
+scripted_effect bryten_heresy_council_lollard_no_women = {
+	faith:lollard = { 
+		add_doctrine = doctrine_clerical_gender_male_only
+	}
+}
+scripted_effect bryten_heresy_council_lollard_yes_women = {
+	faith:lollard = { 
+		hidden_effect = { remove_doctrine = doctrine_clerical_gender_male_only }
+		add_doctrine = doctrine_clerical_gender_either 
+	}
+}
+bryten_heresy.079 = {# Council: Female Clergy
+	type = character_event
+	title = bryten_heresy.079.t
+	desc = bryten_heresy.079.desc
+	theme = martial
+	left_portrait = {
+		character = scope:lollard_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:lollard_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:lollard_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:lollard_priest_at_council }
+			clear_saved_scope = lollard_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:lollard_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = lollard_priest_at_council
+			}
+		}
+	}
+
+	option = {# No female
+		name = bryten_heresy.079.a
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted } 
+				NOT = {	scope:lollard_council_stance_female = flag:lollard_council_stance_no_female_clergy }
+			}
+		}
+
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_lollard_no_women = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.079.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.079.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_no_women = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.079.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.079.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_yes_women = yes
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# Female clergy
+		name = bryten_heresy.079.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted } 
+				NOT = {	scope:lollard_council_stance_female = flag:lollard_council_stance_yes_female_clergy }
+			}
+		}
+		if = {# going against John Wycliff himself is costly
+				limit = { scope:lollard_priest = { has_character_flag = lollard_priest_is_wycliff }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_lollard_yes_women = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.079.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.079.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_yes_women = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.079.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.079.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_no_women = yes
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# The clergy decide
+		name = bryten_heresy.079.d
+
+		# We take scope:lollard_priest's preference.
+		## No Female Clergy.
+		if = {
+			limit = { scope:lollard_council_stance_female = flag:lollard_council_stance_no_female_clergy }
+			bryten_heresy_council_lollard_no_women = yes
+		}
+		## Allow Female Clergy.
+		if = {
+			limit = { scope:lollard_council_stance_female = flag:lollard_council_stance_yes_female_clergy }
+			bryten_heresy_council_lollard_yes_women = yes
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.080
+			days = {5 10}
+		}
+	}
+}
+# Council: Divorce
+scripted_effect bryten_heresy_council_lollard_no_divorce = {
+	faith:lollard = { 
+		add_doctrine = doctrine_divorce_disallowed }
+}
+scripted_effect bryten_heresy_council_lollard_approve_divorce = {
+	faith:lollard = { 
+		add_doctrine = doctrine_divorce_approval 
+	}
+}
+bryten_heresy.080 = {# Council: Divorce
+	type = character_event
+	title = bryten_heresy.080.t
+	desc = bryten_heresy.080.desc
+	theme = martial
+	left_portrait = {
+		character = scope:lollard_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:lollard_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:lollard_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:lollard_priest_at_council }
+			clear_saved_scope = lollard_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:lollard_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = lollard_priest_at_council
+			}
+		}
+	}
+
+	option = {# No Divorce
+		name = bryten_heresy.080.a
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:lollard_council_stance_divorce = flag:lollard_council_stance_no_divorce	}
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_lollard_no_divorce = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.080.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.080.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_no_divorce = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.080.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.080.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_approve_divorce = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# Allow Divorce
+		name = bryten_heresy.080.b
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:lollard_council_stance_divorce = flag:lollard_council_stance_yes_divorce }
+			}
+		}
+		if = {# going against John Wycliff himself is costly
+				limit = { scope:lollard_priest = { has_character_flag = lollard_priest_is_wycliff }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_lollard_approve_divorce = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.080.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.080.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_approve_divorce = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.080.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.080.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_no_divorce = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# The Clergy decide
+		name = bryten_heresy.080.d
+
+		# We take scope:lollard_priest's preference.
+		if = {# No Divorce
+			limit = { scope:lollard_council_stance_divorce = flag:lollard_council_stance_no_divorce }
+			bryten_heresy_council_lollard_no_divorce = yes
+		}
+		if = {# Allow Divorce
+			limit = { scope:lollard_council_stance_divorce = flag:lollard_council_stance_yes_divorce }
+			bryten_heresy_council_lollard_approve_divorce = yes
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 100
+		}
+	}
+	
+	after = {
+		trigger_event = {
+			id = bryten_heresy.081
+			days = { 5 10 }
+		}
+	}
+
+}
+# Council: Pilgrimage
+scripted_effect bryten_heresy_council_lollard_no_pilgrimage = {
+	faith:lollard = { 
+		add_doctrine = doctrine_pilgrimage_forbidden 
+	}
+}
+scripted_effect bryten_heresy_council_lollard_yes_pilgrimage = {
+	faith:lollard = { 
+		hidden_effect = { remove_doctrine = doctrine_pilgrimage_forbidden }
+		add_doctrine = doctrine_pilgrimage_encouraged 
+	}
+}
+bryten_heresy.081 = {# Council: Pilgrimage
+	type = character_event
+	title = bryten_heresy.081.t
+	desc = bryten_heresy.081.desc
+	theme = martial
+	left_portrait = {
+		character = scope:lollard_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:lollard_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:lollard_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:lollard_priest_at_council }
+			clear_saved_scope = lollard_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:lollard_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = lollard_priest_at_council
+			}
+		}
+	}
+
+	option = {# No Pilgrimage
+		name = bryten_heresy.081.a
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:lollard_council_stance_pilgrimage = flag:lollard_council_stance_forbid_pilgriamge }
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_lollard_no_pilgrimage = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.081.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.081.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_no_pilgrimage = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.081.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.081.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_yes_pilgrimage = yes
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# Yes Pilgrimage
+		name = bryten_heresy.081.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:lollard_council_stance_pilgrimage = flag:lollard_council_stance_allow_pilgrimage }
+			}
+		}
+		if = {# going against John Wycliff himself is costly
+				limit = { scope:lollard_priest = { has_character_flag = lollard_priest_is_wycliff }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_lollard_yes_pilgrimage = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.081.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.081.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_yes_pilgrimage = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.081.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.081.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_lollard_no_pilgrimage = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 0
+		}
+	}
+	option = {# Clergy Decide
+		name = bryten_heresy.081.d
+
+		if = {# No Pilgrimages
+			limit = { scope:lollard_council_stance_pilgrimage = flag:lollard_council_stance_forbid_pilgriamge }
+			bryten_heresy_council_lollard_no_pilgrimage = yes
+		}
+		if = {# Yes Pilgrimages
+			limit = { scope:lollard_council_stance_pilgrimage = flag:lollard_council_stance_allow_pilgrimage }
+			bryten_heresy_council_lollard_yes_pilgrimage = yes
+		}
+		ai_chance = {
+			# The AI should just let the scope:lollard_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.082
+			days = {5 10}
+		}
+	}
+}
+# council results
+bryten_heresy.082 = {# The church council arrives at their final important doctrinal conclusions.
+	type = character_event
+	title = bryten_heresy.082.t
+	desc = {
+		desc = bryten_heresy.082.desc.intro
+		first_valid = {# Priesthood
+			triggered_desc = {# Spiritual + Hof
+				trigger = {	faith:lollard = { has_doctrine = doctrine_spiritual_head } }
+				desc = bryten_heresy.082.desc.hof
+			}
+			triggered_desc = {# Spiritual 
+				trigger = {
+					faith:lollard = { 
+						NOT = {	has_doctrine = doctrine_spiritual_head }
+						has_doctrine = doctrine_theocracy_temporal 
+					}
+				}
+				desc = bryten_heresy.082.desc.priests
+			}
+			triggered_desc = {# Lay Clergy
+				trigger = {	faith:lollard = { has_doctrine = doctrine_theocracy_lay_clergy }	}
+				desc = bryten_heresy.082.desc.lay
+			}
+		}
+		first_valid = {# female clergy
+			triggered_desc = {# No Female Clergy
+				trigger = {	faith:lollard = { has_doctrine = doctrine_clerical_gender_male_only } }
+				desc = bryten_heresy.082.desc.male_only
+			}
+			triggered_desc = {# Yes Female Clergy
+				trigger = {	faith:lollard = { has_doctrine = doctrine_clerical_gender_either }	}
+				desc = bryten_heresy.082.desc.female_clergy
+			}
+		}
+		first_valid = {# Divorce
+			triggered_desc = {# No Divorce
+				trigger = {	faith:lollard = { has_doctrine = doctrine_divorce_disallowed } }
+				desc = bryten_heresy.082.desc.divorce_banned
+			}
+			triggered_desc = {# Yes Divorce
+				trigger = {	faith:lollard = { has_doctrine = doctrine_divorce_approval } }
+				desc = bryten_heresy.082.desc.divorce_allowed
+			}
+		}
+		first_valid = {# Pilgrimage
+			triggered_desc = {# No Pilgrimage
+				trigger = {	faith:lollard = { has_doctrine = doctrine_pilgrimage_forbidden } }
+				desc = bryten_heresy.082.desc.pilgrimage_forbidden
+			}
+			triggered_desc = {# Yes Pilgrimage
+				trigger = {	faith:lollard = { has_doctrine = doctrine_pilgrimage_encouraged } }
+				desc = bryten_heresy.082.desc.pilgrimage_allowed
+			}
+		}
+		# Outro.
+		desc = bryten_heresy.082.desc.outro
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:lollard_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:lollard_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Music!
+		play_music_cue = "mx_cue_sacredrite"
+		faith:lollard = {# the Council is over and now is formulized
+			remove_doctrine = heretic_movement_doctrine
+			change_fervor = { 
+				value = 50
+				desc = bryten_fervor_gain_lollard_council	
+			} 
+		}
+		# Now let's display our choices.
+		faith:lollard = {
+			show_as_tooltip = {
+				# Gnosticism.
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_pluralistic }
+					add_doctrine = doctrine_pluralism_pluralistic
+				}
+				# Priesthood.
+				if = {
+					limit = { has_doctrine = doctrine_spiritual_head }
+					add_doctrine = doctrine_theocracy_temporal
+					add_doctrine = doctrine_spiritual_head
+				}
+				if = {
+					limit = { 
+						has_doctrine = doctrine_theocracy_temporal 
+						NOT = { has_doctrine = doctrine_spiritual_head }
+					}
+					add_doctrine = doctrine_theocracy_temporal
+				}
+				if = {
+					limit = { has_doctrine = doctrine_theocracy_lay_clergy }
+					add_doctrine = doctrine_theocracy_lay_clergy
+				}
+				# Wealth.
+				if = {
+					limit = { has_doctrine = tenet_communal_possessions }
+					add_doctrine = tenet_communal_possessions
+				}
+				if = {
+					limit = { has_doctrine = tenet_apostolic_poverty }
+					add_doctrine = tenet_apostolic_poverty
+				}
+				if = {
+					limit = { has_doctrine = tenet_pure_priesthood }
+					add_doctrine = tenet_pure_priesthood
+				}
+				# Pacifism.
+				if = {
+					limit = { has_doctrine = tenet_armed_pilgrimages }
+					add_doctrine = tenet_armed_pilgrimages
+				}
+				if = {
+					limit = { has_doctrine = tenet_pacifism }
+					add_doctrine = tenet_pacifism
+				}
+				if = {
+					limit = { has_doctrine = tenet_unrelenting_faith }
+					add_doctrine = tenet_unrelenting_faith
+				}
+			}
+
+
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:bryten_lollard_council_completed
+		}
+
+
+	}
+
+	option = {
+		name = bryten_heresy.082.a
+		add_piety = major_piety_gain
+
+	}
+
+	after = {
+		# Clean up the story.
+		every_player = {# letting players know that the lollard church has been formalized
+			trigger_event = {
+				id = bryten_heresy.083
+				days = {5 10}
+			}
+		}
+	}
+}
+bryten_heresy.083 = {# lollard Council(let players know)
+	type = character_event
+	title = bryten_heresy.083.t
+	desc = bryten_heresy.083.desc
+	theme = faith	
+
+
+	option = {# Condemn the heretic
+		name = bryten_heresy.083.a
+	}
 }
 #######################################
 # arnoldism 
@@ -3489,6 +4665,1188 @@ bryten_heresy.101 = {# Convert to arnoldism?
 			remove_county_modifier = rebellious_people
 		}
 	}	
+}
+# Council: Council gathers from all over
+bryten_heresy.102 = {# council: Clergy gather from all over
+	type = character_event
+	title = bryten_heresy.102.t
+	desc = bryten_heresy.102.desc
+	theme = learning
+	left_portrait = {
+		character = scope:arnoldism_council_host
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:arnoldism_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# You are a heresiarch
+		add_trait = heresiarch
+		# Sort our locale.
+		## First, whether this is a repeater.
+		scope:council_1_venue = {
+			## Preferring to chill at scope:arnoldism_priest's place.
+			if = {
+				limit = { holder = scope:arnoldism_priest }
+				save_scope_as = council_2_venue
+			}
+			## But otherwise we take your capital.
+			else = {
+				scope:arnoldism_council_host.capital_barony = { save_scope_as = council_2_venue }
+			}
+		}
+		scope:council_2_venue = { save_scope_as = background_temple_scope }
+		scope:arnoldism_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = arnoldism_priest_at_council
+			}
+		}
+	}
+
+	
+	option = {# Naturally, I'll take a leading role in the discussions.
+		name = bryten_heresy.102.a
+
+		# You'll engage in learning debates.
+		custom_tooltip = bryten_heresy.102.a.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:debate
+		}
+		stress_impact = {
+			gregarious = miniscule_stress_impact_loss
+			shy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# My influence will be more felt than seen...
+		name = bryten_heresy.102.b
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:piety
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# This is a matter for the clergy alone.
+		name = bryten_heresy.102.c
+		custom_tooltip = bryten_heresy.102.c.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:defaulted
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_loss
+			arrogant = major_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 100
+		}
+	}
+
+
+	after = {
+		trigger_event = {
+			id = bryten_heresy.103
+			days = {5 10}
+		}
+	}
+}
+# Council: The priesthood
+scripted_effect bryten_heresy_council_arnoldism_hof_effect = {
+	faith:arnoldism = { 
+		hidden_effect = { remove_doctrine = doctrine_theocracy_lay_clergy }
+		add_doctrine = doctrine_theocracy_temporal
+		add_doctrine = doctrine_spiritual_head
+		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:arnoldism_council_host }
+	}
+}
+scripted_effect bryten_heresy_council_arnoldism_spiritual_effect = {
+	faith:arnoldism = { 
+		hidden_effect = { remove_doctrine = doctrine_theocracy_lay_clergy }
+		add_doctrine = doctrine_theocracy_temporal 
+	}
+}
+scripted_effect bryten_heresy_council_arnoldism_lay_priests_effect = {
+	faith:arnoldism = { 
+		add_doctrine = doctrine_theocracy_lay_clergy 
+	}
+}
+bryten_heresy.103 = {# Council: priesthood
+	type = character_event
+	title = bryten_heresy.103.t
+	desc = bryten_heresy.103.desc
+	theme = diplomacy
+	left_portrait = {
+		character = scope:arnoldism_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:arnoldism_priest_at_council
+		animation = personality_bold
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:arnoldism_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:arnoldism_priest_at_council }
+			clear_saved_scope = arnoldism_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:arnoldism_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = arnoldism_priest_at_council
+			}
+		}
+	}
+
+	option = {# Spiritual + Hof
+		name = bryten_heresy.103.a
+		trigger = { 
+			OR = {
+				not = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_hof	}
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_arnoldism_hof_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.103.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.103.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_hof_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.103.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.103.a.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:arnoldism_priest's preference.
+						## Spiritual.
+						if = {
+							limit = { scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_spiritual }
+							bryten_heresy_council_arnoldism_spiritual_effect = yes
+						}
+						## Lay Clergy.
+						if = {
+							limit = { scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_lay_clergy }
+							bryten_heresy_council_arnoldism_lay_priests_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# Spiritual
+		name = bryten_heresy.103.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_spiritual }
+			}
+		}
+
+		if = {# going against Arnold of Brescia himself is costly
+				limit = { scope:arnoldism_priest = { has_character_flag = arnoldism_priest_is_arnold }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		if = {# Piety path.
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_arnoldism_spiritual_effect = yes
+		}
+		if = {# Debate path.
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.103.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.103.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_spiritual_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.103.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.103.b.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:arnoldism_priest's preference.
+						## Spiritual + Hof.
+						if = {
+							limit = { scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_hof }
+							bryten_heresy_council_arnoldism_hof_effect = yes
+						}
+						## Lay Clergy.
+						if = {
+							limit = { scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_lay_clergy }
+							bryten_heresy_council_arnoldism_lay_priests_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# Lay Clergy
+		name = bryten_heresy.103.c
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_lay_clergy	}
+			}
+		}
+		if = {# going against Arnold of Brescia himself is costly
+				limit = { scope:arnoldism_priest = { has_character_flag = arnoldism_priest_is_arnold }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_arnoldism_lay_priests_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.103.c.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.103.c.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_lay_priests_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.103.c.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.103.c.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:arnoldism_priest's preference.
+						## Spiritual + Hof.
+						if = {
+							limit = { scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_hof }
+							bryten_heresy_council_arnoldism_hof_effect = yes
+						}
+						## Spiritual.
+						if = {
+							limit = { scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_spiritual }
+							bryten_heresy_council_arnoldism_spiritual_effect = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# I have no opinion on this matter.
+		name = bryten_heresy.103.d
+
+		# We take scope:arnoldism_priest's preference.
+		## Spiritual + Hof.
+		if = {
+			limit = { scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_hof }
+			bryten_heresy_council_arnoldism_hof_effect = yes
+		}
+		## Spiritual.
+		if = {
+			limit = { scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_spiritual }
+			bryten_heresy_council_arnoldism_spiritual_effect = yes
+		}
+		## Lay Clergy.
+		if = {
+			limit = { scope:arnoldism_council_stance_clergy = flag:arnoldism_council_stance_lay_clergy }
+			bryten_heresy_council_arnoldism_lay_priests_effect = yes
+		}
+
+		# We don't charge stress for the opt-outs, not least because their results are variable.
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.104
+			days = {5 10}
+		}
+	}
+}
+# Council: Female Clergy
+scripted_effect bryten_heresy_council_arnoldism_no_women = {
+	faith:arnoldism = { 
+		add_doctrine = doctrine_clerical_gender_male_only
+	}
+}
+scripted_effect bryten_heresy_council_arnoldism_yes_women = {
+	faith:arnoldism = { 
+		hidden_effect = { remove_doctrine = doctrine_clerical_gender_male_only }
+		add_doctrine = doctrine_clerical_gender_either 
+	}
+}
+bryten_heresy.104 = {# Council: Female Clergy
+	type = character_event
+	title = bryten_heresy.104.t
+	desc = bryten_heresy.104.desc
+	theme = martial
+	left_portrait = {
+		character = scope:arnoldism_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:arnoldism_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:arnoldism_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:arnoldism_priest_at_council }
+			clear_saved_scope = arnoldism_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:arnoldism_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = arnoldism_priest_at_council
+			}
+		}
+	}
+
+	option = {# No female
+		name = bryten_heresy.104.a
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted } 
+				NOT = {	scope:arnoldism_council_stance_female = flag:arnoldism_council_stance_no_female_clergy }
+			}
+		}
+
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_arnoldism_no_women = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.104.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.104.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_no_women = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.104.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.104.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_yes_women = yes
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# Female clergy
+		name = bryten_heresy.104.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted } 
+				NOT = {	scope:arnoldism_council_stance_female = flag:arnoldism_council_stance_yes_female_clergy }
+			}
+		}
+		if = {# going against Arnold of Brescia himself is costly
+				limit = { scope:arnoldism_priest = { has_character_flag = arnoldism_priest_is_arnold }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_arnoldism_yes_women = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.104.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.104.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_yes_women = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.104.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.104.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_no_women = yes
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# The clergy decide
+		name = bryten_heresy.104.d
+
+		# We take scope:arnoldism_priest's preference.
+		## No Female Clergy.
+		if = {
+			limit = { scope:arnoldism_council_stance_female = flag:arnoldism_council_stance_no_female_clergy }
+			bryten_heresy_council_arnoldism_no_women = yes
+		}
+		## Allow Female Clergy.
+		if = {
+			limit = { scope:arnoldism_council_stance_female = flag:arnoldism_council_stance_yes_female_clergy }
+			bryten_heresy_council_arnoldism_yes_women = yes
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.105
+			days = {5 10}
+		}
+	}
+}
+# Council: Divorce
+scripted_effect bryten_heresy_council_arnoldism_no_divorce = {
+	faith:arnoldism = { 
+		add_doctrine = doctrine_divorce_disallowed }
+}
+scripted_effect bryten_heresy_council_arnoldism_approve_divorce = {
+	faith:arnoldism = { 
+		add_doctrine = doctrine_divorce_approval 
+	}
+}
+bryten_heresy.105 = {# Council: Divorce
+	type = character_event
+	title = bryten_heresy.105.t
+	desc = bryten_heresy.105.desc
+	theme = martial
+	left_portrait = {
+		character = scope:arnoldism_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:arnoldism_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:arnoldism_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:arnoldism_priest_at_council }
+			clear_saved_scope = arnoldism_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:arnoldism_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = arnoldism_priest_at_council
+			}
+		}
+	}
+
+	option = {# No Divorce
+		name = bryten_heresy.105.a
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:arnoldism_council_stance_divorce = flag:arnoldism_council_stance_no_divorce	}
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_arnoldism_no_divorce = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.105.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.105.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_no_divorce = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.105.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.105.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_approve_divorce = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# Allow Divorce
+		name = bryten_heresy.105.b
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:arnoldism_council_stance_divorce = flag:arnoldism_council_stance_yes_divorce }
+			}
+		}
+		if = {# going against Arnold of Brescia himself is costly
+				limit = { scope:arnoldism_priest = { has_character_flag = arnoldism_priest_is_arnold }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_arnoldism_approve_divorce = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.105.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.105.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_approve_divorce = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.105.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.105.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_no_divorce = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# The Clergy decide
+		name = bryten_heresy.105.d
+
+		# We take scope:arnoldism_priest's preference.
+		if = {# No Divorce
+			limit = { scope:arnoldism_council_stance_divorce = flag:arnoldism_council_stance_no_divorce }
+			bryten_heresy_council_arnoldism_no_divorce = yes
+		}
+		if = {# Allow Divorce
+			limit = { scope:arnoldism_council_stance_divorce = flag:arnoldism_council_stance_yes_divorce }
+			bryten_heresy_council_arnoldism_approve_divorce = yes
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 100
+		}
+	}
+	
+	after = {
+		trigger_event = {
+			id = bryten_heresy.106
+			days = { 5 10 }
+		}
+	}
+
+}
+# Council: Pilgrimage
+scripted_effect bryten_heresy_council_arnoldism_no_pilgrimage = {
+	faith:arnoldism = { 
+		add_doctrine = doctrine_pilgrimage_forbidden 
+	}
+}
+scripted_effect bryten_heresy_council_arnoldism_yes_pilgrimage = {
+	faith:arnoldism = { 
+		hidden_effect = { remove_doctrine = doctrine_pilgrimage_forbidden }
+		add_doctrine = doctrine_pilgrimage_encouraged 
+	}
+}
+bryten_heresy.106 = {# Council: Pilgrimage
+	type = character_event
+	title = bryten_heresy.106.t
+	desc = bryten_heresy.106.desc
+	theme = martial
+	left_portrait = {
+		character = scope:arnoldism_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:arnoldism_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:arnoldism_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:arnoldism_priest_at_council }
+			clear_saved_scope = arnoldism_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:arnoldism_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = arnoldism_priest_at_council
+			}
+		}
+	}
+
+	option = {# No Pilgrimage
+		name = bryten_heresy.106.a
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:arnoldism_council_stance_pilgrimage = flag:arnoldism_council_stance_forbid_pilgriamge }
+			}
+		}
+		if = {# going against Arnold of Brescia himself is costly
+				limit = { scope:arnoldism_priest = { has_character_flag = arnoldism_priest_is_arnold }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_arnoldism_no_pilgrimage = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.106.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.106.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_no_pilgrimage = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.106.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.106.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_yes_pilgrimage = yes
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# Yes Pilgrimage
+		name = bryten_heresy.106.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:arnoldism_council_stance_pilgrimage = flag:arnoldism_council_stance_allow_pilgrimage }
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_arnoldism_yes_pilgrimage = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.106.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.106.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_yes_pilgrimage = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.106.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.106.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_arnoldism_no_pilgrimage = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 0
+		}
+	}
+	option = {# Clergy Decide
+		name = bryten_heresy.106.d
+
+		if = {# No Pilgrimages
+			limit = { scope:arnoldism_council_stance_pilgrimage = flag:arnoldism_council_stance_forbid_pilgriamge }
+			bryten_heresy_council_arnoldism_no_pilgrimage = yes
+		}
+		if = {# Yes Pilgrimages
+			limit = { scope:arnoldism_council_stance_pilgrimage = flag:arnoldism_council_stance_allow_pilgrimage }
+			bryten_heresy_council_arnoldism_yes_pilgrimage = yes
+		}
+		ai_chance = {
+			# The AI should just let the scope:arnoldism_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.107
+			days = {5 10}
+		}
+	}
+}
+# council results
+bryten_heresy.107 = {# The church council arrives at their final important doctrinal conclusions.
+	type = character_event
+	title = bryten_heresy.107.t
+	desc = {
+		desc = bryten_heresy.107.desc.intro
+		first_valid = {# Priesthood
+			triggered_desc = {# Spiritual + Hof
+				trigger = {	faith:arnoldism = { has_doctrine = doctrine_spiritual_head } }
+				desc = bryten_heresy.107.desc.hof
+			}
+			triggered_desc = {# Spiritual 
+				trigger = {
+					faith:arnoldism = { 
+						NOT = {	has_doctrine = doctrine_spiritual_head }
+						has_doctrine = doctrine_theocracy_temporal 
+					}
+				}
+				desc = bryten_heresy.107.desc.priests
+			}
+			triggered_desc = {# Lay Clergy
+				trigger = {	faith:arnoldism = { has_doctrine = doctrine_theocracy_lay_clergy }	}
+				desc = bryten_heresy.107.desc.lay
+			}
+		}
+		first_valid = {# female clergy
+			triggered_desc = {# No Female Clergy
+				trigger = {	faith:arnoldism = { has_doctrine = doctrine_clerical_gender_male_only } }
+				desc = bryten_heresy.107.desc.male_only
+			}
+			triggered_desc = {# Yes Female Clergy
+				trigger = {	faith:arnoldism = { has_doctrine = doctrine_clerical_gender_either }	}
+				desc = bryten_heresy.107.desc.female_clergy
+			}
+		}
+		first_valid = {# Divorce
+			triggered_desc = {# No Divorce
+				trigger = {	faith:arnoldism = { has_doctrine = doctrine_divorce_disallowed } }
+				desc = bryten_heresy.107.desc.divorce_banned
+			}
+			triggered_desc = {# Yes Divorce
+				trigger = {	faith:arnoldism = { has_doctrine = doctrine_divorce_approval } }
+				desc = bryten_heresy.107.desc.divorce_allowed
+			}
+		}
+		first_valid = {# Pilgrimage
+			triggered_desc = {# No Pilgrimage
+				trigger = {	faith:arnoldism = { has_doctrine = doctrine_pilgrimage_forbidden } }
+				desc = bryten_heresy.107.desc.pilgrimage_forbidden
+			}
+			triggered_desc = {# Yes Pilgrimage
+				trigger = {	faith:arnoldism = { has_doctrine = doctrine_pilgrimage_encouraged } }
+				desc = bryten_heresy.107.desc.pilgrimage_allowed
+			}
+		}
+		# Outro.
+		desc = bryten_heresy.107.desc.outro
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:arnoldism_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:arnoldism_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Music!
+		play_music_cue = "mx_cue_sacredrite"
+		faith:arnoldism = {# the Council is over and now is formulized
+			remove_doctrine = heretic_movement_doctrine
+			change_fervor = { 
+				value = 50
+				desc = bryten_fervor_gain_arnoldism_council	
+			} 
+		}
+		# Now let's display our choices.
+		faith:arnoldism = {
+			show_as_tooltip = {
+				# Gnosticism.
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_pluralistic }
+					add_doctrine = doctrine_pluralism_pluralistic
+				}
+				# Priesthood.
+				if = {
+					limit = { has_doctrine = doctrine_spiritual_head }
+					add_doctrine = doctrine_theocracy_temporal
+					add_doctrine = doctrine_spiritual_head
+				}
+				if = {
+					limit = { 
+						has_doctrine = doctrine_theocracy_temporal 
+						NOT = { has_doctrine = doctrine_spiritual_head }
+					}
+					add_doctrine = doctrine_theocracy_temporal
+				}
+				if = {
+					limit = { has_doctrine = doctrine_theocracy_lay_clergy }
+					add_doctrine = doctrine_theocracy_lay_clergy
+				}
+				# Wealth.
+				if = {
+					limit = { has_doctrine = tenet_communal_possessions }
+					add_doctrine = tenet_communal_possessions
+				}
+				if = {
+					limit = { has_doctrine = tenet_apostolic_poverty }
+					add_doctrine = tenet_apostolic_poverty
+				}
+				if = {
+					limit = { has_doctrine = tenet_pure_priesthood }
+					add_doctrine = tenet_pure_priesthood
+				}
+				# Pacifism.
+				if = {
+					limit = { has_doctrine = tenet_armed_pilgrimages }
+					add_doctrine = tenet_armed_pilgrimages
+				}
+				if = {
+					limit = { has_doctrine = tenet_pacifism }
+					add_doctrine = tenet_pacifism
+				}
+				if = {
+					limit = { has_doctrine = tenet_unrelenting_faith }
+					add_doctrine = tenet_unrelenting_faith
+				}
+			}
+
+
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:bryten_arnoldism_council_completed
+		}
+
+
+	}
+
+	option = {
+		name = bryten_heresy.107.a
+		add_piety = major_piety_gain
+
+	}
+
+	after = {
+		# Clean up the story.
+		every_player = {# letting players know that the arnoldism church has been formalized
+			trigger_event = {
+				id = bryten_heresy.108
+				days = {5 10}
+			}
+		}
+	}
+}
+bryten_heresy.108 = {# arnoldism Council(let players know)
+	type = character_event
+	title = bryten_heresy.108.t
+	desc = bryten_heresy.108.desc
+	theme = faith	
+
+
+	option = {# Condemn the heretic
+		name = bryten_heresy.108.a
+	}
 }
 #######################################
 # joachimites 
@@ -4383,6 +6741,1188 @@ bryten_heresy.176 = {# Convert to henricians?
 		}
 	}	
 }
+# Council: Council gathers from all over
+bryten_heresy.177 = {# council: Clergy gather from all over
+	type = character_event
+	title = bryten_heresy.177.t
+	desc = bryten_heresy.177.desc
+	theme = learning
+	left_portrait = {
+		character = scope:henricians_council_host
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:henricians_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# You are a heresiarch
+		add_trait = heresiarch
+		# Sort our locale.
+		## First, whether this is a repeater.
+		scope:council_1_venue = {
+			## Preferring to chill at scope:henricians_priest's place.
+			if = {
+				limit = { holder = scope:henricians_priest }
+				save_scope_as = council_2_venue
+			}
+			## But otherwise we take your capital.
+			else = {
+				scope:henricians_council_host.capital_barony = { save_scope_as = council_2_venue }
+			}
+		}
+		scope:council_2_venue = { save_scope_as = background_temple_scope }
+		scope:henricians_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = henricians_priest_at_council
+			}
+		}
+	}
+
+	
+	option = {# Naturally, I'll take a leading role in the discussions.
+		name = bryten_heresy.177.a
+
+		# You'll engage in learning debates.
+		custom_tooltip = bryten_heresy.177.a.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:debate
+		}
+		stress_impact = {
+			gregarious = miniscule_stress_impact_loss
+			shy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# My influence will be more felt than seen...
+		name = bryten_heresy.177.b
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:piety
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# This is a matter for the clergy alone.
+		name = bryten_heresy.177.c
+		custom_tooltip = bryten_heresy.177.c.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:defaulted
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_loss
+			arrogant = major_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 100
+		}
+	}
+
+
+	after = {
+		trigger_event = {
+			id = bryten_heresy.178
+			days = {5 10}
+		}
+	}
+}
+# Council: The priesthood
+scripted_effect bryten_heresy_council_henricians_hof_effect = {
+	faith:henricians = { 
+		hidden_effect = { remove_doctrine = doctrine_theocracy_lay_clergy }
+		add_doctrine = doctrine_theocracy_temporal
+		add_doctrine = doctrine_spiritual_head
+		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:henricians_council_host }
+	}
+}
+scripted_effect bryten_heresy_council_henricians_spiritual_effect = {
+	faith:henricians = { 
+		hidden_effect = { remove_doctrine = doctrine_theocracy_lay_clergy }
+		add_doctrine = doctrine_theocracy_temporal 
+	}
+}
+scripted_effect bryten_heresy_council_henricians_lay_priests_effect = {
+	faith:henricians = { 
+		add_doctrine = doctrine_theocracy_lay_clergy 
+	}
+}
+bryten_heresy.178 = {# Council: priesthood
+	type = character_event
+	title = bryten_heresy.178.t
+	desc = bryten_heresy.178.desc
+	theme = diplomacy
+	left_portrait = {
+		character = scope:henricians_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:henricians_priest_at_council
+		animation = personality_bold
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:henricians_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:henricians_priest_at_council }
+			clear_saved_scope = henricians_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:henricians_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = henricians_priest_at_council
+			}
+		}
+	}
+
+	option = {# Spiritual + Hof
+		name = bryten_heresy.178.a
+		trigger = { 
+			OR = {
+				not = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:henricians_council_stance_clergy = flag:henricians_council_stance_hof	}
+			}
+		}
+		if = {# going against Henry of Lusanne himself is costly
+				limit = { scope:henricians_priest = { has_character_flag = henricians_priest_is_henry }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_henricians_hof_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.178.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.178.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_hof_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.178.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.178.a.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:henricians_priest's preference.
+						## Spiritual.
+						if = {
+							limit = { scope:henricians_council_stance_clergy = flag:henricians_council_stance_spiritual }
+							bryten_heresy_council_henricians_spiritual_effect = yes
+						}
+						## Lay Clergy.
+						if = {
+							limit = { scope:henricians_council_stance_clergy = flag:henricians_council_stance_lay_clergy }
+							bryten_heresy_council_henricians_lay_priests_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# Spiritual
+		name = bryten_heresy.178.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:henricians_council_stance_clergy = flag:henricians_council_stance_spiritual }
+			}
+		}
+
+		if = {# going against Henry of Lusanne himself is costly
+				limit = { scope:henricians_priest = { has_character_flag = henricians_priest_is_henry }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		if = {# Piety path.
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_henricians_spiritual_effect = yes
+		}
+		if = {# Debate path.
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.178.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.178.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_spiritual_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.178.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.178.b.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:henricians_priest's preference.
+						## Spiritual + Hof.
+						if = {
+							limit = { scope:henricians_council_stance_clergy = flag:henricians_council_stance_hof }
+							bryten_heresy_council_henricians_hof_effect = yes
+						}
+						## Lay Clergy.
+						if = {
+							limit = { scope:henricians_council_stance_clergy = flag:henricians_council_stance_lay_clergy }
+							bryten_heresy_council_henricians_lay_priests_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# Lay Clergy
+		name = bryten_heresy.178.c
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:henricians_council_stance_clergy = flag:henricians_council_stance_lay_clergy	}
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_henricians_lay_priests_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.178.c.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.178.c.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_lay_priests_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.178.c.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.178.c.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:henricians_priest's preference.
+						## Spiritual + Hof.
+						if = {
+							limit = { scope:henricians_council_stance_clergy = flag:henricians_council_stance_hof }
+							bryten_heresy_council_henricians_hof_effect = yes
+						}
+						## Spiritual.
+						if = {
+							limit = { scope:henricians_council_stance_clergy = flag:henricians_council_stance_spiritual }
+							bryten_heresy_council_henricians_spiritual_effect = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# I have no opinion on this matter.
+		name = bryten_heresy.178.d
+
+		# We take scope:henricians_priest's preference.
+		## Spiritual + Hof.
+		if = {
+			limit = { scope:henricians_council_stance_clergy = flag:henricians_council_stance_hof }
+			bryten_heresy_council_henricians_hof_effect = yes
+		}
+		## Spiritual.
+		if = {
+			limit = { scope:henricians_council_stance_clergy = flag:henricians_council_stance_spiritual }
+			bryten_heresy_council_henricians_spiritual_effect = yes
+		}
+		## Lay Clergy.
+		if = {
+			limit = { scope:henricians_council_stance_clergy = flag:henricians_council_stance_lay_clergy }
+			bryten_heresy_council_henricians_lay_priests_effect = yes
+		}
+
+		# We don't charge stress for the opt-outs, not least because their results are variable.
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.179
+			days = {5 10}
+		}
+	}
+}
+# Council: Female Clergy
+scripted_effect bryten_heresy_council_henricians_no_women = {
+	faith:henricians = { 
+		add_doctrine = doctrine_clerical_gender_male_only
+	}
+}
+scripted_effect bryten_heresy_council_henricians_yes_women = {
+	faith:henricians = { 
+		hidden_effect = { remove_doctrine = doctrine_clerical_gender_male_only }
+		add_doctrine = doctrine_clerical_gender_either 
+	}
+}
+bryten_heresy.179 = {# Council: Female Clergy
+	type = character_event
+	title = bryten_heresy.179.t
+	desc = bryten_heresy.179.desc
+	theme = martial
+	left_portrait = {
+		character = scope:henricians_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:henricians_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:henricians_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:henricians_priest_at_council }
+			clear_saved_scope = henricians_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:henricians_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = henricians_priest_at_council
+			}
+		}
+	}
+
+	option = {# No female
+		name = bryten_heresy.179.a
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted } 
+				NOT = {	scope:henricians_council_stance_female = flag:henricians_council_stance_no_female_clergy }
+			}
+		}
+
+
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_henricians_no_women = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.179.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.179.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_no_women = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.179.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.179.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_yes_women = yes
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# Female clergy
+		name = bryten_heresy.179.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted } 
+				NOT = {	scope:henricians_council_stance_female = flag:henricians_council_stance_yes_female_clergy }
+			}
+		}
+		if = {# going against Henry of Lusanne himself is costly
+				limit = { scope:henricians_priest = { has_character_flag = henricians_priest_is_henry }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_henricians_yes_women = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.179.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.179.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_yes_women = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.179.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.179.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_no_women = yes
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# The clergy decide
+		name = bryten_heresy.179.d
+
+		# We take scope:henricians_priest's preference.
+		## No Female Clergy.
+		if = {
+			limit = { scope:henricians_council_stance_female = flag:henricians_council_stance_no_female_clergy }
+			bryten_heresy_council_henricians_no_women = yes
+		}
+		## Allow Female Clergy.
+		if = {
+			limit = { scope:henricians_council_stance_female = flag:henricians_council_stance_yes_female_clergy }
+			bryten_heresy_council_henricians_yes_women = yes
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.180
+			days = {5 10}
+		}
+	}
+}
+# Council: Divorce
+scripted_effect bryten_heresy_council_henricians_no_divorce = {
+	faith:henricians = { 
+		add_doctrine = doctrine_divorce_disallowed }
+}
+scripted_effect bryten_heresy_council_henricians_approve_divorce = {
+	faith:henricians = { 
+		add_doctrine = doctrine_divorce_approval 
+	}
+}
+bryten_heresy.180 = {# Council: Divorce
+	type = character_event
+	title = bryten_heresy.180.t
+	desc = bryten_heresy.180.desc
+	theme = martial
+	left_portrait = {
+		character = scope:henricians_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:henricians_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:henricians_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:henricians_priest_at_council }
+			clear_saved_scope = henricians_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:henricians_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = henricians_priest_at_council
+			}
+		}
+	}
+
+	option = {# No Divorce
+		name = bryten_heresy.180.a
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:henricians_council_stance_divorce = flag:henricians_council_stance_no_divorce	}
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_henricians_no_divorce = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.180.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.180.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_no_divorce = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.180.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.180.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_approve_divorce = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# Allow Divorce
+		name = bryten_heresy.180.b
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:henricians_council_stance_divorce = flag:henricians_council_stance_yes_divorce }
+			}
+		}
+		if = {# going against Henry of Lusanne himself is costly
+				limit = { scope:henricians_priest = { has_character_flag = henricians_priest_is_henry }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_henricians_approve_divorce = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.180.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.180.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_approve_divorce = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.180.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.180.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_no_divorce = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# The Clergy decide
+		name = bryten_heresy.180.d
+
+		# We take scope:henricians_priest's preference.
+		if = {# No Divorce
+			limit = { scope:henricians_council_stance_divorce = flag:henricians_council_stance_no_divorce }
+			bryten_heresy_council_henricians_no_divorce = yes
+		}
+		if = {# Allow Divorce
+			limit = { scope:henricians_council_stance_divorce = flag:henricians_council_stance_yes_divorce }
+			bryten_heresy_council_henricians_approve_divorce = yes
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 100
+		}
+	}
+	
+	after = {
+		trigger_event = {
+			id = bryten_heresy.181
+			days = { 5 10 }
+		}
+	}
+
+}
+# Council: Pilgrimage
+scripted_effect bryten_heresy_council_henricians_no_pilgrimage = {
+	faith:henricians = { 
+		add_doctrine = doctrine_pilgrimage_forbidden 
+	}
+}
+scripted_effect bryten_heresy_council_henricians_yes_pilgrimage = {
+	faith:henricians = { 
+		hidden_effect = { remove_doctrine = doctrine_pilgrimage_forbidden }
+		add_doctrine = doctrine_pilgrimage_encouraged 
+	}
+}
+bryten_heresy.181 = {# Council: Pilgrimage
+	type = character_event
+	title = bryten_heresy.181.t
+	desc = bryten_heresy.181.desc
+	theme = martial
+	left_portrait = {
+		character = scope:henricians_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:henricians_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:henricians_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:henricians_priest_at_council }
+			clear_saved_scope = henricians_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:henricians_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = henricians_priest_at_council
+			}
+		}
+	}
+
+	option = {# No Pilgrimage
+		name = bryten_heresy.181.a
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:henricians_council_stance_pilgrimage = flag:henricians_council_stance_forbid_pilgriamge }
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_henricians_no_pilgrimage = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.181.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.181.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_no_pilgrimage = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.181.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.181.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_yes_pilgrimage = yes
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# Yes Pilgrimage
+		name = bryten_heresy.181.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:henricians_council_stance_pilgrimage = flag:henricians_council_stance_allow_pilgrimage }
+			}
+		}
+		if = {# going against Henry of Lusanne himself is costly
+				limit = { scope:henricians_priest = { has_character_flag = henricians_priest_is_henry }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_henricians_yes_pilgrimage = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.181.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.181.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_yes_pilgrimage = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.181.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.181.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_henricians_no_pilgrimage = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 0
+		}
+	}
+	option = {# Clergy Decide
+		name = bryten_heresy.181.d
+
+		if = {# No Pilgrimages
+			limit = { scope:henricians_council_stance_pilgrimage = flag:henricians_council_stance_forbid_pilgriamge }
+			bryten_heresy_council_henricians_no_pilgrimage = yes
+		}
+		if = {# Yes Pilgrimages
+			limit = { scope:henricians_council_stance_pilgrimage = flag:henricians_council_stance_allow_pilgrimage }
+			bryten_heresy_council_henricians_yes_pilgrimage = yes
+		}
+		ai_chance = {
+			# The AI should just let the scope:henricians_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.182
+			days = {5 10}
+		}
+	}
+}
+# council results
+bryten_heresy.182 = {# The church council arrives at their final important doctrinal conclusions.
+	type = character_event
+	title = bryten_heresy.182.t
+	desc = {
+		desc = bryten_heresy.182.desc.intro
+		first_valid = {# Priesthood
+			triggered_desc = {# Spiritual + Hof
+				trigger = {	faith:henricians = { has_doctrine = doctrine_spiritual_head } }
+				desc = bryten_heresy.182.desc.hof
+			}
+			triggered_desc = {# Spiritual 
+				trigger = {
+					faith:henricians = { 
+						NOT = {	has_doctrine = doctrine_spiritual_head }
+						has_doctrine = doctrine_theocracy_temporal 
+					}
+				}
+				desc = bryten_heresy.182.desc.priests
+			}
+			triggered_desc = {# Lay Clergy
+				trigger = {	faith:henricians = { has_doctrine = doctrine_theocracy_lay_clergy }	}
+				desc = bryten_heresy.182.desc.lay
+			}
+		}
+		first_valid = {# female clergy
+			triggered_desc = {# No Female Clergy
+				trigger = {	faith:henricians = { has_doctrine = doctrine_clerical_gender_male_only } }
+				desc = bryten_heresy.182.desc.male_only
+			}
+			triggered_desc = {# Yes Female Clergy
+				trigger = {	faith:henricians = { has_doctrine = doctrine_clerical_gender_either }	}
+				desc = bryten_heresy.182.desc.female_clergy
+			}
+		}
+		first_valid = {# Divorce
+			triggered_desc = {# No Divorce
+				trigger = {	faith:henricians = { has_doctrine = doctrine_divorce_disallowed } }
+				desc = bryten_heresy.182.desc.divorce_banned
+			}
+			triggered_desc = {# Yes Divorce
+				trigger = {	faith:henricians = { has_doctrine = doctrine_divorce_approval } }
+				desc = bryten_heresy.182.desc.divorce_allowed
+			}
+		}
+		first_valid = {# Pilgrimage
+			triggered_desc = {# No Pilgrimage
+				trigger = {	faith:henricians = { has_doctrine = doctrine_pilgrimage_forbidden } }
+				desc = bryten_heresy.182.desc.pilgrimage_forbidden
+			}
+			triggered_desc = {# Yes Pilgrimage
+				trigger = {	faith:henricians = { has_doctrine = doctrine_pilgrimage_encouraged } }
+				desc = bryten_heresy.182.desc.pilgrimage_allowed
+			}
+		}
+		# Outro.
+		desc = bryten_heresy.182.desc.outro
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:henricians_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:henricians_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Music!
+		play_music_cue = "mx_cue_sacredrite"
+		faith:henricians = {# the Council is over and now is formulized
+			remove_doctrine = heretic_movement_doctrine
+			change_fervor = { 
+				value = 50
+				desc = bryten_fervor_gain_henricians_council	
+			} 
+		}
+		# Now let's display our choices.
+		faith:henricians = {
+			show_as_tooltip = {
+				# Gnosticism.
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_pluralistic }
+					add_doctrine = doctrine_pluralism_pluralistic
+				}
+				# Priesthood.
+				if = {
+					limit = { has_doctrine = doctrine_spiritual_head }
+					add_doctrine = doctrine_theocracy_temporal
+					add_doctrine = doctrine_spiritual_head
+				}
+				if = {
+					limit = { 
+						has_doctrine = doctrine_theocracy_temporal 
+						NOT = { has_doctrine = doctrine_spiritual_head }
+					}
+					add_doctrine = doctrine_theocracy_temporal
+				}
+				if = {
+					limit = { has_doctrine = doctrine_theocracy_lay_clergy }
+					add_doctrine = doctrine_theocracy_lay_clergy
+				}
+				# Wealth.
+				if = {
+					limit = { has_doctrine = tenet_communal_possessions }
+					add_doctrine = tenet_communal_possessions
+				}
+				if = {
+					limit = { has_doctrine = tenet_apostolic_poverty }
+					add_doctrine = tenet_apostolic_poverty
+				}
+				if = {
+					limit = { has_doctrine = tenet_pure_priesthood }
+					add_doctrine = tenet_pure_priesthood
+				}
+				# Pacifism.
+				if = {
+					limit = { has_doctrine = tenet_armed_pilgrimages }
+					add_doctrine = tenet_armed_pilgrimages
+				}
+				if = {
+					limit = { has_doctrine = tenet_pacifism }
+					add_doctrine = tenet_pacifism
+				}
+				if = {
+					limit = { has_doctrine = tenet_unrelenting_faith }
+					add_doctrine = tenet_unrelenting_faith
+				}
+			}
+
+
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:bryten_henricians_council_completed
+		}
+
+
+	}
+
+	option = {
+		name = bryten_heresy.182.a
+		add_piety = major_piety_gain
+
+	}
+
+	after = {
+		# Clean up the story.
+		every_player = {# letting players know that the henricians church has been formalized
+			trigger_event = {
+				id = bryten_heresy.183
+				days = {5 10}
+			}
+		}
+	}
+}
+bryten_heresy.183 = {# henricians Council(let players know)
+	type = character_event
+	title = bryten_heresy.183.t
+	desc = bryten_heresy.183.desc
+	theme = faith	
+
+
+	option = {# Condemn the heretic
+		name = bryten_heresy.183.a
+	}
+}
 #######################################
 # petrobrusian 
 #######################################
@@ -4522,14 +8062,1187 @@ bryten_heresy.201 = {# Convert to petrobrusian?
 		}
 	}	
 }
+# Council: Council gathers from all over
+bryten_heresy.202 = {# council: Clergy gather from all over
+	type = character_event
+	title = bryten_heresy.202.t
+	desc = bryten_heresy.202.desc
+	theme = learning
+	left_portrait = {
+		character = scope:petrobrusian_council_host
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:petrobrusian_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# You are a heresiarch
+		add_trait = heresiarch
+		# Sort our locale.
+		## First, whether this is a repeater.
+		scope:council_1_venue = {
+			## Preferring to chill at scope:petrobrusian_priest's place.
+			if = {
+				limit = { holder = scope:petrobrusian_priest }
+				save_scope_as = council_2_venue
+			}
+			## But otherwise we take your capital.
+			else = {
+				scope:petrobrusian_council_host.capital_barony = { save_scope_as = council_2_venue }
+			}
+		}
+		scope:council_2_venue = { save_scope_as = background_temple_scope }
+		scope:petrobrusian_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = petrobrusian_priest_at_council
+			}
+		}
+	}
+
+	
+	option = {# Naturally, I'll take a leading role in the discussions.
+		name = bryten_heresy.202.a
+
+		# You'll engage in learning debates.
+		custom_tooltip = bryten_heresy.202.a.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:debate
+		}
+		stress_impact = {
+			gregarious = miniscule_stress_impact_loss
+			shy = medium_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# My influence will be more felt than seen...
+		name = bryten_heresy.202.b
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:piety
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# This is a matter for the clergy alone.
+		name = bryten_heresy.202.c
+		custom_tooltip = bryten_heresy.202.c.tt
+		save_scope_value_as = {
+			name = conclave_engagement
+			value = flag:defaulted
+		}
+		stress_impact = {
+			humble = miniscule_stress_impact_loss
+			arrogant = major_stress_impact_gain
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 100
+		}
+	}
 
 
+	after = {
+		trigger_event = {
+			id = bryten_heresy.203
+			days = {5 10}
+		}
+	}
+}
+# Council: The priesthood
+scripted_effect bryten_heresy_council_petrobrusian_hof_effect = {
+	faith:petrobrusian = { 
+		hidden_effect = { remove_doctrine = doctrine_theocracy_lay_clergy }
+		add_doctrine = doctrine_theocracy_temporal
+		add_doctrine = doctrine_spiritual_head
+		set_up_dynamic_spiritual_hof_title_effect = { CREATOR = scope:petrobrusian_council_host }
+	}
+}
+scripted_effect bryten_heresy_council_petrobrusian_spiritual_effect = {
+	faith:petrobrusian = { 
+		hidden_effect = { remove_doctrine = doctrine_theocracy_lay_clergy }
+		add_doctrine = doctrine_theocracy_temporal 
+	}
+}
+scripted_effect bryten_heresy_council_petrobrusian_lay_priests_effect = {
+	faith:petrobrusian = { 
+		add_doctrine = doctrine_theocracy_lay_clergy 
+	}
+}
+bryten_heresy.203 = {# Council: priesthood
+	type = character_event
+	title = bryten_heresy.203.t
+	desc = bryten_heresy.203.desc
+	theme = diplomacy
+	left_portrait = {
+		character = scope:petrobrusian_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:petrobrusian_priest_at_council
+		animation = personality_bold
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:petrobrusian_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:petrobrusian_priest_at_council }
+			clear_saved_scope = petrobrusian_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:petrobrusian_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = petrobrusian_priest_at_council
+			}
+		}
+	}
+
+	option = {# Spiritual + Hof
+		name = bryten_heresy.203.a
+		trigger = { 
+			OR = {
+				not = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_hof	}
+			}
+		}
+		if = {# going against Peter of Bruys himself is costly
+				limit = { scope:petrobrusian_priest = { has_character_flag = petrobrusian_priest_is_peter }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_petrobrusian_hof_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.203.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.203.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_hof_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.203.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.203.a.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:petrobrusian_priest's preference.
+						## Spiritual.
+						if = {
+							limit = { scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_spiritual }
+							bryten_heresy_council_petrobrusian_spiritual_effect = yes
+						}
+						## Lay Clergy.
+						if = {
+							limit = { scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_lay_clergy }
+							bryten_heresy_council_petrobrusian_lay_priests_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# Spiritual
+		name = bryten_heresy.203.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_spiritual }
+			}
+		}
+		if = {# going against Peter of Bruys himself is costly
+				limit = { scope:petrobrusian_priest = { has_character_flag = petrobrusian_priest_is_peter }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		if = {# Piety path.
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_petrobrusian_spiritual_effect = yes
+		}
+		if = {# Debate path.
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.203.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.203.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_spiritual_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.203.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.203.b.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:petrobrusian_priest's preference.
+						## Spiritual + Hof.
+						if = {
+							limit = { scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_hof }
+							bryten_heresy_council_petrobrusian_hof_effect = yes
+						}
+						## Lay Clergy.
+						if = {
+							limit = { scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_lay_clergy }
+							bryten_heresy_council_petrobrusian_lay_priests_effect = yes
+						}
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# Lay Clergy
+		name = bryten_heresy.203.c
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_lay_clergy	}
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_petrobrusian_lay_priests_effect = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.203.c.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.203.c.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_lay_priests_effect = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.203.c.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.203.c.tt.failure
+						left_icon = scope:council_1_venue
+						# We take scope:petrobrusian_priest's preference.
+						## Spiritual + Hof.
+						if = {
+							limit = { scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_hof }
+							bryten_heresy_council_petrobrusian_hof_effect = yes
+						}
+						## Spiritual.
+						if = {
+							limit = { scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_spiritual }
+							bryten_heresy_council_petrobrusian_spiritual_effect = yes
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# I have no opinion on this matter.
+		name = bryten_heresy.203.d
+
+		# We take scope:petrobrusian_priest's preference.
+		## Spiritual + Hof.
+		if = {
+			limit = { scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_hof }
+			bryten_heresy_council_petrobrusian_hof_effect = yes
+		}
+		## Spiritual.
+		if = {
+			limit = { scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_spiritual }
+			bryten_heresy_council_petrobrusian_spiritual_effect = yes
+		}
+		## Lay Clergy.
+		if = {
+			limit = { scope:petrobrusian_council_stance_clergy = flag:petrobrusian_council_stance_lay_clergy }
+			bryten_heresy_council_petrobrusian_lay_priests_effect = yes
+		}
+
+		# We don't charge stress for the opt-outs, not least because their results are variable.
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.204
+			days = {5 10}
+		}
+	}
+}
+# Council: Female Clergy
+scripted_effect bryten_heresy_council_petrobrusian_no_women = {
+	faith:petrobrusian = { 
+		add_doctrine = doctrine_clerical_gender_male_only
+	}
+}
+scripted_effect bryten_heresy_council_petrobrusian_yes_women = {
+	faith:petrobrusian = { 
+		hidden_effect = { remove_doctrine = doctrine_clerical_gender_male_only }
+		add_doctrine = doctrine_clerical_gender_either 
+	}
+}
+bryten_heresy.204 = {# Council: Female Clergy
+	type = character_event
+	title = bryten_heresy.204.t
+	desc = bryten_heresy.204.desc
+	theme = martial
+	left_portrait = {
+		character = scope:petrobrusian_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:petrobrusian_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:petrobrusian_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:petrobrusian_priest_at_council }
+			clear_saved_scope = petrobrusian_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:petrobrusian_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = petrobrusian_priest_at_council
+			}
+		}
+	}
+
+	option = {# No female
+		name = bryten_heresy.204.a
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted } 
+				NOT = {	scope:petrobrusian_council_stance_female = flag:petrobrusian_council_stance_no_female_clergy }
+			}
+		}
 
 
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_petrobrusian_no_women = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.204.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.204.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_no_women = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.204.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.204.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_yes_women = yes
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# Female clergy
+		name = bryten_heresy.204.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted } 
+				NOT = {	scope:petrobrusian_council_stance_female = flag:petrobrusian_council_stance_yes_female_clergy }
+			}
+		}
+		if = {# going against Peter of Bruys himself is costly
+				limit = { scope:petrobrusian_priest = { has_character_flag = petrobrusian_priest_is_peter }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_petrobrusian_yes_women = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.204.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.204.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_yes_women = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.204.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.204.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_no_women = yes
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# The clergy decide
+		name = bryten_heresy.204.d
+
+		# We take scope:petrobrusian_priest's preference.
+		## No Female Clergy.
+		if = {
+			limit = { scope:petrobrusian_council_stance_female = flag:petrobrusian_council_stance_no_female_clergy }
+			bryten_heresy_council_petrobrusian_no_women = yes
+		}
+		## Allow Female Clergy.
+		if = {
+			limit = { scope:petrobrusian_council_stance_female = flag:petrobrusian_council_stance_yes_female_clergy }
+			bryten_heresy_council_petrobrusian_yes_women = yes
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.205
+			days = {5 10}
+		}
+	}
+}
+# Council: Divorce
+scripted_effect bryten_heresy_council_petrobrusian_no_divorce = {
+	faith:petrobrusian = { 
+		add_doctrine = doctrine_divorce_disallowed }
+}
+scripted_effect bryten_heresy_council_petrobrusian_approve_divorce = {
+	faith:petrobrusian = { 
+		add_doctrine = doctrine_divorce_approval 
+	}
+}
+bryten_heresy.205 = {# Council: Divorce
+	type = character_event
+	title = bryten_heresy.205.t
+	desc = bryten_heresy.205.desc
+	theme = martial
+	left_portrait = {
+		character = scope:petrobrusian_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:petrobrusian_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:petrobrusian_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:petrobrusian_priest_at_council }
+			clear_saved_scope = petrobrusian_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:petrobrusian_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = petrobrusian_priest_at_council
+			}
+		}
+	}
+
+	option = {# No Divorce
+		name = bryten_heresy.205.a
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:petrobrusian_council_stance_divorce = flag:petrobrusian_council_stance_no_divorce	}
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_petrobrusian_no_divorce = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.205.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.205.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_no_divorce = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.205.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.205.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_approve_divorce = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# Allow Divorce
+		name = bryten_heresy.205.b
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:petrobrusian_council_stance_divorce = flag:petrobrusian_council_stance_yes_divorce }
+			}
+		}
+		if = {# going against Peter of Bruys himself is costly
+				limit = { scope:petrobrusian_priest = { has_character_flag = petrobrusian_priest_is_peter }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_petrobrusian_approve_divorce = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.205.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.205.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_approve_divorce = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.205.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.205.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_no_divorce = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# The Clergy decide
+		name = bryten_heresy.205.d
+
+		# We take scope:petrobrusian_priest's preference.
+		if = {# No Divorce
+			limit = { scope:petrobrusian_council_stance_divorce = flag:petrobrusian_council_stance_no_divorce }
+			bryten_heresy_council_petrobrusian_no_divorce = yes
+		}
+		if = {# Allow Divorce
+			limit = { scope:petrobrusian_council_stance_divorce = flag:petrobrusian_council_stance_yes_divorce }
+			bryten_heresy_council_petrobrusian_approve_divorce = yes
+		}
+
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 100
+		}
+	}
+	
+	after = {
+		trigger_event = {
+			id = bryten_heresy.206
+			days = { 5 10 }
+		}
+	}
+
+}
+# Council: Pilgrimage
+scripted_effect bryten_heresy_council_petrobrusian_no_pilgrimage = {
+	faith:petrobrusian = { 
+		add_doctrine = doctrine_pilgrimage_forbidden 
+	}
+}
+scripted_effect bryten_heresy_council_petrobrusian_yes_pilgrimage = {
+	faith:petrobrusian = { 
+		hidden_effect = { remove_doctrine = doctrine_pilgrimage_forbidden }
+		add_doctrine = doctrine_pilgrimage_encouraged 
+	}
+}
+bryten_heresy.206 = {# Council: Pilgrimage
+	type = character_event
+	title = bryten_heresy.206.t
+	desc = bryten_heresy.206.desc
+	theme = martial
+	left_portrait = {
+		character = scope:petrobrusian_council_host
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:petrobrusian_priest_at_council
+		animation = chaplain
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Check to see if scope:petrobrusian_priest around for the pictures.
+		## Clear the old scope if applicable.
+		if = {
+			limit = { exists = scope:petrobrusian_priest_at_council }
+			clear_saved_scope = petrobrusian_priest_at_council
+		}
+		## Now try to refresh it.
+		scope:petrobrusian_priest = {
+			if = {
+				limit = { is_physically_able = yes }
+				save_scope_as = petrobrusian_priest_at_council
+			}
+		}
+	}
+
+	option = {# No Pilgrimage
+		name = bryten_heresy.206.a
+		trigger = { 
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:petrobrusian_council_stance_pilgrimage = flag:petrobrusian_council_stance_forbid_pilgriamge }
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_petrobrusian_no_pilgrimage = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.206.a.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.206.a.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_no_pilgrimage = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.206.a.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.206.a.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_yes_pilgrimage = yes
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# Yes Pilgrimage
+		name = bryten_heresy.206.b
+		trigger = {
+			OR = {
+				NOT = {	scope:conclave_engagement = flag:defaulted 	} 
+				NOT = {	scope:petrobrusian_council_stance_pilgrimage = flag:petrobrusian_council_stance_allow_pilgrimage }
+			}
+		}
+		if = {# going against Peter of Bruys himself is costly
+				limit = { scope:petrobrusian_priest = { has_character_flag = petrobrusian_priest_is_peter }
+			}
+			add_piety = {
+				value = bryten_heretic_council_oppose_founder_value
+				multiply = -1
+			}
+		}
+		# Piety path.
+		if = {
+			limit = { scope:conclave_engagement = flag:piety }
+			# Pay the piety tax.
+			add_piety = {
+				value = bryten_heretic_council_cost_value
+				multiply = -1
+			}
+			# Get your results.
+			bryten_heresy_council_petrobrusian_yes_pilgrimage = yes
+		}
+		# Debate path.
+		if = {
+			limit = { scope:conclave_engagement = flag:debate }
+			duel = {
+				skill = learning
+				value = high_skill_rating
+				# You sway the priests.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 3.5
+						min = -49
+					}
+					desc = bryten_heresy.206.b.tt.success
+					send_interface_toast = {
+						title = bryten_heresy.206.b.tt.success
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_yes_pilgrimage = yes
+					}
+				}
+				# The clergy ignore you.
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					desc = bryten_heresy.206.b.tt.failure
+					send_interface_toast = {
+						title = bryten_heresy.206.b.tt.failure
+						left_icon = scope:council_1_venue
+						bryten_heresy_council_petrobrusian_no_pilgrimage = yes
+
+					}
+				}
+			}
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 0
+		}
+	}
+	option = {# Clergy Decide
+		name = bryten_heresy.206.d
+
+		if = {# No Pilgrimages
+			limit = { scope:petrobrusian_council_stance_pilgrimage = flag:petrobrusian_council_stance_forbid_pilgriamge }
+			bryten_heresy_council_petrobrusian_no_pilgrimage = yes
+		}
+		if = {# Yes Pilgrimages
+			limit = { scope:petrobrusian_council_stance_pilgrimage = flag:petrobrusian_council_stance_allow_pilgrimage }
+			bryten_heresy_council_petrobrusian_yes_pilgrimage = yes
+		}
+		ai_chance = {
+			# The AI should just let the scope:petrobrusian_priest pick.
+			base = 100
+		}
+	}
+
+	after = {
+		# Progress the conclave.
+		trigger_event = {
+			id = bryten_heresy.207
+			days = {5 10}
+		}
+	}
+}
+# council results
+bryten_heresy.207 = {# The church council arrives at their final important doctrinal conclusions.
+	type = character_event
+	title = bryten_heresy.207.t
+	desc = {
+		desc = bryten_heresy.207.desc.intro
+		first_valid = {# Priesthood
+			triggered_desc = {# Spiritual + Hof
+				trigger = {	faith:petrobrusian = { has_doctrine = doctrine_spiritual_head } }
+				desc = bryten_heresy.207.desc.hof
+			}
+			triggered_desc = {# Spiritual 
+				trigger = {
+					faith:petrobrusian = { 
+						NOT = {	has_doctrine = doctrine_spiritual_head }
+						has_doctrine = doctrine_theocracy_temporal 
+					}
+				}
+				desc = bryten_heresy.207.desc.priests
+			}
+			triggered_desc = {# Lay Clergy
+				trigger = {	faith:petrobrusian = { has_doctrine = doctrine_theocracy_lay_clergy }	}
+				desc = bryten_heresy.207.desc.lay
+			}
+		}
+		first_valid = {# female clergy
+			triggered_desc = {# No Female Clergy
+				trigger = {	faith:petrobrusian = { has_doctrine = doctrine_clerical_gender_male_only } }
+				desc = bryten_heresy.207.desc.male_only
+			}
+			triggered_desc = {# Yes Female Clergy
+				trigger = {	faith:petrobrusian = { has_doctrine = doctrine_clerical_gender_either }	}
+				desc = bryten_heresy.207.desc.female_clergy
+			}
+		}
+		first_valid = {# Divorce
+			triggered_desc = {# No Divorce
+				trigger = {	faith:petrobrusian = { has_doctrine = doctrine_divorce_disallowed } }
+				desc = bryten_heresy.207.desc.divorce_banned
+			}
+			triggered_desc = {# Yes Divorce
+				trigger = {	faith:petrobrusian = { has_doctrine = doctrine_divorce_approval } }
+				desc = bryten_heresy.207.desc.divorce_allowed
+			}
+		}
+		first_valid = {# Pilgrimage
+			triggered_desc = {# No Pilgrimage
+				trigger = {	faith:petrobrusian = { has_doctrine = doctrine_pilgrimage_forbidden } }
+				desc = bryten_heresy.207.desc.pilgrimage_forbidden
+			}
+			triggered_desc = {# Yes Pilgrimage
+				trigger = {	faith:petrobrusian = { has_doctrine = doctrine_pilgrimage_encouraged } }
+				desc = bryten_heresy.207.desc.pilgrimage_allowed
+			}
+		}
+		# Outro.
+		desc = bryten_heresy.207.desc.outro
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:petrobrusian_council_host
+		animation = personality_bold
+	}
+	right_portrait = {
+		character = scope:petrobrusian_priest_at_council
+		animation = chancellor
+	}
+	override_background = { reference = temple_scope }
+
+	immediate = {
+		# Music!
+		play_music_cue = "mx_cue_sacredrite"
+		faith:petrobrusian = {# the Council is over and now is formulized
+			remove_doctrine = heretic_movement_doctrine
+			change_fervor = { 
+				value = 50
+				desc = bryten_fervor_gain_petrobrusian_council	
+			} 
+		}
+		# Now let's display our choices.
+		faith:petrobrusian = {
+			show_as_tooltip = {
+				# Gnosticism.
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_righteous }
+					add_doctrine = doctrine_pluralism_righteous
+				}
+				if = {
+					limit = { has_doctrine = doctrine_pluralism_pluralistic }
+					add_doctrine = doctrine_pluralism_pluralistic
+				}
+				# Priesthood.
+				if = {
+					limit = { has_doctrine = doctrine_spiritual_head }
+					add_doctrine = doctrine_theocracy_temporal
+					add_doctrine = doctrine_spiritual_head
+				}
+				if = {
+					limit = { 
+						has_doctrine = doctrine_theocracy_temporal 
+						NOT = { has_doctrine = doctrine_spiritual_head }
+					}
+					add_doctrine = doctrine_theocracy_temporal
+				}
+				if = {
+					limit = { has_doctrine = doctrine_theocracy_lay_clergy }
+					add_doctrine = doctrine_theocracy_lay_clergy
+				}
+				# Wealth.
+				if = {
+					limit = { has_doctrine = tenet_communal_possessions }
+					add_doctrine = tenet_communal_possessions
+				}
+				if = {
+					limit = { has_doctrine = tenet_apostolic_poverty }
+					add_doctrine = tenet_apostolic_poverty
+				}
+				if = {
+					limit = { has_doctrine = tenet_pure_priesthood }
+					add_doctrine = tenet_pure_priesthood
+				}
+				# Pacifism.
+				if = {
+					limit = { has_doctrine = tenet_armed_pilgrimages }
+					add_doctrine = tenet_armed_pilgrimages
+				}
+				if = {
+					limit = { has_doctrine = tenet_pacifism }
+					add_doctrine = tenet_pacifism
+				}
+				if = {
+					limit = { has_doctrine = tenet_unrelenting_faith }
+					add_doctrine = tenet_unrelenting_faith
+				}
+			}
 
 
+		}
+		add_to_global_variable_list = {
+			name = unavailable_unique_decisions
+			target = flag:bryten_petrobrusian_council_completed
+		}
 
 
+	}
+
+	option = {
+		name = bryten_heresy.207.a
+		add_piety = major_piety_gain
+
+	}
+
+	after = {
+		# Clean up the story.
+		every_player = {# letting players know that the petrobrusian church has been formalized
+			trigger_event = {
+				id = bryten_heresy.208
+				days = {5 10}
+			}
+		}
+	}
+}
+bryten_heresy.208 = {# petrobrusian Council(let players know)
+	type = character_event
+	title = bryten_heresy.208.t
+	desc = bryten_heresy.208.desc
+	theme = faith	
+
+
+	option = {# Condemn the heretic
+		name = bryten_heresy.208.a
+	}
+}
 
 
 

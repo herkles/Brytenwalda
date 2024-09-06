@@ -212,31 +212,58 @@ bryten_setup_after_game_start_on_actions = {
 				value = yes
 			}
 			culture:norse = {
-				remove_culture_tradition = tradition_bryten_viking_spirit
+				if = {
+					limit = { has_cultural_tradition = tradition_bryten_viking_spirit }
+					remove_culture_tradition = tradition_bryten_viking_spirit
+				}
 			}
 			culture:swedish = {
-				remove_culture_tradition = tradition_bryten_viking_spirit
+				if = {
+					limit = { has_cultural_tradition = tradition_bryten_viking_spirit }
+					remove_culture_tradition = tradition_bryten_viking_spirit
+				}
 			}
 			culture:norwegian = {
-				remove_culture_tradition = tradition_bryten_viking_spirit
+				if = {
+					limit = { has_cultural_tradition = tradition_bryten_viking_spirit }
+					remove_culture_tradition = tradition_bryten_viking_spirit
+				}
 			}
 			culture:danish = {
-				remove_culture_tradition = tradition_bryten_viking_spirit
+				if = {
+					limit = { has_cultural_tradition = tradition_bryten_viking_spirit }
+					remove_culture_tradition = tradition_bryten_viking_spirit
+				}
 			}
 			culture:gaet = {
-				remove_culture_tradition = tradition_bryten_viking_spirit
+				if = {
+					limit = { has_cultural_tradition = tradition_bryten_viking_spirit }
+					remove_culture_tradition = tradition_bryten_viking_spirit
+				}
 			}
 			culture:gute = {
-				remove_culture_tradition = tradition_bryten_viking_spirit
+				if = {
+					limit = { has_cultural_tradition = tradition_bryten_viking_spirit }
+					remove_culture_tradition = tradition_bryten_viking_spirit
+				}
 			}
 			culture:icelandic = {
-				remove_culture_tradition = tradition_bryten_viking_spirit
+				if = {
+					limit = { has_cultural_tradition = tradition_bryten_viking_spirit }
+					remove_culture_tradition = tradition_bryten_viking_spirit
+				}
 			}
 			culture:varangian = {
-				remove_culture_tradition = tradition_bryten_viking_spirit
+				if = {
+					limit = { has_cultural_tradition = tradition_bryten_viking_spirit }
+					remove_culture_tradition = tradition_bryten_viking_spirit
+				}
 			}
 			culture:norse_gael = {
-				remove_culture_tradition = tradition_bryten_viking_spirit
+				if = {
+					limit = { has_cultural_tradition = tradition_bryten_viking_spirit }
+					remove_culture_tradition = tradition_bryten_viking_spirit
+				}
 			}
 			
 		}

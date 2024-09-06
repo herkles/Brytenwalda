@@ -2815,739 +2815,738 @@ bryten_waldensian_council_decision = {
 		base = 100
 	}
 }
-# bryten_lollard_council_decision = {
-# 	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
-# 	desc = bryten_lollard_council_decision_desc
-# 	selection_tooltip = bryten_lollard_council_decision_tooltip
-# 	major = yes
+bryten_lollard_council_decision = {
+	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	desc = bryten_lollard_council_decision_desc
+	selection_tooltip = bryten_lollard_council_decision_tooltip
+	major = yes
 
-# 	sort_order = 80
+	sort_order = 80
 
-# 	is_shown = {
-# 		has_faith = faith:lollard
-# 		is_landed = yes
-# 		NOR = {
-# 			is_target_in_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_lollard_council_began
-# 			}
-# 			is_target_in_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_lollard_council_completed
-# 			}
-# 		}
-# 	}
-# 	is_valid = {
-# 		# got to be a kingdom or Empire
-# 		highest_held_title_tier >= tier_kingdom
-# 		# got to be somewhat prestigious
-# 		prestige_level >= 3
-# 		# Got to be some what pious
-# 		piety_level >= 3
-# 		is_independent_ruler = yes
-# 		custom_tooltip = {# Needs a solid chunk of Bosnian counties.
-# 			text = bryten_heretic_count.need_at_least_twelve_same_faith_counties
-# 			any_sub_realm_county = {
-# 				count >= bryten_heretic_church_county_count
-# 				faith = root.faith
-# 			}
-# 		}
-# 	}
+	is_shown = {
+		has_faith = faith:lollard
+		is_landed = yes
+		NOR = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_lollard_council_began
+			}
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_lollard_council_completed
+			}
+		}
+	}
+	is_valid = {
+		# got to be a kingdom or Empire
+		highest_held_title_tier >= tier_kingdom
+		# got to be somewhat prestigious
+		prestige_level >= 3
+		# Got to be some what pious
+		piety_level >= 3
+		is_independent_ruler = yes
+		custom_tooltip = {# Needs a solid chunk of Bosnian counties.
+			text = bryten_heretic_count.need_at_least_twelve_same_faith_counties
+			any_sub_realm_county = {
+				count >= bryten_heretic_church_county_count
+				faith = root.faith
+			}
+		}
+	}
 
-# 	is_valid_showing_failures_only = {
-# 		# Not at war
-# 		is_at_war = no
-# 	}
+	is_valid_showing_failures_only = {
+		# Not at war
+		is_at_war = no
+	}
 
-# 	effect = {
-# 		save_scope_as = lollard_council_host
-# 		trigger_event = { 
-# 			id = bryten_heresy.003 
-# 			days = 1
-# 		}
-# 		hidden_effect = {
-# 			# Get the lollard priest
-# 			add_to_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_lollard_council_began
-# 			}
+	effect = {
+		save_scope_as = lollard_council_host
+		trigger_event = { 
+			id = bryten_heresy.077 
+			days = 1
+		}
+		hidden_effect = {
+			# Get the lollard priest
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_lollard_council_began
+			}
 
-# 			if = {# First Peter Waldo is chosen because he is the founder and it is lollard after all.
-# 				limit = { scope:lollard_founder = { is_alive = yes } }
-# 				save_scope_as = lollard_priest
-# 				add_character_flag = lollard_priest_is_wycliff
-# 			}
-# 			if = {# Second get your court chaplain.
-# 				limit = {
-# 					exists = cp:councillor_court_chaplain
-# 					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
-# 					faith = faith:lollard
-# 				}
-# 				cp:councillor_court_chaplain = { save_scope_as = lollard_priest }
-# 			}
-# 			else = {# Create lollard preacher just to be safe
-# 				create_character = {
-# 					location = scope:lollard_council_host.capital_province
-# 					template = heretic_preacher_template
-# 					culture = scope:lollard_council_host.culture
-# 					faith = faith:lollard
-# 					save_scope_as = lollard_priest
-# 				}
-# 			}
-# 			# Get the various positions
-# 			if = {# John Wycliff already has positions as he is the founder
-# 				limit = {
-# 					scope:lollard_priest = { has_character_flag = lollard_priest_is_peter }
-# 				}
-# 				save_scope_value_as = {# Peter prefers lay clergy
-# 					name = lollard_council_stance_clergy
-# 					value = flag:lollard_council_stance_lay_clergy
-# 				}
-# 				save_scope_value_as = {# Peter prefers male clergy
-# 					name = lollard_council_stance_female
-# 					value = flag:lollard_council_stance_male
-# 				}
-# 				save_scope_value_as = {# lollard favors share no Divroce
-# 					name = lollard_council_stance_divorce
-# 					value = flag:lollard_council_stance_no_divorce
-# 				}
-# 				save_scope_value_as = {# lollard favors no pilgrimage
-# 					name = lollard_council_stance_pilgrimage
-# 					value = flag:lollard_council_stance_forbid_pilgriamge
-# 				}
-# 			}
-# 			else = {# for others who aren't those two
-# 				scope:lollard_priest = {
-# 					random_list = {# choice for priesthood
-# 						20 = {# Spiritual HoF
-# 							save_scope_value_as = {
-# 								name = lollard_council_stance_clergy
-# 								value = flag:lollard_council_stance_hof
-# 							}						
-# 						}
-# 						40 = {# Spiritual but no HoF
-# 							save_scope_value_as = {
-# 								name = lollard_council_stance_clergy
-# 								value = flag:lollard_council_stance_spiritual
-# 							}
-# 						}
-# 						40 = {# Lay Clergy
-# 							save_scope_value_as = {
-# 								name = lollard_council_stance_clergy
-# 								value = flag:lollard_council_stance_lay_clergy
-# 							}
-# 						}
-# 					}
-# 					random_list = {# choice for female
-# 						40 = {# Male only
-# 							save_scope_value_as = {
-# 								name = lollard_council_stance_female
-# 								value = flag:lollard_council_stance_male
-# 							}						
-# 						}
-# 						60 = {# Both
-# 							save_scope_value_as = {
-# 								name = lollard_council_stance_female
-# 								value = flag:lollard_council_stance_female
-# 							}
-# 						}
-# 					}
-# 					random_list = {# choice for divorce
-# 						60 = {# no divorce
-# 							save_scope_value_as = {
-# 								name = lollard_council_stance_divorce
-# 								value = flag:lollard_council_stance_no_divorce
-# 							}
-# 						}
-# 						40 = {# allow divorce
-# 							save_scope_value_as = {
-# 								name = lollard_council_stance_divorce
-# 								value = flag:lollard_council_stance_yes_divorce
-# 							}	
-# 						}
-# 					}
-# 					random_list = {# choice for pilgrimage
-# 						80 = {# Forbiden
-# 							save_scope_value_as = {# Priest favors monarchianism
-# 								name = lollard_council_stance_pilgrimage
-# 								value = flag:lollard_council_stance_forbid_pilgriamge
-# 							}							
-# 						}
-# 						20 = {# allow
-# 							save_scope_value_as = {
-# 								name = lollard_council_stance_pilgrimage
-# 								value = flag:lollard_council_stance_allow_pilgrimage
-# 							}
-# 						}
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
-# 	cost = {
-# 		gold = council_of_toledo_gold_cost_value
-# 		piety = council_of_toledo_piety_cost_value
-# 	}
+			if = {# First John Wycliff is chosen because he is the founder and it is lollard after all.
+				limit = { scope:lollard_founder = { is_alive = yes } }
+				save_scope_as = lollard_priest
+				add_character_flag = lollard_priest_is_wycliff
+			}
+			if = {# Second get your court chaplain.
+				limit = {
+					exists = cp:councillor_court_chaplain
+					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
+					faith = faith:lollard
+				}
+				cp:councillor_court_chaplain = { save_scope_as = lollard_priest }
+			}
+			else = {# Create lollard preacher just to be safe
+				create_character = {
+					location = scope:lollard_council_host.capital_province
+					template = heretic_preacher_template
+					culture = scope:lollard_council_host.culture
+					faith = faith:lollard
+					save_scope_as = lollard_priest
+				}
+			}
+			# Get the various positions
+			if = {# John Wycliff already has positions as he is the founder
+				limit = {
+					scope:lollard_priest = { has_character_flag = lollard_priest_is_wycliff }
+				}
+				save_scope_value_as = {# Wycliff prefers lay clergy
+					name = lollard_council_stance_clergy
+					value = flag:lollard_council_stance_lay_clergy
+				}
+				save_scope_value_as = {# Wycliff prefers male clergy
+					name = lollard_council_stance_female
+					value = flag:waldensian_council_stance_no_female_clergy
+				}
+				save_scope_value_as = {# lollard favors share no Divroce
+					name = lollard_council_stance_divorce
+					value = flag:lollard_council_stance_no_divorce
+				}
+				save_scope_value_as = {# lollard favors no pilgrimage
+					name = lollard_council_stance_pilgrimage
+					value = flag:lollard_council_stance_forbid_pilgriamge
+				}
+			}
+			else = {# for others who aren't those two
+				scope:lollard_priest = {
+					random_list = {# choice for priesthood
+						20 = {# Spiritual HoF
+							save_scope_value_as = {
+								name = lollard_council_stance_clergy
+								value = flag:lollard_council_stance_hof
+							}						
+						}
+						40 = {# Spiritual but no HoF
+							save_scope_value_as = {
+								name = lollard_council_stance_clergy
+								value = flag:lollard_council_stance_spiritual
+							}
+						}
+						40 = {# Lay Clergy
+							save_scope_value_as = {
+								name = lollard_council_stance_clergy
+								value = flag:lollard_council_stance_lay_clergy
+							}
+						}
+					}
+					random_list = {# choice for female
+						40 = {# Male only
+							save_scope_value_as = {
+								name = lollard_council_stance_female
+								value = flag:lollard_council_stance_no_female_clergy
+							}						
+						}
+						60 = {# Both
+							save_scope_value_as = {
+								name = lollard_council_stance_female
+								value = flag:lollard_council_stance_yes_female_clergy
+							}
+						}
+					}
+					random_list = {# choice for divorce
+						60 = {# no divorce
+							save_scope_value_as = {
+								name = lollard_council_stance_divorce
+								value = flag:lollard_council_stance_no_divorce
+							}
+						}
+						40 = {# allow divorce
+							save_scope_value_as = {
+								name = lollard_council_stance_divorce
+								value = flag:lollard_council_stance_yes_divorce
+							}	
+						}
+					}
+					random_list = {# choice for pilgrimage
+						80 = {# Forbiden
+							save_scope_value_as = {# Priest favors monarchianism
+								name = lollard_council_stance_pilgrimage
+								value = flag:lollard_council_stance_forbid_pilgriamge
+							}							
+						}
+						20 = {# allow
+							save_scope_value_as = {
+								name = lollard_council_stance_pilgrimage
+								value = flag:lollard_council_stance_allow_pilgrimage
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	cost = {
+		gold = council_of_toledo_gold_cost_value
+		piety = council_of_toledo_piety_cost_value
+	}
 
-# 	ai_check_interval = 60
-# 	ai_potential = {
-# 		is_ruler = yes
-# 		short_term_gold >= council_of_toledo_gold_cost_value
-# 	}
-# 	ai_will_do = {
-# 		base = 100
-# 	}
-# }
-# bryten_arnoldism_council_decision = {
-# 	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
-# 	desc = bryten_arnoldism_council_decision_desc
-# 	selection_tooltip = bryten_arnoldism_council_decision_tooltip
-# 	major = yes
+	ai_check_interval = 60
+	ai_potential = {
+		is_ruler = yes
+		short_term_gold >= council_of_toledo_gold_cost_value
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+bryten_arnoldism_council_decision = {
+	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	desc = bryten_arnoldism_council_decision_desc
+	selection_tooltip = bryten_arnoldism_council_decision_tooltip
+	major = yes
 
-# 	sort_order = 80
+	sort_order = 80
 
-# 	is_shown = {
-# 		has_faith = faith:arnoldism
-# 		is_landed = yes
-# 		NOR = {
-# 			is_target_in_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_arnoldism_council_began
-# 			}
-# 			is_target_in_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_arnoldism_council_completed
-# 			}
-# 		}
-# 	}
-# 	is_valid = {
-# 		# got to be a kingdom or Empire
-# 		highest_held_title_tier >= tier_kingdom
-# 		# got to be somewhat prestigious
-# 		prestige_level >= 3
-# 		# Got to be some what pious
-# 		piety_level >= 3
-# 		is_independent_ruler = yes
-# 		custom_tooltip = {# Needs a solid chunk of Bosnian counties.
-# 			text = bryten_heretic_count.need_at_least_twelve_same_faith_counties
-# 			any_sub_realm_county = {
-# 				count >= bryten_heretic_church_county_count
-# 				faith = root.faith
-# 			}
-# 		}
-# 	}
+	is_shown = {
+		has_faith = faith:arnoldism
+		is_landed = yes
+		NOR = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_arnoldism_council_began
+			}
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_arnoldism_council_completed
+			}
+		}
+	}
+	is_valid = {
+		# got to be a kingdom or Empire
+		highest_held_title_tier >= tier_kingdom
+		# got to be somewhat prestigious
+		prestige_level >= 3
+		# Got to be some what pious
+		piety_level >= 3
+		is_independent_ruler = yes
+		custom_tooltip = {# Needs a solid chunk of Bosnian counties.
+			text = bryten_heretic_count.need_at_least_twelve_same_faith_counties
+			any_sub_realm_county = {
+				count >= bryten_heretic_church_county_count
+				faith = root.faith
+			}
+		}
+	}
 
-# 	is_valid_showing_failures_only = {
-# 		# Not at war
-# 		is_at_war = no
-# 	}
+	is_valid_showing_failures_only = {
+		# Not at war
+		is_at_war = no
+	}
 
-# 	effect = {
-# 		save_scope_as = arnoldism_council_host
-# 		trigger_event = { 
-# 			id = bryten_heresy.003 
-# 			days = 1
-# 		}
-# 		hidden_effect = {
-# 			# Get the arnoldism priest
-# 			add_to_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_arnoldism_council_began
-# 			}
+	effect = {
+		save_scope_as = arnoldism_council_host
+		trigger_event = { 
+			id = bryten_heresy.102 
+			days = 1
+		}
+		hidden_effect = {
+			# Get the arnoldism priest
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_arnoldism_council_began
+			}
 
-# 			if = {# First Arnold of Brescia is chosen because he is the founder and it is arnoldism after all.
-# 				limit = { scope:arnoldism_founder = { is_alive = yes } }
-# 				save_scope_as = arnoldism_priest
-# 				add_character_flag = arnoldism_priest_is_peter
-# 			}
-# 			if = {# Second get your court chaplain.
-# 				limit = {
-# 					exists = cp:councillor_court_chaplain
-# 					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
-# 					faith = faith:arnoldism
-# 				}
-# 				cp:councillor_court_chaplain = { save_scope_as = arnoldism_priest }
-# 			}
-# 			else = {# Create arnoldism preacher just to be safe
-# 				create_character = {
-# 					location = scope:arnoldism_council_host.capital_province
-# 					template = heretic_preacher_template
-# 					culture = scope:arnoldism_council_host.culture
-# 					faith = faith:arnoldism
-# 					save_scope_as = arnoldism_priest
-# 				}
-# 			}
-# 			# Get the various positions
-# 			if = {# Arnold of Brescia already has positions as he is the founder
-# 				limit = {
-# 					scope:arnoldism_priest = { has_character_flag = arnoldism_priest_is_peter }
-# 				}
-# 				save_scope_value_as = {# Peter prefers Head of Face
-# 					name = arnoldism_council_stance_clergy
-# 					value = flag:arnoldism_council_stance_hof
-# 				}
-# 				save_scope_value_as = {# Peter prefers male clergy
-# 					name = arnoldism_council_stance_female
-# 					value = flag:arnoldism_council_stance_male
-# 				}
-# 				save_scope_value_as = {# arnoldism favors share no Divroce
-# 					name = arnoldism_council_stance_divorce
-# 					value = flag:arnoldism_council_stance_no_divorce
-# 				}
-# 				save_scope_value_as = {# arnoldism favors pilgrimage
-# 					name = arnoldism_council_stance_pilgrimage
-# 					value = flag:arnoldism_council_stance_allow_pilgrimage
-# 				}
-# 			}
-# 			else = {# for others who aren't those two
-# 				scope:arnoldism_priest = {
-# 					random_list = {# choice for priesthood
-# 						50 = {# Spiritual HoF
-# 							save_scope_value_as = {
-# 								name = arnoldism_council_stance_clergy
-# 								value = flag:arnoldism_council_stance_hof
-# 							}						
-# 						}
-# 						50 = {# Spiritual but no HoF
-# 							save_scope_value_as = {
-# 								name = arnoldism_council_stance_clergy
-# 								value = flag:arnoldism_council_stance_spiritual
-# 							}
-# 						}
-# 					}
-# 					random_list = {# choice for female
-# 						40 = {# Male only
-# 							save_scope_value_as = {
-# 								name = arnoldism_council_stance_female
-# 								value = flag:arnoldism_council_stance_male
-# 							}						
-# 						}
-# 						60 = {# Both
-# 							save_scope_value_as = {
-# 								name = arnoldism_council_stance_female
-# 								value = flag:arnoldism_council_stance_female
-# 							}
-# 						}
-# 					}
-# 					random_list = {# choice for divorce
-# 						60 = {# no divorce
-# 							save_scope_value_as = {
-# 								name = arnoldism_council_stance_divorce
-# 								value = flag:arnoldism_council_stance_no_divorce
-# 							}
-# 						}
-# 						40 = {# allow divorce
-# 							save_scope_value_as = {
-# 								name = arnoldism_council_stance_divorce
-# 								value = flag:arnoldism_council_stance_yes_divorce
-# 							}	
-# 						}
-# 					}
-# 					random_list = {# choice for pilgrimage
-# 						80 = {# Forbiden
-# 							save_scope_value_as = {# Priest favors monarchianism
-# 								name = arnoldism_council_stance_pilgrimage
-# 								value = flag:arnoldism_council_stance_forbid_pilgriamge
-# 							}							
-# 						}
-# 						20 = {# allow
-# 							save_scope_value_as = {
-# 								name = arnoldism_council_stance_pilgrimage
-# 								value = flag:arnoldism_council_stance_allow_pilgrimage
-# 							}
-# 						}
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
-# 	cost = {
-# 		gold = council_of_toledo_gold_cost_value
-# 		piety = council_of_toledo_piety_cost_value
-# 	}
+			if = {# First Arnold of Brescia is chosen because he is the founder and it is arnoldism after all.
+				limit = { scope:arnoldism_founder = { is_alive = yes } }
+				save_scope_as = arnoldism_priest
+				add_character_flag = arnoldism_priest_is_arnold
+			}
+			if = {# Second get your court chaplain.
+				limit = {
+					exists = cp:councillor_court_chaplain
+					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
+					faith = faith:arnoldism
+				}
+				cp:councillor_court_chaplain = { save_scope_as = arnoldism_priest }
+			}
+			else = {# Create arnoldism preacher just to be safe
+				create_character = {
+					location = scope:arnoldism_council_host.capital_province
+					template = heretic_preacher_template
+					culture = scope:arnoldism_council_host.culture
+					faith = faith:arnoldism
+					save_scope_as = arnoldism_priest
+				}
+			}
+			# Get the various positions
+			if = {# Arnold of Brescia already has positions as he is the founder
+				limit = {
+					scope:arnoldism_priest = { has_character_flag = arnoldism_priest_is_arnold }
+				}
+				save_scope_value_as = {# Peter prefers Head of Faith
+					name = arnoldism_council_stance_clergy
+					value = flag:arnoldism_council_stance_hof
+				}
+				save_scope_value_as = {# Peter prefers male clergy
+					name = arnoldism_council_stance_female
+					value = flag:arnoldism_council_stance_no_female_clergy
+				}
+				save_scope_value_as = {# arnoldism favors share no Divroce
+					name = arnoldism_council_stance_divorce
+					value = flag:arnoldism_council_stance_no_divorce
+				}
+				save_scope_value_as = {# arnoldism favors pilgrimage
+					name = arnoldism_council_stance_pilgrimage
+					value = flag:arnoldism_council_stance_allow_pilgrimage
+				}
+			}
+			else = {# for others who aren't those two
+				scope:arnoldism_priest = {
+					random_list = {# choice for priesthood
+						60 = {# Spiritual HoF
+							save_scope_value_as = {
+								name = arnoldism_council_stance_clergy
+								value = flag:arnoldism_council_stance_hof
+							}						
+						}
+						30 = {# Spiritual but no HoF
+							save_scope_value_as = {
+								name = arnoldism_council_stance_clergy
+								value = flag:arnoldism_council_stance_spiritual
+							}
+						}
+						10 = {# Lay Clergy
+							save_scope_value_as = {
+								name = arnoldism_council_stance_clergy
+								value = flag:arnoldism_council_stance_lay_clergy
+							}
+						}						
+					}
+					random_list = {# choice for female
+						40 = {# Male only
+							save_scope_value_as = {
+								name = arnoldism_council_stance_female
+								value = flag:arnoldism_council_stance_no_female_clergy
+							}						
+						}
+						60 = {# Both
+							save_scope_value_as = {
+								name = arnoldism_council_stance_female
+								value = flag:arnoldism_council_stance_yes_female_clergy
+							}
+						}
+					}
+					random_list = {# choice for divorce
+						60 = {# no divorce
+							save_scope_value_as = {
+								name = arnoldism_council_stance_divorce
+								value = flag:arnoldism_council_stance_no_divorce
+							}
+						}
+						40 = {# allow divorce
+							save_scope_value_as = {
+								name = arnoldism_council_stance_divorce
+								value = flag:arnoldism_council_stance_yes_divorce
+							}	
+						}
+					}
+					random_list = {# choice for pilgrimage
+						80 = {# Forbiden
+							save_scope_value_as = {# Priest favors monarchianism
+								name = arnoldism_council_stance_pilgrimage
+								value = flag:arnoldism_council_stance_forbid_pilgriamge
+							}							
+						}
+						20 = {# allow
+							save_scope_value_as = {
+								name = arnoldism_council_stance_pilgrimage
+								value = flag:arnoldism_council_stance_allow_pilgrimage
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	cost = {
+		gold = council_of_toledo_gold_cost_value
+		piety = council_of_toledo_piety_cost_value
+	}
 
-# 	ai_check_interval = 60
-# 	ai_potential = {
-# 		is_ruler = yes
-# 		short_term_gold >= council_of_toledo_gold_cost_value
-# 	}
-# 	ai_will_do = {
-# 		base = 100
-# 	}
-# }
-# bryten_henricians_council_decision = {
-# 	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
-# 	desc = bryten_henricians_council_decision_desc
-# 	selection_tooltip = bryten_henricians_council_decision_tooltip
-# 	major = yes
+	ai_check_interval = 60
+	ai_potential = {
+		is_ruler = yes
+		short_term_gold >= council_of_toledo_gold_cost_value
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+bryten_henricians_council_decision = {
+	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	desc = bryten_henricians_council_decision_desc
+	selection_tooltip = bryten_henricians_council_decision_tooltip
+	major = yes
 
-# 	sort_order = 80
+	sort_order = 80
 
-# 	is_shown = {
-# 		has_faith = faith:henricians
-# 		is_landed = yes
-# 		NOR = {
-# 			is_target_in_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_henricians_council_began
-# 			}
-# 			is_target_in_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_henricians_council_completed
-# 			}
-# 		}
-# 	}
-# 	is_valid = {
-# 		# got to be a kingdom or Empire
-# 		highest_held_title_tier >= tier_kingdom
-# 		# got to be somewhat prestigious
-# 		prestige_level >= 3
-# 		# Got to be some what pious
-# 		piety_level >= 3
-# 		is_independent_ruler = yes
-# 		custom_tooltip = {# Needs a solid chunk of Bosnian counties.
-# 			text = bryten_heretic_count.need_at_least_twelve_same_faith_counties
-# 			any_sub_realm_county = {
-# 				count >= bryten_heretic_church_county_count
-# 				faith = root.faith
-# 			}
-# 		}
-# 	}
+	is_shown = {
+		has_faith = faith:henricians
+		is_landed = yes
+		NOR = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_henricians_council_began
+			}
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_henricians_council_completed
+			}
+		}
+	}
+	is_valid = {
+		# got to be a kingdom or Empire
+		highest_held_title_tier >= tier_kingdom
+		# got to be somewhat prestigious
+		prestige_level >= 3
+		# Got to be some what pious
+		piety_level >= 3
+		is_independent_ruler = yes
+		custom_tooltip = {# Needs a solid chunk of Bosnian counties.
+			text = bryten_heretic_count.need_at_least_twelve_same_faith_counties
+			any_sub_realm_county = {
+				count >= bryten_heretic_church_county_count
+				faith = root.faith
+			}
+		}
+	}
 
-# 	is_valid_showing_failures_only = {
-# 		# Not at war
-# 		is_at_war = no
-# 	}
+	is_valid_showing_failures_only = {
+		# Not at war
+		is_at_war = no
+	}
 
-# 	effect = {
-# 		save_scope_as = henricians_council_host
-# 		trigger_event = { 
-# 			id = bryten_heresy.003 
-# 			days = 1
-# 		}
-# 		hidden_effect = {
-# 			# Get the henricians priest
-# 			add_to_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_henricians_council_began
-# 			}
+	effect = {
+		save_scope_as = henricians_council_host
+		trigger_event = { 
+			id = bryten_heresy.177 
+			days = 1
+		}
+		hidden_effect = {
+			# Get the henricians priest
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_henricians_council_began
+			}
 
-# 			if = {# First Peter Waldo is chosen because he is the founder and it is henricians after all.
-# 				limit = { scope:henricians_founder = { is_alive = yes } }
-# 				save_scope_as = henricians_priest
-# 				add_character_flag = henricians_priest_is_peter
-# 			}
-# 			if = {# Second get your court chaplain.
-# 				limit = {
-# 					exists = cp:councillor_court_chaplain
-# 					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
-# 					faith = faith:henricians
-# 				}
-# 				cp:councillor_court_chaplain = { save_scope_as = henricians_priest }
-# 			}
-# 			else = {# Create henricians preacher just to be safe
-# 				create_character = {
-# 					location = scope:henricians_council_host.capital_province
-# 					template = heretic_preacher_template
-# 					culture = scope:henricians_council_host.culture
-# 					faith = faith:henricians
-# 					save_scope_as = henricians_priest
-# 				}
-# 			}
-# 			# Get the various positions
-# 			if = {# Peter Waldo already has positions as he is the founder
-# 				limit = {
-# 					scope:henricians_priest = { has_character_flag = henricians_priest_is_peter }
-# 				}
-# 				save_scope_value_as = {# Peter prefers lay clergy
-# 					name = henricians_council_stance_clergy
-# 					value = flag:henricians_council_stance_lay_clergy
-# 				}
-# 				save_scope_value_as = {# Peter prefers male clergy
-# 					name = henricians_council_stance_female
-# 					value = flag:henricians_council_stance_male
-# 				}
-# 				save_scope_value_as = {# henricians favors share no Divroce
-# 					name = henricians_council_stance_divorce
-# 					value = flag:henricians_council_stance_no_divorce
-# 				}
-# 				save_scope_value_as = {# henricians favors no pilgrimage
-# 					name = henricians_council_stance_pilgrimage
-# 					value = flag:henricians_council_stance_forbid_pilgriamge
-# 				}
-# 			}
-# 			else = {# for others who aren't those two
-# 				scope:henricians_priest = {
-# 					random_list = {# choice for priesthood
-# 						20 = {# Spiritual HoF
-# 							save_scope_value_as = {
-# 								name = henricians_council_stance_clergy
-# 								value = flag:henricians_council_stance_hof
-# 							}						
-# 						}
-# 						40 = {# Spiritual but no HoF
-# 							save_scope_value_as = {
-# 								name = henricians_council_stance_clergy
-# 								value = flag:henricians_council_stance_spiritual
-# 							}
-# 						}
-# 						40 = {# Lay Clergy
-# 							save_scope_value_as = {
-# 								name = henricians_council_stance_clergy
-# 								value = flag:henricians_council_stance_lay_clergy
-# 							}
-# 						}
-# 					}
-# 					random_list = {# choice for female
-# 						40 = {# Male only
-# 							save_scope_value_as = {
-# 								name = henricians_council_stance_female
-# 								value = flag:henricians_council_stance_male
-# 							}						
-# 						}
-# 						60 = {# Both
-# 							save_scope_value_as = {
-# 								name = henricians_council_stance_female
-# 								value = flag:henricians_council_stance_female
-# 							}
-# 						}
-# 					}
-# 					random_list = {# choice for divorce
-# 						60 = {# no divorce
-# 							save_scope_value_as = {
-# 								name = henricians_council_stance_divorce
-# 								value = flag:henricians_council_stance_no_divorce
-# 							}
-# 						}
-# 						40 = {# allow divorce
-# 							save_scope_value_as = {
-# 								name = henricians_council_stance_divorce
-# 								value = flag:henricians_council_stance_yes_divorce
-# 							}	
-# 						}
-# 					}
-# 					random_list = {# choice for pilgrimage
-# 						80 = {# Forbiden
-# 							save_scope_value_as = {# Priest favors monarchianism
-# 								name = henricians_council_stance_pilgrimage
-# 								value = flag:henricians_council_stance_forbid_pilgriamge
-# 							}							
-# 						}
-# 						20 = {# allow
-# 							save_scope_value_as = {
-# 								name = henricians_council_stance_pilgrimage
-# 								value = flag:henricians_council_stance_allow_pilgrimage
-# 							}
-# 						}
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
-# 	cost = {
-# 		gold = council_of_toledo_gold_cost_value
-# 		piety = council_of_toledo_piety_cost_value
-# 	}
+			if = {# First Henry of Lusanne is chosen because he is the founder and it is henricians after all.
+				limit = { scope:henricians_founder = { is_alive = yes } }
+				save_scope_as = henricians_priest
+				add_character_flag = henricians_priest_is_henry
+			}
+			if = {# Second get your court chaplain.
+				limit = {
+					exists = cp:councillor_court_chaplain
+					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
+					faith = faith:henricians
+				}
+				cp:councillor_court_chaplain = { save_scope_as = henricians_priest }
+			}
+			else = {# Create henricians preacher just to be safe
+				create_character = {
+					location = scope:henricians_council_host.capital_province
+					template = heretic_preacher_template
+					culture = scope:henricians_council_host.culture
+					faith = faith:henricians
+					save_scope_as = henricians_priest
+				}
+			}
+			# Get the various positions
+			if = {# Henry of Lusanne already has positions as he is the founder
+				limit = {
+					scope:henricians_priest = { has_character_flag = henricians_priest_is_henry }
+				}
+				save_scope_value_as = {# Peter prefers lay clergy
+					name = henricians_council_stance_clergy
+					value = flag:henricians_council_stance_lay_clergy
+				}
+				save_scope_value_as = {# Peter prefers male clergy
+					name = henricians_council_stance_female
+					value = flag:henricians_council_stance_no_female_clergy
+				}
+				save_scope_value_as = {# henricians favors share no Divroce
+					name = henricians_council_stance_divorce
+					value = flag:henricians_council_stance_no_divorce
+				}
+				save_scope_value_as = {# henricians favors no pilgrimage
+					name = henricians_council_stance_pilgrimage
+					value = flag:henricians_council_stance_forbid_pilgriamge
+				}
+			}
+			else = {# for others who aren't those two
+				scope:henricians_priest = {
+					random_list = {# choice for priesthood
+						20 = {# Spiritual HoF
+							save_scope_value_as = {
+								name = henricians_council_stance_clergy
+								value = flag:henricians_council_stance_hof
+							}						
+						}
+						40 = {# Spiritual but no HoF
+							save_scope_value_as = {
+								name = henricians_council_stance_clergy
+								value = flag:henricians_council_stance_spiritual
+							}
+						}
+						40 = {# Lay Clergy
+							save_scope_value_as = {
+								name = henricians_council_stance_clergy
+								value = flag:henricians_council_stance_lay_clergy
+							}
+						}
+					}
+					random_list = {# choice for female
+						40 = {# Male only
+							save_scope_value_as = {
+								name = henricians_council_stance_female
+								value = flag:henricians_council_stance_no_female_clergy
+							}						
+						}
+						60 = {# Both
+							save_scope_value_as = {
+								name = henricians_council_stance_female
+								value = flag:henricians_council_stance_yes_female_clergy
+							}
+						}
+					}
+					random_list = {# choice for divorce
+						60 = {# no divorce
+							save_scope_value_as = {
+								name = henricians_council_stance_divorce
+								value = flag:henricians_council_stance_no_divorce
+							}
+						}
+						40 = {# allow divorce
+							save_scope_value_as = {
+								name = henricians_council_stance_divorce
+								value = flag:henricians_council_stance_yes_divorce
+							}	
+						}
+					}
+					random_list = {# choice for pilgrimage
+						80 = {# Forbiden
+							save_scope_value_as = {# Priest favors monarchianism
+								name = henricians_council_stance_pilgrimage
+								value = flag:henricians_council_stance_forbid_pilgriamge
+							}							
+						}
+						20 = {# allow
+							save_scope_value_as = {
+								name = henricians_council_stance_pilgrimage
+								value = flag:henricians_council_stance_allow_pilgrimage
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	cost = {
+		gold = council_of_toledo_gold_cost_value
+		piety = council_of_toledo_piety_cost_value
+	}
 
-# 	ai_check_interval = 60
-# 	ai_potential = {
-# 		is_ruler = yes
-# 		short_term_gold >= council_of_toledo_gold_cost_value
-# 	}
-# 	ai_will_do = {
-# 		base = 100
-# 	}
-# }
-# bryten_petrobrusian_council_decision = {
-# 	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
-# 	desc = bryten_petrobrusian_council_decision_desc
-# 	selection_tooltip = bryten_petrobrusian_council_decision_tooltip
-# 	major = yes
+	ai_check_interval = 60
+	ai_potential = {
+		is_ruler = yes
+		short_term_gold >= council_of_toledo_gold_cost_value
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
+bryten_petrobrusian_council_decision = {
+	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	desc = bryten_petrobrusian_council_decision_desc
+	selection_tooltip = bryten_petrobrusian_council_decision_tooltip
+	major = yes
 
-# 	sort_order = 80
+	sort_order = 80
 
-# 	is_shown = {
-# 		has_faith = faith:petrobrusian
-# 		is_landed = yes
-# 		NOR = {
-# 			is_target_in_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_petrobrusian_council_began
-# 			}
-# 			is_target_in_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_petrobrusian_council_completed
-# 			}
-# 		}
-# 	}
-# 	is_valid = {
-# 		# got to be a kingdom or Empire
-# 		highest_held_title_tier >= tier_kingdom
-# 		# got to be somewhat prestigious
-# 		prestige_level >= 3
-# 		# Got to be some what pious
-# 		piety_level >= 3
-# 		is_independent_ruler = yes
-# 		custom_tooltip = {# Needs a solid chunk of Bosnian counties.
-# 			text = bryten_heretic_count.need_at_least_twelve_same_faith_counties
-# 			any_sub_realm_county = {
-# 				count >= bryten_heretic_church_county_count
-# 				faith = root.faith
-# 			}
-# 		}
-# 	}
+	is_shown = {
+		has_faith = faith:petrobrusian
+		is_landed = yes
+		NOR = {
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_petrobrusian_council_began
+			}
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_petrobrusian_council_completed
+			}
+		}
+	}
+	is_valid = {
+		# got to be a kingdom or Empire
+		highest_held_title_tier >= tier_kingdom
+		# got to be somewhat prestigious
+		prestige_level >= 3
+		# Got to be some what pious
+		piety_level >= 3
+		is_independent_ruler = yes
+		custom_tooltip = {# Needs a solid chunk of Bosnian counties.
+			text = bryten_heretic_count.need_at_least_twelve_same_faith_counties
+			any_sub_realm_county = {
+				count >= bryten_heretic_church_county_count
+				faith = root.faith
+			}
+		}
+	}
 
-# 	is_valid_showing_failures_only = {
-# 		# Not at war
-# 		is_at_war = no
-# 	}
+	is_valid_showing_failures_only = {
+		# Not at war
+		is_at_war = no
+	}
 
-# 	effect = {
-# 		save_scope_as = petrobrusian_council_host
-# 		trigger_event = { 
-# 			id = bryten_heresy.003 
-# 			days = 1
-# 		}
-# 		hidden_effect = {
-# 			# Get the petrobrusian priest
-# 			add_to_global_variable_list = {
-# 				name = unavailable_unique_decisions
-# 				target = flag:bryten_petrobrusian_council_began
-# 			}
+	effect = {
+		save_scope_as = petrobrusian_council_host
+		trigger_event = { 
+			id = bryten_heresy.202 
+			days = 1
+		}
+		hidden_effect = {
+			# Get the petrobrusian priest
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_petrobrusian_council_began
+			}
 
-# 			if = {# First Peter Waldo is chosen because he is the founder and it is petrobrusian after all.
-# 				limit = { scope:petrobrusian_founder = { is_alive = yes } }
-# 				save_scope_as = petrobrusian_priest
-# 				add_character_flag = petrobrusian_priest_is_peter
-# 			}
-# 			if = {# Second get your court chaplain.
-# 				limit = {
-# 					exists = cp:councillor_court_chaplain
-# 					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
-# 					faith = faith:petrobrusian
-# 				}
-# 				cp:councillor_court_chaplain = { save_scope_as = petrobrusian_priest }
-# 			}
-# 			else = {# Create petrobrusian preacher just to be safe
-# 				create_character = {
-# 					location = scope:petrobrusian_council_host.capital_province
-# 					template = heretic_preacher_template
-# 					culture = scope:petrobrusian_council_host.culture
-# 					faith = faith:petrobrusian
-# 					save_scope_as = petrobrusian_priest
-# 				}
-# 			}
-# 			# Get the various positions
-# 			if = {# Peter Waldo already has positions as he is the founder
-# 				limit = {
-# 					scope:petrobrusian_priest = { has_character_flag = petrobrusian_priest_is_peter }
-# 				}
-# 				save_scope_value_as = {# Peter prefers lay clergy
-# 					name = petrobrusian_council_stance_clergy
-# 					value = flag:petrobrusian_council_stance_lay_clergy
-# 				}
-# 				save_scope_value_as = {# Peter prefers male clergy
-# 					name = petrobrusian_council_stance_female
-# 					value = flag:petrobrusian_council_stance_male
-# 				}
-# 				save_scope_value_as = {# petrobrusian favors share no Divroce
-# 					name = petrobrusian_council_stance_divorce
-# 					value = flag:petrobrusian_council_stance_no_divorce
-# 				}
-# 				save_scope_value_as = {# petrobrusian favors no pilgrimage
-# 					name = petrobrusian_council_stance_pilgrimage
-# 					value = flag:petrobrusian_council_stance_forbid_pilgriamge
-# 				}
-# 			}
-# 			else = {# for others who aren't those two
-# 				scope:petrobrusian_priest = {
-# 					random_list = {# choice for priesthood
-# 						20 = {# Spiritual HoF
-# 							save_scope_value_as = {
-# 								name = petrobrusian_council_stance_clergy
-# 								value = flag:petrobrusian_council_stance_hof
-# 							}						
-# 						}
-# 						40 = {# Spiritual but no HoF
-# 							save_scope_value_as = {
-# 								name = petrobrusian_council_stance_clergy
-# 								value = flag:petrobrusian_council_stance_spiritual
-# 							}
-# 						}
-# 						40 = {# Lay Clergy
-# 							save_scope_value_as = {
-# 								name = petrobrusian_council_stance_clergy
-# 								value = flag:petrobrusian_council_stance_lay_clergy
-# 							}
-# 						}
-# 					}
-# 					random_list = {# choice for female
-# 						40 = {# Male only
-# 							save_scope_value_as = {
-# 								name = petrobrusian_council_stance_female
-# 								value = flag:petrobrusian_council_stance_male
-# 							}						
-# 						}
-# 						60 = {# Both
-# 							save_scope_value_as = {
-# 								name = petrobrusian_council_stance_female
-# 								value = flag:petrobrusian_council_stance_female
-# 							}
-# 						}
-# 					}
-# 					random_list = {# choice for divorce
-# 						60 = {# no divorce
-# 							save_scope_value_as = {
-# 								name = petrobrusian_council_stance_divorce
-# 								value = flag:petrobrusian_council_stance_no_divorce
-# 							}
-# 						}
-# 						40 = {# allow divorce
-# 							save_scope_value_as = {
-# 								name = petrobrusian_council_stance_divorce
-# 								value = flag:petrobrusian_council_stance_yes_divorce
-# 							}	
-# 						}
-# 					}
-# 					random_list = {# choice for pilgrimage
-# 						80 = {# Forbiden
-# 							save_scope_value_as = {# Priest favors monarchianism
-# 								name = petrobrusian_council_stance_pilgrimage
-# 								value = flag:petrobrusian_council_stance_forbid_pilgriamge
-# 							}							
-# 						}
-# 						20 = {# allow
-# 							save_scope_value_as = {
-# 								name = petrobrusian_council_stance_pilgrimage
-# 								value = flag:petrobrusian_council_stance_allow_pilgrimage
-# 							}
-# 						}
-# 					}
-# 				}
-# 			}
-# 		}
-# 	}
-# 	cost = {
-# 		gold = council_of_toledo_gold_cost_value
-# 		piety = council_of_toledo_piety_cost_value
-# 	}
+			if = {# First Peter of Bruys is chosen because he is the founder and it is petrobrusian after all.
+				limit = { scope:petrobrusian_founder = { is_alive = yes } }
+				save_scope_as = petrobrusian_priest
+				add_character_flag = petrobrusian_priest_is_peter
+			}
+			if = {# Second get your court chaplain.
+				limit = {
+					exists = cp:councillor_court_chaplain
+					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
+					faith = faith:petrobrusian
+				}
+				cp:councillor_court_chaplain = { save_scope_as = petrobrusian_priest }
+			}
+			else = {# Create petrobrusian preacher just to be safe
+				create_character = {
+					location = scope:petrobrusian_council_host.capital_province
+					template = heretic_preacher_template
+					culture = scope:petrobrusian_council_host.culture
+					faith = faith:petrobrusian
+					save_scope_as = petrobrusian_priest
+				}
+			}
+			# Get the various positions
+			if = {# Peter of Bruys already has positions as he is the founder
+				limit = {
+					scope:petrobrusian_priest = { has_character_flag = petrobrusian_priest_is_peter }
+				}
+				save_scope_value_as = {# Peter prefers lay clergy
+					name = petrobrusian_council_stance_clergy
+					value = flag:petrobrusian_council_stance_lay_clergy
+				}
+				save_scope_value_as = {# Peter prefers male clergy
+					name = petrobrusian_council_stance_female
+					value = flag:petrobrusian_council_stance_no_female_clergy
+				}
+				save_scope_value_as = {# petrobrusian favors share no Divroce
+					name = petrobrusian_council_stance_divorce
+					value = flag:petrobrusian_council_stance_no_divorce
+				}
+				save_scope_value_as = {# petrobrusian favors no pilgrimage
+					name = petrobrusian_council_stance_pilgrimage
+					value = flag:petrobrusian_council_stance_forbid_pilgriamge
+				}
+			}
+			else = {# for others who aren't those two
+				scope:petrobrusian_priest = {
+					random_list = {# choice for priesthood
+						20 = {# Spiritual HoF
+							save_scope_value_as = {
+								name = petrobrusian_council_stance_clergy
+								value = flag:petrobrusian_council_stance_hof
+							}						
+						}
+						40 = {# Spiritual but no HoF
+							save_scope_value_as = {
+								name = petrobrusian_council_stance_clergy
+								value = flag:petrobrusian_council_stance_spiritual
+							}
+						}
+						40 = {# Lay Clergy
+							save_scope_value_as = {
+								name = petrobrusian_council_stance_clergy
+								value = flag:petrobrusian_council_stance_lay_clergy
+							}
+						}
+					}
+					random_list = {# choice for female
+						40 = {# Male only
+							save_scope_value_as = {
+								name = petrobrusian_council_stance_female
+								value = flag:petrobrusian_council_stance_no_female_clergy
+							}						
+						}
+						60 = {# Both
+							save_scope_value_as = {
+								name = petrobrusian_council_stance_female
+								value = flag:petrobrusian_council_stance_yes_female_clergy
+							}
+						}
+					}
+					random_list = {# choice for divorce
+						60 = {# no divorce
+							save_scope_value_as = {
+								name = petrobrusian_council_stance_divorce
+								value = flag:petrobrusian_council_stance_no_divorce
+							}
+						}
+						40 = {# allow divorce
+							save_scope_value_as = {
+								name = petrobrusian_council_stance_divorce
+								value = flag:petrobrusian_council_stance_yes_divorce
+							}	
+						}
+					}
+					random_list = {# choice for pilgrimage
+						80 = {# Forbiden
+							save_scope_value_as = {# Priest favors monarchianism
+								name = petrobrusian_council_stance_pilgrimage
+								value = flag:petrobrusian_council_stance_forbid_pilgriamge
+							}							
+						}
+						20 = {# allow
+							save_scope_value_as = {
+								name = petrobrusian_council_stance_pilgrimage
+								value = flag:petrobrusian_council_stance_allow_pilgrimage
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	cost = {
+		gold = council_of_toledo_gold_cost_value
+		piety = council_of_toledo_piety_cost_value
+	}
 
-# 	ai_check_interval = 60
-# 	ai_potential = {
-# 		is_ruler = yes
-# 		short_term_gold >= council_of_toledo_gold_cost_value
-# 	}
-# 	ai_will_do = {
-# 		base = 100
-# 	}
-# }
-
-
-
-
-
-
-
+	ai_check_interval = 60
+	ai_potential = {
+		is_ruler = yes
+		short_term_gold >= council_of_toledo_gold_cost_value
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
 #############################################
 # Christian Flavor Decisions
 #############################################
