@@ -30,9 +30,21 @@ bryten_english_pilgrimage_st_davids_host_memory = {# Visited St. davids
 	categories = { pilgrimage positive religious travel }
 	icon = "religious.dds"
 
-	description = { random_valid = { desc = bryten_visited_st_davids_first_perspective } }
-	second_perspective_description = { random_valid = {	desc = bryten_visited_st_davids_second_perspective } }
-	third_perspective_description = { random_valid = { desc = bryten_visited_st_davids_third_perspective } }
+	description = { 
+		random_valid = { 
+			desc = bryten_visited_st_davids_first_perspective 
+		} 
+	}
+	second_perspective_description = { 
+		random_valid = {
+			desc = bryten_visited_st_davids_second_perspective 
+		} 
+	}
+	third_perspective_description = { 
+		random_valid = { 
+			desc = bryten_visited_st_davids_third_perspective 
+		} 
+	}
 
 	duration = { years = memory_default_duration }
 }
@@ -47,3 +59,35 @@ bryten_pilgrimage_st_andrews_host_memory = {# Visited Durham
 	duration = { years = memory_default_duration }
 
 }
+#######################################
+#									  #
+#      	  	Event Memories      	  #
+#									  #
+#######################################
+bryten_first_confirmation_memory = {# Visited Durham
+	categories = { childhood positive religious }
+	icon = "religious.dds"
+
+	description = { 
+		random_valid = { 
+			desc = bryten_first_confirmation_first_perspective 
+		} 
+	}
+	second_perspective_description = { 
+		random_valid = { 
+			desc = bryten_first_confirmation_second_perspective 
+		} 
+	}
+	third_perspective_description = { 
+		random_valid = { 
+			desc = bryten_first_confirmation_third_perspective 
+		} 
+	}
+	duration = { years = memory_default_duration }
+
+}
+
+
+
+
+

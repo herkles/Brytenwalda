@@ -64,16 +64,6 @@ bryten_setup_after_game_start_on_actions = {
 			}
 			character:90120 ?= { trigger_event = tapestry_french.030 }
 		}
-		# Other Character stuff
-		character:6878 = {# kill haestin
-			if = {
-				limit = {
-					is_alive = yes
-					is_landed = yes
-				}
-				death = { death_reason = death_disappearance }
-			}
-		}
 		if = {# Gero gets the choice for conversion policy
 			limit = {
 				character:168562 ?= { 
@@ -84,6 +74,17 @@ bryten_setup_after_game_start_on_actions = {
 			}
 			character:168562 ?= { trigger_event = tapestry_hre.011 }
 		}
+		# Other Character stuff
+		character:6878 = {# kill haestin
+			if = {
+				limit = {
+					is_alive = yes
+					is_landed = yes
+				}
+				death = { death_reason = death_disappearance }
+			}
+		}
+
 		# Set Frankish Elective in 887
 		if = {# Election of Odo begins the Election period
 			limit = { game_start_date > 888.2.29 }
@@ -164,14 +165,12 @@ bryten_setup_after_game_start_on_actions = {
 					desc = cultural_acceptance_historical_relations
 				}
 			}
-			every_child = {# Sicilian children in 1066 know Norman
-				limit = {
-					AND = {
-						has_culture = culture:sicilian
-						any_parent = {	has_culture = culture:norman }
-					}
+			culture:sicilian = {
+				change_cultural_acceptance = {
+					target = culture:norman
+					value = 75
+					desc = cultural_acceptance_historical_relations
 				}
-				learn_language = language_french
 			}
 		}
 		# traditions

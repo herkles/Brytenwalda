@@ -24,14 +24,13 @@
 				multiply = faith_unchanged_doctrine_cost_mult
 			}
 		}
-
 		can_pick = {
 			# You need a priesthood (obviously)
 			custom_description = {
 				text = requires_doctrine_theocracy_temporal_trigger
 				doctrine:doctrine_theocracy_temporal = { is_in_list = selected_doctrines }
-
 			}
+			
 		}
 
 		parameters = {

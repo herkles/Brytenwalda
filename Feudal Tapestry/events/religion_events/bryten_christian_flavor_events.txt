@@ -1506,7 +1506,72 @@ bryten_christian.021 = {# Bosnian orientation decision event
 ##############################################
 # Confirmation
 ##############################################
+bryten_christian.025 = {# Celebrate Confirmation 
+	type = character_event
+	title = bryten_christian.025.t
+	desc = bryten_christian.025.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	
+	trigger = {
+		is_available_child = yes
+		child_is_teen_trigger = yes
+		has_religion = religion:christianity_religion
+		not = { has_character_flag = bryten_child_had_confirmation }
+	}
 
+	immediate = {
+		save_scope_as = bryten_confirmation_child
+		scope:bryten_confirmation_child = {
+			every_parent = {
+				limit = { is_ai = no }
+				save_scope_as = bryten_confirmation_child_parent
+			}
+		}
+	}
+	
+	option = {# Go and make a vow
+		name = bryten_christian.025.a	
+		add_piety = miniscule_piety_gain
+		add_prestige = miniscule_prestige_value
+		hidden_effect = { 
+			add_character_flag = bryten_child_had_confirmation
+			create_character_memory = {
+				type = bryten_first_confirmation_memory
+			} 
+		}
+	}
+	
+	after = {
+		scope:bryten_confirmation_child_parent = {
+			trigger_event = {
+				id = bryten_christian.026
+				days = { 1 5 }
+			}
+		}
+
+	}
+
+}
+bryten_christian.026 = {# Celebrate Confirmation - Parents view
+	type = character_event
+	title = bryten_christian.026.t
+	desc = bryten_christian.026.desc
+	theme = faith
+	override_background = { reference = temple_church }
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	right_portrait = {
+		character = scope:bryten_confirmation_child
+		animation = happiness
+	}
+	option = {# 
+		name = bryten_christian.026.a
+	}
+
+}
 ##############################################
 # Saintly Miracles
 ##############################################
