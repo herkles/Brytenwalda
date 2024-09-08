@@ -84,7 +84,6 @@ bryten_setup_after_game_start_on_actions = {
 				death = { death_reason = death_disappearance }
 			}
 		}
-
 		# Set Frankish Elective in 887
 		if = {# Election of Odo begins the Election period
 			limit = { game_start_date > 888.2.29 }
@@ -161,14 +160,14 @@ bryten_setup_after_game_start_on_actions = {
 			culture:norman = {
 				change_cultural_acceptance = {
 					target = culture:sicilian
-					value = 75
+					value = 50
 					desc = cultural_acceptance_historical_relations
 				}
 			}
 			culture:sicilian = {
 				change_cultural_acceptance = {
 					target = culture:norman
-					value = 75
+					value = 50
 					desc = cultural_acceptance_historical_relations
 				}
 			}
@@ -437,10 +436,5 @@ bryten_setup_after_game_start_on_actions = {
 			title:c_sussex = { add_county_modifier = {	modifier = bryten_cinque_port_modifier } }
 			title:c_kent = { add_county_modifier = { modifier = bryten_cinque_port_modifier	} }
 		}
-		# # Holy Site for Kent in 1171 and after
-		# if = {
-		# 	limit = { game_start_date >= 1066.1.1 }
-		# 	faith:catholic = { activate_holy_site = kent }	
-		# }
 	}
 }
