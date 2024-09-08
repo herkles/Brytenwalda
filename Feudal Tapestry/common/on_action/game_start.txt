@@ -955,6 +955,10 @@ on_game_start = {
 		if = {# Make catholicism not have kent
 			limit = { current_date <= 1173.1.1 }
 			faith:catholic = { deactivate_holy_site = kent }
+			set_global_variable = {
+				name = thomas_becket_sainted
+				value = yes
+			}
 		}
 		# Catholicism doesn't start with Assisi
 		faith:catholic = { deactivate_holy_site = assisi_catholic }

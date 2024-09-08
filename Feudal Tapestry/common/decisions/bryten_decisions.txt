@@ -280,6 +280,91 @@ restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
 		base = 100
 	}
 }
+bryten_promote_pilgrimage_cantebury = {# Promote Pilgrimage to Cantebury
+	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	ai_check_interval = 64
+	cooldown = { days = 7300 }
+	desc = bryten_promote_pilgrimage_cantebury_desc
+	major = yes
+
+	is_shown = {
+		completely_controls = title:d_canterbury
+		is_ruler = yes
+		is_landed = yes
+		capital_province = { geographical_region = world_europe_west_britannia } 
+		# The Pope Must exist
+		exists = faith.religious_head
+		root.faith = faith:catholic
+		NOT = {	#You can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_canterbury_pilgrimage_promoted
+			}
+		}
+		# Check to make sure that Thomas Becket isn't sainted
+		NOT = { has_global_variable = thomas_becket_sainted }
+		OR = {# Has to be Anglo-Saxon Cultures
+			has_culture = culture:anglo_saxon
+			has_culture = culture:anglo_norse
+			has_culture = culture:northumbrian
+			has_culture = culture:mercian
+			has_culture = culture:west_saxon
+			has_culture = culture:east_anglian
+		}
+	}
+	
+	is_valid = {
+		piety_level >= 4
+		prestige_level >= 2
+		culture = {	has_innovation = innovation_divine_right }
+		gold >= medium_gold_value
+		faith.religious_head = {# the Pope must like you
+			opinion = {
+				target = root
+				value >= very_high_positive_opinion
+			}
+		}
+	}
+	
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		save_scope_as = english_king
+		faith.religious_head = {# the Pope must like you
+			save_scope_as = pope
+		}
+		custom_tooltip = bryten_promote_pilgrimage_cantebury_tooltip
+		trigger_event = { id = bryten_england.175 }
+		hidden_effect = {
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_canterbury_pilgrimage_promoted
+			}
+		}
+	}
+
+	cost = { 
+		gold = { value = medium_gold_value } # Will depend
+	}	
+
+	ai_potential = {
+		short_term_gold > standard_activity_cost
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 5
+			has_trait = zealous
+		}
+		modifier = {
+			add = -15
+			has_trait = cynical
+		}
+	}
+}
 #############################################
 # Anglo-Norse England Decisions
 #############################################

@@ -3580,9 +3580,53 @@ bryten_england.153 = {# Syncretic Beliefs
 		
 }
 #######################################
-# The english Monastic Reforms
+# Promoting Pilgrimage to Canterbury
 #######################################
+bryten_england.175 = {# Promoting Pilgrimage to Canterbury
+	type = character_event
+	title = bryten_england.175.t
+	desc = bryten_england.175.desc
+	theme = realm
+	left_portrait = {
+		character = scope:english_king
+		animation = personality_zealous
+	}
 
+	immediate = {
+		play_music_cue = "mx_cue_pilgrimage_arrival"
+		faith:catholic = { activate_holy_site = kent }
+	}
+	
+	option = {# woo new holy site
+		name = bryten_england.175.a
+		give_nickname = nick_the_pious
+	}
+
+	after = {
+		every_player = {
+			limit = { religion = religion:christianity_religion	}
+			trigger_event = {# Resistance to William's rule
+				id = bryten_england.176
+				days = { 1 2 }
+			}
+		}
+	}
+}
+bryten_england.176 = {# Canterbury is a pilgrimage spot
+	type = character_event
+	title = bryten_england.176.t
+	desc = bryten_england.176.desc		
+
+	theme = realm
+	left_portrait = {
+		character = scope:english_king
+		animation = personality_zealous
+	}
+	
+	option = {
+		name = name_i_see
+	}
+}
 #######################################
 # The Thomas Beckett Controversy
 #######################################
