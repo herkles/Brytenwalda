@@ -17,7 +17,11 @@ With the expansion east ward to the edge of Europe, the cultures of the Slavs ha
 - Heresies are to appear in a more historicalish fashion
 - Bosnia Church can decide which way to go
 - Fraticelli can try and reform the church
-- bug fixes with the Olga event chain
+- Church councils to determine the nature of heresies
+- changes to the set up of holy sites for a number of christian faiths
+- Christian Dualist faiths are now actually christian
+- Sicilians whose parents are norman know french
+- Various Bug fixes
 
 
 ## Main Features

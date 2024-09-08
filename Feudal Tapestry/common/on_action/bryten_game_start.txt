@@ -167,7 +167,7 @@ bryten_setup_after_game_start_on_actions = {
 		}
 		if = {# Sicilian Children know french in 1066
 			limit = { game_start_date >= 1066.1.1 }
-			every_child = {
+			every_living_character = {
 				limit = {
 					AND = {
 						has_culture = culture:sicilian
