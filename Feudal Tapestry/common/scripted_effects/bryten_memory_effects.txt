@@ -57,3 +57,20 @@ bryten_pilgrimage_st_andrews_host_memory_log_entry_effect = {# Memory for Durham
 		}
 	}
 }
+#######################################
+#									  #
+#     Germanic Pilgrimage Memories    #
+#									  #
+#######################################
+bryten_trondheim_pilgrimage_host_memory_log_entry_effect = {# Memory for Durham
+	scope:activity = {
+		add_activity_log_entry = {
+			key = bryten_trondheim_pilgrimage_host_memory_log
+			tags = { completed }
+			# this line below adds the entry to the Effects section of the conclusion UI
+			show_in_conclusion = yes
+			character = root
+		}
+	}
+}
+

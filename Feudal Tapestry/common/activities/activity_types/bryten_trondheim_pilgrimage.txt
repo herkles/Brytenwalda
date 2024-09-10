@@ -1,35 +1,34 @@
-﻿
-activity_bryten_english_pilgrimage = {
-	############################
-	# STARTING AND VALID
-	############################
+﻿activity_bryten_trondheim_pilgrimage = {
 	is_shown = {
-		religion = religion:christianity_religion
-		NOT = { faith = { has_doctrine = doctrine_pilgrimage_forbidden } }
 		highest_held_title_tier > tier_barony
 		is_landed = yes
-		trigger_if = {
-			limit = { is_ai = yes }
-			is_at_war = no
-			short_term_gold >= bryten_activity_cost
-			capital_province = {# should be in Western Europe
-				OR = {
-					geographical_region = world_europe_west_britannia
-					geographical_region = world_europe_north
-					geographical_region = world_europe_west_francia
-					geographical_region = custom_frisia
-				}
+		game_start_date >= 1028.01.01 # have to be after saint Olaf.
+		religion = religion:christianity_religion
+		NOT = { faith = { has_doctrine = doctrine_pilgrimage_forbidden } }
+		capital_province = {# should be in Scandinvia or Britannia
+			OR = {
+				geographical_region = world_europe_west_britannia
+				geographical_region = world_europe_north
 			}
 		}
+		trigger_if = {
+			limit = {
+				is_ai = yes
+			}
+			is_at_war = no
+			short_term_gold >= bryten_activity_cost
+		}	
 	}
+
 	can_start = {
 		religion = religion:christianity_religion
 		NOT = { faith = { has_doctrine = doctrine_pilgrimage_forbidden } }
-		#is_at_war = no
 	}
+
 	can_start_showing_failures_only = {
 		is_available_adult = yes
 	}
+
 	is_valid = {
 		NOT = {
 			has_variable = activity_invalidated
@@ -38,14 +37,14 @@ activity_bryten_english_pilgrimage = {
 			is_landed = yes
 			NOT = { is_incapable = yes }
 		}
-		# If no one shows up
-		trigger_if = {
-			limit = {
-				is_current_phase_active = yes
+		scope:activity = {
+			OR = {
+				NOT = { has_variable = starting_faith }
+				scope:host.faith = var:starting_faith
 			}
-			has_attending_activity_guests = yes
 		}
 	}
+
 	on_invalidated = {
 		# Host becomes unlanded
 		if = {
@@ -74,7 +73,21 @@ activity_bryten_english_pilgrimage = {
 				trigger_event = activity_system.0331
 			}
 		}
+
+		if = {
+			limit = {
+				NOT = { scope:host.faith = var:starting_faith }
+			}
+			scope:activity = {
+				activity_type = { save_scope_as = activity_type }
+				activity_location = { save_scope_as = location }
+			}
+			every_attending_character = {
+				trigger_event = activity_system.0320
+			}
+		}
 	}
+
 	on_host_death = {
 		scope:activity = {
 			set_variable = {
@@ -85,44 +98,18 @@ activity_bryten_english_pilgrimage = {
 
 	province_filter = all
 	ai_province_filter = realm
+	wait_time_before_start = { days = 14 }
 
-	############################
-	# PROVINCE DESCRIPTIONS
-	############################
-	province_description = {
-		triggered_desc = {# For Durham
-			trigger = {
-				barony = title:b_durham
-			}
-			desc = activity_bryten_england_pilgrimage_durham_province_desc
-		}
-		triggered_desc = {# For St. Edmunds
-			trigger = {
-				barony = title:b_beodericsworth
-			}
-			desc = activity_bryten_england_pilgrimage_bury_st_edmunds_province_desc
-		}
-		triggered_desc = {# For St. Davids
-			trigger = {
-				barony = title:b_st_davids
-			}
-			desc = activity_bryten_england_pilgrimage_st_davids_province_desc
-		}
-		triggered_desc = {# For St. Andrews
-			trigger = {
-				barony = title:b_st_andrews
-			}
-			desc = activity_bryten_pilgrimage_st_andrews_province_desc
-		}		
-	}
-	
-	wait_time_before_start = { days = 7 }
-	##########################
+	###################
 	# OPTIONS
-	##########################
+	###################
+
 	special_option_category = special_type
 
 	options = {
+		#########
+		# TYPE OF VISIT
+		#########
 		special_type = {# Pilgrimage type
 			bryten_english_pilgrimage_type_pious = {# Pious Pilgrimage
 				default = yes	
@@ -347,37 +334,29 @@ activity_bryten_english_pilgrimage = {
 					}
 				}
 			}
-		}		
+		}
 	}
-	##########################
+
+	###################
 	# PHASES
-	##########################
+	###################
+
 	phases = {
-		bryten_english_pilgrimage_phases = {
+		bryten_trondheim_pilgrimage_phases = {
 			is_predefined = yes
 			
-			on_phase_active = {# For activiating the stuff
+			on_phase_active = {
 				if = {
-					limit = { this = scope:host	}
-					if = {# Visiting Durham
-						limit = { involved_activity.activity_location.barony = title:b_durham }
-						scope:host = { trigger_event = bryten_pilgrimage.125 }
+					limit = {
+						this = scope:host
 					}
-					else_if = {# Visiting Bury St. Edmunds
-						limit = { involved_activity.activity_location.barony = title:b_beodericsworth }
-						scope:host = { trigger_event = bryten_pilgrimage.100 }
+					if = {# Visiting Nidaros
+						limit = { involved_activity.activity_location.barony = title:b_nidaros }
+						scope:host = { trigger_event = bryten_pilgrimage.160 }
 					}
-					else_if = {# Visiting St. Davids
-						limit = { involved_activity.activity_location.barony = title:b_st_davids }
-						scope:host = { trigger_event = bryten_pilgrimage.140 }
-					}
-					else_if = {# Visiting St. Andrew
-						limit = { involved_activity.activity_location.barony = title:b_st_andrews }
-						scope:host = { trigger_event = bryten_pilgrimage.150 }
-					}
-				}
+				}		
 			}
-			on_end = {# When the Pilgrimage is over
+			on_end = {
 				# Run conclusion stuff here
 				# if = {
 				# 	limit = { this = scope:host }
@@ -387,13 +366,12 @@ activity_bryten_english_pilgrimage = {
 		}
 	}
 
-	max_guest_arrival_delay_time = { days = 3 }
+	max_guest_arrival_delay_time = { months = 1 }
 
 	# desc is only shown in debug AI watch window
 	ai_will_do = {
 		value = 50
 		
-		# How much do you care about your faith not liking this?
 		if = {
 			limit = {
 				has_trait = cynical
@@ -417,42 +395,37 @@ activity_bryten_english_pilgrimage = {
 	}
 
 	ai_check_interval = 60
-	##########################
-	# LOCATION PICKING
-	##########################
+
 	ai_will_select_province = {
 		value = 10
-	}	
+		# if = {
+		# 	limit = {
+		# 		this = scope:host.capital_province
+		# 	}
+		# 	add = {
+		# 		value = 30
+		# 		desc = "Capital Province preferred"
+		# 	}
+		# }
+	}
+	
 	is_location_valid = {
-		OR = {
-			trigger_if = {# Durham
-				limit = {
-					exists = barony
-					exists = global_var:bryten_cuthbert_tomb
-				}
-				barony = title:b_durham
+		barony ?= title:b_nidaros
+	}
+
+	max_province_icons = 1
+
+	province_score = {
+		add = 0
+		# Actual location
+		if = {
+			limit = {
+				county ?= title:c_trandheim
 			}
-			trigger_if = {# Bury St. Edmunds
-				limit = {
-					exists = barony
-					exists = global_var:bryten_bury_saint_edmunds
-				}
-				barony = title:b_beodericsworth
-			}
-			trigger_if = {# St. David
-				limit = {
-					exists = barony
-				}
-				barony = title:b_st_davids
-			}
-			trigger_if = {# St. David
-				limit = {
-					exists = barony
-				}
-				barony = title:b_st_andrews
-			}			
+			add = 100
 		}
 	}
+	
 	cost = {
 		gold = {
 			add = {
@@ -464,37 +437,44 @@ activity_bryten_english_pilgrimage = {
 			}
 		}
 	}
+
 	ui_predicted_cost = {
 		gold = {
 			value = bryten_activity_cost
+
 			# Make it a multiple of 5 (rounded up)
 			divide = 5 
 			ceiling = yes 
 			multiply = 5
 		}
 	}
-
 	cooldown = { days = 3650 }
 	
-	##########################
-	# PULSES
-	##########################
+	###################
+	# ACTIVITY-SPECIFIC PULSES
+	###################
+	
 	pulse_actions = {
 
 	}
-	on_start = {# Check what faith the pilgrimage is supposed to be for.
+
+	on_start = {
+		# Check what faith the pilgrimage is supposed to be for.
 		set_variable = {
 			name = starting_faith
 			value = scope:host.faith
 		}
 	}
-	on_enter_passive_state = {
 
+	on_enter_passive_state = {
+		
 	}
-	##########################
+
+	###################
 	# GUEST HANDLING
-	##########################
-	max_guests = 15
+	###################
+
+	max_guests = 10
 
 	guest_invite_rules = {
 		rules = {
@@ -519,12 +499,15 @@ activity_bryten_english_pilgrimage = {
 			1 = activity_invite_spouses
 		}
 	}
+
 	can_be_activity_guest = {
+		faith.religion = scope:host.faith.religion
 		is_adult = yes
 		is_available = yes
 		in_diplomatic_range = scope:host
 		is_landed = no
 	}
+
 	host_intents = {
 		intents = { 
 			bryten_reflection_intent
@@ -534,6 +517,7 @@ activity_bryten_english_pilgrimage = {
 		}
 		default = bryten_reflection_intent
 	}
+
 	guest_intents = {
 		intents = { 
 			bryten_reflection_intent
@@ -543,39 +527,23 @@ activity_bryten_english_pilgrimage = {
 		}
 		default = bryten_reflection_intent
 	}
+
 	guest_join_chance = {
-		base = 0
+		base = 10
 		base_activity_modifier = yes
 
 		# Scripted Modifiers
 		activity_guest_shared_ai_accept_modifier = yes
 	}
-	##########################
-	# COMPLETION EFFECTS
-	##########################	
+	
 	on_complete = {
-		if = {# Did the Durham pilgrimage for the first time
-			limit = { scope:activity.activity_location.county = title:c_durham }
-			create_character_memory = {	type = bryten_english_pilgrimage_durham_host_memory	}
-			scope:host = { bryten_english_pilgrimage_durham_host_memory_log_entry_effect = yes }
+		if = {
+			limit = { scope:activity.activity_location.county = title:c_trandheim }
+			create_character_memory = {	type = bryten_trondheim_pilgrimage_host_memory	}
+			scope:host = { bryten_trondheim_pilgrimage_host_memory_log_entry_effect = yes }	
 		}
-		if = {# Did the bury st. Edmunds pilgrimage for the first time
-			limit = { scope:activity.activity_location.county = title:c_suffolk	}
-			create_character_memory = {	type = bryten_english_pilgrimage_edmund_host_memory	}
-			scope:host = { bryten_english_pilgrimage_edmund_host_memory_log_entry_effect = yes }
-		}
-		if = {# Did the St. David pilgrimage for the first time
-			limit = { scope:activity.activity_location.county = title:c_pembrokeshire }
-			create_character_memory = {	type = bryten_english_pilgrimage_st_davids_host_memory }
-			scope:host = { bryten_english_pilgrimage_st_davids_host_memory_log_entry_effect = yes }
-		}
-		if = {# Did the St. Andrew pilgrimage for the first time
-			limit = { scope:activity.activity_location.county = title:c_fife }
-			create_character_memory = {	type = bryten_pilgrimage_st_andrews_host_memory	}
-			scope:host = { bryten_pilgrimage_st_andrews_host_memory_log_entry_effect = yes }
-		}
-
 	}
+
 	###################
 	# EVENT IMAGES
 	###################
@@ -746,34 +714,25 @@ activity_bryten_english_pilgrimage = {
 		environment = "environment_event_fp1_ocean"
 		ambience = "event:/DLC/FP1/SFX/Events/event_ocean_longship"
 	}
-	##########################
-	# PILGRIMAGE IMAGES
-	##########################
-	background = {# Durham
+	#################
+	#
+	# ARRIVED
+	#
+	#################
+	background = {# b_nidaros Nidaros / Trandheim
 		trigger = {
-			activity_location.barony = title:b_durham
+			activity_location.barony = title:b_nidaros
 		}
 		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_western.dds"
 		environment = "environment_western_holy_site"
 		ambience = "event:/SFX/Events/Backgrounds/temple_christian"
 	}
-	background = {# Bury St. Edmunds
-		trigger = {
-			activity_location.barony = title:b_beodericsworth
-		}
-		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_western.dds"
-		environment = "environment_western_holy_site"
-		ambience = "event:/SFX/Events/Backgrounds/temple_christian"
-	}	
 	background = {# Fall back
 		texture = "gfx/interface/illustrations/event_scenes/ep2_holysite_western.dds"
 		environment = "environment_western_holy_site"
 		ambience = "event:/SFX/Events/Backgrounds/temple_christian"
 	}
-	
-	##########################
-	# CHARACTER WINDOW
-	##########################
+
 	window_characters = {
 
 		guest = {
@@ -789,7 +748,26 @@ activity_bryten_english_pilgrimage = {
 			}
 
 			scripted_animation = {
-				animation = idle
+				triggered_animation = {
+					trigger = {
+						scope:character = {
+							has_trait = zealous
+						}
+					}
+					animation = { personality_zealous personality_honorable }
+				}
+				triggered_animation = {
+					trigger = {
+						scope:character = {
+							OR = {
+								has_trait = cynical
+								has_trait = lazy
+							}
+						}
+					}
+					animation = { boredom eyeroll }
+				}
+				animation = personality_content
 			}
 		}
 
@@ -806,7 +784,26 @@ activity_bryten_english_pilgrimage = {
 			}
 
 			scripted_animation = {
-				animation = happiness
+				triggered_animation = {
+					trigger = {
+						scope:character = {
+							has_trait = zealous
+						}
+					}
+					animation = { personality_zealous personality_honorable }
+				}
+				triggered_animation = {
+					trigger = {
+						scope:character = {
+							OR = {
+								has_trait = cynical
+								has_trait = lazy
+							}
+						}
+					}
+					animation = { boredom eyeroll }
+				}
+				animation = personality_compassionate
 			}
 		}
 		
@@ -825,7 +822,18 @@ activity_bryten_english_pilgrimage = {
 			}
 
 			scripted_animation = {
-				animation = idle
+				triggered_animation = {
+					trigger = {
+						scope:character = {
+							OR = {
+								has_trait = cynical
+								has_trait = lazy
+							}
+						}
+					}
+					animation = { boredom eyeroll }
+				}
+				animation = personality_zealous
 			}
 		}
 		
@@ -856,16 +864,33 @@ activity_bryten_english_pilgrimage = {
 			effect = {
 				every_attending_character = {
 					limit = {
-						NOT = {
-							scope:host.location = scope:activity.activity_location
-						}
+						scope:host.location = scope:activity.activity_location
 					}
 					add_to_list = characters
 				}
 			}
 
 			scripted_animation = {
-				animation = jockey_walk
+				triggered_animation = {
+					trigger = {
+						scope:character = {
+							has_trait = zealous
+						}
+					}
+					animation = { personality_zealous personality_honorable }
+				}
+				triggered_animation = {
+					trigger = {
+						scope:character = {
+							OR = {
+								has_trait = cynical
+								has_trait = lazy
+							}
+						}
+					}
+					animation = { boredom eyeroll }
+				}
+				animation = personality_forgiving
 			}
 		}
 
@@ -875,18 +900,34 @@ activity_bryten_english_pilgrimage = {
 			effect = {
 				every_attending_character = {
 					limit = {
-						NOT = {
-							scope:host.location = scope:activity.activity_location
-						}
+						scope:host.location = scope:activity.activity_location
 					}
 					add_to_list = characters
 				}
 			}
 
 			scripted_animation = {
-				animation = jockey_walk
+				triggered_animation = {
+					trigger = {
+						scope:character = {
+							has_trait = zealous
+						}
+					}
+					animation = { personality_zealous personality_honorable }
+				}
+				triggered_animation = {
+					trigger = {
+						scope:character = {
+							OR = {
+								has_trait = cynical
+								has_trait = lazy
+							}
+						}
+					}
+					animation = { boredom eyeroll }
+				}
+				animation = personality_honorable
 			}
 		}
 	}
 }
-

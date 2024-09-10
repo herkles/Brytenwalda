@@ -10,7 +10,7 @@ bryten_pilgrimage_journey_events = {# On-action managing possible Pilgrimage jou
 			has_activity_type = activity_pilgrimage
 		}
 		#We should only get pilgrimage events on our way TO the pilgrimage destination
-		is_on_a_british_pilgrimage_trigger = yes
+		is_on_a_bryten_local_pilgrimage_trigger = yes
 		NOR = { 
 			has_character_flag = in_pilgrimage_event_chain
 			has_character_flag = pilgrimage_dealing_with_invalidation
@@ -23,7 +23,7 @@ bryten_pilgrimage_journey_events = {# On-action managing possible Pilgrimage jou
 		10 = pilgrimage_generic_travel_events
 		5 = pilgrimage_temptation_travel_events
 		5 = pilgrimage_religious_travel_events
-		8 = pilgrimage_intent_travel_events
+		8 = bryten_pilgrimage_intent_travel_events
 	}
 }
 bryten_pilgrimage_generic_travel_events = {# Generic Travel Events

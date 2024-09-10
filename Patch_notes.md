@@ -6,11 +6,11 @@ If you find any bugs or issues do let me know and I will try to fix them to the 
 
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up.
 
-## Latest Version: 3.0.0 "Iron Century" (Released 08/08/2024)
+## Latest Version: 3.1.0 "Heresy" (Released 09/09/2024)
 
-The update brings the 10th century bookmark from CK2, the Iron Century to the mod. With the rise of Otto the Great, Kyivian Rus, the Capetians, England and more. 
+ A smaller update that adds some flavor for Christianity. Pregnant characters can make a vow to the Virgin Mary, as well as laying in and churching after the baby is born. Confirmation and other various flavor events have been added. 
 
-With the expansion east ward to the edge of Europe, the cultures of the Slavs have been redrawn based on the various tribal polities that existed in this era. The various pagan faiths of various uralic and baltic peoples have been added. The caucauses also had their cultures expanded. 
+ It also adds stuff for several christian heresies to make them more dynamic and historical. Catholicism's holy sites have been updated to switch out cologne for milan and canterbury for Chatres; though it is possible to get Canterbury as a holy site.
 
 ### Change Log
 - New Christian Heresies and heretical events
@@ -38,6 +38,8 @@ With the expansion east ward to the edge of Europe, the cultures of the Slavs ha
 - revision of the cultures of Frankia and Scandinvia; franks now exist in 867
 - Revision of the kingdoms in western europe for both 867 and 1066 to better reflect history
 - 936 Bookmark
+- more dynamic and historical set up for heresies
+
 
 ## Manual Installation Steps
 

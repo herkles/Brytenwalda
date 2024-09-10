@@ -57,15 +57,38 @@ is_on_a_british_pilgrimage_trigger = {
 		}
 	}
 }
+is_on_a_bryten_local_pilgrimage_trigger = {
+	exists = involved_activity
+	involved_activity = {
+		OR = {# Trigger for custom Pilgrimage activities for the future
+			has_activity_type = activity_bryten_english_pilgrimage 
+			has_activity_type = activity_bryten_trondheim_pilgrimage 
+
+		}
+	}
+	#No more pilgrimage events if you're on your way home :colbert:
+	exists = capital_province
+	NOT = { 
+		current_travel_plan = {
+			next_destination_province = root.capital_province 
+		}
+	}
+}
 bryten_activity_has_pious_pilgrimage_type_trigger = {
-	has_activity_type = activity_bryten_english_pilgrimage
+	OR = {# for the different types of pilgrimage activities
+		has_activity_type = activity_bryten_english_pilgrimage
+		has_activity_type = activity_bryten_trondheim_pilgrimage
+	}
 	has_activity_option = {
 		category = special_type
 		option = bryten_english_pilgrimage_type_pious
 	}
 }
 bryten_activity_has_worldly_pilgrimage_type_trigger = {
-	has_activity_type = activity_bryten_english_pilgrimage
+	OR = {
+		has_activity_type = activity_bryten_english_pilgrimage
+		has_activity_type = activity_bryten_trondheim_pilgrimage
+	}
 	has_activity_option = {
 		category = special_type
 		option = bryten_english_pilgrimage_type_worldy

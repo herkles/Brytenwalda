@@ -2510,6 +2510,124 @@ bryten_pilgrimage.153 = {# Departing Saint Andrews's for Home.
 	}
 }
 #######################################
+# Pilgrimage to Nidaros
+#######################################
+bryten_pilgrimage.160 = {# Arrive in Nidaros
+	type = activity_event
+	title = bryten_pilgrimage.160.t
+	desc = bryten_pilgrimage.160.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.160.a
+
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_pilgrimage.161
+			days = { 2 5 }
+		}
+	}
+
+}
+bryten_pilgrimage.161 = {# Praying in Nidaros Cathedral
+	type = activity_event
+	title = bryten_pilgrimage.161.t
+	desc = bryten_pilgrimage.161.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.161.a
+
+	}
+	
+	after = {
+		trigger_event = {
+			id = bryten_pilgrimage.162
+			days = { 2 5 }
+		}
+	}
+
+}
+bryten_pilgrimage.162 = {# Visiting the Tomb of Saint Olaf
+	type = activity_event
+	title = bryten_pilgrimage.162.t
+	desc = bryten_pilgrimage.162.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.162.a
+		if = {
+			limit = { has_trait = ill }
+			random = {
+				chance = 01
+				remove_trait = ill
+			}
+		}
+
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_pilgrimage.163
+			days = { 2 5 }
+		}
+	}
+}
+bryten_pilgrimage.163 = {# Departing Nidaros for Home.
+	type = activity_event
+	title = bryten_pilgrimage.163.t
+	desc = bryten_pilgrimage.163.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.163.home
+	}
+
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				hidden_effect = { skip_activity_phase = yes }
+			}
+		}
+	}
+}
+#######################################
 # General Destination Events
 #######################################
 scripted_effect pilgrimage_6770_relic_effect = {
