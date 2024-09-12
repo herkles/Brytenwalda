@@ -94,8 +94,8 @@
   bryten_pilgrimage.162.desc:0 "In the past few days, while at Saint Davids, I visited some other religious sites and met with some of the town's notables. Today, with all my other business taken care of, I can finally enter the Saint Davids Cathedral itself at last. It is a remarkable and splendid building, designed by a talented architect. I sit in the main part of the Cathedral, reflecting on my faith, and engaging in prayer."
   bryten_pilgrimage.162.a:1 "A marvelous place."
 
-  bryten_pilgrimage.163.t:0 "Departing St. Davids for Home."
-  bryten_pilgrimage.163.desc:0 "You have spent time in St. Davids, visiting their church and the reliquary tomb of Saint David. However it is time to return home. You and your companions begin making the preparations to return home."
+  bryten_pilgrimage.163.t:0 "Departing Nidaros for Home."
+  bryten_pilgrimage.163.desc:0 "You have spent time in Nidaros, visiting their church and the reliquary tomb of Saint Olaf. However it is time to return home. You and your companions begin making the preparations to return home."
   bryten_pilgrimage.163.home:1 "Time to return home."
 
   # the memory 
@@ -105,7 +105,53 @@
   bryten_visited_nidaros_third_perspective:0 "[owner.GetName] went on a pilgrimage to Nidaros."
 
 
+#######################################
+# Cluny Pilgrimage
+#######################################
+  bryten_pilgrimage.165.t:0 "Arrival at the Abbey of Cluny"
+  bryten_pilgrimage.165.desc:0 "I have arrived at the monastic center of Cluny. The monks and nuns of the abbey come to greet me. A few other pilgrims are here. While here I will be learning about their way of life following the Rule of Saint Benedict and spending my time in prayer."
+  bryten_pilgrimage.165.a:1 "I'm Glad to be here."
 
+  bryten_pilgrimage.166.t:0 "Following the Rule of St. Benedict"
+  bryten_pilgrimage.166.desc:0 "While you are at the Abbey of Cluny, you are to follow the rule of Saint Benedict, even though you are a ruler. In particular, while your accommodations are fancier than the monks and nuns of the abbey, you will be praying every few hours, the canonical hours and you will be eating like the monks and nuns do."
+  bryten_pilgrimage.166.a:1 "Blessed be to God."
+
+  bryten_pilgrimage.167.t.male:0 "Praying with the Monks"
+  bryten_pilgrimage.167.desc.male:0 "While at the abbey of Cluny you prayed with the monks of the monastery. The Cluniac monks favor liturgy as the main form of work. Thus while here you are spending quite a bit of time in prayer. Long hours are spent in the chapel praying to God. "
+  bryten_pilgrimage.167.t.female:0 "Praying with the Nuns"
+  bryten_pilgrimage.167.desc.female:0 "While at the abbey of Cluny you prayed with the nuns of the monastery. The Cluniac nuns favor liturgy as the main form of work. Thus while here you are spending quite a bit of time in prayer. Long hours are spent in the chapel praying to God. "
+  bryten_pilgrimage.167.a:1 "Amen"
+
+  bryten_pilgrimage.168.t:0 "Latin Studies"
+  bryten_pilgrimage.168.desc.male:0 "As one of the centers of Christianity in Francia, You have the opportunity to brush up on your Latin and a chance to master it. While in the Abbey, one of the monks is willing to help you while you are at the abbey."
+  bryten_pilgrimage.168.desc.female:0 "As one of the centers of Christianity in Francia, You have the opportunity to brush up on your Latin and a chance to master it. While in the Abbey, one of the nuns is willing to help you while you are at the abbey. "
+  bryten_pilgrimage.168.a:1 "Focus on Learning Latin"
+  bryten_pilgrimage.168.a.success:0 "You master the latin language"
+  bryten_pilgrimage.168.a.success.tt:0 "You mastered the latin language"
+  bryten_pilgrimage.168.a.failure:0 "Latin eludes you"
+  bryten_pilgrimage.168.a.failure.tt:0 "Latin eludes you"
+  bryten_pilgrimage.168.b:0 "Study your Latin"
+  bryten_pilgrimage.168.b.success:0 "You improve your latin studies"
+  bryten_pilgrimage.168.b.failure:0 "You do not improve your latin studies"
+  bryten_learned_latin_language_log_title:0 "Learned Latin"
+  bryten_learned_latin_language:0 "[CHARACTER.GetName] has learned the Latin Language."
+
+  bryten_pilgrimage.169.t:0 "Donating to the Abbey of Cluny?"
+  bryten_pilgrimage.169.desc:0 "As your time at the Abbey of Cluny is drawing to a close, you are reminded by the monks about a donation to the Abbey of Cluny. The question now before you is how much of a donation shall you give to the Abbey of Cluny?"
+  bryten_pilgrimage.169.a:1 "A large donation"
+  bryten_pilgrimage.169.b:1 "A reasonable Donation"
+  bryten_pilgrimage.169.c:1 "A small donation"
+  bryten_pilgrimage.169.d:1 "No donation"
+
+  bryten_pilgrimage.170.t:0 "Departing Cluny"
+  bryten_pilgrimage.170.desc:0 "Your time at the Abbey of Cluny is at an end. You have spent time in prayer and studied the Bible, and read some latin. However, now the road before is taking you home, and thus you and your companions prepare to set out for the journey back."
+  bryten_pilgrimage.170.home:1 "Time to return home."
+
+  # the memory 
+  bryten_cluny_pilgrimage_host_memory:0 "Went on a pilgrimage to the Abbey of Cluny."
+  bryten_visited_cluny_first_perspective:0 "I went on a pilgrimage to the Abbey of Cluny." 
+  bryten_visited_cluny_second_perspective:0 "You went on a pilgrimage to the Abbey of Cluny."
+  bryten_visited_cluny_third_perspective:0 "[owner.GetName] went on a pilgrimage to the Abbey of Cluny."
 
 
 #######################################

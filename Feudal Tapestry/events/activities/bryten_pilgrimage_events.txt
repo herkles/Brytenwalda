@@ -2628,6 +2628,458 @@ bryten_pilgrimage.163 = {# Departing Nidaros for Home.
 	}
 }
 #######################################
+# Pilgrimage to the Cluny Abbey
+#######################################
+bryten_pilgrimage.165 = {# Arrive at Cluny
+	type = activity_event
+	title = bryten_pilgrimage.165.t
+	desc = bryten_pilgrimage.165.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.165.a
+
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_pilgrimage.166
+			days = { 2 5 }
+		}
+	}
+
+}
+bryten_pilgrimage.166 = {# Living like a Monk
+	type = activity_event
+	title = bryten_pilgrimage.166.t
+	desc = bryten_pilgrimage.166.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.166.a
+
+	}
+	
+	after = {
+		trigger_event = {
+			id = bryten_pilgrimage.167
+			days = { 2 5 }
+		}
+	}
+
+}
+bryten_pilgrimage.167 = {# Praying in the Cluny Abbey
+	type = activity_event
+	title = {
+		first_valid = {
+			triggered_desc = {# Praying with the Monks
+				trigger = {
+					is_female = no
+				}
+				desc = bryten_pilgrimage.167.t.male
+			}
+			triggered_desc = {# Praying with the Nuns
+				trigger = {
+					is_female = yes
+				}
+				desc = bryten_pilgrimage.167.t.female
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {# Praying with the Monks
+				trigger = {
+					is_female = no
+				}
+				desc = bryten_pilgrimage.167.desc.male
+			}
+			triggered_desc = {# Praying with the Nuns
+				trigger = {
+					is_female = yes
+				}
+				desc = bryten_pilgrimage.167.desc.female
+			}
+		}
+	}
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.167.a
+		if = {
+			limit = { has_trait = ill }
+			random = {
+				chance = 01
+				remove_trait = ill
+			}
+		}
+
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_pilgrimage.168
+			days = { 2 5 }
+		}
+	}
+}
+bryten_pilgrimage.168 = {# Studying Latin
+	type = activity_event
+	title = bryten_pilgrimage.168.t
+	desc = {
+		first_valid = {
+			triggered_desc = {# Praying with the Monks
+				trigger = {
+					is_female = no
+				}
+				desc = bryten_pilgrimage.168.desc.male
+			}
+			triggered_desc = {# Praying with the Nuns
+				trigger = {
+					is_female = yes
+				}
+				desc = bryten_pilgrimage.168.desc.female
+			}
+		}
+	}
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = {# Try to Learn Latin
+		name = bryten_pilgrimage.168.a
+		trigger = {	NOT = {	knows_language = language_latin } }
+		duel = {
+			skills = { learning diplomacy }
+			value = high_skill_rating
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_pilgrimage.168.a.success
+				send_interface_toast = {
+					title = bryten_pilgrimage.168.a.success.tt
+					left_icon = root
+					learn_language = language_latin
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_pilgrimage.168.a.failure
+				send_interface_toast = {
+					title = bryten_pilgrimage.168.a.failure.tt
+					left_icon = root
+					stress_impact = {
+						base = medium_stress_impact_gain
+					}
+				}
+			}
+		}
+	}
+	option = {# Improving My Latin
+		name = bryten_pilgrimage.168.b
+		trigger = {	knows_language = language_latin }
+		duel = {
+			skill = learning
+			value = medium_skill_rating
+			20 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 2
+				}
+				root = {
+					send_interface_toast = {
+						title = bryten_pilgrimage.168.b.success
+						left_icon = root
+						add_learning_lifestyle_xp = minor_lifestyle_experience
+					}
+				}	
+			}
+			20 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1
+				}
+				root = {
+					send_interface_toast = {
+						title = bryten_pilgrimage.168.b.failure
+						left_icon = root
+					}
+				}
+			}
+		}
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_pilgrimage.169
+			days = { 2 5 }
+		}
+	}
+}
+bryten_pilgrimage.169 = {# Donating to Cluny
+	type = activity_event
+	title = bryten_pilgrimage.169.t
+	desc = bryten_pilgrimage.169.desc
+	theme = friendly
+	override_icon = {
+		reference = "gfx/interface/icons/event_types/type_faith.dds"
+	}
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_epic_sacral_moment"
+	}
+	
+	option = {# Large
+		name = bryten_pilgrimage.169.a
+		add_piety = 150
+		add_prestige = 50
+		remove_short_term_gold = 150
+		show_as_tooltip = {
+			add_character_modifier = {
+				modifier = bryten_cluny_abbey_donation_large
+				years = 10
+			}
+		}
+		hidden_effect = {
+			add_character_flag = bryten_cluny_pilgrimage_donation_large
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_loss
+			generous = minor_stress_impact_loss
+			improvident = minor_stress_impact_loss
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				has_trait = zealous
+				add = 35
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 20
+			}
+			modifier = {
+				has_trait = generous
+				add = 20
+			}
+			modifier = {
+				has_trait = greedy
+				add = -20
+			}
+			modifier = {
+				has_trait = cynical
+				add = -20
+			}
+			ai_value_modifier = {
+				ai_zeal = 2
+				ai_greed = -1
+			}
+		}
+	}
+	option = {# Medium
+		name = bryten_pilgrimage.169.b
+		remove_short_term_gold = 100
+		add_piety = 100
+		show_as_tooltip = {
+			add_character_modifier = {
+				modifier = bryten_cluny_abbey_donation_medium
+				years = 10
+			}
+		}
+		hidden_effect = {
+			add_character_flag = bryten_cluny_pilgrimage_donation_medium
+		}
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_loss
+			generous = miniscule_stress_impact_loss
+			improvident = miniscule_stress_impact_loss
+		}
+
+		ai_chance = {
+			factor = 75
+			modifier = {
+				has_trait = zealous
+				add = 25
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 15
+			}
+			modifier = {
+				has_trait = generous
+				add = 15
+			}
+			modifier = {
+				has_trait = greedy
+				add = -30
+			}
+			modifier = {
+				has_trait = cynical
+				add = -30
+			}
+			ai_value_modifier = {
+				ai_zeal = 2
+				ai_greed = -1
+			}
+		}
+	}
+	option = {# Small
+		name = bryten_pilgrimage.169.c
+		remove_short_term_gold = 50
+		add_piety = 50
+		show_as_tooltip = {
+			add_character_modifier = {
+				modifier = bryten_cluny_abbey_donation_small
+				years = 10
+			}
+		}
+		hidden_effect = {
+			add_character_flag = bryten_cluny_pilgrimage_donation_small
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {# No Donation
+		name = bryten_pilgrimage.169.d
+
+		add_piety = 100
+
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_loss
+			generous = miniscule_stress_impact_loss
+			improvident = miniscule_stress_impact_loss
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			# first remove the donation to Cluny
+			if = {# Large Donation
+				limit = { has_character_modifier = bryten_cluny_abbey_donation_large}
+				remove_character_modifier = bryten_cluny_abbey_donation_large
+			}
+			if = {# Medium Donation
+				limit = { has_character_modifier = bryten_cluny_abbey_donation_large}
+				remove_character_modifier = bryten_cluny_abbey_donation_large
+			}
+			if = {# Small Donation
+				limit = { has_character_modifier = bryten_cluny_abbey_donation_medium}
+				remove_character_modifier = bryten_cluny_abbey_donation_medium
+			}		
+			# Second add the modifier
+			if = {# Large Donation
+				limit = { 
+					has_character_flag = bryten_cluny_pilgrimage_donation_large
+				}
+				add_character_modifier = bryten_cluny_abbey_donation_large
+			}
+			if = {# Medium Donation
+				limit = { has_character_flag = bryten_cluny_pilgrimage_donation_medium }
+				add_character_modifier = bryten_cluny_abbey_donation_medium
+			}
+			if = {# Small Donation
+				limit = { has_character_flag = bryten_cluny_pilgrimage_donation_small }
+				add_character_modifier = bryten_cluny_abbey_donation_small
+			}
+			# Then remove the flags
+			if = {
+				limit = { has_character_flag = bryten_cluny_pilgrimage_donation_small }
+				remove_character_flag = bryten_cluny_pilgrimage_donation_small
+			}			
+			if = {
+				limit = { has_character_flag = bryten_cluny_pilgrimage_donation_medium }
+				remove_character_flag = bryten_cluny_pilgrimage_donation_medium
+			}			
+			if = {
+				limit = { has_character_flag = bryten_cluny_pilgrimage_donation_large }
+				remove_character_flag = bryten_cluny_pilgrimage_donation_large
+			}	
+		}
+		trigger_event = {
+			id = bryten_pilgrimage.170
+			days = { 2 5 }
+		}
+	}
+
+}
+bryten_pilgrimage.170 = {# Departing Cluny for Home.
+	type = activity_event
+	title = bryten_pilgrimage.169.t
+	desc = bryten_pilgrimage.169.desc
+	theme = faith
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	option = { # Ok
+		name = bryten_pilgrimage.170.home
+	}
+
+	after = {
+		hidden_effect = {
+			scope:activity = {
+				hidden_effect = { skip_activity_phase = yes }
+			}
+		}
+	}
+}
+#######################################
 # General Destination Events
 #######################################
 scripted_effect pilgrimage_6770_relic_effect = {

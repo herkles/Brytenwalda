@@ -246,11 +246,9 @@ scripted_effect bryten_heresy_council_bogomil_dualism_effect = {
 	}
 }
 scripted_effect bryten_heresy_council_bogomil_trinity_effect = {
-	show_as_tooltip = {
-		faith:bogomilist = {
-			hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
-			add_doctrine = doctrine_pluralism_pluralistic
-		}
+	faith:bogomilist = {
+		hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
+		add_doctrine = doctrine_pluralism_pluralistic
 	}
 }
 bryten_heresy.004 = {# Council: How Gnostic are you
@@ -1992,12 +1990,11 @@ scripted_effect bryten_heresy_council_cathar_dualism_effect = {
 	}
 }
 scripted_effect bryten_heresy_council_cathar_trinity_effect = {
-	show_as_tooltip = {
-		faith:cathar = {
-			hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
-			add_doctrine = doctrine_pluralism_pluralistic
-		}
+	faith:cathar = {
+		hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
+		add_doctrine = doctrine_pluralism_pluralistic
 	}
+
 }
 bryten_heresy.028 = {# Council: How Gnostic are you
 	type = character_event

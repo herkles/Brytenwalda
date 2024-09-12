@@ -26,6 +26,17 @@
   activity_bryten_trondheim_pilgrimage_conclusion_desc: "The [GetActivityType( 'activity_bryten_trondheim_pilgrimage' ).GetName] is over. It was a fun and relaxing experience!"
   activity_bryten_trondheim_pilgrimage_destination_selection:0 "Shall you go to Nidaros?"
 
+  # Cluny Pilgrimage
+  activity_bryten_cluny_pilgrimage:0 "Pilgrimage to Cluny Abbey"
+  activity_bryten_cluny_pilgrimage_desc:0 "The abbey of Cluny is one of the most influential Benedictine abbeys in Western Europe. To visit such an abbey has become a popular spot for a pilgrimage. Countless monks have come from here. Maybe it would be good to visit the abbey?"
+  activity_bryten_cluny_pilgrimage_selection:0 "Visit Cluny"
+  activity_bryten_cluny_pilgrimage_selection_tooltip: "Visit Cluny Abbey\n\nAnticipated Rewards:\n$BULLET_WITH_TAB$[piety_i] [piety|E]\n$BULLET_WITH_TAB$[prestige_i] [prestige|E]"
+  activity_bryten_cluny_pilgrimage_host_desc: "\n$BULLET_WITH_TAB$[piety_i] [piety|E]\n$BULLET_WITH_TAB$[prestige_i] [prestige|E]"
+  activity_bryten_cluny_pilgrimage_guest_desc: "Gain [piety_i] [piety|E] and [prestige_i] [prestige|E]"
+  activity_bryten_cluny_pilgrimage_guest_help_text: "$activity_bryten_cluny_pilgrimage$"
+  activity_bryten_cluny_pilgrimage_predicted_cost: "The cost of a pilgrimage to Cluny Abbey depends on how far is it away."
+  activity_bryten_cluny_pilgrimage_conclusion_desc: "The [GetActivityType( 'activity_bryten_cluny_pilgrimage' ).GetName] is over. It was a fun and relaxing experience!"
+  activity_bryten_cluny_pilgrimage_destination_selection:0 "Shall you go to the Abbey of Cluny?"
 
 #######################################
 # Pilgrimage Types
@@ -50,6 +61,8 @@
   activity_bryten_pilgrimage_st_andrews_province_desc: "This site is dedicated to Saint Andrew."
   # Nordic Locations
   activity_bryten_trondheim_pilgrimage_province_desc: "This site is dedicated to Saint Olaf."
+  # French Locations
+  activity_bryten_cluny_pilgrimage_province_desc: "Cluny is a monastic abbey dedicated to following the Rule of St. Benedict."
 #######################################
 # Memories
 #######################################
@@ -67,6 +80,9 @@
 
   bryten_trondheim_pilgrimage_host_memory_log_title:0 "Completed the pilgrimage to Trondheim"
   bryten_trondheim_pilgrimage_host_memory_log:0 "[CHARACTER.GetShortUIName|U] completed [CHARACTER.GetHerHis] pilgrimage to Trondheim."
+
+  bryten_cluny_pilgrimage_host_memory_log_title:0 "Completed a pilgrimage to the Abbey of Cluny"
+  bryten_cluny_pilgrimage_host_memory_log:0 "[CHARACTER.GetShortUIName|U] completed [CHARACTER.GetHerHis] pilgrimage to the Abbey of Cluny."
 
 #######################################
 # Intents

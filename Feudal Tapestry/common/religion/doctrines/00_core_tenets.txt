@@ -1521,8 +1521,8 @@
 					trigger = {
 						OR = {
 							religion_tag = judaism_religion
-							faith = faith:pasagian
-							faith = faith:josephines
+							this = faith:pasagian
+							this = faith:josephines
 						}
 					}
 					desc = tenet_religious_legal_pronouncements_halakha
@@ -1806,7 +1806,7 @@
 		name = {
 			first_valid = {
 				triggered_desc = {
-					trigger = { faith = faith:cathar }
+					trigger = { this = faith:cathar }
 					desc = tenet_pacifism_cathar_name
 				}
 				desc = tenet_dharmic_pacifism_name
@@ -1815,7 +1815,7 @@
 		desc = {
 			first_valid = {
 				triggered_desc = {
-					trigger = {	faith = faith:cathar }
+					trigger = {	this = faith:cathar }
 					desc = tenet_pacifism_cathar_desc
 				}
 				desc = tenet_dharmic_pacifism_desc

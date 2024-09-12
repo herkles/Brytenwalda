@@ -21,6 +21,7 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 - changes to the set up of holy sites for a number of christian faiths
 - Christian Dualist faiths are now actually christian
 - Sicilians whose parents are norman know french
+- Pilgrimage to Nidaros
 - Various Bug fixes
 
 

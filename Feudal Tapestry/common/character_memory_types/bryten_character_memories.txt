@@ -59,7 +59,7 @@ bryten_pilgrimage_st_andrews_host_memory = {# Visited Durham
 	duration = { years = memory_default_duration }
 
 }
-bryten_trondheim_pilgrimage_host_memory = {# Visited Durham
+bryten_trondheim_pilgrimage_host_memory = {# Visited Nidaros
 	categories = { pilgrimage positive religious travel }
 	icon = "religious.dds"
 
@@ -68,9 +68,17 @@ bryten_trondheim_pilgrimage_host_memory = {# Visited Durham
 	third_perspective_description = { random_valid = { desc = bryten_visited_nidaros_third_perspective } }
 
 	duration = { years = memory_default_duration }
-
 }
+bryten_cluny_pilgrimage_host_memory = {# Visited Cluny
+	categories = { pilgrimage positive religious travel }
+	icon = "religious.dds"
 
+	description = { random_valid = { desc = bryten_visited_cluny_first_perspective } }
+	second_perspective_description = { random_valid = { desc = bryten_visited_cluny_second_perspective } }
+	third_perspective_description = { random_valid = { desc = bryten_visited_cluny_third_perspective } }
+
+	duration = { years = memory_default_duration }
+}
 #######################################
 #									  #
 #      	  	Event Memories      	  #
