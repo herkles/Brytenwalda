@@ -442,5 +442,13 @@ bryten_setup_after_game_start_on_actions = {
 			title:c_sussex = { add_county_modifier = {	modifier = bryten_cinque_port_modifier } }
 			title:c_kent = { add_county_modifier = { modifier = bryten_cinque_port_modifier	} }
 		}
+
+		# turning insular into catholic.
+		if = {
+			every_living_character = {
+				limit = { faith = faith:insular_celtic }
+				set_character_faith = faith:catholic
+			}
+		}
 	}
 }
