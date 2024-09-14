@@ -10902,7 +10902,14 @@ bryten_heresy.508 = {# Help from chief rabbi
 	trigger = {
 		any_courtier_or_guest = {
 			is_available_ai_adult = yes
+			is_female = no
+			knows_language = language_israelite
 			has_religion = religion:judaism_religion
+			OR = {
+				has_trait = scholar
+				has_trait = theologian
+				learning >= high_skill_rating
+			}
 		}
 		NOR = {
 			exists = scope:story.var:had_bryten_heresy_508
@@ -10934,7 +10941,14 @@ bryten_heresy.508 = {# Help from chief rabbi
 		random_courtier_or_guest = {
 			limit = {
 				is_available_ai_adult = yes
+				is_female = no
+				knows_language = language_israelite
 				religion = religion:judaism_religion
+				OR = {
+					has_trait = scholar
+					has_trait = theologian
+					learning >= high_skill_rating
+				}
 			}
 			save_scope_as = chief_rabbi
 		}
