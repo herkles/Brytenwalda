@@ -10346,8 +10346,865 @@ bryten_heresy.208 = {# petrobrusian Council(let players know)
 		name = bryten_heresy.208.a
 	}
 }
+#######################################
+# Bible Translation 
+#######################################
+bryten_heresy.500 = {# Translating the Bible
+	type = character_event
+	title = bryten_heresy.500.t
+	desc = bryten_heresy.500.desc
+	left_portrait = root
+	theme = faith
 
 
+	immediate = {
+		add_character_flag = {
+			flag = is_in_learning_special_event
+			days = 365
+		}
+		add_character_flag = had_learning_scholarship_special_2001_this_lifetime
+	}
+
+	option = {# Start the translation Project
+		name = bryten_heresy.500.begin
+		bryten_bible_translation_story_effect = yes
+	}
+	option = {# Not now
+		name = bryten_heresy.500.decline
+		remove_character_flag = is_in_learning_special_event
+		hidden_effect = {
+			if = {# Waldensians
+				limit = { has_faith = faith:waldensian }
+				remove_global_variable = bryten_bible_translation_waldensian_begun
+			}
+			if = {# Lollard
+				limit = { has_faith = faith:lollard }
+				remove_global_variable = bryten_bible_translation_lollard_begun
+			}
+			if = {# arnoldism
+				limit = { has_faith = faith:arnoldism }
+				remove_global_variable = bryten_bible_translation_arnoldism_begun
+			}
+			if = {# henricians
+				limit = { has_faith = faith:henricians }
+				remove_global_variable = bryten_bible_translation_henricians_begun
+			}			
+			if = {# petrobrusian
+				limit = { has_faith = faith:petrobrusian }
+				remove_global_variable = bryten_bible_translation_petrobrusian_begun
+			}
+		}
+	}
+}
+bryten_heresy.501 = {# Confusing passage
+	type = character_event
+	title = bryten_heresy.500.t
+	desc = bryten_heresy.501.desc
+	left_portrait = root
+	theme = faith
+	override_background = { reference = council_chamber }
+
+	trigger = {
+		NOR = {
+			exists = scope:story.var:had_bryten_heresy_501
+			is_imprisoned = yes
+			has_trait = incapable
+		}
+	}
+
+	immediate = {
+		scope:story = {
+			set_variable = {
+				name = had_bryten_heresy_501
+				value = yes
+			}
+		}
+	}
+
+	option = {# My interpretation is better
+		name = bryten_heresy.501.a
+		duel = {
+			skill = learning
+			value = average_skill_rating
+
+			20 = {
+				desc = bryten_heresy.501.a.success
+				compare_modifier = {
+					value = scope:duel_value
+				}
+				random_list = {
+					60 = {
+						bryten_bible_translation_greatly_improved_translation_effect = yes
+					}
+					40 = {
+						bryten_bible_translation_somewhat_improved_translation_effect = yes
+					}
+				}
+
+			}
+			20 = {
+				desc = bryten_heresy.501.a.failure
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -1
+				}
+				random_list = {
+					70 = {
+						custom_tooltip = bible_translation_tooltip.unchanged
+					}
+					30 = {
+						bryten_bible_translation_somewhat_worsened_translation_effect = yes
+					}
+				}
+			}
+		}
+	}
+	option = {# Let's stay true to the text
+		name = bryten_heresy.501.b
+		random_list = {
+			70 = {
+				custom_tooltip = bible_translation_tooltip.unchanged
+			}
+			40 = {
+				bryten_bible_translation_somewhat_worsened_translation_effect = yes
+			}
+		}		
+	}
+	option = {# Oh, the meaning is obvious
+		name = bryten_heresy.501.c
+		trigger = {
+			OR = {
+				has_trait = scholar
+				learning >= very_high_skill_rating
+			}
+		}
+		bryten_bible_translation_greatly_improved_translation_effect = yes
+	}
+}
+bryten_heresy.502 = {# Realm Priest offers help
+	type = character_event
+	title = bryten_heresy.500.t
+	desc = bryten_heresy.502.desc
+	theme = faith
+	override_background = { reference = study }
+
+	left_portrait = scope:realm_priest
+
+	trigger = {
+		exists = cp:councillor_court_chaplain
+		cp:councillor_court_chaplain = {
+			is_ai = yes
+		}
+		NOR = {
+			exists = scope:story.var:had_bryten_heresy_502
+			is_imprisoned = yes
+			has_trait = incapable
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 1
+			cp:councillor_court_chaplain = {
+				opinion = {
+					target = root
+					value < 30
+				}
+			}
+		}
+	}
+
+	immediate = {
+		scope:story = {
+			set_variable = {
+				name = had_bryten_heresy_502
+				value = yes
+			}
+		}
+		cp:councillor_court_chaplain = {
+			save_scope_as = realm_priest
+		}
+	}
+
+	option = {# Help me uncover this,
+		name = bryten_heresy.502.a
+		scope:realm_priest = {
+			duel = {
+				skill = learning
+				value = average_skill_rating
+				20 = {
+					desc = bryten_heresy.502.a.success
+					compare_modifier = {
+						value = scope:duel_value
+					}
+					random_list = {
+						60 = {
+							bryten_bible_translation_greatly_improved_translation_effect = yes
+						}
+						40 = {
+							bryten_bible_translation_somewhat_improved_translation_effect = yes
+						}
+					}
+				}
+				20 = {
+					desc = bryten_heresy.502.a.failure
+					compare_modifier = {
+						value = scope:duel_value
+					}
+					random_list = {
+						70 = {
+							custom_tooltip = bible_translation_tooltip.unchanged
+						}
+						30 = {
+							bryten_bible_translation_somewhat_worsened_translation_effect = yes
+						}
+					}
+					send_interface_toast = {
+						title = bible_translation_toast.less_good
+						left_icon = scope:realm_priest
+					}
+				}
+			}
+		}
+	}
+	option = {# Just tell me what I am looking for.
+		name = bryten_heresy.502.b
+		scope:realm_priest = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 30
+			}
+		}
+		add_prestige = minor_prestige_loss
+		random_list = {
+			70 = {
+				custom_tooltip = bible_translation_tooltip.unchanged
+			}
+			30 = {
+				bryten_bible_translation_somewhat_worsened_translation_effect = yes
+			}
+		}
+	}
+	option = {# Care to show me, old friend?
+		name = bryten_heresy.502.c
+		trigger = {
+			has_relation_friend = scope:realm_priest
+		}
+		custom_tooltip = bryten_heresy.502.c.friendship_tooltip
+		random_list = {
+			60 = {
+				bryten_bible_translation_greatly_improved_translation_effect = yes
+			}
+			40 = {
+				bryten_bible_translation_somewhat_improved_translation_effect = yes
+			}
+		}
+		scope:realm_priest = {
+			add_opinion = {
+				target = root
+				modifier = friendliness_opinion
+				opinion = low_positive_opinion
+			}
+		}
+	}
+}
+bryten_heresy.503 = {# Sudden Insight
+	type = character_event
+	title = bryten_heresy.500.t
+	desc = bryten_heresy.503.desc
+	theme = faith
+	override_background = { reference = study }
+
+	left_portrait = root
+
+	trigger = {
+		NOR = {
+			exists = scope:story.var:had_bryten_heresy_bible_special_translation_event
+			is_imprisoned = yes
+			has_trait = incapable
+		}
+	}
+
+	immediate = {
+		scope:story = {
+			set_variable = {
+				name = had_bryten_heresy_bible_special_translation_event
+				value = yes
+			}
+		}
+		bryten_bible_translation_greatly_improved_translation_effect = yes
+	}
+
+	option = { #As evident from the will of HighGod...
+		name = bryten_heresy.503.b
+		add_piety = medium_piety_gain
+	}
+}
+bryten_heresy.504 = {# Translation work is Boring
+	type = character_event
+	title = bryten_heresy.500.t
+	desc = bryten_heresy.504.desc
+	theme = faith
+	override_background = { reference = study }
+
+	left_portrait = root
+
+	trigger = {
+		NOR = {
+			exists = scope:story.var:had_bryten_heresy_bible_special_translation_event
+			is_imprisoned = yes
+			has_trait = incapable
+		}
+	}
+
+	immediate = {
+		scope:story = {
+			set_variable = {
+				name = had_bryten_heresy_bible_special_translation_event
+				value = yes
+			}
+		}
+	}
+
+	option = {# I'll still get it done!
+		name = bryten_heresy.504.a
+		add_stress = medium_stress_gain
+		random_list = {
+			60 = {
+				bryten_bible_translation_greatly_improved_translation_effect = yes
+			}
+			40 = {
+				bryten_bible_translation_somewhat_improved_translation_effect = yes
+			}
+		}
+	}
+	option = {# My scribes can work overtime
+		name = bryten_heresy.504.b
+		remove_short_term_gold = 2
+		random_list = {
+			70 = {
+				custom_tooltip = bible_translation_tooltip.unchanged
+			}
+			30 = {
+				bryten_bible_translation_somewhat_worsened_translation_effect = yes
+			}
+		}
+	}
+	option = {# Take a break
+		name = bryten_heresy.504.c
+		add_stress = medium_stress_loss
+		custom_tooltip = bible_translation_tooltip.unchanged
+	}
+}
+bryten_heresy.505 = {# Working long into the night
+	type = character_event
+	title = bryten_heresy.500.t
+	desc = bryten_heresy.505.desc
+	theme = faith
+	override_background = { reference = study }
+
+	left_portrait = root
+	right_portrait = scope:realm_priest
+
+	trigger = {
+		NOR = {
+			exists = scope:story.var:had_bryten_heresy_505
+			is_imprisoned = yes
+			has_trait = incapable
+		}
+	}
+
+	immediate = {
+		scope:story = {
+			set_variable = {
+				name = had_bryten_heresy_505
+				value = yes
+			}
+		}
+	}
+
+	option = {# Let's keep going
+		name = bryten_heresy.505.a
+		random_list = {
+			60 = {
+				bryten_bible_translation_greatly_improved_translation_effect = yes
+			}
+			20 = {
+				bryten_bible_translation_somewhat_improved_translation_effect = yes
+			}
+			20 = {
+				bryten_bible_translation_somewhat_worsened_translation_effect = yes
+			}
+		}
+		speed_up_translation_effect = yes
+		add_stress = minor_stress_gain
+	}
+	option = {# Get some rest
+		name = bryten_heresy.505.b
+		add_stress = minor_stress_loss
+	}
+	option = {# Scribes can work while I sleep
+		name = bryten_heresy.505.c
+		random_list = {
+			80 = {
+				custom_tooltip = bible_translation_tooltip.unchanged
+			}
+			20 = {
+				bryten_bible_translation_somewhat_improved_translation_effect = yes
+			}
+		}
+		add_stress = medium_stress_loss
+	}
+}
+bryten_heresy.506 = {# Scribe makes unapproved changes
+	type = character_event
+	title = bryten_heresy.500.t
+	desc = bryten_heresy.506.desc
+	theme = faith
+	override_background = { reference = council_chamber }
+
+	left_portrait = root
+
+	trigger = {
+		NOR = {
+			exists = scope:story.var:had_bryten_heresy_506
+			is_imprisoned = yes
+			has_trait = incapable
+		}
+	}
+
+	immediate = {
+		scope:story = {
+			set_variable = {
+				name = had_bryten_heresy_506
+				value = yes
+			}
+		}
+	}
+
+	option = { # Get out of here!
+		name = bryten_heresy.506.a
+		random_list = {
+			80 = {
+				custom_tooltip = bible_translation_tooltip.unchanged
+			}
+			20 = {
+				bryten_bible_translation_somewhat_improved_translation_effect = yes
+			}
+		}
+		add_prestige = minor_prestige_loss
+	}
+	option = {# The rest of you better learn from this
+		name = bryten_heresy.506.b
+		flavor = bryten_heresy.506.b.flavor
+		random_list = {
+			20 = {
+				bryten_bible_translation_greatly_improved_translation_effect = yes
+			}
+			20 = {
+				bryten_bible_translation_somewhat_improved_translation_effect = yes
+			}
+			40 = {
+				custom_tooltip = bible_translation_tooltip.unchanged
+			}
+		}
+		add_character_modifier = {
+			modifier = terrified_courtiers_modifier
+			years = 5
+		}
+	}
+	option = {# These are pretty good, actually
+		name = bryten_heresy.506.c
+		random_list = {
+			60 = {
+				bryten_bible_translation_greatly_improved_translation_effect = yes
+			}
+			40 = {
+				bryten_bible_translation_somewhat_improved_translation_effect = yes
+			}
+		}
+		speed_up_translation_effect = yes
+	}
+}
+bryten_heresy.507 = {# Tired from constant work
+	type = character_event
+	title = bryten_heresy.500.t
+	desc = bryten_heresy.507.desc
+	theme = faith
+	override_background = { reference = study }
+
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+
+	trigger = {
+		NOR = {
+			exists = scope:story.var:had_bryten_heresy_507
+			is_imprisoned = yes
+			has_trait = incapable
+		}
+	}
+
+	immediate = {
+		scope:story = {
+			set_variable = {
+				name = had_bryten_heresy_507
+				value = yes
+			}
+		}
+	}
+
+	option = {# I can do a few more events- I mean pages, at least
+		name = bryten_heresy.507.a
+		add_stress = medium_stress_gain
+		random_list = {
+			60 = {
+				custom_tooltip = bible_translation_tooltip.unchanged
+			}
+			30 = {
+				bryten_bible_translation_somewhat_worsened_translation_effect = yes
+			}
+			10 = {
+				bryten_bible_translation_somewhat_improved_translation_effect = yes
+			}
+		}
+	}
+	option = {# I will seclude myself with prayer and focus
+		name = bryten_heresy.507.b
+		add_prestige = medium_prestige_gain
+		random_list = {
+			30 = {
+				custom_tooltip = bible_translation_tooltip.unchanged
+			}
+			70 = {
+				bryten_bible_translation_somewhat_improved_translation_effect = yes
+			}
+		}
+	}
+	option = {# I'd rather do something else
+		name = bryten_heresy.507.c
+		add_stress = minor_stress_loss
+		custom_tooltip = bible_translation_tooltip.unchanged
+	}
+}
+bryten_heresy.508 = {# Help from chief rabbi
+	type = character_event
+	title = bryten_heresy.500.t
+	desc = bryten_heresy.508.desc
+	theme = faith
+	override_background = { reference = study }
+
+	left_portrait = scope:chief_rabbi
+
+	trigger = {
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			has_religion = religion:judaism_religion
+		}
+		NOR = {
+			exists = scope:story.var:had_bryten_heresy_508
+			is_imprisoned = yes
+			has_trait = incapable
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = 1
+			scope:chief_rabbi = {
+				opinion = {
+					target = root
+					value < 30
+				}
+			}
+		}
+	}
+
+	immediate = {
+		scope:story = {
+			set_variable = {
+				name = had_bryten_heresy_508
+				value = yes
+			}
+		}
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				religion = religion:judaism_religion
+			}
+			save_scope_as = chief_rabbi
+		}
+	}
+
+	option = {# Help me uncover this
+		name = bryten_heresy.508.a
+		scope:chief_rabbi = {
+			duel = {
+				skill = learning
+				value = average_skill_rating
+				20 = {
+					desc = bryten_heresy.508.a.success
+					compare_modifier = {
+						value = scope:duel_value
+					}
+					random_list = {
+						60 = {
+							bryten_bible_translation_greatly_improved_translation_effect = yes
+						}
+						40 = {
+							bryten_bible_translation_somewhat_improved_translation_effect = yes
+						}
+					}
+				}
+				20 = {
+					desc = bryten_heresy.508.a.failure
+					compare_modifier = {
+						value = scope:duel_value
+					}
+					random_list = {
+						70 = {
+							custom_tooltip = bible_translation_tooltip.unchanged
+						}
+						30 = {
+							bryten_bible_translation_somewhat_worsened_translation_effect = yes
+						}
+					}
+					send_interface_toast = {
+						title = bible_translation_toast.less_good
+						left_icon = scope:chief_rabbi
+					}
+				}
+			}
+		}
+	}
+	option = {# Just tell me what I am looking for
+		name = bryten_heresy.508.b
+		scope:chief_rabbi = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 30
+			}
+		}
+		add_prestige = minor_prestige_loss
+		random_list = {
+			70 = {
+				custom_tooltip = bible_translation_tooltip.unchanged
+			}
+			30 = {
+				bryten_bible_translation_somewhat_worsened_translation_effect = yes
+			}
+		}
+	}
+	option = {# Care to show me, old friend?
+		name = bryten_heresy.508.c
+		trigger = {
+			has_relation_friend = scope:chief_rabbi
+		}
+		custom_tooltip = bryten_heresy.508.c.friendship_tooltip
+		random_list = {
+			60 = {
+				bryten_bible_translation_greatly_improved_translation_effect = yes
+			}
+			40 = {
+				bryten_bible_translation_somewhat_improved_translation_effect = yes
+			}
+		}
+		scope:chief_rabbi = {
+			add_opinion = {
+				target = root
+				modifier = friendliness_opinion
+				opinion = low_positive_opinion
+			}
+		}
+	}
+}
+
+bryten_heresy.510 = {# Good outcome of the translation
+	type = character_event
+	title = bryten_heresy.510.t
+	desc = {
+		desc = bryten_heresy.510.opening
+		desc = bryten_heresy.510.conclusion
+	}
+	theme = faith
+	override_background = { reference = temple_church }
+
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	immediate = {
+		if = {# Waldensians
+			limit = { has_faith = faith:waldensian }
+			remove_global_variable = bryten_bible_translation_waldensian_begun
+			set_global_variable = {
+				name = bryten_bible_translation_waldensian_completed
+				value = yes
+				days = 3650 # 10 Years
+			}
+		}
+		if = {# Lollard
+			limit = { has_faith = faith:lollard }
+			remove_global_variable = bryten_bible_translation_lollard_begun
+			set_global_variable = {
+				name = bryten_bible_translation_lollard_completed
+				value = yes
+				days = 3650 # 10 Years
+			}
+		}
+		if = {# arnoldism
+			limit = { has_faith = faith:arnoldism }
+			remove_global_variable = bryten_bible_translation_arnoldism_begun
+			set_global_variable = {
+				name = bryten_bible_translation_arnoldism_completed
+				value = yes
+				days = 3650 # 10 Years
+			}
+		}
+		if = {# henricians
+			limit = { has_faith = faith:henricians }
+			remove_global_variable = bryten_bible_translation_henricians_begun
+			set_global_variable = {
+				name = bryten_bible_translation_henricians_completed
+				value = yes
+				days = 3650 # 10 Years
+			}
+		}			
+		if = {# petrobrusian
+			limit = { has_faith = faith:petrobrusian }
+			remove_global_variable = bryten_bible_translation_petrobrusian_begun
+			set_global_variable = {
+				name = bryten_bible_translation_petrobrusian_completed
+				value = yes
+				days = 3650 # 10 Years
+			}
+		}
+	}
+
+	option = {
+		name = bryten_heresy.510.a
+		bryten_good_bible_translation_scripted_effect = yes 
+		add_learning_lifestyle_perk_points = 1
+	}
+
+	after = {
+		remove_character_modifier = book_translation_ongoing_modifier
+		hidden_effect = {
+			scope:story = {
+				end_story = yes
+			}
+		}
+	}
+}
+bryten_heresy.511 = {# Bad outcome of the translation
+	type = character_event
+	title = bryten_heresy.511.t
+	desc = {
+		desc = bryten_heresy.511.opening
+		desc = bryten_heresy.511.conclusion
+	}
+	theme = faith
+	override_background = { reference = temple_church }
+
+	left_portrait = root
+
+	immediate = {
+		if = {# Waldensians
+			limit = { has_faith = faith:waldensian }
+			remove_global_variable = bryten_bible_translation_waldensian_begun
+			set_global_variable = {
+				name = bryten_bible_translation_waldensian_completed
+				value = yes
+				days = 3650 # 10 Years
+			}
+		}
+		if = {# Lollard
+			limit = { has_faith = faith:lollard }
+			remove_global_variable = bryten_bible_translation_lollard_begun
+			set_global_variable = {
+				name = bryten_bible_translation_lollard_completed
+				value = yes
+				days = 3650 # 10 Years
+			}
+		}
+		if = {# arnoldism
+			limit = { has_faith = faith:arnoldism }
+			remove_global_variable = bryten_bible_translation_arnoldism_begun
+			set_global_variable = {
+				name = bryten_bible_translation_arnoldism_completed
+				value = yes
+				days = 3650 # 10 Years
+			}
+		}
+		if = {# henricians
+			limit = { has_faith = faith:henricians }
+			remove_global_variable = bryten_bible_translation_henricians_begun
+			set_global_variable = {
+				name = bryten_bible_translation_henricians_completed
+				value = yes
+				days = 3650 # 10 Years
+			}
+		}			
+		if = {# petrobrusian
+			limit = { has_faith = faith:petrobrusian }
+			remove_global_variable = bryten_bible_translation_petrobrusian_begun
+			set_global_variable = {
+				name = bryten_bible_translation_petrobrusian_completed
+				value = yes
+				days = 3650 # 10 Years
+			}
+		}
+	}
+
+	option = {
+		name = bryten_heresy.511.a
+		bryten_bad_bible_translation_scripted_effect = yes 
+		add_learning_lifestyle_perk_points = 1
+	}
+
+	after = {
+		remove_character_modifier = book_translation_ongoing_modifier
+		hidden_effect = {
+			scope:story = {
+				end_story = yes
+			}
+		}
+	}
+}
+bryten_heresy.512 = {
+	hidden = yes
+	orphan = yes # TODO [CD] - Figure out why
+
+	immediate = {
+		if = {
+			limit = {
+				is_imprisoned = yes
+			}
+			send_interface_toast = {
+				title = bryten_heresy.512.termination.toast
+				custom_tooltip = bryten_heresy.512.termination.desc.prison
+			}
+		}
+		else = {
+			send_interface_toast = {
+				title = bryten_heresy.512.termination.toast
+				custom_tooltip = bryten_heresy.512.termination.desc.incapable
+			}
+		}
+	}
+
+	after = {
+		scope:story = {
+			end_story = yes
+		}
+	}
+}
 
 
 

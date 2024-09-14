@@ -29,7 +29,6 @@
   bryten_promote_pilgrimage_cantebury_confirm:0 "Not Angles but Angels"
   bryten_promote_pilgrimage_cantebury_tooltip:0 "Canterbury will become a [holy_site|E] for Catholicism"
 
-
 #######################################
 # Anglo-Norse England
 #######################################
@@ -297,6 +296,11 @@
   bryten_fraticelli_break_with_rome_decision.need_at_least_twenty_same_faith_counties:0 "You must hold at least [EmptyScope.ScriptValue('bryten_fraticelli_county_count')|0] same-[faith|E] [counties|E]"
 
 
+  bryten_bible_translate_decision:0 "Translate the Bible into [ROOT.Char.GetCulture.GetLanguage.GetNameNoTooltip]"
+  bryten_bible_translate_decision_desc:0 "A common criticism of the Catholic church was how they denied the bible to the common man. that people could not read it. Now we have a chance to change that. We can begin a process to translate the Bible into [ROOT.Char.GetCulture.GetLanguage.GetNameNoTooltip]. This will take time, but success will be quite the worthwhile endeavor."
+  bryten_bible_translate_decision_confirm:0 "A just and godly endeavor!"
+  bryten_bible_translate_decision_tooltip:0 "You shall begin the process to translate the Bible."
+
 #######################################
 # Christian Heretical Councils
 #######################################
@@ -336,11 +340,6 @@
   bryten_cathar_council_decision_tooltip:0 "You will decide the fate and future of Catharism and what it looks like going foreward."  
   bryten_cathar_council_decision_confirm:0 "A just and godly path!"
 
-
-
-
-
-
 #######################################
 # Christian Flavor Decisions
 #######################################
@@ -378,12 +377,5 @@
  bryten_choose_none_desc: "$choose_none_name$"
  bryten_choose_none_tooltip: "The church of Bosnia stands by itself, resolute in the truth of her teachings. We are good christians, we don't need the greedy lackeys of the Pope or Patriarch telling us that we are heretics, and we don't need the gnostic heretics telling us what to do either."
  bryten_bosnian_church_count.need_at_least_twelve_same_faith_counties:0 "You must hold at least [EmptyScope.ScriptValue('bryten_bosnian_church_count')|0] same-[faith|E] [counties|E]"
-
-
-
-
-
-
-
 
 

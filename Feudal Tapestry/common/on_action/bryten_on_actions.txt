@@ -216,8 +216,25 @@ bryten_events_norse_flavor_pulse = {
 		10 = bryten_norse.065		# Offering to Thor by throwing a little stone hammer into a river
 	}
 }
-
-
+#######################################
+# Story Cycles
+#######################################
+bryten_bible_translation_story_events = {
+	trigger = {
+		any_owned_story = {
+			story_type = bryten_bible_translation_story
+		}
+	}
+	random_events = {
+		100 = bryten_heresy.501 # Confusing passage
+		100 = bryten_heresy.502	# Realm Priest offers help
+		100 = bryten_heresy.503 # Sudden Insight
+		100 = bryten_heresy.504 # The Book is Boring
+		100 = bryten_heresy.505 # Working long into the night
+		30 = bryten_heresy.506  # Scribe makes unapproved changes
+		100 = bryten_heresy.507 # Tired from constant work
+	}
+}
 
 
 

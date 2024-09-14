@@ -2474,3 +2474,113 @@ send_child_to_clergy_effect_for_events = {
 		}
 	}
 }
+#######################################
+#									  #
+#      Christian Heresy Effects	      #
+#									  #
+#######################################
+bryten_bible_translation_story_effect = {
+	add_character_modifier = {
+		modifier = bryten_bible_translation_ongoing_modifier
+	}
+	create_story = bryten_bible_translation_story
+}
+bryten_bible_translation_greatly_improved_translation_effect = {
+	custom_tooltip = bible_translation_tooltip.more_good
+	hidden_effect = {
+		scope:story = {
+			change_variable = {
+				name = bryten_bible_translation_quality
+				add = 2
+			}
+		}
+	}
+}
+bryten_bible_translation_somewhat_improved_translation_effect = {
+	custom_tooltip = bible_translation_tooltip.less_good
+	hidden_effect = {
+		scope:story = {
+			change_variable = {
+				name = bryten_bible_translation_quality
+				add = 1
+			}
+		}
+	}
+}
+bryten_bible_translation_somewhat_worsened_translation_effect = {
+	custom_tooltip = bible_translation_tooltip.worsened
+	hidden_effect = {
+		scope:story = {
+			change_variable = {
+				name = bryten_bible_translation_quality
+				add = -1
+			}
+		}
+	}
+}
+bryten_bible_translation_speed_up_translation_effect = {
+	custom_tooltip = bible_translation_tooltip.finish_faster
+	hidden_effect = {
+		scope:story = {
+			change_variable = {
+				name = duration_left
+				add = -1
+			}
+		}
+	}
+}
+bryten_good_bible_translation_scripted_effect = {
+	create_artifact = {
+		name = bryten_good_bible_translated_book_artifact_name
+		description = bryten_good_bible_translated_book_artifact_desc
+		type = book
+		visuals = book
+		quality = 100
+		wealth = 100
+		modifier = bryten_good_bible_translated_book_modifier
+		save_scope_as = bryten_good_bible_translated_book_artifact
+		decaying = no
+	}
+	faith = {
+		change_fervor = {
+			value = medium_fervor_gain
+			desc = fervor_gain_good_bible_translation
+		}
+	}
+	faith:catholic = {
+		change_fervor = {
+			value = medium_fervor_loss
+			desc = fervor_gain_good_bible_catholic_translation
+		}
+	}
+}
+bryten_bad_bible_translation_scripted_effect = {
+	create_artifact = {
+		name = bryten_bad_bible_translated_book_artifact_name
+		description = bryten_bad_bible_translated_book_artifact_desc
+		type = book
+		visuals = book
+		quality = 100
+		wealth = 100
+		modifier = bryten_bad_bible_translated_book_modifier
+		save_scope_as = bryten_bad_bible_translated_book_artifact
+		decaying = no
+	}
+	faith = {
+		change_fervor = {
+			value = minor_fervor_loss
+			desc = fervor_gain_bad_bible_translation
+		}
+	}
+	faith:catholic = {
+		change_fervor = {
+			value = minor_fervor_gain
+			desc = fervor_gain_bad_bible_catholic_translation
+		}
+	}
+}
+
+
+
+
+

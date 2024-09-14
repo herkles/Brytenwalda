@@ -314,6 +314,25 @@ rebellious_people = {# Rebellious people are causing trouble
 	county_opinion_add = -10
 	monthly_county_control_decline_add = -5
 }
+bryten_bible_translation_ongoing_modifier = {
+	icon = piety_positive
+	same_faith_opinion = 2
+}
+bryten_good_bible_translated_book_modifier = {
+	icon = letter_positive
+	monthly_piety = 0.5
+	same_faith_opinion = 4
+	clergy_opinion = 10
+	zealot_same_faith_opinion = 05
+	faith_conversion_piety_cost_mult = -0.5
+}
+bryten_bad_bible_translated_book_modifier = {
+	icon = letter_positive
+	monthly_piety = 0.1
+	clergy_opinion = 05
+	zealot_same_faith_opinion = 05
+	faith_conversion_piety_cost_mult = 0.5
+}
 ##########################################
 # Churching and Marry Vows Modifiers
 ##########################################

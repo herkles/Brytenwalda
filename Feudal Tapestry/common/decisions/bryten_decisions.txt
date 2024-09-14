@@ -3838,6 +3838,211 @@ bryten_cathar_council_decision = {
 		base = 100
 	}
 }
+bryten_bible_translate_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_ck2_carolingian_script_cm.dds"
+	desc = bryten_bible_translate_decision_desc
+	selection_tooltip = bryten_bible_translate_decision_tooltip
+	major = yes
+
+	sort_order = 80
+
+	is_shown = {
+		is_landed = yes
+		highest_held_title_tier > tier_barony
+
+		OR = {# Got to be a protestant faith
+			has_faith = faith:waldensian
+			has_faith = faith:lollard
+			has_faith = faith:arnoldism
+			has_faith = faith:henricians
+			has_faith = faith:petrobrusian
+		}
+		NOR = {# Not if you already begun
+			has_global_variable = bryten_bible_translation_waldensian_begun
+			has_global_variable = bryten_bible_translation_lollard_begun 
+			has_global_variable = bryten_bible_translation_arnoldism_begun 
+			has_global_variable = bryten_bible_translation_henricians_begun 
+			has_global_variable = bryten_bible_translation_petrobrusian_begun  
+		}
+		NOR = {# Can't do it if it is completed for a while.
+			has_global_variable = bryten_bible_translation_waldensian_completed
+			has_global_variable = bryten_bible_translation_lollard_completed 
+			has_global_variable = bryten_bible_translation_arnoldism_completed
+			has_global_variable = bryten_bible_translation_henricians_completed
+			has_global_variable = bryten_bible_translation_petrobrusian_completed
+		}
+		NOT = {# Faith can't be a movement
+			faith = { has_doctrine = heretic_movement_doctrine } 
+		}
+	}
+	is_valid = {
+		OR = {# Got to be focusing on Theology or Scholarship
+			has_focus = learning_theology_focus 
+			has_focus = learning_scholarship_focus
+		}
+		knows_language = language_latin		# You got to know at least Latin to begin
+		gold >= medium_gold_value # needs a bit of gold to begin the task
+
+	}
+
+	is_valid_showing_failures_only = {
+		# Not at war
+		is_at_war = no
+	}
+
+	effect = {
+		hidden_effect = {# Set the begining global flag for the begining. 
+			if = {# Waldensians
+				limit = { has_faith = faith:waldensian }
+				set_global_variable = {
+					name = bryten_bible_translation_waldensian_begun
+					value = yes
+				}
+			}
+			if = {# Lollard
+				limit = { has_faith = faith:lollard }
+				set_global_variable = {
+					name = bryten_bible_translation_lollard_begun
+					value = yes
+				}
+			}
+			if = {# arnoldism
+				limit = { has_faith = faith:arnoldism }
+				set_global_variable = {
+					name = bryten_bible_translation_arnoldism_begun
+					value = yes
+				}
+			}
+			if = {# henricians
+				limit = { has_faith = faith:henricians }
+				set_global_variable = {
+					name = bryten_bible_translation_henricians_begun
+					value = yes
+				}
+			}			
+			if = {# petrobrusian
+				limit = { has_faith = faith:petrobrusian }
+				set_global_variable = {
+					name = bryten_bible_translation_petrobrusian_begun
+					value = yes
+				}
+			}
+		}
+		show_as_tooltip = { bryten_bible_translation_story_effect = yes }
+		trigger_event = { 
+			id = bryten_heresy.500 
+			days = 1
+		}
+		hidden_effect = {
+			# Get the cathar priest
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:bryten_cathar_council_began
+			}
+			if = {# Second get your court chaplain.
+				limit = {
+					exists = cp:councillor_court_chaplain
+					cp:councillor_court_chaplain = { is_available_ai_adult = yes }
+					faith = faith:cathar
+				}
+				cp:councillor_court_chaplain = { save_scope_as = cathar_priest }
+			}
+			else = {# Create cathar preacher just to be safe
+				create_character = {
+					location = scope:cathar_council_host.capital_province
+					template = heretic_preacher_template
+					culture = scope:cathar_council_host.culture
+					faith = faith:cathar
+					save_scope_as = cathar_priest
+				}
+			}
+			# Get the various positions
+			scope:cathar_priest = {
+				random_list = {# choice for Gnosticism
+					40 = {
+						save_scope_value_as = {# Priest favors monarchianism
+							name = cathar_council_stance_gnostic
+							value = flag:cathar_council_stance_monarchianism
+						}						
+					}
+					40 = {
+						save_scope_value_as = {# Priest favors Dualism
+							name = cathar_council_stance_gnostic
+							value = flag:cathar_council_stance_dualism
+						}
+					}
+					20 = {
+						save_scope_value_as = {# Priest favors trinity
+							name = cathar_council_stance_gnostic
+							value = flag:cathar_council_stance_trinity
+						}
+					}
+				}
+				random_list = {# choice for priesthood
+					30 = {# Scholarly Priesthood
+						save_scope_value_as = {
+							name = cathar_council_stance_clergy
+							value = flag:cathar_council_stance_scholarly
+						}						
+					}
+					40 = {# Mystical Priesthood
+						save_scope_value_as = {
+							name = cathar_council_stance_clergy
+							value = flag:cathar_council_stance_mystical
+						}
+					}
+					30 = {# Pure Priesthood
+						save_scope_value_as = {
+							name = cathar_council_stance_clergy
+							value = flag:cathar_council_stance_pure
+						}
+					}
+				}
+				random_list = {# choice for divorce
+					60 = {# no divorce
+						save_scope_value_as = {
+							name = cathar_council_stance_divorce
+							value = flag:cathar_council_stance_no_divorce
+						}
+					}
+					40 = {# allow divorce
+						save_scope_value_as = {
+							name = cathar_council_stance_divorce
+							value = flag:cathar_council_stance_yes_divorce
+						}	
+					}
+				}
+				random_list = {# choice for pilgrimage
+					80 = {# Forbiden
+						save_scope_value_as = {# Priest favors monarchianism
+							name = cathar_council_stance_pilgrimage
+							value = flag:cathar_council_stance_forbid_pilgriamge
+						}							
+					}
+					20 = {# allow
+						save_scope_value_as = {
+							name = cathar_council_stance_pilgrimage
+							value = flag:cathar_council_stance_allow_pilgrimage
+						}
+					}
+				}
+			}
+		}
+	}
+	cost = {
+		gold = council_of_toledo_gold_cost_value
+		piety = council_of_toledo_piety_cost_value
+	}
+
+	ai_check_interval = 60
+	ai_potential = {
+		is_ruler = yes
+		short_term_gold >= council_of_toledo_gold_cost_value
+	}
+	ai_will_do = {
+		base = 100
+	}
+}
 #############################################
 # Christian Flavor Decisions
 #############################################
