@@ -5380,9 +5380,6 @@ thankmar_rebellion_cb = {# The Exeter Rebellion
 		# truce
 		add_truce_attacker_victory_effect = yes
 
-		# FP1: note the victory for future memorialisation via stele (if applicable).
-		scope:attacker = { fp1_remember_recent_conquest_victory_effect = yes }
-
 		scope:attacker = {# Thankmar gets to decide the fate of East Francia
 			trigger_event = {
 				id = tapestry_hre.006

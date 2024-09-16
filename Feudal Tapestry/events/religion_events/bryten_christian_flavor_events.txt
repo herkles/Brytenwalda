@@ -243,36 +243,35 @@ bryten_christian.007 = {# The Blessing at the Church
 	override_background = { reference = temple_church }
 	
 	
-	immediate = {
-		primary_partner = { save_scope_as = husband }
-	}
+	# immediate = {
+	# 	if = {
+	# 		limit = {
+	# 			exists = primary_partner
+	# 		}
+	# 		primary_partner = {
+	# 			save_scope_as = spouse
+	# 		}
+	# 	}
+	# 	else = {
+	# 		random_consort = {
+	# 			save_scope_as = spouse
+	# 		}
+	# 	}
+	# }
 	
 	option = {# Thank God
 		name = bryten_christian.007.a	
 		add_piety = minor_piety_gain
 	}
 	
-	after = {
-		scope:husband = {
-			trigger_event = {
-				id = bryten_christian.008
-				days = { 1 2 }
-			}
-		}
-	}
-
-}
-bryten_christian.008 = {# Husband hears about the Churching
-	type = character_event
-	title = bryten_christian.008.t
-	desc = bryten_christian.008.desc
-	theme = faith
-	override_background = { reference = temple_church }
-	
-	option = {# Thank God
-		name = bryten_christian.008.a	
-	}
-	
+	# after = {
+	# 	scope:spouse = {
+	# 		trigger_event = {
+	# 			id = bryten_christian.008
+	# 			days = { 1 2 }
+	# 		}
+	# 	}
+	# }
 
 }
 ##############################################
@@ -378,13 +377,17 @@ bryten_christian.010 = {# Monks make fantastic beer
 		}
 		if = {
 			limit = { NOT = { has_trait = drunkard } }
-			random = {
-				chance = 10
-				add_trait = drunkard
-				send_interface_toast = {
-					type = event_toast_effect_bad
-					title =  bryten_christian.010.a.drunkard 
-					left_icon = root
+			random_list = {
+				10 = {
+					add_trait = drunkard
+					send_interface_toast = {
+						type = event_toast_effect_bad
+						title =  bryten_christian.010.a.drunkard 
+						left_icon = root
+					}
+				}
+				90 = {
+
 				}
 			}
 		}
@@ -417,13 +420,17 @@ bryten_christian.010 = {# Monks make fantastic beer
 		}
 		if = {
 			limit = { NOT = { has_trait = temperate } }
-			random = {
-				chance = 20
-				add_trait = temperate
-				send_interface_toast = {
-					type = event_toast_effect_good
-					title =  bryten_christian.010.b.temperate
-					left_icon = root
+			random_list = {
+				20 = {
+					add_trait = temperate
+					send_interface_toast = {
+						type = event_toast_effect_good
+						title =  bryten_christian.010.b.temperate
+						left_icon = root
+					}
+				}
+				80 = {
+
 				}
 			}
 		}
@@ -540,9 +547,15 @@ bryten_christian.011 = {# Monks have healing herbs
 		ai_chance = {
 			base = 80
 		}
-		random = {
-			chance = 30
-			remove_trait = ill
+		random_list = {
+			30 = {
+				add_trait = temperate
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title =  bryten_christian.010.b.temperate
+					left_icon = root
+				}
+			}
 		}
 		stress_impact = {
 			base = miniscule_stress_impact_loss
@@ -694,8 +707,7 @@ bryten_christian.012 = {# Monks make great wine
 		ai_chance = {
 			base = 50
 		}
-		random = {
-			chance = 50
+		random_list = {
 			add_learning_skill = 1
 		}
 		stress_impact = {
@@ -729,15 +741,21 @@ bryten_christian.012 = {# Monks make great wine
 		}
 		if = {
 			limit = { NOT = { has_trait = temperate } }
-			random = {
-				chance = 20
-				add_trait = temperate
-				send_interface_toast = {
-					type = event_toast_effect_good
-					title = bryten_christian.012.b.temperate
-					left_icon = root
+			random_list = {
+				20 = {
+					add_trait = temperate
+					send_interface_toast = {
+						type = event_toast_effect_good
+						title = bryten_christian.012.b.temperate
+						left_icon = root
+					}
+				}
+				80 = {
+
 				}
 			}
+
+
 		}
 		stress_impact = {
 			base = miniscule_stress_impact_loss
@@ -944,11 +962,12 @@ bryten_christian.014 = {# Monks produce beautiful books
 	option = {# I will buy the Book
 		name = bryten_christian.014.a
 		remove_short_term_gold = 30
-		random = {
-			chance = 20
-			add_learning_skill = 1
+		random_list = {
+			20 = {
+				add_learning_skill = 1
+			}
+			80 = {}
 		}
-
 		stress_impact = {
 			# traits that gain Stress
 			greedy = miniscule_stress_impact_gain
@@ -1071,9 +1090,13 @@ bryten_christian.015 = {# Local monks come to visit often
 			}
 		}
 		add_piety = 20
-		random = {
-			chance = 30
-			add_learning_skill = 1
+		random_list = {
+			30 = {
+				add_learning_skill = 1
+			}
+			70 = {
+
+			}
 		}
 		stress_impact = {
 			# traits that gain Stress

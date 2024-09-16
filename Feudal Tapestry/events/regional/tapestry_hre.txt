@@ -18,12 +18,13 @@ tapestry_hre.001 = {# Choice given to Otto about invading Lorraine.
 		character:7813 = {# we want to make sure Giselbert is alive
 			is_alive = yes
 		}
+		is_at_war = no # Otto needs to deal with Thankmar first.
 		OR = {# either after Thankmars rebellion or 940
 			current_year >= 940
 			has_global_variable = thankmar_rebel_event
 		}
 		Not = { has_global_variable = otto_traitor_lorraine_event } # only trigger once
-		scope:gislebert = { NOT = { is_vassal_or_below_of = root } }
+		character:7813 = { NOT = { is_vassal_or_below_of = character:1282 } }
 	}
 	
 	immediate = {
@@ -90,26 +91,29 @@ tapestry_hre.003 = {# Thankmar is given the chance of rebelling against Otto.
 	}
 	
 	trigger = {
-		current_year >= 940
+		current_year <= 940
 		Not = { has_global_variable = thankmar_rebel_event } # only trigger once
 		this = character:261394 # triggers for Thankmar
 		character:1282 = {# we want to make sure Otto is alive
 			is_alive = yes
 		}
+		character:261394 = {# we want to make sure Thankmar is alive
+			is_alive = yes
+		}
 	}
 	
 	immediate = {
-		title:k_east_francia.holder = { save_scope_as = otto }
-		character:261394 = { save_scope_as = thankmar}
 		set_global_variable = {
 			name = thankmar_rebel_event
 			value = yes
 		}
+		character:1282 = { save_scope_as = otto }
+		character:261394 = { save_scope_as = thankmar}
 	}
 
-	option = {# Interesting
+	option = {# Thankmar always rebels
 		name = tapestry_hre.003.rebel
-		ai_chance = { base = 99 }
+		ai_chance = { base = 100 }
 		add_character_flag = temp_no_claim_war_cost
 		start_war = {
 			cb = thankmar_rebellion_cb
@@ -118,35 +122,33 @@ tapestry_hre.003 = {# Thankmar is given the chance of rebelling against Otto.
 			target_title = title:k_east_francia
 		}
 		remove_character_flag = temp_no_claim_war_cost
-	}
-
-	option = {# Interesting
-		name = tapestry_hre.003.no_rebel
-		ai_chance = { base = 1 }
-	}
-
-	after = {
 		hidden_effect = {
-			if = {
-				limit = { has_global_variable = thankmar_rebel_event }
-				scope:otto = {# Otto is alerted of the rebellion
-					trigger_event = {
-						id = tapestry_hre.005
-						days = { 5 10 }
+			set_global_variable = {
+				name = thankmar_rebel_event
+				value = yes
+			}
+			scope:otto = {# Otto is alerted of the rebellion
+				trigger_event = {
+					id = tapestry_hre.005
+					days = { 5 10 }
+				}
+				every_vassal = {# vassals are allowed to join Thankmar's rebellion
+					limit = {
+						government_has_flag = government_is_feudal
+						highest_held_title_tier >= tier_county
 					}
-					every_vassal = {# vassals are allowed to join Thankmar's rebellion
-						limit = {
-							government_has_flag = government_is_feudal
-							highest_held_title_tier <= tier_county
-						}
-						trigger_event = {
-							id = tapestry_hre.004
-							days = { 5 10 }
-						}
+					trigger_event = {
+						id = tapestry_hre.004
+						days = { 5 10 }
 					}
 				}
 			}
 		}
+	}
+
+	option = {# Interesting
+		name = tapestry_hre.003.no_rebel
+		ai_chance = { base = 0 }
 	}
 
 }
@@ -169,7 +171,7 @@ tapestry_hre.004 = {# Dukes are invited to join the rebellion.
 		}
 	}
 
-	option = {# Interesting
+	option = {# Rebeling
 		name = tapestry_hre.004.rebel
 		hidden_effect = {
 			create_title_and_vassal_change = {
@@ -179,14 +181,14 @@ tapestry_hre.004 = {# Dukes are invited to join the rebellion.
 			scope:rebelious_lord = { 
 				change_liege = {
 					liege = scope:thankmar
-					change = scope:york_swaps_sides
+					change = scope:lord_joins_thankmar
 				}
 			}
 			resolve_title_and_vassal_change = scope:lord_joins_thankmar
 		}
 
 		ai_chance = {
-			base = 2
+			base = 050
 			ai_value_modifier = {
 				ai_honor = -0.25
 			}
@@ -199,14 +201,14 @@ tapestry_hre.004 = {# Dukes are invited to join the rebellion.
 				has_trait = ambitious
 			}
 			modifier = {	# Weight up for dukes.
-				add = 1.5
+				add = 0.5
 				highest_held_title_tier = tier_duchy
 			}
 		}
 
 
 	}
-	option = {# Interesting
+	option = {# don't rebel
 		name = tapestry_hre.004.no_rebel
 		ai_chance = {
 			base = 98
@@ -282,7 +284,6 @@ tapestry_hre.007 = {# A return to the old ways.
 	immediate = {
 		thankmar_restored_old_kingdoms_effect = yes
 	}
-
 	option = {# Interesting
 		name = tapestry_hre.007.a
 
@@ -302,6 +303,7 @@ tapestry_hre.008 = {# Otto won against Thankmar's rebellion.
 	option = {# Interesting
 		name = tapestry_hre.008.a
 		add_prestige = medium_prestige_gain
+		add_legitimacy = medium_legitimacy_gain
 	}
 
 }

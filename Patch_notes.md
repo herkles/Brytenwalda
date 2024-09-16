@@ -10,7 +10,9 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
 
  A smaller update that adds some flavor for Christianity. Pregnant characters can make a vow to the Virgin Mary, as well as laying in and churching after the baby is born. Confirmation and other various flavor events have been added. 
 
- It also adds stuff for several christian heresies to make them more dynamic and historical. Catholicism's holy sites have been updated to switch out cologne for milan and canterbury for Chatres; though it is possible to get Canterbury as a holy site. Nidaros and Cluny are pilgrimage sites
+ A number of Christian Heresies are able to hold church councils to determine various natures and doctrines of the Church. They also have a decision to translate the bible into a local language.
+
+  Catholicism's holy sites have been updated to switch out cologne for milan and canterbury for Chatres; though it is possible to get Canterbury as a holy site. Nidaros and Cluny are pilgrimage sites
 
 ### Change Log
 - New Christian Heresies and heretical events
