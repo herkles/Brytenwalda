@@ -6,7 +6,7 @@ If you find any bugs or issues do let me know and I will try to fix them to the 
 
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up.
 
-## Latest Version: 3.1.0 "Heresy" (Released 09/09/2024)
+## Latest Version: 3.1.0 "Heresy" (Released 15/09/2024)
 
  A smaller update that adds some flavor for Christianity. Pregnant characters can make a vow to the Virgin Mary, as well as laying in and churching after the baby is born. Confirmation and other various flavor events have been added. 
 

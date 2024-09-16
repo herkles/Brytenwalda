@@ -5,7 +5,7 @@ tags={
 	"Events"
 	"Gameplay"
 }
-name="Feudal Tapestry - A Western European Overhaul"
+name="Feudal Tapestry - A European Overhaul"
 picture="thumbnail.png"
 supported_version="1.12.*"
 path="C:/Users/Sean Zeitler/Documents/Paradox Interactive/Crusader Kings III/mod/Brytenwalda/Feudal Tapestry"

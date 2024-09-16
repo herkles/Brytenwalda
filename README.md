@@ -6,20 +6,26 @@ If you find any bugs or issues do let me know and I will try to fix them to the 
 
 Feel free to use my work in your mods - all I ask is that I am credited and (if possible) to give me a heads up.
 
-## Latest Version: 3.0.0 "Iron Century" (Released 08/08/2024)
+## Latest Version: 3.1.0 "Heresy" (Released 15/09/2024)
 
-The update brings the 10th century bookmark from CK2, the Iron Century to the mod. With the rise of Otto the Great, Kyivian Rus, the Capetians, England and more. 
+ A smaller update that adds some flavor for Christianity. Pregnant characters can make a vow to the Virgin Mary, as well as laying in and churching after the baby is born. Confirmation and other various flavor events have been added. 
 
-With the expansion east ward to the edge of Europe, the cultures of the Slavs have been redrawn based on the various tribal polities that existed in this era. The various pagan faiths of various uralic and baltic peoples have been added. The caucauses also had their cultures expanded. 
+ A number of Christian Heresies are able to hold church councils to determine various natures and doctrines of the Church. They also have a decision to translate the bible into a local language.
+
+  Catholicism's holy sites have been updated to switch out cologne for milan and canterbury for Chatres; though it is possible to get Canterbury as a holy site. Nidaros and Cluny are pilgrimage sites
 
 ### Change Log
-- Updated to the latest version of the game
-- Updated the Holy Sites for Catholicsim
-- Expanded the cultures of the Slavic tribes better fitting for the 9th, 10th, and 11th centuries
-- added 936 as a bookmark with events for the Iron Century
-- added various pagan faiths to eastern europe
-- added some new caucasian cultures
-
+- New Christian Heresies and heretical events
+- Heresies are to appear in a more historicalish fashion
+- Bosnia Church can decide which way to go
+- Fraticelli can try and reform the church
+- Church councils to determine the nature of heresies
+- changes to the set up of holy sites for a number of christian faiths
+- Christian Dualist faiths are now actually christian
+- Sicilians whose parents are norman know french
+- Pilgrimage to Nidaros and Cluny
+- Certain Heretical faiths can translate the bible
+- Various Bug fixes
 
 ## Main Features
 
