@@ -297,3 +297,33 @@ gallo = {# Gallo / Angevien / Mainse
 		35 = caucasian_dark_hair
 	}
 }
+norman_irish = {# Hiberno-Normans 
+	color = { 8 143 143 }
+	created = 177.1.1 # Establishment of the Lordship of Ireland
+	parents = { norman irish }
+	
+	ethos = ethos_bellicose
+	heritage = heritage_frankish
+	language = language_french
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_hereditary_hierarchy
+		tradition_chivalry
+		tradition_chanson_de_geste
+		tradition_castle_keepers
+	}
+	
+	name_list = name_list_norman
+	
+	coa_gfx = { norman_coa_gfx frankish_group_coa_gfx irish_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { french_clothing_gfx western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = caucasian_blond
+		25 = caucasian_ginger
+		45 = caucasian_brown_hair
+		35 = caucasian_dark_hair
+	}	
+}

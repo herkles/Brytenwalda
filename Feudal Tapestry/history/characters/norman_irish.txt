@@ -1,0 +1,952 @@
+﻿#######################################
+# Butler
+#######################################
+204038 = {
+	name = "Theobald"
+	dynasty = 4040
+	martial = 7
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman"
+	trait = diligent
+	trait = education_martial_2
+	father = 204039
+	1151.1.1 = {
+		birth = "1151.1.1"
+	}
+	1175.1.19 = {
+		add_spouse = 204040
+	}
+	1205.5.1 = {
+		death = "1205.5.1"
+	}
+}
+204039 = {
+	name = "Hervey"
+	# AKA: Hervey Walter
+	dynasty = 4040
+	martial = 5
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = "norman"
+	trait = deceitful
+	trait = education_martial_2
+	1120.1.1 = {
+		birth = "1120.1.1"
+	}
+	1175.1.1 = {
+		death = "1175.1.1"
+	}
+}
+204041 = {
+	name = "Theobald"
+	dynasty = 4040
+	martial = 6
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = temperate
+	trait = humble
+	trait = education_martial_2
+	father = 204038
+	mother = 204040
+	1174.1.1 = {
+		birth = "1174.1.1"
+	}
+	1230.7.1 = {
+		death = "1230.7.1"
+	}
+}
+204042 = {
+	name = "Maud"
+	female = yes
+	dynasty = 4040
+	martial = 5
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = just
+	trait = gluttonous
+	trait = education_stewardship_2
+	father = 204038
+	mother = 204040
+	1176.1.1 = {
+		birth = "1176.1.1"
+	}
+	1226.1.1 = {
+		death = "1226.1.1"
+	}
+}
+232680 = {
+	name = "Hubert"
+	dynasty = 4040
+	martial = 4
+	diplomacy = 9
+	intrigue = 4
+	stewardship = 9
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = education_learning_4
+	trait = calm
+	trait = diligent
+	trait = zealous
+	father = 204039
+	1160.1.1 = {
+		birth = "1160.1.1"
+	}
+	1205.7.13 = {
+		death = "1205.7.13"
+	}
+}
+454110 = {
+	name = "James"
+	dynasty = 4040
+	martial = 7
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 1
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = brave
+	trait = education_martial_1
+	father = 454111 #Edmund earl of Carrick
+	mother = 454112 #born 1265
+	1305.1.6 = {
+		birth = yes
+	}
+	1327.1.1 = {
+		add_spouse = 454564
+	}
+	1338.7.1 = {
+		death = "1338.7.1"
+	}
+}
+454111 = {
+	name = "Edmund" #earl of Carrick
+	dynasty = 4040
+	martial = 3
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = brave
+	trait = education_martial_2
+	father = 83377
+	1263.1.1 = {
+		birth = "1263.1.1"
+	}
+	1282.1.2 = {
+		add_spouse = 454112 #born 1265
+	}
+	1321.7.1 = {
+		death = "1321.7.1"
+	}
+}
+454113 = {
+	name = "James"
+	dynasty = 4040
+	martial = 7
+	diplomacy = 3
+	intrigue = 3
+	stewardship = 4
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = education_martial_2
+	father = 454110
+	mother = 454564
+	1331.1.1 = {
+		birth = yes
+	}
+	1382.7.1 = {
+		death = "1382.7.1"
+	}
+}
+454114 = {
+	name = "Petronilla"
+	female = yes
+	dynasty = 4040
+	martial = 5
+	diplomacy = 3
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = education_stewardship_2
+	father = 454110
+	mother = 454564
+	1335.1.1 = {
+		birth = yes
+	}
+	1382.7.1 = {
+		death = "1382.7.1"
+	}
+}
+83375 = {
+	name = "Osbert"
+	dynasty = 4040
+	martial = 4
+	diplomacy = 7
+	intrigue = 5
+	stewardship = 10
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 204039
+	trait = diligent
+	trait = education_stewardship_4
+	1161.1.1 = {
+		birth = "1161.1.1"
+	}
+	1211.1.1 = {
+		death = "1211.1.1"
+	}
+}
+83376 = {
+	name = "Theobald"
+	dynasty = 4040
+	martial = 6
+	diplomacy = 7
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 204041
+	trait = arbitrary
+	trait = education_martial_2
+	1224.1.1 = {
+		birth = yes
+	}
+	1248.7.1 = {
+		death = yes
+	}
+}
+83377 = {
+	name = "Theobald"
+	dynasty = 4040
+	martial = 6
+	diplomacy = 4
+	intrigue = 6
+	stewardship = 5
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 83376
+	trait = education_martial_2
+	1242.1.1 = {
+		birth = yes
+	}
+	1285.7.1 = {
+		death = yes
+	}
+}
+83378 = {
+	name = "Theobald"
+	dynasty = 4040
+	martial = 5
+	diplomacy = 6
+	intrigue = 6
+	stewardship = 5
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 83377
+	trait = education_martial_2
+	1261.1.1 = {
+		birth = "1261.1.1"
+	}
+	1299.7.1 = {
+		death = "1299.7.1"
+	}
+}
+83379 = {
+	name = "Thomas"
+	dynasty = 4040
+	martial = 5
+	diplomacy = 4
+	intrigue = 6
+	stewardship = 4
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 83377
+	trait = education_martial_2
+	1266.1.1 = {
+		birth = "1266.1.1"
+	}
+	1329.7.1 = {
+		death = "1329.7.1"
+	}
+}
+83380 = {
+	name = "Lawrence"
+	dynasty = 4040
+	martial = 5
+	diplomacy = 4
+	intrigue = 6
+	stewardship = 9
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 454111 #Edmund earl of Carrick
+	mother = 454112 #born 1280
+	trait = education_martial_2
+	1309.1.1 = {
+		birth = "1309.1.1"
+	}
+	1338.7.1 = {
+		death = "1338.7.1"
+	}
+}
+83381 = {
+	name = "Thomas"
+	dynasty = 4040
+	martial = 5
+	diplomacy = 4
+	intrigue = 6
+	stewardship = 9
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 454111 #Edmund earl of Carrick
+	mother = 454112 #born 1280
+	trait = education_martial_2
+	1311.1.1 = {
+		birth = "1311.1.1"
+	}
+	1360.7.1 = {
+		death = "1360.7.1"
+	}
+}
+180790 = {
+	name = "Maud"
+	# wife of John Fitzalan, 6th Earl of Arundel
+	female = yes
+	dynasty = 4040
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 204041
+	1229.1.1 = {
+		birth = yes
+	}
+	1283.11.27 = {
+		death = yes
+	}
+}
+#######################################
+# de Burgh
+#######################################
+231055 = {
+	name = "William"
+	dynasty = 4034
+	martial = 8
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = "norman"
+	trait = deceitful
+	trait = lustful
+	trait = greedy
+	trait = education_martial_2
+	father = 7460
+	1160.1.1 = {
+		birth = "1160.1.1"
+	}
+	1210.1.1 = {
+		death = "1210.1.1"
+	}
+}
+454050 = {
+	name = "Maud"
+	female = yes
+	dynasty = 4034
+	martial = 7
+	diplomacy = 7
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = arrogant
+	trait = temperate
+	trait = education_intrigue_1
+	father = 454106
+	mother = 454108
+	1294.1.1 = {
+		birth = "1294.1.1"
+	}
+	1320.1.1 = {
+		death = "1320.1.1"
+	}
+}
+454106 = {
+	name = "Richard"
+	dynasty = 4034
+	martial = 4
+	diplomacy = 7
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = arrogant
+	trait = education_martial_2
+	father = 454154
+	1259.1.1 = {
+		birth = "1259.1.1"
+	}
+	1275.1.2 = {
+		add_spouse = 454108
+	}
+	1329.7.29 = {
+		death = "1329.7.29"
+	}
+}
+454107 = {
+	name = "Joan"
+	female = yes
+	dynasty = 4034
+	martial = 5
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = arrogant
+	trait = education_stewardship_2
+	father = 454106
+	mother = 454108
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1362.1.1 = {
+		death = "1362.1.1"
+	}
+}
+454150 = {
+	name = "Edmund"
+	dynasty = 4034
+	martial = 8
+	diplomacy = 2
+	intrigue = 7
+	stewardship = 4
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = greedy
+	trait = zealous
+	trait = education_learning_2
+	father = 454151
+	1315.1.1 = {
+		birth = "1315.1.1"
+	}
+	1365.1.1 = {
+		death = "1365.1.1"
+	}
+}
+454151 = {
+	name = "Willian"
+	# AKA: Willian Liath
+	dynasty = 4034
+	martial = 5
+	diplomacy = 4
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = education_martial_2
+	father = 454152
+	1258.1.1 = {
+		birth = "1258.1.1"
+	}
+	1324.1.1 = {
+		death = "1324.1.1"
+	}
+}
+454152 = {
+	name = "Willian_Oc"
+	# AKA: Willian Oc
+	dynasty = 4034
+	martial = 5
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = education_martial_2
+	father = 454153
+	mother = 7284
+	1240.1.1 = {
+		birth = "1240.1.1"
+	}
+	1271.12.28 = {
+		death = "1271.12.28"
+	}
+}
+454153 = {
+	name = "Richard"
+	dynasty = 4034
+	martial = 8
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = education_martial_4
+	father = 231055
+	1174.1.1 = {
+		birth = "1174.1.1"
+	}
+	1196.1.1 = {
+		add_spouse = 7284
+	}
+	1243.2.17 = {
+		death = "1243.2.17"
+	}
+}
+454154 = {
+	name = "Walter"
+	dynasty = 4034
+	martial = 6
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = temperate
+	trait = education_martial_2
+	father = 454153
+	mother = 7284
+	1234.1.1 = {
+		birth = "1234.1.1"
+	}
+	1271.1.1 = {
+		death = "1271.1.1"
+	}
+}
+454155 = {
+	name = "William"
+	dynasty = 4034
+	martial = 5
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 4
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 454150
+	1335.1.1 = {
+		birth = "1335.1.1"
+	}
+	1385.1.1 = {
+		death = "1385.1.1"
+	}
+}
+454612 = {
+	name = "John"
+	dynasty = 4034
+	martial = 7
+	diplomacy = 7
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = arrogant
+	trait = greedy
+	trait = education_martial_2
+	father = 454106
+	mother = 454108
+	1280.1.1 = {
+		birth = "1280.1.1"
+	}
+	1308.1.2 = {
+		add_spouse = 454609
+	}
+	1314.1.1 = {
+		death = "1314.1.1"
+	}
+}
+454613 = {
+	name = "William"
+	dynasty = 4034
+	martial = 6
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = brave
+	trait = arrogant
+	trait = education_martial_2
+	father = 454612
+	mother = 454609
+	1312.1.1 = {
+		birth = "1312.1.1"
+	}
+	1327.11.16 = {
+		add_spouse = 454531
+	}
+	1333.6.6 = {
+		death = "1333.6.6"
+	}
+}
+454614 = {
+	name = "Elizabeth"
+	female = yes
+	dynasty = 4034
+	martial = 6
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = education_learning_2
+	father = 454613
+	mother = 454531
+	1332.1.1 = {
+		birth = "1332.1.1"
+	}
+	1382.1.1 = {
+		death = "1382.1.1"
+	}
+}
+7458 = {
+	name = "Hubert"
+	dynasty = 4034
+	martial = 8
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = "norman"
+	trait = deceitful
+	trait = lustful
+	trait = greedy
+	trait = education_martial_2
+	father = 7460
+	1161.1.1 = {
+		birth = "1161.1.1"
+	}
+	1243.5.5 = {
+		death = "1243.5.5"
+	}
+}
+7460 = {
+	name = "Walter"
+	dynasty = 4034
+	martial = 8
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = "norman"
+	trait = deceitful
+	trait = lustful
+	trait = greedy
+	trait = education_martial_2
+	1130.1.1 = {
+		birth = "1130.1.1"
+	}
+	1180.1.1 = {
+		death = "1180.1.1"
+	}
+}
+#######################################
+# FitzGerald
+#######################################
+454112 = {
+	name = "Joan"
+	female = yes
+	dynasty = 4041
+	martial = 4
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = education_intrigue_1
+	father = 454120
+	1265.1.1 = {
+		birth = "1265.1.1"
+	}
+	1333.1.1 = {
+		death = "1333.1.1"
+	}
+}
+454120 = {
+	name = "John"
+	dynasty = 4041
+	martial = 7
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 4
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = education_martial_1
+	father = 454123
+	1247.1.1 = {
+		birth = "1247.1.1"
+	}
+	1316.9.12 = {
+		death = "1316.9.12"
+	}
+}
+454121 = {
+	name = "Thomas"
+	dynasty = 4041
+	martial = 4
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = education_intrigue_1
+	father = 454120
+	1295.1.1 = {
+		birth = "1295.1.1"
+	}
+	1316.1.1 = {
+		add_spouse = 454107
+	}
+	1328.4.5 = {
+		death = "1328.4.5"
+	}
+}
+454122 = {
+	name = "Maurice"
+	dynasty = 4041
+	martial = 4
+	diplomacy = 5
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = diligent
+	trait = honest
+	trait = education_martial_2
+	father = 454121
+	mother = 454107
+	1318.1.1 = {
+		birth = "1318.1.1"
+	}
+	1368.1.1 = {
+		death = "1368.1.1"
+	}
+}
+454123 = {
+	name = "Thomas"
+	dynasty = 4041
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 454124
+	1230.1.1 = {
+		birth = "1230.1.1"
+	}
+	1271.1.1 = {
+		death = "1271.1.1"
+	}
+}
+454124 = {
+	name = "Maurice"
+	dynasty = 4041
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 454125
+	1183.1.1 = {
+		birth = "1183.1.1"
+	}
+	1257.1.1 = {
+		death = "1257.1.1"
+	}
+}
+454125 = {
+	name = "Gerald"
+	dynasty = 4041
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 454126
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1203.1.1 = {
+		death = "1203.1.1"
+	}
+}
+454126 = {
+	name = "Maurice"
+	dynasty = 4041
+	religion = "catholic"
+	culture = "norman"
+	father = 204056
+	mother = 204057
+	1120.1.1 = {
+		birth = "1120.1.1"
+	}
+	1176.9.1 = {
+		death = "1176.9.1"
+	}
+}
+161453 = {
+	name = "William"
+	dynasty = 4041
+	religion = "catholic"
+	culture = "norman"
+	father = 454126
+	1148.1.1 = {
+		birth = "1148.1.1"
+	}
+	1199.1.1 = {
+		death = "1199.1.1"
+	}
+}
+161454 = {
+	name = "Thomas"
+	dynasty = 4041
+	religion = "catholic"
+	culture = "norman"
+	father = 454126
+	1153.1.1 = {
+		birth = "1153.1.1"
+	}
+	1213.1.1 = {
+		death = "1213.1.1"
+	}
+}
+161455 = {
+	name = "Gerald"
+	dynasty = 4041
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 454124
+	1220.1.1 = {
+		birth = "1220.1.1"
+	}
+	1243.1.1 = {
+		death = "1243.1.1"
+	}
+}
+161456 = {
+	name = "Maurice"
+	dynasty = 4041
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 454124
+	1225.1.1 = {
+		birth = "1225.1.1"
+	}
+	1250.1.1 = {
+		add_spouse = 161457
+	}
+	1286.1.1 = {
+		death = "1286.1.1"
+	}
+}
+161458 = {
+	name = "Juliana"
+	female = yes
+	dynasty = 4041
+	religion = "catholic"
+	culture = "norman_irish"
+	father = 454124
+	1222.1.1 = {
+		birth = "1222.1.1"
+	}
+	1302.1.1 = {
+		death = "1302.1.1"
+	}
+}
+161459 = {
+	name = "Richard"
+	dynasty = 4041
+	religion = "catholic"
+	culture = "norman_irish"
+	trait = diligent
+	trait = honest
+	trait = education_martial_2
+	father = 454121
+	mother = 454107
+	1317.1.1 = {
+		birth = "1317.1.1"
+	}
+	1331.7.7 = {
+		death = "1331.7.7"
+	}
+}
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################
+
+#######################################
+# NAMEHouse
+#######################################

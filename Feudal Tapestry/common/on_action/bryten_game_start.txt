@@ -177,7 +177,56 @@ bryten_setup_after_game_start_on_actions = {
 				learn_language = language_french
 			}
 		}
-
+		# cultures formation dates
+		if = {# Anglo-Saxon Formed 
+			limit = { current_date >= 927.1.1 }
+			set_global_variable = {
+				name = bryten_anglo_saxon_created
+				value = yes
+			}
+		}
+		if = {# Scots Formed 
+			limit = { current_date >= 1130.1.1 }
+			set_global_variable = {
+				name = scottish_culture_creation
+				value = yes
+			}
+		}
+		if = {# English Formed 
+			limit = { current_date >= 1150.1.1 }
+			set_global_variable = {
+				name = bryten_english_created
+				value = yes
+			}
+		}
+		if = {# Anglo-Norse Formed 
+			limit = { current_date >= 886.1.1 }
+			set_global_variable = {
+				name = bryten_anglo_norse_created
+				value = yes
+			}
+		}
+		if = {# Frankish culture split  
+			limit = { current_date >= 936.1.1 }
+			set_global_variable = {
+				name = frankish_culture_split
+				value = yes
+			}
+		}
+		if = {# Rus Formed 
+			limit = { current_date >= 988.1.1 }
+			set_global_variable = {
+				name = rus_culture_formed
+				value = yes
+			}
+		}
+		if = {# Sicilian Formed 
+			limit = { current_date >= 1060.1.1 }
+			set_global_variable = {
+				name = bryten_sicilian_created
+				value = yes
+			}
+		}		
 		# traditions
 		if = {# Anglo-Saxons have housecarls thanks to cnut
 			limit = { game_start_date >= 1016.1.1 }
