@@ -58,8 +58,7 @@ sardinian = {# Sardinian
 }
 sicilian = {# Siculo-Normans / Italo-Norman
 	color = { 255 228 181 }
-	parents = { longobard norman }
-
+	parents = { lombard norman }
 	created = 1043.1.1 # Norman Conquest of Southern Italy
 	
 	ethos = ethos_courtly
@@ -85,15 +84,10 @@ sicilian = {# Siculo-Normans / Italo-Norman
 		10 = mediterranean
 	}	
 }
-
-
-lombard = {# Lombards - Italy
+cisalpine = {# Lombards - Italy
 	color = { 223 255 0 }
-
 	created = 650.1.1
-
 	parents = { langobard roman }
-	
 	ethos = ethos_bellicose
 	heritage = heritage_latin
 	language = language_italian
@@ -106,6 +100,32 @@ lombard = {# Lombards - Italy
 	}
 	
 	name_list = name_list_cisalpine
+	
+	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
+	building_gfx = { mediterranean_building_gfx }
+	clothing_gfx = { western_clothing_gfx }
+	unit_gfx = { western_unit_gfx }
+	
+	ethnicities = {
+		10 = mediterranean
+	}
+}
+lombard = {# Longobards; Italianized Langobards in southern Italy
+	color = { 236 255 220 }
+	parents = { langobard roman }
+	created = 700.11.4
+
+	ethos = ethos_courtly
+	heritage = heritage_latin
+	language = language_italian
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_formation_fighting
+		tradition_republican_legacy
+		tradition_poetry
+	}
+	
+	name_list = name_list_lombard
 	
 	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
 	building_gfx = { mediterranean_building_gfx }
@@ -234,34 +254,6 @@ ligurian = {# Ligurian, ie Genoese
 		10 = mediterranean
 	}
 }
-longobard = {# Longobards; Italianized Langobards in southern Italy
-	color = { 236 255 220 }
-
-	parents = { langobard roman }
-
-	created = 700.11.4
-	
-	ethos = ethos_courtly
-	heritage = heritage_latin
-	language = language_italian
-	martial_custom = martial_custom_male_only
-	traditions = {
-		tradition_formation_fighting
-		tradition_republican_legacy
-		tradition_poetry
-	}
-	
-	name_list = name_list_italian
-	
-	coa_gfx = { latin_group_coa_gfx western_coa_gfx }
-	building_gfx = { mediterranean_building_gfx }
-	clothing_gfx = { western_clothing_gfx }
-	unit_gfx = { western_unit_gfx }
-	
-	ethnicities = {
-		10 = mediterranean
-	}
-}
 tuscan = {# Tuscan
 	color = { 228 208 10 }
 
@@ -316,35 +308,6 @@ corsican = {# Corsican
 	unit_gfx = { western_unit_gfx }
 	
 	ethnicities = {
-		10 = mediterranean
-	}
-}
-siqilliyyan = {# Sicilian but arabic
-	color = { 147 197 114 }
-	parents = { maghrebi greek }
-
-	created = 856.1.1
-	
-	ethos = ethos_spiritual
-	heritage = heritage_arabic
-	language = language_arabic
-	martial_custom = martial_custom_male_only
-	traditions = {
-		tradition_gardening
-		tradition_mubarizuns
-		tradition_poetry
-		tradition_xenophilic
-	}
-	
-	name_list = name_list_maghrebi
-	
-	coa_gfx = { arabic_group_coa_gfx }
-	building_gfx = {  arabic_group_building_gfx mena_building_gfx }
-	clothing_gfx = { dde_abbasid_clothing_gfx mena_clothing_gfx } 
-	unit_gfx = { mena_unit_gfx } 
-
-	ethnicities = {
-		10 = arab
 		10 = mediterranean
 	}
 }

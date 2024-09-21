@@ -1,0 +1,35 @@
+﻿#############################################
+# New Cultures			
+#############################################
+siqilli = {# Sicilian but arabic
+	color = { 158 250 88 }
+	parents = { maghrebi greek }
+
+	created = 827.1.1 # Start of the Arab-Berber conquest of Sicily
+	
+	ethos = ethos_stoic
+	heritage = heritage_arabic
+	language = language_arabic
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_gardening
+		tradition_mubarizuns
+		tradition_poetry
+		tradition_xenophilic
+	}
+	
+	name_list = name_list_maghrebi
+	
+	coa_gfx = { arabic_group_coa_gfx }
+	building_gfx = {  arabic_group_building_gfx mena_building_gfx }
+	clothing_gfx = { dde_abbasid_clothing_gfx mena_clothing_gfx } 
+	unit_gfx = { mena_unit_gfx } 
+
+	ethnicities = {
+		10 = arab
+		1 = african
+		5 = mediterranean
+		5 = mediterranean_byzantine
+	}
+}
+
