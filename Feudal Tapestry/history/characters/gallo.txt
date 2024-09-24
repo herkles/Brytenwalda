@@ -1001,6 +1001,1368 @@
 	}
 }
 #######################################
+# House Penthievre
+#######################################
+346 = {
+	name = "Edouarzh"
+	dynasty_house = house_penthievre
+	religion = "catholic"
+	culture = "gallo"
+	father = 342
+	mother = 257
+	999.1.2 = {
+		birth = "999.1.2"
+	}
+	1020.1.2 = {
+		add_spouse = 10041
+	}
+	1079.1.7 = {
+		death = "1079.1.7"
+	}
+}
+350 = {
+	name = "Jafrez" #Jafrez I Boterel
+	# AKA: Jafrez 'Boterel'
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 346 #Éon I de Penthièvre
+	mother = 10041 #Oanez de Cornouaille
+	1025.1.1 = {
+		birth = "1025.1.1"
+	}
+	1093.4.24 = {
+		death = "1093.4.24"
+	}
+}
+356 = {
+	name = "Alan"
+	# AKA: Alan 'Rufus'
+	dynasty_house = house_penthievre
+	religion = "catholic"
+	culture = "gallo"
+	father = 346
+	mother = 10041
+	1039.1.2 = {
+		birth = "1039.1.2"
+		give_nickname = nick_the_red
+	}
+	1066.1.1 = {
+		employer = 140
+	}
+	1089.1.1 = {
+		death = "1089.1.1"
+	}
+}
+91161 = {
+	name = "Jafrez" #Jafrez II de Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205744 #Stefen I de Penthièvre
+	mother = 205745 #Hawiz de Guingamp
+	1090.1.1 = {
+		birth = "1090.1.1"
+	}
+	#Hawise, d. of Jean de Dol
+	1148.1.1 = {
+		death = "1148.1.1"
+	}
+}
+91162 = {
+	name = "Rivallon" #Rivallon de Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91161 #Jafrez II de Penthièvre
+	#Hawise, d. of Jean de Dol
+	1130.1.1 = {
+		birth = "1130.1.1"
+	}
+	#Hawise, d. of Jean de Dol
+	1155.1.1 = {
+		death = "1155.1.1" #after 1152
+	}
+}
+91163 = {
+	name = "Stefen" #Stefen II de Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91161 #Jafrez II de Penthièvre
+	#Hawise, d. of Jean de Dol
+	1120.1.1 = {
+		birth = "1120.1.1"
+	}
+	1164.1.1 = {
+		death = "1164.1.1"
+	}
+}
+91164 = {
+	name = "Jafrez" #Jafrez III de Penthièvre
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91162 #Rivallon de Penthièvre
+	#Hawise, d. of Jean de Dol
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1209.1.1 = {
+		death = "1209.1.1"
+	}
+}
+91165 = {
+	name = "Herri" #Henry II d'Avaugour
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205742 #Alan I de Penthièvre
+	#Pétronille de Beaumont-au-Maine
+	1204.1.5 = {
+		birth = "1204.1.5"
+	}
+	1281.10.6 = {
+		death = "1281.10.6"
+	}
+}
+91169 = {
+	name = "Alan" #Alan II d'Avaugour
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91165 #Harry II d'Avaugour
+	#Marguerite de Mayenne
+	1224.1.1 = {
+		birth = "1224.1.1"
+	}
+	#Clémence de Beaufort 1246
+	1270.1.1 = {
+		death = "1270.1.1" #after 1268
+	}
+}
+205740 = {
+	name = "Konstanza" #Constance, duchess of Brittany
+	female = yes
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	trait = gluttonous
+	trait = education_learning_3
+	father = 205741 #Konan IV le Petit
+	mother = 203510 #Marguerite de Huntinton
+	1161.6.12 = {
+		birth = "1161.6.12"
+	}
+	1201.9.5 = {
+		death = "1201.9.5"
+	}
+}
+205741 = {
+	name = "Konan" #Konan IV le Petit
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	trait = dwarf
+	father = 205751 #Alan de Penthièvre
+	mother = 205825 #Berthe de Bretagne
+	1138.1.1 = {
+		birth = "1138.1.1"
+	}
+	1160.1.1 = {
+		add_spouse = 203510 #Marguerite de Huntinton
+	}
+	1171.2.21 = {
+		remove_spouse = 203510 #Marguerite de Huntinton
+		death = "1171.2.21"
+	}
+}
+205744 = {
+	name = "Stefen"
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 346 #Eudes de Penthièvre
+	mother = 10041 #Oanez de Cornouaille
+	1050.1.1 = {
+		birth = "1050.1.1"
+	}
+	1080.1.1 = {
+		add_spouse = 205745 #Hawiz de Guingamp
+	}
+	1136.4.13 = {
+		death = "1136.4.13"
+	}
+}
+205750 = {
+	name = "Konstanza" #Constance de Bretagne
+	female = yes
+	dynasty_house = house_penthievre #House of Penthièvre
+	father = 205751 #Alan le Noir
+	mother = 205825 #Berthe de Bretagne
+	religion = "catholic"
+	culture = "gallo"
+	1140.1.1 = {
+		birth = "1140.1.1"
+	}
+	#spouse of Alan III de Rohan
+	1184.1.19 = {
+		death = "1184.1.19"
+	}
+}
+205751 = {
+	name = "Alan" #de Bretagne
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205744 #Stefen I de Penthièvre
+	mother = 205745 #Hawiz de Guingamp
+	1095.1.1 = {
+		birth = "1095.1.1"
+	}
+	1138.1.1 = {
+		add_spouse = 205825 #Bertha de Bretagne
+	}
+	1146.1.1 = {
+		death = "1146.1.1"
+	}
+}
+
+455580 = {
+	name = "Janed" #Jeanne d'Avaugour
+	female = yes
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91258 #Harry IV d'Avaugour
+	#Jeanne d'Harcourt
+	1290.1.1 = {
+		birth = "1290.1.1"
+	}
+	#Guy de Bretagne, compte de Penthièvre (1318)
+	1327.8.30 = {
+		death = "1327.8.30"
+	}
+}
+455581 = {
+	name = "Herri" #I assume he is Henry III d'Avaugour
+	dynasty_house = house_penthievre #House of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91169 #Alan II d'Avaugour
+	#Clémence de Beaufort, lady of Dinan
+	1247.1.1 = {
+		birth = "1247.1.1"
+	}
+	#Marie de Brienne in 1270
+	1301.1.1 = {
+		death = "1301.1.1"
+	}
+}
+91261 = {
+	name = "Gwilherm" #Guillaume de Bretagne
+	dynasty_house = house_penthievre#Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 346 #Eudes de Bretagne
+	mother = 10041 #Oanez de Cornouaille
+	1040.1.1 = {
+		birth = "1040.1.1"
+	}
+	1100.1.1 = {
+		death = "1100.1.1"
+	}
+}
+91262 = {
+	name = "Roparzh" #Robert de Bretagne
+	dynasty_house = house_penthievre#Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 346 #Eudes de Bretagne
+	mother = 10041 #Oanez de Cornouaille
+	1041.1.1 = {
+		birth = "1041.1.1"
+	}
+	1085.1.1 = {
+		death = "1085.1.1" #after 1083
+	}
+}
+91263 = {
+	name = "Richard" #Richard de Bretagne
+	dynasty_house = house_penthievre#Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 346 #Eudes de Bretagne
+	mother = 10041 #Oanez de Cornouaille
+	1042.1.1 = {
+		birth = "1042.1.1"
+	}
+	1105.1.1 = {
+		death = "1105.1.1"
+	}
+}
+91265 = {
+	name = "Ribald"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	trait = legitimized_bastard
+	father = 346 #Eudes de Bretagne
+	1041.1.1 = {
+		birth = "1041.1.1"
+	}
+	1101.1.1 = {
+		death = "1101.1.1"
+	}
+}
+91266 = {
+	name = "Bardulf"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
+	religion = "catholic"
+	culture = "gallo"
+	trait = legitimized_bastard
+	father = 346 #Eudes de Bretagne
+	1042.1.1 = {
+		birth = "1042.1.1"
+	}
+	1102.1.1 = {
+		death = "1102.1.1"
+	}
+}
+91269 = {
+	name = "Konan"
+	dynasty_house = house_penthievre#Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 350 #Jafrez Boretel
+	#unknow mother
+	1045.1.1 = {
+		birth = "1045.1.1"
+	}
+	1098.2.9 = {
+		death = "1098.2.9"
+	}
+}
+91270 = {
+	name = "Acarias"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
+	religion = "catholic"
+	culture = "gallo"
+	father = 91266 #Bardulf
+	1065.1.1 = {
+		birth = "1065.1.1"
+	}
+	1140.1.1 = {
+		death = "1140.1.1" #after 1130
+	}
+}
+91271 = {
+	name = "Scolland"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
+	religion = "catholic"
+	culture = "gallo"
+	father = 91266 #Bardulf
+	1070.1.1 = {
+		birth = "1070.1.1"
+	}
+	1145.1.1 = {
+		death = "1145.1.1" #after 1130
+	}
+}
+91272 = {
+	name = "Huiarnviuy"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
+	religion = "catholic"
+	culture = "gallo"
+	father = 91270 #Acarias
+	1090.1.1 = {
+		birth = "1090.1.1"
+	}
+	1150.1.1 = {
+		death = "1150.1.1"
+	}
+}
+91273 = {
+	name = "Walter"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
+	religion = "catholic"
+	culture = "gallo"
+	father = 91270 #Acarias
+	1092.1.1 = {
+		birth = "1092.1.1"
+	}
+	1152.1.1 = {
+		death = "1152.1.1"
+	}
+}
+91274 = {
+	name = "Harscoit"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
+	religion = "catholic"
+	culture = "gallo"
+	father = 91270 #Acarias
+	1095.1.1 = {
+		birth = "1095.1.1"
+	}
+	1155.1.1 = {
+		death = "1155.1.1"
+	}
+}
+91275 = {
+	name = "Herri"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Ravensworth
+	religion = "catholic"
+	culture = "gallo"
+	father = 91270 #Acarias
+	1096.1.1 = {
+		birth = "1096.1.1"
+	}
+	1156.1.1 = {
+		death = "1156.1.1"
+	}
+}
+91276 = {
+	name = "Mathilde" #Mathilde de Penthièvre
+	female = yes
+	dynasty_house = house_penthievre # Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205744 #Stefen de Bretagne
+	mother = 205745 #Havise de Gingamp
+	1102.1.1 = {
+		birth = "1102.1.1"
+	}
+	1170.1.1 = {
+		death = "1170.1.1"
+	}
+}
+91277 = {
+	name = "Tiphaine" #Tiphaine de Penthièvre
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205744 #Stefen de Bretagne
+	mother = 205745 #Havise de Gingamp
+	1112.1.1 = {
+		birth = "1112.1.1"
+	}
+	1175.1.1 = {
+		death = "1175.1.1"
+	}
+}
+91278 = {
+	name = "Gonnor" #Gonnor de Penthièvre
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205744 #Stefen de Bretagne
+	mother = 205745 #Havise de Gingamp
+	1113.1.1 = {
+		birth = "1113.1.1"
+	}
+	1175.1.1 = {
+		death = "1175.1.1"
+	}
+}
+91279 = {
+	name = "Olive"
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205744 #Stefen de Bretagne
+	mother = 205745 #Havise de Gingamp
+	1113.1.1 = {
+		birth = "1113.1.1"
+	}
+	1175.1.1 = {
+		death = "1175.1.1"
+	}
+}
+91280 = {
+	name = "Stefen" #Stefen de Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91162 #Rivallon de Penthièvre
+	#? de Dol
+	1145.1.1 = {
+		birth = "1145.1.1"
+	}
+	1164.1.1 = {
+		death = "1164.1.1"
+	}
+}
+91281 = {
+	name = "Elina" #Elina de Penthièvre
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91162 #Rivallon de Penthièvre
+	#? de Dol
+	1155.1.1 = {
+		birth = "1155.1.1"
+	}
+	1215.1.1 = {
+		death = "1215.1.1"
+	}
+}
+91282 = {
+	name = "Enoguen" #Enoguen de Penthièvre
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205751 #Alan le Noir
+	mother = 205825 #Berthe de Bretagne
+	1145.1.1 = {
+		birth = "1145.1.1"
+	}
+	1187.1.1 = {
+		death = "1187.1.1"
+	}
+}
+91283 = {
+	name = "Roparzh" #Robert Brito
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	trait = bastard
+	father = 205751 #Alan le Noir
+	1145.1.1 = {
+		birth = "1145.1.1"
+	}
+	1187.1.1 = {
+		death = "1187.1.1"
+	}
+}
+91284 = {
+	name = "Herri" #Harry de Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205743 #Harry de Bretagne
+	mother = 205760 #Mathilde de Vendôme
+	1152.1.1 = {
+		birth = "1152.1.1"
+	}
+	1152.12.1 = {
+		death = "1152.12.1"
+	}
+}
+91285 = {
+	name = "Stefen" #Stefen de Penthièvre
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205743 #Harry de Bretagne
+	mother = 205760 #Mathilde de Vendôme
+	1155.1.1 = {
+		birth = "1155.1.1"
+	}
+	1205.1.1 = {
+		death = "1205.1.1" #after 1202
+	}
+}
+91286 = {
+	name = "JuhaE_l"
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91165 #Harry
+	#Marguerite de Mayenne
+	1235.1.1 = {
+		birth = "1235.1.1"
+	}
+	1295.1.1 = {
+		death = "1295.1.1"
+	}
+}
+91287 = {
+	name = "Herri" #lord of Goello
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91165 #Harry
+	#Marguerite de Mayenne
+	1240.1.1 = {
+		birth = "1240.1.1"
+	}
+	#Phelipe de Rohan, d. of Alan V, vicompte de Rohan
+	1300.1.1 = {
+		death = "1300.1.1"
+	}
+}
+91288 = {
+	name = "Mari" #Marie de Penthièvre
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91165 #Harry
+	#Marguerite de Mayenne
+	1245.1.1 = {
+		birth = "1245.1.1"
+	}
+	1305.1.1 = {
+		death = "1305.1.1"
+	}
+}
+91289 = {
+	name = "Janed" #Jeanne d'Avalgor
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91165 #Harry
+	#Marguerite de Mayenne
+	1250.1.1 = {
+		birth = "1250.1.1"
+	}
+	1310.1.1 = {
+		death = "1310.1.1"
+	}
+}
+91290 = {
+	name = "Jafrez" #Jafrez Borotel
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205742 #Alan, comte de Penthièvre
+	#Adélaïde
+	1210.1.1 = {
+		birth = "1210.1.1"
+	}
+	#Eustachie de Vitré, d. of André III de Vitré & Catherine de Thouars
+	1281.1.1 = {
+		death = "1281.1.1"
+	}
+}
+91291 = {
+	name = "Hawiz" #Haoys d'Avaugour
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91169 #Alan d'Avaugour
+	#Clémence de Dinan
+	1250.1.1 = {
+		birth = "1250.1.1"
+	}
+	#Olivier de Tinteniac
+	1310.1.1 = {
+		death = "1310.1.1"
+	}
+}
+91292 = {
+	name = "Konstanza"
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91169 #Alan d'Avaugour
+	#Clémence de Dinan
+	1255.1.1 = {
+		birth = "1255.1.1"
+	}
+	1315.10.29 = {
+		death = "1315.10.29"
+	}
+}
+91293 = {
+	name = "Yann" #Jean, bishop of Saint-Brieue
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	trait = education_learning_1
+	father = 455581 #Harry III d'Avaugour
+	#Marie de Beaumont-Brienne, d. of Louis of Brienne & Oanez of Beaumont.
+	1275.1.1 = {
+		birth = "1275.1.1"
+	}
+	1329.1.1 = {
+		death = "1329.1.1"
+	}
+}
+91294 = {
+	name = "Gwilherm"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 455581 #Harry III d'Avaugour
+	#Marie de Beaumont-Brienne, d. of Louis of Brienne & Oanez of Beaumont.
+	1276.1.1 = {
+		birth = "1276.1.1"
+	}
+	1290.1.1 = {
+		death = "1290.1.1"
+	}
+}
+91295 = {
+	name = "Blanche" #Blanche d'Avaugour
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 455581 #Harry III d'Avaugour
+	#Marie de Beaumont-Brienne, d. of Louis of Brienne & Oanez of Beaumont.
+	1277.1.1 = {
+		birth = "1277.1.1"
+	}
+	#Guillaume d'Harcourt, lord of Saussaye
+	1340.12.10 = {
+		death = "1340.12.10" #a 10th of december, after 1337
+	}
+}
+91296 = {
+	name = "Marc_harit" #Marguerite d'Avaugour
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 455581 #Harry III d'Avaugour
+	#Marie de Beaumont-Brienne, d. of Louis of Brienne & Oanez of Beaumont.
+	1278.1.1 = {
+		birth = "1278.1.1"
+	}
+	#Guillaume de Paynel, lord of Hambie (1296)
+	1340.1.1 = {
+		death = "1340.1.1"
+	}
+}
+91258 = {
+	name = "Herri" #Harry IV d'Avaugour
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 455581 #Harry III d'Avaugour
+	#Marie de Beaumont-Brienne, d. of louis de Brienne & Oanez de Beaumont.
+	1274.1.1 = {
+		birth = "1274.1.1"
+	}
+	#Jeanne d'Harcourt, d. of Jean II d'Harcourt & Jeanne of Châtellerault
+	1331.1.1 = {
+		death = "1331.1.1"
+	}
+}
+91297 = {
+	name = "Isabelle"
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91258 #Harry IV d'Avaugour
+	#Marie de Beaumont-Brienne, d. of louis de Brienne & Oanez de Beaumont.
+	1294.1.1 = {
+		birth = "1294.1.1"
+	}
+	#Louis, viscount of Thouars (455930)
+	1330.5.3 = {
+		death = "1330.5.3"
+	}
+}
+91298 = {
+	name = "Marc_harit"
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91258 #Harry IV d'Avaugour
+	1295.1.1 = {
+		birth = "1295.1.1"
+	}
+	#Huiarnviu VII de Léon
+	#Jafrez de Vaulx
+	1340.1.1 = {
+		death = "1340.1.1"
+	}
+}
+91299 = {
+	name = "Mari"
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91258 #Harry IV d'Avaugour
+	1296.1.1 = {
+		birth = "1296.1.1"
+	}
+	1345.4.11 = {
+		death = "1345.4.11"
+	}
+}
+91300 = {
+	name = "Alan" #Alan, vicomte de Tonquedec
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205747 #Geslin de Penthièvre
+	1175.1.1 = {
+		birth = "1175.1.1"
+	}
+	1255.1.1 = {
+		death = "1255.1.1" #after 1253
+	}
+}
+91301 = {
+	name = "Herri"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205747 #Geslin de Penthièvre
+	1180.1.1 = {
+		birth = "1180.1.1"
+	}
+	1233.1.1 = {
+		death = "1233.1.1"
+	}
+}
+91302 = {
+	name = "HoE_l"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 205747 #Geslin de Penthièvre
+	1185.1.1 = {
+		birth = "1185.1.1"
+	}
+	1240.1.1 = {
+		death = "1240.1.1" #after 1239
+	}
+}
+91303 = {
+	name = "Roland" #Roland de Tonquedec
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91300 #Alan, viscount of Tonquedec
+	#Constance de Vitré
+	1195.1.1 = {
+		birth = "1195.1.1"
+	}
+	1295.1.1 = {
+		death = "1295.1.1" #before 1300
+	}
+}
+91304 = {
+	name = "Prigent" #Prigent de Coëtmen
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91303 #Roland de Tonquedec
+	1220.1.1 = {
+		birth = "1220.1.1"
+	}
+	1310.1.1 = {
+		death = "1310.1.1" #after 1300
+	}
+}
+91306 = {
+	name = "Guy"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91304 #Prigent de Coëtmen
+	1240.1.1 = {
+		birth = "1240.1.1"
+	}
+	1330.1.1 = {
+		death = "1330.1.1"
+	}
+}
+91307 = {
+	name = "Janed"
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre
+	religion = "catholic"
+	culture = "gallo"
+	father = 91306 #Guy
+	1260.1.1 = {
+		birth = "1260.1.1"
+	}
+	1320.1.1 = {
+		death = "1320.1.1"
+	}
+}
+91309 = {
+	name = "Ralph"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91265 #Ribald
+	1060.1.1 = {
+		birth = "1060.1.1"
+	}
+	1120.1.1 = {
+		death = "1120.1.1"
+	}
+}
+91310 = {
+	name = "Huiarnviu" #Huiarnviu Taillebois
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91265 #Ribald
+	1062.1.1 = {
+		birth = "1062.1.1"
+	}
+	1122.1.1 = {
+		death = "1122.1.1"
+	}
+}
+91311 = {
+	name = "Raynaud" #Raynaud Taillebois
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91265 #Ribald
+	1065.1.1 = {
+		birth = "1065.1.1"
+	}
+	1125.1.1 = {
+		death = "1125.1.1"
+	}
+}
+91312 = {
+	name = "Gwilherm" #William Taillebois
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91265 #Ribald
+	1066.1.1 = {
+		birth = "1066.1.1"
+	}
+	1126.1.1 = {
+		death = "1126.1.1"
+	}
+}
+91313 = {
+	name = "Roparzh"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91309 #Ralph
+	1080.1.1 = {
+		birth = "1080.1.1"
+	}
+	1170.1.1 = {
+		death = "1170.1.1"
+	}
+}
+91314 = {
+	name = "Walran"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91313 #Robert
+	1150.1.1 = {
+		birth = "1150.1.1"
+	}
+	1240.1.1 = {
+		death = "1240.1.1"
+	}
+}
+91315 = {
+	name = "Ralph"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91313 #Robert
+	1155.1.1 = {
+		birth = "1155.1.1"
+	}
+	1250.1.1 = {
+		death = "1250.1.1"
+	}
+}
+91316 = {
+	name = "Randulf"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91313 #Robert
+	1160.1.1 = {
+		birth = "1160.1.1"
+	}
+	1251.1.1 = {
+		death = "1251.1.1"
+	}
+}
+91317 = {
+	name = "Ralph"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91316 #Randulf
+	1200.1.1 = {
+		birth = "1200.1.1"
+	}
+	1258.3.31 = {
+		death = "1258.3.31"
+	}
+}
+91318 = {
+	name = "Berthildis"
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91316 #Randulf
+	1205.1.1 = {
+		birth = "1205.1.1"
+	}
+	1265.1.1 = {
+		death = "1265.1.1"
+	}
+}
+91319 = {
+	name = "Randulf"
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91316 #Randulf
+	1210.1.1 = {
+		birth = "1210.1.1"
+	}
+	1270.1.1 = {
+		death = "1270.1.1"
+	}
+}
+91320 = {
+	name = "Mari"
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91317 #Ralph
+	1240.1.1 = {
+		birth = "1240.1.1"
+	}
+	1320.1.1 = {
+		death = "1320.1.1"
+	}
+}
+91321 = {
+	name = "Janed"
+	female = yes
+	dynasty_house = house_penthievre #Rennes house of Penthièvre-Middleham
+	religion = "catholic"
+	culture = "gallo"
+	father = 91317 #Ralph
+	1245.1.1 = {
+		birth = "1245.1.1"
+	}
+	1310.1.1 = {
+		death = "1310.1.1" #before the 1st of april, 1310
+	}
+}
+#######################################
+# de gael
+#######################################
+204591 = {
+	name = "Amice"
+	female = yes
+	dynasty = 559
+	martial = 8
+	diplomacy = 5
+	intrigue = 8
+	stewardship = 6
+	religion = "catholic"
+	culture = "gallo"
+	trait = cynical
+	trait = education_learning_3
+	father = 161429
+	1105.1.2 = {
+		birth = "1105.1.2"
+	}
+	1168.8.31 = {
+		death = "1168.8.31"
+	}
+}
+5650 = {
+	name = "Ralf"
+	# AKA: Radulf 'Stalre'
+	dynasty = 559
+	martial = 4
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 6
+	religion = "catholic"
+	culture = "gallo"
+	trait = craven
+	trait = education_martial_2
+	1011.1.1 = {
+		birth = "1011.1.1"
+	}
+	1068.1.1 = {
+		death = "1068.1.1"
+	}
+}
+5652 = {
+	name = "Ralf"
+	# AKA Radulf 'de Guader'
+	dynasty = 559
+	martial = 5
+	diplomacy = 7
+	intrigue = 5
+	stewardship = 6
+	religion = "catholic"
+	culture = "gallo"
+	trait = deceitful
+	trait = just
+	trait = education_martial_3
+	father = 5650
+	1040.1.2 = {
+		birth = "1040.1.2"
+	}
+	1066.1.1 = {
+		employer = 140
+	}
+	1096.1.2 = {
+		death = "1096.1.2"
+	}
+}
+161427 = {
+	name = "Harduin"
+	dynasty = 559
+	religion = "catholic"
+	culture = "gallo"
+	father = 5650
+	1042.1.1 = {
+		birth = "1042.1.1"
+	}
+	1066.1.1 = {
+		employer = 140
+	}
+	1069.1.1 = {
+		death = "1069.1.1"
+	}
+}
+161428 = {
+	name = "Gwilherm"
+	dynasty = 559
+	religion = "catholic"
+	culture = "gallo"
+	father = 5652
+	1070.1.1 = {
+		birth = "1070.1.1"
+	}
+	
+	1090.1.1 = {
+		death = "1090.1.1"
+	}
+}
+161429 = {
+	name = "Riwal"
+	dynasty = 559
+	religion = "catholic"
+	culture = "gallo"
+	father = 5652
+	1072.1.1 = {
+		birth = "1072.1.1"
+	}
+	1125.1.1 = {
+		death = "1125.1.1"
+	}
+}
+161430 = {
+	name = "Alan"
+	dynasty = 559
+	religion = "catholic"
+	culture = "gallo"
+	father = 5652
+	1074.1.1 = {
+		birth = "1074.1.1"
+	}
+	1100.1.1 = {
+		death = "1100.1.1"
+	}
+}
+#######################################
+# Naoned
+#######################################
+160077 = {
+	name = "Ridoredh" #
+	dynasty_house = house_naoned #Naoned
+	religion = "catholic"
+	culture = "gallo"
+	father = 159965
+	martial = 8
+	diplomacy = 6
+	intrigue = 6
+	stewardship = 6
+	trait = ambitious
+	trait = diligent
+	trait = calm
+	trait = humble
+	trait = education_martial_3
+	849.1.1 = {
+		birth = "849.1.1"
+	}
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+160078 = {
+	name = "Gourmaelon" #
+	dynasty_house = house_naoned #Naoned
+	religion = "catholic"
+	culture = "gallo"
+	father = 160077
+	865.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 163105 # Duke of Brittany
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+160079 = {
+	name = "Pascueten" #
+	dynasty_house = house_naoned #Naoned
+	religion = "catholic"
+	culture = "gallo"
+	father = 160077
+	866.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 163105 # Duke of Brittany
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House Rieux
+#######################################
+159699 = {
+	name = "Rudalt"
+	religion = "catholic"
+	culture = "gallo"
+	dynasty_house = house_rieux #de Rieux
+	father = 159698
+	880.1.1 = {
+		birth = "880.1.1"
+	}
+	917.1.1 = {
+		death = "917.1.1"
+	}
+}
+159700 = {
+	name = "Alan"
+	religion = "catholic"
+	culture = "gallo"
+	dynasty_house = house_rieux #de Rieux
+	father = 159699
+	910.1.1 = {
+		birth = "910.1.1"
+	}
+	987.1.1 = {
+		death = "987.1.1"
+	}
+}
+159701 = {
+	name = "Rudalt"
+	religion = "catholic"
+	culture = "gallo"
+	dynasty_house = house_rieux #de Rieux
+	father = 159700
+	950.1.1 = {
+		birth = "950.1.1"
+	}
+	1021.1.1 = {
+		death = "1021.1.1"
+	}
+}
+159702 = {
+	name = "Alan"
+	religion = "catholic"
+	culture = "gallo"
+	dynasty_house = house_rieux #de Rieux
+	father = 159701
+	980.1.1 = {
+		birth = "980.1.1"
+	}
+	1051.1.1 = {
+		death = "1051.1.1"
+	}
+}
+159703 = {
+	name = "Rudalt"
+	religion = "catholic"
+	culture = "gallo"
+	dynasty_house = house_rieux #de Rieux
+	father = 159702
+	1020.1.1 = {
+		birth = "1020.1.1"
+	}
+	1066.1.1 = {
+		death = "1066.1.1"
+	}
+}
+159704 = {
+	name = "Iocilin"
+	religion = "catholic"
+	culture = "gallo"
+	dynasty_house = house_rieux #de Rieux
+	father = 159703
+	1045.1.1 = {
+		birth = "1045.1.1"
+	}
+	1107.1.1 = {
+		death = "1107.1.1"
+	}
+}
+159705 = {
+	name = "Raoul"
+	religion = "catholic"
+	culture = "gallo"
+	dynasty_house = house_rieux #de Rieux
+	father = 159703
+	1045.1.1 = {
+		birth = "1045.1.1"
+	}
+	1064.1.1 = {
+		death = "1064.1.1"
+	}
+}
+159706 = {
+	name = "Alan"
+	religion = "catholic"
+	culture = "gallo"
+	dynasty_house = house_rieux #de Rieux
+	father = 159705
+	1064.1.1 = {
+		birth = "1064.1.1"
+	}
+	1124.1.1 = {
+		death = "1124.1.1"
+	}
+}
+159707 = {
+	name = "GuE_thenoc"
+	religion = "catholic"
+	culture = "gallo"
+	dynasty_house = house_rieux #de Rieux
+	father = 159704
+	1061.1.1 = {
+		birth = "1061.1.1"
+	}
+	1127.1.1 = {
+		death = "1127.1.1"
+	}
+}
+#######################################
 # NAME Dynasty
 #######################################
 
+#######################################
+# NAME Dynasty
+#######################################

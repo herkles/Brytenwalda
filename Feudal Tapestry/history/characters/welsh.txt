@@ -1,992 +1,991 @@
 ﻿#######################################
 # House Aberffraw
 #######################################
-	184089 = {# Merfyn
-		name = "Merfyn" #ap Rhodri
-		dynasty_house = house_british_isles_aberffraw #Aberffraw for tree appearance
-		religion = "catholic"
-		culture = "welsh"
-		father = 81831 #Rhodri Mawr
-		865.1.1 = {
-			birth = "865.1.1"	#unknown
-		}
-		900.1.1 = {
-			death = "900.1.1"
-		}
+184089 = {# Merfyn
+	name = "Merfyn" #ap Rhodri
+	dynasty_house = house_british_isles_aberffraw #Aberffraw for tree appearance
+	religion = "catholic"
+	culture = "welsh"
+	father = 81831 #Rhodri Mawr
+	865.1.1 = {
+		birth = "865.1.1"	#unknown
 	}
-	184090 = {# Llywelyn
-		name = "Llywelyn"
-		dynasty_house = house_british_isles_aberffraw #Aberffraw for tree appearance
-		religion = "catholic"
-		culture = "welsh"
-		father = 184089
-		890.1.1 = {
-			birth = "890.1.1"	#unknown
-		}
-		942.1.1 = {
-			death = "942.1.1"
-		}
+	900.1.1 = {
+		death = "900.1.1"
 	}
-	214700 = {# Dafydd
-		name = "Dafydd"
-		# AKA: Dafydd ab Owain
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		trait = kinslayer_3
-		father = 214710 #Owain ap Gruffydd
-		mother = 214808 #Crisiant ferch Gronw
-		1134.1.1 = {
-			birth = "1134.1.1"
-		}
-		1173.1.1 = {
-			add_spouse = 204499 #Emma d'Anjou
-		}
-		1203.1.1 = {
-			death = "1203.1.1"
-		}
+}
+184090 = {# Llywelyn
+	name = "Llywelyn"
+	dynasty_house = house_british_isles_aberffraw #Aberffraw for tree appearance
+	religion = "catholic"
+	culture = "welsh"
+	father = 184089
+	890.1.1 = {
+		birth = "890.1.1"	#unknown
 	}
-	214701 = {# Owain ap Dafydd
-		name = "Owain"
-		# AKA: Owain ap Dafydd
-		dynasty_house = house_british_isles_aberffraw
-		martial = 7
-		diplomacy = 8
-		intrigue = 5
-		stewardship = 8
-		religion = "catholic"
-		culture = "welsh"
-		trait = deceitful
-		trait = humble
-		trait = education_martial_2
-		father = 214700
-		mother = 204499
-		1174.1.2 = {
-			birth = "1174.1.2"
-		}
-		1224.1.2 = {
-			death = "1224.1.2"
-		}
+	942.1.1 = {
+		death = "942.1.1"
 	}
-	214702 = {# Gwenhwyfar ferch Dafydd
-		name = "Gwenhwyfar"
-		# AKA: Gwenhwyfar ferch Dafydd
-		female = yes
-		dynasty_house = house_british_isles_aberffraw
-		martial = 8
-		diplomacy = 8
-		intrigue = 7
-		stewardship = 7
-		religion = "catholic"
-		culture = "welsh"
-		trait = craven
-		trait = education_stewardship_2
-		father = 214700
-		mother = 204499
-		1175.1.2 = {
-			birth = "1175.1.2"
-		}
-		1225.1.2 = {
-			death = "1225.1.2"
-		}
+}
+214700 = {# Dafydd
+	name = "Dafydd"
+	# AKA: Dafydd ab Owain
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	trait = kinslayer_3
+	father = 214710 #Owain ap Gruffydd
+	mother = 214808 #Crisiant ferch Gronw
+	1134.1.1 = {
+		birth = "1134.1.1"
 	}
-	214703 = {# Gwenllian ferch Dafydd
-		name = "Gwenllian"
-		# AKA: Gwenllian ferch Dafydd
-		female = yes
-		dynasty_house = house_british_isles_aberffraw
-		martial = 5
-		diplomacy = 6
-		intrigue = 6
-		stewardship = 8
-		religion = "catholic"
-		culture = "welsh"
-		trait = chaste
-		trait = arbitrary
-		trait = education_stewardship_2
-		father = 214700
-		mother = 204499
-		1176.1.2 = {
-			birth = "1176.1.2"
-		}
-		1226.1.2 = {
-			death = "1226.1.2"
-		}
+	1173.1.1 = {
+		add_spouse = 204499 #Emma d'Anjou
 	}
-	214704 = {# Einion ap Dafydd
-		name = "Einion"
-		# AKA: Einion ap Dafydd
-		dynasty_house = house_british_isles_aberffraw
-		martial = 6
-		diplomacy = 8
-		intrigue = 5
-		stewardship = 4
-		religion = "catholic"
-		culture = "welsh"
-		trait = brave
-		trait = education_martial_2
-		father = 214700
-		mother = 204499
-		1177.1.2 = {
-			birth = "1177.1.2"
-		}
-		1227.1.2 = {
-			death = "1227.1.2"
-		}
+	1203.1.1 = {
+		death = "1203.1.1"
 	}
-	214710 = {#  Owain ap Gruffydd
-		name = "Owain"
-		# AKA: Owain ap Gruffydd
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81031 #Gruffyd ap Cynan
-		mother = 214814 #Angharad ferch Owain
-		trait = lustful
-		1100.1.1 = {
-			birth = "1100.1.1"
-		}
-		1130.1.1 = {
-			add_spouse = 214711 #Gwladys Aberffraw
-		}
-		1135.1.1 = {
-			remove_spouse = 214711
-		}
-		1136.1.1 = {
-			add_spouse = 214808 #Crisiant ferch Gronw
-		}
-		1169.11.1 = {
-			death = "1169.11.1"
-		}
+}
+214701 = {# Owain ap Dafydd
+	name = "Owain"
+	# AKA: Owain ap Dafydd
+	dynasty_house = house_british_isles_aberffraw
+	martial = 7
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 8
+	religion = "catholic"
+	culture = "welsh"
+	trait = deceitful
+	trait = humble
+	trait = education_martial_2
+	father = 214700
+	mother = 204499
+	1174.1.2 = {
+		birth = "1174.1.2"
 	}
-	214711 = {# Gwladys
-		name = "Gwladus" #ferch Llywarch
-		# AKA: Gwladys
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		female = yes
-		religion = "catholic"
-		culture = "welsh"
-		father = 138478 # Llywarch ap Trahaiarn
-		1100.1.1 = {
-			birth = "1100.1.1" #unknown
-		}
-		#married Owain ap Gruffydd of Gwynedd
-		1161.1.1 = {
-			death = "1161.1.1"
-		}
+	1224.1.2 = {
+		death = "1224.1.2"
 	}
-	214712 = {# Iorwerth ap Owain
-		name = "Iorwerth_Drwyndwyn" #flatnose
-		# AKA: Iorwerth ap Owain
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 214710 #Owain ap Gruffydd
-		mother = 214711 #Gwladys Aberffraw
-		trait = beauty_bad_2
-		1132.1.1 = {
-			birth = "1132.1.1"
-		}
-		1167.1.1 = {
-			add_spouse = 214717 #Marared of Powys
-		}
-		1174.1.1 = {
-			death = "1174.1.1"
-		}
+}
+214702 = {# Gwenhwyfar ferch Dafydd
+	name = "Gwenhwyfar"
+	# AKA: Gwenhwyfar ferch Dafydd
+	female = yes
+	dynasty_house = house_british_isles_aberffraw
+	martial = 8
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = "welsh"
+	trait = craven
+	trait = education_stewardship_2
+	father = 214700
+	mother = 204499
+	1175.1.2 = {
+		birth = "1175.1.2"
 	}
-	214714 = {# Llywelyn ab Iorwerth
-		name = "Llywelyn"
-		# AKA: Llywelyn ab Iorwerth
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 214712 #Iorwerth ap Owain
-		mother = 214717 #Marared of Powys
-		1173.1.1 = {
-			birth = "1173.1.1"
-			give_nickname = nick_the_great
-		}
-		1205.4.16 = {
-			add_spouse = 138451 # Joan of England
-		}
-		1237.1.1 = {
-			trait = incapable
-		}
-		1240.4.11 = {
-			death = "1240.4.11"
-		}
+	1225.1.2 = {
+		death = "1225.1.2"
 	}
-	214715 = {# Rhun ab Owain
-		name = "Rhun"
-		# AKA: Rhun ab Owain
-		dynasty_house = house_british_isles_aberffraw
-		martial = 9
-		diplomacy = 7
-		intrigue = 8
-		stewardship = 8
-		religion = "catholic"
-		culture = "welsh"
-		trait = brave
-		trait = diligent
-		trait = just
-		trait = calm
-		father = 214710
-		mother = 214713
-		1130.1.2 = {
-			birth = "1130.1.2"
-		}
-		1146.1.8 = {
-			death = "1146.1.8"
-		}
+}
+214703 = {# Gwenllian ferch Dafydd
+	name = "Gwenllian"
+	# AKA: Gwenllian ferch Dafydd
+	female = yes
+	dynasty_house = house_british_isles_aberffraw
+	martial = 5
+	diplomacy = 6
+	intrigue = 6
+	stewardship = 8
+	religion = "catholic"
+	culture = "welsh"
+	trait = chaste
+	trait = arbitrary
+	trait = education_stewardship_2
+	father = 214700
+	mother = 204499
+	1176.1.2 = {
+		birth = "1176.1.2"
 	}
-	214716 = {# Hywel ab Owain
-		name = "Hywel"
-		# AKA: Hywel ab Owain
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 214710 #Owain ap Gruffydd
-		mother = 214713
-		trait = bastard
-		1131.1.1 = {
-			birth = "1131.1.1"
-		}
-		1170.1.1 = {
-			death = "1170.1.1"
-		}
+	1226.1.2 = {
+		death = "1226.1.2"
 	}
-	214721 = {# Gwenllian ferch Owain ap Gruffydd
-		name = "Gwenllian" #of Gwynedd
-		# AKA: Gwenllian ferch Owain ap Gruffydd
-		female = yes
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 214710 # Owain ap Gruffydd
-		trait = bastard
-		1140.1.1 = {
-			birth = "1140.1.1" #unknown
-		}
-		1180.1.1 = {
-			death = "1180.1.1" #unknown
-		}
+}
+214704 = {# Einion ap Dafydd
+	name = "Einion"
+	# AKA: Einion ap Dafydd
+	dynasty_house = house_british_isles_aberffraw
+	martial = 6
+	diplomacy = 8
+	intrigue = 5
+	stewardship = 4
+	religion = "catholic"
+	culture = "welsh"
+	trait = brave
+	trait = education_martial_2
+	father = 214700
+	mother = 204499
+	1177.1.2 = {
+		birth = "1177.1.2"
 	}
-	214811 = {# Gwenllian ferch Gruffydd
-		name = "Gwenllian"
-		# AKA: Gwenllian ferch Gruffydd
-		female = yes
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81031 #Gruffyd ap Cynan
-		mother = 214814 #Angharad ferch Owain
-		1105.1.1 = {
-			birth = "1105.1.1"
-		}
-		#1116 married Gruffyd ap Rhys of Dyfed
-		1136.1.1 = {
-			death = "1136.1.1"
-		}
+	1227.1.2 = {
+		death = "1227.1.2"
 	}
-	420000 = {# Gruffydd
-		name = "Gruffydd" #ap Llywelyn
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 214714 #Llywelyn ab Iorwerth
-		trait = bastard
-		1204.1.1 = {
-			birth = "1204.1.1"
-		}
-		1244.3.1 = {
-			death = "1244.3.1"
-		}
+}
+214710 = {#  Owain ap Gruffydd
+	name = "Owain"
+	# AKA: Owain ap Gruffydd
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81031 #Gruffyd ap Cynan
+	mother = 214814 #Angharad ferch Owain
+	trait = lustful
+	1100.1.1 = {
+		birth = "1100.1.1"
 	}
-	420001 = {# Llywelyn
-		name = "Llywelyn" #ap Gruffydd
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 420000 #Gruffydd ap Llywelyn
-		1234.1.1 = {
-			birth = "1234.1.1"
-		}
-		1278.10.13 = {
-			add_spouse = 144182 #Eleanor de Montfort
-		}
-		1282.12.10 = {
-			death = "1282.12.10"
-		}
+	1130.1.1 = {
+		add_spouse = 214711 #Gwladys Aberffraw
 	}
-	420002 = {# Dafydd
-		name = "Dafydd" #ap Gruffydd
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 420000 #Gruffydd ap Llywelyn
-		1235.1.1 = {
-			birth = "1235.1.1"
-		}
-		#married Elizabeth Ferrers
-		1283.9.29 = {
-			death = "1283.9.29"
-		}
+	1135.1.1 = {
+		remove_spouse = 214711
 	}
-	420003 = {# Owain Goch
-		name = "Owain_Goch" #ap Gruffyd
-		# AKA: Owain Goch
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 420000 #Gruffydd ap Llywelyn
-		1221.1.1 = {
-			birth = "1221.1.1"
-		}
-		1282.1.1 = {
-			death = "1282.1.1"
-		}
+	1136.1.1 = {
+		add_spouse = 214808 #Crisiant ferch Gronw
 	}
-	420004 = {# Rhodri ap Llywelyn
-		name = "Rhodri" #ap Gruffyd
-		# AKA: Rhodri ap Llywelyn
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 420000 #Gruffydd ap Llywelyn
-		1231.1.1 = {
-			birth = "1231.1.1"
-		}
-		1315.1.1 = {
-			death = "1315.1.1"
-		}
+	1169.11.1 = {
+		death = "1169.11.1"
 	}
-	138464 = {# Idwal Fychan
-		name = "Idwal_Fychan" #the small ap Idwal
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81829 #Idwal Foel
-		920.1.1 = {
-			birth = "920.1.1"
-		}
-		979.1.1 = {
-			death = "979.1.1"
-		}
+}
+214711 = {# Gwladys
+	name = "Gwladus" #ferch Llywarch
+	# AKA: Gwladys
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	female = yes
+	religion = "catholic"
+	culture = "welsh"
+	father = 138478 # Llywarch ap Trahaiarn
+	1100.1.1 = {
+		birth = "1100.1.1" #unknown
 	}
-	138466 = {# Idwal
-		name = "Idwal" # ap Rhodri
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81831 #Rhodri Mawr
-		trait = legitimized_bastard
-		865.1.1 = {
-			birth = "865.1.1"
-		}
-		943.1.1 = {
-			death = "943.1.1"
-		}
+	#married Owain ap Gruffydd of Gwynedd
+	1161.1.1 = {
+		death = "1161.1.1"
 	}
-	138468 = {# Cadwallon
-		name = "Cadwallon" # ap Gruffydd
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81031 #Gruffydd ap Cynan
-		trait = bastard
-		1095.1.1 = {
-			birth = "1095.1.1"
-		}
-		1132.1.1 = {
-			death = "1132.1.1"
-		}
+}
+214712 = {# Iorwerth ap Owain
+	name = "Iorwerth_Drwyndwyn" #flatnose
+	# AKA: Iorwerth ap Owain
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 214710 #Owain ap Gruffydd
+	mother = 214711 #Gwladys Aberffraw
+	trait = beauty_bad_2
+	1132.1.1 = {
+		birth = "1132.1.1"
 	}
-	138470 = {# Cadwaladr
-		name = "Cadwaladr" # ap Gruffydd
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81031 #Gruffyd ap Cynan
-		mother = 214814 #Angharad ferch Owain
-		1102.1.1 = {
-			birth = "1102.1.1"
-		}
-		#married Alice de Clare
-		1172.3.1 = {
-			death = "1172.3.1"
-		}		
+	1167.1.1 = {
+		add_spouse = 214717 #Marared of Powys
 	}
-	138472 = {# Gruffydd
-		name = "Gruffydd" #ap Iago
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81825 #Iago ap Idwal
-		1014.1.1 = {
-			birth = "1014.1.1"
-		}
-		1060.1.1 = {
-			death = "1060.1.1"
-		}
+	1174.1.1 = {
+		death = "1174.1.1"
 	}
-	138474 = {# Caradog
-		name = "Caradog" #ap Gruffydd
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 138472 #Gruffydd ap Iago
-		1033.1.1 = {
-			birth = "1033.1.1"
-			add_pressed_claim = title:d_gwynedd
-		}
-		1074.1.1 = {
-			death = "1074.1.1"
-		}
+}
+214714 = {# Llywelyn ab Iorwerth
+	name = "Llywelyn"
+	# AKA: Llywelyn ab Iorwerth
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 214712 #Iorwerth ap Owain
+	mother = 214717 #Marared of Powys
+	1173.1.1 = {
+		birth = "1173.1.1"
+		give_nickname = nick_the_great
 	}
-	138476 = {# Trahaearn
-		name = "Trahaearn" #ap Caradog
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 138474 #Caradog ap Gruffydd
-		1050.1.1 = {
-			birth = "1050.1.1"
-		}
-		1074.1.1 = {
-			add_pressed_claim = title:d_gwynedd
-		}
-		1081.1.1 = {
-			death = "1081.1.1"
-		}	
+	1205.4.16 = {
+		add_spouse = 138451 # Joan of England
 	}
-	138478 = {# Llywarch
-		name = "Llywarch" #ap Trahaiarn
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 138476 # Trahaiarn ap Caradog
-		1070.1.1 = {
-			birth = "1070.1.1"
-		}
-		1107.1.1 = {
-			death = "1107.1.1"
-		}	
+	1237.1.1 = {
+		trait = incapable
 	}
-	159000 = {# Hywel
-		name = "Hywel" # ap Iago
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 159004 # Iago ap Idwal
-		938.1.1 = {
-			birth = "938.1.1"	#unknown
-		}
-		997.1.1 = {
-			death = "997.1.1"
-		}
+	1240.4.11 = {
+		death = "1240.4.11"
 	}
-	159001 = {# Cynan
-		name = "Cynan" # ap Hywel
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 159000 # Hywel ap Iago
-		955.1.1 = {
-			birth = "955.1.1"	#unknown
-		}
-		1015.1.1 = {
-			death = "1015.1.1"
-		}
+}
+214715 = {# Rhun ab Owain
+	name = "Rhun"
+	# AKA: Rhun ab Owain
+	dynasty_house = house_british_isles_aberffraw
+	martial = 9
+	diplomacy = 7
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = "welsh"
+	trait = brave
+	trait = diligent
+	trait = just
+	trait = calm
+	father = 214710
+	mother = 214713
+	1130.1.2 = {
+		birth = "1130.1.2"
 	}
-	159004 = {# Iago
-		name = "Iago" # ap Idwal Foel
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81829 # Idwal Foel
-		920.1.1 = {
-			birth = "920.1.1"	#unknown
-		}
-		979.1.1 = {
-			death = "979.1.1"
-		}
+	1146.1.8 = {
+		death = "1146.1.8"
 	}
-	159005 = {# Hywel
-		name = "Hywel" # ap Idwal Ieuaf ap Idwal Foel
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81828 #Idwal Ieuaf
-		940.1.1 = {
-			birth = "940.1.1"
-		}
-		985.1.1 = {
-			death = "985.1.1"
-		}
+}
+214716 = {# Hywel ab Owain
+	name = "Hywel"
+	# AKA: Hywel ab Owain
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 214710 #Owain ap Gruffydd
+	mother = 214713
+	trait = bastard
+	1131.1.1 = {
+		birth = "1131.1.1"
 	}
-	159006 = {# Cadwallon
-		name = "Cadwallon" # ap Idwal Ieuaf ap Idwal Foel
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81828 #Idwal Ieuaf
-		941.1.1 = {
-			birth = "941.1.1"
-		}
-		987.1.1 = {
-			death = "987.1.1"
-		}
+	1170.1.1 = {
+		death = "1170.1.1"
 	}
-	138486 = {# Dafydd
-		name = "Dafydd" #ap Llywelyn
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 214714 #Llywelyn ab Iorwerth
-		mother = 138451 #Joan of England
-		1208.1.1 = {
-			birth = "1208.1.1"
-		}
-		#1230 married Isabel de Briouse
-		1230.1.1 = {
-			add_spouse = 161621
-		}
-		1237.1.1 = {
-			employer = 214714 #Llywelyn ab Iorwerth
-		}
-		1240.4.11 = {
-			employer = 0 #Becomes duke of Gwynedd
-		}
-		1246.1.1 = {
-			death = "1246.1.1"
-		}
+}
+214721 = {# Gwenllian ferch Owain ap Gruffydd
+	name = "Gwenllian" #of Gwynedd
+	# AKA: Gwenllian ferch Owain ap Gruffydd
+	female = yes
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 214710 # Owain ap Gruffydd
+	trait = bastard
+	1140.1.1 = {
+		birth = "1140.1.1" #unknown
 	}
-	138487 = {# Helen
-		name = "Helen" #ferch Llywelyn
-		female = yes
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 214714 #Llywelyn ab Iorwerth
-		mother = 138451 #Joan of England
-		1206.1.1 = {
-			birth = "1206.1.1"
-		}	
-		#1222 married John the Scot of Huntingdon
-		#married 1237 Robert de Quincy
-		1253.10.24 = {
-			death = "1253.10.24"
-		}
+	1180.1.1 = {
+		death = "1180.1.1" #unknown
 	}
-	159041 = {# Elisedd
-		name = "Elisedd" # ap Idwal
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81829 # Cadwaladr
-		906.1.1 = {
-			birth = "906.1.1"
-		}
-		942.1.1 = {
-			death = "942.1.1"
-		}
+}
+214811 = {# Gwenllian ferch Gruffydd
+	name = "Gwenllian"
+	# AKA: Gwenllian ferch Gruffydd
+	female = yes
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81031 #Gruffyd ap Cynan
+	mother = 214814 #Angharad ferch Owain
+	1105.1.1 = {
+		birth = "1105.1.1"
 	}
-	159042 = {# Prawst
-		name = "Prawst" # ferch Elisedd
-		female = yes
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 159041 # Elisedd
-		942.1.1 = {
-			birth = "942.1.1"
-		}
-		970.1.2 = {
-			add_spouse = 81820
-		}
-		1000.1.1 = {
-			death = "1000.1.1"
-		}
+	#1116 married Gruffyd ap Rhys of Dyfed
+	1136.1.1 = {
+		death = "1136.1.1"
 	}
-	161615 = {# Gwladus
-		name = "Gwladus" #ferch Llywelyn
-		female = yes
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		trait = bastard
-		father = 214714 #Llywelyn ab Iorwerth
-		1210.1.1 = {
-			birth = "1210.1.1"
-		}	
-		1251.1.1 = {
-			death = "1251.1.1"
-		}
+}
+420000 = {# Gruffydd
+	name = "Gruffydd" #ap Llywelyn
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 214714 #Llywelyn ab Iorwerth
+	trait = bastard
+	1204.1.1 = {
+		birth = "1204.1.1"
 	}
-	159313 = {# Crusli
-		name = "Crusli" #
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		female = yes
-		religion = "catholic"
-		culture = "welsh"
-		father = 81826
-		960.1.1 = {
-			birth = "960.1.1"
-		}
-		980.1.1 = {
-			add_spouse = 159311
-		}
-		1030.1.2 = {
-			death = "1030.1.2"
-		}
+	1244.3.1 = {
+		death = "1244.3.1"
 	}
-	159375 = {# Elen
-		name = "Elen" #ferch Rhodri Mawr
-		female = yes
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81831 #Rhodri Mawr
-		855.1.1 = {
-			birth = "855.1.1"	#unknown
-		}
-		935.1.1 = {
-			death = "935.1.1"
-		}
+}
+420001 = {# Llywelyn
+	name = "Llywelyn" #ap Gruffydd
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 420000 #Gruffydd ap Llywelyn
+	1234.1.1 = {
+		birth = "1234.1.1"
 	}
-	159803 = {# Nest
-		name = "Nest" # ferch Rhodri
-		female = yes
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81831 #Rhodri Mawr
-		mother = 159802
-		854.1.1 = {
-			birth = "854.1.1"
-		}
-		911.1.1 = {
-			death = "911.1.1"
-		}
+	1278.10.13 = {
+		add_spouse = 144182 #Eleanor de Montfort
 	}
-	159804 = {# Tudwal
-		name = "Tudwal" # ap Rhodri
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81831 #Rhodri Mawr
-		mother = 159802
-		859.1.1 = {
-			birth = "859.1.1"
-		}
-		905.1.1 = {
-			death = "905.1.1"
-		}
+	1282.12.10 = {
+		death = "1282.12.10"
 	}
-	159805 = {# Merfyn
-		name = "Merfyn" # ap Rhodri
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81831 #Rhodri Mawr
-		mother = 159802
-		852.1.1 = {
-			birth = "852.1.1"
-		}
-		910.1.1 = {
-			death = "910.1.1"
-		}
+}
+420002 = {# Dafydd
+	name = "Dafydd" #ap Gruffydd
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 420000 #Gruffydd ap Llywelyn
+	1235.1.1 = {
+		birth = "1235.1.1"
 	}
-	138449 = {# Susann
-		name = "Susann" #ferch Gruffydd
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		female = yes
-		religion = "catholic"
-		culture = "welsh"
-		father = 81031 #Gruffyd ap Cynan
-		mother = 214814 #Angharad ferch Owain
-		1110.1.1 = {
-			birth = "1110.1.1"
-		}
-		#married Madog ap Maredudd of Powys 214718
-		1161.1.1 = {
-			death = "1161.1.1"
-		}	
+	#married Elizabeth Ferrers
+	1283.9.29 = {
+		death = "1283.9.29"
 	}
-	232002 = {# Rhodri
-		name = "Rhodri"
-		# AKA: Rhodri ab Owain
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		trait = kinslayer_3
-		father = 214710 #Owain ap Gruffydd
-		mother = 214808 #Crisiant ferch Gronw
-		1136.1.1 = {
-			birth = "1136.1.1"
-		}
-		1179.1.1 = {
-			add_spouse = 214805 #Nest of Deheubarth
-		}
-		1195.1.1 = {
-			death = "1195.1.1"
-		}
+}
+420003 = {# Owain Goch
+	name = "Owain_Goch" #ap Gruffyd
+	# AKA: Owain Goch
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 420000 #Gruffydd ap Llywelyn
+	1221.1.1 = {
+		birth = "1221.1.1"
 	}
-	232003 = {# Tomas
-		name = "Tomas"
-		# AKA: Tomas ap Rhodri
-		dynasty_house = house_british_isles_aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 232002 #Rhodri ab Owain
-		1179.1.1 = {
-			birth = "1179.1.1"
-		}
-		1229.1.1 = {
-			death = "1229.1.1"
-		}
+	1282.1.1 = {
+		death = "1282.1.1"
 	}
-	232004 = {# Gruffyd
-		name = "Gruffyd"
-		# AKA: Gruffyd ap Rhodri
-		dynasty_house = house_british_isles_aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 232002 #Rhodri ab Owain
-		1180.1.1 = {
-			birth = "1180.1.1"
-		}
-		1230.1.1 = {
-			death = "1230.1.1"
-		}
+}
+420004 = {# Rhodri ap Llywelyn
+	name = "Rhodri" #ap Gruffyd
+	# AKA: Rhodri ap Llywelyn
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 420000 #Gruffydd ap Llywelyn
+	1231.1.1 = {
+		birth = "1231.1.1"
 	}
-	232005 = {# Einion
-		name = "Einion"
-		# AKA: Einion ap Rhodri
-		dynasty_house = house_british_isles_aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 232002 #Rhodri ab Owain
-		1181.1.1 = {
-			birth = "1181.1.1"
-		}
-		1231.1.1 = {
-			death = "1231.1.1"
-		}
+	1315.1.1 = {
+		death = "1315.1.1"
 	}
-	420005 = {# Tomas
-		name = "Tomas"
-		# AKA: Tomas ap Rhodri
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 420004 #Rhodri ap Gruffyd
-		1300.1.1 = {
-			birth = "1300.1.1"
-		}
-		1363.1.1 = {
-			death = "1363.1.1"
-		}
+}
+138464 = {# Idwal Fychan
+	name = "Idwal_Fychan" #the small ap Idwal
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81829 #Idwal Foel
+	920.1.1 = {
+		birth = "920.1.1"
 	}
-	420006 = {# Owain Lawgoch
-		name = "Owain"
-		# AKA: Owain Lawgoch
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 420005 #Tomas ap Gruffyd
-		1330.1.1 = {
-			birth = "1330.1.1"
-		}
-		1380.1.1 = {
-			death = "1380.1.1"
-		}
+	979.1.1 = {
+		death = "979.1.1"
 	}
-	81030 = {# Cynan
-		name = "Cynan" #ap Iago
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81825 #Iago ap Idwal
-		1014.1.1 = {
-			birth = "1014.1.1"
-		}
-		1038.1.1 = {
-			add_spouse = 1029 #Ragnhild dghtr of Olav King of Dublin
-		}
-		1063.1.1 = {
-			death = "1063.1.1"
-		}
+}
+138466 = {# Idwal
+	name = "Idwal" # ap Rhodri
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81831 #Rhodri Mawr
+	trait = legitimized_bastard
+	865.1.1 = {
+		birth = "865.1.1"
 	}
-	81031 = {# Gruffydd
-		name = "Gruffydd" #ap Cynan
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81030 # Cynan ap Iago
-		mother = 1029 #Ragnhild erv Olav
-		1055.1.1 = {
-			birth = "1055.1.1"
-			add_pressed_claim = title:d_gwynedd
-			add_pressed_claim = title:c_dublin
-		}
-		1095.1.1 = {
-			add_spouse = 214814 #Angharad ferch Owain
-		}	
-		1137.1.1 = {
-			death = "1137.1.1"
-		}
+	943.1.1 = {
+		death = "943.1.1"
 	}
-	81824 = {# Cadell
-		name = "Cadell" #ap Rhodri King of Seisyllwg
-		dynasty_house = house_british_isles_aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81831 #Rhodri Mawr
-		mother = 159802
-		853.1.1 = {
-			birth = "853.1.1"	#unknown
-		}
-		880.1.1 = {
-			dynasty_house = house_british_isles_dinefwr #Dinefrw
-		}
-		935.1.1 = {
-			death = "935.1.1"
-		}
+}
+138468 = {# Cadwallon
+	name = "Cadwallon" # ap Gruffydd
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81031 #Gruffydd ap Cynan
+	trait = bastard
+	1095.1.1 = {
+		birth = "1095.1.1"
 	}
-	81825 = {# Iago
-		name = "Iago" #ap Idwal
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81826 #Idwal ap Meuric
-		970.1.1 = {
-			birth = "970.1.1"	#unknown
-		}
-		1039.1.1 = {
-			death = "1039.1.1"
-		}
+	1132.1.1 = {
+		death = "1132.1.1"
 	}
-	81826 = {# Idwal
-		name = "Idwal" # ap Meuric
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81827 # Meuric ap Idwal
-		940.1.1 = {
-			birth = "940.1.1"	#unknown
-		}
-		996.1.1 = {
-			death = "996.1.1"
-		}
+}
+138470 = {# Cadwaladr
+	name = "Cadwaladr" # ap Gruffydd
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81031 #Gruffyd ap Cynan
+	mother = 214814 #Angharad ferch Owain
+	1102.1.1 = {
+		birth = "1102.1.1"
 	}
-	81827 = {# Meuric
-		name = "Meuric" #ap Idwal
-		# AKA: Meurig
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 138466 #Idwal ap Rhodri
-		920.1.1 = {
-			birth = "920.1.1"	#unknown
-		}
-		986.1.1 = {
-			death = "986.1.1"
-		}
+	#married Alice de Clare
+	1172.3.1 = {
+		death = "1172.3.1"
+	}		
+}
+138472 = {# Gruffydd
+	name = "Gruffydd" #ap Iago
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81825 #Iago ap Idwal
+	1014.1.1 = {
+		birth = "1014.1.1"
 	}
-	81828 = {# Idwal Ieuaf
-		name = "Idwal_Ieuaf" # Idwal Ieuaf ap Idwal Foel the Younger
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81829 #Idwal Foel
-		921.1.1 = {
-			birth = "921.1.1"
-		}
-		969.1.1 = {
-			death = "969.1.1"
-		}
+	1060.1.1 = {
+		death = "1060.1.1"
 	}
-	81829 = {#  Idwal Foel
-		name = "Idwal_Foel" #the Bald ap Anarawd
-		# AKA: Idwal Foel
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81830 #Anarawd ap Rhodri
-		885.1.1 = {
-			birth = "885.1.1"	#unknown
-		}
-		942.1.1 = {
-			death = "942.1.1"
-		}
+}
+138474 = {# Caradog
+	name = "Caradog" #ap Gruffydd
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 138472 #Gruffydd ap Iago
+	1033.1.1 = {
+		birth = "1033.1.1"
+		add_pressed_claim = title:d_gwynedd
 	}
-	81830 = {# Anarawd
-		name = "Anarawd" #ap Rhodri
-		dynasty_house = house_british_isles_aberffraw #Aberffraw
-		religion = "catholic"
-		culture = "welsh"
-		father = 81831 #Rhodri Mawr
-		mother = 159802
-		
-		trait = education_martial_3
+	1074.1.1 = {
+		death = "1074.1.1"
+	}
+}
+138476 = {# Trahaearn
+	name = "Trahaearn" #ap Caradog
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 138474 #Caradog ap Gruffydd
+	1050.1.1 = {
+		birth = "1050.1.1"
+	}
+	1074.1.1 = {
+		add_pressed_claim = title:d_gwynedd
+	}
+	1081.1.1 = {
+		death = "1081.1.1"
+	}	
+}
+138478 = {# Llywarch
+	name = "Llywarch" #ap Trahaiarn
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 138476 # Trahaiarn ap Caradog
+	1070.1.1 = {
+		birth = "1070.1.1"
+	}
+	1107.1.1 = {
+		death = "1107.1.1"
+	}	
+}
+159000 = {# Hywel
+	name = "Hywel" # ap Iago
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 159004 # Iago ap Idwal
+	938.1.1 = {
+		birth = "938.1.1"	#unknown
+	}
+	997.1.1 = {
+		death = "997.1.1"
+	}
+}
+159001 = {# Cynan
+	name = "Cynan" # ap Hywel
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 159000 # Hywel ap Iago
+	955.1.1 = {
+		birth = "955.1.1"	#unknown
+	}
+	1015.1.1 = {
+		death = "1015.1.1"
+	}
+}
+159004 = {# Iago
+	name = "Iago" # ap Idwal Foel
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81829 # Idwal Foel
+	920.1.1 = {
+		birth = "920.1.1"	#unknown
+	}
+	979.1.1 = {
+		death = "979.1.1"
+	}
+}
+159005 = {# Hywel
+	name = "Hywel" # ap Idwal Ieuaf ap Idwal Foel
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81828 #Idwal Ieuaf
+	940.1.1 = {
+		birth = "940.1.1"
+	}
+	985.1.1 = {
+		death = "985.1.1"
+	}
+}
+159006 = {# Cadwallon
+	name = "Cadwallon" # ap Idwal Ieuaf ap Idwal Foel
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81828 #Idwal Ieuaf
+	941.1.1 = {
+		birth = "941.1.1"
+	}
+	987.1.1 = {
+		death = "987.1.1"
+	}
+}
+138486 = {# Dafydd
+	name = "Dafydd" #ap Llywelyn
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 214714 #Llywelyn ab Iorwerth
+	mother = 138451 #Joan of England
+	1208.1.1 = {
+		birth = "1208.1.1"
+	}
+	#1230 married Isabel de Briouse
+	1230.1.1 = {
+		add_spouse = 161621
+	}
+	1237.1.1 = {
+		employer = 214714 #Llywelyn ab Iorwerth
+	}
+	1240.4.11 = {
+		employer = 0 #Becomes duke of Gwynedd
+	}
+	1246.1.1 = {
+		death = "1246.1.1"
+	}
+}
+138487 = {# Helen
+	name = "Helen" #ferch Llywelyn
+	female = yes
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 214714 #Llywelyn ab Iorwerth
+	mother = 138451 #Joan of England
+	1206.1.1 = {
+		birth = "1206.1.1"
+	}	
+	#1222 married John the Scot of Huntingdon
+	#married 1237 Robert de Quincy
+	1253.10.24 = {
+		death = "1253.10.24"
+	}
+}
+159041 = {# Elisedd
+	name = "Elisedd" # ap Idwal
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81829 # Cadwaladr
+	906.1.1 = {
+		birth = "906.1.1"
+	}
+	942.1.1 = {
+		death = "942.1.1"
+	}
+}
+159042 = {# Prawst
+	name = "Prawst" # ferch Elisedd
+	female = yes
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 159041 # Elisedd
+	942.1.1 = {
+		birth = "942.1.1"
+	}
+	970.1.2 = {
+		add_spouse = 81820
+	}
+	1000.1.1 = {
+		death = "1000.1.1"
+	}
+}
+161615 = {# Gwladus
+	name = "Gwladus" #ferch Llywelyn
+	female = yes
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	trait = bastard
+	father = 214714 #Llywelyn ab Iorwerth
+	1210.1.1 = {
+		birth = "1210.1.1"
+	}	
+	1251.1.1 = {
+		death = "1251.1.1"
+	}
+}
+159313 = {# Crusli
+	name = "Crusli" #
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	female = yes
+	religion = "catholic"
+	culture = "welsh"
+	father = 81826
+	960.1.1 = {
+		birth = "960.1.1"
+	}
+	980.1.1 = {
+		add_spouse = 159311
+	}
+	1030.1.2 = {
+		death = "1030.1.2"
+	}
+}
+159375 = {# Elen
+	name = "Elen" #ferch Rhodri Mawr
+	female = yes
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81831 #Rhodri Mawr
+	855.1.1 = {
+		birth = "855.1.1"	#unknown
+	}
+	935.1.1 = {
+		death = "935.1.1"
+	}
+}
+159803 = {# Nest
+	name = "Nest" # ferch Rhodri
+	female = yes
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81831 #Rhodri Mawr
+	mother = 159802
+	854.1.1 = {
+		birth = "854.1.1"
+	}
+	911.1.1 = {
+		death = "911.1.1"
+	}
+}
+159804 = {# Tudwal
+	name = "Tudwal" # ap Rhodri
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81831 #Rhodri Mawr
+	mother = 159802
+	859.1.1 = {
+		birth = "859.1.1"
+	}
+	905.1.1 = {
+		death = "905.1.1"
+	}
+}
+159805 = {# Merfyn
+	name = "Merfyn" # ap Rhodri
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81831 #Rhodri Mawr
+	mother = 159802
+	852.1.1 = {
+		birth = "852.1.1"
+	}
+	910.1.1 = {
+		death = "910.1.1"
+	}
+}
+138449 = {# Susann
+	name = "Susann" #ferch Gruffydd
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	female = yes
+	religion = "catholic"
+	culture = "welsh"
+	father = 81031 #Gruffyd ap Cynan
+	mother = 214814 #Angharad ferch Owain
+	1110.1.1 = {
+		birth = "1110.1.1"
+	}
+	#married Madog ap Maredudd of Powys 214718
+	1161.1.1 = {
+		death = "1161.1.1"
+	}	
+}
+232002 = {# Rhodri
+	name = "Rhodri"
+	# AKA: Rhodri ab Owain
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	trait = kinslayer_3
+	father = 214710 #Owain ap Gruffydd
+	mother = 214808 #Crisiant ferch Gronw
+	1136.1.1 = {
+		birth = "1136.1.1"
+	}
+	1179.1.1 = {
+		add_spouse = 214805 #Nest of Deheubarth
+	}
+	1195.1.1 = {
+		death = "1195.1.1"
+	}
+}
+232003 = {# Tomas
+	name = "Tomas"
+	# AKA: Tomas ap Rhodri
+	dynasty_house = house_british_isles_aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 232002 #Rhodri ab Owain
+	1179.1.1 = {
+		birth = "1179.1.1"
+	}
+	1229.1.1 = {
+		death = "1229.1.1"
+	}
+}
+232004 = {# Gruffyd
+	name = "Gruffyd"
+	# AKA: Gruffyd ap Rhodri
+	dynasty_house = house_british_isles_aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 232002 #Rhodri ab Owain
+	1180.1.1 = {
+		birth = "1180.1.1"
+	}
+	1230.1.1 = {
+		death = "1230.1.1"
+	}
+}
+232005 = {# Einion
+	name = "Einion"
+	# AKA: Einion ap Rhodri
+	dynasty_house = house_british_isles_aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 232002 #Rhodri ab Owain
+	1181.1.1 = {
+		birth = "1181.1.1"
+	}
+	1231.1.1 = {
+		death = "1231.1.1"
+	}
+}
+420005 = {# Tomas
+	name = "Tomas"
+	# AKA: Tomas ap Rhodri
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 420004 #Rhodri ap Gruffyd
+	1300.1.1 = {
+		birth = "1300.1.1"
+	}
+	1363.1.1 = {
+		death = "1363.1.1"
+	}
+}
+420006 = {# Owain Lawgoch
+	name = "Owain"
+	# AKA: Owain Lawgoch
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 420005 #Tomas ap Gruffyd
+	1330.1.1 = {
+		birth = "1330.1.1"
+	}
+	1380.1.1 = {
+		death = "1380.1.1"
+	}
+}
+81030 = {# Cynan
+	name = "Cynan" #ap Iago
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81825 #Iago ap Idwal
+	1014.1.1 = {
+		birth = "1014.1.1"
+	}
+	1038.1.1 = {
+		add_spouse = 1029 #Ragnhild dghtr of Olav King of Dublin
+	}
+	1063.1.1 = {
+		death = "1063.1.1"
+	}
+}
+81031 = {# Gruffydd
+	name = "Gruffydd" #ap Cynan
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81030 # Cynan ap Iago
+	mother = 1029 #Ragnhild erv Olav
+	1055.1.1 = {
+		birth = "1055.1.1"
+		add_pressed_claim = title:d_gwynedd
+		add_pressed_claim = title:c_dublin
+	}
+	1095.1.1 = {
+		add_spouse = 214814 #Angharad ferch Owain
+	}	
+	1137.1.1 = {
+		death = "1137.1.1"
+	}
+}
+81824 = {# Cadell
+	name = "Cadell" #ap Rhodri King of Seisyllwg
+	dynasty_house = house_british_isles_aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81831 #Rhodri Mawr
+	mother = 159802
+	853.1.1 = {
+		birth = "853.1.1"	#unknown
+	}
+	880.1.1 = {
+		dynasty_house = house_british_isles_dinefwr #Dinefrw
+	}
+	935.1.1 = {
+		death = "935.1.1"
+	}
+}
+81825 = {# Iago
+	name = "Iago" #ap Idwal
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81826 #Idwal ap Meuric
+	970.1.1 = {
+		birth = "970.1.1"	#unknown
+	}
+	1039.1.1 = {
+		death = "1039.1.1"
+	}
+}
+81826 = {# Idwal
+	name = "Idwal" # ap Meuric
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81827 # Meuric ap Idwal
+	940.1.1 = {
+		birth = "940.1.1"	#unknown
+	}
+	996.1.1 = {
+		death = "996.1.1"
+	}
+}
+81827 = {# Meuric
+	name = "Meuric" #ap Idwal
+	# AKA: Meurig
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 138466 #Idwal ap Rhodri
+	920.1.1 = {
+		birth = "920.1.1"	#unknown
+	}
+	986.1.1 = {
+		death = "986.1.1"
+	}
+}
+81828 = {# Idwal Ieuaf
+	name = "Idwal_Ieuaf" # Idwal Ieuaf ap Idwal Foel the Younger
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81829 #Idwal Foel
+	921.1.1 = {
+		birth = "921.1.1"
+	}
+	969.1.1 = {
+		death = "969.1.1"
+	}
+}
+81829 = {#  Idwal Foel
+	name = "Idwal_Foel" #the Bald ap Anarawd
+	# AKA: Idwal Foel
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81830 #Anarawd ap Rhodri
+	885.1.1 = {
+		birth = "885.1.1"	#unknown
+	}
+	942.1.1 = {
+		death = "942.1.1"
+	}
+}
+81830 = {# Anarawd
+	name = "Anarawd" #ap Rhodri
+	dynasty_house = house_british_isles_aberffraw #Aberffraw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81831 #Rhodri Mawr
+	mother = 159802
+	
+	trait = education_martial_3
 
-		trait = vengeful
-		trait = ambitious
-		trait = callous
+	trait = vengeful
+	trait = ambitious
+	trait = callous
 
-		trait = diplomat
+	trait = diplomat
 
-		850.1.1 = {
-			birth = "850.1.1"	#unknown
-		}
-		915.1.1 = {
-			death = "915.1.1"
-		}
+	850.1.1 = {
+		birth = "850.1.1"	#unknown
 	}
-	81831 = {# Rhodri Mawr
-		name = "Rhodri" #Mawr ap Merfyn
-		# AKA: Rhodri Mawr
-		dynasty_house = house_british_isles_aberffraw #Aberffraw for tree appearance
-		#was dynasty_house = house_british_isles_manaw
-		religion = "catholic"
-		culture = "welsh"
-		father = 159027
-		mother = 159088
-
-		diplomacy = 8
-		martial = 10
-		intrigue = 12
-		learning = 6
-		prowess = 10
-
-		trait = education_martial_3
-
-		trait = diligent
-		trait = ambitious
-		trait = impatient
-
-		trait = architect
-
-		trait = rough_terrain_expert
-		trait = forest_fighter
-
-		820.1.1 = {
-			birth = "820.1.1"
-			remove_claim = title:d_the_isles
-			give_nickname = "nick_the_great"
-			capital = c_anglesey
-		}
-		840.1.1 = {
-			add_spouse = 159802
-			set_relation_rival = character:159801	#Not a great fan of his brother-in-law.
-		}
-		878.1.1 = {
-			death = "878.1.1"
-		}
+	915.1.1 = {
+		death = "915.1.1"
 	}
+}
+81831 = {# Rhodri Mawr
+	name = "Rhodri" #Mawr ap Merfyn
+	# AKA: Rhodri Mawr
+	dynasty_house = house_british_isles_aberffraw #Aberffraw for tree appearance
+	religion = "catholic"
+	culture = "welsh"
+	father = 159027
+	mother = 159088
+
+	diplomacy = 8
+	martial = 10
+	intrigue = 12
+	learning = 6
+	prowess = 10
+
+	trait = education_martial_3
+
+	trait = diligent
+	trait = ambitious
+	trait = impatient
+
+	trait = architect
+
+	trait = rough_terrain_expert
+	trait = forest_fighter
+
+	820.1.1 = {
+		birth = "820.1.1"
+		remove_claim = title:d_the_isles
+		give_nickname = "nick_the_great"
+		capital = c_anglesey
+	}
+	840.1.1 = {
+		add_spouse = 159802
+		set_relation_rival = character:159801	#Not a great fan of his brother-in-law.
+	}
+	878.1.1 = {
+		death = "878.1.1"
+	}
+}
 #######################################
-# House of NAME 
+# House of Aberffraw 
 #######################################
 252352 = {
 	name="Llywelyn" # ap Merfyn
@@ -1002,7 +1001,7 @@
 	}
 }
 #######################################
-# House of NAME 
+# House of Nowy 
 #######################################
 1228338 = {
     name="Gwriad"
@@ -1068,9 +1067,6 @@
         death=yes
     }
 }
-#######################################
-# House of NAME 
-#######################################
 1228339 = {
     name="Elisedd" #ap Gwriad
     dynasty=1000100963
@@ -1098,32 +1094,296 @@
     }
 }
 #######################################
-# House of NAME 
-#######################################
-
-#######################################
-# House of NAME 
-#######################################
-
-#######################################
-# House of NAME 
-#######################################
-
-#######################################
-# House of NAME 
-#######################################
-
-#######################################
-# House of NAME 
-#######################################
-
-#######################################
-# House of NAME 
+# dyfnaint
 #######################################
 
 
-
-
+#######################################
+# House Breizh - The welsh 
+#######################################
+159433 = {
+	name = "Urbien"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159431
+	321.1.1 = {
+		birth = "321.1.1"
+	}
+	400.1.1 = {
+		death = "400.1.1"
+	}
+}
+159434 = {
+	name = "Gradlon"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159433
+	361.1.1 = {
+		birth = "361.1.1"
+	}
+	434.1.1 = {
+		death = "434.1.1"
+		give_nickname = nick_the_great
+	}
+}
+159633 = {
+	name = "Salomon"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159434
+	380.1.1 = {
+		birth = "380.1.1"
+	}
+	446.1.1 = {
+		death = "446.1.1"
+	}
+}
+159652 = {
+	name = "Aldrien"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159633
+	400.1.1 = {
+		birth = "400.1.1"
+	}
+	464.1.1 = {
+		death = "464.1.1"
+	}
+}
+159657 = {
+	name = "Iehan_Riotham"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159652
+	420.1.1 = {
+		birth = "420.1.1"
+	}
+	470.1.1 = {
+		death = "470.1.1"
+	}
+}
+159658 = {
+	name = "Salomon"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159652
+	418.1.1 = {
+		birth = "418.1.1"
+	}
+	464.1.1 = {
+		death = "464.1.1"
+	}
+}
+159756 = {
+	name = "GuE_rech"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159652
+	425.1.1 = {
+		birth = "425.1.1"
+	}
+	494.1.1 = {
+		death = "494.1.1"
+	}
+}
+159659 = {
+	name = "Budic"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159652
+	420.1.1 = {
+		birth = yes
+	}
+	478.1.1 = {
+		death = "478.1.1"
+	}
+}
+159660 = {
+	name = "Budic"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159756
+	460.1.1 = {
+		birth = "460.1.1"
+	}
+	544.1.1 = {
+		death = "544.1.1"
+	}
+}
+159661 = {
+	name = "Emyric"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159657
+	440.1.1 = {
+		birth = "440.1.1"
+	}
+	500.1.1 = {
+		death = "500.1.1"
+	}
+}
+159662 = {
+	name = "HoE_l"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159660
+	491.1.1 = {
+		birth = "491.1.1"
+	}
+	520.1.1 = {
+		add_spouse = 160048
+	}
+	545.1.1 = {
+		death = "545.1.1"
+	}
+}
+159757 = {
+	name = "Teudur"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159662
+	mother = 160048
+	520.1.1 = {
+		birth = "520.1.1"
+	}
+	546.1.1 = {
+		death = "546.1.1"
+		give_nickname = nick_the_great
+	}
+}
+159663 = {
+	name = "HoE_l"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159662
+	mother = 160048
+	522.1.1 = {
+		birth = "522.1.1"
+	}
+	547.1.1 = {
+		death = "547.1.1"
+	}
+}
+159664 = {
+	name = "Alan"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159663
+	540.1.1 = {
+		birth = "540.1.1"
+	}
+	594.1.1 = {
+		death = "594.1.1"
+	}
+}
+159665 = {
+	name = "HoE_l"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159664
+	560.1.1 = {
+		birth = "560.1.1"
+	}
+	612.1.1 = {
+		death = "612.1.1"
+	}
+}
+159666 = {
+	name = "Salomon"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159665
+	580.1.1 = {
+		birth = "580.1.1"
+	}
+	630.1.1 = {
+		death = "630.1.1"
+	}
+}
+159667 = {
+	name = "Iudicael"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159665
+	600.1.1 = {
+		birth = "600.1.1"
+	}
+	620.1.1 = {
+		death = "620.1.1"
+	}
+}
+159653 = {
+	name = "GuE_rech"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159652
+	425.1.1 = {
+		birth = "425.1.1"
+	}
+	478.1.1 = {
+		death = "478.1.1"
+	}
+}
+159654 = {
+	name = "Budic"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159653
+	460.1.1 = {
+		birth = "460.1.1"
+	}
+	501.1.1 = {
+		death = "501.1.1"
+	}
+}
+159655 = {
+	name = "Budic"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159654
+	490.1.1 = {
+		birth = "490.1.1"
+	}
+	541.1.1 = {
+		death = "541.1.1"
+	}
+}
+159656 = {
+	name = "Teudric" #Theodoric
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_breizh #Breizh
+	father = 159655
+	520.1.1 = {
+		birth = "520.1.1"
+	}
+	584.1.1 = {
+		death = "584.1.1"
+	}
+}
+#######################################
+# House of Tyddewi 
+#######################################
 131700 = {
 	name = "Bleiddud"
 	dynasty = 20172
@@ -1142,6 +1402,9 @@
 		death = "1070.1.2"
 	}
 }
+#######################################
+# House of Maelienydd 
+#######################################
 131701 = {
 	name = "Elystan" # "Glodrydd"
 	# AKA: Elystan Glodrydd
@@ -1191,6 +1454,157 @@
 		death = "1179.1.1"
 	}
 }
+81856 = {
+	name = "Morien" #ferch Idnerth
+	female = yes
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	religion = "catholic"
+	culture = "welsh"
+	father = 8187
+	1036.1.1 = {
+		birth = "1036.1.1" #unknown
+	}
+	1088.1.1 = {
+		death = "1088.1.1" #unknown
+	}
+}
+8187 = {
+	name = "Idnerth" #ap Cadwgon
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	father = 184126 #Cadwgon ap Elystan
+	religion = "catholic"
+	culture = "welsh"
+	1017.1.1 = {
+		birth = "1017.1.1"
+	}
+	1056.2.1 = {
+		death = "1056.2.1"
+	}
+}
+184121 = {
+	name = "Cadwr"
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	religion = "catholic"
+	culture = "welsh"
+	father = 184120
+	800.1.1 = {
+		birth = "800.1.1"
+	}
+	870.1.1 = {
+		death = "870.1.1"
+	}
+}
+184122 = {
+	name = "Cadwr"
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	religion = "catholic"
+	culture = "welsh"
+	father = 184121
+	830.1.1 = {
+		birth = "830.1.1"
+	}
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+184123 = {
+	name = "Seferus"
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	religion = "catholic"
+	culture = "welsh"
+	father = 184122
+	860.1.1 = {
+		birth = "860.1.1"
+	}
+	940.1.1 = {
+		death = "940.1.1"
+	}
+}
+184124 = {
+	name = "Ifor"
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	religion = "catholic"
+	culture = "welsh"
+	father = 184123
+	890.1.1 = {
+		birth = "890.1.1"
+	}
+	950.1.1 = {
+		death = "950.1.1"
+	}
+}
+184125 = {
+	name = "Cuhelyn"
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	religion = "catholic"
+	culture = "welsh"
+	father = 184123
+	920.1.1 = {
+		birth = "920.1.1"
+	}
+	980.1.1 = {
+		death = "980.1.1"
+	}
+}
+184126 = {
+	name = "Cadwgon" #ap Elystan
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	father = 131701
+	religion = "catholic"
+	culture = "welsh"
+	1000.1.1 = {
+		birth = "1000.1.1"
+	}
+	1050.1.1 = {
+		death = "1050.1.1"
+	}
+}
+184127 = {
+	name = "Maelgwn" #ap Cadwgon
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	father = 131703
+	# mother = 138445
+	religion = "catholic"
+	culture = "welsh"
+	1153.1.1 = {
+		birth = "1153.1.1"
+	}
+	1188.1.1 = {
+		trait = faith_warrior
+	}
+	1234.1.1 = {
+		death = "1234.1.1"
+	}
+}
+184128 = {
+	name = "Maredudd" #ap Maelgwn
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	father = 184127
+	religion = "catholic"
+	culture = "welsh"
+	1195.1.1 = {
+		birth = "1195.1.1"
+	}
+	1281.1.1 = {
+		death = "1281.1.1"
+	}
+}
+184129 = {
+	name = "Madog" #ap Maredudd
+	dynasty_house = house_british_isles_maelienydd #Maelienydd
+	father = 184128
+	religion = "catholic"
+	culture = "welsh"
+	1250.1.1 = {
+		birth = "1250.1.1"
+	}
+	1320.1.1 = {
+		death = "1320.1.1"
+	}
+}
+#######################################
+# House of Brycheiniog 
+#######################################
 131704 = {
 	name = "Bleddyn"
 	dynasty = 1042817
@@ -1211,21 +1625,72 @@
 		death = "1090.1.2"
 	}
 }
-204051 = {
-	name = "Angharad"
-	female = yes
-	dynasty = 101905
+159314 = {
+	name = "Blegwrd" # of Brycheiniog
+	dynasty = 1042817 #Brycheiniog
 	religion = "catholic"
 	culture = "welsh"
-	father = 204056 # Gerald de Windsor
-	mother = 204057  # Nest ferch Rhys
-	1126.1.1 = {
-		birth = "1126.1.1"
+	father = 131704
+	1066.1.1 = {
+		birth = "1066.1.1"
 	}
-	1176.1.1 = {
-		death = "1176.1.1"
+	1130.1.2 = {
+		death = "1130.1.2"
 	}
 }
+159315 = {
+	name = "Gwgon" # of Brycheiniog
+	dynasty = 1042817 #Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 159314
+	1086.1.1 = {
+		birth = "1086.1.1"
+	}
+	1150.1.2 = {
+		death = "1150.1.2"
+	}
+}
+159519 = {
+	name = "Drymbenog"
+	dynasty = 1042817
+	martial = 8
+	diplomacy = 3
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "welsh"
+	father = 159312
+	mother = 159374
+	trait = zealous
+	trait = education_martial_2
+	1035.1.2 = {
+		birth = "1035.1.2"
+	}
+	1090.1.2 = {
+		death = "1090.1.2"
+	}
+}
+159520 = {
+	name = "Elinor" #ferch Drymbenog
+	female = yes
+	dynasty = 1042817
+	religion = "catholic"
+	culture = "welsh"
+	father = 159519
+	1050.1.1 = {
+		birth = "1050.1.1"	#unknown
+	}
+	1066.1.1 = {
+		add_spouse = 159292
+	}
+	1100.1.1 = {
+		death = "1100.1.1"
+	}
+}
+#######################################
+# House of Dinefrw 
+#######################################
 204057 = {
 	name = "Nest" #ferch Rhys
 	female = yes
@@ -1241,6 +1706,464 @@
 		death = "1136.1.1"
 	}
 }
+214800 = {
+	name = "Rhys"
+	# AKA: Rhys ap Gruffydd
+	dynasty_house = house_british_isles_dinefwr #Dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 214810 #Gruffydd ap Rhys
+	mother = 214811 #Gwenllian ferch Gruffydd
+	1132.1.2 = {
+		birth = "1132.1.2"
+	}
+	1153.1.1 = {
+		add_spouse = 214801 #Gwenllian ferch Owain of Powys
+	}
+	1197.4.28 = {
+		death = "1197.4.28"
+	}
+}
+214802 = {
+	name = "Gwenllian"
+	# AKA: Gwenllian ferch Rhys
+	female = yes
+	dynasty_house = house_british_isles_dinefwr #Dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 214800 #Rhys ap Gruffydd
+	mother = 214801 #Gwenllian ferch Owain
+	1162.1.1 = {
+		birth = "1162.1.1"
+	}
+	#married Ednyfed ap Cynwrig
+	1236.1.1 = {
+		death = "1236.1.1"
+	}
+}
+214803 = {
+	name = "Gruffydd"
+	# AKA: Gruffydd ap Rhys
+	dynasty_house = house_british_isles_dinefwr #Dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 214800 #Rhys ap Gruffydd
+	mother = 214801 #Gwenllian ferch Owain
+	1164.1.1 = {
+		birth = "1164.1.1"
+	}
+	1189.1.1 = {
+		add_spouse = 204010 #Matilda de Briouse
+	}
+	1201.8.1 = {
+		death = "1201.8.1"
+	}
+}
+214804 = {
+	name = "Rhys" #the Hoarse
+	# AKA: Rhys 'Gryg' ap Rhys
+	dynasty_house = house_british_isles_dinefwr #Dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 214800
+	mother = 214801
+	1166.1.2 = {
+		birth = "1166.1.2"
+	}
+	#1219 married Mathilda de Clare
+	1234.1.1 = {
+		death = "1234.1.1"
+	}
+}
+214805 = {
+	name = "Nest"
+	# AKA: Nest ferch Rhys
+	female = yes
+	dynasty_house = house_british_isles_dinefwr #Dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 214800 #Rhys ap Gruffydd
+	mother = 214801 #Gwenllian ferch Owain
+	1167.1.1 = {
+		birth = "1167.1.1"
+	}
+	1217.1.1 = {
+		death = "1217.1.1"
+	}
+}
+214806 = {
+	name = "Catrin"
+	# AKA: Catrin ferch Rhys
+	female = yes
+	dynasty_house = house_british_isles_dinefwr #Dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	trait = bastard
+	father = 214800 #Rhys ap Gruffydd
+	1172.1.1 = {
+		birth = "1172.1.1"
+	}
+	1222.1.1 = {
+		death = "1222.1.1"
+	}
+}
+214807 = {
+	name = "Angharad"
+	# AKA: Anghared ferch Rhys
+	female = yes
+	dynasty_house = house_british_isles_dinefwr #Dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 214800 #Rhys ap Gruffydd
+	mother = 214801 #Gwenllian ferch Owain
+	1172.1.1 = {
+		birth = "1172.1.1"
+	}
+	#married William de Martin
+	1226.1.1 = {
+		death = "1226.1.1"
+	}
+}
+214810 = {
+	name = "Gruffydd"
+	# AKA: Gruffydd ap Rhys
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81816 #Rhys ap Tewdr
+	mother = 40506 #Gwladys ap Rhiwallon
+	1090.1.1 = {
+		birth = "1090.1.1"
+	}
+	1120.1.1 = {
+		add_spouse = 214811 #Gwenllian ferch Gruffydd
+	}
+	1137.1.1 = {
+		death = "1137.1.1"
+	}
+}
+332039 = {
+	name = "Maelgwn"
+	# AKA: Maelgwn ap Rhys
+	dynasty_house = house_british_isles_dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 214800 #Rhys ap Gruffydd
+	mother = 214801 #Gwenllian ferch Owain
+	1170.1.1 = {
+		birth = "1170.1.1"
+	}
+	1231.1.1 = {
+		death = "1231.1.1"
+	}
+}
+40501 = {
+	name = "Angharad" #of Gwynedd
+	female = yes
+	dynasty_house = house_british_isles_dinefwr #Dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 81821 #Maredudd ab Owain (Deheubarth)
+	978.1.1 = {
+		birth = "978.1.1" #982
+	}
+	#994 married Llywelyn ap Seisyll of Gwynedd 40500
+	#1023 married Cynfyn ap Gwerstan of Powys
+	1025.7.4 = {
+		death = "1025.7.4" #?
+	}
+}
+81814 = {
+	name = "Maredudd" #ap Gruffydd
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 214810 #Gruffydd ap Rhys
+	1130.1.1 = {
+		birth = "1130.1.1"
+	}
+	1157.1.1 = {
+		death = "1157.1.1"
+	}
+}
+81815 = {
+	name = "Rhys" #ap Owain
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 138494 #Owain ap Edwin
+	1011.1.1 = {
+		birth = "1011.1.1" #unknown
+	}
+	1076.1.1 = {
+		death = "1076.1.1"
+	}
+}
+81816 = {
+	name = "Rhys" # ap Tewdwr
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	trait = generous
+	father = 138488 #Tewdwr ap Cadell
+	997.1.1 = {
+		birth = "997.1.1" #unknown
+	}
+	1080.1.1 = {
+		add_spouse = 40506 #Gwladys ap Rhiwallon
+	}
+	1093.4.1 = {
+		death = "1093.4.1"
+	}
+}
+81819 = {
+	name = "Edwyn" #ap Hywel
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81823 #Hywel Dda
+	mother = 159355 #Elen of Dyfed
+	906.1.1 = {
+		birth = "906.1.1"
+	}
+	954.1.1 = {
+		death = "954.1.1"
+	}
+}
+81821 = {
+	name = "Maredudd" #ap Owain of Deheubarth
+	dynasty_house = house_british_isles_dinefwr #Dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 81822 #Owain of Deheubarth
+	920.1.1 = {
+		birth = "920.1.1"
+	}
+	999.1.1 = {
+		death = "999.1.1"
+	}
+}
+81822 = {
+	name = "Owain" #ap Hywel
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81823 #Hywel Dda
+	mother = 159355 #Elen of Dyfed
+	905.1.1 = {
+		birth = "905.1.1"
+	}
+	987.1.1 = {
+		death = "987.1.1"
+	}
+}
+81823 = {
+	name = "Hywel" # the Good
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	trait = just
+	father = 81824 #Cadell ap Rhodri
+	880.1.1 = {
+		birth = "880.1.1"
+		give_nickname = nick_the_good
+	}
+	904.1.1 = {
+		add_spouse = 159355 #Elen of Dyfed
+	}
+	950.1.1 = {
+		death = "950.1.1"
+	}
+}
+138484 = {
+	name = "Einion" #ap Owain
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81822 #Owain ap Hywel
+	930.1.1 = {
+		birth = "930.1.1" #unknown
+	}
+	983.1.1 = {
+		death = "983.1.1"
+	}
+}
+138490 = {
+	name = "Cadell" #ap Einion
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 138484 #Einion ap Owain
+	953.1.1 = {
+		birth = "953.1.1"
+	}
+	1018.1.1 = {
+		death = "1018.1.1"
+	}
+}
+	
+138488 = {
+	name = "Tewdwr" #ap Cadell King of Deheubarth
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 138490 #Cadell ap Einion
+	975.1.1 = {
+		birth = "975.1.1" #unknown
+		give_nickname = "nick_the_great"
+	}
+	1014.1.1 = {
+		death = "1014.1.1" #unknown
+	}
+}
+138492 = {
+	name = "Edwin" #ap Einion
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 138484 #Einion ap Owain
+	954.1.1 = {
+		birth = "954.1.1" #unknown
+	}
+	993.1.1 = {
+		death = "993.1.1" #unknown
+	}
+}
+138494 = {
+	name = "Owain" # ap Edwin
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 138484 #Einion ap Owain
+	974.1.1 = {
+		birth = "974.1.1" #unknown
+	}
+	1032.1.1 = {
+		death = "1032.1.1" #unknown
+	}
+}
+138496 = {
+	name = "Maredudd" #ap Owain
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 138494 #Owain ap Edwin
+	1010.1.1 = {
+		birth = "1010.1.1" #unknown
+	}
+	1070.1.1 = {
+		death = "1070.1.1"
+	}	
+}
+138498 = {
+	name = "Anarawd" #ap Gruffyd
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 214810 #Gruffydd ap Rhys
+	trait = bastard
+	1110.1.1 = {
+		birth = "1110.1.1" #unknown	
+	}
+	#married daughter of Cadwaladr ap Gruffydd
+	1143.1.1 = {
+		death = "1143.1.1"
+	}
+}
+138500 = {
+	name = "Cadell" #ap Gruffyd
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 214810 #Gruffydd ap Rhys
+	trait = bastard
+	1112.1.1 = {
+		birth = "1112.1.1" #unknown	
+	}
+	#1153 abdicated
+	1174.1.1 = {
+		trait = ill
+	}
+	1175.1.1 = {
+		death = "1175.1.1"
+	}
+}
+159290 = {
+	name = "Nest" # ferch Tewdwr
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	female = yes
+	religion = "catholic"
+	culture = "welsh"
+	trait = generous
+	father = 138488 #Tewdwr ap Cadell
+	1014.1.1 = {
+		birth = "1014.1.1" #unknown
+	}
+	1093.4.1 = {
+		death = "1093.4.1"
+	}
+}
+159231 = {
+	name = "Rhydderch"
+	dynasty_house = house_british_isles_dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 138488
+	1000.1.1 = {
+		birth = "1000.1.1"
+	}
+	1070.1.1 = {
+		add_spouse = 81850 #married Hunydd ferch Bleddyn
+	}
+	1090.1.1 = {
+		death = "1090.1.1"
+	}
+}
+159232 = {
+	name = "Maredudd"
+	dynasty_house = house_british_isles_dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 159231
+	mother = 81850 #Hunydd ferch Bleddyn
+	1070.1.1 = {
+		birth = "1070.1.1"
+	}
+	1150.1.1 = {
+		death = "1150.1.1"
+	}
+}
+159233 = {
+	name = "Owain"
+	dynasty_house = house_british_isles_dinefwr
+	religion = "catholic"
+	culture = "welsh"
+	father = 159231
+	mother = 81850 #Hunydd ferch Bleddyn
+	1071.1.1 = {
+		birth = "1071.1.1"
+	}
+	1151.1.1 = {
+		death = "1151.1.1"
+	}
+}
+159362 = {
+	name = "Rhodri" #ap Hywel
+	dynasty_house = house_british_isles_dinefwr #Dinefrw
+	religion = "catholic"
+	culture = "welsh"
+	father = 81823 #Hywel Dda
+	mother = 159355 #Elen of Dyfed
+	905.1.1 = {
+		birth = "905.1.1"
+	}
+	954.1.1 = {
+		death = "954.1.1"
+	}
+}
+#######################################
+# House of Vitre 
+#######################################
 205830 = {
 	name = "Andrev"
 	dynasty = 310
@@ -1283,7 +2206,9 @@
 		death = "1173.1.31"
 	}
 }
-
+#######################################
+# House of Mathrafal 
+#######################################
 214717 = {
 	name = "Marared"
 	# AKA: Marared ferch Madog
@@ -1301,7 +2226,6 @@
 		death = "1207.1.1"
 	}
 }
-
 214718 = {
 	name = "Madog"
 	# AKA: Madog ap Maredudd
@@ -1319,7 +2243,6 @@
 		death = "1159.1.1"
 	}
 }
-
 214720 = {
 	name = "Owain_Cyfeiliog" #ap Gruffydd
 	# AKA: Owain Cyfelloig
@@ -1338,9 +2261,6 @@
 		death = "1195.1.1"
 	}
 }
-
-
-
 214722 = {
 	name = "Gruffydd" #Gruffyd ap Maredudd
 	# AKA: Gruffydd ap Madog can't be as he died in 1191
@@ -1356,7 +2276,6 @@
 		death = "1128.1.1"
 	}
 }
-
 214724 = {
 	name = "Madog"
 	# AKA: Gwenwynwyn
@@ -1372,26 +2291,6 @@
 		death = "1236.1.1"
 	}
 }
-
-214800 = {
-	name = "Rhys"
-	# AKA: Rhys ap Gruffydd
-	dynasty_house = house_british_isles_dinefwr #Dinefwr
-	religion = "catholic"
-	culture = "welsh"
-	father = 214810 #Gruffydd ap Rhys
-	mother = 214811 #Gwenllian ferch Gruffydd
-	1132.1.2 = {
-		birth = "1132.1.2"
-	}
-	1153.1.1 = {
-		add_spouse = 214801 #Gwenllian ferch Owain of Powys
-	}
-	1197.4.28 = {
-		death = "1197.4.28"
-	}
-}
-
 214801 = {
 	name = "Gwenllian" #Gwenllian ferch Madog
 	# AKA: Gwenllian ferch Owain - wrong
@@ -1408,113 +2307,596 @@
 		death = "1186.1.1"
 	}
 }
-
-214802 = {
-	name = "Gwenllian"
-	# AKA: Gwenllian ferch Rhys
-	female = yes
-	dynasty_house = house_british_isles_dinefwr #Dinefwr
+40503 = {
+	name = "Cynfyn" #ap Gwerstan
+	#dynasty = 100065 #Gruffyd of Powys
+	dynasty_house = house_british_isles_mathrafal
 	religion = "catholic"
 	culture = "welsh"
-	father = 214800 #Rhys ap Gruffydd
-	mother = 214801 #Gwenllian ferch Owain
+	father = 138444 #Gwerstan
+	978.1.1 = {
+		birth = "978.1.1" #unknown
+	}
+	1023.1.1 = {
+		add_spouse = 40501 #Angharad of Gwynedd
+	}
+	1025.1.1 = {
+		death = "1025.1.1"
+	}
+}
+40504 = {
+	name = "Rhiwallon" #ap Cynfyn
+	dynasty_house = house_british_isles_mathrafal #Mathrafal
+	religion = "catholic"
+	culture = "welsh"
+	father = 40503 #Cynfyn ap Gwerstan
+	mother = 40501 #Angharad of Gwynedd
+	trait = education_martial_2
+	1025.1.1 = {
+		birth = "1025.1.1"
+	}
+	1068.1.1 = {
+		death = "1068.1.1"
+	}
+}
+40505 = {
+	name = "Iweryd" #ap Cynfyn
+	# AKA: Eferydd
+	female = yes
+	dynasty_house = house_british_isles_mathrafal #Mathrafal
+	religion = "catholic"
+	culture = "welsh"
+	father = 40503 #Cynfyn ap Gwerstan
+	mother = 40501 #Angharad of Gwynedd
+	1023.1.1 = {
+		birth = "1023.1.1"
+	}
+	#married Edwin ap Gronw
+	1073.1.1 = {
+		death = "1073.1.1"
+	}
+}
+40506 = {
+	name = "Gwladus" #verch Rhiwallon
+	# AKA: Gwladys
+	female = yes
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 40504 #Rhiwallon ap Cynfyn
+	1049.1.1 = {
+		birth = "1049.1.1" #unknown
+	}
+	#1080 married Rhys ap Twedr 81816
+	1099.1.1 = {
+		death = "1099.1.1" #unknown
+	}
+}
+420007 = {
+	name = "Gwenwynwyn"
+	# AKA: Gwenwynwyn ab Owain Cyfelloig
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 214720 #Owain Cyfelloig ap Gruffydd
+	mother = 214721 #Gwenllian ferch Owain ap Gruffydd
 	1162.1.1 = {
 		birth = "1162.1.1"
 	}
-	#married Ednyfed ap Cynwrig
-	1236.1.1 = {
-		death = "1236.1.1"
+	#married Mary Corbet
+	1216.1.1 = {
+		death = "1216.1.1"
 	}
 }
-
-214803 = {
-	name = "Gruffydd"
-	# AKA: Gruffydd ap Rhys
-	dynasty_house = house_british_isles_dinefwr #Dinefwr
+6358 = {
+	name = "Bleddyn" #ap Cynfyn
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
 	religion = "catholic"
 	culture = "welsh"
-	father = 214800 #Rhys ap Gruffydd
-	mother = 214801 #Gwenllian ferch Owain
-	1164.1.1 = {
-		birth = "1164.1.1"
+	father = 40503 #Cynfyn ap Gwerstan
+	mother = 40501 #Angharad of Gwynedd
+	trait = lustful
+	1025.1.1 = {
+		birth = "1025.1.1"
 	}
-	1189.1.1 = {
-		add_spouse = 204010 #Matilda de Briouse
+	1041.1.1 = {
+		add_spouse = 81849 #Brandwen Nwrcelyn 1st spouse
 	}
-	1201.8.1 = {
-		death = "1201.8.1"
+	1043.1.1 = {
+		remove_spouse = 81849
+	}
+	#unknown second spouse. was 81853
+	1044.1.1 = {
+		add_spouse = 40507 #Haer Efionydd 3rd spouse
+	}
+	1050.1.1 = {
+		remove_spouse = 40507 #date unknown
+	}
+	1052.1.1 = {
+		add_spouse = 81856 #Morien Maelienydd 4th spouse
+	}
+	1075.1.1 = {
+		death = "1075.1.1"
 	}
 }
-
-214804 = {
-	name = "Rhys" #the Hoarse
-	# AKA: Rhys 'Gryg' ap Rhys
-	dynasty_house = house_british_isles_dinefwr #Dinefwr
+6360 = {
+	name = "Maredudd" #ap Bleddyn
+	dynasty_house = house_british_isles_mathrafal #Mathrafal
 	religion = "catholic"
 	culture = "welsh"
-	father = 214800
-	mother = 214801
-	1166.1.2 = {
-		birth = "1166.1.2"
+	father = 6358 #Bleddyn ap Cynfyn
+	mother = 40507 #Haer Efionydd
+	trait = education_martial_3
+	1047.1.1 = {
+		birth = "1047.1.1"
 	}
-	#1219 married Mathilda de Clare
-	1234.1.1 = {
-		death = "1234.1.1"
+	#married Hunedd ferch Einudd
+	#mistress Cristin ferch Bledrus
+	1111.1.1 = {
+		employer = 138452 #Owain ap Cadwgan
+	}
+	1132.2.9 = {
+		death = "1132.2.9"
 	}
 }
-
-214805 = {
-	name = "Nest"
-	# AKA: Nest ferch Rhys
+6378 = {
+	name = "Cadwgan" #ap Bleddyn
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 6358 #Bleddyn ap Cynfyn
+	mother = 81849 #Brandwen Nwrcelyn
+	trait = education_martial_3
+	trait = lustful
+	1041.1.1 = {
+		birth = "1041.1.1"
+	}
+	#married Sanan 4th spouse
+	#married Ellyw daughter of Cedivor ap Collwyn 5th spouse
+	1098.1.1 = {
+		add_spouse = 81853 #Gwenllian ferch Gruffydd 6th spouse
+	}
+	#married Euron daughter of Hoedlyw ap Cadwgan 7th spouse
+	1111.1.1 = {
+		death = "1111.1.1"
+	}
+}
+81847 = {
+	name = "Madog" #ap Bleddyn
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 6358 #Bleddyn ap Cynfyn
+	1043.1.1 = {
+		birth = "1043.1.1" #unknown
+	}
+	1087.1.1 = {
+		death = "1087.1.1"
+	}
+}
+81848 = {
+	name = "Rhirid" #Rhirid ap Bleddyn
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 6358 #Bleddyn ap Cynfyn
+	1043.1.1 = {
+		birth = "1043.1.1" #unknown
+	}
+	1087.1.1 = {
+		death = "1087.1.1"
+	}
+}
+81850 = {
+	name = "Hunydd" #ap Bleddyn
 	female = yes
-	dynasty_house = house_british_isles_dinefwr #Dinefwr
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
 	religion = "catholic"
 	culture = "welsh"
-	father = 214800 #Rhys ap Gruffydd
-	mother = 214801 #Gwenllian ferch Owain
-	1167.1.1 = {
-		birth = "1167.1.1"
+	father = 6358 #Bleddyn ap Cynfyn
+	mother = 81849 #Brandwen Nwrcelyn
+	1042.1.1 = {
+		birth = "1042.1.1" #unknown
 	}
+	1100.1.1 = {
+		death = "1100.1.1" #unknown
+	}
+}
+81851 = {
+	name = "Llywelyn" #ap Madog
+	# AKA: Llywarch
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 214718 #Madog ap Maredudd
+	#mother Susann of Gwynedd
+	1130.1.1 = {
+		birth = "1130.1.1"
+	}
+	1161.1.1 = {
+		death = "1161.1.1"
+	}
+}
+81854 = {
+	name = "Gruffydd_Maelor" #ap Madog
+	# AKA: Maelog
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 214718 #Madog ap Maredudd
+	#mother Susann of Gwynedd
+	1154.1.1 = {
+		birth = "1154.1.1"
+	}
+	#married Angharad of Gwynedd verch Owain Gwynedd
+	1191.1.1 = {
+		death = "1191.1.1"
+	}
+}
+81855 = {
+	name = "Rhiryd" #ap Iorwerth
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 81857 #Iorwerth ap Bleddyn
+	1100.1.1 = {
+		birth = "1100.1.1" #unknown
+	}
+	1175.1.1 = {
+		death = "1175.1.1" #unknown
+	}
+}
+81857 = {
+	name = "Iorwerth" #ap Bleddyn
+	dynasty_house = house_british_isles_mathrafal #Mathrafal
+	religion = "catholic"
+	culture = "welsh"
+	father = 6358 #Bleddyn ap Cynfyn
+	mother = 81856 #Morien Maelienydd
+	1053.1.1 = {
+		birth = "1053.1.1"
+	}
+	1108.1.1 = {
+		death = "1108.1.1"
+	}
+}
+81859 = {
+	name = "Meilys" #ap Rhiwallon
+	# AKA: Meilyr
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 40504 #Rhiwallon ap Cynfyn
+	1047.1.1 = {
+		birth = "1047.1.1" #unknown
+	}
+	1081.1.1 = {
+		death = "1081.1.1" #unknown
+	}
+}
+81860 = {
+	name = "Sioned" #verch Rhiwallon
+	female = yes
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 40504 #Rhiwallon ap Cynfyn
+	1048.1.1 = {
+		birth = "1048.1.1" #unknown
+	}
+	#married Ednyfed
+	1098.1.1 = {
+		death = "1098.1.1" #unknown
+	}
+}
+138443 = {
+	name = "Gwenllian"
+	female = yes
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 6358 #Bleddyn ap Cynfyn
+	mother = 81849 #Brandwen Nwrcelyn
+	1042.1.1 = {
+		birth = "1042.1.1"
+	}
+	#married Caradog ap Gruffyd ap Rhys
+	1090.1.1 = {
+		death = "1090.1.1"
+	}	
+}
+138444 = {
+	name = "Gwerstan" #ap Gwaithfoed
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 159076
+	954.1.1 = {
+		birth = "954.1.1"
+	}
+	990.1.1 = {
+		death = "990.1.1"
+	}	
+}
+138445 = {
+	name = "Gwenllian"
+	female = yes
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 214718 #Madog ap Maredudd
+	#mother Susann of Gwynedd
+	1155.1.1 = {
+		birth = "1155.1.1"
+	}
+	#married Rhys ap Gruffyd of Deheubarth
+	1198.1.1 = {
+		death = "1198.1.1"
+	}	
+}
+138446 = {
+	name = "Madog" #ap Rhirid
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 81848 #Rhirid ap Bleddyn	
+	1075.1.1 = {
+		birth = "1075.1.1"
+	}
+	1111.1.1 = {
+		trait = kinslayer_3 #killed Iorwerth & Cadwgan ap Bleddyn
+	}
+	1113.1.1 = {
+		give_nickname = nick_the_blind
+		trait = blind
+	}
+	1114.1.1 = {
+		death = "1114.1.1"
+	}
+}
+138448 = {
+	name = "Ithel" #ap Rhirid
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 81848 #Rhirid ap Bleddyn
+	1076.1.1 = {
+		birth = "1076.1.1"
+	}
+	1122.1.1 = {
+		death = "1122.1.1"
+	}
+}
+138450 = {
+	name = "Llywelyn" #ap Cadwgan
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 6378 #Cadwgan ap Bleddyn
+	1057.1.1 = {
+		birth = "1057.1.1"
+	}
+	1098.1.1 = {
+		death = "1098.1.1"
+	}
+}
+138452 = {
+	name = "Owain" #ap Cadwgan
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 6378 #Cadwgan ap Bleddyn
+	trait = ambitious
+	trait = education_diplomacy_4
+	trait = callous
+	trait = education_martial_2
+	1076.1.1 = {
+		birth = "1076.1.1"
+	}
+	#1115 knighted
+	1116.1.1 = {
+		death = "1116.1.1" #1113
+	}
+}
+138454 = {
+	name = "Einon" #ap Cadwgan
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 6378 #Cadwgan ap Bleddyn
+	#mother Sanan
+	1085.1.1 = {
+		birth = "1085.1.1"
+	}
+	1121.1.1 = {
+		death = "1121.1.1"
+	}
+}
+138456 = {
+	name = "Madog" #ap Cadwgan
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 6378 #Cadwgan ap Bleddyn
+	mother = 81853 #Gwenllian ferch Gruffydd
+	1098.1.1 = {
+		birth = "1098.1.1"
+	}
+	1118.1.1 = {
+		death = "1118.1.1"
+	}
+}
+138458 = {
+	name = "Maredudd" #ap Cadwgan
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 6378 #Cadwgan ap Bleddyn
+	#Euron daughter of Hoedlyw ap Cadwgan
+	1105.1.1 = {
+		birth = "1105.1.1"
+	}
+	1122.1.1 = {
+		death = "1122.1.1"
+	}
+}
+138460 = {
+	name = "Morgan" #ap Cadwgan
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 6378 #Cadwgan ap Bleddyn
+	#Euron daughter of Hoedlyw ap Cadwgan
+	1106.1.1 = {
+		birth = "1106.1.1"
+	}
+	1122.1.1 = {
+		trait = kinslayer_3
+		trait = faith_warrior
+	}
+	1125.12.1 = {
+		death = "1125.12.1"
+	}
+}
+138462 = {
+	name = "Gruffydd_Maelor" #Gruffydd Maelor II
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 214724 #Madog ap Gruffydd Maelor ap Madog
+	#mother Angharad of Gwynedd
+	1200.1.1 = {
+		birth = "1200.1.1"
+	}
+	#married Emma de Audley
+	1269.1.1 = {
+		death = "1269.1.1"
+	}
+}
+159076 = {
+	name = "Gwaithfoed" #
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 159075
+	924.1.1 = {
+		birth = "924.1.1"
+	}
+	980.1.1 = {
+		death = "980.1.1"
+	}
+}
+159234 = {
+	name = "Denis" #ferch Bleddyn
+	dynasty_house = house_british_isles_mathrafal #Mathrafal
+	female = yes
+	religion = "catholic"
+	culture = "welsh"
+	father = 6358 #Bleddyn ap Cynfyn
+	mother = 40507 #Haer Efionydd
+	1049.1.1 = {
+		birth = "1049.1.1"
+	}
+	1130.1.1 = {
+		death = "1130.1.1"
+	}
+}
+184083 = {
+	name = "Madog" #Madog II
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 138462 #Gruffydd Maelor II
+	1230.1.1 = {
+		birth = "1230.1.1"
+	}
+	#married Emma de Audley
+	1277.1.1 = {
+		death = "1277.1.1"
+	}
+}
+184084 = {
+	name = "Gruffydd_Fychan"
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 138462 #Gruffydd Maelor II
+	1240.1.1 = {
+		birth = "1240.1.1"
+	}
+	1289.1.1 = {
+		death = "1289.1.1"
+	}
+}
+184085 = {
+	name = "Madog_Crypl"
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 184084 #Gruffydd Fychan
+	1275.1.1 = {
+		birth = "1275.1.1"
+	}
+	1304.1.1 = {
+		death = "1304.1.1"
+	}
+}
+184086 = {
+	name = "Gruffydd" #of Rhuddallt
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 184085 #Madog Crypl
+	1298.1.1 = {
+		birth = "1298.1.1"
+	}
+	1343.1.1 = {
+		death = "1343.1.1"
+	}
+}
+184087 = {
+	name = "Gruffydd_Fychan" #II
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 184086 #Gruffydd of Rhuddalt
+	1320.1.1 = {
+		birth = "1320.1.1"
+	}
+	1369.1.1 = {
+		death = "1369.1.1"
+	}
+}
+184093 = {
+	name = "Madog"
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 420007 #Gwenwynwyn ab Owain
+	1201.1.1 = {
+		birth = "1201.1.1"
+	}
+	1286.1.1 = {
+		death = "1286.1.1"
+	}
+}
+184094 = {
+	name = "Efa"
+	female = yes
+	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	religion = "catholic"
+	culture = "welsh"
+	father = 184093 #Madog
 	1217.1.1 = {
-		death = "1217.1.1"
+		birth = "1217.1.1"
+	}
+	1286.1.1 = {
+		death = "1286.1.1"
 	}
 }
-
-214806 = {
-	name = "Catrin"
-	# AKA: Catrin ferch Rhys
-	female = yes
-	dynasty_house = house_british_isles_dinefwr #Dinefwr
-	religion = "catholic"
-	culture = "welsh"
-	trait = bastard
-	father = 214800 #Rhys ap Gruffydd
-	1172.1.1 = {
-		birth = "1172.1.1"
-	}
-	1222.1.1 = {
-		death = "1222.1.1"
-	}
-}
-
-214807 = {
-	name = "Angharad"
-	# AKA: Anghared ferch Rhys
-	female = yes
-	dynasty_house = house_british_isles_dinefwr #Dinefwr
-	religion = "catholic"
-	culture = "welsh"
-	father = 214800 #Rhys ap Gruffydd
-	mother = 214801 #Gwenllian ferch Owain
-	1172.1.1 = {
-		birth = "1172.1.1"
-	}
-	#married William de Martin
-	1226.1.1 = {
-		death = "1226.1.1"
-	}
-}
-
+#######################################
+# House of Tegaingl 
+#######################################
 214808 = {
 	name = "Crisiant" #ferch Gronw
 	# AKA: Cristen ferch Goronwy
@@ -1530,7 +2912,6 @@
 		death = "1161.1.2"
 	}
 }
-
 214809 = {
 	name = "Goronwy" #Gronw ab Owain
 	# AKA: Goronwy ab Owain
@@ -1545,28 +2926,6 @@
 		death = "1124.1.1"
 	}
 }
-
-214810 = {
-	name = "Gruffydd"
-	# AKA: Gruffydd ap Rhys
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 81816 #Rhys ap Tewdr
-	mother = 40506 #Gwladys ap Rhiwallon
-	1090.1.1 = {
-		birth = "1090.1.1"
-	}
-	1120.1.1 = {
-		add_spouse = 214811 #Gwenllian ferch Gruffydd
-	}
-	1137.1.1 = {
-		death = "1137.1.1"
-	}
-}
-
-
-
 214814 = {
 	name = "Angharad"
 	# AKA: Angharad ferch Owain
@@ -1583,7 +2942,6 @@
 		death = "1161.1.1"
 	}
 }
-
 214815 = {
 	name = "Owain" #ap Edwin
 	dynasty_house = house_british_isles_tegainl #Tegaingl
@@ -1601,27 +2959,64 @@
 		death = "1102.1.1"
 	}
 }
-
-
-
-
-
-332039 = {
-	name = "Maelgwn"
-	# AKA: Maelgwn ap Rhys
-	dynasty_house = house_british_isles_dinefwr
+40508 = {
+	name = "Edwyn" #ap Goronwy
+	dynasty_house = house_british_isles_tegainl #Tegaingl
 	religion = "catholic"
 	culture = "welsh"
-	father = 214800 #Rhys ap Gruffydd
-	mother = 214801 #Gwenllian ferch Owain
-	1170.1.1 = {
-		birth = "1170.1.1"
+	father = 138482 #Goronwy ap Einion
+	1014.1.1 = {
+		birth = "1014.1.1" #unknown
 	}
-	1231.1.1 = {
-		death = "1231.1.1"
+	1040.1.1 = {
+		add_spouse = 40505 #Iweryd ap Cynfyn
+	}
+	1073.1.1 = {
+		death = "1073.1.1" #unknown
 	}
 }
-
+81817 = {
+	name = "Rhirid" #ap Owain
+	dynasty_house = house_british_isles_tegainl #Tegaingl
+	religion = "catholic"
+	culture = "welsh"
+	father = 214815 #Owain ap Edwin ap Goronwy
+	1064.1.1 = {
+		birth = "1064.1.1" #unknown
+	}
+	1124.1.1 = {
+		death = "1124.1.1"
+	}
+}
+81818 = {
+	name = "Tewdwr" #ap Edwin
+	dynasty_house = house_british_isles_tegainl #Tegaingl
+	religion = "catholic"
+	culture = "welsh"
+	father = 40508 #Edwin ap Goronwy
+	1040.1.1 = {
+		birth = "1040.1.1"
+	}
+	1094.1.1 = {
+		death = "1094.1.1"
+	}
+}
+138482 = {
+	name = "Goronwy" #ap Einion King of Deheubarth
+	dynasty_house = house_british_isles_tegainl #Tegaingl
+	religion = "catholic"
+	culture = "welsh"
+	father = 138484 #Einion ap Owain
+	975.1.1 = {
+		birth = "975.1.1"
+	}
+	1030.1.1 = {
+		death = "1030.1.1"
+	}
+}
+#######################################
+# House of Seisyll 
+#######################################
 40500 = {
 	name = "Llywelyn" #ap Seisyll of Gwynedd
 	dynasty_house = house_british_isles_seisyll # Seisyll
@@ -1639,24 +3034,6 @@
 		death = "1023.1.1"
 	}
 }
-
-40501 = {
-	name = "Angharad" #of Gwynedd
-	female = yes
-	dynasty_house = house_british_isles_dinefwr #Dinefwr
-	religion = "catholic"
-	culture = "welsh"
-	father = 81821 #Maredudd ab Owain (Deheubarth)
-	978.1.1 = {
-		birth = "978.1.1" #982
-	}
-	#994 married Llywelyn ap Seisyll of Gwynedd 40500
-	#1023 married Cynfyn ap Gwerstan of Powys
-	1025.7.4 = {
-		death = "1025.7.4" #?
-	}
-}
-
 40502 = {
 	name = "Gruffydd" #ap Llywelyn
 	dynasty_house = house_british_isles_seisyll # Seisyll
@@ -1677,77 +3054,95 @@
 		}
 	}
 }
-
-
-40503 = {
-	name = "Cynfyn" #ap Gwerstan
-	#dynasty = 100065 #Gruffyd of Powys
-	dynasty_house = house_british_isles_mathrafal
+81820 = {
+	name = "Seisyll" #Seisyll of Gwynedd
+	dynasty_house = house_british_isles_seisyll #Seisyll
 	religion = "catholic"
 	culture = "welsh"
-	father = 138444 #Gwerstan
-	978.1.1 = {
-		birth = "978.1.1" #unknown
+	father = 159055 #Ednywain ap Pyll
+	940.1.1 = {
+		birth = "940.1.1" #unknown
 	}
-	1023.1.1 = {
-		add_spouse = 40501 #Angharad of Gwynedd
+	970.1.2 = {
+		add_spouse = 159042 #married Praust of Gwynedd daughter of Elisedd ap Anarawd
 	}
-	1025.1.1 = {
-		death = "1025.1.1"
+	1010.1.1 = {
+		death = "1010.1.1" #unknown
 	}
 }
-
-40504 = {
-	name = "Rhiwallon" #ap Cynfyn
-	dynasty_house = house_british_isles_mathrafal #Mathrafal
+81841 = {
+	name = "Maredudd"
+	dynasty_house = house_british_isles_seisyll
+	martial = 4
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 5
 	religion = "catholic"
 	culture = "welsh"
-	father = 40503 #Cynfyn ap Gwerstan
-	mother = 40501 #Angharad of Gwynedd
-	trait = education_martial_2
-	1025.1.1 = {
-		birth = "1025.1.1"
+	trait = ambitious
+	trait = education_stewardship_2
+	father = 40502
+	mother = 123
+	1053.1.2 = {
+		add_pressed_claim = title:d_gwynedd
+		add_pressed_claim = title:d_powys
+		birth = "1053.1.2"
+	}
+	1066.1.1 = {
+		set_relation_rival = character:6358
 	}
 	1068.1.1 = {
-		death = "1068.1.1"
+		death = "1068.1.1" #Battle of Mechain
 	}
 }
-
-40505 = {
-	name = "Iweryd" #ap Cynfyn
-	# AKA: Eferydd
-	female = yes
-	dynasty_house = house_british_isles_mathrafal #Mathrafal
+81842 = {
+	name = "Idwal"
+	dynasty_house = house_british_isles_seisyll
+	martial = 4
+	diplomacy = 5
+	intrigue = 7
+	stewardship = 4
 	religion = "catholic"
 	culture = "welsh"
-	father = 40503 #Cynfyn ap Gwerstan
-	mother = 40501 #Angharad of Gwynedd
-	1023.1.1 = {
-		birth = "1023.1.1"
+	trait = education_martial_2
+	father = 40502
+	mother = 123
+	1054.1.2 = {
+		add_pressed_claim = title:d_gwynedd
+		add_pressed_claim = title:d_powys
+		birth = "1054.1.2"
 	}
-	#married Edwin ap Gronw
-	1073.1.1 = {
-		death = "1073.1.1"
+	1063.1.2 = {
+		employer = 81841 #Maredudd ap Gruffydd
+	}
+	1068.1.1 = {
+		death = "1068.1.1" #Battle of Mechain
 	}
 }
-
-40506 = {
-	name = "Gwladus" #verch Rhiwallon
-	# AKA: Gwladys
+81843 = {
+	name = "Nest"
 	female = yes
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+	dynasty_house = house_british_isles_seisyll
+	martial = 5
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 4
 	religion = "catholic"
 	culture = "welsh"
-	father = 40504 #Rhiwallon ap Cynfyn
-	1049.1.1 = {
-		birth = "1049.1.1" #unknown
+	trait = calm
+	trait = education_learning_2
+	father = 40502
+	mother = 123
+	1055.1.2 = {
+		birth = "1055.1.2"
 	}
-	#1080 married Rhys ap Twedr 81816
-	1099.1.1 = {
-		death = "1099.1.1" #unknown
+	1105.1.2 = {
+		death = "1105.1.2"
 	}
 }
-
+#######################################
+# House of Efionydd 
+#######################################
 40507 = {
 	name = "Haer" #ferch Cillin
 	female = yes
@@ -1762,24 +3157,9 @@
 		death = "1065.1.1" #unknown
 	}
 }
-
-40508 = {
-	name = "Edwyn" #ap Goronwy
-	dynasty_house = house_british_isles_tegainl #Tegaingl
-	religion = "catholic"
-	culture = "welsh"
-	father = 138482 #Goronwy ap Einion
-	1014.1.1 = {
-		birth = "1014.1.1" #unknown
-	}
-	1040.1.1 = {
-		add_spouse = 40505 #Iweryd ap Cynfyn
-	}
-	1073.1.1 = {
-		death = "1073.1.1" #unknown
-	}
-}
-
+#######################################
+# House of Morgannwg 
+#######################################
 40510 = {
 	name = "Owain"
 	dynasty_house = house_british_isles_morgannwg
@@ -1798,7 +3178,6 @@
 		death = "1001.1.2"
 	}
 }
-
 40511 = {
 	name = "Rhys"
 	dynasty_house = house_british_isles_morgannwg
@@ -1817,7 +3196,6 @@
 		death = "1035.1.2"
 	}
 }
-
 40512 = {
 	name = "Hywel"
 	dynasty_house = house_british_isles_morgannwg
@@ -1836,7 +3214,6 @@
 		death = "1043.1.2"
 	}
 }
-
 40513 = {
 	name = "Meurig" #ap Hywel
 	dynasty_house = house_british_isles_morgannwg #Morgan
@@ -1850,7 +3227,6 @@
 		death = "1065.1.1"
 	}
 }
-
 40514 = {
 	name = "Ithel_Ddu"
 	# AKA: Ithel Ddu
@@ -1870,7 +3246,6 @@
 		death = "1041.1.2"
 	}
 }
-
 40515 = {
 	name = "Gwrgant" #ap Ithel Ddu
 	dynasty_house = house_british_isles_morgannwg #Morgan
@@ -1884,25 +3259,6 @@
 		death = "1060.1.1"
 	}
 }
-
-40516 = {
-	name = "Angharad"
-	female = yes
-	martial = 6
-	diplomacy = 6
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = "welsh"
-	trait = education_diplomacy_1
-	1045.1.2 = {
-		birth = "1045.1.2"
-	}
-	1066.1.2 = {
-		death = "1066.1.2"
-	}
-}
-
 40517 = {
 	name = "Caradog"
 	dynasty_house = house_british_isles_morgannwg
@@ -1922,7 +3278,6 @@
 		death = "1111.1.2"
 	}
 }
-
 40518 = {
 	name = "Madog"
 	dynasty_house = house_british_isles_morgannwg
@@ -1941,7 +3296,6 @@
 		death = "1112.1.2"
 	}
 }
-
 40519 = {
 	name = "Rhys"
 	dynasty_house = house_british_isles_morgannwg
@@ -1960,7 +3314,6 @@
 		death = "1113.1.2"
 	}
 }
-
 40520 = {
 	name = "Morgan"
 	dynasty_house = house_british_isles_morgannwg
@@ -1979,7 +3332,6 @@
 		death = "1114.1.2"
 	}
 }
-
 40521 = {
 	name = "Nest"
 	female = yes
@@ -1999,7 +3351,6 @@
 		death = "1115.1.2"
 	}
 }
-
 40522 = {
 	name = "Efe"
 	# AKA: Efet
@@ -2020,7 +3371,6 @@
 		death = "1097.1.2"
 	}
 }
-
 40523 = {
 	name = "Nest"
 	female = yes
@@ -2040,22 +3390,417 @@
 		death = "1099.1.2"
 	}
 }
-420007 = {
-	name = "Gwenwynwyn"
-	# AKA: Gwenwynwyn ab Owain Cyfelloig
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+6362 = {
+	name = "Cadwgan" #ap Meurig
+	dynasty_house = house_british_isles_morgannwg #Morgan
 	religion = "catholic"
 	culture = "welsh"
-	father = 214720 #Owain Cyfelloig ap Gruffydd
-	mother = 214721 #Gwenllian ferch Owain ap Gruffydd
-	1162.1.1 = {
-		birth = "1162.1.1"
+	father = 40513 #Meurig ap Hywel
+	1042.1.1 = {
+		birth = "1042.1.1"
 	}
-	#married Mary Corbet
-	1216.1.1 = {
-		death = "1216.1.1"
+	1074.1.1 = {
+		death = "1074.1.1"
 	}
 }
+6376 = {
+	name = "Iestyn" #ap Gwrgant
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 40515 #Gwrgant ap Ithel Ddu
+	1045.1.1 = {
+		birth = "1045.1.1"
+	}
+	1061.1.1 = {
+		add_spouse = 40516 #Angharad ?
+	}
+	1093.1.1 = {
+		death = "1093.1.1"
+	}
+}
+6382 = {
+	name = "Rhys"
+	dynasty_house = house_british_isles_morgannwg
+	martial = 7
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 7
+	religion = "catholic"
+	culture = "welsh"
+	father = 40513 #Meurig ap Hywel
+	trait = diligent
+	trait = zealous
+	trait = education_learning_2
+	1053.1.2 = {
+		birth = "1053.1.2"
+	}
+	1103.1.2 = {
+		death = "1103.1.2"
+	}
+}
+81863 = {
+	name = "Rhydderch"
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	martial = 8
+	diplomacy = 8
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "welsh"
+	trait = humble
+	father = 159003
+	1003.1.1 = {
+		birth = "1003.1.1"
+	}
+	1033.1.1 = {
+		death = "1033.1.1"
+	}
+}
+81864 = {
+	name = "Rhydderch_Ieuaf"
+	# AKA: Rhydderch Ieuaf
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	martial = 5
+	diplomacy = 4
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = "welsh"
+	father = 81863
+	1020.1.2 = {
+		birth = "1020.1.2"
+	}
+	1070.1.2 = {
+		death = "1070.1.2"
+	}
+}
+81865 = {
+	name = "Hywel"
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	martial = 4
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 6
+	religion = "catholic"
+	culture = "welsh"
+	trait = calm
+	trait = temperate
+	father = 81863
+	1022.1.2 = {
+		birth = "1022.1.2"
+	}
+	1072.1.2 = {
+		death = "1072.1.2"
+	}
+}
+81866 = {
+	name = "Rhys"
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	martial = 8
+	diplomacy = 5
+	intrigue = 5
+	stewardship = 8
+	religion = "catholic"
+	culture = "welsh"
+	trait = arbitrary
+	trait = education_intrigue_2
+	father = 81863
+	1023.1.2 = {
+		birth = "1023.1.2"
+	}
+	1073.1.2 = {
+		death = "1073.1.2"
+	}
+}
+81867 = {
+	name = "Meirchion"
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	martial = 8
+	diplomacy = 4
+	intrigue = 8
+	stewardship = 5
+	religion = "catholic"
+	culture = "welsh"
+	trait = education_stewardship_2
+	father = 81866
+	1055.1.2 = {
+		birth = "1055.1.2"
+	}
+	1105.1.2 = {
+		death = "1105.1.2"
+	}
+}
+81868 = {
+	name = "Caradog"
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	martial = 4
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = "welsh"
+	trait = honest
+	trait = education_martial_2
+	father = 81863
+	1024.1.2 = {
+		birth = "1024.1.2"
+	}
+	1074.1.2 = {
+		death = "1074.1.2"
+	}
+}
+81869 = {
+	name = "Rhydderch"
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	martial = 7
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 8
+	religion = "catholic"
+	culture = "welsh"
+	trait = lustful
+	trait = education_martial_2
+	father = 81868
+	1044.1.2 = {
+		birth = "1044.1.2"
+	}
+	1094.1.2 = {
+		death = "1094.1.2"
+	}
+}
+159003 = {
+	name = "Iestyn" # ap Owain ap Morgan Hen
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 40510 # Owain ap Morgan Hen
+	975.1.1 = {
+		birth = "975.1.1"	#unknown
+	}
+	1023.1.1 = {
+		death = "1023.1.1" #unknown
+	}
+}
+159107 = {
+	name = "Morgan" #
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159108
+	mother = 159375
+	874.1.1 = {
+		birth = "874.1.1"
+	}
+	974.1.1 = {
+		give_nickname = nick_the_old
+	}
+	974.1.2 = {
+		death = "974.1.2"
+	}
+}
+159108 = {
+	name = "Owain" #
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159109
+	850.1.1 = {
+		birth = "850.1.1"
+	}
+	875.1.1 = {
+		add_spouse = 159375
+	}
+	930.1.1 = {
+		death = "930.1.1"
+	}
+}
+159109 = {
+	name = "Hywel" #
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159110
+	830.1.1 = {
+		birth = "830.1.1"
+	}
+	885.1.1 = {
+		death = "885.1.1"
+	}
+}
+159110 = {
+	name = "Rhys" #
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159111
+	789.1.1 = {
+		birth = yes
+	}
+	840.1.1 = {
+		death = "840.1.1"
+	}
+}
+159111 = {
+	name = "Arthfael" #
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159112
+	775.1.1 = {
+		birth = yes
+	}
+	840.1.1 = {
+		death = "840.1.1"
+	}
+}
+159112 = {
+	name = "Gwriad" #
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159113
+	750.1.1 = {
+		birth = "750.1.1"
+	}
+	810.1.1 = {
+		death = "810.1.1"
+	}
+}
+159113 = {
+	name = "Brochfael" #
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159114
+	730.1.1 = {
+		birth = "730.1.1"
+	}
+	790.1.1 = {
+		death = "790.1.1"
+	}
+}
+159114 = {
+	name = "Rhys" #
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159115
+	709.1.1 = {
+		birth = "709.1.1"
+	}
+	780.1.1 = {
+		death = "780.1.1"
+	}
+}
+159115 = {
+	name = "Ithel" #
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159116
+	675.1.1 = {
+		birth = "675.1.1"
+	}
+	740.1.1 = {
+		death = "740.1.1"
+	}
+}
+159116 = {
+	name = "Morgan" #
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159835
+	634.1.1 = {
+		birth = "634.1.1"
+	}
+	710.1.2 = {
+		death = "710.1.2"
+		give_nickname = nick_the_great
+	}
+}
+160255 = {
+	name = "Arthfael" # ap Hywel
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159109
+	849.1.1 = {
+		birth = "849.1.1"
+	}
+	916.1.1 = {
+		death = "916.1.1"
+	}
+}
+160256 = {
+	name = "Rhys" # ap Hywel
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159109
+	851.1.1 = {
+		birth = "851.1.1"
+	}
+	900.1.1 = {
+		death = "900.1.1"
+	}
+}
+160257 = {
+	name = "Arthfael" # ap Rhys
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159110
+	835.1.1 = {
+		birth = "835.1.1"
+	}
+	895.1.1 = {
+		death = "895.1.1"
+	}
+}
+160258 = {
+	name = "Meurig" # ap Arthfael
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 159111
+	800.1.1= {
+		birth = yes
+	}
+	874.1.1= {
+		death = yes
+	}
+}
+160259 = {
+	name = "Brochfael" # ap Meurig
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 160258
+	835.1.1 = {
+		birth = "835.1.1"
+	}
+	890.1.1 = {
+		death = "890.1.1"
+	}
+}
+160260 = {
+	name = "Ffernfael" # ap Meurig
+	dynasty_house = house_british_isles_morgannwg #Morgan
+	religion = "catholic"
+	culture = "welsh"
+	father = 160258
+	837.1.1 = {
+		birth = "837.1.1"
+	}
+	892.1.1 = {
+		death = "892.1.1"
+	}
+}
+#######################################
+# House of de la poole 
+#######################################
 420008 = {
 	name = "Gruffydd"
 	# AKA: Gruffydd ap Gwenwynwyn
@@ -2119,71 +3864,137 @@
 		death = "1353.1.1"
 	}
 }
-6358 = {
-	name = "Bleddyn" #ap Cynfyn
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
+183190 = {
+	name = "Llywelyn"
+	# AKA: Llywelyn ap Gruffydd
+	dynasty = 200069
 	religion = "catholic"
 	culture = "welsh"
-	father = 40503 #Cynfyn ap Gwerstan
-	mother = 40501 #Angharad of Gwynedd
-	trait = lustful
-	1025.1.1 = {
-		birth = "1025.1.1"
+	father = 420008 #Gruffydd ap Gwenwynwyn
+	1258.1.1 = {
+		birth = "1258.1.1"
 	}
-	1041.1.1 = {
-		add_spouse = 81849 #Brandwen Nwrcelyn 1st spouse
-	}
-	1043.1.1 = {
-		remove_spouse = 81849
-	}
-	#unknown second spouse. was 81853
-	1044.1.1 = {
-		add_spouse = 40507 #Haer Efionydd 3rd spouse
-	}
-	1050.1.1 = {
-		remove_spouse = 40507 #date unknown
-	}
-	1052.1.1 = {
-		add_spouse = 81856 #Morien Maelienydd 4th spouse
-	}
-	1075.1.1 = {
-		death = "1075.1.1"
+	1291.1.1 = {
+		death = "1291.1.1"
 	}
 }
-6360 = {
-	name = "Maredudd" #ap Bleddyn
-	dynasty_house = house_british_isles_mathrafal #Mathrafal
+183191 = {
+	name = "Margred"
+	# AKA: Margred ferch Gruffydd
+	female = yes
+	dynasty = 200069
 	religion = "catholic"
 	culture = "welsh"
-	father = 6358 #Bleddyn ap Cynfyn
-	mother = 40507 #Haer Efionydd
-	trait = education_martial_3
-	1047.1.1 = {
-		birth = "1047.1.1"
+	father = 420008 #Gruffydd ap Gwenwynwyn
+	1255.1.1 = {
+		birth = "1255.1.1"
 	}
-	#married Hunedd ferch Einudd
-	#mistress Cristin ferch Bledrus
-	1111.1.1 = {
-		employer = 138452 #Owain ap Cadwgan
-	}
-	1132.2.9 = {
-		death = "1132.2.9"
+	1336.5.11 = {
+		death = "1336.5.11"
 	}
 }
-6362 = {
-	name = "Cadwgan" #ap Meurig
-	dynasty_house = house_british_isles_morgannwg #Morgan
+183192 = {
+	name = "Ieuan"
+	# AKA: Ieuan ap Gruffydd
+	dynasty = 200069
 	religion = "catholic"
 	culture = "welsh"
-	father = 40513 #Meurig ap Hywel
-	1042.1.1 = {
-		birth = "1042.1.1"
+	father = 420008 #Gruffydd ap Gwenwynwyn
+	1261.1.1 = {
+		birth = "1261.1.1"
 	}
-	1074.1.1 = {
-		death = "1074.1.1"
+	1278.1.1 = {
+		death = "1278.1.1"
 	}
 }
-
+183193 = {
+	name = "Gwilym"
+	# AKA: Gwilym ap Gruffydd
+	dynasty = 200069
+	religion = "catholic"
+	culture = "welsh"
+	father = 420008 #Gruffydd ap Gwenwynwyn
+	1263.1.1 = {
+		birth = "1263.1.1"
+	}
+	1317.1.1 = {
+		death = "1317.1.1"
+	}
+}
+183194 = {
+	name = "Gruffydd"
+	# AKA: Gruffydd ap Gruffydd
+	dynasty = 200069
+	religion = "catholic"
+	culture = "welsh"
+	father = 420008 #Gruffydd ap Gwenwynwyn
+	1268.1.1 = {
+		birth = "1268.1.1"
+	}
+	1324.1.1 = {
+		death = "1324.1.1"
+	}
+}
+183195 = {
+	name = "Dafydd"
+	# AKA: Dafydd ap Gruffydd
+	dynasty = 200069
+	religion = "catholic"
+	culture = "welsh"
+	father = 420008 #Gruffydd ap Gwenwynwyn
+	1271.1.1 = {
+		birth = "1271.1.1"
+	}
+	1339.1.1 = {
+		death = "1339.1.1"
+	}
+}
+183196 = {
+	name = "Efa"
+	# AKA: Efa ferch Llywelyn
+	female = yes
+	dynasty = 200069
+	religion = "catholic"
+	culture = "welsh"
+	father = 183190 #Llywelyn ap Gruffydd
+	1288.1.1 = {
+		birth = "1288.1.1"
+	}
+	1338.1.1 = {
+		death = "1338.1.1"
+	}
+}
+183197 = {
+	name = "Gruffydd"
+	# AKA: Gruffydd ap Gwilym
+	dynasty = 200069
+	religion = "catholic"
+	culture = "welsh"
+	father = 183193 #Gwilym ap Gruffydd
+	1292.1.1 = {
+		birth = "1292.1.1"
+	}
+	1356.1.1 = {
+		death = "1356.1.1"
+	}
+}
+183198 = {
+	name = "Gwilym"
+	# AKA: Gwilym ap Gruffydd
+	dynasty = 200069
+	religion = "catholic"
+	culture = "welsh"
+	father = 183197 #Gruffydd ap Gwilym
+	1332.1.1 = {
+		birth = "1332.1.1"
+	}
+	1376.1.1 = {
+		death = "1376.1.1"
+	}
+}
+#######################################
+# House of Arwystli 
+#######################################
 6368 = {
 	name = "Traheaern_Dyfnallt"
 	# AKA: Traheaern Dyfnallt
@@ -2206,68 +4017,23 @@
 		death = "1086.1.2"
 	}
 }
-
-6376 = {
-	name = "Iestyn" #ap Gwrgant
-	dynasty_house = house_british_isles_morgannwg #Morgan
+8189 = {
+	name = "Ederfydd" #ap Seisyll
 	religion = "catholic"
 	culture = "welsh"
-	father = 40515 #Gwrgant ap Ithel Ddu
-	1045.1.1 = {
-		birth = "1045.1.1"
+	trait = bastard
+	dynasty_house = house_british_isles_arwystli
+	father = 81820 #Seisyll of Gwynedd
+	985.1.1 = {
+		birth = "985.1.1"
 	}
-	1061.1.1 = {
-		add_spouse = 40516 #Angharad ?
-	}
-	1093.1.1 = {
-		death = "1093.1.1"
-	}
-}
-
-6378 = {
-	name = "Cadwgan" #ap Bleddyn
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6358 #Bleddyn ap Cynfyn
-	mother = 81849 #Brandwen Nwrcelyn
-	trait = education_martial_3
-	trait = lustful
-	1041.1.1 = {
-		birth = "1041.1.1"
-	}
-	#married Sanan 4th spouse
-	#married Ellyw daughter of Cedivor ap Collwyn 5th spouse
-	1098.1.1 = {
-		add_spouse = 81853 #Gwenllian ferch Gruffydd 6th spouse
-	}
-	#married Euron daughter of Hoedlyw ap Cadwgan 7th spouse
-	1111.1.1 = {
-		death = "1111.1.1"
+	1038.1.1 = {
+		death = "1038.1.1"
 	}
 }
-
-6382 = {
-	name = "Rhys"
-	dynasty_house = house_british_isles_morgannwg
-	martial = 7
-	diplomacy = 8
-	intrigue = 8
-	stewardship = 7
-	religion = "catholic"
-	culture = "welsh"
-	father = 40513 #Meurig ap Hywel
-	trait = diligent
-	trait = zealous
-	trait = education_learning_2
-	1053.1.2 = {
-		birth = "1053.1.2"
-	}
-	1103.1.2 = {
-		death = "1103.1.2"
-	}
-}
-
+#######################################
+# House of Edern 
+#######################################
 6384 = {
 	name = "Rhys"
 	dynasty = 101724
@@ -2285,9 +4051,9 @@
 		death = "1047.1.2"
 	}
 }
-
-
-
+#######################################
+# House of Llanbadarn 
+#######################################
 81811 = {
 	name = "Sulien"
 	# AKA: Sulien
@@ -2308,7 +4074,6 @@
 		death = "1070.1.2"
 	}
 }
-
 81812 = {
 	name = "Rhygyfarch"
 	dynasty = 20181
@@ -2330,7 +4095,6 @@
 		death = "1095.1.2"
 	}
 }
-
 81813 = {
 	name = "Ieuan"
 	dynasty = 20181
@@ -2351,236 +4115,9 @@
 		death = "1100.1.2"
 	}
 }
-
-81814 = {
-	name = "Maredudd" #ap Gruffydd
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 214810 #Gruffydd ap Rhys
-	1130.1.1 = {
-		birth = "1130.1.1"
-	}
-	1157.1.1 = {
-		death = "1157.1.1"
-	}
-}
-
-81815 = {
-	name = "Rhys" #ap Owain
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 138494 #Owain ap Edwin
-	1011.1.1 = {
-		birth = "1011.1.1" #unknown
-	}
-	1076.1.1 = {
-		death = "1076.1.1"
-	}
-}
-
-81816 = {
-	name = "Rhys" # ap Tewdwr
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	trait = generous
-	father = 138488 #Tewdwr ap Cadell
-	997.1.1 = {
-		birth = "997.1.1" #unknown
-	}
-	1080.1.1 = {
-		add_spouse = 40506 #Gwladys ap Rhiwallon
-	}
-	1093.4.1 = {
-		death = "1093.4.1"
-	}
-}
-
-81817 = {
-	name = "Rhirid" #ap Owain
-	dynasty_house = house_british_isles_tegainl #Tegaingl
-	religion = "catholic"
-	culture = "welsh"
-	father = 214815 #Owain ap Edwin ap Goronwy
-	1064.1.1 = {
-		birth = "1064.1.1" #unknown
-	}
-	1124.1.1 = {
-		death = "1124.1.1"
-	}
-}
-
-81818 = {
-	name = "Tewdwr" #ap Edwin
-	dynasty_house = house_british_isles_tegainl #Tegaingl
-	religion = "catholic"
-	culture = "welsh"
-	father = 40508 #Edwin ap Goronwy
-	1040.1.1 = {
-		birth = "1040.1.1"
-	}
-	1094.1.1 = {
-		death = "1094.1.1"
-	}
-}
-
-81819 = {
-	name = "Edwyn" #ap Hywel
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 81823 #Hywel Dda
-	mother = 159355 #Elen of Dyfed
-	906.1.1 = {
-		birth = "906.1.1"
-	}
-	954.1.1 = {
-		death = "954.1.1"
-	}
-}
-
-81820 = {
-	name = "Seisyll" #Seisyll of Gwynedd
-	dynasty_house = house_british_isles_seisyll #Seisyll
-	religion = "catholic"
-	culture = "welsh"
-	father = 159055 #Ednywain ap Pyll
-	940.1.1 = {
-		birth = "940.1.1" #unknown
-	}
-	970.1.2 = {
-		add_spouse = 159042 #married Praust of Gwynedd daughter of Elisedd ap Anarawd
-	}
-	1010.1.1 = {
-		death = "1010.1.1" #unknown
-	}
-}
-
-81821 = {
-	name = "Maredudd" #ap Owain of Deheubarth
-	dynasty_house = house_british_isles_dinefwr #Dinefwr
-	religion = "catholic"
-	culture = "welsh"
-	father = 81822 #Owain of Deheubarth
-	920.1.1 = {
-		birth = "920.1.1"
-	}
-	999.1.1 = {
-		death = "999.1.1"
-	}
-}
-
-81822 = {
-	name = "Owain" #ap Hywel
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 81823 #Hywel Dda
-	mother = 159355 #Elen of Dyfed
-	905.1.1 = {
-		birth = "905.1.1"
-	}
-	987.1.1 = {
-		death = "987.1.1"
-	}
-}
-
-81823 = {
-	name = "Hywel" # the Good
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	trait = just
-	father = 81824 #Cadell ap Rhodri
-	880.1.1 = {
-		birth = "880.1.1"
-		give_nickname = nick_the_good
-	}
-	904.1.1 = {
-		add_spouse = 159355 #Elen of Dyfed
-	}
-	950.1.1 = {
-		death = "950.1.1"
-	}
-}
-
-
-
-81841 = {
-	name = "Maredudd"
-	dynasty_house = house_british_isles_seisyll
-	martial = 4
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = "welsh"
-	trait = ambitious
-	trait = education_stewardship_2
-	father = 40502
-	mother = 123
-	1053.1.2 = {
-		add_pressed_claim = title:d_gwynedd
-		add_pressed_claim = title:d_powys
-		birth = "1053.1.2"
-	}
-	1066.1.1 = {
-		set_relation_rival = character:6358
-	}
-	1068.1.1 = {
-		death = "1068.1.1" #Battle of Mechain
-	}
-}
-
-81842 = {
-	name = "Idwal"
-	dynasty_house = house_british_isles_seisyll
-	martial = 4
-	diplomacy = 5
-	intrigue = 7
-	stewardship = 4
-	religion = "catholic"
-	culture = "welsh"
-	trait = education_martial_2
-	father = 40502
-	mother = 123
-	1054.1.2 = {
-		add_pressed_claim = title:d_gwynedd
-		add_pressed_claim = title:d_powys
-		birth = "1054.1.2"
-	}
-	1063.1.2 = {
-		employer = 81841 #Maredudd ap Gruffydd
-	}
-	1068.1.1 = {
-		death = "1068.1.1" #Battle of Mechain
-	}
-}
-
-81843 = {
-	name = "Nest"
-	female = yes
-	dynasty_house = house_british_isles_seisyll
-	martial = 5
-	diplomacy = 6
-	intrigue = 7
-	stewardship = 4
-	religion = "catholic"
-	culture = "welsh"
-	trait = calm
-	trait = education_learning_2
-	father = 40502
-	mother = 123
-	1055.1.2 = {
-		birth = "1055.1.2"
-	}
-	1105.1.2 = {
-		death = "1105.1.2"
-	}
-}
-
+#######################################
+# House of Gwynllwg 
+#######################################
 81846 = {
 	name = "Caradog" #ap Gruffydd
 	dynasty_house = house_british_isles_gwynllwg #Gwynllwg
@@ -2594,190 +4131,6 @@
 		death = "1081.1.1"
 	}
 }
-
-81847 = {
-	name = "Madog" #ap Bleddyn
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6358 #Bleddyn ap Cynfyn
-	1043.1.1 = {
-		birth = "1043.1.1" #unknown
-	}
-	1087.1.1 = {
-		death = "1087.1.1"
-	}
-}
-
-81848 = {
-	name = "Rhirid" #Rhirid ap Bleddyn
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6358 #Bleddyn ap Cynfyn
-	1043.1.1 = {
-		birth = "1043.1.1" #unknown
-	}
-	1087.1.1 = {
-		death = "1087.1.1"
-	}
-}
-
-81849 = {
-	name = "Branwen" #? Nwrcelyn
-	female = yes
-	dynasty = 20138 #Nwrcelyn
-	religion = "catholic"
-	culture = "welsh"
-	#father Brockwell ap Moelyn of Nwrcelyn
-	1025.1.1 = {
-		birth = "1025.1.1"
-	}
-	1052.1.1 = {
-		death = "1052.1.1"
-	}
-}
-
-81850 = {
-	name = "Hunydd" #ap Bleddyn
-	female = yes
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6358 #Bleddyn ap Cynfyn
-	mother = 81849 #Brandwen Nwrcelyn
-	1042.1.1 = {
-		birth = "1042.1.1" #unknown
-	}
-	1100.1.1 = {
-		death = "1100.1.1" #unknown
-	}
-}
-
-81851 = {
-	name = "Llywelyn" #ap Madog
-	# AKA: Llywarch
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 214718 #Madog ap Maredudd
-	#mother Susann of Gwynedd
-	1130.1.1 = {
-		birth = "1130.1.1"
-	}
-	1161.1.1 = {
-		death = "1161.1.1"
-	}
-}
-
-81853 = {
-	name = "Gwenllian" #Gwenllian ferch Gruffydd
-	female = yes
-	religion = "catholic"
-	culture = "welsh"
-	#father Gruffydd ap Cynan
-	1080.1.1 = {
-		birth = "1080.1.1"
-	}
-	#1098 married Cadwgan ap Bleddyn
-	#1116 married Gruffyd ap Rhys
-	1136.1.1 = {
-		death = "1136.1.1"
-	}
-}
-
-81854 = {
-	name = "Gruffydd_Maelor" #ap Madog
-	# AKA: Maelog
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 214718 #Madog ap Maredudd
-	#mother Susann of Gwynedd
-	1154.1.1 = {
-		birth = "1154.1.1"
-	}
-	#married Angharad of Gwynedd verch Owain Gwynedd
-	1191.1.1 = {
-		death = "1191.1.1"
-	}
-}
-
-81855 = {
-	name = "Rhiryd" #ap Iorwerth
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 81857 #Iorwerth ap Bleddyn
-	1100.1.1 = {
-		birth = "1100.1.1" #unknown
-	}
-	1175.1.1 = {
-		death = "1175.1.1" #unknown
-	}
-}
-
-81856 = {
-	name = "Morien" #ferch Idnerth
-	female = yes
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	religion = "catholic"
-	culture = "welsh"
-	father = 8187
-	1036.1.1 = {
-		birth = "1036.1.1" #unknown
-	}
-	1088.1.1 = {
-		death = "1088.1.1" #unknown
-	}
-}
-
-81857 = {
-	name = "Iorwerth" #ap Bleddyn
-	dynasty_house = house_british_isles_mathrafal #Mathrafal
-	religion = "catholic"
-	culture = "welsh"
-	father = 6358 #Bleddyn ap Cynfyn
-	mother = 81856 #Morien Maelienydd
-	1053.1.1 = {
-		birth = "1053.1.1"
-	}
-	1108.1.1 = {
-		death = "1108.1.1"
-	}
-}
-
-81859 = {
-	name = "Meilys" #ap Rhiwallon
-	# AKA: Meilyr
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 40504 #Rhiwallon ap Cynfyn
-	1047.1.1 = {
-		birth = "1047.1.1" #unknown
-	}
-	1081.1.1 = {
-		death = "1081.1.1" #unknown
-	}
-}
-
-81860 = {
-	name = "Sioned" #verch Rhiwallon
-	female = yes
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 40504 #Rhiwallon ap Cynfyn
-	1048.1.1 = {
-		birth = "1048.1.1" #unknown
-	}
-	#married Ednyfed
-	1098.1.1 = {
-		death = "1098.1.1" #unknown
-	}
-}
-
 81861 = {
 	name = "Owain"
 	dynasty_house = house_british_isles_gwynllwg #Gwynllwg
@@ -2796,7 +4149,6 @@
 		death = "1106.1.2"
 	}
 }
-
 81862 = {
 	name = "Gruffydd"
 	dynasty_house = house_british_isles_gwynllwg #Gwynllwg
@@ -2815,158 +4167,26 @@
 		death = "1055.1.2"
 	}
 }
-
-81863 = {
-	name = "Rhydderch"
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	martial = 8
-	diplomacy = 8
-	intrigue = 4
-	stewardship = 5
+#######################################
+# House of Nwrcelyn 
+#######################################
+81849 = {
+	name = "Branwen" #? Nwrcelyn
+	female = yes
+	dynasty = 20138 #Nwrcelyn
 	religion = "catholic"
 	culture = "welsh"
-	trait = humble
-	father = 159003
-	1003.1.1 = {
-		birth = "1003.1.1"
+	#father Brockwell ap Moelyn of Nwrcelyn
+	1025.1.1 = {
+		birth = "1025.1.1"
 	}
-	1033.1.1 = {
-		death = "1033.1.1"
-	}
-}
-
-81864 = {
-	name = "Rhydderch_Ieuaf"
-	# AKA: Rhydderch Ieuaf
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	martial = 5
-	diplomacy = 4
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = "welsh"
-	father = 81863
-	1020.1.2 = {
-		birth = "1020.1.2"
-	}
-	1070.1.2 = {
-		death = "1070.1.2"
+	1052.1.1 = {
+		death = "1052.1.1"
 	}
 }
-
-81865 = {
-	name = "Hywel"
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	martial = 4
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 6
-	religion = "catholic"
-	culture = "welsh"
-	trait = calm
-	trait = temperate
-	father = 81863
-	1022.1.2 = {
-		birth = "1022.1.2"
-	}
-	1072.1.2 = {
-		death = "1072.1.2"
-	}
-}
-
-81866 = {
-	name = "Rhys"
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	martial = 8
-	diplomacy = 5
-	intrigue = 5
-	stewardship = 8
-	religion = "catholic"
-	culture = "welsh"
-	trait = arbitrary
-	trait = education_intrigue_2
-	father = 81863
-	1023.1.2 = {
-		birth = "1023.1.2"
-	}
-	1073.1.2 = {
-		death = "1073.1.2"
-	}
-}
-
-81867 = {
-	name = "Meirchion"
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	martial = 8
-	diplomacy = 4
-	intrigue = 8
-	stewardship = 5
-	religion = "catholic"
-	culture = "welsh"
-	trait = education_stewardship_2
-	father = 81866
-	1055.1.2 = {
-		birth = "1055.1.2"
-	}
-	1105.1.2 = {
-		death = "1105.1.2"
-	}
-}
-
-81868 = {
-	name = "Caradog"
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	martial = 4
-	diplomacy = 6
-	intrigue = 7
-	stewardship = 7
-	religion = "catholic"
-	culture = "welsh"
-	trait = honest
-	trait = education_martial_2
-	father = 81863
-	1024.1.2 = {
-		birth = "1024.1.2"
-	}
-	1074.1.2 = {
-		death = "1074.1.2"
-	}
-}
-
-81869 = {
-	name = "Rhydderch"
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	martial = 7
-	diplomacy = 7
-	intrigue = 7
-	stewardship = 8
-	religion = "catholic"
-	culture = "welsh"
-	trait = lustful
-	trait = education_martial_2
-	father = 81868
-	1044.1.2 = {
-		birth = "1044.1.2"
-	}
-	1094.1.2 = {
-		death = "1094.1.2"
-	}
-}
-
-8187 = {
-	name = "Idnerth" #ap Cadwgon
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	father = 184126 #Cadwgon ap Elystan
-	religion = "catholic"
-	culture = "welsh"
-	1017.1.1 = {
-		birth = "1017.1.1"
-	}
-	1056.2.1 = {
-		death = "1056.2.1"
-	}
-}
-
+#######################################
+# House of Aberteifi 
+#######################################
 81871 = {
 	name = "Neiniad"
 	dynasty = 20148
@@ -2987,7 +4207,6 @@
 		death = "1090.1.2"
 	}
 }
-
 81872 = {
 	name = "Ednowain"
 	# AKA: Ednowain Bendew
@@ -3007,22 +4226,9 @@
 		death = "1114.1.2"
 	}
 }
-
-8189 = {
-	name = "Ederfydd" #ap Seisyll
-	religion = "catholic"
-	culture = "welsh"
-	trait = bastard
-	dynasty_house = house_british_isles_arwystli
-	father = 81820 #Seisyll of Gwynedd
-	985.1.1 = {
-		birth = "985.1.1"
-	}
-	1038.1.1 = {
-		death = "1038.1.1"
-	}
-}
-
+#######################################
+# House of Llancarfan 
+#######################################
 81911 = {
 	name = "Herewallt"
 	dynasty = 20191 #Llancarfan
@@ -3035,7 +4241,6 @@
 		death = "1075.1.1"
 	}
 }
-
 81912 = {
 	name = "Lifris"
 	dynasty = 20191
@@ -3055,7 +4260,6 @@
 		death = "1095.1.2"
 	}
 }
-
 81913 = {
 	name = "Steffen"
 	dynasty = 20191
@@ -3075,344 +4279,9 @@
 		death = "1100.1.2"
 	}
 }
-
-138443 = {
-	name = "Gwenllian"
-	female = yes
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6358 #Bleddyn ap Cynfyn
-	mother = 81849 #Brandwen Nwrcelyn
-	1042.1.1 = {
-		birth = "1042.1.1"
-	}
-	#married Caradog ap Gruffyd ap Rhys
-	1090.1.1 = {
-		death = "1090.1.1"
-	}	
-}
-
-138444 = {
-	name = "Gwerstan" #ap Gwaithfoed
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 159076
-	954.1.1 = {
-		birth = "954.1.1"
-	}
-	990.1.1 = {
-		death = "990.1.1"
-	}	
-}
-
-138445 = {
-	name = "Gwenllian"
-	female = yes
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 214718 #Madog ap Maredudd
-	#mother Susann of Gwynedd
-	1155.1.1 = {
-		birth = "1155.1.1"
-	}
-	#married Rhys ap Gruffyd of Deheubarth
-	1198.1.1 = {
-		death = "1198.1.1"
-	}	
-}
-
-138446 = {
-	name = "Madog" #ap Rhirid
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 81848 #Rhirid ap Bleddyn	
-	1075.1.1 = {
-		birth = "1075.1.1"
-	}
-	1111.1.1 = {
-		trait = kinslayer_3 #killed Iorwerth & Cadwgan ap Bleddyn
-	}
-	1113.1.1 = {
-		give_nickname = nick_the_blind
-		trait = blind
-	}
-	1114.1.1 = {
-		death = "1114.1.1"
-	}
-}
-
-138448 = {
-	name = "Ithel" #ap Rhirid
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 81848 #Rhirid ap Bleddyn
-	1076.1.1 = {
-		birth = "1076.1.1"
-	}
-	1122.1.1 = {
-		death = "1122.1.1"
-	}
-}
-
-
-
-138450 = {
-	name = "Llywelyn" #ap Cadwgan
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6378 #Cadwgan ap Bleddyn
-	1057.1.1 = {
-		birth = "1057.1.1"
-	}
-	1098.1.1 = {
-		death = "1098.1.1"
-	}
-}
-
-138452 = {
-	name = "Owain" #ap Cadwgan
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6378 #Cadwgan ap Bleddyn
-	trait = ambitious
-	trait = education_diplomacy_4
-	trait = callous
-	trait = education_martial_2
-	1076.1.1 = {
-		birth = "1076.1.1"
-	}
-	#1115 knighted
-	1116.1.1 = {
-		death = "1116.1.1" #1113
-	}
-}
-
-138454 = {
-	name = "Einon" #ap Cadwgan
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6378 #Cadwgan ap Bleddyn
-	#mother Sanan
-	1085.1.1 = {
-		birth = "1085.1.1"
-	}
-	1121.1.1 = {
-		death = "1121.1.1"
-	}
-}
-
-138456 = {
-	name = "Madog" #ap Cadwgan
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6378 #Cadwgan ap Bleddyn
-	mother = 81853 #Gwenllian ferch Gruffydd
-	1098.1.1 = {
-		birth = "1098.1.1"
-	}
-	1118.1.1 = {
-		death = "1118.1.1"
-	}
-}
-
-138458 = {
-	name = "Maredudd" #ap Cadwgan
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6378 #Cadwgan ap Bleddyn
-	#Euron daughter of Hoedlyw ap Cadwgan
-	1105.1.1 = {
-		birth = "1105.1.1"
-	}
-	1122.1.1 = {
-		death = "1122.1.1"
-	}
-}
-
-138460 = {
-	name = "Morgan" #ap Cadwgan
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 6378 #Cadwgan ap Bleddyn
-	#Euron daughter of Hoedlyw ap Cadwgan
-	1106.1.1 = {
-		birth = "1106.1.1"
-	}
-	1122.1.1 = {
-		trait = kinslayer_3
-		trait = faith_warrior
-	}
-	1125.12.1 = {
-		death = "1125.12.1"
-	}
-}
-
-138462 = {
-	name = "Gruffydd_Maelor" #Gruffydd Maelor II
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 214724 #Madog ap Gruffydd Maelor ap Madog
-	#mother Angharad of Gwynedd
-	1200.1.1 = {
-		birth = "1200.1.1"
-	}
-	#married Emma de Audley
-	1269.1.1 = {
-		death = "1269.1.1"
-	}
-}
-
-
-138482 = {
-	name = "Goronwy" #ap Einion King of Deheubarth
-	dynasty_house = house_british_isles_tegainl #Tegaingl
-	religion = "catholic"
-	culture = "welsh"
-	father = 138484 #Einion ap Owain
-	975.1.1 = {
-		birth = "975.1.1"
-	}
-	1030.1.1 = {
-		death = "1030.1.1"
-	}
-}
-
-138484 = {
-	name = "Einion" #ap Owain
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 81822 #Owain ap Hywel
-	930.1.1 = {
-		birth = "930.1.1" #unknown
-	}
-	983.1.1 = {
-		death = "983.1.1"
-	}
-}
-
-
-138490 = {
-	name = "Cadell" #ap Einion
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 138484 #Einion ap Owain
-	953.1.1 = {
-		birth = "953.1.1"
-	}
-	1018.1.1 = {
-		death = "1018.1.1"
-	}
-}
-	
-138488 = {
-	name = "Tewdwr" #ap Cadell King of Deheubarth
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 138490 #Cadell ap Einion
-	975.1.1 = {
-		birth = "975.1.1" #unknown
-		give_nickname = "nick_the_great"
-	}
-	1014.1.1 = {
-		death = "1014.1.1" #unknown
-	}
-}
-
-138492 = {
-	name = "Edwin" #ap Einion
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 138484 #Einion ap Owain
-	954.1.1 = {
-		birth = "954.1.1" #unknown
-	}
-	993.1.1 = {
-		death = "993.1.1" #unknown
-	}
-}
-
-138494 = {
-	name = "Owain" # ap Edwin
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 138484 #Einion ap Owain
-	974.1.1 = {
-		birth = "974.1.1" #unknown
-	}
-	1032.1.1 = {
-		death = "1032.1.1" #unknown
-	}
-}
-
-138496 = {
-	name = "Maredudd" #ap Owain
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 138494 #Owain ap Edwin
-	1010.1.1 = {
-		birth = "1010.1.1" #unknown
-	}
-	1070.1.1 = {
-		death = "1070.1.1"
-	}	
-}
-
-138498 = {
-	name = "Anarawd" #ap Gruffyd
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 214810 #Gruffydd ap Rhys
-	trait = bastard
-	1110.1.1 = {
-		birth = "1110.1.1" #unknown	
-	}
-	#married daughter of Cadwaladr ap Gruffydd
-	1143.1.1 = {
-		death = "1143.1.1"
-	}
-}
-
-138500 = {
-	name = "Cadell" #ap Gruffyd
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 214810 #Gruffydd ap Rhys
-	trait = bastard
-	1112.1.1 = {
-		birth = "1112.1.1" #unknown	
-	}
-	#1153 abdicated
-	1174.1.1 = {
-		trait = ill
-	}
-	1175.1.1 = {
-		death = "1175.1.1"
-	}
-}
-
-
-
-
+#######################################
+# House of Yns Mon 
+#######################################
 159002 = {
 	name = "Aeddan_ap_Blegywryd"
 	dynasty = 20154 #placeholder
@@ -3428,21 +4297,9 @@
 		death = "1018.1.1"
 	}
 }
-	
-159003 = {
-	name = "Iestyn" # ap Owain ap Morgan Hen
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 40510 # Owain ap Morgan Hen
-	975.1.1 = {
-		birth = "975.1.1"	#unknown
-	}
-	1023.1.1 = {
-		death = "1023.1.1" #unknown
-	}
-}
-
+#######################################
+# House of Gwynedd 
+#######################################
 159010 = {
 	name = "Cunedda" # ap Edern
 	dynasty_house = house_british_isles_gwynedd #Gwynedd
@@ -3607,20 +4464,6 @@
 		death = "754.1.1"
 	}
 }
-
-159022 = {
-	name = "Caradog" # ap Meirchion
-	dynasty_house = house_british_isles_rhos #Rhos
-	father = 160046
-	religion = "catholic"
-	culture = "welsh"
-	730.1.1 = {
-		birth = "730.1.1"
-	}
-	798.1.1 = {
-		death = "798.1.1"
-	}
-}
 159023 = {
 	name = "Cynan" # ap Rhodri
 	dynasty_house = house_british_isles_gwynedd #Gwynedd
@@ -3665,7 +4508,186 @@
 		death = "834.1.1"
 	}
 }
-
+159040 = {
+	name = "Ifwr" # ap Cadwaladr
+	dynasty_house = house_british_isles_gwynedd #Gwynedd
+	religion = "catholic"
+	culture = "welsh"
+	father = 159019 # Cadwaladr
+	660.1.1 = {
+		birth = "660.1.1"
+	}
+	684.1.1 = {
+		death = "684.1.1"
+	}
+}
+160048 = {
+	name = "Rimo" # ferch Maelgwn
+	dynasty_house = house_british_isles_gwynedd #Gwynedd
+	female = yes
+	religion = "catholic"
+	culture = "welsh"
+	father = 159013 #
+	502.1.1 = {
+		birth = "502.1.1"
+	}
+	520.1.1 = {
+		add_spouse = 159662
+	}
+	580.1.1 = {
+		death = "580.1.1"
+	}
+}
+#######################################
+# House of Rhos 
+#######################################
+159022 = {
+	name = "Caradog" # ap Meirchion
+	dynasty_house = house_british_isles_rhos #Rhos
+	father = 160046
+	religion = "catholic"
+	culture = "welsh"
+	730.1.1 = {
+		birth = "730.1.1"
+	}
+	798.1.1 = {
+		death = "798.1.1"
+	}
+}
+160038 = {
+	name = "Owain" # ap Einion
+	dynasty_house = house_british_isles_rhos #Rhos
+	religion = "catholic"
+	culture = "welsh"
+	father = 159011
+	455.1.1 = {
+		birth = "455.1.1"
+	}
+	525.1.1 = {
+		death = "525.1.1"
+	}
+}
+160039 = {
+	name = "Cynlas" # Goch
+	dynasty_house = house_british_isles_rhos #Rhos
+	religion = "catholic"
+	culture = "welsh"
+	father = 160038
+	480.1.1 = {
+		birth = "480.1.1"
+	}
+	540.1.1 = {
+		death = "540.1.1"
+	}
+}
+160040 = {
+	name = "Einion" #ap Cynlas
+	dynasty_house = house_british_isles_rhos #Rhos
+	religion = "catholic"
+	culture = "welsh"
+	father = 160039
+	500.1.1 = {
+		birth = "500.1.1"
+	}
+	550.1.1 = {
+		death = "550.1.1"
+		give_nickname = nick_the_saint
+	}
+}
+160041 = {
+	name = "Cadwal"
+	dynasty_house = house_british_isles_rhos #Rhos
+	religion = "catholic"
+	culture = "welsh"
+	father = 160040
+	535.1.1 = {
+		birth = "535.1.1"
+	}
+	575.1.1 = {
+		death = "575.1.1"
+	}
+}
+160042 = {
+	name = "Idgwyn"
+	dynasty_house = house_british_isles_rhos #Rhos
+	religion = "catholic"
+	culture = "welsh"
+	father = 160041
+	570.1.1 = {
+		birth = "570.1.1"
+	}
+	630.1.1 = {
+		death = "630.1.1"
+	}
+}
+160043 = {
+	name = "Einion"
+	dynasty_house = house_british_isles_rhos #Rhos
+	religion = "catholic"
+	culture = "welsh"
+	father = 160042
+	600.1.1 = {
+		birth = "600.1.1"
+	}
+	650.1.1 = {
+		death = "650.1.1"
+	}
+}
+160044 = {
+	name = "Rhufon"
+	dynasty_house = house_british_isles_rhos #Rhos
+	religion = "catholic"
+	culture = "welsh"
+	father = 160043
+	630.1.1 = {
+		birth = "630.1.1"
+	}
+	695.1.1 = {
+		death = "695.1.1"
+	}
+}
+160045 = {
+	name = "Hywel"
+	dynasty_house = house_british_isles_rhos #Rhos
+	religion = "catholic"
+	culture = "welsh"
+	father = 160044
+	660.1.1 = {
+		birth = "660.1.1"
+	}
+	700.1.1 = {
+		death = "700.1.1"
+	}
+}
+160046 = {
+	name = "Meirchion"
+	dynasty_house = house_british_isles_rhos #Rhos
+	religion = "catholic"
+	culture = "welsh"
+	father = 160045
+	690.1.1 = {
+		birth = "690.1.1"
+	}
+	740.1.1 = {
+		death = "740.1.1"
+	}
+}
+205140 = {
+	name = "Hywel" # ap Caradog
+	dynasty_house = house_british_isles_rhos #Rhos
+	father = 159022
+	religion = "catholic"
+	culture = "welsh"
+	750.1.1 = {
+		birth = "750.1.1"
+	}
+	825.1.1 = {
+		death = "825.1.1"
+	}
+}
+#######################################
+# House of Manaw 
+#######################################
 159026 = {
 	name = "Gwriad" #
 	dynasty_house = house_british_isles_manaw #Manaw
@@ -3682,7 +4704,6 @@
 		death = "825.1.1"
 	}
 }
-
 159027 = {
 	name = "Merfyn" #
 	dynasty_house = house_british_isles_manaw #Manaw
@@ -3703,7 +4724,6 @@
 		death = "844.1.1"
 	}
 }
-
 159028 = {
 	name = "Elidyr" #
 	dynasty_house = house_british_isles_manaw #Manaw
@@ -3719,23 +4739,9 @@
 		death = "820.1.1"
 	}
 }
-
-159040 = {
-	name = "Ifwr" # ap Cadwaladr
-	dynasty_house = house_british_isles_gwynedd #Gwynedd
-	religion = "catholic"
-	culture = "welsh"
-	father = 159019 # Cadwaladr
-	660.1.1 = {
-		birth = "660.1.1"
-	}
-	684.1.1 = {
-		death = "684.1.1"
-	}
-}
-
-
-
+#######################################
+# House of Arllechwydd 
+#######################################
 159043 = {
 	name = "Llyr" # ap Einion
 	dynasty_house = house_british_isles_arllechwydd #Arllechwydd
@@ -3905,6 +4911,9 @@
 		death = "990.1.1"
 	}
 }
+#######################################
+# House of Gwerthrynion 
+#######################################
 159056 = {
 	name = "Gwrtheyrn" # Vortigern
 	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
@@ -3938,35 +4947,6 @@
 		death = "471.1.1"
 	}
 }
-159058 = {
-	name = "Cadell" #
-	dynasty = 1029133 #Powys
-	religion = "catholic"
-	culture = "welsh"
-	father = 159948
-	400.1.1 = {
-		birth = "400.1.1"
-	}
-	470.1.1 = {
-		death = "470.1.1"
-	}
-}
-159059 = {
-	name = "Pasgen" #
-	dynasty = 1029133 #Powys
-	religion = "catholic"
-	culture = "welsh"
-	father = 159058
-	425.1.1 = {
-		birth = "425.1.1"
-	}
-	450.1.1 = {
-		add_spouse = 159950
-	}
-	501.1.1 = {
-		death = "501.1.1"
-	}
-}
 159060 = {
 	name = "Rhyddfedd" #aka Maun
 	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
@@ -3979,214 +4959,6 @@
 	}
 	521.1.1 = {
 		death = "521.1.1"
-	}
-}
-159061 = {
-	name = "Casnar" # Wledig
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159057
-	421.1.1 = {
-		birth = "421.1.1"
-	}
-	500.1.1 = {
-		death = "500.1.1"
-	}
-}
-159062 = {
-	name = "Llary" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159061
-	470.1.1 = {
-		birth = "470.1.1"
-	}
-	550.1.1 = {
-		death = "550.1.1"
-	}
-}
-159063 = {
-	name = "Rhun" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159062
-	510.1.1 = {
-		birth = "510.1.1"
-	}
-	580.1.1 = {
-		death = "580.1.1"
-	}
-}
-159064 = {
-	name = "Bywdeg" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159063
-	550.1.1 = {
-		birth = "550.1.1"
-	}
-	640.1.1 = {
-		death = "640.1.1"
-	}
-}
-159065 = {
-	name = "Bywyr_Lew" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159064
-	600.1.1 = {
-		birth = "600.1.1"
-	}
-	690.1.1 = {
-		death = "690.1.1"
-	}
-}
-159066 = {
-	name = "Gwineu_Deufureuddwyd" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159065
-	630.1.1 = {
-		birth = "630.1.1"
-	}
-	700.1.1 = {
-		death = "700.1.1"
-	}
-}
-159067 = {
-	name = "Teon" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159066
-	670.1.1 = {
-		birth = "670.1.1"
-	}
-	746.1.1 = {
-		death = "746.1.1"
-	}
-}
-159068 = {
-	name = "Tegonwy" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159067
-	700.1.1 = {
-		birth = "700.1.1"
-	}
-	769.1.1 = {
-		death = "769.1.1"
-	}
-}
-159069 = {
-	name = "Caenog" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159068
-	740.1.1 = {
-		birth = "740.1.1"
-	}
-	803.1.1 = {
-		death = "803.1.1"
-	}
-}
-159070 = {
-	name = "Corf" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159069
-	760.1.1 = {
-		birth = "760.1.1"
-	}
-	820.1.1 = {
-		death = "820.1.1"
-	}
-}
-159071 = {
-	name = "Ceidio" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159070
-	783.1.1 = {
-		birth = "783.1.1"
-	}
-	867.1.1 = {
-		death = "867.1.1"
-	}
-}
-159072 = {
-	name = "Lles_Llawddeog" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159071
-	810.1.1 = {
-		birth = "810.1.1"
-	}
-	888.1.1 = {
-		death = "888.1.1"
-	}
-}
-159073 = {
-	name = "Caradog" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159072
-	842.1.1 = {
-		birth = "842.1.1"
-	}
-	901.1.1 = {
-		death = "901.1.1"
-	}
-}
-159074 = {
-	name = "Bleddyn" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159073
-	873.1.1 = {
-		birth = "873.1.1"
-	}
-	940.1.1 = {
-		death = "940.1.1"
-	}
-}
-159075 = {
-	name = "Gwrydr" #
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159074
-	894.1.1 = {
-		birth = "894.1.1"
-	}
-	960.1.1 = {
-		death = "960.1.1"
-	}
-}
-159076 = {
-	name = "Gwaithfoed" #
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 159075
-	924.1.1 = {
-		birth = "924.1.1"
-	}
-	980.1.1 = {
-		death = "980.1.1"
 	}
 }
 159077 = {
@@ -4241,7 +5013,6 @@
 		death = "613.1.1"
 	}
 }
-
 159081 = {
 	name = "Manwgan" #
 	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
@@ -4255,7 +5026,6 @@
 		death = "655.1.1"
 	}
 }
-
 159082 = {
 	name = "Beli" # ap Eliudd
 	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
@@ -4269,7 +5039,6 @@
 		death = "680.1.1"
 	}
 }
-
 159083 = {
 	name = "Gwylog" #
 	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
@@ -4521,7 +5290,6 @@
 		death = "1070.1.1"
 	}
 }
-
 159102 = {
 	name = "Gwyn" #
 	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
@@ -4535,7 +5303,6 @@
 		death = "1120.1.1"
 	}
 }
-
 159103 = {
 	name = "Aeddan" #
 	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
@@ -4549,7 +5316,6 @@
 		death = "1160.1.1"
 	}
 }
-
 159104 = {
 	name = "Beli" #
 	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
@@ -4563,7 +5329,6 @@
 		death = "1170.1.1"
 	}
 }
-
 159105 = {
 	name = "Pasgen" #
 	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
@@ -4577,7 +5342,6 @@
 		death = "1170.1.1"
 	}
 }
-
 159106 = {
 	name = "Tangwre" #
 	female = yes
@@ -4592,173 +5356,349 @@
 		death = "1170.1.1"
 	}
 }
-
-159107 = {
-	name = "Morgan" #
-	dynasty_house = house_british_isles_morgannwg #Morgan
+159836 = {
+	name = "Gwerthefyr" # Vortimer
+	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
 	religion = "catholic"
 	culture = "welsh"
-	father = 159108
-	mother = 159375
-	874.1.1 = {
-		birth = "874.1.1"
+	father = 159056
+	mother = 159810
+	376.1.1 = {
+		birth = "376.1.1"
 	}
-	974.1.1 = {
-		give_nickname = nick_the_old
-	}
-	974.1.2 = {
-		death = "974.1.2"
+	453.1.1 = {
+		death = "453.1.1"
+		give_nickname = nick_the_blessed
 	}
 }
-
-159108 = {
-	name = "Owain" #
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159109
-	850.1.1 = {
-		birth = "850.1.1"
-	}
-	875.1.1 = {
-		add_spouse = 159375
-	}
-	930.1.1 = {
-		death = "930.1.1"
-	}
-}
-
-159109 = {
-	name = "Hywel" #
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159110
-	830.1.1 = {
-		birth = "830.1.1"
-	}
-	885.1.1 = {
-		death = "885.1.1"
-	}
-}
-
-159110 = {
-	name = "Rhys" #
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159111
-	789.1.1 = {
-		birth = yes
-	}
-	840.1.1 = {
-		death = "840.1.1"
-	}
-}
-
-159111 = {
-	name = "Arthfael" #
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159112
-	775.1.1 = {
-		birth = yes
-	}
-	840.1.1 = {
-		death = "840.1.1"
-	}
-}
-
-159112 = {
-	name = "Gwriad" #
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159113
-	750.1.1 = {
-		birth = "750.1.1"
-	}
-	810.1.1 = {
-		death = "810.1.1"
-	}
-}
-
-159113 = {
-	name = "Brochfael" #
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159114
-	730.1.1 = {
-		birth = "730.1.1"
-	}
-	790.1.1 = {
-		death = "790.1.1"
-	}
-}
-
-159114 = {
-	name = "Rhys" #
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159115
-	709.1.1 = {
-		birth = "709.1.1"
-	}
-	780.1.1 = {
-		death = "780.1.1"
-	}
-}
-
-159115 = {
-	name = "Ithel" #
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159116
-	675.1.1 = {
-		birth = "675.1.1"
-	}
-	740.1.1 = {
-		death = "740.1.1"
-	}
-}
-
-159116 = {
-	name = "Morgan" #
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159835
-	634.1.1 = {
-		birth = "634.1.1"
-	}
-	710.1.2 = {
-		death = "710.1.2"
-		give_nickname = nick_the_great
-	}
-}
-
-
-
-159290 = {
-	name = "Nest" # ferch Tewdwr
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
+159837 = {
+	name = "Madrun" #
 	female = yes
+	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
 	religion = "catholic"
 	culture = "welsh"
-	trait = generous
-	father = 138488 #Tewdwr ap Cadell
-	1014.1.1 = {
-		birth = "1014.1.1" #unknown
+	father = 159836
+	430.1.1 = {
+		birth = "430.1.1"
 	}
-	1093.4.1 = {
-		death = "1093.4.1"
+	470.1.1 = {
+		add_spouse = 159822
+	}
+	490.1.1 = {
+		give_nickname = nick_the_saint
+	}
+	500.1.1 = {
+		death = "500.1.1"
 	}
 }
-
+159949 = {
+	name = "Brydw" #
+	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
+	religion = "catholic"
+	culture = "welsh"
+	father = 159056
+	mother = 159810
+	390.1.1 = {
+		birth = "390.1.1"
+	}
+	450.1.1 = {
+		death = "450.1.1"
+	}
+}
+159950 = {
+	name = "Annan" #
+	female = yes
+	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
+	religion = "catholic"
+	culture = "welsh"
+	father = 159949
+	430.1.1 = {
+		birth = "430.1.1"
+	}
+	490.1.1 = {
+		death = "490.1.1"
+	}
+}
+#######################################
+# House of Powys 
+#######################################
+159058 = {
+	name = "Cadell" #
+	dynasty = 1029133 #Powys
+	religion = "catholic"
+	culture = "welsh"
+	father = 159948
+	400.1.1 = {
+		birth = "400.1.1"
+	}
+	470.1.1 = {
+		death = "470.1.1"
+	}
+}
+159059 = {
+	name = "Pasgen" #
+	dynasty = 1029133 #Powys
+	religion = "catholic"
+	culture = "welsh"
+	father = 159058
+	425.1.1 = {
+		birth = "425.1.1"
+	}
+	450.1.1 = {
+		add_spouse = 159950
+	}
+	501.1.1 = {
+		death = "501.1.1"
+	}
+}
+159948 = {
+	name = "Cadeyrn" #
+	dynasty = 1029133 #Powys
+	religion = "catholic"
+	culture = "welsh"
+	father = 159947
+	360.1.1 = {
+		birth = "360.1.1"
+	}
+	421.1.1 = {
+		death = "421.1.1"
+	}
+}
+#######################################
+# House of Ternyllwg
+#######################################
+159061 = {
+	name = "Casnar" # Wledig
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159057
+	421.1.1 = {
+		birth = "421.1.1"
+	}
+	500.1.1 = {
+		death = "500.1.1"
+	}
+}
+159062 = {
+	name = "Llary" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159061
+	470.1.1 = {
+		birth = "470.1.1"
+	}
+	550.1.1 = {
+		death = "550.1.1"
+	}
+}
+159063 = {
+	name = "Rhun" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159062
+	510.1.1 = {
+		birth = "510.1.1"
+	}
+	580.1.1 = {
+		death = "580.1.1"
+	}
+}
+159064 = {
+	name = "Bywdeg" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159063
+	550.1.1 = {
+		birth = "550.1.1"
+	}
+	640.1.1 = {
+		death = "640.1.1"
+	}
+}
+159065 = {
+	name = "Bywyr_Lew" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159064
+	600.1.1 = {
+		birth = "600.1.1"
+	}
+	690.1.1 = {
+		death = "690.1.1"
+	}
+}
+159066 = {
+	name = "Gwineu_Deufureuddwyd" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159065
+	630.1.1 = {
+		birth = "630.1.1"
+	}
+	700.1.1 = {
+		death = "700.1.1"
+	}
+}
+159067 = {
+	name = "Teon" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159066
+	670.1.1 = {
+		birth = "670.1.1"
+	}
+	746.1.1 = {
+		death = "746.1.1"
+	}
+}
+159068 = {
+	name = "Tegonwy" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159067
+	700.1.1 = {
+		birth = "700.1.1"
+	}
+	769.1.1 = {
+		death = "769.1.1"
+	}
+}
+159069 = {
+	name = "Caenog" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159068
+	740.1.1 = {
+		birth = "740.1.1"
+	}
+	803.1.1 = {
+		death = "803.1.1"
+	}
+}
+159070 = {
+	name = "Corf" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159069
+	760.1.1 = {
+		birth = "760.1.1"
+	}
+	820.1.1 = {
+		death = "820.1.1"
+	}
+}
+159071 = {
+	name = "Ceidio" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159070
+	783.1.1 = {
+		birth = "783.1.1"
+	}
+	867.1.1 = {
+		death = "867.1.1"
+	}
+}
+159072 = {
+	name = "Lles_Llawddeog" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159071
+	810.1.1 = {
+		birth = "810.1.1"
+	}
+	888.1.1 = {
+		death = "888.1.1"
+	}
+}
+159073 = {
+	name = "Caradog" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159072
+	842.1.1 = {
+		birth = "842.1.1"
+	}
+	901.1.1 = {
+		death = "901.1.1"
+	}
+}
+159074 = {
+	name = "Bleddyn" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159073
+	873.1.1 = {
+		birth = "873.1.1"
+	}
+	940.1.1 = {
+		death = "940.1.1"
+	}
+}
+159075 = {
+	name = "Gwrydr" #
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159074
+	894.1.1 = {
+		birth = "894.1.1"
+	}
+	960.1.1 = {
+		death = "960.1.1"
+	}
+}
+184119 = {
+	name = "Iorwerth"
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 159068 #Tegonwy Gruffyd of Powys
+	740.1.1 = {
+		birth = "740.1.1"
+	}
+	759.1.1 = {
+		add_spouse = 184135
+	}
+	815.1.1 = {
+		dynasty_house = house_british_isles_maelienydd #Maelienydd
+		death = "815.1.1"
+	}
+}
+184120 = {
+	name = "Idnerth"
+	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
+	religion = "catholic"
+	culture = "welsh"
+	father = 184119
+	mother = 184135
+	760.1.1 = {
+		birth = "760.1.1"
+	}
+	815.1.1 = {
+		dynasty_house = house_british_isles_maelienydd #Maelienydd
+	}
+	820.1.1 = {
+		death = "820.1.1"
+	}
+}
+#######################################
+# House of Llywel 
+#######################################
 159292 = {
 	name = "Madog" # Eidio ap Swtrig
 	dynasty_house = house_british_isles_llywel #Llywel
@@ -4781,7 +5721,6 @@
 		death = "1094.1.5"
 	}
 }
-
 159293 = {
 	name = "Golwg" # ab Eidio
 	dynasty_house = house_british_isles_llywel #Llywel
@@ -4801,7 +5740,6 @@
 		death = "1134.1.5"
 	}
 }
-
 159294 = {
 	name = "Madog" # ap Golwg
 	dynasty_house = house_british_isles_llywel #Llywel
@@ -4820,7 +5758,6 @@
 		death = "1160.1.5"
 	}
 }
-
 159295 = {
 	name = "Ysbwys" # ap Golwg
 	dynasty_house = house_british_isles_llywel #Llywel
@@ -4839,7 +5776,6 @@
 		death = "1165.1.5"
 	}
 }
-
 159296 = {
 	name = "Mabron" # ap Golwg
 	dynasty_house = house_british_isles_llywel #Llywel
@@ -4858,7 +5794,9 @@
 		death = "1170.1.5"
 	}
 }
-
+#######################################
+# House of Manceinion 
+#######################################
 159297 = {
 	name = "Ller_Merini" #
 	dynasty = 1047020 #Manceinion
@@ -4885,7 +5823,6 @@
 		death = "600.1.2"
 	}
 }
-
 159299 = {
 	name = "Cawrdaf" #
 	dynasty = 1047020 #Manceinion
@@ -4899,7 +5836,6 @@
 		death = "640.1.2"
 	}
 }
-
 159300 = {
 	name = "Caw" #
 	dynasty = 1047020 #Manceinion
@@ -4913,7 +5849,6 @@
 		death = "670.1.2"
 	}
 }
-
 159301 = {
 	name = "Gloyw" #
 	dynasty = 1047020 #Manceinion
@@ -4927,7 +5862,6 @@
 		death = "700.1.2"
 	}
 }
-
 159302 = {
 	name = "Hoyw" #
 	dynasty = 1047020 #Manceinion
@@ -4941,7 +5875,6 @@
 		death = "730.1.2"
 	}
 }
-
 159303 = {
 	name = "Cynfarch" #
 	dynasty = 1047020 #Manceinion
@@ -4955,7 +5888,6 @@
 		death = "760.1.2"
 	}
 }
-
 159304 = {
 	name = "Cyndegg" #
 	dynasty = 1047020 #Manceinion
@@ -4969,7 +5901,6 @@
 		death = "790.1.2"
 	}
 }
-
 159305 = {
 	name = "Teithwalch" #
 	dynasty = 1047020 #Manceinion
@@ -4983,7 +5914,6 @@
 		death = "820.1.2"
 	}
 }
-
 159306 = {
 	name = "Tegid" #
 	dynasty = 1047020 #Manceinion
@@ -4997,7 +5927,6 @@
 		death = "860.1.2"
 	}
 }
-
 159307 = {
 	name = "Anarawd" #
 	dynasty = 1047020 #Manceinion
@@ -5011,7 +5940,6 @@
 		death = "890.1.2"
 	}
 }
-
 159308 = {
 	name = "Gwenddy" #
 	dynasty = 1047020 #Manceinion
@@ -5025,7 +5953,6 @@
 		death = "920.1.2"
 	}
 }
-
 159309 = {
 	name = "Gwengy" #
 	dynasty = 1047020 #Manceinion
@@ -5039,7 +5966,6 @@
 		death = "970.1.2"
 	}
 }
-
 159310 = {
 	name = "Hwgan" #
 	dynasty = 1047020 #Manceinion
@@ -5053,7 +5979,6 @@
 		death = "1000.1.2"
 	}
 }
-
 159311 = {
 	name = "Dryffryn" #
 	dynasty = 1047020 #Manceinion
@@ -5070,7 +5995,6 @@
 		death = "1030.1.2"
 	}
 }
-
 159312 = {
 	name = "Maenyrch" # of Brycheiniog
 	dynasty = 1047020 #Manceinion
@@ -5088,100 +6012,9 @@
 		death = "1060.1.2"
 	}
 }
-
-
-
-159314 = {
-	name = "Blegwrd" # of Brycheiniog
-	dynasty = 1042817 #Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 131704
-	1066.1.1 = {
-		birth = "1066.1.1"
-	}
-	1130.1.2 = {
-		death = "1130.1.2"
-	}
-}
-
-159315 = {
-	name = "Gwgon" # of Brycheiniog
-	dynasty = 1042817 #Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 159314
-	1086.1.1 = {
-		birth = "1086.1.1"
-	}
-	1150.1.2 = {
-		death = "1150.1.2"
-	}
-}
-
-159231 = {
-	name = "Rhydderch"
-	dynasty_house = house_british_isles_dinefwr
-	religion = "catholic"
-	culture = "welsh"
-	father = 138488
-	1000.1.1 = {
-		birth = "1000.1.1"
-	}
-	1070.1.1 = {
-		add_spouse = 81850 #married Hunydd ferch Bleddyn
-	}
-	1090.1.1 = {
-		death = "1090.1.1"
-	}
-}
-
-159232 = {
-	name = "Maredudd"
-	dynasty_house = house_british_isles_dinefwr
-	religion = "catholic"
-	culture = "welsh"
-	father = 159231
-	mother = 81850 #Hunydd ferch Bleddyn
-	1070.1.1 = {
-		birth = "1070.1.1"
-	}
-	1150.1.1 = {
-		death = "1150.1.1"
-	}
-}
-
-159233 = {
-	name = "Owain"
-	dynasty_house = house_british_isles_dinefwr
-	religion = "catholic"
-	culture = "welsh"
-	father = 159231
-	mother = 81850 #Hunydd ferch Bleddyn
-	1071.1.1 = {
-		birth = "1071.1.1"
-	}
-	1151.1.1 = {
-		death = "1151.1.1"
-	}
-}
-
-159234 = {
-	name = "Denis" #ferch Bleddyn
-	dynasty_house = house_british_isles_mathrafal #Mathrafal
-	female = yes
-	religion = "catholic"
-	culture = "welsh"
-	father = 6358 #Bleddyn ap Cynfyn
-	mother = 40507 #Haer Efionydd
-	1049.1.1 = {
-		birth = "1049.1.1"
-	}
-	1130.1.1 = {
-		death = "1130.1.1"
-	}
-}
-
+#######################################
+# House of Brycheiniog(1st)
+#######################################
 159323 = {
 	name = "Brychan"
 	dynasty = 1029032 #1st Brycheiniog
@@ -5199,19 +6032,6 @@
 		death = "490.1.1"
 	}
 }
-159324 = {
-	name = "Gwerthefyr"
-	dynasty_house = house_british_isles_dyfed #Dyfed
-	religion = "catholic"
-	culture = "welsh"
-	father = 159322
-	455.1.1 = {
-		birth = "455.1.1"
-	}
-	540.1.1 = {
-		death = "540.1.1"
-	}
-}
 159325 = {
 	name = "Rhain_Dremrudd"
 	dynasty = 1029032 #1st Brycheiniog
@@ -5226,7 +6046,6 @@
 		death = "510.1.1"
 	}
 }
-
 159326 = {
 	name = "Rhigeneu"
 	dynasty = 1029032 #1st Brycheiniog
@@ -5294,6 +6113,250 @@
 	}
 	670.1.1 = {
 		death = "670.1.1"
+	}
+}
+159956 = {
+	name = "Brychan"
+	dynasty = 1029032 #1st Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 159323
+	mother = 159932
+	430.1.1 = {
+		birth = "430.1.1"
+	}
+	510.1.1 = {
+		death = "510.1.1"
+	}
+}
+159957 = {
+	name = "Nyfain"
+	female = yes
+	dynasty = 1029032 #1st Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 159956
+	460.1.1 = {
+		birth = "460.1.1"
+	}
+	476.1.1 = {
+		add_spouse = 159952
+	}
+	530.1.1 = {
+		death = "530.1.1"
+	}
+}
+184130 = {
+	name = "Maredudd"
+	dynasty = 1029032 #1st Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	trait = legitimized_bastard
+	father = 159328 #Idwallon
+	580.1.1 = {
+		birth = "580.1.1"
+	}
+	650.1.1 = {
+		death = "650.1.1"
+	}
+}
+184131 = {
+	name = "Cynan"
+	dynasty = 1029032 #1st Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 184130
+	610.1.1 = {
+		birth = "610.1.1"
+	}
+	680.1.1 = {
+		death = "680.1.1"
+	}
+}
+184132 = {
+	name = "Maelgwn"
+	dynasty = 1029032 #1st Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 184131
+	640.1.1 = {
+		birth = "640.1.1"
+	}
+	710.1.1 = {
+		death = "710.1.1"
+	}
+}
+184133 = {
+	name = "Idwal"
+	dynasty = 1029032 #1st Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 184132
+	670.1.1 = {
+		birth = "670.1.1"
+	}
+	740.1.1 = {
+		death = "740.1.1"
+	}
+}
+184134 = {
+	name = "Brychan"
+	dynasty = 1029032 #1st Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 184133
+	710.1.1 = {
+		birth = "710.1.1"
+	}
+	770.1.1 = {
+		death = "770.1.1"
+	}
+}
+184135 = {
+	name = "Arianwen"
+	dynasty = 1029032 #1st Brycheiniog
+	female = yes
+	religion = "catholic"
+	culture = "welsh"
+	father = 184134
+	740.1.1 = {
+		birth = "740.1.1"
+	}
+	820.1.1 = {
+		death = "820.1.1"
+	}
+}
+205138 = {
+	name = "Ceindrych"
+	female = yes
+	dynasty = 1029032 #1st Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 184130
+	611.1.1 = {
+		birth = "611.1.1"
+	}
+	680.1.1 = {
+		death = "680.1.1"
+	}
+}
+301020 = { #305139
+	name = "Bleddyn" #ap Maenarch
+	dynasty = 1029032 #1066 Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 301022
+	mother = 301023
+	1045.1.1 = {
+		birth = "1045.1.1"
+	}
+	1065.1.1 = {
+		add_spouse = 301024 #"Elen" #verch Tudor
+	}
+	1093.1.1 = {
+		death = "1093.1.1"
+	}
+}
+301021 = { #305140
+	name = "Wogan" #ap Bleddyn
+	dynasty = 1029032 #1066 Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 301020
+	mother = 301024
+	1065.1.1 = {
+		birth = "1065.1.1"
+	}
+	1134.1.1 = {
+		death = "1134.1.1"
+	}
+}
+301022 = { #305141
+	name = "Maenarch" #ap Dryffin
+	dynasty = 1029032 #1066 Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	#father = 184130
+	1025.1.1 = {
+		birth = "1025.1.1"
+	}
+	1045.1.1 = {
+		add_spouse = 301023 #"Elen" #verch Einion
+	}
+	1060.1.1 = {
+		death = "1060.1.1"
+	}
+}
+301023 = { #305142
+	name = "Elen" #verch Einion
+	#dynasty = 1029032 #1066 Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	female = yes
+	#father = 184130
+	1025.1.1 = {
+		birth = "1025.1.1"
+	}
+	1100.1.1 = {
+		death = "1100.1.1"
+	}
+}
+301024 = { #305143
+	name = "Elen" #verch Tudor
+	#dynasty = 1029032 #1066 Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	female = yes
+	#father = 184130
+	1045.1.1 = {
+		birth = "1045.1.1"
+	}
+	1093.1.1 = {
+		death = "1093.1.1"
+	}
+}
+301025 = { #305144
+	name = "Drymbenog" #ap Maenarch
+	dynasty = 1029032 #1066 Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 301022
+	mother = 301023
+	1045.1.1 = {
+		birth = "1045.1.1"
+	}
+	1095.1.1 = {
+		death = "1095.1.1"
+	}
+}
+301026 = { #305145
+	name = "Rhys" #ap Maenarch
+	dynasty = 1029032 #1066 Brycheiniog
+	religion = "catholic"
+	culture = "welsh"
+	father = 301022
+	mother = 301023
+	1055.1.1 = {
+		birth = "1055.1.1"
+	}
+	1095.1.1 = {
+		death = "1095.1.1"
+	}
+}
+#######################################
+# House of Dyfed 
+#######################################
+159324 = {
+	name = "Gwerthefyr"
+	dynasty_house = house_british_isles_dyfed #Dyfed
+	religion = "catholic"
+	culture = "welsh"
+	father = 159322
+	455.1.1 = {
+		birth = "455.1.1"
+	}
+	540.1.1 = {
+		death = "540.1.1"
 	}
 }
 159340 = {
@@ -5460,66 +6523,6 @@
 		death = "850.1.1"
 	}
 }
-159352 = {
-	name = "Bledrig"
-	dynasty = welsh_ap_bleddri
-	religion = "catholic"
-	culture = "welsh"
-	trait = peasant_leader	#Not in the sense of being a rebel, but he was either a villein or an elevated villein. Possibly simply the son of one.
-	790.1.1 = {
-		birth = "790.1.1"
-	}
-	820.1.1 = {
-		add_spouse = 159351
-	}
-	850.1.1 = {
-		death = "850.1.1"
-	}
-}
-159353 = {
-	name = "Hyfaidd"
-	dynasty = welsh_ap_bleddri
-	religion = "catholic"
-	culture = "welsh"
-	father = 159352
-	mother = 159351
-	830.1.1 = {
-		birth = "810.1.1"
-	}
-	893.1.1 = {
-		death = "890.1.1"
-	}
-}
-159354 = {
-	name = "Llywarch"
-	dynasty = welsh_ap_bleddri
-	religion = "catholic"
-	culture = "welsh"
-	father = 159353
-	850.1.1 = {
-		birth = "850.1.1"
-	}
-	904.1.1 = {
-		death = "904.1.1"
-	}
-}
-159355 = {
-	name = "Elen"
-	female = yes
-	dynasty = welsh_ap_bleddri
-	religion = "catholic"
-	culture = "welsh"
-	father = 159354
-	880.1.1 = {
-		birth = "880.1.1"
-	}
-	904.1.1 = {
-		add_spouse = 81823
-	}
-	940.1.1 = {
-		death = "940.1.1"
-	}
-}
 159356 = {
 	name = "Rhain"
 	dynasty_house = house_british_isles_dyfed #Dyfed
@@ -5585,6 +6588,123 @@
 		death = "750.1.1"
 	}
 }
+159697 = {
+	name = "Iudon"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_dyfed #Dyfed
+	father = 159349
+	760.1.1 = {
+		birth = "760.1.1"
+	}
+	827.1.1 = {
+		death = "827.1.1"
+	}
+}
+159322 = {
+	name = "Aergul" #Aircol
+	dynasty_house = house_british_isles_dyfed #Dyfed
+	religion = "catholic"
+	culture = "welsh"
+	father = 159321
+	mother = 159820
+	437.1.1 = {
+		birth = "437.1.1"
+	}
+	495.1.1 = {
+		death = "495.1.1"
+	}
+}
+252370 = {
+	name = "Naufedd" #Naufedd Hen
+	dynasty_house = house_british_isles_dyfed #Dyfed
+	religion = "catholic"
+	culture = "welsh"
+	father = 159347
+	703.1.1 = {
+		birth = yes
+	}
+	785.1.1 = {
+		death = yes
+		give_nickname = nick_the_old
+	}
+}
+252371 = {
+	name = "Elisedd" #Elisedd
+	dynasty_house = house_british_isles_dyfed #Dyfed
+	religion = "catholic"
+	culture = "welsh"
+	father = 159347
+	705.1.1 = {
+		birth = yes
+	}
+	770.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# House ap Bleddri
+#######################################
+159352 = {
+	name = "Bledrig"
+	dynasty = welsh_ap_bleddri
+	religion = "catholic"
+	culture = "welsh"
+	trait = peasant_leader	#Not in the sense of being a rebel, but he was either a villein or an elevated villein. Possibly simply the son of one.
+	790.1.1 = {
+		birth = "790.1.1"
+	}
+	820.1.1 = {
+		add_spouse = 159351
+	}
+	850.1.1 = {
+		death = "850.1.1"
+	}
+}
+159353 = {
+	name = "Hyfaidd"
+	dynasty = welsh_ap_bleddri
+	religion = "catholic"
+	culture = "welsh"
+	father = 159352
+	mother = 159351
+	830.1.1 = {
+		birth = "810.1.1"
+	}
+	893.1.1 = {
+		death = "890.1.1"
+	}
+}
+159354 = {
+	name = "Llywarch"
+	dynasty = welsh_ap_bleddri
+	religion = "catholic"
+	culture = "welsh"
+	father = 159353
+	850.1.1 = {
+		birth = "850.1.1"
+	}
+	904.1.1 = {
+		death = "904.1.1"
+	}
+}
+159355 = {
+	name = "Elen"
+	female = yes
+	dynasty = welsh_ap_bleddri
+	religion = "catholic"
+	culture = "welsh"
+	father = 159354
+	880.1.1 = {
+		birth = "880.1.1"
+	}
+	904.1.1 = {
+		add_spouse = 81823
+	}
+	940.1.1 = {
+		death = "940.1.1"
+	}
+}
 159361 = {
 	name = "Rhodri"
 	dynasty = welsh_ap_bleddri
@@ -5598,20 +6718,9 @@
 		death = "905.1.1"
 	}
 }
-159362 = {
-	name = "Rhodri" #ap Hywel
-	dynasty_house = house_british_isles_dinefwr #Dinefrw
-	religion = "catholic"
-	culture = "welsh"
-	father = 81823 #Hywel Dda
-	mother = 159355 #Elen of Dyfed
-	905.1.1 = {
-		birth = "905.1.1"
-	}
-	954.1.1 = {
-		death = "954.1.1"
-	}
-}
+#######################################
+# House of brycheiniog 
+#######################################
 159363 = {
 	name = "Nowy"
 	dynasty_house = house_british_isles_brycheiniog
@@ -5772,45 +6881,22 @@
 		death = "1080.1.1"
 	}
 }
-
-
-159519 = {
-	name = "Drymbenog"
-	dynasty = 1042817
-	martial = 8
-	diplomacy = 3
-	intrigue = 4
-	stewardship = 5
+252372 = {
+	name = "Tewdwr" 
+	dynasty_house = house_british_isles_brycheiniog
 	religion = "catholic"
 	culture = "welsh"
-	father = 159312
-	mother = 159374
-	trait = zealous
-	trait = education_martial_2
-	1035.1.2 = {
-		birth = "1035.1.2"
+	father = 159366
+	848.1.1 = {
+		birth = yes
 	}
-	1090.1.2 = {
-		death = "1090.1.2"
+	910.1.1={
+		death = yes
 	}
 }
-159520 = {
-	name = "Elinor" #ferch Drymbenog
-	female = yes
-	dynasty = 1042817
-	religion = "catholic"
-	culture = "welsh"
-	father = 159519
-	1050.1.1 = {
-		birth = "1050.1.1"	#unknown
-	}
-	1066.1.1 = {
-		add_spouse = 159292
-	}
-	1100.1.1 = {
-		death = "1100.1.1"
-	}
-}
+#######################################
+# House of Caradoc 
+#######################################
 159424 = {
 	name = "Caradog"
 	religion = "catholic"
@@ -5863,6 +6949,9 @@
 		death = "370.1.1"
 	}
 }
+#######################################
+# House of Prydain 
+#######################################
 159428 = {
 	name = "Einudd"
 	religion = "catholic"
@@ -5905,6 +6994,22 @@
 		death = "400.1.1"
 	}
 }
+159472 = {
+	name = "Geraint"
+	religion = "catholic"
+	culture = "welsh"
+	dynasty = 1029001 #Prydain
+	father = 159428
+	265.1.1 = {
+		birth = "265.1.1"
+	}
+	340.1.1 = {
+		death = "340.1.1"
+	}
+}
+#######################################
+# House of Dyfnaint 
+#######################################
 159431 = {
 	name = "Cynan_Meiriadog"
 	religion = "catholic"
@@ -5932,19 +7037,7 @@
 		death = "390.1.1"
 	}
 }
-159472 = {
-	name = "Geraint"
-	religion = "catholic"
-	culture = "welsh"
-	dynasty = 1029001 #Prydain
-	father = 159428
-	265.1.1 = {
-		birth = "265.1.1"
-	}
-	340.1.1 = {
-		death = "340.1.1"
-	}
-}
+
 159435 = {
 	name = "Gwrfawr"
 	religion = "catholic"
@@ -5974,7 +7067,6 @@
 		death = "410.1.1"
 	}
 }
-
 159437 = {
 	name = "Cynfawr"
 	religion = "catholic"
@@ -5989,7 +7081,6 @@
 		death = "435.1.1"
 	}
 }
-
 159438 = {
 	name = "Custennin" #Constantine of Cornwall
 	religion = "catholic"
@@ -6061,93 +7152,6 @@
 		dynasty_house = house_british_isles_dyfnaint #Devnent
 	}
 }
-159443 = {
-	name = "Geraint"
-	religion = "catholic"
-	culture = "welsh"
-	dynasty_house = house_british_isles_dyfnaint #Dyfnaint
-	father = 159442
-	530.1.1 = {
-		birth = "530.1.1"
-	}
-	577.1.1 = {
-		name = "Gereint"
-		culture = "breton"
-		dynasty_house = house_british_isles_dyfnaint #Devnent
-	}
-	598.1.1 = {
-		death = "598.1.1"
-	}
-}
-159444 = {
-	name = "Bledrig"
-	religion = "catholic"
-	culture = "welsh"
-	dynasty_house = house_british_isles_dyfnaint #Dyfnaint
-	father = 159442
-	535.1.1 = {
-		birth = "531.1.1"
-	}
-	577.1.1 = {
-		name = "Bledric"
-		culture = "breton"
-		dynasty_house = house_british_isles_dyfnaint #Devnent
-	}
-	613.1.1 = {
-		death = "613.1.1"
-	}
-}
-
-159751 = {
-	name = "Newlyna"
-	female = yes
-	religion = "catholic"
-	culture = "welsh"
-	dynasty_house = house_british_isles_dyfnaint #Dyfnaint
-	father = 159442
-	540.1.1 = {
-		birth = "540.1.1"
-	}
-	577.1.1 = {
-		name = "Neulenna"
-		culture = "breton"
-		dynasty_house = house_british_isles_dyfnaint #Devnent
-	}
-	590.1.1 = {
-		death = "590.1.1"
-	}
-}
-159752 = {
-	name = "Dywel"
-	religion = "catholic"
-	culture = "welsh"
-	dynasty_house = house_british_isles_dyfnaint #Dyfnaint
-	father = 159442
-	543.1.1 = {
-		birth = "543.1.1"
-	}
-	577.1.1 = {
-		name = "Domuel"
-		culture = "breton"
-		dynasty_house = house_british_isles_dyfnaint #Devnent
-	}
-	605.1.1 = {
-		death = "605.1.1"
-	}
-}
-159753 = {
-	name = "Enid"
-	female = yes
-	religion = "catholic"
-	culture = "welsh"
-	#dynasty = 0 #
-	453.1.1 = {
-		birth = "453.1.1"
-	}
-	500.1.1 = {
-		death = "500.1.1"
-	}
-}
 159754 = {
 	name = "Ermind"
 	religion = "catholic"
@@ -6174,20 +7178,44 @@
 		death = "505.1.1"
 	}
 }
-159697 = {
-	name = "Iudon"
+159932 = {
+	name = "Prawst"
+	female = yes
 	religion = "catholic"
 	culture = "welsh"
-	dynasty_house = house_british_isles_dyfed #Dyfed
-	father = 159349
-	760.1.1 = {
-		birth = "760.1.1"
+	dynasty_house = house_british_isles_dyfnaint #Dyfnaint
+	father = 159436
+	mother = 159811
+	406.1.1 = {
+		birth = "406.1.1"
 	}
-	827.1.1 = {
-		death = "827.1.1"
+	435.1.1 = {
+		add_spouse = 159323
+	}
+	500.1.1 = {
+		death = "500.1.1"
 	}
 }
-
+159951 = {
+	name = "Ystradwel"
+	female = yes
+	religion = "catholic"
+	culture = "welsh"
+	dynasty_house = house_british_isles_dyfnaint #Dyfnaint
+	father = 159432
+	345.1.1 = {
+		birth = "345.1.1"
+	}
+	390.1.1 = {
+		add_spouse = 159038
+	}
+	400.1.1 = {
+		death = "400.1.1"
+	}
+}
+#######################################
+# House of Gwent 
+#######################################
 159807 = {
 	name = "Macsen" # Wledig, or, as he is better known, Emperor Magnus Maximus, pretender to the WRE
 	dynasty = 1029129 #Gwent
@@ -6239,7 +7267,6 @@
 		death = "428.1.1"
 	}
 }
-
 159808 = {
 	name = "Annwn_Dynod" #
 	dynasty = 1029129 #Gwent
@@ -6308,59 +7335,6 @@
 	}
 	431.1.1 = {
 		death = "431.1.1"
-	}
-}
-159817 = {
-	name = "Gloitguin" #
-	dynasty = 1029134 #Dyfed
-	religion = "catholic"
-	culture = "welsh"
-	father = 159816
-	389.1.1 = {
-		birth = "389.1.1"
-	}
-	451.1.1 = {
-		death = "451.1.1"
-	}
-}
-159818 = {
-	name = "Clotri" #
-	dynasty = 1029134 #Dyfed
-	religion = "catholic"
-	culture = "welsh"
-	father = 159817
-	405.1.1 = {
-		birth = "405.1.1"
-	}
-	475.1.1 = {
-		death = "475.1.1"
-	}
-}
-159819 = {
-	name = "Maelgwn" #
-	dynasty = 1029134 #Dyfed
-	religion = "catholic"
-	culture = "welsh"
-	father = 159818
-	422.1.1 = {
-		birth = "422.1.1"
-	}
-	475.1.1 = {
-		death = "475.1.1"
-	}
-}
-159820 = {
-	name = "Gwledyr" #
-	female = yes
-	dynasty = 1029134 #Dyfed
-	religion = "catholic"
-	culture = "welsh"
-	father = 159818
-	421.1.1 = {
-		birth = "421.1.1"
-	}
-	475.1.1 = {
-		death = "475.1.1"
 	}
 }
 159821 = {
@@ -6438,75 +7412,6 @@
 	}
 	570.1.1 = {
 		death = "570.1.1"
-	}
-}
-159809 = {
-	name = "Owain" #
-	dynasty = 1029130 #Cernyw
-	religion = "catholic"
-	culture = "welsh"
-	father = 159807
-	357.1.1 = {
-		birth = "357.1.1"
-	}
-	428.1.1 = {
-		death = "428.1.1"
-	}
-}
-159826 = {
-	name = "Mor" #
-	dynasty = 1029130 #Cernyw
-	religion = "catholic"
-	culture = "welsh"
-	father = 159809
-	378.1.1 = {
-		birth = "378.1.1"
-	}
-	448.1.1 = {
-		death = "448.1.1"
-	}
-}
-159827 = {
-	name = "Solor" #
-	dynasty = 1029130 #Cernyw
-	religion = "catholic"
-	culture = "welsh"
-	father = 159826
-	398.1.1 = {
-		birth = "398.1.1"
-	}
-	470.1.1 = {
-		death = "470.1.1"
-	}
-}
-159828 = {
-	name = "Glywys" #
-	dynasty = 1029130 #Cernyw
-	religion = "catholic"
-	culture = "welsh"
-	father = 159827
-	435.1.1 = {
-		birth = "435.1.1"
-	}
-	498.1.1 = {
-		death = "498.1.1"
-	}
-}
-159829 = {
-	name = "Dyfwn" #
-	female = yes
-	dynasty = 1029130 #Cernyw
-	religion = "catholic"
-	culture = "welsh"
-	father = 159828
-	486.1.1 = {
-		birth = "486.1.1"
-	}
-	508.1.1 = {
-		add_spouse = 159824
-	}
-	548.1.1 = {
-		death = "548.1.1"
 	}
 }
 159830 = {
@@ -6592,41 +7497,6 @@
 		death = "680.1.1"
 	}
 }
-159836 = {
-	name = "Gwerthefyr" # Vortimer
-	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
-	religion = "catholic"
-	culture = "welsh"
-	father = 159056
-	mother = 159810
-	376.1.1 = {
-		birth = "376.1.1"
-	}
-	453.1.1 = {
-		death = "453.1.1"
-		give_nickname = nick_the_blessed
-	}
-}
-159837 = {
-	name = "Madrun" #
-	female = yes
-	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
-	religion = "catholic"
-	culture = "welsh"
-	father = 159836
-	430.1.1 = {
-		birth = "430.1.1"
-	}
-	470.1.1 = {
-		add_spouse = 159822
-	}
-	490.1.1 = {
-		give_nickname = nick_the_saint
-	}
-	500.1.1 = {
-		death = "500.1.1"
-	}
-}
 159812 = {
 	name = "Custennin" #
 	dynasty = 1029129 #Gwent
@@ -6641,26 +7511,151 @@
 		death = "411.1.1"
 	}
 }
-
-159932 = {
-	name = "Prawst"
+205137 = {
+	name = "Angharad" #
 	female = yes
+	dynasty = 1029129 #Gwent
 	religion = "catholic"
 	culture = "welsh"
-	dynasty_house = house_british_isles_dyfnaint #Dyfnaint
-	father = 159436
-	mother = 159811
-	406.1.1 = {
-		birth = "406.1.1"
+	father = 159831
+	561.1.1 = {
+		birth = "561.1.1"
 	}
-	435.1.1 = {
-		add_spouse = 159323
-	}
-	500.1.1 = {
-		death = "500.1.1"
+	605.1.1 = {
+		death = "605.1.1"
 	}
 }
-
+#######################################
+# House of Dyfed 
+#######################################
+159817 = {
+	name = "Gloitguin" #
+	dynasty = 1029134 #Dyfed
+	religion = "catholic"
+	culture = "welsh"
+	father = 159816
+	389.1.1 = {
+		birth = "389.1.1"
+	}
+	451.1.1 = {
+		death = "451.1.1"
+	}
+}
+159818 = {
+	name = "Clotri" #
+	dynasty = 1029134 #Dyfed
+	religion = "catholic"
+	culture = "welsh"
+	father = 159817
+	405.1.1 = {
+		birth = "405.1.1"
+	}
+	475.1.1 = {
+		death = "475.1.1"
+	}
+}
+159819 = {
+	name = "Maelgwn" #
+	dynasty = 1029134 #Dyfed
+	religion = "catholic"
+	culture = "welsh"
+	father = 159818
+	422.1.1 = {
+		birth = "422.1.1"
+	}
+	475.1.1 = {
+		death = "475.1.1"
+	}
+}
+159820 = {
+	name = "Gwledyr" #
+	female = yes
+	dynasty = 1029134 #Dyfed
+	religion = "catholic"
+	culture = "welsh"
+	father = 159818
+	421.1.1 = {
+		birth = "421.1.1"
+	}
+	475.1.1 = {
+		death = "475.1.1"
+	}
+}
+#######################################
+# House of Cernyw 
+#######################################
+159809 = {
+	name = "Owain" #
+	dynasty = 1029130 #Cernyw
+	religion = "catholic"
+	culture = "welsh"
+	father = 159807
+	357.1.1 = {
+		birth = "357.1.1"
+	}
+	428.1.1 = {
+		death = "428.1.1"
+	}
+}
+159826 = {
+	name = "Mor" #
+	dynasty = 1029130 #Cernyw
+	religion = "catholic"
+	culture = "welsh"
+	father = 159809
+	378.1.1 = {
+		birth = "378.1.1"
+	}
+	448.1.1 = {
+		death = "448.1.1"
+	}
+}
+159827 = {
+	name = "Solor" #
+	dynasty = 1029130 #Cernyw
+	religion = "catholic"
+	culture = "welsh"
+	father = 159826
+	398.1.1 = {
+		birth = "398.1.1"
+	}
+	470.1.1 = {
+		death = "470.1.1"
+	}
+}
+159828 = {
+	name = "Glywys" #
+	dynasty = 1029130 #Cernyw
+	religion = "catholic"
+	culture = "welsh"
+	father = 159827
+	435.1.1 = {
+		birth = "435.1.1"
+	}
+	498.1.1 = {
+		death = "498.1.1"
+	}
+}
+159829 = {
+	name = "Dyfwn" #
+	female = yes
+	dynasty = 1029130 #Cernyw
+	religion = "catholic"
+	culture = "welsh"
+	father = 159828
+	486.1.1 = {
+		birth = "486.1.1"
+	}
+	508.1.1 = {
+		add_spouse = 159824
+	}
+	548.1.1 = {
+		death = "548.1.1"
+	}
+}
+#######################################
+# House of Manaw 
+#######################################
 159933 = {
 	name = "Celeinion" #
 	female = yes
@@ -6808,6 +7803,9 @@
 		death = "691.1.1"
 	}
 }
+#######################################
+# House of Caerloyw 
+#######################################
 159944 = {
 	name = "Gloyw" #
 	dynasty = 1029132 #Caerloyw
@@ -6859,99 +7857,9 @@
 		death = "391.1.1"
 	}
 }
-159948 = {
-	name = "Cadeyrn" #
-	dynasty = 1029133 #Powys
-	religion = "catholic"
-	culture = "welsh"
-	father = 159947
-	360.1.1 = {
-		birth = "360.1.1"
-	}
-	421.1.1 = {
-		death = "421.1.1"
-	}
-}
-159949 = {
-	name = "Brydw" #
-	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
-	religion = "catholic"
-	culture = "welsh"
-	father = 159056
-	mother = 159810
-	390.1.1 = {
-		birth = "390.1.1"
-	}
-	450.1.1 = {
-		death = "450.1.1"
-	}
-}
-159950 = {
-	name = "Annan" #
-	female = yes
-	dynasty_house = house_british_isles_gwerthrynion #Gwerthrynion
-	religion = "catholic"
-	culture = "welsh"
-	father = 159949
-	430.1.1 = {
-		birth = "430.1.1"
-	}
-	490.1.1 = {
-		death = "490.1.1"
-	}
-}
-
-159951 = {
-	name = "Ystradwel"
-	female = yes
-	religion = "catholic"
-	culture = "welsh"
-	dynasty_house = house_british_isles_dyfnaint #Dyfnaint
-	father = 159432
-	345.1.1 = {
-		birth = "345.1.1"
-	}
-	390.1.1 = {
-		add_spouse = 159038
-	}
-	400.1.1 = {
-		death = "400.1.1"
-	}
-}
-
-159956 = {
-	name = "Brychan"
-	dynasty = 1029032 #1st Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 159323
-	mother = 159932
-	430.1.1 = {
-		birth = "430.1.1"
-	}
-	510.1.1 = {
-		death = "510.1.1"
-	}
-}
-159957 = {
-	name = "Nyfain"
-	female = yes
-	dynasty = 1029032 #1st Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 159956
-	460.1.1 = {
-		birth = "460.1.1"
-	}
-	476.1.1 = {
-		add_spouse = 159952
-	}
-	530.1.1 = {
-		death = "530.1.1"
-	}
-}
-
-
+#######################################
+# House of Ergyng 
+#######################################
 159961 = {
 	name = "Pebiau" # Clafrog
 	dynasty = 20037 #Ergyng
@@ -7008,21 +7916,9 @@
 		death = "690.1.1"
 	}
 }
-159322 = {
-	name = "Aergul" #Aircol
-	dynasty_house = house_british_isles_dyfed #Dyfed
-	religion = "catholic"
-	culture = "welsh"
-	father = 159321
-	mother = 159820
-	437.1.1 = {
-		birth = "437.1.1"
-	}
-	495.1.1 = {
-		death = "495.1.1"
-	}
-}
-
+#######################################
+# House of Ceredigion 
+#######################################
 159791 = {
 	name = "Ceredig" # ap Cunedda
 	dynasty_house = house_british_isles_ceredigion #Ceredigion
@@ -7115,6 +8011,9 @@
 		death = "670.1.1"
 	}
 }
+#######################################
+# House of Seisyllwg 
+#######################################
 159798 = {
 	name = "Seisyll" # ap Clydog
 	dynasty = 14255 # Seisyllwg
@@ -7167,7 +8066,6 @@
 		death = "872.1.1"
 	}
 }
-
 159802 = {
 	name = "Angharad" # ferch Meurig
 	female = yes
@@ -7185,9 +8083,6 @@
 		death = "880.1.1"
 	}
 }
-
-
-
 159806 = {
 	name = "Dyfnwal" # ab Arthwyr
 	dynasty = 14255 # Seisyllwg
@@ -7201,445 +8096,9 @@
 		death = "818.1.1"
 	}
 }
-
-160038 = {
-	name = "Owain" # ap Einion
-	dynasty_house = house_british_isles_rhos #Rhos
-	religion = "catholic"
-	culture = "welsh"
-	father = 159011
-	455.1.1 = {
-		birth = "455.1.1"
-	}
-	525.1.1 = {
-		death = "525.1.1"
-	}
-}
-160039 = {
-	name = "Cynlas" # Goch
-	dynasty_house = house_british_isles_rhos #Rhos
-	religion = "catholic"
-	culture = "welsh"
-	father = 160038
-	480.1.1 = {
-		birth = "480.1.1"
-	}
-	540.1.1 = {
-		death = "540.1.1"
-	}
-}
-160040 = {
-	name = "Einion" #ap Cynlas
-	dynasty_house = house_british_isles_rhos #Rhos
-	religion = "catholic"
-	culture = "welsh"
-	father = 160039
-	500.1.1 = {
-		birth = "500.1.1"
-	}
-	550.1.1 = {
-		death = "550.1.1"
-		give_nickname = nick_the_saint
-	}
-}
-160041 = {
-	name = "Cadwal"
-	dynasty_house = house_british_isles_rhos #Rhos
-	religion = "catholic"
-	culture = "welsh"
-	father = 160040
-	535.1.1 = {
-		birth = "535.1.1"
-	}
-	575.1.1 = {
-		death = "575.1.1"
-	}
-}
-160042 = {
-	name = "Idgwyn"
-	dynasty_house = house_british_isles_rhos #Rhos
-	religion = "catholic"
-	culture = "welsh"
-	father = 160041
-	570.1.1 = {
-		birth = "570.1.1"
-	}
-	630.1.1 = {
-		death = "630.1.1"
-	}
-}
-160043 = {
-	name = "Einion"
-	dynasty_house = house_british_isles_rhos #Rhos
-	religion = "catholic"
-	culture = "welsh"
-	father = 160042
-	600.1.1 = {
-		birth = "600.1.1"
-	}
-	650.1.1 = {
-		death = "650.1.1"
-	}
-}
-160044 = {
-	name = "Rhufon"
-	dynasty_house = house_british_isles_rhos #Rhos
-	religion = "catholic"
-	culture = "welsh"
-	father = 160043
-	630.1.1 = {
-		birth = "630.1.1"
-	}
-	695.1.1 = {
-		death = "695.1.1"
-	}
-}
-160045 = {
-	name = "Hywel"
-	dynasty_house = house_british_isles_rhos #Rhos
-	religion = "catholic"
-	culture = "welsh"
-	father = 160044
-	660.1.1 = {
-		birth = "660.1.1"
-	}
-	700.1.1 = {
-		death = "700.1.1"
-	}
-}
-160046 = {
-	name = "Meirchion"
-	dynasty_house = house_british_isles_rhos #Rhos
-	religion = "catholic"
-	culture = "welsh"
-	father = 160045
-	690.1.1 = {
-		birth = "690.1.1"
-	}
-	740.1.1 = {
-		death = "740.1.1"
-	}
-}
-160048 = {
-	name = "Rimo" # ferch Maelgwn
-	dynasty_house = house_british_isles_gwynedd #Gwynedd
-	female = yes
-	religion = "catholic"
-	culture = "welsh"
-	father = 159013 #
-	502.1.1 = {
-		birth = "502.1.1"
-	}
-	520.1.1 = {
-		add_spouse = 159662
-	}
-	580.1.1 = {
-		death = "580.1.1"
-	}
-}
-
-184119 = {
-	name = "Iorwerth"
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 159068 #Tegonwy Gruffyd of Powys
-	740.1.1 = {
-		birth = "740.1.1"
-	}
-	759.1.1 = {
-		add_spouse = 184135
-	}
-	815.1.1 = {
-		dynasty_house = house_british_isles_maelienydd #Maelienydd
-		death = "815.1.1"
-	}
-}
-184120 = {
-	name = "Idnerth"
-	dynasty_house = house_british_isles_ternyllwg #Ternyllwg
-	religion = "catholic"
-	culture = "welsh"
-	father = 184119
-	mother = 184135
-	760.1.1 = {
-		birth = "760.1.1"
-	}
-	815.1.1 = {
-		dynasty_house = house_british_isles_maelienydd #Maelienydd
-	}
-	820.1.1 = {
-		death = "820.1.1"
-	}
-}
-184121 = {
-	name = "Cadwr"
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	religion = "catholic"
-	culture = "welsh"
-	father = 184120
-	800.1.1 = {
-		birth = "800.1.1"
-	}
-	870.1.1 = {
-		death = "870.1.1"
-	}
-}
-184122 = {
-	name = "Cadwr"
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	religion = "catholic"
-	culture = "welsh"
-	father = 184121
-	830.1.1 = {
-		birth = "830.1.1"
-	}
-	900.1.1 = {
-		death = "900.1.1"
-	}
-}
-184123 = {
-	name = "Seferus"
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	religion = "catholic"
-	culture = "welsh"
-	father = 184122
-	860.1.1 = {
-		birth = "860.1.1"
-	}
-	940.1.1 = {
-		death = "940.1.1"
-	}
-}
-184124 = {
-	name = "Ifor"
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	religion = "catholic"
-	culture = "welsh"
-	father = 184123
-	890.1.1 = {
-		birth = "890.1.1"
-	}
-	950.1.1 = {
-		death = "950.1.1"
-	}
-}
-184125 = {
-	name = "Cuhelyn"
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	religion = "catholic"
-	culture = "welsh"
-	father = 184123
-	920.1.1 = {
-		birth = "920.1.1"
-	}
-	980.1.1 = {
-		death = "980.1.1"
-	}
-}
-184126 = {
-	name = "Cadwgon" #ap Elystan
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	father = 131701
-	religion = "catholic"
-	culture = "welsh"
-	1000.1.1 = {
-		birth = "1000.1.1"
-	}
-	1050.1.1 = {
-		death = "1050.1.1"
-	}
-}
-184127 = {
-	name = "Maelgwn" #ap Cadwgon
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	father = 131703
-#	mother = 138445
-	religion = "catholic"
-	culture = "welsh"
-	1153.1.1 = {
-		birth = "1153.1.1"
-	}
-	1188.1.1 = {
-		trait = faith_warrior
-	}
-	1234.1.1 = {
-		death = "1234.1.1"
-	}
-}
-184128 = {
-	name = "Maredudd" #ap Maelgwn
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	father = 184127
-	religion = "catholic"
-	culture = "welsh"
-	1195.1.1 = {
-		birth = "1195.1.1"
-	}
-	1281.1.1 = {
-		death = "1281.1.1"
-	}
-}
-184129 = {
-	name = "Madog" #ap Maredudd
-	dynasty_house = house_british_isles_maelienydd #Maelienydd
-	father = 184128
-	religion = "catholic"
-	culture = "welsh"
-	1250.1.1 = {
-		birth = "1250.1.1"
-	}
-	1320.1.1 = {
-		death = "1320.1.1"
-	}
-}
-184130 = {
-	name = "Maredudd"
-	dynasty = 1029032 #1st Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	trait = legitimized_bastard
-	father = 159328 #Idwallon
-	580.1.1 = {
-		birth = "580.1.1"
-	}
-	650.1.1 = {
-		death = "650.1.1"
-	}
-}
-184131 = {
-	name = "Cynan"
-	dynasty = 1029032 #1st Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 184130
-	610.1.1 = {
-		birth = "610.1.1"
-	}
-	680.1.1 = {
-		death = "680.1.1"
-	}
-}
-184132 = {
-	name = "Maelgwn"
-	dynasty = 1029032 #1st Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 184131
-	640.1.1 = {
-		birth = "640.1.1"
-	}
-	710.1.1 = {
-		death = "710.1.1"
-	}
-}
-184133 = {
-	name = "Idwal"
-	dynasty = 1029032 #1st Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 184132
-	670.1.1 = {
-		birth = "670.1.1"
-	}
-	740.1.1 = {
-		death = "740.1.1"
-	}
-}
-184134 = {
-	name = "Brychan"
-	dynasty = 1029032 #1st Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 184133
-	710.1.1 = {
-		birth = "710.1.1"
-	}
-	770.1.1 = {
-		death = "770.1.1"
-	}
-}
-184135 = {
-	name = "Arianwen"
-	dynasty = 1029032 #1st Brycheiniog
-	female = yes
-	religion = "catholic"
-	culture = "welsh"
-	father = 184134
-	740.1.1 = {
-		birth = "740.1.1"
-	}
-	820.1.1 = {
-		death = "820.1.1"
-	}
-}
-184083 = {
-	name = "Madog" #Madog II
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 138462 #Gruffydd Maelor II
-	1230.1.1 = {
-		birth = "1230.1.1"
-	}
-	#married Emma de Audley
-	1277.1.1 = {
-		death = "1277.1.1"
-	}
-}
-184084 = {
-	name = "Gruffydd_Fychan"
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 138462 #Gruffydd Maelor II
-	1240.1.1 = {
-		birth = "1240.1.1"
-	}
-	1289.1.1 = {
-		death = "1289.1.1"
-	}
-}
-184085 = {
-	name = "Madog_Crypl"
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 184084 #Gruffydd Fychan
-	1275.1.1 = {
-		birth = "1275.1.1"
-	}
-	1304.1.1 = {
-		death = "1304.1.1"
-	}
-}
-184086 = {
-	name = "Gruffydd" #of Rhuddallt
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 184085 #Madog Crypl
-	1298.1.1 = {
-		birth = "1298.1.1"
-	}
-	1343.1.1 = {
-		death = "1343.1.1"
-	}
-}
-184087 = {
-	name = "Gruffydd_Fychan" #II
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 184086 #Gruffydd of Rhuddalt
-	1320.1.1 = {
-		birth = "1320.1.1"
-	}
-	1369.1.1 = {
-		death = "1369.1.1"
-	}
-}
-
+#######################################
+# House of Brogyntyn 
+#######################################
 184091 = {
 	name = "Owain" #ap Madog
 	# AKA: Owain Brogyntyn
@@ -7673,33 +8132,6 @@
 		death = "1260.1.1"
 	}
 }
-184093 = {
-	name = "Madog"
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 420007 #Gwenwynwyn ab Owain
-	1201.1.1 = {
-		birth = "1201.1.1"
-	}
-	1286.1.1 = {
-		death = "1286.1.1"
-	}
-}
-184094 = {
-	name = "Efa"
-	female = yes
-	dynasty_house = house_british_isles_mathrafal #Mathrafal (Powys)
-	religion = "catholic"
-	culture = "welsh"
-	father = 184093 #Madog
-	1217.1.1 = {
-		birth = "1217.1.1"
-	}
-	1286.1.1 = {
-		death = "1286.1.1"
-	}
-}
 184095 = {
 	name = "Gruffudd" #ap Iorwerth
 	dynasty = 1042815
@@ -7727,6 +8159,9 @@
 		death = "1370.1.1"
 	}
 }
+#######################################
+# House of Tewdwr 
+#######################################
 183161 = {
 	name = "Ednyfed"
 	# AKA: Ednyfed Fychan ap Cynwrig
@@ -8199,396 +8634,9 @@
 		death = "1334.1.1"
 	}
 }
-183190 = {
-	name = "Llywelyn"
-	# AKA: Llywelyn ap Gruffydd
-	dynasty = 200069
-	religion = "catholic"
-	culture = "welsh"
-	father = 420008 #Gruffydd ap Gwenwynwyn
-	1258.1.1 = {
-		birth = "1258.1.1"
-	}
-	1291.1.1 = {
-		death = "1291.1.1"
-	}
-}
-183191 = {
-	name = "Margred"
-	# AKA: Margred ferch Gruffydd
-	female = yes
-	dynasty = 200069
-	religion = "catholic"
-	culture = "welsh"
-	father = 420008 #Gruffydd ap Gwenwynwyn
-	1255.1.1 = {
-		birth = "1255.1.1"
-	}
-	1336.5.11 = {
-		death = "1336.5.11"
-	}
-}
-183192 = {
-	name = "Ieuan"
-	# AKA: Ieuan ap Gruffydd
-	dynasty = 200069
-	religion = "catholic"
-	culture = "welsh"
-	father = 420008 #Gruffydd ap Gwenwynwyn
-	1261.1.1 = {
-		birth = "1261.1.1"
-	}
-	1278.1.1 = {
-		death = "1278.1.1"
-	}
-}
-183193 = {
-	name = "Gwilym"
-	# AKA: Gwilym ap Gruffydd
-	dynasty = 200069
-	religion = "catholic"
-	culture = "welsh"
-	father = 420008 #Gruffydd ap Gwenwynwyn
-	1263.1.1 = {
-		birth = "1263.1.1"
-	}
-	1317.1.1 = {
-		death = "1317.1.1"
-	}
-}
-183194 = {
-	name = "Gruffydd"
-	# AKA: Gruffydd ap Gruffydd
-	dynasty = 200069
-	religion = "catholic"
-	culture = "welsh"
-	father = 420008 #Gruffydd ap Gwenwynwyn
-	1268.1.1 = {
-		birth = "1268.1.1"
-	}
-	1324.1.1 = {
-		death = "1324.1.1"
-	}
-}
-183195 = {
-	name = "Dafydd"
-	# AKA: Dafydd ap Gruffydd
-	dynasty = 200069
-	religion = "catholic"
-	culture = "welsh"
-	father = 420008 #Gruffydd ap Gwenwynwyn
-	1271.1.1 = {
-		birth = "1271.1.1"
-	}
-	1339.1.1 = {
-		death = "1339.1.1"
-	}
-}
-183196 = {
-	name = "Efa"
-	# AKA: Efa ferch Llywelyn
-	female = yes
-	dynasty = 200069
-	religion = "catholic"
-	culture = "welsh"
-	father = 183190 #Llywelyn ap Gruffydd
-	1288.1.1 = {
-		birth = "1288.1.1"
-	}
-	1338.1.1 = {
-		death = "1338.1.1"
-	}
-}
-183197 = {
-	name = "Gruffydd"
-	# AKA: Gruffydd ap Gwilym
-	dynasty = 200069
-	religion = "catholic"
-	culture = "welsh"
-	father = 183193 #Gwilym ap Gruffydd
-	1292.1.1 = {
-		birth = "1292.1.1"
-	}
-	1356.1.1 = {
-		death = "1356.1.1"
-	}
-}
-183198 = {
-	name = "Gwilym"
-	# AKA: Gwilym ap Gruffydd
-	dynasty = 200069
-	religion = "catholic"
-	culture = "welsh"
-	father = 183197 #Gruffydd ap Gwilym
-	1332.1.1 = {
-		birth = "1332.1.1"
-	}
-	1376.1.1 = {
-		death = "1376.1.1"
-	}
-}
-160255 = {
-	name = "Arthfael" # ap Hywel
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159109
-	849.1.1 = {
-		birth = "849.1.1"
-	}
-	916.1.1 = {
-		death = "916.1.1"
-	}
-}
-160256 = {
-	name = "Rhys" # ap Hywel
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159109
-	851.1.1 = {
-		birth = "851.1.1"
-	}
-	900.1.1 = {
-		death = "900.1.1"
-	}
-}
-160257 = {
-	name = "Arthfael" # ap Rhys
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159110
-	835.1.1 = {
-		birth = "835.1.1"
-	}
-	895.1.1 = {
-		death = "895.1.1"
-	}
-}
-160258 = {
-	name = "Meurig" # ap Arthfael
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 159111
-	800.1.1= {
-		birth = yes
-	}
-	874.1.1= {
-		death = yes
-	}
-}
-160259 = {
-	name = "Brochfael" # ap Meurig
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 160258
-	835.1.1 = {
-		birth = "835.1.1"
-	}
-	890.1.1 = {
-		death = "890.1.1"
-	}
-}
-160260 = {
-	name = "Ffernfael" # ap Meurig
-	dynasty_house = house_british_isles_morgannwg #Morgan
-	religion = "catholic"
-	culture = "welsh"
-	father = 160258
-	837.1.1 = {
-		birth = "837.1.1"
-	}
-	892.1.1 = {
-		death = "892.1.1"
-	}
-}
-205140 = {
-	name = "Hywel" # ap Caradog
-	dynasty_house = house_british_isles_rhos #Rhos
-	father = 159022
-	religion = "catholic"
-	culture = "welsh"
-	750.1.1 = {
-		birth = "750.1.1"
-	}
-	825.1.1 = {
-		death = "825.1.1"
-	}
-}
-205137 = {
-	name = "Angharad" #
-	female = yes
-	dynasty = 1029129 #Gwent
-	religion = "catholic"
-	culture = "welsh"
-	father = 159831
-	561.1.1 = {
-		birth = "561.1.1"
-	}
-	605.1.1 = {
-		death = "605.1.1"
-	}
-}
-205138 = {
-	name = "Ceindrych"
-	female = yes
-	dynasty = 1029032 #1st Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 184130
-	611.1.1 = {
-		birth = "611.1.1"
-	}
-	680.1.1 = {
-		death = "680.1.1"
-	}
-}
-252370 = {
-	name = "Naufedd" #Naufedd Hen
-	dynasty_house = house_british_isles_dyfed #Dyfed
-	religion = "catholic"
-	culture = "welsh"
-	father = 159347
-	703.1.1 = {
-		birth = yes
-	}
-	785.1.1 = {
-		death = yes
-		give_nickname = nick_the_old
-	}
-}
-252371 = {
-	name = "Elisedd" #Elisedd
-	dynasty_house = house_british_isles_dyfed #Dyfed
-	religion = "catholic"
-	culture = "welsh"
-	father = 159347
-	705.1.1 = {
-		birth = yes
-	}
-	770.1.1 = {
-		death = yes
-	}
-}
-252372 = {
-	name = "Tewdwr" 
-	dynasty_house = house_british_isles_brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 159366
-	848.1.1 = {
-		birth = yes
-	}
-	910.1.1={
-		death = yes
-	}
-}
-301020 = { #305139
-	name = "Bleddyn" #ap Maenarch
-	dynasty = 1029032 #1066 Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 301022
-	mother = 301023
-	1045.1.1 = {
-		birth = "1045.1.1"
-	}
-	1065.1.1 = {
-		add_spouse = 301024 #"Elen" #verch Tudor
-	}
-	1093.1.1 = {
-		death = "1093.1.1"
-	}
-}
-301021 = { #305140
-	name = "Wogan" #ap Bleddyn
-	dynasty = 1029032 #1066 Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 301020
-	mother = 301024
-	1065.1.1 = {
-		birth = "1065.1.1"
-	}
-	1134.1.1 = {
-		death = "1134.1.1"
-	}
-}
-301022 = { #305141
-	name = "Maenarch" #ap Dryffin
-	dynasty = 1029032 #1066 Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	#father = 184130
-	1025.1.1 = {
-		birth = "1025.1.1"
-	}
-	1045.1.1 = {
-		add_spouse = 301023 #"Elen" #verch Einion
-	}
-	1060.1.1 = {
-		death = "1060.1.1"
-	}
-}
-301023 = { #305142
-	name = "Elen" #verch Einion
-	#dynasty = 1029032 #1066 Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	female = yes
-	#father = 184130
-	1025.1.1 = {
-		birth = "1025.1.1"
-	}
-	1100.1.1 = {
-		death = "1100.1.1"
-	}
-}
-301024 = { #305143
-	name = "Elen" #verch Tudor
-	#dynasty = 1029032 #1066 Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	female = yes
-	#father = 184130
-	1045.1.1 = {
-		birth = "1045.1.1"
-	}
-	1093.1.1 = {
-		death = "1093.1.1"
-	}
-}
-301025 = { #305144
-	name = "Drymbenog" #ap Maenarch
-	dynasty = 1029032 #1066 Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 301022
-	mother = 301023
-	1045.1.1 = {
-		birth = "1045.1.1"
-	}
-	1095.1.1 = {
-		death = "1095.1.1"
-	}
-}
-301026 = { #305145
-	name = "Rhys" #ap Maenarch
-	dynasty = 1029032 #1066 Brycheiniog
-	religion = "catholic"
-	culture = "welsh"
-	father = 301022
-	mother = 301023
-	1055.1.1 = {
-		birth = "1055.1.1"
-	}
-	1095.1.1 = {
-		death = "1095.1.1"
-	}
-}
+#######################################
+# House of Brynffenigl 
+#######################################
 308004 = { 
 	name = "Edryd"
 	dynasty = brynffenigl1234 #Proto-Tudor
@@ -8654,5 +8702,53 @@
 	}
 	1105.1.1 = {
 		death = "1105.1.1"
+	}
+}
+#######################################
+# Other Breton
+#######################################
+40516 = {
+	name = "Angharad"
+	female = yes
+	martial = 6
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = "welsh"
+	trait = education_diplomacy_1
+	1045.1.2 = {
+		birth = "1045.1.2"
+	}
+	1066.1.2 = {
+		death = "1066.1.2"
+	}
+}
+81853 = {
+	name = "Gwenllian" #Gwenllian ferch Gruffydd
+	female = yes
+	religion = "catholic"
+	culture = "welsh"
+	#father Gruffydd ap Cynan
+	1080.1.1 = {
+		birth = "1080.1.1"
+	}
+	#1098 married Cadwgan ap Bleddyn
+	#1116 married Gruffyd ap Rhys
+	1136.1.1 = {
+		death = "1136.1.1"
+	}
+}
+159753 = {
+	name = "Enid"
+	female = yes
+	religion = "catholic"
+	culture = "welsh"
+	#dynasty = 0 #
+	453.1.1 = {
+		birth = "453.1.1"
+	}
+	500.1.1 = {
+		death = "500.1.1"
 	}
 }
