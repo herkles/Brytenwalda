@@ -3278,10 +3278,9 @@ sicilian0007 = {
 #######################################
 sicilian0002 = {
 	name = "Gugghiermu" # Guglielmo di Montescaglioso
-	dynasty_house = house_montescaglioso
+	dynasty_house = house_jimena_navarra
 	religion = "catholic"
 	culture = "sicilian"
-
 	father = 71554
 	mother = sicilian0001
 
@@ -4179,6 +4178,32 @@ sicilian0026 = {
 		birth = yes
 	}
 	1338.1.1 = {
+		death = yes
+	}
+}
+sanseverino_1 = {
+	name = "William" # William de Sanseverino, count of Caserta
+	dynasty = 101843
+	religion = catholic
+	culture = norman
+	father = sicilian0013
+	1133.1.1 = {
+		birth = yes
+	}
+	1189.1.1 = {
+		death = yes
+	}
+}
+sanseverino_2 = {
+	name = "Richard" # Richard de Sanseverino
+	dynasty = 101843
+	religion = catholic
+	culture = norman
+	father = sicilian0013
+	1137.1.1 = {
+		birth = yes
+	}
+	1182.1.1 = {
 		death = yes
 	}
 }
@@ -5186,6 +5211,115 @@ sicilian0044 = {
 		death = yes
 	}
 }
+#######################################
+# Drengot Dynasty
+#######################################
+30842 = {
+	name = "Rainolf" # Rainolf Drengot
+	dynasty = 676
+	religion = catholic
+	culture = norman
+	father = 144702
+	
+	1077.1.1 = {
+		birth = yes
+	}
+	1094.1.1 = {
+		add_spouse = 1133
+	}
+	1130.1.1 = {
+		name = "Rainulfu"
+		culture = sicilian
+	}
+	1139.4.30 = {
+		death = yes
+	}
+}
+30843 = {
+	name = "Richard" # Richard Drengot
+	dynasty = 676
+	religion = catholic
+	culture = sicilian
+	father = 144702
+	
+	1078.1.1 = {
+		birth = yes
+	}
+	1130.1.1 = {
+		death = yes
+	}
+}
+30844 = {
+	name = "Gaitelgrima" # Gaitelgrima Drengot
+	female = yes
+	dynasty = 676
+	religion = catholic
+	culture = sicilian
+	father = 144702
+	
+	1079.1.1 = {
+		birth = yes
+	}
+	1117.1.1 = {
+		death = yes
+	}
+}
+rupecanina_1 = {
+	name = "Andrew" # Andrew of Rupecanina
+	dynasty = 676
+	religion = catholic
+	culture = norman
+	father = 30843
+	1118.1.1 = {
+		birth = yes
+	}
+	1168.1.1 = {
+		death = yes
+	}
+}
+rupecanina_2 = {
+	name = "Roger" # Roger, count of Alife
+	dynasty = 676
+	religion = catholic
+	culture = norman
+	father = 30843
+	1123.1.1 = {
+		birth = yes
+	}
+	1180.1.1 = {
+		death = yes
+	}
+}
+#######################################
+# Mohac Dynasty
+#######################################
+mohac_1 = {
+	name = "Walter" # Walter de Mohac (Modica)
+	dynasty = norman_mohac
+	religion = catholic
+	culture = norman
+	1138.1.1 = {
+		birth = yes
+	}
+	1194.1.1 = {
+		death = yes
+	}
+}
+mohac_2 = {
+	name = "Arnold" # Arnaldo de Mohac, baron of Sortino
+	dynasty = norman_mohac
+	religion = catholic
+	culture = norman
+	1159.1.1 = {
+		birth = yes
+	}
+	1211.1.1 = {
+		death = yes
+	}
+}
+
+
+
 #######################################
 # Wives without Dynasties
 #######################################

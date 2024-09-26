@@ -2,11 +2,12 @@
 # 		  Forming new kingdoms 				#
 #############################################
 form_switzerland_kingdom_decision = {# Creating Switzerland "Kingdom"
-	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
-
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
 	desc = form_switzerland_kingdom_decision_desc
 	selection_tooltip = form_switzerland_kingdom_decision_tooltip
-	major = yes
+	decision_group_type = tapestry_german_medium
 
 	ai_check_interval = 120
 
@@ -86,11 +87,12 @@ form_switzerland_kingdom_decision = {# Creating Switzerland "Kingdom"
 	}
 }
 form_austria_kingdom_decision = {# Creating Austrian Archduchy
-	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
-
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
 	desc = form_austria_kingdom_decision_desc
 	selection_tooltip = form_austria_kingdom_decision_tooltip
-	major = yes
+	decision_group_type = tapestry_german_medium
 	ai_goal = yes
 
 	is_shown = {
@@ -193,11 +195,12 @@ form_austria_kingdom_decision = {# Creating Austrian Archduchy
 # 		  Carolingian Decisions				#
 #############################################
 reform_carolingian_empire_decision = {# Reforming the Carolingian Empire
-	picture = "gfx/interface/illustrations/decisions/decision_charlemagne.dds"
-
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_charlemagne.dds"
+	}
 	desc = reform_carolingian_empire_decision_desc
 	selection_tooltip = reform_carolingian_empire_decision_tooltip
-	major = yes
+	decision_group_type = tapestry_imperial
 
 	ai_check_interval = 120
 
@@ -287,8 +290,10 @@ reform_carolingian_empire_decision = {# Reforming the Carolingian Empire
 # 		Holy Roman Empire Decisions			#
 #############################################
 restore_holy_roman_empire_decision = {# Restore the Holy Roman Empire
-	picture = "gfx/interface/illustrations/decisions/decision_charlemagne.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_charlemagne.dds"
+	}
+	decision_group_type = tapestry_imperial
 
 	ai_check_interval = 120
 
@@ -544,11 +549,12 @@ restore_holy_roman_empire_decision = {# Restore the Holy Roman Empire
 # 		  French Decisions	 				#
 #############################################
 promote_gothic_innovations_decision = { #12th century Renaissance
-	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
-
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_gothic.dds"
+	}
 	desc = promote_gothic_innovations_decision_desc
 	selection_tooltip = promote_gothic_innovations_decision_tooltip
-	major = yes
+	decision_group_type = tapestry_french_medium
 	ai_goal = yes
 
 	is_shown = {
@@ -641,18 +647,19 @@ promote_gothic_innovations_decision = { #12th century Renaissance
 		}
 	}
 }
-unify_burgundy_kingdom_decision = {# Uniting the Burgundies
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
-
+unify_burgundy_kingdom_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
 	desc = unify_burgundy_kingdom_decision_desc
 	selection_tooltip = unify_burgundy_kingdom_decision_tooltip
-	major = yes
+	decision_group_type = tapestry_french_medium
 	ai_goal = yes
 
 	is_shown = {
 		culture = { has_cultural_pillar = heritage_frankish }
 		is_ruler = yes
-		is_landed = yes
+		is_playable_character = yes
 		NOT = {
 			exists = title:k_burgundy.holder
 		}
@@ -690,6 +697,7 @@ unify_burgundy_kingdom_decision = {# Uniting the Burgundies
 	}
 
 	effect = {
+		gain_heroic_legend_seed_tooltip_effect = yes
 		if = {
 			limit = {
 				NOT = { has_culture = culture:occitan }
@@ -727,9 +735,11 @@ unify_burgundy_kingdom_decision = {# Uniting the Burgundies
 		}
 	}
 }
-establish_norman_culture_decision = {# Norman Culture founding
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
-	major = yes
+establish_norman_culture_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	decision_group_type = tapestry_french_medium
 
 	ai_check_interval = 120
 
@@ -737,7 +747,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 	selection_tooltip = establish_norman_culture_decision_tooltip
 
 	is_shown = {
-		culture = { has_cultural_pillar = heritage_north_germanic }
+		culture = culture:norse
 		any_sub_realm_county = {
 			target_is_de_jure_liege_or_above = title:d_normandy
 			culture = culture:french
@@ -751,7 +761,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 	}
 
 	is_valid = {
-		culture = { has_cultural_pillar = heritage_north_germanic }
+		culture = culture:norse
 		completely_controls = title:d_normandy
 	}
 
@@ -778,7 +788,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 						title_province = { geographical_region = custom_normandy_and_adjacent }
 						OR = {
 							culture = culture:french
-							culture = { has_cultural_pillar = heritage_north_germanic }
+							culture = culture:norse
 						}
 					}
 					add_to_list = norman_counties
@@ -789,7 +799,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 			every_in_list = {
 				list = norman_counties
 				merge_cultures_in_region_effect = {
-					OLD_CULTURE_1 = root.culture
+					OLD_CULTURE_1 = culture:norse
 					OLD_CULTURE_2 = culture:french
 					NEW_CULTURE = culture:norman
 					REGION = custom_normandy_and_adjacent
@@ -798,7 +808,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 
 			# Send all players in the game a notification event about the flip.
 			save_scope_as = norman_founder
-			root.culture = {save_scope_as = old_culture_1}
+			culture:norse = {save_scope_as = old_culture_1}
 			culture:french = {save_scope_as = old_culture_2}
 			culture:norman = {
 				reset_culture_creation_date = yes
@@ -812,7 +822,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 						NOT = { this = root }
 						OR = {
 							culture = culture:french
-							culture = { has_cultural_pillar = heritage_north_germanic }
+							culture = culture:norse
 						}
 						exists = capital_province
 						capital_province = { geographical_region = custom_normandy_and_adjacent }
@@ -852,7 +862,7 @@ establish_norman_culture_decision = {# Norman Culture founding
 					limit = {
 						OR = {
 							culture = culture:french
-							culture = { has_cultural_pillar = heritage_north_germanic }
+							culture = culture:norse
 						}
 					}
 					set_culture = culture:norman
@@ -906,8 +916,10 @@ establish_norman_culture_decision = {# Norman Culture founding
 # 		  German Decisions	 				#
 #############################################
 establish_the_electorate_of_saxony_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_dynasty_house.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = tapestry_german_medium
 
 	ai_check_interval = 120
 
@@ -999,11 +1011,13 @@ establish_the_electorate_of_saxony_decision = {
 # 		  Italian Decisions	 				#
 #############################################
 empower_sicilian_parliament_decision = {# Empower Sicilian Parliament
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	decision_group_type = tapestry_italian_medium
 
 	desc = empower_sicilian_parliament_decision_desc
 	selection_tooltip = empower_sicilian_parliament_decision_tooltip
-	major = yes
 	ai_goal = yes
 
 	is_shown = {

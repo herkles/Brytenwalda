@@ -15,17 +15,9 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
   Catholicism's holy sites have been updated to switch out cologne for milan and canterbury for Chatres; though it is possible to get Canterbury as a holy site. Nidaros and Cluny are pilgrimage sites
 
 ### Change Log
-- New Christian Heresies and heretical events
-- Heresies are to appear in a more historicalish fashion
-- Bosnia Church can decide which way to go
-- Fraticelli can try and reform the church
-- Church councils to determine the nature of heresies
-- changes to the set up of holy sites for a number of christian faiths
-- Christian Dualist faiths are now actually christian
-- Sicilians whose parents are norman know french
-- Pilgrimage to Nidaros and Cluny
-- Certain Heretical faiths can translate the bible
-- Various Bug fixes
+- Cultural Descriptions for various cultures
+- Updated to the new patch
+
 
 
 ## Main Features

@@ -3,8 +3,10 @@
 # Reclaim Britannia Celtic					#
 #############################################
 reclaim_britannia_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	}
+	decision_group_type = tapestry_brythonic_major
 
 	ai_check_interval = 120
 
@@ -97,8 +99,10 @@ reclaim_britannia_decision = {
 # Cultural Mixing Decisions					#
 #############################################
 embrace_english_culture_decision = {# For the King of england
-	picture = "gfx/interface/illustrations/decisions/decision_european_market.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	}
+	decision_group_type = tapestry_english_major
 
 	ai_check_interval = 36
 
@@ -181,11 +185,12 @@ embrace_english_culture_decision = {# For the King of england
 # General British Decisions					#
 #############################################
 england_request_laudabiliter_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_norman_warfare.dds"
-
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
 	desc = england_request_laudabiliter_decision_desc
 	selection_tooltip = england_request_laudabiliter_decision_tooltip
-	major = yes
+	decision_group_type = tapestry_english_major
 	ai_goal = yes
 
 	is_shown = {
@@ -297,8 +302,10 @@ england_request_laudabiliter_decision = {
 # #Restore Dumnonia to the map				#
 #############################################
 restore_dumnonia_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	}
+	decision_group_type = tapestry_brythonic_major
 
 	ai_check_interval = 120
 

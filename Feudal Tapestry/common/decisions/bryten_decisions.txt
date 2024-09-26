@@ -2,8 +2,10 @@
 # Anglo-Saxon England Decisions
 #############################################
 unite_england_decision = {# Unite England
-	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = tapestry_anglo_saxon_major	
 	ai_check_interval = 60
 	desc = unite_england_decision_desc
 
@@ -120,8 +122,11 @@ unite_england_decision = {# Unite England
 	ai_will_do = { base = 100 }
 }
 restore_kingdom_kent_decision = {# Restore the Kingdom of Kent
-	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = tapestry_anglo_saxon_major
+
 	ai_check_interval = 120
 
 	desc = restore_kingdom_kent_decision_desc
@@ -202,8 +207,10 @@ restore_kingdom_kent_decision = {# Restore the Kingdom of Kent
 	}
 }
 restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
-	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = tapestry_anglo_saxon_major
 	ai_check_interval = 120
 
 	desc = restore_kingdom_essex_decision_desc
@@ -281,11 +288,15 @@ restore_kingdom_essex_decision = {# Restore the Kingdom of Essex
 	}
 }
 bryten_promote_pilgrimage_cantebury = {# Promote Pilgrimage to Cantebury
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	}
+	decision_group_type = tapestry_christian_major
+
+
 	ai_check_interval = 64
 	cooldown = { days = 7300 }
 	desc = bryten_promote_pilgrimage_cantebury_desc
-	major = yes
 
 	is_shown = {
 		completely_controls = title:d_canterbury
@@ -377,7 +388,11 @@ bryten_promote_pilgrimage_cantebury = {# Promote Pilgrimage to Cantebury
 # General England Decisions
 #############################################
 bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
-	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_gothic.dds"
+	}
+	decision_group_type = tapestry_british_minor
+
 	ai_check_interval = 64
 	cooldown = { days = 7300 }
 	desc = bryten_build_saint_edmunds_desc
@@ -426,7 +441,11 @@ bryten_build_saint_edmunds = {# Build the Abbey of Saint Edmunds
 	}
 }
 TFE_consecrate_holy_well = {# Consencrate a Holy Well
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	}
+	decision_group_type = tapestry_british_minor
+
 	ai_check_interval = 64
 	desc = TFE_consecrate_holy_well_desc
 	
@@ -519,10 +538,13 @@ TFE_consecrate_holy_well = {# Consencrate a Holy Well
 	}
 }
 TFE_visit_holy_well = {# Visit a Holy Well
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	}
+	decision_group_type = tapestry_british_minor
+
 
 	ai_check_interval = 64
-
 	cooldown = { days = 3650 } #1825
 	
 	desc = TFE_visit_holy_well_desc
@@ -697,7 +719,11 @@ TFE_visit_holy_well = {# Visit a Holy Well
 	}
 }
 bryten_cinque_ports_exempt_tax = {# Set up the Cinque ports
-	picture = "gfx/interface/illustrations/decisions/decision_european_port.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_european_port.dds"
+	}
+	decision_group_type = tapestry_british_minor
+
 	ai_check_interval = 64
 	cooldown = { days = 3650 }
 	desc = bryten_cinque_ports_exempt_tax_desc
@@ -758,8 +784,10 @@ bryten_cinque_ports_exempt_tax = {# Set up the Cinque ports
 # Irish Decisions
 #############################################
 strengthen_high_kingship_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_high_king.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
+	}
+	decision_group_type = tapestry_irish_major
 	ai_check_interval = 60
 	desc = strengthen_high_kingship_decision_desc
 
@@ -817,9 +845,12 @@ strengthen_high_kingship_decision = {
 # Scottish Decisions
 #############################################
 integrate_strathclyde_kingdom = {# Integrate the Kingdom of Strathclyde
-	picture = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	}
+	decision_group_type = tapestry_scottish_major
+
 	ai_check_interval = 60
-	major = yes
 	desc = integrate_strathclyde_kingdom_desc
 
 	is_shown = {
@@ -885,7 +916,11 @@ integrate_strathclyde_kingdom = {# Integrate the Kingdom of Strathclyde
 	}
 }
 create_duchy_of_lothian = {# Create the Duchy of Lothian
-	picture = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	}
+	decision_group_type = tapestry_scottish_major
+
 	ai_check_interval = 60
 	desc = create_duchy_of_lothian_desc
 
@@ -950,7 +985,12 @@ create_duchy_of_lothian = {# Create the Duchy of Lothian
 	}
 }
 bryten_saint_andrew_routes_decision = {# Support the Way of Saint Andrew in Scotland
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	}
+	decision_group_type = tapestry_christian
+
+
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -1136,11 +1176,12 @@ bryten_saint_andrew_routes_decision = {# Support the Way of Saint Andrew in Scot
 # Italian Decisions
 #############################################
 embrace_tuscan_culture_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_tuscan.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_tuscan.dds"
+	}
+	decision_group_type = tapestry_italian_medium
 
 	ai_check_interval = 36
-
 	desc = embrace_tuscan_culture_decision_desc
 
 	is_shown = {
@@ -1225,9 +1266,12 @@ embrace_tuscan_culture_decision = {
 # French Decisions
 #############################################
 bryten_cluny_abbey_donation = {# Donate to the Abbey of Cluny
-	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
-	ai_check_interval = 64
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_gothic.dds"
+	}
+	decision_group_type = tapestry_christian
 
+	ai_check_interval = 64
 	cooldown = { days = 5475 }
 	
 	desc = bryten_cluny_abbey_donation_desc
@@ -1315,7 +1359,11 @@ bryten_cluny_abbey_donation = {# Donate to the Abbey of Cluny
 # Norse Decisions
 #############################################
 consecrate_sacred_grove = {# Consencrate a Sacred Grove
-	picture = "gfx/interface/illustrations/decisions/decision_sacred_grove.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_sacred_grove.dds"
+	}
+	decision_group_type = tapestry_pagan
+
 	ai_check_interval = 64
 	desc = consecrate_sacred_grove_desc
 	
@@ -1408,10 +1456,13 @@ consecrate_sacred_grove = {# Consencrate a Sacred Grove
 	}
 }
 vist_sacred_grove = {# Visit a Sacred Grove
-	picture = "gfx/interface/illustrations/decisions/decision_sacred_grove.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_sacred_grove.dds"
+	}
+	decision_group_type = tapestry_pagan
+
 
 	ai_check_interval = 64
-
 	cooldown = { days = 3650 } #1825
 	
 	desc = vist_sacred_grove_desc
@@ -1586,8 +1637,11 @@ vist_sacred_grove = {# Visit a Sacred Grove
 	}
 }
 create_kingdom_gotaland_decision = {# Create the Kingdom of Gotaland
-	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = tapestry_norse_medium
+
 	ai_check_interval = 120
 
 	desc = create_kingdom_gotaland_decision_desc
@@ -1661,7 +1715,12 @@ create_kingdom_gotaland_decision = {# Create the Kingdom of Gotaland
 	}
 }
 bryten_saint_olaf_routes_decision = {# Support the Way of Saint Olaf in Scandinavia
-	picture = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_christian_pilgrimage.dds"
+	}
+	decision_group_type = tapestry_christian
+
+
 	desc = {
 		first_valid = {
 			triggered_desc = {
@@ -1675,7 +1734,6 @@ bryten_saint_olaf_routes_decision = {# Support the Way of Saint Olaf in Scandina
 		}
 	}
 	ai_check_interval = 40
-	
 	cooldown = { days = bryten_way_of_saint_andrew_decisions_cooldown_time }
 
 	is_shown = {
@@ -1840,9 +1898,12 @@ bryten_saint_olaf_routes_decision = {# Support the Way of Saint Olaf in Scandina
 # German / Imperial Decisions
 #############################################
 integrate_sorbia_kingdom = {# Integrate Sorbia into Germany
-	picture = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_knight_kneeling.dds"
+	}
+	decision_group_type = tapestry_imperial
+
 	ai_check_interval = 60
-	major = yes
 	desc = integrate_sorbia_kingdom_desc
 
 	is_shown = {
@@ -1899,8 +1960,11 @@ integrate_sorbia_kingdom = {# Integrate Sorbia into Germany
 	}
 }
 create_kingdom_of_frisia_decision = {# Create the Kingdom of Frisia
-	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = tapestry_german_major
+
 	ai_check_interval = 120
 
 	desc = create_kingdom_of_frisia_decision_desc
@@ -1968,8 +2032,11 @@ create_kingdom_of_frisia_decision = {# Create the Kingdom of Frisia
 	}
 }
 create_kingdom_bavaria_decision = {# Create the Kingdom of Bavaria
-	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = tapestry_german_major
+
 	ai_check_interval = 120
 	desc = {
 		first_valid = {
@@ -2057,8 +2124,11 @@ create_kingdom_bavaria_decision = {# Create the Kingdom of Bavaria
 	}
 }
 create_kingdom_lotheringia_decision = {# Create the Kingdom of Lotharingia
-	picture = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = tapestry_german_major
+
 	ai_check_interval = 120
 
 	desc = create_kingdom_lotheringia_decision
@@ -2141,8 +2211,11 @@ create_kingdom_lotheringia_decision = {# Create the Kingdom of Lotharingia
 # Fraticelli Decisions
 #############################################
 bryten_fraticelli_victory = {
-	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = tapestry_heretic_major
+
 	desc = bryten_fraticelli_victory_desc
 
 	ai_check_interval = 120
@@ -2227,8 +2300,11 @@ bryten_fraticelli_victory = {
 	}
 }
 bryten_fraticelli_break_with_rome_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_gothic.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
+	}
+	decision_group_type = tapestry_heretic_major
+
 
 	ai_check_interval = 120
 
@@ -2348,10 +2424,14 @@ bryten_fraticelli_break_with_rome_decision = {
 # Heretic Decisions
 #############################################
 bryten_bogomil_council_decision = {
-	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
+	}
+	decision_group_type = tapestry_heretic_major
+
+
 	desc = bryten_bogomil_council_decision_desc
 	selection_tooltip = bryten_bogomil_council_decision_tooltip
-	major = yes
 
 	sort_order = 80
 
@@ -2728,10 +2808,14 @@ bryten_bogomil_council_decision = {
 	}
 }
 bryten_waldensian_council_decision = {
-	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
+	}
+	decision_group_type = tapestry_heretic_major
+
+
 	desc = bryten_waldensian_council_decision_desc
 	selection_tooltip = bryten_waldensian_council_decision_tooltip
-	major = yes
 
 	sort_order = 80
 
@@ -2918,11 +3002,13 @@ bryten_waldensian_council_decision = {
 	}
 }
 bryten_lollard_council_decision = {
-	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
+	}
+	decision_group_type = tapestry_heretic_major
+
 	desc = bryten_lollard_council_decision_desc
 	selection_tooltip = bryten_lollard_council_decision_tooltip
-	major = yes
-
 	sort_order = 80
 
 	is_shown = {
@@ -3108,10 +3194,13 @@ bryten_lollard_council_decision = {
 	}
 }
 bryten_arnoldism_council_decision = {
-	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
+	}
+	decision_group_type = tapestry_heretic_major
+
 	desc = bryten_arnoldism_council_decision_desc
 	selection_tooltip = bryten_arnoldism_council_decision_tooltip
-	major = yes
 
 	sort_order = 80
 
@@ -3298,10 +3387,13 @@ bryten_arnoldism_council_decision = {
 	}
 }
 bryten_henricians_council_decision = {
-	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
+	}
+	decision_group_type = tapestry_heretic_major
+
 	desc = bryten_henricians_council_decision_desc
 	selection_tooltip = bryten_henricians_council_decision_tooltip
-	major = yes
 
 	sort_order = 80
 
@@ -3489,10 +3581,14 @@ bryten_henricians_council_decision = {
 	}
 }
 bryten_petrobrusian_council_decision = {
-	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
+	}
+	decision_group_type = tapestry_heretic_major
+
+
 	desc = bryten_petrobrusian_council_decision_desc
 	selection_tooltip = bryten_petrobrusian_council_decision_tooltip
-	major = yes
 
 	sort_order = 80
 
@@ -3679,10 +3775,13 @@ bryten_petrobrusian_council_decision = {
 	}
 }
 bryten_cathar_council_decision = {
-	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
+	}
+	decision_group_type = tapestry_heretic_major
+
 	desc = bryten_cathar_council_decision_desc
 	selection_tooltip = bryten_cathar_council_decision_tooltip
-	major = yes
 
 	sort_order = 80
 
@@ -3839,10 +3938,13 @@ bryten_cathar_council_decision = {
 	}
 }
 bryten_bible_translate_decision = {
-	picture = "gfx/interface/illustrations/decisions/decision_ck2_carolingian_script_cm.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_ck2_carolingian_script_cm.dds"
+	}
+	decision_group_type = tapestry_heretic_major
+
 	desc = bryten_bible_translate_decision_desc
 	selection_tooltip = bryten_bible_translate_decision_tooltip
-	major = yes
 
 	sort_order = 80
 
@@ -4047,7 +4149,11 @@ bryten_bible_translate_decision = {
 # Christian Flavor Decisions
 #############################################
 bryten_pregnancy_mary_vow_decision = {
-	picture = "gfx/interface/illustrations/decisions/bryten_mary_vow_decision.dds"
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/bryten_mary_vow_decision.dds"
+	}
+	decision_group_type = tapestry_christian
+
 
 	desc = bryten_pregnancy_mary_vow_decision_desc
 	selection_tooltip = bryten_pregnancy_mary_vow_decision_tooltip
@@ -4093,8 +4199,11 @@ bryten_pregnancy_mary_vow_decision = {
 	}
 }
 bryten_bosnian_church_decide_orientation = {
-	picture = "gfx/interface/illustrations/decisions/christian_council.dds"
-	major = yes
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
+	}
+	decision_group_type = tapestry_christian_major
+
 	desc = bryten_bosnian_church_decide_orientation_desc
 
 	ai_check_interval = 40

@@ -62,6 +62,7 @@
 
 		parameters = {
 			vows_of_poverty_active = yes
+			unlock_voluntary_laampdom_faith = yes
 		}
 		clergy_modifier = {
 			county_opinion_add_even_if_baron = 10
@@ -683,6 +684,7 @@
 		parameters = {
 			mendicant_preachers_conversion_active = yes
 			pilgrimage_decision_active = yes
+			unlock_voluntary_laampdom_faith = yes
 		}
 		traits = {
 			virtues = { temperate }
@@ -968,6 +970,7 @@
 
 		parameters = {
 			vows_of_poverty_active = yes
+			unlock_voluntary_laampdom_faith = yes
 		}
 
 		traits = {
@@ -1568,6 +1571,8 @@
 			ghw_no_hof_conversion_buffs_active = yes
 			bonus_holy_war_piety_active = yes
 			pilgrimage_decision_active = yes
+			unlock_voluntary_laampdom_faith = yes
+
 		}
 	}
 	tenet_false_conversion_sanction = {
@@ -1730,6 +1735,7 @@
 
 		parameters = {
 			meditation_mechanics_active = yes
+			unlock_voluntary_laampdom_faith = yes
 		}
 
 		#name = { #FP3 - Removed and saved for posterity. Zurvanism would fit a future hypotetical "Fatalism" tenet, but Asceticism isn't a good fit, per beta input. Ola's note. 
@@ -3466,6 +3472,7 @@
 			master_assassin_court_position_unlocked = yes 
 			death_is_glory = yes
 			sanctioned_assassinations = yes 
+			unlock_voluntary_laampdom_faith = yes
 		}
 
 		character_modifier = {
@@ -3527,3 +3534,46 @@
 	}
 }
 
+	#############################
+	# Empty Template Tenet 		#
+	#############################
+
+	#tenets = {
+	#	is_shown = {
+	#		always = no
+	#	}
+	#	can_pick = {
+	#		always = yes
+	#	}
+
+	#	piety_cost = {
+	#		if = {
+	#			limit = {
+	#				always = no
+	#			}
+	#			value = faith_tenet_cost_low
+	#		}
+	#		else = {
+	#			value = faith_tenet_cost_massive
+	#		}
+
+	#		# Multiplier for keeping same tenet
+	#		if = {
+	#			limit = { has_doctrine = tenets }
+	#			multiply = faith_unchanged_doctrine_cost_mult
+	#		}
+	#	}
+
+	#	parameters = {
+	#		tenets_active = yes
+	#	}
+
+	#	character_modifier = {
+
+	#	}
+
+	#	traits = {
+	#		virtues = { brave = 2}
+	#		sins = { craven = 2}
+	#	}
+	#}
