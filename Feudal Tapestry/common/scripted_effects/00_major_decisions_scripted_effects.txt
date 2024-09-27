@@ -1,4 +1,5 @@
-﻿#############################################
+﻿
+#############################################
 # 		  Reforming the Roman Empire		#
 #############################################
 create_roman_empire_scripted_effect = {
@@ -2829,6 +2830,23 @@ restore_old_vasconia_decision_scripted_effect = {
 		}
 	}
 }
+restore_old_vasconia_decision_tooltip_scripted_effect = {
+	custom_tooltip = restore_old_vasconia_decision_vasconia_past_tt
+	show_as_tooltip = {
+		every_in_list = {
+			list = vasconia_transfers
+			set_de_jure_liege_title = title:k_navarra
+		}
+		every_in_list = {
+			list = superseded_kingdoms
+			save_scope_as = superseded_kingdom
+			root = { destroy_title = scope:superseded_kingdom }
+		}
+	}
+}
+#############################################
+# 		  Holy Bloodline Effects			#
+#############################################
 declare_bloodline_holy_decision_effect = {
 	save_scope_as = progenitor_holy_blood
 	if = {

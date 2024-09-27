@@ -1,21 +1,27 @@
 ﻿#############################################
 # Vanilla Cultures			
 #############################################
-arberian = {
-	color = { 128 0 32 }
-	ethos = ethos_stoic
-	heritage = heritage_arberian
-	language = language_arberian
+albanian = {
+	color = { 0.8 0.75 0.83 }
+	
+	ethos = ethos_communal
+	heritage = heritage_albanian
+	language = language_albanian
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_quarrelsome
+		tradition_swords_for_hire
 		tradition_hill_dwellers
-		tradition_eye_for_an_eye
+		tradition_wedding_ceremonies
 	}
 	
-	name_list = name_list_arberian
+	dlc_tradition = {
+		trait = tradition_staunch_traditionalists
+		requires_dlc_flag = hybridize_culture
+	}
 	
-	coa_gfx = { byzantine_group_coa_gfx western_coa_gfx }
+	name_list = name_list_albanian
+	
+	coa_gfx = { south_slavic_group_coa_gfx western_coa_gfx }
 	building_gfx = { mediterranean_building_gfx }
 	clothing_gfx = { byzantine_clothing_gfx }
 	unit_gfx = { eastern_unit_gfx }

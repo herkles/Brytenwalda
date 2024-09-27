@@ -1927,6 +1927,17 @@ on_death = {
 
 		# Additional Flavor Titles
 		additional_flavor_check_death_effect = yes
+
+		# Cadevar Synod stuff
+		if = {
+			limit = { title:k_papal_state.holder = { has_character_flag = cadevar_synod_pope_condemned }	}
+			trigger_event = {
+				id = tapestry_italian.076
+				days = 16
+			}
+		}
+
+
 	}
 	
 	events = {

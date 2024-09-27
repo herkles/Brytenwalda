@@ -197,6 +197,11 @@ d_meath = {
 	936.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
+	1172.3.1 = {
+		holder = 204021 # Henry II's grant of Meath to Hugh de Lacy in 1172
+		remove_succession_laws = yes
+		liege = "k_england"
+	}
 	1185.1.1 = {
 		liege = "k_england"
 	}
@@ -219,6 +224,7 @@ d_meath = {
 c_dublin = {# Kings of Dublin
 	867.1.1 = { change_development_level = 4 }
 	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 26 }
 	
 	763.1.1 = {
 		holder = 160247
@@ -330,11 +336,12 @@ c_dublin = {# Kings of Dublin
 	1170.7.1 = {
 		holder = 214550 #Diarmait of Leinster
 	}
-	1171.5.1 = {
-		holder = 214553 #wife of Richard de Clare
+	1171.11.11 = {
+		holder = 204500 # Henry II
 	}
-	1185.1.1 = {
-		liege = "d_meath" #Representing lordship of Ireland
+	1172.3.1 = {
+		holder = 204021 # Hugh de Lacy as bailiff of the king's city of Dublin
+		liege = "k_england"
 	}
 	1185.1.1 = {
 		holder = 204514 #John of England
@@ -354,8 +361,7 @@ c_dublin = {# Kings of Dublin
 
 }
 c_athlone = {
-	#Replacing & copied from c_kildare
-	
+	#Replacing & copied from c_kildare	
 	430.1.1 = {
 		holder = 7255 #Niall of the Nine Hostages
 		government = tribal_government
@@ -616,10 +622,10 @@ c_ulster = {
 		holder = 7281
 	}
 	1176.1.1 = {
-		holder = 214000
+		holder = 214000 # conquered by John de Courcy
 	}
-	1199.1.1 = {
-		liege = "d_ulster"
+	1185.1.1 = {
+		liege = "k_england"
 	}
 	1199.1.1 = {
 		holder = 204022
@@ -643,6 +649,7 @@ c_ulster = {
 c_oriel = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	696.1.1 = {
 		holder = 7271 #Fergal son of Máel Duin
@@ -1665,10 +1672,7 @@ c_leinster = {
 		liege = "d_leinster"
 	}
 	1171.5.1 = {
-		holder = 214555 #Domnall Cáemánach
-	}
-	1175.7.1 = {
-		holder = 83200 #Muirchertach Mac Murchada-Cennselach
+		holder = 214553 #wife of Richard de Clare
 	}
 	1185.1.1 = {
 		liege = "d_meath"
@@ -1804,7 +1808,7 @@ c_ossory = {
 		holder = 83223 #Conchobar son of Cerball
 	}
 	1123.12.1 = {
-		holder = 906 #Murchad son of Donnchad
+		holder = 83193 #Murchad son of Donnchad
 	}
 	1126.1.1 = {
 		holder = 83223 #Conchobar son of Cerball
@@ -2085,9 +2089,6 @@ c_thomond = {
 	1168.7.1 = {
 		holder = 214580 #Domnall Mór son of Toirrdellbach mac Diarmata
 	}
-	1172.1.1 = {
-		liege = "k_england"
-	}
 	1185.1.1 = {
 		liege = "d_meath"
 	}
@@ -2287,9 +2288,6 @@ c_ennis = {
 	1168.7.1 = {
 		holder = 214580 #Domnall Mór son of Toirrdellbach mac Diarmata
 	}
-	1172.1.1 = {
-		liege = "k_england"
-	}
 	1185.1.1 = {
 		liege = "d_meath"
 	}
@@ -2478,6 +2476,7 @@ c_ormond = {
 c_desmond = {
 	867.1.1 = { change_development_level = 4 }
 	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	370.1.1 = {
 		holder = 83607 #Conall Corc

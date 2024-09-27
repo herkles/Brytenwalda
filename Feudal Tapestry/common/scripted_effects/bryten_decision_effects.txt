@@ -604,11 +604,6 @@ embrace_anglo_norse_culture_effect = {
 				}
 				NOT = { is_in_list = notified_of_culture_change }
 			}
-			send_interface_message = {
-				type = culture_conversion
-				title = converted_culture_msg_title
-				custom_tooltip = converted_from_old_culture_to_new_culture_tt
-			}
 		}
 	}
 }

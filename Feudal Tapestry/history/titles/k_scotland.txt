@@ -101,6 +101,7 @@ k_strathclyde = {
 k_scotland = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	210.1.1 = {
 		holder = 166513
@@ -415,11 +416,35 @@ d_albany = {
 	1058.1.1 = {
 		holder = 984 # Malcolm Canmore
 	}
-
+	1093.1.1 = {
+		holder = 986 # Donald the White
+	}
+	1094.5.1 = {
+		holder = 988
+	}
+	1094.11.12 = {
+		holder = 986
+	}
+	1097.1.1 = {
+		holder = 202968
+	}
+	1107.1.8 = {
+		holder = 232678
+	}
+	1124.4.1 = {
+		holder = 202998
+	}
+	1153.5.24 = {
+		holder = 203000
+	}
+	1165.5.24 = {
+		holder = 202999
+	}
 }
 c_gowrie = {
 	867.1.1 = { change_development_level = 4 }
 	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	695.1.1 = {
 		liege = "d_moray"
@@ -1249,6 +1274,7 @@ c_angus = {
 c_mearns = {
 	867.1.1 = { change_development_level = 4 }
 	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	695.1.1 = {
 		liege = "d_moray"
@@ -1399,6 +1425,7 @@ c_mearns = {
 d_the_isles = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 11 }
 	
 	431.1.1 = {
 		holder = 159935 #Dingad ap Tudwal
@@ -1448,6 +1475,9 @@ d_the_isles = {
 	}
 	935.1.1 = {
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
+	}
+	1164.1.1 = {
+		holder = 220021 # Gudrod Crovan
 	}
 }
 c_isle_of_man = {
@@ -1532,7 +1562,7 @@ c_isle_of_man = {
 		holder = 220023
 	}
 	1153.1.1 = {
-		holder = 220021
+		holder = 220021 # Gudrod Crovan
 	}
 	1164.1.1 = {
 		liege = 0
@@ -1942,16 +1972,14 @@ c_ayrshire = {
 		holder = 203560
 	}
 	1161.1.1 = {
-		holder = 203555
+		holder = 203027 # Walter Stewart
+		liege = k_scotland
 	}
-	1174.1.1 = {
-		holder = 203550
+	1177.1.1 = {
+		holder = 203011 # Alan Stewart
 	}
 	1185.1.2 = {
 		holder = 203540
-	}
-	1236.1.2 = {
-		liege = k_scotland
 	}
 	1250.1.2 = {
 		holder = 203542
@@ -2082,6 +2110,13 @@ c_annandale = {
 	1067.1.1 = {
 		holder = 131111
 	}
+	1113.1.1 = {
+		holder = 144949 # Robert de Brus, 1st Lord of Annandale
+		liege = "k_scotland"
+	}
+	1141.1.1 = {
+		holder = 144948 # Robert de Brus, 2nd Lord of Annandale
+	}
 }
 c_lennox = {
 	355.1.1 = {
@@ -2192,6 +2227,10 @@ c_lennox = {
 	
 	1058.1.1 = {
 		holder = 984 # Malcolm Canmore
+	}
+	1178.1.1 = {
+		holder = 203520 # Granted to David of Scotland by his brother, King William
+		liege = "k_scotland"
 	}
 }
 #######################################
@@ -2386,13 +2425,14 @@ d_western_isles = {
 		holder = 220023
 	}
 	1153.1.1 = {
-		holder = 220021
+		holder = 220021 # Gudrod Crovan
 	}
 	1158.1.1 = {
 		holder = 220027
 	}
 	1164.1.1 = {
 		holder = 220019
+		liege = 0
 	}
 	1198.1.1 = {
 		holder = 220031
@@ -2588,7 +2628,7 @@ c_inner_hebrides = {
 		holder = 220023
 	}
 	1153.1.1 = {
-		holder = 220021
+		holder = 220021 # Gudrod Crovan
 	}
 	1158.1.1 = {
 		holder = 220027
@@ -2794,13 +2834,7 @@ c_outer_hebrides = {
 		holder = 220023
 	}
 	1153.1.1 = {
-		holder = 220021
-	}
-	1158.1.1 = {
-		holder = 220027
-	}
-	1164.1.1 = {
-		holder = 220019
+		holder = 220021 # Gudrod Crovan
 	}
 	1198.1.1 = {
 		holder = 220031
@@ -2985,7 +3019,7 @@ c_argyll = {
 		holder = 220023
 	}
 	1153.1.1 = {
-		holder = 220021
+		holder = 220021 # Gudrod Crovan
 	}
 	1156.1.1 = {
 		holder = 220027
@@ -3000,7 +3034,7 @@ c_argyll = {
 		holder = 7278
 	}
 	1266.1.1 = {
-		holder = 7279 # Cailean M√≥r Campbell
+		holder = 7279 # Cailean M??r Campbell
 		liege = k_scotland
 	}
 	1296.10.1 = {
@@ -3745,7 +3779,7 @@ c_ross = {
 		holder = 83589 #M·el-Coluim Macheth
 	}
 	1168.10.23 = {
-		holder = 220038 #daughter of M·Èl-Coluim Macheth, wife of Harald of Orkney
+		holder = 202971 # Domnall mac Uilleim
 	}
 	1215.7.1 = {
 		holder = 83593 #Ferchar mac in tSagairt
@@ -4068,7 +4102,7 @@ c_inverness = {
 		holder = 202973 #Gofraid mac Uilleim
 	}
 	1213.1.1 = {
-		holder = 202974 #Domnall B√°n mac Uilleim
+		holder = 202974 #Domnall B??n mac Uilleim
 	}
 	1215.6.15 = {
 		holder = 203005 #William Comyn

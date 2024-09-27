@@ -2,6 +2,7 @@
 k_croatia = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	925.1.1 = {
 		holder = 8604
@@ -147,20 +148,18 @@ k_croatia = {
 	#{
 	#	holder = 96003
 	#}
-	
 	1305.12.6 = {
 		holder = 98009
 	}
-	
 	1307.10.10 = {
 		holder = 469500
 	}
-	
-
 }
+	
 d_dalmatia = {
 	867.1.1 = { change_development_level = 8 }
 	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 15 }
 	
 	536.7.1 = {
 		liege = "e_byzantium"
@@ -230,14 +229,7 @@ d_dalmatia = {
 		holder = 32594
 	}
 	1164.1.1 = {
-		holder = 219999
-	}
-	1165.1.1 = {
-		liege = "e_byzantium"
-		holder = 219500
-	}
-	1172.3.4 = {
-		holder = 125709
+		holder = 0
 	}
 	1183.9.24 = {
 		liege = "k_hungary"
@@ -261,6 +253,8 @@ d_dalmatia = {
 		holder = 32625
 	}
 }
+
+
 c_zadar = {
 	536.7.1 = {
 		liege = "d_dalmatia"
@@ -284,8 +278,8 @@ c_zadar = {
 	1035.1.1 = {
 		holder = 1600251 # Andro Madii
 	}
-	1066.1.1 = {
-		holder = 1600252 # Dragos Madii
+		1066.1.2 = {
+		holder = 32591
 	}
 	1089.1.1 = {
 		holder = 32592
@@ -300,7 +294,7 @@ c_zadar = {
 		holder = 219999
 	}
 	1165.1.1 = {
-		liege = "k_venice"
+		liege = "k_hungary"
 	}
 	1183.9.24 = {
 		liege = "d_dalmatia"
@@ -326,7 +320,10 @@ c_zadar = {
 	1302.1.1 = {
 		holder = 470003
 	}
+
 }
+
+
 c_knin = {
 	536.7.1 = {
 		liege = "d_dalmatia"
@@ -383,11 +380,16 @@ c_knin = {
 	1302.1.1 = {
 		holder = 470003
 	}
+
 }
+
+
 c_cetina = {
 	536.7.1 = {
 		liege = "d_dalmatia"
 	}	
+	
+	
 	760.1.1 = {
 		holder = 145850
 	}
@@ -453,31 +455,20 @@ c_cetina = {
 	1164.1.1 = {
 		holder = 219999
 	}
-	
-	
 	1165.1.1 = {
 		holder = 219500
 	}
-	
-	
 	1172.3.4 = {
-		holder = 125709
+		holder = doukas_2 # Konstantinos Doukas
 	}
-	
-	
-	
 	# Subic dynasty
 	
 	1183.9.24 = {
 		holder = 32596
 	}
-	
-	
 	1224.1.1 = {
 		holder = 32604
 	}
-	
-	
 	1235.1.1 = {
 		holder = 32608
 	}
@@ -486,13 +477,9 @@ c_cetina = {
 	1300.1.1 = {
 		holder = 32619
 	}
-	
-	
 	1304.1.1 = {
 		holder = 470002
 	}
-	
-	
 	1327.1.1 = {
 		liege = "k_venice"
 	}
@@ -500,13 +487,12 @@ c_cetina = {
 	1330.1.1 = {
 		holder = 470004
 	}
-	
-	
-
 }
+	
 c_pagania = {
 	867.1.1 = { change_development_level = 8 }
 	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	867.1.1 = {
 		liege = 0
@@ -568,7 +554,7 @@ c_pagania = {
 		holder = 219500
 	}
 	1172.3.4 = {
-		holder = 125709
+		holder = doukas_2 # Konstantinos Doukas
 	}
 	1183.9.24 = {
 		holder = 32595
@@ -595,6 +581,7 @@ c_pagania = {
 		holder = 468800
 	}
 }
+
 
 d_croatia = {
 	745.1.1 = {
@@ -753,7 +740,10 @@ d_croatia = {
 	1322.1.1 = {
 		holder = 32625
 	}
+
 }
+
+
 c_gacka = {
 	536.7.1 = {
 		liege = "d_croatia"
@@ -834,6 +824,8 @@ c_gacka = {
 		holder = 470003
 	}
 }
+
+
 c_lika = {
 	536.7.1 = {
 		liege = "d_dalmatia"
@@ -894,9 +886,12 @@ c_lika = {
 		holder = 470003
 	}
 }
+
+
 c_cherso = {
 	867.1.1 = { change_development_level = 8 }
 	1066.1.1 = { change_development_level = 11 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	536.7.1 = {
 		liege = "d_dalmatia"
@@ -955,6 +950,7 @@ c_cherso = {
 	
 	1131.4.2 = {
 		holder = 219990
+		liege = k_venice
 	}
 	1163.1.1 = {
 		holder = 219991
@@ -980,7 +976,10 @@ c_cherso = {
 	1322.1.1 = {
 		holder = 470021
 	}
+
 }
+
+
 c_pset = {
 	757.1.1 = {
 		liege = "d_croatia"
@@ -1094,7 +1093,10 @@ c_pset = {
 	1322.1.1 = {
 		holder = 32625
 	}
+
 }
+
+
 c_modrus = {
 	536.7.1 = {
 		liege = "d_croatia"
@@ -1155,6 +1157,7 @@ c_modrus = {
 		holder = 470003
 	}
 }
+
 
 d_slavonia = {
 	760.1.1 = {
@@ -1271,7 +1274,10 @@ d_slavonia = {
 	1336.1.1 = {
 		holder = 32652
 	}
+
 }
+
+
 c_zagreb = {
 	760.1.1 = {
 		liege = "d_slavonia"
@@ -1389,21 +1395,28 @@ c_zagreb = {
 	1336.1.1 = {
 		holder = 32652
 	}
+
 }
+
+
 c_zagorje = {
 	760.1.1 = {
 		liege = "d_slavonia"
 		holder = 168292
 	}	
+	
 	768.1.1 = {
 		holder = 168294
 	}	
+	
 	796.1.1 = {
 		holder = 168295
 	}	
+	
 	810.1.1 = {
 		holder = 168297
 	}	
+	
 	825.1.1 = {
 		holder = 168298
 	}	
@@ -1417,6 +1430,7 @@ c_zagorje = {
 	1060.1.1 = {
 		holder = 8628
 	}	
+	
 	1066.1.1 = {
 		liege = "d_slavonia"
 	}
@@ -1627,19 +1641,10 @@ c_pozega = {
 	1161.1.1 = {
 		holder = 93544
 	}
-	
 	1165.1.1 = {
-		liege = "d_bosna"
+		holder = boricevic_2
+		liege = d_bosna
 	}
-	
-	1165.1.1 = {
-		holder = 219500
-	}
-	
-	1172.3.4 = {
-		holder = 218800
-	}
-	
 	1183.9.24 = {
 		liege = "d_slavonia"
 	}
@@ -2103,9 +2108,11 @@ c_vrbas = {
 }
 
 d_bosna = {
-	
 	1165.1.1 = {
-		liege = "e_byzantium"
+		liege = 0
+	}
+	1154.1.1 = {
+		holder = boricevic_1
 	}
 	1165.1.1 = {
 		holder = 219500
@@ -2138,6 +2145,8 @@ d_bosna = {
 		liege = 0
 	}
 }
+
+
 c_rama = {
 	539.1.1 = {
 		liege = "d_rashka"
@@ -2370,15 +2379,10 @@ c_vhrbosna = {
 	1150.1.1 = {
 		holder = 93558
 	}
-	
-	1165.1.1 = {
-		liege = "d_bosna"
-	}
-	1165.1.1 = {
-		holder = 219500
-	}
-	1172.3.4 = {
-		holder = 218800
+	1151.1.1 = {
+		holder = bishop_milovan
+		liege = d_bosna
+		government = theocracy_government
 	}
 	1204.1.1 = {
 		holder = 218801
@@ -2399,6 +2403,8 @@ c_vhrbosna = {
 		holder = 468800
 	}
 }
+
+
 c_zachlumia = {
 	867.1.1 = {
 		liege = 0
@@ -2442,8 +2448,9 @@ c_zachlumia = {
 	1165.1.1 = {
 		holder = 219500
 	}
-	1172.3.4 = {
-		holder = 125709
+	1166.1.1 = {
+		holder = 34075 # Miroslav
+		liege = d_rashka
 	}
 	1183.9.24 = {
 		holder = 32595
@@ -2470,6 +2477,7 @@ c_zachlumia = {
 		holder = 468800
 	}
 }
+
 c_zelengora = {
 	867.1.1 = {
 		liege = 0
@@ -2513,8 +2521,8 @@ c_zelengora = {
 	1165.1.1 = {
 		holder = 219500
 	}
-	1172.3.4 = {
-		holder = 125709
+	1166.1.1 = {
+		holder = 34075 # Miroslav
 	}
 	1183.9.24 = {
 		holder = 32595
@@ -2861,74 +2869,17 @@ c_soli = {
 d_ragusa = {
 	867.1.1 = { change_development_level = 8 }
 	1066.1.1 = { change_development_level = 11 }
-
-	769.1.1 = {
-		holder = 260394
-		liege = e_byzantium
-	}
-	850.1.1 = {
-		liege = e_byzantium
-		government = republic_government
-		holder = 1233508
-	}
-	927.1.1 = {
-		holder = 1232953
-	}
-	949.1.1 = {
-		holder = 1232955
-	}
-	992.1.1 = {
-		holder = 1232986
-	}
-	999.1.1 = {
-		holder = 1232988
-	}
-	1038.1.1 = {
-		holder = 1233540
-	}
-	1050.1.1 = {
-		liege = 0
-	}
-	1077.1.1 = {
-		holder = 1233542
-	}
-	1104.1.1 = {
-		holder = 1233518
-	}
-	1117.1.1 = {
-		holder = 1232994
-	}
-	1144.1.1 = {
-		holder = 1232964
-	}
-	1154.1.1 = {
-		holder = 1232966
-	}
-	1171.1.1 = {
-		holder = 1233545
-	}
-	1190.1.1 = {
-		holder = 1233522
-	}
-	1199.1.1 = {
-		holder = 1233524
-	}
-	1232.1.1 = {
-		holder = 1232972
-	}
-	1263.1.1 = {
-		holder = 1232974
-	}
-	1294.1.1 = {
-		holder = 1233575
-	}
-	1316.1.1 = {
-		holder = 1233531
+	1178.1.1 = { change_development_level = 15 }
+	
+	1066.1.1 = {
+		holder = 0
 	}
 }
+
 c_ragusa = {
-	850.1.1 = {
-		holder = 1233508	
+	867.1.1 = {
+		liege = 0
+		holder = 303447	#Fictional Pavel
 	}
 	927.1.1 = {
 		holder = 1232953
@@ -2981,9 +2932,8 @@ c_ragusa = {
 	1162.1.1 = {
 		holder = 34141
 	}
-	1167.1.1 = {
-		liege = d_rashka
-		holder = 218500  #Stefan
+	1166.1.1 = {
+		holder = 34075 # Miroslav
 	}
 	1196.1.1 = {
 		holder = 218507
@@ -3013,3 +2963,4 @@ c_ragusa = {
 		holder = 468500
 	}
 }
+

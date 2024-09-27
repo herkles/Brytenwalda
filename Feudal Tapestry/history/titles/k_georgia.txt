@@ -1,6 +1,7 @@
 k_georgia = {
 	867.1.1 = {	change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	#809.1.1 = {
 		#holder = 41540
@@ -131,7 +132,6 @@ d_tao-klarjeti = {
 	}
 	646.1.1 = {
 		holder = 159918
-		#name = "IBERIA"
 	}
 	673.1.1 = {
 		holder = 70448
@@ -197,6 +197,9 @@ d_tao-klarjeti = {
 	}
 	1122.1.1 = {
 		holder = 216524
+	}
+	1178.1.1 = {
+		holder = 232768 # Botso Jaqeli
 	}
 	1180.1.1 = {
 		holder = 232764
@@ -278,6 +281,9 @@ c_tao = {
 	1122.1.1 = {
 		holder = 216524
 	}
+	1178.1.1 = {
+		holder = 232768 # Botso Jaqeli
+	}
 	1180.1.1 = {
 		holder = 232764
 	}
@@ -357,6 +363,9 @@ c_klarjeti = {
 	1122.1.1 = {
 		holder = 216524
 	}
+	1178.1.1 = {
+		holder = 232768 # Botso Jaqeli
+	}
 	1180.1.1 = {
 		holder = 232764
 	}
@@ -388,6 +397,7 @@ c_klarjeti = {
 c_kartli = {
 	867.1.1 = {	change_development_level = 6 }
 	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	646.1.1 = {
 		liege = d_greater_armenia
@@ -439,48 +449,35 @@ c_kartli = {
 	1122.1.1 = {
 		holder = 216524
 	}
+	1177.1.1 = {
+		holder = surameli_1 # Rati Surameli
+		liege = k_georgia
+	}
 	1180.1.1 = {
-		holder = 216515
+		holder = 232764
 	}
-	1184.4.6 = {
-		holder = 466517
+	1204.1.2 = {
+		holder = 232765
 	}
-	1212.1.8 = {
-		holder = 466515
+	1226.1.2 = {
+		holder = 232766
 	}
-	1223.1.1 = {
-		holder = 466518
+	1229.1.2 = {
+		holder = 232767
 	}
-	1245.1.1 = {
-		holder = 466519
+	1231.1.2 = {
+		holder = 232769
 	}
-	1259.1.1 = {
-		holder = 466514
+	1250.1.1 = {
+		holder = 466750
 	}
-	1270.1.1 = {
-		holder = 466501
+	1306.1.1 = {
+		holder = 466752
 	}
-	1289.3.12 = {
-		holder = 144009
+	1334.1.2 = {
+		holder = 466753
 	}
-	1292.1.1 = {
-		holder = 466511
-	}
-	1299.1.1 = {
-		holder = 466500
-	}
-	1302.1.1 = {
-		holder = 145081
-	}
-	1308.1.1 = {
-		holder = 466511
-	}
-	1311.1.1 = {	
-		holder = 466512
-	}
-	1313.1.1 = {
-		holder = 466500
-	}
+
 }
 
 
@@ -536,6 +533,9 @@ c_acampse = {
 	}
 	1122.1.1 = {
 		holder = 216524
+	}
+	1178.1.1 = {
+		holder = 232768 # Botso Jaqeli
 	}
 	1180.1.1 = {
 		holder = 232764
@@ -679,23 +679,25 @@ d_abkhazia = {
 	1245.1.1 = {
 		holder = 466519
 	}
-	#Kingdom of Imereti
 	1259.1.1 = { 
-		liege = 0
-		name = IMERETI
+		holder = 466514
 	}
-	1293.1.15 = {
-		holder = konstantine_imereti
+	1270.1.1 = {
+		holder = 466501
 	}
-	1326.1.1 = {
-		holder = 466521
+	1289.3.12 = {
+		holder = 144009
 	}
-	1329.1.2 = {
-		holder = 466520
+	1292.1.1 = {
+		holder = 466511
 	}
-	1330.1.1 = {
-		liege = k_georgia
+	1311.1.1 = {	
+		holder = 466512
 	}
+	1313.1.1 = {
+		holder = 466500
+	}
+
 }
 
 
@@ -788,16 +790,22 @@ c_abkhazia = {
 		holder = 466519
 	}
 	1259.1.1 = {
-		liege = d_abkhazia
+		holder = 466514
 	}
-	1293.1.15 = {
-		holder = konstantine_imereti
+	1270.1.1 = {
+		holder = 466501
 	}
-	1326.1.1 = {
-		holder = 466521
+	1289.3.12 = {
+		holder = 144009
 	}
-	1329.1.2 = {
-		holder = 466520
+	1292.1.1 = {
+		holder = 466511
+	}
+	1311.1.1 = {	
+		holder = 466512
+	}
+	1313.1.1 = {
+		holder = 466500
 	}
 
 }
@@ -892,16 +900,22 @@ c_odishi = {
 		holder = 466519
 	}
 	1259.1.1 = {
-		liege = d_abkhazia
+		holder = 466514
 	}
-	1293.1.15 = {
-		holder = konstantine_imereti
+	1270.1.1 = {
+		holder = 466501
 	}
-	1326.1.1 = {
-		holder = 466521
+	1289.3.12 = {
+		holder = 144009
 	}
-	1329.1.2 = {
-		holder = 466520
+	1292.1.1 = {
+		holder = 466511
+	}
+	1311.1.1 = {	
+		holder = 466512
+	}
+	1313.1.1 = {
+		holder = 466500
 	}
 
 }
@@ -996,25 +1010,31 @@ c_svaneti = {
 		holder = 466519
 	}
 	1259.1.1 = {
-		liege = d_abkhazia
+		holder = 466514
 	}
-	1293.1.15 = {
-		holder = konstantine_imereti
+	1270.1.1 = {
+		holder = 466501
 	}
-	1326.1.1 = {
-		holder = 466521
+	1289.3.12 = {
+		holder = 144009
 	}
-	1329.1.2 = {
-		holder = 466520
+	1292.1.1 = {
+		holder = 466511
 	}
+	1311.1.1 = {	
+		holder = 466512
+	}
+	1313.1.1 = {
+		holder = 466500
+	}
+
 }
 
 
 c_guria = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	500.1.1 = {
 		holder = 160021
@@ -1104,29 +1124,34 @@ c_guria = {
 		holder = 466519
 	}
 	1259.1.1 = {
-		liege = d_abkhazia
+		holder = 466514
 	}
-	1293.1.15 = {
-		holder = konstantine_imereti
+	1270.1.1 = {
+		holder = 466501
 	}
-	1326.1.1 = {
-		holder = 466521
+	1289.3.12 = {
+		holder = 144009
 	}
-	1329.1.2 = {
-		holder = 466520
+	1292.1.1 = {
+		holder = 466511
+	}
+	1311.1.1 = {	
+		holder = 466512
+	}
+	1313.1.1 = {
+		holder = 466500
 	}
 }
-
 d_georgia = {
 	867.1.1 = {	change_development_level = 6 }
 	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 13 }
 }
 
 c_tbilisi = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 43 }
 	
 	50.1.1 = {
 		holder = 159909
@@ -1282,7 +1307,6 @@ c_tbilisi = {
 	}
 	914.1.1 = {
 		holder = 302368	#Mansur bin Jaffar Jaffarid
-		liege = 0
 	}
 	952.1.1 = {
 		holder = 302369	#Jaffar II bin Mansur Jaffarid
@@ -1420,18 +1444,19 @@ c_lori = {
 		holder = 144010
 		liege = k_georgia
 	}
-	1184.4.6 = {
-		holder = 232758
+	1178.1.1 = {
+		holder = 232758 # Sargis Zakarian
+		liege = k_georgia
 	}
-	1187.1.2 = {
+	1191.1.1 = {
 		holder = 232759
 	}
-	#1202.1.1 = {
-	#	holder = 232760
-	#}
+	1202.1.1 = {
+		holder = 232760
+	}
 	1202.7.1 = {
 		liege = "d_greater_armenia"
-		#holder = 159207
+		holder = 159207
 	}
 	1225.1.2 = {
 		liege = "d_erzerum"
@@ -1449,11 +1474,6 @@ c_lori = {
 	}
 	1300.1.1 = {
 		holder = 34401
-	}
-	
-	1320.1.1 = {
-		liege = k_georgia
-		holder = 466500
 	}
 	
 
@@ -1590,8 +1610,8 @@ c_kakheti = {
 		holder = 260987
 	}
 	#1008 Unification of Georgia, k_georgia created
-	1060.1.1 = {
-		holder = 41607
+	1058.1.1 = {
+		holder = 41515 # Agsartan
 	}
 	1088.1.1 = {
 		holder = 41608
@@ -1599,56 +1619,37 @@ c_kakheti = {
 	1122.1.1 = {
 		holder = 216524
 	}
-	#1180.1.1 = {
-	#	holder = 232764
-	#}
-	#1204.1.2 = {
-	#	holder = 232765
-	#}
+	1178.1.1 = {
+		holder = 466517 # Tamar
+	}
+	1180.1.1 = {
+		holder = 232764
+	}
+	1204.1.2 = {
+		holder = 232765
+	}
 	
 	#Taken by Georgia
-	1180.1.1 = {
-		holder = 216515
+	1120.1.1 = {
 		liege = k_georgia
 	}
-	1184.4.6 = {
-		holder = 466517
+	1226.1.2 = {
+		holder = 232766
 	}
-	1212.1.8 = {
-		holder = 466515
+	1229.1.2 = {
+		holder = 232767
 	}
-	1223.1.1 = {
-		holder = 466518
+	1231.1.2 = {
+		holder = 232769
 	}
-	1245.1.1 = {
-		holder = 466519
+	1250.1.1 = {
+		holder = 466750
 	}
-	1259.1.1 = {
-		holder = 466514
+	1306.1.1 = {
+		holder = 466752
 	}
-	1270.1.1 = {
-		holder = 466501
-	}
-	1289.3.12 = {
-		holder = 144009
-	}
-	1292.1.1 = {
-		holder = 466511
-	}
-	1299.1.1 = {
-		holder = 466500
-	}
-	1302.1.1 = {
-		holder = 145081
-	}
-	1308.1.1 = {
-		holder = 466511
-	}
-	1311.1.1 = {	
-		holder = 466512
-	}
-	1313.1.1 = {
-		holder = 466500
+	1334.1.2 = {
+		holder = 466753
 	}
 
 }
@@ -1738,65 +1739,39 @@ c_hereti = {
 		holder = 260982
 	}
 	#1008 Unification of Georgia, k_georgia created
-	1060.1.1 = {
-		holder = 41607
+	1058.1.1 = {
+		holder = 41515 # Agsartan
 	}
 	1088.1.1 = {
 		holder = 41608
 	}
+	#Taken by Georgia
+	1120.1.1 = {
+		liege = k_georgia
+	}
 	1122.1.1 = {
 		holder = 216524
 	}
-	#1180.1.1 = {
-	#	holder = 232764
-	#}
-	#1204.1.2 = {
-	#	holder = 232765
-	#}
-	
-	#Taken by Georgia
-	1180.1.1 = {
-		holder = 216515
-		liege = k_georgia
+	1178.1.1 = {
+		holder = grigolisdze_1 # Asat Grigolisdze
 	}
-	1184.4.6 = {
-		holder = 466517
+	1226.1.2 = {
+		holder = 232766
 	}
-	1212.1.8 = {
-		holder = 466515
+	1229.1.2 = {
+		holder = 232767
 	}
-	1223.1.1 = {
-		holder = 466518
+	1231.1.2 = {
+		holder = 232769
 	}
-	1245.1.1 = {
-		holder = 466519
+	1250.1.1 = {
+		holder = 466750
 	}
-	1259.1.1 = {
-		holder = 466514
+	1306.1.1 = {
+		holder = 466752
 	}
-	1270.1.1 = {
-		holder = 466501
-	}
-	1289.3.12 = {
-		holder = 144009
-	}
-	1292.1.1 = {
-		holder = 466511
-	}
-	1299.1.1 = {
-		holder = 466500
-	}
-	1302.1.1 = {
-		holder = 145081
-	}
-	1308.1.1 = {
-		holder = 466511
-	}
-	1311.1.1 = {	
-		holder = 466512
-	}
-	1313.1.1 = {
-		holder = 466500
+	1334.1.2 = {
+		holder = 466753
 	}
 }
 

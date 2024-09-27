@@ -1,7 +1,6 @@
 ﻿#######################################
 #				Modded Stuff		  #
 #######################################
-
 reclaim_britannia_decision_effect = {
 	every_sub_realm_county = {
 		limit = {
@@ -143,7 +142,7 @@ embrace_english_culture_effect = {
 					}
 					every_close_family_member = {
 						limit = {
-							is_playable_character = no
+							is_landed = no
 							NOT = { is_spouse_of = prev }
 						}
 						custom = all_unlanded_family_members
@@ -200,10 +199,10 @@ embrace_english_culture_effect = {
 						set_culture = culture:english
 						hidden_effect = {
 							if = {
-								limit = { any_spouse = { is_playable_character = no } }
+								limit = { any_spouse = { is_landed = no } }
 								every_spouse = {
 									limit = {
-										is_playable_character = no
+										is_landed = no
 										OR = {
 											culture = culture:norman
 											culture = culture:french
@@ -215,13 +214,13 @@ embrace_english_culture_effect = {
 							if = {
 								limit = {
 									any_close_family_member = {
-										is_playable_character = no
+										is_landed = no
 										NOT = { is_spouse_of = prev }
 									}
 								}
 								every_close_family_member = {
 									limit = {
-										is_playable_character = no
+										is_landed = no
 										NOT = { is_spouse_of = prev }
 									}
 									custom = all_unlanded_family_members
@@ -271,7 +270,6 @@ embrace_english_culture_effect = {
 		}
 	}
 }
-
 #######################################
 #				Vanilla Stuff		  #
 #######################################
@@ -412,18 +410,15 @@ form_portugal_decision_effects = {
 		}
 		set_primary_title_to = title:k_portugal
 	}
-
 	hidden_effect = {
 		if = {
 			limit = { has_global_variable = fp2_struggle_compromise_ending }
 			title:k_portugal = { fp2_struggle_compromise_create_new_empire_effect = yes }
 		}
 	}
-
 	#Covert self & court to portuguese culture
 	if = {
 		limit = { NOT = { has_culture = culture:portuguese } }
-
 		every_courtier = {
 			limit = { has_same_culture_as = scope:portugal_former }
 			add_to_list = convert_list
@@ -441,7 +436,6 @@ form_portugal_decision_effects = {
 			set_culture = culture:portuguese
 		}
 	}
-
 	# Convert Iberian counties to Portugese culture
 	every_sub_realm_county = {
 		limit = {
@@ -474,13 +468,11 @@ form_portugal_decision_effects = {
 			set_county_culture = culture:portuguese
 		}
 	}
-
 	#Innovations
 	culture:portuguese = {
 		add_random_innovation = culture_group_military
 		add_random_innovation = culture_group_civic
 	}
-
 	#Prestige
 	add_prestige = massive_prestige_gain	
 }
@@ -493,7 +485,6 @@ declare_canarias_decision_effects = {
 	title:k_canarias = {
 		save_scope_as = title_k_canarias
 	}
-
 	create_title_and_vassal_change = {
 		type = created
 		save_scope_as = title_change
@@ -517,7 +508,6 @@ declare_canarias_decision_effects = {
 		}
 		set_primary_title_to = title:k_canarias
 	}
-
 	#Prestige
 	add_prestige = massive_prestige_gain	
 }
@@ -549,7 +539,6 @@ unite_the_spanish_thrones_decision_effects = {
 		limit = { scope:spain_uniter.primary_title = title:k_leon }
 		primary_title = { set_coa = k_leon_castille }
 	}
-
 	#Handle other Kingdom titles
 	title:k_castille = { add_to_list = spanish_kingdoms }
 	title:k_leon = { add_to_list = spanish_kingdoms }
@@ -561,7 +550,6 @@ unite_the_spanish_thrones_decision_effects = {
 	title:k_badajoz = { add_to_list = spanish_kingdoms }
 	title:k_valencia = { add_to_list = spanish_kingdoms }
 	title:k_toledo = { add_to_list = spanish_kingdoms }
-
 	custom_tooltip = unite_the_spanish_thrones_decision_titles_tt
 	hidden_effect = {
 		every_in_list = {
@@ -570,13 +558,11 @@ unite_the_spanish_thrones_decision_effects = {
 				NOT = { this = scope:spain_uniter.primary_title }
 				scope:spain_uniter = { completely_controls = prev }
 			}
-
 			#De jure shift all held spanish titles into your primary title
 			every_in_de_jure_hierarchy = {
 				limit = { tier = tier_duchy }
 				set_de_jure_liege_title = scope:spain_uniter.primary_title
 			}
-
 			#Destroys them all!
 			scope:spain_uniter = { destroy_title = prev }
 		}
@@ -607,7 +593,6 @@ unite_africa_decision_effects = {
 				desc = fervor_gain_united_africa
 			}
 		}
-
 		if = {
 			limit = {
 				any_vassal_or_below = {
@@ -631,7 +616,6 @@ unite_africa_decision_effects = {
 				}
 			}
 		}
-
 		if = {
 			limit = {
 				any_realm_province = {
@@ -646,7 +630,6 @@ unite_africa_decision_effects = {
 				}
 				county = { add_to_list = every_realm_county }
 			}
-
 			every_in_list = {
 				list = every_realm_county
 				custom = every_non_root_faith_county_africa
@@ -665,7 +648,6 @@ avenge_the_battle_of_tours_decision_effects = {
 	add_character_modifier = {
 		modifier = avenger_of_the_martyrs
 	}
-
 	add_prestige = massive_prestige_gain
 
 	#Religious bonuses
@@ -676,9 +658,7 @@ avenge_the_battle_of_tours_decision_effects = {
 			desc = fervor_gain_avenged_battle_of_tours
 		}
 	}
-
 	add_achievement_flag_effect = { FLAG = achievement_al_andalus_flag }
-
 	if = {
 		limit = {
 			any_vassal_or_below = {
@@ -702,7 +682,6 @@ avenge_the_battle_of_tours_decision_effects = {
 			}
 		}
 	}
-
 	if = {
 		limit = {
 			any_realm_province = {
@@ -719,7 +698,6 @@ avenge_the_battle_of_tours_decision_effects = {
 				add_to_list = every_realm_county
 			}	
 		}
-
 		every_in_list = {
 			list = every_realm_county
 			custom = every_non_root_faith_county_west_europe		
@@ -730,7 +708,6 @@ avenge_the_battle_of_tours_decision_effects = {
 			}
 		}
 	}
-
 	#Christian penalty
 	if = {
 		limit = { exists = scope:frankish_christian_faith }
@@ -741,7 +718,6 @@ avenge_the_battle_of_tours_decision_effects = {
 			}
 		}
 	}
-
 	# Rattach south of France to the e_hispania
 	title:e_france = {
 		every_in_de_jure_hierarchy = {
@@ -765,7 +741,6 @@ unite_the_western_slavs_decision_effects = {
 		add_random_innovation = culture_group_military
 		add_random_innovation = culture_group_civic
 	}
-
 	#Laws
 	if = {
 		limit = { has_realm_law = crown_authority_0 }
@@ -780,14 +755,12 @@ unite_the_western_slavs_decision_effects = {
 		}
 		add_realm_law_skip_effects = crown_authority_3
 	}
-
 	#Handle de jure drift & destructions of other kingdom titles
 	title:k_poland = { add_to_list = west_slavic_kingdoms }
 	title:k_pomerania = { add_to_list = west_slavic_kingdoms }
 	title:k_bohemia = { add_to_list = west_slavic_kingdoms }
 	title:k_sorbia = { add_to_list = west_slavic_kingdoms }
 	title:k_moravia = { add_to_list = west_slavic_kingdoms }
-
 	if = {
 		limit = { highest_held_title_tier = tier_kingdom }
 		custom_tooltip = unite_the_western_slavs_decision_titles_tt
@@ -843,14 +816,12 @@ unite_the_southern_slavs_decision_effects = {
 		add_random_innovation = culture_group_military
 		add_random_innovation = culture_group_civic
 	}
-
 	#Handle de jure drift & destructions of other kingdom titles
 	title:k_croatia = { add_to_list = south_slavic_kingdoms }
 	title:k_serbia = { add_to_list = south_slavic_kingdoms }
 	title:k_bulgaria = { add_to_list = south_slavic_kingdoms }
 	title:k_dacia = { add_to_list = south_slavic_kingdoms }
 	title:k_moldavia = { add_to_list = south_slavic_kingdoms }
-
 	custom_tooltip = unite_the_southern_slavs_decision_titles_tt
 	hidden_effect = {
 		every_in_list = {
@@ -859,13 +830,11 @@ unite_the_southern_slavs_decision_effects = {
 				NOT = { this = scope:southern_slav_uniter.primary_title }
 				scope:southern_slav_uniter = { completely_controls = prev }
 			}
-
 			#De jure shift all held west slavic titles into your primary title
 			every_in_de_jure_hierarchy = {
 				limit = { tier = tier_duchy }
 				set_de_jure_liege_title = scope:southern_slav_uniter.primary_title
 			}
-
 			#Destroys them all!
 			scope:southern_slav_uniter = { destroy_title = prev }
 		}
@@ -916,7 +885,6 @@ unite_the_slavs_decision_effects = {
 			remove_while_counter_variable_effect = yes
 		}
 	}
-
 	#Create the title and make it primary
 	create_title_and_vassal_change = {
 		type = created
@@ -947,7 +915,6 @@ unite_the_slavs_decision_effects = {
 		limit = { has_title = title:e_carpathia }
 		destroy_title = title:e_carpathia
 	}
-
 	###Handle de jure drift and empire destruction###
 
 	#First: add all the kingdoms
@@ -966,10 +933,21 @@ unite_the_slavs_decision_effects = {
 	title:k_novgorod = { add_to_list = slavic_kingdoms }
 	title:k_opolye = { add_to_list = slavic_kingdoms }
 	title:k_hungary = { add_to_list = slavic_kingdoms }
-
 	# Inform players of the de jure drift
 	title:e_slavia = { custom_tooltip = unite_the_slavs_decision_titles_tt } #Scope change for tooltip formatting.
-
+	
+	if = {
+		limit = { has_dlc_feature = legends }
+		create_legend_seed = {
+			type = legitimizing
+			quality = illustrious
+			chronicle = new_title
+			properties = {
+				title = title:e_slavia
+				founder = root
+			}
+		}
+	}
 	# Actually do the de jure drift
 	hidden_effect = {
 		every_in_list = {
@@ -998,7 +976,6 @@ unite_india_decision_effect = {
 	title:e_rajastan = { add_to_list = indian_empire }
 	title:e_deccan = { add_to_list = indian_empire }
 	title:e_bengal = { add_to_list = indian_empire }
-
 	every_in_list = {
 		list = indian_empire
 		every_in_de_jure_hierarchy = {
@@ -1008,7 +985,6 @@ unite_india_decision_effect = {
 			set_de_jure_liege_title = title:e_india
 		}
 	}
-
 	hidden_effect = {
 		if = {
 			limit = { has_title = title:e_rajastan }
@@ -1097,14 +1073,14 @@ accept_cannibalism_decision_effect = {
 			limit = {
 				any_close_family_member = {
 					is_cannibal_trigger = no
-					is_landed = no
+					is_playable_character = no
 					is_ai = yes
 				}
 			}
 			every_close_family_member = {
 				limit = {
 					is_cannibal_trigger = no
-					is_landed = no
+					is_playable_character = no
 					is_ai = yes
 				}
 				custom = all_my_family_members
@@ -1148,7 +1124,6 @@ found_university_decision_event_effect = {
 		}
 		give_nickname = nick_the_scholar
 	}
-
 	hidden_effect = {
 		#Event that gives you highly skilled courtier
 		trigger_event = {
@@ -1250,38 +1225,42 @@ convert_whole_realm_to_feudalism_effect = {
 	}
 	##You're an independent anything else? Convert to feudal!
 	else = { change_government = feudal_government }
-	##General
-	custom_tooltip = all_holding_will_change
-	##Liege has clan? Convert to clan!
 	if = {
 		limit = {
-			is_independent_ruler = no
-			liege = { government_has_flag = government_is_clan }
+			government_has_flag = government_is_tribal
 		}
-		custom_tooltip = clan_liege_vassals_will_convert
-	}
-	#Liege has feudal? Convert to feudal!
-	if = {
-		limit = {
-			is_independent_ruler = no
-			liege = { government_has_flag = government_is_feudal }
+		##General
+		custom_tooltip = all_holding_will_change
+		##Liege has clan? Convert to clan!
+		if = {
+			limit = {
+				is_independent_ruler = no
+				liege = { government_has_flag = government_is_clan }
+			}
+			custom_tooltip = clan_liege_vassals_will_convert
 		}
-		custom_tooltip = feudal_liege_vassals_will_convert
-	}
-	##If I am Islamic, we will become clan.
-	if = {
-		limit = {
-			is_independent_ruler = yes
-			faith = { religion_tag = islam_religion }
+		#Liege has feudal? Convert to feudal!
+		if = {
+			limit = {
+				is_independent_ruler = no
+				liege = { government_has_flag = government_is_feudal }
+			}
+			custom_tooltip = feudal_liege_vassals_will_convert
 		}
-		custom_tooltip = islamic_vassals_will_convert
+		##If I am Islamic, we will become clan.
+		if = {
+			limit = {
+				is_independent_ruler = yes
+				faith = { religion_tag = islam_religion }
+			}
+			custom_tooltip = islamic_vassals_will_convert
+		}
+		##If I am not Islamic, we will become feudal.
+		else_if = {
+			limit = { is_independent_ruler = yes }
+			custom_tooltip = other_vassals_will_convert
+		}
 	}
-	##If I am not Islamic, we will become feudal.
-	else_if = {
-		limit = { is_independent_ruler = yes }
-		custom_tooltip = other_vassals_will_convert
-	}
-
 	hidden_effect = {
 		#Nuke tribal authorities.
 		if = {
@@ -1307,7 +1286,6 @@ convert_whole_realm_to_feudalism_effect = {
 			}
 			add_realm_law_skip_effects = crown_authority_0
 		}
-
 		#Also convert every vassal.
 		#Liege has taken clan, so become clan.
 		if = {
@@ -1395,6 +1373,7 @@ convert_whole_realm_to_feudalism_effect = {
 			random_county_province = {
 				limit = {
 					has_holding = no
+					barony_cannot_construct_holding = no
 					barony = {
 						is_holy_site_of = root.faith
 					}
@@ -1427,6 +1406,7 @@ convert_whole_realm_to_feudalism_effect = {
 					}
 					is_coastal = yes
 					has_special_building_slot = no
+					barony_cannot_construct_holding = no
 				}
 				alternative_limit = {
 					has_holding = no
@@ -1436,6 +1416,7 @@ convert_whole_realm_to_feudalism_effect = {
 						terrain = farmlands
 					}
 					has_special_building_slot = no
+					barony_cannot_construct_holding = no
 				}
 				alternative_limit = {
 					has_holding = no
@@ -1444,9 +1425,11 @@ convert_whole_realm_to_feudalism_effect = {
 						terrain = oasis
 						terrain = farmlands
 					}
+					barony_cannot_construct_holding = no
 				}
 				alternative_limit = {
 					has_holding = no
+					barony_cannot_construct_holding = no
 				}
 				random = {
 					chance = 60
@@ -1494,6 +1477,7 @@ convert_whole_realm_to_feudalism_effect = {
 					}
 					is_coastal = yes
 					has_special_building_slot = no
+					barony_cannot_construct_holding = no
 				}
 				alternative_limit = {
 					has_holding = no
@@ -1503,6 +1487,7 @@ convert_whole_realm_to_feudalism_effect = {
 						terrain = farmlands
 					}
 					has_special_building_slot = no
+					barony_cannot_construct_holding = no
 				}
 				alternative_limit = {
 					has_holding = no
@@ -1511,9 +1496,11 @@ convert_whole_realm_to_feudalism_effect = {
 						terrain = oasis
 						terrain = farmlands
 					}
+					barony_cannot_construct_holding = no
 				}
 				alternative_limit = {
 					has_holding = no
+					barony_cannot_construct_holding = no
 				}
 				random = {
 					chance = 50
@@ -1536,7 +1523,6 @@ convert_whole_realm_to_feudalism_effect = {
 				}
 			}
 		}
-
 		##Sort out new buildings for liege and all vassals
 		every_realm_province = {
 			limit = {
@@ -1579,7 +1565,6 @@ convert_whole_realm_to_feudalism_effect = {
 		}
 	}
 }
-
 ##################################################
 # Add Special Succession Effects
 
@@ -1763,7 +1748,6 @@ special_succession_jirga_effect = {
 		}
 	}
 }
-
 ##################################################
 # Launch Hungarian Migration Effects
 
@@ -1799,7 +1783,6 @@ launch_hungarian_migration_scripted_effect = {
 				title:k_hungary = { set_title_name = k_hungary }
 			}
 		}
-
 		#If $INVADER$ has both k_hungary & any other kingdom-tier title, destroy the excess titles.
 		custom_tooltip = launch_hungarian_migration_scripted_effect.tt.destroy_other_kingdoms
 		hidden_effect = {
@@ -1821,7 +1804,6 @@ launch_hungarian_migration_scripted_effect = {
 				}
 			}
 		}
-
 		#Replace all Avar territories within Pannonia with Mogyer, excepting Keve & Krasso.
 		custom_tooltip = launch_hungarian_migration_scripted_effect.tt.mogyers_move_to_pannonia
 		hidden_effect = {
@@ -1851,7 +1833,6 @@ launch_hungarian_migration_scripted_effect = {
 				}
 			}
 		}
-
 		#Replace all Mogyer territories outside of the Pannonian Basin
 		custom_tooltip = launch_hungarian_migration_scripted_effect.tt.mogyers_outside_pannonia
 		hidden_effect = {
@@ -1876,7 +1857,6 @@ launch_hungarian_migration_scripted_effect = {
 				set_county_faith = faith:tengri_pagan
 			}
 		}
-
 		#All territory outside Pannonia is given to new holders and/or made independent.
 		custom_tooltip = launch_hungarian_migration_scripted_effect.tt.territory_outside_pannonia.non_mogyer_vassals
 		custom_tooltip = launch_hungarian_migration_scripted_effect.tt.territory_outside_pannonia.mogyer_vassals
@@ -2374,12 +2354,11 @@ tribal_challenger_lost_effect = {
 		}
 	}
 }
-
 ##################################################
 # DANELAW IS GONE IN THE MOD
-
 ##################################################
 # Found Cadet House Effects
+##################################################
 found_cadet_house_decision_effect = {
 	hidden_effect = {
 		house.house_head = {
@@ -2390,7 +2369,6 @@ found_cadet_house_decision_effect = {
 		}
 		add_achievement_flag_effect = { FLAG = achievement_a_house_of_my_own_flag }
 	}
-
 	create_cadet_branch = yes
 	add_prestige = $PRESTIGE$
 	hidden_effect = {
@@ -2473,7 +2451,6 @@ found_cadet_house_decision_effect = {
 				add_house_artifact_claim = scope:new_branch_dynasty_banner
 			}
 		}
-
 		# Struggle Catalysts
 		if = {
 			limit = {
@@ -2505,31 +2482,10 @@ learn_language_linguist_effect = {
 		title = learn_court_language_toast_title
 		left_icon = root
 		right_icon = $LINGUIST$
-		if = {
-			limit = {
-				can_employ_court_position_type = court_tutor_court_position
-			}
-			appoint_court_position = {
-				recipient = $LINGUIST$
-				court_position = court_tutor_court_position
-			}
-		}
-		else_if = {
-			limit = {
-				exists = court_position:court_tutor_court_position
-			}
-			court_position:court_tutor_court_position = {
-				add_opinion = {
-					target = root
-					modifier = disappointed_opinion
-					opinion = -5
-				}
-			}
-			replace_court_position = {
-				recipient = $LINGUIST$
-				holder = court_position:court_tutor_court_position
-				court_position = court_tutor_court_position
-			}
+		court_position_grant_effect = {
+			EMPLOYER = root
+			POS = court_tutor
+			CANDIDATE = $LINGUIST$
 		}
 		if = {
 			limit = {
@@ -2537,7 +2493,7 @@ learn_language_linguist_effect = {
 			}
 	    	start_scheme = {
 				type = learn_language
-				target = $LINGUIST$
+				target_character = $LINGUIST$
 			}
 	    }
 	}
@@ -2760,3 +2716,4 @@ unisolate_family_decision_effect = {
 		shy = minor_stress_impact_gain
 	}
 }
+

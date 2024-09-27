@@ -708,7 +708,8 @@ bryten_christian.012 = {# Monks make great wine
 			base = 50
 		}
 		random_list = {
-			add_learning_skill = 1
+			30 = { add_learning_lifestyle_xp = minor_lifestyle_experience }
+			70 = {}
 		}
 		stress_impact = {
 			base = miniscule_stress_impact_loss
@@ -964,7 +965,7 @@ bryten_christian.014 = {# Monks produce beautiful books
 		remove_short_term_gold = 30
 		random_list = {
 			20 = {
-				add_learning_skill = 1
+				add_learning_lifestyle_xp = minor_lifestyle_experience
 			}
 			80 = {}
 		}
@@ -1091,12 +1092,8 @@ bryten_christian.015 = {# Local monks come to visit often
 		}
 		add_piety = 20
 		random_list = {
-			30 = {
-				add_learning_skill = 1
-			}
-			70 = {
-
-			}
+			30 = { add_learning_lifestyle_xp = minor_lifestyle_experience }
+			70 = { }
 		}
 		stress_impact = {
 			# traits that gain Stress
