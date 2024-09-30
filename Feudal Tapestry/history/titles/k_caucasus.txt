@@ -1,14 +1,7 @@
 k_caucasus = {
 	867.1.1 = { change_development_level = 0 }
 	1066.1.1 = { change_development_level = 0 }
-	1187.1.1 = { change_development_level = 6 }
-	1337.1.1 = {
-		change_development_level = 10
-		de_jure_liege = e_golden_horde
-		effect = {
-			set_capital_county = title:c_astrakhan
-		}
-	}
+	1178.1.1 = { change_development_level = 0 }
 }
 
 d_khazaria = {
@@ -52,20 +45,38 @@ d_khazaria = {
 	864.1.1 = {
 		holder = 74025
 	}
-	936.1.1 = {
-		holder = 260704
+	888.1.1 = {
+		holder = 74026
+	}
+	899.1.1 = {
+		holder = 146187
+	}
+	916.1.1 = {
+		holder = 146188
+	}
+	920.1.1 = {
+		holder = 146189
+	}
+	928.1.1 = {
+		holder = 146190
+	}
+	945.1.1 = {
+		holder = 146191
+	}
+	969.1.1 = {
+		holder = 146193
+	}
+	993.1.1 = {
+		holder = 146194
 	}
 	1016.1.1 = {
 		holder = 0
 	}
-	1337.1.1 = {
-		name = c_astrakhan
-		effect = {
-			set_capital_county = title:c_astrakhan
-		}
+	1178.1.1 = {
+		holder = 161733 # Fictional placeholder
+		liege = k_cuman
 	}
 }
-
 
 c_sarkel = {
 	691.1.1 = {
@@ -109,8 +120,29 @@ c_sarkel = {
 	864.1.1 = {
 		holder = 74025
 	}
-	936.1.1 = {
-		holder = 260704
+	888.1.1 = {
+		holder = 74026
+	}
+	899.1.1 = {
+		holder = 146187
+	}
+	916.1.1 = {
+		holder = 146188
+	}
+	920.1.1 = {
+		holder = 146189
+	}
+	928.1.1 = {
+		holder = 146190
+	}
+	945.1.1 = {
+		holder = 146191
+	}
+	969.1.1 = {
+		holder = 146193
+	}
+	993.1.1 = {
+		holder = 146194
 	}
 	
 	#Cumans
@@ -121,14 +153,8 @@ c_sarkel = {
 	1060.1.1 = {
 		holder = 806
 	}
-	1110.1.1 = {
-		holder = 90143
-	}
-	1120.1.1 = {
-		holder = 125401
-	}
-	1146.1.1 = {
-		holder = 125402
+	1178.1.1 = {
+		holder = 161733 # Fictional placeholder
 	}
 	1183.1.1 = {
 		holder = 228030
@@ -160,9 +186,8 @@ c_sarkel = {
 c_astrakhan = {
 	867.1.1 = { change_development_level = 9 }
 	1066.1.1 = { change_development_level = 2 }
-	1337.1.1 = {
-		change_development_level = 35
-	}
+	1178.1.1 = { change_development_level = 15 }
+	
 	691.1.1 = {
 		liege = e_caspian-pontic_steppe
 		holder = 74007
@@ -204,8 +229,29 @@ c_astrakhan = {
 	864.1.1 = {
 		holder = 74025
 	}
-	936.1.1 = {
-		holder = 260704
+	888.1.1 = {
+		holder = 74026
+	}
+	899.1.1 = {
+		holder = 146187
+	}
+	916.1.1 = {
+		holder = 146188
+	}
+	920.1.1 = {
+		holder = 146189
+	}
+	928.1.1 = {
+		holder = 146190
+	}
+	945.1.1 = {
+		holder = 146191
+	}
+	969.1.1 = {
+		holder = 146193
+	}
+	993.1.1 = {
+		holder = 146194
 	}
 	
 	#Cumans
@@ -216,14 +262,9 @@ c_astrakhan = {
 	1060.1.1 = {
 		holder = 20663
 	}
-	1110.1.1 = {
-		holder = 90143
-	}
-	1120.1.1 = {
-		holder = 125401
-	}
-	1146.1.1 = {
-		holder = 125402
+	1178.1.1 = {
+		holder = 194214 # Fictional placeholder
+		liege = d_khazaria
 	}
 	1183.1.1 = {
 		holder = 228030
@@ -294,8 +335,29 @@ c_beksima = {
 	864.1.1 = {
 		holder = 74025
 	}
-	936.1.1 = {
-		holder = 260704
+	888.1.1 = {
+		holder = 74026
+	}
+	899.1.1 = {
+		holder = 146187
+	}
+	916.1.1 = {
+		holder = 146188
+	}
+	920.1.1 = {
+		holder = 146189
+	}
+	928.1.1 = {
+		holder = 146190
+	}
+	945.1.1 = {
+		holder = 146191
+	}
+	969.1.1 = {
+		holder = 146193
+	}
+	993.1.1 = {
+		holder = 146194
 	}
 	
 	#Cumans
@@ -306,14 +368,8 @@ c_beksima = {
 	1060.1.1 = {
 		holder = 806
 	}
-	1110.1.1 = {
-		holder = 90143
-	}
-	1120.1.1 = {
-		holder = 125401
-	}
-	1146.1.1 = {
-		holder = 125402
+	1178.1.1 = {
+		holder = 161733 # Fictional placeholder
 	}
 	1183.1.1 = {
 		holder = 228030
@@ -357,10 +413,10 @@ d_azov = {
 		holder=74023
 	}
 	852.1.1={
-		holder=0 #74024
+		holder=0
 	}
 	863.1.1 = {
-		holder = 0 #302271	#placeholder
+		holder = 0	#placeholder
 	}
 	906.1.1 = {
 		holder = 302272	#placeholder
@@ -391,6 +447,9 @@ d_azov = {
 	1150.1.1 = {
 		holder = 34882
 	}
+	1170.1.1 = {
+		holder = 0
+	}
 	1180.1.1 = {
 		holder = 34883
 	}
@@ -410,16 +469,12 @@ d_azov = {
 	1315.1.1 = {
 		holder = 34888
 	}
-	
-
 }
-
 
 c_tmutarakan = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 5 }
-	1187.1.1 = { change_development_level = 15 }
-	1337.1.1 = { change_development_level = 30 }
+	1178.1.1 = { change_development_level = 6 }
 	
 	822.1.1= {
 		liege=d_azov
@@ -443,6 +498,7 @@ c_tmutarakan = {
 		holder = 3022740	#placeholder
 	}
 	906.1.1 = {
+		government = tribal_government
 		holder = 302272	#placeholder
 	}
 	930.1.1 = {
@@ -453,7 +509,8 @@ c_tmutarakan = {
 	#Annexed by Kievan Rus'
 	1016.1.1 = {
 		liege = "d_kiev"
-	holder = 618
+		government = feudal_government
+		holder = 618
 	}
 	1024.1.2 = {
 		liege = "d_chernigov"
@@ -507,6 +564,9 @@ c_tmutarakan = {
 	1150.1.1 = {
 		holder = 34882
 	}
+	1178.1.1 = {
+		holder = 232544 # Michael Gabras
+	}
 	1180.1.1 = {
 		holder = 34883
 	}
@@ -516,10 +576,6 @@ c_tmutarakan = {
 	1199.1.1 = {
 		holder = 34883
 	}
-	#1204.5.16 = {
-		#holder = tukar
-		#liege = 0
-	#}
 	#1204.5.16 =
 	1205.1.1 = {
 		liege = "k_trebizond"
@@ -582,8 +638,8 @@ c_khumar = {
 		holder=74024
 	}
 	863.1.1 = {
-		holder = 302271	#placeholder
 		liege=e_caspian-pontic_steppe
+		holder = 302271	#placeholder
 	}
 	906.1.1 = {
 		holder = 302272	#placeholder
@@ -611,8 +667,8 @@ c_khumar = {
 	1150.1.1 = {
 		holder = 34882
 	}
-	1170.1.1 = {
-		holder = 34889
+	1178.1.1 = {
+		holder = 161733 # Fictional placeholder
 	}
 	1180.1.1 = {
 		holder = 34883
@@ -653,8 +709,8 @@ c_azov = {
 		holder=74024
 	}
 	863.1.1 = {
-		holder = 302271	#placeholder
 		liege=e_caspian-pontic_steppe
+		holder = 302271	#placeholder
 	}
 	906.1.1 = {
 		holder = 302272	#placeholder
@@ -682,6 +738,12 @@ c_azov = {
 	1150.1.1 = {
 		holder = 34882
 	}
+	1170.1.1 = {
+		holder = 34889
+	}
+	1178.1.1 = {
+		holder = 161733 # Fictional placeholder
+	}
 	1180.1.1 = {
 		holder = 34883
 	}
@@ -689,17 +751,16 @@ c_azov = {
 		holder = 34884
 	}
 	1238.1.1 = {
-		liege = e_golden_horde
-	holder = 34885
+		holder = 34892
 	}
 	1270.1.1 = {
-		holder = 34886
+		holder = 34893
 	}
 	1300.1.1 = {
-		holder = 34887
+		holder = 34894
 	}
 	1315.1.1 = {
-		holder = 34888
+		holder = 34895
 	}
 }
 
@@ -752,8 +813,6 @@ d_alania = {
 	}
 	1181.1.1 = {
 		holder = 466516	#David Soslan
-		government = feudal_government
-		liege = 0
 	}
 	1207.1.1 = {
 		holder = 302270	#semi-fictional Rhosmices Ovsia
@@ -764,14 +823,14 @@ d_alania = {
 		liege = e_golden_horde
 	}
 	1238.1.2 = {
-		holder = 0#93037	#fictional Khankhusy
+		holder = 93037	#fictional Khankhusy
 	}
-	#1280.1.1 = {
-		#holder = 93039
-	#}
-	#1313.1.1 = {
-		#holder = 93047
-	#}
+	1280.1.1 = {
+		holder = 93039
+	}
+	1313.1.1 = {
+		holder = 93047
+	}
 }
 
 
@@ -822,16 +881,15 @@ c_cabardinia = {
 	}
 	1181.1.1 = {
 		holder = 466516	#David Soslan
-		government = feudal_government
 	}
 	1207.1.1 = {
 		holder = 302270	#semi-fictional Rhosmices Ovsia
 	}
 	
 	#Mongol conquest and destruction of kingdom of Alania
-	1238.1.2 = {
-		liege = e_golden_horde
-	}
+	#1238.1.2 = {
+	#	liege = e_golden_horde
+	#}
 	1238.1.2 = {
 		holder = 93037	#fictional Khankhusy
 	}
@@ -847,6 +905,7 @@ c_cabardinia = {
 c_maghas = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 6 }
 	
 	#Alans tributaries to Khazars
 	741.1.1 = {
@@ -894,16 +953,15 @@ c_maghas = {
 	}
 	1181.1.1 = {
 		holder = 466516	#David Soslan
-		government = feudal_government
 	}
 	1207.1.1 = {
 		holder = 302270	#semi-fictional Rhosmices Ovsia
 	}
 	
 	#Mongol conquest and destruction of kingdom of Alania
-	1238.1.2 = {
-		liege = e_golden_horde
-	}
+	#1238.1.2 = {
+	#	liege = e_golden_horde
+	#}
 	1238.1.2 = {
 		holder = 93037	#fictional Khankhusy
 	}
@@ -944,7 +1002,6 @@ c_zichia = {
 	#}
 	1000.1.1 = {
 		holder = 41592	#Urdur Oseti
-		liege = d_alania
 	}
 	1022.1.1 = {
 		holder = 20662	#Durgulel Oseti
@@ -958,26 +1015,35 @@ c_zichia = {
 	1130.1.1 = {
 		holder = 41550	#Athom Bagratoni
 	}
-	1150.1.1 = {
-		holder = abdunkhan
-		government = feudal_government
-		liege = 0
+	1168.1.1 = {
+		holder = 216524	#Djadaron Bagratoni
 	}
-	1200.1.1 = {
-		holder = tukar
-		liege = 0
+	1181.1.1 = {
+		holder = 466516	#David Soslan
 	}
-	1333.1.1 = {
-		holder = verzacht
-		liege = 0
+	1207.1.1 = {
+		holder = 302270	#semi-fictional Rhosmices Ovsia
+	}
+	
+	#Mongol conquest and destruction of kingdom of Alania
+	#1238.1.2 = {
+	#	liege = e_golden_horde
+	#}
+	1238.1.2 = {
+		holder = 93037	#fictional Khankhusy
+	}
+	1280.1.1 = {
+		holder = 93039
+	}
+	1313.1.1 = {
+		holder = 93047
 	}
 }
 
 c_derbent = {
 	867.1.1 = { change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
-	1187.1.1 = { change_development_level = 14 }
-	1337.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 39 }
 	
 	270.1.1 = {
 		holder = 159580
@@ -1153,62 +1219,93 @@ c_derbent = {
 	}
 	1317.1.1 = {
 		holder = 144574
-		liege = 0
 	}
 }
 
 
-c_samander = { #Avaristan
-	1187.1.1 = { change_development_level = 10 }
-	1337.1.1 = { change_development_level = 14 }
-	865.1.1 = {
-		holder = avaz_avar
+c_samander = {
+	691.1.1 = {
 		liege = e_caspian-pontic_steppe
+		holder = 74007
 	}
-	910.1.1 = {
-		holder = buht_yisho_i_avar
+	715.1.1 = {
+		holder = 74008
 	}
-	930.1.1 = {
-		holder = pilan_shah_avar
-		liege = 0
+	731.1.1 = {
+		holder = 74009
 	}
-	980.1.1 = {
-		holder = buht_yisho_ii_avar
-	}
-	1030.1.1 = {
-		holder = piruzha_avar
-	}
-	1060.1.1 = {
-		holder = tokku_avar
-	}
-	#1100.1.1 = {
-		#holder = 0
-	#}
-	1180.1.1 = {
-		holder = saratan_i_avar
-		government = feudal_government
-	}
-	1220.1.1 = {
-		holder = surakat_i_avar
-		liege = e_golden_horde
-	}
-	1250.1.1 = {
-		holder = baysar_avar
+	740.1.1 = {
+		holder = saririds_1
 		government = clan_government
 	}
-	1270.1.1 = {
-		holder = amir_sultan_avar
+	788.1.1 = {
+		holder = saririds_2
 	}
-	1295.1.1 = {
-		holder = saratan_ii_avar
+	832.1.1 = {
+		holder = saririds_3
 	}
-	1330.1.1 = {
-		holder = surakat_ii_avar
+	836.1.1 = {
+		holder = saririds_4
+	}
+	853.1.1 = {
+		holder = saririds_5
+	}
+	905.1.1 = {
+		holder = saririds_6
+	}
+	940.1.1 = {
+		holder = saririds_7
+	}
+	950.1.1 = {
+		holder = saririds_8
+	}
+	1025.1.1 = {
+		holder = saririds_9
+	}
+	1026.1.1 = {
+		holder = saririds_10
+	}
+	1064.1.1 = {
+		liege = 0 #Sarir seem to have been independent at this time, though more research wouldn't hurt 
+		holder = saririds_11
+	}
+	#Cumans
+	1080.1.1 = {
+		liege = "k_cuman"
+	}
+	1178.1.1 = {
+		holder = alan_sarir_1 # Saratan
+		government = tribal_government
+		liege = 0
+	}
+	1183.1.1 = {
+		holder = 228030
+	}
+	1203.1.1 = {
+		holder = 125403
+	}
+	1223.1.1 = {
+		holder = 125404
+	}
+	1238.1.1 = {
+		holder = 34851
+	}
+	1262.1.13 = {
+		holder = 34903
+	}
+	1280.1.1 = {
+		holder = 34904
+	}
+	1285.1.1 = {
+		holder = 34906
+	}
+	1305.1.1 = {
+		holder = 480000
 	}
 }
 
 
-c_samiran = { #Shamkhalate (Kumykia)
+c_samiran = {
 	691.1.1 = {
 		liege = e_caspian-pontic_steppe
 		holder = 74007
@@ -1250,8 +1347,29 @@ c_samiran = { #Shamkhalate (Kumykia)
 	864.1.1 = {
 		holder = 74025
 	}
-	936.1.1 = {
-		holder = 260704
+	888.1.1 = {
+		holder = 74026
+	}
+	899.1.1 = {
+		holder = 146187
+	}
+	916.1.1 = {
+		holder = 146188
+	}
+	920.1.1 = {
+		holder = 146189
+	}
+	928.1.1 = {
+		holder = 146190
+	}
+	945.1.1 = {
+		holder = 146191
+	}
+	969.1.1 = {
+		holder = 146193
+	}
+	993.1.1 = {
+		holder = 146194
 	}
 	
 	#Cumans
@@ -1262,14 +1380,8 @@ c_samiran = { #Shamkhalate (Kumykia)
 	1060.1.1 = {
 		holder = 20663
 	}
-	1110.1.1 = {
-		holder = 90143
-	}
-	1120.1.1 = {
-		holder = 125401
-	}
-	1146.1.1 = {
-		holder = 125402
+	1178.1.1 = {
+		holder = 161733 # Fictional placeholder
 	}
 	1183.1.1 = {
 		holder = 228030
@@ -1281,15 +1393,18 @@ c_samiran = { #Shamkhalate (Kumykia)
 		holder = 125404
 	}
 	1238.1.1 = {
-		liege = e_golden_horde
+		holder = 34851
 	}
-	
-	1295.1.1 = {
-		holder = badr_shamkhal
-		government = clan_government
+	1262.1.13 = {
+		holder = 34903
 	}
-	1320.1.1 = {
-		holder = akhsuvar_shamkhal
+	1280.1.1 = {
+		holder = 34904
 	}
-	
+	1285.1.1 = {
+		holder = 34906
+	}
+	1305.1.1 = {
+		holder = 480000
+	}
 }

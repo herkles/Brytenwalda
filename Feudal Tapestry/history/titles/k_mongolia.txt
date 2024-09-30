@@ -1,21 +1,45 @@
-e_mongolia = {
+k_mongolia = {
+	867.1.1 = { change_development_level = 0 }
+	1066.1.1 = { change_development_level = 0 }
+	1178.1.1 = { change_development_level = 0 }
+	
+	# Liao Dynasty
+	1040.1.1 = {
+		holder = 194332
+		government = tribal_government
+	}
+	1055.8.28 = {
+		holder = 194333
+	}
+	1101.2.12 = {
+		holder = 194334
+	}
+	1125.3.26 = {
+		holder = 0
+	}
+	
+	
+	# Mongol Empire
+	1206.1.1 = {
+		holder = 125501 # Genghis Khan
+	}
 	1227.12.2 = {
-		holder = 172005 # Ögedei Khan
+		holder = 172005 # ??gedei Khan
 	}
 	1241.12.11 = {
-		holder = 172007 # Güyük Khan
+		holder = 172007 # G??y??k Khan
 	}
 	1248.1.1 = {
-		holder = 217265 # Möngke Khan
+		holder = 217265 # M??ngke Khan
 	}
 	1259.8.11 = {
 		holder = 217266 # Kublai Khan
 	}
 	1294.2.18 = {
-		holder = 217269 # Temür Khan
+		holder = 217269 # Tem??r Khan
 	}
 	1307.2.10 = {
-		holder = 217271 # Külüg Khan
+		holder = 217271 # K??l??g Khan
 	}
 	1311.1.27 = {
 		holder = 217272 # Buyantu Khan
@@ -24,7 +48,7 @@ e_mongolia = {
 		holder = 217274 # Gegeen Khan
 	}
 	1323.9.4 = {
-		holder = 217279 # Yesün Temür Khan
+		holder = 217279 # Yes??n Tem??r Khan
 	}
 	1328.8.15 = {
 		holder = 217280 # Ragibagh Khan
@@ -42,46 +66,7 @@ e_mongolia = {
 		holder = 217283 # Rinchinbal Khan
 	}
 	1332.12.14 = {
-		holder = 217284 #Toghon Temür Khan
-		government = feudal_government
-	}
-}
-k_mongolia = {
-	867.1.1 = { change_development_level = 0 }
-	1066.1.1 = { change_development_level = 0 }
-	1187.1.1 = { change_development_level = 10 }
-	1337.1.1 = { change_development_level = 12 }
-	
-	# Liao Dynasty
-	907.2.27 = {
-		holder = 194325
-	}
-	926.9.6 = {
-		holder = 194326
-	}
-	947.5.15 = {
-		holder = 194328
-	}
-	951.10.7 = {
-		holder = 194329
-	}
-	969.3.12 = {
-		holder = 194330
-	}
-	982.10.13 = {
-		holder = 194331
-	}
-	1031.6.25 = {
-		holder = 194332
-	}
-	1055.8.28 = {
-		holder = 194333
-	}
-	1101.2.12 = {
-		holder = 194334
-	}
-	1125.3.26 = {
-		holder = 0
+		holder = 217284 # Toghon Tem??r Khan
 	}
 }
 
@@ -93,9 +78,6 @@ d_otuken = {
 	#Keraits defeated by the mongols
 	1203.1.2 = {
 		holder = 125501		#Genghis Khan
-	}
-	1332.12.14 = {
-		holder = 217284
 	}
 }
 
@@ -132,6 +114,9 @@ c_karakorum = {
 		holder = 194331
 	}
 	1031.6.25 = {
+		holder = 194332
+	}
+	1040.1.1 = {
 		holder = 194332
 	}
 	1055.8.28 = {
@@ -172,20 +157,13 @@ c_karakorum = {
 		liege = d_otuken
 		holder = 125501		#Genghis Khan
 	}
-	
-	1332.12.14 = {
-		government = feudal_government
-		holder = 217284 #Toghon Temr Khan
-	}
-	1337.1.1 = {
-		change_development_level = 50
-	}
 }
 
 
 c_karabalgasun = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	#Kirghiz khanate
 	840.1.2 = {
@@ -203,14 +181,14 @@ c_karabalgasun = {
 	
 	#End of Kirghiz Khanate
 	925.1.2 = {
-		liege = k_mongolia
+		liege = 0
 	}
 	
 	952.1.2 = {
-		holder = 303259		#Menen Tdn Borjigin
+		holder = 303259		#Menen Tüdün Borjigin
 	}
 	992.1.2 = {
-		holder = 303260		#Hachi Hlg Borjigin
+		holder = 303260		#Hachi Hülüg Borjigin
 	}
 	999.1.1 = {
 		liege = d_ogrash	#Khan of the Khamag
@@ -251,9 +229,6 @@ c_karabalgasun = {
 	}
 	1200.10.25 = {
 		holder = 303237		#fictional Gur Konkant
-	}
-	1332.12.14 = {
-		holder = 217284 #Toghon Temr Khan
 	}
 }
 
@@ -275,14 +250,14 @@ c_mumo = {
 	
 	#End of Kirghiz Khanate
 	925.1.2 = {
-		liege = k_mongolia
+		liege = 0
 	}
 	
 	952.1.2 = {
-		holder = 303259		#Menen Tdn Borjigin
+		holder = 303259		#Menen Tüdün Borjigin
 	}
 	992.1.2 = {
-		holder = 303260		#Hachi Hlg Borjigin
+		holder = 303260		#Hachi Hülüg Borjigin
 	}
 	999.1.1 = {
 		liege = d_ogrash	#Khan of the Khamag
@@ -323,9 +298,6 @@ c_mumo = {
 	}
 	1200.10.25 = {
 		holder = 303237		#fictional Gur Konkant
-	}
-	1332.12.14 = {
-		holder = 217284 #Toghon Temr Khan
 	}
 }
 
@@ -366,10 +338,6 @@ d_ogrash = {
 	1189.1.1 = {
 		holder = 125501		#Temujin GENGHIS KHAN Borjigin
 	}
-	1300.1.1 = {
-		holder = 93099
-		liege = e_mongolia
-	}
 }
 
 
@@ -390,14 +358,14 @@ c_ulaanbaatar = {
 	
 	#End of Kirghiz Khanate
 	925.1.2 = {
-		liege = k_mongolia
+		liege = 0
 	}
 	
 	952.1.2 = {
-		holder = 303259		#Menen Tdn Borjigin
+		holder = 303259		#Menen Tüdün Borjigin
 	}
 	992.1.2 = {
-		holder = 303260		#Hachi Hlg Borjigin
+		holder = 303260		#Hachi Hülüg Borjigin
 	}
 	999.1.1 = {
 		liege = d_ogrash	#Khan of the Khamag
@@ -432,22 +400,13 @@ c_ulaanbaatar = {
 	}
 	1160.1.1 = {
 		liege = 0	#No Khamag Khan
-		holder = 93055		#Yesgei Borjigin
+		holder = 93055		#Yesügei Borjigin
 	}
 	1171.1.1 = {
 		holder = 125501		#Temujin GENGHIS KHAN Borjigin
 	}
 	1189.1.1 = {
 		liege = d_ogrash
-		effect = {
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:become_greatest_of_khans_decision
-			}
-		}
-	}
-	1300.1.1 = {
-		holder = 93099
 	}
 }
 
@@ -469,14 +428,14 @@ c_khentii = {
 	
 	#End of Kirghiz Khanate
 	925.1.2 = {
-		liege = k_mongolia
+		liege = 0
 	}
 	
 	952.1.2 = {
-		holder = 303259		#Menen Tdn Borjigin
+		holder = 303259		#Menen Tüdün Borjigin
 	}
 	992.1.2 = {
-		holder = 303260		#Hachi Hlg Borjigin
+		holder = 303260		#Hachi Hülüg Borjigin
 	}
 	999.1.1 = {
 		liege = d_ogrash	#Khan of the Khamag
@@ -511,16 +470,13 @@ c_khentii = {
 	}
 	1160.1.1 = {
 		liege = 0	#No Khamag Khan
-		holder = 93055		#Yesgei Borjigin
+		holder = 93055		#Yesügei Borjigin
 	}
 	1171.1.1 = {
 		holder = 125501		#Temujin GENGHIS KHAN Borjigin
 	}
 	1189.1.1 = {
 		liege = d_ogrash
-	}
-	1300.1.1 = {
-		holder = 93099
 	}
 }
 
@@ -542,14 +498,14 @@ c_naushki = {
 	
 	#End of Kirghiz Khanate
 	925.1.2 = {
-		liege = k_mongolia
+		liege = 0
 	}
 	
 	952.1.2 = {
-		holder = 303259		#Menen Tdn Borjigin
+		holder = 303259		#Menen Tüdün Borjigin
 	}
 	992.1.2 = {
-		holder = 303260		#Hachi Hlg Borjigin
+		holder = 303260		#Hachi Hülüg Borjigin
 	}
 	999.1.1 = {
 		liege = d_ogrash	#Khan of the Khamag
@@ -584,16 +540,13 @@ c_naushki = {
 	}
 	1160.1.1 = {
 		liege = 0	#No Khamag Khan
-		holder = 93055		#Yesgei Borjigin
+		holder = 93055		#Yesügei Borjigin
 	}
 	1171.1.1 = {
 		holder = 125501		#Temujin GENGHIS KHAN Borjigin
 	}
 	1189.1.1 = {
 		liege = d_ogrash
-	}
-	1300.1.1 = {
-		holder = 93099
 	}
 }
 
@@ -655,19 +608,13 @@ d_selenga_valley = {
 	
 	#1150 - Bayad (fictional date)
 	1150.1.2 = {
-		holder = 1303140		#fictional Hulegu Bayad
+		holder = 303140		#fictional Hulegu Bayad
 	}
 	1178.5.20 = {
-		holder = 1303142		#fictional Tamachi Bayad
+		holder = 303142		#fictional Tamachi Bayad
 	}
 	1187.3.17 = {
-		holder = 1303147		#fictional Bartan Bayad
-	}
-	1200.2.3 = {
-		holder = 1303148		#Fictional Munglig Bayad
-	}
-	1332.12.14 = {
-		holder = 217284 #Toghon Temr Khan
+		holder = bayad0005		#fictional Bartan Bayad
 	}
 }
 
@@ -716,19 +663,13 @@ c_selenga = {
 	
 	#1150 - Bayad (fictional date)
 	1150.1.2 = {
-		holder = 1303140		#fictional Hulegu Bayad
+		holder = 303140		#fictional Hulegu Bayad
 	}
 	1178.5.20 = {
-		holder = 1303142		#fictional Tamachi Bayad
+		holder = 303142		#fictional Tamachi Bayad
 	}
 	1187.3.17 = {
-		holder = 1303147		#fictional Bartan Bayad
-	}
-	1200.2.3 = {
-		holder = 1303148		#Fictional Munglig Bayad
-	}
-	1332.12.14 = {
-		holder = 217284 #Toghon Temr Khan
+		holder = bayad0005		#fictional Bartan Bayad
 	}
 }
 
@@ -774,16 +715,13 @@ c_baibalik = {
 	
 	#1150 - Bayad (fictional date)
 	1150.1.2 = {
-		holder = 1303140		#fictional Hulegu Bayad
+		holder = 303140		#fictional Hulegu Bayad
 	}
 	1178.5.20 = {
-		holder = 303144		#fictional Uighurtai Bayad
+		holder = bayad0002		#fictional Uighurtai Bayad
 	}
 	1189.8.8 = {
-		holder = 303153		#fictional Ghazan Bayad
-	}
-	1332.12.14 = {
-		holder = 217284 #Toghon Temr Khan
+		holder = bayad0011		#fictional Ghazan Bayad
 	}
 }
 
@@ -829,16 +767,13 @@ c_khokhoo = {
 	
 	#1150 - Bayad (fictional date)
 	1150.1.2 = {
-		holder = 1303140		#fictional Hulegu Bayad
+		holder = 303140		#fictional Hulegu Bayad
 	}
 	1178.5.20 = {
-		holder = 1303143		#fictional Taghai Bayad
+		holder = 303143		#fictional Taghai Bayad
 	}
 	1181.8.24 = {
-		holder = 1303151		#fictional Godan Bayad
-	}
-	1332.12.14 = {
-		holder = 217284 #Toghon Temr Khan
+		holder = bayad0009		#fictional Godan Bayad
 	}
 }
 
@@ -881,16 +816,13 @@ c_karatsagaan = {
 	
 	#1150 - Bayad (fictional date)
 	1150.1.2 = {
-		holder = 1303140		#fictional Hulegu Bayad
+		holder = 303140		#fictional Hulegu Bayad
 	}
 	1178.5.20 = {
-		holder = 1303143		#fictional Taghai Bayad
+		holder = 303143		#fictional Taghai Bayad
 	}
 	1181.8.24 = {
-		holder = 1303151		#fictional Godan Bayad
-	}
-	1332.12.14 = {
-		holder = 217284 #Toghon Temr Khan
+		holder = bayad0009		#fictional Godan Bayad
 	}
 }
 
@@ -939,19 +871,13 @@ c_tunka = {
 	
 	#1150 - Bayad (fictional date)
 	1150.1.2 = {
-		holder = 1303140		#fictional Hulegu Bayad
+		holder = 303140		#fictional Hulegu Bayad
 	}
 	1178.5.20 = {
-		holder = 1303142		#fictional Tamachi Bayad
+		holder = 303142		#fictional Tamachi Bayad
 	}
 	1187.3.17 = {
-		holder = 1303147		#fictional Bartan Bayad
-	}
-	1200.2.3 = {
-		holder = 1303148		#Fictional Munglig Bayad
-	}
-	1332.12.14 = {
-		holder = 217284 #Toghon Temr Khan
+		holder = bayad0005		#fictional Bartan Bayad
 	}
 }
 
@@ -1643,11 +1569,8 @@ c_tomorbulag = {
 	1168.1.18 = {
 		holder = 303019	#fictional Gulichi Oirat
 	}
-	1195.7.28 = {
+	1177.1.1 = {
 		holder = 303020	#fictional O_rU_g Oirat
-	}
-	1332.12.14 = {
-		holder = 217284 #Toghon Temr Khan
 	}
 }
 
@@ -1709,10 +1632,10 @@ d_gobi_altai = {
 	
 	#867
 	850.1.15 = {
-		holder = 303301		#Qatarqa Gchgd
+		holder = 303301		#Qatarqa Güchügüd
 	}
 	884.5.12 = {
-		holder = 303302		#Qorisu_Dayir Gchgd
+		holder = 303302		#Qorisu_Dayir Güchügüd
 	}
 
 	896.8.11 = {
@@ -1739,27 +1662,20 @@ d_gobi_altai = {
 	
 	#1066
 	1060.3.5 = {
-		holder = 303303		#Kurchakus Gchgd
+		holder = 303303		#Kurchakus Güchügüd
 	}
 	1090.6.2 = {
-		holder = 303304		#Tayan Gchgd
+		holder = 303304		#Tayan Güchügüd
 	}
 	1123.11.24 = {
-		holder = 303305		#Togrul Gchgd
+		holder = 303305		#Togrul Güchügüd
 	}
 	#End of Liao Dynasty
 	1125.3.26 = {
 		liege = 0
 	}
 	1154.7.13 = {
-		holder = 303306		#Bukha_Timur Gchgd
-	}
-	1187.1.1 = {
-		liege = e_kara_khitai
-	}
-	1332.12.14 = {
-		holder = 217261
-		liege = e_mongolia
+		holder = 303306		#Bukha_Timur Güchügüd
 	}
 }
 
@@ -1772,7 +1688,7 @@ c_tseel = {
 		government = tribal_government
 	}
 	884.5.12 = {
-		holder = 303302		#Qorisu_Dayir Gchgd
+		holder = 303302		#Qorisu_Dayir Güchügüd
 	}
 
 	896.8.11 = {
@@ -1791,19 +1707,16 @@ c_tseel = {
 	
 	#1066
 	1060.3.5 = {
-		holder = 303303		#Kurchakus Gchgd
+		holder = 303303		#Kurchakus Güchügüd
 	}
 	1090.6.2 = {
-		holder = 303304		#Tayan Gchgd
+		holder = 303304		#Tayan Güchügüd
 	}
 	1123.11.24 = {
-		holder = 303305		#Togrul Gchgd
+		holder = 303305		#Togrul Güchügüd
 	}
 	1154.7.13 = {
-		holder = 303306		#Bukha_Timur Gchgd
-	}
-	1332.12.14 = {
-		holder = 217261
+		holder = 303306		#Bukha_Timur Güchügüd
 	}
 }
 
@@ -1812,11 +1725,11 @@ c_sharga = {
 	#867
 	850.1.15 = {
 		liege = d_gobi_altai
-		holder = 303301		#Qatarqa Gchgd
+		holder = 303301		#Qatarqa Güchügüd
 		government = tribal_government
 	}
 	884.5.12 = {
-		holder = 303302		#Qorisu_Dayir Gchgd
+		holder = 303302		#Qorisu_Dayir Güchügüd
 	}
 
 	896.8.11 = {
@@ -1836,19 +1749,19 @@ c_sharga = {
 	
 	#1066
 	1060.3.5 = {
-		holder = 303303		#Kurchakus Gchgd
+		holder = 303303		#Kurchakus Güchügüd
 	}
 	1090.6.2 = {
-		holder = 303304		#Tayan Gchgd
+		holder = 303304		#Tayan Güchügüd
 	}
 	1123.11.24 = {
-		holder = 303305		#Togrul Gchgd
+		holder = 303305		#Togrul Güchügüd
 	}
 	1154.7.13 = {
-		holder = 303306		#Bukha_Timur Gchgd
+		holder = 303306		#Bukha_Timur Güchügüd
 	}
-	1332.12.14 = {
-		holder = 217261
+	1177.1.1 = {
+		holder = 303307 # Toqto'a Güchügüd
 	}
 }
 
@@ -1857,11 +1770,11 @@ c_zarman = {
 	#867
 	850.1.15 = {
 		liege = d_gobi_altai
-		holder = 303301		#Qatarqa Gchgd
+		holder = 303301		#Qatarqa Güchügüd
 		government = tribal_government
 	}
 	884.5.12 = {
-		holder = 303302		#Qorisu_Dayir Gchgd
+		holder = 303302		#Qorisu_Dayir Güchügüd
 	}
 
 	896.8.11 = {
@@ -1881,19 +1794,16 @@ c_zarman = {
 	
 	#1066
 	1060.3.5 = {
-		holder = 303303		#Kurchakus Gchgd
+		holder = 303303		#Kurchakus Güchügüd
 	}
 	1090.6.2 = {
-		holder = 303304		#Tayan Gchgd
+		holder = 303304		#Tayan Güchügüd
 	}
 	1123.11.24 = {
-		holder = 303305		#Togrul Gchgd
+		holder = 303305		#Togrul Güchügüd
 	}
 	1154.7.13 = {
-		holder = 303306		#Bukha_Timur Gchgd
-	}
-	1332.12.14 = {
-		holder = 217261
+		holder = 303306		#Bukha_Timur Güchügüd
 	}
 }
 
@@ -2170,11 +2080,11 @@ c_khar_us = {
 	#867
 	850.1.15 = {
 		liege = d_gobi_altai
-		holder = 303301		#Qatarqa Gchgd
+		holder = 303301		#Qatarqa Güchügüd
 		government = tribal_government
 	}
 	884.5.12 = {
-		holder = 303302		#Qorisu_Dayir Gchgd
+		holder = 303302		#Qorisu_Dayir Güchügüd
 	}
 	
 	896.8.11 = {
@@ -2218,10 +2128,10 @@ c_khar_us = {
 	}
 	
 	1154.7.13 = {
-		holder = 303306		#Bukha_Timur Gchgd
+		holder = 303306		#Bukha_Timur Güchügüd
 	}
-	1332.12.14 = {
-		holder = 217261
+	1177.1.1 = {
+		holder = 303307 # Toqto'a Güchügüd
 	}
 }
 
@@ -2292,11 +2202,11 @@ c_tsambagarau = {
 	#867
 	850.1.15 = {
 		liege = d_gobi_altai
-		holder = 303301		#Qatarqa Gchgd
+		holder = 303301		#Qatarqa Güchügüd
 		government = tribal_government
 	}
 	884.5.12 = {
-		holder = 303302		#Qorisu_Dayir Gchgd
+		holder = 303302		#Qorisu_Dayir Güchügüd
 	}
 
 	896.8.11 = {
@@ -2317,19 +2227,16 @@ c_tsambagarau = {
 	
 	#1066
 	1060.3.5 = {
-		holder = 303303		#Kurchakus Gchgd
+		holder = 303303		#Kurchakus Güchügüd
 	}
 	1090.6.2 = {
-		holder = 303304		#Tayan Gchgd
+		holder = 303304		#Tayan Güchügüd
 	}
 	1123.11.24 = {
-		holder = 303305		#Togrul Gchgd
+		holder = 303305		#Togrul Güchügüd
 	}
 	1154.7.13 = {
-		holder = 303306		#Bukha_Timur Gchgd
-	}
-	1332.12.14 = {
-		holder = 217261
+		holder = 303306		#Bukha_Timur Güchügüd
 	}
 }
 

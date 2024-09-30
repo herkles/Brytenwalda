@@ -8,21 +8,6 @@ k_africa = {
 	768.1.1 = {
 		government = clan_government
 		holder = 210014
-		effect = {
-			if = {
-				limit = {
-					exists = holder
-					has_dlc_feature = royal_court
-				}
-				holder = {
-					set_court_language = language_arabic
-					if = {
-						limit = { NOT = { knows_court_language_of = this } }
-						learn_court_language_of = this
-					}
-				}
-			}
-		}
 	}
 	#768.1.1 = {
 	#	liege = "e_arabia"
@@ -79,13 +64,6 @@ k_africa = {
 	875.1.1 = {
 		holder = 163147
 	}
-	# Fatimids
-	909.1.1 = {
-		holder = 32900
-	}
-	934.1.1 = {
-		holder = 32901
-	}
 	#Zirids
 	1045.1.1 = {
 		holder = 20935
@@ -124,9 +102,6 @@ k_africa = {
 	#Hafsids
 	1229.1.1 = {
 		holder = 33021
-		effect = {
-			set_capital_county = title:c_tunis
-		}
 	}
 	1251.1.1 = {
 		holder = 33024
@@ -163,6 +138,7 @@ k_africa = {
 d_kairouan = {
 	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	1054.1.1 = {
 		government = tribal_government
@@ -170,7 +146,9 @@ d_kairouan = {
 	}
 	1090.1.1 = {
 		holder = 0
+	}
 }
+
 c_kairwan = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
@@ -599,9 +577,8 @@ d_tunis = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
-
 }
+	
 c_tunis = {
 	867.1.1 = {	change_development_level = 10 }
 	1066.1.1 = { change_development_level = 16 }
@@ -617,8 +594,8 @@ c_tunis = {
 		government = clan_government
 		holder = 163096
 	}
-	936.1.1 = {
-		holder = 260857
+	920.1.1 = {
+		holder = 20931
 	}
 	973.1.1 = {
 		holder = 20932
@@ -928,8 +905,8 @@ c_mahdiya = {
 	864.1.1 = {
 		holder = 163096
 	}
-	936.1.1 = {
-		holder = 32901
+	920.1.1 = {
+		holder = 20931
 	}
 	973.1.1 = {
 		holder = 20932
@@ -1210,8 +1187,8 @@ c_sfax = {
 	864.1.1 = {
 		holder = 163096
 	}
-	936.1.1 = {
-		holder = 32901
+	920.1.1 = {
+		holder = 20931
 	}
 	973.1.1 = {
 		holder = 20932
@@ -1715,6 +1692,7 @@ c_bir_amir = {
 		holder = 155138
 	}
 
+#Old history
 	1070.1.1 = {
 		holder = 155139
 	}
@@ -1765,6 +1743,9 @@ c_bir_amir = {
 	}
 	1172.1.1 = {
 		holder = 155113
+	}
+	1177.1.1 = {
+		holder = dabbabid_1 # Hamid
 	}
 	1187.10.15 = {
 		liege = "d_tunis"
@@ -1846,6 +1827,7 @@ c_ghadames = {
 		holder = 155138
 	}
 
+	#Old history
 	1070.1.1 = {
 		holder = 155139
 	}
@@ -2374,6 +2356,7 @@ c_syrte = {
 		holder = 1229656
 	}
 
+	#Old history
 	1093.1.1 = {
 		government = clan_government
 		holder = 155208
@@ -2434,6 +2417,7 @@ c_labda = {
 		holder = 1229656
 	}
 
+	#Old history
 	1093.1.1 = {
 		government = clan_government
 		holder = 155133

@@ -1,23 +1,22 @@
 ﻿k_jerusalem = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	1099.7.15 = {
 		holder = 10072 #Godefroy I de Boulogne
 	}
-	1100.4.2 = {
+	1100.7.18 = {
 		holder = 10073 #Badouin I de Boulogne
 	}
 	1118.4.2 = {
 		holder = 232007 #Badouin II de Rethel
 	}
 	1131.8.21 = {
-		holder = 223525
+		holder = 232006 # Melisende
 	}
-	1143.11.13 = {
-		holder = 231067
+	1152.3.30 = {
+		holder = 231067 # Baldwin III of Jerusalem
 	}
 	1162.2.10 = {
 		holder = 223520
@@ -53,17 +52,17 @@
 	1212.1.1 = {
 		holder = 30809 #Isabelle II de Brienne
 	}
-	1228.5.4 = {
-		holder = 30760 #Konrad Hohenstauffen
-	}
 	#1228.1.1 = {
-	#	holder = 138019 #Alix de Blois (acting as regent)
+	#	holder = 30760 #Konrad Hohenstauffen
 	#}
-	1254.5.21 = {
-		holder = 30785 #Konradin Hohenstaufen
+	1228.1.1 = {
+		holder = 138019 #Alix de Blois (acting as regent)
 	}
-	
-	1268.10.29 = {
+	#1254.5.21 = {
+	#	holder = 30785 #Konradin Hohenstaufen
+	#}
+	#
+	1247.1.1 = {
 		holder = 461905 #Hugues III de Chypres/Lusignan
 	}
 	1284.3.24 = {
@@ -79,9 +78,7 @@
 	#1337.1.1 = {
 	#	holder = 461700
 	#}
-
 }
-
 
 d_oultrejourdain = {
 	800.1.1 = {
@@ -93,6 +90,7 @@ d_oultrejourdain = {
 	1100.1.1 = {
 		change_development_level = 15
 	}
+	1178.1.1 = { change_development_level = 15 }
 	
 	1118.4.2 = {
 		liege = "k_jerusalem"
@@ -160,6 +158,7 @@ d_oultrejourdain = {
 c_kerak = {
 	867.1.1 = {	change_development_level = 10 }
 	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 18 }
 	
 	690.1.1 = {
 		liege = "d_palestine"
@@ -234,9 +233,9 @@ c_kerak = {
 	1174.10.1 = {
 		holder = 223592
 	}
-	#1176.1.1 = {
-	#	holder = 223590
-	#}
+	1177.1.1 = {
+		holder = 223590 # Reynald de Chatillon's marriage to Stephanie de Milly
+	}
 	1187.7.4 = {
 		holder = 223560
 	}
@@ -382,6 +381,7 @@ d_palestine = {
 	1100.1.1 = {
 		change_development_level = 17
 	}
+	1178.1.1 = { change_development_level = 17 }
 	
 	690.1.1 = {
 		liege = "e_arabia"
@@ -447,10 +447,10 @@ d_palestine = {
 		holder = 232007 #Badouin II de Rethel
 	}
 	1131.8.21 = {
-		holder = 223525
+		holder = 232006 # Melisende
 	}
-	1143.11.13 = {
-		holder = 231067
+	1152.3.30 = {
+		holder = 231067 # Baldwin III of Jerusalem
 	}
 	1162.2.10 = {
 		holder = 223520
@@ -507,6 +507,7 @@ d_palestine = {
 c_jerusalem = {
 	867.1.1 = {	change_development_level = 10 }
 	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 34 }
 	
 	690.1.1 = {
 		liege = "d_palestine"
@@ -561,10 +562,10 @@ c_jerusalem = {
 		holder = 232007 #Badouin II de Rethel
 	}
 	1131.8.21 = {
-		holder = 223525
+		holder = 232006 # Melisende
 	}
-	1143.11.13 = {
-		holder = 231067
+	1152.3.30 = {
+		holder = 231067 # Baldwin III of Jerusalem
 	}
 	1162.2.10 = {
 		holder = 223520
@@ -616,6 +617,26 @@ c_jerusalem = {
 	}
 }
 
+b_ar-ramla = {
+	1152.1.1 = {
+		holder = 144187 # Hugues d'Ibelin
+	}
+	1169.1.1 = {
+		holder = 144167 # Baudouin d'Ibelin
+	}
+}
+
+b_nablus = {
+	1177.1.1 = {
+		holder = 223570 # Balian d'Ibelin
+	}
+}
+
+b_hebron = {
+	1174.7.11 = {
+		holder = 223523
+	}
+}
 
 c_ghazza = {
 	690.1.1 = {
@@ -644,7 +665,7 @@ c_ghazza = {
 	#	liege = "d_ascalon"
 	#}
 	866.1.1 = {
-		holder = 163136
+		holder = 159732
 	}
 	877.1.1 = {
 		liege = 0
@@ -685,9 +706,6 @@ c_ghazza = {
 	}
 	1177.1.1 = {
 		holder = 223522 #Sybilla of Jerusalem
-	}
-	1187.1.1 = {
-		holder = 223500
 	}
 	1188.1.1 = {
 		liege = "d_palestine"
@@ -815,14 +833,11 @@ c_jaffa = {
 	1122.1.1 = {
 		holder = 32293 #Hugues II de Puiset
 	}
-	1134.1.1 = {
-		holder = 223525
+	1131.8.21 = {
+		holder = 232006 # Melisende
 	}
-	1143.11.13 = {
-		holder = 231067
-	}
-	1151.1.1 = {
-		holder = 223520
+	1152.3.30 = {
+		holder = 231067 # Baldwin III of Jerusalem
 	}
 	#1153.1.1 = {
 	#	liege = "d_ascalon"
@@ -909,6 +924,7 @@ d_urdunn = {
 	1100.1.1 = {
 		change_development_level = 17
 	}
+	1178.1.1 = { change_development_level = 17 }
 	
 	733.1.1 = {
 		liege = "e_arabia"
@@ -937,7 +953,7 @@ d_urdunn = {
 		holder = levantine0001
 	}
 	866.1.1 = {
-		holder = 146080
+		holder = 159732
 	}
 	877.1.1 = {
 		liege = 0
@@ -957,7 +973,6 @@ d_urdunn = {
 	}
 	1099.7.15 = {
 		holder = 30871 #Tancred de Hauteville
-		#name = d_galilee
 	}
 	1101.1.1 = {
 		holder = 31352 #Hugues de Saint-Omer
@@ -986,9 +1001,7 @@ d_urdunn = {
 	1187.9.1 = {
 		holder = 0
 	}
-	#1337.1.1 = {
-	#	reset_name = yes
-	#}
+
 }
 
 
@@ -1019,7 +1032,7 @@ c_tiberias = {
 		holder = levantine0001
 	}
 	866.1.1 = {
-		holder = 146080
+		holder = 159732
 	}
 	936.1.1 = {
 		holder = 260847
@@ -1068,11 +1081,8 @@ c_tiberias = {
 	1148.1.1 = {
 		holder = 31393 #Guillaume II de Bures
 	}
-	1159.3.1 = {
-		holder = 31355 #Gauthier de Saint-Omer
-	}
-	1171.1.1 = {
-		holder = 223650 #Raimond III de Toulouse
+	1158.1.1 = {
+		holder = 31384 # Eschiva de Bures
 	}
 	1187.9.1 = {
 		liege = "d_palestine"
@@ -1114,13 +1124,12 @@ c_tiberias = {
 	1320.1.1 = {
 		holder = 485220
 	}
-
 }
-
 
 c_acre = {
 	867.1.1 = {	change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 34 }
 	
 	733.1.1 = {
 		liege = "d_urdunn"
@@ -1139,7 +1148,7 @@ c_acre = {
 		holder = 146045
 	}
 	852.3.1 = {
-		holder = 163134
+		holder = 159732
 	}
 	866.1.1 = {
 		liege = "d_palestine"
@@ -1163,29 +1172,8 @@ c_acre = {
 	1099.7.15 = {
 		liege = "d_urdunn"
 	}
-	1099.7.15 = {
-		holder = 30871 #Tancred de Hauteville
-	}
 	1101.1.1 = {
 		liege = "d_palestine"
-	}
-	1101.1.1 = {
-		holder = 10073 #Badouin I de Boulogne
-	}
-	1118.4.2 = {
-		holder = 232007 #Badouin II de Rethel
-	}
-	1131.8.21 = {
-		holder = 223525
-	}
-	1143.11.13 = {
-		holder = 231067
-	}
-	1162.2.10 = {
-		holder = 223520
-	}
-	1174.7.11 = {
-		holder = 223523
 	}
 	1176.1.1 = {
 		holder = 231015
@@ -1260,6 +1248,7 @@ c_acre = {
 	}
 
 }
+
 
 c_irbid = {
 	661.2.28 = {
@@ -1345,7 +1334,7 @@ c_irbid = {
 		holder = levantine0001
 	}
 	866.1.1 = {
-		holder = 146080
+		holder = 159732
 	}
 	936.1.1 = {
 		holder = 260840
@@ -1376,26 +1365,8 @@ c_irbid = {
 	1099.7.15 = {
 		liege = "d_urdunn"
 	}
-	1099.7.15 = {
-		holder = 30871 #Tancred de Hauteville
-	}
-	1101.1.1 = {
-		holder = 10073 #Badouin I de Boulogne
-	}
-	1118.4.2 = {
-		holder = 232007 #Badouin II de Rethel
-	}
-	1131.8.21 = {
-		holder = 223525
-	}
-	1143.11.13 = {
-		holder = 231067
-	}
-	1162.2.10 = {
-		holder = 223520
-	}
-	1174.7.11 = {
-		holder = 223523
+	1174.10.1 = {
+		holder = 223592 # Stephanie de Milly
 	}
 	1185.3.16 = {
 		holder = 223541

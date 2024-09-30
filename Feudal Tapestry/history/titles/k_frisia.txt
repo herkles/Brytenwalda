@@ -1,6 +1,7 @@
 k_frisia = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	646.1.1 = {
 		holder = 131727 #Aldgisl
@@ -35,10 +36,7 @@ k_frisia = {
 	962.2.2 = {
 		de_jure_liege = e_hre
 	}
-	
-
 }
-
 
 d_holland = {
 	760.1.1 = {
@@ -48,20 +46,15 @@ d_holland = {
 	860.1.1 = {
 		liege = "k_lotharingia"
 	}
-	
-	
 	860.1.1 = {
 		holder = 167782
 	}
-	
 	870.8.8 = {
 		liege = "e_hre"
 	}
 	880.1.1 = {
 		holder = 168336
 	}
-	
-	
 	885.1.1 = {
 		holder = 31060 #Gerolf I
 	}
@@ -144,7 +137,6 @@ c_holland = {
 	896.1.1 = {
 		holder = 263007 #Dirk I's brother
 	}
-
 	939.1.1 = {
 		holder = 106550 #Dirk II
 	}
@@ -317,6 +309,9 @@ c_zeeland = {
 	1157.8.5 = {
 		holder = 206840 #Floris III
 	}
+	1175.1.1 = {
+		holder = 31042 # Dirk van Voorne
+	}
 	1190.8.1 = {
 		holder = 206842 #Dirk VII
 	}
@@ -467,9 +462,8 @@ c_arnhem = {
 	1337.1.1 = {
 		liege = "d_gelre"
 	}
-	
-
 }
+	
 c_zutphen = {
 	769.1.1 = {
 		holder = 6392
@@ -519,11 +513,8 @@ c_zutphen = {
 	1120.1.1 = {
 		holder = 30060 #Arnold I von Kleve
 	}
-	1146.2.20 = {
-		holder = 212925 #Dietrich III
-	}
-	1172.1.18 = {
-		holder = 212920 #Dietrich IV
+	1131.10.24 = {
+		holder = 30015 # Hendrik Flamens
 	}
 	1180.9.16 = {
 		liege = "e_hre"
@@ -550,9 +541,34 @@ c_zutphen = {
 		holder = 462920 #Dietrich VIII
 	}
 }
+
+d_utrecht = {
+	1112.5.16 = {
+		holder = 30672 #Godebald van Sticht
+		liege = e_hre
+		government = theocracy_government
+	}
+	1127.11.12 = {
+		holder = 30673 #Andries van Cuijk
+	}
+	1139.6.23 = {
+		holder = 30674 #Hartbert van Bierum
+	}
+	1150.11.12 = {
+		holder = 30675 #Hermann von Hornes
+	}
+	1156.1.31 = {
+		holder = 30676 #Godfried van Rhenen
+	}
+	1178.5.27 = {
+		holder = 206847 #Boudewijn van Holland
+	}
+}
+
 c_nedersticht = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	760.1.1 = {
 		holder = 194170
@@ -660,6 +676,7 @@ c_nedersticht = {
 c_oversticht = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	760.1.1 = {
 		holder = 194170
@@ -866,34 +883,6 @@ c_groningen = {
 	1322.9.18 = {
 		holder = 462006 #Jan van Diest
 	}
-
-}
-d_frisia = {
-	1003.1.2 = {
-		holder = 106512
-		liege = e_hre
-	}
-	1038.1.24 = {
-		holder = 144956
-	}
-	1057.6.26 = {
-		holder = 106510 #Ekbert I von Braunschweig
-	}
-	1066.1.1 = {
-		holder = 0
-	}
-	1068.1.1 = {
-		holder = 106515 #Ekbert II von Braunschweig
-	}
-	1090.7.3 = {
-		holder = 30670 #Konrad von Hildesheim
-	}
-	1099.4.13 = {
-		holder = 112603 #Heinrich von Nordheim
-	}
-	1101.1.1 = {
-		holder = 0
-	}
 }
 
 c_dokkum = {
@@ -927,7 +916,7 @@ c_dokkum = {
 	}
 	1066.1.1 = {
 		liege = e_hre
-		holder = 106515
+		holder = dutch0001
 	}
 	1068.1.1 = {
 		holder = 106515 #Ekbert II von Braunschweig
@@ -953,11 +942,9 @@ c_dokkum = {
 	1150.11.12 = {
 		holder = 30675 #Hermann von Hornes
 	}
-	1156.1.31 = {
-		holder = 30676 #Godfried van Rhenen
-	}
-	1178.5.27 = {
-		holder = 206847 #Boudewijn van Holland
+	1152.1.1 = {
+		holder = horne_1 # Engelbert van Horne, bailiff in Zealand
+		liege = d_holland
 	}
 	1196.4.30 = {
 		holder = 30354 #Arnold von Isenburg
@@ -1005,9 +992,8 @@ c_dokkum = {
 	1322.9.18 = {
 		holder = 462006 #Jan van Diest
 	}
-	
-
 }
+	
 c_ostfriesland = {
 	760.1.1 = {
 		holder = 168620
@@ -1049,7 +1035,7 @@ c_ostfriesland = {
 	}
 	1066.1.1 = {
 		liege = "e_hre"
-		holder = 1418
+		holder = dutch0003
 	}
 	1072.3.28 = {
 		holder = 1418
@@ -1064,7 +1050,7 @@ c_ostfriesland = {
 		holder = 212908
 	}
 	1142.1.1 = {
-		holder = 212600
+		holder = 212600 # Henry the Lion
 	}
 	1180.9.16 = {
 		liege = "e_hre"
@@ -1124,7 +1110,7 @@ c_frisia = {
 	}
 	1066.1.1 = {
 		liege = "e_hre"
-		holder = 106515
+		holder = dutch0002
 	}
 	1068.1.1 = {
 		holder = 106515 #Ekbert II von Braunschweig
@@ -1150,11 +1136,9 @@ c_frisia = {
 	1150.11.12 = {
 		holder = 30675 #Hermann von Hornes
 	}
-	1156.1.31 = {
-		holder = 30676 #Godfried van Rhenen
-	}
-	1178.5.27 = {
-		holder = 206847 #Boudewijn van Holland
+	1152.1.1 = {
+		holder = horne_1 # Engelbert van Horne, bailiff in Zealand
+		liege = d_holland
 	}
 	1196.4.30 = {
 		holder = 30354 #Arnold von Isenburg

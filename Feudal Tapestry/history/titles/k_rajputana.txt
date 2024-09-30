@@ -2,8 +2,7 @@
 k_rajputana = {
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	550.1.1 = {
 		holder = 191605 #Harichandra
@@ -59,6 +58,7 @@ k_rajputana = {
 	}
 	1055.1.1 = {
 		holder = 188123 # Durlabharaja III
+
 	}
 	1070.1.1 = {
 		holder = 188125 # Virasimha
@@ -102,8 +102,7 @@ k_rajputana = {
 d_maru = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
-	1187.1.1 = { change_development_level = 25 }
-	1337.1.1 = { change_development_level = 50 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	550.1.1 = {
 		holder = 191605 #Harichandra
@@ -228,9 +227,6 @@ d_maru = {
 	1164.1.1 = {
 		holder = 191728 #Kelhana
 	}
-	1177.1.1 = {
-		holder = 191742 #Jayatashimha
-	}
 	1192.1.1 = {
 		holder = 191743 #Samarisimha, Chauhans of Jalor
 		liege = 0
@@ -238,27 +234,14 @@ d_maru = {
 	1232.1.1 = {
 		holder = 191745 #Udayasimha
 	}
-	1243.1.1 = {
-		holder = 191885
-		liege = k_delhi
+	1259.1.1 = {
+		holder = 191748 #Chachigadeva
 	}
-	1273.1.1 = {
-		holder = 191886
+	1282.1.1 = {
+		holder = 191751 #Samantasimha
 	}
-	1292.1.1 = {
-		holder = 191889
-	}
-	1309.1.1 = {
-		holder = 191895
-	}
-	1313.1.1 = {
-		holder = 191902
-	}
-	1323.1.1 = {
-		holder = 191903
-	}
-	1328.1.1 = {
-		holder = 191904
+	1296.1.1 = {
+		holder = 0
 	}
 }
 
@@ -379,35 +362,46 @@ c_mandavyapura = {
 	1164.1.1 = {
 		holder = 191728 #Kelhana
 	}
-	1177.1.1 = {
-		holder = 191742 #Jayatashimha
-	}
 	1192.1.1 = {
 		holder = 191743#Samarisimha
 	}
 	1232.1.1 = {
 		holder = 191745 #Udayasimha
 	}
-	1243.1.1 = {
-		holder = 191885
+	1259.1.1 = {
+		holder = 191748 #Chachigadeva
 	}
-	1273.1.1 = {
-		holder = 191886
+	1282.1.1 = {
+		holder = 191751 #Samantasimha
 	}
-	1292.1.1 = {
-		holder = 191889
+	1296.1.1 = {
+		holder = 191752 #Kanhadadeva
+		liege = 0
 	}
-	1309.1.1 = {
-		holder = 191895
+	1299.1.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+		liege = e_rajastan
 	}
-	1313.1.1 = {
-		holder = 191902
+	1316.1.3 = {
+		holder = 170247 #Umar
 	}
-	1323.1.1 = {
-		holder = 191903
+	1316.4.1 = {
+		holder = 170248 #Mubarak
 	}
-	1328.1.1 = {
-		holder = 191904
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
 
@@ -497,40 +491,9 @@ c_medantaka = {
 	1055.1.1 = {
 		holder = 188123 # Durlabharaja III
 	}
-	1070.1.1 = {
-		holder = 188125 # Virasimha
+	1178.1.1 = {
+		holder = 188143 # Hariraja
 	}
-	1090.1.1 = {
-		holder = 188126 # Vigrharaja III
-	}
-	1105.1.1 = {
-		holder = 188127 # Prithviraja I
-	}
-	1110.1.1 = {
-		holder = 188129 # Ajairaja I
-	}
-	1125.1.1 = {
-		holder = 188131 # Arnoraja
-	}
-	1151.1.1 = {
-		holder = 188134 # Jagadeva
-	}
-	1151.6.1 = {
-		holder = 188136 # Vigrharaja IV
-	}
-	1163.1.1 = {
-		holder = 188139 # Amarangeya
-	}
-	1165.1.1 = {
-		holder = 188135 # Prithviraja II
-	}
-	1169.1.1 = {
-		holder = 188141 # Someshwara
-	}
-	1177.1.1 = {
-		holder = 188142 # Prithviraja III
-	}
-	# Liege change to Ghurids
 	1192.1.1 = {
 		holder = 188145 # Govinda
 	}
@@ -562,26 +525,36 @@ c_medantaka = {
 		holder = 191745 #Udayasimha
 		liege = d_maru
 	}
-	1243.1.1 = {
-		holder = 191885
+	1259.1.1 = {
+		holder = 191748 #Chachigadeva
 	}
-	1273.1.1 = {
-		holder = 191886
+	1282.1.1 = {
+		holder = 191751 #Samantasimha
 	}
-	1292.1.1 = {
-		holder = 191889
+	1294.1.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+		liege = e_rajastan
 	}
-	1309.1.1 = {
-		holder = 191895
+	1316.1.3 = {
+		holder = 170247 #Umar
 	}
-	1313.1.1 = {
-		holder = 191902
+	1316.4.1 = {
+		holder = 170248 #Mubarak
 	}
-	1323.1.1 = {
-		holder = 191903
+	1318.1.1 = {
+		holder = 170250 #Mahmud
 	}
-	1328.1.1 = {
-		holder = 191904
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
 
@@ -852,35 +825,46 @@ c_naddula = {
 	1164.1.1 = {
 		holder = 191728 #Kelhana
 	}
-	1177.1.1 = {
-		holder = 191742 #Jayatashimha
-	}
 	1192.1.1 = {
 		holder = 191743#Samarisimha
 	}
 	1232.1.1 = {
 		holder = 191745 #Udayasimha
 	}
-	1243.1.1 = {
-		holder = 191885
+	1259.1.1 = {
+		holder = 191748 #Chachigadeva
 	}
-	1273.1.1 = {
-		holder = 191886
+	1282.1.1 = {
+		holder = 191751 #Samantasimha
 	}
-	1292.1.1 = {
-		holder = 191889
+	1296.1.1 = {
+		holder = 191752 #Kanhadadeva
+		liege = 0
 	}
-	1309.1.1 = {
-		holder = 191895
+	1299.1.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+		liege = e_rajastan
 	}
-	1313.1.1 = {
-		holder = 191902
+	1316.1.3 = {
+		holder = 170247 #Umar
 	}
-	1323.1.1 = {
-		holder = 191903
+	1316.4.1 = {
+		holder = 170248 #Mubarak
 	}
-	1328.1.1 = {
-		holder = 191904
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
 
@@ -888,6 +872,7 @@ c_naddula = {
 d_jangladesh = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	551.1.1 = {
 		liege = k_malwa
@@ -1172,26 +1157,44 @@ c_nagauda = {
 	1232.1.1 = {
 		holder = 191958 #Simhabala
 	}
-	1243.1.1 = {
-		holder = 191885
+	1239.10.1 = {
+		holder = 170204 #Balban, feif granted by Bahram
 	}
-	1273.1.1 = {
-		holder = 191886
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
 	}
-	1292.1.1 = {
-		holder = 191889
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
 	}
-	1309.1.1 = {
-		holder = 191895
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
 	}
-	1313.1.1 = {
-		holder = 191902
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
 	}
-	1323.1.1 = {
-		holder = 191903
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
 	}
-	1328.1.1 = {
-		holder = 191904
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
 
@@ -1199,8 +1202,7 @@ c_nagauda = {
 d_stravani = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
-	1187.1.1 = { change_development_level = 25 }
-	1337.1.1 = { change_development_level = 50 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	530.1.1 = {
 		holder = 188320 #Jaisimha
@@ -2238,26 +2240,62 @@ c_ajayameru = {
 	1194.1.1 = {
 		holder = 170190
 	}
-	1243.1.1 = {
-		holder = 191885
+	1210.1.1 = {
+		holder = 170191 #Aram
 	}
-	1273.1.1 = {
-		holder = 191886
+	1211.1.1 = {
+		holder = 191840 #Byala
 	}
-	1292.1.1 = {
-		holder = 191889
+	1236.5.1 = {
+		holder = 170194 #Firuz I
 	}
-	1309.1.1 = {
-		holder = 191895
+	1236.11.20 = {
+		holder = 170195 #Raziyya
 	}
-	1313.1.1 = {
-		holder = 191902
+	1239.10.1 = {
+		holder = 170198 #Bahram
 	}
-	1323.1.1 = {
-		holder = 191903
+	1242.5.15 = {
+		holder = 170199 #Masud
 	}
-	1328.1.1 = {
-		holder = 191904
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
 
@@ -2538,12 +2576,9 @@ c_gwalior = {
 	1160.1.1 = {
 		holder = 188238 # Vikramasimha Kachawaha
 	}
-	1169.1.1 = {
-		liege = k_delhi
-		holder = 188141 # Someshwara Chauhan
-	}
-	1177.1.1 = {
-		holder = 188142 # Prithviraja III
+	1170.1.1 = {
+		holder = 191860 # Anayapala
+		liege = 0
 	}
 	1192.1.1 = {
 		holder = 170190 #Mu'izz al-Din conquered Gwalior and made Qutb-ud-din Aibak governor

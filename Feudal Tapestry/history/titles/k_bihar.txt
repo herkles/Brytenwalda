@@ -1,9 +1,7 @@
-
 k_bihar = {
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	672.1.1 = {
 		holder = 191096 #Adityasenagupta
@@ -182,32 +180,15 @@ k_bihar = {
 	}
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
-		effect = {
-			if = {
-				limit = {
-					exists = holder
-					has_dlc_feature = royal_court
-				}
-				holder = {
-					set_court_language = language_iranian
-					if = {
-						limit = { NOT = { knows_court_language_of = this } }
-						learn_court_language_of = this
-					}
-				}
-			}
-		}
 	}
 	#Lasting independence from 1338
-	1337.1.1 = {
-		holder = 0
-	}
 }
 
 
 d_magadha = {
 	867.1.1 = { change_development_level = 18 }
 	1066.1.1 = { change_development_level = 25 }
+	1178.1.1 = { change_development_level = 28 }
 	
 	490.1.1 = {
 		holder = 191088	#Krisnagupta
@@ -344,11 +325,7 @@ d_magadha = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 	}
-	1337.1.1 = {
-		holder = 0
-	}
 }
-
 
 c_magadha = {
 	490.1.1 = {
@@ -440,7 +417,7 @@ c_magadha = {
 		liege = d_kasi
 	}
 	1168.1.1 = {
-		holder = 191389 #Pratpadhawala Khayarwala
+		holder = 191390 #Pratpadhawala Khayarwala
 		liege = d_magadha
 	}
 	1185.1.1 = {
@@ -518,10 +495,6 @@ c_magadha = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 		liege = k_bihar
-	}
-	1337.1.1 = {
-		holder = placeholder_bihar_1337
-		liege = e_rajastan
 	}
 }
 
@@ -670,10 +643,6 @@ c_mudgagiri = {
 		holder = 170282 #Bahram Khan
 		liege = k_bihar
 	}
-	1337.1.1 = {
-		holder = placeholder_bihar_1337
-		liege = e_rajastan
-	}
 }
 
 
@@ -724,7 +693,6 @@ c_gaya = {
 	
 	1290.1.1 = {
 		holder = 191168 #Pandita
-		liege = e_rajastan
 	}
 
 }
@@ -775,8 +743,68 @@ c_sasaram = {
 		holder = 170190 #Battle of Chandwar - Granted to Muhammad Bakhtiyar, of later Bengali fame
 		liege = k_delhi
 	}
-	1337.1.1 = {
-		holder = 170258 #Placeholder
+	1206.3.15 = {
+		liege = e_rajastan
+	}
+	1210.11.4 = {
+		holder = 170191 #Aram
+	}
+	1211.6.1 = {
+		holder = 170193 #Iltutmish
+	}
+	1220.1.1 = {
+		holder = 194292
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
 
@@ -784,6 +812,7 @@ c_sasaram = {
 d_tirabhukti = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	846.1.1 = {
 		holder = 190103 #Ajatashatru
@@ -809,7 +838,7 @@ d_tirabhukti = {
 		liege = 0
 	}
 	1147.1.1 = {
-		holder = 191062	#Gangadeva Karnata
+		holder = 191063	#Gangadeva Karnata
 	}
 	1180.1.1 = {
 		holder = 191064	#Narsinhadeva Karnata
@@ -821,8 +850,7 @@ d_tirabhukti = {
 		holder = 191066	#Harisinhadeva Karnata
 	}
 	1324.1.1 = {
-		holder = nath_thakur
-		liege = k_delhi
+		holder = 0
 	}
 }
 
@@ -867,7 +895,7 @@ c_mithila = {
 		liege = 0
 	}
 	1160.1.1 = {
-		holder = 191401#Krishnagupta
+		holder = 191063 # Gangadeva
 	}
 	1180.1.1 = {
 		holder = 191402#Samgramagupta
@@ -876,15 +904,76 @@ c_mithila = {
 		holder = 170252 #Muhammad Bakhtiyar
 		liege = k_bihar
 	}
-	1230.1.1 = {
-		holder = 191065	#Shakrasinhadeva Karnata
+	1206.1.1 = {
+		holder = 170253 #Muhammad Shiran
 	}
-	1280.1.1 = {
-		holder = 191066	#Harisinhadeva Karnata
+	1208.1.1 = {
+		holder = 170255 #Ghiyasuddin Iwaj
 	}
-	1324.1.1 = {
-		holder = nath_thakur
-		liege = k_delhi
+	1210.1.1 = {
+		holder = 170254 #Ali Mardan
+	}
+	1211.1.1 = {
+		holder = 170255 #Ghiyasuddin Iwaj
+	}
+	1220.1.1 = {
+		holder = 191417 #Udayamana
+	}
+	1227.1.1 = {
+		holder = 170200 #Nasiruddin Mahmud
+	}
+	1229.1.1 = {
+		holder = 170263 #Alauddin Daulat
+	}
+	1229.6.1 = {
+		holder = 170262 #Malik Balkha
+	}
+	1232.1.1 = {
+		holder = 170264 #Alauddin Jani
+	}
+	1233.1.1 = {
+		holder = 170265 #Saifuddin Aibak
+	}
+	1236.1.1 = {
+		holder = 170267 #Tughral Tughan Khan
+	}
+	1246.1.1 = {
+		holder = 170268 #Tughlaq Tamar Khan
+	}
+	1247.1.1 = {
+		holder = 170269 #Jalaluddin Masud Jani
+	}
+	1251.1.1 = {
+		holder = 170270 #Malik Ikhtiyaruddin Iuzbak
+	}
+	1257.1.1 = {
+		holder = 170271 #Ijjauddin Balban Iuzbaki
+	}
+	1259.1.1 = {
+		holder = 170272 #Tatar Khan
+	}
+	1268.1.1 = {
+		holder = 170273 #Sher Khan
+	}
+	1272.1.1 = {
+		holder = 170274 #Amin Khan
+	}
+	1272.12.1 = {
+		holder = 170267 #Tughral Tughan Khan
+	}
+	1281.1.1 = {
+		holder = 170211 #Bughra Khan
+	}
+	1291.1.1 = {
+		holder = 170215 #Rukunuddin Kaikaus
+	}
+	1300.1.1 = {
+		holder = 170280 #Tajuddin Hatim Khan
+		liege = d_magadha
+	}
+	1328.6.1 = {
+		holder = 170282 #Bahram Khan
+		liege = k_bihar
 	}
 }
 
@@ -919,7 +1008,7 @@ c_simaramapura = {
 		liege = d_tirabhukti
 	}
 	1147.1.1 = {
-		holder = 191062	#Gangadeva Karnata
+		holder = 191063	#Gangadeva Karnata
 	}
 	1180.1.1 = {
 		holder = 191064	#Narsinhadeva Karnata
@@ -931,8 +1020,7 @@ c_simaramapura = {
 		holder = 191066	#Harisinhadeva Karnata
 	}
 	1324.1.1 = {
-		liege = d_tirabhukti
-		holder = nath_thakur
+		liege = e_rajastan
 	}
 }
 
@@ -999,6 +1087,9 @@ c_kusinagara = {
 	}
 	1170.1.1 = {
 		holder = 190220 #Jayacandra Gahadvala
+	}
+	1177.1.1 = {
+		holder = 190221 # Hariscandra
 	}
 	1193.1.1 = {
 		holder = 170190 #Battle of Chandwar
@@ -1105,8 +1196,8 @@ c_bangaon = {
 		holder = 191399#Devagupta
 	}
 	1147.1.1 = {
-		holder = 191400#Rajadityagupta
-		liege = 0
+		holder = 191400 # Rajadityagupta
+		liege = d_tirabhukti # tracing back from Samgramagupta below being a possible vassal of the Karnatas
 	}
 	1160.1.1 = {
 		holder = 191401#Krishnagupta
@@ -1118,15 +1209,76 @@ c_bangaon = {
 		holder = 170252 #Muhammad Bakhtiyar
 		liege = k_bihar
 	}
-	1230.1.1 = {
-		holder = 191065	#Shakrasinhadeva Karnata
+	1206.1.1 = {
+		holder = 170253 #Muhammad Shiran
 	}
-	1280.1.1 = {
-		holder = 191066	#Harisinhadeva Karnata
+	1208.1.1 = {
+		holder = 170255 #Ghiyasuddin Iwaj
 	}
-	1324.1.1 = {
-		holder = nath_thakur
-		liege = k_delhi
+	1210.1.1 = {
+		holder = 170254 #Ali Mardan
+	}
+	1211.1.1 = {
+		holder = 170255 #Ghiyasuddin Iwaj
+	}
+	1220.1.1 = {
+		holder = 191417 #Udayamana
+	}
+	1227.1.1 = {
+		holder = 170200 #Nasiruddin Mahmud
+	}
+	1229.1.1 = {
+		holder = 170263 #Alauddin Daulat
+	}
+	1229.6.1 = {
+		holder = 170262 #Malik Balkha
+	}
+	1232.1.1 = {
+		holder = 170264 #Alauddin Jani
+	}
+	1233.1.1 = {
+		holder = 170265 #Saifuddin Aibak
+	}
+	1236.1.1 = {
+		holder = 170267 #Tughral Tughan Khan
+	}
+	1246.1.1 = {
+		holder = 170268 #Tughlaq Tamar Khan
+	}
+	1247.1.1 = {
+		holder = 170269 #Jalaluddin Masud Jani
+	}
+	1251.1.1 = {
+		holder = 170270 #Malik Ikhtiyaruddin Iuzbak
+	}
+	1257.1.1 = {
+		holder = 170271 #Ijjauddin Balban Iuzbaki
+	}
+	1259.1.1 = {
+		holder = 170272 #Tatar Khan
+	}
+	1268.1.1 = {
+		holder = 170273 #Sher Khan
+	}
+	1272.1.1 = {
+		holder = 170274 #Amin Khan
+	}
+	1272.12.1 = {
+		holder = 170267 #Tughral Tughan Khan
+	}
+	1281.1.1 = {
+		holder = 170211 #Bughra Khan
+	}
+	1291.1.1 = {
+		holder = 170215 #Rukunuddin Kaikaus
+	}
+	1300.1.1 = {
+		holder = 170280 #Tajuddin Hatim Khan
+		liege = d_magadha
+	}
+	1328.6.1 = {
+		holder = 170282 #Bahram Khan
+		liege = k_bihar
 	}
 }
 
@@ -1134,6 +1286,7 @@ c_bangaon = {
 d_kasi = {
 	867.1.1 = { change_development_level = 18 }
 	1066.1.1 = { change_development_level = 25 }
+	1178.1.1 = { change_development_level = 28 }
 	
 	750.1.1 = {
 		holder = 191518 #Bhars
@@ -1289,6 +1442,8 @@ c_jaunpur = {
 
 
 c_varanasi = {
+	1178.1.1 = { change_development_level = 39 }
+
 	750.1.1 = {
 		holder = 191518 #Bhars
 		liege = d_kasi
@@ -1396,8 +1551,9 @@ c_varanasi = {
 	}
 }
 
-
 c_chunar = {
+	1178.1.1 = { change_development_level = 40 }
+
 	700.1.1 = {
 		liege = d_jejakabhukti
 		holder = 191018 #Karamchand
@@ -1478,8 +1634,68 @@ c_chunar = {
 		holder = 170190 #Battle of Chandwar
 		liege = k_delhi
 	}
-	1337.1.1 = {
-		holder = 170258 #Placeholder
+	1206.3.15 = {
+		liege = e_rajastan
+	}
+	1210.11.4 = {
+		holder = 170191 #Aram
+	}
+	1211.6.1 = {
+		holder = 170193 #Iltutmish
+	}
+	1220.1.1 = {
+		holder = 194287
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
 
@@ -1487,6 +1703,7 @@ c_chunar = {
 d_jharkand = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 6 }
 	
 	858.1.1 = {
 		holder = 190107 #Kaivarta
@@ -1495,7 +1712,7 @@ d_jharkand = {
 	887.1.1 = {
 		holder = 190108 #Bhutapala
 	}#918 return to Pala
-	900.1.1 = {
+	1063.1.1 = {
 		holder = 0
 	}
 }
@@ -1514,11 +1731,7 @@ c_jharkand = {
 	}
 	887.1.1 = {
 		holder = 190108 #Bhutapala
-	}
-	918.1.1 = {
-		holder = bryten_bengali_003 #Bhutapala
-	}
-	#918 return to Pala
+	}#918 return to Pala
 	1040.1.1 = {
 		holder = 190116 #Salisuka (fictional ruler of Gurgi)
 		liege = k_gondwana
@@ -1659,10 +1872,8 @@ c_rothas = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 	}
-	1337.1.1 = {
-		holder = 170258 #placeholder
-	}
 }
+
 
 c_rajrappa = {
 	740.1.1 = {
@@ -1696,7 +1907,6 @@ c_rajrappa = {
 	}
 	1270.1.1 = {
 		holder = 191533
-		liege = e_rajastan
 	}
 	1340.1.1 = {
 		holder = 191534
@@ -1811,7 +2021,6 @@ c_damin_i_koh = {
 	}
 	1310.1.1 = {
 		holder = 191420 #Varnamana
-		liege = e_rajastan
 	}
 }
 

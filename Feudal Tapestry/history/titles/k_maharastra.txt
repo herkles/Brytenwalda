@@ -2,8 +2,8 @@
 k_maharastra = {
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
+
 	#Seuna Yadavas
 	1173.1.1 = {
 		holder = 74654
@@ -148,16 +148,13 @@ d_devagiri = {
 	1173.1.1 = {
 		holder = 0
 	}
-	1337.1.1 = {
-		holder = 191927
-		liege = k_malwa
-	}
 }
 
 
 c_devagiri = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	769.1.1 = {
 		holder = 74415
@@ -251,12 +248,6 @@ c_devagiri = {
 	}
 	1312.1.1 = {
 		holder = 74662
-	}
-	1313.1.1 = {
-		holder = malik_kafur
-	}
-	1337.1.1 = {
-		holder = 191927
 	}
 }
 
@@ -392,9 +383,6 @@ c_mulaka = {
 		holder = 170258
 	}
 	#End of Ruler Placeholder until something better#
-	1337.1.1 = {
-		holder = 191927
-	}
 }
 
 
@@ -462,19 +450,9 @@ c_vatsagulma = {
 	1150.1.1 = {
 		holder = 74650
 	}
-
-	#Start of ruler placeholder until something better
-	1156.1.1 = {
-		holder = 74462
-	}
-	1167.1.1 = {
-		holder = 74463
-	}
-	1176.1.1 = {
-		holder = 74464
-	}
 	1177.1.1 = {
-		holder = 74465
+		holder = 74467 # Singhana
+		liege = k_karnata
 	}
 	1180.1.1 = {
 		holder = 74466
@@ -534,9 +512,6 @@ c_vatsagulma = {
 		holder = 170258
 	}
 	#End of Ruler Placeholder until something better#
-	1337.1.1 = {
-		holder = 191927
-	}
 }
 
 
@@ -605,8 +580,7 @@ c_mahur = { #Sirpur
 d_vidharba = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
-	1187.1.1 = { change_development_level = 25 }
-	1337.1.1 = { change_development_level = 50 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	720.1.1 = {
 		holder = 74410
@@ -677,29 +651,8 @@ c_acalapura = {
 		holder = 74442
 		liege = k_karnata
 	}
-	1076.1.1 = {
-		holder = 74443
-	}
-	1126.1.1 = {
-		holder = 74446
-	}
-	1138.1.1 = {
-		holder = 74447
-	}
-	1151.1.1 = {
-		holder = 74448
-	}
-	1156.1.1 = {
-		holder = 74462
-	}
-	1167.1.1 = {
-		holder = 74463
-	}
-	1176.1.1 = {
-		holder = 74464
-	}
 	1177.1.1 = {
-		holder = 74465
+		holder = 74467 # Singhana
 	}
 	1180.1.1 = {
 		holder = 74466
@@ -756,9 +709,6 @@ c_acalapura = {
 		holder = 170258
 	}
 	#End of Ruler Placeholder until something better#
-	1337.1.1 = {
-		holder = 191927
-	}
 }
 
 
@@ -966,6 +916,7 @@ c_vairagara = {
 d_konkana = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	765.1.1 = {
 		holder = 74526	#Sanahapulla
@@ -1225,7 +1176,7 @@ c_panaji = {
 		holder = 74618
 	}
 	1337.1.1 = {
-		liege = k_karnata
+		liege = e_deccan
 	}
 }
 
@@ -1289,6 +1240,7 @@ c_kanara = {
 	}
 	1148.1.1={
 		holder = 74548
+		liege = k_karnata
 	}
 	1179.1.1={
 		holder = 74549
@@ -1319,9 +1271,6 @@ c_kanara = {
 	}
 	1325.1.1={
 		holder = 74557
-	}
-	1337.1.1 = {
-		liege = k_karnata
 	}
 }
 
@@ -1456,9 +1405,6 @@ c_trikuta = {
 	1312.1.1 = {
 		holder = 74662
 	}
-	1337.1.1 = {
-		holder = 74724
-	}
 }
 
 
@@ -1524,10 +1470,6 @@ c_kondana = {
 	}
 	
 	#End of Ruler Placeholder until something better#
-	1337.1.1 = {
-		holder = 74724
-		liege = k_maharastra
-	}
 }
 
 
@@ -1539,18 +1481,18 @@ d_rattapadi = {
 	878.1.1 = {
 		holder = 74417	#Krishna II
 	}
-	#914.1.1 = {
-	#	holder = 74421	#Indra III
-	#}
-	#929.1.1 = {
-	#	holder = 74422	#Amogavarsha
-	#}
-	#930.1.1 = {
-	#	holder = 74423	#Govinda IV
-	#}
-	#934.1.1 = {
-	#	holder = 74424	#Amogavarsha III
-	#}
+	914.1.1 = {
+		holder = 74421	#Indra III
+	}
+	929.1.1 = {
+		holder = 74422	#Amogavarsha
+	}
+	930.1.1 = {
+		holder = 74423	#Govinda IV
+	}
+	934.1.1 = {
+		holder = 74424	#Amogavarsha III
+	}
 	936.1.1 = {
 		holder = 191994			   
 	}
@@ -1601,12 +1543,6 @@ d_rattapadi = {
 		liege = 0
 	}
 	1164.1.1 = {
-		holder = 74449
-	}
-	1183.1.1 = {
-		holder = 74450
-	}
-	1185.1.1 = {
 		holder = 0
 	}
 	1191.1.1 = {
@@ -1678,6 +1614,10 @@ c_taradavadi = {
 	}
 	1164.1.1 = {
 		holder = 74449
+	}
+	1177.1.1 = {
+		holder = 74466 # Ahavamalla
+		liege = k_karnata
 	}
 	1183.1.1 = {
 		holder = 74450
@@ -2010,8 +1950,6 @@ c_naldurg = {
 	1156.1.1 = {
 		liege = k_karnata
 	}
-	
-	
 	1109.1.1 = {
 		holder = 74446
 		liege = d_rattapadi
@@ -2021,6 +1959,9 @@ c_naldurg = {
 	}
 	1138.1.1 = {
 		holder = 74448
+	}
+	1177.1.1 = {
+		holder = 74465 # Sankama
 	}
 	1220.1.1 = {
 		holder = 74657
@@ -2065,7 +2006,7 @@ c_naldurg = {
 	}
 	#Ruler Placeholder until something better#
 	1330.1.1 = {
-		holder = 74723
+		holder = 74724
 		liege = d_rattapadi
 	}
 }
@@ -2136,3 +2077,4 @@ c_kolhapur = {
 		liege = k_maharastra
 	}
 }
+

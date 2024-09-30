@@ -2,8 +2,7 @@
 k_punjab = {
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	699.1.1 = {
 		holder = 188377 # Lalitaditya Muktapida
@@ -52,21 +51,6 @@ k_punjab = {
 	1186.1.1 = {
 		holder = 170190 #Mu'izz al-Din conquered Lahore and made Qutb-ud-din Aibak governor
 		liege = e_rajastan
-		effect = {
-			if = {
-				limit = {
-					exists = holder
-					has_dlc_feature = royal_court
-				}
-				holder = {
-					set_court_language = language_iranian
-					if = {
-						limit = { NOT = { knows_court_language_of = this } }
-						learn_court_language_of = this
-					}
-				}
-			}
-		}
 	}
 	1210.1.1 = {
 		holder = 170191 #Aram
@@ -125,15 +109,13 @@ k_punjab = {
 	1325.2.1 = {
 		holder = 170258 #Muhammad
 	}
-	1337.1.1 = {
-		holder = 0
-	}
 }
 
 
 d_multan = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	712.1.1 = {
 		liege = e_arabia
@@ -195,11 +177,67 @@ d_multan = {
 		liege = k_sindh
 		holder = 170300 # Nasir-ud-Din Qabacha
 	}
-	1337.1.1 = {
-		holder = punjab_1337_khokhar
+	1218.1.1 = {
+		holder = 194188
+	}
+	1228.5.30 = {
 		liege = e_rajastan
+		holder = 170193 #Iltutmish
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_multan = {
 	712.1.1 = {
 		liege = d_multan
@@ -214,12 +252,12 @@ c_multan = {
 	# 750-863: Abbasid governors
 	
 	863.1.1 = {
-		holder = 178016#188532 # Muhammad banu Sama
+		holder = 178016
 	}
 	
-	#866.1.1 = {
-	#	government = clan_government	#Ahistorical, just for ease of bookmarks.
-	#}
+	866.1.1 = {
+		government = clan_government	#Ahistorical, just for ease of bookmarks.
+	}
 	936.1.1 = {
 		holder = 261112
 	}
@@ -235,10 +273,8 @@ c_multan = {
 	1035.1.1 = {
 		holder = ghaznavid_vassal_1
 	}
-	1080.1.1 = {
-		holder = 188539 # ? Karmatia
-	}
 	#History uncertain up until Ghurid conquest.
+	
 	1178.1.1 = { # Ghurid conquest, massacre of Ismaili sultans
 		liege = k_kabulistan
 		holder = 144142
@@ -249,11 +285,67 @@ c_multan = {
 	1203.1.1 = {
 		holder = 170300
 	}
-	1337.1.1 = {
-		holder = punjab_1337_khokhar
-		liege = d_multan
+	1218.1.1 = {
+		holder = 194188
+	}
+	1228.5.30 = {
+		holder = 170193 #Iltutmish
+		liege = e_rajastan
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_kafirkot = {
 	712.1.1 = {
 		liege = d_multan
@@ -313,11 +405,67 @@ c_kafirkot = {
 	1203.1.1 = {
 		holder = 170300
 	}
-	1337.1.1 = {
-		holder = punjab_1337_khokhar
-		liege = d_multan
+	1218.1.1 = {
+		holder = 194188
+	}
+	1228.5.30 = {
+		holder = 170193 #Iltutmish
+		liege = e_rajastan
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_uch = {
 	712.1.1 = {
 		liege = d_multan
@@ -353,10 +501,8 @@ c_uch = {
 	1035.1.1 = {
 		holder = ghaznavid_vassal_1 
 	} #This county would also at least partially have been under the control of the Bhatis of Ludrava
-	1080.1.1 = {
-		holder = 188539 # ? Karmatia
-	}
 
+	#History uncertain up until Ghurid conquest.
 	1178.1.1 = { # Ghurid conquest, massacre of Ismaili sultans
 		liege = k_kabulistan
 		holder = 144142
@@ -367,11 +513,67 @@ c_uch = {
 	1203.1.1 = {
 		holder = 170300
 	}
-	1337.1.1 = {
-		holder = punjab_1337_khokhar
-		liege = d_multan
+	1218.1.1 = {
+		holder = 194188
+	}
+	1228.5.30 = {
+		holder = 170193 #Iltutmish
+		liege = e_rajastan
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_karur = {
 	712.1.1 = {
 		liege = d_multan
@@ -409,14 +611,6 @@ c_karur = {
 		holder = ghaznavid_vassal_1
 	}
 	#History uncertain up until Ghurid conquest.
-	1080.1.1 = {
-		liege = d_lahore
-		holder = 188547
-	}
-	1099.1.1 = {
-		holder = 144134 # Masud II
-	}
-	#End
 	
 	1178.1.1 = {
 		holder = 144142
@@ -428,11 +622,67 @@ c_karur = {
 	1203.1.1 = {
 		holder = 170300
 	}
-	1337.1.1 = {
-		holder = punjab_1337_khokhar
-		liege = d_multan
+	1218.1.1 = {
+		holder = 194188
+	}
+	1228.5.30 = {
+		holder = 170193 #Iltutmish
+		liege = e_rajastan
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_karor = {
 	712.1.1 = {
 		liege = d_multan
@@ -479,7 +729,6 @@ c_karor = {
 	
 	1178.1.1 = {
 		holder = 144142
-		liege = k_kabulistan
 	}
 	1186.1.1 = {
 		liege = k_sindh
@@ -487,11 +736,67 @@ c_karor = {
 	1203.1.1 = {
 		holder = 170300
 	}
-	1337.1.1 = {
-		holder = punjab_1337_khokhar
-		liege = d_multan
+	1218.1.1 = {
+		holder = 194188
+	}
+	1228.5.30 = {
+		holder = 170193 #Iltutmish
+		liege = e_rajastan
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_kalat = {
 	711.1.1 = {
 		liege = 0 # not fully conquered by Abbasids
@@ -518,9 +823,11 @@ c_kalat = {
 	1099.1.1 = {
 		holder = 144134
 	}
-	#End
 	
-	
+	1178.1.1 = {
+		holder = sanjari_1 # Historical figure, placeholder
+		liege = d_kabul
+	}	
 	1182.1.1 = {
 		holder = 144142
 		liege = d_kabul
@@ -535,17 +842,46 @@ c_kalat = {
 		holder = 144143
 		liege = 0
 	}
+	#Khwazerim
+	#Kartids
+	1212.1.1 = {
+		liege = "k_persia"
+		holder = 93153
+	}
 	
 	
-	1337.1.1 = {
-		holder = punjab_1337_khokhar
-		liege = d_multan
+	1221.1.1 = {
+		liege = e_mongol_empire
+	}
+	1227.12.2 = {
+		liege = "e_ilkhanate"
+	}
+	1245.1.1 = {
+		holder = 93154
+	}
+	1277.1.1 = {
+		holder = 93155
+	}
+	1295.1.1 = {
+		holder = 93156
+	}
+	1308.1.1 = {
+		holder = 93157
+	}
+	1330.1.1 = {
+		holder = 93158
+	}
+	1332.1.1 = {
+		liege = 0
+		holder = 93159
 	}
 }
+
 
 d_lahore = {
 	867.1.1 = { change_development_level = 18 }
 	1066.1.1 = { change_development_level = 25 }
+	1178.1.1 = { change_development_level = 25 }
 	
 	740.1.1 = {
 		holder = 191017 #Madras
@@ -571,7 +907,7 @@ d_lahore = {
 	1041.1.1 = {
 		holder = ghaznavid_vassal_3	#Abul Naim Zarir Shaybani
 	}
-	1110.1.1 = {
+	1099.1.1 = {
 		holder = 144134 # Masud II
 	}
 	1115.1.1 = {
@@ -603,11 +939,72 @@ d_lahore = {
 	1206.3.15 = {
 		liege = e_rajastan
 	}
-	1337.1.1 = {
-		holder = 170261
+	1210.11.4 = {
+		holder = 170191 #Aram
+	}
+	1211.6.1 = {
+		holder = 170193 #Iltutmish
+	}
+	1220.1.1 = {
+		holder = 194298
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_lahur = {
+	1178.1.1 = { change_development_level = 36 }
+
 	740.1.1 = {
 		holder = 191017 #Madras
 		liege = d_lahore
@@ -634,19 +1031,6 @@ c_lahur = {
 	1041.1.1 = {
 		holder = ghaznavid_vassal_3	#Abul Naim Zarir Shaybani
 	}
-	
-	1110.1.1 = {
-		holder = 144135
-	}
-	1115.6.1 = {
-		holder = 144136
-	}
-	1118.1.1 = {
-		holder = 144137
-	}
-	1152.1.1 = {
-		holder = 144138
-	}
 	1160.1.1 = {
 		holder = 144139
 	}
@@ -660,10 +1044,69 @@ c_lahur = {
 	1206.3.15 = {
 		liege = e_rajastan
 	}
-	1337.1.1 = {
-		holder = 170261
+	1210.11.4 = {
+		holder = 170191 #Aram
+	}
+	1211.6.1 = {
+		holder = 170193 #Iltutmish
+	}
+	1220.1.1 = {
+		holder = 194298
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_dipalpur = {
 	712.1.1 = {
 		liege = d_multan
@@ -682,30 +1125,10 @@ c_dipalpur = {
 	#Varhas of Bathinda
 	1050.1.1 = {
 		holder = ghaznavid_vassal_2 #Amaraji
-		liege = d_multan
 	}
-	
-	1079.1.1 = { #Conquered by Ghaznavids
-		liege = d_lahore
-		holder = 144133
-	}
-	1099.1.1 = {
-		holder = 144134
-	}
-	1115.1.1 = {
-		holder = 144135
-	}
-	1115.6.1 = {
-		holder = 144136
-	}
-	1118.1.1 = {
-		holder = 144137
-	}
-	1152.1.1 = {
-		holder = 144138
-	}
-	1160.1.1 = {
-		holder = 144139
+	1178.1.1 = {
+		holder = ghaznavid_6 # Khusraushah
+		liege = k_punjab
 	}
 	1186.1.1 = {
 		liege = k_punjab
@@ -717,10 +1140,69 @@ c_dipalpur = {
 	1206.3.15 = {
 		liege = e_rajastan
 	}
-	1337.1.1 = {
-		holder = 170261
+	1210.11.4 = {
+		holder = 170191 #Aram
+	}
+	1211.6.1 = {
+		holder = 170193 #Iltutmish
+	}
+	1220.1.1 = {
+		holder = 194298
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_bhera = {
 	740.1.1 = {
 		holder = 191965 #Sangiya, fictional vassal in Takkadesa
@@ -748,25 +1230,14 @@ c_bhera = {
 		holder = 144127
 	}
 	1041.1.1 = {
+		holder = 144128
+	}
+	1041.1.1 = {
 		holder = ghaznavid_vassal_3	#Abul Naim Zarir Shaybani
 	}
-	1099.1.1 = {
-		holder = 144134
-	}
-	1115.1.1 = {
-		holder = 144135
-	}
-	1115.6.1 = {
-		holder = 144136
-	}
-	1118.1.1 = {
-		holder = 144137
-	}
-	1152.1.1 = {
-		holder = 144138
-	}
-	1160.1.1 = {
-		holder = 144139
+	1178.1.1 = {
+		holder = ghaznavid_2
+		liege = k_punjab
 	}
 	1186.1.1 = {
 		liege = k_punjab
@@ -778,10 +1249,69 @@ c_bhera = {
 	1206.3.15 = {
 		liege = e_rajastan
 	}
-	1337.1.1 = {
-		holder = 170261
+	1210.11.4 = {
+		holder = 170191 #Aram
+	}
+	1211.6.1 = {
+		holder = 170193 #Iltutmish
+	}
+	1220.1.1 = {
+		holder = 194299
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_shorkot = {
 	740.1.1 = {
 		holder = 191965 #Sangiya, fictional vassal in Takkadesa
@@ -811,23 +1341,9 @@ c_shorkot = {
 	1041.1.1 = {
 		holder = ghaznavid_vassal_3	#Abul Naim Zarir Shaybani
 	}
-	1099.1.1 = {
-		holder = 144134
-	}
-	1115.1.1 = {
-		holder = 144135
-	}
-	1115.6.1 = {
-		holder = 144136
-	}
-	1118.1.1 = {
-		holder = 144137
-	}
-	1152.1.1 = {
-		holder = 144138
-	}
-	1160.1.1 = {
-		holder = 144139
+	1178.1.1 = {
+		holder = ghaznavid_1
+		liege = k_punjab
 	}
 	1186.1.1 = {
 		liege = k_punjab
@@ -839,10 +1355,69 @@ c_shorkot = {
 	1206.3.15 = {
 		liege = e_rajastan
 	}
-	1337.1.1 = {
-		holder = 170261
+	1210.11.4 = {
+		holder = 170191 #Aram
+	}
+	1211.6.1 = {
+		holder = 170193 #Iltutmish
+	}
+	1220.1.1 = {
+		holder = 194299
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_sakala = {
 	740.1.1 = {
 		holder = 191017 #Madras
@@ -895,6 +1470,8 @@ c_sakala = {
 		holder = dogra_ruler_11 #Hamir Dev
 	}
 }
+
+
 c_trigarta = {
 	600.1.1={
 		liege="k_guge"
@@ -1040,9 +1617,6 @@ c_trigarta = {
 	1063.1.1={
 		holder=katoch_45
 	}
-	1081.1.1={
-		holder=katoch_46
-	}
 	1088.1.1={
 		holder = ghaznavid_vassal_3	#Abul Naim Zarir Shaybani
 		liege = d_multan
@@ -1064,6 +1638,11 @@ c_trigarta = {
 	}
 	1168.1.1 = {
 		holder = 170233 #Gopal
+		liege = "k_punjab"
+	}
+	1178.1.1 = {
+		holder = ghaznavid_3
+		liege = k_punjab
 	}
 	1185.1.1 = {
 		holder = 170234 #Arjunpal
@@ -1093,6 +1672,7 @@ c_trigarta = {
 		holder = 170241 #Jaspal
 	}
 }
+
 c_kangra = {
 	600.1.1={
 		liege="k_guge"
@@ -1294,6 +1874,7 @@ c_kangra = {
 		holder=katoch_63
 	}
 }
+
 c_gurjaratra = {
 	740.1.1 = {
 		holder = 191965 #Sangiya, fictional vassal in Takkadesa
@@ -1324,22 +1905,6 @@ c_gurjaratra = {
 		holder = 191974 #Mahpal Han
 		liege = d_gandhara
 	}
-	1099.1.1 = {
-		holder = 144134
-		liege = d_lahore
-	}
-	1115.1.1 = {
-		holder = 144135
-	}
-	1115.6.1 = {
-		holder = 144136
-	}
-	1118.1.1 = {
-		holder = 144137
-	}
-	1152.1.1 = {
-		holder = 144138
-	}
 	1160.1.1 = {
 		holder = 144139
 	}
@@ -1353,14 +1918,72 @@ c_gurjaratra = {
 	1206.3.15 = {
 		liege = e_rajastan
 	}
-	1337.1.1 = {
-		holder = 170261
+	1210.11.4 = {
+		holder = 170191 #Aram
+	}
+	1211.6.1 = {
+		holder = 170193 #Iltutmish
+	}
+	1220.1.1 = {
+		holder = 170237
+	}
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
 
 d_gandhara = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 20 }
 	1065.1.1 = {
 		holder = 191974 #Mahpal Han
 		liege = k_kabulistan
@@ -1369,11 +1992,8 @@ d_gandhara = {
 		holder = 0
 		liege = 0
 	}
-	1337.1.1 = {
-		holder = 191983
-		liege = e_rajastan
-	}
 }
+
 c_udabhanda = {
 	763.1.1 = {
 		liege = d_kabul
@@ -1408,8 +2028,8 @@ c_udabhanda = {
 	1152.1.1 = {
 		holder = 191977 #Ragar Han
 	}
-	1175.1.1 = {
-		liege = k_kabulistan
+	1160.1.1 = {
+		holder = 144139 # Khusraw Malik
 	}
 	1186.1.1 = {
 		holder = 191978 #Sipihr Han
@@ -1439,6 +2059,8 @@ c_udabhanda = {
 		holder = 191984 #Haydar Han
 	}
 }
+
+
 c_purushapura = {
 	755.1.1 = {
 		liege = d_kabul
@@ -1477,27 +2099,13 @@ c_purushapura = {
 		holder = 144132
 	}
 	1059.1.1 = {
-		holder = 144133
-	}
-	1099.1.1 = {
-		holder = 144134
-	}
-	1115.1.1 = {
-		holder = 144135
-	}
-	1115.6.1 = {
-		holder = 144136
-	}
-	1118.1.1 = {
-		holder = 144137
-	}
-	1152.1.1 = {
-		holder = 144138
+		holder = extra_ghaznavids_12 #Izedyar, not attested, but seems plausible
+		liege = k_kabulistan
 	}
 	1160.1.1 = {
 		holder = 144139
 	}
-	1175.1.1 = {
+	1179.1.1 = {
 		liege = k_kabulistan
 		holder = 144142
 	}
@@ -1520,16 +2128,60 @@ c_purushapura = {
 	1220.1.1 = {
 		holder = 194284
 	}
-	1267.1.1 = {
-		holder = 191982 #Lahar Han
+	1236.5.1 = {
+		holder = 170194 #Firuz I
 	}
-	1330.1.1 = {
-		holder = 191983 #Lakhan Han
+	1236.11.20 = {
+		holder = 170195 #Raziyya
 	}
-	1341.1.1 = {
-		holder = 191984 #Haydar Han
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
+
+
 c_nandana = {
 	756.1.1 = {
 		holder = 191961 #Sujji, fictional vassal in the Salt range
@@ -1576,8 +2228,12 @@ c_nandana = {
 	1152.1.1 = {
 		holder = 191977 #Ragar Han
 	}
-	1175.1.1 = {
-		liege = k_kabulistan
+	1160.1.1 = {
+		holder = 144139 # Khusraw Malik
+	}
+	1178.1.1 = {
+		holder = ghaznavid_5
+		liege = k_punjab
 	}
 	1186.1.1 = {
 		holder = 191978 #Sipihr Han

@@ -1,6 +1,8 @@
 ﻿k_spanish_galicia = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 24 }
+
 	910.12.21 = {
 		holder = 70021 # Ordo�o II de Le�n
 		insert_title_history = k_leon
@@ -220,6 +222,7 @@ c_coruna = {
 c_santiago = {
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 24 }
  
 	741.1.1 = {
 		holder = 70011 # Duke Fruela Pérez of Cantabria
@@ -312,24 +315,15 @@ c_santiago = {
 		holder = 109500 # García I Jimena
 		liege = k_spanish_galicia
 	}
-	1071.10.1 = {
-		holder = 107500 # King Sancho II of Castille
-	}
-	1072.10.7 = {
-		holder = 108500 # King Alfonso VI of León
-	}
 	1092.5.1 = {
-		holder = 298 # Raymond de Bourgogne
 		liege = d_galicia
-	}
-	1107.9.20 = {
-		holder = 207500 # Alfonso VII de Borgoña
 	}
  
 	#Bishops of Santiago
  
 	1126.3.8 = {
 		holder = 232021 # Diego Gelmirez
+		government = theocracy_government
 		liege = k_leon
 	}
 	1140.1.1 = {
@@ -465,6 +459,7 @@ c_tui = {
  
 	1126.3.8 = {
 		holder = 232021 # Diego Gelmirez
+		government = theocracy_government
 		liege = k_leon
 	}
 	1140.1.1 = {
@@ -514,77 +509,65 @@ c_tui = {
 	}
 }
 c_astorga = {
-	754.1.1 = {
-		holder = 70116 # Mauregato Alf�nsez de Cantabria
+	854.1.1 = {
+		holder = 73755 # Gatón del Bierzo
 		liege = k_asturias
 	}
-	788.1.1 = {
-		holder = 70013 # Bermudo I de Cantabria
-	}
-	791.1.1 = {
-		holder = 70006 # Alfonso II de Asturias
-	}
-	842.3.20 = {
-		holder = 70015 # Ramiro I de Cantabria
-	}
-	850.2.1 = {
-		holder = 70017 # Ordo�o I de Cantabria
-	}
-	853.1.1 = {
-		holder = 73755 # Gat�n Ram�rez
-	}
 	878.6.6 = {
-		holder = 73757 # Bermudo Gat�nez
+		holder = 73753 # Odoario Ordóñez
 	}
-	900.1.1 = {
-		holder = 73758 # Savarico Gat�nez
+	896.1.1 = {
+		holder = 73752 # Bermudo Ordóñez
+	}
+	904.1.1 = {
+		holder = 70020 # King García I of León
 		liege = d_leon
+	}
+	910.1.1 = {
+		holder = 73893 # Aires Mendes
 	}
 	910.12.20 = {
 		liege = k_leon
 	}
-	922.1.1 = {
-		holder = 70021 # Ordo�o II de Le�n
+	912.5.1 = {
+		holder = 70020 # King García I of León, title reverted
 	}
-	924.1.1 = {
-		holder = 70030 # Fruela II de Cantabria
+	914.1.19 = {
+		holder = 70021 # King Ordoño II of León
 	}
-	925.7.1 = {
-		holder = 70023 # Alfonso IV de Le�n
+	924.6.1 = {
+		holder = galician0059 # Gunterico Aires
 	}
-	931.6.1 = {
-		holder = 70024 # Ramiro II de Le�n
+	973.1.1 = {
+		holder = galician0062 # Rodrigo Vázquez
 	}
-	936.1.1 = {
-		holder = 260603
+	977.1.17 = {
+		holder = asturleonese0039 # Munio Godestéiz
 	}
-	951.1.5 = {
-		holder = 108600 # Ordo�o III de Le�n
-	}
-	956.11.13 = {
-		holder = 70026 # Sancho I de Le�n
-	}
-	958.1.1 = {
-		holder = 70029 # Ordo�o IV de Le�n
-	}
-	960.1.1 = {
-		holder = 70026 # Sancho I de Le�n
-	}
-	966.1.1 = {
-		holder = 108610 # Ramiro III de Le�n
-	}
-	984.1.1 = {
-		holder = 108590 # Bermudo II de Le�n
+	988.10.8 = {
+		holder = 108590 # King Bermudo II León
 	}
 	999.9.1 = {
-		holder = 70031 # Ordo�o Berm�dez de Le�n
+		holder = castilian0085 # Juan Muñoz
 	}
-	1042.9.18 = {
-		holder = 70032 # Sancho Ordo�ez de Le�n
+	999.9.1 = {
+		holder = 108570 # King Alfonso V of León
 	}
-	1065.12.24 = {
+	1028.8.7 = {
+		holder = asturleonese0072 # Count Pedro Froilaz of Pravia
+	}
+	1033.9.16 = {
+		holder = asturleonese0196 # Munio Rodríguez
+	}
+	1039.1.21 = {
+		holder = asturleonese0186 # Fernando Muñiz
+	}
+	1056.6.28 = {
+		holder = 70094 # Flaín Fernández
+	}
+	1065.5.28 = {
 		holder = 107643 # Diego Ansúrez
-		liege = k_spanish_galicia #Jim�nez dynasty fracture
+		liege = k_spanish_galicia 
 	}
 	1084.8.1 = {
 		holder = 70034 # Oveco Sánchez de León
@@ -592,14 +575,9 @@ c_astorga = {
 	1109.1.1 = {
 		holder = 71321 # Sancho Ovéquiz de León
 	}
-	1113.1.1 = {
-		holder = 71329 # Alvaro, Señor de Santibáñez
-	}
-	1129.1.1 = {
-		holder = 71330 # Bermudo Alvarez
-	}
 	1156.1.1 = {
 		holder = 72398 # Fernando Gutiérrez de Castro
+		liege = "k_leon"
 	}
 	1195.4.9 = {
 		holder = 72401 # Pedro Fernández de Castro
@@ -627,88 +605,55 @@ c_astorga = {
 	}
 }
 c_monterrei = {
-	754.1.1 = {
-		holder = 70116 # Mauregato Alf�nsez de Cantabria
+	815.1.1 = {
+		holder = visigothic0015 # Alamundo Vitíciz
 		liege = k_asturias
 	}
-	788.1.1 = {
-		holder = 70013 # Bermudo I de Cantabria
+	825.1.1 = {
+		holder = galician0360 # Witiza Alamúndez
 	}
-	791.1.1 = {
-		holder = 70006 # Alfonso II de Asturias
+	850.1.1 = {
+		holder = galician0361 # Bermudo Vitíciz
 	}
-	842.3.20 = {
-		holder = 70015 # Ramiro I de Cantabria
+	867.1.1 = {
+		holder = galician0357 # Duke Witiza of Galicia
 	}
-	850.2.1 = {
-		holder = 70017 # Ordo�o I de Cantabria
-	}
-	853.1.1 = {
-		holder = 73755 # Gat�n Ram�rez
-	}
-	878.6.6 = {
-		holder = 73757 # Bermudo Gat�nez
+	895.1.1 = {
+		holder = 73857 # Duke Hermenegildo Gutiérrez of Galicia
 	}
 	900.1.1 = {
-		holder = 73758 # Savarico Gat�nez
-		liege = d_leon
+		holder = 73862 # Duke Gutierre Osórez of Galicia
 	}
-	910.12.20 = {
+	941.1.1 = {
+		holder = galician0005 # Osorio Gutiérrez
+	}
+	950.1.1 = {
+		holder = 73863 # Rodrigo Gutiérrez
+	}
+	992.1.1 = {
+		holder = 109622 # Duke Mendo Gonçalves of Galicia
+	}
+	997.1.1 = {
+		holder = 108590 # King Bermudo II of León
 		liege = k_leon
 	}
-	922.1.1 = {
-		holder = 70021 # Ordo�o II de Le�n
-	}
-	924.1.1 = {
-		holder = 70030 # Fruela II de Cantabria
-	}
-	925.7.1 = {
-		holder = 70023 # Alfonso IV de Le�n
-	}
-	931.6.1 = {
-		holder = 70024 # Ramiro II de Le�n
-	}
-	936.1.1 = {
-		holder = 260603
-	}
-	951.1.5 = {
-		holder = 108600 # Ordo�o III de Le�n
-	}
-	956.11.13 = {
-		holder = 70026 # Sancho I de Le�n
-	}
-	958.1.1 = {
-		holder = 70029 # Ordo�o IV de Le�n
-	}
-	960.1.1 = {
-		holder = 70026 # Sancho I de Le�n
-	}
-	966.1.1 = {
-		holder = 108610 # Ramiro III de Le�n
-	}
-	984.1.1 = {
-		holder = 108590 # Bermudo II de Le�n
-	}
 	999.9.1 = {
-		holder = 70031 # Ordo�o Berm�dez de Le�n
+		holder = 108570 # King Alfonso V León
+	}
+	1028.8.7 = {
+		holder = 70075 # King Bermudo III of León
 	}
 	1034.1.1 = {
 		holder = 109606 # Velasco Alfonso de Celanova
 	}
-	1042.9.18 = {
-		holder = 70032 # Sancho Ordo�ez de Le�n
-	}
-	1065.12.24 = {
-		liege = k_spanish_galicia #Jim�nez dynasty fracture
+	1065.12.27 = {
+		liege = k_spanish_galicia
 	}
 	1067.1.1 = {
 		holder = 142436 # Nuño Vázquez de Celanova
 	}
 	1105.12.13 = {
 		holder = 142023 # Sancho Núñez de Celanova
-	}
-	1130.1.1 = {
-		holder = 71330 # Bermudo Alvarez
 	}
 	1156.1.1 = {
 		holder = 72398 # Fernando Gutiérrez de Castro
@@ -849,34 +794,35 @@ c_viseu = {
 	875.1.1 = {
 		holder = surunbaqi0001 # Walih Sa'dun al-Surunbaqi of Portucale
 	}
-	878.1.1 = {
-		holder = 73857 # Hermenegildo Guterres de Coimbra
-		liege = d_porto
-		government = feudal_government
+	881.1.1 = {
+		holder = andalusian0020 # Walih Ma'sud ibn Sa'dun al-Surunbaqi of Beja
 	}
-	920.1.1 = {
-		holder = 73862 # Guterre Hermenegildes de Coimbra
+	909.1.1 = {
+		holder = 73959 # Sultan Zaid ibn Abd al-Rahman of Badajoz
+		liege = k_badajoz
 	}
-	933.1.1 = {
-		holder = 73863 # Rodrigo Guterres de Coimbra
+	913.1.1 = {
+		holder = andalusian0001 # Sultan Abdallah ibn Abd al-Rahman of Badajoz
 	}
-	970.1.1 = {
-		holder = 70111 # Paio Rodrigues de Coimbra
+	923.1.1 = {
+		holder = andalusian0002 # Sultan Abdallah ibn Abdallah of Badajoz
 	}
-	1005.1.1 = {
-		holder = 109622 # Mendo II Bet�tez
+	930.1.1 = {
+		liege = d_badajoz
 	}
-	1008.10.11 = {
-		holder = 109601 # Alvito Nunes Vimaranes
+	981.1.1 = {
+		holder = 200219 # Emir Sabur of Badajoz
 	}
-	1015.1.1 = {
-		holder = 109603 # Nuno I Vimaranes
+	1022.4.8 = {
+		holder = 200220 # Emir Abd al-Aziz ibn Sabur of Beja
+		liege = d_beja
 	}
-	1028.1.1 = {
-		holder = 109604 # Mendo II Vimaranes
+	1030.1.1 = {
+		holder = 200221 # Emir Abd al-Malik ibn Sabur of Beja
 	}
-	1050.1.1 = {
-		holder = 109607 # Nuno II Vimaranes
+	1034.1.1 = {
+		holder = 3900 # Emir al-Muzaffar of Badajoz
+		liege = d_badajoz
 	}
 	1057.1.1 = {
 		holder = 142125 # Gomes Echigues de Sousa
@@ -900,6 +846,9 @@ c_viseu = {
 	}
 	1139.7.29 = {
 		liege = k_portugal
+	}
+	1178.1.1 = {
+		holder = 142415 # Egas Afonso de Ribadouro 
 	}
 	1185.12.6 = {
 		holder = 209500 # Sancho I de Bourgogne
@@ -1008,19 +957,20 @@ c_castelo_branco = {
 	875.1.1 = {
 		holder = 73683 # Sultan Muhammad I of Andalusia
 	}
-	880.1.1 = {
-		holder = 142005 # Lucidio Vimaranes
-		liege = d_porto
-		government = feudal_government
+	886.8.4 = {
+		holder = 73684 # Sultan al-Mundir ibn Muhammad of Andalusia
 	}
-	922.1.1 = {
-		holder = 73865 # Diogo de Guimaraez
+	888.6.24 = {
+		holder = 73685 # Sultan Abdallah ibn Muhammad of Andalusia
 	}
-	924.1.1 = {
-		holder = 70249 # Mendo I Bet�tez
+	912.10.15 = {
+		holder = 3200 # Caliph Abd al-Rahman III of Andalusia
 	}
-	950.7.24 = {
-		holder = 109620 # Gon�alo Mendez Bet�tez
+	961.10.15 = {
+		holder = 3202 # Caliph al-Hakam II of Andalusia
+	}
+	976.10.1 = {
+		holder = 3204 # Caliph Hisham II of Andalusia
 	}
 	981.1.1 = {
 		holder = 200219 # Emir Sabur of Badajoz
@@ -1092,40 +1042,42 @@ d_porto = {
 		liege = k_andalusia
 	}
 	868.1.1 = {
+		holder = 142006 # Vimara Peres
 		liege = k_asturias
-		holder = 142006 # Vimara Vimaranes
 	}
 	873.1.1 = {
-		holder = 142005 # Luc�dio Vimaranes
-	}
-	910.12.20 = {
-		liege = k_spanish_galicia
+		holder = 142005 # Lucídio Vimaranes
 	}
 	922.1.1 = {
-		holder = 73865 # Diogo de Guimaraez
+		holder = 73865 # Diogo Fernandes
 	}
-	924.1.1 = {
-		holder = 70249 # Mendo I Bet�tez
+	926.2.22 = {
+		holder = 70249 # Mendo I Gonçalves
+	}
+	949.7.24 = {
+		holder = 73866 # Mumadona Dias
 	}
 	950.7.24 = {
-		holder = 109620 # Gon�alo Mendez Bet�tez
+		holder = 109620 # Duke Gonçalo Mendes of Galicia
 	}
 	997.1.1 = {
-		holder = 109622 # Mendo II Bet�tez
+		holder = 109622 # Duke Mendo Gonçalves of Galicia
 	}
 	1008.10.11 = {
-		holder = 109601 # Alvito Nunes Vimaranes
+		holder = 109601 # Aloito Nunes
 	}
-	1015.1.1 = {
-		holder = 109603 # Nuno I Vimaranes
+	1016.1.1 = {
+		holder = 109603 # Nuno I Aloites
 	}
 	1028.1.1 = {
-		holder = 109604 # Mendo II Vimaranes
+		holder = 109604 # Mendo III Nunes
 	}
-	1050.1.1 = {
-		holder = 109607 # Nuno II Vimaranes
+	1054.12.24 = {
+		holder = 109607 # Nuno II Mendes
 	}
-
+	1065.12.27 = {
+		liege = k_spanish_galicia
+	}
 	1071.1.18 = {
 		holder = 0
 	}
@@ -1278,17 +1230,29 @@ b_guimaraes = {
 }
 c_braganza = {
 	851.1.1 = {
-		holder = surunbaqi0001 # Muhammad I Ummayyad
+		holder = surunbaqi0001 # Walih Sa'dun al-Surunbaqi of Portucale
 		liege = d_porto
 	}
 	868.1.1 = {
-		holder = 142006 # Vimara Peres Vimaranes
+		holder = 142006 # Duke Vimara Peres of Portucale
+		liege = d_porto
 	}
 	873.1.1 = {
-		holder = 142005 # Lucidio Vimaranes
+		holder = 142005 # Duke Lucídio Vimaranes of Portucale
 	}
 	922.1.1 = {
-		holder = 142004 # Alvito Lucides Vimaranes
+		holder = 70021 # King Ordoño II of León
+		liege = k_leon
+	}
+	924.6.1 = {
+		holder = 70114 # Nuno Alvites Vimaranes I
+	}
+	926.1.1 = {
+		holder = 70024 # King Ramiro II of León, styled King of Portugal
+	}
+	929.6.10 = {
+		holder = galician0157 # Ramiro Lucides
+		liege = d_porto
 	}
 	942.9.26 = {
 		holder = 70249 # Duke Mendo I of Portucale
@@ -1299,17 +1263,14 @@ c_braganza = {
 	975.1.1 = {
 		holder = 142166 # Vizoi Vizois
 	}
-	987.1.1 = {
-		holder = 109601 # Alvito Nunes Vimaranes
+	1000.1.1 = {
+		holder = galician0291 # Echega Guiçoi
 	}
-	1015.1.1 = {
-		holder = 109603 # Nuno Alvites Vimaranes II
-	}
-	1028.1.1 = {
-		holder = 142587 # Mendo Al�o de Bragan�a
+	1035.1.1 = {
+		holder = 142587 # Mendo Alão de Bragança
 	}
 	1050.1.1 = {
-		holder = 142140 # Fern�o Mendes de Bragan�a
+		holder = 142140 # Fernão Mendes de Antas
 	}
 	1071.1.18 = {
 		liege = k_spanish_galicia

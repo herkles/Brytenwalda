@@ -2,8 +2,7 @@
 k_gujarat = {
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	502.1.1 = {
 		holder = 191645 #Dronasimha
@@ -55,6 +54,7 @@ k_gujarat = {
 	}
 	1064.1.1 = {
 		holder = 188089 # Karnadeva
+
 	}
 	1094.1.1 = {
 		holder = 188091 # Jayasimha
@@ -94,9 +94,28 @@ k_gujarat = {
 	}
 	1304.1.1 = {
 		liege = e_rajastan
+		holder = 170246 #Ala-ud-din Muhammad
 	}
-	1310.1.1 = {
-		holder = 0
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
+	}
+	1318.1.1 = {
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
 
@@ -104,6 +123,7 @@ k_gujarat = {
 d_gurjara_mandala = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	502.1.1 = {
 		holder = 191645 #Dronasimha
@@ -239,15 +259,14 @@ d_gurjara_mandala = {
 		holder = 188163 # Karnadeva
 	}
 	1304.1.1 = {
-		liege = e_rajastan
-	}
-	1310.1.1 = {
-		holder = 0 #placeholder
+		liege = k_delhi
 	}
 }
 
 
 c_sarasvata_mandala = {
+	1178.1.1 = { change_development_level = 50 }
+
 	745.1.1 = {
 		liege = k_gujarat
 		holder = 188063 # Vanaraja Capa
@@ -329,15 +348,13 @@ c_sarasvata_mandala = {
 		holder = 188163 # Karnadeva
 	}
 	1304.1.1 = {
-		liege = e_rajastan
-	}
-	1320.1.1 = {
-		holder = 191907 #Lunkaran
+		liege = k_delhi
 	}
 }
 
-
 c_khetaka = {
+	1178.1.1 = { change_development_level = 36 }
+
 	475.1.1 = {
 		holder = 191643 #Bhatarka Maitraka
 	}
@@ -453,9 +470,6 @@ c_khetaka = {
 		holder = 188094 # Mulraja II
 	}
 	1178.1.1 = {
-		holder = 188095 # Bhima II
-	}
-	1208.1.1 = {
 		holder = 188097 # Jayasimha
 	}
 	1224.1.1 = {
@@ -477,10 +491,7 @@ c_khetaka = {
 		holder = 188163 # Karnadeva
 	}
 	1304.1.1 = {
-		liege = e_rajastan
-	}
-	1320.1.1 = {
-		holder = 191907 #Lunkaran
+		liege = k_delhi
 	}
 }
 
@@ -529,6 +540,10 @@ c_mohadavasaka = {
 	1101.1.1 = {
 		holder = 191924 #Vijaya
 	}
+	1178.1.1 = {
+		holder = 188198 # Subhatavarman
+		liege = k_malwa
+	}
 	1179.1.1 = {
 		holder = 188496 #Samant Singh Guhilot
 		liege = d_medapata
@@ -555,6 +570,9 @@ c_mohadavasaka = {
 	1300.1.1 = {
 		holder = 191906 #Dhavalma
 		liege = e_rajastan
+	}
+	1305.1.1 = {
+		liege = k_malwa
 	}
 	1320.1.1 = {
 		holder = 191907 #Lunkaran
@@ -659,18 +677,14 @@ c_dhamalpur = {
 		holder = 188163 # Karnadeva
 	}
 	1304.1.1 = {
-		liege = e_rajastan
-	}
-	1310.1.1 = {
-		holder = 188165 #placeholder
+		liege = k_gujarat
 	}
 }
 
 d_anartta = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
-	1187.1.1 = { change_development_level = 25 }
-	1337.1.1 = { change_development_level = 50 }
+	1178.1.1 = { change_development_level = 24 }
 }
 
 c_dvaraka = {
@@ -858,6 +872,10 @@ c_kutch = {
 	1321.1.1 = {
 		holder = 188283 #Rao Mulvaji
 	}
+	
+	1325.1.1 = {
+		liege = e_rajastan
+	}
 }
 
 
@@ -996,10 +1014,7 @@ d_saurashtra = {
 		holder = 188163 # Karnadeva
 	}
 	1304.1.1 = {
-		liege = e_rajastan
-	}
-	1310.1.1 = {
-		holder = 188165 #placeholder
+		liege = k_delhi
 	}
 }
 
@@ -1123,6 +1138,8 @@ c_bhumilka = {
 
 
 c_somnath = {
+	1178.1.1 = { change_development_level = 37 }
+
 	740.1.1 = {
 		liege = d_saurashtra
 		holder = 191672 # Calukya
@@ -1208,7 +1225,7 @@ c_somnath = {
 		holder = 188163 # Karnadeva
 	}
 	1304.1.1 = {
-		liege = e_rajastan
+		liege = k_gujarat
 		holder = 170246 #Ala-ud-din Muhammad
 	}
 	1316.1.3 = {
@@ -1360,10 +1377,7 @@ c_vardhamana = {
 		holder = 188163 # Karnadeva
 	}
 	1304.1.1 = {
-		liege = e_rajastan
-	}
-	1310.1.1 = {
-		holder = 188165 #placeholder
+		liege = k_delhi
 	}
 }
 
@@ -1506,10 +1520,7 @@ c_valabhi = {
 		holder = 188163 # Karnadeva
 	}
 	1304.1.1 = {
-		liege = e_rajastan
-	}
-	1310.1.1 = {
-		holder = 188165 #placeholder
+		liege = k_delhi
 	}
 }
 
@@ -1752,13 +1763,41 @@ c_navasarika = {
 	1298.1.1 = {
 		holder = 188205
 	}
-	
-	1337.1.1 = {
-		holder = 191927
+	1305.1.1 = {
+		holder = 170246
+	}
+	1316.1.3 = {
+		holder = 170247
+	}
+	1316.4.1 = {
+		holder = 170248
+	}
+	1318.1.1 = {
+		holder = 170250
+	}
+	1318.6.1 = {
+		holder = 170248
+	}
+	1320.6.1 = {
+		holder = 170251
+	}
+	1320.10.1 = {
+		holder = 170257
+	}
+	1325.2.1 = {
+		holder = 170258
 	}
 	#End of Ruler Placeholder until something better#
 }
 
+b_navasarika = {
+	1142.1.1 = {
+		holder = zartosht_4 # Zartosht
+	}
+	1163.1.1 = {
+		holder = zartosht_1 # Kamdin Zartosht
+	}
+}
 
 c_daman = {
 	#Up to 670 under the Sendrakas and then the Maitrakas
@@ -1877,10 +1916,6 @@ c_daman = {
 	1312.1.1 = {
 		holder = 74662
 	}
-	1337.1.1 = {
-		holder = 74724
-		liege = k_maharastra
-	}
 }
 
 
@@ -1957,33 +1992,8 @@ c_vadodara = {
 	1087.1.1 = {
 		holder = 188187 # Lakshamanadeva
 	}
-	
 	1178.1.1 = {
-		holder = 188095 # Bhima II
-	}
-	1208.1.1 = {
 		holder = 188097 # Jayasimha
-	}
-	1224.1.1 = {
-		holder = 188095 # Bhima II (again)
-	}
-	1241.1.1 = {
-		holder = 188096 # Tribhuvanapala
-	}
-	1243.1.1 = {
-		holder = 188158 # Viramdeva Vaghela
-	}
-	1262.1.1 = {
-		holder = 188160 # Arjunadeva
-	}
-	1274.1.1 = {
-		holder = 188161 # Sarangadeva
-	}
-	1296.1.1 = {
-		holder = 188163 # Karnadeva
-	}
-	
-	1337.1.1 = {
-		holder = 191927 #placeholder
+		liege = k_gujarat
 	}
 }

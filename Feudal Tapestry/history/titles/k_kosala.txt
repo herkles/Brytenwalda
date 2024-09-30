@@ -2,8 +2,7 @@
 k_kosala = {
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	725.1.1 = {
 		holder = 191000 #Yasovarman
@@ -37,6 +36,7 @@ k_kosala = {
 	}
 	836.1.1 = {
 		holder = 188008 # Bhoja I
+
 	}
 	885.1.1 = {
 		holder = 188009 # Mahendrapala I
@@ -77,6 +77,7 @@ k_kosala = {
 d_kanyakubja = {
 	867.1.1 = { change_development_level = 20 }
 	1066.1.1 = { change_development_level = 25 }
+	1178.1.1 = { change_development_level = 25 }
 	
 	725.1.1 = {
 		holder = 191000 #Yasovarman
@@ -165,6 +166,7 @@ d_kanyakubja = {
 c_kanyakubja = {
 	867.1.1 = { change_development_level = 24 }
 	1066.1.1 = { change_development_level = 34 }
+	1178.1.1 = { change_development_level = 46 }
 	
 	725.1.1 = {
 		holder = 191000 #Yasovarman
@@ -233,7 +235,7 @@ c_kanyakubja = {
 	1170.1.1 = {
 		holder = 191052 #Surapala Rashtrakuta
 	}
-	1180.1.1 = {
+	1177.1.1 = {
 		holder = 191053 #Amritapala Rashtrakuta
 	}
 	1186.1.1 = {
@@ -362,7 +364,7 @@ c_lakhnau = {
 	1170.1.1 = {
 		holder = 191052 #Surapala Rashtrakuta
 	}
-	1180.1.1 = {
+	1177.1.1 = {
 		holder = 191053 #Amritapala Rashtrakuta
 	}
 	1186.1.1 = {
@@ -509,12 +511,9 @@ c_kalpi = {
 	1160.1.1 = {
 		holder = 188238 # Vikramasimha Kachawaha
 	}
-	1169.1.1 = {
-		liege = k_delhi
-		holder = 188141 # Someshwara Chauhan
-	}
-	1177.1.1 = {
-		holder = 188142 # Prithviraja III
+	1170.1.1 = {
+		holder = 191860 # Anayapala
+		liege = 0
 	}
 	1192.1.1 = {
 		holder = 170190 #Mu'izz al-Din conquered Gwalior and made Qutb-ud-din Aibak governor
@@ -665,7 +664,7 @@ c_manikpur = {
 	1170.1.1 = {
 		holder = 191052 #Surapala Rashtrakuta
 	}
-	1180.1.1 = {
+	1177.1.1 = {
 		holder = 191053 #Amritapala Rashtrakuta
 	}
 	1186.1.1 = {
@@ -1026,11 +1025,9 @@ d_saryupara = {
 	910.1.1 = {
 		holder = 191030	#Bhamanadeva
 	}
-	936.1.1 = {
-		liege = 0
-	}
 	942.1.1 = {
 		holder = 191031	#Shankaragana II
+		liege = 0
 	}
 	960.1.1 = {
 		holder = 191032	#Mugdhatunga
@@ -1066,6 +1063,39 @@ d_saryupara = {
 
 
 c_ayodhya = {
+	320.1.1 = {
+		holder = gupta_3 # Chandragupta I
+	}
+	350.1.1 = {
+		holder = gupta_2 # Samudragupta
+	}
+	375.1.1 = {
+		holder = gupta_1 # Chandragupta II
+	}
+	415.1.1 = {
+		holder = gupta_6 # 	Kumaragupta I
+	}
+	455.1.1 = {
+		holder = gupta_9 # Skandagupta
+	}
+	468.1.1 = {
+		holder = gupta_10 # Purugupta
+	}
+	473.1.1 = {
+		holder = gupta_11 # Kumaragupta II
+	}
+	476.1.1 = {
+		holder = gupta_12 # Budhagupta
+	}
+	495.1.1 = {
+		holder = gupta_13 # Narasimhagupta
+	}
+	530.1.1 = {
+		holder = gupta_14 # Kumaragupta III
+	}
+	540.1.1 = {
+		holder = gupta_15 # Vishnugupta
+	}
 	725.1.1 = {
 		holder = 191025	#Rajaputra
 		liege = d_saryupara
@@ -1127,6 +1157,9 @@ c_ayodhya = {
 	}
 	1170.1.1 = {
 		holder = 190220 #Jayacandra Gahadvala
+	}
+	1177.1.1 = {
+		holder = 190221 # Hariscandra
 	}
 	1193.1.1 = {
 		holder = 170190 #Battle of Chandwar
@@ -1261,6 +1294,9 @@ c_naimisa = {
 	1170.1.1 = {
 		holder = 190220 #Jayacandra Gahadvala
 	}
+	1177.1.1 = {
+		holder = 190221 # Hariscandra
+	}
 	1193.1.1 = {
 		holder = 170190 #Battle of Chandwar
 		liege = k_delhi
@@ -1393,6 +1429,9 @@ c_sravasti = {
 	}
 	1170.1.1 = {
 		holder = 190220 #Jayacandra Gahadvala
+	}
+	1177.1.1 = {
+		holder = 190221 # Hariscandra
 	}
 	1193.1.1 = {
 		holder = 170190 #Battle of Chandwar
@@ -1711,8 +1750,9 @@ c_mahoba = {
 	}
 }
 
-
 c_kalanjara = {
+	1178.1.1 = { change_development_level = 36 }
+
 	700.1.1 = {
 		liege = d_jejakabhukti
 		holder = 191018 #Karamchand
@@ -1899,25 +1939,68 @@ c_damoh = {
 		holder = 170190 #Mu'izz al-Din conquered Delhi and made Qutb-ud-din Aibak governor
 		liege = k_delhi
 	}
-	
-	1205.1.1 = {
-		holder = 188054 # Trailokyavarma retakes Kalanjara
-		liege = d_jejakabhukti
+	1206.3.15 = {
+		liege = e_rajastan
 	}
-	1245.1.1 = {
-		holder = 188056 # Viravarma I
+	1210.11.4 = {
+		holder = 170191 #Aram
 	}
-	1285.1.1 = {
-		holder = 188058 # Bhojavarma
+	1211.6.1 = {
+		holder = 170193 #Iltutmish
 	}
-	1289.1.1 = {
-		holder = 188060 # Hammivarma
+	1220.1.1 = {
+		holder = 194288
 	}
-	1305.1.1 = {
-		holder = 191431 #Dynasty remains in power locally here up to mid 16th century
+	1236.5.1 = {
+		holder = 170194 #Firuz I
+	}
+	1236.11.20 = {
+		holder = 170195 #Raziyya
+	}
+	1239.10.1 = {
+		holder = 170198 #Bahram
+	}
+	1242.5.15 = {
+		holder = 170199 #Masud
+	}
+	1246.6.11 = {
+		holder = 170201 #Mahmud
+	}
+	1266.2.19 = {
+		holder = 170204 #Ghiyasuddin Balban
+	}
+	1286.1.1 = {
+		holder = 170213 #Muizz ud-din Qaiqabad
+	}
+	1290.10.1 = {
+		holder = 170243 #Jalal ud din Firuz Khilji
+	}
+	1296.7.21 = {
+		holder = 170245 #Ibrahim
+	}
+	1296.11.1 = {
+		holder = 170246 #Ala-ud-din Muhammad
+	}
+	1316.1.3 = {
+		holder = 170247 #Umar
+	}
+	1316.4.1 = {
+		holder = 170248 #Mubarak
 	}
 	1318.1.1 = {
-		liege = e_rajastan
+		holder = 170250 #Mahmud
+	}
+	1318.6.1 = {
+		holder = 170248 #Mubarak
+	}
+	1320.6.1 = {
+		holder = 170251 #Husraw Kushru
+	}
+	1320.10.1 = {
+		holder = 170257 #Ghiyath al-Din Tughluq
+	}
+	1325.2.1 = {
+		holder = 170258 #Muhammad
 	}
 }
 

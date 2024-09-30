@@ -1,33 +1,13 @@
 k_yemen = {
 	867.1.1 = {	change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
-	1187.1.1 = { change_development_level = 20 }
-	1337.1.1 = { change_development_level = 40 }
-	1229.1.1 = {
-		holder = 144094
-		effect = {
-			set_capital_county = title:c_zabid
-		}
-	}
-	1250.1.1 = {
-		holder = 144095
-	}
-	1295.1.1 = {
-		holder = 144096
-	}
-	1296.1.1 = {
-		holder = 144097
-	}
-	1322.1.1 = {
-		holder = 144098
-	}
+	1178.1.1 = { change_development_level = 20 }
 }
 
 d_sanaa = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 17 }
 
 	630.1.1 = {
 		liege = e_arabia
@@ -49,7 +29,7 @@ d_sanaa = {
 	882.1.1 = {
 		holder = 159399 # Rassids
 	}
-	911.8.19 = {
+	911.1.1 = {
 		holder = 159400
 	}
 	922.1.1 = {
@@ -118,27 +98,21 @@ d_sanaa = {
 	1250.1.1 = {
 		holder = 144095
 	}
-	1288.1.1 = {
-		holder = al_mutawakkil_al_mutahhar
-		government = clan_government
+	1295.1.1 = {
+		holder = 144096
 	}
-	1298.6.23 = {
-		holder = al_mahdi_muhammad
+	1296.1.1 = {
+		holder = 144097
 	}
 	1322.1.1 = {
-		liege = 0
-	}
-	1328.10.28 = {
-		holder = al_muayyad_yahya#al_wathiq_al_mutahhar
+		holder = 144098
 	}
 }
-
 
 c_sanaa = {
 	867.1.1 = {	change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
-	1187.1.1 = { change_development_level = 35 }
-	1337.1.1 = { change_development_level = 70 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	# c_sanaa
 	
@@ -163,7 +137,7 @@ c_sanaa = {
 	882.1.1 = {
 		holder = 159399 # Rassids
 	}
-	911.8.19 = {
+	911.1.1 = {
 		holder = 159400
 	}
 	922.1.1 = {
@@ -205,16 +179,10 @@ c_sanaa = {
 	1138.1.1 = {
 		holder = 45059
 	}
-	1171.1.1 = {
-		holder = 32915
-	}
-	1174.1.1 = {
-		holder = 32916
+	1161.1.1 = {
+		holder = hamdanid_1 # Ali ibn Hatim
 	}
 	1197.1.1 = {
-		holder = almansurabdallah
-	}
-	1198.1.1 = {
 		holder = 144092
 	}
 	1202.1.1 = {
@@ -229,19 +197,14 @@ c_sanaa = {
 	1250.1.1 = {
 		holder = 144095
 	}
-	1288.1.1 = {
-		holder = al_mutawakkil_al_mutahhar
-		government = clan_government
+	1295.1.1 = {
+		holder = 144096
 	}
-	1298.6.23 = {
-		holder = al_mahdi_muhammad
+	1296.1.1 = {
+		holder = 144097
 	}
 	1322.1.1 = {
-		liege = 0
-	}
-	1328.10.28 = {
-		holder = al_muayyad_yahya#al_wathiq_al_mutahhar
-		liege = d_zayidi
+		holder = 144098
 	}
 }
 
@@ -262,7 +225,7 @@ c_tihamat-al-yamani = {
 	882.1.1 = {
 		holder = 159399 # Rassids
 	}
-	911.8.19 = {
+	911.1.1 = {
 		holder = 159400
 	}
 	922.1.1 = {
@@ -397,16 +360,16 @@ c_najran = {
 	1138.1.1 = {
 		holder = 45059
 	}
-	1171.1.1 = {
-		holder = 32915
+	1161.1.1 = {
+		holder = hamdanid_1 # Ali ibn Hatim
 	}
-	1174.1.1 = {
-		holder = 32916
+	1197.1.1 = {
+		holder = 144092
 	}
-	1187.1.1 = {
-		holder = almansurabdallah
+	1202.1.1 = {
+		holder = 144093
 	}
-	1217.4.21 = {
+	1203.1.1 = {
 		holder = 32929
 	}
 	1229.1.1 = {
@@ -415,26 +378,19 @@ c_najran = {
 	1250.1.1 = {
 		holder = 144095
 	}
-	1288.1.1 = {
-		holder = al_mutawakkil_al_mutahhar
-		government = clan_government
+	1295.1.1 = {
+		holder = 144096
 	}
-	1298.6.23 = {
-		holder = al_mahdi_muhammad
+	1296.1.1 = {
+		holder = 144097
 	}
 	1322.1.1 = {
-		liege = 0
-	}
-	1328.10.28 = {
-		holder = almahdi_ali
-		liege = d_zayidi
+		holder = 144098
 	}
 }
 
 
 c_zabid = {
-	1187.1.1 = { change_development_level = 35 }
-	1337.1.1 = { change_development_level = 70 }
 	630.1.1 = {
 		liege = "d_sanaa"
 	}
@@ -619,16 +575,16 @@ c_jawf-al-yamani = {
 	1138.1.1 = {
 		holder = 45059
 	}
-	1171.1.1 = {
-		holder = 32915
+	1161.1.1 = {
+		holder = hamdanid_1 # Ali ibn Hatim
 	}
-	1174.1.1 = {
-		holder = 32916
+	1197.1.1 = {
+		holder = 144092
 	}
-	1187.1.1 = {
-		holder = almansurabdallah
+	1202.1.1 = {
+		holder = 144093
 	}
-	1217.4.21 = {
+	1203.1.1 = {
 		holder = 32929
 	}
 	1229.1.1 = {
@@ -644,11 +600,7 @@ c_jawf-al-yamani = {
 		holder = 144097
 	}
 	1322.1.1 = {
-		holder = al_mahdi_muhammad
-		liege = 0
-	}
-	1328.10.28 = {
-		holder = al_muayyad_yahya
+		holder = 144098
 	}
 }
 
@@ -710,16 +662,16 @@ c_wabar = {
 	1138.1.1 = {
 		holder = 45059
 	}
-	1171.1.1 = {
-		holder = 32915
+	1161.1.1 = {
+		holder = hamdanid_1 # Ali ibn Hatim
 	}
-	1174.1.1 = {
-		holder = 32916
+	1197.1.1 = {
+		holder = 144092
 	}
-	1187.1.1 = {
-		holder = almansurabdallah
+	1202.1.1 = {
+		holder = 144093
 	}
-	1217.4.21 = {
+	1203.1.1 = {
 		holder = 32929
 	}
 	1229.1.1 = {
@@ -735,22 +687,14 @@ c_wabar = {
 		holder = 144097
 	}
 	1322.1.1 = {
-		holder = al_mahdi_muhammad
-		liege = 0
-	}
-	1328.10.28 = {
-		holder = al_wathiq_al_mutahhar
-		liege = d_zayidi
-		government = clan_government
+		holder = 144098
 	}
 }
-
 
 d_taizz = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 17 }
 	
 	818.1.1 = {
 		holder = 188736 # Muhammad Ziyadid
@@ -777,9 +721,6 @@ d_taizz = {
 	1040.1.1 = {
 		holder = 45035
 	}
-	1070.1.1 = {
-		holder = 45036
-	}
 	1084.1.1 = {
 		holder = 0
 	}
@@ -789,8 +730,7 @@ d_taizz = {
 c_taizz = {
 	867.1.1 = {	change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
-	1187.1.1 = { change_development_level = 35 }
-	1337.1.1 = { change_development_level = 70 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	768.1.1 = {
 		liege = "d_sanaa"
@@ -1170,11 +1110,7 @@ c_hadramawt = {
 		holder = 144097
 	}
 	1322.1.1 = {
-		holder = al_mahdi_muhammad
-		liege = 0
-	}
-	1328.10.28 = {
-		holder = al_muayyad_yahya
+		holder = 144098
 	}	
 }
 
@@ -1264,13 +1200,7 @@ c_ahqaf = {
 		holder = 144097
 	}
 	1322.1.1 = {
-		holder = al_mahdi_muhammad
-		liege = 0
-	}
-	1328.10.28 = {
-		holder = al_wathiq_al_mutahhar
-		liege = d_zayidi
-		government = clan_government
+		holder = 144098
 	}
 }
 
@@ -1303,7 +1233,7 @@ c_kinda_sakun = {
 		holder = 159399
 		government = clan_government
 	}
-	911.8.19 = {
+	911.1.1 = {
 		holder = 159400
 	}
 	922.1.1 = {
@@ -1414,45 +1344,23 @@ c_mahra = {
 	1142.1.1 = {
 		holder = 144035
 	}
+	1145.1.1 = {
+		holder = manjawa_1 # Ahmad al-Manjawa
+	}
 	1154.1.1 = {
 		liege = "d_oman"
 	}
-	1154.1.1 = {
-		holder = 144145
-	}
-	1161.1.1 = {
-		holder = 144560
-	}
-	1171.1.1 = {
-		holder = 32915
-		liege = d_sanaa
-	}
-	1174.1.1 = {
-		holder = 32916
-	}
-	1197.1.1 = {
-		holder = 144092
-	}
-	1202.1.1 = {
-		holder = 144093
-	}
-	1203.1.1 = {
-		holder = 32929
-	}
-	1229.1.1 = {
-		holder = 144094
+	1200.1.1 = {
+		holder = 144561
 	}
 	1250.1.1 = {
-		holder = 144095
+		holder = 144562
 	}
-	1295.1.1 = {
-		holder = 144096
+	1278.1.1 = {
+		holder = 144563
 	}
-	1296.1.1 = {
-		holder = 144097
-	}
-	1322.1.1 = {
-		holder = 144098
+	1285.1.1 = {
+		holder = 144564
 	}
 }
 
@@ -1492,16 +1400,13 @@ c_al-asa = {
 	1142.1.1 = {
 		holder = 144035
 	}
+	1145.1.1 = {
+		holder = manjawa_1 # Ahmad al-Manjawa
+	}
 	1154.1.1 = {
 		liege = "d_oman"
 	}
-	1154.1.1 = {
-		holder = 144145
-	}
-	1161.1.1 = {
-		holder = 144560
-	}
-	1210.1.1 = {
+	1200.1.1 = {
 		holder = 144561
 	}
 	1250.1.1 = {
@@ -1718,16 +1623,13 @@ c_dhofar = {
 	1142.1.1 = {
 		holder = 144035
 	}
+	1145.1.1 = {
+		holder = manjawa_1 # Ahmad al-Manjawa
+	}
 	1154.1.1 = {
 		liege = "d_oman"
 	}
-	1154.1.1 = {
-		holder = 144145
-	}
-	1161.1.1 = {
-		holder = 144560
-	}
-	1210.1.1 = {
+	1200.1.1 = {
 		holder = 144561
 	}
 	1250.1.1 = {

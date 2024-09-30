@@ -1,8 +1,7 @@
 k_arabia = {
 	867.1.1 = {	change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
-	1187.1.1 = { change_development_level = 20 }
-	1337.1.1 = { change_development_level = 40 }
+	1178.1.1 = { change_development_level = 20 }
 }
 
 c_al_jawf = {
@@ -52,30 +51,13 @@ c_al_jawf = {
 	1195.1.1 = {
 		holder = bedouin0084
 	}
-	
-	1223.1.1 = {
-		holder = 34490
-	}
-	1250.1.1 = {
-		holder = 34491
-	}
-	1285.1.1 = {
-		holder = 34492
-	}
-	1300.1.1 = {
-		holder = 34493
-	}
-	1320.1.1 = {
-		holder = 34494
-	}
 }
 
 
 c_thalabiya = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	627.1.1 = {
 		liege = e_arabia
@@ -187,31 +169,13 @@ c_sirhan = {
 		holder = bedouin0084
 	}
 	
-	1223.1.1 = {
-		holder = 34490
-	}
-	1250.1.1 = {
-		holder = 34491
-	}
-	1285.1.1 = {
-		holder = 34492
-	}
-	1300.1.1 = {
-		holder = 34493
-	}
-	1320.1.1 = {
-		holder = 34494
-	}
 }
-
 
 d_amman = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 }
-
 
 c_balqa = {
 	750.1.1 = {
@@ -228,7 +192,7 @@ c_balqa = {
 		holder = 146066
 	}
 	850.1.1 = {
-		holder = bedouin0052
+		holder = levantine0001
 	}
 	866.1.1 = {
 		holder = 146080
@@ -292,6 +256,9 @@ c_balqa = {
 	1175.1.1 = {
 		holder = 226000
 	}
+	1178.1.1 = {
+		holder = ayyubid_1 # Farrukhshah
+	}
 	1186.1.1 = {
 		holder = 226051
 	}
@@ -331,10 +298,10 @@ c_balqa = {
 	
 }
 
-
 c_maab = {
 	867.1.1 = {	change_development_level = 10 }
 	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 18 }
 	
 	690.1.1 = {
 		liege = "d_palestine"
@@ -523,18 +490,18 @@ c_jilat = {
 		holder = 93009
 	}
 	1174.10.1 = {
-		holder = 223592
+		holder = 226000 # Saladin
 	}
-	1176.1.1 = {
-		holder = 223590
+	1178.1.1 = {
+		holder = ayyubid_1 # Farrukhshah
 	}
-	1187.1.1 = {
-		holder = 93354
+	#1176.1.1 = {
+	#	holder = 223590
+	#}
+	1187.7.4 = {
+		holder = 223560
 	}
 	1187.10.2 = {
-		holder = 226051
-	}
-	1196.1.1 = {
 		holder = 226052
 	}
 	1218.8.1 = {
@@ -599,11 +566,10 @@ d_shammar = {
 c_tabuk = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	767.1.1 = {
-		liege = "d_mecca"
+		liege = "d_medina"
 		holder = 188619
 	}
 	
@@ -616,7 +582,7 @@ c_tabuk = {
 	}
 	
 	1066.1.1 = {
-		liege = "d_mecca"
+		liege = "d_medina"
 	}
 	1066.1.1 = {
 		holder = 20794
@@ -629,7 +595,6 @@ c_tabuk = {
 	}
 	1160.1.1 = {
 		holder = 93361
-		liege = k_egypt
 	}
 	1200.1.1 = {
 		holder = 93362
@@ -647,13 +612,12 @@ c_tabuk = {
 
 
 c_al_aqabah = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	755.1.1 = {
-		liege = "d_mecca"
+		liege = "d_medina"
 		holder = 188618
 	}
 	855.1.1 = {
@@ -702,15 +666,12 @@ c_al_aqabah = {
 	1320.1.1 = {
 		holder = 93372
 	}
-
 }
 
-
 c_maan = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	690.1.1 = {
 		liege = "d_shammar"
@@ -777,19 +738,17 @@ c_maan = {
 
 
 c_tayma = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	767.1.1 = {
-		liege = "d_mecca"
+		liege = "d_medina"
 		holder = 188620
 	}
 	
-	861.1.1 = {
-		holder = ali_ibn_husain_ibn_ismail
-		liege = d_medina
+	830.1.1 = {
+		holder = bedouin00162
 	}
 	936.1.1 = {
 		holder = 260932
@@ -801,6 +760,7 @@ c_tayma = {
 	}
 	1066.1.1 = {
 		holder = 20794
+		liege = "d_medina"
 	}
 	1089.1.1 = {
 		holder = 93359
@@ -810,23 +770,54 @@ c_tayma = {
 	}
 	1160.1.1 = {
 		holder = 93361
-		liege = k_egypt
 	}
-	1200.1.1 = {
-		holder = 93362
+	1201.1.1 = {
+		holder = 34051 # Qatada - Emir of Mecca
+	}
+	1220.1.1 = {
+		holder = 34052
+	}
+	1232.1.1 = {
+		holder = 34053
+	}
+	1239.1.1 = {
+		holder = 34054
 	}
 	1240.1.1 = {
-		holder = 93363
+		holder = 34053
 	}
-	1280.1.1 = {
-		holder = 93364
+	1241.1.1 = {
+		holder = 34055
 	}
-	1320.1.1 = {
-		holder = 93365
+	1245.1.1 = {
+		holder = 34053
+	}
+	1254.1.1 = {
+		holder = 34057
+	}
+	1255.1.1 = {
+		holder = 34058
+	}
+	1270.1.1 = {
+		holder = 34056
+	}
+	1301.1.1 = {
+		holder = 34060
+	}
+	1302.1.1 = {
+		holder = 34062
+	}
+	1314.1.1 = {
+		holder = 34060
 	}
 }
 
+
 d_medina = {
+	767.1.1 = {
+		liege = e_arabia
+		holder = 163125 # Hasan ibn Zayd ibn Hasan
+	}
 	861.1.1 = {
 		holder = ali_ibn_husain_ibn_ismail
 		liege = e_arabia
@@ -857,55 +848,72 @@ d_medina = {
 	1018.1.1 = {
 		holder = al_husayn_ibn_muhanna_ibn_daud
 	}
-	1080.1.1 = {
-		holder = mansur_ibn_umara_ibn_muhanna
+	1061.1.1 = {
+		holder = 34046 # Hussayn - not actually the Emir of Mecca (it was Abul-Hashim ibn Muhammed )
+		liege = "k_egypt"
+	}
+	1076.1.1 = {
 		liege = "k_persia"
 	}
-	1103.1.1 = {
-		holder = muhanna_ibn_alhusayn_ibn_muhanna
+	1094.1.1 = {
+		holder = 34047 # Issa - not actually the Emir of Mecca (it was Ibn Abul-Hashim Al-Thalab )
 	}
-	1120.1.1 = {
-		holder = alhusayn_ibn_muhanna_ibn_alhusayn
+	1101.1.1 = {
+		holder = 34048 # Abd al-Karim - probably not Emir of Mecca
+	}
+	1130.1.1 = {
+		holder = 34049 # Muta'in - probably not Emir of Mecca
+	}
+	1150.1.1 = {
+		holder = 34050 # Idris - probably not Emir of Mecca
+	}
+	1154.1.1 = {
+		liege = "k_egypt"
 	}
 	1170.1.1 = {
-		holder = qasim_ibn_muhanna
-		liege = k_egypt
+		holder = husaynid_23 # Qasim
 	}
-	#gap
-	#1170.1.1 = {
-	#	holder = qasim_ibn_muhanna
-	#}
-	1195.1.1 = {
-		holder = salim_ibn_qasim
+	1201.1.1 = {
+		holder = 34051 # Qatada - Emir of Mecca
 	}
-	1216.1.1 = {
-		holder = qasim_ibn_djammaz_ibn_qasim
+	1220.1.1 = {
+		holder = 34052
 	}
-	1226.1.1 = {
+	1232.1.1 = {
+		holder = 34053
+	}
+	1239.1.1 = {
 		holder = 34054
 	}
-	1249.1.1 = {
-		holder = isa_ibn_shiha
+	1240.1.1 = {
+		holder = 34053
+	}
+	1241.1.1 = {
+		holder = 34055
+	}
+	1245.1.1 = {
+		holder = 34053
+	}
+	1254.1.1 = {
+		holder = 34057
 	}
 	1255.1.1 = {
-		holder = munif_ibn_shihah
+		holder = 34058
 	}
-	1259.1.1 = {
-		holder = 34059
+	1270.1.1 = {
+		holder = 34056
 	}
-	1300.1.1 = {
-		holder = mansur_ibn_jammaz
+	1301.1.1 = {
+		holder = 34060
 	}
-	1325.1.1 = {
-		holder = muqbil_bin_jammaz
+	1302.1.1 = {
+		holder = 34062
 	}
-	1326.1.1 = {
-		holder = kubaish_b_mansur
-	}
-	1327.1.1 = {
-		holder = tufail_b_mansur
+	1314.1.1 = {
+		holder = 34060
 	}
 }
+
 
 c_medina = {
 	867.1.1 = {	change_development_level = 10 }
@@ -961,60 +969,77 @@ c_medina = {
 	1018.1.1 = {
 		holder = al_husayn_ibn_muhanna_ibn_daud
 	}
-	1080.1.1 = {
-		holder = mansur_ibn_umara_ibn_muhanna
+	1061.1.1 = {
+		holder = 34046 # Hussayn - not actually the Emir of Mecca (it was Abul-Hashim ibn Muhammed )
 	}
-	1103.1.1 = {
-		holder = muhanna_ibn_alhusayn_ibn_muhanna
+	1094.1.1 = {
+		holder = 34047 # Issa - not actually the Emir of Mecca (it was Ibn Abul-Hashim Al-Thalab )
 	}
-	1120.1.1 = {
-		holder = alhusayn_ibn_muhanna_ibn_alhusayn
+	1101.1.1 = {
+		holder = 34048 # Abd al-Karim - probably not Emir of Mecca
+	}
+	1130.1.1 = {
+		holder = 34049 # Muta'in - probably not Emir of Mecca
+	}
+	1150.1.1 = {
+		holder = 34050 # Idris - probably not Emir of Mecca
 	}
 	1170.1.1 = {
-		holder = qasim_ibn_muhanna
+		holder = husaynid_23 # Qasim
 	}
-	1195.1.1 = {
-		holder = salim_ibn_qasim
+	1201.1.1 = {
+		holder = 34051 # Qatada - Emir of Mecca
 	}
-	1216.1.1 = {
-		holder = qasim_ibn_djammaz_ibn_qasim
+	1220.1.1 = {
+		holder = 34052
 	}
-	1226.1.1 = {
+	1232.1.1 = {
+		holder = 34053
+	}
+	1239.1.1 = {
 		holder = 34054
 	}
-	1249.1.1 = {
-		holder = isa_ibn_shiha
+	1240.1.1 = {
+		holder = 34053
+	}
+	1241.1.1 = {
+		holder = 34055
+	}
+	1245.1.1 = {
+		holder = 34053
+	}
+	1254.1.1 = {
+		holder = 34057
 	}
 	1255.1.1 = {
-		holder = munif_ibn_shihah
+		holder = 34058
 	}
-	1259.1.1 = {
-		holder = 34059
+	1270.1.1 = {
+		holder = 34056
 	}
-	1300.1.1 = {
-		holder = mansur_ibn_jammaz
+	1301.1.1 = {
+		holder = 34060
 	}
-	1325.1.1 = {
-		holder = muqbil_bin_jammaz
+	1302.1.1 = {
+		holder = 34062
 	}
-	1326.1.1 = {
-		holder = kubaish_b_mansur
-	}
-	1327.1.1 = {
-		holder = tufail_b_mansur
+	1314.1.1 = {
+		holder = 34060
 	}
 }
 
 
 c_wajh = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 	
-	861.1.1 = {
-		holder = ali_ibn_husain_ibn_ismail
-		liege = d_medina
+	767.1.1 = {
+		liege = "d_medina"
+		holder = 188620
+	}
+	830.1.1 = {
+		holder = bedouin00162
 	}
 	936.1.1 = {
 		holder = 260970
@@ -1022,42 +1047,78 @@ c_wajh = {
 	}
 	1061.1.1 = {
 		holder = 20794
-		liege = "d_mecca"
+		liege = "d_medina"
 	}
-	1066.1.1 = {
-		holder = 20794
+	1094.1.1 = {
+		holder = 34047 # Issa - not actually the Emir of Mecca (it was Ibn Abul-Hashim Al-Thalab )
 	}
-	1089.1.1 = {
-		holder = 93359
+	1101.1.1 = {
+		holder = 34048 # Abd al-Karim - probably not Emir of Mecca
 	}
-	1120.1.1 = {
-		holder = 93360
+	1130.1.1 = {
+		holder = 34049 # Muta'in - probably not Emir of Mecca
 	}
-	1160.1.1 = {
-		holder = 93361
-		liege = k_egypt
+	1150.1.1 = {
+		holder = 34050 # Idris - probably not Emir of Mecca
 	}
-	1200.1.1 = {
-		holder = 93362
+	1170.1.1 = {
+		holder = husaynid_23 # Qasim
+	}
+	1201.1.1 = {
+		holder = 34051 # Qatada - Emir of Mecca
+	}
+	1220.1.1 = {
+		holder = 34052
+	}
+	1232.1.1 = {
+		holder = 34053
+	}
+	1239.1.1 = {
+		holder = 34054
 	}
 	1240.1.1 = {
-		holder = 93363
+		holder = 34053
 	}
-	1280.1.1 = {
-		holder = 93364
+	1241.1.1 = {
+		holder = 34055
 	}
-	1320.1.1 = {
-		holder = 93365
+	1245.1.1 = {
+		holder = 34053
+	}
+	1254.1.1 = {
+		holder = 34057
+	}
+	1255.1.1 = {
+		holder = 34058
+	}
+	1270.1.1 = {
+		holder = 34056
+	}
+	1301.1.1 = {
+		holder = 34060
+	}
+	1302.1.1 = {
+		holder = 34062
+	}
+	1314.1.1 = {
+		holder = 34060
 	}
 }
 
 
 c_khaybar = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 	
+	767.1.1 = {
+		liege = d_medina
+		holder = 163125 # Hasan ibn Zayd ibn Hasan
+	}
+	
+	830.1.1 = {
+		holder = bedouin00162
+	}
 	861.1.1 = {
 		holder = ali_ibn_husain_ibn_ismail
 		liege = d_medina
@@ -1088,67 +1149,8 @@ c_khaybar = {
 	1018.1.1 = {
 		holder = al_husayn_ibn_muhanna_ibn_daud
 	}
-	1080.1.1 = {
-		holder = mansur_ibn_umara_ibn_muhanna
-	}
-	1103.1.1 = {
-		holder = muhanna_ibn_alhusayn_ibn_muhanna
-	}
-	1120.1.1 = {
-		holder = alhusayn_ibn_muhanna_ibn_alhusayn
-	}
-	1170.1.1 = {
-		holder = qasim_ibn_muhanna
-	}
-	1195.1.1 = {
-		holder = salim_ibn_qasim
-	}
-	1216.1.1 = {
-		holder = qasim_ibn_djammaz_ibn_qasim
-	}
-	1226.1.1 = {
-		holder = 34054
-	}
-	1249.1.1 = {
-		holder = isa_ibn_shiha
-	}
-	1255.1.1 = {
-		holder = munif_ibn_shihah
-	}
-	1259.1.1 = {
-		holder = 34059
-	}
-	1300.1.1 = {
-		holder = mansur_ibn_jammaz
-	}
-	1325.1.1 = {
-		holder = muqbil_bin_jammaz
-	}
-	1326.1.1 = {
-		holder = kubaish_b_mansur
-	}
-	1327.1.1 = {
-		holder = tufail_b_mansur
-	}
-}
-
-
-c_yanbu = {
-	867.1.1 = { change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
-	
-	
-	830.1.1 = {
-		holder = bedouin00162
-		liege = d_mecca
-	}
-	936.1.1 = {
-		holder = 260970
-	}
 	1061.1.1 = {
-		holder = 20802
+		holder = 34046 # Hussayn - not actually the Emir of Mecca (it was Abul-Hashim ibn Muhammed )
 	}
 	1094.1.1 = {
 		holder = 34047 # Issa - not actually the Emir of Mecca (it was Ibn Abul-Hashim Al-Thalab )
@@ -1161,6 +1163,9 @@ c_yanbu = {
 	}
 	1150.1.1 = {
 		holder = 34050 # Idris - probably not Emir of Mecca
+	}
+	1170.1.1 = {
+		holder = husaynid_23 # Qasim
 	}
 	1201.1.1 = {
 		holder = 34051 # Qatada - Emir of Mecca
@@ -1180,7 +1185,83 @@ c_yanbu = {
 	1241.1.1 = {
 		holder = 34055
 	}
-	1253.1.1 = {
+	1245.1.1 = {
+		holder = 34053
+	}
+	1254.1.1 = {
+		holder = 34057
+	}
+	1255.1.1 = {
+		holder = 34058
+	}
+	1270.1.1 = {
+		holder = 34056
+	}
+	1301.1.1 = {
+		holder = 34060
+	}
+	1302.1.1 = {
+		holder = 34062
+	}
+	1314.1.1 = {
+		holder = 34060
+	}
+}
+
+
+c_yanbu = {
+	867.1.1 = {	change_development_level = 7 }
+	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 24 }
+	
+	767.1.1 = {
+		liege = d_medina
+		holder = 163125 # Hasan ibn Zayd ibn Hasan
+	}
+	
+	830.1.1 = {
+		holder = bedouin00162
+	}
+	936.1.1 = {
+		holder = 260970
+	}
+	1061.1.1 = {
+		holder = 20802
+	}
+	1094.1.1 = {
+		holder = 34047 # Issa - not actually the Emir of Mecca (it was Ibn Abul-Hashim Al-Thalab )
+	}
+	1101.1.1 = {
+		holder = 34048 # Abd al-Karim - probably not Emir of Mecca
+	}
+	1130.1.1 = {
+		holder = 34049 # Muta'in - probably not Emir of Mecca
+	}
+	1150.1.1 = {
+		holder = 34050 # Idris - probably not Emir of Mecca
+	}
+	1170.1.1 = {
+		holder = husaynid_23 # Qasim
+	}
+	1201.1.1 = {
+		holder = 34051 # Qatada - Emir of Mecca
+	}
+	1220.1.1 = {
+		holder = 34052
+	}
+	1232.1.1 = {
+		holder = 34053
+	}
+	1239.1.1 = {
+		holder = 34054
+	}
+	1240.1.1 = {
+		holder = 34053
+	}
+	1241.1.1 = {
+		holder = 34055
+	}
+	1245.1.1 = {
 		holder = 34053
 	}
 	1254.1.1 = {
@@ -1205,14 +1286,13 @@ c_yanbu = {
 
 
 c_harrat_rahat = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	767.1.1 = {
 		government = tribal_government
-		liege = d_mecca
+		liege = d_medina
 		holder = 163125 # Hasan ibn Zayd ibn Hasan
 	}
 	
@@ -1269,24 +1349,14 @@ c_harrat_rahat = {
 	1234.1.1 = {
 		holder = bedouin0097
 	}
-	1266.1.1 = {
-		holder = 34059
-	}
-	1300.1.1 = {
-		holder = mansur_ibn_jammaz
-	}
-	1325.1.1 = {
-		holder = muqbil_bin_jammaz
-	}
-	1326.1.1 = {
-		holder = kubaish_b_mansur
-	}
-	1327.1.1 = {
-		holder = tufail_b_mansur
-	}
 }
 
+
 d_mecca = {
+	867.1.1 = {	change_development_level = 12 }
+	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 20 }
+
 	767.1.1 = {
 		liege = e_arabia
 		holder = 163125 # Hasan ibn Zayd ibn Hasan
@@ -1324,46 +1394,8 @@ d_mecca = {
 	1154.1.1 = {
 		liege = "k_egypt"
 	}
-	1201.1.1 = {
-		holder = 34051 # Qatada - Emir of Mecca
-	}
-	1220.1.1 = {
-		holder = 34052
-	}
-	1232.1.1 = {
-		holder = 34053
-	}
-	1239.1.1 = {
-		holder = 34054
-	}
-	1240.1.1 = {
-		holder = 34053
-	}
-	1241.1.1 = {
-		holder = 34055
-	}
-	1253.1.1 = {
-		holder = 34053
-	}
-	1254.1.1 = {
-		holder = 34057
-	}
-	1255.1.1 = {
-		holder = 34058
-	}
-	1270.1.1 = {
-		holder = 34056
-	}
-	1301.1.1 = {
-		holder = 34060
-	}
-	1302.1.1 = {
-		holder = 34062
-	}
-	1314.1.1 = {
-		holder = 34060
-	}
 }
+
 c_mecca = {
 	867.1.1 = {	change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
@@ -1412,7 +1444,7 @@ c_mecca = {
 	1241.1.1 = {
 		holder = 34055
 	}
-	1253.1.1 = {
+	1245.1.1 = {
 		holder = 34053
 	}
 	1254.1.1 = {
@@ -1439,10 +1471,11 @@ c_mecca = {
 c_taif = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	767.1.1 = {
 		government = tribal_government
-		liege = d_mecca
+		liege = d_medina
 		holder = 188610 # Muhammad b Ibrahim
 	}
 
@@ -1496,15 +1529,12 @@ c_taif = {
 	1234.1.1 = {
 		holder = bedouin0097
 	}
-	1337.1.1 = {
-		holder = 34060
-	}
 }
 
 
 c_tihama = {
 	767.1.1 = {
-		liege = d_mecca
+		liege = d_medina
 		holder = 188610 # Muhammad b Ibrahim
 	}
 	
@@ -1547,7 +1577,7 @@ c_tihama = {
 	1241.1.1 = {
 		holder = 34055
 	}
-	1253.1.1 = {
+	1245.1.1 = {
 		holder = 34053
 	}
 	1254.1.1 = {
@@ -1574,7 +1604,7 @@ c_tihama = {
 c_bisha = {
 	767.1.1 = {
 		government = tribal_government
-		liege = "d_mecca"
+		liege = "d_medina"
 		holder = 188621
 	}
 	
@@ -1627,9 +1657,6 @@ c_bisha = {
 	1222.1.1 = {
 		holder = bedouin0108
 	}
-	1337.1.1 = {
-		holder = 34060
-	}
 }
 
 
@@ -1681,15 +1708,13 @@ c_aqiq = {
 	1222.1.1 = {
 		holder = bedouin0108
 	}
-	1337.1.1 = {
-		holder = 34517
-	}
 }
 
 
 d_asir = {
 	867.1.1 = {	change_development_level = 1 }
 	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 5 }
 	
 	1059.1.1 = {
 		government = tribal_government
@@ -1713,7 +1738,7 @@ d_asir = {
 c_asir = {
 	767.1.1 = {
 		government = tribal_government
-		liege = "d_mecca"
+		liege = "d_medina"
 		holder = 188621
 	}
 	
@@ -1769,16 +1794,13 @@ c_asir = {
 	1222.1.1 = {
 		holder = bedouin0108
 	}
-	
-	1337.1.1 = {
-		holder = 34517
-	}
 }
 
 
 d_najd = {
 	867.1.1 = {	change_development_level = 1 }
 	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 5 }
 	
 	760.1.1 = {
 	#	liege = e_arabia
@@ -1811,17 +1833,13 @@ d_najd = {
 	1201.1.1 = {
 		holder = bedouin0072
 	}
-	1337.1.1 = {
-		holder = 34517
-	}
 }
 
 
 c_sharaf = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	627.1.1 = {
 		liege = e_arabia
@@ -1895,7 +1913,7 @@ c_sharaf = {
 c_subay = {
 	767.1.1 = {
 		government = tribal_government
-		liege = d_mecca
+		liege = d_medina
 		holder = 188610 # Muhammad b Ibrahim
 	}
 	
@@ -1952,9 +1970,6 @@ c_subay = {
 		holder = bedouin0097
 	}
 	
-	1337.1.1 = {
-		holder = 34517
-	}
 }
 
 
@@ -2201,6 +2216,7 @@ c_surrah = {
 d_yamama = {
 	867.1.1 = {	change_development_level = 1 }
 	1066.1.1 = { change_development_level = 4 }
+	1178.1.1 = { change_development_level = 6 }
 	
 	#Banu Numayr
 	800.1.1 = {
@@ -2457,6 +2473,8 @@ c_falaj = {
 
 
 c_al-hasa = {
+	1178.1.1 = { change_development_level = 44 }
+
 	661.2.28 = {
 		liege = d_bahrain
 	}
@@ -2500,7 +2518,7 @@ c_al-hasa = {
 	1161.1.1 = {
 		holder = 144152
 	}
-	1180.1.1 = {
+	1177.1.1 = {
 		holder = 144154
 	}
 	1209.1.1 = {
@@ -2601,20 +2619,13 @@ c_dhafra = {
 	1285.1.1 = {
 		holder = 144564
 	}
-	
-	1320.1.1 = {
-		holder = qotb_al_din_tahamtan
-		liege = d_hormuz
-	}
 }
 
 
 c_uqayr = {
-
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	661.2.28 = {
 		liege = d_bahrain
@@ -2674,25 +2685,19 @@ c_uqayr = {
 	1236.1.1 = {
 		holder = 34477
 	}
-	
-	#CK2 c_bahrein
-	1253.1.1 = {#1240.1.1 = {
-		holder = 34562
-		government = clan_government
+	1253.1.1 = {
+		holder = 34479
 	}
-	1280.1.1 = {
-		holder = 34563
+	1270.1.1 = {
+		holder = 34481
 	}
-	1290.1.1 = {
-		holder = 34564
+	1292.1.1 = {
+		holder = 34482
 	}
 	1310.1.1 = {
-		holder = 34565
+		holder = 34483
 	}
-	1320.1.1 = {
-		holder = 34568#34566
-		#liege = d_hormuz
-	}
+
 }
 
 
@@ -2849,14 +2854,12 @@ d_bahrain = {
 	1310.1.1 = {
 		holder = 34483
 	}
-	1320.1.1 = {
-		holder = 34568
-	}
 }
 
 c_qatif = {
 	867.1.1 = {	change_development_level = 10 }
 	1066.1.1 = { change_development_level = 16 }
+	1178.1.1 = { change_development_level = 18 }
 	
 	661.2.28 = {
 		liege = d_bahrain
@@ -2937,10 +2940,7 @@ c_qatif = {
 	1310.1.1 = {
 		holder = 34483
 	}
-	1320.1.1 = {
-		holder = 34568#34566
-		#liege = d_hormuz
-	}
+
 }
 
 
@@ -3009,9 +3009,9 @@ c_uwal = {
 	1310.1.1 = {
 		holder = 34565
 	}
-	1320.1.1 = {
-		holder = qotb_al_din_tahamtan#34566
-		liege = d_hormuz
+	1330.1.1 = {
+		liege = "d_kirman"
+		holder = 34568
 	}
 
 }
@@ -3090,9 +3090,7 @@ c_samman = {
 	1310.1.1 = {
 		holder = 34483
 	}
-	1320.1.1 = {
-		holder = 34568
-	}
+
 }
 
 
@@ -3210,6 +3208,7 @@ d_oman = {
 c_nizwa = {
 	867.1.1 = {	change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	665.1.1 = {
 		liege = d_oman
@@ -3266,24 +3265,25 @@ c_nizwa = {
 	#Nabhanids
 	1154.1.1 = {
 		liege = "d_oman"
+		holder = bedouin0134
 	}
-	1154.1.1 = {
-		holder = 144145
+	1176.1.1 = {
+		holder = bedouin0138
 	}
-	1161.1.1 = {
-		holder = 144560
+	1202.1.1 = {
+		holder = bedouin0139
 	}
-	1210.1.1 = {
-		holder = 144561
+	1247.1.1 = {
+		holder = bedouin0140
 	}
-	1250.1.1 = {
-		holder = 144562
+	1275.1.1 = {
+		holder = bedouin0141
 	}
-	1278.1.1 = {
-		holder = 144563
+	1299.1.1 = {
+		holder = bedouin0142
 	}
-	1285.1.1 = {
-		holder = 144564
+	1322.1.1 = {
+		holder = bedouin0143
 	}
 }
 
@@ -3403,18 +3403,13 @@ c_julfar = {
 	1285.1.1 = {
 		holder = 144564
 	}
-	1320.1.1 = {
-		holder = qotb_al_din_tahamtan
-		liege = d_hormuz
-	}
 }
 
 
 c_batina = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	768.1.1 = {
 		liege = d_oman
@@ -3539,22 +3534,25 @@ c_az-dhahira = {
 	}
 	1154.1.1 = {
 		liege = "d_oman"
-		holder = 144145
+		holder = bedouin0134
 	}
-	1161.1.1 = {
-		holder = 144560
+	1176.1.1 = {
+		holder = bedouin0138
 	}
-	1210.1.1 = {
-		holder = 144561
+	1202.1.1 = {
+		holder = bedouin0139
 	}
-	1250.1.1 = {
-		holder = 144562
+	1247.1.1 = {
+		holder = bedouin0140
 	}
-	1278.1.1 = {
-		holder = 144563
+	1275.1.1 = {
+		holder = bedouin0141
 	}
-	1285.1.1 = {
-		holder = 144564
+	1299.1.1 = {
+		holder = bedouin0142
+	}
+	1322.1.1 = {
+		holder = bedouin0143
 	}
 }
 
@@ -3562,8 +3560,7 @@ c_az-dhahira = {
 c_muscat = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	665.1.1 = {
 		liege = d_oman
@@ -3646,8 +3643,7 @@ c_muscat = {
 c_duqm = {
 	867.1.1 = {	change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
-	1187.1.1 = { change_development_level = 20 }
-	1337.1.1 = { change_development_level = 40 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	665.1.1 = {
 		liege = d_oman
@@ -3726,8 +3722,3 @@ c_duqm = {
 	}
 }
 
-d_al-hasa = {
-	1320.1.1 = {
-		holder = 34483
-	}
-}

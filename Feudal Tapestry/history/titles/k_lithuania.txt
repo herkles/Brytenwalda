@@ -1,12 +1,10 @@
 k_lithuania = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 5 }
-	1187.1.1 = { change_development_level = 12 }
-	1337.1.1 = { change_development_level = 25 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	1253.6.30 = {
 		holder = 125301
-		government = feudal_government
 	}
 	1263.9.12 = {
 		holder = 125302
@@ -35,29 +33,6 @@ k_lithuania = {
 	1316.1.1 = {
 		holder = 473500
 	}
-	1337.1.1 = {
-		effect = {
-			if = {
-				limit = {
-					exists = holder
-					has_dlc_feature = royal_court
-				}
-				holder = {
-					set_court_language = language_east_slavic
-					if = {
-						limit = { NOT = { knows_court_language_of = this } }
-						learn_court_language_of = this
-					}
-				}
-			}
-		}
-	}
-	
-	1392.8.4 = {
-		holder = vytautas_the_great
-		succession_laws = { feudal_elective_succession_law }
-	}
-	
 }
 
 d_lithuanians = {
@@ -90,10 +65,10 @@ d_lithuanians = {
 		holder = 82178 #Utenis son of Kukovaitis
 	}
 	1054.1.1 = {
-		holder = 82182 #�ventaragis son of Utenis
+		holder = 82182 #Šventaragis son of Utenis
 	}
 	1093.1.1 = {
-		holder = 82200 #Skirmantas son of �ventaragis
+		holder = 82200 #Skirmantas son of Šventaragis
 	}
 	1124.1.1 = {
 		holder = 82203 #Koliginas
@@ -141,15 +116,13 @@ d_lithuanians = {
 		holder = 473500
 	}
 
-	1415.7.6 = {
-		holder = vytautas_the_great
-		government = feudal_government
-	}
 }
+
+
 c_kernave = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
-	1337.1.1 = { change_development_level = 30 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	750.1.1 = {
 		holder = 194113
@@ -184,10 +157,10 @@ c_kernave = {
 		holder = 82178 #Utenis son of Kukovaitis
 	}
 	1054.1.1 = {
-		holder = 82182 #�ventaragis son of Utenis
+		holder = 82182 #Šventaragis son of Utenis
 	}
 	1093.1.1 = {
-		holder = 82200 #Skirmantas son of �ventaragis
+		holder = 82200 #Skirmantas son of Šventaragis
 	}
 	1124.1.1 = {
 		holder = 82203 #Koliginas
@@ -230,17 +203,14 @@ c_kernave = {
 	}
 	1316.1.1 = {
 		holder = 473500
-		name = b_vilnius
-	}
-	
-	1415.7.6 = {
-		holder = vytautas_the_great
 	}
 }
+	
+
 c_trakai = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
-	1337.1.1 = { change_development_level = 30 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	750.1.1 = {
 		holder = 194113
@@ -259,19 +229,35 @@ c_trakai = {
 	850.1.1 = {
 		holder = 82141
 	}
-	936.1.1 = {	
-		holder = 82152
+	890.1.1 = {
+		holder = 82149
 	}
-	
+	910.1.1 = {
+		holder = 82150
+	}
+	930.1.1 = {
+		holder = 82146 #Borkus son of Palemon
+	}
+	938.1.1 = {
+		holder = 82153 #Gimbutas son of Kunos
+	}
+	962.1.1 = {
+		holder = 82166 #Montvilas son of Gimbutas
+	}
+	989.1.1 = {
+		holder = 82170 #Vykintas son of Montvilas
+	}
+	1023.1.1 = {
+		holder = 82175 #Zivinbudas son of Vykintas
+	}
 	1064.1.1 = {
 		holder = 82180 #Kukovaitis son of Zivinbudas
-		liege = d_samogitia
 	}
 	1088.1.1 = {
-		holder = 82182 #�ventaragis son of Utenis
+		holder = 82182 #Šventaragis son of Utenis
 	}
 	1093.1.1 = {
-		holder = 82200 #Skirmantas son of �ventaragis
+		holder = 82200 #Skirmantas son of Šventaragis
 	}
 	1124.1.1 = {
 		holder = 82204 #Trabus son of Skirmantas
@@ -309,11 +295,9 @@ c_trakai = {
 	1316.1.1 = {
 		holder = 473500
 	}
-	
-	1415.7.6 = {
-		holder = vytautas_the_great
-	}
 }
+	
+
 c_yatvyagi = {
 	750.1.1 = {
 		holder = 194113
@@ -366,13 +350,12 @@ c_yatvyagi = {
 		holder = 473500
 	}
 	1316.1.2 = {
-		holder = 473500
+		holder = 473508
 	}
 	
-	1415.7.6 = {
-		holder = vytautas_the_great
-	}
 }
+
+
 c_braslau = {
 	750.1.1 = {
 		holder = 194113
@@ -407,10 +390,10 @@ c_braslau = {
 		holder = 82178 #Utenis son of Kukovaitis
 	}
 	1054.1.1 = {
-		holder = 82182 #�ventaragis son of Utenis
+		holder = 82182 #Šventaragis son of Utenis
 	}
 	1093.1.1 = {
-		holder = 82200 #Skirmantas son of �ventaragis
+		holder = 82200 #Skirmantas son of Šventaragis
 	}
 	1124.1.1 = {
 		holder = 82203 #Koliginas
@@ -454,11 +437,8 @@ c_braslau = {
 	1316.1.1 = {
 		holder = 473500
 	}
-	
-	1415.7.6 = {
-		holder = vytautas_the_great
-	}
 }
+
 
 d_prussia = {
 	# Pruthenians
@@ -493,8 +473,9 @@ d_prussia = {
 		holder = 0
 	}
 }
-c_malbork = { #Pomesania
-	1337.1.1 = { change_development_level = 30 }
+
+
+c_malbork = {
 	750.1.1 = {
 		holder = 194074
 		liege = d_prussia
@@ -521,7 +502,7 @@ c_malbork = { #Pomesania
 		holder = 144671
 	}
 	1170.1.1 = {
-		holder = 228016
+		holder = 228015 # Milzas
 	}
 	
 	#Golden Bull of Rimini
@@ -533,17 +514,16 @@ c_malbork = { #Pomesania
 		holder = 30403 #Hermann von Salza
 	}
 	1239.3.20 = {
-		holder = 30404 #Konrad von Th�ringen
+		holder = 30404 #Konrad von Thüringen
 	}
 	1240.7.24 = {
 		holder = 30405 #Gerhard von Malberg
 	}
-	
 	1244.1.1 = {
 		holder = 30406 #Heinrich von Hohenlohe
 	}
 	1249.7.15 = {
-		holder = 30407 #Gunther von W�llersleben
+		holder = 30407 #Gunther von Wüllersleben
 	}
 	1252.5.4 = {
 		holder = 30408 #Poppo von Osterna
@@ -582,6 +562,7 @@ c_malbork = { #Pomesania
 	
 
 }
+
 c_natangia = {
 	750.1.1 = {
 		holder = 194074
@@ -594,9 +575,7 @@ c_natangia = {
 	822.1.1 = {
 		holder = 167739
 	}
-	936.1.1 = {
-		holder = 260767
-	}
+	
 	867.1.1 = {
 		holder = 167740
 	}
@@ -625,7 +604,7 @@ c_natangia = {
 		holder = 30403 #Hermann von Salza
 	}
 	1239.3.20 = {
-		holder = 30404 #Konrad von Th�ringen
+		holder = 30404 #Konrad von Thüringen
 	}
 	1240.7.24 = {
 		holder = 30405 #Gerhard von Malberg
@@ -635,7 +614,7 @@ c_natangia = {
 		holder = 30406 #Heinrich von Hohenlohe
 	}
 	1249.7.15 = {
-		holder = 30407 #Gunther von W�llersleben
+		holder = 30407 #Gunther von Wüllersleben
 	}
 	1252.5.4 = {
 		holder = 30408 #Poppo von Osterna
@@ -671,9 +650,11 @@ c_natangia = {
 		holder = 474000 #Dietrich von Altenburg
 	}
 }
-c_konigsberg = { #Sambia
+
+c_konigsberg = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	750.1.1 = {
 		holder = 194074
@@ -725,7 +706,7 @@ c_konigsberg = { #Sambia
 		holder = 30406 #Heinrich von Hohenlohe
 	}
 	1249.7.15 = {
-		holder = 30407 #Gunther von W�llersleben
+		holder = 30407 #Gunther von Wüllersleben
 	}
 	1252.5.4 = {
 		holder = 30408 #Poppo von Osterna
@@ -761,7 +742,9 @@ c_konigsberg = { #Sambia
 		holder = 474000 #Dietrich von Altenburg
 	}
 }
-c_allenstein = { #Galindia
+
+
+c_allenstein = {
 	750.1.1 = {
 		holder = 194076
 		liege = d_prussia
@@ -800,7 +783,7 @@ c_allenstein = { #Galindia
 		holder = 30403 #Hermann von Salza
 	}
 	1239.3.20 = {
-		holder = 30404 #Konrad von Th�ringen
+		holder = 30404 #Konrad von Thüringen
 	}
 	1240.7.24 = {
 		holder = 30405 #Gerhard von Malberg
@@ -810,7 +793,7 @@ c_allenstein = { #Galindia
 		holder = 30406 #Heinrich von Hohenlohe
 	}
 	1249.7.15 = {
-		holder = 30407 #Gunther von W�llersleben
+		holder = 30407 #Gunther von Wüllersleben
 	}
 	1252.5.4 = {
 		holder = 30408 #Poppo von Osterna
@@ -850,7 +833,9 @@ c_allenstein = { #Galindia
 	
 
 }
-c_wormditt = { #Warmia
+
+
+c_wormditt = {
 	750.1.1 = {
 		holder = 194076
 		liege = d_prussia
@@ -889,7 +874,7 @@ c_wormditt = { #Warmia
 		holder = 30403 #Hermann von Salza
 	}
 	1239.3.20 = {
-		holder = 30404 #Konrad von Th�ringen
+		holder = 30404 #Konrad von Thüringen
 	}
 	1240.7.24 = {
 		holder = 30405 #Gerhard von Malberg
@@ -899,7 +884,7 @@ c_wormditt = { #Warmia
 		holder = 30406 #Heinrich von Hohenlohe
 	}
 	1249.7.15 = {
-		holder = 30407 #Gunther von W�llersleben
+		holder = 30407 #Gunther von Wüllersleben
 	}
 	1252.5.4 = {
 		holder = 30408 #Poppo von Osterna
@@ -939,7 +924,9 @@ c_wormditt = { #Warmia
 	
 
 }
-c_bartenstein = { #Bartia
+
+
+c_bartenstein = {
 	750.1.1 = {
 		holder = 194076
 		liege = d_prussia
@@ -977,7 +964,7 @@ c_bartenstein = { #Bartia
 		holder = 30403 #Hermann von Salza
 	}
 	1239.3.20 = {
-		holder = 30404 #Konrad von Th�ringen
+		holder = 30404 #Konrad von Thüringen
 	}
 	1240.7.24 = {
 		holder = 30405 #Gerhard von Malberg
@@ -987,7 +974,7 @@ c_bartenstein = { #Bartia
 		holder = 30406 #Heinrich von Hohenlohe
 	}
 	1249.7.15 = {
-		holder = 30407 #Gunther von W�llersleben
+		holder = 30407 #Gunther von Wüllersleben
 	}
 	1252.5.4 = {
 		holder = 30408 #Poppo von Osterna
@@ -1027,11 +1014,10 @@ c_bartenstein = { #Bartia
 d_masuria = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 20 }
 }
-c_torun = { #c_chelmno
-	1101.1.1 = { change_development_level = 12 }
-	1187.1.1 = { change_development_level = 15 }
-	1337.1.1 = { change_development_level = 40 }
+
+c_torun = {
 	867.1.1 = {
 		holder = 302064
 		government = tribal_government
@@ -1047,33 +1033,15 @@ c_torun = { #c_chelmno
 		holder = 302004	#Mieszko, Boleslaw & Wladyslaw's brother
 		liege = k_poland
 	}
-	1065.1.28 = {
-		holder = 82241	#random guy
-		liege = d_kuyavia
-		government = feudal_government
+	1066.1.1 = {
+		holder = 28015
+		liege = d_prussia
 	}
-	1079.1.1 = {
-		holder =  764
+	1120.1.1 = {
+		holder = 144671
 	}
-	1102.6.4 = {
-		holder = 170108	#Zbigniew
-	}
-	
-	1107.4.1 = {
-		holder = 221515	#Boleslaw III Wrymouth
-	}
-	1138.10.28={
-		holder=125973 #Boleslaw IV
-		liege = d_mazovia
-	}
-	1173.4.3={
-		holder=125975 #Leszek
-	}
-	1186.1.1={
-		holder=221520 #Casimir II
-	}
-	1194.5.5={
-		holder=221525 #Konrad I
+	1170.1.1 = {
+		holder = 228015 # Milzas
 	}
 	#Golden Bull of Rimini
 	1225.1.1 = {
@@ -1094,7 +1062,7 @@ c_torun = { #c_chelmno
 		holder = 30406 #Heinrich von Hohenlohe
 	}
 	1249.7.15 = {
-		holder = 30407 #Gunther von W�llersleben
+		holder = 30407 #Gunther von Wüllersleben
 	}
 	1252.5.4 = {
 		holder = 30408 #Poppo von Osterna
@@ -1132,7 +1100,9 @@ c_torun = { #c_chelmno
 	
 
 }
-c_osterode = { #Sasna
+
+
+c_osterode = {
 	750.1.1 = {
 		holder = 194076
 		liege = d_prussia
@@ -1171,7 +1141,7 @@ c_osterode = { #Sasna
 		holder = 30403 #Hermann von Salza
 	}
 	1239.3.20 = {
-		holder = 30404 #Konrad von Th�ringen
+		holder = 30404 #Konrad von Thüringen
 	}
 	1240.7.24 = {
 		holder = 30405 #Gerhard von Malberg
@@ -1181,7 +1151,7 @@ c_osterode = { #Sasna
 		holder = 30406 #Heinrich von Hohenlohe
 	}
 	1249.7.15 = {
-		holder = 30407 #Gunther von W�llersleben
+		holder = 30407 #Gunther von Wüllersleben
 	}
 	1252.5.4 = {
 		holder = 30408 #Poppo von Osterna
@@ -1221,7 +1191,9 @@ c_osterode = { #Sasna
 	
 
 }
-c_angerburg = { #Sudovia
+
+
+c_angerburg = {
 	750.1.1 = {
 		holder = 194076
 		liege = d_prussia
@@ -1262,7 +1234,7 @@ c_angerburg = { #Sudovia
 		holder = 30403 #Hermann von Salza
 	}
 	1239.3.20 = {
-		holder = 30404 #Konrad von Th�ringen
+		holder = 30404 #Konrad von Thüringen
 	}
 	1240.7.24 = {
 		holder = 30405 #Gerhard von Malberg
@@ -1272,7 +1244,7 @@ c_angerburg = { #Sudovia
 		holder = 30406 #Heinrich von Hohenlohe
 	}
 	1249.7.15 = {
-		holder = 30407 #Gunther von W�llersleben
+		holder = 30407 #Gunther von Wüllersleben
 	}
 	1252.5.4 = {
 		holder = 30408 #Poppo von Osterna
@@ -1313,6 +1285,7 @@ c_angerburg = { #Sudovia
 
 }
 
+
 d_courland = {
 	750.1.1 = {
 		holder = 194105
@@ -1349,9 +1322,12 @@ d_courland = {
 	}
 
 }
+
+
 c_zemigalians = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	750.1.1 = {
 		holder = 194105
@@ -1386,13 +1362,24 @@ c_zemigalians = {
 	1199.1.1 = {
 		liege = "e_hre"
 	}	
+	
 	1199.1.1 = {
 		holder = 30421 #Albrecht von Buxthoeven
-		government = theocracy_government
+	}
+	
+	1202.1.1 = {
+		liege = "d_livonia"
 	}	
+	
+	
+	
 	1229.1.17 = {
 		holder = 30422 #Nikolaus von Nauen
 	}	
+	
+	1236.9.22 = {
+		liege = "d_teutonic_order"
+	}
 	1254.1.1 = {
 		holder = 30423 #Albrecht Suerbeer
 	}
@@ -1417,6 +1404,8 @@ c_zemigalians = {
 	
 
 }
+
+
 c_vanemane = {
 	750.1.1 = {
 		holder = 194105
@@ -1449,17 +1438,75 @@ c_vanemane = {
 	}
 	##Livonian Swordbrothers
 	1202.1.1 = {
+		liege = "d_livonia"
+	}
+	
+	1202.1.1 = {
 		holder = 30443 #Vinno von Rohrbach
 	}	
+	
 	1209.1.1 = {
 		holder = 30444 #Volkwin von Naumburg
 	}	
+	
+	
 	##Swordbrothers absorbed by the Teutonic Order
-	1328.1.1 = {
-		holder = 474090
+	1236.9.22 = {
+		liege = "d_teutonic_order"
+	}
+	1236.9.22 = {
+		holder = 30403 #Hermann von Salza
+	}
+	1239.3.20 = {
+		holder = 30404 #Konrad von Thüringen
+	}
+	1240.7.24 = {
+		holder = 30405 #Gerhard von Malberg
+	}
+	
+	1244.1.1 = {
+		holder = 30406 #Heinrich von Hohenlohe
+	}
+	1249.7.15 = {
+		holder = 30407 #Gunther von Wüllersleben
+	}
+	1252.5.4 = {
+		holder = 30408 #Poppo von Osterna
+	}
+	1256.1.1 = {
+		holder = 30409 #Anno von Sangershausen
+	}
+	1273.7.8 = {
+		holder = 30410 #Hartmann von Heldrungen
+	}
+	1282.8.19 = {
+		holder = 30411 #Burchard von Schwanden
+	}
+	1290.1.1 = {
+		holder = 30412 #Konrad von Feuchtwangen
+	}
+	1296.7.4 = {
+		holder = 30413 #Gottfried von Hohenlohe
+	}
+	1303.1.1 = {
+		holder = 30414 #Siegfried von Feuchtwangen
+	}
+	1311.5.3 = {
+		holder = 30415 #Karl von Trier
+	}
+	1324.2.11 = {
+		holder = 30416 #Werner von Orseln
+	}
+	1330.11.18 = {
+		holder = 30417 #Luther Welf
+	}
+	1335.4.18 = {
+		holder = 474000 #Dietrich von Altenburg
 	}
 
 }
+
+
 c_grobin = {
 	750.1.1 = {
 		holder = 194105
@@ -1487,22 +1534,80 @@ c_grobin = {
 	1139.1.1 = {
 		holder = 143133
 	}
-	1187.1.1 = {
+	1177.1.1 = {
 		holder = 228075
 	}
 	##Livonian Swordbrothers
 	1202.1.1 = {
+		liege = "d_livonia"
+	}
+	
+	1202.1.1 = {
 		holder = 30443 #Vinno von Rohrbach
 	}
+	
 	1209.1.1 = {
 		holder = 30444 #Volkwin von Naumburg
 	}	
+	
+	
 	##Swordbrothers absorbed by the Teutonic Order
-	1328.1.1 = {
-		holder = 474090
+	1236.9.22 = {
+		liege = "d_teutonic_order"
+	}
+	1236.9.22 = {
+		holder = 30403 #Hermann von Salza
+	}
+	1239.3.20 = {
+		holder = 30404 #Konrad von Thüringen
+	}
+	1240.7.24 = {
+		holder = 30405 #Gerhard von Malberg
+	}
+	
+	1244.1.1 = {
+		holder = 30406 #Heinrich von Hohenlohe
+	}
+	1249.7.15 = {
+		holder = 30407 #Gunther von Wüllersleben
+	}
+	1252.5.4 = {
+		holder = 30408 #Poppo von Osterna
+	}
+	1256.1.1 = {
+		holder = 30409 #Anno von Sangershausen
+	}
+	1273.7.8 = {
+		holder = 30410 #Hartmann von Heldrungen
+	}
+	1282.8.19 = {
+		holder = 30411 #Burchard von Schwanden
+	}
+	1290.1.1 = {
+		holder = 30412 #Konrad von Feuchtwangen
+	}
+	1296.7.4 = {
+		holder = 30413 #Gottfried von Hohenlohe
+	}
+	1303.1.1 = {
+		holder = 30414 #Siegfried von Feuchtwangen
+	}
+	1311.5.3 = {
+		holder = 30415 #Karl von Trier
+	}
+	1324.2.11 = {
+		holder = 30416 #Werner von Orseln
+	}
+	1330.11.18 = {
+		holder = 30417 #Luther Welf
+	}
+	1335.4.18 = {
+		holder = 474000 #Dietrich von Altenburg
 	}
 
 }
+
+
 c_selpils = {
 	750.1.1 = {
 		holder = 194105
@@ -1540,10 +1645,20 @@ c_selpils = {
 	
 	1199.1.1 = {
 		holder = 30421 #Albrecht von Buxthoeven
-		government = theocracy_government
 	}
+	
+	1202.1.1 = {
+		liege = "d_livonia"
+	}
+	
+	
+	
 	1229.1.17 = {
 		holder = 30422 #Nikolaus von Nauen
+	}
+	
+	1236.9.22 = {
+		liege = "d_teutonic_order"
 	}
 	1254.1.1 = {
 		holder = 30423 #Albrecht Suerbeer
@@ -1592,7 +1707,7 @@ c_talava = {
 	1139.1.1 = {
 		holder = 143151
 	}
-	1187.1.1 = {
+	1178.1.1 = {
 		holder = 228023
 	}
 	
@@ -1600,11 +1715,61 @@ c_talava = {
 	1217.9.21 = {
 		holder = 30444 #Volkwin von Naumburg
 	}	
+	
 	##Swordbrothers absorbed by the Teutonic Order
-	1328.1.1 = {
-		holder = 474090
+	
+	1236.9.22 = {
+		liege = "d_teutonic_order"
+		holder = 30403 #Hermann von Salza
+	}
+	1239.3.20 = {
+		holder = 30404 #Konrad von Thüringen
+	}
+	1240.7.24 = {
+		holder = 30405 #Gerhard von Malberg
+	}
+	1244.1.1 = {
+		holder = 30406 #Heinrich von Hohenlohe
+	}
+	1249.7.15 = {
+		holder = 30407 #Gunther von Wüllersleben
+	}
+	1252.5.4 = {
+		holder = 30408 #Poppo von Osterna
+	}
+	1256.1.1 = {
+		holder = 30409 #Anno von Sangershausen
+	}
+	1273.7.8 = {
+		holder = 30410 #Hartmann von Heldrungen
+	}
+	1282.8.19 = {
+		holder = 30411 #Burchard von Schwanden
+	}
+	1290.1.1 = {
+		holder = 30412 #Konrad von Feuchtwangen
+	}
+	1296.7.4 = {
+		holder = 30413 #Gottfried von Hohenlohe
+	}
+	1303.1.1 = {
+		holder = 30414 #Siegfried von Feuchtwangen
+	}
+	1311.5.3 = {
+		holder = 30415 #Karl von Trier
+	}
+	1324.2.11 = {
+		holder = 30416 #Werner von Orseln
+	}
+	1330.11.18 = {
+		holder = 30417 #Luther Welf
+	}
+	1335.4.18 = {
+		holder = 474000 #Dietrich von Altenburg
 	}
 }
+
+
 c_kokenois = {
 	765.1.1 = {
 		holder = 170349
@@ -1628,6 +1793,9 @@ c_kokenois = {
 	1139.1.1 = {
 		holder = 143151
 	}
+	1178.1.1 = {
+		holder = estonian_vassal_1 # Dabrel
+	}
 	1187.1.1 = {
 		holder = 228023
 	}
@@ -1636,11 +1804,61 @@ c_kokenois = {
 	1217.9.21 = {
 		holder = 30444 #Volkwin von Naumburg
 	}
+	
 	##Swordbrothers absorbed by the Teutonic Order
-	1328.1.1 = {
-		holder = 474090
+	
+	1236.9.22 = {
+		liege = "d_teutonic_order"
+		holder = 30403 #Hermann von Salza
+	}
+	1239.3.20 = {
+		holder = 30404 #Konrad von Thüringen
+	}
+	1240.7.24 = {
+		holder = 30405 #Gerhard von Malberg
+	}
+	1244.1.1 = {
+		holder = 30406 #Heinrich von Hohenlohe
+	}
+	1249.7.15 = {
+		holder = 30407 #Gunther von Wüllersleben
+	}
+	1252.5.4 = {
+		holder = 30408 #Poppo von Osterna
+	}
+	1256.1.1 = {
+		holder = 30409 #Anno von Sangershausen
+	}
+	1273.7.8 = {
+		holder = 30410 #Hartmann von Heldrungen
+	}
+	1282.8.19 = {
+		holder = 30411 #Burchard von Schwanden
+	}
+	1290.1.1 = {
+		holder = 30412 #Konrad von Feuchtwangen
+	}
+	1296.7.4 = {
+		holder = 30413 #Gottfried von Hohenlohe
+	}
+	1303.1.1 = {
+		holder = 30414 #Siegfried von Feuchtwangen
+	}
+	1311.5.3 = {
+		holder = 30415 #Karl von Trier
+	}
+	1324.2.11 = {
+		holder = 30416 #Werner von Orseln
+	}
+	1330.11.18 = {
+		holder = 30417 #Luther Welf
+	}
+	1335.4.18 = {
+		holder = 474000 #Dietrich von Altenburg
 	}
 }
+
+
 c_jersika = {
 	768.1.1 = {
 		holder = 170351
@@ -1670,11 +1888,61 @@ c_jersika = {
 	1209.1.1 = {
 		holder = 30444 #Volkwin von Naumburg
 	}
+	
 	###Swordbrothers absorbed by the Teutonic Order
-	1328.1.1 = {
-		holder = 474090
+	
+	1236.9.22 = {
+		liege = "d_teutonic_order"
+		holder = 30403 #Hermann von Salza
+	}
+	1239.3.20 = {
+		holder = 30404 #Konrad von Thüringen
+	}
+	1240.7.24 = {
+		holder = 30405 #Gerhard von Malberg
+	}
+	1244.1.1 = {
+		holder = 30406 #Heinrich von Hohenlohe
+	}
+	1249.7.15 = {
+		holder = 30407 #Gunther von Wüllersleben
+	}
+	1252.5.4 = {
+		holder = 30408 #Poppo von Osterna
+	}
+	1256.1.1 = {
+		holder = 30409 #Anno von Sangershausen
+	}
+	1273.7.8 = {
+		holder = 30410 #Hartmann von Heldrungen
+	}
+	1282.8.19 = {
+		holder = 30411 #Burchard von Schwanden
+	}
+	1290.1.1 = {
+		holder = 30412 #Konrad von Feuchtwangen
+	}
+	1296.7.4 = {
+		holder = 30413 #Gottfried von Hohenlohe
+	}
+	1303.1.1 = {
+		holder = 30414 #Siegfried von Feuchtwangen
+	}
+	1311.5.3 = {
+		holder = 30415 #Karl von Trier
+	}
+	1324.2.11 = {
+		holder = 30416 #Werner von Orseln
+	}
+	1330.11.18 = {
+		holder = 30417 #Luther Welf
+	}
+	1335.4.18 = {
+		holder = 474000 #Dietrich von Altenburg
 	}
 }
+
+
 c_aluksne = {
 	765.1.1 = {
 		holder = 170349
@@ -1706,11 +1974,60 @@ c_aluksne = {
 	1217.9.21 = {
 		holder = 30444 #Volkwin von Naumburg
 	}	
+	
 	##Swordbrothers absorbed by the Teutonic Order
-	1328.1.1 = {
-		holder = 474090
+	
+	1236.9.22 = {
+		liege = "d_teutonic_order"
+		holder = 30403 #Hermann von Salza
+	}
+	1239.3.20 = {
+		holder = 30404 #Konrad von Thüringen
+	}
+	1240.7.24 = {
+		holder = 30405 #Gerhard von Malberg
+	}
+	1244.1.1 = {
+		holder = 30406 #Heinrich von Hohenlohe
+	}
+	1249.7.15 = {
+		holder = 30407 #Gunther von Wüllersleben
+	}
+	1252.5.4 = {
+		holder = 30408 #Poppo von Osterna
+	}
+	1256.1.1 = {
+		holder = 30409 #Anno von Sangershausen
+	}
+	1273.7.8 = {
+		holder = 30410 #Hartmann von Heldrungen
+	}
+	1282.8.19 = {
+		holder = 30411 #Burchard von Schwanden
+	}
+	1290.1.1 = {
+		holder = 30412 #Konrad von Feuchtwangen
+	}
+	1296.7.4 = {
+		holder = 30413 #Gottfried von Hohenlohe
+	}
+	1303.1.1 = {
+		holder = 30414 #Siegfried von Feuchtwangen
+	}
+	1311.5.3 = {
+		holder = 30415 #Karl von Trier
+	}
+	1324.2.11 = {
+		holder = 30416 #Werner von Orseln
+	}
+	1330.11.18 = {
+		holder = 30417 #Luther Welf
+	}
+	1335.4.18 = {
+		holder = 474000 #Dietrich von Altenburg
 	}
 }
+
 
 d_samogitia = {
 	827.1.1 = {
@@ -1745,10 +2062,10 @@ d_samogitia = {
 		holder = 82180 #Kukovaitis son of Zivinbudas
 	}
 	1088.1.1 = {
-		holder = 82182 #�ventaragis son of Utenis
+		holder = 82182 #Šventaragis son of Utenis
 	}
 	1093.1.1 = {
-		holder = 82200 #Skirmantas son of �ventaragis
+		holder = 82200 #Skirmantas son of Šventaragis
 	}
 	1124.1.1 = {
 		holder = 82204 #Trabus son of Skirmantas
@@ -1761,7 +2078,6 @@ d_samogitia = {
 	}
 	1253.6.30 = {
 		liege = "k_lithuania"
-		government = feudal_government
 	}
 	1263.9.12 = {
 		holder = 125302
@@ -1793,11 +2109,9 @@ d_samogitia = {
 	1316.1.2 = {
 		holder = 473508
 	}
-	1415.7.6 = {
-		holder = vytautas_the_great
-		government = feudal_government
-	}
+
 }
+
 c_raseiniai = {
 	750.1.1 = {
 		holder = 194110
@@ -1839,16 +2153,19 @@ c_raseiniai = {
 		holder = 82180 #Kukovaitis son of Zivinbudas
 	}
 	1088.1.1 = {
-		holder = 82182 #�ventaragis son of Utenis
+		holder = 82182 #Šventaragis son of Utenis
 	}
 	1093.1.1 = {
-		holder = 82200 #Skirmantas son of �ventaragis
+		holder = 82200 #Skirmantas son of Šventaragis
 	}
 	1124.1.1 = {
 		holder = 82204 #Trabus son of Skirmantas
 	}
 	1169.1.1 = {
 		holder = 82198 #Algimantas son of Liubartas
+	}
+	1178.1.1 = {
+		holder = 143135 # Antanas
 	}
 	1238.1.1 = {
 		holder = 125301 #Mindaugas son of Rimgaudas
@@ -1883,12 +2200,9 @@ c_raseiniai = {
 	1316.1.2 = {
 		holder = 473508
 	}
-	
-	1415.7.6 = {
-		holder = vytautas_the_great
-		government = feudal_government
-	}
 }
+
+
 c_scalovia = {
 	750.1.1 = {
 		holder = 194113
@@ -1907,9 +2221,18 @@ c_scalovia = {
 	865.1.1 = {
 		holder = 82276
 	}
+	927.1.1 = {
+		holder = 82278
+	}
 	936.1.1 = {
 		holder = 260769
 		liege = 0
+	}
+	1000.1.1 = {
+		holder = 82279
+	}
+	1015.1.1 = {
+		holder = 82280
 	}
 	1065.1.1 = {
 		holder = 82283
@@ -1923,16 +2246,25 @@ c_scalovia = {
 	1189.1.1 = {
 		holder = 82288
 	}
-	1337.1.1 = {
-		holder = 474000
+	1235.1.1 = {
+		holder = 82289
+	}
+	1256.1.1 = {
+		holder = 82290
+	}
+	1296.1.1 = {
+		liege = "k_lithuania"
+	}
+	1296.1.1 = {
+		holder = 473500
+	}
+	1316.1.2 = {
+		holder = 473508
 	}
 	
-	1415.7.6 = {
-		holder = vytautas_the_great
-		government = feudal_government
-	}
-
 }
+
+
 c_memel = {
 	750.1.1 = {
 		holder = 194110
@@ -1949,25 +2281,45 @@ c_memel = {
 		holder = 82141
 		liege = d_samogitia
 	}
-	936.1.1 = {
-		holder = 260769
-		liege = 0
+	890.1.1 = {
+		holder = 82149
+	}
+	910.1.1 = {
+		holder = 82150
+	}
+	930.1.1 = {
+		holder = 82146 #Borkus son of Palemon
+	}
+	938.1.1 = {
+		holder = 82153 #Gimbutas son of Kunos
+	}
+	962.1.1 = {
+		holder = 82166 #Montvilas son of Gimbutas
+	}
+	989.1.1 = {
+		holder = 82170 #Vykintas son of Montvilas
+	}
+	1023.1.1 = {
+		holder = 82175 #Zivinbudas son of Vykintas
 	}
 	1064.1.1 = {
 		holder = 82180 #Kukovaitis son of Zivinbudas
-		liege = d_samogitia
 	}
 	1088.1.1 = {
-		holder = 82182 #�ventaragis son of Utenis
+		holder = 82182 #Šventaragis son of Utenis
 	}
 	1093.1.1 = {
-		holder = 82200 #Skirmantas son of �ventaragis
+		holder = 82200 #Skirmantas son of Šventaragis
 	}
 	1124.1.1 = {
 		holder = 82204 #Trabus son of Skirmantas
 	}
 	1139.1.1 = {
 		holder = 143133
+	}
+	1166.1.1 = {
+		holder = skalauti_1 # Skalvians
+		liege = 0
 	}
 	1187.1.1 = {
 		liege = "d_samogitia"
@@ -2024,11 +2376,10 @@ c_memel = {
 	1335.4.18 = {
 		holder = 474000 #Dietrich von Altenburg
 	}
-	1415.7.6 = {
-		holder = vytautas_the_great
-		government = feudal_government
-	}
+
 }
+
+
 c_palanga = {
 	750.1.1 = {
 		holder = 194110
@@ -2070,16 +2421,20 @@ c_palanga = {
 		holder = 82180 #Kukovaitis son of Zivinbudas
 	}
 	1088.1.1 = {
-		holder = 82182 #�ventaragis son of Utenis
+		holder = 82182 #Šventaragis son of Utenis
 	}
 	1093.1.1 = {
-		holder = 82200 #Skirmantas son of �ventaragis
+		holder = 82200 #Skirmantas son of Šventaragis
 	}
 	1124.1.1 = {
 		holder = 82204 #Trabus son of Skirmantas
 	}
 	1169.1.1 = {
 		holder = 82198 #Algimantas son of Liubartas
+	}
+	1178.1.1 = {
+		holder = 143135 # Antanas
+		liege = d_lithuanians
 	}
 	1238.1.1 = {
 		holder = 125301 #Mindaugas son of Rimgaudas
@@ -2114,11 +2469,9 @@ c_palanga = {
 	1316.1.2 = {
 		holder = 473508
 	}
-	1415.7.6 = {
-		holder = vytautas_the_great
-		government = feudal_government
 	}
-}
+
+
 c_siauliai = {
 	750.1.1 = {
 		holder = 194110
@@ -2163,13 +2516,16 @@ c_siauliai = {
 		holder = 82182 #�ventaragis son of Utenis
 	}
 	1093.1.1 = {
-		holder = 82200 #Skirmantas son of �ventaragis
+		holder = 82200 #Skirmantas son of Šventaragis
 	}
 	1124.1.1 = {
 		holder = 82204 #Trabus son of Skirmantas
 	}
 	1169.1.1 = {
 		holder = 82198 #Algimantas son of Liubartas
+	}
+	1178.1.1 = {
+		holder = 143135 # Antanas
 	}
 	1238.1.1 = {
 		holder = 125301 #Mindaugas son of Rimgaudas
@@ -2204,8 +2560,5 @@ c_siauliai = {
 	1316.1.2 = {
 		holder = 473508
 	}
-	1415.7.6 = {
-		holder = vytautas_the_great
-		government = feudal_government
-	}
 }
+

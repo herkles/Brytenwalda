@@ -1,23 +1,10 @@
-
 k_bengal = {
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 60 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	755.1.1 = {
 		holder = 190027 #Gopala Pala
-		effect = {
-			if = {
-				limit = {
-					exists = holder
-					has_dlc_feature = royal_court
-				}
-				holder = {
-					set_court_type = court_scholarly
-				}
-			}
-		}
 	}
 	769.1.1 = {
 		holder = 190028 #Dharamapala Pala
@@ -33,6 +20,17 @@ k_bengal = {
 	}
 	855.1.1 = {
 		holder = 190009 #Narayanapala Pala
+		effect = {
+			if = {
+				limit = {
+					exists = holder
+					has_dlc_feature = royal_court
+				}
+				holder = {
+					set_court_type = court_scholarly
+				}
+			}
+		}
 	}
 	908.1.1 = {
 		holder = 190010 #Rajyapala Pala
@@ -51,6 +49,7 @@ k_bengal = {
 	}
 	1055.1.1 = {
 		holder = 190017 #Vigrahapala III Pala
+
 	}
 	1070.1.1 = {
 		holder = 190018 #Mahipala II Pala
@@ -171,39 +170,13 @@ k_bengal = {
 		holder = 170282 #Bahram Khan
 	}
 	#Lasting independence from 1338
-	1337.1.1 = {
-		holder = 0
-		effect = {
-			set_capital_county = title:c_saptagrama
-		}
-	}
-	1352.1.1 = {
-		holder = ilyas_shah_bengal
-	}
-	1358.1.1 = {
-		holder = sikandar_shah
-	}
-	1390.1.1 = {
-		holder = azam_shah_bengal
-	}
-	1411.1.1 = {
-		holder = hamza_shah_bengal
-	}
-	1413.1.1 = {
-		holder = bayazid_shah_bengal
-	}
-	1414.1.1 = {
-		holder = raja_ganesha
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
 d_gauda = {
 	867.1.1 = { change_development_level = 18 }
 	1066.1.1 = { change_development_level = 25 }
+	1178.1.1 = { change_development_level = 28 }
 	
 	755.1.1 = {
 		holder = 190027 #Gopala Pala
@@ -339,17 +312,13 @@ d_gauda = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 	}
-	1337.1.1 = {
-		holder = ali_shah_bengal
-		liege = e_rajastan
-	}
-	1415.1.1 = {
-		holder = 0
-	}
+
 }
 
 
 c_laksmanavati = {
+	1178.1.1 = { change_development_level = 36 }
+
 	755.1.1 = {
 		holder = 190027 #Gopala Pala
 	}
@@ -386,33 +355,13 @@ c_laksmanavati = {
 	1055.1.1 = {
 		holder = 190017 #Vigrahapala III Pala
 	}
-	1070.1.1 = {
-		holder = 190018 #Mahipala II Pala
-	}
-	1075.1.1 = {
-		holder = 190019 #Surapala Pala
-	}
-	1077.1.1 = {
-		holder = 190020 #Ramapala Pala
-	}
-	1120.1.1 = {
-		holder = 190021 #Kumarapala Pala
-	}
-	1125.1.1 = {
-		holder = 190022 #Gopala III Pala
-	}
 	1144.1.1 = {
-		holder = 190023 #Madanapala Pala
 		liege = k_bihar
 	}
 	1155.1.1 = {
-		holder = 154002 #Vijay Sena
 		liege = k_bengal
 	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
-	}
-	1179.1.1 = {
+	1178.1.1 = {
 		holder = 154005 #Laksmana Sena
 	}
 	1204.1.1 = {
@@ -490,17 +439,12 @@ c_laksmanavati = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 	}
-	1337.1.1 = {
-		holder = ali_shah_bengal
-		liege = d_gauda
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
 c_kotivarsa = {
+	1178.1.1 = { change_development_level = 42 }
+
 	755.1.1 = {
 		holder = 190027 #Gopala Pala
 		liege = d_varendra
@@ -651,13 +595,6 @@ c_kotivarsa = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 	}
-	1337.1.1 = {
-		holder = ali_shah_bengal
-		liege = d_gauda
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
@@ -701,20 +638,9 @@ c_gauda = {
 	1040.1.1 = {
 		holder = 191078 #Narasimharjjuna
 	}
-	1090.1.1 = {
-		holder = 190020 #Ramapala Pala
-	}
-	1120.1.1 = {
-		holder = 190021 #Kumarapala Pala
-	}
-	1125.1.1 = {
-		holder = 190022 #Gopala III Pala
-	}
-	1140.1.1 = {
-		holder = 154002 #Vijay Sena
-	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
+	1178.1.1 = {
+		holder = 154006 # Visvarupa
+		liege = d_nadia
 	}
 	1179.1.1 = {
 		holder = 154005 #Laksmana Sena
@@ -794,9 +720,7 @@ c_gauda = {
 		holder = 170278 #Ghiyasuddin Bahadur
 		liege = k_bengal
 	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
+
 }
 
 
@@ -838,20 +762,8 @@ c_radha = {
 	1055.1.1 = {
 		holder = 190017 #Vigrahapala III Pala
 	}
-	1100.1.1 = {
-		holder = 190020 #Ramapala Pala
-	}
-	1120.1.1 = {
-		holder = 190021 #Kumarapala Pala
-	}
-	1125.1.1 = {
-		holder = 190022 #Gopala III Pala
-	}
-	1140.1.1 = {
-		holder = 154002 #Vijay Sena
-	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
+	1167.1.1 = {
+		holder = 191137 #Jiban
 	}
 	1179.1.1 = {
 		holder = 154005 #Laksmana Sena
@@ -930,19 +842,13 @@ c_radha = {
 		holder = 170278 #Ghiyasuddin Bahadur
 		liege = k_bengal
 	}
-	1337.1.1 = {
-		holder = ilyas_shah_bengal
-		liege = e_rajastan
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
 d_varendra = {
 	867.1.1 = { change_development_level = 18 }
 	1066.1.1 = { change_development_level = 25 }
+	1178.1.1 = { change_development_level = 28 }
 	
 	755.1.1 = {
 		holder = 190027 #Gopala Pala
@@ -1189,13 +1095,6 @@ c_pundravardhana = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 	}
-	1337.1.1 = {
-		holder = ali_shah_bengal
-		liege = d_gauda
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
@@ -1285,9 +1184,6 @@ c_suvarnagram = {
 	1179.1.1 = {
 		holder = 154005 #Laksmana Sena
 	}
-	1206.1.1 = {
-		holder = 154006
-	}
 	1210.1.1 = {
 		holder = 191547 #Kharavana
 		liege = d_vanga
@@ -1314,13 +1210,6 @@ c_suvarnagram = {
 		liege = k_bengal
 	}
 	#Lasting independence from 1338
-	1337.1.1 = {
-		holder = fakhruddin_mubarak
-		liege = d_vanga
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
@@ -1482,19 +1371,13 @@ c_madhupur = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 	}
-	1337.1.1 = {
-		holder = ali_shah_bengal
-		liege = d_gauda
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
 d_vanga = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	645.1.1 = {
 		holder = 191100 #Khadgodyama
@@ -1538,7 +1421,6 @@ d_vanga = {
 	#The Cedis crush the Palas and Chandras
 	1052.1.1 = {
 		holder = 190073 #Jatavarman Bangala Varman
-		#liege = k_bengal
 	} #Nominally tributary to the Palas of Bengal, but stops paying tribute in 1080.
 	1067.1.1 = {
 		holder = 190074 #Harivarman Bangala Varman
@@ -1554,7 +1436,6 @@ d_vanga = {
 	}
 	1204.1.1 = {
 		holder = 154005 #Laksmana Sena
-		#liege = 0
 	}
 	1206.1.1 = {
 		holder = 154006 #Visvarupa Sena
@@ -1573,12 +1454,12 @@ d_vanga = {
 	}
 	1285.1.1 = {
 		holder = 191544 #Dasarathadeva
-		liege = e_rajastan
 	}
-	1337.1.1 = {
-		holder = fakhruddin_mubarak
+	1300.1.1 = {
+		holder = 170278 #Ghiyasuddin Bahadur
+		liege = k_bengal
 	}
-	1415.1.1 = {
+	1328.6.1 = {
 		holder = 0
 	}
 }
@@ -1663,12 +1544,10 @@ c_bikrampur = {
 	1285.1.1 = {
 		holder = 191544 #Dasarathadeva
 	}
-	1337.1.1 = {
-		holder = fakhruddin_mubarak
+	1300.1.1 = {
+		liege = 0
 	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
+
 }
 
 
@@ -1737,8 +1616,8 @@ c_candradvipa = {
 		holder = 154002 #Vijay Sena
 		liege = k_bengal
 	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
+	1150.1.1 = {
+		holder = 191539 #Purushottama
 	}
 	1179.1.1 = {
 		holder = 154005 #Laksmana Sena
@@ -1826,12 +1705,6 @@ c_candradvipa = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 	}
-	1337.1.1 = {
-		holder = ilyas_shah_bengal
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
@@ -1894,11 +1767,8 @@ c_karmanta = {
 		holder = 154002 #Vijay Sena
 		liege = k_bengal
 	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
-	}
-	1179.1.1 = {
-		holder = 154005 #Laksmana Sena
+	1150.1.1 = {
+		holder = 191539 #Purushottama
 	}
 	1204.1.1 = {
 		holder = 191546 #Harikaladeva Ranavankamalla
@@ -1920,11 +1790,8 @@ c_karmanta = {
 	1285.1.1 = {
 		holder = 191544 #Dasarathadeva
 	}
-	1337.1.1 = {
-		holder = fakhruddin_mubarak
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
+	1300.1.1 = {
+		liege = 0
 	}
 }
 
@@ -2012,11 +1879,8 @@ c_samatata = {
 	1285.1.1 = {
 		holder = 191544 #Dasarathadeva
 	}
-	1337.1.1 = {
-		holder = fakhruddin_mubarak
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
+	1300.1.1 = {
+		liege = 0
 	}
 }
 
@@ -2080,8 +1944,8 @@ c_harikela = {
 		holder = 154002 #Vijay Sena
 		liege = k_bengal
 	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
+	1150.1.1 = {
+		holder = 191539 #Purushottama
 	}
 	1179.1.1 = {
 		holder = 154005 #Laksmana Sena
@@ -2106,11 +1970,8 @@ c_harikela = {
 	1285.1.1 = {
 		holder = 191544 #Dasarathadeva
 	}
-	1337.1.1 = {
-		holder = fakhruddin_mubarak
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
+	1300.1.1 = {
+		liege = 0
 	}
 }
 
@@ -2118,6 +1979,7 @@ c_harikela = {
 d_nadia = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	823.1.1 = {
 		holder = 190097 #Biswajit
@@ -2141,20 +2003,12 @@ d_nadia = {
 	1020.1.1 = {
 		liege = k_bengal
 	}
-	1071.1.1 = {
-		holder = 154001 #Hemanta Sena
-	}
-	1097.1.1 = {
-		holder = 154002 #Vijay Sena
-	}
 	1132.1.1 = {
 		liege = 0
 	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
-	}
-	1179.1.1 = {
+	1178.1.1 = {
 		holder = 154005 #Laksmana Sena
+		liege = k_bengal
 	}
 	1206.1.1 = {
 		holder = 154006 #Visvarupa Sena
@@ -2162,20 +2016,12 @@ d_nadia = {
 	1225.1.1 = {
 		holder = 154007 #Keseva Sena dies 1230
 	}
-	1230.1.1 = {
-		holder = 191545
-	}
-	1337.1.1 = {
-		holder = ilyas_shah_bengal
-		liege = e_rajastan
-	}
-	1415.1.1 = {
-		holder = 0
-	}
 }
 
 
 c_nabadwipa = {
+	1178.1.1 = { change_development_level = 44 }
+
 	645.1.1 = {
 		holder = 191100 #Khadgodyama
 		liege = d_vanga
@@ -2210,22 +2056,13 @@ c_nabadwipa = {
 	1020.1.1 = {
 		liege = k_bengal
 	}
-	1071.1.1 = {
-		holder = 154001 #Hemanta Sena
-	}
-	1097.1.1 = {
-		holder = 154002 #Vijay Sena
-	}
 	1132.1.1 = {
 		liege = 0
 	}
 	1140.1.1 = {
 		liege = k_bengal
 	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
-	}
-	1179.1.1 = {
+	1178.1.1 = {
 		holder = 154005 #Laksmana Sena
 	}
 	1204.1.1 = {
@@ -2306,12 +2143,6 @@ c_nabadwipa = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 	}
-	1337.1.1 = {
-		holder = ilyas_shah_bengal
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
@@ -2351,16 +2182,7 @@ c_saptagrama = {
 		holder = 191076	#Rudrasikhara
 		liege = k_bengal
 	}
-	1071.1.1 = {
-		holder = 154001 #Hemanta Sena
-	}
-	1097.1.1 = {
-		holder = 154002 #Vijay Sena
-	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
-	}
-	1179.1.1 = {
+	1178.1.1 = {
 		holder = 154005 #Laksmana Sena
 	}
 	1204.1.1 = {
@@ -2439,12 +2261,6 @@ c_saptagrama = {
 		holder = 170282 #Bahram Khan
 		liege = k_bengal
 	}
-	1337.1.1 = {
-		holder = ilyas_shah_bengal
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
@@ -2484,17 +2300,12 @@ c_vijayapura = {
 		holder = 154000 #Samanta Sena
 		liege = k_bengal
 	}
-	1071.1.1 = {
-		holder = 154001 #Hemanta Sena
-	}
-	1097.1.1 = {
-		holder = 154002 #Vijay Sena
-	}
 	1132.1.1 = {
 		liege = 0
 	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
+	1167.1.1 = {
+		holder = 191137 #Jiban
+		liege = k_bengal
 	}
 	1179.1.1 = {
 		holder = 154005 #Laksmana Sena
@@ -2578,18 +2389,13 @@ c_vijayapura = {
 	1328.6.1 = {
 		holder = 170282 #Bahram Khan
 	}
-	1337.1.1 = {
-		holder = ilyas_shah_bengal
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
 d_suhma = {
 	867.1.1 = { change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	#Suhmabhukti or Daksina Radha
 	755.1.1 = {
@@ -2838,14 +2644,8 @@ c_tamralipti = {
 	1125.1.1 = {
 		holder = 190022 #Gopala III Pala
 	}
-	1140.1.1 = {
-		holder = 154002 #Vijay Sena
-	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
-	}
-	1179.1.1 = {
-		holder = 154005 #Laksmana Sena
+	1178.1.1 = {
+		holder = 191551 # Dommanapala (attested as having declared independence here in 1196)
 	}
 	1204.1.1 = {
 		holder = 170252 #Muhammad Bakhtiyar
@@ -2923,12 +2723,6 @@ c_tamralipti = {
 		holder = 170282 #Bahram Khan
 		liege = k_bengal
 	}
-	1337.1.1 = {
-		holder = ilyas_shah_bengal
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
 
 
@@ -2967,14 +2761,8 @@ c_midnapore = {
 	1110.1.1 = {
 		liege = k_bengal
 	}
-	1140.1.1 = {
-		holder = 154002 #Vijay Sena
-	}
-	1159.1.1 = {
-		holder = 154004 #Valla Sena
-	}
-	1179.1.1 = {
-		holder = 154005 #Laksmana Sena
+	1178.1.1 = {
+		holder = 191551 # Dommanapala
 	}
 	1204.1.1 = {
 		holder = 170252 #Muhammad Bakhtiyar
@@ -3052,10 +2840,5 @@ c_midnapore = {
 		holder = 170282 #Bahram Khan
 		liege = k_bengal
 	}
-	1337.1.1 = {
-		holder = ilyas_shah_bengal
-	}
-	1415.1.1 = {
-		holder = jalaluddin_muhammad_shah
-	}
 }
+

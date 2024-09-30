@@ -1,50 +1,13 @@
 k_pagan = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 9 }
-	1187.1.1 = { change_development_level = 25 }
-	1337.1.1 = { change_development_level = 50 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	1044.8.11 = {
 		holder = burman001 #Anawrahta - Founder of the Pagan Kingdom/Empire
 	}
-	1077.4.11 = {
-		holder = burman002 #Saw Lu
-	}
-	1084.4.20 = {
-		holder = burman003 #Kyansittha
-	}
-	1111.1.1 = {
-		holder = sithu_i
-	}
-	1167.1.1 = {
-		holder = narathu
-	}
-	1171.2.1 = {
-		holder = naratheinkha
-	}
 	1174.5.1 = {
-		holder = sithu_ii
-	}
-	1211.8.18 = {
-		holder = htilominlo
-	}
-	1235.7.19 = {
-		holder = kyaswa
-	}
-	1251.5.1 = {
-		holder = uzana
-	}
-	1256.5.6 = {
-		holder = narathihapate
-	}
-	1287.7.1 = {
-		holder = 0
-	}
-	1289.5.30 = {
-		holder = kyawswa
-	}
-	1297.12.17 = {
-		holder = 0
+		holder = pagan_1
 	}
 }
 
@@ -76,60 +39,15 @@ d_pagan = {
 	1044.8.11 = {
 		holder = burman001 #Anawrahta - Becomes king after killing Sokkate in a duel
 	}
-	1077.4.11 = {
-		holder = burman002 #Saw Lu
-	}
-	1084.4.20 = {
-		holder = burman003 #Kyansittha
-	}
-	1111.1.1 = {
-		holder = sithu_i
-	}
-	1167.1.1 = {
-		holder = narathu
-	}
-	1171.2.1 = {
-		holder = naratheinkha
-	}
 	1174.5.1 = {
-		holder = sithu_ii
-	}
-	1211.8.18 = {
-		holder = htilominlo
-	}
-	1235.7.19 = {
-		holder = kyaswa
-	}
-	1251.5.1 = {
-		holder = uzana
-	}
-	1256.5.6 = {
-		holder = narathihapate
-	}
-	1287.7.1 = {
-		holder = kyawswa
-	}
-	1297.12.17 = {
-		holder = athinkhaya
-	}
-	1310.4.13 = {
-		holder = yazathingyan
-	}
-	1313.2.7 = {
-		holder = thihathu
-	}
-	1325.2.1 = {
-		holder = uzana_pinya
-		name = b_pinya
-		effect = {
-			set_capital_county = title:c_ava
-		}
+		holder = pagan_1
 	}
 }
 
 c_pagan = {
 	867.1.1 = { change_development_level = 9 }
 	1066.1.1 = { change_development_level = 13 }
+	1178.1.1 = { change_development_level = 53 }
 	
 	846.1.1 = {
 		holder = earlyburman001 #Pyinbya
@@ -158,51 +76,8 @@ c_pagan = {
 	1044.8.11 = {
 		holder = burman001 #Anawrahta - Becomes king after killing Sokkate in a duel
 	}
-	1077.4.11 = {
-		holder = burman002 #Saw Lu
-	}
-	1084.4.20 = {
-		holder = burman003 #Kyansittha
-	}
-	1111.1.1 = {
-		holder = sithu_i
-	}
-	1167.1.1 = {
-		holder = narathu
-	}
-	1171.2.1 = {
-		holder = naratheinkha
-	}
 	1174.5.1 = {
-		holder = sithu_ii
-	}
-	1211.8.18 = {
-		holder = htilominlo
-	}
-	1235.7.19 = {
-		holder = kyaswa
-	}
-	1251.5.1 = {
-		holder = uzana
-	}
-	1256.5.6 = {
-		holder = narathihapate
-	}
-	1287.7.1 = {
-		holder = kyawswa
-	}
-	1299.5.8 = {
-		holder = saw_hnit
-		liege = d_pagan
-	}
-	1301.1.25 = {
-		holder = kumara_kassapa
-	}
-	1301.4.6 = {
-		holder = saw_hnit
-	}
-	1325.1.1 = {
-		holder = uzana_ii
+		holder = pagan_1
 	}
 }
 
@@ -234,8 +109,12 @@ c_ava = {
 	1044.8.11 = {
 		holder = burman001 #Anawrahta - Becomes king after killing Sokkate in a duel
 	}
-	1325.2.1 = {
-		holder = uzana_pinya
+	1174.5.1 = {
+		holder = pagan_1
+	}
+	1177.1.1 = {
+		holder = pagan_5 # Zeya Thura
+		liege = k_pagan
 	}
 }
 
@@ -267,8 +146,12 @@ c_kyaukse = {
 	1044.8.11 = {
 		holder = burman001 #Anawrahta - Becomes king after killing Sokkate in a duel
 	}
-	1325.2.1 = {
-		holder = uzana_pinya
+	1174.5.1 = {
+		holder = pagan_1
+	}
+	1177.1.1 = {
+		holder = pagan_5 # Zeya Thura
+		liege = k_pagan
 	}
 }
 
@@ -300,8 +183,8 @@ c_minbu = {
 	1044.8.11 = {
 		holder = burman001 #Anawrahta - Becomes king after killing Sokkate in a duel
 	}
-	1325.2.1 = {
-		holder = uzana_pinya
+	1174.5.1 = {
+		holder = pagan_1
 	}
 }
 
@@ -333,12 +216,8 @@ c_sagaing = {
 	1044.8.11 = {
 		holder = burman001 #Anawrahta - Becomes king after killing Sokkate in a duel
 	}
-	1315.5.15 = {
-		de_jure_liege = d_tagaung
-	}
-	1335.1.1 = {
-		holder = shwetaungtet
-		liege = 0
+	1174.5.1 = {
+		holder = pagan_1
 	}
 }
 
@@ -370,26 +249,12 @@ c_yamethin = {
 	1044.8.11 = {
 		holder = burman001 #Anawrahta - Becomes king after killing Sokkate in a duel
 	}
-	1337.1.1 = {
-		holder = thihapate_of_yamethin
-		liege = d_pagan
+	1174.5.1 = {
+		holder = pagan_1
 	}
-}
-
-d_tagaung = {
-	1315.5.15 = {
-		holder = saw_yun_sagaing
-		name = c_sagaing
-		effect = {
-			set_capital_county = title:c_sagaing
-		}
-	}
-	1327.2.5 = {
-		holder = tarabya_i
-	}
-	1335.1.1 = {
-		holder = shwetaungtet
-		liege = 0
+	1177.1.1 = {
+		holder = pagan_5 # Zeya Thura
+		liege = k_pagan
 	}
 }
 
@@ -405,9 +270,8 @@ c_takon = {
 		holder = burman011 #Kaleinga - Fictional ruler
 		liege = k_pagan
 	}
-	1335.1.1 = {
-		holder = shwetaungtet
-		liege = 0
+	1178.1.1 = {
+		holder = kaleinga_4 # Fictional placeholder
 	}
 }
 
@@ -422,9 +286,8 @@ c_madaya = {
 		holder = burman011 #Kaleinga - Fictional ruler
 		liege = k_pagan
 	}
-	1335.1.1 = {
-		holder = shwetaungtet
-		liege = 0
+	1178.1.1 = {
+		holder = kaleinga_4 # Fictional placeholder
 	}
 }
 
@@ -439,9 +302,8 @@ c_hanlan = {
 		holder = burman013 #Minhlagyi - Fictional ruler
 		liege = k_pagan
 	}
-	1335.1.1 = {
-		holder = shwetaungtet
-		liege = 0
+	1178.1.1 = {
+		holder = kaleinga_9 # Fictional placeholder
 	}
 }
 
@@ -661,8 +523,8 @@ c_hinthada = {
 	1060.1.1 = {
 		holder = mon052 #Katha Wunna - Fictional ruler to split up the Irrawaddy Delta
 	}
-	1337.1.1 = {
-		holder = e_law
+	1174.5.1 = {
+		holder = pagan_1 # Narapatisithu
 	}
 }
 
@@ -728,8 +590,7 @@ c_toungoo = {
 d_arakan = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
-	1187.1.1 = { change_development_level = 20 }
-	1337.1.1 = { change_development_level = 45 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	788.1.1 = {
 		holder = arakan001 #Mahataingchandra
@@ -797,17 +658,8 @@ d_arakan = {
 	1066.1.1 = {
 		holder = arakan026 #Minlade
 	}
-	1078.1.1 = {
-		holder = thinkhaya
-	}
-	1180.1.1 = {
-		holder = misuthin
-	}
-	1201.1.1 = {
-		holder = ngasu
-	}
-	1279.1.1 = {
-		holder = min_hti
+	1072.1.1 = {
+		holder = 0
 	}
 }
 
@@ -878,17 +730,12 @@ c_vaisali = {
 	1066.1.1 = {
 		holder = arakan026 #Minlade
 	}
-	1078.1.1 = {
-		holder = thinkhaya
+	1174.5.1 = {
+		holder = pagan_1 # Narapatisithu
 	}
-	1180.1.1 = {
-		holder = misuthin
-	}
-	1201.1.1 = {
-		holder = ngasu
-	}
-	1279.1.1 = {
-		holder = min_hti
+	1177.1.1 = {
+		holder = pagan_6 # Yaza Thura
+		liege = k_pagan
 	}
 }
 
@@ -959,17 +806,12 @@ c_ramu = {
 	1066.1.1 = {
 		holder = arakan026 #Minlade
 	}
-	1078.1.1 = {
-		holder = thinkhaya
+	1174.5.1 = {
+		holder = pagan_1 # Narapatisithu
 	}
-	1180.1.1 = {
-		holder = misuthin
-	}
-	1201.1.1 = {
-		holder = ngasu
-	}
-	1279.1.1 = {
-		holder = min_hti
+	1177.1.1 = {
+		holder = pagan_7 # Ginga Thura
+		liege = k_pagan
 	}
 }
 
@@ -1040,17 +882,12 @@ c_thabeik_taung = {
 	1066.1.1 = {
 		holder = arakan026 #Minlade
 	}
-	1078.1.1 = {
-		holder = thinkhaya
+	1174.5.1 = {
+		holder = pagan_1 # Narapatisithu
 	}
-	1180.1.1 = {
-		holder = misuthin
-	}
-	1201.1.1 = {
-		holder = ngasu
-	}
-	1279.1.1 = {
-		holder = min_hti
+	1177.1.1 = {
+		holder = pagan_7 # Ginga Thura
+		liege = k_pagan
 	}
 }
 
@@ -1121,17 +958,12 @@ c_sandoway = {
 	1066.1.1 = {
 		holder = arakan026 #Minlade
 	}
-	1078.1.1 = {
-		holder = thinkhaya
+	1174.5.1 = {
+		holder = pagan_1 # Narapatisithu
 	}
-	1180.1.1 = {
-		holder = misuthin
-	}
-	1201.1.1 = {
-		holder = ngasu
-	}
-	1279.1.1 = {
-		holder = min_hti
+	1177.1.1 = {
+		holder = pagan_6 # Yaza Thura
+		liege = k_pagan
 	}
 }
 
@@ -1167,40 +999,12 @@ d_ramannadesa = {
 	1057.1.1 = {
 		holder = 0 #Conquered by Pagan
 	}
-	1285.1.1 = {
-		holder = wareru
-		liege = k_pagan
-	}
-	1287.1.1 = {
-		liege = 0
-	}
-	1307.1.14 = {
-		holder = hkun_law
-		#name = dynn_Hanthawaddy
-		effect = {
-			set_capital_county = title:c_pegu
-		}
-	}
-	1311.3.31 = {
-		holder = saw_o
-	}
-	1323.9.28 = {
-		holder = saw_zein
-	}
-	1330.4.6 = {
-		holder = zein_pun
-	}
-	1330.4.13 = {
-		holder = saw_e
-	}
-	1330.6.1 = {
-		holder = e_law
-	}
 }
 
 c_thaton = {
 	867.1.1 = { change_development_level = 10 }
 	1066.1.1 = { change_development_level = 15 }
+	1178.1.1 = { change_development_level = 18 }
 	
 	820.1.1 = {
 		holder = mon022 #Dhamma
@@ -1233,8 +1037,8 @@ c_thaton = {
 		holder = mon031 #Maradi - Fictional son to have a playable vassal under Pagan in 1066
 		liege = k_pagan
 	}
-	1330.6.1 = {
-		holder = e_law
+	1178.1.1 = {
+		holder = thaton_5 # Fictional placeholder
 	}
 }
 
@@ -1270,8 +1074,8 @@ c_sittaung = {
 		holder = mon031 #Maradi - Fictional son to have a playable vassal under Pagan in 1066
 		liege = k_pagan
 	}
-	1330.6.1 = {
-		holder = e_law
+	1178.1.1 = {
+		holder = thaton_5 # Fictional placeholder
 	}
 }
 
@@ -1330,23 +1134,15 @@ c_pegu = {
 	1057.1.1 = {
 		liege = k_pagan
 	}
-	#1195.1.1 = {
-		#holder = jayavarman_vii
-	#}
-	1330.6.1 = {
-		holder = e_law
-		name = "dynn_Hanthawaddy"
-	}
-}
-b_pegu = {
-	1330.6.1 = {
-		name = "dynn_Hanthawaddy"
+	1178.1.1 = {
+		holder = hanthawaddy_5 # Fictional placeholder
 	}
 }
 
 c_dagon = {
 	867.1.1 = { change_development_level = 10 }
 	1066.1.1 = { change_development_level = 15 }
+	1178.1.1 = { change_development_level = 18 }
 	
 	825.1.1 = {
 		holder = mon002 #Thamala
@@ -1417,7 +1213,8 @@ c_kusumi = {
 	1060.1.1 = {
 		holder = mon052 #Katha Wunna - Fictional ruler to split up the Irrawaddy Delta
 	}
-	1330.6.1 = {
-		holder = e_law
+	1174.5.1 = {
+		holder = pagan_1 # Narapatisithu
 	}
 }
+
