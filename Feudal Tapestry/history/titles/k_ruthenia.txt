@@ -2,6 +2,7 @@
 k_ruthenia = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 7 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	###Kievan Rus'
 	882.1.2 = {
@@ -45,6 +46,7 @@ k_ruthenia = {
 		holder = 0
 	}
 }
+
 
 d_kiev = {
 	###Pre-Kievan Rus'
@@ -187,8 +189,11 @@ d_kiev = {
 	1175.1.2 = {
 		holder = 222577
 	}
-	1177.1.2 = {
-		holder = 222650
+	1176.8.1 = {
+		holder = 222650 # Sviatoslav
+	}
+	1178.1.1 = {
+		succession_laws = { male_only_law }
 	}
 	1194.7.27 = {
 		holder = 222579
@@ -799,14 +804,8 @@ c_zvyahel = {
 	1171.5.30 = {
 		holder = 222577
 	}
-	1174.1.2 = {
-		holder = 222622
-	}
-	1175.1.2 = {
-		holder = 222577
-	}
-	1177.1.2 = {
-		holder = 222650
+	1173.1.1 = {
+		holder = 222579 # Rurik Rostislavich
 	}
 	1194.7.27 = {
 		holder = 222579
@@ -1004,11 +1003,8 @@ c_chornobyl = {
 	1174.1.2 = {
 		holder = 222622
 	}
-	1175.1.2 = {
-		holder = 222577
-	}
-	1177.1.2 = {
-		holder = 222650
+	1175.1.1 = {
+		holder = 222570 # Davyd Rostislavich, technically Vyshgorod and Bilhorod
 	}
 	1194.7.27 = {
 		holder = 222579
@@ -1557,6 +1553,9 @@ d_turov = {
 	1168.1.2 = {
 		holder = 222540
 	}
+	1178.1.1 = {
+		succession_laws = { male_only_law }
+	}
 	1190.1.2 = {
 		holder = 125036
 	}
@@ -1589,6 +1588,7 @@ d_turov = {
 c_turov = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	800.1.2 = {
 	#	holder = 0
@@ -1805,14 +1805,8 @@ c_korosten = {
 	1171.5.30 = {
 		holder = 222577
 	}
-	1174.1.2 = {
-		holder = 222622
-	}
-	1175.1.2 = {
-		holder = 222577
-	}
-	1177.1.2 = {
-		holder = 222650
+	1173.1.1 = {
+		holder = 222579 # Rurik Rostislavich, as prince of Ovruch
 	}
 	1194.7.27 = {
 		holder = 222579
@@ -1963,29 +1957,9 @@ c_dubrovytsia = {
 	1167.3.14 = {
 		holder = 222522
 	}
-	1169.1.2 = {
-		holder = 222702
-	}
-	1170.1.2 = {
-		holder = 222522
-	}
-	1170.8.19 = {
-		holder = 222702
-	}
-	1171.1.20 = {
-		holder = 222592
-	}
-	1171.5.30 = {
-		holder = 222577
-	}
-	1174.1.2 = {
-		holder = 222622
-	}
-	1175.1.2 = {
-		holder = 222577
-	}
-	1177.1.2 = {
-		holder = 222650
+	1168.1.2 = {
+		holder = 125036 # Gleb Yurievich
+		liege = "d_turov"
 	}
 	1194.7.27 = {
 		holder = 222579
@@ -2134,10 +2108,16 @@ d_pereyaslavl = {
 	1169.1.2 = {
 		holder = 222700	#Vladimir III Glebovich
 	}
+	1178.1.1 = {
+		succession_laws = { male_only_law }
+	}
 }
+
+
 c_pereyaslavl = {
 	867.1.1 = {	change_development_level = 3 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	###Pre Kievan Rus
 	800.1.1 = {
@@ -2665,8 +2645,12 @@ d_chernigov = {
 	1176.1.2 = {
 		holder = 222600		#Yaroslav II Vsevolodovich
 	}
+	1178.1.1 = {
+		succession_laws = { male_only_law }
 }
 c_chernigov = {
+	1178.1.1 = { change_development_level = 13 }
+
 	###Pre Kievan Rus
 	800.1.1 = {
 		liege = 0
@@ -3157,6 +3141,7 @@ c_kursk = {
 d_karachev = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 9 }
 }
 c_karachev = {
 	###Pre Kievan Rus
@@ -3226,8 +3211,8 @@ c_karachev = {
 	1151.5.12 = {
 		holder = 302259		#Ivan Kromsky, fictional
 	}
-	1184.6.1 = {
-		holder = 302260		#Simeon Kromsky, fictional
+	1178.1.1 = {
+		holder = 222606 # Rostislav, historical figure, fictional placeholder
 	}
 }
 c_kozelsk = {
@@ -3298,8 +3283,8 @@ c_kozelsk = {
 	1151.5.12 = {
 		holder = 302259		#Ivan Kromsky, fictional
 	}
-	1184.6.1 = {
-		holder = 302260		#Simeon Kromsky, fictional
+	1178.1.1 = {
+		holder = 222606 # Rostislav, historical figure, fictional placeholder
 	}
 }
 c_sevsk = {
@@ -3394,12 +3379,17 @@ c_sevsk = {
 	1176.1.2 = {
 		holder = 222600		#Yaroslav II Vsevolodovich
 	}
+	1178.1.1 = {
+		holder = 222606 # Rostislav, historical figure, fictional placeholder
+	}
 }
 
 d_novosil = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 9 }
 }
+
 c_novosil = {
 	###Pre Kievan Rus
 	809.3.16 = {
@@ -3476,8 +3466,8 @@ c_novosil = {
 	1151.5.12 = {
 		holder = 302259		#Ivan Kromsky, fictional
 	}
-	1184.6.1 = {
-		holder = 302260		#Simeon Kromsky, fictional
+	1178.1.1 = {
+		holder = 222600 # Yaroslav
 	}
 }
 c_odoyev = {
@@ -3559,8 +3549,8 @@ c_odoyev = {
 	1151.5.12 = {
 		holder = 302259		#Ivan Kromsky, fictional
 	}
-	1184.6.1 = {
-		holder = 302260		#Simeon Kromsky, fictional
+	1178.1.1 = {
+		holder = 222600 # Yaroslav
 	}
 }
 

@@ -1,29 +1,65 @@
-
 k_transoxiana = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
-	1187.1.1 = { change_development_level = 25 }
-	1337.1.1 = {
-		change_development_level = 26
-		de_jure_liege = e_chagatai
-	}
+	1178.1.1 = { change_development_level = 24 }
 	
+	#Samanids 
 	864.1.1 = {
 		holder = 163099
 		government = clan_government
+		effect = {
+			if = {
+				limit = {
+					exists = holder
+					has_dlc_feature = royal_court
+				}
+				holder = {
+					set_court_language = language_iranian
+					if = {
+						limit = { NOT = { knows_court_language_of = this } }
+						learn_court_language_of = this
+					}
+				}
+			}
+		}
 	}
 	892.1.1 = {
 		holder = 163157
 	}
-	907.1.1 = {
-		holder = 261016
+	907.11.24 = {
+		holder = extra_samanids_1
 	}
-	914.1.1 = {
-		holder = 261017
+	914.1.7 = {
+		holder = extra_samanids_2
 	}
-	943.1.1 = {
-		holder = 261018
+	943.4.2 = {
+		holder = extra_samanids_3 
 	}
+	947.3.3 = {
+		holder = extra_samanids_7
+	}
+	947.5.5 = {
+		holder = extra_samanids_3 #retaking the title 
+	}
+	954.8.10 = {
+		holder = extra_samanids_8
+	}
+	961.11.2 = {
+		holder = extra_samanids_9
+	}
+	976.6.13 = {
+		holder = extra_samanids_11
+	}
+	997.7.22 = {
+		holder = extra_samanids_12
+	}
+	999.2.2 = {
+		holder = extra_samanids_13
+	}
+	999.10.1 = {
+		holder = 0
+	}
+
 	1041.1.1 = {
 		holder = 3012
 	}
@@ -45,6 +81,9 @@ k_transoxiana = {
 			}
 		}
 	}
+	1066.1.1 = {
+		liege = 0
+	}
 	
 	## Karakhanids
 	1068.1.1 = {
@@ -63,81 +102,44 @@ k_transoxiana = {
 		holder = 3024
 	}
 	1097.1.1 = {
-		holder = 144110
+		holder = 144099	#Qutb al-Din Muhammad Anushteginid
 	}
-	1097.6.1 = {
-		holder = 144108
-	}
-	1099.1.1 = {
-		holder = 144109
-	}
-	1102.1.1 = {
-		holder = 144111
-	}
-	1129.1.1 = {
-		holder = 144112
-	}
-	1129.6.1 = {
-		holder = 144113
-	}
-	1130.1.1 = {
-		holder = 144116
-	}
-	1132.1.1 = {
-		holder = 144117
-	}
-	1132.6.1 = {
-		holder = 144118
-	}
-	
-	1141.1.1 = {
-		holder = 144100
+	1127.1.1 = {
+		holder = 144100	#Atsiz Anushteginid
 	}
 	1156.1.1 = {
-		holder = 144101
+		holder = 144101	#Il-Arslan Anushteginid
 	}
-	1172.1.1 = {
-		holder = 230000
-		effect = { set_capital_county = title:c_gurganj }
+	1172.3.1 = {
+		holder = 230000 # Tekish
 	}
-	1194.3.1 = {
-		holder = 230000
-	}
-	1200.1.1 = {
-		holder = 93052
-	}
-	1221.1.1 = {
+	1212.1.1 = {
 		holder = 0
-	}
-	1267.1.1 = {
-		holder = 217305
-	}
-	1301.10.23 = {
-		holder = 0
-		effect = { set_capital_county = title:c_samarkand }
 	}
 }
 
-
 d_soghd = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 28 }
+	1178.1.1 = { change_development_level = 14 }
 
 	867.1.1 = {
-		holder = 163157
-		liege = k_transoxiana	#Samanid
+		holder = 0
+		liege = k_transoxiana
 	}
 	936.1.1 = {
 		holder = 261017
 	}
+	1020.1.1 = {
+		holder = 3010
+		liege = k_transoxiana
+	}
 	1066.1.1 = {
 		holder = 0
 	}
-	1405.2.18 = {
-		holder = ulugh_beg
-		liege = e_persia
+	1177.1.1 = {
+		holder = karakhanid_5 # Muhammad
+		liege = k_syr_darya
 	}
 }
 
@@ -145,13 +147,56 @@ d_soghd = {
 c_bukhara = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 41 }
 
+	660.1.1 = {
+		holder = sogdian0100 #The Bukhara Khuda, ancient rulers of Bukhara
+	}
+	681.1.1 = {
+		holder = sogdian0102 #Regency led by a woman known only to us as her title, Khatun 
+	}
+	700.1.1 = {
+		holder = sogdian0101 #Tughshada 
+	}
+	739.1.1 = {
+		holder = sogdian0103 #Qutayba
+	}
+	750.1.1 = {
+		holder = sogdian0104 #Sakan
+	}
+	757.1.1 = {
+		holder = sogdian0105 #Bunyat
+	}
+	783.1.1 = {
+		holder = sogdian0106 #Ot-tegin, fictional placeholder
+	}
+	810.1.1 = {
+		holder = sogdian0107 #Tarxun, fictional placeholder
+	}
+	823.1.1 = {
+		holder = sogdian0108 #Parsak, fictional placeholder
+	}
+	853.1.1 = {
+		holder = sogdian0109 #Abu Ishaq Ibrahim, last Bukhara Khuda 
+	}
 	864.1.1 = {
-		holder = 163157
-		liege = d_soghd
+		holder = 163157 #Ismail Samani 
+		liege = k_transoxiana
 	}
 	936.1.1 = {
 		holder = 261017
+	}
+	992.1.1 = {
+		liege = k_transoxiana
+		holder = extra_karakhanids_10
+	}
+	999.1.1 = {
+		liege = k_zhetysu
+		holder = extra_karakhanids_2
+	}
+	1020.1.1 = {
+		holder = 3010
+		liege = k_transoxiana
 	}
 	1041.1.1 = {
 		liege = "k_transoxiana"
@@ -162,26 +207,8 @@ c_bukhara = {
 	1052.1.1 = {
 		holder = 3014
 	}
-	1068.1.1 = {
-		holder = 3016
-	}
-	1073.1.1 = {
-		liege = "d_uzboy"
-	}
-	1073.1.1 = {
-		holder = 20713
-	}
-	1096.1.1 = {
-		holder = 144099
-	}
-	1127.1.1 = {
-		holder = 144100
-	}
-	1156.1.1 = {
-		holder = 144101
-	}
-	1172.3.1 = {
-		holder = 230000
+	1178.1.1 = {
+		holder = karakhanid_5 # Muhammad
 	}
 	1200.1.1 = {
 		holder = 93052
@@ -193,27 +220,18 @@ c_bukhara = {
 	1221.1.1 = {
 		holder = 125520
 	}
-	1335.1.1 = {
-		holder = 93086
-	}
-	1405.2.18 = {
-		holder = ulugh_beg
-		liege = e_persia
-	}
 }
 
 
 c_kishsh = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	864.1.1 = {
-		holder = 163157
-		liege = d_soghd
+		holder = 163099  
 		government = clan_government
-	}
-	936.1.1 = {
-		holder = 261045
+		liege = k_transoxiana
 	}
 	1041.1.1 = {
 		liege = "k_transoxiana"
@@ -227,26 +245,8 @@ c_kishsh = {
 	1060.1.1={
 		holder = 3016
 	}
-	1068.1.1 = {
-		holder = 3016
-	}
-	1073.1.1 = {
-		liege = "d_uzboy"
-	}
-	1073.1.1 = {
-		holder = 20713
-	}
-	1096.1.1 = {
-		holder = 144099
-	}
-	1127.1.1 = {
-		holder = 144100
-	}
-	1156.1.1 = {
-		holder = 144101
-	}
-	1172.3.1 = {
-		holder = 230000
+	1178.1.1 = {
+		holder = karakhanid_5 # Muhammad
 	}
 	1200.1.1 = {
 		holder = 93052
@@ -258,21 +258,13 @@ c_kishsh = {
 	1221.1.1 = {
 		holder = 125520
 	}
-	1337.1.1 = {
-		holder = taraghai
-		liege = e_chagatai
-	}
-	1405.2.18 = {
-		holder = ulugh_beg
-		liege = e_persia
-	}
 }
 
 
 c_nakhshab = {
 	864.1.1 = {
-		holder = 163157
-		liege = d_soghd
+		holder = sogdian0109 #Abu Ishaq Ibrahim, last Bukhara Khuda (it is unclear whether he still held any lands historically at this point, I gave him this for gameplay reasons, to give Ismail Samani a landed rival.)
+		liege = k_transoxiana
 	}
 	936.1.1 = {
 		holder = 261045
@@ -292,20 +284,11 @@ c_nakhshab = {
 	1073.1.1 = {
 		liege = "d_uzboy"
 	}
-	1073.1.1 = {
-		holder = 20713
-	}
-	1096.1.1 = {
-		holder = 144099
-	}
-	1127.1.1 = {
-		holder = 144100
-	}
-	1156.1.1 = {
-		holder = 144101
-	}
 	1172.3.1 = {
 		holder = 230000
+	}
+	1178.1.1 = {
+		holder = karakhanid_5 # Muhammad
 	}
 	1200.1.1 = {
 		holder = 93052
@@ -317,20 +300,14 @@ c_nakhshab = {
 	1221.1.1 = {
 		holder = 125520
 	}
-	1335.1.1 = {
-		holder = 93086
-	}
-	1405.2.18 = {
-		holder = ulugh_beg
-		liege = e_persia
-	}
+
 }
 
 
 c_firabr = {
 	864.1.1 = {
-		holder = 163157
-		liege = d_soghd
+		holder = 163157 #Ismail Samani 
+		liege = "k_transoxiana"
 	}
 	936.1.1 = {
 		holder = 261017
@@ -353,17 +330,11 @@ c_firabr = {
 	1073.1.1 = {
 		holder = 20713
 	}
-	1096.1.1 = {
-		holder = 144099
-	}
-	1127.1.1 = {
-		holder = 144100
-	}
-	1156.1.1 = {
-		holder = 144101
-	}
 	1172.3.1 = {
 		holder = 230000
+	}
+	1178.1.1 = {
+		holder = karakhanid_5 # Muhammad
 	}
 	1200.1.1 = {
 		holder = 93052
@@ -374,23 +345,16 @@ c_firabr = {
 	}
 	1221.1.1 = {
 		holder = 125520
-	}
-	1335.1.1 = {
-		holder = 93086
-	}
-	1405.2.18 = {
-		holder = ulugh_beg
-		liege = e_persia
 	}
 }
 
 
 c_dabusiya = {
 	864.1.1 = {
-		holder = 163157
-		liege = d_soghd
+		holder = 163099
 	}
 	936.1.1 = {
+		liege = d_soghd
 		holder = 261017
 	}
 	1041.1.1 = {
@@ -411,17 +375,11 @@ c_dabusiya = {
 	1073.1.1 = {
 		holder = 20713
 	}
-	1096.1.1 = {
-		holder = 144099
-	}
-	1127.1.1 = {
-		holder = 144100
-	}
-	1156.1.1 = {
-		holder = 144101
-	}
 	1172.3.1 = {
 		holder = 230000
+	}
+	1178.1.1 = {
+		holder = karakhanid_5 # Muhammad
 	}
 	1200.1.1 = {
 		holder = 93052
@@ -432,13 +390,6 @@ c_dabusiya = {
 	}
 	1221.1.1 = {
 		holder = 125520
-	}
-	1335.1.1 = {
-		holder = 93086
-	}
-	1405.2.18 = {
-		holder = ulugh_beg
-		liege = e_persia
 	}
 }
 
@@ -446,6 +397,7 @@ c_dabusiya = {
 c_samarkand = {
 	867.1.1 = {	change_development_level = 12 }
 	1066.1.1 = { change_development_level = 18 }
+	1178.1.1 = { change_development_level = 30 }
 
 	710.1.1 = {
 		liege = k_transoxiana
@@ -464,6 +416,9 @@ c_samarkand = {
 	}
 	864.1.1 = {
 		holder = 163099 # Nasr
+	}
+	907.1.1 = {
+		holder = extra_samanids_15 #Ishaq - appointed governor before amir Ismail's death
 	}
 	936.1.1 = {
 		holder = 261045
@@ -526,8 +481,7 @@ c_samarkand = {
 		holder = 144121
 	}
 	1178.1.1 = {
-		holder = 144122
-		liege = e_kara_khitai
+		holder = karakhanid_5 # Muhammad
 	}
 	1204.1.1 = {
 		holder = 93051
@@ -603,10 +557,6 @@ c_samarkand = {
 	1335.1.1 = {
 		holder = 93086
 	}
-	1405.2.18 = {
-		holder = ulugh_beg
-		liege = e_persia
-	}
 }
 
 d_badakhshan = {
@@ -619,16 +569,12 @@ d_badakhshan = {
 	1099.1.1 = {
 		holder = 0
 	}
-	1337.1.1 = {
-		holder = tughlugh_timur
-		liege = e_chagatai
-	}
 }
 
 c_badakhshan = {
 	864.1.1 = {
-		liege = "d_badakhshan"
-		holder = 163099
+		liege = "k_transoxiana"
+		holder = extra_badakshanshah_1
 	}
 	936.1.1 = {
 		holder = 261066
@@ -692,6 +638,10 @@ c_badakhshan = {
 	1173.1.1 = {
 		holder = 144141 # Ghiyath Ghurid
 	}
+	1178.1.1 = {
+		holder = ghurid_2 # Abbas
+		liege = d_balkh
+	}
 	1186.1.1 = {
 		liege = e_rajastan
 	}
@@ -705,16 +655,13 @@ c_badakhshan = {
 	#1216.2.15 = {
 	#	holder = 0
 	#}
-	1337.1.1 = {
-		holder = tughlugh_timur
-	}
 }
 
 
 c_munjan = {
 	864.1.1 = {
-		liege = "d_badakhshan"
-		holder = 163099
+		liege = "k_transoxiana"
+		holder = extra_badakshanshah_1
 	}
 	936.1.1 = {
 		holder = 261066
@@ -778,6 +725,9 @@ c_munjan = {
 	1173.1.1 = {
 		holder = 144141 # Ghiyath Ghurid
 	}
+	1178.1.1 = {
+		holder = ghurid_2 # Abbas
+	}
 	1186.1.1 = {
 		liege = e_rajastan
 	}
@@ -791,20 +741,17 @@ c_munjan = {
 	#1216.2.15 = {
 	#	holder = 0
 	#}
-	1337.1.1 = {
-		holder = tughlugh_timur
-		liege = e_chagatai
-	}
 }
 
 
-c_wakhan = {
+c_wakhan = { #the fictional rulers here represent unnamed local lords that were referenced by Arabic chroniclers 
 	867.1.1 = {	change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	864.1.1 = {
-		liege = "d_badakhshan"
-		holder = 163099
+		liege = "k_transoxiana"
+		holder = extra_badakshanshah_1
 	}
 	936.1.1 = {
 		holder = 261066
@@ -839,12 +786,9 @@ c_wakhan = {
 	1053.1.1 = {
 		holder = 144132 # Farrukhzad
 	}
-	1059.1.1 = {
-		holder = 144133 # Ibrahim
-	}
-	1066.1.1 = {
+	1056.5.2 = {
 		liege = d_badakhshan
-		holder = 248023
+		holder = fictional_sakas_13
 	}
 	1099.1.1 = {
 		holder = 144134 # Masud II
@@ -868,6 +812,10 @@ c_wakhan = {
 	1173.1.1 = {
 		holder = 144141 # Ghiyath Ghurid
 	}
+	1178.1.1 = {
+		holder = ghurid_2 # Abbas
+		liege = d_balkh
+	}
 	1186.1.1 = {
 		liege = e_rajastan
 	}
@@ -881,20 +829,17 @@ c_wakhan = {
 	#1216.2.15 = {
 	#	holder = 0
 	#}
-	1337.1.1 = {
-		holder = tughlugh_timur
-		liege = e_chagatai
-	}
 }
 
 
 c_shughnan = {
 	867.1.1 = {	change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	864.1.1 = {
-		liege = "d_badakhshan"
-		holder = 163099
+		liege = "k_transoxiana"
+		holder = extra_badakshanshah_1
 	}
 	936.1.1 = {
 		holder = 261066
@@ -934,7 +879,7 @@ c_shughnan = {
 	}
 	1066.1.1 = {
 		liege = d_badakhshan
-		holder = 248023
+		holder = badakhshanids_3
 	}
 	1099.1.1 = {
 		holder = 144134 # Masud II
@@ -955,8 +900,12 @@ c_shughnan = {
 	1160.1.1 = {
 		holder = 144139 # Khusraw Malik
 	}
-	1173.1.1 = {
-		holder = 144141 # Ghiyath Ghurid
+	1163.1.1 = {
+		holder = 93147 # Shams ad-Din Muhammad of Bamiyan
+	}
+	1178.1.1 = {
+		holder = ghurid_2 # Abbas
+		liege = d_balkh
 	}
 	1186.1.1 = {
 		liege = e_rajastan
@@ -980,8 +929,8 @@ c_shughnan = {
 
 c_karran = {
 	864.1.1 = {
-		liege = "d_badakhshan"
-		holder = 163099
+		liege = "k_transoxiana"
+		holder = extra_badakshanshah_1
 	}
 	936.1.1 = {
 		holder = 261066
@@ -1044,6 +993,10 @@ c_karran = {
 	}
 	1173.1.1 = {
 		holder = 144141 # Ghiyath Ghurid
+	}
+	1178.1.1 = {
+		holder = ghurid_2 # Abbas
+		liege = d_balkh
 	}
 	1186.1.1 = {
 		liege = e_rajastan
@@ -1070,11 +1023,11 @@ d_khuttal = {
 		holder = 188694 # fictitious assignment
 	}
 	
-	864.1.1 = {
-		liege = k_transoxiana	#Samanid
+	830.1.1 = {
+		holder = sogdian0022 #Asad Banijurid
 	}
-	864.1.1 = {
-		holder = 163099
+	866.1.1 = {
+		liege = "k_transoxiana"	#Samanid
 	}
 	936.1.1 = {
 		holder = 248003
@@ -1117,10 +1070,19 @@ d_khuttal = {
 	1221.1.1 = {
 		holder = 125501
 	}
-	1337.1.1 = {
-		holder = ali_sultan
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93057
 	}
+	1250.1.1 = {
+		holder = 93058
+	}
+	1280.1.1 = {
+		holder = 93059
+	}
+	1310.1.1 = {
+		holder = 93060
+	}
+
 }
 
 
@@ -1144,29 +1106,10 @@ c_khuttal = {
 	1064.1.1 = {
 		holder = 93123
 	}
-	1078.1.1 = {
-		holder = 93125
+	1178.1.1 = {
+		holder = ghurid_1 # Zangi
+		liege = d_balkh
 	}
-	1098.1.1 = {
-		holder = 93128
-	}
-	1100.1.1 = {
-		holder = 93129
-	}
-	1110.1.1 = {
-		holder = 93126
-	}
-	1152.1.1 = {
-		holder = 93127
-	}
-	1161.1.1 = {
-		holder = 144101
-	}
-	
-	1172.3.1 = {
-		holder = 230000
-	}
-	
 	1200.1.1 = {
 		holder = 93052
 	}
@@ -1176,11 +1119,18 @@ c_khuttal = {
 	1221.1.1 = {
 		holder = 125501
 	}
-	1337.1.1 = {
-		holder = ali_sultan
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93057
 	}
-
+	1250.1.1 = {
+		holder = 93058
+	}
+	1280.1.1 = {
+		holder = 93059
+	}
+	1310.1.1 = {
+		holder = 93060
+	}
 
 }
 
@@ -1193,12 +1143,12 @@ c_wakhsh = {
 	769.1.1 = {
 		holder = 188694 # fictitious assignment
 	}
-	
-	864.1.1 = {
+	820.1.1 = {
 		liege = "d_khuttal"
+		holder = sogdian0021 #Hashim Banijurid 
 	}
-	864.1.1 = {
-		holder = 163099
+	857.2.9 = {
+		holder = sogdian0024
 	}
 	936.1.1 = {
 		holder = 248003
@@ -1206,29 +1156,10 @@ c_wakhsh = {
 	1066.1.1 = {
 		holder = 93123
 	}
-	1078.1.1 = {
-		holder = 93125
+	1178.1.1 = {
+		holder = ghurid_1 # Zangi
+		liege = d_balkh
 	}
-	1098.1.1 = {
-		holder = 93128
-	}
-	1100.1.1 = {
-		holder = 93129
-	}
-	1110.1.1 = {
-		holder = 93126
-	}
-	1152.1.1 = {
-		holder = 93127
-	}
-	1161.1.1 = {
-		holder = 144101
-	}
-	
-	1172.3.1 = {
-		holder = 230000
-	}
-	
 	1200.1.1 = {
 		holder = 93052
 	}
@@ -1238,14 +1169,19 @@ c_wakhsh = {
 	1221.1.1 = {
 		holder = 125501
 	}
-	1337.1.1 = {
-		holder = ali_sultan
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93057
 	}
-
-
+	1250.1.1 = {
+		holder = 93058
+	}
+	1280.1.1 = {
+		holder = 93059
+	}
+	1310.1.1 = {
+		holder = 93060
+	}
 }
-
 
 c_chaghaniyan = {
 	650.1.1 = {
@@ -1255,12 +1191,11 @@ c_chaghaniyan = {
 	769.1.1 = {
 		holder = 188694 # fictitious assignment
 	}
-	
-	864.1.1 = {
-		liege = "d_khuttal"
-	}
-	864.1.1 = {
-		holder = 163099
+	834.1.1 = {
+		holder = sogdian0013 #the semi-fictional ancestor of the Muhtajids 
+	}	
+	866.1.1 = {
+		liege = k_transoxiana
 	}
 	936.1.1 = {
 		holder = 248003
@@ -1268,29 +1203,10 @@ c_chaghaniyan = {
 	1066.1.1 = {
 		holder = 93123
 	}
-	1078.1.1 = {
-		holder = 93125
+	1178.1.1 = {
+		holder = ghurid_1 # Zangi
+		liege = d_balkh
 	}
-	1098.1.1 = {
-		holder = 93128
-	}
-	1100.1.1 = {
-		holder = 93129
-	}
-	1110.1.1 = {
-		holder = 93126
-	}
-	1152.1.1 = {
-		holder = 93127
-	}
-	1161.1.1 = {
-		holder = 144101
-	}
-	
-	1172.3.1 = {
-		holder = 230000
-	}
-	
 	1200.1.1 = {
 		holder = 93052
 	}
@@ -1300,11 +1216,18 @@ c_chaghaniyan = {
 	1221.1.1 = {
 		holder = 125501
 	}
-	1337.1.1 = {
-		holder = ali_sultan
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93057
 	}
-
+	1250.1.1 = {
+		holder = 93058
+	}
+	1280.1.1 = {
+		holder = 93059
+	}
+	1310.1.1 = {
+		holder = 93060
+	}
 
 }
 
@@ -1320,9 +1243,7 @@ c_rasht = {
 	
 	864.1.1 = {
 		liege = "d_khuttal"
-	}
-	864.1.1 = {
-		holder = 163099
+		holder = kumiji0004 #fictional character, but his clan/tribe were indeed prominent in the area
 	}
 	936.1.1 = {
 		holder = 248003
@@ -1330,29 +1251,10 @@ c_rasht = {
 	1066.1.1 = {
 		holder = 93123
 	}
-	1078.1.1 = {
-		holder = 93125
+	1178.1.1 = {
+		holder = ghurid_1 # Zangi
+		liege = d_balkh
 	}
-	1098.1.1 = {
-		holder = 93128
-	}
-	1100.1.1 = {
-		holder = 93129
-	}
-	1110.1.1 = {
-		holder = 93126
-	}
-	1152.1.1 = {
-		holder = 93127
-	}
-	1161.1.1 = {
-		holder = 144101
-	}
-	
-	1172.3.1 = {
-		holder = 230000
-	}
-	
 	1200.1.1 = {
 		holder = 93052
 	}
@@ -1362,19 +1264,25 @@ c_rasht = {
 	1221.1.1 = {
 		holder = 125501
 	}
-	1337.1.1 = {
-		holder = ali_sultan
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93057
+	}
+	1250.1.1 = {
+		holder = 93058
+	}
+	1280.1.1 = {
+		holder = 93059
+	}
+	1310.1.1 = {
+		holder = 93060
 	}
 
 }
 
-
 c_oshrusana = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 28 }
+	1178.1.1 = { change_development_level = 24 }
 
 	710.1.1 = {
 		liege = k_transoxiana
@@ -1412,60 +1320,12 @@ c_oshrusana = {
 	1060.1.1 = {
 		holder = 3018
 	}
-	1068.1.1 = {
-		holder = 3016
-	}
-	1080.1.1 = {
-		holder = 3018
-	}
-	1081.1.1 = {
-		holder = 3020
-	}
-	1089.1.1 = {
-		holder = 3022
-	}
-	1095.1.1 = {
-		holder = 3024
-	}
-	1097.1.1 = {
-		holder = 144110
-	}
-	1097.6.1 = {
-		holder = 144108
-	}
-	1099.1.1 = {
-		holder = 144109
-	}
-	1102.1.1 = {
-		holder = 144111
-	}
-	1129.1.1 = {
-		holder = 144112
-	}
-	1129.6.1 = {
-		holder = 144113
-	}
-	1130.1.1 = {
-		holder = 144116
-	}
-	1132.1.1 = {
-		holder = 144117
-	}
-	1132.6.1 = {
-		holder = 144118
-	}
 	1141.1.1 = {
 		liege = d_ferghana # Kara Khitan expansion
-		holder = 188905 # Yelü-Dashi
-	}
-	1143.1.1 = {
-		holder = 188907 # Yelü-Yilie
-	}
-	1163.1.1 = {
-		holder = 188908 # Pusuwan
 	}
 	1177.1.1 = {
-		holder = 188912 # Yelü-Zhilugu
+		holder = karakhanid_2 # Usman
+		liege = k_syr_darya
 	}
 	1212.1.1 = {
 		#liege = d_khiva
@@ -1478,16 +1338,72 @@ c_oshrusana = {
 	1227.12.2 = {
 		holder = 93062
 	}
-	1337.1.1 = {
-		holder = taraghai
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
 
 c_zarafshan = {
 	864.1.1 = {
-		holder = 163157
-		liege = d_soghd
+		holder = 217327
 		government = clan_government
 	}
 	936.1.1 = {
@@ -1511,17 +1427,12 @@ c_zarafshan = {
 	1073.1.1 = {
 		holder = 20713
 	}
-	1096.1.1 = {
-		holder = 144099
-	}
-	1127.1.1 = {
-		holder = 144100
-	}
-	1156.1.1 = {
-		holder = 144101
-	}
 	1172.3.1 = {
 		holder = 230000
+	}
+	1177.1.1 = {
+		holder = karakhanid_2 # Usman
+		liege = k_syr_darya
 	}
 	1200.1.1 = {
 		holder = 93052
@@ -1533,29 +1444,26 @@ c_zarafshan = {
 	1221.1.1 = {
 		holder = 125520
 	}
-	1337.1.1 = {
-		holder = taraghai
-		liege = e_chagatai
-	}
 }
 
 
 d_ferghana = {
 	867.1.1 = { change_development_level = 7 }
+
+	900.1.1 = {
+		holder = extra_samanids_15
+	}
+	905.1.1 = {
+		holder = extra_samanids_16 
+	}
+	942.1.1 = {
+		holder = 0
+	}
 	1066.1.1 = { change_development_level = 10 }
-	
-	1137.1.1 = {
-		liege = 0 # Kara Khitan expansion
-		holder = 188905 # Yelü-Dashi
-	}
-	1143.1.1 = {
-		holder = 188907 # Yelü-Yilie
-	}
-	1163.1.1 = {
-		holder = 188908 # Pusuwan
-	}
-	1177.1.1 = {
-		holder = 188912 # Yelü-Zhilugu
+	1178.1.1 = { change_development_level = 14 }
+	1178.1.1 = {
+		holder = karakhanid_1 # Nasr b. Husayn
+		liege = e_kara_khitai
 	}
 	1211.1.1 = {
 		holder = 188914 # Kuchlug (de facto)
@@ -1569,6 +1477,7 @@ d_ferghana = {
 c_ferghana = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	718.1.1={
 		liege=d_ferghana
@@ -1588,9 +1497,16 @@ c_ferghana = {
 	819.1.1={
 		holder=163154 # Ahmad Samanid
 	}
-	864.1.1={
-		holder = 163099 # Nasr Samanid
+	864.1.1 ={
+		holder = extra_samanids_6 # Asad Samanid
 		liege=k_transoxiana
+	}
+	900.1.1 = {
+		holder = extra_samanids_15
+		liege=d_ferghana
+	}
+	905.1.1 = {
+		holder = extra_samanids_16 
 	}
 	936.1.1 = {
 		holder = 261068
@@ -1608,57 +1524,11 @@ c_ferghana = {
 		liege = k_transoxiana
 		#Ferghana goes back and forth between Western & Eastern Karakhanids
 	}
-	1080.1.1= {
-		holder = 3018
-	}
-	1081.1.1= {
-		holder = 3020
-	}
-	1089.1.1= {
-		holder = 3022
-	}
-	1095.1.1= {
-		holder = 3024
-	}
-	1097.1.1= {
-		holder = 144110
-	}
-	1097.6.1= {
-		holder = 144108
-	}
-	1099.1.1= {
-		holder = 144109
-	}
-	1102.1.1= {
-		holder = 144111
-	}
-	1129.1.1= {
-		holder = 144112
-	}
-	1129.6.1= {
-		holder = 144113
-	}
-	1130.1.1={
-		holder = 144116
-	}
-	1132.1.1={
-		holder = 144117
-	}
-	1132.6.1={
-		holder = 144118
-	}
 	1137.1.1={
 		liege=d_ferghana # Kara Khitan conquest
-		holder = 188905 # Yelü-Dashi
 	}
-	1143.1.1={
-		holder = 188907 # Yelü-Yilie
-	}
-	1163.1.1={
-		holder = 188908 # Pusuwan
-	}
-	1177.1.1={
-		holder = 188912 # Yelü-Zhilugu
+	1178.1.1 = {
+		holder = karakhanid_1 # Nasr b. Husayn
 	}
 	1211.1.1={
 		holder = 188914 # Kuchlug (de facto)
@@ -1695,6 +1565,7 @@ c_ferghana = {
 c_khojand = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	718.1.1={
 		liege=d_ferghana
@@ -1710,13 +1581,19 @@ c_khojand = {
 	782.1.1={
 		holder=248314
 	}
-	
 	819.1.1={
 		holder=163154 # Ahmad Samanid
 	}
-	864.1.1={
-		holder = 163099 # Nasr Samanid
+	864.1.1 ={
+		holder = extra_samanids_6 
 		liege=k_transoxiana
+	}
+	900.1.1 = {
+		holder = extra_samanids_15
+		liege=d_ferghana
+	}
+	905.1.1 = {
+		holder = extra_samanids_16 
 	}
 	936.1.1 = {
 		holder = 261069
@@ -1727,60 +1604,11 @@ c_khojand = {
 	1060.1.1={
 		holder = 3018
 	}
-	1068.1.1={
-		holder = 3016
-	}
-	1080.1.1= {
-		holder = 3018
-	}
-	1081.1.1= {
-		holder = 3020
-	}
-	1089.1.1= {
-		holder = 3022
-	}
-	1095.1.1= {
-		holder = 3024
-	}
-	1097.1.1= {
-		holder = 144110
-	}
-	1097.6.1= {
-		holder = 144108
-	}
-	1099.1.1= {
-		holder = 144109
-	}
-	1102.1.1= {
-		holder = 144111
-	}
-	1129.1.1= {
-		holder = 144112
-	}
-	1129.6.1= {
-		holder = 144113
-	}
-	1130.1.1={
-		holder = 144116
-	}
-	1132.1.1={
-		holder = 144117
-	}
-	1132.6.1={
-		holder = 144118
-	}
 	1137.1.1={
 		liege=d_ferghana # Kara Khitan conquest
-		holder = 188905 # Yelü-Dashi
 	}
-	1143.1.1={
-		holder = 188907 # Yelü-Yilie
-	}
-	1163.1.1={
-		holder = 188908 # Pusuwan
-	}
-	1177.1.1={
-		holder = 188912 # Yelü-Zhilugu
+	1178.1.1 = {
+		holder = karakhanid_1 # Nasr b. Husayn
 	}
 	1211.1.1={
 		holder = 188914 # Kuchlug (de facto)
@@ -1813,10 +1641,10 @@ c_khojand = {
 	}
 }
 
-
 c_isfara = {
 	867.1.1 = {	change_development_level = 8 }
 	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	718.1.1={
 		liege=d_ferghana
@@ -1837,7 +1665,7 @@ c_isfara = {
 		holder=163154 # Ahmad Samanid
 	}
 	864.1.1={
-		holder = 163099 # Nasr Samanid
+		holder = extra_samanids_6 # Asad Samanid
 		liege=k_transoxiana
 	}
 	936.1.1 = {
@@ -1849,60 +1677,11 @@ c_isfara = {
 	1060.1.1={
 		holder = 3018
 	}
-	1068.1.1={
-		holder = 3016
-	}
-	1080.1.1= {
-		holder = 3018
-	}
-	1081.1.1= {
-		holder = 3020
-	}
-	1089.1.1= {
-		holder = 3022
-	}
-	1095.1.1= {
-		holder = 3024
-	}
-	1097.1.1= {
-		holder = 144110
-	}
-	1097.6.1= {
-		holder = 144108
-	}
-	1099.1.1= {
-		holder = 144109
-	}
-	1102.1.1= {
-		holder = 144111
-	}
-	1129.1.1= {
-		holder = 144112
-	}
-	1129.6.1= {
-		holder = 144113
-	}
-	1130.1.1={
-		holder = 144116
-	}
-	1132.1.1={
-		holder = 144117
-	}
-	1132.6.1={
-		holder = 144118
-	}
 	1137.1.1={
 		liege=d_ferghana # Kara Khitan conquest
-		holder = 188905 # Yelü-Dashi
 	}
-	1143.1.1={
-		holder = 188907 # Yelü-Yilie
-	}
-	1163.1.1={
-		holder = 188908 # Pusuwan
-	}
-	1177.1.1={
-		holder = 188912 # Yelü-Zhilugu
+	1178.1.1 = {
+		holder = karakhanid_1 # Nasr b. Husayn
 	}
 	1211.1.1={
 		holder = 188914 # Kuchlug (de facto)
@@ -1956,7 +1735,7 @@ c_nasaiya = {
 		holder = 163154 # Ahmad Samanid
 	}
 	864.1.1 = {
-		holder = 163099 # Nasr Samanid
+		holder = extra_samanids_6 # Asad Samanid
 		liege = k_transoxiana
 	}
 	936.1.1 = {
@@ -1975,57 +1754,12 @@ c_nasaiya = {
 		liege = k_transoxiana
 		#Ferghana goes back and forth between Western & Eastern Karakhanids
 	}
-	1080.1.1 = {
-		holder = 3018
-	}
-	1081.1.1 = {
-		holder = 3020
-	}
-	1089.1.1 = {
-		holder = 3022
-	}
-	1095.1.1 = {
-		holder = 3024
-	}
-	1097.1.1 = {
-		holder = 144110
-	}
-	1097.6.1 = {
-		holder = 144108
-	}
-	1099.1.1 = {
-		holder = 144109
-	}
-	1102.1.1 = {
-		holder = 144111
-	}
-	1129.1.1 = {
-		holder = 144112
-	}
-	1129.6.1 = {
-		holder = 144113
-	}
-	1130.1.1 = {
-		holder = 144116
-	}
-	1132.1.1 = {
-		holder = 144117
-	}
-	1132.6.1 = {
-		holder = 144118
-	}
 	1137.1.1 = {
 		liege = d_ferghana # Kara Khitan conquest
-		holder = 188905 # Yelü-Dashi
 	}
-	1143.1.1 = {
-		holder = 188907 # Yelü-Yilie
-	}
-	1163.1.1 = {
-		holder = 188908 # Pusuwan
-	}
-	1177.1.1 = {
-		holder = 188912 # Yelü-Zhilugu
+	1178.1.1 = {
+		holder = karakhanid_4 # Muhammad
+		liege = d_ferghana
 	}
 	1211.1.1 = {
 		holder = 188914 # Kuchlug (de facto)
@@ -2079,7 +1813,7 @@ c_nasrabad = {
 		holder=163154 # Ahmad Samanid
 	}
 	864.1.1={
-		holder = 163099 # Nasr Samanid
+		holder = fictional_karluks_1 #his dynasty was present in the area however, as it would seem 
 		liege=k_transoxiana
 	}
 	936.1.1 = {
@@ -2098,57 +1832,11 @@ c_nasrabad = {
 		liege = k_transoxiana
 		#Ferghana goes back and forth between Western & Eastern Karakhanids
 	}
-	1080.1.1= {
-		holder = 3018
-	}
-	1081.1.1= {
-		holder = 3020
-	}
-	1089.1.1= {
-		holder = 3022
-	}
-	1095.1.1= {
-		holder = 3024
-	}
-	1097.1.1= {
-		holder = 144110
-	}
-	1097.6.1= {
-		holder = 144108
-	}
-	1099.1.1= {
-		holder = 144109
-	}
-	1102.1.1= {
-		holder = 144111
-	}
-	1129.1.1= {
-		holder = 144112
-	}
-	1129.6.1= {
-		holder = 144113
-	}
-	1130.1.1={
-		holder = 144116
-	}
-	1132.1.1={
-		holder = 144117
-	}
-	1132.6.1={
-		holder = 144118
-	}
 	1137.1.1={
 		liege=d_ferghana # Kara Khitan conquest
-		holder = 188905 # Yelü-Dashi
 	}
-	1143.1.1={
-		holder = 188907 # Yelü-Yilie
-	}
-	1163.1.1={
-		holder = 188908 # Pusuwan
-	}
-	1177.1.1={
-		holder = 188912 # Yelü-Zhilugu
+	1178.1.1 = {
+		holder = karakhanid_1 # Nasr b. Husayn
 	}
 	1211.1.1={
 		holder = 188914 # Kuchlug (de facto)
@@ -2185,17 +1873,90 @@ c_nasrabad = {
 d_khorezm = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	#Samanids
 	#819.1.1 = {
 	#	liege = k_transoxiana	#Samanid
 	#}
-	865.1.1 = {
+	300.1.1 = {
+		holder = 188580	#historical Afrighid ruler
+	}
+	350.1.1 = {
+		holder = 188581	#historical Afrighid ruler
+	}
+	380.1.1 = {
+		holder = 188582	#historical Afrighid ruler
+	}
+	410.1.1 = {
+		holder = 188583	#historical Afrighid ruler
+	}
+	440.1.1 = {
+		holder = 188584	#historical Afrighid ruler
+	}
+	470.1.1 = {
+		holder = 188585	#historical Afrighid ruler
+	}
+	500.1.1 = {
+		holder = 188586	#historical Afrighid ruler
+	}
+	530.1.1 = {
+		holder = 188587	#historical Afrighid ruler
+	}
+	560.1.1 = {
+		holder = 188588	#historical Afrighid ruler
+	}
+	600.1.1 = {
+		holder = 188589	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	665.1.1 = {
+		holder = 188591	#historical Afrighid ruler
+	}
+	690.1.1 = {
+		holder = 188592	#historical Afrighid ruler
+	}
+	712.1.1 = {
+		holder = 188593	#historical Afrighid ruler
+	}
+	740.1.1 = {
+		holder = 188594	#historical Afrighid ruler
+	}
+	765.1.1 = {
+		holder = 188595	#historical Afrighid ruler
+	}
+	790.1.1 = {
+		holder = 188596	#historical Afrighid ruler
+	}
+	815.1.1 = {
+		holder = 188597	#historical Afrighid ruler
+	}
+	850.1.1 = {
 		holder = 188598	#historical Afrighid ruler
 	}
 	936.1.1 = {
 		holder = 188599
 		liege = k_transoxiana
+	}
+	995.1.1 = {
+		holder = 1231221 #first Ma'munid
+	}
+	997.1.1. = {
+		holder = 1231224 #second Ma'munid
+	}
+	1009.1.1 = {
+		holder = 1231228 #third Ma'munid 
+	}
+	1017.3.3 = {
+		holder = 1231225 #fourth and last Ma'munid 
 	}
 	1066.1.1 = {
 		holder = 93121	#Arslan Argun Seljuk prince
@@ -2213,24 +1974,77 @@ d_khorezm = {
 	1172.1.1 = {
 		holder = 230000	#placeholder Baybars Khori
 	}
-	1204.1.1 = {
-		holder = 93052
-	}
-	1337.1.1 = {
-		holder = 93096
-		liege = e_white_horde
-		government = tribal_government
-	}
 }
 
 
 c_gurganj = {
 	867.1.1 = {	change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	#Samanids
 	819.1.1 = {
 		liege = d_khorezm
+	}
+	300.1.1 = {
+		holder = 188580	#historical Afrighid ruler
+	}
+	350.1.1 = {
+		holder = 188581	#historical Afrighid ruler
+	}
+	380.1.1 = {
+		holder = 188582	#historical Afrighid ruler
+	}
+	410.1.1 = {
+		holder = 188583	#historical Afrighid ruler
+	}
+	440.1.1 = {
+		holder = 188584	#historical Afrighid ruler
+	}
+	470.1.1 = {
+		holder = 188585	#historical Afrighid ruler
+	}
+	500.1.1 = {
+		holder = 188586	#historical Afrighid ruler
+	}
+	530.1.1 = {
+		holder = 188587	#historical Afrighid ruler
+	}
+	560.1.1 = {
+		holder = 188588	#historical Afrighid ruler
+	}
+	600.1.1 = {
+		holder = 188589	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	665.1.1 = {
+		holder = 188591	#historical Afrighid ruler
+	}
+	690.1.1 = {
+		holder = 188592	#historical Afrighid ruler
+	}
+	712.1.1 = {
+		holder = 188593	#historical Afrighid ruler
+	}
+	740.1.1 = {
+		holder = 188594	#historical Afrighid ruler
+	}
+	765.1.1 = {
+		holder = 188595	#historical Afrighid ruler
+	}
+	790.1.1 = {
+		holder = 188596	#historical Afrighid ruler
+	}
+	815.1.1 = {
+		holder = 188597	#historical Afrighid ruler
 	}
 	850.1.1 = {
 		holder = 188598	#historical Afrighid ruler
@@ -2238,32 +2052,91 @@ c_gurganj = {
 	936.1.1 = {
 		holder = 188599
 	}
+	995.1.1 = {
+		holder = 1231221 #first Ma'munid
+	}
+	997.1.1. = {
+		holder = 1231224 #second Ma'munid
+	}
+	1009.1.1 = {
+		holder = 1231228 #third Ma'munid 
+	}
+	1017.3.3 = {
+		holder = 1231225 #fourth and last Ma'munid 
+	}
 	1066.1.1 = {
 		holder = 93121	#Arslan Argun Seljuk prince
 	}
-	1097.1.1 = {
-		holder = 144099	#Qutb al-Din Muhammad Anushteginid
-	}
-	1127.1.1 = {
-		holder = 144100	#Atsiz Anushteginid
-	}
-	1156.1.1 = {
-		holder = 144101	#Il-Arslan Anushteginid
-	}
 	1172.1.1 = {
 		holder = 230000	#placeholder Baybars Khori
-	}
-	1337.1.1 = {
-		holder = 93096
-		liege = e_white_horde
 	}
 }
 
 
 c_darghan = {
 	#Samanids
-	819.1.1 = {
+	300.1.1 = {
 		liege = d_khorezm
+	}
+	300.1.1 = {
+		holder = 188580	#historical Afrighid ruler
+	}
+	350.1.1 = {
+		holder = 188581	#historical Afrighid ruler
+	}
+	380.1.1 = {
+		holder = 188582	#historical Afrighid ruler
+	}
+	410.1.1 = {
+		holder = 188583	#historical Afrighid ruler
+	}
+	440.1.1 = {
+		holder = 188584	#historical Afrighid ruler
+	}
+	470.1.1 = {
+		holder = 188585	#historical Afrighid ruler
+	}
+	500.1.1 = {
+		holder = 188586	#historical Afrighid ruler
+	}
+	530.1.1 = {
+		holder = 188587	#historical Afrighid ruler
+	}
+	560.1.1 = {
+		holder = 188588	#historical Afrighid ruler
+	}
+	600.1.1 = {
+		holder = 188589	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	665.1.1 = {
+		holder = 188591	#historical Afrighid ruler
+	}
+	690.1.1 = {
+		holder = 188592	#historical Afrighid ruler
+	}
+	712.1.1 = {
+		holder = 188593	#historical Afrighid ruler
+	}
+	740.1.1 = {
+		holder = 188594	#historical Afrighid ruler
+	}
+	765.1.1 = {
+		holder = 188595	#historical Afrighid ruler
+	}
+	790.1.1 = {
+		holder = 188596	#historical Afrighid ruler
+	}
+	815.1.1 = {
+		holder = 188597	#historical Afrighid ruler
 	}
 	850.1.1 = {
 		holder = 188598	#historical Afrighid ruler
@@ -2271,35 +2144,91 @@ c_darghan = {
 	936.1.1 = {
 		holder = 188599
 	}
+	995.1.1 = {
+		holder = 1231221 #first Ma'munid
+	}
+	997.1.1. = {
+		holder = 1231224 #second Ma'munid
+	}
+	1009.1.1 = {
+		holder = 1231228 #third Ma'munid 
+	}
+	1017.3.3 = {
+		holder = 1231225 #fourth and last Ma'munid 
+	}
 	1066.1.1 = {
 		holder = 93121	#Arslan Argun Seljuk prince
 	}
-	1097.1.1 = {
-		holder = 144099	#Qutb al-Din Muhammad Anushteginid
-	}
-	1127.1.1 = {
-		holder = 144100	#Atsiz Anushteginid
-	}
-	1156.1.1 = {
-		holder = 144101	#Il-Arslan Anushteginid
-	}
 	1172.1.1 = {
 		holder = 230000	#placeholder Baybars Khori
-	}
-	1204.1.1 = {
-		holder = 93052
-	}
-	1337.1.1 = {
-		holder = 93086
-		liege = e_chagatai
 	}
 }
 
 
 c_kath = {
 	#Samanids
-	819.1.1 = {
+	300.1.1 = {
 		liege = d_khorezm
+	}
+	300.1.1 = {
+		holder = 188580	#historical Afrighid ruler
+	}
+	350.1.1 = {
+		holder = 188581	#historical Afrighid ruler
+	}
+	380.1.1 = {
+		holder = 188582	#historical Afrighid ruler
+	}
+	410.1.1 = {
+		holder = 188583	#historical Afrighid ruler
+	}
+	440.1.1 = {
+		holder = 188584	#historical Afrighid ruler
+	}
+	470.1.1 = {
+		holder = 188585	#historical Afrighid ruler
+	}
+	500.1.1 = {
+		holder = 188586	#historical Afrighid ruler
+	}
+	530.1.1 = {
+		holder = 188587	#historical Afrighid ruler
+	}
+	560.1.1 = {
+		holder = 188588	#historical Afrighid ruler
+	}
+	600.1.1 = {
+		holder = 188589	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	665.1.1 = {
+		holder = 188591	#historical Afrighid ruler
+	}
+	690.1.1 = {
+		holder = 188592	#historical Afrighid ruler
+	}
+	712.1.1 = {
+		holder = 188593	#historical Afrighid ruler
+	}
+	740.1.1 = {
+		holder = 188594	#historical Afrighid ruler
+	}
+	765.1.1 = {
+		holder = 188595	#historical Afrighid ruler
+	}
+	790.1.1 = {
+		holder = 188596	#historical Afrighid ruler
+	}
+	815.1.1 = {
+		holder = 188597	#historical Afrighid ruler
 	}
 	850.1.1 = {
 		holder = 188598	#historical Afrighid ruler
@@ -2307,40 +2236,94 @@ c_kath = {
 	936.1.1 = {
 		holder = 188599
 	}
+	995.1.1 = {
+		holder = 1231221 #first Ma'munid
+	}
+	997.1.1. = {
+		holder = 1231224 #second Ma'munid
+	}
+	1009.1.1 = {
+		holder = 1231228 #third Ma'munid 
+	}
+	1017.3.3 = {
+		holder = 1231225 #fourth and last Ma'munid 
+	}
 	1066.1.1 = {
 		holder = 93121	#Arslan Argun Seljuk prince
 	}
-	1097.1.1 = {
-		holder = 144099	#Qutb al-Din Muhammad Anushteginid
-	}
-	1127.1.1 = {
-		holder = 144100	#Atsiz Anushteginid
-	}
-	1156.1.1 = {
-		holder = 144101	#Il-Arslan Anushteginid
-	}
 	1172.1.1 = {
 		holder = 230000	#placeholder Baybars Khori
-	}
-	1204.1.1 = {
-		holder = 93052
-	}
-	1337.1.1 = {
-		holder = 93086
-		liege = e_chagatai
 	}
 }
 
-
 c_khiva = {
-	867.1.1 = { change_development_level = 7 }
+	867.1.1 = {	change_development_level = 7 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 28 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	#Samanids
-	819.1.1 = {
+	300.1.1 = {
 		liege = d_khorezm
+	}
+	300.1.1 = {
+		holder = 188580	#historical Afrighid ruler
+	}
+	350.1.1 = {
+		holder = 188581	#historical Afrighid ruler
+	}
+	380.1.1 = {
+		holder = 188582	#historical Afrighid ruler
+	}
+	410.1.1 = {
+		holder = 188583	#historical Afrighid ruler
+	}
+	440.1.1 = {
+		holder = 188584	#historical Afrighid ruler
+	}
+	470.1.1 = {
+		holder = 188585	#historical Afrighid ruler
+	}
+	500.1.1 = {
+		holder = 188586	#historical Afrighid ruler
+	}
+	530.1.1 = {
+		holder = 188587	#historical Afrighid ruler
+	}
+	560.1.1 = {
+		holder = 188588	#historical Afrighid ruler
+	}
+	600.1.1 = {
+		holder = 188589	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	665.1.1 = {
+		holder = 188591	#historical Afrighid ruler
+	}
+	690.1.1 = {
+		holder = 188592	#historical Afrighid ruler
+	}
+	712.1.1 = {
+		holder = 188593	#historical Afrighid ruler
+	}
+	740.1.1 = {
+		holder = 188594	#historical Afrighid ruler
+	}
+	765.1.1 = {
+		holder = 188595	#historical Afrighid ruler
+	}
+	790.1.1 = {
+		holder = 188596	#historical Afrighid ruler
+	}
+	815.1.1 = {
+		holder = 188597	#historical Afrighid ruler
 	}
 	850.1.1 = {
 		holder = 188598	#historical Afrighid ruler
@@ -2348,35 +2331,91 @@ c_khiva = {
 	936.1.1 = {
 		holder = 188599
 	}
+	995.1.1 = {
+		holder = 1231221 #first Ma'munid
+	}
+	997.1.1. = {
+		holder = 1231224 #second Ma'munid
+	}
+	1009.1.1 = {
+		holder = 1231228 #third Ma'munid 
+	}
+	1017.3.3 = {
+		holder = 1231225 #fourth and last Ma'munid 
+	}
 	1066.1.1 = {
 		holder = 93121	#Arslan Argun Seljuk prince
 	}
-	1097.1.1 = {
-		holder = 144099	#Qutb al-Din Muhammad Anushteginid
-	}
-	1127.1.1 = {
-		holder = 144100	#Atsiz Anushteginid
-	}
-	1156.1.1 = {
-		holder = 144101	#Il-Arslan Anushteginid
-	}
 	1172.1.1 = {
 		holder = 230000	#placeholder Baybars Khori
-	}
-	1204.1.1 = {
-		holder = 93052
-	}
-	1337.1.1 = {
-		holder = 93086
-		liege = e_chagatai
 	}
 }
 
 
 c_kurdar = {
 	#Samanids
-	819.1.1 = {
+	300.1.1 = {
 		liege = d_khorezm
+	}
+	300.1.1 = {
+		holder = 188580	#historical Afrighid ruler
+	}
+	350.1.1 = {
+		holder = 188581	#historical Afrighid ruler
+	}
+	380.1.1 = {
+		holder = 188582	#historical Afrighid ruler
+	}
+	410.1.1 = {
+		holder = 188583	#historical Afrighid ruler
+	}
+	440.1.1 = {
+		holder = 188584	#historical Afrighid ruler
+	}
+	470.1.1 = {
+		holder = 188585	#historical Afrighid ruler
+	}
+	500.1.1 = {
+		holder = 188586	#historical Afrighid ruler
+	}
+	530.1.1 = {
+		holder = 188587	#historical Afrighid ruler
+	}
+	560.1.1 = {
+		holder = 188588	#historical Afrighid ruler
+	}
+	600.1.1 = {
+		holder = 188589	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	625.1.1 = {
+		holder = 188590	#historical Afrighid ruler
+	}
+	665.1.1 = {
+		holder = 188591	#historical Afrighid ruler
+	}
+	690.1.1 = {
+		holder = 188592	#historical Afrighid ruler
+	}
+	712.1.1 = {
+		holder = 188593	#historical Afrighid ruler
+	}
+	740.1.1 = {
+		holder = 188594	#historical Afrighid ruler
+	}
+	765.1.1 = {
+		holder = 188595	#historical Afrighid ruler
+	}
+	790.1.1 = {
+		holder = 188596	#historical Afrighid ruler
+	}
+	815.1.1 = {
+		holder = 188597	#historical Afrighid ruler
 	}
 	850.1.1 = {
 		holder = 188598	#historical Afrighid ruler
@@ -2384,27 +2423,23 @@ c_kurdar = {
 	936.1.1 = {
 		holder = 188599
 	}
+	995.1.1 = {
+		holder = 1231221 #first Ma'munid
+	}
+	997.1.1. = {
+		holder = 1231224 #second Ma'munid
+	}
+	1009.1.1 = {
+		holder = 1231228 #third Ma'munid 
+	}
+	1017.3.3 = {
+		holder = 1231225 #fourth and last Ma'munid 
+	}
 	1066.1.1 = {
 		holder = 93121	#Arslan Argun Seljuk prince
 	}
-	1097.1.1 = {
-		holder = 144099	#Qutb al-Din Muhammad Anushteginid
-	}
-	1127.1.1 = {
-		holder = 144100	#Atsiz Anushteginid
-	}
-	1156.1.1 = {
-		holder = 144101	#Il-Arslan Anushteginid
-	}
 	1172.1.1 = {
 		holder = 230000	#placeholder Baybars Khori
-	}
-	1204.1.1 = {
-		holder = 93052
-	}
-	1337.1.1 = {
-		holder = 93096
-		liege = e_white_horde
 	}
 }
 
@@ -2412,7 +2447,7 @@ c_kurdar = {
 d_uzboy = {
 	867.1.1 = {	change_development_level = 3 }
 	1066.1.1 = { change_development_level = 6 }
-	
+	1178.1.1 = { change_development_level = 20 }
 	935.1.1 = {
 		government = clan_government	#Ahistorical, just for ease of bookmarks.
 	}
@@ -2431,12 +2466,11 @@ d_uzboy = {
 		holder = 302681	#placeholder Kemal Khori
 	}
 	1166.1.1 = {
-		holder = 302682	#placeholder Porsuk Khori
-		liege = k_transoxiana
+		holder = 0
 	}
-	1196.1.1 = {
-		holder = 302683	#placeholder Baybars Khori
-		liege = k_persia
+	1178.1.1 = {
+		holder = khwarezmid_1 # Alishah
+		liege = k_transoxiana
 	}
 }
 
@@ -2469,6 +2503,9 @@ c_sarykamysh = {
 	1166.1.1 = {
 		holder = 302682	#placeholder Porsuk Khori
 	}
+	1178.1.1 = {
+		holder = khwarezmid_1 # Alishah
+	}
 	1196.1.1 = {
 		holder = 302683	#placeholder Baybars Khori
 	}
@@ -2486,7 +2523,7 @@ c_sarykamysh = {
 		holder = 93103
 	}
 	1227.12.2 = {
-		liege = e_white_horde
+		liege = e_golden_horde
 	}
 	1260.1.1 = {
 		holder = 93104
@@ -2529,6 +2566,9 @@ c_uzboy = {
 	1166.1.1 = {
 		holder = 302682	#placeholder Porsuk Khori
 	}
+	1178.1.1 = {
+		holder = khwarezmid_1 # Alishah
+	}
 	1196.1.1 = {
 		holder = 302683	#placeholder Baybars Khori
 	}
@@ -2546,7 +2586,7 @@ c_uzboy = {
 		holder = 93103
 	}
 	1227.12.2 = {
-		liege = e_white_horde
+		liege = e_golden_horde
 	}
 	1260.1.1 = {
 		holder = 93104
@@ -2557,9 +2597,4 @@ c_uzboy = {
 	
 
 }
-d_osrushana = {
-	1337.1.1 = {
-		holder = taraghai
-		liege = e_chagatai
-	}
-}
+

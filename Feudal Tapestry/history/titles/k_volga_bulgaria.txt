@@ -1,9 +1,7 @@
-
 k_volga_bulgaria = {
 	867.1.1 = { change_development_level = 0 }
 	1066.1.1 = { change_development_level = 0 }
-	1187.1.1 = { change_development_level = 6 }
-	1337.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 0 }
 	
 	#965 Independance from devastated Khazars
 	935.1.1 = {
@@ -207,14 +205,16 @@ d_volga_bulgaria = {
 	1294.1.1 = {
 		holder = 34943
 	}
+	1310.1.1 = {
+		holder = 34944
+	}
 }
 
 
 c_bolghar = {
 	867.1.1 = { change_development_level = 7 }
 	1066.1.1 = { change_development_level = 12 }
-	1187.1.1 = { change_development_level = 25 }
-	1337.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 14 }
 	
 	20.1.1 = {
 		government = tribal_government
@@ -388,13 +388,25 @@ c_ashli = {
 	865.1.2 = {
 		holder = 159128 # Shilki
 	}
+	875.1.2 = {
+		holder = 160175 #Batir
+	}
+	895.1.2 = {
+		holder = 125600
+	}
 	
 	#922 Conversion to Islam
 	922.1.1 = {
 		government = feudal_government
 	}
-	936.1.1 = {
-		holder = 260706
+	925.1.2 = {
+		holder = 125601
+	}
+	930.1.2 = {
+		holder = 125602
+	}
+	943.1.2 = {
+		holder = 41417
 	}
 	
 	#965 Independance from devastated Khazars
@@ -439,6 +451,10 @@ c_ashli = {
 	}
 	1164.1.2 = {
 		holder = 125607
+	}
+	1178.1.1 = {
+		holder = barsil_1 # Fictional placeholder
+		liege = k_volga_bulgaria
 	}
 	1185.1.2 = {
 		holder = 125608
@@ -535,8 +551,8 @@ c_yar-calli = {
 	1135.1.2 = {
 		holder = 125606
 	}
-	1164.1.2 = {
-		holder = 125607
+	1147.1.2 = {
+		holder = 302316		#fictional Sondoke Jalyaman
 	}
 	1185.1.2 = {
 		holder = 125608
@@ -674,6 +690,10 @@ c_karabolam = {
 	1164.1.2 = {
 		holder = 125607
 	}
+	1178.1.1 = {
+		holder = 125608 # Abdullah Chebir
+		liege = k_volga_bulgaria
+	}
 	1185.1.2 = {
 		holder = 125608
 	}
@@ -775,6 +795,10 @@ c_samar_VB = {
 	1164.1.2 = {
 		holder = 125607
 	}
+	1178.1.1 = {
+		holder = 125608 # Abdullah Chebir
+		liege = k_volga_bulgaria
+	}
 	1185.1.2 = {
 		holder = 125608
 	}
@@ -817,8 +841,6 @@ c_samar_VB = {
 
 
 c_kazan = {
-	1187.1.1 = { change_development_level = 15 }
-	1337.1.1 = { change_development_level = 15 }
 	#Maris
 	750.1.1 = {
 		holder = 194162
@@ -1081,61 +1103,17 @@ c_elabuga = {
 	1028.1.2 = {
 		holder = 41419
 	}
-	1061.1.2 = {
-		holder = 3504
+	1066.1.1 = {
+		holder = 161720
 	}
-	1071.1.2 = {
-		holder = 41420
+	1110.1.1 = {
+		holder = 161721
 	}
-	1118.1.2 = {
-		holder = 125605
+	1140.1.1 = {
+		holder = 161722
 	}
-	1135.1.2 = {
-		holder = 125606
-	}
-	1164.1.2 = {
-		holder = 125607
-	}
-	1185.1.2 = {
-		holder = 125608
-	}
-	
-	#Mongol Empire
-	1236.1.1 = {
-		liege = e_golden_horde
-	}
-	1236.1.1 = {
-		holder = 34935
-	}
-	1237.1.1 = {
-		holder = 34936
-	}
-	1239.1.1 = {
-		holder = 34937
-	}
-	1241.1.1 = {
-		holder = 34938
-	}
-	1261.1.1 = {
-		holder = 34939
-	}
-	1267.1.1 = {
-		holder = 34940
-	}
-	1270.1.1 = {
-		holder = 34941
-	}
-	1271.1.1 = {
-		holder = 34940
-	}
-	1276.1.1 = {
-		holder = 34942
-	}
-	1294.1.1 = {
-		holder = 34943
-	}
-	1310.1.1 = {
-		holder = 34944
+	1170.1.1 = {
+		holder = 161723
 	}
 }
 
@@ -1178,16 +1156,13 @@ c_jalmat = {
 		holder = 302314		#fictional Organa Jalyaman
 	}
 	1118.1.2 = {
-		holder = 302315		#fictional Yen?epi Jalyaman
+		holder = 302315		#fictional Yençepi Jalyaman
 	}
 	1147.1.2 = {
 		holder = 302316		#fictional Sondoke Jalyaman
 	}
 	1187.1.2 = {
 		holder = 302317		#fictional Labertam Jalyaman
-	}
-	1310.1.1 = {
-		holder = 34944
 	}
 }
 
@@ -1297,16 +1272,13 @@ c_bugurslan = {
 		holder = 302314		#fictional Organa Jalyaman
 	}
 	1118.1.2 = {
-		holder = 302315		#fictional Yen?epi Jalyaman
+		holder = 302315		#fictional Yençepi Jalyaman
 	}
 	1147.1.2 = {
 		holder = 302316		#fictional Sondoke Jalyaman
 	}
 	1187.1.2 = {
 		holder = 302317		#fictional Labertam Jalyaman
-	}
-	1310.1.1 = {
-		holder = 34944
 	}
 }
 

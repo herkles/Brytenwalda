@@ -45,6 +45,7 @@ k_bohemia = {
 d_bohemia = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	720.1.1 = {
 		holder = 168345
@@ -102,12 +103,6 @@ d_bohemia = {
 		holder = 168536
 	}
 	1003.1.1 = {
-		holder = 512
-	}
-	1003.6.1 = {
-		holder = 756
-	}
-	1004.1.1 = {
 		holder = 514
 	}
 	1012.1.1 = {
@@ -162,7 +157,7 @@ d_bohemia = {
 		holder = 212560
 	}
 	1178.1.1 = {
-		holder = 212850
+		holder = 212850 # Bedrich
 	}
 	1189.3.25 = {
 		holder = 212057
@@ -204,6 +199,7 @@ d_bohemia = {
 c_praha = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 12 }
+	1178.1.1 = { change_development_level = 28 }
 	
 	720.1.1 = {
 		liege = "d_bohemia"
@@ -239,7 +235,7 @@ c_praha = {
 	921.1.1 = {
 		holder = 506
 	}
-	935.9.28 = {
+	935.1.1 = {
 		holder = 508
 	}
 	972.1.1 = {
@@ -453,6 +449,7 @@ c_litomerice = {
 c_zatec = {
 	867.1.1 = { change_development_level = 4 }
 	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	720.1.1 = {
 		liege = "d_bohemia"
@@ -490,7 +487,7 @@ c_zatec = {
 	921.1.1 = {
 		holder = 506
 	}
-	935.9.28 = {
+	935.1.1 = {
 		holder = 508
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
@@ -636,7 +633,7 @@ c_plzen = {
 		holder = 508
 	}
 	1066.1.1 = {
-		holder = 530
+		holder = 522
 	}
 	1092.1.14 = {
 		holder = 526
@@ -745,7 +742,7 @@ c_doudleby = {
 	921.1.1 = {
 		holder = 506
 	}
-	935.9.28 = {
+	935.1.1 = {
 		holder = 508
 		government = feudal_government	#Ahistorical, just for ease of bookmarks.
 	}
@@ -775,9 +772,6 @@ c_doudleby = {
 	}
 	1061.1.1 = {
 		holder = 522
-	}
-	1066.1.1 = {
-		holder = 530
 	}
 	1092.1.14 = {
 		holder = 526
@@ -1244,6 +1238,7 @@ c_caslav = {
 d_moravia = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	801.1.1 = {
 		change_development_level = 5
@@ -1355,6 +1350,7 @@ d_moravia = {
 c_olomouc = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 10 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	741.1.1 = {
 		liege = "d_moravia"
@@ -1506,9 +1502,11 @@ c_opava = {
 	1066.1.1 = {
 		liege = "d_bohemia"
 		holder = 528
+		government = theocracy_government
 	}
 	1092.9.6 = {
 		holder = 96012
+		government = feudal_government
 	}
 	1097.1.1 = {
 		holder = 8504
@@ -1544,10 +1542,10 @@ c_opava = {
 		holder = 212850
 	}
 	1173.1.1 = {
-		holder = 212875
+		holder = 212873
 	}
-	1177.1.1 = {
-		holder = 212057
+	1177.1.2 = {
+		holder = 212875
 	}
 	1189.1.1 = {
 		holder = 96005
@@ -2007,6 +2005,7 @@ c_jihlava = {
 c_znojmo = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 9 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	731.1.1 = {
 		liege = "d_visegrad"

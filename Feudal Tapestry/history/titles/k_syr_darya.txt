@@ -1,28 +1,25 @@
 k_syr_darya = {
 	867.1.1 = { change_development_level = 0 }
 	1066.1.1 = { change_development_level = 0 }
-	1187.1.1 = { change_development_level = 6 }
-	1337.1.1 = {
-		change_development_level = 18
-		de_jure_liege = e_chagatai
+	1178.1.1 = { change_development_level = 0 }
+
+	1178.1.1 = {
+		holder = 144122 # Ibrahim b. Husayn
+		liege = "e_kara_khitai"
+		de_jure_liege = e_kara_khitai
 	}
 }
 
 d_syr_darya = {
 	867.1.1 = { change_development_level = 2 }
 	1066.1.1 = { change_development_level = 4 }
-	1187.1.1 = { change_development_level = 15 }
-	1337.1.1 = { change_development_level = 20 }
-	1337.1.1 = {
-		de_jure_liege = k_oghuz_il #to make it de jure white horde
-	}
+	1178.1.1 = { change_development_level = 7 }
 }
 
 c_jend = {
 	867.1.1 = { change_development_level = 5 }
 	1066.1.1 = { change_development_level = 8 }
-	1187.1.1 = { change_development_level = 25 }
-	1337.1.1 = { change_development_level = 24 }
+	1178.1.1 = { change_development_level = 20 }
 	
 	850.1.1 = {
 		liege = d_syr_darya
@@ -42,22 +39,7 @@ c_jend = {
 		holder = 93087
 		liege = 0
 	}
-	1085.1.1 = {
-		holder = 93088
-	}
-	1097.1.1 = {
-		holder = 144099
-	}
-	1127.1.1 = {
-		holder = 144100
-	}
-	1156.1.1 = {
-		holder = 144101
-	}
-	1172.3.1 = {
-		holder = 230000
-	}
-	1200.1.1 = {
+	1178.1.1 = {
 		holder = 93052
 	}
 	1207.1.1 = {
@@ -75,15 +57,12 @@ c_jend = {
 	1260.1.1 = {
 		holder = 93101
 	}
-	1337.1.1 = {
-		holder = 34917
+	1300.1.1 = {
+		holder = 93102
 	}
-
 }
 
-
 c_sighnaq = {
-	1337.1.1 = { change_development_level = 35 }
 	850.1.1 = {
 		liege = 0
 		holder = 302642	#fictional Yunus Shavgari
@@ -111,17 +90,14 @@ c_sighnaq = {
 		holder = 302650	#fictional BO_nek Shavgari
 	}
 	1173.4.3 = {
-		holder = 302651	#fictional Uzur Shavgari
-		liege = k_transoxiana
+		holder = 144122 # the Qarakhanid ruler in Uzgend, Ibrahim b. Husayn
 	}
-	1204.5.16 = {
-		liege = k_persia
+	1178.1.1 = {
+		holder = karakhanid_3 # Ahmad, attested in Uzgend from 1178
+		liege = k_syr_darya
 	}
 	1209.2.17 = {
 		holder = 302652	#fictional Koza Shavgari
-	}
-	1337.1.1 = {
-		holder = 34917
 	}
 }
 
@@ -154,17 +130,14 @@ c_uzgend_KARA = {
 		holder = 302650	#fictional BO_nek Shavgari
 	}
 	1173.4.3 = {
-		holder = 302651	#fictional Uzur Shavgari
-		liege = k_transoxiana
+		holder = 144122 # the Qarakhanid ruler in Uzgend, Ibrahim b. Husayn
 	}
-	1204.5.16 = {
-		liege = k_persia
+	1178.1.1 = {
+		holder = karakhanid_3 # Ahmad, attested here from 1178
+		liege = k_syr_darya
 	}
 	1209.2.17 = {
 		holder = 302652	#fictional Koza Shavgari
-	}
-	1337.1.1 = {
-		holder = 34917
 	}
 }
 
@@ -172,12 +145,16 @@ c_uzgend_KARA = {
 d_chah = {
 	867.1.1 = { change_development_level = 3 }
 	1066.1.1 = { change_development_level = 5 }
+	1178.1.1 = { change_development_level = 8 }
 	
 	#Chah within the Samanid in 867
 	849.1.2 = {
-		holder = 302686	#fictional Aksonqor Shahn
+		holder = 188639	#Yahya Samanid 
 		#liege = k_transoxiana	#Samanid
-		government = tribal_government
+		government = clan_government
+	}
+	855.3.2 = {
+		holder = extra_samanids_17 #Muhammed ibn Nuh
 	}
 	867.1.1 = {
 		liege = k_transoxiana
@@ -185,10 +162,10 @@ d_chah = {
 	882.1.9 = {
 		holder = 302688	#fictional Dogan Shahn
 	}
-	898.4.21 = {
-		holder = 170303 #placeholder
+	999.1.1 = {
+		liege = k_transoxiana
+		holder = 3002
 	}
-	
 	#Chah within the Karakhanid in 1066
 	1060.1.2 = {
 		holder = 302692	#fictional Mala Karachahnid
@@ -210,11 +187,11 @@ d_chah = {
 	1132.7.19 = {
 		holder = 302696	#fictional Kobyak Karachahnid
 	}
-	
-	#1137 - Kara Khitai invasion
+	1178.1.1 = {
+		holder = 144122 # Ibrahim
+	}
 	1181.1.13 = {
 		holder = 302697	#fictional KO_nC_ek Karachahnid
-		liege = e_kara_khitai
 	}
 	1196.9.26 = {
 		holder = 302698	#fictional Girgen Karachahnid
@@ -225,10 +202,68 @@ d_chah = {
 		liege = e_mongol_empire
 		holder = 125501
 	}
-	1337.1.1 = {
-		holder = muhammad_ibn_pulad
-		government = clan_government
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93062
+	}
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
@@ -236,20 +271,21 @@ d_chah = {
 c_chah = {
 	867.1.1 = { change_development_level = 6 }
 	1066.1.1 = { change_development_level = 10 }
-	1187.1.1 = { change_development_level = 30 }
-	1337.1.1 = { change_development_level = 26 }
+	1178.1.1 = { change_development_level = 24 }
 	
 	#Chah within the Samanid in 867
 	849.1.2 = {
-		holder = 302686	#fictional Aksonqor Shahn
-		liege = d_chah
-		government = tribal_government
+		holder = 188639	#Yahya Samanid 
+	}
+	855.3.2 = {
+		holder = extra_samanids_17 #Muhammed ibn Nuh
 	}
 	882.1.9 = {
 		holder = 302688	#fictional Dogan Shahn
 	}
-	898.4.21 = {
-		holder = 170303 #placeholder
+	999.1.1 = {
+		liege = k_transoxiana
+		holder = 3002
 	}
 	
 	#Chah within the Karakhanid in 1066
@@ -273,8 +309,9 @@ c_chah = {
 	1132.7.19 = {
 		holder = 302696	#fictional Kobyak Karachahnid
 	}
-	
-	#1137 - Kara Khitai invasion
+	1178.1.1 = {
+		holder = 144122 # Ibrahim b. Husayn
+	}
 	1181.1.13 = {
 		holder = 302697	#fictional KO_nC_ek Karachahnid
 	}
@@ -287,10 +324,68 @@ c_chah = {
 		liege = e_mongol_empire
 		holder = 125501
 	}
-	1337.1.1 = {
-		holder = muhammad_ibn_pulad
-		government = clan_government
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93062
+	}
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
@@ -330,8 +425,9 @@ c_otrar = {
 	1132.7.19 = {
 		holder = 302696	#fictional Kobyak Karachahnid
 	}
-	
-	#1137 - Kara Khitai invasion
+	1178.1.1 = {
+		holder = 144122 # Ibrahim b. Husayn
+	}
 	1181.1.13 = {
 		holder = 302697	#fictional KO_nC_ek Karachahnid
 	}
@@ -344,10 +440,68 @@ c_otrar = {
 		liege = e_mongol_empire
 		holder = 125501
 	}
-	1337.1.1 = {
-		holder = muhammad_ibn_pulad
-		government = clan_government
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93062
+	}
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
@@ -404,8 +558,68 @@ c_shavgar = {
 		liege = e_mongol_empire
 		holder = 125501
 	}
-	1337.1.1 = {
-		holder = 34917
+	1227.12.2 = {
+		holder = 93062
+	}
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
@@ -413,9 +627,13 @@ c_shavgar = {
 c_sutkend = {
 	#Chah within the Samanid in 867
 	849.1.2 = {
-		holder = 302686	#fictional Aksonqor Shahn
-		liege = d_chah
+		holder = 188639	#Yahya Samanid 
+		#liege = k_transoxiana	#Samanid
 		government = tribal_government
+	}
+	855.3.2 = {
+		holder = extra_samanids_5 #Ya'qub 
+		liege = d_chah
 	}
 	882.1.9 = {
 		holder = 302688	#fictional Dogan Shahn
@@ -445,7 +663,9 @@ c_sutkend = {
 	1132.7.19 = {
 		holder = 302696	#fictional Kobyak Karachahnid
 	}
-	
+	1178.1.1 = {
+		holder = 144122 # Ibrahim b. Husayn
+	}	
 	#1137 - Kara Khitai invasion
 	1181.1.13 = {
 		holder = 302697	#fictional KO_nC_ek Karachahnid
@@ -459,10 +679,68 @@ c_sutkend = {
 		liege = e_mongol_empire
 		holder = 125501
 	}
-	1337.1.1 = {
-		holder = muhammad_ibn_pulad
-		government = clan_government
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93062
+	}
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
@@ -535,31 +813,87 @@ d_muyunkum = {
 	1160.1.1 = {
 		holder = 188847
 	}
+	1178.1.1 = {
+		holder = 188855 # Muhammad
+	}
 	1185.1.1 = {
 		holder = 188848
 	}
-	1187.1.1 = {
-		holder = 188912
+	1210.1.1 = {
+		holder = 188849
 	}
 	1218.1.1 = {
 		liege = 0
 	}
-	1235.1.1 = {
-		holder = 188850
-	}
-
 	
 	#Mongols
 	1220.2.1 = {
 		liege = e_mongol_empire
+		holder = 34852
 	}
 	1227.12.2 = {
 		liege = k_zhetysu
+		holder = 93062
 	}
-	1337.1.1 = {
-		holder = yesun_temur
-		government = clan_government
-		liege = e_chagatai
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
@@ -567,8 +901,7 @@ d_muyunkum = {
 c_balashagun = {
 	867.1.1 = {	change_development_level = 4 }
 	1066.1.1 = { change_development_level = 9 }
-	1187.1.1 = { change_development_level = 25 }
-	1337.1.1 = { change_development_level = 26 }
+	1178.1.1 = { change_development_level = 36 }
 	
 	#As Karakhanid Khanate from year 840
 	840.1.1 = {
@@ -625,20 +958,18 @@ c_balashagun = {
 	}
 	
 	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
-	1143.1.1 = {
-		holder = 188906	#Tabuyan = Regent Empress Gantian
+	1158.1.1 = {
+		holder = 188855 # Muhammad
+		liege = e_kara_khitai
 	}
-	1150.1.1 = {
-		holder = 188907	#Yel�-Yilie = Emperor Renzong
+	1188.1.1 = {
+		holder = 188856 # Yusuf
 	}
-	1164.1.1 = {
-		holder = 188908	#Yel� Pusuwan = Regent Empress Chengtian
-	}
-	1178.1.1 = {
-		holder = 188912	#Yel� Zhilugu
+	1205.1.1 = {
+		holder = 188857 # Muhammad
 	}
 	1211.1.1 = {
-		holder = 188914	#Kuchlug
+		holder = 188914 # Kuchlug
 	}
 	
 	#Mongols
@@ -646,10 +977,68 @@ c_balashagun = {
 		liege = e_mongol_empire
 		holder = 34852
 	}
-	1337.1.1 = {
-		holder = yesun_temur
-		government = clan_government
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93062
+	}
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
@@ -657,10 +1046,11 @@ c_balashagun = {
 c_suyab = {
 	#As Karakhanid Khanate from year 840
 	840.1.1 = {
-		holder = 34872	#Bilge Khan
+		#holder = 34872	#Bilge Khan
+		holder = karluk0059 # Fictional Nestorian, representing the area's established metropolitan see
 		government = tribal_government
-		liege = k_zhetysu
 	}
+	841.1.1 = { liege = k_zhetysu }
 	893.1.1 = {
 		holder = 188851	#Bazir Arslan Khan
 	}
@@ -710,20 +1100,18 @@ c_suyab = {
 	}
 	
 	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
-	1143.1.1 = {
-		holder = 188906	#Tabuyan = Regent Empress Gantian
+	1158.1.1 = {
+		holder = 188855 # Muhammad
+		liege = e_kara_khitai
 	}
-	1150.1.1 = {
-		holder = 188907	#Yel�-Yilie = Emperor Renzong
+	1188.1.1 = {
+		holder = 188856 # Yusuf
 	}
-	1164.1.1 = {
-		holder = 188908	#Yel� Pusuwan = Regent Empress Chengtian
-	}
-	1178.1.1 = {
-		holder = 188912	#Yel� Zhilugu
+	1205.1.1 = {
+		holder = 188857 # Muhammad
 	}
 	1211.1.1 = {
-		holder = 188914	#Kuchlug
+		holder = 188914 # Kuchlug
 	}
 	
 	#Mongols
@@ -731,10 +1119,68 @@ c_suyab = {
 		liege = e_mongol_empire
 		holder = 34852
 	}
-	1337.1.1 = {
-		holder = yesun_temur
-		government = clan_government
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93062
+	}
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
@@ -795,20 +1241,18 @@ c_taraz = {
 	}
 	
 	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
-	1143.1.1 = {
-		holder = 188906	#Tabuyan = Regent Empress Gantian
+	1158.1.1 = {
+		holder = 188855 # Muhammad
+		liege = e_kara_khitai
 	}
-	1150.1.1 = {
-		holder = 188907	#Yel�-Yilie = Emperor Renzong
+	1188.1.1 = {
+		holder = 188856 # Yusuf
 	}
-	1164.1.1 = {
-		holder = 188908	#Yel� Pusuwan = Regent Empress Chengtian
-	}
-	1178.1.1 = {
-		holder = 188912	#Yel� Zhilugu
+	1205.1.1 = {
+		holder = 188857 # Muhammad
 	}
 	1211.1.1 = {
-		holder = 188914	#Kuchlug
+		holder = 188914 # Kuchlug
 	}
 	
 	#Mongols
@@ -816,10 +1260,68 @@ c_taraz = {
 		liege = e_mongol_empire
 		holder = 34852
 	}
-	1337.1.1 = {
-		holder = yesun_temur
-		government = clan_government
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93062
+	}
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
@@ -880,20 +1382,18 @@ c_shelji = {
 	}
 	
 	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
-	1143.1.1 = {
-		holder = 188906	#Tabuyan = Regent Empress Gantian
+	1158.1.1 = {
+		holder = 188855 # Muhammad
+		liege = e_kara_khitai
 	}
-	1150.1.1 = {
-		holder = 188907	#Yel�-Yilie = Emperor Renzong
+	1188.1.1 = {
+		holder = 188856 # Yusuf
 	}
-	1164.1.1 = {
-		holder = 188908	#Yel� Pusuwan = Regent Empress Chengtian
-	}
-	1178.1.1 = {
-		holder = 188912	#Yel� Zhilugu
+	1205.1.1 = {
+		holder = 188857 # Muhammad
 	}
 	1211.1.1 = {
-		holder = 188914	#Kuchlug
+		holder = 188914 # Kuchlug
 	}
 	
 	#Mongols
@@ -901,10 +1401,68 @@ c_shelji = {
 		liege = e_mongol_empire
 		holder = 34852
 	}
-	1337.1.1 = {
-		holder = yesun_temur
-		government = clan_government
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93062
+	}
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 
@@ -938,15 +1496,9 @@ c_quriltay = {
 	}
 	
 	#1137 Quriltay to Kara Khitai
-	1178.1.1 = {
-		holder = 188912	#Yel� Zhilugu
-	}
-	1211.1.1 = {
-		holder = 188914	#Kuchlug
-	}
-	
-	1337.1.1 = {
-		holder = 34917
+	1158.1.1 = {
+		holder = 188855 # Muhammad
+		liege = e_kara_khitai
 	}
 }
 
@@ -1007,20 +1559,18 @@ c_cherik = {
 	}
 	
 	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
-	1143.1.1 = {
-		holder = 188906	#Tabuyan = Regent Empress Gantian
+	1158.1.1 = {
+		holder = 188855 # Muhammad
+		liege = e_kara_khitai
 	}
-	1150.1.1 = {
-		holder = 188907	#Yel�-Yilie = Emperor Renzong
+	1188.1.1 = {
+		holder = 188856 # Yusuf
 	}
-	1164.1.1 = {
-		holder = 188908	#Yel� Pusuwan = Regent Empress Chengtian
-	}
-	1178.1.1 = {
-		holder = 188912	#Yel� Zhilugu
+	1205.1.1 = {
+		holder = 188857 # Muhammad
 	}
 	1211.1.1 = {
-		holder = 188914	#Kuchlug
+		holder = 188914 # Kuchlug
 	}
 	
 	#Mongols
@@ -1028,10 +1578,68 @@ c_cherik = {
 		liege = e_mongol_empire
 		holder = 34852
 	}
-	1337.1.1 = {
-		holder = yesun_temur
-		government = clan_government
-		liege = e_chagatai
+	1227.12.2 = {
+		holder = 93062
+	}
+	1242.1.1 = {
+		holder = 93064
+	}
+	1246.1.1 = {
+		holder = 93065
+	}
+	1252.1.1 = {
+		holder = 93064
+	}
+	1253.1.1 = {
+		holder = 93066
+	}
+	1260.1.1 = {
+		holder = 93068
+	}
+	1266.1.1 = {
+		holder = 93066
+	}
+	1266.9.1 = {
+		holder = 93070
+	}
+	1271.1.1 = {
+		holder = 93072
+	}
+	1272.1.1 = {
+		holder = 93074
+	}
+	1282.1.1 = {
+		holder = 93075
+	}
+	1307.1.1 = {
+		holder = 93076
+	}
+	1308.1.1 = {
+		holder = 93078
+	}
+	1309.1.1 = {
+		holder = 93079
+	}
+	1310.1.1 = {
+		holder = 93080
+	}
+	1318.1.1 = {
+		holder = 93079
+	}
+	1326.1.1 = {
+		holder = 93081
+	}
+	1329.1.1 = {
+		holder = 93082
+	}
+	1330.1.1 = {
+		holder = 93083
+	}
+	1334.1.1 = {
+		holder = 93084
+	}
+	1335.1.1 = {
+		holder = 93086
 	}
 }
 

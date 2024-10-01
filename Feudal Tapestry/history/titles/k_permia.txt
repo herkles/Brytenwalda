@@ -1,6 +1,7 @@
 k_permia = {
 	867.1.1 = { change_development_level = 0 }
 	1066.1.1 = { change_development_level = 0 }
+	1178.1.1 = { change_development_level = 0 }
 }
 
 d_perm = {
@@ -248,6 +249,22 @@ c_kumych = {
 	}
 }
 
+
+d_ural = {
+	#860
+	860.1.2 = {
+		holder = 302330		#Onika of Kerken
+		government = tribal_government
+	}
+	
+	#1066
+	1000.1.2 = {
+		holder = 0
+	}
+
+}
+
+
 c_ural = {
 	#860
 	860.1.2 = {
@@ -341,6 +358,9 @@ c_votkinsk = {
 	1170.1.1 = {
 		holder = 161723
 	}
+	1177.1.1 = {
+		holder = 161724 # Parush
+	}
 }
 
 
@@ -382,6 +402,9 @@ c_kerken = {
 	1171.1.2 = {
 		holder = 302334		#Rateg of Kerken
 	}
+	1177.1.1 = {
+		holder = 161724 # Parush
+	}
 	1198.1.2 = {
 		holder = 302335		#Zhuneg of Kerken
 	}
@@ -390,8 +413,9 @@ c_kerken = {
 
 d_udmurtia = {
 	#860
-	860.1.1 = {
-		holder = 302319
+	863.1.2 = {
+		holder = 302324		#fictional Nylog Udmurt
+		government = tribal_government
 	}
 	900 = {
 		holder = 0
@@ -407,16 +431,16 @@ d_udmurtia = {
 	}	
 	#1066
 	1058.1.2 = {
-		holder = 302325		#fictional Tuhan Udmurt
+		holder = 302325	#fictional Tuhan Udmurt
 	}
 	1096.1.2 = {
-		holder = 302326		#fictional Sektev Udmurt
+		holder = 302326	#fictional Sektev Udmurt
 	}
 	1137.1.2 = {
-		holder = 302328		#fictional Vokan Udmurt
+		holder = 302328	#fictional Vokan Udmurt
 	}
 	1175.1.2 = {
-		holder = 30239		#fictional Malyy Udmurt
+		holder = 302329	#fictional Malyy Udmurt
 	}
 }
 
@@ -525,7 +549,7 @@ c_glazov = {
 		holder = 302328		#fictional Vokan Udmurt
 	}
 	1175.1.2 = {
-		holder = 30239		#fictional Malyy Udmurt
+		holder = 302329		#fictional Malyy Udmurt
 	}
 }
 
@@ -561,7 +585,7 @@ c_kolyn = {
 		holder = 302328		#fictional Vokan Udmurt
 	}
 	1175.1.2 = {
-		holder = 30239		#fictional Malyy Udmurt
+		holder = 302329		#fictional Malyy Udmurt
 	}
 }
 
