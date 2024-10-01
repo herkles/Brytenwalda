@@ -415,7 +415,7 @@ heric = {
 }
 103000 = {
 	name = "Geoffroy"
-	dynasty = 106
+	dynasty_house = house_plantagenet
 	martial = 5
 	diplomacy = 5
 	intrigue = 7
@@ -1858,7 +1858,7 @@ heric = {
 204499 = {
 	name = "Emme" #Emme d'Anjou
 	female = yes
-	dynasty = 106
+	dynasty_house = house_plantagenet
 	religion = "catholic"
 	culture = french
 	trait = education_diplomacy_3
@@ -1875,7 +1875,7 @@ heric = {
 204506 = {
 	name = "Geoffroy"
 	# AKA: Geoffrey the Handsome
-	dynasty = 106
+	dynasty_house = house_plantagenet
 	martial = 5
 	diplomacy = 8
 	intrigue = 7
@@ -24954,8 +24954,8 @@ heric = {
 	1135.1.1 = {
 		birth = "1135.1.1" #unknown
 	}
-	1175.1.24 = {
-		death = "1175.1.24" #a 24th of January, before 1180
+	1179.1.24 = {
+		death = yes #a 24th of January, before 1180
 	}
 }
 91207 = {
@@ -31786,7 +31786,7 @@ heric = {
 183009 = {
 	name = "Marie" #Marie de France
 	female = yes
-	dynasty = 106
+	dynasty_house = house_plantagenet
 	religion = "catholic"
 	culture = french
 	trait = bastard
@@ -32755,7 +32755,7 @@ aubry_ii_de_macon = {
 }
 261392 = {
 	name = "HervE_"
-	dynasty = 1062608
+	dynasty_house = house_plantagenet
 	religion = catholic
 	culture = french
 	915.1.1 = {
@@ -32860,8 +32860,385 @@ Porcien1 = {
 	}
 }
 
+deols_1 = {
+	name = "Denise"
+	female = yes
+	dynasty = 2001322
+	religion = catholic
+	culture = french
+	father = 303432
+	1173.1.1 = {
+		birth = yes
+	}
+	1207.1.1 = {
+		death = yes
+	}
+}
+clermont_1 = {
+	name = "Renaud"
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = french0003 # Hugues
+	1075.1.1 = {
+		birth = yes
+	}
+	1152.1.1 = {
+		death = yes
+	}
+}
 
+clermont_2 = {
+	name = "Raoul" # Raoul I, Count of Clermont-en-Beauvaisis
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = clermont_1 # Renaud
+	1129.1.1 = {
+		birth = yes
+	}
+	1191.10.15 = {
+		death = yes
+	}
+}
 
+clermont_3 = {
+	name = "Hugues"
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = clermont_1
+	1130.1.1 = {
+		birth = yes
+	}
+	1200.5.28 = {
+		death = yes
+	}
+}
+
+clermont_4 = {
+	name = "Simon"
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = clermont_1
+	1131.1.1 = {
+		birth = yes
+	}
+	1187.1.1 = {
+		death = yes
+	}
+}
+
+clermont_5 = {
+	name = "Guy"
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = clermont_1
+	1132.1.1 = {
+		birth = yes
+	}
+	1152.1.1 = {
+		death = yes
+	}
+}
+
+clermont_6 = {
+	name = "E_tienne"
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = clermont_1
+	1133.1.1 = {
+		birth = yes
+	}
+	1162.1.1 = {
+		death = yes
+	}
+}
+
+clermont_7 = {
+	name = "Gauthier"
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = clermont_1
+	1134.1.1 = {
+		birth = yes
+	}
+	1187.1.1 = {
+		death = yes
+	}
+}
+
+clermont_8 = {
+	name = "Marguerite"
+	female = yes
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = clermont_1
+	1135.1.1 = {
+		birth = yes
+	}
+	1187.10.29 = {
+		death = yes
+	}
+}
+
+clermont_9 = {
+	name = "Mahaut"
+	female = yes
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = clermont_1
+	1136.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+clermont_10 = {
+	name = "Constance"
+	female = yes
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = clermont_1
+	1137.1.1 = {
+		birth = yes
+	}
+	1195.1.1 = {
+		death = yes
+	}
+}
+
+clermont_11 = {
+	name = "Marguerite"
+	female = yes
+	dynasty = 89
+	religion = catholic
+	culture = french
+	father = clermont_1
+	1104.1.1 = {
+		birth = yes
+	}
+	1132.1.1 = {
+		death = yes
+	}
+}
+
+challant_1 = {
+	name = "Boson" # Boson I
+	dynasty = french_challant
+	religion = catholic
+	culture = french
+	1070.1.1 = {
+		birth = yes
+	}
+	1125.1.1 = {
+		death = yes
+	}
+}
+
+challant_2 = {
+	name = "Aymon" # Aymon I
+	dynasty = french_challant
+	religion = catholic
+	culture = french
+	father = challant_1
+	1112.1.1 = {
+		birth = yes
+	}
+	1147.1.1 = {
+		death = yes
+	}
+}
+
+challant_3 = {
+	name = "Boson" # Boson II
+	dynasty = french_challant
+	religion = catholic
+	culture = french
+	father = challant_2
+	1134.1.1 = {
+		birth = yes
+	}
+	1181.1.1 = {
+		death = yes
+	}
+}
+
+challant_4 = {
+	name = "Boson" # Boson III
+	dynasty = french_challant
+	religion = catholic
+	culture = french
+	father = challant_3
+	1159.1.1 = {
+		birth = yes
+	}
+	1239.1.1 = {
+		death = yes
+	}
+}
+
+challant_5 = {
+	name = "Aymon"
+	dynasty = french_challant
+	religion = catholic
+	culture = french
+	father = challant_3
+	1162.1.1 = {
+		birth = yes
+	}
+	1212.1.1 = {
+		death = yes
+	}
+}
+
+neuville_1 = {
+	name = "Arnoul"
+	dynasty = french_neuville
+	religion = catholic
+	culture = french
+	1105.1.1 = {
+		birth = yes
+	}
+	1181.1.1 = {
+		death = yes
+	}
+}
+
+joinville_1 = {
+	name = "Geoffroy"
+	dynasty = 23110 # Joinville
+	religion = catholic
+	culture = french
+	father = 212651
+	1143.1.1 = {
+		birth = yes
+	}
+	1190.1.1 = {
+		death = yes
+	}
+}
+
+joinville_2 = {
+	name = "Roger"
+	dynasty = 23110 # Joinville
+	religion = catholic
+	culture = french
+	father = joinville_3
+	1090.1.1 = {
+		birth = yes
+	}
+	1137.1.1 = {
+		death = yes
+	}
+}
+
+joinville_3 = {
+	name = "Geoffroy"
+	dynasty = 23110 # Joinville
+	religion = catholic
+	culture = french
+	father = joinville_4
+	1053.1.1 = {
+		birth = yes
+	}
+	1096.1.1 = {
+		death = yes
+	}
+}
+
+joinville_4 = {
+	name = "Geoffroy"
+	dynasty = 23110 # Joinville
+	religion = catholic
+	culture = french
+	father = joinville_5
+	1031.1.1 = {
+		birth = yes
+	}
+	1080.1.1 = {
+		death = yes
+	}
+}
+
+joinville_5 = {
+	name = "E_tienne"
+	dynasty = 23110 # Joinville
+	religion = catholic
+	culture = french
+	1000.1.1 = {
+		birth = yes
+	}
+	1060.1.1 = {
+		death = yes
+	}
+}
+
+cerebruno_1 = {
+	name = "Bruno"
+	religion = catholic
+	culture = french
+	trait = intellect_good_1
+	1117.1.1 = {
+		birth = yes
+	}
+	1178.1.1 = {
+		give_nickname = nick_the_clever
+	}
+	1180.5.12 = {
+		death = yes
+	}
+}
+
+pont_leveque_1 = {
+	name = "Roger"
+	religion = catholic
+	culture = french
+	1115.1.1 = {
+		birth = yes
+	}
+	1181.11.26 = {
+		death = yes
+	}
+}
+
+aumale_1 = {
+	name = "Guillaume"
+	dynasty = 343 # Aumale
+	religion = catholic
+	culture = french
+	father = 40390
+	1115.1.1 = {
+		birth = yes
+	}
+	1179.8.20 = {
+		death = yes
+	}
+}
+
+lusignan_1 = {
+	name = "AE_nor"
+	female = yes
+	dynasty = 93
+	religion = "catholic"
+	culture = french
+	father = 205665 #Hugues de Lusignan coruler of Lusignan
+	1164.1.1 = {
+		birth = yes
+	}
+	1195.5.1 = {
+		death = yes
+	}
+}
 
 
 

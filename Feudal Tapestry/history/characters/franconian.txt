@@ -1947,6 +1947,7 @@
 	}
 	1136.1.31 = {
 		death = "1136.1.31"
+		give_nickname = nick_the_good
 	}
 }
 
@@ -1971,6 +1972,7 @@
 	}
 	1095.10.12 = {
 		death = "1095.10.12"
+		give_nickname = nick_the_fair
 	}
 }
 
@@ -2176,8 +2178,12 @@
 	1052.1.2 = {
 		add_spouse = 7201
 	}
+	1066.1.1 = {
+		effect = { add_character_flag = margrave_flag }
+	}
 	1081.6.10 = {
 		death = "1081.6.10"
+		give_nickname = nick_the_brave
 	}
 }
 
@@ -2302,6 +2308,7 @@
 	}
 	1141.10.18 = {
 		death = "1141.10.18"
+		give_nickname = nick_the_generous
 	}
 }
 
@@ -4162,13 +4169,10 @@
 	culture = franconian
 	father = 30418
 	1200.1.1 = {
-		birth = "1200.1.1"
-	}
-	1225.1.1 = {
-		capital = c_malbork
+		birth = yes
 	}
 	1249.7.15 = {
-		death = "1249.7.15"
+		death = yes
 	}
 }
 
@@ -4192,13 +4196,27 @@
 30418 = {
 	name = "Heinrich" # Heinrich I
 	dynasty = 7138 #von Hohenlohe
-	religion = "catholic"
+	religion = catholic
 	culture = franconian
+	father = hohenlohe_1
 	1160.1.1 = {
-		birth = "1160.1.1"
+		birth = yes
 	}
 	1207.1.1 = {
-		death = "1207.1.1"
+		death = yes
+	}
+}
+
+hohenlohe_1 = {
+	name = "Konrad"
+	dynasty = 7138 # von Hohenlohe
+	religion = catholic
+	culture = franconian
+	1130.1.1 = {
+		birth = yes
+	}
+	1183.1.1 = {
+		death = yes
 	}
 }
 
@@ -5994,7 +6012,7 @@
 		birth = "1111.1.1"
 	}
 	1153.1.1 = {
-		add_spouse = 212592
+		add_spouse = 129015
 	}
 	1167.8.19 = {
 		death = "1167.8.19"
@@ -16014,20 +16032,226 @@ franconian0002 = {
 	}
 }
 
+263005 = {
+	name = "Eberhard" #Eberhard "the Saxon"
+	religion = "catholic"
+	culture = "franconian"
+	father = 167775 #Meginhard II
+	mother = 263004
+	dynasty = 1064000
+	865.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		add_spouse = 263006
+	}
+	898.1.1 = {
+		death = {
+		    death_reason = death_murder_known
+		    killer = 263007
+	    }
+	}
+}
+franconian0001 = {
+	name = "Eberhard" # Bishop of Naumburg
+	martial = 4
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 6
+	learning = 11
+	religion = "catholic"
+	culture = franconian
+	trait = education_learning_2
+	1015.1.1 = {
+		birth = "1015.1.1"
+	}
+	1079.1.1 = {
+		death = "1079.1.1"
+	}
+}
+franconian0002 = {
+	name = "Ruprecht" # von Laurenburg
+	dynasty = 263 #von Nassau
+	religion = "catholic"
+	culture = franconian
+	1035.1.1 = {
+		birth = "1035.1.1"
+	}
+	1094.1.1 = {
+		death = "1094.1.1"
+	}
+}
 
+saarbrucken_1 = {
+	name = "Heinrich"
+	dynasty = 1062187
+	religion = catholic
+	culture = franconian
+	father = 260465
+	1152.1.1 = {
+		birth = yes
+	}
+	1228.1.1 = {
+		death = yes
+	}
+}
+saarbrucken_2 = {
+	name = "Friedrich"
+	dynasty = 1062187
+	religion = catholic
+	culture = franconian
+	father = 260465
+	1154.1.1 = {
+		birth = yes
+	}
+	1187.1.1 = {
+		death = yes
+	}
+}
+saarbrucken_3 = {
+	name = "Gottfried"
+	dynasty = 1062187
+	religion = catholic
+	culture = franconian
+	father = 260465
+	1155.1.1 = {
+		birth = yes
+	}
+	1203.1.1 = {
+		death = yes
+	}
+}
+saarbrucken_4 = {
+	name = "Adalbert"
+	dynasty = 1062187
+	religion = catholic
+	culture = franconian
+	father = 260465
+	1157.1.1 = {
+		birth = yes
+	}
+	1210.1.1 = {
+		death = yes
+	}
+}
+saarbrucken_5 = {
+	name = "Jutta"
+	female = yes
+	dynasty = 1062187
+	religion = catholic
+	culture = franconian
+	father = 260465
+	1158.1.1 = {
+		birth = yes
+	}
+	1223.1.1 = {
+		death = yes
+	}
+}
+saarbrucken_6 = {
+	name = "Sophie"
+	female = yes
+	dynasty = 1062187
+	religion = catholic
+	culture = franconian
+	father = 260465
+	1160.1.1 = {
+		birth = yes
+	}
+	1215.1.1 = {
+		death = yes
+	}
+}
+saarbrucken_7 = {
+	name = "Agnes"
+	female = yes
+	dynasty = 1062187
+	religion = catholic
+	culture = franconian
+	father = 260465
+	1161.1.1 = {
+		birth = yes
+	}
+	1180.1.1 = {
+		death = yes
+	}
+}
+sternberg_1 = {
+	name = "Konrad"
+	dynasty = franconian_sternberg
+	religion = catholic
+	culture = franconian
+	trait = devoted
+	1137.1.1 = {
+		birth = yes
+	}
+	1192.1.18 = {
+		death = yes
+	}
+}
 
+fulda_abbot_1 = {
+	name = "Konrad"
+	religion = catholic
+	culture = franconian
+	1131.1.1 = {
+		birth = yes
+	}
+	1192.1.1 = {
+		death = yes
+	}
+}
 
+wartha_1 = {
+	name = "Hugo"
+	dynasty = franconian_wartha
+	religion = catholic
+	culture = franconian
+	1135.1.1 = {
+		birth = yes
+	}
+	1184.1.1 = {
+		death = yes
+	}
+}
 
+abenberg_1 = {
+	name = "Reginhard"
+	dynasty = franconian_abenberg
+	religion = catholic
+	culture = franconian
+	1120.1.1 = {
+		birth = yes
+	}
+	1186.6.15 = {
+		death = yes
+	}
+}
 
+durn_1 = {
+	name = "Ruprecht"
+	dynasty = franconian_durn
+	religion = catholic
+	culture = franconian
+	1143.1.1 = {
+		birth = yes
+	}
+	1197.1.1 = {
+		death = yes
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
+durn_2 = {
+	name = "Ulrich"
+	dynasty = franconian_durn
+	religion = catholic
+	culture = franconian
+	father = durn_1
+	1161.1.1 = {
+		birth = yes
+	}
+	1201.1.1 = {
+		death = yes
+	}
+}
 

@@ -92,9 +92,9 @@ bryten_setup_after_game_start_on_actions = {
 			}
 		}
 		if = {# Philip II abolishes it in 1187
-			limit = { game_start_date >= 1178.1.1 }
-			add_realm_law_skip_effects = single_heir_succession_law
+			limit = { game_start_date >= 1187.1.1 }
 			title:k_france = { remove_title_law = feudal_elective_succession_law }
+			title:k_france = { add_title_law = single_heir_succession_law }
 		}
 		# cultural acceptance stuff
 		if = {# setting up the pilgrimage stuff for 1066 start date
@@ -466,6 +466,57 @@ bryten_setup_after_game_start_on_actions = {
 			title:d_karachev = { set_title_name = d_vyatichi }
 
 
+		}
+		if = {# Norman Adminstration is established after
+			limit = { current_date >= 925.1.1 }
+			
+			# The Duchy of Lancaster
+			title:c_lancashire = { set_de_jure_liege_title = title:d_lancaster }
+			title:c_westmorland = { set_de_jure_liege_title = title:d_lancaster }
+			title:c_cheshire = { set_de_jure_liege_title = title:d_lancaster }
+			title:c_derby = { set_de_jure_liege_title = title:d_lancaster }
+			# The Duchy of Gloucester
+			title:c_gloucestershire = { set_de_jure_liege_title = title:d_gloucester }
+			title:c_wiltshire = { set_de_jure_liege_title = title:d_gloucester }
+			title:c_oxfordshire = { set_de_jure_liege_title = title:d_gloucester }
+			title:c_berkshire = { set_de_jure_liege_title = title:d_gloucester }			
+			# The Duchy of Hereford
+			title:c_hereford = { set_de_jure_liege_title = title:d_hereford }
+			title:c_shropshire = { set_de_jure_liege_title = title:d_hereford }
+			# The Duchy of Warwick
+			title:c_warwickshire = { set_de_jure_liege_title = title:d_warwick }
+			title:c_worcestershire = { set_de_jure_liege_title = title:d_warwick }
+			title:c_staffordshire = { set_de_jure_liege_title = title:d_warwick }
+			# The Duchy of Bedford
+			title:c_bedford = { set_de_jure_liege_title = title:d_bedford }
+			title:c_huntingdonshire = { set_de_jure_liege_title = title:d_bedford }
+			# The Duchy of Buckingham
+			title:c_buckinghamshire = { set_de_jure_liege_title = title:d_buckingham }
+			title:c_middlesex = { set_de_jure_liege_title = title:d_buckingham }
+			title:c_essex = { set_de_jure_liege_title = title:d_buckingham }
+			title:c_hertfordshire = { set_de_jure_liege_title = title:d_buckingham }
+			# The Duchy of Northumberland
+			title:c_northumberland = { set_de_jure_liege_title = title:d_northumberland }
+			title:c_durham = { set_de_jure_liege_title = title:d_northumberland }
+			title:c_cumberland = { set_de_jure_liege_title = title:d_northumberland }
+			# The Duchy of Norfolk
+			title:c_norfolk = { set_de_jure_liege_title = title:d_norfolk }
+			title:c_suffolk = { set_de_jure_liege_title = title:d_norfolk }
+			title:c_cambridgeshire = { set_de_jure_liege_title = title:d_norfolk }
+			# The Duchy of Surrey
+			title:c_kent = { set_de_jure_liege_title = title:d_canterbury }
+			title:c_surrey = { set_de_jure_liege_title = title:d_canterbury }
+			title:c_sussex = { set_de_jure_liege_title = title:d_canterbury }
+			# The Duchy of Sommerset
+			title:c_hampton = { set_de_jure_liege_title = title:d_somerset }
+			title:c_isle_of_wight = { set_de_jure_liege_title = title:d_somerset }
+			title:c_somerset = { set_de_jure_liege_title = title:d_somerset }
+			title:c_dorset = { set_de_jure_liege_title = title:d_somerset }
+			# The Duchy of Lincolnshire
+			title:c_lincolnshire = { set_de_jure_liege_title = title:d_lincoln }
+			title:c_leicestershire = { set_de_jure_liege_title = title:d_lincoln }
+			title:c_nottinghamshire = { set_de_jure_liege_title = title:d_lincoln }
+			title:c_northamptonshire = { set_de_jure_liege_title = title:d_lincoln }
 		}
 		# Global Variables
 		if = {# Bury Saint Edmonds is founded in 1020 
