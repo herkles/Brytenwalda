@@ -1037,6 +1037,87 @@ tradition_anglo_saxon = {# Anglo-Saxon Burhs, ShireCourts
 		}
 	}
 }
+tradition_horse_fyrd = {# Horse fyrd
+	category = regional
+
+	layers = {
+		0 = martial
+		1 = western
+		4 = rider.dds
+	}
+
+	is_shown = {
+		OR = {
+			this = culture:new_english
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:new_english
+				}
+			}
+		}
+	}
+	can_pick = {
+		OR = {
+			this = culture:new_english
+			any_parent_culture_or_above = {
+				OR = {
+					this = culture:new_english
+				}
+			}
+		}
+	}
+		
+	parameters = {
+		strong_traits_more_valued = yes
+		strong_traits_more_common = yes
+		weak_traits_looked_down_upon = yes
+		rowdy_trait_more_common = yes
+
+		unlock_maa_englisc_horse_axemen = yes
+		unlock_maa_englisc_horse_archers = yes
+		unlock_maa_englisc_horsemen = yes
+		can_recruit_open_specialist = yes
+	}
+
+	character_modifier = {
+		light_cavalry_damage_mult = 0.1
+		light_cavalry_toughness_mult = 0.1
+		heavy_cavalry_damage_mult = 0.1
+		heavy_cavalry_toughness_mult = 0.1
+		light_cavalry_max_size_add = 2
+		heavy_cavalry_max_size_add = 2
+		movement_speed = 0.1
+		movement_speed_land_raiding = 0.3
+	}
+	
+	cost = {
+		prestige = {
+			add = {
+				value = tradition_base_cost
+				desc = BASE
+				format = "BASE_VALUE_FORMAT"
+			}
+			if = {
+				limit = {
+					NOR = {
+						culture_pillar:ethos_bellicose = { is_in_list = traits }
+						culture_pillar:ethos_communal = { is_in_list = traits }
+					}
+				}
+				add = {
+					value = tradition_incompatible_ethos_penalty
+					desc = not_bellicose_or_communal_desc
+				}
+			}
+			
+			multiply = tradition_replacement_cost_if_relevant
+		}
+	}
+	
+	ai_will_do = {
+		value = 100
+	}
+}
 #############################################
 # Brythonic traditions			
 #############################################

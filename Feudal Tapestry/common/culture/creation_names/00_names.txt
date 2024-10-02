@@ -793,145 +793,6 @@ tyrolian = {# Tyrolian
 		}
 	}
 }
-prussisch = {# Germanic Prussian
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_prussia = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_salzburg = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_steyermark = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_carinthia = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_prussia
-			has_primary_title = title:d_masuria
-			has_primary_title = title:d_samogitia
-			has_primary_title = title:d_latgalians
-		}
-		culture = { has_cultural_pillar = heritage_central_germanic }
-		any_sub_realm_county = {
-			culture = { has_cultural_pillar = heritage_central_germanic }
-			OR = {
-				duchy = title:d_prussia
-				duchy = title:d_masuria
-				duchy = title:d_samogitia
-				duchy = title:d_latgalians
-			}
-		}
-	}
-}
-pommerisch = {# Germanic Pommerians
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_pommerania = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_nordmark = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_pomerelia = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_ostmark = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_pommerania
-			has_primary_title = title:d_nordmark
-			has_primary_title = title:d_pomerelia
-			has_primary_title = title:d_ostmark
-		}
-		culture = { has_cultural_pillar = heritage_central_germanic }
-		any_sub_realm_county = {
-			culture = { has_cultural_pillar = heritage_central_germanic }
-			OR = {
-				duchy = title:d_pommerania
-				duchy = title:d_nordmark
-				duchy = title:d_pomerelia
-				duchy = title:d_ostmark
-			}
-		}
-	}
-}
-balte = {# Baltic Germans
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_esthonia = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_livonia = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_courland = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_esthonia
-			has_primary_title = title:d_livonia
-			has_primary_title = title:d_courland
-		}
-		culture = { has_cultural_pillar = heritage_central_germanic }
-		any_sub_realm_county = {
-			culture = { has_cultural_pillar = heritage_central_germanic }
-			OR = {
-				duchy = title:d_esthonia
-				duchy = title:d_livonia
-				duchy = title:d_courland
-			}
-		}
-	}
-}
-meissian = {# Upper Saxons
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_meissen = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_lausitz = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_meissen
-			has_primary_title = title:d_lausitz
-		}
-		culture = { has_cultural_pillar = heritage_central_germanic }
-		any_sub_realm_county = {
-			culture = { has_cultural_pillar = heritage_central_germanic }
-			OR = {
-				duchy = title:d_meissen
-				duchy = title:d_lausitz
-			}
-		}
-	}
-}
 #############################################
 # Frankish Cultures			
 #############################################
@@ -1153,21 +1014,7 @@ auvergnat = {
 #############################################
 # English Cultures			
 #############################################
-new_english = {
-	trigger = {
-		capital_county = {
-			title_province = {
-				geographical_region = world_steppe
-			}
-		}
-		culture = { has_cultural_pillar = heritage_west_germanic }
-		any_sub_realm_county = {
-			title_province = {
-				geographical_region = world_steppe
-			}
-		}
-	}
-}
+
 #############################################
 # Gaelic Cultures			
 #############################################
@@ -1293,9 +1140,5 @@ szekely = {
 		}
 	}
 }
-
-
-
-
 
 

@@ -777,41 +777,7 @@ bari = { # Emirate of Bari
 	}
 	hybrid = yes
 }
-new_english_hybrid = {
-	trigger = {
-		OR = {
-			AND = {
-				scope:culture = { has_cultural_pillar = heritage_west_germanic }
-				OR = {
-					scope:other_culture = { has_cultural_pillar = heritage_mongolic }
-					scope:other_culture = { has_cultural_pillar = heritage_turkic }
-				}
-			}
-			AND = {
-				OR = {
-					scope:culture = { has_cultural_pillar = heritage_mongolic }
-					scope:culture = { has_cultural_pillar = heritage_turkic }
-				}
-				scope:other_culture = { has_cultural_pillar = heritage_west_germanic }
-			}
-		}
-		capital_county = {
-			title_province = {
-				geographical_region = world_steppe
-			}
-		}
-		any_sub_realm_county = {
-			OR = {
-				culture = scope:culture
-				culture = scope:other_culture
-			}
-			title_province = {
-				geographical_region = world_steppe
-			}
-		}
-	}
-	hybrid = yes
-}
+
 #############################################
 # New Hybrid Cultures			
 #############################################

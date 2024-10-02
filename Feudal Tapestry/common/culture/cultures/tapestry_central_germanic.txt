@@ -235,11 +235,223 @@ lothringian = {# German Lorriane
 		25 = caucasian_dark_hair
 	}
 }
+# Ostsiedlung Cultures
+meissian = {# Messian / Upper Saxons
+	color = { 0.5 0.5 0.5 }
+	created = 1150.1.1 # Ostsiedlung picks up steam
+	parents = { franconian sorbian }
+	history_loc_override = bryten_messian_history_loc
 
+	ethos = ethos_courtly
+	heritage = heritage_central_germanic
+	language = language_high_german
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_zealous_people
+		tradition_stand_and_fight
+		tradition_hereditary_hierarchy
+		tradition_castle_keepers
+	}
+	
+	name_list = name_list_franconian
 
+	coa_gfx = { german_group_coa_gfx western_coa_gfx } 
+	building_gfx = { western_building_gfx } 
+	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } 
+	unit_gfx = { western_unit_gfx } 		
 
+	ethnicities = {
+		25 = caucasian_blond
+		15 = caucasian_ginger
+		35 = caucasian_brown_hair
+		25 = caucasian_dark_hair
+	}
+}
+pommerisch = {# Germanized Pommeranians
+	color = { 0.5 0.5 0.5 }
+	created = 1147.1.1 # The end of the Wendish Crusade and Ostsiedlung picks up steam.
 
+	parents = { franconian pommeranian  }
+	history_loc_override = bryten_pommerisch_history_loc
 
+	ethos = ethos_courtly
+	heritage = heritage_central_germanic
+	language = language_high_german
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_hereditary_hierarchy
+		tradition_astute_diplomats
+		tradition_city_keepers
+		tradition_maritime_mercantilism
+	}
+	
+	name_list = name_list_franconian
 
+	coa_gfx = { german_group_coa_gfx western_coa_gfx } 
+	building_gfx = { western_building_gfx } 
+	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } 
+	unit_gfx = { western_unit_gfx } 		
+
+	ethnicities = {
+		25 = caucasian_blond
+		15 = caucasian_ginger
+		35 = caucasian_brown_hair
+		25 = caucasian_dark_hair
+	}
+}
+markish = {# Brandenburgian Germans / Polabians who germanized
+	color = { 0.5 0.5 0.5 }
+	created = 1147.1.1 # The end of the Wendish Crusade and Ostsiedlung picks up steam.
+	parents = { franconian polabian }
+	history_loc_override = bryten_markish_history_loc
+
+	ethos = ethos_courtly
+	heritage = heritage_central_germanic
+	language = language_high_german
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_hereditary_hierarchy
+		tradition_zealous_people
+		tradition_castle_keepers
+		tradition_martial_admiration
+	}
+	
+	name_list = name_list_franconian
+
+	coa_gfx = { german_group_coa_gfx western_coa_gfx } 
+	building_gfx = { western_building_gfx } 
+	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } 
+	unit_gfx = { western_unit_gfx } 		
+
+	ethnicities = {
+		25 = caucasian_blond
+		15 = caucasian_ginger
+		35 = caucasian_brown_hair
+		25 = caucasian_dark_hair
+	}
+}
+zipser = {# Carpathian Germans
+	color = { 0.5 0.5 0.5 }
+	created = 1150.1.1 # Ostsiedlung picks up steam
+	parents = { franconian czech }
+	history_loc_override = bryten_zipser_history_loc
+
+	ethos = ethos_courtly
+	heritage = heritage_central_germanic
+	language = language_high_german
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_hill_dwellers		tradition_astute_diplomats
+		tradition_city_keepers
+		tradition_family_entrepreneurship
+	}
+	
+	name_list = name_list_franconian
+
+	coa_gfx = { german_group_coa_gfx western_coa_gfx } 
+	building_gfx = { western_building_gfx } 
+	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } 
+	unit_gfx = { western_unit_gfx } 		
+
+	ethnicities = {
+		25 = caucasian_blond
+		15 = caucasian_ginger
+		35 = caucasian_brown_hair
+		25 = caucasian_dark_hair
+	}
+}
+transylvanian_saxons = {# Transylavnian Saxons
+	color = { 0.5 0.5 0.5 }
+	created = 1160.1.1 # Ostsiedlung picks up steam
+	parents = { franconian hungarian }
+	history_loc_override = bryten_transylvanian_saxon_history_loc
+
+	ethos = ethos_courtly
+	heritage = heritage_central_germanic
+	language = language_high_german
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_hill_dwellers		tradition_astute_diplomats
+		tradition_city_keepers
+		tradition_family_entrepreneurship
+	}
+	
+	name_list = name_list_franconian
+
+	coa_gfx = { german_group_coa_gfx western_coa_gfx } 
+	building_gfx = { western_building_gfx } 
+	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } 
+	unit_gfx = { western_unit_gfx } 		
+
+	ethnicities = {
+		25 = caucasian_blond
+		15 = caucasian_ginger
+		35 = caucasian_brown_hair
+		25 = caucasian_dark_hair
+	}
+}
+prussisch = {# Germanized Prussians
+	color = { 0.5 0.5 0.5 }
+	created = 1226.1.1 # The establishment of the State of the Teutonic Order
+	parents = { franconian prussian }
+	history_loc_override = bryten_prussisch_history_loc
+
+	ethos = ethos_courtly
+	heritage = heritage_central_germanic
+	language = language_high_german
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_hereditary_hierarchy
+		tradition_castle_keepers
+		tradition_zealous_people
+		tradition_martial_admiration
+	}
+	
+	name_list = name_list_franconian
+
+	coa_gfx = { german_group_coa_gfx western_coa_gfx } 
+	building_gfx = { western_building_gfx } 
+	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } 
+	unit_gfx = { western_unit_gfx } 		
+
+	ethnicities = {
+		25 = caucasian_blond
+		15 = caucasian_ginger
+		35 = caucasian_brown_hair
+		25 = caucasian_dark_hair
+	}
+}
+balte = {# Baltic Germans
+	color = { 0.5 0.5 0.5 }
+	created = 1226.1.1 # The establishment of the State of the Teutonic Order
+	parents = { franconian livonian }
+	history_loc_override = bryten_balte_history_loc
+
+	ethos = ethos_courtly
+	heritage = heritage_central_germanic
+	language = language_high_german
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_hereditary_hierarchy
+		tradition_astute_diplomats
+		tradition_city_keepers
+		tradition_zealous_people
+		tradition_martial_admiration
+	}
+	
+	name_list = name_list_franconian
+
+	coa_gfx = { german_group_coa_gfx western_coa_gfx } 
+	building_gfx = { western_building_gfx } 
+	clothing_gfx = { dde_hre_clothing_gfx western_clothing_gfx } 
+	unit_gfx = { western_unit_gfx } 		
+
+	ethnicities = {
+		25 = caucasian_blond
+		15 = caucasian_ginger
+		35 = caucasian_brown_hair
+		25 = caucasian_dark_hair
+	}
+}
 
 
