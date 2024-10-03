@@ -2200,8 +2200,26 @@ d_apulia = {
 	871.1.1 = {
 		holder = 0
 	}
+	936.1.1 = {
+		holder = 200308
+		liege = e_byzantium
+		government = administrative_government
+		effect = {
+			if = {
+				limit = {
+					exists = holder
+					NOT = { has_dlc_feature = roads_to_power }
+				}
+				holder = {
+					change_government = feudal_government
+				}
+			}
+		}
+	}
+
 	1042.1.1 = {
 		holder = 1122 # William I de Hauteville 'Iron Arm'
+		government = feudal_government
 	}
 	1046.7.1 = {
 		holder = 1124 # Drogo
@@ -2796,6 +2814,7 @@ c_camarda = { # Principality of Taranto
 	}
 	936.1.1 = {
 		holder = 262225
+		liege = e_byzantium
 	}
 	1057.1.1 = {
 		holder = 1134 # Abelard de Hauteville

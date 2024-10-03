@@ -8,6 +8,21 @@ k_africa = {
 	768.1.1 = {
 		government = clan_government
 		holder = 210014
+		effect = {
+			if = {
+				limit = {
+					exists = holder
+					has_dlc_feature = royal_court
+				}
+				holder = {
+					set_court_language = language_arabic
+					if = {
+						limit = { NOT = { knows_court_language_of = this } }
+						learn_court_language_of = this
+					}
+				}
+			}
+		}
 	}
 	#768.1.1 = {
 	#	liege = "e_arabia"
@@ -63,6 +78,13 @@ k_africa = {
 	}
 	875.1.1 = {
 		holder = 163147
+	}
+	# Fatimids
+	909.1.1 = {
+		holder = 32900
+	}
+	934.1.1 = {
+		holder = 32901
 	}
 	#Zirids
 	1045.1.1 = {

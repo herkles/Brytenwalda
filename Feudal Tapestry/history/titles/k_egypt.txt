@@ -5,6 +5,21 @@ k_egypt = {
 	
 	762.1.1 = {
 		liege = "e_arabia"
+		effect = {
+			if = {
+				limit = {
+					exists = holder
+					has_dlc_feature = royal_court
+				}
+				holder = {
+					set_court_language = language_arabic
+					if = {
+						limit = { NOT = { knows_court_language_of = this } }
+						learn_court_language_of = this
+					}
+				}
+			}
+		}
 	}
 	762.1.1 = {
 		holder = 210009
