@@ -349,10 +349,12 @@
 					story_owner = {
 						culture = {
 							change_cultural_acceptance = {
-								OR = {
-									culture = culture:anglo_saxon
-									culture = culture:anglo_norse
-								}
+								culture = culture:anglo_saxon
+								value = major_cultural_acceptance_loss
+								desc = harrying_of_the_north_tt_resistance_level_4
+							}
+							change_cultural_acceptance = {
+								culture = culture:anglo_norse
 								value = major_cultural_acceptance_loss
 								desc = harrying_of_the_north_tt_resistance_level_4
 							}
@@ -369,10 +371,12 @@
 					story_owner = {
 						culture = {
 							change_cultural_acceptance = {
-								OR = {
-									culture = culture:anglo_saxon
-									culture = culture:anglo_norse
-								}
+								culture = culture:anglo_saxon
+								value = medium_cultural_acceptance_loss
+								desc = harrying_of_the_north_tt_resistance_level_3
+							}
+							change_cultural_acceptance = {
+								culture = culture:anglo_norse
 								value = medium_cultural_acceptance_loss
 								desc = harrying_of_the_north_tt_resistance_level_3
 							}
@@ -389,10 +393,12 @@
 					story_owner = {
 						culture = {
 							change_cultural_acceptance = {
-								OR = {
-									culture = culture:anglo_saxon
-									culture = culture:anglo_norse
-								}
+								culture = culture:anglo_saxon
+								value = minor_cultural_acceptance_loss
+								desc = harrying_of_the_north_tt_resistance_level_2
+							}
+							change_cultural_acceptance = {
+								culture = culture:anglo_norse
 								value = minor_cultural_acceptance_loss
 								desc = harrying_of_the_north_tt_resistance_level_2
 							}
@@ -409,10 +415,12 @@
 					story_owner = {
 						culture = {
 							change_cultural_acceptance = {
-								OR = {
-									culture = culture:anglo_saxon
-									culture = culture:anglo_norse
-								}
+								culture = culture:anglo_saxon
+								value = miniscule_cultural_acceptance_loss
+								desc = harrying_of_the_north_tt_resistance_level_1
+							}
+							change_cultural_acceptance = {
+								culture = culture:anglo_norse
 								value = miniscule_cultural_acceptance_loss
 								desc = harrying_of_the_north_tt_resistance_level_1
 							}
@@ -429,10 +437,12 @@
 					story_owner = {
 						culture = {
 							change_cultural_acceptance = {
-								OR = {
-									culture = culture:anglo_saxon
-									culture = culture:anglo_norse
-								}
+								culture = culture:anglo_saxon
+								value = major_cultural_acceptance_gain
+								desc = harrying_of_the_north_tt_pacification_level_4
+							}
+							change_cultural_acceptance = {
+								culture = culture:anglo_norse
 								value = major_cultural_acceptance_gain
 								desc = harrying_of_the_north_tt_pacification_level_4
 							}
@@ -449,10 +459,12 @@
 					story_owner = {
 						culture = {
 							change_cultural_acceptance = {
-								OR = {
-									culture = culture:anglo_saxon
-									culture = culture:anglo_norse
-								}
+								culture = culture:anglo_saxon
+								value = medium_cultural_acceptance_gain
+								desc = harrying_of_the_north_tt_pacification_level_3
+							}
+							change_cultural_acceptance = {
+								culture = culture:anglo_norse
 								value = medium_cultural_acceptance_gain
 								desc = harrying_of_the_north_tt_pacification_level_3
 							}
@@ -469,10 +481,12 @@
 					story_owner = {
 						culture = {
 							change_cultural_acceptance = {
-								OR = {
-									culture = culture:anglo_saxon
-									culture = culture:anglo_norse
-								}
+								culture = culture:anglo_saxon
+								value = minor_cultural_acceptance_gain
+								desc = harrying_of_the_north_tt_pacification_level_2
+							}
+							change_cultural_acceptance = {
+								culture = culture:anglo_norse
 								value = minor_cultural_acceptance_gain
 								desc = harrying_of_the_north_tt_pacification_level_2
 							}
@@ -489,10 +503,12 @@
 					story_owner = {
 						culture = {
 							change_cultural_acceptance = {
-								OR = {
-									culture = culture:anglo_saxon
-									culture = culture:anglo_norse
-								}
+								culture = culture:anglo_saxon
+								value = miniscule_cultural_acceptance_gain
+								desc = harrying_of_the_north_tt_pacification_level_1
+							}
+							change_cultural_acceptance = {
+								culture = culture:anglo_norse
 								value = miniscule_cultural_acceptance_gain
 								desc = harrying_of_the_north_tt_pacification_level_1
 							}

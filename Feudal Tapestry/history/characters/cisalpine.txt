@@ -474,7 +474,7 @@
 	}
 }
 20299 = {
-	name = "Folco" # Folco (I) d'Este, Duke of cisalpineia (1097-1128), Count of Luni (1097-1128)
+	name = "Folco" # Folco (I) d'Este, Duke of Lombardia (1097-1128), Count of Luni (1097-1128)
 	dynasty_house = house_este
 	martial = 5
 	diplomacy = 8
@@ -8545,7 +8545,7 @@
 	father = 71262
 	mother = 71261
 
-	1138.1.1 = {
+	1130.1.1 = {
 		birth = yes
 	}
 	1190.4.8 = {
@@ -9666,11 +9666,11 @@
 	religion = "catholic"
 	culture = "cisalpine"
 	father = 213026
-	1181.1.1 = {
-		birth = "1181.1.1"
+	1170.1.1 = {
+		birth = yes
 	}
-	1244.1.1 = {
-		death = "1244.1.1"
+	1249.1.13 = {
+		death = yes
 	}
 }
 73580 = {
@@ -10801,7 +10801,7 @@
 	}
 }
 167975 = {
-	name = "Alberico" # Alberico di Milano, Count of cisalpineia (865-894)
+	name = "Alberico" # Alberico di Milano, Count of Lombardia (865-894)
 	dynasty = 9565
 	religion = "catholic"
 	culture = "cisalpine"
@@ -11264,7 +11264,7 @@
 	}
 }
 213007 = {
-	name = "Ruggero" # Ruggero Visconti, Podestà of cisalpineia (1176-1180)
+	name = "Ruggero" # Ruggero Visconti, Podestà of Lombardia (1176-1180)
 	dynasty = 234
 	martial = 4
 	diplomacy = 4
@@ -11302,7 +11302,7 @@
 	}
 }
 213020 = {
-	name = "Ghiberto" # Ghiberto Milanese, placeholder, Count of cisalpineia (1184-1188)
+	name = "Ghiberto" # Ghiberto Milanese, placeholder, Count of Lombardia (1184-1188)
 	dynasty = 100235
 	martial = 6
 	diplomacy = 7
@@ -11350,10 +11350,10 @@
 	culture = "cisalpine"
 	father = 213027
 	1153.1.1 = {
-		birth = "1153.1.1"
+		birth = yes
 	}
 	1216.2.12 = {
-		death = "1216.2.12"
+		death = yes
 	}
 }
 213031 = {
@@ -11488,11 +11488,10 @@
 	trait = diligent
 	trait = zealous
 	trait = brave
-	trait = education_learning_2
-
+	trait = gallant
+	trait = education_martial_2
 	father = 213520
 	mother = 213527
-
 	1150.1.2 = {
 		birth = yes
 	}
@@ -11568,13 +11567,16 @@
 	stewardship = 5
 	religion = "catholic"
 	culture = "cisalpine"
-	trait = education_diplomacy_2
-
+	trait = education_martial_2
+	trait = brave # young, but mature in bravery
+	trait = beauty_good_1 # beautiful, with hair bright like the sun
 	father = 213520
 	mother = 213527
-
 	1162.1.1 = {
 		birth = yes
+	}
+	1178.1.1 = {
+		employer = 215530 # Manuel Komnenos
 	}
 	1180.2.1 = {
 		add_spouse = 213528
@@ -11792,25 +11794,24 @@
 	stewardship = 4
 	religion = "catholic"
 	culture = "cisalpine"
-	trait = honest
 	trait = gluttonous
-	trait = humble
+	trait = brave
+	trait = generous
 	trait = faith_warrior
-	trait = education_learning_2
-
+	trait = education_martial_2
 	father = 213520
 	mother = 213527
-
 	1140.1.1 = {
 		birth = yes
 	}
 	1168.1.2 = {
 		add_spouse = 223522
 	}
-	1177.4.1 = {
+	1177.6.1 = {
 		death = {
 			death_reason = death_consumption
 		}
+		give_nickname = nick_longsword
 	}
 }
 232559 = {
@@ -11896,7 +11897,7 @@
 	}
 }
 223597 = {
-	name = "Obizzo" # Obizzo (I) d'Este, Duke of cisalpineia (1128-1193), Count of Luni (1128-1193) and Podestá of Padua (1177-1178)
+	name = "Obizzo" # Obizzo (I) d'Este, Duke of Lombardia (1128-1193), Count of Luni (1128-1193) and Podestá of Padua (1177-1178)
 	dynasty_house = house_este
 	martial = 7
 	diplomacy = 7
@@ -12563,7 +12564,7 @@
 	}
 }
 463140 = {
-	name = "Azzone" # Azzone (I) Visconti, Duke of cisalpineia (1322-1339)
+	name = "Azzone" # Azzone (I) Visconti, Duke of Lombardia (1322-1339)
 	dynasty = 234
 	martial = 7
 	diplomacy = 7
@@ -12595,7 +12596,7 @@
 	}
 }
 463141 = {
-	name = "Galeazzo" # Galeazzo (I) Visconti, Duke of cisalpineia (1322-1328)
+	name = "Galeazzo" # Galeazzo (I) Visconti, Duke of Lombardia (1322-1328)
 	dynasty = 234
 	martial = 7
 	diplomacy = 7
@@ -12621,7 +12622,7 @@
 	}
 }
 463142 = {
-	name = "Beatrice" # Beatrice d'Este, wife of Nino Visconti di Gallura and Galeazzo I of cisalpineia
+	name = "Beatrice" # Beatrice d'Este, wife of Nino Visconti di Gallura and Galeazzo I of Lombardia
 	female = yes
 	dynasty_house = house_este
 	martial = 7
@@ -12670,7 +12671,7 @@
 	}
 }
 463145 = {
-	name = "Matteo" # Matteo (I) Visconti, Duke of cisalpineia (1295-1302 & 1311-1322)
+	name = "Matteo" # Matteo (I) Visconti, Duke of Lombardia (1295-1302 & 1311-1322)
 	dynasty = 234
 	martial = 8
 	diplomacy = 7
@@ -13108,9 +13109,6 @@ cisalpine0007 = {
 	religion = "catholic"
 	culture = "cisalpine"
 	trait = education_martial_3
-
-	father = cisalpine0002
-
 	1109.1.1 = {
 		birth = yes
 	}
@@ -13395,7 +13393,7 @@ cisalpine0025 = {
 	}
 }
 cisalpine0026 = {
-	name = "Ugo" # Ugo Obertenghi, Duke of cisalpineia (1014)
+	name = "Ugo" # Ugo Obertenghi, Duke of Lombardia (1014)
 	dynasty_house = house_obertenghi
 	religion = catholic
 	culture = cisalpine
@@ -15904,7 +15902,7 @@ cisalpine0185 = {
 
 	father = 70655
 	
-	1997.1.1 = {
+	1197.1.1 = {
 		birth = yes
 	}
 	1259.1.1 = {
@@ -16005,7 +16003,7 @@ cisalpine0194 = {
 
 	father = 70655
 	
-	1998.1.1 = {
+	1198.1.1 = {
 		birth = yes
 	}
 	1279.1.1 = {
@@ -16188,9 +16186,7 @@ cisalpine0206 = {
 	dynasty = sambonifazio
 	religion = "catholic"
 	culture = "cisalpine"
-
-	father = cisalpine0196
-	
+	father = cisalpine0205
 	1170.1.1 = {
 		birth = yes
 	}
@@ -16218,7 +16214,6 @@ cisalpine0207 = {
 cisalpine0208 = {
 	name = "Ezzelino" # Ezzelino (I) da Romano 'Balbo', Podestà of Treviso (1173-1179 & 1181-1183)
 	dynasty = 13025
-	female = yes
 	religion = "catholic"
 	culture = "cisalpine"
 
@@ -20561,7 +20556,7 @@ cisalpine0524 = {
 	}
 }
 cisalpine0525 = {
-	name = "Brumifonde" # Brumifonde di Langosco, sposue of Guido of cisalpineia
+	name = "Brumifonde" # Brumifonde di Langosco, sposue of Guido of Lombardia
 	dynasty = langosco
 	religion = "catholic"
 	culture = "cisalpine"
@@ -20720,7 +20715,7 @@ cisalpine0534 = {
 	}
 }
 cisalpine0535 = {
-	name = "Pagano" # Pagano della Torre, Podestà of cisalpineia (1192-1197)
+	name = "Pagano" # Pagano della Torre, Podestà of Lombardia (1192-1197)
 	dynasty = 101849
 	religion = "catholic"
 	culture = "cisalpine"
@@ -20802,7 +20797,7 @@ cisalpine0539 = {
 	}
 }
 cisalpine0540 = {
-	name = "cisalpineo" # cisalpineo della Torre
+	name = "Lombardo" # Lombardo della Torre
 	dynasty = 101849
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22714,7 +22709,7 @@ cisalpine0656 = {
 	}
 }
 cisalpine0657 = {
-	name = "Landolfo" # Landolfo da Carcano, Bishop of cisalpineia (979-998)
+	name = "Landolfo" # Landolfo da Carcano, Bishop of Lombardia (979-998)
 	dynasty = carcano
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22730,7 +22725,7 @@ cisalpine0657 = {
 	}
 }
 cisalpine0658 = {
-	name = "Arnolfo" # Arnolfo da Arsago, Bishop of cisalpineia (998-1018)
+	name = "Arnolfo" # Arnolfo da Arsago, Bishop of Lombardia (998-1018)
 	dynasty = arsago
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22746,7 +22741,7 @@ cisalpine0658 = {
 	}
 }
 cisalpine0659 = {
-	name = "Ariberto" # Ariberto da Intimiano, Bishop of cisalpineia (998-1042)
+	name = "Ariberto" # Ariberto da Intimiano, Bishop of Lombardia (998-1042)
 	dynasty = intimiano
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22762,7 +22757,7 @@ cisalpine0659 = {
 	}
 }
 cisalpine0660 = {
-	name = "Lanzone" # Lanzone della Corte, Podestà of cisalpineia (1042-1045)
+	name = "Lanzone" # Lanzone della Corte, Podestà of Lombardia (1042-1045)
 	dynasty = corte
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22776,7 +22771,7 @@ cisalpine0660 = {
 	}
 }
 cisalpine0661 = {
-	name = "Giordano" # Giordano di Bresciano, placeholder Podestà of cisalpineia (1065-1069)
+	name = "Giordano" # Giordano di Bresciano, placeholder Podestà of Lombardia (1065-1069)
 	dynasty = carcano
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22790,7 +22785,7 @@ cisalpine0661 = {
 	}
 }
 cisalpine0662 = {
-	name = "Tedaldo" # Tedaldo da Castiglione, Bishop of cisalpineia (1075-1086)
+	name = "Tedaldo" # Tedaldo da Castiglione, Bishop of Lombardia (1075-1086)
 	dynasty = castiglione
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22806,7 +22801,7 @@ cisalpine0662 = {
 	}
 }
 cisalpine0663 = {
-	name = "Anselmo" # Anselmo da Rho, Bishop of cisalpineia (1086-1093)
+	name = "Anselmo" # Anselmo da Rho, Bishop of Lombardia (1086-1093)
 	dynasty = rho
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22822,7 +22817,7 @@ cisalpine0663 = {
 	}
 }
 cisalpine0664 = {
-	name = "Arnolfo" # Arnolfo di Porta Argentea, Bishop of cisalpineia (1093-1097)
+	name = "Arnolfo" # Arnolfo di Porta Argentea, Bishop of Lombardia (1093-1097)
 	dynasty = portaargentea
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22838,7 +22833,7 @@ cisalpine0664 = {
 	}
 }
 cisalpine0665 = {
-	name = "Anselmo" # Anselmo da Bovisio, Bishop of cisalpineia (1097-1101)
+	name = "Anselmo" # Anselmo da Bovisio, Bishop of Lombardia (1097-1101)
 	dynasty = bovisio
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22854,7 +22849,7 @@ cisalpine0665 = {
 	}
 }
 cisalpine0666 = {
-	name = "Pietro" # Pietro Grossolano, Bishop of cisalpineia (1101-1112)
+	name = "Pietro" # Pietro Grossolano, Bishop of Lombardia (1101-1112)
 	dynasty = grossolano
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22870,7 +22865,7 @@ cisalpine0666 = {
 	}
 }
 cisalpine0667 = {
-	name = "Giordano" # Giordano da Clivio, Bishop of cisalpineia (1112-1120)
+	name = "Giordano" # Giordano da Clivio, Bishop of Lombardia (1112-1120)
 	dynasty = clivio
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22888,7 +22883,7 @@ cisalpine0667 = {
 	}
 }
 cisalpine0668 = {
-	name = "Olrico" # Olrico da Corte, Bishop of cisalpineia (1120-1126)
+	name = "Olrico" # Olrico da Corte, Bishop of Lombardia (1120-1126)
 	dynasty = corte2
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22906,7 +22901,7 @@ cisalpine0668 = {
 	}
 }
 cisalpine0669 = {
-	name = "Anselmo" # Anselmo della Pusterla, Bishop of cisalpineia (1126-1135)
+	name = "Anselmo" # Anselmo della Pusterla, Bishop of Lombardia (1126-1135)
 	dynasty = pusterla
 	religion = "catholic"
 	culture = "cisalpine"
@@ -22922,7 +22917,7 @@ cisalpine0669 = {
 	}
 }
 cisalpine0670 = {
-	name = "Robaldo" # Robaldo, Bishop of cisalpineia (1135-1145)
+	name = "Robaldo" # Robaldo, Bishop of Lombardia (1135-1145)
 	religion = "catholic"
 	culture = "cisalpine"
 	trait = celibate
@@ -22937,7 +22932,7 @@ cisalpine0670 = {
 	}
 }
 cisalpine0671 = {
-	name = "Umberto" # Umberto Pirovano, Bishop of cisalpineia (1145-1158)
+	name = "Umberto" # Umberto Pirovano, Bishop of Lombardia (1145-1158)
 	dynasty = 8725
 	religion = "catholic"
 	culture = "cisalpine"
@@ -23484,13 +23479,11 @@ cisalpine0704 = {
 }
 cisalpine0705 = {
 	name = "Ugo" # Ugo da Noceto, Bishop of Cremona (1117)
-	name = noceto
 	religion = "catholic"
 	culture = "cisalpine"
 	trait = celibate
 	trait = theologian
 	trait = education_learning_1
-
 	1069.1.1 = {
 		birth = yes
 	}
@@ -23809,7 +23802,7 @@ cisalpine0724 = {
 	}
 }
 cisalpine0725 = {
-	name = "Maginfredo" # Maginfredo di Lomello, Count of cisalpineia (894-896)
+	name = "Maginfredo" # Maginfredo di Lomello, Count of Lombardia (894-896)
 	dynasty = lomello2
 	religion = "catholic"
 	culture = "cisalpine"
@@ -23825,7 +23818,7 @@ cisalpine0725 = {
 	}
 }
 cisalpine0726 = {
-	name = "Ugo" # Ugo di Lomello, Count of cisalpineia (896-899)
+	name = "Ugo" # Ugo di Lomello, Count of Lombardia (896-899)
 	dynasty = lomello2
 	religion = "catholic"
 	culture = "cisalpine"
@@ -24545,7 +24538,7 @@ cisalpine0768 = {
 	}
 }
 cisalpine0769 = {
-	name = "cisalpineino" # cisalpineino da Correggio
+	name = "Lombardino" # Lombardino da Correggio
 	dynasty = 13064
 	religion = "catholic"
 	culture = "cisalpine"

@@ -11372,12 +11372,19 @@
 	dynasty_house = house_gramont #de Gramont
 	religion = "catholic"
 	culture = "occitan"
+	trait = education_martial_2
 	father = 93809
 	1120.1.1 = {
-		birth = "1120.1.1"
+		birth = yes
+		effect = { add_character_flag = do_not_generate_starting_family }
 	}
-	1175.1.1 = {
-		death = "1175.1.1"
+	1178.6.1 = {
+		effect = {
+			set_landless_government_effect = yes
+		}
+	}
+	1183.8.10 = {
+		death = yes
 	}
 }
 

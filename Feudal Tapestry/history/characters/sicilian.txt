@@ -1948,6 +1948,21 @@ sicilian0007 = {
 		death = yes
 	}
 }
+
+31407 = {
+	name = "Alvisa" # Aloysia Fimetta, wife of Pierino di Candia
+	female = yes
+	religion = "catholic"
+	culture = "sicilian"
+
+	1238.1.1 = {
+		birth = yes
+	}
+	1288.1.1 = {
+		death = yes
+	}
+}
+
 31408 = {
 	name = "Gugghiermu" # Guglielmo di Candia
 	dynasty = 7212
@@ -2014,6 +2029,19 @@ sicilian0007 = {
 		birth = yes
 	}
 	1330.1.1 = {
+		death = yes
+	}
+}
+31412 = {
+	name = "Chiara" # Clara di Rocca, wife of Guglielmo di Candia
+	female = yes
+	religion = "catholic"
+	culture = "sicilian"
+
+	1260.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
 		death = yes
 	}
 }
@@ -2182,6 +2210,90 @@ sicilian0007 = {
 		death = yes
 	}
 }
+
+32554 = {
+	name = "Francisca" # Francesca di Licinardo, wife of Giovanni of Cosenza
+	female = yes
+	religion = "catholic"
+	culture = "sicilian"
+
+	1270.1.1 = {
+		birth = yes
+	}
+	1320.1.1 = {
+		death = yes
+	}
+}
+
+32555 = {
+	name = "Petru" # Pietro Ruffo di Licinardo, Count of Rossano (1334-1344)
+	dynasty_house = house_ruffo_di_licinardo
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 32553
+	mother = 32554
+
+	1300.1.1 = {
+		birth = yes
+	}
+	1325.1.1 = {
+		add_spouse = 32556
+	}
+	1344.1.1 = {
+		death = yes
+	}
+}
+
+32556 = {
+	name = "Sibbila" # Sibilla di Leone, wife of Pietro of Cosenza
+	female = yes
+	religion = "catholic"
+	culture = "sicilian"
+
+	1305.1.1 = {
+		birth = yes
+	}
+	1355.1.1 = {
+		death = yes
+	}
+}
+
+32557 = {
+	name = "Antonia" # Antonia Ruffo di Licinardo
+	female = yes
+	dynasty_house = house_ruffo_di_licinardo
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 32555
+	mother = 32556
+
+	1327.1.1 = {
+		birth = yes
+	}
+	1377.1.1 = {
+		death = yes
+	}
+}
+
+32558 = {
+	name = "Antoniu" # Antonio Ruffo di Licinardo
+	dynasty_house = house_ruffo_di_licinardo
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 32555
+	mother = 32556
+
+	1331.1.1 = {
+		birth = yes
+	}
+	1383.1.1 = {
+		death = yes
+	}
+}
+
 32559 = {
 	name = "Fulcone" # Fulcone Ruffo, Count of Reggio, Cosenza and Rossano (1257-1266)
 	dynasty = 13077
@@ -2285,6 +2397,21 @@ sicilian0007 = {
 		death = yes
 	}
 }
+
+32566 = {
+	name = "Marghirita" # Margherita di San Lucidio, wife of Enrico of Reggio
+	female = yes
+	religion = "catholic"
+	culture = "sicilian"
+
+	1264.1.1 = {
+		birth = yes
+	}
+	1309.1.1 = {
+		death = yes
+	}
+}
+
 32567 = {
 	name = "Petru" # Pietro (II) Ruffo, Count of Reggio, Cosenza and Rossano (1309-1310)
 	dynasty = 13077
@@ -2377,6 +2504,35 @@ sicilian0007 = {
 		}
 	}
 }
+
+32572 = {
+	name = "Giuvanna" # Giovanna Torda, wife of Pietro II of Reggio
+	female = yes
+	religion = "catholic"
+	culture = "sicilian"
+
+	1310.1.1 = {
+		birth = yes
+	}
+	1360.1.1 = {
+		death = yes
+	}
+}
+
+32573 = {
+	name = "Catarina" # Caterina Scripari, wife of Guglielmo of Reggio
+	female = yes
+	religion = "catholic"
+	culture = "sicilian"
+
+	1300.1.1 = {
+		birth = yes
+	}
+	1328.8.24 = {
+		death = yes
+	}
+}
+
 32575 = {
 	name = "Arricu" # Enrico Ruffo
 	dynasty = 13077
@@ -2662,6 +2818,23 @@ sicilian0007 = {
 		death = yes
 	}
 }
+
+71755 = {
+	name = "Giuvanni" # Giovanni di Chiaramonte
+	dynasty = 65
+	religion = "catholic"
+	culture = "sicilian"
+	1290.1.1 = {
+		birth = yes
+	}
+	1314.1.1 = {
+		add_spouse = 461567
+	}
+	1345.1.1 = {
+		death = yes
+	}
+}
+
 71756 = {
 	name = "Sanciu" # Sancho di Sicilia
 	dynasty_house = house_aragon-sicily
@@ -2682,6 +2855,99 @@ sicilian0007 = {
 		death = yes
 	}
 }
+
+71757 = {
+	name = "Macalda" # Macalda Palizzi, wife of Sancho di Sicilia
+	female = yes
+
+	religion = catholic
+	culture = italian
+
+	1299.1.1 = {
+		birth = yes
+	}
+	1364.1.1 = {
+		death = yes
+	}
+}
+
+71758 = {
+	name = "Fidiricu" # Federigo di Militello
+	dynasty_house = house_militello
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 71756
+	mother = 71757
+
+	1317.1.1 = {
+		birth = yes
+	}
+	1339.1.1 = {
+		death = yes
+	}
+}
+
+71759 = {
+	name = "Vinciguerra" # Vinciguerra di Militello
+	dynasty_house = house_militello
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 71758
+
+	1337.1.1 = {
+		birth = yes
+	}
+	1380.1.1 = {
+		death = yes
+	}
+}
+
+72111 = {
+	name = "Ramuni" # Ramone di Squillache
+	dynasty_house = house_squillache
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 72109
+	trait = bastard
+
+	1308.1.1 = {
+		birth = "1308.1.1"
+	}
+	1327.1.1 = {
+		death = "1327.1.1"
+	}
+}
+
+211531 = {
+	name = "Margaritu" # Margaritone di Brindisi, Count of Malta (1192-1197)
+	dynasty = 7188
+	martial = 7
+	diplomacy = 7
+	intrigue = 3
+	stewardship = 7
+	religion = "catholic"
+	culture = "sicilian"
+	trait = diligent
+	trait = arrogant
+	trait = education_martial_3
+
+	1147.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		add_spouse = 211530
+	}
+	1194.1.1 = {
+		trait = disfigured
+	}
+	1197.1.1 = {
+		death = yes
+	}
+}
+
 461502 = {
 	name = "Petru" # Pietro (II) di Sicilia, King of Trinacria (1337-1342)
 	dynasty_house = house_aragon-sicily
@@ -3291,19 +3557,68 @@ sicilian0002 = {
 		death = yes
 	}
 }
+461565 = {
+	name = "Isabella" # Isabella di Sicilia, wife of Ponç VI of Ampurias and Raimondo di Peralta
+	female = yes
+	dynasty_house = house_aragon-sicily
+	martial = 4
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 4
+	religion = "catholic"
+	culture = "sicilian"
+	trait = bastard
+	trait = honest
+	trait = temperate
+	trait = education_intrigue_1
+
+	father = 461500
+	mother = 461501
+
+	1292.1.1 = {
+		birth = yes
+	}
+	1341.1.1 = {
+		death = yes
+	}
+}
 #######################################
 # Gesualdo Dynasty
 #######################################
+461567 = {
+	name = "Eleunora" # Eleonora di Sicilia, wife of Giovanni di Chiaramonte
+	female = yes
+	dynasty_house = house_aragon-sicily
+	martial = 6
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = "sicilian"
+	trait = bastard
+	trait = humble
+	trait = calm
+	trait = education_intrigue_1
+
+	father = 461500
+	mother = 461501
+
+	1298.1.1 = {
+		birth = yes
+	}
+	1357.1.1 = {
+		death = yes
+	}
+}
+
 sicilian0003 = {
 	name = "Ruggeru" # Ruggero Gesualdo
 	dynasty_house = house_gesualdo
 	religion = "catholic"
 	culture = "sicilian"
 	trait = education_martial_3
-
 	father = 211523
 	mother = 211524
-
 	1149.1.1 = {
 		birth = yes
 	}
@@ -3317,10 +3632,8 @@ sicilian0004 = {
 	religion = "catholic"
 	culture = "sicilian"
 	trait = education_martial_2
-
 	father = 211523
 	mother = 211524
-
 	1153.1.1 = {
 		birth = yes
 	}
@@ -3335,10 +3648,8 @@ sicilian0005 = {
 	religion = "catholic"
 	culture = "sicilian"
 	trait = education_stewardship_1
-
 	father = 211523
 	mother = 211524
-
 	1154.1.1 = {
 		birth = yes
 	}
@@ -3355,11 +3666,25 @@ sicilian0006 = {
 
 	father = 211526
 	mother = 211527
-
 	1187.1.1 = {
 		birth = yes
 	}
 	1237.1.1 = {
+		death = yes
+	}
+}
+sicilian0007 = {
+	name = "Desiderata" # Desiderata di Lecce
+	female = yes
+	dynasty = 100345
+	religion = "catholic"
+	culture = "sicilian"
+	trait = education_learning_2
+	father = 73283
+	1133.1.1 = {
+		birth = yes
+	}
+	1201.1.1 = {
 		death = yes
 	}
 }
@@ -3379,6 +3704,220 @@ sicilian0006 = {
 		add_spouse = 211524
 	}
 	1187.1.1 = {
+		death = yes
+	}
+}
+73281 = {
+	name = "Acciardu" # Acciardo di Lecce, Count of Lecce (1114-1137)
+	dynasty = 100345
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 73276
+
+	1090.1.1 = {
+		birth = yes
+	}
+	1106.1.1 = {
+		add_spouse = 73282
+	}
+	1137.5.1 = {
+		death = yes
+	}
+}
+73282 = {
+	name = "Macalda" # Matilda, wife of Acciardo of Lecce
+	female = yes
+	religion = "catholic"
+	culture = "sicilian"
+
+	1090.1.1 = {
+		birth = yes
+	}
+	1150.1.1 = {
+		death = yes
+	}
+}
+
+73283 = {
+	name = "Guffredu" # Goffredo di Lecce, Count of Lecce (1137-1174)
+	dynasty = 100345
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 73281
+	mother = 73282
+
+	1107.1.1 = {
+		birth = yes
+	}
+	1174.4.8 = {
+		death = yes
+	}
+}
+
+73284 = {
+	name = "Emma" # Emma di Lecce
+	dynasty = 100345
+	female = yes
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 73281
+	mother = 73282
+
+	1113.1.1 = {
+		birth = yes
+	}
+	1190.5.1 = {
+		death = yes
+	}
+}
+
+73285 = {
+	name = "Guffredu" # Goffredo di Lecce
+	dynasty = 100345
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 73276
+
+	1109.1.1 = {
+		birth = yes
+	}
+	1133.5.1 = {
+		death = yes
+	}
+}
+
+73286 = {
+	name = "Agnesa" # Agnese di Lecce
+	female = yes
+	dynasty = 100345
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 73276
+
+	1111.1.1 = {
+		birth = yes
+	}
+	1137.3.1 = {
+		death = yes
+	}
+}
+
+73287 = {
+	name = "Gimarca" # Gimarca di Lecce
+	female = yes
+	dynasty = 100345
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 73276
+
+	1113.1.1 = {
+		birth = yes
+	}
+	1142.7.1 = {
+		death = yes
+	}
+}
+
+73358 = {
+	name = "Ruggeru" # Roger de Foggia, Count of Foggia (1182-1200)
+	dynasty = 100348
+	religion = "catholic"
+	culture = "sicilian"
+
+	1141.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+211523 = {
+	name = "Elia" # Elia (I) Gesualdo
+	dynasty_house = house_gesualdo
+	religion = "catholic"
+	culture = "sicilian"
+	father = 211521
+	mother = 73280
+	1120.1.1 = {
+		birth = yes
+	}
+	1146.1.1 = {
+		add_spouse = 211524
+	}
+	1187.1.1 = {
+		death = yes
+	}
+}
+
+211525 = {
+	name = "Gugghiermu" # Guglielmo (II) Gesualdo
+	dynasty_house = house_gesualdo
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 211523
+	mother = 211524
+
+	1147.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+211526 = {
+	name = "Rubbertu" # Roberto Gesualdo
+	dynasty_house = house_gesualdo
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 211523
+	mother = 211524
+
+	1150.1.1 = {
+		birth = yes
+	}
+	1185.1.1 = {
+		add_spouse = 211527
+	}
+	1206.1.1 = {
+		death = yes
+	}
+}
+
+211527 = {
+	name = "Sibbila" # Sibila, wife of Robert Gesualdo
+	female = yes
+	religion = "catholic"
+	culture = "sicilian"
+	1160.1.1 = {
+		birth = yes
+	}
+	1210.1.1 = {
+		death = yes
+	}
+}
+
+465525 = {
+	name = "Elia" # Elia (II) Gesualdo
+	dynasty_house = house_gesualdo
+	religion = "catholic"
+	culture = "sicilian"
+
+	father = 211526
+
+	1173.1.1 = {
+		birth = yes
+	}
+	1225.1.1 = {
 		death = yes
 	}
 }
@@ -3726,6 +4265,20 @@ sicilian0006 = {
 		death = yes
 	}
 }
+
+200357 = {
+	name = "Lolegrima" # Lolegrima, wife of Roberto Paldolfidi
+	female = yes
+	religion = catholic
+	culture = sicilian
+	1100.1.1 = {
+		birth = yes
+	}
+	1156.10.3 = {
+		death = yes
+	}
+}
+
 200358 = {
 	name = "Guidu" # Guido Paldolfidi
 	dynasty_house = house_paldolfidi
@@ -4240,8 +4793,8 @@ sanseverino_2 = {
 # di Paternò Dynasty
 #######################################
 70982 = {
-	name = "Simuni" # Simone di Paternò
-	dynasty_house = house_paterno
+	name = "Simone" # Simone di Paternò
+	dynasty_house = house_vasto
 	martial = 9
 	diplomacy = 6
 	intrigue = 5
@@ -4262,8 +4815,8 @@ sanseverino_2 = {
 	}
 }
 70983 = {
-	name = "Manfredi" # Manfredo di Paternò
-	dynasty_house = house_paterno
+	name = "Manfredo" # Manfredo di Paternò
+	dynasty_house = house_vasto
 	martial = 7
 	diplomacy = 7
 	intrigue = 5
@@ -4283,14 +4836,12 @@ sanseverino_2 = {
 	}
 }
 70984 = {
-	name = "Ruggeru" # Ruggiero di Paternò
-	dynasty_house = house_paterno
+	name = "Ruggiero" # Ruggiero di Paternò
+	dynasty_house = house_vasto
 	religion = "catholic"
 	culture = "sicilian"
-
 	father = 70982
 	trait = bastard
-
 	1120.1.1 = {
 		birth = yes
 	}
@@ -4336,7 +4887,7 @@ sicilian0046 = {
 # Lancia Dynasty
 #######################################
 70992 = {
-	name = "Manfredi" # Manfredo Lancia
+	name = "Manfredo" # Manfredo Lancia
 	dynasty_house = house_lancia
 	martial = 6
 	diplomacy = 7
@@ -4448,6 +4999,28 @@ sicilian0046 = {
 		}
 	}
 }
+
+70999 = {
+	name = "Marghirita" # Marghirita di Ocra, spouse of Galvano Lancia
+	dynasty = 8712
+	female = yes
+	martial = 5
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 6
+	religion = "catholic"
+	culture = "sicilian"
+	trait = lunatic_1
+	trait = education_diplomacy_1
+
+	1213.1.1 = {
+		birth = yes
+	}
+	1248.1.1 = {
+		death = yes
+	}
+}
+
 71000 = {
 	name = "Bartolomeu" # Bartolomeo Lancia
 	dynasty_house = house_lancia
@@ -4633,6 +5206,34 @@ sicilian0046 = {
 		death = yes
 	}
 }
+
+71011 = {
+	name = "Artali" # Artali d'Alagona
+	dynasty_house = house_alagona
+	martial = 6
+	diplomacy = 5
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = "sicilian"
+	trait = lifestyle_blademaster
+	trait = education_martial_2
+
+	father = sicilian0047
+
+	1320.1.1 = {
+		birth = yes
+	}
+	1337.1.1 = {
+		add_spouse = 71009
+	}
+	1389.2.15 = {
+		death = {
+			death_reason = death_old_age
+		}
+	}
+}
+
 71012 = {
 	name = "Ugu" # Ugo Lancia
 	dynasty_house = house_lancia
@@ -4993,9 +5594,23 @@ sicilian0052 = {
 		death = "1305.1.19"
 	}
 }
-#######################################
-# medania Dynasty
-#######################################
+
+200350 = {
+	name = "Matteu" # Matteu Paldolfidi
+	dynasty_house = house_paldolfidi
+	religion = catholic
+	culture = sicilian
+	
+	father = 200349
+
+	1090.1.1 = {
+		birth = yes
+	}	
+	1138.1.1 = {
+		death = yes
+	}
+}
+
 sicilian0009 = {
 	name = "Rubbertu" # Roberto de Medania
 	dynasty = medania
@@ -5086,6 +5701,124 @@ sicilian0031 = {
 #######################################
 # di Marsico Dynasty
 #######################################
+sicilian0016 = {
+	name = "Simuni" # Simone de Sanseverino
+	dynasty = 101843
+	religion = catholic
+	culture = sicilian
+
+	father = sicilian0015
+	mother = 211513
+
+	1207.1.1 = {
+		birth = yes
+	}
+	1225.1.1 = {
+		death = yes
+	}
+}
+
+sicilian0023 = {
+	name = "Gugghiermu" # Guglielmo de Sanseverino
+	dynasty = 101843
+	religion = catholic
+	culture = sicilian
+
+	father = sicilian0021
+
+	1193.1.1 = {
+		birth = yes
+	}
+	1248.1.1 = {
+		death = yes
+	}
+}
+
+sicilian0024 = {
+	name = "Ruggeru" # Ruggerio de Sanseverino
+	dynasty = 101843
+	religion = catholic
+	culture = sicilian
+
+	father = sicilian0021
+
+	1195.1.1 = {
+		birth = yes
+	}
+	1256.1.1 = {
+		add_spouse = italian0001
+	}
+	1281.1.1 = {
+		death = yes
+	}
+}
+
+sicilian0025 = {
+	name = "Tumasi" # Tomasso de Sanseverino
+	dynasty = 101843
+	religion = catholic
+	culture = sicilian
+
+	father = sicilian0024
+	mother = italian0001
+
+	1257.1.1 = {
+		birth = yes
+	}
+	1317.1.1 = {
+		death = yes
+	}
+}
+
+sicilian0026 = {
+	name = "Ruggeru" # Ruggiero de Sanseverino
+	dynasty = 101843
+	religion = catholic
+	culture = sicilian
+
+	father = sicilian0025
+
+	1284.1.1 = {
+		birth = yes
+	}
+	1338.1.1 = {
+		death = yes
+	}
+}
+sicilian0030 = {
+	name = "Jozzelinu" # Jozzelino di Loreto
+	dynasty = loreto
+	religion = catholic
+	culture = sicilian
+	1114.1.1 = {
+		birth = yes
+	}
+	1129.1.1 = {
+		add_spouse = 30902
+	}
+	1131.1.1 = {
+		remove_spouse = 30902
+	}
+	1189.1.1 = {
+		death = yes
+	}
+}
+
+sicilian0031 = {
+	name = "Macalda" # Macalda di Loreto, wife of Riccardo di Aquila
+	dynasty = loreto
+	female = yes
+	religion = catholic
+	culture = sicilian
+	father = sicilian0030
+	mother = 30902
+	1130.1.1 = {
+		birth = yes
+	}
+	1161.1.1 = {
+		death = yes
+	}
+}
 sicilian0037 = {
 	name = "Silvestru" # Silvestro di Marsico
 	dynasty_house = house_marsico
@@ -5208,6 +5941,154 @@ sicilian0044 = {
 		birth = yes
 	}
 	1135.1.1 = {
+		death = yes
+	}
+}
+
+
+sicilian0045 = {
+	name = "Ruggeru" # Ruggiero di Paternò
+	dynasty_house = house_vasto
+	religion = "catholic"
+	culture = "sicilian"
+	trait = education_martial_2
+
+	father = 70978
+	mother = norman0011
+
+	1095.1.1 = {
+		birth = yes
+	}
+	1134.1.1 = {
+		death = yes
+	}
+}
+
+sicilian0046 = {
+	name = "Girardu" # Girardo di Paternò
+	dynasty_house = house_vasto
+	religion = "catholic"
+	culture = "sicilian"
+	trait = education_intrigue_1
+
+	father = 70978
+	mother = norman0011
+
+	1099.1.1 = {
+		birth = yes
+	}
+	1158.12.1 = {
+		death = yes
+	}
+}
+
+sicilian0047 = {
+	name = "Blascu" # Blasco d'Alagona 'the Young'
+	dynasty_house = house_alagona
+	religion = "catholic"
+	culture = "sicilian"
+	trait = education_stewardship_2
+
+	father = aragonese0002
+	mother = 30796
+
+	1281.1.1 = {
+		birth = yes
+	}
+	1355.10.21 = {
+		death = {
+			death_reason = death_old_age
+		}
+	}
+}
+
+sicilian0048 = {
+	name = "Giuvanni" # Giovanni d'Alagona
+	dynasty_house = house_alagona
+	religion = "catholic"
+	culture = "sicilian"
+	trait = education_martial_1
+
+	father = sicilian0047
+
+	1321.1.1 = {
+		birth = yes
+	}
+	1340.1.1 = {
+		death = yes
+	}
+}
+
+sicilian0049 = {
+	name = "Manfredi" # Manfredi d'Alagona
+	dynasty_house = house_alagona
+	martial = 5
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 8
+	religion = "catholic"
+	culture = "sicilian"
+	trait = education_diplomacy_2
+
+	father = sicilian0047
+
+	1322.1.1 = {
+		birth = yes
+	}
+	1392.1.1 = {
+		death = {
+			death_reason = death_old_age
+		}
+	}
+}
+
+sicilian0050 = {
+	name = "JA_picu" # Giacomo d'Alagona
+	dynasty_house = house_alagona
+	religion = "catholic"
+	culture = "sicilian"
+	trait = education_stewardship_2
+
+	father = sicilian0047
+
+	1324.1.1 = {
+		birth = yes
+	}
+	1339.1.1 = {
+		death = yes
+	}
+}
+
+sicilian0051 = {
+	name = "Matteu" # Matteu d'Alagona
+	dynasty_house = house_alagona
+	religion = "catholic"
+	culture = "sicilian"
+	trait = education_martial_1
+
+	father = sicilian0047
+
+	1325.1.1 = {
+		birth = yes
+	}
+	1341.1.1 = {
+		death = yes
+	}
+}
+
+sicilian0052 = {
+	name = "Maria" # Maria d'Alagona, wife of Pietro Lancia
+	dynasty_house = house_alagona
+	religion = "catholic"
+	culture = "sicilian"
+	trait = education_diplomacy_1
+
+	father = sicilian0047
+
+	1300.1.1 = {
+		birth = yes
+	}
+	1350.1.1 = {
 		death = yes
 	}
 }
