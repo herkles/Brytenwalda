@@ -6,7 +6,7 @@ on_game_start = {
 		bryten_setup_after_game_start_on_actions
 	}
 }
-
+3224
 bryten_setup_after_game_start_on_actions = {
 	effect = {
 		# Character start up Events
@@ -18,7 +18,7 @@ bryten_setup_after_game_start_on_actions = {
 					current_date = 1066.12.25
 				}
 			}
-			character:140 ?= { trigger_event = bryten_england.001 }
+			character:140 ?= { trigger_event = bryten_norman_conquest.001 }
 		}
 		if = {# Alfred is the proper successor
 			limit = {

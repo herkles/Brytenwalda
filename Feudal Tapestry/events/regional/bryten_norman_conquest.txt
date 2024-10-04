@@ -1,0 +1,7615 @@
+﻿namespace = bryten_norman_conquest
+
+#######################################
+# Norman Conquest - Set Up
+#######################################
+bryten_norman_conquest.001 = {# William the Conquerer is Coronated in London at Westminister Abbey.
+	type = character_event
+	title = bryten_norman_conquest.001.t
+	desc = bryten_norman_conquest.001.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		title:k_england = {# Willy's capital is now in London
+			set_capital_county = title:c_middlesex
+			clear_title_laws = yes
+		}
+		set_global_variable = {
+			name = william_is_king
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = bryten_norman_conquest.001.coronation
+		custom_tooltip = bryten_william_is_king_tooltip
+		hidden_effect = {# Giving massive bonus to the Norman courtiers and vassals=
+			every_courtier_or_guest = {
+				limit = { has_culture = culture:norman	}
+				add_opinion = {
+					target = character:140
+					modifier = norman_rightful_king
+					opinion = 40
+				}
+			}
+			every_vassal = {
+				limit = { has_culture = culture:norman	}
+				add_opinion = {
+					target = character:140
+					modifier = norman_rightful_king
+					opinion = 40
+				}
+			}
+		}
+
+
+		if = {# William doesn't need more prestige when he is king. 
+			limit = { game_start_date = 1066.9.15 }
+			add_prestige = medium_prestige_gain
+		}
+	}
+
+	after = {
+		trigger_event = {# rewarding William's loyal men
+			id = bryten_norman_conquest.002
+			days = { 10 20 }
+		}
+		if = {# This is for the Norman Conquest specifically since he might not fight in Haestings in the fate of england start.
+			limit = { game_start_date = 1066.12.25 }
+			trigger_event = {# rewarding William's loyal men
+				id = bryten_norman_conquest.003
+				days = { 30 60 }
+			}
+		}
+		trigger_event = {# Resistance to William's rule
+			id = bryten_norman_conquest.004
+			days = { 40 80 }
+		}
+	}
+}
+bryten_norman_conquest.002 = {# William rewarding his men with land in England. 
+	type = character_event
+	title = bryten_norman_conquest.002.t
+	desc = bryten_norman_conquest.002.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		random_knight = {
+			limit = { has_culture = culture:norman	}
+			save_scope_as = norman_knight
+		}
+		random_knight = {
+			limit = { 
+				has_culture = culture:norman
+				NOT = {
+					this = scope:norman_knight
+				} 			
+			}
+			save_scope_as = norman_knight1
+		}
+		random_knight = {
+			limit = { 
+				has_culture = culture:norman
+				NOT = {
+					this = scope:norman_knight
+					this = scope:norman_knight1
+				} 			
+			}
+			save_scope_as = norman_knight2
+		}
+		random_knight = {
+			limit = { 
+				has_culture = culture:norman
+				NOT = {
+					this = scope:norman_knight
+					this = scope:norman_knight1
+					this = scope:norman_knight2
+				} 			
+			}
+			save_scope_as = norman_knight3
+		}		
+		random_knight = {
+			limit = { 
+				has_culture = culture:norman
+				NOT = {
+					this = scope:norman_knight
+					this = scope:norman_knight1
+					this = scope:norman_knight2
+					this = scope:norman_knight3
+				} 			
+			}
+			save_scope_as = norman_knight4
+		}		
+		character:140 = {
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { this = title:c_middlesex }
+
+				}
+				save_scope_as = norman_england_county
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:norman_england_county
+					}
+
+				}
+				save_scope_as = norman_england_county2
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:norman_england_county
+						this = scope:norman_england_county2
+					}
+
+				}
+				save_scope_as = norman_england_county3
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:norman_england_county
+						this = scope:norman_england_county2
+						this = scope:norman_england_county3
+
+					}
+
+				}
+				save_scope_as = norman_england_county4
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:norman_england_county
+						this = scope:norman_england_county2
+						this = scope:norman_england_county3
+						this = scope:norman_england_county4
+
+					}
+
+				}
+				save_scope_as = norman_england_county5
+			}					
+		}
+	}
+	
+	option = {# Interesting
+		name = bryten_norman_conquest.002.reward
+		custom_tooltip = norman_conquest_reward_men_tt
+
+		hidden_effect = {
+			# First Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county = {
+				change_title_holder = {
+					holder = scope:norman_knight
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+
+			# Second Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change2
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county2 = {
+				change_title_holder = {
+					holder = scope:norman_knight1
+					change = scope:change2
+				}
+			}
+			resolve_title_and_vassal_change = scope:change2
+
+			# Third Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change3
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county3 = {
+				change_title_holder = {
+					holder = scope:norman_knight2
+					change = scope:change3
+				}
+			}
+			resolve_title_and_vassal_change = scope:change3
+
+			# Fourth Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change4
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county4 = {
+				change_title_holder = {
+					holder = scope:norman_knight3
+					change = scope:change4
+				}
+			}
+			resolve_title_and_vassal_change = scope:change4
+
+			# Fifth Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change5
+				add_claim_on_loss = yes
+			}	
+			scope:norman_england_county5 = {
+				change_title_holder = {
+					holder = scope:norman_knight4
+					change = scope:change5
+				}
+			}
+			resolve_title_and_vassal_change = scope:change5
+
+			if = {# these lords already have land in the norman conquest but not the fate of england.
+				limit = { game_start_date = 1066.9.15 }
+				title:c_norfolk = {
+					change_title_holder = {
+						holder = character:5652
+					}
+				}
+				title:c_suffolk = {
+					change_title_holder = {
+						holder = character:41236
+					}
+				}			
+				title:c_cambridgeshire = {
+					change_title_holder = {
+						holder = character:41236
+					}
+				}			
+				title:c_kent = {
+					change_title_holder = {
+						holder = character:148
+					}
+				}
+				title:c_surrey = {
+					change_title_holder = {
+						holder = character:172
+					}
+				}
+				title:c_sussex = {
+					change_title_holder = {
+						holder = character:152
+					}
+				}
+				title:c_cheshire = {
+					change_title_holder = {
+						holder = character:167007
+					}
+				}
+				title:c_gloucestershire = {
+					change_title_holder = {
+						holder = character:6806
+					}
+				}
+				title:c_staffordshire = {
+					change_title_holder = {
+						holder = character:204596
+					}
+				}
+				title:c_hereford = {
+					change_title_holder = {
+						holder = character:6806
+					}
+				}
+				title:c_leicestershire = {
+					change_title_holder = {
+						holder = character:204596
+					}
+				}
+				title:c_nottinghamshire = {
+					change_title_holder = {
+						holder = character:204596
+					}
+				}
+				title:c_essex = {
+					change_title_holder = {
+						holder = character:41260
+					}
+				}
+				title:c_devon = {
+					change_title_holder = {
+						holder = character:140
+					}
+				}
+			}
+		}
+	}
+}
+bryten_norman_conquest.003 = {# The Ermenfried Penitential 
+	type = character_event
+	title = bryten_norman_conquest.003.t
+	desc = bryten_norman_conquest.003.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {	
+		random_realm_county = {
+			limit = { kingdom = title:k_england }
+			random_county_province = {
+				limit = { has_holding = no }
+				save_scope_as = norman_church_province
+			}
+		}
+		if = { # root's counties...
+			limit = {
+				any_held_title = {
+					county_has_empty_province_trigger = yes
+					kingdom = title:k_england
+				}
+			}
+			ordered_held_title = {
+				limit = {
+					county_has_empty_province_trigger = yes
+					kingdom = title:k_england
+					county_has_no_church_trigger = yes
+				}
+				alternative_limit = {
+					county_has_empty_province_trigger = yes
+					kingdom = title:k_england
+					county_has_all_holding_types = yes
+				}
+				alternative_limit = { county_has_empty_province_trigger = yes }
+				order_by = development_level
+				save_scope_as = norman_church_county
+			}
+		}
+		else = { # ... vassal counties
+			ordered_sub_realm_county = {
+				limit = {
+					holder = { is_vassal_of = ROOT }
+					kingdom = title:k_england
+					any_county_province = { province_has_no_holding_trigger = yes }
+					county_has_no_church_trigger = yes
+				}
+				alternative_limit = {
+					holder = { is_vassal_of = ROOT }
+					kingdom = title:k_england
+					any_county_province = {	province_has_no_holding_trigger = yes }
+					county_has_all_holding_types = yes
+				}
+				order_by = development_level
+				save_scope_as = norman_church_county
+			}
+		}
+		scope:norman_church_county = {
+			random_county_province = {
+				limit = { province_has_no_holding_trigger = yes }
+				save_scope_as = norman_church_province
+			}
+		}
+
+
+
+
+	}
+	
+	option = {# I must make penance
+		name = bryten_norman_conquest.003.penance
+		remove_short_term_gold = hold_court_holding_cost_cheaper_value
+		scope:norman_church_province = {
+			begin_create_holding = {
+				type = church_holding
+				refund_cost = { gold = hold_court_holding_cost_cheaper_value }
+			}
+		}
+
+	}
+}
+bryten_norman_conquest.004 = {# Resistance to William's Control - William's view(starts the harrying of england)
+	type = character_event
+	title = bryten_norman_conquest.004.t
+	desc = bryten_norman_conquest.004.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		play_music_cue = mx_cue_war_declared
+
+		character:140 = {
+			save_scope_as = william
+		}
+
+		# Make a list of every Anglo-Saxon lord
+		scope:william = {
+			every_vassal = {
+				limit = {
+					has_culture = culture:anglo_saxon
+				}
+				add_to_list = aethelings
+			}
+		}
+	}
+
+	option = {# Interesting
+		name = bryten_norman_conquest.004.rebels
+		every_in_list = {
+			list = aethelings
+			custom = every_aetheling
+			every_realm_county = {
+				custom = every_county
+				change_county_control = 25
+				add_county_modifier = {
+					modifier = ep3_harried_modifier
+					years = 15
+				}
+			}
+		}
+		scope:william = {
+			add_character_modifier = {
+				modifier = ep3_the_conqueror_modifier
+				years = 15
+			}
+			create_story = story_cycle_harrying_of_the_north
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_energy = 1
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			every_vassal = {# Anglo_saxon Lords
+				limit = {
+					OR = {
+						has_culture = culture:anglo_saxon
+						has_culture = culture:anglo_norse
+					}
+				}
+				trigger_event = {# Resistance to William's rule
+					id = bryten_norman_conquest.006
+					days = { 1 2 }
+				}
+			}
+			every_vassal = {# Norman Lords
+				limit = {
+					OR = {
+						has_culture = culture:norman
+						has_culture = culture:gallo
+					}
+				}
+				trigger_event = {# Resistance to William's rule
+					id = bryten_norman_conquest.005
+					days = { 1 2 }
+				}
+			}
+		}
+	}
+
+}
+bryten_norman_conquest.005 = {# Resistance to William's Control - Other Norman Lords
+	type = character_event
+	title = bryten_norman_conquest.005.t
+	desc = bryten_norman_conquest.005.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {# Interesting
+		name = bryten_norman_conquest.005.rebels
+
+	}
+}
+bryten_norman_conquest.006 = {# Resistance to William's Control - Anglo Saxon Characters
+	type = character_event
+	title = bryten_norman_conquest.006.t
+	desc = bryten_norman_conquest.006.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {# Interesting
+		name = bryten_norman_conquest.006.rebels
+	}
+}
+bryten_norman_conquest.007 = {# Rise of The Silvatici 
+	type = character_event
+	title = bryten_norman_conquest.007.t
+	desc = bryten_norman_conquest.007.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		has_title = title:k_england
+		is_at_war = no # Willy has to secure his throne first.
+		has_global_variable = william_is_king # Needs William to be king
+		NOT = { has_global_variable = silvatici_bandits_rise_up }
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = silvatici_bandits_rise_up
+			value = yes
+		}
+		random_realm_county = {
+			limit = {
+				kingdom = title:k_england
+				holder.culture = culture:norman
+			}
+			save_scope_as = silvatici_county
+		}
+	}
+	
+	option = {# Interesting
+		name = bryten_norman_conquest.007.bandits
+		scope:silvatici_county = {
+			add_county_modifier = {
+				modifier = silvatici_bandits
+				days = 360
+			}
+		}
+		ep3_increase_pacification_effect = { AMOUNT = harrying_medium_increase_value }
+	}
+}
+#######################################
+# Norman Conquest - Exeter Rebellion
+#######################################
+bryten_norman_conquest.010 = {# The Exeter Rebellion 
+	type = character_event
+	title = bryten_norman_conquest.010.t
+	desc = bryten_norman_conquest.010.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		has_title = title:c_devon # Holds Exeter
+		NOT = { culture = culture:norman } # normans won't rebel
+		is_at_war = no # Willy has to secure his throne first.
+		has_global_variable = william_is_king # Needs William to be king
+		NOT = { has_global_variable = exeter_rebelion_debate }
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+	}
+
+	immediate = {
+		character:140 = { save_scope_as = norman_king }		
+		character:122 = {
+			ordered_child = {
+				order_by = age
+				limit = {
+					is_male = yes
+					is_alive = yes
+				}
+				save_scope_as = godwine_head
+			}
+		}
+
+		set_global_variable = {
+			name = exeter_rebelion_debate
+			value = yes
+		}
+	}
+	
+	option = {# Rebel
+		name = bryten_norman_conquest.010.rebel
+		ai_chance = {
+			base = 80
+		}
+		add_character_flag = temp_no_claim_war_cost
+		start_war = {
+			cb = exeter_rebellion_cb
+			target = character:140
+			claimant = scope:godwine_head
+			target_title = title:k_england
+		}
+		remove_character_flag = temp_no_claim_war_cost				
+		hidden_effect = {
+			add_visiting_courtier = scope:godwine_head
+			scope:norman_king = {
+				trigger_event = {
+					id = bryten_norman_conquest.011
+					days = { 5 10 }
+				}
+			}
+		}
+	}
+	option = {# Don't Rebel
+		name = bryten_norman_conquest.010.loyal
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+bryten_norman_conquest.011 = {# The Exeter Rebellion 
+	type = character_event
+	title = bryten_norman_conquest.011.t
+	desc = bryten_norman_conquest.011.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	option = {# Interesting
+		name = bryten_norman_conquest.011.rebels
+		ep3_increase_pacification_effect = { AMOUNT = harrying_medium_increase_value }
+	}
+}
+#######################################
+# Norman Conquest - Danish Intervention
+#######################################
+bryten_norman_conquest.020 = {# Call in Danish help
+	type = character_event
+	title = bryten_norman_conquest.020.t
+	desc = bryten_norman_conquest.020.desc
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = writing
+	}
+	right_portrait = {
+		character = scope:danish_king
+		animation = thinking
+	}
+	cooldown = { years = 50 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_available = yes
+		is_healthy = yes
+		title:k_denmark.holder = {
+			is_at_war = no
+			is_available_healthy_ai_adult = yes
+		}
+		title:k_england.holder = {
+			is_ai = yes #Just to ensure we don't screw players over
+		}
+	}
+
+	immediate = {
+		location = {
+			save_scope_as = location
+		}
+		title:k_denmark.holder = {
+			save_scope_as = danish_king
+		}
+		hidden_effect = {
+			create_character = {
+				location = scope:danish_king.location
+				template = new_warrior_character
+				faith = scope:danish_king.faith
+				culture = scope:danish_king.culture
+				gender_female_chance = root_soldier_female_chance
+				save_scope_as = knight_1
+			}
+			create_character = {
+				location = scope:danish_king.location
+				template = new_berserker_character
+				faith = scope:danish_king.faith
+				culture = scope:danish_king.culture
+				gender_female_chance = root_soldier_female_chance
+				save_scope_as = knight_2
+			}
+			create_character = {
+				location = scope:danish_king.location
+				template = new_commander_character
+				faith = scope:danish_king.faith
+				culture = scope:danish_king.culture
+				gender_female_chance = root_soldier_female_chance
+				save_scope_as = knight_3
+			}
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Send them a letter begging for them to be your new liege
+		name = bryten_norman_conquest.020.a
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+			brave = miniscule_stress_impact_loss
+			content = medium_stress_impact_gain
+			craven = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_energy = 1
+			}
+		}
+		hidden_effect = {
+			scope:danish_king = {
+				trigger_event = {
+					id = bryten_norman_conquest.021
+					days = { 10 20 }
+				}
+			}
+		}
+	}
+
+	option = { #We fight this battle alone
+		name = bryten_norman_conquest.020.b
+
+		add_character_modifier = {
+			modifier = ep3_standing_alone_modifier
+			years = 10
+		}
+
+		every_courtier_or_guest = {
+			custom = every_follower_custom
+			add_opinion = {
+				target = root
+				modifier = impressed_opinion
+				opinion = 25
+			}
+		}
+
+		stress_impact = {
+			arrogant = miniscule_stress_impact_loss
+			humble = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_greed = -1
+				ai_energy = -0.5
+			}
+		}
+	}
+
+	after = {
+		scope:knight_1 = { silent_disappearance_effect = yes }
+		scope:knight_2 = { silent_disappearance_effect = yes }
+		scope:knight_3 = { silent_disappearance_effect = yes }
+
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.021 = {# An Envoy from the English  
+	type = character_event
+	title = bryten_norman_conquest.021.t
+	desc = bryten_norman_conquest.021.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		this = character:101515
+		is_at_war = no
+		title:k_england.holder = {	NOT = { has_culture = culture:norman } } # if they beat william they won't send the invite
+		title:k_england.holder = {	is_at_war = no } # if there is a rebellion they won't send the invite
+		has_title = title:k_denmark # Holds Exeter
+		has_global_variable = exeter_rebelion_debate # Should happen after the debate
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+	}
+
+	immediate = {
+		character:101515 = { save_scope_as = danish_king }
+	}
+	
+	option = {# Interesting
+		name = bryten_norman_conquest.021.War
+		ai_chance = {
+			base = 80
+		}
+		add_character_flag = temp_no_claim_war_cost
+		start_war = {
+			cb = svend_invasion_cb
+			target = character:140
+			claimant = scope:danish_king
+			target_title = title:k_england
+		}
+		remove_character_flag = temp_no_claim_war_cost				
+		hidden_effect = {
+			set_global_variable = {
+				name = danish_invansion_england
+				value = yes
+			}
+			scope:norman_king = {
+				trigger_event = {
+					id = bryten_norman_conquest.023
+					days = { 5 10 }
+				}
+			}
+		}
+
+	}
+	option = {# Wait
+		name = bryten_norman_conquest.021.Wait
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+bryten_norman_conquest.022 = {# Join the Danish? 
+	type = character_event
+	title = bryten_norman_conquest.022.t
+	desc = bryten_norman_conquest.022.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		OR = {
+			has_culture = culture:anglo_norse	
+			has_culture = culture:anglo_saxon	
+		}
+		has_title = title:d_york # is king of England
+		any_character_war = {
+			any_war_participant = {
+				title:c_north_riding = {
+					county_controller = character:101515
+				}
+			}
+		}
+		has_global_variable = danish_invansion_england # Should happen after the danish
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+	}	
+
+	immediate = {
+
+		title:d_york.holder = { save_scope_as = english_lord }
+		title:k_denmark.holder = { save_scope_as = danish_king }
+		random_character_war = {
+			limit = { primary_attacker = scope:danish_king }
+			save_scope_as = danish_invansion
+		}
+	}
+	
+	option = {# Join the war
+		name = bryten_norman_conquest.022.rebel
+		ai_chance = {
+			base = 80
+		}
+		hidden_effect = {
+			create_title_and_vassal_change = {
+				type = swear_fealty
+				save_scope_as = york_swaps_sides
+			}
+			scope:english_lord = { 
+				change_liege = {
+					liege = scope:danish_king
+					change = scope:york_swaps_sides
+				}
+			}
+			resolve_title_and_vassal_change = scope:york_swaps_sides
+		}
+	}
+	option = {# Not time
+		name = bryten_norman_conquest.022.loyal
+		ai_chance = {
+			base = 20
+		}
+	}
+
+}
+bryten_norman_conquest.023 = {# The Danish Invansion 
+	type = character_event
+	title = bryten_norman_conquest.023.t
+	desc = bryten_norman_conquest.023.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+ 		has_title = title:k_england # is king of England
+		is_at_war_with = character:101515 
+		this = character:140
+		has_global_variable = danish_invansion_england # Should happen after the debate
+		NOT = { has_global_variable = danish_invansion_offer } # once england is secured by the normans this shouldn't happen
+		NOT = { has_global_variable = norman_england_secured } # once england is secured by the normans this shouldn't happen
+		any_character_war = {
+			war_days >= 30 #a battle has likely happened
+		}
+	}	
+
+	immediate = {
+		character:101515 = { save_scope_as = danish_king }
+		set_global_variable = {
+			name = danish_invansion_offer
+			value = yes
+		}
+	}
+	
+	option = {# Danegeld
+		name = bryten_norman_conquest.023.danegeld
+		ai_chance = {
+			base = 75
+		}
+		scope:danish_king = {
+			trigger_event = {
+				id = bryten_norman_conquest.024
+				days = { 10 20 }
+			}
+		}
+	}
+	option = {# Fight
+		name = bryten_norman_conquest.023.fight
+		ai_chance = {
+			base = 25
+		}
+	}
+
+}
+bryten_norman_conquest.024 = {# The Norman Offer 
+	type = character_event
+	title = bryten_norman_conquest.024.t
+	desc = bryten_norman_conquest.024.desc
+	theme = martial
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		character:140 = { save_scope_as = norman_king }
+	}
+	
+	option = {# Fight
+		name = bryten_norman_conquest.024.fight
+		ai_chance = {
+			base = 30
+		}
+		scope:norman_king = {
+			trigger_event = {
+				id = bryten_norman_conquest.025
+				days = { 10 20 }
+			}
+		}
+	}
+	option = {# Bribe
+		name = bryten_norman_conquest.024.bribe
+		ai_chance = {
+			base = 70
+		}
+		scope:norman_king = {
+			trigger_event = {
+				id = bryten_norman_conquest.026
+				days = { 10 20 }
+			}
+		}
+	}
+
+}
+bryten_norman_conquest.025 = {# The Danes Reject the Danegeld 
+	type = character_event
+	title = bryten_norman_conquest.025.t
+	desc = bryten_norman_conquest.025.desc
+	theme = martial
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	
+	option = {# Interesting
+		name = bryten_norman_conquest.025.rejected
+
+	}
+}
+bryten_norman_conquest.026 = {# The Danes accept the Danegeld 
+	type = character_event
+	title = bryten_norman_conquest.026.t
+	desc = bryten_norman_conquest.026.desc
+	theme = martial
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		title:k_england.holder = { save_scope_as = norman_king }
+		title:d_york.holder = { save_scope_as = english_eorl }
+		title:k_denmark.holder = { save_scope_as = danish_king }
+		
+		random_character_war = {
+			limit = {
+				using_cb = svend_invasion_cb
+				primary_attacker = scope:danish_king
+				primary_defender = scope:norman_king
+			}
+			save_scope_as = svend_war
+		}
+	}
+	
+	option = {# Interesting
+		name = bryten_norman_conquest.026.accepted
+		pay_short_term_gold = {
+			target = scope:danish_king
+			gold = monumental_gold_value
+		}
+		scope:svend_war = { end_war = defender }
+	}
+
+	after = {
+		scope:english_eorl = {
+			trigger_event = {
+				id = bryten_norman_conquest.027
+				days = { 3 5 }
+			}
+		}
+	}
+
+}
+bryten_norman_conquest.027 = {# The Danes head back home 
+	type = character_event
+	title = bryten_norman_conquest.027.t
+	desc = bryten_norman_conquest.027.desc
+	theme = martial
+	override_background = { reference = docks }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		title:k_england.holder = { save_scope_as = norman_king }
+		title:d_york.holder = { save_scope_as = english_eorl }
+		title:k_denmark.holder = { save_scope_as = danish_king }
+		ep3_decrease_resistance_effect = yes
+		ep3_increase_pacification_effect = { AMOUNT = harrying_medium_increase_value }
+
+
+		random_character_war = {
+			limit = {
+				primary_defender = scope:norman_king
+			}
+			end_war = white_peace
+		}
+
+		if = {
+			character:112 = {
+				if = {
+					limit = { is_alive = yes }
+					save_scope_as = english_lord
+				}
+			}
+		}
+		else_if = {
+			character:112 = {
+				ordered_child = {
+					order_by = age
+					limit = {
+						is_male = yes
+						is_alive = yes
+					}
+					save_scope_as = english_lord
+				}
+			}
+		}
+		else_if = {
+			character:122 = {
+				ordered_child = {
+					order_by = age
+					limit = {
+						is_male = yes
+						is_alive = yes
+					}
+					save_scope_as = english_lord
+				}
+			}
+		}
+		else = {
+			title:d_york.holder = { save_scope_as = english_lord }
+		}
+
+		culture:anglo_saxon = {
+			change_cultural_acceptance = {
+				target = culture:swedish
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+			change_cultural_acceptance = {
+				target = culture:norwegian
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+			change_cultural_acceptance = {
+				target = culture:danish
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+		}
+		culture:anglo_norse = {
+			change_cultural_acceptance = {
+				target = culture:swedish
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+			change_cultural_acceptance = {
+				target = culture:norwegian
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+			change_cultural_acceptance = {
+				target = culture:danish
+				value = -15
+				desc = cultural_betrayed_us_relations
+			}
+		}
+	}
+	
+	option = {# Surrender
+		name = bryten_norman_conquest.027.surrender
+		ai_chance = {
+			base = 20
+		}
+		rightfully_imprison_character_effect = {
+			TARGET = scope:english_eorl
+			IMPRISONER = scope:norman_king
+		}
+		ep3_decrease_resistance_effect = yes
+		ep3_increase_pacification_effect = { AMOUNT = harrying_medium_increase_value }
+
+	}
+	option = {# Fight on
+		name = bryten_norman_conquest.027.fight
+		ai_chance = {
+			base = 80
+		}
+		start_war = {
+			cb = northern_rebellion_cb
+			target = scope:norman_king
+			claimant = scope:english_lord
+			target_title = title:k_england
+		}
+		scope:norman_king = {
+			trigger_event = {
+				id = bryten_norman_conquest.028
+				days = { 10 20 }
+			}
+		}
+		ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+
+	}
+}
+bryten_norman_conquest.028 = {# The English fight on
+	type = character_event
+	title = bryten_norman_conquest.028.t
+	desc = bryten_norman_conquest.028.desc
+	theme = martial
+	override_background = { reference = army_camp }
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = english_fight_on
+			value = yes
+		}
+	}
+
+	option = {# Interesting
+		name = bryten_norman_conquest.028.harrying
+
+	}
+}
+#######################################
+# Norman Conquest - Hereward Events
+#######################################
+# Norman Conquest - Hereward Events: Starting
+
+bryten_norman_conquest.030 = {# Hereward hears of trouble in England
+
+	type = character_event
+	title = bryten_norman_conquest.030.t
+	desc = bryten_norman_conquest.030.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = interested
+	}
+	lower_right_portrait = scope:william
+	lower_center_portrait = scope:harald
+	lower_left_portrait = scope:harold
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		character:140 = {
+			if = {
+				limit = {
+					is_alive = yes
+				}
+				save_scope_as = william
+			}
+		}
+		character:122 = {
+			if = {
+				limit = {
+					is_alive = yes
+				}
+				save_scope_as = harold
+			}
+		}
+		character:102531 = {
+			if = {
+				limit = {
+					is_alive = yes
+				}
+				save_scope_as = harald
+			}		
+		}
+		character:364 = {
+			if = {
+				limit = {
+					is_alive = yes
+				}
+				save_scope_as = flanders #I can't be bothered spelling Boujewijingjn ok
+			}		
+		}
+		character:114 = {
+			save_scope_as = edward			
+		}
+		location = {
+			save_scope_as = location
+		}
+	}
+ 	
+	option = { #Let's wait and see
+		name = bryten_norman_conquest.030.a
+
+		add_character_modifier = {
+			modifier = ep3_foreign_affairs_modifier
+			years = 5
+		}
+
+		stress_impact = {
+			ambitious = miniscule_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_energy = 1
+			}
+		}
+	}
+
+	option = { #England concerns me no longer
+		name = bryten_norman_conquest.030.b
+		custom_tooltip = bryten_norman_conquest.030.b.tt
+		contract_passive_spawn_effect = {
+			SPAWN_CONTRACTS = 1
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_boldness = -1
+				ai_energy = -1
+			}
+		}
+	}
+}
+bryten_norman_conquest.031 = {# Hereward sets off
+
+	type = character_event
+	title = bryten_norman_conquest.031.t
+	desc = {
+		desc = bryten_norman_conquest.031.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {	scope:brother = { is_alive = yes } }
+				desc = bryten_norman_conquest.031.body.alive
+			}
+			desc = bryten_norman_conquest.031.body.dead
+		}
+		desc = bryten_norman_conquest.031.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {	scope:brother = { is_alive = yes } }
+				desc = bryten_norman_conquest.031.closing.alive
+			}
+			desc = bryten_norman_conquest.031.closing.dead
+		}
+	}
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = chancellor
+	}
+	lower_right_portrait = scope:william
+	lower_center_portrait = scope:brother
+	lower_left_portrait = scope:harold
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		character:140 = {
+			save_scope_as = william
+		}
+		character:122 = {
+			save_scope_as = harold
+		}
+		father = {
+			save_scope_as = father
+		}
+		random_sibling = { #Hereweard only has one sibling
+			even_if_dead = yes
+			save_scope_as = brother
+		}
+		province:1537 = {
+			save_scope_as = ely
+		}
+	}
+ 	
+	option = { #Set sail at once!
+		name = {
+			text = bryten_norman_conquest.031.a.dead
+			trigger = {
+				scope:brother = { is_alive = no }
+			}
+		}
+		name = {
+			text = bryten_norman_conquest.031.a
+			trigger = {
+				scope:brother = { is_alive = yes }
+			}
+		}
+
+		flavor = bryten_norman_conquest.031.a.flavor
+
+		custom_tooltip = bryten_norman_conquest.031.a.tt
+
+		every_character_active_contract = { invalidate_contract = yes }
+		add_character_flag = laamp_stay_same_kingdom
+
+		start_travel_plan = {
+			destination = province:1537 #Ely
+			players_use_planner = no
+			on_start_on_action = on_travel_relocation_start
+			on_arrival_on_action = on_travel_relocation_end
+			on_arrival_event = bryten_norman_conquest.032
+			on_arrival_destinations = last
+			return_trip = no # One way
+			travel_with_domicile = yes
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			# Hereward will always do the thing.
+			base = 1000
+		}
+	}
+
+	option = { #It is time to forget
+		name = bryten_norman_conquest.031.b
+
+		custom_tooltip = bryten_norman_conquest.031.b.tt
+
+		add_character_modifier = {
+			modifier = ep3_the_restful_modifier
+			years = 15
+		}
+		add_opinion = {
+			target = scope:william
+			modifier = demanded_eviction_opinion
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			# Hereward will always do the thing.
+			base = 0
+		}
+	}
+}
+bryten_norman_conquest.032 = {# Hereward arrives, finds his brother dead
+
+	type = character_event
+	title = bryten_norman_conquest.032.t
+	desc = bryten_norman_conquest.032.desc
+	theme = death
+	left_portrait = {
+		character = root
+		animation = random_weapon_aggressive
+	}
+	right_portrait = {
+		character = scope:frederick
+		animation = inspect_weapon
+	}
+	lower_center_portrait = scope:brother
+	override_effect_2d = {
+		reference = fog	
+	}
+	override_effect_2d = {
+		reference = fog	
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		random_sibling = { #Hereweard only has one sibling
+			limit = {
+				is_alive = yes
+			}
+			save_scope_as = brother
+		}
+		province:1537 = {
+			save_scope_as = ely
+		}
+		if = { #Either grab Frederick de Warenne, real-life killer of Hereward's brother...
+			limit = {
+				character:175 = {
+					is_alive = yes
+					is_available_healthy_ai_adult = yes
+				}
+			}
+			character:175 = {
+				save_scope_as = frederick
+			}
+		}
+		else = { #...or make another Frederick
+			create_character = {
+				location = scope:ely
+				template = knight
+				culture = culture:norman
+				faith = faith:catholic
+				save_scope_as = frederick
+			}			
+		}
+		hidden_effect = { #Finally, kill Oslac
+			scope:brother = {
+				death = {
+					death_reason = death_murder
+					killer = scope:frederick
+				}
+			}
+		}
+	}
+ 	
+	option = { #Initiate the duel
+		name = bryten_norman_conquest.032.a
+
+		custom_tooltip = bryten_norman_conquest.032.b.two.tt
+
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = root
+			SC_DEFENDER = scope:frederick
+			FATALITY = always
+			FIXED = sc_attacker #Hereward should _always_ win
+			LOCALE = wilderness_scope
+			OUTPUT_EVENT = bryten_norman_conquest.033
+			INVALIDATION_EVENT = fp1_yearly.2002 #Re-use this, though SHOULD never invalidate
+		}
+
+		stress_impact = {
+			vengeful = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_energy = 1
+			}
+		}
+	}
+
+	option = { #Give them a chance to run
+		name = bryten_norman_conquest.032.b
+
+		random_list = {
+			1 = {
+				desc = bryten_norman_conquest.032.b.one
+				show_chance = no
+
+				custom_tooltip = bryten_norman_conquest.032.b.one.tt
+
+				configure_start_single_combat_effect = {
+					SC_INITIATOR = root
+					SC_ATTACKER = root
+					SC_DEFENDER = scope:frederick
+					FATALITY = always
+					FIXED = sc_attacker #We win these, boys
+					LOCALE = wilderness_scope
+					OUTPUT_EVENT = bryten_norman_conquest.033
+					INVALIDATION_EVENT = fp1_yearly.2002 #Re-use this, though SHOULD never invalidate
+				}
+			}
+			1 = {
+				desc = bryten_norman_conquest.032.b.two
+				show_chance = no
+
+				custom_tooltip = bryten_norman_conquest.032.b.two.tt
+
+				configure_start_single_combat_effect = { #Ah, the illusion of choice!
+					SC_INITIATOR = root
+					SC_ATTACKER = root
+					SC_DEFENDER = scope:frederick
+					FATALITY = always
+					FIXED = sc_attacker #We win these, boys
+					LOCALE = wilderness_scope
+					OUTPUT_EVENT = bryten_norman_conquest.033
+					INVALIDATION_EVENT = fp1_yearly.2002 #Re-use this, though SHOULD never invalidate
+				}
+			}
+		}
+
+		stress_impact = {
+			wrathful = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_boldness = -1
+				ai_energy = -1
+			}
+		}
+	}
+
+	after = { trigger_event = ep3_laamps.9983 }
+}
+bryten_norman_conquest.033 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		trigger_event = { id = bryten_norman_conquest.034 days = 1 }
+	}
+}
+bryten_norman_conquest.034 = {# Hereward swears revenge
+
+	type = character_event
+	title = bryten_norman_conquest.034.t
+	desc = bryten_norman_conquest.034.desc
+	theme = death
+	left_portrait = {
+		character = root
+		animation = grief
+	}
+	lower_right_portrait = {
+		trigger = {
+			character:172 = {
+				is_alive = yes
+			}
+		}
+		character = character:172
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		if = { #If Frederick's brother still exists, Nemesis'em
+			limit = {
+				character:172 = {
+					is_alive = yes
+				}
+			}
+			character:172 = {
+				set_relation_nemesis = {
+					target = root
+					reason = nemesis_killed_brother
+				}
+			}
+		}
+	}
+ 	
+	option = { #Swear vengeance
+		name = bryten_norman_conquest.034.a
+
+		add_trait_xp = {
+			trait = the_wake
+			value = 15
+		}
+
+		stress_impact = {
+			base = medium_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_energy = 1
+			}
+		}
+	}
+
+	option = { #Rifle through Fred's pockets
+		name = bryten_norman_conquest.034.b
+
+		flavor = bryten_norman_conquest.034.b.flavor
+
+		add_gold = minor_gold_value
+
+		random = {
+			chance = 50
+
+			create_artifact = {
+				name = warenne_coin
+				description = warenne_coin_description
+				history = {
+					type = created_before_history
+				}
+				type = miscellaneous
+				visuals = brooch
+				modifier = artifact_knight_effectiveness_2_modifier
+				modifier = artifact_raid_speed_4_modifier
+				modifier = artifact_pursue_efficiency_1_modifier
+				save_scope_as = new_trinket
+			}
+
+
+			send_interface_toast = {
+				title = stewardship_general.2001.tt #Re-using this
+				left_icon = root
+				right_icon = scope:new_trinket
+				show_as_tooltip = {
+					scope:new_trinket = { set_owner = root }
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_boldness = -1
+				ai_energy = -1
+			}
+		}
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_norman_conquest.035
+			days = { 25 45 }
+		}
+	}
+}
+bryten_norman_conquest.035 = {# Hereward sets up a camp in the fens near Ely
+	type = character_event
+	title = bryten_norman_conquest.035.t
+	desc = bryten_norman_conquest.035.desc
+	theme = realm
+	override_background = { reference = wilderness_wetlands }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		#Save William
+		character:140 = {
+			save_scope_as = william
+		}
+
+		#Save our location; should be Ely
+		location = { save_scope_as = location }
+
+		#Set up The Fens
+		ep3_the_fens_list_effect = yes
+
+		every_in_list = {
+			list = the_fens
+			custom = every_fenland_holding
+			add_province_modifier = {
+				modifier = ep3_dangerous_fenland_modifier
+				years = 15
+			}
+		}
+
+		#Create the character here
+		create_character = {
+			location = root.capital_province
+			template = wetlands_commander_character
+			culture = root.culture
+			faith = root.faith
+			save_scope_as = wetlands_commander
+		}
+
+		## Used in the after:
+		# Make a list of every Anglo-Saxon lord
+		scope:william = {
+			every_vassal = {
+				limit = {
+					has_culture = culture:anglo_saxon
+				}
+				add_to_list = aethelings
+			}
+		}
+
+		# Pick the most powerful Anglo-Saxon lord
+		# Most likely Eadwin Aelfgarson
+		ordered_in_list = {
+			list = aethelings
+			order_by = max_military_strength
+			save_scope_as = powerful_vassal
+		}
+
+		domicile = {
+			change_provisions = minor_provisions_gain
+		}
+	}
+ 	
+	option = { #Raid to acquire wealth
+		name = bryten_norman_conquest.035.a
+
+		flavor = bryten_norman_conquest.035.a.tt
+
+		add_gold = medium_gold_value
+
+		scope:ely = {
+			add_province_modifier = {
+				modifier = ep3_plundered_modifier
+				years = 5
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = -1
+				ai_energy = -1
+			}
+		}
+	}
+
+	option = { #Recruit a local knight
+		name = bryten_norman_conquest.035.b
+
+		flavor = bryten_norman_conquest.035.b.tt
+
+		add_courtier = scope:wetlands_commander
+
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_energy = 1
+			}
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				exists = scope:powerful_vassal
+			}
+			trigger_event = {
+				id = bryten_norman_conquest.036
+				days = { 60 120 }
+			}
+		}
+	}
+}
+bryten_norman_conquest.036 = {# The Aethelings are disgruntled; go to visit the most powerful one?
+
+	type = letter_event
+	opening = bryten_norman_conquest.036.t
+	desc = bryten_norman_conquest.036.desc
+	sender = scope:powerful_vassal
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		# Make a list of every Anglo-Saxon lord
+		scope:william = {
+			every_vassal = {
+				limit = {
+					has_culture = culture:anglo_saxon
+				}
+				add_to_list = aethelings
+			}
+		}
+
+		# Pick the most powerful Anglo-Saxon lord
+		# Most likely Eadwin Aelfgarson
+		ordered_in_list = {
+			list = aethelings
+			order_by = max_military_strength
+			save_scope_as = powerful_vassal
+		}
+
+		scope:powerful_vassal.capital_province = {
+			save_scope_as = powerful_vassal_capital
+		}
+	}
+
+	option = { #Yes!
+		name = bryten_norman_conquest.036.a
+
+		flavor = bryten_norman_conquest.036.a.flavor
+
+		custom_tooltip = bryten_norman_conquest.036.a.tt
+
+		every_character_active_contract = { invalidate_contract = yes }
+
+		start_travel_plan = {
+			destination = scope:powerful_vassal_capital
+			players_use_planner = no
+			on_arrival_event = bryten_norman_conquest.037
+			on_arrival_destinations = last
+			return_trip = no
+		}
+
+		#Just to ensure we get the right one
+		scope:powerful_vassal = {
+			add_character_flag = temp_powerful_vassal_flag
+		}
+
+		ai_chance = {
+			base = 100
+		}		
+	}
+
+	option = { #...no.
+		name = bryten_norman_conquest.036.b
+
+		reverse_add_opinion = {
+			target = scope:powerful_vassal
+			modifier = annoyed_opinion
+			opinion = -35
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+bryten_norman_conquest.037 = {# You meet with the Aetheling
+	type = character_event
+	title = bryten_norman_conquest.037.t
+	desc = bryten_norman_conquest.037.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:powerful_vassal
+		animation = worry
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		character:140 = {
+			save_scope_as = william
+		}
+
+		scope:william = {
+			random_vassal = {
+				limit = {
+					has_character_flag = temp_powerful_vassal_flag
+				}
+				save_scope_as = powerful_vassal
+			}
+		}
+	}
+ 	
+	option = { #You have my support
+		name = bryten_norman_conquest.037.a
+
+		scope:william = {
+			every_vassal = {
+				limit = {
+					culture = culture:norman
+				}
+				custom = every_direct_vassal_william
+				add_opinion = {
+					target = root
+					modifier = revanchist_opinion
+					opinion = -35
+				}
+			}
+			every_vassal_or_below = {
+				limit = {
+					culture = culture:anglo_saxon
+				}
+				custom = every_anglo_noble
+				add_opinion = {
+					target = root
+					modifier = revanchist_opinion
+					opinion = 35
+				}
+			}
+		}
+
+		scope:powerful_vassal = {
+			add_character_flag = happy_flag
+		}
+
+		add_diplomacy_skill = 1
+
+		reverse_add_opinion = {
+			target = scope:powerful_vassal
+			modifier = pleased_opinion
+			opinion = 50
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_energy = 1
+			}
+		}
+	}
+
+	option = { #I need time to decide
+		name = bryten_norman_conquest.037.b
+
+		scope:powerful_vassal = {
+			add_character_flag = annoyed_flag
+		}
+
+		add_character_modifier = {
+			modifier = ep3_hereward_caution_modifier
+			years = 5
+		}
+
+		reverse_add_opinion = {
+			target = scope:powerful_vassal
+			modifier = annoyed_opinion
+			opinion = -5
+		}
+
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_boldness = -1
+				ai_rationality = 0.5
+			}
+		}
+	}
+
+}
+
+#Rob local church
+#William offers to parcel out Cambridgeshire to you
+#Call in Danish help
+#Heist an artifact from a local noble
+#Downgrade local building
+#Travel to other areas of the country to gather support
+
+# Norman Conquest - Hereward Events: Random
+
+scripted_trigger ep3_story_cycle_harrying_3010_ambushable_noble_trigger = {
+	location = {
+		geographical_region = world_europe_west_britannia
+		duchy = root.location.duchy #Same duchy as Hereward
+	}
+	culture = culture:norman
+	is_theocratic_lessee = no #No dueling priests!
+	is_adult = yes
+	can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = $WILLIAM$ }
+	NOT = { has_character_flag = hereward_ambushed }
+}
+
+bryten_norman_conquest.038 = {# Rob local church
+	type = character_event
+	title = bryten_norman_conquest.038.t
+	desc = bryten_norman_conquest.038.desc
+	theme = harrying
+	override_background = { reference = temple }
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:bishop
+		animation = beg
+	}
+	artifact = {
+		target = scope:newly_created_artifact
+		position = lower_center_portrait		
+	}
+	cooldown = { years = 10 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		location = { save_temporary_scope_as = current_temp }
+		scope:current_temp = {
+			any_neighboring_province = {
+				has_holding_type = church_holding
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			random_neighboring_province = {
+				limit = {
+					has_holding_type = church_holding
+				}
+				save_scope_as = neighboring_church
+			}
+		}
+		hidden_effect = {
+			create_character = {
+				template = priest_character_template
+				location = scope:neighboring_church
+				save_scope_as = bishop
+			}
+			random_dummy_gender_effect = yes
+			scope:bishop = {
+				create_artifact_brooch_effect = { 
+					OWNER = scope:bishop 
+					SMITH = scope:dummy_gender
+				}
+			}
+			scope:newly_created_artifact = {
+				set_artifact_name = artifact_church_saint_brooch_name
+				set_artifact_description = artifact_church_saint_brooch_description
+				add_artifact_modifier = artifact_monthly_piety_4_modifier
+				add_artifact_modifier = artifact_same_faith_opinion_4_modifier
+				add_artifact_modifier = artifact_clergy_opinion_penalty_5_modifier
+				set_artifact_rarity = famed
+			}
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Relics, you say?
+		name = bryten_norman_conquest.038.a
+
+		add_piety = medium_piety_loss
+
+		add_prestige = minor_prestige_loss
+
+		scope:newly_created_artifact = {
+			set_owner = root
+		}
+
+		scope:neighboring_church = {
+			add_province_modifier = {
+				modifier = ep3_church_bereft
+				years = 15
+			}			
+		}
+
+		stress_impact = {
+			greedy = medium_stress_impact_loss
+			callous = miniscule_stress_impact_loss
+			compassionate = medium_stress_impact_gain
+			generous = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 1
+				ai_compassion = -1
+			}
+		}
+	}
+
+	option = { #This gold is needed for the war effort, but we'll leave any relics
+		name = bryten_norman_conquest.038.b
+
+		flavor = bryten_norman_conquest.038.b.tt
+
+		ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+
+		add_gold = medium_gold_value
+
+		stress_impact = {
+			calm = miniscule_stress_impact_loss
+			greedy = miniscule_stress_impact_loss
+			generous = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 0.5
+				ai_compassion = -0.5
+			}
+		}
+	}
+
+	option = { #I am a man of god, I would never.
+		name = bryten_norman_conquest.038.c
+
+		add_piety = medium_piety_gain
+
+		add_character_modifier = {
+			modifier = ep3_man_of_god
+			years = 10
+		}
+
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			generous = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -1
+				ai_compassion = 1
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.039 = {# Interdict supply lines
+	type = character_event
+	title = bryten_norman_conquest.039.t
+	desc = bryten_norman_conquest.039.desc
+	theme = harrying
+	override_background = { reference = ep2_hunt_foggy_forest }
+	override_effect_2d = fog
+	left_portrait = {
+		character = root
+		animation = inspect_weapon
+	}
+	right_portrait = {
+		character = scope:norman_soldier
+		animation = survey
+	}
+	artifact = {
+		target = scope:newly_created_artifact
+		position = lower_right_portrait
+	}
+
+	cooldown = { years = 10 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_available = yes
+	}
+
+	immediate = {
+		location = {
+			save_scope_as = location
+		}
+		random_dummy_gender_effect = yes
+		create_character = {
+			template = new_warrior_character
+			location = root.location
+			culture = culture:norman
+			faith = root.location.faith
+			gender_female_chance = root_soldier_female_chance
+			save_scope_as = norman_soldier
+		}
+		hidden_effect = {
+			scope:norman_soldier = {
+				create_artifact = { #Scripted effect didn't like this, so custom weapon it is
+					name = norman_sword_name
+					description = stolen_norman_sword_description
+					type = sword
+					visuals = sword
+					modifier = artifact_prowess_4_modifier
+					modifier = artifact_knight_effectiveness_3_modifier
+					modifier = artifact_hard_casualty_modifier_4_modifier
+					rarity = masterwork
+					save_scope_as = newly_created_artifact
+				}
+			}
+		}
+		global_var:harrying_of_the_north.story_owner = {
+			save_scope_as = william
+			random_vassal = {
+				limit = {
+					location = { geographical_region = world_europe_west_britannia } #To ensure they're not getting sent to Normandy
+				}
+				primary_title = {
+					save_scope_as = vassal_county
+				}
+			}
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Grab the equipment for yourself
+		name = bryten_norman_conquest.039.a
+
+		duel = {
+			skills = { martial prowess }
+			target = scope:norman_soldier
+			60 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.039.a.success
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.039.a.success
+	
+					ep3_decrease_pacification_effect = yes
+
+					add_character_modifier = {
+						modifier = ep3_stolen_equipment
+						years = 5
+					}
+					
+					scope:newly_created_artifact = {
+						set_owner = root
+						set_artifact_name = stolen_norman_sword_name
+					}
+					
+					scope:vassal_county = {
+						add_county_modifier = {
+							modifier = ep3_missing_supplies
+							years = 15
+						}
+					}
+				}
+			}
+			40 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.039.a.failure
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.039.a.failure
+	
+					add_prestige = medium_prestige_loss
+					increase_wounds_no_death_effect = { REASON = battle }
+					every_knight = { 
+						custom = every_knight
+						add_opinion = {
+							modifier = botched_ambush_opinion
+							target = root
+							opinion = -15
+						}
+					}
+				}
+			}
+		}
+
+		stress_impact = {
+			greedy = medium_stress_impact_loss
+			callous = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_gain
+			generous = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 1
+				ai_energy = 0.5
+			}
+		}
+	}
+
+	option = { #Take the equipment for allies
+		name = bryten_norman_conquest.039.b
+
+		flavor = bryten_norman_conquest.039.b.tt
+
+		duel = {
+			skills = { martial prowess }
+			target = scope:norman_soldier
+			60 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.039.a.success
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.039.a.success
+	
+					ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+					ep3_decrease_pacification_effect = yes
+
+					scope:vassal_county = {
+						add_county_modifier = {
+							modifier = ep3_missing_supplies
+							years = 15
+						}
+					}
+					global_var:harrying_of_the_north.story_owner = {
+						every_vassal = {
+							limit = {
+								culture = culture:anglo_saxon
+							}
+							custom = every_anglo_vassal
+							add_character_modifier = {
+								modifier = ep3_redistributed_equipment
+								years = 5
+							}
+						}
+					}
+				}
+			}
+			40 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.039.a.failure
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.039.a.failure
+	
+					add_prestige = medium_prestige_loss
+					increase_wounds_no_death_effect = { REASON = battle }
+					every_knight = { 
+						custom = every_knight
+						add_opinion = {
+							modifier = botched_ambush_opinion
+							target = root
+							opinion = -15
+						}
+					}
+				}
+			}
+		}
+
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			generous = medium_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -1
+				ai_energy = 0.5
+			}
+		}
+	}
+
+	option = { #Sabotage the road ahead
+		name = bryten_norman_conquest.039.c
+
+		flavor = bryten_norman_conquest.039.c.tt
+
+		scope:location = {
+			add_province_modifier = {
+				modifier = ep3_sabotaged_roads
+				years = 10
+			}		
+		}
+
+		scope:vassal_county = {
+			add_county_modifier = {
+				modifier = ep3_delayed_supplies
+				years = 10
+			}
+		}
+
+		stress_impact = {
+			craven = medium_stress_impact_loss
+			brave = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_honor = -0.5
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+		scope:norman_soldier = {
+			silent_disappearance_effect = yes
+		}
+	}
+}
+bryten_norman_conquest.040 = {# Ambush Norman noble
+
+	type = character_event
+	title = bryten_norman_conquest.040.t
+	desc = bryten_norman_conquest.040.desc
+	theme = harrying
+	override_background = { reference = ep2_travel_bridge }
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+	right_portrait = {
+		character = scope:norman_noble
+		animation = aggressive_sword
+	}
+	artifact = {
+		target = scope:newly_created_artifact
+		position = lower_right_portrait
+	}
+
+	cooldown = { years = 5 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_available = yes
+		is_healthy = yes
+		global_var:harrying_of_the_north.story_owner = {
+			save_temporary_scope_as = william_temp
+			any_vassal_or_below = {
+				ep3_story_cycle_harrying_3010_ambushable_noble_trigger = { WILLIAM = scope:william_temp }
+			}
+		}
+	}
+
+	immediate = {
+		location = { save_scope_as = location }
+		global_var:harrying_of_the_north.story_owner = {
+			save_scope_as = william
+			random_vassal_or_below = {
+				limit = {
+					ep3_story_cycle_harrying_3010_ambushable_noble_trigger = { WILLIAM = scope:william }
+				}
+				primary_title = { save_scope_as = noble_county }
+				save_scope_as = norman_noble
+				add_character_flag = hereward_ambushed
+			}
+		}
+		hidden_effect = { 
+			random_dummy_gender_effect = yes
+			scope:norman_noble = {
+				create_artifact_ring_effect = {
+					OWNER = scope:norman_noble
+					SMITH = scope:dummy_gender
+				}
+			}
+		}
+		root = { save_scope_as = root_for_loc }
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Fight them
+		name = bryten_norman_conquest.040.a
+
+		custom_tooltip = bryten_norman_conquest.040.a.tt
+
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = root
+			SC_DEFENDER = scope:norman_noble
+			FIXED = no
+			FATALITY = always
+			LOCALE = ep2_travel_bridge
+			OUTPUT_EVENT = bryten_norman_conquest.041
+			INVALIDATION_EVENT = fp1_yearly.2002 #Re-use this
+		}
+
+		stress_impact = {
+			brave = medium_stress_impact_loss
+			wrathful = miniscule_stress_impact_loss
+			calm = miniscule_stress_impact_gain
+			craven = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_energy = 1
+			}
+		}
+	}
+
+	option = { #Simply rob them
+		name = bryten_norman_conquest.040.b
+
+		add_short_term_gold = medium_gold_value
+
+		scope:newly_created_artifact = {
+			set_owner = root
+		}
+
+		ep3_decrease_pacification_effect = yes
+
+		stress_impact = {
+			brave = medium_stress_impact_gain
+			wrathful = miniscule_stress_impact_gain
+			calm = miniscule_stress_impact_loss
+			craven = medium_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 1
+				ai_energy = -0.5
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.041 = {# Followup, post-duel
+	type = character_event
+	title = bryten_norman_conquest.041.t
+	desc = bryten_norman_conquest.041.desc
+	theme = harrying
+	override_background = { reference = ep2_travel_bridge }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:saxon_soldier_1
+		animation = thinking
+	}
+	lower_center_portrait = {
+		character = scope:saxon_soldier_2
+	}
+
+	cooldown = { years = 5 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_available = yes
+		is_healthy = yes
+	}
+
+	immediate = {
+		ep3_harrying_widget_setup_effect = yes
+		ep3_decrease_pacification_effect = yes
+		ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+		scope:newly_created_artifact = {
+			set_owner = root
+		}
+		hidden_effect = {
+			random_dummy_gender_effect = yes
+			create_character = {
+				template = new_warrior_character
+				location = root.location
+				culture = culture:anglo_saxon
+				faith = root.faith
+				gender_female_chance = root_soldier_female_chance
+				save_scope_as = saxon_soldier_1
+			}
+			create_character = {
+				template = new_warrior_character
+				location = root.location
+				culture = culture:anglo_saxon
+				faith = root.faith
+				gender_female_chance = root_soldier_female_chance
+				save_scope_as = saxon_soldier_2
+			}
+		}
+	}
+
+	option = { #Would you boys like a job?
+		name = bryten_norman_conquest.041.a
+
+		add_courtier = scope:saxon_soldier_1
+		add_courtier = scope:saxon_soldier_2
+
+		stress_impact = {
+			forgiving = medium_stress_impact_loss
+			vengeful = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_rationality = 1
+				ai_vengefulness = -1
+			}
+		}
+	}
+
+	option = { #Let them return to their families
+		name = bryten_norman_conquest.041.b
+
+		hidden_effect = {
+			scope:saxon_soldier_1 = {
+				silent_disappearance_effect = yes
+			}
+			scope:saxon_soldier_2 = {
+				silent_disappearance_effect = yes
+			}
+		}
+
+		add_character_modifier = {
+			modifier = ep3_defender_of_families
+			years = 10
+		}
+
+		stress_impact = {
+			generous = miniscule_stress_impact_loss
+			greedy = miniscule_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_sociability = 1
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.042 = {# Travel to another area of the country to intimidate a Norman sympathiser
+	type = character_event
+	title = bryten_norman_conquest.042.t
+	desc = bryten_norman_conquest.042.desc
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = inspect_weapon
+	}
+	right_portrait = {
+		character = scope:willy_vassal
+		animation = dismissal
+	}
+	cooldown = { years = 10 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_available = yes
+		is_healthy = yes
+		title:k_england.holder = {
+			save_temporary_scope_as = willy_temp
+			any_vassal = {
+				culture = culture:anglo_saxon
+				capital_province = { geographical_region = world_europe_west_britannia }
+				highest_held_title_tier > tier_barony
+				opinion = {
+					target = scope:willy_temp
+					value >= neutral_opinion
+				}
+				any_courtier = {
+					can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root }
+					culture = culture:anglo_saxon
+				}
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			save_scope_as = location
+		}
+		title:k_england.holder = {
+			save_scope_as = willy
+			random_vassal = {
+				limit = {
+					culture = culture:anglo_saxon
+					capital_province = { geographical_region = world_europe_west_britannia }
+					highest_held_title_tier > tier_barony
+					opinion = {
+						target = scope:willy
+						value >= neutral_opinion
+					}
+					any_courtier = {
+						can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root }
+						culture = culture:anglo_saxon
+					}
+				}
+				save_scope_as = willy_vassal
+				location = {
+					save_scope_as = willy_vassal_capital
+				}
+			}
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Travel there, raise hell
+		name = bryten_norman_conquest.042.a
+
+		custom_tooltip = bryten_norman_conquest.042.a.tt
+
+		start_travel_plan = {
+			destination = scope:willy_vassal_capital
+			players_use_planner = no
+			on_arrival_destinations = last
+			on_arrival_event = bryten_norman_conquest.043
+			return_trip = no
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+			brave = miniscule_stress_impact_loss
+			content = medium_stress_impact_gain
+			craven = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_energy = 1
+			}
+		}
+	}
+
+	option = { #Leave it
+		name = bryten_norman_conquest.042.b
+
+		ep3_decrease_resistance_effect = yes
+
+		stress_impact = {
+			patient = miniscule_stress_impact_loss
+			impatient = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_energy = 0.5
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.043 = {# You arrive and ambush him
+	type = character_event
+	title = bryten_norman_conquest.043.t
+	desc = bryten_norman_conquest.043.desc
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+	right_portrait = {
+		character = scope:willy_vassal
+		animation = beg
+	}
+	cooldown = { years = 5 }
+	override_background = { reference = alley_night }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_available = yes
+		is_healthy = yes
+		title:k_england.holder = {
+			save_temporary_scope_as = willy_temp
+			any_vassal = {
+				culture = culture:anglo_saxon
+				capital_province = { geographical_region = world_europe_west_britannia }
+				highest_held_title_tier > tier_barony
+				opinion = {
+					target = scope:willy_temp
+					value >= neutral_opinion
+				}
+				location = root.location
+				any_courtier = {
+					can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root }
+					culture = culture:anglo_saxon
+				}
+			}
+		}
+	}
+
+	immediate = {
+		save_scope_as = root_for_loc
+		title:k_england.holder = {
+			save_scope_as = willy
+			random_vassal = {
+				limit = {
+					culture = culture:anglo_saxon
+					capital_province = { geographical_region = world_europe_west_britannia }
+					highest_held_title_tier > tier_barony
+					opinion = {
+						target = scope:willy
+						value >= neutral_opinion
+					}
+					location = root.location
+					any_courtier = {
+						can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root }
+						culture = culture:anglo_saxon
+					}
+				}
+				save_scope_as = willy_vassal
+			}
+		}
+		scope:willy_vassal = {
+			random_courtier = {
+				limit = {
+					can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = root }
+					culture = culture:anglo_saxon
+				}
+				save_scope_as = knight_1
+			}
+		}
+		hidden_effect = {
+			create_character = {
+				template = new_warrior_character
+				location = scope:willy_vassal.location
+				culture = scope:willy_vassal.culture
+				faith = scope:willy_vassal.faith
+				gender_female_chance = root_soldier_female_chance
+				save_scope_as = knight_2
+			}
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Kill him and steal his stuff
+		name = bryten_norman_conquest.043.a
+
+		custom_tooltip = bryten_norman_conquest.043.a.tt
+
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = root
+			SC_DEFENDER = scope:willy_vassal
+			FIXED = no
+			FATALITY = always
+			LOCALE = ep2_travel_bridge
+			OUTPUT_EVENT = bryten_norman_conquest.044
+			INVALIDATION_EVENT = fp1_yearly.2002 #Re-use this
+		}
+
+		stress_impact = {
+			calm = medium_stress_impact_gain
+			just = minor_stress_impact_gain
+			wrathful = minor_stress_impact_loss
+			arbitrary = miniscule_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_energy = 1
+				ai_compassion = -1
+			}
+		}
+	}
+
+	option = { #Reason with him
+		name = bryten_norman_conquest.043.b
+
+		duel = {
+			skill = diplomacy
+			target = scope:willy_vassal
+			
+			50 = { #You reason successfully
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.043.b.success
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.043.b.success
+					left_icon = root
+					right_icon = scope:willy_vassal
+
+					scope:willy_vassal = {
+						add_opinion = {
+							target = scope:willy
+							modifier = revanchist_opinion
+							opinion = -120
+						}
+					}
+					scope:willy = {
+						add_character_modifier = {
+							modifier = ep3_disgruntled_vassals_modifier
+							years = 10
+						}
+					}
+					ep3_decrease_pacification_effect = yes
+				}
+			}
+
+			50 = { #You are unable to reason with him
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.043.b.failure
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.043.b.failure
+	
+					add_stress = miniscule_stress_gain
+					ep3_decrease_resistance_effect = yes
+				}
+			}
+		}
+
+		stress_impact = {
+			calm = minor_stress_impact_loss
+			just = miniscule_stress_impact_loss
+			wrathful = medium_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_compassion = 1
+			}
+		}
+	}
+
+	option = { #Threaten him
+		name = bryten_norman_conquest.043.c
+
+		duel = {
+			skill = prowess
+			target = scope:willy_vassal
+
+			60 = { #Your threats work
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.043.c.success
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.043.c.success
+					left_icon = root
+					right_icon = scope:willy_vassal
+
+					scope:willy_vassal = {
+						add_opinion = {
+							target = scope:willy
+							modifier = revanchist_opinion
+							opinion = -120
+						}
+					}
+					scope:willy = {
+						add_dread = major_dread_loss
+						add_character_modifier = {
+							modifier = ep3_disgruntled_vassals_modifier
+							years = 10
+						}
+					}
+					ep3_decrease_pacification_effect = yes
+				}
+			}
+
+			40 = { #Your threats don't work
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.043.c.failure
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.043.c.failure
+	
+					add_dread = minor_dread_loss
+					add_prestige = minor_prestige_loss
+					ep3_decrease_resistance_effect = yes
+				}
+			}
+		}
+
+		stress_impact = {
+			ambitious = miniscule_stress_impact_loss
+			vengeful = miniscule_stress_impact_loss
+			content = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_compassion = -0.5
+			}
+		}
+	}
+
+	option = { #Take some loyalists and leave him to it
+		name = bryten_norman_conquest.043.d
+
+		flavor = bryten_norman_conquest.043.d.flavour
+
+		add_courtier = scope:knight_1
+		add_courtier = scope:knight_2
+
+		ep3_decrease_resistance_effect = yes
+
+		stress_impact = {
+			patient = miniscule_stress_impact_loss
+			impatient = minor_stress_impact_gain
+			just = miniscule_stress_impact_loss
+			arbitrary = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_energy = -0.5
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.044 = {# Duel resolution
+	type = character_event
+	title = bryten_norman_conquest.044.t
+	desc = bryten_norman_conquest.044.desc
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = marshal
+	}
+	right_portrait = {
+		character = scope:willy_vassal
+		animation = dead
+	}
+	artifact = {
+		target = scope:newly_created_artifact
+		position = lower_left_portrait
+	}
+	artifact = {
+		target = scope:traitors_head_artifact
+		position = lower_right_portrait
+	}
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		ep3_harrying_widget_setup_effect = yes
+		capital_province = { save_scope_as = domicile }
+
+		random_dummy_gender_effect = yes
+
+		add_gold = { 50 100 }
+
+		hidden_effect = {
+			scope:willy_vassal = {
+				create_artifact_brooch_effect = { 
+					OWNER = scope:willy_vassal 
+					SMITH = scope:dummy_gender
+				}
+			}
+			create_artifact = {
+				name = traitors_head
+				description = traitors_head_description
+				type = miscellaneous
+				visuals = small_box
+				durability = 10
+				max_durability = 10
+				decaying = yes
+				modifier = artifact_health_penalty_1_modifier
+				modifier = artifact_stress_gain_1_penalty_modifier
+				modifier = artifact_attraction_opinion_negative_2_modifier
+				creator = root
+				rarity = famed
+				save_scope_as = traitors_head_artifact
+			}
+		}
+
+		scope:newly_created_artifact = {
+			set_owner = root
+		}
+	}
+
+	option = { #Send his head to William
+		name = bryten_norman_conquest.044.a
+
+		scope:traitors_head_artifact = {
+			set_owner = scope:willy
+		}
+
+		scope:willy = {
+			add_character_modifier = {
+				modifier = ep3_life_threatened_modifier
+				years = 10
+			}
+		}
+
+		stress_impact = {
+			calm = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+			wrathful = miniscule_stress_impact_loss
+			arbitrary = miniscule_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_energy = 1
+				ai_compassion = -1
+			}
+		}
+	}
+
+	option = { #Let everyone know what happens to turncoats
+		name = bryten_norman_conquest.044.b
+
+		ep3_increase_resistance_large_effect = yes
+
+		if = {
+			limit = {
+				scope:willy = {
+					any_sub_realm_duchy = {
+						count > 1
+						holder.culture = culture:norman
+					}
+				}
+			}
+			scope:willy = {
+				random_sub_realm_duchy = {
+					limit = {
+						holder.culture = culture:norman
+					}
+					show_as_tooltip = {
+						add_county_modifier = {
+							modifier = ep3_impassioned_populace_modifier
+							years = 10
+						}
+					}
+					hidden_effect = {
+						every_de_jure_county = {
+							add_county_modifier = {
+								modifier = ep3_impassioned_populace_modifier
+								years = 10
+							}
+						}
+					}
+					save_scope_as = saved_duchy
+				}
+				random_sub_realm_duchy = {
+					limit = {
+						holder.culture = culture:norman
+						NOT = {
+							this = scope:saved_duchy
+						}
+					}
+					show_as_tooltip = {
+						add_county_modifier = {
+							modifier = ep3_impassioned_populace_modifier
+							years = 10
+						}
+					}
+					hidden_effect = {
+						every_de_jure_county = {
+							add_county_modifier = {
+								modifier = ep3_impassioned_populace_modifier
+								years = 10
+							}
+						}
+					}
+				}
+			}
+		}
+
+		hidden_effect = {
+			destroy_artifact = scope:traitors_head_artifact
+		}
+
+		stress_impact = {
+			calm = minor_stress_impact_loss
+			just = miniscule_stress_impact_loss
+			wrathful = minor_stress_impact_gain
+			arbitrary = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 1
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+		start_travel_plan = {
+			destination = scope:domicile
+			players_use_planner = no
+			on_arrival_destinations = last
+			return_trip = no
+		}
+	}
+}
+#######################################
+# Norman Conquest - William Events
+#######################################
+
+#Burn crops
+#Burn down villages
+#Construct castles
+#Improve infrastructure North/South
+#Revoke titles
+#Slaughter supposed conspirators
+#Build spy network
+#Rebuild villages in grids
+#Decide the fate of a captive Aetheling
+#Receive a desperate northerner
+#Mutilate a captive
+
+bryten_norman_conquest.050 = {# Burn crops
+	type = character_event
+	title = bryten_norman_conquest.050.t
+	desc = bryten_norman_conquest.050.desc
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:aetheling
+		animation = anger
+	}
+	cooldown = { years = 10 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		any_vassal = {
+			culture = culture:anglo_saxon
+			highest_held_title_tier > tier_county
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = {
+				culture = culture:anglo_saxon
+				highest_held_title_tier > tier_county
+			}
+			save_scope_as = aetheling
+		}
+		scope:aetheling.primary_title = {
+			save_scope_as = crop_duchy
+		}
+		ep3_harrying_widget_setup_effect = yes
+
+		save_scope_as = root_scope
+	}
+
+	option = { #Burn all the crops
+		name = bryten_norman_conquest.050.a
+
+		add_dread = medium_dread_gain
+
+		add_tyranny = minor_tyranny_gain
+
+		ep3_increase_pacification_effect = { AMOUNT = harrying_medium_increase_value }
+
+		scope:crop_duchy = {
+			change_county_control = 15
+			every_direct_de_jure_vassal_title = {
+				custom = every_county_in_duchy_aetheling
+				add_county_modifier = {
+					modifier = all_crops_burned
+					years = 5
+				}
+			}
+		}
+
+		culture = {
+			change_cultural_acceptance = {
+				target = scope:aetheling.culture
+				value = minor_cultural_acceptance_loss
+				desc = harrying_of_the_north_tt
+			}
+		}
+
+		stress_impact = {
+			wrathful = miniscule_stress_impact_loss
+			sadistic = miniscule_stress_impact_loss
+			vengeful = minor_stress_impact_loss
+			compassionate = major_stress_impact_gain
+			forgiving = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 1
+				ai_compassion = -1
+			}
+		}
+	}
+
+	option = { #Burn most of them, leaving enough for subsistence
+		name = bryten_norman_conquest.050.b
+
+		add_dread = minor_dread_gain
+
+		scope:crop_duchy = {
+			change_county_control = 5
+			every_direct_de_jure_vassal_title = {
+				custom = every_county_in_duchy_aetheling
+				add_county_modifier = {
+					modifier = crops_burned
+					years = 5
+				}
+			}
+		}
+
+		culture = {
+			change_cultural_acceptance = {
+				target = scope:aetheling.culture
+				value = miniscule_cultural_acceptance_loss
+				desc = harrying_of_the_north_tt
+			}
+		}
+
+		stress_impact = {
+			calm = miniscule_stress_impact_loss
+			vengeful = miniscule_stress_impact_loss
+			wrathful = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 0.5
+				ai_compassion = -0.5
+			}
+		}
+	}
+
+	option = { #Exact a levy of crops
+		name = bryten_norman_conquest.050.c
+
+		add_gold = medium_gold_value
+
+		scope:crop_duchy = {
+			change_county_control = -10
+			every_direct_de_jure_vassal_title = {
+				custom = every_county_in_duchy_aetheling
+				add_county_modifier = {
+					modifier = crop_levy
+					years = 5
+				}
+			}
+		}
+
+		every_vassal = {
+			custom = every_minority_vassal
+			limit = { has_vassal_stance = minority }
+			add_opinion = {
+				target = root 
+				modifier = annoyed_opinion
+				opinion = -15
+			}
+		}	
+
+		stress_impact = {
+			sadistic = medium_stress_impact_gain
+			vengeful = major_stress_impact_gain
+			compassionate = miniscule_stress_impact_loss
+			forgiving = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = -1
+				ai_compassion = 1
+			}
+		}
+	}
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.051 = {# Build on the Great North Road
+	type = character_event
+	title = bryten_norman_conquest.051.t
+	desc = bryten_norman_conquest.051.desc
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:marshal
+		animation = chancellor
+	}
+	cooldown = { years = 10 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		any_vassal = {
+			culture = culture:anglo_saxon
+		}
+		OR = { #Ensure owns at least one county on the route
+			has_title = title:c_middlesex
+			has_title = title:c_hertfordshire
+			has_title = title:c_bedford
+			has_title = title:c_northamptonshire
+			has_title = title:c_leicestershire
+			has_title = title:c_nottinghamshire
+			has_title = title:c_west_riding
+		}
+		cp:councillor_marshal = {
+			exists = this
+		}
+	}
+
+	immediate = {
+		every_county_in_region = {
+			region = world_europe_west_britannia
+			limit = { # All counties along the Great North Road...ish
+				OR = {
+					this = title:c_middlesex
+					this = title:c_hertfordshire
+					this = title:c_bedford
+					this = title:c_northamptonshire
+					this = title:c_leicestershire
+					this = title:c_nottinghamshire
+					this = title:c_west_riding
+				}
+				OR = {
+					holder = root
+					holder.top_liege = root
+				}
+			}
+			add_to_list = great_north_road
+		}
+		cp:councillor_marshal = {
+			save_scope_as = marshal
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Rebuild and stock the road with armed guards
+		name = bryten_norman_conquest.051.a
+
+		remove_short_term_gold = major_gold_value
+
+		every_in_list = {
+			list = great_north_road
+			custom = bryten_norman_conquest.051.a.tt
+			add_county_modifier = {
+				modifier = ep3_gnr_guards_modifier
+				years = 15
+			}
+		}
+
+		stress_impact = {
+			craven = miniscule_stress_impact_loss
+			diligent = miniscule_stress_impact_loss
+			lazy = minor_stress_impact_gain
+			greedy = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_rationality = 1
+				ai_greed = -1
+			}
+		}
+	}
+
+	option = { #Rebuild the road
+		name = bryten_norman_conquest.051.b
+
+		remove_short_term_gold = major_gold_value
+
+		every_in_list = {
+			list = great_north_road
+			custom = bryten_norman_conquest.051.a.tt
+			add_county_modifier = {
+				modifier = ep3_gnr_modifier
+				years = 10
+			}
+		}
+
+		stress_impact = {
+			diligent = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -0.5
+			}
+		}
+	}
+
+	option = { #Destroy the northern parts of the road; deny them the passage
+		name = bryten_norman_conquest.051.c
+
+		ep3_increase_pacification_effect = { AMOUNT = harrying_medium_increase_value }
+
+		every_in_list = {
+			list = great_north_road
+			custom = bryten_norman_conquest.051.c.tt1
+			limit = {
+				holder.culture = culture:anglo_saxon
+			}
+			add_county_modifier = {
+				modifier = ep3_gnr_negative_modifier
+				years = 10
+			}
+		}
+
+		stress_impact = {
+			callous = miniscule_stress_impact_loss
+			sadistic = miniscule_stress_impact_loss
+			greedy = miniscule_stress_impact_loss
+			vengeful = minor_stress_impact_loss
+			compassionate = medium_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 1
+				ai_compassion = -1
+			}
+		}
+	}
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.052 = {# Decide the fate of a captive Aetheling
+	type = character_event
+	title = bryten_norman_conquest.052.t
+	desc = bryten_norman_conquest.052.desc
+	theme = harrying
+	override_background = { reference = dungeon }
+	left_portrait = {
+		character = root
+		animation = spymaster
+	}
+	right_portrait = {
+		character = scope:captured
+		animation = prisondungeon
+	}
+	cooldown = { years = 10 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		any_prisoner = {
+			is_ai = yes
+			is_adult = yes
+			culture = culture:anglo_saxon
+			is_lowborn = no
+		}
+	}
+
+	immediate = {
+		save_scope_as = actor
+		random_prisoner = {
+			limit = {
+				is_ai = yes
+				is_adult = yes
+				culture = culture:anglo_saxon
+				is_lowborn = no
+			}
+			save_scope_as = captured
+			save_scope_as = recipient
+		}
+		save_scope_as = root_scope #for tooltip
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Kill him
+		name = bryten_norman_conquest.052.a
+
+		execute_prisoner_effect = {
+			VICTIM = scope:captured
+			EXECUTIONER = root
+		}
+
+		ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+		ep3_increase_pacification_effect = { AMOUNT = harrying_medium_increase_value }
+
+		stress_impact = {
+			callous = miniscule_stress_impact_loss
+			sadistic = miniscule_stress_impact_loss
+			vengeful = miniscule_stress_impact_loss
+			compassionate = major_stress_impact_gain
+			just = major_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 1
+				ai_honor = -1
+			}
+		}
+	}
+
+	option = { #Mutilate and release him
+		name = bryten_norman_conquest.052.b
+
+		add_dread = miniscule_dread_gain
+
+		disfigure_recipient_effect = yes
+		torture_blind_castrate_disfigure_opinion_effect = { VERB = disfigured }
+
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+			compassionate = medium_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 0.5
+				ai_honor = -0.5
+			}
+		}
+	}
+
+	option = { #You will be a Norman, now
+		name = bryten_norman_conquest.052.c
+
+		duel = {
+			skills = { diplomacy intrigue }
+			target = scope:captured
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.052.c.success
+
+				show_as_tooltip = { #To resolve in follow-up, due to learn language scheme
+					scope:captured = {
+						set_culture = culture:norman
+					}
+				}
+
+				trigger_event = {
+					id = bryten_norman_conquest.053
+					days = { 1 2 }
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.052.c.failure
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.052.c.failure
+	
+					add_prestige = medium_prestige_loss
+					every_vassal = { 
+						limit = {
+							has_vassal_stance = glory_hound
+						}
+						custom = every_glory_hound_vassal
+						add_opinion = {
+							modifier = tournament_mocked_opinion #Re-using
+							target = root
+							opinion = -15
+						}
+					}
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = -1
+				ai_compassion = 1
+			}
+		}
+	}
+
+	option = { #Let them rot
+		name = bryten_norman_conquest.052.d
+
+		add_character_modifier = {
+			modifier = ep3_honourable_jailor_modifier
+			years = 15
+		}
+
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			sadistic = major_stress_impact_gain
+			compassionate = miniscule_stress_impact_loss
+			just = miniscule_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = -1
+				ai_compassion = 1
+			}
+		}
+	}
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.053 = {# Follow-up on acceptance
+	type = character_event
+	title = bryten_norman_conquest.053.t
+	desc = {
+		desc = bryten_norman_conquest.053.desc
+		triggered_desc = {
+			trigger = {
+				scope:spouse_courtier = {
+					exists = this 
+				}			
+			}
+			desc = bryten_norman_conquest.053.desc.spouse
+		}
+	}
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:captured
+		animation = happiness
+	}
+	lower_center_portrait = {
+		trigger = {
+			scope:spouse_courtier = {
+				exists = this
+			}
+		}
+		character = scope:spouse_courtier
+	}
+	cooldown = { years = 10 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	immediate = {
+		if = { #Ugly if/else block starts here!
+			limit = {
+				scope:captured = {
+					is_married = no
+					is_betrothed = no
+				}
+			}
+			if = { #Grab a courtier
+				limit = {
+					AND = {
+						scope:captured = { is_female = yes }
+						any_courtier = {
+							is_female = no
+							is_married = no
+							is_betrothed = no
+							is_adult = yes
+							culture = culture:norman
+							age > scope:captured.age_plus_10
+							age < scope:captured.age_minus_10
+						}
+					}
+				}
+				random_courtier = {
+					limit = {
+						is_female = no
+						is_married = no
+						is_betrothed = no
+						is_adult = yes
+						culture = culture:norman
+						age > scope:captured.age_plus_10
+						age < scope:captured.age_minus_10
+					}
+					weight = {
+						base = 1
+						modifier = {
+							factor = 10
+							is_lowborn = no #Always good to do noble marriages where possible
+						}
+						modifier = {
+							factor = 5
+							is_close_or_extended_family_of = root #And what nobler than the king?
+						}
+					}
+					save_scope_as = spouse_courtier
+				}
+			}
+			else_if = { #Gender reverse
+				limit = {
+					AND = {
+						scope:captured = { is_female = no }
+						any_courtier = {
+							is_female = yes
+							is_married = no
+							is_betrothed = no
+							is_adult = yes
+							culture = culture:norman
+							age > scope:captured.age_plus_10
+							age < scope:captured.age_minus_10
+						}
+					}
+				}
+				random_courtier = {
+					limit = {
+						is_female = yes
+						is_married = no
+						is_betrothed = no
+						is_adult = yes
+						culture = culture:norman
+						age > scope:captured.age_plus_10
+						age < scope:captured.age_minus_10
+					}
+					weight = {
+						base = 1
+						modifier = {
+							factor = 10
+							is_lowborn = no
+						}
+						modifier = {
+							factor = 5
+							is_close_or_extended_family_of = root
+						}
+					}
+					save_scope_as = spouse_courtier
+				}
+			}
+			else = { #Just in case
+				hidden_effect = {
+					create_character = {
+						location = root.location
+						random_traits = yes
+						faith = root.faith
+						culture = culture:norman
+						age = scope:captured.age
+						gender_female_chance = {
+							if = {
+								limit = { scope:captured = { is_female = yes } }
+								add = 0
+							}
+							else = { add = 100 }
+						}
+						save_scope_as = spouse_courtier
+					}
+				}
+			}
+		}
+
+		if = { #Just to ensure she's actually part of your court, if generated
+			limit = {
+				scope:spouse_courtier = {
+					exists = this
+					NOT = {
+						is_courtier_of = root
+					}
+				}
+			}
+			hidden_effect = {
+				add_courtier = scope:spouse_courtier
+			}
+		}
+
+		ep3_harrying_widget_setup_effect = yes
+
+		ep3_increase_pacification_effect = { AMOUNT = harrying_medium_increase_value }
+	}
+
+	option = { #You'll get married to a nice Norman lad/lass! Also learn the language
+		name = {
+			text = {
+				first_valid = {
+					triggered_desc = {
+						trigger = { 
+							scope:spouse_courtier = {
+								exists = this 
+							}
+						}
+						desc = bryten_norman_conquest.053.a.spouselanguage
+					}
+					desc = bryten_norman_conquest.053.a.language
+				}
+			}
+		}
+
+		scope:captured = {
+			if = {
+				limit = {
+					scope:spouse_courtier = {
+						exists = this
+					}
+				}
+				marry = scope:spouse_courtier
+			}
+			if = {
+				limit = {
+					can_start_scheme = {
+						type = learn_language
+						target_character = root
+					}
+				}
+				start_scheme = {
+					type = learn_language
+					target_character = root
+				}
+			}
+			release_from_prison = yes
+			if = {
+				limit = {
+					highest_held_title_tier = tier_unlanded
+				}
+				change_liege = {
+					liege = root
+					change = scope:change
+				}
+				add_courtier = scope:captured
+			}
+		}
+
+		reverse_add_opinion = {
+			modifier = grateful_opinion
+			target = scope:captured
+			opinion = 35
+		}
+
+		stress_impact = {
+			diligent = miniscule_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = -1
+				ai_compassion = 1
+			}
+		}
+	}
+
+	option = { #Go now, and be free
+		name = bryten_norman_conquest.053.b
+
+		scope:captured = {
+			release_from_prison = yes
+			if = {
+				limit = {
+					highest_held_title_tier = tier_unlanded
+				}
+				change_liege = {
+					liege = root
+					change = scope:change
+				}
+			}
+		}
+
+		stress_impact = {
+			diligent = miniscule_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+			lazy = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+
+		reverse_add_opinion = {
+			modifier = grateful_opinion
+			target = scope:captured
+			opinion = 50
+		}
+
+		ai_chance = {
+			base = 75
+			ai_value_modifier = {
+				ai_compassion = 0.5
+				ai_honor = 1
+			}
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			scope:captured = {
+				set_culture = culture:norman
+			}
+		}
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.054 = {# Punish a village
+	type = character_event
+	title = bryten_norman_conquest.054.t
+	desc = bryten_norman_conquest.054.desc
+	theme = harrying
+	override_background = { reference = burning_building }
+	override_effect_2d = smoke
+	left_portrait = {
+		character = root
+		animation = rage
+	}
+	cooldown = { years = 10 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		any_vassal = {
+			culture = culture:anglo_saxon
+			highest_held_title_tier > tier_county	
+			any_county = {
+				any_province = {
+					has_holding = yes
+					num_buildings > 0
+				}
+			}		
+		}
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = { culture = culture:anglo_saxon }
+			save_scope_as = vassal
+			random_realm_province = {
+				limit = {
+					has_holding = yes
+					num_buildings >= 1
+				}
+				save_scope_as = offending_village	
+				every_neighboring_province = { add_to_list = resettlement_villages }
+				hidden_effect = { destroy_random_building_variable_effect = yes }
+			}
+		}
+		save_scope_as = root_scope #for tooltip
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Burn it to cinders
+		name = bryten_norman_conquest.054.a
+
+		ep3_increase_pacification_effect = { AMOUNT = harrying_medium_increase_value }
+
+		scope:offending_village = {
+			destroy_random_building_effect = yes
+			add_province_modifier = {
+				modifier = ep3_smouldering_village
+				years = 15
+			}
+		}
+
+		stress_impact = {
+			callous = minor_stress_impact_loss
+			sadistic = minor_stress_impact_loss
+			vengeful = minor_stress_impact_loss
+			compassionate = major_stress_impact_gain
+			just = major_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 1
+				ai_honor = -1
+			}
+		}
+	}
+
+	option = { #Resettle the residents
+		name = bryten_norman_conquest.054.b
+
+		scope:offending_village = {
+			add_province_modifier = {
+				modifier = ep3_resettled_village
+				years = 15
+			}
+		}
+
+		every_in_list = {
+			list = resettlement_villages
+			custom = all_neighbouring_villages
+			add_province_modifier = {
+				modifier = ep3_population_boost
+				years = 15
+			}
+		}
+
+		stress_impact = {
+			sadistic = minor_stress_impact_loss
+			compassionate = medium_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 0.5
+				ai_honor = -0.5
+			}
+		}
+	}
+
+	option = { #Leave it be
+		name = bryten_norman_conquest.054.c
+
+		ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+
+		add_tyranny = minor_tyranny_loss
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = -1
+				ai_compassion = 1
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+#######################################
+# Norman Conquest - Anglo-Saxon Lord Events
+#######################################
+# Appeal for Scottish help
+# Bleddyn allies with Anglo-Saxons
+# Welsh raids into Herefordshire
+# Send messages to Europe for knights
+# Stoke flames across the country
+
+
+bryten_norman_conquest.070 = {# Recruit levies from starving men
+	type = character_event
+	title = bryten_norman_conquest.070.t
+	desc = {
+		desc = bryten_norman_conquest.070.desc
+		triggered_desc = {
+			trigger = {
+				NOR = {
+					has_trait = callous
+					has_trait = sadistic
+				}
+			}
+			desc = bryten_norman_conquest.070.notcallous
+		}
+	}
+	theme = harrying
+	override_background = { reference = alley_day }
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	right_portrait = {
+		character = scope:starving_man
+		animation = beg
+	}
+	cooldown = { years = 10 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_available = yes
+		location = root.capital_province
+		exists = root.cp:councillor_marshal
+	}
+
+	immediate = {
+		location = {
+			save_scope_as = location
+		}
+		top_liege = {
+			save_scope_as = william
+		}
+		hidden_effect = {
+			random_dummy_gender_effect = yes
+			create_character = {
+				template = new_warrior_character
+				location = root.location
+				culture = culture:anglo_saxon
+				faith = root.location.faith
+				gender_female_chance = root_soldier_female_chance
+				save_scope_as = starving_man
+			}
+			scope:starving_man = {
+				change_current_weight = -50
+			}
+		}
+		root.cp:councillor_marshal = {
+			save_scope_as = marshal
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #All of you; you're all hired.
+		name = bryten_norman_conquest.070.a
+
+		remove_short_term_gold = major_gold_value
+
+		ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+
+		add_prestige = medium_prestige_gain
+
+		scope:location.county = {
+			add_county_modifier = {
+				modifier = ep3_paid_grains
+				years = 10
+			}
+		}
+
+		trigger_event = {
+			id = bryten_norman_conquest.071
+			days = { 3 6 }
+		}
+
+		stress_impact = {
+			greedy = medium_stress_impact_gain
+			callous = minor_stress_impact_gain
+			compassionate = minor_stress_impact_loss
+			generous = medium_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -1
+				ai_compassion = 1
+			}
+		}
+	}
+
+	option = { #I'll hire you, fine gentleman
+		name = bryten_norman_conquest.070.b
+
+		remove_short_term_gold = minor_gold_value
+
+		add_courtier = scope:starving_man
+
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			callous = minor_stress_impact_gain
+			compassionate = minor_stress_impact_loss
+			generous = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -0.5
+				ai_compassion = 1
+			}
+		}
+	}
+
+	option = { #Maybe I can try intervening myself?
+		name = bryten_norman_conquest.070.c
+
+		duel = {
+			skill = stewardship
+			value = decent_skill_rating
+			60 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.070.c.success
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.070.c.success
+	
+					ep3_decrease_pacification_effect = yes
+
+					scope:location.county = {
+						add_county_modifier = {
+							modifier = ep3_innovative_farming_techniques
+							years = 10
+						}
+					}
+				}
+			}
+			40 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.070.c.failure
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.070.c.failure
+	
+					add_prestige = minor_prestige_loss
+					ep3_decrease_resistance_effect = yes
+				}
+			}
+		}
+
+		stress_impact = {
+			greedy = minor_stress_impact_loss
+			generous = minor_stress_impact_gain
+			lazy = minor_stress_impact_gain
+			diligent = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 1
+				ai_compassion = -0.5
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.071 = {# You gain event troops!
+	type = letter_event
+	opening = bryten_norman_conquest.071.opening
+	desc = bryten_norman_conquest.071.desc
+	sender = scope:marshal
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		add_stress = minor_stress_loss
+	}
+
+	option = { # Wooo!
+		name = bryten_norman_conquest.071.a
+
+		spawn_army = {
+			name = event_troop_default_name
+			levies = 1000
+			location = scope:location
+			origin = scope:location
+		}
+
+		ai_chance = {
+			base = 100
+		}		
+	}
+
+	option = { # Reject them for now
+		name = bryten_norman_conquest.071.b
+
+		flavor = bryten_norman_conquest.071.b.tt
+
+		scope:location.county = {
+			add_county_modifier = {
+				modifier = ep3_surplus_manpower
+				years = 10
+			}
+		}
+
+		ai_chance = {
+			base = 100
+		}		
+	}
+}
+bryten_norman_conquest.072 = {# Recruit murderers to kill Normans
+	type = character_event
+	title = bryten_norman_conquest.072.t
+	desc = bryten_norman_conquest.072.desc
+	theme = harrying
+	override_background = { reference = armory }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:murderer
+		animation = spymaster
+	}
+	lower_center_portrait = {
+		character = scope:spymaster
+	}
+	cooldown = { years = 20 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_available = yes
+		exists = root.cp:councillor_spymaster
+		title:k_england.holder = {
+			culture = culture:norman
+			any_vassal = {
+				culture = culture:norman
+				capital_province = {
+					geographical_region = world_europe_west_britannia
+				}
+			}
+		}
+	}
+
+	immediate = {
+		location = {
+			save_scope_as = location
+		}
+		top_liege = {
+			save_scope_as = william
+		}
+		scope:william = {
+			random_vassal = {
+				limit = {
+					culture = culture:norman
+					capital_province = {
+						geographical_region = world_europe_west_britannia
+					}
+				}
+				capital_province.county = {
+					save_scope_as = willy_vassal
+				}
+			}
+		}
+		hidden_effect = {
+			create_character = {
+				template = ep3_murderer_template
+				location = root.location
+				culture = culture:anglo_saxon
+				faith = root.location.faith
+				gender_female_chance = root_soldier_female_chance
+				save_scope_as = murderer
+			}
+		}
+		root.cp:councillor_spymaster = {
+			save_scope_as = spymaster
+		}
+		scope:william = {
+			random_close_family_member = {
+				limit = {
+					location = { geographical_region = world_europe_west_britannia } 
+				}
+				save_scope_as = willy_family
+			}
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Perhaps we need to aim higher...
+		name = bryten_norman_conquest.072.a
+
+		trigger = {
+			scope:william = {
+				any_close_family_member = {
+					location = { geographical_region = world_europe_west_britannia } 
+				}
+			}
+		}
+
+		add_internal_flag = special
+
+		pay_short_term_gold = {
+			target = scope:murderer
+			gold = medium_gold_value
+		}
+
+		start_scheme = { type = murder target_character = scope:willy_family }
+
+		custom_tooltip = diplomacy_family.2250.b.tt
+		hidden_effect = {
+			random_scheme = {
+				limit = {
+					scheme_type = murder
+					scheme_target_character = scope:willy_family
+				}
+				add_scheme_modifier = {
+					type = extra_success_chance_modifier
+				}
+			}
+		}
+
+		hidden_effect = {
+			scope:murderer = {
+				silent_disappearance_effect = yes
+			}
+		}
+
+		stress_impact = {
+			vengeful = medium_stress_impact_loss
+			sadistic = minor_stress_impact_loss
+			forgiving = medium_stress_impact_gain
+			greedy = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_compassion = -1
+			}
+		}
+	}
+
+	option = { #Go off and murder some Normans, wouldja?
+		name = bryten_norman_conquest.072.b
+
+		flavor = bryten_norman_conquest.072.b.tt
+
+		pay_short_term_gold = {
+			target = scope:murderer
+			gold = medium_gold_value
+		}
+
+		ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+
+		scope:willy_vassal = {
+			add_county_modifier = {
+				modifier = ep3_murderers_loose
+				years = 20
+			}
+		}
+
+		hidden_effect = {
+			scope:murderer = {
+				silent_disappearance_effect = yes
+			}
+		}
+
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			callous = minor_stress_impact_loss
+			compassionate = minor_stress_impact_gain
+			generous = miniscule_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -0.5
+			}
+		}
+	}
+
+	option = { #Well, you might be handy to have around...
+		name = bryten_norman_conquest.072.c
+
+		add_courtier = scope:murderer
+
+		stress_impact = {
+			lazy = minor_stress_impact_loss
+			diligent = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_sociability = 1
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.073 = {# Gather support amongst the minor nobles
+	type = character_event
+	title = bryten_norman_conquest.073.t
+	desc = bryten_norman_conquest.073.desc
+	theme = harrying
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = chancellor
+	}
+	cooldown = { years = 15 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_available = yes
+		title:k_england.holder = {
+			culture = culture:norman
+			any_duchy = {
+				count > 1
+			}
+		}		
+	}
+
+	immediate = {
+		top_liege = {
+			save_scope_as = william
+		}
+		scope:william = {
+			every_sub_realm_county = { #Choose first one of two random counties
+				limit = {
+					holder = {
+						culture = culture:norman
+					}
+				}
+				add_to_list = county_list
+			}
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Rally general support
+		name = bryten_norman_conquest.073.a
+
+		duel = {
+			skill = diplomacy
+			value = decent_skill_rating
+
+			10 = { #It really works
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.073.a.critsuccess
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = bryten_norman_conquest.073.a.critsuccess
+					left_icon = root
+
+					ep3_increase_resistance_large_effect = yes
+				}
+			}
+
+			50 = { #It works
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+
+				desc = bryten_norman_conquest.073.a.success
+				send_interface_toast = {
+					type = event_toast_effect_good
+					title = bryten_norman_conquest.073.a.success
+					left_icon = root  
+				
+					ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+				}
+			}
+
+			50 = { #It doesn't work
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+
+				desc = bryten_norman_conquest.073.a.failure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = bryten_norman_conquest.073.a.failure
+					left_icon = root  
+				
+					add_prestige = medium_prestige_loss
+				}
+			}
+
+			10 = { #Message is intercepted and more troops sent
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.073.a.critfailure
+				send_interface_toast = {
+					type = event_toast_effect_bad
+					title = bryten_norman_conquest.073.a.critfailure
+					left_icon = root  
+				
+					ep3_increase_pacification_effect = { AMOUNT = harrying_medium_increase_value }
+					add_prestige = medium_prestige_loss
+				}
+			}
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+			content = medium_stress_impact_gain
+			greedy = miniscule_stress_impact_gain
+			brave = miniscule_stress_impact_loss
+			craven = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 1
+			}
+		}
+	}
+
+	option = { #Appeal for extra tax revenue
+		name = bryten_norman_conquest.073.b
+
+		duel = {
+			skills = { stewardship diplomacy }
+			value = decent_skill_rating
+			
+			50 = { #Yes!
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.073.b.success
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.073.b.success
+					left_icon = root
+	
+					add_gold = medium_gold_value
+				}
+			}
+			50 = { #...no
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.073.b.failure
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.073.b.failure
+					left_icon = root
+	
+					add_prestige = minor_prestige_loss
+					ep3_decrease_resistance_effect = yes
+				}
+			}
+		}
+
+		stress_impact = {
+			greedy = minor_stress_impact_loss
+			generous = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 1
+			}
+		}
+	}
+
+	option = { #Tell them to save their strength
+		name = bryten_norman_conquest.073.c
+
+
+		scope:william = {
+			every_sub_realm_county = {
+				limit = {
+					is_in_list = county_list
+				}
+				custom = county_list_tt
+				random = {
+					chance = 5
+					add_county_modifier = {
+						modifier = ep3_counties_restless_modifier
+						years = 15
+					}
+				}
+			}
+		}
+
+		stress_impact = {
+			lazy = minor_stress_impact_loss
+			diligent = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_sociability = 1
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.074 = {# Forge documents strengthening Aetheling positions
+	type = character_event
+	title = bryten_norman_conquest.074.t
+	desc = bryten_norman_conquest.074.desc
+	theme = harrying
+	override_background = { reference = study }
+	left_portrait = {
+		character = root
+		animation = scheme
+	}
+	right_portrait = {
+		character = scope:chancellor
+		animation = chancellor
+	}
+	lower_center_portrait = {
+		trigger = {
+			scope:other_vassal = {
+				is_alive = yes
+			}
+		}
+		character = scope:other_vassal
+	}
+	cooldown = { years = 15 }
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_available = yes
+		primary_title.tier >= tier_duchy
+	}
+
+	immediate = {
+		top_liege = {
+			save_scope_as = william
+		}
+		primary_title = {
+			save_scope_as = primary_title
+		}
+		if = {
+			limit = {
+				scope:william = {
+					any_vassal = {
+						NOT = {
+							this = root
+						}
+						culture = culture:anglo_saxon
+					}
+				}
+			}
+			scope:william = {
+				random_vassal = {
+					limit = {
+						NOT = {
+							this = root
+						}
+						culture = culture:anglo_saxon
+					}
+					save_scope_as = other_vassal
+					primary_title = {
+						save_scope_as = other_vassal_primary_title
+					}
+				}
+			}
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Ensure your titles cannot be revoked
+		name = bryten_norman_conquest.074.a
+
+		duel = {
+			skills = { diplomacy intrigue }
+			target = scope:william
+			
+			60 = { #Yes!
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.074.a.success
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.074.a.success
+					left_icon = root
+					right_icon = scope:william
+	
+					if = {
+						limit = {
+							vassal_contract_obligation_level_can_be_decreased = title_revocation_rights
+						}
+						vassal_contract_set_obligation_level = {
+							type = title_revocation_rights
+							level = 1
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								can_add_hook = {
+									target = scope:william
+									type = fabrication_hook
+								}
+							}
+							add_hook = {
+								target = scope:william
+								type = fabrication_hook
+							}
+						}						
+					}
+
+					if = {
+						limit = {
+							scope:other_vassal = {
+								is_alive = yes
+								vassal_contract_obligation_level_can_be_decreased = title_revocation_rights
+							}
+						}
+						scope:other_vassal = {
+							vassal_contract_set_obligation_level = {
+								type = title_revocation_rights
+								level = 1
+							}
+						}
+					}
+				}
+			}
+			40 = { #...no
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.074.a.failure
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.074.a.failure
+					left_icon = root
+					right_icon = scope:william
+	
+					if = {
+						limit = {
+							can_add_hook = {
+								target = scope:william
+								type = favor_hook
+							}
+						}
+						add_hook = {
+							target = scope:william
+							type = favor_hook
+						}
+					}
+					if = {
+						limit = {
+							scope:other_vassal = {
+								is_alive = yes
+							}
+						}
+						scope:other_vassal = {
+							add_hook = {
+								target = scope:william
+								type = favor_hook
+							}
+						}
+					}
+				}
+			}
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+			content = medium_stress_impact_gain
+			deceitful = miniscule_stress_impact_loss
+			brave = miniscule_stress_impact_loss
+			craven = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 1
+			}
+		}
+	}
+
+	option = { #Reduce Feudal Levies/Taxes
+		name = bryten_norman_conquest.074.b
+
+		if = {
+			limit = {
+				vassal_contract_obligation_level_can_be_decreased = feudal_government_taxes
+			}
+			vassal_contract_decrease_obligation_level = feudal_government_taxes
+		}
+		if = {
+			limit = {
+				vassal_contract_obligation_level_can_be_decreased = feudal_government_levies
+			}
+			vassal_contract_decrease_obligation_level = feudal_government_levies
+		}
+		if = {
+			limit = {
+				scope:other_vassal = {
+					is_alive = yes
+				}
+			}
+			scope:other_vassal = {
+				if = {
+					limit = {
+						vassal_contract_obligation_level_can_be_decreased = feudal_government_taxes
+					}
+					vassal_contract_decrease_obligation_level = feudal_government_taxes
+				}
+				if = {
+					limit = {
+						vassal_contract_obligation_level_can_be_decreased = feudal_government_levies
+					}
+					vassal_contract_decrease_obligation_level = feudal_government_levies
+				}
+			}
+		}
+
+		stress_impact = {
+			greedy = minor_stress_impact_loss
+			generous = medium_stress_impact_gain
+			just = miniscule_stress_impact_gain
+			arbitrary = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 1
+			}
+		}
+	}
+
+	option = { #Gain Marcher Lord status
+		name = bryten_norman_conquest.074.c
+
+		vassal_contract_set_obligation_level = {
+			type = special_contract
+			level = 2
+		}
+
+		scope:other_vassal = {
+			vassal_contract_set_obligation_level = {
+				type = special_contract
+				level = 2
+			}
+		}
+
+		stress_impact = {
+			lazy = minor_stress_impact_loss
+			diligent = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_sociability = 1
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+#######################################
+# Norman Conquest - Deal With the Devil
+#######################################
+
+scripted_effect bryten_norman_conquest_083_process_vassalisation_effect = {
+	create_title_and_vassal_change = {
+		type = granted
+		save_scope_as = change
+	}
+	if = {
+		limit = {
+			scope:duke_norfolk ?= { is_vassal_of = scope:william }
+		}
+		change_liege = {
+			liege = scope:duke_norfolk
+			change = scope:change
+		}
+		add_truce_both_ways = {
+			character = scope:william
+			years = 100
+			name = fp3_landed_zanj_reason #Re-using this
+		}
+		add_truce_both_ways = {
+			character = scope:duke_norfolk
+			years = 100
+			name = fp3_landed_zanj_reason #Re-using this
+		}
+	}
+	else = {
+		change_liege = {
+			liege = scope:william
+			change = scope:change
+		}
+		add_truce_both_ways = {
+			character = scope:william
+			years = 100
+			name = fp3_landed_zanj_reason #Re-using this
+		}
+	}
+	resolve_title_and_vassal_change = scope:change
+}
+
+bryten_norman_conquest.080 = {# William sends you a letter
+
+	type = letter_event
+	opening = bryten_norman_conquest.080.opening
+	desc = bryten_norman_conquest.080.desc
+	sender = scope:william
+	cooldown = { years = 100 }
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_ai = no #Don't even trigger this for AI
+		is_imprisoned = no
+		is_incapable = no
+		global_var:harrying_of_the_north.story_owner = { #King of England
+			is_ai = yes
+			OR = { #But needs to either have Cambridgeshire or be able to take it off a Norman vassal
+				has_title = title:c_cambridgeshire
+				any_vassal = {
+					culture = culture:norman
+					has_title = title:c_cambridgeshire
+				}
+			}
+		}
+	}
+
+	immediate = {
+		global_var:harrying_of_the_north.story_owner = {
+			save_scope_as = william
+			capital_province.barony = { save_scope_as = london }
+		}
+	}
+
+	option = { # Grimly accept
+		name = bryten_norman_conquest.080.a
+
+		custom_tooltip = bryten_norman_conquest.080.a.tt
+
+		every_character_active_contract = { invalidate_contract = yes }
+
+		start_travel_plan = {
+			destination = scope:william.capital_province
+			players_use_planner = no
+			on_arrival_event = bryten_norman_conquest.081
+			on_arrival_destinations = last
+			return_trip = no
+		}
+
+		ai_chance = { #Just in case
+			base = 0
+		}		
+	}
+
+	option = { # Refuse
+		name = bryten_norman_conquest.080.b
+
+		reverse_add_opinion = {
+			target = scope:william
+			modifier = disrespect_opinion
+			opinion = -40
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+bryten_norman_conquest.081 = {# You meet William
+
+	type = character_event
+	title = bryten_norman_conquest.081.t
+	desc = bryten_norman_conquest.081.desc
+	theme = harrying
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:william
+		animation = thinking
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		location = {
+			save_scope_as = location
+		}
+	}
+
+	option = { #Greet him cheekily
+		name = bryten_norman_conquest.081.a
+
+		duel = {
+			skill = diplomacy
+			value = decent_skill_rating
+			
+			70 = { #He's lets it slide
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.081.a.success
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.081.a.success
+					left_icon = root
+					right_icon = scope:william
+
+					if = {
+						limit = {
+							scope:william = {
+								this = character:140
+							}
+						}
+						scope:william = {
+							add_legitimacy = miniscule_legitimacy_loss
+							every_vassal = {
+								limit = {
+									culture = culture:anglo_saxon
+								}
+								custom = every_anglo_vassal
+								add_opinion = {
+									modifier = bantered_with_the_bastard_opinion
+									target = root
+									opinion = 10
+								}
+							}
+						}
+					}
+					else = {
+						scope:william = {
+							add_legitimacy = miniscule_legitimacy_loss
+							every_vassal = {
+								limit = {
+									culture = culture:anglo_saxon
+								}
+								custom = every_anglo_vassal
+								add_opinion = {
+									modifier = bantered_with_the_devil_opinion
+									target = root
+									opinion = 10
+								}
+							}
+						}
+					}
+				}
+			}
+
+			30 = { #He's annoyed by your levity
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.081.a.failure
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.081.a.failure
+	
+					add_prestige = miniscule_prestige_loss
+				}
+			}
+		}
+
+		stress_impact = {
+			greedy = medium_stress_impact_loss
+			callous = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_gain
+			generous = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 1
+				ai_energy = 0.5
+			}
+		}
+	}
+
+	option = { #Stay silent
+		name = bryten_norman_conquest.081.b
+
+		flavor = bryten_norman_conquest.081.b.tt
+
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			generous = medium_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -1
+				ai_energy = 0.5
+			}
+		}
+	}
+
+
+	after = {
+		trigger_event = {
+			id = bryten_norman_conquest.082
+			days = 1
+		}
+	}
+}
+bryten_norman_conquest.082 = {# William offers to give you Cambridgeshire
+
+	type = character_event
+	title = bryten_norman_conquest.082.t
+	desc = bryten_norman_conquest.082.desc
+	theme = harrying
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:william
+		animation = disapproval
+	}
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+	cooldown = { years = 10 }
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		location = {
+			save_scope_as = location
+		}
+		title:c_cambridgeshire = { save_scope_as = cambridgeshire }
+		father = {
+			save_scope_as = father
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Take his offer
+		name = bryten_norman_conquest.082.a
+
+		flavor = bryten_norman_conquest.082.a.flavor
+		custom_tooltip = bryten_norman_conquest.082.a.tt
+
+		add_prestige = medium_prestige_loss
+
+		if = {
+			limit = {
+				scope:cambridgeshire.holder = {
+					NOT = {
+						this = scope:william
+					}
+				}
+			}
+			scope:cambridgeshire.holder = {
+				add_opinion = {
+					target = scope:william
+					modifier = angry_opinion
+					opinion = -40
+				}
+			}
+		}
+
+		trigger_event = {
+			id = bryten_norman_conquest.083
+			days = 1
+		}
+
+		stress_impact = {
+			greedy = medium_stress_impact_loss
+			callous = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_gain
+			generous = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 1
+				ai_energy = 0.5
+			}
+		}
+	}
+
+	option = { #Turn down his offer
+		name = bryten_norman_conquest.082.b
+
+		ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+
+		reverse_add_opinion = {
+			target = scope:william 
+			modifier = angry_opinion
+			opinion = -65
+		}
+
+		trigger_event = {
+			id = bryten_norman_conquest.084
+			days = 1
+		}
+
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			generous = medium_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -1
+				ai_energy = 0.5
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+	}
+}
+bryten_norman_conquest.083 = {# You accept his offer
+	type = character_event
+	title = bryten_norman_conquest.083.t
+	desc = bryten_norman_conquest.083.desc
+	theme = harrying
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:william
+		animation = disapproval
+	}
+	lower_right_portrait = scope:duke_norfolk
+	cooldown = { years = 10 }
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		scope:cambridgeshire.duchy.holder ?= { save_scope_as = duke_norfolk }
+	}
+
+	option = { #Recant your decision
+		name = bryten_norman_conquest.083.a
+
+		add_prestige = medium_prestige_gain
+
+		trigger_event = {
+			id = bryten_norman_conquest.084
+			days = 1
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #Accept
+		name = bryten_norman_conquest.083.b
+
+		custom_tooltip = bryten_norman_conquest.083.b.tt
+
+		create_title_and_vassal_change = {
+			type = granted
+			save_scope_as = change
+		}
+		scope:cambridgeshire = {
+			change_title_holder_include_vassals = {
+				holder = root
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+		# We need to do this here to account for you already being duke tier.
+		show_as_tooltip = { bryten_norman_conquest_083_process_vassalisation_effect = yes }
+		save_scope_value_as = {
+			name = settled_option
+			value = yes
+		}
+		add_character_flag = hereward_settled_flag
+
+		ep3_decrease_resistance_effect = yes
+		ep3_increase_pacification_large_effect = yes
+
+		if = {
+			limit = {
+				has_nickname = nick_the_wake
+			}
+			remove_nickname = yes
+		}
+
+		give_nickname = nick_iscariot
+
+		remove_trait = the_wake
+
+		start_travel_plan = {
+			destination = root.capital_province
+			players_use_planner = no
+			on_arrival_destinations = last
+			return_trip = no
+		}
+
+		scope:william = {
+			add_stress = major_stress_loss
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		# We need to do this here to account for you already being duke tier.
+		hidden_effect = {
+			if = {
+				limit = { exists = scope:settled_option }
+				bryten_norman_conquest_083_process_vassalisation_effect = yes
+			}
+		}
+	}
+}
+bryten_norman_conquest.084 = {# You decline his offer
+	type = character_event
+	title = bryten_norman_conquest.084.t
+	desc = bryten_norman_conquest.084.desc
+	theme = harrying
+	override_background = { reference = throne_room }
+	left_portrait = {
+		character = root
+		animation = dismissal
+	}
+	right_portrait = {
+		character = scope:william
+		animation = rage
+	}
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		location = {
+			save_scope_as = location
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Try to fight your way out
+		name = bryten_norman_conquest.084.a
+
+		duel = {
+			skill = prowess
+			value = very_high_skill_rating
+			
+			25 = { #You escape!
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.084.a.success
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.084.a.success
+					left_icon = root
+
+					add_prestige = major_prestige_gain
+
+					scope:william = {
+						add_prestige = major_prestige_loss
+					}
+				}
+
+				start_travel_plan = {
+					destination = root.domicile.domicile_location
+					players_use_planner = no
+					on_arrival_destinations = last
+					return_trip = no
+				}
+			}
+			75 = { #You are caught, beaten, and carted down to the cells
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.084.a.failure
+
+				trigger_event = {
+					id = bryten_norman_conquest.085
+					days = 1
+				}
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.084.a.failure
+
+					ep3_decrease_resistance_effect = yes
+
+					add_prestige = medium_prestige_loss
+					
+					increase_wounds_no_death_effect = { REASON = fight }
+
+					scope:william = {
+						imprison = {
+							target = root
+							type = dungeon
+						}
+					}
+				}
+			}
+		}
+
+		stress_impact = {
+			greedy = medium_stress_impact_loss
+			callous = miniscule_stress_impact_loss
+			compassionate = miniscule_stress_impact_gain
+			generous = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = 1
+				ai_energy = 0.5
+			}
+		}
+	}
+
+	option = { #Allow yourself to be taken to the dungeons
+		name = bryten_norman_conquest.084.b
+
+		flavor = bryten_norman_conquest.084.b.tt
+
+		ep3_decrease_resistance_effect = yes
+
+		add_prestige = minor_prestige_loss
+
+		scope:william = {
+			imprison = {
+				target = root
+				type = dungeon
+			}
+		}
+
+		trigger_event = {
+			id = bryten_norman_conquest.085
+			days = 1
+		}
+
+		stress_impact = {
+			arrogant = minor_stress_impact_gain
+			greedy = minor_stress_impact_gain
+			generous = medium_stress_impact_loss
+			humble = miniscule_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_greed = -1
+				ai_energy = 0.5
+			}
+		}
+	}
+
+	after = {
+		ep3_harrying_widget_clear_effect = yes
+		# Since we sent custom imprisonment events, we want to block the default ones.
+		hidden_effect = {
+			add_character_flag = {
+				flag = block_imprisonment_event
+				days = 2
+			}
+		}
+	}
+}
+bryten_norman_conquest.085 = {# You are thrown in the dungeon
+	type = character_event
+	title = bryten_norman_conquest.085.t
+	desc = bryten_norman_conquest.085.desc
+	theme = harrying
+	override_background = { reference = dungeon }
+	left_portrait = {
+		character = root
+		animation = prisondungeon
+		outfit_tags = { beggar_rags }
+	}
+	right_portrait = {
+		character = scope:william
+		animation = schadenfreude
+	}
+	lower_center_portrait = {
+		character = scope:sympathetic_courtier
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_imprisoned = yes
+		imprisoner = scope:william
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				scope:william = {
+					any_courtier = {
+						culture = culture:anglo_saxon
+					}
+				}
+			}
+			scope:william = {
+				random_courtier = {
+					limit = {
+						culture = culture:anglo_saxon
+					}
+					save_scope_as = sympathetic_courtier
+				}
+			}
+		}
+		else = {
+			hidden_effect = {
+				create_character = {
+					employer = scope:william
+					template = servant_character
+					gender_female_chance = 50
+					culture = culture:anglo_saxon
+					faith = root.faith
+					save_scope_as = sympathetic_courtier
+				}
+				scope:william = {
+					add_courtier = scope:sympathetic_courtier
+				}
+			}
+		}
+		add_character_flag = harrying_imprisoned_flag
+	}
+
+	option = { #You look around your cell
+		name = bryten_norman_conquest.085.a
+
+		stress_impact = {
+			base = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_norman_conquest.086
+			days = { 30 40 }
+		}
+	}
+}
+bryten_norman_conquest.086 = {# A mysterious letter appears
+	type = character_event
+	window = anonymous_letter_event
+	title = debug.0002.t
+	desc = bryten_norman_conquest.086.desc
+	theme = harrying
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_imprisoned = yes
+		imprisoner = scope:william
+	}
+
+	option = { # A lifeline!
+		name = bryten_norman_conquest.086.a
+
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+		}		
+	}
+
+	after = {
+		trigger_event = {
+			id = bryten_norman_conquest.087
+			days = { 2 4 }
+		}
+	}
+}
+bryten_norman_conquest.087 = {# You are sprung free!
+
+	type = character_event
+	title = bryten_norman_conquest.087.t
+	desc = bryten_norman_conquest.087.desc
+	theme = harrying
+	override_background = { reference = alley_night }
+
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:sympathetic_courtier
+		animation = survey
+		outfit_tags = { western_stealth_hood }
+	}
+	widget = {
+		gui = "event_window_widget_harrying"
+		container = "custom_widgets_container"
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_imprisoned = yes
+		imprisoner = scope:william
+	}
+
+	immediate = {
+		ep3_harrying_widget_setup_effect = yes
+	}
+
+	option = { #Come with me!
+		name = bryten_norman_conquest.087.a
+
+		duel = {
+			skill = diplomacy
+			value = decent_skill_rating
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.087.a.success
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.087.a.success
+					left_icon = root
+					right_icon = scope:sympathetic_courtier
+	
+					add_courtier = scope:sympathetic_courtier
+
+					reverse_add_opinion = {
+						target = scope:sympathetic_courtier
+						modifier = pleased_opinion
+						opinion = 15
+					}
+
+					hidden_effect = {
+						start_travel_plan = {
+							destination = root.domicile.domicile_location
+							players_use_planner = no
+							on_arrival_destinations = last
+							return_trip = no
+						}
+					}
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = bryten_norman_conquest.087.a.failure
+
+				send_interface_toast = {
+					title = bryten_norman_conquest.087.a.failure
+					left_icon = root
+					right_icon = scope:sympathetic_courtier
+
+					add_stress = miniscule_stress_gain
+				}
+			}
+		}
+
+		release_from_prison = yes #Used here for event order reasons
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #I will always remember you.
+		name = bryten_norman_conquest.087.b
+
+		#scope:sympathetic_courtier = { #In case we ever wanna use him for something
+		#	add_character_flag = sympathetic_courtier_flag
+		#}
+
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+
+		release_from_prison = yes #Used here for event order reasons
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	after = {
+		start_travel_plan = {
+			destination = root.domicile.domicile_location
+			players_use_planner = no
+			on_arrival_destinations = last
+			return_trip = no
+		}
+		scope:sympathetic_courtier = {
+			add_stress = medium_stress_loss #Prevent errors
+		}
+		ep3_harrying_widget_clear_effect = yes
+		remove_character_flag = harrying_imprisoned_flag
+	}
+}
+#######################################
+# Norman Conquest - Edgar Events
+#######################################
+bryten_norman_conquest.090 = {# Eadgar becomes a LAAMP
+	type = character_event
+	title = bryten_norman_conquest.090.t
+	desc = bryten_norman_conquest.090.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	lower_center_portrait = scope:william
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		title:k_england = {
+			save_scope_as = england
+			holder = { save_scope_as = william }
+		}
+		location = {
+			save_scope_as = location
+		}
+		primary_heir = {
+			save_scope_as = heir
+		}
+	}
+ 	
+	option = { #I'll go to Scotland
+		name = bryten_norman_conquest.090.a
+
+		hidden_effect = {
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			every_held_title = {
+				change_title_holder_include_vassals = {
+					holder = scope:heir
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+
+		create_landless_adventurer_title_effect = {
+			REASON = flag:voluntary
+			FLAVOR_CHAR = scope:heir
+		}
+
+		add_trait = gallivanter
+
+		start_travel_plan = {
+			destination = province:1741 #St Johnston
+			players_use_planner = no
+			on_start_on_action = on_travel_relocation_start
+			on_arrival_on_action = on_travel_relocation_end
+			on_arrival_destinations = last
+			travel_with_domicile = yes
+			return_trip = no # One way
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_energy = 0.5
+			}
+		}
+	}
+
+	option = { #Norman Italy sounds like fun
+		name = bryten_norman_conquest.090.b
+
+		hidden_effect = {
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			every_held_title = {
+				change_title_holder_include_vassals = {
+					holder = scope:heir
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+
+		create_landless_adventurer_title_effect = {
+			REASON = flag:voluntary
+			FLAVOR_CHAR = scope:heir
+		}
+
+		add_trait = gallivanter
+
+		start_travel_plan = {
+			destination = province:2619 #Trani
+			players_use_planner = no
+			on_start_on_action = on_travel_relocation_start
+			on_arrival_on_action = on_travel_relocation_end
+			on_arrival_destinations = last
+			travel_with_domicile = yes
+			return_trip = no # One way
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 75
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_energy = 1
+			}
+		}
+	}
+
+	option = { #Maybe I'll stay
+		name = bryten_norman_conquest.090.c
+
+		add_prestige = major_prestige_gain
+
+		stress_impact = {
+			ambitious = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_boldness = -1
+				ai_energy = -1
+			}
+		}
+	}
+}
+#######################################
+# Norman Conquest - Siward Events
+#######################################
+
+scripted_effect bryten_norman_conquest_101_ai_siward_leaves_effect = {
+	scope:siward = {
+		create_landless_adventurer_title_effect = {
+			REASON = flag:voluntary
+			FLAVOR_CHAR = scope:siward
+		}
+		start_travel_plan = {
+			destination = province:5296 #Bata
+			players_use_planner = no
+			on_start_on_action = on_travel_relocation_start
+			on_arrival_on_action = on_travel_relocation_end
+			on_arrival_destinations = last
+			on_arrival_event = bryten_norman_conquest.102
+			travel_with_domicile = yes
+			return_trip = no # One way
+		}
+	}
+}
+scripted_effect new_england_holding_names_effect = {
+	random_list = {
+	    100 = { set_title_name = b_london }
+	    100 = { set_title_name = b_southwark }
+	    100 = { set_title_name = b_woxbrigge }
+	    100 = { set_title_name = b_gore }
+	    100 = { set_title_name = b_brentford }
+	    100 = { set_title_name = b_colchester }
+	    100 = { set_title_name = b_maldon }
+	    100 = { set_title_name = b_chelmsford }
+	    100 = { set_title_name = b_dunmow }
+	    100 = { set_title_name = b_bedford }
+	    100 = { set_title_name = b_ampthill }
+	    100 = { set_title_name = b_luton }
+	    100 = { set_title_name = b_berkhamsted }
+	    100 = { set_title_name = b_saint_albans }
+	    100 = { set_title_name = b_hertford }
+	    100 = { set_title_name = b_buckingham }
+	    100 = { set_title_name = b_aylesbury }
+	    100 = { set_title_name = b_newport }
+	    100 = { set_title_name = b_wycombe }
+	    100 = { set_title_name = b_bamburgh }
+	    100 = { set_title_name = b_rothbury }
+	    100 = { set_title_name = b_lindisfarne }
+	    100 = { set_title_name = b_hexham }
+	    100 = { set_title_name = b_durham }
+	    100 = { set_title_name = b_hartlepool }
+	    100 = { set_title_name = b_darlington }
+	    100 = { set_title_name = b_carlisle }
+	    100 = { set_title_name = b_whitehaven }
+	    100 = { set_title_name = b_furness }
+	    100 = { set_title_name = b_wigton }
+	    100 = { set_title_name = b_lancaster }
+	    100 = { set_title_name = b_salford }
+	    100 = { set_title_name = b_west_derby }
+	    100 = { set_title_name = b_kendal }
+	    100 = { set_title_name = b_appleby }
+	    100 = { set_title_name = b_chester }
+	    100 = { set_title_name = b_northwich }
+	    100 = { set_title_name = b_macclesfield }
+	    100 = { set_title_name = b_derby }
+	    100 = { set_title_name = b_chesterfield }
+	    100 = { set_title_name = b_castleton }
+	    100 = { set_title_name = b_york }
+	    100 = { set_title_name = b_scarborough }
+	    100 = { set_title_name = b_whitby }
+	    100 = { set_title_name = b_richmond }
+	    100 = { set_title_name = b_yarlestre }
+	    100 = { set_title_name = b_pockington }
+	    100 = { set_title_name = b_cottingham }
+	    100 = { set_title_name = b_bridlington }
+	    100 = { set_title_name = b_leeds }
+	    100 = { set_title_name = b_doncaster }
+	    100 = { set_title_name = b_halifax }
+	    100 = { set_title_name = b_sheffield }
+	    100 = { set_title_name = b_bolton }
+	    100 = { set_title_name = b_ripon }
+	    100 = { set_title_name = b_lincoln }
+	    100 = { set_title_name = b_stamford }
+	    100 = { set_title_name = b_boston }
+	    100 = { set_title_name = b_bolingsbroke }
+	    100 = { set_title_name = b_grimsby }
+	    100 = { set_title_name = b_norwich }
+	    100 = { set_title_name = b_thetford }
+	    100 = { set_title_name = b_walsingham }
+	    100 = { set_title_name = b_lynn }
+	    100 = { set_title_name = b_ipswich }
+	    100 = { set_title_name = b_sudbury }
+	    100 = { set_title_name = b_blything }
+	    100 = { set_title_name = b_beodericsworth }
+	    100 = { set_title_name = b_cambridge }
+	    100 = { set_title_name = b_radfield }
+	    100 = { set_title_name = b_papworth }
+	    100 = { set_title_name = b_ely }
+	    100 = { set_title_name = b_warwick }
+	    100 = { set_title_name = b_coventry }
+	    100 = { set_title_name = b_birmingham }
+	    100 = { set_title_name = b_leicester }
+	    100 = { set_title_name = b_melton }
+	    100 = { set_title_name = b_bosworth }
+	    100 = { set_title_name = b_rutland }
+	    100 = { set_title_name = b_nottingham }
+	    100 = { set_title_name = b_newark }
+	    100 = { set_title_name = b_retford }
+	    100 = { set_title_name = b_stafford }
+	    100 = { set_title_name = b_wolverhampton }
+	    100 = { set_title_name = b_stoke_on_trent }
+	    100 = { set_title_name = b_worcester }
+	    100 = { set_title_name = b_evesham }
+	    100 = { set_title_name = b_kidderminster }
+	    100 = { set_title_name = b_hurstingstone }
+	    100 = { set_title_name = b_norman_cross }
+	    100 = { set_title_name = b_leightonstone }
+	    100 = { set_title_name = b_northampton }
+	    100 = { set_title_name = b_peterborough }
+	    100 = { set_title_name = b_kettering }
+	    100 = { set_title_name = b_shrewsbury }
+	    100 = { set_title_name = b_ludlow }
+	    100 = { set_title_name = b_bishops_castle }
+	    100 = { set_title_name = b_gloucester }
+	    100 = { set_title_name = b_bristol }
+	    100 = { set_title_name = b_winchcombe }
+	    100 = { set_title_name = b_salisbury }
+	    100 = { set_title_name = b_wilton }
+	    100 = { set_title_name = b_ramsbury }
+	    100 = { set_title_name = b_malmesbury }
+	    100 = { set_title_name = b_oxford }
+	    100 = { set_title_name = b_banbury }
+	    100 = { set_title_name = b_witney }
+	    100 = { set_title_name = b_reading }
+	    100 = { set_title_name = b_newbury }
+	    100 = { set_title_name = b_abingdon }
+	    100 = { set_title_name = b_dover }
+	    100 = { set_title_name = b_canterbury }
+	    100 = { set_title_name = b_rochester }
+	    100 = { set_title_name = b_tonbridge }
+	    100 = { set_title_name = b_chertsey }
+	    100 = { set_title_name = b_guildford }
+	    100 = { set_title_name = b_kingston }
+	    100 = { set_title_name = b_tandbridge }
+	    100 = { set_title_name = b_lewes }
+	    100 = { set_title_name = b_chichester }
+	    100 = { set_title_name = b_arun }
+	    100 = { set_title_name = b_hastings }
+	    100 = { set_title_name = b_winchester }
+	    100 = { set_title_name = b_southampton }
+	    100 = { set_title_name = b_portsmouth }
+	    100 = { set_title_name = b_basingstoke }
+	    100 = { set_title_name = b_christchurch }
+	    100 = { set_title_name = b_carisbrooke }
+	    100 = { set_title_name = b_wareham }
+	    100 = { set_title_name = b_poole }
+	    100 = { set_title_name = b_shaftesbury }
+	    100 = { set_title_name = b_lyme }
+	    100 = { set_title_name = b_bath }
+	    100 = { set_title_name = b_winterstoke }
+	    100 = { set_title_name = b_ilchester }
+	    100 = { set_title_name = b_taunton }
+	    100 = { set_title_name = b_exeter }
+	    100 = { set_title_name = b_totnes }
+	    100 = { set_title_name = b_okehampton }
+	    100 = { set_title_name = b_barnstaple }
+	    100 = { set_title_name = b_launceston }
+	    100 = { set_title_name = b_tintagel }
+	    100 = { set_title_name = b_helston }
+	}
+}
+
+bryten_norman_conquest.100 = {# Siward Barn turns up at Hereward's camp - Hereward's perspective
+	type = character_event
+	title = bryten_norman_conquest.100.t
+	desc = bryten_norman_conquest.100.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:siward
+		animation = marshal
+	}
+	cooldown = { years = 200 } #Should never happen again
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		is_landless_adventurer = yes
+		character:90028 = {
+			exists = this
+		}
+		character:161266 = {
+			exists = this
+		}
+	}
+
+	immediate = {
+		character:161266 = {
+			save_scope_as = siward
+			move_to_pool_at = root.location
+		}
+		location = {
+			save_scope_as = location
+		}
+		ep3_harrying_widget_setup_effect = yes
+	}
+ 	
+	option = { #Of course, come on in!
+		name = bryten_norman_conquest.100.a
+
+		add_courtier = scope:siward
+
+		ep3_increase_resistance_effect = { AMOUNT = harrying_medium_increase_value }
+
+		random = {
+			chance = {
+				value = 5
+				if = {
+					limit = { is_ai = no }
+					add = 95
+				}
+			}
+			trigger_event = {
+				id = bryten_norman_conquest.101
+				days = { 150 200 }
+			}
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+			gregarious = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_energy = 1
+			}
+		}
+	}
+
+	option = { #We're full
+		name = bryten_norman_conquest.100.b
+
+		reverse_add_opinion = {
+			target = scope:siward
+			modifier = annoyed_opinion
+			opinion = -20
+		}
+
+		stress_impact = {
+			compassionate = minor_stress_impact_gain
+			callous = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 50
+			ai_value_modifier = {
+				ai_boldness = -1
+				ai_energy = -1
+			}
+		}
+	}
+}
+bryten_norman_conquest.101 = {# Siward Barn leaves Hereward's camp - Hereward's perspective
+	type = character_event
+	title = bryten_norman_conquest.101.t
+	desc = bryten_norman_conquest.101.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		character = scope:siward
+		animation = personality_honorable
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+		character:90028 = {
+			exists = this
+		}
+		character:161266 = {
+			exists = this
+			location = root.location
+		}
+		title:e_byzantium = {
+			exists = this
+		}
+		title:k_england = {
+			exists = this
+		}
+		title:c_zichia.holder = {
+			NOT = {
+				this = title:e_byzantium.holder
+			}
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			scope:siward = { #Give him some gold so he can buy land
+				add_gold = 300
+			}
+		}
+		title:e_byzantium.holder = {
+			save_scope_as = emperor
+		}
+		title:k_england.holder = {
+			save_scope_as = king_england
+		}
+	}
+
+	option = { #Go with my blessing
+		name = bryten_norman_conquest.101.a
+
+		bryten_norman_conquest_101_ai_siward_leaves_effect = yes
+
+		stress_impact = {
+			compassionate = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			ai_value_modifier = {
+				ai_boldness = 1
+				ai_energy = 1
+			}
+		}
+	}
+
+	option = { #I SHALL BECOME YOU
+		name = bryten_norman_conquest.101.b
+
+		trigger = {
+			is_ai = no
+		}
+
+		add_internal_flag = dangerous
+
+		scope:siward = {
+			create_landless_adventurer_title_effect = {
+				REASON = flag:voluntary
+				FLAVOR_CHAR = scope:siward
+			}
+			start_travel_plan = {
+				destination = province:496 #Constantinople
+				players_use_planner = no
+				on_start_on_action = on_travel_relocation_start
+				on_arrival_on_action = on_travel_relocation_end
+				on_arrival_destinations = last
+				on_arrival_event = bryten_norman_conquest.102
+				travel_with_domicile = yes
+				return_trip = no # One way
+			}
+		}
+
+		set_player_character = scope:siward
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	option = { #Duel to stay.
+		name = bp1_yearly.1020.a
+
+		duel = {
+			skill = diplomacy
+			target = scope:siward
+			# He stays.
+			60 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 3.5
+					min = -49
+				}
+				min = 5
+				desc = bryten_norman_conquest.101.c.success
+				send_interface_toast = {
+					title = bryten_norman_conquest.101.c.success
+					left_icon = scope:siward
+					reverse_add_opinion = {
+						target = scope:siward
+						modifier = respect_opinion
+						opinion = 30
+					}
+				}
+			}
+			# He goes.
+			40 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				min = 5
+				desc = bryten_norman_conquest.101.c.failure
+				send_interface_toast = {
+					title = bryten_norman_conquest.101.c.failure
+					left_icon = scope:siward
+					bryten_norman_conquest_101_ai_siward_leaves_effect = yes
+				}
+			}
+		}
+
+		ai_chance = {
+			ai_value_modifier = {
+				ai_sociability = 1
+				ai_rationality = 1
+			}
+		}
+	}
+
+	after = {
+		scope:siward = { add_character_modifier = laamp_provisions_forgiveness_travel_modifier }
+	}
+}
+bryten_norman_conquest.102 = {# Siward Barn arrives in Constantinople
+
+	type = character_event
+	title = bryten_norman_conquest.102.t
+	desc = bryten_norman_conquest.102.desc
+	theme = realm
+	override_background = { reference = ep3_constantinople }
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:emperor
+		animation = scheme
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		title:e_byzantium.holder = {
+			save_scope_as = emperor
+		}
+		title:c_zichia = {
+			save_scope_as = zichia
+		}
+	}
+
+	option = { #Oh boy I'd love to do a realmy thing!
+		name = bryten_norman_conquest.102.a
+
+		custom_tooltip = bryten_norman_conquest.102.a.tt
+
+		start_travel_plan = {
+			destination = province:5296 #Bata
+			players_use_planner = no
+			on_start_on_action = on_travel_relocation_start
+			on_arrival_on_action = on_travel_relocation_end
+			on_arrival_destinations = last
+			on_arrival_event = bryten_norman_conquest.103
+			travel_with_domicile = yes
+			return_trip = no # One way
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+		}
+
+		ai_chance = { #50% chance for AI
+			base = 50
+		}
+	}
+
+	option = { #Nah I'd rather stay here
+		name = bryten_norman_conquest.102.b
+
+		add_character_modifier = {
+			modifier = ep3_culturally_greek_modifier
+			years = 20
+		}
+
+		reverse_add_opinion = {
+			target = scope:emperor
+			modifier = disappointed_opinion
+			opinion = -5
+		}
+
+		ai_chance = { #50% chance for AI
+			base = 50
+		}
+	}
+}
+bryten_norman_conquest.103 = {# Siward Barn arrives in Bata
+
+	type = character_event
+	title = bryten_norman_conquest.103.t
+	desc = bryten_norman_conquest.103.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		character = scope:title_holder
+		animation = scheme
+	}
+
+	trigger = {
+		has_ep3_dlc_trigger = yes
+	}
+
+	immediate = {
+		scope:zichia.holder.top_liege = {
+			save_scope_as = title_holder
+		}
+		hidden_effect = {
+			add_unpressed_claim = title:c_zichia
+		}
+		title:c_zichia = {
+			add_to_list = landed_titles
+		}
+		scope:zichia.holder = {
+			every_realm_province = {
+				barony = { add_to_list = zichia_names }
+			}
+		}
+	}
+
+	option = { #OK, I'll pay
+		name = bryten_norman_conquest.103.a
+
+		add_character_flag = { #Bypass usual event
+			flag = siward_flag
+			years = 1
+		}
+
+		pay_short_term_gold = {
+			target = scope:title_holder
+			gold = 100
+		}
+
+		hidden_effect = { #For tooltip reasons
+			ep3_become_landed_transfer_effect = {
+				TITLE_RECEIVER = root
+				TITLE_LIST = landed_titles
+				TYPE = granted
+				REASON = flag:granted
+			}
+		}
+
+		custom_tooltip = destroy_laamp_effect.tt.domicile_liquidated
+
+		show_as_tooltip = {
+			get_title = title:c_zichia
+			add_character_modifier = {
+				modifier = ep3_ennobled_adventurer_modifier_1
+				years = 10
+			}
+			## Administrative.
+			if = {
+				limit = {
+					scope:new_liege ?= { government_has_flag = government_is_administrative }
+				}
+				change_government = administrative_government
+			}
+			## Clan.
+			else_if = {
+				limit = {
+					scope:new_liege ?= { government_has_flag = government_is_clan }
+				}
+				change_government = clan_government
+			}
+			## Tribal.
+			else_if = {
+				limit = {
+					scope:new_liege ?= { government_has_flag = government_is_tribal }
+				}
+				change_government = tribal_government
+			}
+			## Else feudal.
+			else = { change_government = feudal_government }
+		}
+
+		scope:zichia = {
+			set_title_name = c_new_england
+			set_color_from_title = title:k_england
+		}
+
+		every_in_list = {
+			list = zichia_names
+			new_england_holding_names_effect = yes
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+			greedy = medium_stress_impact_gain
+		}
+
+		ai_chance = { #50% chance for AI
+			base = 50
+		}
+	}
+
+	option = { #I'll take it by force!
+		name = bryten_norman_conquest.103.b
+
+		start_war = {
+			cb = county_conquest_cb
+			target = title:c_zichia.holder
+			target_title = title:c_zichia
+		}
+
+		stress_impact = {
+			ambitious = minor_stress_impact_loss
+			greedy = minor_stress_impact_loss
+			craven = medium_stress_impact_gain
+		}
+
+		ai_chance = { #50% chance for AI
+			base = 50
+		}
+	}
+}
+#######################################
+# Norman Conquest - Endings
+#######################################
+bryten_norman_conquest.110 = {# Harrying ends - the Aethelings are no more
+	type = character_event
+	title = bryten_norman_conquest.110.t
+	desc = {
+		desc = bryten_norman_conquest.110.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					this = scope:ruler_england
+				}
+				desc = bryten_norman_conquest.110.desc.william
+			}
+			triggered_desc = {
+				trigger = {
+					this = character:90028
+				}
+				desc = bryten_norman_conquest.110.desc.hereward
+			}
+			desc = bryten_norman_conquest.110.desc.therest
+		}
+	}
+
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		trigger = { NOT = { root = this } }
+		character = scope:ruler_england
+		animation = personality_honorable
+	}
+
+	immediate = {
+		title:k_england.holder = {
+			save_scope_as = norman_england_king
+		}
+		title:k_england = {
+			save_scope_as = england
+		}
+		custom_tooltip = harrying_end
+		set_global_variable = {
+			name = norman_england_secured
+			value = yes
+		}
+		establish_norman_adminstration_effects = yes
+
+	}
+
+	option = { # Hereward
+		name = bryten_norman_conquest.110.a
+
+
+		trigger = {
+			this = character:90028
+		}
+
+		stress_impact = {
+			base = minor_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #William
+		name = bryten_norman_conquest.110.b
+
+		trigger = {
+			this = scope:norman_england_king
+		}
+
+		stress_impact = {
+			base = major_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #All others
+		name = bryten_norman_conquest.110.b
+
+		trigger = {
+			NOR = {
+				this = scope:ruler_england
+				this = character:90028
+			}
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+bryten_norman_conquest.111 = {# Harrying ends - an Aetheling rules
+	type = character_event
+	title = bryten_norman_conquest.111.t
+	desc = {
+		desc = bryten_norman_conquest.111.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					this = scope:ruler_england
+				}
+				desc = bryten_norman_conquest.111.desc.ruler
+			}
+			triggered_desc = {
+				trigger = {
+					this = character:90028
+				}
+				desc = bryten_norman_conquest.111.desc.hereward
+			}
+			desc = bryten_norman_conquest.111.desc.therest
+		}
+	}
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		trigger = { NOT = { root = this } }
+		character = scope:ruler_england
+		animation = personality_honorable
+	}
+
+	immediate = {
+		title:k_england.holder = {
+			save_scope_as = ruler_england
+		}
+		title:k_england = {
+			save_scope_as = england
+		}
+		custom_tooltip = harrying_end
+	}
+
+	option = { # Hereward
+		name = bryten_norman_conquest.111.a
+
+		trigger = {
+			this = character:90028
+		}
+
+		stress_impact = {
+			base = medium_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { # Ruler
+		name = bryten_norman_conquest.111.b
+
+		trigger = {
+			this = scope:ruler_england
+		}
+
+		stress_impact = {
+			base = major_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #All others
+		name = bryten_norman_conquest.111.b
+
+		trigger = {
+			NOR = {
+				this = scope:ruler_england
+				this = character:90028
+			}
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	after = {
+		scope:ruler_england = {
+			trigger_event = {# Dealing with the Normans
+				id = bryten_norman_conquest.113
+				days = { 5 10 }
+			}
+		}
+	}
+}
+bryten_norman_conquest.112 = {# Harrying ends - neither Normans nor Aethelings rule
+	type = character_event
+	title = bryten_norman_conquest.112.t
+	desc = bryten_norman_conquest.112.desc
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		trigger = { NOT = { root = this } }
+		character = scope:ruler_england
+		animation = personality_honorable
+	}
+
+	immediate = {
+		title:k_england.holder = {
+			save_scope_as = ruler_england
+		}
+		title:k_england = {
+			save_scope_as = england
+		}
+		custom_tooltip = harrying_end
+	}
+
+	option = { # Hereward
+		name = bryten_norman_conquest.112.a
+
+		trigger = {
+			this = character:90028
+		}
+
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { # Ruler
+		name = bryten_norman_conquest.112.b
+
+		trigger = {
+			this = scope:ruler_england
+		}
+
+		stress_impact = {
+			base = major_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #All others
+		name = bryten_norman_conquest.112.b
+
+		trigger = {
+			NOR = {
+				this = scope:ruler_england
+				this = character:90028
+			}
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+bryten_norman_conquest.113 = {# Coronation after William 
+	type = character_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { this = character:112 }
+				desc = bryten_norman_conquest.113.t.edgar
+			}
+			triggered_desc = {
+				trigger = { this = character:101515 }
+				desc = bryten_norman_conquest.113.t.svend
+			}
+			triggered_desc = {
+				trigger = { 
+					NOT = {
+						this = character:112
+						this = character:101515
+					}
+				}
+				desc = bryten_norman_conquest.113.t.else
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { this = character:112}
+				desc = bryten_norman_conquest.113.desc.edgar
+			}
+			triggered_desc = {
+				trigger = { this = character:101515 }
+				desc = bryten_norman_conquest.113.desc.svend
+			}
+			triggered_desc = {
+				trigger = { 
+					NOT = {
+						this = character:112
+						this = character:101515
+					}				
+				}
+				desc = bryten_norman_conquest.113.desc.else
+			}
+		}
+	}
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		NOT = { has_culture = culture:norman }
+		has_title = title:k_england # Holds Exeter
+		NOT = { has_global_variable = edgar_is_king }
+		has_global_variable = william_is_king # Should happen after the debate
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = edgar_is_king
+			value = yes
+		}
+		reestablish_saxon_adminstration_effects = yes
+	}
+	
+	option = {# Interesting
+		name = bryten_norman_conquest.113.king
+		every_vassal = {
+			limit = { special_succession_witengamot_trigger = yes }
+			add_opinion = {
+				modifier = implemented_traditional_succession_law_opinion
+				years = 20
+				target = root
+			}
+			custom = major_decisions.3100.tt_opinion_witengamot
+		}
+	}
+
+	after = {
+		trigger_event = {# Dealing with the Normans
+			id = bryten_norman_conquest.114
+			days = { 10 20 }
+		}
+	}
+
+}
+bryten_norman_conquest.114 = {# Dealing with the Normans who remain 
+	type = character_event
+	title = bryten_norman_conquest.114.t
+	desc = bryten_norman_conquest.114.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	immediate = {
+		title:k_england.holder = { save_scope_as = saxon_king }
+
+		random_knight = {
+			limit = { NOT = { has_culture = culture:norman }	}
+			save_scope_as = english_knight
+		}
+		random_knight = {
+			limit = { 
+				NOT = { has_culture = culture:norman }
+				NOT = {
+					this = scope:english_knight
+				} 			
+			}
+			save_scope_as = english_knight1
+		}
+		random_knight = {
+			limit = { 
+				NOT = { has_culture = culture:norman }
+				NOT = {
+					this = scope:english_knight
+					this = scope:english_knight1
+				} 			
+			}
+			save_scope_as = english_knight2
+		}
+		random_knight = {
+			limit = { 
+				NOT = { has_culture = culture:norman }
+				NOT = {
+					this = scope:english_knight
+					this = scope:english_knight1
+					this = scope:english_knight2
+				} 			
+			}
+			save_scope_as = english_knight3
+		}		
+		random_knight = {
+			limit = { 
+				NOT = { has_culture = culture:norman }
+				NOT = {
+					this = scope:english_knight
+					this = scope:english_knight1
+					this = scope:english_knight2
+					this = scope:english_knight3
+				} 			
+			}
+			save_scope_as = english_knight4
+		}		
+		scope:saxon_king = {
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { this = title:c_middlesex }
+
+				}
+				save_scope_as = saxon_england_county
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:saxon_england_county
+					}
+
+				}
+				save_scope_as = saxon_england_county2
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:saxon_england_county
+						this = scope:saxon_england_county2
+					}
+
+				}
+				save_scope_as = saxon_england_county3
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:saxon_england_county
+						this = scope:saxon_england_county2
+						this = scope:saxon_england_county3
+
+					}
+
+				}
+				save_scope_as = saxon_england_county4
+			}
+			random_held_title = {
+				limit = { 
+					tier = tier_county 
+					kingdom = title:k_england
+					NOT = { 
+						this = title:c_middlesex 
+						this = scope:saxon_england_county
+						this = scope:saxon_england_county2
+						this = scope:saxon_england_county3
+						this = scope:saxon_england_county4
+
+					}
+
+				}
+				save_scope_as = saxon_england_county5
+			}					
+		}
+
+
+
+	}
+	
+	option = {# Banish
+		name = bryten_norman_conquest.114.banish
+		ai_chance = {
+			base = 50
+		}		
+		every_vassal = {
+			limit = { 
+				has_culture = culture:norman 
+				kingdom = title:k_england
+			}
+			banish = yes
+		}
+		hidden_effect = {
+			# First Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change
+				add_claim_on_loss = yes
+			}	
+			scope:saxon_england_county = {
+				change_title_holder = {
+					holder = scope:english_knight
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+
+			# Second Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change2
+				add_claim_on_loss = yes
+			}	
+			scope:saxon_england_county2 = {
+				change_title_holder = {
+					holder = scope:english_knight1
+					change = scope:change2
+				}
+			}
+			resolve_title_and_vassal_change = scope:change2
+
+			# Third Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change3
+				add_claim_on_loss = yes
+			}	
+			scope:saxon_england_county3 = {
+				change_title_holder = {
+					holder = scope:english_knight2
+					change = scope:change3
+				}
+			}
+			resolve_title_and_vassal_change = scope:change3
+
+			# Fourth Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change4
+				add_claim_on_loss = yes
+			}	
+			scope:saxon_england_county4 = {
+				change_title_holder = {
+					holder = scope:english_knight3
+					change = scope:change4
+				}
+			}
+			resolve_title_and_vassal_change = scope:change4
+
+			# Fifth Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change5
+				add_claim_on_loss = yes
+			}	
+			scope:saxon_england_county5 = {
+				change_title_holder = {
+					holder = scope:english_knight4
+					change = scope:change5
+				}
+			}
+			resolve_title_and_vassal_change = scope:change5
+		}
+	}
+	option = {# don't Banish
+		name = bryten_norman_conquest.114.leave
+		ai_chance = {
+			base = 50
+		}
+		every_vassal = {
+			limit = { 
+				NOT = { has_culture = culture:norman } 
+				kingdom = title:k_england			
+			}
+			add_opinion = {
+				target = root
+				modifier = no_banish_normans
+				opinion = -25
+			}
+		}
+		hidden_effect = {
+			# First Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change
+				add_claim_on_loss = yes
+			}	
+			scope:saxon_england_county = {
+				change_title_holder = {
+					holder = scope:english_knight
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+
+			# Second Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change2
+				add_claim_on_loss = yes
+			}	
+			scope:saxon_england_county2 = {
+				change_title_holder = {
+					holder = scope:english_knight1
+					change = scope:change2
+				}
+			}
+			resolve_title_and_vassal_change = scope:change2
+
+			# Third Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change3
+				add_claim_on_loss = yes
+			}	
+			scope:saxon_england_county3 = {
+				change_title_holder = {
+					holder = scope:english_knight2
+					change = scope:change3
+				}
+			}
+			resolve_title_and_vassal_change = scope:change3
+
+			# Fourth Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change4
+				add_claim_on_loss = yes
+			}	
+			scope:saxon_england_county4 = {
+				change_title_holder = {
+					holder = scope:english_knight3
+					change = scope:change4
+				}
+			}
+			resolve_title_and_vassal_change = scope:change4
+
+			# Fifth Norman County
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change5
+				add_claim_on_loss = yes
+			}	
+			scope:saxon_england_county5 = {
+				change_title_holder = {
+					holder = scope:english_knight4
+					change = scope:change5
+				}
+			}
+			resolve_title_and_vassal_change = scope:change5
+		}
+	}
+
+}
+
+bryten_norman_conquest.115 = {# Harrying ends - 100 years have passed
+	type = character_event
+	title = bryten_norman_conquest.115.t
+	desc = {
+		desc = bryten_norman_conquest.115.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					this = scope:ruler_england
+				}
+				desc = bryten_norman_conquest.115.desc.ruler
+			}
+			triggered_desc = {
+				trigger = {
+					this.culture = culture:anglo_saxon
+				}
+				desc = bryten_norman_conquest.115.desc.anglo_saxon
+			}
+			desc = bryten_norman_conquest.115.desc.therest
+		}
+	}
+	theme = harrying
+	left_portrait = {
+		character = root
+		animation = thinking
+	}
+	right_portrait = {
+		trigger = { NOT = { root = this } }
+		character = scope:ruler_england
+		animation = personality_honorable
+	}
+
+	immediate = {
+		title:k_england.holder = {
+			save_scope_as = norman_england_king
+		}
+		title:k_england = {
+			save_scope_as = england
+		}
+		custom_tooltip = harrying_end
+		set_global_variable = {
+			name = norman_england_secured
+			value = yes
+		}
+		establish_norman_adminstration_effects = yes
+
+	}
+
+	option = { # Anglo-Saxons
+		name = bryten_norman_conquest.115.a
+
+		trigger = {
+			this.culture = culture:anglo_saxon
+		}
+
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { # Ruler
+		name = bryten_norman_conquest.115.b
+		trigger = {
+			this = scope:norman_england_king
+		}
+
+		stress_impact = {
+			base = major_stress_impact_loss
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { #All others
+		name = bryten_norman_conquest.115.b
+
+		trigger = {
+			NOR = {
+				this = scope:ruler_england
+				this.culture = culture:anglo_saxon
+			}
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+#######################################
+
+
+
+
+
+
