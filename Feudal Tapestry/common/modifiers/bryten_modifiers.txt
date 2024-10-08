@@ -357,11 +357,18 @@ bryten_vow_temperate_modifier = {# Temperate Vow
 	diplomacy = -1
 	monthly_piety = 0.1
 }
-
-
-
-
-
+##########################################
+# Byzantine Modifiers
+##########################################
+bryten_byz_reclaimant_bulgaria_modifier = {
+	icon = byzantine_eagle_positive
+	stacking = yes
+	legitimacy_gain_mult = 0.05
+	monthly_influence_mult = 0.05
+	hostage_prestige_mult = 0.05
+	development_growth_factor = 0.05
+	court_grandeur_baseline_add = 5
+}
 
 
 

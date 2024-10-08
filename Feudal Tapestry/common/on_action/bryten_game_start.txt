@@ -518,7 +518,7 @@ bryten_setup_after_game_start_on_actions = {
 			title:c_northamptonshire = { set_de_jure_liege_title = title:d_lincoln }
 		}
 		if = {# Croatia is no longer part of de jure Byzantines in 1178
-			limit = { game_start_date <= 1102.2.2 }
+			limit = { game_start_date >= 1102.2.2 }
 			title:k_croatia = { set_de_jure_liege_title = title:e_carpathia	}
 		}
 		# Global Variables
@@ -544,6 +544,16 @@ bryten_setup_after_game_start_on_actions = {
 			}
 			title:c_sussex = { add_county_modifier = {	modifier = bryten_cinque_port_modifier } }
 			title:c_kent = { add_county_modifier = { modifier = bryten_cinque_port_modifier	} }
+		}
+		# Important Locations
+		if = {# Bulgarian - Byzantine Wars
+			limit = { game_start_date = 936.8.7 }
+			title:c_byzantion = {# For Bulgaria 
+				set_important_location = {
+					title = title:e_bulgaria
+					enter_realm_event = bryten_byzantine
+				}
+			}
 		}
 
 		# turning insular into catholic.

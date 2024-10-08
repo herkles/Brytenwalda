@@ -1,7 +1,7 @@
 ﻿namespace = bryten_england
 
 #######################################
-# Norman Conquest Stuff
+# Post Norman Conquest Events
 #######################################
 
 #######################################
@@ -353,7 +353,7 @@ bryten_england.041 = {# Norse Ruled Realms
 	theme = culture_change
 
 	trigger = {# safety checks
-	culture = { has_cultural_pillar = heritage_north_germanic }
+		culture = { has_cultural_pillar = heritage_north_germanic }
 		is_landed = yes
 		OR = {# Must own one of the Kingdoms
 			has_title = title:k_northumbria

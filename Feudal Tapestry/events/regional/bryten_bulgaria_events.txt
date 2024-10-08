@@ -1,0 +1,1416 @@
+﻿namespace = bryten_bulgaria
+
+#######################################
+# Bulgarian - Byzantine War Events
+#######################################
+bryten_bulgaria.001 = {# Start up for the Bulgarian Empire
+	type = character_event
+	title = bryten_bulgaria.001.t
+	desc = bryten_bulgaria.001.desc
+	theme = byzantine
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	lower_right_portrait = {
+		character = scope:byz_emperor
+	}
+	
+	immediate = {
+		title:e_byzantium.holder = {
+			save_scope_as = byz_emperor
+		}
+
+
+	}
+
+	option = {# Interesting
+		name = bryten_bulgaria.001.a
+	}
+
+}
+bryten_bulgaria.002 = {# Start up for the Byzantine Empire
+	type = character_event
+	title = bryten_bulgaria.002.t
+	desc = bryten_bulgaria.002.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Interesting
+		name = bryten_bulgaria.002.a
+	}
+
+}
+# Bulgarians Take Constantinople - fallout
+scripted_trigger bryten_bulgarokratia_favorite_vassal_trigger = {
+	is_vassal_of = scope:emperor
+	scope:previous_holder = {
+		is_alive = yes
+		is_imprisoned = no
+		is_incapable = no
+		is_landed = no
+	}
+	scope:emperor = {
+		OR = {
+			#No vassal who former emp likes more
+			NOT = {
+				any_vassal = {
+					highest_held_title_tier >= tier_county
+					is_landed = yes
+					reverse_opinion = {
+						target = scope:previous_holder
+						value >= "scope:previous_holder.opinion(scope:vassal)"
+					}
+				}
+			}
+			#No stronger vassal who former emp likes the same
+			NOT = {
+				any_vassal = {
+					highest_held_title_tier >= tier_county
+					is_landed = yes
+					reverse_opinion = {
+						target = scope:previous_holder
+						value > "scope:previous_holder.opinion(scope:vassal)"
+					}
+					current_military_strength > root.current_military_strength
+				}
+			}
+		}
+	}
+}
+scripted_trigger bryten_bulgarokratia_potential_king_trigger = {
+	is_landed = yes
+	OR = {
+		#is already a king, duh
+		highest_held_title_tier >= tier_kingdom
+		#Can make them a kingdom
+		AND = {
+			capital_county = {
+				kingdom = {
+					NOR = {
+						exists = holder
+						#Desperately try to stop latin kingdoms being grabbed
+						trigger_if = {
+							limit = {
+								exists = global_var:latin_kingdom_1
+							}
+							this = global_var:latin_kingdom_1
+						}
+						trigger_if = {
+							limit = {
+								exists = global_var:latin_kingdom_2
+							}
+							this = global_var:latin_kingdom_2
+						}
+						any_in_de_jure_hierarchy = {
+							tier = tier_county
+							this = scope:emperor.capital_county
+						}
+						AND = {
+							scope:emperor = {
+								any_realm_county = {
+									this = title:c_byzantion
+								}
+								any_realm_county = {
+									kingdom = title:k_hellas
+								}
+							}
+							this = title:k_hellas
+						}
+					}
+				}
+			}
+			highest_held_title_tier >= tier_duchy
+			exists = liege
+			#Must be free of any liege that isn't the emperor
+			NOT = {
+				liege = {
+					highest_held_title_tier < tier_empire
+				}
+			}
+			OR = {
+				is_powerful_vassal_of = title:e_byzantium.holder
+				house ?= { is_powerful_family = yes }
+				#Let's just always let Nikaea do this, they special
+				capital_county = {
+					kingdom = title:k_nikaea
+					NOT = {
+						exists = title:k_nikaea.holder
+					}
+				}
+			}
+		}
+	}
+	NOT = {
+		government_has_flag = government_is_theocracy
+	}
+}
+scripted_trigger bryten_bulgarokratia_daddy_neighbor_trigger = {
+	is_landed = yes
+	highest_held_title_tier >= tier_duchy
+	any_sub_realm_county = {
+		any_neighboring_county = {
+			OR = {
+				holder = root
+				holder.liege = root
+				holder.liege.liege ?= root
+			}
+		}
+	}
+	OR = {
+		#Higher tier
+		highest_held_title_tier > root.highest_held_title_tier
+		AND = {
+			bryten_bulgarokratia_potential_king_trigger = yes
+			#Stronger military
+			max_military_strength >= root.max_military_strength
+		}
+		AND = {
+			bryten_bulgarokratia_potential_king_trigger = yes
+			#More counties
+			sub_realm_size > root.sub_realm_size
+		}
+	}
+	NOR = {
+		highest_held_title_tier < root.highest_held_title_tier
+		highest_held_title_tier < tier_duchy
+		is_imprisoned = yes
+		this = root
+	}
+	#If more than one option exists, second should always be admin
+	trigger_if = {
+		limit = {
+			root = {
+				government_has_flag = government_is_administrative
+			}
+			OR = {
+				root = {
+					is_landless_ruler = yes
+				}
+				exists = scope:daddy
+			}
+		}
+		government_has_flag = government_is_administrative
+	}
+}
+
+bryten_bulgaria.003 = {# The Conquest of Constantinople
+	type = character_event
+	title = bryten_bulgaria.003.t
+	desc = bryten_bulgaria.003.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	trigger = {
+		# This can only happen once. 
+		not = { exists = global_var:bryten_bulgarians_take_constantinople }
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = bryten_bulgarians_take_constantinople
+			value = yes
+		}
+	}
+	
+	option = {# Emperor of the Romans at Last
+		name = bryten_bulgaria.002.a
+		trigger = {
+			faith = {
+				has_doctrine = special_doctrine_ecumenical_christian
+			}
+		}
+		custom_tooltip = bryten_bulgarian_roman_empire_tooltip
+		byrten_bulgarian_roman_empire_effect = yes
+
+	}
+	option = {# Emperor of the Bulgarians First
+		name = bryten_bulgaria.002.b
+		trigger = {
+		}
+		custom_tooltip = bryten_bulgarian_empire_tooltip
+		hidden_effect = {
+			set_global_variable = {# Full chaos time!
+				name = bryten_bulgarians_sack_constantinople
+				value = yes
+			}
+			title:e_byzantium.holder = {# the Empire of the Byzantines will break up
+				trigger_event = {
+					id = bryten_bulgaria.005
+					days = 1
+				}
+			}
+		}
+	}
+}
+bryten_bulgaria.004 = {# The Byzantine empire shatters
+	hidden = yes
+
+	#dang
+	option = {
+		#Byzantine counties around Bulgaria empire are destabilized
+		every_realm_county = {
+			change_county_control = minor_county_control_loss
+		}
+		every_realm_county = {
+			limit = {
+				OR = {
+					kingdom = {
+						any_de_jure_county = {
+							holder = {
+								OR = {
+									this = scope:bulgarian_emperor
+									any_liege_or_above = {
+										this = scope:bulgarian_emperor
+									}
+								}
+							}
+						}
+					}
+					duchy = {
+						any_de_jure_county = {
+							any_neighboring_county = {
+								holder = {
+									OR = {
+										this = scope:bulgarian_emperor
+										any_liege_or_above = {
+											this = scope:bulgarian_emperor
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			change_county_control = medium_county_control_loss
+		}
+		every_realm_county = {
+			limit = {
+				any_neighboring_county = {
+					holder = {
+						OR = {
+							this = scope:bulgarian_emperor
+							any_liege_or_above = {
+								this = scope:bulgarian_emperor
+							}
+						}
+					}
+				}
+			}
+			change_county_control = minor_county_control_loss
+		}
+		# Make new byz kings and give kings vassals
+		bryten_bulgarokratia_form_byzantine_kingdoms_effect = yes
+		# Random counts break off from dukes
+		bryten_bulgarokratia_byzantine_independence_effect = yes
+		every_vassal = {
+			add_to_list = all_byz_vassals
+		}
+		# Bye bye Byzantium... and equivalents
+		every_held_title = {
+			limit = {
+				tier = tier_empire
+			}
+			root = {
+				destroy_title = prev
+			}
+		}
+		# Release all non-de jure vassals still around
+		every_vassal = {
+			limit = {
+				primary_title = {
+					NOT = {
+						any_this_title_or_de_jure_above = {
+							this = root.primary_title
+						}
+					}
+				}
+				highest_held_title_tier >= tier_county
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = religion:islam_religion
+						culture = { has_cultural_pillar = heritage_iranian }
+						culture = { has_cultural_pillar = heritage_turkic }
+						culture = { has_cultural_pillar = heritage_arabic }
+					}
+					highest_held_title_tier < tier_kingdom
+					government_has_flag = government_is_administrative
+				}
+				change_government = clan_government
+			}
+			else_if = {
+				limit = {
+					highest_held_title_tier < tier_kingdom
+					government_has_flag = government_is_administrative
+				}
+				change_government = feudal_government
+			}
+			create_character_memory = {
+				type = bryten_bulgarkratoia_byz_independent_memory
+			}
+			create_title_and_vassal_change = {
+				type = independency
+				save_scope_as = change
+			}
+			becomes_independent = { change = scope:change }
+			resolve_title_and_vassal_change = scope:change
+		}
+		
+		#If the emperor is independent and below king make him and his vassals switch from admin
+		if = {
+			limit = {
+				highest_held_title_tier < tier_kingdom
+				OR = {
+					NOT = { exists = liege }
+					liege = {
+						highest_held_title_tier < tier_kingdom
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						religion = religion:islam_religion
+						culture = { has_cultural_pillar = heritage_iranian }
+						culture = { has_cultural_pillar = heritage_turkic }
+						culture = { has_cultural_pillar = heritage_arabic }
+					}
+				}
+				change_government = clan_government
+			}
+			else = {
+				change_government = feudal_government
+			}
+			if = {
+				limit = {
+					any_vassal = {
+						is_landed = yes
+						government_has_flag = government_is_administrative
+					}
+				}
+				every_vassal_or_below = {
+					limit = {
+						is_landed = yes
+						government_has_flag = government_is_administrative
+					}
+					if = {
+						limit = {
+							OR = {
+								religion = religion:islam_religion
+								culture = { has_cultural_pillar = heritage_iranian }
+								culture = { has_cultural_pillar = heritage_turkic }
+								culture = { has_cultural_pillar = heritage_arabic }
+							}
+						}
+						change_government = clan_government
+					}
+					else = {
+						change_government = feudal_government
+					}
+				}
+			}
+		}
+	}
+	after = {
+		#General event that tells all players what happened
+		every_player = {
+			limit = {
+				bryten_bulgarokratia_notification_recipient_trigger = yes
+			}
+			add_character_flag = bulgarokratia_bulgaria_empire_outcome
+			trigger_event = {
+				id = bryten_bulgaria.005
+				days = 1
+			}
+		}
+	}
+}
+bryten_bulgaria.005 = {# Byzantine vassals hear about what's going on... and brace for what might come
+	type = character_event
+	title = bryten_bulgaria.005.t
+	desc = bryten_bulgaria.005.desc
+	theme = byzantine
+	override_background = {
+		reference = ep3_byzantium_throneroom
+	}
+	left_portrait = {
+		character = scope:emperor
+		animation = acknowledging
+	}
+	lower_center_portrait = scope:previous_holder
+	lower_left_portrait = scope:daddy_2
+	lower_right_portrait = scope:daddy
+	immediate = {
+		save_scope_as = vassal
+		#Save potential daddies of landed imperial vassal
+		if = {
+			limit = {
+				is_vassal_of = scope:emperor
+				is_landed = yes
+				highest_held_title_tier < tier_kingdom
+			}
+			scope:emperor = {
+				every_vassal = {
+					limit = {
+						NOT = {
+							this = root
+						}
+						bryten_bulgarokratia_daddy_neighbor_trigger = yes
+					}
+					add_to_list = potential_daddies
+				}
+			}
+			#Try to grab neighbors
+			if = {
+				limit = {
+					any_in_list = {
+						list = potential_daddies
+						highest_held_title_tier >= tier_kingdom
+					}
+				}
+				ordered_in_list = {
+					list = potential_daddies
+					order_by = max_military_strength
+					limit = {
+						highest_held_title_tier >= tier_kingdom
+					}
+					save_scope_as = daddy
+				}
+			}
+			else = {
+				ordered_in_list = {
+					list = potential_daddies
+					order_by = max_military_strength
+					save_scope_as = daddy
+				}
+			}
+			# No one wants to lose admin status - try to grab same kingdom rulers
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:daddy
+					}
+				}
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOT = {
+								this = root
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							capital_county.kingdom = root.capital_county.kingdom
+							exists = root.house
+							house ?= {
+								this = root.house
+							}
+						}
+						save_scope_as = daddy
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:daddy
+					}
+				}
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOT = {
+								this = root
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							exists = root.house
+							house ?= {
+								this = root.house
+							}
+						}
+						save_scope_as = daddy
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:daddy
+					}
+				}
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOT = {
+								this = root
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							capital_county.kingdom = {
+								any_de_jure_county = {
+									any_neighboring_county = {
+										kingdom = root.capital_county.kingdom
+									}
+								}
+							}
+						}
+						save_scope_as = daddy
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = scope:daddy
+					}
+				}
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOT = {
+								this = root
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							any_realm_county = {
+								is_coastal_county = yes
+							}
+							root = {
+								any_realm_county = {
+									is_coastal_county = yes
+								}
+							}
+						}
+						save_scope_as = daddy
+					}
+				}
+			}
+			if = {
+				limit = {
+					any_in_list = {
+						list = potential_daddies
+						highest_held_title_tier >= tier_kingdom
+					}
+				}
+				ordered_in_list = {
+					list = potential_daddies
+					order_by = realm_size
+					limit = {
+						highest_held_title_tier >= tier_kingdom
+						NOT = {
+							this = scope:daddy
+						}
+					}
+					save_scope_as = daddy_2
+				}
+			}
+			else = {
+				ordered_in_list = {
+					list = potential_daddies
+					order_by = realm_size
+					limit = {
+						NOT = {
+							this = scope:daddy
+						}
+					}
+					save_scope_as = daddy_2
+				}
+			}
+			#No one wants to lose admin status - try to grab same kingdom rulers
+			if = {
+				limit = {
+					exists = scope:daddy
+					NOT = {
+						exists = scope:daddy_2
+					}
+				}
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOR = {
+								this = root
+								this = scope:daddy
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							capital_county.kingdom = root.primary_title.kingdom
+							exists = root.house
+							house ?= {
+								this = root.house
+							}
+						}
+						save_scope_as = daddy_2
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = scope:daddy
+					NOT = {
+						exists = scope:daddy_2
+					}
+				}
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOR = {
+								this = root
+								this = scope:daddy
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							exists = root.house
+							house ?= {
+								this = root.house
+							}
+						}
+						save_scope_as = daddy_2
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = scope:daddy
+					NOT = {
+						exists = scope:daddy_2
+					}
+				}
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOR = {
+								this = root
+								this = scope:daddy
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							capital_county.kingdom = {
+								any_de_jure_county = {
+									any_neighboring_county = {
+										kingdom = root.primary_title.kingdom
+									}
+								}
+							}
+						}
+						save_scope_as = daddy_2
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = scope:daddy
+					NOT = {
+						exists = scope:daddy_2
+					}
+				}
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOR = {
+								this = root
+								this = scope:daddy
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							any_realm_county = {
+								is_coastal_county = yes
+							}
+							root = {
+								any_realm_county = {
+									is_coastal_county = yes
+								}
+							}
+						}
+						save_scope_as = daddy_2
+					}
+				}
+			}
+		}
+		#Sub vassal already has a daddy
+		else_if = {
+			limit = {
+				liege.liege ?= {
+					highest_held_title_tier < tier_empire
+					NOT = {
+						this = root
+					}
+				}
+				is_landed = yes
+			}
+			liege.liege = {
+				save_scope_as = daddy
+			}
+		}
+		else_if = {
+			limit = {
+				is_landed = yes
+				exists = liege
+				liege = {
+					NOT = {
+						this = root
+					}
+					highest_held_title_tier <= tier_kingdom
+				}
+			}
+			liege = {
+				save_scope_as = daddy
+			}
+		}
+		#Save daddies for landless
+		if = {
+			limit = {
+				is_landless_ruler = yes
+			}
+			#Relatives first
+			if = {	
+				limit = {
+					scope:emperor = {
+						any_vassal = {
+							NOT = {
+								this = root
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							exists = root.house
+							house ?= {
+								this = root.house
+							}
+						}
+					}
+				}
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOT = {
+								this = root
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							exists = root.house
+							house ?= {
+								this = root.house
+							}
+						}
+						save_scope_as = daddy
+					}
+				}
+			}
+			#Vassals in same kingdom as estate
+			else_if = {	
+				limit = {
+					scope:emperor = {
+						any_vassal = {
+							NOT = {
+								this = root
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							exists = capital_county
+							capital_county.kingdom = {
+								this = root.domicile.domicile_location.county.kingdom
+							}
+						}
+					}
+				}
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOT = {
+								this = root
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+							exists = capital_county
+							capital_county.kingdom = {
+								this = root.domicile.domicile_location.county.kingdom
+							}
+						}
+						save_scope_as = daddy
+					}
+				}
+			}
+			else = {
+				scope:emperor = {
+					ordered_vassal = {
+						order_by = max_military_strength
+						limit = {
+							NOT = {
+								this = root
+							}
+							bryten_bulgarokratia_potential_king_trigger = yes
+							NOT = {
+								government_has_flag = government_is_theocracy
+							}
+						}
+						save_scope_as = daddy
+					}
+				}
+			}
+			if = {
+				limit = {
+					exists = scope:daddy
+				}
+				#Relatives first for daddy 2
+				if = {	
+					limit = {
+						scope:emperor = {
+							any_vassal = {
+								NOR = {
+									this = scope:daddy
+									this = root
+									government_has_flag = government_is_theocracy
+								}
+								bryten_bulgarokratia_potential_king_trigger = yes
+								exists = root.house
+								house ?= {
+									this = root.house
+								}
+							}
+						}
+					}
+					scope:emperor = {
+						ordered_vassal = {
+							order_by = max_military_strength
+							limit = {
+								NOR = {
+									this = scope:daddy
+									this = root
+									government_has_flag = government_is_theocracy
+								}
+								bryten_bulgarokratia_potential_king_trigger = yes
+								exists = root.house
+								house ?= {
+									this = root.house
+								}
+							}
+							save_scope_as = daddy_2
+						}
+					}
+				}
+				#Vassals in same kingdom as estate
+				else_if = {	
+					limit = {
+						scope:emperor = {
+							any_vassal = {
+								NOR = {
+									this = scope:daddy
+									this = root
+									government_has_flag = government_is_theocracy
+								}
+								bryten_bulgarokratia_potential_king_trigger = yes
+								exists = capital_county
+								capital_county.kingdom = {
+									this = root.domicile.domicile_location.county.kingdom
+								}
+							}
+						}
+					}
+					scope:emperor = {
+						ordered_vassal = {
+							order_by = max_military_strength
+							limit = {
+								NOR = {
+									this = scope:daddy
+									this = root
+									government_has_flag = government_is_theocracy
+								}
+								bryten_bulgarokratia_potential_king_trigger = yes
+								exists = capital_county
+								capital_county.kingdom = {
+									this = root.domicile.domicile_location.county.kingdom
+								}
+							}
+							save_scope_as = daddy_2
+						}
+					}
+				}
+				else = {
+					scope:emperor = {
+						ordered_vassal = {
+							order_by = max_military_strength
+							limit = {
+								NOR = {
+									this = scope:daddy
+									this = root
+									government_has_flag = government_is_theocracy
+								}
+								bryten_bulgarokratia_potential_king_trigger = yes
+							}
+							save_scope_as = daddy_2
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				bryten_bulgarokratia_potential_king_trigger = yes
+			}
+			capital_county = {
+				kingdom = {
+					save_scope_as = byz_kingdom
+				}
+			}
+		}
+		set_global_variable = {
+			name = bryten_bulgarokratia_has_begun
+			value = yes
+		}
+
+	}
+	#Powerful vassal - and want to maintain administrative government
+	option = {
+		trigger = {
+			is_ai = no
+			bryten_bulgarokratia_potential_king_trigger = yes
+		}
+		name = bryten_bulgaria.005.a
+		add_internal_flag = special
+		#If you are the emperor's favorite vassal, he flees to join you
+		if = {
+			limit = {
+				bryten_bulgarokratia_favorite_vassal_trigger = yes
+			}
+			custom_tooltip = previous_emp_will_join_court_tt
+		}
+		custom_description_no_bullet = {
+		 	text = if_byz_dissolves_tt
+		 	subject = root
+		}
+		if = {
+			limit = {
+				highest_held_title_tier < tier_kingdom
+			}
+			custom_tooltip = gain_byz_kingdom_tt
+		}
+		if = {
+			limit = {
+				government_has_flag = government_is_administrative
+			}
+			custom_tooltip = byz_remain_admin_tt
+		}
+		custom_tooltip = byz_vassals_may_join_tt
+		custom_tooltip = byz_become_independent_tt
+		if = {
+			limit = {
+				NOT = {
+					highest_held_title_tier = tier_kingdom
+				}
+			}
+			set_variable = {
+				name = bulgarokratia_becoming_king
+				value = yes
+				days = 60
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:daddy
+			}
+			stress_impact = {
+				humble = medium_stress_impact_gain
+				craven = medium_stress_impact_gain
+				content = minor_stress_impact_gain
+			}
+		}
+		#Once all player vassals have this flag, Latin Empire chain can proceed
+		add_character_flag = {
+			flag = byz_aftermath_fate
+			years = 1
+		}
+	}
+	#Want to be under a more powerful neighbor
+	option = {
+		trigger = {
+			is_ai = no
+			exists = scope:daddy
+			highest_held_title_tier < tier_kingdom
+		}
+		name = bryten_bulgaria.005.b
+		#If you are the emperor's favorite vassal, he flees to join you
+		if = {
+			limit = {
+				bryten_bulgarokratia_favorite_vassal_trigger = yes
+			}
+			custom_tooltip = previous_emp_will_join_court_tt
+		}
+		custom_description_no_bullet = {
+		 	text = if_byz_dissolves_tt
+		 	subject = root
+		}
+		if = {
+			limit = {
+				NOR = {
+					liege = scope:daddy
+					liege.liege ?= scope:daddy
+				}
+			}
+			custom_tooltip = become_daddys_vassal_tt
+		}
+		else = {
+			custom_tooltip = remain_daddys_vassal_tt
+		}
+		if = {
+			limit = {
+				government_has_flag = government_is_administrative
+				scope:daddy = {
+					government_has_flag = government_is_administrative
+					bryten_bulgarokratia_potential_king_trigger = yes
+				}
+			}
+			custom_tooltip = byz_remain_admin_tt
+		}
+		else_if = {
+			limit = {
+				government_has_flag = government_is_administrative
+			}
+			custom_tooltip = byz_become_feudal_or_clan_tt
+			custom_tooltip = bulgarokratia_lose_domicile_tt
+		}
+		scope:daddy = {
+			set_variable = {
+				name = bulgarokratia_gaining_vassal
+				value = root
+				days = 60
+			}
+		}
+		if = {
+			limit = {
+				is_landed = yes
+			}
+			stress_impact = {
+				ambitious = minor_stress_impact_gain
+				arrogant = medium_stress_impact_gain
+				fickle = minor_stress_impact_gain
+				brave = miniscule_stress_impact_gain
+			}
+		}
+		else = {
+			hidden_effect = {
+				domicile = {
+					move_domicile = scope:daddy.capital_province
+				}
+			}
+		}
+		#Once all player vassals have this flag, Latin Empire chain can proceed
+		add_character_flag = {
+			flag = byz_aftermath_fate
+			years = 1
+		}
+	}
+	#Want to be under a different more powerful neighbor
+	option = {
+		trigger = {
+			is_ai = no
+			exists = scope:daddy_2
+			highest_held_title_tier < tier_kingdom
+		}
+		name = bryten_bulgaria.005.c
+		#If you are the emperor's favorite vassal, he flees to join you
+		if = {
+			limit = {
+				bryten_bulgarokratia_favorite_vassal_trigger = yes
+			}
+			custom_tooltip = previous_emp_will_join_court_tt
+		}
+		custom_description_no_bullet = {
+		 	text = if_byz_dissolves_tt
+		 	subject = root
+		}
+		if = {
+			limit = {
+				NOR = {
+					liege = scope:daddy_2
+					liege.liege ?= scope:daddy_2
+				}
+			}
+			custom_tooltip = become_daddy_2_vassal_tt
+		}
+		else = {
+			custom_tooltip = remain_daddy_2_vassal_tt
+		}
+		if = {
+			limit = {
+				government_has_flag = government_is_administrative
+				scope:daddy_2 = {
+					government_has_flag = government_is_administrative
+					bryten_bulgarokratia_potential_king_trigger = yes
+				}
+			}
+			custom_tooltip = byz_remain_admin_tt
+		}
+		else_if = {
+			limit = {
+				government_has_flag = government_is_administrative
+			}
+			custom_tooltip = byz_become_feudal_or_clan_tt
+			custom_tooltip = bulgarokratia_lose_domicile_tt
+		}
+		scope:daddy_2 = {
+			set_variable = {
+				name = bulgarokratia_gaining_vassal
+				value = root
+				days = 60
+			}
+		}
+		if = {
+			limit = {
+				is_landed = yes
+			}
+			stress_impact = {
+				ambitious = minor_stress_impact_gain
+				arrogant = medium_stress_impact_gain
+				fickle = minor_stress_impact_gain
+				brave = miniscule_stress_impact_gain
+			}
+		}
+		else = {
+			hidden_effect = {
+				domicile = {
+					move_domicile = scope:daddy_2.capital_province
+				}
+			}
+		}
+		#Once all player vassals have this flag, Latin Empire chain can proceed
+		add_character_flag = {
+			flag = byz_aftermath_fate
+			years = 1
+		}
+	}
+	#Want to be independent
+	option = {
+		trigger = {
+			is_ai = no
+			is_landed = yes
+		}
+		name = bryten_bulgaria.005.d
+		#If you are the emperor's favorite vassal, he flees to join you
+		if = {
+			limit = {
+				bryten_bulgarokratia_favorite_vassal_trigger = yes
+			}
+			custom_tooltip = previous_emp_will_join_court_tt
+		}
+		custom_description_no_bullet = {
+		 	text = if_byz_dissolves_tt
+		 	subject = root
+		}
+		custom_tooltip = byz_become_independent_tt
+		if = {
+			limit = {
+				government_has_flag = government_is_administrative
+			}
+			custom_tooltip = byz_become_feudal_or_clan_tt
+			custom_tooltip = bulgarokratia_lose_domicile_tt
+		}
+		set_variable = {
+			name = bulgarokratia_independent
+			value = yes
+			days = 60
+		}
+		if = {
+			limit = {
+				exists = scope:daddy
+			}
+			stress_impact = {
+				trusting = minor_stress_impact_gain
+				humble = minor_stress_impact_gain
+				craven = medium_stress_impact_gain
+				content = medium_stress_impact_gain
+			}
+		}
+		#Once all player vassals have this flag, Latin Empire chain can proceed
+		add_character_flag = {
+			flag = byz_aftermath_fate
+			years = 1
+		}
+	}
+	#AI option that does nothing
+	option = {
+		trigger = {
+			is_ai = yes
+		}
+	}
+	after = {
+		if = {
+			limit = {
+				bryten_bulgarokratia_favorite_vassal_trigger = yes
+			}
+			trigger_event = {
+				id = bryten_bulgaria.006
+				days = 10
+			}
+		}
+	}
+}
+bryten_bulgaria.006 = {# Hidden event
+	hidden = yes
+	immediate = {
+		if = {
+			limit = {
+				scope:previous_holder = {
+					is_alive = yes
+					is_imprisoned = no
+					is_incapable = no
+					is_landed = no
+					is_landless_ruler = no
+				}
+				is_landed = yes
+			}
+			send_interface_message = {
+				type = msg_frankokratia_former_emp_courtier
+				title = bulgarokratia_former_emp_courtier.t
+				left_icon = scope:previous_holder
+				add_courtier = scope:previous_holder
+				scope:previous_holder = {
+					every_consort = {
+						limit = {
+							is_ruler = no
+							is_imprisoned = no
+						}
+						root = {
+							add_courtier = prev
+						}
+					}
+				}
+				scope:previous_holder = {
+					every_child = {
+						limit = {
+							is_ruler = no
+							is_imprisoned = no
+							is_adult = no
+							is_hostage = no
+							is_foreign_court_guest = no
+						}
+						root = {
+							add_courtier = prev
+						}
+					}
+				}
+			}
+		}
+	}
+}
+bryten_bulgaria.007 = {# Other players are informed of what happened
+	type = character_event
+	title = bryten_bulgaria.007.t
+	desc = bryten_bulgaria.007.desc			
+	theme = byzantine
+	override_background = {
+		reference = ep3_constantinople
+	}
+
+	left_portrait = {
+		character = scope:bulgarian_emperor
+		animation = scepter
+	}
+
+	right_portrait = {
+		character = scope:byzantine_emperor
+		animation = wailing
+		camera = camera_event_right_forward
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = bryten_bulgaria.007.a
+
+	}
+
+
+}
+# Byzantines destroy the Bulgarians
+bryten_bulgaria.010 = {# Historical Outcome - Bulgar slaying time
+	type = character_event
+	title = bryten_bulgaria.010.t
+	desc = bryten_bulgaria.010.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		has_title = title:e_byzantium
+		not = { is_at_war_with = scope:bulgarian_emperor }
+		completely_controls = title:e_bulgaria # Must control the Bulgarian Balkans area
+	}
+
+	immediate = {
+		title:e_bulgaria = { holder = { save_scope_as = bulgarian_emperor } }
+		byrten_bulgarian_war_roman_victory_effect = yes
+
+	}
+
+
+	option = {# Interesting
+		name = bryten_bulgaria.010.a
+		
+		set_nickname_effect = { NICKNAME = nick_bulgaroktonos } # You are now the Bulgar Slayer
+	}
+}
+#######################################
+# Bulgarian Hellenization Events
+#######################################
+
+#######################################
+# EVENT
+#######################################
+
+#######################################
+# EVENT
+#######################################
+
+#######################################
+# EVENT
+#######################################
+
+#######################################
+# EVENT
+#######################################

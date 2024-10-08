@@ -771,6 +771,21 @@ on_title_gain = {
 					trigger_event = ep3_frankokratia_events.0110
 				}
 			}
+			# Bulgarokratia Special happens when the Bulgarians break up the empire.
+			if = {
+				limit = {
+					AND = {
+						exists = global_var:bryten_bulgarians_sack_constantinople_light
+						NOT = { exists = global_var:bryten_bulgarokratia_has_begun }
+					}
+				}
+				every_vassal_or_below = {
+					limit = {
+						is_playable_character = yes
+					}
+					trigger_event = bryten_bulgaria.005
+				}
+			}			
 			else = {
 				#normal triggering
 				every_vassal_or_below = {

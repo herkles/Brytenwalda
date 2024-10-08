@@ -1,0 +1,1014 @@
+﻿#######################################
+#									  #
+#  	Bulgarian Victory - Victory!	  #
+#									  #
+#######################################
+
+#######################################
+#									  #
+#  Bulgarian Victory - Romanization	  #
+#									  #
+#######################################
+
+byrten_bulgarian_roman_empire_effect = {
+	# First Constantinople is now the Capital
+	set_capital_county = title:c_byzantion
+
+	# Merge the Bulgarian Empire into the Byzantines
+	title:e_bulgaria = { add_to_list = bulgarian_empire_lands }
+	every_in_list = {
+		list = bulgarian_empire_lands
+		every_in_de_jure_hierarchy = {
+			limit = {
+				tier = tier_kingdom
+			}
+			set_de_jure_liege_title = title:e_byzantium
+		}
+	}
+	# get the scopes for the Byzantine and Bulgarian Empires
+	title:e_byzantium = { holder = { save_scope_as = byzantine_emperor } }
+	title:e_bulgaria = { holder = { save_scope_as = bulgarian_emperor } }
+
+	# make Bulgarian admin
+	if = {
+		limit = {
+			NOT = {
+				government_has_flag = government_is_administrative
+			}
+		}
+		convert_to_administrative_from_feudalism_effect = yes
+	}
+	# Next take Byzantine Empire
+	title:e_byzantium = {
+		change_title_holder = {
+			holder = scope:bulgarian_emperor
+			change = scope:title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:title_change
+	# then destroy the Bulgarian Empire, you be roman now!
+	destroy_title = title:e_bulgaria
+
+	# Set up Initial Hellenization for Bulgarian
+	culture:bulgarian = { set_culture_pillar = heritage_byzantine } # Bulgarians are now in the Greek Heritage
+
+	culture:bulgarian = { add_culture_tradition = tradition_ep3_roman_ceremonies } # Bulgarians are now following Roman Ceremonies. 
+
+	every_living_character = {
+		limit = {
+			AND = {
+				age >= 5
+				has_culture = culture:bulgarian
+			}
+		}
+		learn_language = language_greek
+	}
+	culture:bulgarian = {
+		change_cultural_acceptance = {
+			target = culture:greek
+			value = 20
+			desc = bryten_bulgarian_hellenization
+		}
+	}
+	# Byzantine Empire is furious that you stole his empire. 
+	scope:byzantine_emperor = {
+		set_relation_rival = {
+			target = scope:bulgarian_emperor
+			reason = rival_usurper
+		}
+	}
+}
+
+#######################################
+#									  #
+#  Bulgarian Victory - Stay Bulgar	  #
+#									  #
+#######################################
+bryten_bulgarokratia_form_byzantine_kingdoms_effect = {
+	every_vassal = {
+		limit = {
+			is_landless_ruler = yes
+			is_ai = yes
+			highest_held_title_tier < tier_kingdom
+			
+		}
+		add_to_list = byz_landless
+	}
+	every_vassal = {
+		limit = {
+			is_ai = yes
+			is_landed = yes
+			NOT = {
+				government_has_flag = government_is_theocracy
+			}
+		}
+		add_to_list = byz_vassals
+	}
+	# Create player kings and kings for players
+	every_vassal_or_below = {
+		limit = {
+			OR = {
+				has_variable = bulgarokratia_becoming_king
+				AND = {
+					has_variable = bulgarokratia_gaining_vassal
+					highest_held_title_tier < tier_kingdom
+					capital_county = {
+						kingdom = {	NOT = {	exists = holder	} }
+					}
+					highest_held_title_tier >= tier_duchy
+					#Must be free of any liege that isn't the emperor
+					NOT = {
+						liege = {
+							highest_held_title_tier < tier_empire
+						}
+					}
+					OR = {
+						is_powerful_vassal_of = title:e_byzantium.holder
+						house ?= { is_powerful_family = yes }
+						#Let's just always let Nikaea do this, they special
+						capital_county = {
+							kingdom = title:k_nikaea
+							NOT = {
+								exists = title:k_nikaea.holder
+							}
+						}
+					}
+				}
+			}
+		}
+		save_scope_as = player_byz_king
+		capital_county.kingdom = {
+			save_scope_as = player_byz_kingdom
+		}
+		create_character_memory = {
+			type = bulgarokratia_byz_independent_memory
+		}
+		create_title_and_vassal_change = {
+			type = created
+			save_scope_as = change
+			add_claim_on_loss = no
+		}
+		scope:player_byz_kingdom = {
+			change_title_holder = {
+				holder = scope:player_byz_king
+				change = scope:change
+			}
+		}
+		resolve_title_and_vassal_change = scope:change
+	}
+	# Move players under their kings
+	every_vassal = {
+		limit = {
+			has_variable = bulgarokratia_gaining_vassal
+			var:bulgarokratia_gaining_vassal = {
+				NOT = {
+					is_vassal_or_below_of = prev
+				}
+			}
+		}
+		save_scope_as = new_daddy
+		var:bulgarokratia_gaining_vassal = {
+			create_title_and_vassal_change = {
+				type = granted
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			change_liege = {
+				liege = scope:new_daddy
+				change = scope:change
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+	}
+	# Make players independent
+	every_vassal_or_below = {
+		limit = {
+			has_variable = bulgarokratia_independent
+			NOT = {
+				liege = title:e_byzantium.holder
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = religion:islam_religion
+					culture = { has_cultural_pillar = heritage_iranian }
+					culture = { has_cultural_pillar = heritage_turkic }
+					culture = { has_cultural_pillar = heritage_arabic }
+				}
+				highest_held_title_tier < tier_kingdom
+				
+			}
+			change_government = clan_government
+		}
+		else_if = {
+			limit = {
+				highest_held_title_tier < tier_kingdom
+			}
+			change_government = feudal_government
+		}
+		create_character_memory = {
+			type = bulgarokratia_byz_independent_memory
+		}
+		create_title_and_vassal_change = {
+			type = independency
+			save_scope_as = change
+		}
+		becomes_independent = { change = scope:change }
+		resolve_title_and_vassal_change = scope:change
+	}
+	
+	#Get every available kingdom that has a duke's capital in it
+	if = {
+		limit = {
+			any_realm_county = {
+				empire = title:e_byzantium
+				kingdom = {
+					NOR = {
+						exists = holder
+						AND = {
+							exists = scope:latin_kingdom_1
+							this = scope:latin_kingdom_1
+						}
+						AND = {
+							exists = scope:latin_kingdom_2
+							this = scope:latin_kingdom_2
+						}
+						is_in_list = available_byz_kingdoms
+					}
+				}
+				save_temporary_scope_as = county_temp
+				holder.capital_county = scope:county_temp
+				holder = {
+					is_ai = yes
+					highest_held_title_tier >= tier_duchy
+					OR = {
+						is_powerful_vassal_of = title:e_byzantium.holder
+						house ?= { is_powerful_family = yes }
+						#If people in e_byz are weak, make sure nikaea is still created
+						AND = {
+							NOT = {
+								any_in_list = {
+									list = byz_vassals
+									count = 3
+									highest_held_title_tier >= tier_duchy
+									capital_county = {
+										kingdom = {
+											this = { is_in_list = available_byz_kingdoms }
+											NOT = { exists = holder }
+										}
+									}
+									OR = {
+										house = { is_powerful_family = yes }
+										is_powerful_vassal_of = title:e_byzantium.holder
+									}
+								}
+							}
+							capital_county = {
+								kingdom = title:k_nikaea
+								NOT = {
+									exists = title:k_nikaea.holder
+								}
+							}
+						}
+
+					}
+				}
+			}
+		}
+		every_realm_county = {
+			limit = {
+				empire = title:e_byzantium
+				kingdom = {
+					NOR = {
+						exists = holder
+						AND = {
+							exists = scope:latin_kingdom_1
+							this = scope:latin_kingdom_1
+						}
+						AND = {
+							exists = scope:latin_kingdom_2
+							this = scope:latin_kingdom_2
+						}
+						is_in_list = available_byz_kingdoms
+					}
+				}
+				save_temporary_scope_as = county_temp
+				
+				holder.capital_county = scope:county_temp
+				holder = {
+					is_ai = yes
+					highest_held_title_tier >= tier_duchy
+					OR = {
+						is_powerful_vassal_of = title:e_byzantium.holder
+						house = { is_powerful_family = yes }
+						#If people in e_byz are weak, make sure nikaea is still created
+						AND = {
+							NOT = {
+								any_in_list = {
+									list = byz_vassals
+									count = 3
+									highest_held_title_tier >= tier_duchy
+									capital_county = {
+										kingdom = {
+											this = { is_in_list = available_byz_kingdoms }
+											NOT = { exists = holder }
+										}
+									}
+									OR = {
+										house = { is_powerful_family = yes }
+										is_powerful_vassal_of = title:e_byzantium.holder
+									}
+								}
+							}
+							capital_county = {
+								kingdom = title:k_nikaea
+								NOT = {
+									exists = title:k_nikaea.holder
+								}
+							}
+						}
+					}
+				}
+			}
+			kingdom = {
+				add_to_list = available_byz_kingdoms
+			}
+		}
+	}
+	
+	#Assign new kingdoms
+	if = {
+		limit = {
+			any_in_list = {
+				list = available_byz_kingdoms
+				tier = tier_kingdom
+			}
+		}
+		while = {
+			limit = {
+				any_in_list = {
+					list = available_byz_kingdoms
+					NOT = { exists = holder }
+				}
+			}
+			ordered_in_list = {
+				list = byz_vassals
+				order_by = max_military_strength
+				limit = {
+					capital_county = {
+						kingdom = {
+							this = { is_in_list = available_byz_kingdoms }
+							NOT = { exists = holder }
+						}
+					}
+					highest_held_title_tier >= tier_duchy
+					OR = {
+						is_powerful_vassal_of = title:e_byzantium.holder
+						house = { is_powerful_family = yes }
+						#If people in e_byz are weak, make sure nikaea is still created
+						AND = {
+							NOT = {
+								any_in_list = {
+									list = byz_vassals
+									count = 3
+									highest_held_title_tier >= tier_duchy
+									capital_county = {
+										kingdom = {
+											this = { is_in_list = available_byz_kingdoms }
+											NOT = { exists = holder }
+										}
+									}
+									OR = {
+										house = { is_powerful_family = yes }
+										is_powerful_vassal_of = title:e_byzantium.holder
+									}
+								}
+							}
+							capital_county = {
+								kingdom = title:k_nikaea
+								NOT = {
+									exists = title:k_nikaea.holder
+								}
+							}
+						}
+					}
+				}
+				create_character_memory = {
+					type = bulgarokratia_byz_independent_memory
+				}
+				save_scope_as = new_byz_king
+				capital_county.kingdom = {
+					save_scope_as = new_byz_kingdom
+				}
+				create_title_and_vassal_change = {
+					type = created
+					save_scope_as = change
+					add_claim_on_loss = no
+				}
+				scope:new_byz_kingdom = {
+					change_title_holder = {
+						holder = scope:new_byz_king
+						change = scope:change
+					}
+				}
+				resolve_title_and_vassal_change = scope:change
+			}
+		}
+	}
+	#Move de jure neighbour vassals into kingdoms
+	if = {
+		limit = {
+			any_vassal = {
+				is_in_list = byz_vassals
+				highest_held_title_tier <= tier_duchy
+				government_has_flag = government_is_administrative
+				OR = {
+					ai_boldness <= medium_negative_ai_value
+					ai_honor >= medium_positive_ai_value
+					ai_energy <= medium_negative_ai_value
+					has_trait = loyal
+				}
+				capital_county = {
+					save_temporary_scope_as = prime_title
+					kingdom.holder ?= {
+						OR = {
+							is_in_list = byz_vassals
+							this = title:e_byzantium.holder
+						}
+					}
+				}
+				#One of heir counties borders the king's personal counties
+				any_sub_realm_county = {
+					any_neighboring_county = {
+						holder = {
+							OR = {
+								this = scope:prime_title.kingdom.holder
+								any_liege_or_above = {
+									this = scope:prime_title.kingdom.holder
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		while = {
+			limit = {
+				any_vassal = {
+					is_in_list = byz_vassals
+					highest_held_title_tier <= tier_duchy
+					government_has_flag = government_is_administrative
+					OR = {
+						ai_boldness <= medium_negative_ai_value
+						ai_honor >= medium_positive_ai_value
+						ai_energy <= medium_negative_ai_value
+						has_trait = loyal
+					}
+					capital_county = {
+						save_temporary_scope_as = prime_title
+						kingdom.holder ?= {
+							OR = {
+								is_in_list = byz_vassals
+								this = title:e_byzantium.holder
+							}
+						}
+					}
+					any_sub_realm_county = {
+						any_neighboring_county = {
+							holder = {
+								OR = {
+									this = scope:prime_title.kingdom.holder
+									any_liege_or_above = {
+										this = scope:prime_title.kingdom.holder
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			random_in_list = {
+				list = byz_vassals
+				limit = {
+					is_in_list = byz_vassals
+					highest_held_title_tier <= tier_duchy
+					government_has_flag = government_is_administrative
+					OR = {
+						ai_boldness <= medium_negative_ai_value
+						ai_honor >= medium_positive_ai_value
+						ai_energy <= medium_negative_ai_value
+						has_trait = loyal
+					}
+					capital_county = {
+						save_temporary_scope_as = prime_title
+						kingdom.holder ?= {
+							OR = {
+								is_in_list = byz_vassals
+								this = title:e_byzantium.holder
+							}
+						}
+					}
+					any_sub_realm_county = {
+						any_neighboring_county = {
+							holder = {
+								OR = {
+									this = scope:prime_title.kingdom.holder
+									any_liege_or_above = {
+										this = scope:prime_title.kingdom.holder
+									}
+								}
+							}
+						}
+					}
+				}
+				save_scope_as = vassalizing_vassal
+				random_in_list = {
+					list = byz_vassals
+					limit = {
+						is_in_list = byz_vassals
+						any_held_title = {
+							tier = tier_kingdom
+							any_de_jure_county = {
+								save_temporary_scope_as = county_temp
+								scope:vassalizing_vassal.capital_county = {
+									this = scope:county_temp
+								}
+							}
+						}
+					}
+					save_scope_as = new_liege
+				}
+				create_title_and_vassal_change = {
+					type = granted
+					save_scope_as = change
+					add_claim_on_loss = no
+				}
+				change_liege = {
+					liege = scope:new_liege
+					change = scope:change
+				}
+				resolve_title_and_vassal_change = scope:change
+			}
+		}
+	}
+	#Move landless into kingdoms
+	if = {
+		limit = {
+			any_vassal = {
+				is_in_list = byz_landless
+			}
+			any_vassal = {
+				highest_held_title_tier >= tier_kingdom
+				government_has_flag = government_is_administrative
+			}
+		}
+		while = {
+			limit = {
+				any_in_list = {
+					list = byz_landless
+					exists = house
+					has_domicile = yes
+				}
+			}
+			if = {
+				limit = {
+					any_in_list = {
+						list = byz_landless
+						house ?= {
+							any_house_member = {
+								any_held_title = {
+									tier = tier_kingdom
+								}
+								highest_held_title_tier >= tier_kingdom
+								government_has_flag = government_is_administrative
+							}
+						}
+					}
+				}
+				random_in_list = {
+					list = byz_landless
+					limit = {
+						house ?= {
+							any_house_member = {
+								any_held_title = {
+									tier = tier_kingdom
+								}
+								highest_held_title_tier >= tier_kingdom
+								government_has_flag = government_is_administrative
+							}
+						}
+					}
+					house = {
+						random_house_member = {
+							limit = {
+								any_held_title = {
+									tier = tier_kingdom
+								}
+								highest_held_title_tier >= tier_kingdom
+								government_has_flag = government_is_administrative
+							}
+							save_scope_as = new_byz_liege
+						}
+					}
+					create_title_and_vassal_change = {
+						type = granted
+						save_scope_as = change
+						add_claim_on_loss = no
+					}
+					change_liege = {
+						liege = scope:new_byz_liege
+						change = scope:change
+					}
+					resolve_title_and_vassal_change = scope:change
+					remove_from_list = byz_landless
+					if = {
+						limit = {
+							has_domicile = yes
+						}
+						domicile = {
+							move_domicile = scope:new_byz_liege.capital_province
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_in_list = {
+						list = byz_landless
+						has_domicile = yes
+						domicile.domicile_location = {
+							kingdom = {
+								exists = holder
+								holder = {
+									government_has_flag = government_is_administrative
+									liege = title:e_byzantium.holder
+								}
+							}
+						}
+					}
+				}
+				random_in_list = {
+					list = byz_landless
+					limit = {
+						has_domicile = yes
+						domicile.domicile_location = {
+							kingdom = {
+								exists = holder
+								holder = {
+									government_has_flag = government_is_administrative
+									liege = title:e_byzantium.holder
+								}
+							}
+						}
+					}
+					domicile.domicile_location = {
+						kingdom = {
+							holder = {
+								save_scope_as = new_byz_liege
+							}
+						}
+					}
+					create_title_and_vassal_change = {
+						type = granted
+						save_scope_as = change
+						add_claim_on_loss = no
+					}
+					change_liege = {
+						liege = scope:new_byz_liege
+						change = scope:change
+					}
+					resolve_title_and_vassal_change = scope:change
+					remove_from_list = byz_landless
+					if = {
+						limit = {
+							has_domicile = yes
+						}
+						domicile = {
+							move_domicile = scope:new_byz_liege.capital_province
+						}
+					}
+				}
+			}
+			else = {
+				random_in_list = {
+					list = byz_landless
+					title:e_byzantium.holder = {
+						random_vassal = {
+							limit = {
+								highest_held_title_tier >= tier_kingdom
+								government_has_flag = government_is_administrative
+							}
+							save_scope_as = new_byz_liege
+						}
+					}
+					create_title_and_vassal_change = {
+						type = granted
+						save_scope_as = change
+						add_claim_on_loss = no
+					}
+					change_liege = {
+						liege = scope:new_byz_liege
+						change = scope:change
+					}
+					resolve_title_and_vassal_change = scope:change
+					remove_from_list = byz_landless
+					if = {
+						limit = {
+							has_domicile = yes
+						}
+						domicile = {
+							move_domicile = scope:new_byz_liege.capital_province
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#Make admin kings house heads if they ain't
+	every_vassal = {
+		limit = {
+			highest_held_title_tier = tier_kingdom
+			government_has_flag = government_is_administrative
+			exists = house
+			save_temporary_scope_as = house_king
+			house.house_head = {
+				#Not already house head
+				NOT = {
+					this = scope:house_king
+				}
+				highest_held_title_tier < tier_kingdom
+				#Only remove player house head status if they're in the realm
+				OR = {
+					is_ai = yes
+					top_liege = scope:house_king.liege
+				}
+			}
+			#If there's more than one king of their house, they are the strongest
+			NOT = {
+				house = {
+					any_house_member = {
+						highest_held_title_tier = tier_kingdom
+						government_has_flag = government_is_administrative
+						max_military_strength > scope:house_king.max_military_strength
+					}
+				}
+			}
+		}
+		house = {
+			set_house_head = prev
+		}
+		domicile = {
+			move_domicile = prev.capital_province
+		}
+	}
+
+	#Make governor house heads to save noble families being destroyed
+	every_vassal = {
+		limit = {
+			highest_held_title_tier = tier_kingdom
+		}
+		every_vassal_or_below = {
+			limit = {
+				highest_held_title_tier >= tier_county
+				government_has_flag = government_is_administrative
+				exists = house
+				save_temporary_scope_as = house_chud
+				house.house_head = {
+					#Not already house head
+					NOT = {
+						this = scope:house_chud
+					}
+					government_has_flag = government_is_administrative
+					highest_held_title_tier < tier_kingdom
+					#Only remove player house head status if they're in the realm
+					OR = {
+						is_ai = yes
+						liege ?= scope:house_chud.top_liege
+					}
+					#Liege is the Byzantine emperor
+					liege ?= {
+						is_independent_ruler = yes
+					}
+					#If there's more than one admin survivor of their house, they are the strongest
+					NOT = {
+						house = {
+							any_house_member = {
+								OR = {
+									highest_held_title_tier = tier_kingdom
+									AND = {
+										liege ?= {
+											highest_held_title_tier = tier_kingdom
+										}
+										max_military_strength > scope:house_chud.max_military_strength
+									}
+								}
+								government_has_flag = government_is_administrative
+							}
+						}
+					}
+				}
+			}
+			house = {
+				set_house_head = prev
+			}
+			domicile = {
+				move_domicile = prev.capital_province
+			}
+		}
+	}
+
+	#Switch anyone not under a king to feudal
+	every_vassal_or_below = {
+		limit = {
+			is_landed = yes
+			government_has_flag = government_is_administrative
+			highest_held_title_tier < tier_kingdom
+			OR = {
+				liege = {
+					highest_held_title_tier < tier_kingdom
+				}
+				liege = title:e_byzantium.holder
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = religion:islam_religion
+					culture = { has_cultural_pillar = heritage_iranian }
+					culture = { has_cultural_pillar = heritage_turkic }
+					culture = { has_cultural_pillar = heritage_arabic }
+				}
+			}
+			change_government = clan_government
+		}
+		else = {
+			change_government = feudal_government
+		}
+	}
+}
+bryten_bulgarokratia_byzantine_independence_effect = {
+	every_vassal_or_below = {
+		limit = {
+			is_landed = yes
+			is_ai = yes
+			highest_held_title_tier < tier_kingdom
+			highest_held_title_tier >= tier_county
+			liege = {
+				save_temporary_scope_as = temp_byz_liege
+			}
+			OR = {
+				#They have a strong reason and the last piece is personality
+				AND = {
+					ai_boldness > high_negative_ai_value
+					ai_honor < high_positive_ai_value
+					ai_energy > high_negative_ai_value
+					OR = {
+						trigger_if = {
+							limit = {
+								exists = liege
+								liege = {
+									government_has_flag = government_is_administrative
+								}
+							}
+							NOT = {
+								government_has_flag = government_is_administrative
+							}
+						}
+						liege = {
+							governor_efficiency < 0.7
+						}
+						culture = {
+							NOT = { this = scope:temp_byz_liege.culture }
+						}
+						faith = {
+							NOT = { this = scope:temp_byz_liege.faith }
+						}
+						opinion = {
+							target = liege
+							value <= -50
+						}
+						#They are not de jure to the liege
+						NOT = {
+							primary_title = {
+								target_is_de_jure_liege_or_above = scope:temp_byz_liege.primary_title
+							}
+						}
+					}
+				}
+				#Their only reason is an inclination
+				AND = {
+					ai_boldness >= low_positive_ai_value
+					ai_honor <= low_negative_ai_value
+					ai_energy >= low_positive_ai_value
+					OR = {
+						liege = {
+							influence_level <= 2
+						}
+						opinion = {
+							target = liege
+							value <= -25
+						}
+						liege = {
+							governor_efficiency < 0.85
+						}
+					}
+				}
+			}
+			NOR = {
+				has_trait = loyal
+				opinion = {
+					target = liege
+					value >= 80
+				}
+				liege = {
+					influence_level >= 4
+				}
+				liege = {
+					governor_efficiency >= 1.4
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					religion = religion:islam_religion
+					culture = { has_cultural_pillar = heritage_iranian }
+					culture = { has_cultural_pillar = heritage_turkic }
+					culture = { has_cultural_pillar = heritage_arabic }
+				}
+				highest_held_title_tier < tier_kingdom
+				
+			}
+			change_government = clan_government
+		}
+		else_if = {
+			limit = {
+				highest_held_title_tier < tier_kingdom
+			}
+			change_government = feudal_government
+		}
+		create_character_memory = {
+			type = bulgarokratia_byz_independent_memory
+		}
+		create_title_and_vassal_change = {
+			type = independency
+			save_scope_as = change
+		}
+		becomes_independent = { change = scope:change }
+		resolve_title_and_vassal_change = scope:change
+	}
+}
+
+#######################################
+#									  #
+#  	Bulgarian Victory - Sacking		  #
+#									  #
+#######################################
+
+#######################################
+#									  #
+#  Roman Victory against Bulgarians	  #
+#									  #
+#######################################
+byrten_bulgarian_war_roman_victory_effect = {
+	# Merge the Bulgarian Empire into the Byzantines
+	title:e_bulgaria = { add_to_list = bulgarian_empire_lands }
+	every_in_list = {
+		list = bulgarian_empire_lands
+		every_in_de_jure_hierarchy = {
+			limit = {
+				tier = tier_kingdom
+			}
+			set_de_jure_liege_title = title:e_byzantium
+		}
+	}
+
+	# get the scopes for the Byzantine and Bulgarian Empires
+	title:e_byzantium = { holder = { save_scope_as = byzantine_emperor } }
+	title:e_bulgaria = { holder = { save_scope_as = bulgarian_emperor } }
+	# Destroy the Bulgarian Empire
+	destroy_title = title:e_bulgaria
+	culture:bulgarian = {# Bulgarians are unhappy with the conquests
+		change_cultural_acceptance = {
+			target = culture:greek
+			value = -20
+			desc = bryten_bulgarian_conquest
+		}
+	}
+	# Glory for the Emperor!
+	add_legitimacy = major_legitimacy_gain
+	add_prestige = medium_prestige_gain
+	add_character_modifier = {
+		modifier = bryten_byz_reclaimant_bulgaria_modifier
+		years = 20
+	}
+	# Byzantine Empire is furious that you stole his empire. 
+	scope:bulgarian_emperor = {
+		set_relation_rival = {
+			target = scope:byzantine_emperor
+			reason = rival_usurper
+		}
+	}
+}
