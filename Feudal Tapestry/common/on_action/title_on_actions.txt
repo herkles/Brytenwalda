@@ -775,7 +775,7 @@ on_title_gain = {
 			if = {
 				limit = {
 					AND = {
-						exists = global_var:bryten_bulgarians_sack_constantinople_light
+						exists = global_var:bryten_bulgarians_sack_constantinople_conquest
 						NOT = { exists = global_var:bryten_bulgarokratia_has_begun }
 					}
 				}
@@ -2130,7 +2130,7 @@ on_vassal_change = {
 				government_has_flag = government_is_administrative
 				highest_held_title_tier < tier_kingdom
 			}
-			admin_independence_government_change_effect = yes
+			admin_change_government_effect = yes
 		}
 
 		# Additional Flavor Title

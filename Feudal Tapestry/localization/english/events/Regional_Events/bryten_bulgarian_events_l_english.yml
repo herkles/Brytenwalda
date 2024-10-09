@@ -20,13 +20,31 @@
   bryten_bulgarian_empire_tooltip: "You shall take the city for the Bulgarian and move here. However the Romans won't be happy and will try and fight back."
   bryten_bulgarian_sacking_tooltip: "@warning_icon! #X You shall sack the city and take all the loot back to your capital. The Romans shall be outraged by this."
   bryten_bulgarian_hellenization: "Romanization has begun"
+  bryten_bulgarian_conquest: "Conquest by Bulgarians"
 
-bryten_bulgaria.005.t: "[GetTitleByKey('e_byzantium').GetNameNoTooltip] — Seized!"
-bryten_bulgaria.005.desc: "The Bulgars have seized Constanionople! \n\nFrom the capital trickles word of negotiated peace; talk of the newly-installed [emperor.GetTitledFirstNameRegnal] — a madness in the sacred Purple — who is paraded about by gangs of stinking, leather-coated Bulgars.\n\nThe Bulgarian army is trampling through the streets of our great city. Will anything make them leave? Anything short of our utter destruction...?"
-bryten_bulgaria.005.a: "I will safeguard our imperial ways, whatever comes."
-bryten_bulgaria.005.b: "I should seek [daddy.GetTitledFirstNamePossessiveNoTooltip] protection."
-bryten_bulgaria.005.c: "[daddy_2.GetTitledFirstNameNoTooltip] has strength to weather this..."
-bryten_bulgaria.005.d: "Soon, perhaps... I may just stand alone, unfettered."
-bulgarokratia_lose_domicile_tt: "@warning_icon! #X Your [domicile|E] will be lost#!"
-bulgarokratia_former_emp_courtier.t: "Deposed Liege Joins Your Court"
+  bryten_bulgaria.005.t: "[GetTitleByKey('e_byzantium').GetNameNoTooltip] — Seized!"
+  bryten_bulgaria.005.desc: "The Bulgars have seized Constanionople! \n\nFrom the capital trickles word of negotiated peace; talk of the newly-installed [emperor.GetTitledFirstNameRegnal] — a madness in the sacred Purple — who is paraded about by gangs of stinking, leather-coated Bulgars.\n\nThe Bulgarian army is trampling through the streets of our great city. Will anything make them leave? Anything short of our utter destruction...?"
+  bryten_bulgaria.005.a: "I will safeguard our imperial ways, whatever comes."
+  bryten_bulgaria.005.b: "I should seek [daddy.GetTitledFirstNamePossessiveNoTooltip] protection."
+  bryten_bulgaria.005.c: "[daddy_2.GetTitledFirstNameNoTooltip] has strength to weather this..."
+  bryten_bulgaria.005.d: "Soon, perhaps... I may just stand alone, unfettered."
+  bulgarokratia_lose_domicile_tt: "@warning_icon! #X Your [domicile|E] will be lost#!"
+  bulgarokratia_former_emp_courtier.t: "Deposed Liege Joins Your Court"
+
+  bulgarokratia_byz_independent_memory: "Gained Post-[GetTitleByKey('e_byzantium').GetAdjective] Independence"
+  bulgarokratia_byz_independent_memory_desc: "I became independent after invading Bulgarians caused the collapse of [GetTitleByKey('e_byzantium').GetName]"
+  bulgarokratia_byz_independent_memory_desc_second_perspective: "You became independent after invading Bulgarians caused the collapse of [GetTitleByKey('e_byzantium').GetName]"
+  bulgarokratia_byz_independent_memory_desc_third_perspective: "[owner.GetFirstName] became independent after invading Bulgarians caused the collapse of [GetTitleByKey('e_byzantium').GetName]"
+
+
+  bryten_bulgaria.007.t:0 "The Bulgarians have taken Constanionople"
+  bryten_bulgaria.007.desc_bulgarian_roman_empire:0 "The Bulgarians have entered the great city of Constaniople and conquered it. However, the newly crowned [emperor.GetTitledFirstNameRegnal] has surprised everyone by respecting Roman customs and way of life. He spoke that he was Augustus of both the Romans and the Bulgarians. Already tutors are being hired to teach the Bulgarians Greek."
+  bryten_bulgaria.007.desc_bulgarian_empire:0 "The Bulgarians have entered the great city of Constaniople and conquered it. The Bulgarian Emperor  [emperor.GetTitledFirstNameRegnal] parades through the city as a conqueror. Already further afield Roman commanders have denounced the barbarians who have taken their city. This doesn't look to be the end of conflict between the Romans and Bulgarians."
+  bryten_bulgaria.007.a:1 "Rome shall not bow to barbarians"
+# Defeat of the Bulgarians
+  bryten_bulgaria.010.t:0 "Slaying the Bulgars"
+  bryten_bulgaria.010.desc:0 "The Bulgarian Barbarians are finally defeated. They came into the Roman Empire and tried to conquer our land, but thanks to God and his saints we have not only defeated their assaults, we now have destroyed their false empire. Their can be only one Empire and one Tsar. "
+  bryten_bulgaria.010.a:1 "The Bulgarians are defeated"
+
+
 

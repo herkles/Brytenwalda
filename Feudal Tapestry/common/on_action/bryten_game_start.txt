@@ -73,6 +73,14 @@ bryten_setup_after_game_start_on_actions = {
 			}
 			character:168562 ?= { trigger_event = tapestry_hre.011 }
 		}
+		if = {# Byzantine Event
+			limit = { current_date = 936.8.7 }
+			title:e_byzantium.holder ?= { trigger_event = bryten_bulgaria.002 }
+		}
+		if = {# Bulgarian
+			limit = { current_date = 936.8.7 }
+			title:e_bulgaria.holder ?= { trigger_event = bryten_bulgaria.001 }
+		}
 		# Other Character stuff
 		character:6878 = {# kill haestin
 			if = {
@@ -551,7 +559,7 @@ bryten_setup_after_game_start_on_actions = {
 			title:c_byzantion = {# For Bulgaria 
 				set_important_location = {
 					title = title:e_bulgaria
-					enter_realm_event = bryten_byzantine
+					enter_realm_event = bryten_bulgaria.003
 				}
 			}
 		}

@@ -92,19 +92,6 @@ scripted_trigger bryten_bulgarokratia_potential_king_trigger = {
 				kingdom = {
 					NOR = {
 						exists = holder
-						#Desperately try to stop latin kingdoms being grabbed
-						trigger_if = {
-							limit = {
-								exists = global_var:latin_kingdom_1
-							}
-							this = global_var:latin_kingdom_1
-						}
-						trigger_if = {
-							limit = {
-								exists = global_var:latin_kingdom_2
-							}
-							this = global_var:latin_kingdom_2
-						}
 						any_in_de_jure_hierarchy = {
 							tier = tier_county
 							this = scope:emperor.capital_county
@@ -197,6 +184,7 @@ scripted_trigger bryten_bulgarokratia_daddy_neighbor_trigger = {
 	}
 }
 
+
 bryten_bulgaria.003 = {# The Conquest of Constantinople
 	type = character_event
 	title = bryten_bulgaria.003.t
@@ -220,7 +208,7 @@ bryten_bulgaria.003 = {# The Conquest of Constantinople
 	}
 	
 	option = {# Emperor of the Romans at Last
-		name = bryten_bulgaria.002.a
+		name = bryten_bulgaria.003.a
 		trigger = {
 			faith = {
 				has_doctrine = special_doctrine_ecumenical_christian
@@ -228,26 +216,42 @@ bryten_bulgaria.003 = {# The Conquest of Constantinople
 		}
 		custom_tooltip = bryten_bulgarian_roman_empire_tooltip
 		byrten_bulgarian_roman_empire_effect = yes
+		hidden_effect = {
+			set_global_variable = {# Full chaos time!
+				name = bryten_bulgarians_roman_empire_var
+				value = yes
+			}
+		}
 
 	}
 	option = {# Emperor of the Bulgarians First
-		name = bryten_bulgaria.002.b
-		trigger = {
-		}
+		name = bryten_bulgaria.003.b
 		custom_tooltip = bryten_bulgarian_empire_tooltip
 		hidden_effect = {
 			set_global_variable = {# Full chaos time!
-				name = bryten_bulgarians_sack_constantinople
+				name = bryten_bulgarians_sack_constantinople_conquest
 				value = yes
 			}
 			title:e_byzantium.holder = {# the Empire of the Byzantines will break up
 				trigger_event = {
-					id = bryten_bulgaria.005
+					id = bryten_bulgaria.004
 					days = 1
 				}
 			}
 		}
 	}
+
+
+	after = {
+		#General event that tells all players what happened
+		every_player = {
+			trigger_event = {
+				id = bryten_bulgaria.007
+				days = 5
+			}
+		}
+	}
+
 }
 bryten_bulgaria.004 = {# The Byzantine empire shatters
 	hidden = yes
@@ -355,7 +359,7 @@ bryten_bulgaria.004 = {# The Byzantine empire shatters
 				change_government = feudal_government
 			}
 			create_character_memory = {
-				type = bryten_bulgarkratoia_byz_independent_memory
+				type = bulgarokratia_byz_independent_memory
 			}
 			create_title_and_vassal_change = {
 				type = independency
@@ -417,19 +421,6 @@ bryten_bulgaria.004 = {# The Byzantine empire shatters
 						change_government = feudal_government
 					}
 				}
-			}
-		}
-	}
-	after = {
-		#General event that tells all players what happened
-		every_player = {
-			limit = {
-				bryten_bulgarokratia_notification_recipient_trigger = yes
-			}
-			add_character_flag = bulgarokratia_bulgaria_empire_outcome
-			trigger_event = {
-				id = bryten_bulgaria.005
-				days = 1
 			}
 		}
 	}
@@ -1056,7 +1047,7 @@ bryten_bulgaria.005 = {# Byzantine vassals hear about what's going on... and bra
 				content = minor_stress_impact_gain
 			}
 		}
-		#Once all player vassals have this flag, Latin Empire chain can proceed
+		# Once all player vassals have this flag, bulgarian Empire chain can proceed
 		add_character_flag = {
 			flag = byz_aftermath_fate
 			years = 1
@@ -1135,7 +1126,7 @@ bryten_bulgaria.005 = {# Byzantine vassals hear about what's going on... and bra
 				}
 			}
 		}
-		#Once all player vassals have this flag, Latin Empire chain can proceed
+		#Once all player vassals have this flag, bulgarian Empire chain can proceed
 		add_character_flag = {
 			flag = byz_aftermath_fate
 			years = 1
@@ -1214,7 +1205,7 @@ bryten_bulgaria.005 = {# Byzantine vassals hear about what's going on... and bra
 				}
 			}
 		}
-		#Once all player vassals have this flag, Latin Empire chain can proceed
+		#Once all player vassals have this flag, bulgarian Empire chain can proceed
 		add_character_flag = {
 			flag = byz_aftermath_fate
 			years = 1
@@ -1262,7 +1253,7 @@ bryten_bulgaria.005 = {# Byzantine vassals hear about what's going on... and bra
 				content = medium_stress_impact_gain
 			}
 		}
-		#Once all player vassals have this flag, Latin Empire chain can proceed
+		#Once all player vassals have this flag, bulgarian Empire chain can proceed
 		add_character_flag = {
 			flag = byz_aftermath_fate
 			years = 1
@@ -1337,6 +1328,19 @@ bryten_bulgaria.006 = {# Hidden event
 bryten_bulgaria.007 = {# Other players are informed of what happened
 	type = character_event
 	title = bryten_bulgaria.007.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {	exists = global_var:bryten_bulgarians_roman_empire_var	}
+				desc = bryten_bulgaria.007.desc_bulgarian_roman_empire
+			}
+			triggered_desc = {
+				trigger = {	exists = global_var:bryten_bulgarians_sack_constantinople	}
+				desc = bryten_bulgaria.007.desc_bulgarian_empire.rando_emp
+			}
+		}
+	}
+
 	desc = bryten_bulgaria.007.desc			
 	theme = byzantine
 	override_background = {
