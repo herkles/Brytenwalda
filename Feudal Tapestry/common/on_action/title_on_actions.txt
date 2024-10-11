@@ -775,7 +775,7 @@ on_title_gain = {
 			if = {
 				limit = {
 					AND = {
-						exists = global_var:bryten_bulgarians_sack_constantinople_conquest
+						exists = global_var:bryten_bulgarians_sack_constantinople
 						NOT = { exists = global_var:bryten_bulgarokratia_has_begun }
 					}
 				}

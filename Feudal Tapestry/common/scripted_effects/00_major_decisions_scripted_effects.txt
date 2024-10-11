@@ -17,6 +17,14 @@ create_roman_empire_scripted_effect = {
 		}
 	}
 	#Create Roman Empire, shift dejure/history/laws, destroy e_byzantium.
+
+	if = {
+		limit = { capital_county = { this = title:c_byzantion } }
+		title:e_roman_empire = { 
+			set_capital_county = title:c_byzantion
+		}
+	}
+
 	hidden_effect = {
 		every_held_title = { #Should shift all dejure of all Empires owned at the time.
 			limit = {
@@ -117,6 +125,8 @@ create_roman_empire_scripted_effect = {
 	}
 	hidden_effect = {
 		add_character_flag = flag_restorer_of_rome #used for Eulogy.
+		title:e_roman_empire = {
+			set_variable = rome_was_restored_by_byzantium
 	}
 }
 create_roman_empire_holy_scripted_effect = {

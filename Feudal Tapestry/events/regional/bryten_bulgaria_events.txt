@@ -229,7 +229,7 @@ bryten_bulgaria.003 = {# The Conquest of Constantinople
 		custom_tooltip = bryten_bulgarian_empire_tooltip
 		hidden_effect = {
 			set_global_variable = {# Full chaos time!
-				name = bryten_bulgarians_sack_constantinople_conquest
+				name = bryten_bulgarians_sack_constantinople
 				value = yes
 			}
 			title:e_byzantium.holder = {# the Empire of the Byzantines will break up
@@ -1336,16 +1336,11 @@ bryten_bulgaria.007 = {# Other players are informed of what happened
 			}
 			triggered_desc = {
 				trigger = {	exists = global_var:bryten_bulgarians_sack_constantinople	}
-				desc = bryten_bulgaria.007.desc_bulgarian_empire.rando_emp
+				desc = bryten_bulgaria.007.desc_bulgarian_empire
 			}
 		}
 	}
-
-	desc = bryten_bulgaria.007.desc			
 	theme = byzantine
-	override_background = {
-		reference = ep3_constantinople
-	}
 
 	left_portrait = {
 		character = scope:bulgarian_emperor

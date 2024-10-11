@@ -3,6 +3,366 @@
 #######################################
 # Post Norman Conquest Events
 #######################################
+bryten_england.001 = {# The peeing incident
+	hidden = yes	
+
+	trigger = {
+		# William and his sons must be alive
+		character:140 = {# William I
+			has_title = title:k_england
+			is_alive = yes 
+		}
+		character:142 = {# Robert Curthose 
+			is_alive = yes 
+			is_landed = no
+
+		} 
+		character:146 = { is_alive = yes } # William Rufus
+		current_date >= 1077.1.1
+		exists = global_var:norman_england_secured
+	}
+
+	immediate = {
+		# William Rufus pees on Robert
+		character:142 = {		
+			set_relation_rival = {
+				target = character:146
+				reason = bryten_rival_peed_upon
+			}
+		}
+	}
+
+	after = {
+		character:140 = {		
+			trigger_event = {
+				id = bryten_england.002
+				days = { 1 2 }
+			}
+		}
+	}
+
+}
+bryten_england.002 = {# William hears of his sons behavior
+	type = character_event
+	title = bryten_england.002.t
+	desc = bryten_england.002.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_vengeful
+	}
+	lower_left_portrait = {# Robert Curthose
+		character = character:142
+		animation = rage
+	}
+	lower_right_portrait = {# William Rufus
+		character = character:146
+		animation = personality_callous
+	}
+	
+	option = {# token punishment
+		name = bryten_england.002.a
+		ai_chance = {# this is the historical path
+			base = 95	
+		}
+		character:142 = {
+			add_opinion = {
+				target = character:140
+				modifier = angry_opinion
+				opinion = -40
+			}
+		}
+		hidden_effect = {
+
+			trigger_event = {
+				id = bryten_england.003
+				days = { 1 2 }
+			}
+		}
+
+	}
+	option = {# Proper punishment
+		name = bryten_england.002.b
+		ai_chance = {# this is the ahistorical path
+			base = 05	
+		}
+
+		stress_impact = {# William doesn't like his son robert so he gains stress.
+			base = medium_stress_impact_gain
+		}
+	}
+
+}
+bryten_england.003 = {# William hears that his son has run off
+	type = character_event
+	title = bryten_england.003.t
+	desc = bryten_england.003.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		character:142 = { save_scope_as = curthose }
+		set_global_variable = {
+			name = bryten_robert_curthose_runs_off
+			value = yes
+		}
+		scope:curthose = {
+			create_landless_adventurer_title_effect = {
+				REASON = flag:voluntary
+				FLAVOR_CHAR = root
+			}
+		}
+		scope:curthose = {
+			populate_location_with_contracts_effect = {
+				AREA_CHAR = scope:curthose
+				AMOUNT = 3
+			}
+		}
+	}
+
+	option = {# He will Regret this!
+		name = bryten_england.003.a
+		ai_chance = {#
+			base = 100	
+		}
+	}
+	option = {# My father shall regret this! Switch to Robert Curthose
+		name = bryten_england.003.b
+		trigger = {
+			has_ep3_dlc_trigger = yes
+		}
+		ai_chance = {# this is the ahistorical path
+			base = 00	
+		}
+		set_player_character = scope:curthose
+	}
+
+}
+bryten_england.004 = {# Robert gets a notice from Matilda to try and mend With William
+	type = character_event
+	title = bryten_england.002.t
+	desc = bryten_england.002.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	trigger = {
+		this = character:142 # it fires for Robert Curthose
+		exists = global_var:bryten_robert_curthose_runs_off # Robert has to have run off first
+
+		# Fires sometime after wards to give Robert time to come home. 
+		current_date >= 1084.1.1
+
+		# Curthose must still be mad and not in William's court
+		NOT = { scope:william = { target_is_liege_or_above = scope:curthose } }
+		character:140 = {# William I
+			has_title = title:k_england
+			is_alive = yes 
+		}
+		character:142 = {# Robert Curthose 
+			is_alive = yes 
+		} 
+		character:367 = {# Matilda needs to be alive
+			is_alive = yes 
+		} 
+	}
+
+	immediate = {
+		character:140 = { save_scope_as = william }
+		character:142 = { save_scope_as = curthose }
+	}
+
+	option = {# try to make up with dad
+		name = bryten_england.004.a
+		ai_chance = {# this is the ahistorical path
+			base = 95	
+		}
+		every_character_active_contract = { invalidate_contract = yes }
+
+		start_travel_plan = {
+			destination = scope:william.capital_province
+			players_use_planner = no
+			on_arrival_event = bryten_england.005
+			on_arrival_destinations = last
+			return_trip = no
+		}
+		hidden_effect = {
+			scope:william = {
+				trigger_event = bryten_england.005
+			}
+		}
+	}
+	option = {# Screw you dad!
+		name = bryten_england.004.b
+		ai_chance = {# this is the ahistorical path
+			base = 05	
+		}
+		hidden_effect = {
+			scope:william = {
+				trigger_event = bryten_england.009
+			}
+		}
+		stress_impact = {# Robert is willing to make up
+			base = medium_stress_impact_gain
+		}
+	}
+}
+bryten_england.005 = {# Robert arrives where William is
+	type = character_event
+	title = bryten_england.005.t
+	desc = bryten_england.005.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		character:140 = { save_scope_as = william }
+		character:142 = { save_scope_as = curthose }
+	}
+
+	option = {# Greet him warmly - you are trying to make up
+		name = bryten_england.005.a
+
+	}
+
+	after = {
+		scope:william = {
+			trigger_event = bryten_england.006
+		}
+	}
+}
+bryten_england.006 = {# William's decision about mending ties
+	type = character_event
+	title = bryten_england.006.t
+	desc = bryten_england.006.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	immediate = {
+		character:140 = { save_scope_as = william }
+		character:142 = { save_scope_as = curthose }
+		character:367 = { save_scope_as = matilda }
+	}
+
+	option = {# A truce for now
+		name = bryten_england.006.a
+		ai_chance = {# this is the historical path
+			base = 95	
+		}
+		add_truce_both_ways = {
+			character = scope:curthose
+			years = 5
+			name = TRUCE_COLLABORATION
+		}
+		scope:william = {
+			add_opinion = {
+				target = scope:curthose
+				modifier = upset_opinion
+				opinion = 20
+			}
+		}
+		hidden_effect = {
+			scope:curthose = {
+				trigger_event = bryten_england.007
+			}
+		}
+	}
+	option = {# No Truce
+		name = bryten_england.006.a
+		ai_chance = {# this is the ahistorical path
+			base = 05	
+		}
+		scope:william = {
+			add_opinion = {
+				target = scope:curthose
+				modifier = upset_opinion
+				opinion = -20
+			}
+		}
+		scope:matilda = {
+			add_opinion = {
+				target = scope:william
+				modifier = upset_opinion
+				opinion = -20
+			}
+		}
+		hidden_effect = {
+			scope:curthose = {
+				trigger_event = bryten_england.008
+			}
+		}
+	}
+
+}
+bryten_england.007 = {# William Agrees
+	type = character_event
+	title = bryten_england.006.t
+	desc = bryten_england.006.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# good
+		name = bryten_england.006.a
+	}
+
+}
+bryten_england.008 = {# William Disagrees
+	type = character_event
+	title = bryten_england.007.t
+	desc = bryten_england.007.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# I hate you too, dad!
+		name = bryten_england.007.a
+		character:142 = {
+			add_opinion = {
+				target = character:140
+				modifier = upset_opinion
+				opinion = -20
+			}
+		}
+	}
+
+}
+bryten_england.009 = {# William is informed that Robert doesn't want to make up
+	type = character_event
+	title = bryten_england.002.t
+	desc = bryten_england.002.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+	
+	option = {# Interesting
+		name = bryten_england.002.a
+		character:142 = {
+			add_opinion = {
+				target = character:140
+				modifier = angry_opinion
+				opinion = -40
+			}
+		}
+	}
+
+}
 
 #######################################
 # Anglo-Saxon Culture forming
