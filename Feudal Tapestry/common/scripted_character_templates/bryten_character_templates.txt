@@ -165,4 +165,122 @@ heretic_preacher_template = {# Backup Bogomil preacher for the council
 		}
 	}
 }
+#######################################
+# Ostsiedlung Characters
+#######################################
+bryten_ostsiedlung_courtier_diplomat_template = {
+	age = { 16 50 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits = yes
+	faith = scope:german_faith
+	culture = scope:german_culture
+	diplomacy  = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}
+bryten_ostsiedlung_courtier_martial_template = {
+	age = { 16 50 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits = yes
+	faith = scope:german_faith
+	culture = scope:german_culture
+	martial  = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}
+bryten_ostsiedlung_courtier_stewardship_template = {
+	age = { 16 50 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits = yes
+	faith = scope:german_faith
+	culture = scope:german_culture
+	stewardship  = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}
+bryten_ostsiedlung_courtier_intrigue_template = {
+	age = { 16 50 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits = yes
+	faith = scope:german_faith
+	culture = scope:german_culture
+	intrigue  = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}
+bryten_ostsiedlung_courtier_learning_template = {
+	age = { 16 50 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits = yes
+	faith = scope:german_faith
+	culture = scope:german_culture
+	learning  = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}
+bryten_ostsiedlung_courtier_prowess_template = {
+	age = { 16 50 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits = yes
+	faith = scope:german_faith
+	culture = scope:german_culture
+	prowess  = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+}
+bryten_ostsiedlung_monk_template = {
+	age = { 25 60 }
+	dynasty = none
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits_list = {
+		count = 1
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	trait = devoted
+	random_traits = yes
+	faith = scope:german_faith
+	culture = scope:german_culture
+	learning  = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+
+}
+bryten_ostsiedlung_clergy_template = {
+	age = { 30 60 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits_list = {
+		count = 1
+		education_learning_2 = {}
+		education_learning_3 = {}
+		education_learning_4 = {}
+	}
+	random_traits = yes
+	faith = scope:german_faith
+	culture = scope:german_culture
+	learning  = {
+		min_template_high_skill
+		max_template_high_skill
+	}
+	after_creation = {
+		add_character_flag = {
+			flag = need_priest_outfit
+		}
+	}
+}
+bryten_ostsiedlung_generic_template = {
+	age = { 16 60 }
+	gender_female_chance = root_faith_dominant_gender_adjusted_female_chance
+	random_traits = yes
+	faith = scope:german_faith
+	culture = scope:german_culture
+}
 

@@ -785,3 +785,906 @@ tapestry_hre.021 = {# The Germans Win.
 		add_piety = medium_piety_gain
 	}
 }
+#######################################
+# Ostsiedlung Events
+#######################################
+tapestry_hre.030 = {# Hidden tombola
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		save_scope_as = current_ruler
+		# Failsafe in case it isn't set already via the decision for some reason
+		# Since I keep getting errors the variable isn't set
+		# For some reason this doesn't work even though I literally set the variable here, but I'll keep it here just in case
+		if = {
+			limit = {
+				is_ai = yes
+				NOT = { has_variable = bryten_ostsiedlung_migrants_type }
+			}
+			random_list = {
+				12 = {
+					set_variable = {
+						name = bryten_ostsiedlung_migrants_type
+						value = flag:courtiers
+					}
+				}
+				12 = {
+					set_variable = {
+						name = bryten_ostsiedlung_migrants_type
+						value = flag:colonists
+					}
+				}
+				12 = {
+					set_variable = {
+						name = bryten_ostsiedlung_migrants_type
+						value = flag:mercenaries
+					}
+				}
+				12 = {
+					set_variable = {
+						name = bryten_ostsiedlung_migrants_type
+						value = flag:traders
+					}
+				}
+				5 = {
+					set_variable = {
+						name = bryten_ostsiedlung_migrants
+						value = flag:scholars
+					}
+				}
+			}
+		}
+		# Determine original source of these Normans
+		# If there are any Normans in Scandinavia or connected regions, go there first
+		if = {
+			limit = {
+				any_county_in_region = {
+					region = bryten_germania_region
+					OR = {
+						culture:saxon = { has_innovation = innovation_east_settling }
+						culture:franconian = { has_innovation = innovation_east_settling }
+						culture:swabian = { has_innovation = innovation_east_settling }
+						culture:bavarian = { has_innovation = innovation_east_settling }
+						culture:lothringian = { has_innovation = innovation_east_settling }
+						culture:meissian = { has_innovation = innovation_east_settling }
+					}
+				}
+			}
+			every_county_in_region = {
+				region = bryten_germania_region
+				limit = {
+					OR = {
+						culture:saxon = { has_innovation = innovation_east_settling }
+						culture:franconian = { has_innovation = innovation_east_settling }
+						culture:swabian = { has_innovation = innovation_east_settling }
+						culture:bavarian = { has_innovation = innovation_east_settling }
+						culture:lothringian = { has_innovation = innovation_east_settling }
+						culture:meissian = { has_innovation = innovation_east_settling }
+					}
+				}
+				add_to_list = german_counties
+			}
+			random_in_list = {
+				list = german_counties
+				save_scope_as = county
+			}
+			scope:county.faith = {
+				save_scope_as = german_faith
+			}
+			scope:county.culture = {
+				save_scope_as = german_culture
+			}
+		}
+		# If they cannot be found in Normandy and connected regions, search entire map
+		else_if = {
+			limit = {
+				any_county = {
+					# Normans have their own system
+					OR = {
+						culture:saxon = { has_innovation = innovation_east_settling }
+						culture:franconian = { has_innovation = innovation_east_settling }
+						culture:swabian = { has_innovation = innovation_east_settling }
+						culture:bavarian = { has_innovation = innovation_east_settling }
+						culture:lothringian = { has_innovation = innovation_east_settling }
+						culture:meissian = { has_innovation = innovation_east_settling }
+					}
+				}
+			}
+			every_county = {
+				limit = {
+					# Normans have their own system
+					OR = {
+						culture:saxon = { has_innovation = innovation_east_settling }
+						culture:franconian = { has_innovation = innovation_east_settling }
+						culture:swabian = { has_innovation = innovation_east_settling }
+						culture:bavarian = { has_innovation = innovation_east_settling }
+						culture:lothringian = { has_innovation = innovation_east_settling }
+						culture:meissian = { has_innovation = innovation_east_settling }
+					}
+				}
+				add_to_list = german_counties
+			}
+			random_in_list = {
+				list = german_counties
+				save_scope_as = county
+			}
+			scope:county.faith = {
+				save_scope_as = german_faith
+			}
+			scope:county.culture = {
+				save_scope_as = german_culture
+			}
+		}
+		# If Normans don't exist on the map for some reason
+		else = {
+			random_county_in_region = {
+				region = bryten_germania_region
+				save_scope_as = county
+			}
+			scope:county.faith = {
+				save_scope_as = german_faith
+			}
+			scope:county.culture = {
+				save_scope_as = german_culture
+			}
+		}
+
+		# Do the proper setting up of characters as needed
+		if = {
+			limit = {
+				var:bryten_ostsiedlung_migrants_type = flag:courtiers
+			}
+			# Generate first courtier option
+			random_list = {
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_diplomat_template
+						save_scope_as = courtier_1
+					}
+				}
+				30 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_martial_template
+						save_scope_as = courtier_1
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_stewardship_template
+						save_scope_as = courtier_1
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_intrigue_template
+						save_scope_as = courtier_1
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_learning_template
+						save_scope_as = courtier_1
+					}
+				}
+				30 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_prowess_template
+						save_scope_as = courtier_1
+					}
+				}
+			}
+			# Generate second courtier option
+			random_list = {
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_diplomat_template
+						save_scope_as = courtier_2
+					}
+				}
+				30 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_martial_template
+						save_scope_as = courtier_2
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_stewardship_template
+						save_scope_as = courtier_2
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_intrigue_template
+						save_scope_as = courtier_2
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_learning_template
+						save_scope_as = courtier_2
+					}
+				}
+				30 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_prowess_template
+						save_scope_as = courtier_2
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				var:bryten_ostsiedlung_migrants_type = flag:mercenaries
+			}
+			# Generate first courtier option
+			random_list = {
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_diplomat_template
+						save_scope_as = courtier_1
+					}
+				}
+				30 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_martial_template
+						save_scope_as = courtier_1
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_stewardship_template
+						save_scope_as = courtier_1
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_intrigue_template
+						save_scope_as = courtier_1
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_learning_template
+						save_scope_as = courtier_1
+					}
+				}
+				30 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_prowess_template
+						save_scope_as = courtier_1
+					}
+				}
+			}
+			# Generate second courtier option
+			random_list = {
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_diplomat_template
+						save_scope_as = courtier_2
+					}
+				}
+				30 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_martial_template
+						save_scope_as = courtier_2
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_stewardship_template
+						save_scope_as = courtier_2
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_intrigue_template
+						save_scope_as = courtier_2
+					}
+				}
+				10 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_learning_template
+						save_scope_as = courtier_2
+					}
+				}
+				30 = {
+					create_character = {
+						location = root.capital_province
+						template = bryten_ostsiedlung_courtier_prowess_template
+						save_scope_as = courtier_2
+					}
+				}
+			}
+		}
+		# Generate generic german settler representative for other options
+		else = {
+			create_character = {
+				location = root.capital_province
+				template = bryten_ostsiedlung_generic_template
+				save_scope_as = courtier_1
+			}
+			save_scope_as = courtier_2 # The ruler is not technically not a courtier, but this is for convenience
+		}
+
+		trigger_event = tapestry_hre.031
+
+	}
+}
+tapestry_hre.031 = {# They come in peace
+	type = character_event
+	title = tapestry_hre.031.t
+	desc = {
+		desc = tapestry_hre.031.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					var:bryten_ostsiedlung_migrants_type = flag:courtiers
+				}
+				desc = tapestry_hre.031.desc.courtiers
+			}
+			triggered_desc = {
+				trigger = {
+					var:bryten_ostsiedlung_migrants_type = flag:colonists
+				}
+				desc = tapestry_hre.031.desc.colonists
+			}
+			triggered_desc = {
+				trigger = {
+					var:bryten_ostsiedlung_migrants_type = flag:mercenaries
+				}
+				desc = tapestry_hre.031.desc.mercenaries
+			}
+			triggered_desc = {
+				trigger = {
+					var:bryten_ostsiedlung_migrants_type = flag:traders
+				}
+				desc = tapestry_hre.031.desc.traders
+			}
+			triggered_desc = {
+				trigger = {
+					var:bryten_ostsiedlung_migrants_type = flag:scholars
+				}
+				desc = tapestry_hre.031.desc.scholars
+			}
+		}
+		desc = tapestry_hre.031.desc.conclusion
+	}
+	theme = realm
+	
+	left_portrait = {
+		trigger = { root = { var:bryten_ostsiedlung_migrants_type = flag:courtiers } }
+		character = scope:courtier_2
+		animation = throne_room_bow_2
+	}
+	right_portrait = {
+		character = scope:courtier_1
+		animation = throne_room_bow_1
+	}
+
+	immediate = {
+
+		# Final failsafe in case it isn't set already via the decision for some reason
+		# Since I keep getting errors the variable isn't set
+		# A lot of the stuff requires the previous event, but this is just to get rid of the stupid error log message		
+		# For some reason this doesn't work even though I literally set the variable here, but I'll keep it here just in case
+		if = {
+			limit = {
+				is_ai = yes
+				NOT = { has_variable = bryten_ostsiedlung_migrants_type }
+			}
+			random_list = {
+				12 = {
+					set_variable = {
+						name = bryten_ostsiedlung_migrants_type
+						value = flag:courtiers
+					}
+				}
+				12 = {
+					set_variable = {
+						name = bryten_ostsiedlung_migrants_type
+						value = flag:colonists
+					}
+				}
+				12 = {
+					set_variable = {
+						name = bryten_ostsiedlung_migrants_type
+						value = flag:mercenaries
+					}
+				}
+				12 = {
+					set_variable = {
+						name = bryten_ostsiedlung_migrants_type
+						value = flag:traders
+					}
+				}
+				12 = {
+					set_variable = {
+						name = bryten_ostsiedlung_migrants_type
+						value = flag:scholars
+					}
+				}
+			}
+		}
+
+		bryten_ostsiedlung_migrants_initial_setup_effect = yes
+		bryten_ostsiedlung_migrants_main_effect = yes
+		
+	}
+	
+	option = { # Pick option 1
+		name = tapestry_hre.031.a
+		trigger = {
+			var:bryten_ostsiedlung_migrants_type = flag:courtiers
+		}
+		add_courtier = scope:courtier_1
+		hidden_effect = {
+			scope:courtier_2 = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}	
+	option = { # Pick option 2
+		name = tapestry_hre.031.b
+		trigger = {
+			var:bryten_ostsiedlung_migrants_type = flag:courtiers
+		}
+		add_courtier = scope:courtier_2
+		hidden_effect = {
+			scope:courtier_1 = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}	
+	option = { # Pick both
+		name = tapestry_hre.031.c
+		trigger = {
+			var:bryten_ostsiedlung_migrants_type = flag:courtiers
+			OR = {
+				gold >= bryten_ostsiedlung_migrant_small_cost
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = bryten_ostsiedlung_migrants_small_cost_small_cost
+		add_courtier = scope:courtier_1
+		add_courtier = scope:courtier_2
+	}	
+	option = { # No courtiers to be picked
+		name = tapestry_hre.031.d
+		trigger = {
+			NOT = { var:bryten_ostsiedlung_migrants_type = flag:courtiers }
+		}
+	}	
+	option = { # Defend against borders?
+		name = tapestry_hre.031.e
+		if = {
+			limit = {
+				highest_held_title_tier = tier_county
+			}
+			add_prestige = -200
+		}
+		else_if = {
+			limit = {
+				highest_held_title_tier = tier_duchy
+			}
+			add_prestige = -400
+		}
+		else_if = {
+			limit = {
+				highest_held_title_tier = tier_kingdom
+			}
+			add_prestige = -600
+		}
+		else_if = {
+			limit = {
+				highest_held_title_tier = tier_empire
+			}
+			add_prestige = -800
+		}
+		# Diplomacy
+		if = {
+			limit = {
+				var:bryten_ostsiedlung_migrants_type = flag:colonists
+			}
+			duel = {
+				skill = intrigue
+				target = scope:courtier_1
+				10 = {
+					custom_tooltip = tapestry_hre.031.e.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -0.9
+					}
+					set_variable = {
+						name = bryten_ostsiedlung_provide_further_help
+						value = flag:no
+					}
+				}
+				10 = {
+					custom_tooltip = tapestry_hre.031.e.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 0.9
+					}
+					set_variable = {
+						name = bryten_ostsiedlung_further_help
+						value = flag:yes
+					}
+				}
+			}
+		}
+		# Martial
+		else_if = {
+			limit = {
+				var:bryten_ostsiedlung_migrants_type = flag:mercenaries
+			}
+			duel = {
+				skill = martial
+				target = scope:courtier_1
+				10 = {
+					custom_tooltip = tapestry_hre.031.e.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -0.9
+					}
+					set_variable = {
+						name = bryten_ostsiedlung_provide_further_help
+						value = flag:no
+					}
+				}
+				10 = {
+					custom_tooltip = tapestry_hre.031.e.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 0.9
+					}
+					set_variable = {
+						name = bryten_ostsiedlung_provide_further_help
+						value = flag:yes
+					}
+				}
+			}
+		}
+		# Stewardship
+		else_if = {
+			limit = {
+				var:bryten_ostsiedlung_migrants_type = flag:traders
+			}
+			duel = {
+				skill = stewardship
+				target = scope:courtier_1
+				10 = {
+					custom_tooltip = tapestry_hre.031.e.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -0.9
+					}
+					set_variable = {
+						name = bryten_ostsiedlung_provide_further_help
+						value = flag:no
+					}
+				}
+				10 = {
+					custom_tooltip = tapestry_hre.031.e.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 0.9
+					}
+					set_variable = {
+						name = bryten_ostsiedlung_provide_further_help
+						value = flag:yes
+					}
+				}
+			}
+		}
+		# Intrigue
+		else_if = {
+			limit = {
+				var:bryten_ostsiedlung_migrants_type = flag:courtiers
+			}
+			duel = {
+				skill = intrigue
+				target = scope:courtier_1
+				10 = {
+					custom_tooltip = tapestry_hre.031.e.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -0.9
+					}
+					set_variable = {
+						name = bryten_ostsiedlung_provide_further_help
+						value = flag:no
+					}
+				}
+				10 = {
+					custom_tooltip = tapestry_hre.031.e.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 0.9
+					}
+					set_variable = {
+						name = bryten_ostsiedlung_provide_further_help
+						value = flag:yes
+					}
+				}
+			}
+		}
+		# Learning
+		else_if = {
+			limit = {
+				var:bryten_ostsiedlung_migrants_type = flag:scholars
+			}
+			duel = {
+				skill = learning
+				target = scope:courtier_1
+				10 = {
+					custom_tooltip = tapestry_hre.031.e.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -0.9
+					}
+					set_variable = {
+						name = bryten_ostsiedlung_provide_further_help
+						value = flag:no
+					}
+				}
+				10 = {
+					custom_tooltip = tapestry_hre.031.e.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 0.9
+					}
+					set_variable = {
+						name = bryten_ostsiedlung_provide_further_help
+						value = flag:yes
+					}
+				}
+			}
+		}
+		trigger_event = tapestry_hre.032
+	}		
+
+	after = {
+
+		if = {
+			limit = {
+				NOT = { has_variable = bryten_ostsiedlung_provide_further_help }
+			}
+			if = {
+				limit = {
+					scope:courtier_1 = {
+						has_character_flag = single_combat_duel_armor
+					}
+				}
+				scope:courtier_1 = {
+					remove_character_flag = single_combat_duel_armor
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						var:bryten_ostsiedlung_migrants_type = flag:courtiers
+					}
+				}
+				hidden_effect = {
+					scope:courtier_1 = {
+						death = {
+							death_reason = death_vanished
+						}
+					}			
+				}
+			}
+			if = {
+				limit = { has_variable = bryten_ostsiedlung_migrants_type }
+				remove_variable = bryten_ostsiedlung_migrants_type
+			}
+		}
+	}
+
+}
+tapestry_hre.032 = {# Ask them to provide additional assistance
+	type = character_event
+	title = tapestry_hre.032.t
+	desc = {
+		desc = tapestry_hre.032.desc.intro
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					var:bryten_ostsiedlung_provide_further_help = flag:no
+				}
+				desc = tapestry_hre.032.desc.no
+			}
+			triggered_desc = {
+				trigger = {
+					var:bryten_ostsiedlung_provide_further_help = flag:yes
+				}
+				desc = tapestry_hre.032.desc.yes
+			}
+		}
+	}
+	theme = realm
+	
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { root = { var:bryten_ostsiedlung_provide_further_help = flag:yes } }
+			animation = happiness
+		}
+		triggered_animation = {
+			trigger = { root = { var:bryten_ostsiedlung_provide_further_help = flag:no } }
+			animation = schadenfreude
+		}
+	}	
+	right_portrait = {
+		character = scope:courtier_1
+		triggered_animation = {
+			trigger = { root = { var:bryten_ostsiedlung_provide_further_help = flag:yes } }
+			animation = personality_bold
+		}
+		triggered_animation = {
+			trigger = { root = { var:bryten_ostsiedlung_provide_further_help = flag:no } }
+			animation = shame
+		}
+	}
+
+	lower_center_portrait = {
+		character = scope:courtier_2
+		trigger = { var:bryten_ostsiedlung_migrants_type = flag:courtiers }
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				var:bryten_ostsiedlung_provide_further_help = flag:yes
+			}
+			random_list = {
+				20 = {
+					add_character_modifier = {
+						modifier = bryten_ostsiedlung_long_term_assistance
+						years = 5
+					}
+				}
+				20 = {
+					add_character_modifier = {
+						modifier = bryten_ostsiedlung_long_term_assistance
+						years = 10
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = bryten_ostsiedlung_long_term_assistance
+						years = 15
+					}
+				}
+				10 = {
+					add_character_modifier = {
+						modifier = bryten_ostsiedlung_long_term_assistance
+						years = 20
+					}
+				}
+			}
+		}		
+	}
+		
+	option = { # Defend against borders?
+		name = tapestry_hre.032.a
+		trigger = {
+			var:bryten_ostsiedlung_provide_further_help = flag:yes
+			NOT = { var:bryten_ostsiedlung_migrants_type = flag:courtiers }
+		}
+	}		
+	option = { # Defend against borders?
+		name = tapestry_hre.032.b
+		trigger = {
+			NOT = {
+				var:bryten_ostsiedlung_provide_further_help = flag:yes
+			}
+			NOT = { var:bryten_ostsiedlung_migrants_type = flag:courtiers }
+		}
+	}		
+	option = { # Courtier 1
+		name = tapestry_hre.032.c
+		trigger = {
+			var:bryten_ostsiedlung_migrants_type = flag:courtiers
+		}
+		add_courtier = scope:courtier_1
+		hidden_effect = {
+			scope:courtier_2 = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}		
+	option = { # Courtier 2
+		name = tapestry_hre.032.d
+		trigger = {
+			var:bryten_ostsiedlung_migrants_type = flag:courtiers
+		}
+		add_courtier = scope:courtier_2
+		hidden_effect = {
+			scope:courtier_2 = {
+				death = {
+					death_reason = death_vanished
+				}
+			}			
+		}
+	}		
+	option = { # Courtier 1 and Courtier 2
+		name = tapestry_hre.032.e
+		trigger = {
+			var:bryten_ostsiedlung_migrants_type = flag:courtiers
+			OR = {
+				gold >= bryten_ostsiedlung_migrants_small_cost_small_cost
+				is_ai = no
+			}
+		}
+		remove_short_term_gold = bryten_ostsiedlung_migrants_small_cost_small_cost
+		add_courtier = scope:courtier_1
+		add_courtier = scope:courtier_2
+	}
+
+	after = {		
+		if = {
+			limit = {
+				scope:courtier_1 = {
+					has_character_flag = single_combat_duel_armor
+				}
+			}
+			scope:courtier_1 = {
+				remove_character_flag = single_combat_duel_armor
+			}
+		}
+		if = {
+			limit = {
+				NOT = { var:bryten_ostsiedlung_migrants_type = flag:courtiers }
+			}
+			hidden_effect = {
+				scope:courtier_1 = {
+					death = {
+						death_reason = death_vanished
+					}
+				}			
+			}
+		}
+		if = {
+			limit = { has_variable = bryten_ostsiedlung_migrants_type }
+			remove_variable = bryten_ostsiedlung_migrants_type
+		}
+	}
+}
+
+
+
+
+
+
+

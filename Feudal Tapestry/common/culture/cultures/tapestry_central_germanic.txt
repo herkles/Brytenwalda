@@ -237,7 +237,7 @@ lothringian = {# German Lorriane
 }
 # Ostsiedlung Cultures
 meissian = {# Messian / Upper Saxons
-	color = { 0.5 0.5 0.5 }
+	color = { 178 190 181 }
 	created = 1150.1.1 # Ostsiedlung picks up steam
 	parents = { franconian sorbian }
 	history_loc_override = bryten_messian_history_loc
@@ -247,10 +247,10 @@ meissian = {# Messian / Upper Saxons
 	language = language_high_german
 	martial_custom = martial_custom_male_only
 	traditions = {
-		tradition_zealous_people
-		tradition_stand_and_fight
-		tradition_hereditary_hierarchy
+		tradition_hard_working
+		tradition_esteemed_hospitality
 		tradition_castle_keepers
+		tradition_hereditary_hierarchy
 	}
 	
 	name_list = name_list_franconian
@@ -268,7 +268,7 @@ meissian = {# Messian / Upper Saxons
 	}
 }
 pommerisch = {# Germanized Pommeranians
-	color = { 0.5 0.5 0.5 }
+	color = { 54 69 79 }
 	created = 1147.1.1 # The end of the Wendish Crusade and Ostsiedlung picks up steam.
 
 	parents = { franconian pommeranian  }
@@ -300,7 +300,7 @@ pommerisch = {# Germanized Pommeranians
 	}
 }
 markish = {# Brandenburgian Germans / Polabians who germanized
-	color = { 0.5 0.5 0.5 }
+	color = { 169 169 169 }
 	created = 1147.1.1 # The end of the Wendish Crusade and Ostsiedlung picks up steam.
 	parents = { franconian polabian }
 	history_loc_override = bryten_markish_history_loc
@@ -331,7 +331,7 @@ markish = {# Brandenburgian Germans / Polabians who germanized
 	}
 }
 zipser = {# Carpathian Germans
-	color = { 0.5 0.5 0.5 }
+	color = { 195 199 199 }
 	created = 1150.1.1 # Ostsiedlung picks up steam
 	parents = { franconian czech }
 	history_loc_override = bryten_zipser_history_loc
@@ -361,7 +361,7 @@ zipser = {# Carpathian Germans
 	}
 }
 transylvanian_saxons = {# Transylavnian Saxons
-	color = { 0.5 0.5 0.5 }
+	color = { 166 171 165 }
 	created = 1160.1.1 # Ostsiedlung picks up steam
 	parents = { franconian hungarian }
 	history_loc_override = bryten_transylvanian_saxon_history_loc
@@ -391,7 +391,7 @@ transylvanian_saxons = {# Transylavnian Saxons
 	}
 }
 prussisch = {# Germanized Prussians
-	color = { 0.5 0.5 0.5 }
+	color = { 0 49 83 }
 	created = 1226.1.1 # The establishment of the State of the Teutonic Order
 	parents = { franconian prussian }
 	history_loc_override = bryten_prussisch_history_loc
@@ -422,7 +422,7 @@ prussisch = {# Germanized Prussians
 	}
 }
 balte = {# Baltic Germans
-	color = { 0.5 0.5 0.5 }
+	color = { 196 195 208 }
 	created = 1226.1.1 # The establishment of the State of the Teutonic Order
 	parents = { franconian livonian }
 	history_loc_override = bryten_balte_history_loc

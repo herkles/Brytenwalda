@@ -4455,23 +4455,14 @@ bryten_heresy.058 = {# waldensian Council(let players know)
 bryten_heresy.075 = {# John Wycliff begins preaching
 	hidden = yes
 
+	trigger = {# John Wycliff must exist first
+		exists = global_var:hchar_john_wycliffe
+	}
+
 	immediate = {
 		random_county_in_region = {
 			region = custom_lollard_region
 			save_scope_as = lollardy_county
-		}
-		create_character = {# Bogomil
-			name = "John"
-			gender = male
-			location = scope:lollardy_county.title_province
-			age = 30
-			faith = faith:lollard
-			culture = culture:english
-			trait = heresiarch
-			trait = generous
-			trait = theologian
-			trait = education_learning_4
-			save_scope_as = lollard_founder
 		}
 		set_global_variable = {
 			name = lollard_spawned

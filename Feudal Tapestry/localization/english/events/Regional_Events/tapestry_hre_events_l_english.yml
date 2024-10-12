@@ -48,6 +48,7 @@
   tapestry_hre.010.t:0 "Invasion of Otto"
   tapestry_hre.010.desc:0 "The King of the Germans to our north, Otto, have declared war upon us. He loudly claim it is for the best of the Italian people, and pretends that he is liberating Italy from the rule of [italian_king.GetTitledName].\n\nThe Germans are preparing to pass through the Alps, and put an end to the chaos that has embroiled Italy once and for all. Who will stand against them and treat them like invaders, and who will embrace them like old neighbors and friends?"
   tapestry_hre.010.a:1 "Let them come!"
+
 #######################################
 # The Great Slav Rising
 #######################################
@@ -100,8 +101,39 @@
   tapestry_hre.021.a:1 "God is with us!"
   bryten_slavic_rising_favor_christian_gain:0 "Christians defeated the slavic rising"
 
+#######################################
+# Ostsiedlung Events
+#######################################
+  tapestry_hre.031.t:0 "[courtier_1.GetCulture.GetNameNoTooltip] Migrants"
+  tapestry_hre.031.desc:0 "I have come into contact with a group of [courtier_1.GetCulture.GetName] migrants led by a [courtier_1.GetWomanMan] named [courtier_1.GetFirstName], who have expressed interest in serving me. [courtier_1.GetFirstNameNoTooltip] agreed to provide something in return for me allowing [courtier_1.GetHerHis] migrants to move into my territories."
+  tapestry_hre.031.desc.courtiers:0 "I told [courtier_1.GetFirstNameNoTooltip] that I want one of [courtier_1.GetHerHis] people to act as an intermediary between myself and the newly settled [courtier_1.GetCulture.GetCollectiveNounNoTooltip]. [courtier_1.GetFirstNameNoTooltip] has offered to join my court as a result, though [courtier_1.GetSheHe] says if that doesn’t work out, [courtier_1.GetSheHe] can also recommend [courtier_1.GetHerHis] associate, [courtier_2.GetFullName]."
+  tapestry_hre.031.desc.colonists:0 "[courtier_1.GetFirstNamePossessiveNoTooltip] group is mostly freemen looking for land to farm and sow. There are several places in the [ROOT.Char.GetPrimaryTitle.GetName] suitable for settlement, and the [courtier_1.GetCulture.GetNameNoTooltip] under [courtier_1.GetFirstNameNoTooltip] have begun to settle there to contribute to the region’s vitality."
+  tapestry_hre.031.desc.mercenaries:0 "The valor of [courtier_1.GetCulture.GetNameNoTooltip] soldiers and their abilities in war are known in many lands. [courtier_1.GetFirstNameNoTooltip] commands many honorable knights, who could prove more loyal than the average cutthroat hirelings, if they were to find the right liege. From now on, these knights will serve me, and strike fear into my enemies’ hearts!"
+  tapestry_hre.031.desc.traders:0 "Though famed for their skills in war, the [courtier_1.GetCulture.GetCollectiveNounNoTooltip] are also well connected across Europe. The networks they have built up over the years could prove a valuable asset for any business-minded ruler.\n\nAs it so happens, [courtier_1.GetFirstNameNoTooltip] has experience traveling and trading, and is offering to bring traders in my territories and build a productive trade relationship with me."
+  tapestry_hre.031.desc.scholars:0 "[courtier_1.GetFirstNamePossessiveNoTooltip] group are mostly clergy and scholars who are happy to help spread the catholic faith throughout [ROOT.Char.GetPrimaryTitle.GetName].  n\nI made it evidently clear to [courtier_1.GetFirstNameNoTooltip] that I expect these skilled people to help me improve and ensure that the faith is spread throughout my land without causing trouble. [courtier_1.GetSheHe|U] says they are more than happy to aid me on that front."
+  tapestry_hre.031.desc.conclusion:0 "\n\nLastly, I could see if I can ask [courtier_1.GetFirstNameNoTooltip] to train my soldiers and provide long-term military and political aid."
+  tapestry_hre.031.a:0 "[courtier_1.GetFirstNameNoTooltip] can serve me at my court."
+  tapestry_hre.031.b:0 "[courtier_2.GetFirstNameNoTooltip] seems like a good fit for my court."
+  tapestry_hre.031.c:0 "Both of them can become my courtiers."
+  tapestry_hre.031.d:0 "Excellent! I think that's good enough for now."
+  tapestry_hre.031.e:0 "[courtier_1.GetFirstNameNoTooltip], can you assist us further?"
+  tapestry_hre.031.e.failure:0 "[courtier_1.GetFirstNameNoTooltip] is unable to help you any further"
+  tapestry_hre.031.e.success:0 "[courtier_1.GetFirstNameNoTooltip] helps you acquire the [GetModifier('bryten_ostsiedlung_long_term_assistance').GetNameWithTooltip|L] [character_modifier|E] for anywhere between #V 5-20#! years"
 
+  bryten_ostsiedlung_settlers_tt:0 "Gains the [GetModifier('bryten_ostsiedlung_migrants_colonists').GetNameWithTooltip|L] [county_modifier|E] for #V 10 years#!""
+  tapestry_hre.031.colonists_duchy_tt_15:0 "Gains the [GetModifier('bryten_ostsiedlung_migrants_colonists').GetNameWithTooltip|L] [county_modifier|E] for #V 15 years#!""
+  tapestry_hre.031.colonists_duchy_tt_20:0 "Gains the [GetModifier('bryten_ostsiedlung_migrants_colonists').GetNameWithTooltip|L] [county_modifier|E] for #V 20 years#!""
+  tapestry_hre.031.colonists_duchy_tt_25:0 "Gains the [GetModifier('bryten_ostsiedlung_migrants_colonists').GetNameWithTooltip|L] [county_modifier|E] for #V 25 years#!""
 
+  tapestry_hre.032.t:0 "Further Assistance"
+  tapestry_hre.032.desc.intro:0 "After we negotiated a favorable agreement to both sides, I discussed with [courtier_1.GetFirstName] whether [courtier_1.GetSheHe] and [courtier_1.GetHerHis] band could provide further long-term assistance. The military valor and political savvy of the people from [GetGeographicalRegion(bryten_germania_region).GetName] is well-known, after all, and they have spread throughout many realms."
+  tapestry_hre.032.desc.no:0 "\n\nAlas, it seems, [courtier_1.GetFirstNameNoTooltip] claims [courtier_1.GetSheHe] is lacking in good connections, nor do they have the ability to engage in long-term training for my military.\n\nSensing my disappointment, [courtier_1.GetFirstNameNoTooltip] reassures me that [courtier_1.GetHerHis] band of migrants will do what they can to settle well into my realm. Still, I wonder if [courtier_1.GetFirstNameNoTooltip] is actually telling the truth, or if [courtier_1.GetSheHe] is slyly trying to avoid making me #italic too#! powerful at [courtier_1.GetHerHis] expense."
+  tapestry_hre.032.desc.yes:0 "\n\n[courtier_1.GetFirstNameNoTooltip] assures me, thankfully, that [courtier_1.GetSheHe] and [courtier_1.GetHerHis] migrants can provide me long-term political and military support. [courtier_1.GetSheHe|U] has already given me ideas on how to improve the realm's defenses, drill my troops to perform better in battle, and increase my political authority.\n\nAll in all, these are good, useful steps to help me maintain my power. Having [courtier_1.GetFirstNamePossessiveNoTooltip] band around has turned out to be a good thing!"
+  tapestry_hre.032.a:0 "I look forward to working with these [courtier_1.GetCulture.GetCollectiveNounNoTooltip]!"
+  tapestry_hre.032.b:0 "Let's hope [courtier_1.GetFirstNameNoTooltip] won't be up to any funny business."
+  tapestry_hre.032.c:0 "In the meanwhile, [courtier_1.GetFirstNameNoTooltip] can stay at my court"
+  tapestry_hre.032.d:0 "Now, that aside, I would like [courtier_2.GetFirstNameNoTooltip] in my court"
+  tapestry_hre.032.e:0 "Moving on, I want [courtier_1.GetFirstNameNoTooltip] #italic and#! [courtier_2.GetFirstNameNoTooltip] here."
 
 
 

@@ -277,6 +277,46 @@
   create_kingdom_lotheringia_decision_tooltip:0 "Glory to Lotharingia"
   capital_in_lotheringia_region_tooltip:0 "Your [realm_capital|E] is in Lotharingia"
 
+
+
+
+
+#######################################
+# Ostsiedlung decisions
+#######################################
+  bryten_ostsiedlung_migrants_decision:0 "Invite German Settlers"
+  bryten_ostsiedlung_migrants_decision_tooltip:0 "Bring in Germans to live in your [realm|E]"
+  bryten_ostsiedlung_migrants_decision_desc:0 "The [bryten_germans|E] who originate from [GetGeographicalRegion('bryten_germania_region').GetName] are willing to travel to our lands and settle the lands. With the right investment and inventions I could attract [bryten_germans|E] from abroad to settle in [GetPlayer.GetPrimaryTitle.GetNameNoTier] and help me in various ways."
+  bryten_ostsiedlung_migrants_decision_desc_german:0 "We [bryten_germans|E] are willing to travel eastwards and settle many lands. Using my connections, I could find other [bryten_germans|E] willing to work for me, and, to settle in [GetPlayer.GetPrimaryTitle.GetNameNoTier] and help me in various ways."
+  bryten_ostsiedlung_migrants_effect_tooltip_1:1 "You will choose between either receiving beneficial [character_modifiers|E], [county_modifiers|E], a new [courtier|E], or [special_troops|E]"
+  bryten_ostsiedlung_migrants_decision_confirm:0 "Send word to the Germans!"
+
+  bryten_ostsiedlung_attract_migrants_type:0 "Choose the kind of German settlers to invite"
+  bryten_ostsiedlung_attract_migrants_type_gui:0 "Choose what kind of [bryten_germans_settlers|E] to invite to your [realm|E]"
+  bryten_ostsiedlung_migrants_type_gui:0 "Choose what kind of [bryten_germans_settlers|E] to invite to your [realm|E]"
+
+  bryten_ostsiedlung_attract_migrants_colonists_option:0 "#Bold Freemen#!"
+  bryten_ostsiedlung_attract_migrants_colonists_option_desc:0 "Invite German freemen"
+  bryten_ostsiedlung_attract_migrants_colonists_option_tooltip:0 "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('bryten_ostsiedlung_migrants_large_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$A random county that you hold will gain a small amount of [development|E] and [control|E] and the [GetModifier('bryten_ostsiedlung_migrants_colonists').GetNameWithTooltip] [county_modifier|E] for #V 10#! to #V 25#! years\n$EFFECT_LIST_BULLET$You might be able to acquire the [GetModifier('bryten_ostsiedlung_long_term_assistance').GetNameWithTooltip|L] [character_modifier|E] depending on your [intrigue_i|E] [intrigue|E]"
+ 
+  bryten_ostsiedlung_attract_migrants_courtiers_option:0 "#Bold Courtiers#!"
+  bryten_ostsiedlung_attract_migrants_courtiers_option_desc:0 "Invite German Courtiers"
+  bryten_ostsiedlung_attract_migrants_courtiers_option_tooltip:0 "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('bryten_ostsiedlung_migrants_small_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$Two German [courtiers|E] will be spawned in your [court|E] who have a high rating in at least one [skill|E], often [martial|E] and [prowess|E]; you can choose between one or both. They may arrive with a [family|E]\n$EFFECT_LIST_BULLET$You might be able to acquire the [GetModifier('bryten_ostsiedlung_long_term_assistance').GetNameWithTooltip|L] [character_modifier|E] depending on your [diplomacy_i|E] [diplomacy|E]"
+  
+  bryten_ostsiedlung_attract_migrants_mercenaries_option:0 "#Bold Knights#!"
+  bryten_ostsiedlung_attract_migrants_mercenaries_option_desc:0 "Invite Norman Knights"
+  bryten_ostsiedlung_knights_spawn_event_troops:0 "German Knights"
+  bryten_ostsiedlung_attract_migrants_mercenaries_option_tooltip:0 "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('bryten_ostsiedlung_migrants_large_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$You gain anywhere from #V 200#! to #V 800#! [special_troops|E]\n$EFFECT_LIST_BULLET$You might be able to acquire the [GetModifier('bryten_ostsiedlung_long_term_assistance').GetNameWithTooltip|L] [character_modifier|E] depending on your [martial_i|E] [martial|E]"
+ 
+  bryten_ostsiedlung_attract_migrants_traders_option:0 "#Bold Traders#!"
+  bryten_ostsiedlung_attract_migrants_traders_option_desc:0 "Invite German Merchants"
+  bryten_ostsiedlung_attract_migrants_traders_option_tooltip:0 "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('bryten_ostsiedlung_migrants_large_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$You gain the [GetModifier('bryten_ostsiedlung_german_traders').GetNameWithTooltip] [character_modifier|E] for #V 10#! to #V 25#! years\n$EFFECT_LIST_BULLET$You might be able to acquire the [GetModifier('bryten_ostsiedlung_long_term_assistance').GetNameWithTooltip|L] [character_modifier|E] depending on your [stewardship_i|E] [stewardship|E]"
+  
+  bryten_ostsiedlung_attract_migrants_scholars_option:0 "#Bold Scholars#!"
+  bryten_ostsiedlung_attract_migrants_scholars_option_desc:0 "Invite German Clergy"
+  bryten_ostsiedlung_attract_migrants_scholars_option_tooltip:0 "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('bryten_ostsiedlung_migrants_large_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$You gain the [GetModifier('bryten_ostsiedlung_scholars_modifier').GetNameWithTooltip] [character_modifier|E] for #V 10#! to #V 25#! years [GetPlayer.MakeScope.ScriptValue('minor_prestige_gain')|0]#!\n$EFFECT_LIST_BULLET$You might be able to acquire the [GetModifier('bryten_ostsiedlung_long_term_assistance').GetNameWithTooltip|L] [character_modifier|E] depending on your [learning_i|E] [learning|E]" 
+
+
 #######################################
 # Christian Heretical Decisions
 #######################################

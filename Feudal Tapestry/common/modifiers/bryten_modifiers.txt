@@ -369,7 +369,30 @@ bryten_byz_reclaimant_bulgaria_modifier = {
 	development_growth_factor = 0.05
 	court_grandeur_baseline_add = 5
 }
-
-
-
-
+##########################################
+# Ostsiedlung Modifiers
+##########################################
+bryten_ostsiedlung_migrants_colonists = {
+	icon = family_positive
+	development_growth = 0.1
+	monthly_county_control_growth_add = 0.2
+}
+bryten_ostsiedlung_scholars_modifier = {
+	icon = piety_positive
+	zealot_same_faith_opinion = 05
+	faith_conversion_piety_cost_mult = -0.5
+}
+bryten_ostsiedlung_traders = {
+	icon = economy_positive
+	diplomacy = 1
+	stewardship = 1
+	domain_tax_mult = 0.05
+}
+bryten_ostsiedlung_long_term_assistance = {
+	icon = prestige_positive
+	additional_fort_level = 1
+	levy_reinforcement_rate = 0.05
+	knight_effectiveness_mult = 0.02
+	monthly_county_control_growth_factor = 0.02
+	vassal_tax_contribution_mult = 0.02
+}

@@ -2187,6 +2187,267 @@ start_slav_rising_polabian_effect = {# Starts the Rising for Polobians
 		}
 	}
 }
+
+bryten_ostsiedlung_migrants_initial_setup_effect = {	
+	capital_county = {
+		save_scope_as = capital
+	}
+	if = {
+		limit = {
+			var:bryten_ostsiedlung_attract_migrants_type = flag:courtiers
+		}
+		remove_short_term_gold = bryten_ostsiedlung_migrants_small_cost
+	}
+	else = {			
+		remove_short_term_gold = bryten_ostsiedlung_migrants_large_cost
+	}
+}
+bryten_ostsiedlung_migrants_main_effect = {
+	if = {# Courtiers
+		limit = {
+			var:bryten_ostsiedlung_migrants_type = flag:courtiers
+		}
+	}
+	if = {# Settlers
+		limit = {
+			var:bryten_ostsiedlung_migrants_type = flag:colonists
+		}
+		random_held_title = {
+			limit = { 
+				tier = tier_county 
+				NOT = {
+					this = scope:capital
+				}
+			}
+			save_scope_as = bryten_ostsiedlung_county1
+		}
+		random_held_title = {
+			limit = { 
+				tier = tier_county 
+				NOT = { 
+					this = scope:capital
+					this = scope:bryten_ostsiedlung_county1
+				}
+
+			}
+			save_scope_as = bryten_ostsiedlung_county2
+		}
+		random_held_title = {
+			limit = { 
+				tier = tier_county 
+				NOT = { 
+					this = scope:capital
+					this = scope:bryten_ostsiedlung_county1
+					this = scope:bryten_ostsiedlung_county2
+				}
+			}
+			save_scope_as = bryten_ostsiedlung_county3
+		}
+		random_held_title = {
+			limit = { 
+				tier = tier_county 
+				NOT = { 
+					this = scope:capital
+					this = scope:bryten_ostsiedlung_county1
+					this = scope:bryten_ostsiedlung_county2
+					this = scope:bryten_ostsiedlung_county3
+				}
+			}
+			save_scope_as = bryten_ostsiedlung_county4
+		}
+
+		random_list = {
+			10 = {
+				scope:bryten_ostsiedlung_county1 = {
+					custom_tooltip = bryten_ostsiedlung_settlers_tt
+					change_development_progress_with_overflow = 15
+					change_county_control = 15
+					add_county_modifier = {
+						modifier = bryten_ostsiedlung_migrants_colonists
+						years = 10
+					}
+				}
+			}
+			10 = {
+				scope:bryten_ostsiedlung_county2 = {
+					custom_tooltip = bryten_ostsiedlung_settlers_tt
+					change_development_progress_with_overflow = 15
+					change_county_control = 15
+					add_county_modifier = {
+						modifier = bryten_ostsiedlung_migrants_colonists
+						years = 10
+					}
+				}
+			}
+			10 = {
+				scope:bryten_ostsiedlung_county3 = {
+					custom_tooltip = bryten_ostsiedlung_settlers_tt
+					change_development_progress_with_overflow = 15
+					change_county_control = 15
+					add_county_modifier = {
+						modifier = bryten_ostsiedlung_migrants_colonists
+						years = 10
+					}
+				}
+			}
+			10 = {
+				scope:bryten_ostsiedlung_county4 = {
+					custom_tooltip = bryten_ostsiedlung_settlers_tt
+					change_development_progress_with_overflow = 15
+					change_county_control = 15
+					add_county_modifier = {
+						modifier = bryten_ostsiedlung_migrants_colonists
+						years = 10
+					}
+				}
+			}
+			10 = {
+				scope:capital = {
+					custom_tooltip = bryten_ostsiedlung_settlers_tt
+					change_development_progress_with_overflow = 15
+					change_county_control = 15
+					add_county_modifier = {
+						modifier = bryten_ostsiedlung_migrants_colonists
+						years = 10
+					}
+				}
+			}
+		}
+	}
+	else_if = {# Knights
+		limit = {
+			var:bryten_ostsiedlung_attract_migrants_type = flag:mercenaries
+		}
+		custom_tooltip = bryten_ostsiedlung_knights_spawn_event_troops_tooltip
+		hidden_effect = {
+			bryten_ostsiedlung_knights_spawn_effect = yes
+		}
+		# So they wear armor
+		scope:courtier_1 = {
+			add_character_flag = single_combat_duel_armor
+		}
+	}
+	else_if = {# Traders
+		limit = {
+			var:bryten_ostsiedlung_attract_migrants_type = flag:traders
+		}
+		random_list = {
+			10 = {
+				add_character_modifier = {
+					modifier = bryten_ostsiedlung_traders
+					years = 10
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = bryten_ostsiedlung_traders
+					years = 15
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = bryten_ostsiedlung_traders
+					years = 20
+				}
+			}
+			10 = {
+				add_character_modifier = {
+					modifier = bryten_ostsiedlung_traders
+					years = 25
+				}
+			}
+		}
+	}
+	else_if = {# Scholars and clergy
+		limit = {
+			var:bryten_ostsiedlung_attract_migrants_type = flag:scholars
+		}
+		random_list = {
+			10 = {# scholar Modifier
+				add_character_modifier = {
+					modifier = bryten_ostsiedlung_scholars_modifier
+					years = 10
+				}
+			}
+			10 = {# scholar Modifier
+				add_character_modifier = {
+					modifier = bryten_ostsiedlung_scholars_modifier
+					years = 15
+				}
+			}
+			10 = {# Give me a german Priest
+				create_character = {
+					location = root.capital_province
+					template = bryten_ostsiedlung_clergy_template
+					save_scope_as = courtier_1
+				}
+			}
+			10 = {# Give me a german Priest
+				create_character = {
+					location = root.capital_province
+					template = bryten_ostsiedlung_monk_template
+					save_scope_as = courtier_1
+				}
+			}
+		}
+	}
+}
+bryten_ostsiedlung_knights_spawn_effect = {
+	random_list = {
+		# 200
+		20 = {
+			spawn_army = {
+				levies = 100
+				men_at_arms = {
+					type = armored_horsemen
+					stacks = 2
+				}
+				location = root.capital_province
+				inheritable = no
+				name = bryten_ostsiedlung_knights_spawn_event_troops
+			}
+		}
+		# 400
+		20 = {
+			spawn_army = {
+				levies = 200
+				men_at_arms = {
+					type = armored_horsemen
+					stacks = 2
+				}
+				men_at_arms = {
+					type = bowmen
+					stacks = 1
+				}
+				location = root.capital_province
+				inheritable = no
+				name = bryten_ostsiedlung_knights_spawn_event_troops
+			}
+		}
+		# 600
+		15 = {
+			spawn_army = {
+				levies = 300
+				men_at_arms = {
+					type = armored_horsemen
+					stacks = 2
+				}
+				men_at_arms = {
+					type = bowmen
+					stacks = 1
+				}
+				men_at_arms = {
+					type = armored_footmen
+					stacks = 1
+				}
+				location = root.capital_province
+				inheritable = no
+				name = bryten_ostsiedlung_knights_spawn_event_troops
+			}
+		}
+	}
+}
+
 #######################################
 #									  #
 #         Fraticelli Effects	      #

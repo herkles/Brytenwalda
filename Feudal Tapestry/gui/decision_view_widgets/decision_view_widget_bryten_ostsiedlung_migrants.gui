@@ -1,0 +1,84 @@
+# Required controller: decision_option_list_controller
+
+vbox = {
+	name = "decision_view_widget_bryten_ostsiedlung_migrants"
+	layoutpolicy_horizontal = expanding
+	layoutpolicy_vertical = expanding
+	ignoreinvisible = yes
+
+	margin_top = 10
+	spacing = 10
+
+	text_label_center = {
+		text = "bryten_ostsiedlung_migrants_type_gui"
+	}
+
+	hbox = {
+		layoutpolicy_horizontal = expanding
+		layoutpolicy_vertical = expanding		
+
+		scrollbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+
+			blockoverride "scrollbox_content" {
+				vbox = {
+					datamodel = "[DecisionViewWidgetOptionList.GetEntries]"
+					spacing = 6
+
+					item = {
+						bryten_ostsiedlung_attract_migrants = {}
+					}
+				}
+			}
+
+			blockoverride "scrollbox_background_fade" {}
+		}
+	}
+}
+
+types bryten_ostsiedlung_attract_migrants
+{
+	type bryten_ostsiedlung_attract_migrants = button_standard {
+		size = { 450 70 }
+		margin = { 10 10 }
+		tintcolor = { 0.73 0.95 0.94 0.8 } # Ice blue
+		#tintcolor = "[TooltipInfo.GetTintColor]"
+
+		onclick = "[DecisionViewWidgetOptionList.OnSelect(Entry.Self)]"
+		enabled = "[Entry.IsEnabled]"
+		tooltip = "[Entry.GetTooltip]"
+		down = "[Entry.IsSelected]"
+
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			spacing = 10
+			margin_left = 10
+
+			icon = {
+				name = "bryten_ostsiedlung_migrants_icon"
+				size = { 50 50 } # size = { 30 30 }
+				texture = "[Entry.GetIcon]"
+			}
+
+			vbox = {
+				name = "bryten_ostsiedlung_migrants_info"
+
+				layoutpolicy_vertical = expanding
+				margin_left = 15
+				margin_bottom = 5
+
+				text_single = {
+					name = "bryten_ostsiedlung_migrants_type"
+					text = "[Entry.GetName]"
+					max_width = 400
+					align = left
+				}
+			}
+
+			expand = {}
+		}
+	}
+}
+
