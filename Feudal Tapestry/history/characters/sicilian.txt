@@ -191,9 +191,6 @@
 	1095.1.1 = {
 		birth = "1095.1.1"
 	}
-	1119.1.1 = {
-		employer = 73280
-	}
 	1127.7.1 = {
 		death = "1127.7.1"
 	}
@@ -776,7 +773,7 @@ sicilian0008 = {
 	father = 211502
 	mother = 207662
 
-	1120.1.1 = {
+	1114.1.1 = {
 		birth = yes
 	}
 	1186.1.1 = {
@@ -1208,6 +1205,9 @@ sicilian0008 = {
 
 	1142.1.1 = {
 		birth = yes
+	}
+	1161.1.1 = {
+		add_trait = disinherited # banished after failed coup
 	}
 	1180.1.1 = {
 		add_spouse = 211517
@@ -4347,12 +4347,11 @@ sicilian0021 = {
 }
 sicilian0022 = {
 	name = "Marocta" # Marocta de Sanseverino, wife of Ruggiero d'Aquila
+	female = yes
 	dynasty = 101843
 	religion = catholic
 	culture = sicilian
-
 	father = sicilian0018
-
 	1138.1.1 = {
 		birth = yes
 	}
