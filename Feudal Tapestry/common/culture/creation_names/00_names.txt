@@ -796,23 +796,6 @@ tyrolian = {# Tyrolian
 #############################################
 # Frankish Cultures			
 #############################################
-picard = {# Picardy
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_flanders = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_flanders
-		}
-		culture = { has_cultural_pillar = heritage_frankish }
-		any_sub_realm_county = {
-			culture = { has_cultural_pillar = heritage_frankish }
-			duchy = title:d_flanders
-		}
-	}
-}
 champagne = {# Champagne dialect
 	trigger = {
 		OR = {

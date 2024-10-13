@@ -94,6 +94,11 @@ bryten_germania_region = {
 		d_nordgau d_bavaria d_augsburg d_salzburg d_tyrol
 	}
 }
+bryten_ostsiedlung_meissien_region = {
+	duchies = {
+		d_meissen d_lausitz
+	}
+}
 bryten_ostsiedlung_pommerisch_region = {
 	duchies = {
 		d_pommerania d_pomerelia
@@ -106,22 +111,27 @@ bryten_ostsiedlung_markish_region = {
 }
 bryten_ostsiedlung_zipser_region = {
 	duchies = {
-		d_nyitra d_somogy d_bohemia d_moravia
+		d_nyitra d_ungvar d_transcarpathia d_moravia
 	}
 }
 bryten_ostsiedlung_transylvanian_saxons_region = {
 	duchies = {
-		d_transylvanian_alps d_muntenia d_oltenia d_transcarpathia
+		d_transylvanian_alps d_transylvania d_moldova
 	}
 }
 bryten_ostsiedlung_prussisch_region = {
 	duchies = {
-		d_prussia d_masuria d_lithuanians d_latgalians
+		d_prussia d_masuria d_lithuanians d_samogitia
 	}
 }
 bryten_ostsiedlung_balte_region = {
 	duchies = {
-		d_esthonia d_livonia d_courland d_samogitia
+		d_esthonia d_livonia d_courland d_latgalians
+	}
+}
+bryten_ostsiedlung_silisia_region = {
+	duchies = {
+		d_lower_silesia d_upper_silesia
 	}
 }
 bryten_ostsiedlung_region = {
@@ -134,13 +144,20 @@ bryten_ostsiedlung_region = {
 		# Markish
 		d_nordmark d_ostmark
 		# Zipser
-		d_nyitra d_somogy d_bohemia d_moravia
+		d_nyitra d_ungvar d_transcarpathia
 		# Transylvanian Saxons
-		d_transylvanian_alps d_muntenia d_oltenia d_transcarpathia
+		d_transylvanian_alps d_transylvania d_moldova
 		# Prussisch
-		d_prussia d_masuria d_lithuanians d_latgalians
+		d_prussia d_masuria d_lithuanians d_samogitia
 		# Balte
-		d_esthonia d_livonia d_courland d_samogitia
+		d_esthonia d_livonia d_courland d_latgalians
+		# Hungary
+		d_visegrad d_bihar d_temes d_bacs d_gyor
+		# Poland
+		d_wielkopolska d_lesser_poland d_mazovia d_kuyavia
+		# Bohemia
+		d_bohemia d_moravia
+
 	}
 }
 #######################################

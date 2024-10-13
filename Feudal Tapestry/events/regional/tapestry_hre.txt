@@ -1681,10 +1681,1812 @@ tapestry_hre.032 = {# Ask them to provide additional assistance
 		}
 	}
 }
+# Flavor Events
 
+#######################################
+# Cultures forming
+#######################################
+# meissian
+tapestry_hre.050 = {# meissian Culture forming
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:franconian = { save_scope_as = norman }
+		culture:meissian = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:franconian
+			get_all_innovations_from = culture:sorbian
 
+			# Save scope for player notification events.
+			save_scope_as = meissian
+		}
 
+		# German Counties in Sorbia will convert to Messien
+		culture:franconian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_meissien_region }
+				}
+				add_to_list = meissian_counties
+			}
+		}
+		culture:swabian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_meissien_region }
+				}
+				add_to_list = meissian_counties
+			}
+		}
+		culture:bavarian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_meissien_region }
+				}
+				add_to_list = meissian_counties
+			}
+		}
+		culture:saxon = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_meissien_region }
+				}
+				add_to_list = meissian_counties
+			}
+		}
+		# Convert the franconian counties to Messian
+		every_in_list = {
+			list = meissian_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_meissien_region }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_meissien_region }
+							}
+						}
+					}
+				}
+			}
+						
+			# All franconian counties in Sorbia become Meissian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:saxon
+				NEW_CULTURE = culture:meissian
+				REGION = bryten_ostsiedlung_meissien_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:franconian
+				NEW_CULTURE = culture:meissian
+				REGION = bryten_ostsiedlung_meissien_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:swabian
+				NEW_CULTURE = culture:meissian
+				REGION = bryten_ostsiedlung_meissien_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:bavarian
+				NEW_CULTURE = culture:meissian
+				REGION = bryten_ostsiedlung_meissien_region
+			}
+		}
 
+		# franconian Rulers get the next decision
+		every_ruler = {
+			limit = {
+				AND = {
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+					is_landed = yes			
+					capital_province = { geographical_region = bryten_ostsiedlung_meissien_region }
+				}
+			}
+			trigger_event = tapestry_hre.051
+		}
 
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = meissian_counties
+						holder = { is_within_diplo_range = { CHARACTER = scope:player } }
+					}
+				}
+				trigger_event = tapestry_hre.052
+			}
+		}
+	}
+}
+tapestry_hre.051 = {# German Ruled Realms in Sorbia
+	type = character_event
+	title = tapestry_hre.051.t
+	desc = tapestry_hre.051.desc
+	theme = culture_change
 
+	trigger = {# safety checks
+		OR = {
+			has_culture	= culture:saxon
+			has_culture	= culture:swabian
+			has_culture	= culture:bavarian
+			has_culture	= culture:franconian
+		}
+		is_landed = yes		
+		capital_province = { geographical_region = bryten_ostsiedlung_meissien_region }
+	}	
+	option = {# Embrace Meissian
+		name = tapestry_hre.051.embrace
+		show_as_tooltip = {
+			set_culture = culture:meissian
+			every_in_list = {
+				list = meissian_counties
+				limit = {
+					holder.top_liege = root.top_liege
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+				}
+				set_county_culture = culture:meissian
+			}
+		}
+		# Convert the German counties to Meissian
+		every_in_list = {
+			list = meissian_counties
+			limit = {
+				holder.top_liege = root.top_liege
+				OR = {
+					has_culture	= culture:saxon
+					has_culture	= culture:swabian
+					has_culture	= culture:bavarian
+					has_culture	= culture:franconian
+				}
+			}	
+			# All German counties in Sorbia become Meissian
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:saxon
+					NEW_CULTURE = culture:meissian
+					REGION = bryten_ostsiedlung_meissien_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:franconian
+					NEW_CULTURE = culture:meissian
+					REGION = bryten_ostsiedlung_meissien_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:swabian
+					NEW_CULTURE = culture:meissian
+					REGION = bryten_ostsiedlung_meissien_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:bavarian
+					NEW_CULTURE = culture:meissian
+					REGION = bryten_ostsiedlung_meissien_region
+				}
+			}
+		}
+	}
+}
+tapestry_hre.052 = {# Let other players know that meissian has been created
+	type = character_event
+	title = tapestry_hre.052.t
+	desc = tapestry_hre.052.desc
+	theme = culture_change
 
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = tapestry_hre.052.a
+	}
+}
+# pommerisch
+tapestry_hre.053 = {# pommerisch Culture forming
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:franconian = { save_scope_as = franconian }
+		culture:pommerisch = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:pommeranian
+			get_all_innovations_from = culture:franconian
+
+			# Save scope for player notification events.
+			save_scope_as = pommerisch
+		}
+
+		# German counties in Pommerania will convert to pommerisch
+		culture:saxon = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_pommerisch_region }
+				}
+				add_to_list = pommerisch_counties
+			}
+		}
+		culture:franconian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_pommerisch_region }
+				}
+				add_to_list = pommerisch_counties
+			}
+		}
+		culture:swabian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_pommerisch_region }
+				}
+				add_to_list = pommerisch_counties
+			}
+		}
+		culture:bavarian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_pommerisch_region }
+				}
+				add_to_list = pommerisch_counties
+			}
+		}
+		# Convert the German counties to anglo-norse
+		every_in_list = {
+			list = pommerisch_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_pommerisch_region }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_pommerisch_region }
+							}
+						}
+					}
+				}
+			}
+						
+			# All German counties in Pommernia become pommerisch
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:saxon
+				NEW_CULTURE = culture:pommerisch
+				REGION = bryten_ostsiedlung_pommerisch_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:franconian
+				NEW_CULTURE = culture:pommerisch
+				REGION = bryten_ostsiedlung_pommerisch_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:swabian
+				NEW_CULTURE = culture:pommerisch
+				REGION = bryten_ostsiedlung_pommerisch_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:bavarian
+				NEW_CULTURE = culture:pommerisch
+				REGION = bryten_ostsiedlung_pommerisch_region
+			}
+		}
+
+		# Norman Rulers get the next decision
+		every_ruler = {
+			limit = {
+				AND = {
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+					is_landed = yes			
+					capital_province = { geographical_region = bryten_ostsiedlung_pommerisch_region }
+				}
+			}
+			trigger_event = tapestry_hre.054
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = pommerisch_counties
+						holder = { is_within_diplo_range = { CHARACTER = scope:player } }
+					}
+				}
+				trigger_event = tapestry_hre.055
+			}
+		}
+	}
+}
+tapestry_hre.054 = {# German Ruled Realms in Pommerania
+	type = character_event
+	title = tapestry_hre.054.t
+	desc = tapestry_hre.054.desc
+	theme = culture_change
+
+	trigger = {# safety checks
+		OR = {
+			has_culture	= culture:saxon
+			has_culture	= culture:swabian
+			has_culture	= culture:bavarian
+			has_culture	= culture:franconian
+		}
+		is_landed = yes		
+		capital_province = { geographical_region = bryten_ostsiedlung_pommerisch_region }
+	}
+	
+	option = {# Embrace pommerisch
+		name = tapestry_hre.054.embrace
+		show_as_tooltip = {
+			set_culture = culture:pommerisch
+			every_in_list = {
+				list = pommerisch_counties
+				limit = {
+					holder.top_liege = root.top_liege
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+				}
+				set_county_culture = culture:pommerisch
+			}
+		}
+		# Convert the German counties to pommerisch
+		every_in_list = {
+			list = pommerisch_counties
+			limit = {
+				holder.top_liege = root.top_liege
+				OR = {
+					has_culture	= culture:saxon
+					has_culture	= culture:swabian
+					has_culture	= culture:bavarian
+					has_culture	= culture:franconian
+				}
+			}	
+			# All German counties in Pommerania become pommerisch
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:saxon
+					NEW_CULTURE = culture:pommerisch
+					REGION = bryten_ostsiedlung_pommerisch_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:franconian
+					NEW_CULTURE = culture:pommerisch
+					REGION = bryten_ostsiedlung_pommerisch_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:swabian
+					NEW_CULTURE = culture:pommerisch
+					REGION = bryten_ostsiedlung_pommerisch_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:bavarian
+					NEW_CULTURE = culture:pommerisch
+					REGION = bryten_ostsiedlung_pommerisch_region
+				}
+			}
+		}
+	}
+}
+tapestry_hre.055 = {# Let other players know that pommerisch has been created
+	type = character_event
+	title = tapestry_hre.055.t
+	desc = tapestry_hre.055.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = tapestry_hre.055.a
+	}
+}
+# markish
+tapestry_hre.056 = {# markish Culture forming
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:franconian = { save_scope_as = franconian }
+		culture:markish = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:polabian
+			get_all_innovations_from = culture:franconian
+
+			# Save scope for player notification events.
+			save_scope_as = markish
+		}
+		# German counties in Southernitaly will convert to markish
+		culture:saxon = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_markish_region }
+				}
+				add_to_list = markish_counties
+			}
+		}
+		culture:swabian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_markish_region }
+				}
+				add_to_list = markish_counties
+			}
+		}
+		culture:bavarian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_markish_region }
+				}
+				add_to_list = markish_counties
+			}
+		}
+		# Convert the German counties to anglo-norse
+		every_in_list = {
+			list = markish_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_markish_region }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_markish_region }
+							}
+						}
+					}
+				}
+			}
+						
+			# All German counties in Sicily become sicilian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:saxon
+				NEW_CULTURE = culture:markish
+				REGION = bryten_ostsiedlung_markish_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:franconian
+				NEW_CULTURE = culture:markish
+				REGION = bryten_ostsiedlung_markish_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:swabian
+				NEW_CULTURE = culture:markish
+				REGION = bryten_ostsiedlung_markish_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:bavarian
+				NEW_CULTURE = culture:markish
+				REGION = bryten_ostsiedlung_markish_region
+			}
+		}
+		# German Rulers get the next decision
+		every_ruler = {
+			limit = {
+				AND = {
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+					is_landed = yes			
+					capital_province = { geographical_region = bryten_ostsiedlung_markish_region }
+				}
+			}
+			trigger_event = tapestry_hre.057
+		}
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = markish_counties
+						holder = { is_within_diplo_range = { CHARACTER = scope:player } }
+					}
+				}
+				trigger_event = tapestry_hre.058
+			}
+		}
+	}
+}
+tapestry_hre.057 = {# German Ruled Realms in the Mark
+	type = character_event
+	title = tapestry_hre.057.t
+	desc = tapestry_hre.057.desc
+	theme = culture_change
+
+	trigger = {# safety checks
+		OR = {
+			has_culture	= culture:saxon
+			has_culture	= culture:swabian
+			has_culture	= culture:bavarian
+			has_culture	= culture:franconian
+		}
+		is_landed = yes		
+		capital_province = { geographical_region = bryten_ostsiedlung_markish_region }
+	}
+	
+	option = {# Embrace Markish
+		name = tapestry_hre.057.embrace
+		show_as_tooltip = {
+			set_culture = culture:markish
+			every_in_list = {
+				list = markish_counties
+				limit = {
+					holder.top_liege = root.top_liege
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+				}
+				set_county_culture = culture:markish
+			}
+		}
+		# Convert the German counties to markish
+		every_in_list = {
+			list = markish_counties
+			limit = {
+				holder.top_liege = root.top_liege
+				OR = {
+					has_culture	= culture:saxon
+					has_culture	= culture:swabian
+					has_culture	= culture:bavarian
+					has_culture	= culture:franconian
+				}
+			}	
+			# All German counties in Southernitaly become Sicilian
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:saxon
+					NEW_CULTURE = culture:markish
+					REGION = bryten_ostsiedlung_markish_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:franconian
+					NEW_CULTURE = culture:markish
+					REGION = bryten_ostsiedlung_markish_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:swabian
+					NEW_CULTURE = culture:markish
+					REGION = bryten_ostsiedlung_markish_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:bavarian
+					NEW_CULTURE = culture:markish
+					REGION = bryten_ostsiedlung_markish_region
+				}
+			}
+		}
+	}
+}
+tapestry_hre.058 = {# Let other players know that markish has been created
+	type = character_event
+	title = tapestry_hre.058.t
+	desc = tapestry_hre.058.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = tapestry_hre.058.a
+	}
+}
+# zipser
+tapestry_hre.059 = {# zipser Culture forming
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:franconian = { save_scope_as = franconian }
+		culture:zipser = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:franconian
+			get_all_innovations_from = culture:nitran
+
+			# Save scope for player notification events.
+			save_scope_as = sicilian
+		}
+
+		# German counties in Carpathian Mountains will convert to zipser
+		culture:saxon = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_zipser_region }
+				}
+				add_to_list = zipser_counties
+			}
+		}
+		culture:franconian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_zipser_region }
+				}
+				add_to_list = zipser_counties
+			}
+		}
+		culture:swabian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_zipser_region }
+				}
+				add_to_list = zipser_counties
+			}
+		}
+		culture:bavarian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_zipser_region }
+				}
+				add_to_list = zipser_counties
+			}
+		}
+		# Convert the German counties to anglo-norse
+		every_in_list = {
+			list = zipser_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_zipser_region }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_zipser_region }
+							}
+						}
+					}
+				}
+			}
+						
+			# All German counties in Sicily become sicilian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:saxon
+				NEW_CULTURE = culture:zipser
+				REGION = bryten_ostsiedlung_zipser_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:franconian
+				NEW_CULTURE = culture:zipser
+				REGION = bryten_ostsiedlung_zipser_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:swabian
+				NEW_CULTURE = culture:zipser
+				REGION = bryten_ostsiedlung_zipser_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:bavarian
+				NEW_CULTURE = culture:zipser
+				REGION = bryten_ostsiedlung_zipser_region
+			}
+		}
+
+		# Norman Rulers get the next decision
+		every_ruler = {
+			limit = {
+				AND = {
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+					is_landed = yes			
+					capital_province = { geographical_region = bryten_ostsiedlung_zipser_region }
+				}
+			}
+			trigger_event = tapestry_hre.060
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = zipser_counties
+						holder = { is_within_diplo_range = { CHARACTER = scope:player } }
+					}
+				}
+				trigger_event = tapestry_hre.061
+			}
+		}
+	}
+}
+tapestry_hre.060 = {# German Ruled Realms in the Carpathians
+	type = character_event
+	title = tapestry_hre.060.t
+	desc = tapestry_hre.060.desc
+	theme = culture_change
+
+	trigger = {# safety checks
+		OR = {
+			has_culture	= culture:saxon
+			has_culture	= culture:swabian
+			has_culture	= culture:bavarian
+			has_culture	= culture:franconian
+		}
+		is_landed = yes		
+		capital_province = { geographical_region = bryten_ostsiedlung_zipser_region }
+	}
+	
+	option = {# Embrace zipser
+		name = tapestry_hre.060.embrace
+		show_as_tooltip = {
+			set_culture = culture:zipser
+			every_in_list = {
+				list = zipser_counties
+				limit = {
+					holder.top_liege = root.top_liege
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+				}
+				set_county_culture = culture:zipser
+			}
+		}
+		# Convert the norman counties to zipser
+		every_in_list = {
+			list = zipser_counties
+			limit = {
+				holder.top_liege = root.top_liege
+				OR = {
+					has_culture	= culture:saxon
+					has_culture	= culture:swabian
+					has_culture	= culture:bavarian
+					has_culture	= culture:franconian
+				}
+			}	
+			# All German counties in Southernitaly become Sicilian
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:saxon
+					NEW_CULTURE = culture:zipser
+					REGION = bryten_ostsiedlung_zipser_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:franconian
+					NEW_CULTURE = culture:zipser
+					REGION = bryten_ostsiedlung_zipser_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:swabian
+					NEW_CULTURE = culture:zipser
+					REGION = bryten_ostsiedlung_zipser_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:bavarian
+					NEW_CULTURE = culture:zipser
+					REGION = bryten_ostsiedlung_zipser_region
+				}
+			}
+		}
+	}
+}
+tapestry_hre.061 = {# Let other players know that zipser has been created
+	type = character_event
+	title = tapestry_hre.061.t
+	desc = tapestry_hre.061.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = tapestry_hre.061.a
+	}
+}
+# transylvanian_saxons
+tapestry_hre.062 = {# Transylvanian Saxons Culture forming
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:franconian = { save_scope_as = franconian }
+		culture:transylvanian_saxons = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:hungarian
+			get_all_innovations_from = culture:franconian
+
+			# Save scope for player notification events.
+			save_scope_as = transylvanian_saxons
+		}
+
+		# German counties in Southernitaly will convert to Sicilian
+		culture:saxon = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_transylvanian_saxons_region }
+				}
+				add_to_list = transylvanian_saxons_counties
+			}
+		}
+		culture:franconian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_transylvanian_saxons_region }
+				}
+				add_to_list = transylvanian_saxons_counties
+			}
+		}
+		culture:swabian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_transylvanian_saxons_region }
+				}
+				add_to_list = transylvanian_saxons_counties
+			}
+		}
+		culture:bavarian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_transylvanian_saxons_region }
+				}
+				add_to_list = transylvanian_saxons_counties
+			}
+		}						
+		# Convert the German counties to anglo-norse
+		every_in_list = {
+			list = transylvanian_saxons_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_transylvanian_saxons_region }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_transylvanian_saxons_region }
+							}
+						}
+					}
+				}
+			}
+						
+			# All German counties in Transylvania become franconian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:saxon
+				NEW_CULTURE = culture:transylvanian_saxons
+				REGION = bryten_ostsiedlung_transylvanian_saxons_region
+			}
+			on_effect = {
+				OLD_CULTURE = culture:franconian
+				NEW_CULTURE = culture:transylvanian_saxons
+				REGION = bryten_ostsiedlung_transylvanian_saxons_region
+			}
+			on_effect = {
+				OLD_CULTURE = culture:swabian
+				NEW_CULTURE = culture:transylvanian_saxons
+				REGION = bryten_ostsiedlung_transylvanian_saxons_region
+			}
+			on_effect = {
+				OLD_CULTURE = culture:bavarian
+				NEW_CULTURE = culture:transylvanian_saxons
+				REGION = bryten_ostsiedlung_transylvanian_saxons_region
+			}
+		}
+
+		# Norman Rulers get the next decision
+		every_ruler = {
+			limit = {
+				AND = {
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+					is_landed = yes			
+					capital_province = { geographical_region = bryten_ostsiedlung_transylvanian_saxons_region }
+				}
+			}
+			trigger_event = tapestry_hre.063
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = sicilian_counties
+						holder = { is_within_diplo_range = { CHARACTER = scope:player } }
+					}
+				}
+				trigger_event = tapestry_hre.064
+			}
+		}
+	}
+}
+tapestry_hre.063 = {# Norman Ruled Realms in Transylvania
+	type = character_event
+	title = tapestry_hre.063.t
+	desc = tapestry_hre.063.desc
+	theme = culture_change
+
+	trigger = {# safety checks
+		OR = {
+			has_culture	= culture:saxon
+			has_culture	= culture:swabian
+			has_culture	= culture:bavarian
+			has_culture	= culture:franconian
+		}
+		is_landed = yes		
+		capital_province = { geographical_region = bryten_ostsiedlung_transylvanian_saxons_region }
+	}
+	
+	option = {# Embrace transylvanian_saxons
+		name = tapestry_hre.063.embrace
+		show_as_tooltip = {
+			set_culture = culture:transylvanian_saxons
+			every_in_list = {
+				list = anglo_saxon_counties
+				limit = {
+					holder.top_liege = root.top_liege
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+				}
+				set_county_culture = culture:transylvanian_saxons
+			}
+		}
+		# Convert the norman counties to transylvanian_saxons
+		every_in_list = {
+			list = anglo_saxon_counties
+			limit = {
+				holder.top_liege = root.top_liege
+				OR = {
+					has_culture	= culture:saxon
+					has_culture	= culture:swabian
+					has_culture	= culture:bavarian
+					has_culture	= culture:franconian
+				}
+			}	
+			# All German counties in Translyvania become transylvanian_saxons
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:saxon
+					NEW_CULTURE = culture:transylvanian_saxons
+					REGION = bryten_ostsiedlung_transylvanian_saxons_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:franconian
+					NEW_CULTURE = culture:transylvanian_saxons
+					REGION = bryten_ostsiedlung_transylvanian_saxons_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:swabian
+					NEW_CULTURE = culture:transylvanian_saxons
+					REGION = bryten_ostsiedlung_transylvanian_saxons_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:bavarian
+					NEW_CULTURE = culture:transylvanian_saxons
+					REGION = bryten_ostsiedlung_transylvanian_saxons_region
+				}
+			}
+		}
+	}
+}
+tapestry_hre.064 = {# Let other players know that Transylvanian Saxons has been created
+	type = character_event
+	title = tapestry_hre.064.t
+	desc = tapestry_hre.064.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = tapestry_hre.064.a
+	}
+}
+# prussisch
+tapestry_hre.065 = {# Prussisch Culture forming
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:franconian = { save_scope_as = franconian }
+		culture:prussisch = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:franconian
+			get_all_innovations_from = culture:prussian
+
+			# Save scope for player notification events.
+			save_scope_as = prussisch
+		}
+
+		# German counties in Southernitaly will convert to Sicilian
+		culture:saxon = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_prussisch_region }
+				}
+				add_to_list = prussisch_counties
+			}
+		}
+		culture:franconian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_prussisch_region }
+				}
+				add_to_list = prussisch_counties
+			}
+		}
+		culture:swabian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_prussisch_region }
+				}
+				add_to_list = prussisch_counties
+			}
+		}
+		culture:bavarian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_prussisch_region }
+				}
+				add_to_list = prussisch_counties
+			}
+		}
+		# Convert the German counties to anglo-norse
+		every_in_list = {
+			list = sicilian_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_prussisch_region }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_prussisch_region }
+							}
+						}
+					}
+				}
+			}
+						
+			# All German counties in Sicily become sicilian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:saxon
+				NEW_CULTURE = culture:prussisch
+				REGION = bryten_ostsiedlung_prussisch_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:franconian
+				NEW_CULTURE = culture:prussisch
+				REGION = bryten_ostsiedlung_prussisch_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:swabian
+				NEW_CULTURE = culture:prussisch
+				REGION = bryten_ostsiedlung_prussisch_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:bavarian
+				NEW_CULTURE = culture:prussisch
+				REGION = bryten_ostsiedlung_prussisch_region
+			}
+		}
+
+		# Norman Rulers get the next decision
+		every_ruler = {
+			limit = {
+				AND = {
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+					is_landed = yes			
+					capital_province = { geographical_region = bryten_ostsiedlung_prussisch_region }
+				}
+			}
+			trigger_event = tapestry_hre.066
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = sicilian_counties
+						holder = { is_within_diplo_range = { CHARACTER = scope:player } }
+					}
+				}
+				trigger_event = tapestry_hre.067
+			}
+		}
+	}
+}
+tapestry_hre.066 = {# German Ruled Realms in Prussia
+	type = character_event
+	title = tapestry_hre.066.t
+	desc = tapestry_hre.066.desc
+	theme = culture_change
+
+	trigger = {# safety checks
+		OR = {
+			has_culture	= culture:saxon
+			has_culture	= culture:swabian
+			has_culture	= culture:bavarian
+			has_culture	= culture:franconian
+		}
+		is_landed = yes		
+		capital_province = { geographical_region = bryten_ostsiedlung_prussisch_region }
+	}
+	
+	option = {# Embrace prussisch
+		name = tapestry_hre.066.embrace
+		show_as_tooltip = {
+			set_culture = culture:prussisch
+			every_in_list = {
+				list = anglo_saxon_counties
+				limit = {
+					holder.top_liege = root.top_liege
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+				}
+				set_county_culture = culture:prussisch
+			}
+		}
+		# Convert the norman counties to prussisch
+		every_in_list = {
+			list = anglo_saxon_counties
+			limit = {
+				holder.top_liege = root.top_liege
+				OR = {
+					has_culture	= culture:saxon
+					has_culture	= culture:swabian
+					has_culture	= culture:bavarian
+					has_culture	= culture:franconian
+				}
+			}	
+			# All German counties in Southernitaly become Sicilian
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:saxon
+					NEW_CULTURE = culture:prussisch
+					REGION = bryten_ostsiedlung_prussisch_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:franconian
+					NEW_CULTURE = culture:prussisch
+					REGION = bryten_ostsiedlung_prussisch_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:swabian
+					NEW_CULTURE = culture:prussisch
+					REGION = bryten_ostsiedlung_prussisch_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:bavarian
+					NEW_CULTURE = culture:prussisch
+					REGION = bryten_ostsiedlung_prussisch_region
+				}
+			}
+		}
+	}
+}
+tapestry_hre.067 = {# Let other players know that Prussisch has been created
+	type = character_event
+	title = tapestry_hre.067.t
+	desc = tapestry_hre.067.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = tapestry_hre.067.a
+	}
+}
+# balte
+tapestry_hre.068 = {# Balte Culture forming
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:franconian = { save_scope_as = franconian }
+		culture:balte = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:franconian
+			get_all_innovations_from = culture:livonian
+
+			# Save scope for player notification events.
+			save_scope_as = balte
+		}
+
+		# German counties in Southernitaly will convert to Sicilian
+		culture:saxon = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_balte_region }
+				}
+				add_to_list = balte_counties
+			}
+		}
+		culture:franconian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_balte_region }
+				}
+				add_to_list = balte_counties
+			}
+		}
+		culture:swabian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_balte_region }
+				}
+				add_to_list = balte_counties
+			}
+		}
+		culture:bavarian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_balte_region }
+				}
+				add_to_list = balte_counties
+			}
+		}
+		# Convert the German counties to anglo-norse
+		every_in_list = {
+			list = sicilian_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_balte_region }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_balte_region }
+							}
+						}
+					}
+				}
+			}
+						
+			# All German counties in Sicily become sicilian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:saxon
+				NEW_CULTURE = culture:balte
+				REGION = bryten_ostsiedlung_balte_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:franconian
+				NEW_CULTURE = culture:balte
+				REGION = bryten_ostsiedlung_balte_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:swabian
+				NEW_CULTURE = culture:balte
+				REGION = bryten_ostsiedlung_balte_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:bavarian
+				NEW_CULTURE = culture:balte
+				REGION = bryten_ostsiedlung_balte_region
+			}
+		}
+
+		# Norman Rulers get the next decision
+		every_ruler = {
+			limit = {
+				AND = {
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+					is_landed = yes			
+					capital_province = { geographical_region = bryten_ostsiedlung_balte_region }
+				}
+			}
+			trigger_event = tapestry_hre.069
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = sicilian_counties
+						holder = { is_within_diplo_range = { CHARACTER = scope:player } }
+					}
+				}
+				trigger_event = tapestry_hre.070
+			}
+		}
+	}
+}
+tapestry_hre.069 = {# German Ruled Realms in Livonia
+	type = character_event
+	title = tapestry_hre.069.t
+	desc = tapestry_hre.069.desc
+	theme = culture_change
+
+	trigger = {# safety checks
+		OR = {
+			has_culture	= culture:saxon
+			has_culture	= culture:swabian
+			has_culture	= culture:bavarian
+			has_culture	= culture:franconian
+		}
+		is_landed = yes		
+		capital_province = { geographical_region = bryten_ostsiedlung_balte_region }
+	}
+	
+	option = {# Embrace balte
+		name = tapestry_hre.069.embrace
+		show_as_tooltip = {
+			set_culture = culture:balte
+			every_in_list = {
+				list = anglo_saxon_counties
+				limit = {
+					holder.top_liege = root.top_liege
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+				}
+				set_county_culture = culture:balte
+			}
+		}
+		# Convert the norman counties to balte
+		every_in_list = {
+			list = anglo_saxon_counties
+			limit = {
+				holder.top_liege = root.top_liege
+				OR = {
+					has_culture	= culture:saxon
+					has_culture	= culture:swabian
+					has_culture	= culture:bavarian
+					has_culture	= culture:franconian
+				}
+			}	
+			# All German counties in Livonia become balte
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:saxon
+					NEW_CULTURE = culture:balte
+					REGION = bryten_ostsiedlung_balte_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:franconian
+					NEW_CULTURE = culture:balte
+					REGION = bryten_ostsiedlung_balte_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:swabian
+					NEW_CULTURE = culture:balte
+					REGION = bryten_ostsiedlung_balte_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:bavarian
+					NEW_CULTURE = culture:balte
+					REGION = bryten_ostsiedlung_balte_region
+				}
+			}
+		}
+	}
+}
+tapestry_hre.070 = {# Let other players know that Balte has been created
+	type = character_event
+	title = tapestry_hre.070.t
+	desc = tapestry_hre.070.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = tapestry_hre.070.a
+	}
+}
+# schlesier
+tapestry_hre.071 = {# Schlesier Culture forming
+	hidden = yes
+	
+	immediate = {
+		# Save scopes for player notification events.
+		culture:franconian = { save_scope_as = franconian }
+		culture:schlesier = {
+			# 'Hybridize' this culture by copying innovations from parent cultures. Leave traditions as defined in the database.
+			reset_culture_creation_date = yes
+			get_all_innovations_from = culture:franconian
+			get_all_innovations_from = culture:silesian
+
+			# Save scope for player notification events.
+			save_scope_as = schlesier
+		}
+
+		# German counties in Southernitaly will convert to Sicilian
+		culture:saxon = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_silisia_region }
+				}
+				add_to_list = schlesier_counties
+			}
+		}
+		culture:franconian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_silisia_region }
+				}
+				add_to_list = schlesier_counties
+			}
+		}
+		culture:swabian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_silisia_region }
+				}
+				add_to_list = schlesier_counties
+			}
+		}
+		culture:bavarian = {
+			every_culture_county = {
+				limit = {
+					title_province = { geographical_region = bryten_ostsiedlung_silisia_region }
+				}
+				add_to_list = schlesier_counties
+			}
+		}		
+		# Convert the German counties to anglo-norse
+		every_in_list = {
+			list = schlesier_counties
+			limit = {
+				# Same-culture players get an event informing them of their county's conversion *before* it happens (for their provinces only).
+				NOT = {
+					holder = {
+						OR = {
+							AND = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_silisia_region }
+							}
+							any_liege_or_above = {
+								is_ai = no
+								OR = {
+									has_culture	= culture:saxon
+									has_culture	= culture:swabian
+									has_culture	= culture:bavarian
+									has_culture	= culture:franconian
+								}
+								capital_province = { geographical_region = bryten_ostsiedlung_silisia_region }
+							}
+						}
+					}
+				}
+			}
+						
+			# All German counties in Sicily become sicilian
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:saxon
+				NEW_CULTURE = culture:schlesier
+				REGION = bryten_ostsiedlung_silisia_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:franconian
+				NEW_CULTURE = culture:schlesier
+				REGION = bryten_ostsiedlung_silisia_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:swabian
+				NEW_CULTURE = culture:schlesier
+				REGION = bryten_ostsiedlung_silisia_region
+			}
+			convert_county_and_holder_if_in_region_effect = {
+				OLD_CULTURE = culture:bavarian
+				NEW_CULTURE = culture:schlesier
+				REGION = bryten_ostsiedlung_silisia_region
+			}
+		}
+
+		# Norman Rulers get the next decision
+		every_ruler = {
+			limit = {
+				AND = {
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+					is_landed = yes			
+					capital_province = { geographical_region = bryten_ostsiedlung_silisia_region }
+				}
+			}
+			trigger_event = tapestry_hre.072
+		}
+
+		# Send the appropraite notification event to each player.
+		every_player = {
+			if = {
+				limit = {
+					is_ai = no
+					save_temporary_scope_as = player
+					any_in_list = {
+						list = sicilian_counties
+						holder = { is_within_diplo_range = { CHARACTER = scope:player } }
+					}
+				}
+				trigger_event = tapestry_hre.073
+			}
+		}
+	}
+}
+tapestry_hre.072 = {# German Ruled Realms in Silisia
+	type = character_event
+	title = tapestry_hre.072.t
+	desc = tapestry_hre.072.desc
+	theme = culture_change
+
+	trigger = {# safety checks		
+		OR = {
+			has_culture	= culture:saxon
+			has_culture	= culture:swabian
+			has_culture	= culture:bavarian
+			has_culture	= culture:franconian
+		}
+		is_landed = yes		
+		capital_province = { geographical_region = bryten_ostsiedlung_silisia_region }
+	}
+	
+	option = {# Embrace schlesier
+		name = tapestry_hre.072.embrace
+		show_as_tooltip = {
+			set_culture = culture:schlesier
+			every_in_list = {
+				list = anglo_saxon_counties
+				limit = {
+					holder.top_liege = root.top_liege
+					OR = {
+						has_culture	= culture:saxon
+						has_culture	= culture:swabian
+						has_culture	= culture:bavarian
+						has_culture	= culture:franconian
+					}
+				}
+				set_county_culture = culture:schlesier
+			}
+		}
+		# Convert the norman counties to schlesier
+		every_in_list = {
+			list = anglo_saxon_counties
+			limit = {
+				holder.top_liege = root.top_liege
+				OR = {
+					has_culture	= culture:saxon
+					has_culture	= culture:swabian
+					has_culture	= culture:bavarian
+					has_culture	= culture:franconian
+				}
+			}	
+			# All German counties in Southernitaly become Sicilian
+			hidden_effect = {
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:saxon
+					NEW_CULTURE = culture:schlesier
+					REGION = bryten_ostsiedlung_silisia_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:franconian
+					NEW_CULTURE = culture:schlesier
+					REGION = bryten_ostsiedlung_silisia_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:swabian
+					NEW_CULTURE = culture:schlesier
+					REGION = bryten_ostsiedlung_silisia_region
+				}
+				convert_county_and_holder_if_in_region_effect = {
+					OLD_CULTURE = culture:bavarian
+					NEW_CULTURE = culture:schlesier
+					REGION = bryten_ostsiedlung_silisia_region
+				}
+			}
+		}
+	}
+}
+tapestry_hre.073 = {# Let other players know that Schlesier has been created
+	type = character_event
+	title = tapestry_hre.073.t
+	desc = tapestry_hre.073.desc
+	theme = culture_change
+
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	option = {
+		name = tapestry_hre.073.a
+	}
+}

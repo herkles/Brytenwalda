@@ -233,7 +233,63 @@ bryten_setup_after_game_start_on_actions = {
 				name = bryten_sicilian_created
 				value = yes
 			}
+		}	
+		if = {# meissian Formed 
+			limit = { current_date >= 1145.1.1 }
+			set_global_variable = {
+				name = bryten_meissian_created
+				value = yes
+			}
 		}		
+		if = {# pommerisch Formed 
+			limit = { current_date >= 1150.1.1 }
+			set_global_variable = {
+				name = bryten_pommerisch_created
+				value = yes
+			}
+		}		
+		if = {# markish Formed 
+			limit = { current_date >= 1150.1.1 }
+			set_global_variable = {
+				name = bryten_markish_created
+				value = yes
+			}
+		}
+		if = {# zipser Formed 
+			limit = { current_date >= 1150.1.1 }
+			set_global_variable = {
+				name = bryten_zipser_created
+				value = yes
+			}
+		}
+		if = {# transylvanian_saxons Formed 
+			limit = { current_date >= 1150.1.1 }
+			set_global_variable = {
+				name = bryten_transylvanian_saxons_created
+				value = yes
+			}
+		}
+		if = {# prussisch Formed 
+			limit = { current_date >= 1225.1.1 }
+			set_global_variable = {
+				name = bryten_prussisch_created
+				value = yes
+			}
+		}
+		if = {# balte Formed 
+			limit = { current_date >= 1225.1.1 }
+			set_global_variable = {
+				name = bryten_balte_created
+				value = yes
+			}
+		}
+		if = {# schlesier Formed 
+			limit = { current_date >= 1160.1.1 }
+			set_global_variable = {
+				name = bryten_schlesier_created
+				value = yes
+			}
+		}
 		# traditions
 		if = {# Anglo-Saxons have housecarls thanks to cnut
 			limit = { game_start_date >= 1016.1.1 }

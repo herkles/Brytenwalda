@@ -169,7 +169,7 @@ tapestry_italian.041 = {# Norman Ruled Realms in Southern Italy
 		show_as_tooltip = {
 			set_culture = culture:sicilian
 			every_in_list = {
-				list = anglo_saxon_counties
+				list = sicilian_counties
 				limit = {
 					holder.top_liege = root.top_liege
 					has_culture = culture:norman
@@ -179,7 +179,7 @@ tapestry_italian.041 = {# Norman Ruled Realms in Southern Italy
 		}
 		# Convert the norman counties to Sicilian
 		every_in_list = {
-			list = anglo_saxon_counties
+			list = sicilian_counties
 			limit = {
 				holder.top_liege = root.top_liege
 				has_culture = culture:norman

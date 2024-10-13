@@ -589,7 +589,7 @@ yearly_global_pulse = {
 		}
 
 
-		# New Shifts
+		# New cultures
 		if = {# Anglo-Saxon -> Scottish Culture Shift
 			limit = {
 				NOT = { has_global_variable = scottish_culture_creation }
@@ -828,7 +828,15 @@ yearly_global_pulse = {
 		if = {# Sicilian Culture Forming
 			limit = {
 				NOT = { exists = global_var:bryten_sicilian_created }
-				title:k_england = { is_title_created = yes } # England must be created first
+				OR = {# For the culture to form the Normans have to have control a part of Sicily
+					title:k_sicily.holder = { culture = culture:norman }
+					title:d_sicily.holder = { culture = culture:norman }
+					title:d_benevento.holder = { culture = culture:norman }
+					title:d_capua.holder = { culture = culture:norman }
+					title:d_apulia.holder = { culture = culture:norman }
+					title:d_salerno.holder = { culture = culture:norman }
+					title:d_calabria.holder = { culture = culture:norman }
+				}
 				current_date >= 1000.1.1
 			}
 			random = {
@@ -866,7 +874,360 @@ yearly_global_pulse = {
 					days = { 60 300 }
 				}
 			}
+		}	
+
+		if = {# meissian Culture Forming
+			limit = {
+				NOT = { exists = global_var:bryten_meissian_created }
+				current_date >= 1130.1.1
+				OR = {# the Ostsiedlung must be started.
+					culture:saxon = { has_innovation = innovation_east_settling }
+					culture:franconian = { has_innovation = innovation_east_settling }
+					culture:swabian = { has_innovation = innovation_east_settling }
+					culture:bavarian = { has_innovation = innovation_east_settling }
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 936
+				modifier = {
+					add = 5 # 2% chance per year
+					culture:saxon = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 10% chance per year
+					culture:franconian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:swabian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # if your own culture
+					culture = { has_innovation = innovation_east_settling }
+				}
+				set_global_variable = {
+					name = bryten_meissian_created
+					value = yes
+				}
+				trigger_event = {
+					id = tapestry_hre.050
+					days = { 60 300 }
+				}
+			}
 		}		
+		if = {# pommerisch Culture Forming
+			limit = {
+				NOT = { exists = global_var:bryten_pommerisch_created }
+				current_date >= 1160.1.1
+				OR = {# the Ostsiedlung must be started.
+					culture:saxon = { has_innovation = innovation_east_settling }
+					culture:franconian = { has_innovation = innovation_east_settling }
+					culture:swabian = { has_innovation = innovation_east_settling }
+					culture:bavarian = { has_innovation = innovation_east_settling }
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 936
+				modifier = {
+					add = 5 # 2% chance per year
+					culture:saxon = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 10% chance per year
+					culture:franconian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:swabian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # if your own culture
+					culture = { has_innovation = innovation_east_settling }
+				}
+				set_global_variable = {
+					name = bryten_pommerisch_created
+					value = yes
+				}
+				trigger_event = {
+					id = tapestry_hre.053
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# markish Culture Forming
+			limit = {
+				NOT = { exists = global_var:bryten_markish_created }
+				current_date >= 1150.1.1
+				OR = {# the Ostsiedlung must be started.
+					culture:saxon = { has_innovation = innovation_east_settling }
+					culture:franconian = { has_innovation = innovation_east_settling }
+					culture:swabian = { has_innovation = innovation_east_settling }
+					culture:bavarian = { has_innovation = innovation_east_settling }
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 936
+				modifier = {
+					add = 5 # 2% chance per year
+					culture:saxon = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 10% chance per year
+					culture:franconian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:swabian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # if your own culture
+					culture = { has_innovation = innovation_east_settling }
+				}
+				set_global_variable = {
+					name = bryten_markish_created
+					value = yes
+				}
+				trigger_event = {
+					id = tapestry_hre.056
+					days = { 60 300 }
+				}
+			}
+		}				
+		if = {# zipser Culture Forming
+			limit = {
+				NOT = { exists = global_var:bryten_zipser_created }
+				current_date >= 1160.1.1
+				OR = {# the Ostsiedlung must be started.
+					culture:saxon = { has_innovation = innovation_east_settling }
+					culture:franconian = { has_innovation = innovation_east_settling }
+					culture:swabian = { has_innovation = innovation_east_settling }
+					culture:bavarian = { has_innovation = innovation_east_settling }
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 936
+				modifier = {
+					add = 5 # 2% chance per year
+					culture:saxon = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 10% chance per year
+					culture:franconian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:swabian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # if your own culture
+					culture = { has_innovation = innovation_east_settling }
+				}
+				set_global_variable = {
+					name = bryten_zipser_created
+					value = yes
+				}
+				trigger_event = {
+					id = tapestry_hre.059
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# transylvanian_saxons Culture Forming
+			limit = {
+				NOT = { exists = global_var:bryten_transylvanian_saxons_created }
+				current_date >= 1140.1.1
+				OR = {# the Ostsiedlung must be started.
+					culture:saxon = { has_innovation = innovation_east_settling }
+					culture:franconian = { has_innovation = innovation_east_settling }
+					culture:swabian = { has_innovation = innovation_east_settling }
+					culture:bavarian = { has_innovation = innovation_east_settling }
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 936
+				modifier = {
+					add = 5 # 2% chance per year
+					culture:saxon = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 10% chance per year
+					culture:franconian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:swabian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # if your own culture
+					culture = { has_innovation = innovation_east_settling }
+				}
+				set_global_variable = {
+					name = bryten_transylvanian_saxons_created
+					value = yes
+				}
+				trigger_event = {
+					id = tapestry_hre.062
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# prussisch Culture Forming
+			limit = {
+				NOT = { exists = global_var:bryten_prussisch_created }
+				current_date >= 1200.1.1
+				OR = {# the Ostsiedlung must be started.
+					culture:saxon = { has_innovation = innovation_east_settling }
+					culture:franconian = { has_innovation = innovation_east_settling }
+					culture:swabian = { has_innovation = innovation_east_settling }
+					culture:bavarian = { has_innovation = innovation_east_settling }
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 936
+				modifier = {
+					add = 5 # 2% chance per year
+					culture:saxon = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 10% chance per year
+					culture:franconian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:swabian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # if your own culture
+					culture = { has_innovation = innovation_east_settling }
+				}
+				set_global_variable = {
+					name = bryten_prussisch_created
+					value = yes
+				}
+				trigger_event = {
+					id = tapestry_hre.065
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# balte Culture Forming
+			limit = {
+				NOT = { exists = global_var:bryten_balte_created }
+				current_date >= 1200.1.1
+				OR = {# the Ostsiedlung must be started.
+					culture:saxon = { has_innovation = innovation_east_settling }
+					culture:franconian = { has_innovation = innovation_east_settling }
+					culture:swabian = { has_innovation = innovation_east_settling }
+					culture:bavarian = { has_innovation = innovation_east_settling }
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 936
+				modifier = {
+					add = 5 # 2% chance per year
+					culture:saxon = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 10% chance per year
+					culture:franconian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:swabian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # if your own culture
+					culture = { has_innovation = innovation_east_settling }
+				}
+				set_global_variable = {
+					name = bryten_balte_created
+					value = yes
+				}
+				trigger_event = {
+					id = tapestry_hre.068
+					days = { 60 300 }
+				}
+			}
+		}
+		if = {# schlesier Culture Forming
+			limit = {
+				NOT = { exists = global_var:bryten_schlesier_created }
+				current_date >= 1130.1.1
+				OR = {# the Ostsiedlung must be started.
+					culture:saxon = { has_innovation = innovation_east_settling }
+					culture:franconian = { has_innovation = innovation_east_settling }
+					culture:swabian = { has_innovation = innovation_east_settling }
+					culture:bavarian = { has_innovation = innovation_east_settling }
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+			}
+			random = {
+				chance = 0 # No chance the first year of play if starting in 936
+				modifier = {
+					add = 5 # 2% chance per year
+					culture:saxon = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 10% chance per year
+					culture:franconian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:swabian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # 25% chance per year
+					culture:lothringian = { has_innovation = innovation_east_settling }
+				}
+				modifier = {
+					add = 5 # if your own culture
+					culture = { has_innovation = innovation_east_settling }
+				}
+				set_global_variable = {
+					name = bryten_schlesier_created
+					value = yes
+				}
+				trigger_event = {
+					id = tapestry_hre.071
+					days = { 60 300 }
+				}
+			}
+		}
 		# Viking Spirit is Diminished
 		if = {
 			limit = {
