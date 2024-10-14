@@ -350,6 +350,38 @@ ruthene = {# Rus/Ruthene/Ruthenians around kyiv
 		10 = slavic_northern_dark_hair
 	}
 }
+suzdalian = {# Rus/Ruthene/Ruthenians around kyiv
+	color = { 74 22 122 }
+	
+	created = 1157.5.19
+	parents = { ruthene novgorodian }
+
+	ethos = ethos_communal
+	heritage = heritage_east_slavic
+	language = language_east_slavic
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_pravda_russkaya
+		tradition_portage
+		tradition_druzhina
+		tradition_forest_folk
+		tradition_religious_patronage
+	}
+	
+	name_list = name_list_russian
+
+	coa_gfx = { east_slavic_group_coa_gfx western_coa_gfx }
+	building_gfx = { western_building_gfx }
+	clothing_gfx = { northern_clothing_gfx }
+	unit_gfx = { eastern_unit_gfx }
+
+	ethnicities = {
+		60 = slavic_northern_blond
+		5 = slavic_northern_ginger
+		25 = slavic_northern_brown_hair
+		10 = slavic_northern_dark_hair
+	}
+}
 # Other cultures
 chrobatian = {# White Croats
 	color = { 175 225 175 }

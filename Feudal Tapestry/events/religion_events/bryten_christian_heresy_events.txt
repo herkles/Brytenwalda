@@ -4460,9 +4460,9 @@ bryten_heresy.075 = {# John Wycliff begins preaching
 	}
 
 	immediate = {
-		scope:historical_character = {
-			limit = { has_variable = john_wycliffe }
-			save_scope_as = lollard_founder
+		if = {
+			limit = { scope:historical_character = { has_variable = john_wycliffe } }
+			scope:historical_character = { save_scope_as = lollard_founder }
 		}
 		random_county_in_region = {
 			region = custom_lollard_region
