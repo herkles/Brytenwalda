@@ -1269,11 +1269,11 @@ tapestry_hre.031 = {# They come in peace
 		trigger = {
 			var:bryten_ostsiedlung_migrants_type = flag:courtiers
 			OR = {
-				gold >= bryten_ostsiedlung_migrant_small_cost
+				gold >= bryten_ostsiedlung_migrants_small_cost
 				is_ai = no
 			}
 		}
-		remove_short_term_gold = bryten_ostsiedlung_migrants_small_cost_small_cost
+		remove_short_term_gold = bryten_ostsiedlung_migrants_small_cost
 		add_courtier = scope:courtier_1
 		add_courtier = scope:courtier_2
 	}	
@@ -1643,11 +1643,11 @@ tapestry_hre.032 = {# Ask them to provide additional assistance
 		trigger = {
 			var:bryten_ostsiedlung_migrants_type = flag:courtiers
 			OR = {
-				gold >= bryten_ostsiedlung_migrants_small_cost_small_cost
+				gold >= bryten_ostsiedlung_migrants_small_cost
 				is_ai = no
 			}
 		}
-		remove_short_term_gold = bryten_ostsiedlung_migrants_small_cost_small_cost
+		remove_short_term_gold = bryten_ostsiedlung_migrants_small_cost
 		add_courtier = scope:courtier_1
 		add_courtier = scope:courtier_2
 	}
@@ -2671,17 +2671,17 @@ tapestry_hre.062 = {# Transylvanian Saxons Culture forming
 				NEW_CULTURE = culture:transylvanian_saxons
 				REGION = bryten_ostsiedlung_transylvanian_saxons_region
 			}
-			on_effect = {
+			convert_county_and_holder_if_in_region_effect = {
 				OLD_CULTURE = culture:franconian
 				NEW_CULTURE = culture:transylvanian_saxons
 				REGION = bryten_ostsiedlung_transylvanian_saxons_region
 			}
-			on_effect = {
+			convert_county_and_holder_if_in_region_effect = {
 				OLD_CULTURE = culture:swabian
 				NEW_CULTURE = culture:transylvanian_saxons
 				REGION = bryten_ostsiedlung_transylvanian_saxons_region
 			}
-			on_effect = {
+			convert_county_and_holder_if_in_region_effect = {
 				OLD_CULTURE = culture:bavarian
 				NEW_CULTURE = culture:transylvanian_saxons
 				REGION = bryten_ostsiedlung_transylvanian_saxons_region

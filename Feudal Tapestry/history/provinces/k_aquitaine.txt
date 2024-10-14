@@ -188,7 +188,7 @@
 	1066.1.1 = {
 		buildings = {
 			cereal_fields_01
-		# hunting_grounds_01
+			#hunting_grounds_01
 			military_camps_01
 		}
 	}
@@ -302,6 +302,9 @@
 }
 2216 = {# USES
 	holding = none
+	1178.1.1 = {
+		holding = church_holding
+	}
 	100.1.1 = {
 		special_building_slot = bryten_building_pont_gard_01
 		special_building = bryten_building_pont_gard_01
@@ -355,6 +358,10 @@
 }
 2219 = {# LODEVE
 	holding = none
+
+	1178.1.1 = {
+		holding = church_holding
+	}
 }
 2014 = {# AGDE
 	holding = city_holding

@@ -26,6 +26,10 @@
 		culture = sicilian
 		religion = catholic
 	}
+	1178.1.1 = {
+		culture = siqilli
+		religion = ashari # "Throughout the twelfth century, Muslims probably constituted the majority of the population in Palermo"
+	}
 }
 2636 = {# TRAPANI
 	holding = city_holding
@@ -52,6 +56,10 @@
 	1057.1.1 = {
 		culture = sicilian
 		religion = catholic
+	}
+	1178.1.1 = {
+		culture = griko # "an overwhelmingly Greek city, whose character only began to change through immigration from the mainland in the later twelfth century"
+		religion = orthodox
 	}
 }
 2634 = {# CEFALU
@@ -205,6 +213,10 @@
 			farm_estates_01
 		}
 	}
+	1139.4.1 = {
+		culture = sicilian
+		religion = catholic
+	}
 }
 2611 = {# AMALFI
 	holding = city_holding
@@ -317,6 +329,7 @@
 	culture = lombard
 	religion = catholic
 	holding = castle_holding
+	1091.1.1 = { culture = sicilian	}
 }
 2632 = {# STIGLIANO
 	holding = none
@@ -332,9 +345,19 @@
 		culture = lombard
 		religion = catholic
 	}
+	1178.1.1 = {
+		culture = griko
+		religion = orthodox
+	}
 }
 2626 = {# SQUILLUCE
 	holding = city_holding
+	850.1.1 = {
+		special_building_slot = cattolica_stilo
+	}
+	920.1.1 = {
+		special_building = cattolica_stilo
+	}
 }
 8751 = {# TROPEA
 	holding = church_holding
@@ -346,7 +369,7 @@
 	religion = orthodox
 	holding = castle_holding
 	1074.1.1 = {
-		culture = lombard
+		culture = sicilian
 		religion = catholic
 	}
 }
@@ -366,7 +389,7 @@
 	religion = orthodox
 	holding = castle_holding
 	1074.1.1 = {
-		culture = lombard
+		culture = sicilian
 		religion = catholic
 	}
 }

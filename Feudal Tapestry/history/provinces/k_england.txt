@@ -22,12 +22,21 @@
 			farm_estates_01
 		}
 	}
+	1078.1.1 = {
+		special_building = the_tower_of_london_01
+	}
 	1150.11.11 = {
 		culture = english
 	}
 }
-1526 = {# London
+1526 = {# Southwark
 	holding = city_holding
+	800.1.1 = {
+		special_building_slot = london_bridge_01
+	}
+	1106.1.1 = {
+		holding = church_holding # Southwark Priory
+	}
 }
 1528 = {# Woxbrigge
 	holding = none
@@ -397,8 +406,11 @@
 1593 = {# Halifax
 	holding = none
 }
-1594 = {# Sheffield
-	holding = city_holding
+1594 = {	#Sheffield
+	holding = none
+	1100.1.1 = { # Construction of Sheffield Castle happened sometime after the Norman conquest
+		holding = castle_holding
+	}
 }
 1499 = {# York
 	holding = castle_holding
@@ -835,6 +847,9 @@
 	597.1.1 = {
 		special_building_slot = holy_site_canterbury_cathedral_01
 		special_building = holy_site_canterbury_cathedral_01
+	}
+	1077.1.1 = {
+		special_building = holy_site_canterbury_cathedral_02
 	}
 }
 1504 = {# Rochester

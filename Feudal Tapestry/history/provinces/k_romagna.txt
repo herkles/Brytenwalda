@@ -5,6 +5,13 @@
 	culture = cisalpine
 	religion = catholic
 	holding = church_holding
+	504.1.1 = {
+		special_building_slot = apollinare_nuovo
+		special_building = apollinare_nuovo
+	}
+	900.1.1 = {
+		culture = italian
+	}
 }
 2549 = {# IMOLA
 	holding = castle_holding
@@ -21,11 +28,15 @@
 	culture = cisalpine
 	religion = catholic
 	holding = castle_holding
+	special_building_slot = generic_university
 	1066.1.1 = {
 		buildings = {
 			cereal_fields_01
 			military_camps_01
 		}
+	}
+	1086.1.1 = {
+		special_building = generic_university
 	}
 }
 2529 = {# CONA
@@ -167,6 +178,9 @@
 	1022.1.1 = {
 		culture = lombard
 	}
+	1072.1.1 = {
+		culture = sicilian
+	}
 }
 2603 = {# CLUIELI
 	holding = none
@@ -182,6 +196,9 @@
 	holding = castle_holding
 	1022.1.1 = {
 		culture = italian
+	}
+	1072.1.1 = {
+		culture = sicilian
 	}
 }
 2595 = {# ATRI
