@@ -782,7 +782,7 @@ yearly_global_pulse = {
 		if = {# Rus Cultures Forming
 			limit = {
 				NOT = { has_global_variable = rus_culture_formed }
-				title:k_ruthenia = { is_title_created = yes } # Kyvian Rus must be created first
+				title:k_ruthenia = { is_title_created = yes } # Kyivan Rus must be created first
 				current_date >= 950.1.1
 			}
 			random = {
