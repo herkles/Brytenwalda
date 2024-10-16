@@ -8882,6 +8882,70 @@ e_bulgaria = {# The First Empire of Bulgaria
 	capital = c_turnovo # Turnovo
 }
 
+#######################################
+#									  #
+#    Adminstrative Noble Families 	  #
+#									  #
+#######################################
+
+#######################################
+#									  #
+#       Landless Adventurers 		  #
+#									  #
+#######################################
+d_laamp_ibn_fadlan = {# The Famed Explorer Ibn Fadlan
+	color = { 100 100 100 }
+	capital = c_bolghar
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+d_laamp_ibn_yaqub = {# Ibrahim ibn Yaqub - Famed Jewish traveller
+	color = { 100 100 100 }
+	capital = c_tarragona
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+d_laamp_sveneld = {# Sveneld - Varangain who fought with Sviatoslav I
+	color = { 100 100 100 }
+	capital = c_kiev
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+d_laamp_abu_yazid = {# Abu Yazid - Rebel against the Fatimids
+	color = { 100 100 100 }
+	capital = c_sijilmasa
+
+	definite_form = yes
+	landless = yes
+	require_landless = yes
+	ruler_uses_title_name = no
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+
+	ai_primary_priority = { add = @never_primary_score }
+}
+
 
 
 

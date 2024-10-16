@@ -697,6 +697,57 @@ palestinian = {
 		}
 	}
 }
+cypriot = {
+	trigger = {
+		OR = {
+			capital_county = {
+				title:k_cyprus = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:k_cyprus
+		}
+		culture = culture:greek
+		any_sub_realm_county = {
+			culture = culture:greek
+			kingdom = title:k_cyprus
+		}
+	}
+}
+cappadocian = {
+	trigger = {
+		OR = {
+			capital_county = {
+				title:k_anatolia = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:k_anatolia
+		}
+		culture = culture:greek
+		any_sub_realm_county = {
+			culture = culture:greek
+			kingdom = title:k_anatolia
+		}
+	}
+}
+egyptiote = {
+	trigger = {
+		OR = {
+			capital_county = {
+				title:k_egypt = {
+					is_de_jure_liege_or_above_target = prev
+				}
+			}
+			has_primary_title = title:k_egypt
+		}
+		culture = culture:greek
+		any_sub_realm_county = {
+			culture = culture:greek
+			kingdom = title:k_egypt
+		}
+	}
+}
 #############################################
 # Central Germanic Cultures			
 #############################################
@@ -929,23 +980,6 @@ umbrian = {
 		any_sub_realm_county = {
 			culture = { has_cultural_pillar = heritage_latin }
 			duchy = title:d_spoleto
-		}
-	}
-}
-friulian = {
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_friuli = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_friuli
-		}
-		culture = { has_cultural_pillar = heritage_latin }
-		any_sub_realm_county = {
-			culture = { has_cultural_pillar = heritage_latin }
-			duchy = title:d_friuli
 		}
 	}
 }

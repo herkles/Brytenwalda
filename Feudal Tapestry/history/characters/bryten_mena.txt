@@ -54,8 +54,6 @@
 		death={ death_reason=death_murder}
 	}
 }
-
-
 1230252 = {
 	name="Toghan_Tegin"
 	dynasty=1042185
@@ -121,9 +119,6 @@
 		death = yes
 	}
 }
-
-
-
 261326 = {
 	name = "Tughj"
 	dynasty = 1062411
@@ -4146,18 +4141,53 @@ yemeni_dhofar = {
 		death = yes
 	}
 }
-#######################################
-# CULTURE
-#######################################
 
 
 
+bryten_ibn_fadlan_grandfather = {
+	name="al-Abbas" #al-abbas al-baghdadi - the famous explorer's Grand father
+	dynasty=bryten_ibn_fadlan_dynasty
+	religion="ashari"
+	culture="levantine"
+	trait = education_learning_3
+	trait = journaller
 
+	890.1.1={
+		birth=yes
+	}
+	967.1.1={
+		death=yes
+	}
+}
+bryten_ibn_fadlan_father = {
+	name="fadlan" #Fadlan ibn al-abbas al-baghdadi - the famous explorer's Father
+	dynasty=bryten_ibn_fadlan_dynasty
+	religion="ashari"
+	culture="levantine"
+	father = bryten_ibn_fadlan_grandfather
+	trait = education_learning_3
+	trait = journaller
 
+	890.1.1={
+		birth=yes
+	}
+	967.1.1={
+		death=yes
+	}
+}
+bryten_ibn_fadlan = {
+	name="Ahmad" #Ahmad ibn fadlan ibn al-abbas al-baghdadi - the famous explorer
+	dynasty=bryten_ibn_fadlan_dynasty
+	religion="ashari"
+	culture="levantine"
+	father = bryten_ibn_fadlan_father
+	trait = education_learning_3
+	trait = journaller
 
-
-
-
-
-
-
+	890.1.1={
+		birth=yes
+	}
+	967.1.1={
+		death=yes
+	}
+}

@@ -81,6 +81,15 @@ bryten_setup_after_game_start_on_actions = {
 			limit = { current_date = 936.8.7 }
 			title:e_bulgaria.holder ?= { trigger_event = bryten_bulgaria.001 }
 		}
+		character:32901 ?= {# Shia caliph in 936 gets the conqueror bonuses
+			if = {
+				limit = {
+					is_alive = yes
+					NOT = { has_game_rule = no_conquerors_frequency }
+				}
+				create_story = story_conqueror
+			}
+		}
 		# Other Character stuff
 		character:6878 = {# kill haestin
 			if = {

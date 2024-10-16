@@ -15,15 +15,16 @@ Feel free to use my work in your mods - all I ask is that I am credited and (if 
   Catholicism's holy sites have been updated to switch out cologne for milan and canterbury for Chatres; though it is possible to get Canterbury as a holy site. Nidaros and Cluny are pilgrimage sites
 
 ### Change Log
-- Cultural Descriptions for various cultures
-- Updated to the new patch
+- Cultural Descriptions for various cultures; not all cultures
+- Updated to Roads to Power
 - some new cultures for 1178
+- Revised the Byzantine Borders in 1178
 - Byzantine - Bulgar Content
 - Reworked Norman Conquest stuff to work with the Harrying of the North Content
 - set up for the curthose v rufus rivalry events
-
-
-
+- baltic, slavic, finnic are pluralist
+- The shia caliph in 936 is a conqueror
+- Ostsiedlung decision
 
 ## Main Features
 

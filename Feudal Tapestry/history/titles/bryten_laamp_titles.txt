@@ -1,0 +1,83 @@
+﻿#######################################
+# 867
+#######################################
+
+#######################################
+# 936
+#######################################
+d_laamp_ibn_fadlan = {# The Famed Explorer Ibn Fadlan
+	936.1.1 = {
+		liege = 0
+		holder = bryten_ibn_fadlan # Guttorm
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+			destroy_landless_title_no_dlc_effect = { DATE = 940.1.1 }
+		}
+	}
+	940.1.1 = {
+		holder = 0
+	}
+}
+d_laamp_ibn_yaqub = {# Ibrahim ibn Yaqub - Famed Jewish traveller
+	936.1.1 = {
+		liege = 0
+		holder = bryten_sephardi_yaqub # Guttorm
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+			destroy_landless_title_no_dlc_effect = { DATE = 940.1.1 }
+		}
+	}
+	940.1.1 = {
+		holder = 0
+	}
+}
+d_laamp_sveneld = {# Sveneld - Varangain who fought with Sviatoslav I
+	936.1.1 = {
+		liege = 0
+		holder = 168650 # Guttorm
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+			destroy_landless_title_no_dlc_effect = { DATE = 940.1.1 }
+		}
+	}
+	940.1.1 = {
+		holder = 0
+	}
+}
+d_laamp_abu_yazid = {# Abu Yazid - Rebel against the Fatimids
+	936.1.1 = {
+		liege = 0
+		holder = 260861 # Guttorm
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+			destroy_landless_title_no_dlc_effect = { DATE = 947.1.1 }
+		}
+	}
+	947.1.1 = {
+		holder = 0
+	}
+}
+
+
+
+
+#######################################
+# 1066
+#######################################
+
+#######################################
+# 1178
+#######################################
+
