@@ -3229,7 +3229,6 @@ bryten_bedouin_001 = {# fictional
 		death=yes
 	}
 }
-
 1230146 = {
 	name="Qochqar" #Placeholder Yabghu of Jand and Yangikent
 	dynasty = dynasty_oghuzqayi 
@@ -3272,7 +3271,6 @@ bryten_bedouin_001 = {# fictional
 		death = yes
 	}
 }
-
 1230137 = {
 	name="Shah-Malek" #Yabghu of Jand and Yangikent
 	dynasty = dynasty_oghuzqayi 
@@ -3449,7 +3447,6 @@ bryten_bedouin_001 = {# fictional
 		death = yes
 	}
 }
-
 1231864 = { # Etrek, was Uzlar/Uzes khan in 922.
 	name="Etrek" 
 	dynasty=1000100511 # Uzlar/Uzes
@@ -3480,11 +3477,256 @@ bryten_bedouin_001 = {# fictional
 	}
 }
 
-
+1230100 = {
+	name="Turk"
+	dynasty=1000101748
+	religion="tengri_pagan"
+	culture="turkish"
+	690.1.1={
+		birth = yes
+	}
+	738.1.1={
+		death = yes
+	}
+} 
+1230101 = {
+	name="Bozoq"
+	dynasty=1000101748
+	religion="tengri_pagan"
+	culture="turkish"
+	father = 1230100
+	708.1.1={
+		birth = yes
+	}
+	763.1.1={
+		death = yes
+	}
+} 
+1230105 = {
+	name="Yulduz"
+	dynasty = OghuzYulduz
+	religion="tengri_pagan"
+	culture="turkish"
+	father = 1230101
+	737.1.1={
+		birth = yes
+	}
+	781.1.1={
+		death = yes
+	}
+} 
+1230115 = {
+	name="Qiziq"
+	dynasty_house = house_oghuzkizik
+	religion="tengri_pagan"
+	culture="turkish"
+	father = 1230105
+	759.1.1={
+		birth = yes
+	}
+	808.1.1={
+		death = yes
+	}
+}
+kizik0 = {
+	name="Gök"
+	dynasty_house = house_oghuzkizik
+	religion="tengri_pagan"
+	culture="turkish"
+	father = 1230115
+	793.1.1={
+		birth = yes
+	}
+	845.1.1={
+		death = yes
+	}
+} 
+kizik1 = {
+	name="Doğukan"
+	dynasty_house = house_oghuzkizik
+	religion="tengri_pagan"
+	culture="turkish"
+	father = kizik0
+	821.1.1={
+		birth = yes
+	}
+	867.1.1={
+		death = yes
+	}
+} 
+1600044 = {
+	name="Mut"
+	father = kizik1
+	dynasty_house = house_oghuzkizik
+	religion="maturidi"
+	culture="turkish" #Turkic, but unclear whether oghuz, Kimek, or Karluk
+	840.1.1={ #?
+		birth=yes
+	}
+	890.1.1={ #?
+		death=yes
+	}
+}
+1600045 = {
+	name="Hosayn" # Husayn b. Mut, recorded as a Samanid vassal in 910 in Ta'rikh-i Sistan
+	dynasty_house = house_oghuzkizik
+	religion="maturidi"
+	culture="turkish" #Turkic, but unclear whether oghuz, Kimek, or Karluk
+	father=1600044
+	860.1.1={ #?
+		birth=yes
+	}
+	890.1.1={
+		culture="turkish"
+	}
+	915.1.1={ #?
+		death=yes
+	}
+}
+1600046 = {
+	name="Ahmad" # b. Mut, extant coins from 920 as a Samanid vassal
+	dynasty_house = house_oghuzkizik
+	religion="maturidi"
+	culture="turkish" #Turkic, but unclear whether oghuz, Kimek, or Karluk
+	father=1600044
+	862.1.1={ #?
+		birth=yes
+	}
+	890.1.1={
+		culture="turkish"
+	}
+	921.1.1={ #?
+		death=yes
+	}
+}
+1600047 = {
+	name="Muhammad" # b. Husayn b. Mut
+	dynasty_house = house_oghuzkizik
+	religion="maturidi"
+	culture="turkish" #Turkic, but unclear whether oghuz, Kimek, or Karluk
+	father=1600045
+	880.1.1={ #?
+		birth=yes
+		culture="turkish"
+	}
+	922.1.1={ #killed amidst Samanid infighting
+		death={ death_reason=death_battle }
+	}
+}
+1600042 = {
+	name="Mansur" #b. Qarategin Isfijabi, Samanid governor of Khorasan 947-952
+	dynasty_house = house_oghuzkizik
+	religion="maturidi"
+	culture="turkish" #Turkic, but unclear whether oghuz, Kimek, or Karluk
+	father=1600041
+	904.1.1={ #?
+		birth=yes
+		culture="turkish"
+	}
+	952.1.1={
+		death=yes
+	}
+}
+1600041 = {
+	name="Qarategin" #Isfijabi, Samanid slave general and governor of Balkh, later Bust and al-Rukhaj (929)
+	dynasty_house = house_oghuzkizik
+	religion="maturidi"
+	culture="turkish" #Turkic, but unclear whether oghuz, Kimek, or Karluk
+	father= 1600046 #possibly
+	884.1.1={ #?
+		birth=yes
+		culture="turkish"
+	}
+	943.1.1={ #as late as 942 according to numismatic evidence
+		death=yes
+	}
+}
 #######################################
 # Tajik
 #######################################
-
+1230610 = {
+	name="Ahmad"   #successor of Esmá'íl b.Ahmad
+	dynasty_house = house_samanid # Samanid
+	religion="maturidi"
+	culture = tajik
+	father = 163157
+	873.1.1={
+		birth="873.1.1"
+	}
+	914.1.1={
+		death={ death_reason=death_murder }
+	}
+}
+1230611 = {
+	name="Nasr"
+	dynasty_house = house_samanid # Samanid
+	religion="maturidi"
+	culture="tajik"
+	father = 1230610
+	902.1.1={
+		birth="902.1.1"
+	}
+	943.6.4={
+		death="943.6.4"
+	}
+}
+1230615 = {
+	name="Nuh"
+	dynasty_house = house_samanid # Samanid
+	religion="maturidi"
+	culture = tajik
+	father = 1230611
+	922.1.1={
+		birth="922.1.1"
+		culture="tajik"
+	}
+	954.8.8={
+		death="954.8.8"
+	}
+}
+1230616 = {
+	name="Abd al-Malek"
+	dynasty_house = house_samanid # Samanid
+	religion="maturidi"
+	culture="tajik"
+	father = 1230615
+	944.1.1={
+		birth="944.1.1"
+	}
+	961.1.1={
+		death="961.1.1"
+	}
+}
+1230617 = {
+	name="Mansur"
+	dynasty_house = house_samanid # Samanid
+	religion="maturidi"
+	culture = tajik
+	father = 1230615
+	946.1.1={
+		birth="946.1.1"
+		culture="tajik"
+	}
+	976.6.13={
+		death = yes
+	}
+}
+1230619 = {
+	name="Nuh"
+	dynasty_house = house_samanid # Samanid
+	religion="maturidi"
+	culture="tajik"
+	father = 1230617
+	963.1.1={
+		birth="963.1.1"
+	}
+	997.1.1 = {
+		set_primary_title_to = title:k_transoxiana
+	}
+	997.7.23={
+		death="997.7.23"
+	}
+}
 
 
 1230368 = {
@@ -4149,13 +4391,10 @@ bryten_ibn_fadlan_grandfather = {
 	dynasty=bryten_ibn_fadlan_dynasty
 	religion="ashari"
 	culture="levantine"
-	trait = education_learning_3
-	trait = journaller
-
-	890.1.1={
+	821.1.1={
 		birth=yes
 	}
-	967.1.1={
+	868.1.1={
 		death=yes
 	}
 }
@@ -4165,13 +4404,10 @@ bryten_ibn_fadlan_father = {
 	religion="ashari"
 	culture="levantine"
 	father = bryten_ibn_fadlan_grandfather
-	trait = education_learning_3
-	trait = journaller
-
-	890.1.1={
+	857.1.1={
 		birth=yes
 	}
-	967.1.1={
+	900.1.1={
 		death=yes
 	}
 }
