@@ -49,68 +49,6 @@ d_nf_agelastos = {# Agelastos (Achaia)
 		holder = 0
 	}
 }
-d_nf_doukas = {# Doukas (Paphlagonia)
-	835.1.1 = {
-		liege = e_byzantium
-		holder = 145164 # Konstantinos
-		government = administrative_government
-		succession_laws = { noble_family_succession_law }
-	}
-	867.1.1 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
-		}
-	}
-	870.1.1 = {
-		holder = 1768 # Andronikos
-	}
-	908.1.1 = {
-		holder = 1774 # Konstantinos
-	}
-	913.6.9 = {
-		holder = 145167 # Stephanos
-	}
-	950.1.1 = {
-		holder = 145168 # Andronikos
-	}
-	980.1.1 = {
-		holder = 145169 # Christophoros
-	}
-	1005.1.1 = {
-		holder = 1744 # Andronikos
-	}
-	1050.1.1 = {
-		holder = 1732 # Konstantinos
-	}
-	1066.9.15 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
-		}
-	}
-	1067.5.22 = {
-		holder = 1736 # Michael
-	}
-	1078.3.1 = {
-		holder = 125700 # Konstantinos
-	}
-	1095.1.1 = {
-		holder = 1782 # Michael
-	}
-	1118.1.9 = {
-		holder = 125751 # Konstantinos
-	}
-	1140.1.1 = {
-		holder = doukas_1 # Michael
-	}
-	1163.4.8 = {
-		holder = doukas_2 # Konstantinos
-	}
-	1178.10.1 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1178.10.1 }
-		}
-	}
-}
 d_nf_gerontas = {# Gerontas (Dyrrachion)
 	865.1.1 = {
 		liege = e_byzantium
@@ -178,22 +116,6 @@ d_nf_katakalitzes = {# Katakalitzes (Boukellarion)
 		holder = 0
 	}
 }
-d_nf_kourkouas = {# Kourkouas (Armeniac)
-	860.1.1 = {
-		liege = e_byzantium
-		holder = 145171 # Ioannes
-		government = administrative_government
-		succession_laws = { noble_family_succession_law }
-	}
-	867.1.1 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
-		}
-	}
-	868.1.1 = {
-		holder = 0
-	}
-}
 d_nf_krateros = {# Krateros (Ephesos)
 	750.1.1 = {
 		liege = e_byzantium
@@ -238,71 +160,6 @@ d_nf_lachanodrakon = {# Lachanodrakon (Thrakesion)
 		holder = 0
 	}
 }
-d_nf_makedon = {# Makedon (Kappadokia)
-	866.9.24 = {
-		liege = e_byzantium
-		holder = 1700 # Basileios
-		government = administrative_government
-		succession_laws = { noble_family_succession_law }
-	}
-	867.1.1 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
-		}
-	}
-	868.1.1 = {
-		holder = 0
-	}
-}
-d_nf_maleios = {# Maleios (Kappadokia)
-	823.1.2 = {
-		liege = e_byzantium
-		holder = 302341 #fictional Alexandros Maleios
-		government = administrative_government
-		succession_laws = { noble_family_succession_law }
-	}
-	859.7.16 = {
-		holder = 302342 #fictional Alexios Maleios
-	}
-	867.1.1 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
-		}
-	}
-	893.9.11 = {
-		holder = 302344 #fictional Matthaois Maleios
-	}
-	912.12.16 = {
-		holder = 0
-	}
-	1065.12.9 = {
-		holder = 302350 #fictional Gregorios Maleios
-	}
-	1066.9.15 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
-		}
-	}
-	1067.1.1 = {
-		holder = 0
-	}
-}
-d_nf_maleinos = {# Maleinos (Charsianon)
-	845.1.1 = {
-		liege = e_byzantium
-		holder = 145144 # Nikephoros
-		government = administrative_government
-		succession_laws = { noble_family_succession_law }
-	}
-	867.1.1 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
-		}
-	}
-	868.1.1 = {
-		holder = 0
-	}
-}
 d_nf_maurikios = {# Maurikios (Opsikion)
 	855.1.1 = {
 		liege = e_byzantium
@@ -316,58 +173,6 @@ d_nf_maurikios = {# Maurikios (Opsikion)
 		}
 	}
 	868.1.1 = {
-		holder = 0
-	}
-}
-d_nf_melissenos = {# Melissenos (Anatolikon)
-	750.1.1 = {
-		liege = e_byzantium
-		holder = 145134 # Michael
-		government = administrative_government
-		succession_laws = { noble_family_succession_law }
-	}
-	790.1.1 = {
-		holder = 145135 # Michael
-	}
-	840.1.1 = {
-		holder = 145136 # Kallistos I
-	}
-	860.1.1 = {
-		holder = 145137 # Theodotos
-	}
-	867.1.1 = {
-		holder = 145137 # Kallistos II
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
-		}
-	}
-	900.1.1 = {
-		holder = 145138 # Melissenos
-	}
-	930.1.1 = {
-		holder = 145139 # Theognostos
-	}
-	960.1.1 = {
-		holder = 145140 # Nikephoros
-	}
-	980.1.1 = {
-		holder = 145141 # Theognostos
-	}
-	990.1.1 = {
-		holder = 145142 # Leon
-	}
-	1030.1.1 = {
-		holder = 145143 # Leosthenes
-	}
-	1060.1.1 = {
-		holder = 41303 # Nikephoros
-	}
-	1066.9.15 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
-		}
-	}
-	1067.1.1 = {
 		holder = 0
 	}
 }
@@ -425,6 +230,258 @@ d_nf_sellokalas = {# Sellokalas (Optimatoi)
 		holder = 0
 	}
 }
+
+
+
+d_nf_doukas = {# Doukas (Paphlagonia)
+	835.1.1 = {
+		liege = e_byzantium
+		holder = 145164 # Konstantinos
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	870.1.1 = {
+		holder = 1768 # Andronikos
+	}
+	908.1.1 = {
+		holder = 1774 # Konstantinos
+	}
+	913.6.9 = {
+		holder = 145167 # Stephanos
+	}
+	950.1.1 = {
+		holder = 145168 # Andronikos
+	}
+	980.1.1 = {
+		holder = 145169 # Christophoros
+	}
+	1005.1.1 = {
+		holder = 1744 # Andronikos
+	}
+	1050.1.1 = {
+		holder = 1732 # Konstantinos
+	}
+	1066.9.15 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
+		}
+	}
+	1067.5.22 = {
+		holder = 1736 # Michael
+	}
+	1078.3.1 = {
+		holder = 125700 # Konstantinos
+	}
+	1095.1.1 = {
+		holder = 1782 # Michael
+	}
+	1118.1.9 = {
+		holder = 125751 # Konstantinos
+	}
+	1140.1.1 = {
+		holder = doukas_1 # Michael
+	}
+	1163.4.8 = {
+		holder = doukas_2 # Konstantinos
+	}
+	1178.10.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1178.10.1 }
+		}
+	}
+}
+d_nf_kourkouas = {# Kourkouas (Armeniac)
+	860.1.1 = {
+		liege = e_byzantium
+		holder = 145171 # Ioannes
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	900.1.1 = {
+		holder = 145172
+	}
+	920.1.1 = {
+		holder = 145173
+	}
+	950.1.1 = {
+		holder = 145174
+	}
+	960.1.1 = {
+		holder = 145175
+	}
+	971.1.1 = {
+		holder = 145176
+	}
+	1015.1.1 = {
+		holder = 145177
+	}
+	1030.1.1 = {
+		holder = 145178
+	}
+	1055.1.1 = {
+		holder = 20552
+	}
+	1089.1.1 = {
+		holder = 145179
+	}
+	1100.1.1 = {
+		holder = 145179
+	}
+	1150.1.1 = {
+		holder = 0
+	}
+	1150.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1150.1.1 }
+		}
+	}
+}
+d_nf_makedon = {# Makedon (Kappadokia)
+	866.9.24 = {
+		liege = e_byzantium
+		holder = 1700 # Basileios
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	886.8.29 = {
+		holder = 1702
+	}
+	912.5.1 = {
+		holder = 1704
+	}
+	913.6.6 = {
+		holder = 1708
+	}
+	959.11.9 = {
+		holder = 1710
+	}
+	963.3.15 = {
+		holder = 1716
+	}
+	1025.1.1 = {
+		holder = 1718
+	}
+	1028.11.15 = {
+		holder = 0
+	}
+	1028.11.15 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1028.11.15 }
+		}
+	}
+}
+d_nf_maleios = {# Maleios (Kappadokia)
+	823.1.2 = {
+		liege = e_byzantium
+		holder = 302341 #fictional Alexandros Maleios
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	859.7.16 = {
+		holder = 302342 #fictional Alexios Maleios
+	}
+	867.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
+		}
+	}
+	893.9.11 = {
+		holder = 302344 #fictional Matthaois Maleios
+	}
+	912.12.16 = {
+		holder = 0
+	}
+	1065.12.9 = {
+		holder = 302350 #fictional Gregorios Maleios
+	}
+	1067.1.1 = {
+		holder = 0
+	}
+	1067.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1067.1.1 }
+		}
+	}
+}
+d_nf_maleinos = {# Maleinos (Charsianon)
+	845.1.1 = {
+		liege = e_byzantium
+		holder = 145144 # Nikephoros
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+
+	880.1.1 = {
+		holder = 145145
+	}
+	868.1.1 = {
+		holder = 145146
+	}
+	920.1.1 = {
+		holder = 250798
+	}
+	968.1.1 = {
+		holder = 0
+	}
+	968.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 968.1.1 }
+		}
+	}
+}
+d_nf_melissenos = {# Melissenos (Anatolikon)
+	750.1.1 = {
+		liege = e_byzantium
+		holder = 145134 # Michael
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	790.1.1 = {
+		holder = 145135 # Michael
+	}
+	840.1.1 = {
+		holder = 145136 # Kallistos I
+	}
+	860.1.1 = {
+		holder = 145137 # Theodotos
+	}
+	867.1.1 = {
+		holder = 145137 # Kallistos II
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
+		}
+	}
+	900.1.1 = {
+		holder = 145138 # Melissenos
+	}
+	930.1.1 = {
+		holder = 145139 # Theognostos
+	}
+	960.1.1 = {
+		holder = 145140 # Nikephoros
+	}
+	980.1.1 = {
+		holder = 145141 # Theognostos
+	}
+	990.1.1 = {
+		holder = 145142 # Leon
+	}
+	1030.1.1 = {
+		holder = 145143 # Leosthenes
+	}
+	1060.1.1 = {
+		holder = 41303 # Nikephoros
+	}
+
+	1067.1.1 = {
+		holder = 0
+	}
+	1067.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1067.1.1 }
+		}
+	}
+}
 d_nf_skleros = {# Skleros (Athens)
 	812.1.1 = {
 		liege = e_byzantium
@@ -467,19 +524,344 @@ d_nf_skleros = {# Skleros (Athens)
 	1057.1.1 = {
 		holder = 20526 # Leon
 	}
+	1067.1.1 = {
+		holder = 0
+	}
+	1067.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1067.1.1 }
+		}
+	}
+}
+d_nf_argyros = {# Argyros (Ephesos)
+	867.1.1 = {
+		liege = e_byzantium
+		holder = 145156 # Leon
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	890.1.1 = {
+		holder = 145157
+	}
+	920.1.1 = {
+		holder = 145158
+	}
+	945.1.1 = {
+		holder = 145161
+	}
+	960.1.1 = {
+		holder = 1798
+	}
+	988.1.1 = {
+		holder = 1720
+	}
+	1034.4.11 = {
+		holder = 42003
+	}
+	1066.9.15 = {
+		holder = 0
+	}
 	1066.9.15 = {
 		effect = {
 			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
 		}
 	}
-	1067.1.1 = {
+
+}
+
+d_nf_katakalon = {# Katakalon 
+	867.1.1 = {
+		liege = e_byzantium
+		holder = 1232107 # Leon
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	896.1.1 = {
+		holder = 1232286
+	}
+	955.1.1 = {
+		holder = 1232287
+	}
+	1002.1.1 = {
 		holder = 0
+	}
+	1002.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1002.1.1 }
+		}
 	}
 }
 #######################################
 # Houses established in 936
 #######################################
-
+d_nf_phokas = {# Phokas (Charsianon)
+	860.1.1 = {
+		liege = e_byzantium
+		holder = 145147 # Nikephoros II
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	
+	}
+	885.1.1 = {
+		holder = 41316
+	}
+	905.1.1 = {
+		holder = 41317
+	}
+	936.1.1 = {# So that he becomes emperor
+		holder = 1712
+	}
+	969.12.10 = {
+		holder = 41318 # Leon
+	}
+	972.1.1 = {
+		holder = 41319 # Bardas
+	}
+	989.4.13 = {
+		holder = 41320 # Nikephoros
+	}
+	1022.1.1 = {
+		holder = 20534 # Bardas
+	}	
+	1067.1.1 = {
+		holder = 20536
+	}
+	1115.1.1 = {
+		holder = 0
+	}
+	1115.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 1115.1.1 }
+		}
+	}
+}
+d_nf_rhabdouchos = {# Rhabdouchos 
+	900.1.1 = {
+		liege = e_byzantium
+		holder = 262230 # Leon
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	957.1.1 = {
+		holder = 0
+	}
+	957.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 957.1.1 }
+		}
+	}
+}
+d_nf_aristatos = {# Aristatos 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 260796 # Hektorios
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	964.1.1 = {
+		holder = 0
+	}
+	969.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 964.1.1 }
+		}
+	}
+}
+d_nf_platypodes = {# Platypodes 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 1062404 # Bardas
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	956.1.1 = {
+		holder = 0
+	}
+	956.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 956.1.1 }
+		}
+	}
+}
+d_nf_arotras = {# Arotras 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 1062405 # Krenites
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	957.1.1 = {
+		holder = 0
+	}
+	957.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 957.1.1 }
+		}
+	}
+}
+d_nf_kallistos = {# Kallistos 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 260795 # Christophoros
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	954.1.1 = {
+		holder = 0
+	}
+	954.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 954.1.1 }
+		}
+	}
+}
+d_nf_adralestos = {# Adralestos 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 260796 # Hektorios
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	964.1.1 = {
+		holder = 0
+	}
+	969.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 964.1.1 }
+		}
+	}
+}
+d_nf_balantes = {# Balantes 
+	900.1.1 = {
+		liege = e_byzantium
+		holder = 262242 # Alexios
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	914.1.1 = {
+		holder = 262244
+	}
+	966.1.1 = {
+		holder = 0
+	}
+	966.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 966.1.1 }
+		}
+	}
+}
+d_nf_thisaios = {# Thisaios 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 250803 # Gennadios
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	943.1.1 = {
+		holder = 0
+	}
+	943.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 943.1.1 }
+		}
+	}
+}
+d_nf_chalkoutzes = {# Chalkoutzes 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 260681 # Kyriakos
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	945.1.1 = {
+		holder = 0
+	}
+	945.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 945.1.1 }
+		}
+	}
+}
+d_nf_boumbalis = {# Boumbalis 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 1062306 # Apollonios
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	947.1.1 = {
+		holder = 0
+	}
+	947.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 947.1.1 }
+		}
+	}
+}
+d_nf_aineidas = {# Aineidas 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 260636 # Anastasios
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	938.1.1 = {
+		holder = 0
+	}
+	938.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 938.1.1 }
+		}
+	}
+}
+d_nf_Kurtikainos = {# Kurtikainos 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 260637 # Chrysanthos
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	949.1.1 = {
+		holder = 0
+	}
+	949.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 949.1.1 }
+		}
+	}
+}
+d_nf_studites = {# Studites 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 260638 # Paschalis
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	958.1.1 = {
+		holder = 0
+	}
+	958.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 958.1.1 }
+		}
+	}
+}
+d_nf_peteinos = {# Peteinos 
+	936.1.1 = {
+		liege = e_byzantium
+		holder = 1500522 # Basileios
+		government = administrative_government
+		succession_laws = { noble_family_succession_law }
+	}
+	949.1.1 = {
+		holder = 0
+	}
+	949.1.1 = {
+		effect = {
+			destroy_landless_title_no_dlc_effect = { DATE = 949.1.1 }
+		}
+	}
+}
 #######################################
 # Houses established in 1066
 #######################################
@@ -495,22 +877,6 @@ d_nf_arcruni = {# Arcruni (Sebasteia)
 	}
 	1050.1.2 = {
 		holder = 41579 # Anoush
-	}
-	1066.9.15 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
-		}
-	}
-	1067.1.1 = {
-		holder = 0
-	}
-}
-d_nf_argyros = {# Argyros (Ephesos)
-	1060.1.1 = {
-		liege = e_byzantium
-		holder = 42003 # Konstantinos
-		government = administrative_government
-		succession_laws = { noble_family_succession_law }
 	}
 	1066.9.15 = {
 		effect = {
@@ -537,7 +903,7 @@ d_nf_basiliakos = {# Basiliakos (Thessalonika)
 		holder = 0
 	}
 }
-d_nf_batatzes = {
+d_nf_batatzes = {# Batatzes
 	1047.1.1 = {
 		liege = e_byzantium
 		holder = 70427 # Nikephoros
@@ -811,34 +1177,6 @@ d_nf_pegonites = {# Pegonites (Cyprus)
 		holder = 20563 # Leon
 		government = administrative_government
 		succession_laws = { noble_family_succession_law }
-	}
-	1066.9.15 = {
-		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
-		}
-	}
-	1067.1.1 = {
-		holder = 0
-	}
-}
-d_nf_phokas = {# Phokas (Charsianon)
-	945.1.1 = {
-		liege = e_byzantium
-		holder = 1712 # Nikephoros II
-		government = administrative_government
-		succession_laws = { noble_family_succession_law }
-	}
-	969.12.10 = {
-		holder = 41318 # Leon
-	}
-	972.1.1 = {
-		holder = 41319 # Bardas
-	}
-	989.4.13 = {
-		holder = 41320 # Nikephoros
-	}
-	1022.1.1 = {
-		holder = 20534 # Bardas
 	}
 	1066.9.15 = {
 		effect = {
