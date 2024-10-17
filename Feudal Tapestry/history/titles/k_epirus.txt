@@ -1022,6 +1022,18 @@ c_avlonas = {
 d_cephalonia = {
 	330.1.1 = {
 		liege = "e_byzantium"
+		government = administrative_government
+		effect = {
+			if = {
+				limit = {
+					exists = holder
+					NOT = { has_dlc_feature = roads_to_power }
+				}
+				holder = {
+					change_government = feudal_government
+				}
+			}
+		}
 	}
 	766.1.1 = {
 		holder = 145799

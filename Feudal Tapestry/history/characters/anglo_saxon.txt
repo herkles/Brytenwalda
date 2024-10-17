@@ -6783,8 +6783,12 @@ bryten_wessex_24 = {# Eadweald Son of Oshere, also ealdorman of kent
 				limit = { is_ruler = yes }
 				# Give Hereward a few troops to get started.
 				create_maa_regiment = {
-					type = huscarl
-					size = 5
+					type = light_footmen
+					size = 2
+				}
+				create_maa_regiment = {
+					type = bowmen
+					size = 2
 				}
 				# Plus he's already working for Duke Boudewijn.
 				add_contact = character:364
