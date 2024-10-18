@@ -1600,9 +1600,180 @@ bryten_christian.026 = {# Celebrate Confirmation - Parents view
 
 }
 ##############################################
-# Saintly Miracles
+# Donating to Mount Athos
 ##############################################
+bryten_christian.030 = {# Donating to the Abby of Cluny.
+	type = character_event
+	title = bryten_christian.030.t
+	desc = bryten_christian.030.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	override_background = { reference = temple_church }
 
+	immediate = {
+		# For loc
+		title:b_ierrisos = { save_scope_as = mount_athos_county }
+	}
+	
+	option = {# Small
+		name = bryten_christian.030.a
+		remove_short_term_gold = 50
+		if = {# Fedual donations get these effects
+			add_prestige = miniscule_prestige_gain
+			add_piety = miniscule_piety_gain
+			add_character_modifier = {
+				modifier = bryten_mt_athos_donation_small_feudal
+				years = 10
+			}
+		}
+		if = {# Adminstrative donations get these effects
+			change_influence = miniscule_influence_gain
+			add_piety = minor_piety_gain
+			add_character_modifier = {
+				modifier = bryten_mt_athos_donation_small_admin
+				years = 10
+			}
+		}
+
+
+		add_character_modifier = {
+			modifier = bryten_cluny_abbey_donation_small
+			years = 10
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}	
+	option = {# Medium
+		name = bryten_christian.030.b
+		trigger = {
+			OR = {
+				is_ai = no
+				short_term_gold >= 100
+			}
+		}
+		remove_short_term_gold = 100
+		if = {# Fedual donations get these effects
+			add_prestige = minor_prestige_gain
+			add_piety = minor_piety_gain
+			add_character_modifier = {
+				modifier = bryten_mt_athos_donation_medium_feudal
+				years = 10
+			}
+		}
+		if = {# Adminstrative donations get these effects
+			change_influence = minor_influence_gain
+			add_piety = minor_piety_gain
+			add_character_modifier = {
+				modifier = bryten_mt_athos_donation_medium_admin
+				years = 10
+			}
+		}
+		stress_impact = {
+			greedy = miniscule_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_loss
+			generous = miniscule_stress_impact_loss
+			improvident = miniscule_stress_impact_loss
+		}
+		ai_chance = {
+			factor = 75
+			modifier = {
+				has_trait = zealous
+				add = 25
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 15
+			}
+			modifier = {
+				has_trait = generous
+				add = 15
+			}
+			modifier = {
+				has_trait = greedy
+				add = -30
+			}
+			modifier = {
+				has_trait = cynical
+				add = -30
+			}
+			ai_value_modifier = {
+				ai_zeal = 2
+				ai_greed = -1
+			}
+		}
+	}	
+	option = {# Large
+		name = bryten_christian.030.c
+		trigger = {
+			OR = {
+				is_ai = no
+				short_term_gold >= 150
+			}
+		}
+		remove_short_term_gold = 150
+		if = {# Fedual donations get these effects
+			add_prestige = medium_prestige_gain
+			add_piety = medium_piety_gain
+			add_character_modifier = {
+				modifier = bryten_mt_athos_donation_large_feudal
+				years = 10
+			}
+		}
+		if = {# Adminstrative donations get these effects
+			change_influence = medium_influence_gain
+			add_piety = medium_piety_gain
+			add_character_modifier = {
+				modifier = bryten_mt_athos_donation_large_admin
+				years = 10
+			}
+		}
+		if = {
+			limit = { exists = dynasty }
+			dynasty = {
+				add_dynasty_prestige = 25
+			}
+		}
+		stress_impact = {
+			greedy = minor_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			zealous = miniscule_stress_impact_loss
+			generous = minor_stress_impact_loss
+			improvident = minor_stress_impact_loss
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				has_trait = zealous
+				add = 35
+			}
+			modifier = {
+				has_trait = ambitious
+				add = 20
+			}
+			modifier = {
+				has_trait = generous
+				add = 20
+			}
+			modifier = {
+				has_trait = greedy
+				add = -20
+			}
+			modifier = {
+				has_trait = cynical
+				add = -20
+			}
+			ai_value_modifier = {
+				ai_zeal = 2
+				ai_greed = -1
+			}
+		}
+	}	
+}
 ##############################################
 # Relic Events
 ##############################################

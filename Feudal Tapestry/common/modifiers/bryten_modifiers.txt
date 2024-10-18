@@ -108,21 +108,61 @@ british_pilgrimage_low_worldly_reward_modifier = {
 ##########################################
 bryten_cluny_abbey_donation_small = {
 	icon = piety_positive
-	diplomacy = 1
+	monthly_prestige = 0.05
 	monthly_piety = 0.2
 	same_faith_opinion = 2
 }
 bryten_cluny_abbey_donation_medium = {
 	icon = piety_positive
-	diplomacy = 1
-	stewardship = 1
+	monthly_prestige = 0.1
 	monthly_piety = 0.4
 	same_faith_opinion = 4
 }
 bryten_cluny_abbey_donation_large = {
 	icon = piety_positive
-	diplomacy = 2
-	stewardship = 1
+	monthly_prestige = 0.15
+	monthly_piety = 0.6
+	same_faith_opinion = 6
+}
+##########################################
+# Mt Athos Donation
+##########################################
+
+# Feudal
+bryten_mt_athos_donation_small_feudal = {
+	icon = piety_positive
+	monthly_prestige = 0.05
+	monthly_piety = 0.2
+	same_faith_opinion = 2
+}
+bryten_mt_athos_donation_medium_feudal = {
+	icon = piety_positive
+	monthly_prestige = 0.1
+	monthly_piety = 0.4
+	same_faith_opinion = 4
+}
+bryten_mt_athos_donation_large_feudal = {
+	icon = piety_positive
+	monthly_prestige = 0.15
+	monthly_piety = 0.6
+	same_faith_opinion = 6
+}
+# Admin
+bryten_mt_athos_donation_small_admin = {
+	icon = piety_positive
+	monthly_influence_mult = 0.05
+	monthly_piety = 0.2
+	same_faith_opinion = 2
+}
+bryten_mt_athos_donation_medium_admin = {
+	icon = piety_positive
+	monthly_influence_mult = 0.1
+	monthly_piety = 0.4
+	same_faith_opinion = 4
+}
+bryten_mt_athos_donation_large_admin = {
+	icon = piety_positive
+	monthly_influence_mult = 0.15
 	monthly_piety = 0.6
 	same_faith_opinion = 6
 }

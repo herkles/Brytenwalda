@@ -245,7 +245,7 @@
   bryten_cluny_abbey_donation_desc:0 "As a powerful [ROOT.Char.GetFaith.GetAdjective] [ROOT.Char.GetTitleAsNameNoTooltip], it is my duty to protect and aid the monks and nuns who have devoted their lives to Jesus Christ. The Abbey of Cluny in particular is a powerful and influential monastery community with abbeys and monasteries not just at cluny but throughout Europe. As such, I wish to donate to the Abbey of Cluny so that the monks and nuns there can pray for my soul and the souls of my family."
   bryten_cluny_abbey_donation_effect_tooltip_1:0 "You will choose how much to donate to the Abbey of Cluny, determining the boons and [character_modifier|E] you get #weak (Minimum cost: @gold_icon! 50)#!"
   bryten_cluny_abbey_donation_confirm:0 "God Bless us!"
-  bryten_cluny_must_be_built:0 "The abbey of Cluny must be built firstg"
+  bryten_cluny_must_be_built:0 "The abbey of Cluny must be built first"
 
 #######################################
 # German / Imperial decisions
@@ -276,10 +276,6 @@
   create_kingdom_lotheringia_decision_confirm:0 "Create Lotharingia"
   create_kingdom_lotheringia_decision_tooltip:0 "Glory to Lotharingia"
   capital_in_lotheringia_region_tooltip:0 "Your [realm_capital|E] is in Lotharingia"
-
-
-
-
 
 #######################################
 # Ostsiedlung decisions
@@ -315,7 +311,6 @@
   bryten_ostsiedlung_attract_migrants_scholars_option:0 "#Bold Scholars#!"
   bryten_ostsiedlung_attract_migrants_scholars_option_desc:0 "Invite German Clergy"
   bryten_ostsiedlung_attract_migrants_scholars_option_tooltip:0 "Cost: @gold_icon! #V #Bold [GetPlayer.MakeScope.ScriptValue('bryten_ostsiedlung_migrants_large_cost')|0]#!#!\n\n$EFFECT_LIST_BULLET$You gain the [GetModifier('bryten_ostsiedlung_scholars_modifier').GetNameWithTooltip] [character_modifier|E] for #V 10#! to #V 25#! years [GetPlayer.MakeScope.ScriptValue('minor_prestige_gain')|0]#!\n$EFFECT_LIST_BULLET$You might be able to acquire the [GetModifier('bryten_ostsiedlung_long_term_assistance').GetNameWithTooltip|L] [character_modifier|E] depending on your [learning_i|E] [learning|E]" 
-
 
 #######################################
 # Christian Heretical Decisions
@@ -387,6 +382,11 @@
   bryten_pregnancy_mary_vow_decision_desc:0 "The holy blessed virgin Mary was pregnant with our saviour, with Jesus, in her womb. As such it is common for women who are with child to make a vow to the Mother of God in order to maybe be blessed during this troubling time. "
   bryten_pregnancy_mary_vow_decision_confirm:0 "Make a vow"
   bryten_pregnancy_mary_vow_decision_tooltip:0 "You shall make a vow to Mary"
+
+  bryten_mt_athos_donation:0 "Donate to Mount Athos"
+  bryten_mt_athos_donation_tooltip:0 "The monks of Mount Athos and its monasteries should be supported."
+  bryten_mt_athos_donation_desc:0 "As a powerful [ROOT.Char.GetFaith.GetAdjective] [ROOT.Char.GetTitleAsNameNoTooltip], it is my duty to protect and aid the monks who have devoted their lives to Jesus Christ. The monastary of Mount Athos in particular is a powerful and influential monastery community. As such, I wish to donate to the monks of Mount Athos so that the monks there can pray for my soul and the souls of my family."
+  bryten_mt_athos_donation_effect_tooltip_1:0 "You will choose how much to donate to the monks of Mount Athos, determining the boons and [character_modifier|E] you get #weak (Minimum cost: @gold_icon! 50)#!"
 
 #######################################
 # Bosnian Choose Orientation

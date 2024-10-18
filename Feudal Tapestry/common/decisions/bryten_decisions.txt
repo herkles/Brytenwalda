@@ -784,7 +784,7 @@ bryten_cinque_ports_exempt_tax = {# Set up the Cinque ports
 #############################################
 # Irish Decisions
 #############################################
-strengthen_high_kingship_decision = {
+strengthen_high_kingship_decision = {# strengthen the high kingship of Ireland
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_high_king.dds"
 	}
@@ -1176,7 +1176,7 @@ bryten_saint_andrew_routes_decision = {# Support the Way of Saint Andrew in Scot
 #############################################
 # Italian Decisions
 #############################################
-embrace_tuscan_culture_decision = {
+embrace_tuscan_culture_decision = {# Embrace Tuscan
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_tuscan.dds"
 	}
@@ -1266,96 +1266,7 @@ embrace_tuscan_culture_decision = {
 #############################################
 # French Decisions
 #############################################
-bryten_cluny_abbey_donation = {# Donate to the Abbey of Cluny
-	picture = {
-		reference = "gfx/interface/illustrations/decisions/decision_gothic.dds"
-	}
-	decision_group_type = tapestry_christian
 
-	ai_check_interval = 64
-	cooldown = { days = 5475 }
-	
-	desc = bryten_cluny_abbey_donation_desc
-	
-	is_shown = {
-		is_landed = yes	
-		highest_held_title_tier >= tier_kingdom
-		root.faith = faith:catholic
-		custom_tooltip = {
-			text = bryten_cluny_must_be_built
-			title:b_cluny.title_province = { has_special_building = yes }
-		}
-		capital_province = {# should be in Western Europe
-			OR = {
-				geographical_region = world_europe_west_britannia
-				geographical_region = world_europe_north
-				geographical_region = world_europe_west_francia
-				geographical_region = custom_frisia
-			}
-		}
-	}
-	
-	is_valid = {
-		root.faith = faith:catholic
-		gold >= 40
-		custom_tooltip = {
-			text = bryten_cluny_must_be_built
-			title:b_cluny.title_province = { has_special_building = yes }
-		}
-		capital_province = {# should be in Western Europe
-			OR = {
-				geographical_region = world_europe_west_britannia
-				geographical_region = world_europe_north
-				geographical_region = world_europe_west_francia
-				geographical_region = custom_frisia
-			}
-		}
-	}
-
-	is_valid_showing_failures_only = {
-		bryten_basic_is_available_adult_trigger = yes
-	}
-
-	effect = {
-		hidden_effect = {
-			title:c_macon = { save_scope_as = cluny_county }
-		}
-		custom_tooltip = bryten_cluny_abbey_donation_effect_tooltip_1	
-		trigger_event = { id = tapestry_french.002	}
-	}
-
-	ai_potential = {
-		short_term_gold >= 50
-	}
-
-	ai_will_do = {
-		base = 30
-		modifier = {
-			add = 10
-			has_trait = ambitious
-		}
-		modifier = {
-			add = -10
-			has_trait = lazy
-		}
-		modifier = {
-			add = 10
-			has_trait = generous
-		}
-		modifier = {
-			add = -10
-			has_trait = greedy
-		}
-		modifier = {
-			add = 25
-			has_trait = zealous
-		}
-		modifier = {
-			add = -25
-			has_trait = cynical
-		}
-	}
-}
 #############################################
 # Norse Decisions
 #############################################
@@ -2214,7 +2125,7 @@ bryten_ostsiedlung_migrants_decision = {# Attracting german migrants out of germ
 	picture = { reference = "gfx/interface/illustrations/decisions/ostsiedlung_migrants.dds" }
 	ai_check_interval = 40
 	cooldown = { days = 3650 }
-	decision_group_type = tapestry_imperial
+	decision_group_type = tapestry_german_medium
 
 	desc = {
 		first_valid = {
@@ -2441,7 +2352,7 @@ bryten_ostsiedlung_migrants_decision = {# Attracting german migrants out of germ
 #############################################
 # Fraticelli Decisions
 #############################################
-bryten_fraticelli_victory = {
+bryten_fraticelli_victory = {# push the fraticelli line
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	}
@@ -2530,7 +2441,7 @@ bryten_fraticelli_victory = {
 		base = 100
 	}
 }
-bryten_fraticelli_break_with_rome_decision = {
+bryten_fraticelli_break_with_rome_decision = {# Break with Rome
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_found_kingdom.dds"
 	}
@@ -2654,7 +2565,7 @@ bryten_fraticelli_break_with_rome_decision = {
 #############################################
 # Heretic Decisions
 #############################################
-bryten_bogomil_council_decision = {
+bryten_bogomil_council_decision = {# Bogomil Church Council
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
 	}
@@ -3038,7 +2949,7 @@ bryten_bogomil_council_decision = {
 		base = 100
 	}
 }
-bryten_waldensian_council_decision = {
+bryten_waldensian_council_decision = {# Waldensian Church Council
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
 	}
@@ -3232,7 +3143,7 @@ bryten_waldensian_council_decision = {
 		base = 100
 	}
 }
-bryten_lollard_council_decision = {
+bryten_lollard_council_decision = {# Lollard Church Council
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
 	}
@@ -3424,7 +3335,7 @@ bryten_lollard_council_decision = {
 		base = 100
 	}
 }
-bryten_arnoldism_council_decision = {
+bryten_arnoldism_council_decision = {# Arnoldism Church Council
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
 	}
@@ -3617,7 +3528,7 @@ bryten_arnoldism_council_decision = {
 		base = 100
 	}
 }
-bryten_henricians_council_decision = {
+bryten_henricians_council_decision = {# Henricians Church Council
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
 	}
@@ -3811,7 +3722,7 @@ bryten_henricians_council_decision = {
 		base = 100
 	}
 }
-bryten_petrobrusian_council_decision = {
+bryten_petrobrusian_council_decision = {# Petrobrusian Church Council
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
 	}
@@ -4005,7 +3916,7 @@ bryten_petrobrusian_council_decision = {
 		base = 100
 	}
 }
-bryten_cathar_council_decision = {
+bryten_cathar_council_decision = {# Cathar Church Council
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
 	}
@@ -4168,7 +4079,7 @@ bryten_cathar_council_decision = {
 		base = 100
 	}
 }
-bryten_bible_translate_decision = {
+bryten_bible_translate_decision = {# Translate the Bible
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_ck2_carolingian_script_cm.dds"
 	}
@@ -4379,7 +4290,7 @@ bryten_bible_translate_decision = {
 #############################################
 # Christian Flavor Decisions
 #############################################
-bryten_pregnancy_mary_vow_decision = {
+bryten_pregnancy_mary_vow_decision = {# Make a vow to Marry
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/bryten_mary_vow_decision.dds"
 	}
@@ -4429,7 +4340,7 @@ bryten_pregnancy_mary_vow_decision = {
 		ai_value_modifier = { ai_zeal = 1 }		
 	}
 }
-bryten_bosnian_church_decide_orientation = {
+bryten_bosnian_church_decide_orientation = {# Decide the orientation of Bosnia
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/christian_council.dds"
 	}
@@ -4811,4 +4722,220 @@ bryten_bosnian_church_decide_orientation = {
 		}
 	}
 }
+bryten_cluny_abbey_donation = {# Donate to the Abbey of Cluny
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_gothic.dds"
+	}
+	decision_group_type = tapestry_christian
+
+	ai_check_interval = 64
+	cooldown = { days = 5475 }
+	
+	desc = bryten_cluny_abbey_donation_desc
+	
+	is_shown = {
+		NOR = {
+			has_character_modifier = bryten_cluny_abbey_donation_small
+			has_character_modifier = bryten_cluny_abbey_donation_medium
+			has_character_modifier = bryten_cluny_abbey_donation_large
+		}
+		root.faith = faith:catholic
+
+		custom_tooltip = {
+			text = bryten_cluny_must_be_built
+			title:b_cluny.title_province = { has_special_building = yes }
+		}
+		capital_province = {# should be in Western Europe
+			OR = {
+				geographical_region = world_europe_west_britannia
+				geographical_region = world_europe_north
+				geographical_region = world_europe_west_francia
+				geographical_region = custom_frisia
+			}
+		}
+	}
+	
+	is_valid = {
+		root.faith = faith:catholic
+		gold >= 50
+		custom_tooltip = {
+			text = bryten_cluny_must_be_built
+			title:b_cluny.title_province = { has_special_building = yes }
+		}
+		capital_province = {# should be in Western Europe
+			OR = {
+				geographical_region = world_europe_west_britannia
+				geographical_region = world_europe_north
+				geographical_region = world_europe_west_francia
+				geographical_region = custom_frisia
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		bryten_basic_is_available_adult_trigger = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			title:c_macon = { save_scope_as = cluny_county }
+		}
+		custom_tooltip = bryten_cluny_abbey_donation_effect_tooltip_1	
+		trigger_event = { id = tapestry_french.002	}
+	}
+
+	ai_potential = {
+		short_term_gold >= 50
+		OR = {# to help avoid the AI doing it all the time.
+			AND = {# If landed
+				is_landed = yes	
+				highest_held_title_tier >= tier_duchy
+			}
+			AND = {# Powerful
+				has_ep3_dlc_trigger = yes
+				house ?= {
+					is_powerful_family = yes
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+		modifier = {
+			add = 10
+			has_trait = generous
+		}
+		modifier = {
+			add = -10
+			has_trait = greedy
+		}
+		modifier = {
+			add = 25
+			has_trait = zealous
+		}
+		modifier = {
+			add = -25
+			has_trait = cynical
+		}
+	}
+}
+bryten_mt_athos_donation = {# Donate to the Monastary at Mount Athos
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/bryten_orthodox_church.dds"
+	}
+	decision_group_type = tapestry_christian
+
+	ai_check_interval = 64
+	cooldown = { days = 5475 }
+	
+	desc = bryten_mt_athos_donation_desc
+	
+	is_shown = {
+		root.faith = faith:orthodox
+		NOR = {
+			has_character_modifier = bryten_mt_athos_donation_small_feudal
+			has_character_modifier = bryten_mt_athos_donation_medium_feudal
+			has_character_modifier = bryten_mt_athos_donation_large_feudal
+			has_character_modifier = bryten_mt_athos_donation_small_admin
+			has_character_modifier = bryten_mt_athos_donation_medium_admin
+			has_character_modifier = bryten_mt_athos_donation_large_admin
+		}
+
+		capital_province = {# Roman Empire Mediterranian and Eastern Europe
+			OR = {
+				geographical_region = world_europe_south_east
+				geographical_region = world_europe_east
+				geographical_region = world_asia_minor
+				geographical_region = world_middle_east_jerusalem
+				geographical_region = dlc_fp2_mediterranean_shoreline
+
+			}
+		}
+	}
+	
+	is_valid = {
+		root.faith = faith:orthodox
+		gold >= 50
+		capital_province = {# Roman Empire Mediterranian and Eastern Europe
+			OR = {
+				geographical_region = world_europe_south_east
+				geographical_region = world_europe_east
+				geographical_region = world_asia_minor
+				geographical_region = world_middle_east_jerusalem
+				geographical_region = dlc_fp2_mediterranean_shoreline
+
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		bryten_basic_is_available_adult_trigger = yes
+	}
+
+	effect = {
+		hidden_effect = {
+			title:c_macon = { save_scope_as = cluny_county }
+		}
+		custom_tooltip = bryten_mt_athos_donation_effect_tooltip_1	
+		trigger_event = { id = bryten_christian.030	}
+	}
+
+	ai_potential = {
+		short_term_gold >= 50
+		OR = {
+			AND = {# If landed
+				is_landed = yes	
+				highest_held_title_tier >= tier_duchy
+			}
+			AND = {# Powerful
+				has_ep3_dlc_trigger = yes
+				house ?= {
+					is_powerful_family = yes
+				}
+			}
+		}
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 10
+			has_trait = ambitious
+		}
+		modifier = {
+			add = -10
+			has_trait = lazy
+		}
+		modifier = {
+			add = 10
+			has_trait = generous
+		}
+		modifier = {
+			add = -10
+			has_trait = greedy
+		}
+		modifier = {
+			add = 25
+			has_trait = zealous
+		}
+		modifier = {
+			add = -25
+			has_trait = cynical
+		}
+	}
+}
+
+
+
+
+
 
