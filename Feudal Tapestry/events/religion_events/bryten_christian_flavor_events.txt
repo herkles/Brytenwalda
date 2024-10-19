@@ -1622,6 +1622,7 @@ bryten_christian.030 = {# Donating to the Abby of Cluny.
 		name = bryten_christian.030.a
 		remove_short_term_gold = 50
 		if = {# Fedual donations get these effects
+			limit = { government_has_flag = government_is_feudal }
 			add_prestige = miniscule_prestige_gain
 			add_piety = miniscule_piety_gain
 			add_character_modifier = {
@@ -1630,6 +1631,7 @@ bryten_christian.030 = {# Donating to the Abby of Cluny.
 			}
 		}
 		if = {# Adminstrative donations get these effects
+			limit = { government_has_flag = government_is_administrative }
 			change_influence = miniscule_influence_gain
 			add_piety = minor_piety_gain
 			add_character_modifier = {
@@ -1657,6 +1659,7 @@ bryten_christian.030 = {# Donating to the Abby of Cluny.
 		}
 		remove_short_term_gold = 100
 		if = {# Fedual donations get these effects
+			limit = { government_has_flag = government_is_feudal }
 			add_prestige = minor_prestige_gain
 			add_piety = minor_piety_gain
 			add_character_modifier = {
@@ -1665,6 +1668,7 @@ bryten_christian.030 = {# Donating to the Abby of Cluny.
 			}
 		}
 		if = {# Adminstrative donations get these effects
+			limit = { government_has_flag = government_is_administrative }
 			change_influence = minor_influence_gain
 			add_piety = minor_piety_gain
 			add_character_modifier = {
@@ -1717,6 +1721,7 @@ bryten_christian.030 = {# Donating to the Abby of Cluny.
 		}
 		remove_short_term_gold = 150
 		if = {# Fedual donations get these effects
+			limit = { government_has_flag = government_is_feudal }
 			add_prestige = medium_prestige_gain
 			add_piety = medium_piety_gain
 			add_character_modifier = {
@@ -1725,6 +1730,7 @@ bryten_christian.030 = {# Donating to the Abby of Cluny.
 			}
 		}
 		if = {# Adminstrative donations get these effects
+			limit = { government_has_flag = government_is_administrative }
 			change_influence = medium_influence_gain
 			add_piety = medium_piety_gain
 			add_character_modifier = {
