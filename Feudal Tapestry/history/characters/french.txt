@@ -4283,6 +4283,7 @@ heric = {
 }
 205966 = {
 	name = "Henri"
+	dna = 205966_henri_champagne
 	dynasty = 721
 	martial = 6
 	diplomacy = 6
@@ -4290,12 +4291,19 @@ heric = {
 	stewardship = 4
 	religion = "catholic"
 	culture = french
-	trait = brave
-	trait = education_learning_3
+	trait = diligent
+	trait = just
+	trait = generous
+	trait = education_stewardship_4
+	trait = scholar
+	trait = administrator
 	father = 205891
 	mother = 205893
 	1126.1.2 = {
 		birth = "1126.1.2"
+	}
+	1148.7.24 = {
+		add_trait = faith_warrior # Siege of Damascus
 	}
 	1161.1.2 = {
 		add_spouse = 205512
@@ -5581,6 +5589,7 @@ heric = {
 }
 223523 = {
 	name = "Baudouin"
+	dna = "bookmark_sibylla_baudouin_223523"
 	dynasty = 723
 	martial = 7
 	diplomacy = 6
@@ -5588,12 +5597,17 @@ heric = {
 	stewardship = 7
 	religion = "catholic"
 	culture = french
-	trait = leper
-	trait = education_diplomacy_3
+	trait = brave
+	trait = diligent
+	trait = chaste
+	trait = education_martial_3
 	father = 223520
 	mother = 223521
 	1161.1.2 = {
 		birth = "1161.1.2"
+	}
+	1174.7.11 = {
+		give_nickname = nick_the_leper
 	}
 	1185.3.16 = {
 		death = "1185.3.16"
@@ -5671,6 +5685,7 @@ heric = {
 }
 223541 = {
 	name = "Baudouin"
+	dna = "bookmark_sibylla_baudouin_son_223541"
 	dynasty = 206
 	martial = 6
 	diplomacy = 7
@@ -5782,6 +5797,7 @@ heric = {
 }
 223590 = {
 	name = "Renaud"
+	dna = "223590_renaud_kerak"
 	dynasty = 23113
 	martial = 6
 	diplomacy = 4
@@ -5789,7 +5805,6 @@ heric = {
 	stewardship = 3
 	religion = "catholic"
 	culture = french
-	trait = lustful
 	trait = greedy
 	trait = deceitful
 	trait = wrathful
@@ -9884,6 +9899,7 @@ heric = {
 }
 40406 = {
 	name = "Raoul"
+	dna = "40406_raoul_valois"
 	dynasty_house = house_vexin_amiens
 	martial = 5
 	diplomacy = 6
@@ -9892,6 +9908,9 @@ heric = {
 	religion = "catholic"
 	culture = french
 	trait = education_martial_4
+	trait = cynical
+	trait = fickle
+	trait = diligent
 	father = 168063
 	1021.1.1 = {
 		birth = "1021.1.1"
@@ -10767,6 +10786,7 @@ heric = {
 }
 418 = {
 	name = "Herbert"
+	dna = "418_herbert_vermandois"
 	dynasty = 25061
 	martial = 5
 	diplomacy = 4
@@ -21516,6 +21536,7 @@ heric = {
 }
 31384 = {
 	name = "Eschiva"
+	dna = "bookmark_raimon_eschiva_31384"
 	female = yes
 	dynasty = 7208 #de Bures
 	religion = "catholic"
@@ -21923,6 +21944,8 @@ heric = {
 }
 223522 = {
 	name = "Sibylla" #  Sibylla de Jerusalem
+	dna = "bookmark_sibylla_223522"
+
 	female = yes
 	dynasty = 723 #d'Anjou
 	religion = "catholic"

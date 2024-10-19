@@ -49,8 +49,10 @@
 223743 = {
 	name = "Marie"
 	# AKA: Marie
+	dna = 223743_maria_of_antioch
+
 	female = yes
-	dynasty = 413
+	dynasty_house = house_poitiers_antioch
 	martial = 6
 	diplomacy = 8
 	intrigue = 8
@@ -58,8 +60,10 @@
 	religion = "catholic"
 	culture = poitevin
 	trait = arbitrary
-	trait = lustful
-	trait = education_intrigue_3
+	trait = gregarious # "She was able to win over everybody by her radiant appearance, her pearly complexion, her even disposition, her straightforward intelligence and her charming address"
+	trait = lustful # "a nun with lovers"
+	trait = beauty_good_3 # "Outstanding in beauty; such beauty, the Constantinopolitans said, their age had never seen"
+	trait = education_diplomacy_3 # "an irresistable persuader with her charming manners"
 	father = 223740
 	mother = 223720
 	1145.1.1 = {
@@ -783,6 +787,24 @@
 	mother = 205732
 	1122.1.1 = {
 		birth = "1122.1.1"
+	}
+	1157.9.8 = {
+		effect = {
+			assign_favourite_child_effect = {
+				ACTOR = character:205730
+				RECIPIENT = character:204510
+			}
+			add_opinion = {
+				target = character:204510
+				modifier = love_opinion
+				opinion = 100
+			}
+			reverse_add_opinion = {
+				target = character:204510
+				modifier = love_opinion
+				opinion = 100
+			}
+		}
 	}
 	1204.4.1 = {
 		death = "1204.4.1"
