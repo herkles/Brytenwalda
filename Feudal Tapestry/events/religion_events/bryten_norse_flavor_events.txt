@@ -1459,6 +1459,158 @@ bryten_norse.065 = {# Offering to Thor by throwing a little stone hammer into a 
 		add_prestige = 25
 	}
 }
+#######################################
+# Historical Character flavor
+#######################################
+bryten_norse.100 = {# Snorri Sturluson composes the Prose Edda
+	type = character_event
+	title = bryten_norse.100.t
+	desc = bryten_norse.100.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	
+	trigger = {
+		is_adult = yes
+		is_alive = yes
+		is_imprisoned = no
+		has_variable = snorri_sturluson
+		exists = global_var:hchar_snorri_sturluson
+		OR = {
+			religion = religion:christianity_religion
+			religion = religion:germanic_religion
+		}
+		NOT = { exists = global_var:snori_wrote_prose_edda }
+
+	}
+
+	immediate = {
+		set_global_variable = {
+			name = snori_wrote_prose_edda
+			value = yes
+		}
+		if = {# Christian Version of the Eddas
+			limit = { religion = religion:christianity_religion }
+			create_artifact = {
+				name = bryten_artifact_prose_edda_name
+				description = bryten_artifact_prose_edda_christian_desc
+				type = miscellaneous
+				visuals = bryten_artifact_prose_edda_book_artifact
+				quality = 100
+				wealth = 100
+				modifier = bryten_artifact_prose_edda_christian_modifier
+				#max_durability = 40
+				save_scope_as = bryten_artifact_prose_edda_artifact
+				decaying = no
+			}
+		}
+		if = {# Pagan Version of the Eddas
+			limit = { religion = religion:germanic_religion }
+			create_artifact = {
+				name = bryten_artifact_prose_edda_name
+				description = bryten_artifact_prose_edda_pagan_desc
+				type = miscellaneous
+				visuals = bryten_artifact_prose_edda_book_artifact
+				quality = 100
+				wealth = 100
+				modifier = bryten_artifact_prose_edda_pagan_modifier
+				#max_durability = 40
+				save_scope_as = bryten_artifact_prose_edda_artifact
+				decaying = no
+			}
+		}
+		liege ?= {
+			# Grab the liege for general ease.
+			save_scope_as = liege
+		}
+		if = {# if there is a religious holder
+			limit = {
+				religion = religion:germanic_religion
+				faith = { exists = religious_head_title.holder }
+			}
+			faith.religious_head = {# the Pope must like you
+				save_scope_as = norse_head
+			}
+		}
+
+
+	}
+	
+	option = {# Keep for yourself
+		name = bryten_norse.100.a
+	}
+	option = {# Give to your liege
+		name = bryten_norse.100.b
+		trigger = { exists = liege }
+		scope:bryten_artifact_prose_edda_artifact = { set_owner = scope:liege }
+		scope:liege = {
+			add_opinion = {
+				modifier = bryten_gifted_edda
+				target = root
+				opinion = 10
+			}
+		}
+		hidden_effect = {
+			scope:liege = {
+				trigger_event = {
+					id = bryten_norse.101
+					days = { 1 5 }
+				}
+			}
+		}
+	}
+	option = {# Give to the head of faith(only for pagans)
+		name = bryten_norse.100.c
+		trigger = {
+			religion = religion:germanic_religion
+			faith = {# Norse must have been reformed to have a head of faith
+				exists = religious_head_title.holder
+			}
+		}
+		scope:bryten_artifact_prose_edda_artifact = { set_owner = scope:norse_head }
+		scope:norse_head = {
+			add_opinion = {
+				modifier = bryten_gifted_edda
+				target = root
+				opinion = 10
+			}
+		}
+		hidden_effect = {
+			scope:norse_head = {
+				trigger_event = {
+					id = bryten_norse.101
+					days = { 1 5 }
+				}
+			}
+		}
+	}
+}
+bryten_norse.101 = {# Snorri Sturluson gives you the Prose Edda
+	type = character_event
+	title = bryten_norse.059.t
+	desc = bryten_norse.059.desc
+	theme = faith
+	override_background = { reference = wilderness_forest }
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+		
+	option = {# At
+		name = bryten_norse.059.a
+	}
+}
+
+
+
+
+
+
 
 
 

@@ -2,273 +2,6 @@
 #######################################
 # de Poitou Dynasty
 #######################################
-223651 = {
-	name = "Raimond" #Raimond IV of Tripoli
-	dynasty = 413 #de Poitou
-	martial = 5
-	diplomacy = 7
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = poitevin
-	trait = lustful
-	trait = education_learning_2
-	father = 223750
-	mother = 223751
-	1171.1.1 = {
-		birth = "1171.1.1"
-	}
-	1196.1.1 = {
-		add_spouse = 223005 #Alix Rubenid
-	}
-	1198.6.1 = {
-		death = "1198.6.1"
-	}
-}
-223742 = {
-	name = "Baudouin"
-	dynasty = 413
-	martial = 7
-	diplomacy = 5
-	intrigue = 6
-	stewardship = 5
-	religion = "catholic"
-	culture = poitevin
-	trait = lustful
-	trait = honest
-	trait = education_martial_3
-	father = 223740
-	mother = 223720
-	1141.1.1 = {
-		birth = "1141.1.1"
-	}
-	1176.1.1 = {
-		death = "1176.1.1"
-	}
-}
-223743 = {
-	name = "Marie"
-	# AKA: Marie
-	dna = 223743_maria_of_antioch
-
-	female = yes
-	dynasty_house = house_poitiers_antioch
-	martial = 6
-	diplomacy = 8
-	intrigue = 8
-	stewardship = 8
-	religion = "catholic"
-	culture = poitevin
-	trait = arbitrary
-	trait = gregarious # "She was able to win over everybody by her radiant appearance, her pearly complexion, her even disposition, her straightforward intelligence and her charming address"
-	trait = lustful # "a nun with lovers"
-	trait = beauty_good_3 # "Outstanding in beauty; such beauty, the Constantinopolitans said, their age had never seen"
-	trait = education_diplomacy_3 # "an irresistable persuader with her charming manners"
-	father = 223740
-	mother = 223720
-	1145.1.1 = {
-		birth = "1145.1.1"
-	}
-	#1161 married Manuel I Komnenos
-	1161.1.1 = {
-		name = "Marie-Xena"
-	}
-	1182.8.27 = {
-		death = "1182.8.27"
-	}
-}
-223744 = {
-	name = "Philippa"
-	female = yes
-	dynasty = 413
-	martial = 4
-	diplomacy = 4
-	intrigue = 7
-	stewardship = 5
-	religion = "catholic"
-	culture = poitevin
-	trait = zealous
-	trait = stuttering
-	trait = education_diplomacy_2
-	father = 223740
-	mother = 223720
-	1148.1.1 = {
-		birth = "1148.1.1"
-	}
-	1178.1.1 = {
-		death = "1178.1.1"
-	}
-}
-223750 = {
-	name = "Bohemond" #Bohemond III
-	dynasty = 413
-	martial = 8
-	diplomacy = 8
-	intrigue = 6
-	stewardship = 8
-	religion = "catholic"
-	culture = poitevin
-	trait = lustful
-	trait = stuttering
-	trait = education_intrigue_2
-	father = 223740
-	mother = 223720
-	1144.1.1 = {
-		birth = "1144.1.1"
-	}
-	1168.1.1 = {
-		add_spouse = 223751 #Orgueilleuse de Harenc
-	}
-	1174.1.1 = {
-		remove_spouse = 223751
-	}
-	1175.1.1 = {
-		add_spouse = 223752 #Theodora Komnenos
-	}
-	1181.1.1 = {
-		remove_spouse = 223752
-	}
-	1182.1.1 = {
-		add_spouse = 223753 #Sybille Mansel
-	}
-	1186.1.1 = {
-		remove_spouse = 223753 #Sybille Mansel
-	}
-	1187.1.1 = {
-		add_spouse = 31015 #Isabelle Ledur
-	}
-	1201.3.20 = {
-		death = "1201.3.20"
-	}
-}
-223755 = {
-	name = "Bohemond" #Bohemond IV of Antioch
-	dynasty = 413
-	martial = 5
-	diplomacy = 7
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = poitevin
-	trait = lustful
-	trait = education_martial_2
-	father = 223750
-	mother = 223751
-	1172.1.1 = {
-		birth = "1172.1.1"
-	}
-	1194.1.1 = {
-		add_spouse = 31022 #Plaisance Embracio
-	}
-	1218.1.1 = {
-		add_spouse = 30996 #Melisende de Lusignan
-	}
-	1233.3.1 = {
-		death = "1233.3.1"
-	}
-}
-223756 = {
-	name = "Manuel"
-	dynasty = 413
-	martial = 5
-	diplomacy = 7
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = poitevin
-	trait = humble
-	trait = education_learning_2
-	father = 223750
-	mother = 223752
-	1176.1.2 = {
-		birth = "1176.1.2"
-	}
-	1226.1.2 = {
-		death = "1226.1.2"
-	}
-}
-223757 = {
-	name = "Alix"
-	female = yes
-	dynasty = 413
-	martial = 5
-	diplomacy = 7
-	intrigue = 4
-	stewardship = 5
-	religion = "catholic"
-	culture = poitevin
-	father = 223750
-	mother = 223753
-	1183.1.1 = {
-		birth = "1183.1.1"
-	}
-	#married Guy I Embracio
-	
-	1233.1.1 = {
-		death = "1233.1.1"
-	}
-}
-31013 = {
-	name = "Constance"
-	female = yes
-	dynasty = 413
-	religion = "catholic"
-	culture = poitevin
-	
-	father = 223750
-	mother = 223752
-	1177.1.1 = {
-		birth = "1177.1.1"
-	}
-	1180.1.1 = {
-		death = "1180.1.1"
-	}
-}
-31014 = {
-	name = "Guillaume"
-	dynasty = 413
-	religion = "catholic"
-	culture = poitevin
-	trait = ill
-	father = 223750
-	mother = 223753
-	1185.1.1 = {
-		birth = "1185.1.1"
-	}
-	1194.1.1 = {
-		death = "1194.1.1"
-	}
-}
-31016 = {
-	name = "Bohemond"
-	dynasty = 413
-	religion = "catholic"
-	culture = poitevin
-	father = 223750
-	mother = 31015
-	1195.1.1 = {
-		birth = "1195.1.1"
-	}
-	1244.10.18 = {
-		death = "1244.10.18"
-	}
-}
-31017 = {
-	name = "Eschiva"
-	female = yes
-	dynasty = 413
-	religion = "catholic"
-	culture = poitevin
-	trait = ill
-	father = 223750
-	mother = 31015
-	1190.1.1 = {
-		birth = "1190.1.1"
-	}
-	1196.1.1 = {
-		death = "1196.1.1"
-	}
-}
 31018 = {
 	name = "Raimond-Roupen"
 	# AKA: Raimond Roupen
@@ -600,7 +333,6 @@
 		death = "1134.3.21"
 	}
 }
-
 127029 = {
 	name = "AliC_"
 	# AKA: Aelis
@@ -641,7 +373,6 @@
 		death = "1151.1.1"
 	}
 }
-
 127033 = {
 	name = "AdalaI_da"
 	# AKA: Adelaida
@@ -663,7 +394,6 @@
 		death = "1173.1.1"
 	}
 }
-
 127034 = {
 	name = "AinE_s"
 	# AKA: Aines
@@ -686,7 +416,6 @@
 		death = "1175.1.1"
 	}
 }
-
 127035 = {
 	name = "Ugues"
 	dynasty = 413
@@ -705,7 +434,6 @@
 		death = "1127.1.1"
 	}
 }
-
 127036 = {
 	name = "AinE_s"
 	# AKA: Aines
@@ -726,7 +454,6 @@
 		death = "1097.6.6"
 	}
 }
-
 127037 = {
 	name = "Beatritz"
 	dynasty = 413
@@ -746,7 +473,6 @@
 		death = "1110.1.1"
 	}
 }
-
 127038 = {
 	name = "Beatritz"
 	dynasty = 413
@@ -810,7 +536,6 @@
 		death = "1204.4.1"
 	}
 }
-
 205731 = {
 	name = "GuilhE_m" #Guillaume X d'Aquitaine
 	# AKA: Guillaume
@@ -873,31 +598,6 @@
 		death = "1126.2.10"
 	}
 }
-223740 = {
-	name = "Raimond"
-	dynasty = 413
-	martial = 6
-	diplomacy = 6
-	intrigue = 8
-	stewardship = 6
-	religion = "catholic"
-	culture = "poitevin"
-	trait = diligent
-	trait = bastard
-	trait = education_martial_2
-	father = 205733
-	mother = 127031
-	1104.1.1 = {
-		birth = "1104.1.1"
-	}
-	1136.4.1 = {
-		add_spouse = 223720 #Constance de Hauteville
-	}
-	1149.6.28 = {
-		death = "1149.6.28"
-	}
-}
-
 228 = {
 	name = "Ebles" #Eudes d'Aquitaine
 	dynasty = 413
@@ -917,7 +617,6 @@
 		death = "1039.3.10"
 	}
 }
-
 230 = {
 	name = "GuilhE_m" #Guillaume III d'Aquitaine
 	# AKA: Guilhem
@@ -942,7 +641,6 @@
 		death = "963.4.3"
 	}
 }
-
 231 = {
 	name = "ClemE_ncia"
 	# AKA: Clemence
@@ -964,7 +662,6 @@
 		death = "1142.1.2"
 	}
 }
-
 232 = {
 	name = "GuilhE_m" #Guillaume IV d'Aquitaine
 	# AKA: Guilhem
@@ -989,7 +686,6 @@
 		death = "995.2.3"
 	}
 }
-
 233 = {
 	name = "AdalaI_da"
 	# AKA: Adelaide
@@ -1012,7 +708,6 @@
 		death = "1006.1.2"
 	}
 }
-
 234 = {
 	name = "GuilhE_m" #Guillaume V d'Aquitaine
 	# AKA: Guilhem
@@ -1043,7 +738,6 @@
 		death = "1030.1.31"
 	}
 }
-
 235 = {
 	name = "AinE_s"
 	# AKA: Agnes
@@ -1065,7 +759,6 @@
 		death = "1078.6.6"
 	}
 }
-
 236 = {
 	name = "GuilhE_m" #Guillaume VI d'Aquitaine
 	# AKA: Guilhem
@@ -1087,7 +780,6 @@
 		death = "1038.12.15"
 	}
 }
-
 238 = {
 	name = "GuilhE_m" #Guillaume VII d'Aquitaine
 	# AKA: Peire Guilhem
@@ -1113,7 +805,6 @@
 		death = "1058.9.5"
 	}
 }
-
 239 = {
 	name = "AinE_s"
 	# AKA: Agnes
@@ -1137,7 +828,6 @@
 		death = "1093.1.2"
 	}
 }
-
 240 = {
 	name = "GuilhE_m" #Guillaume VIII d'Aquitaine
 	# AKA: Gui Guilhem
@@ -1207,6 +897,300 @@
 	}
 	1070.1.2 = {
 		death = "1070.1.2"
+	}
+}
+#######################################
+# de Poitou Dynasty - Antioch Branch
+#######################################
+223651 = {
+	name = "Raimond" #Raimond IV of Tripoli
+	dynasty_house = house_poitiers_antioch
+	martial = 5
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = poitevin
+	trait = lustful
+	trait = education_learning_2
+	father = 223750
+	mother = 223751
+	1171.1.1 = {
+		birth = "1171.1.1"
+	}
+	1196.1.1 = {
+		add_spouse = 223005 #Alix Rubenid
+	}
+	1198.6.1 = {
+		death = "1198.6.1"
+	}
+}
+223742 = {
+	name = "Baudouin"
+	dynasty_house = house_poitiers_antioch
+	martial = 7
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 5
+	religion = "catholic"
+	culture = poitevin
+	trait = lustful
+	trait = honest
+	trait = education_martial_3
+	father = 223740
+	mother = 223720
+	1141.1.1 = {
+		birth = "1141.1.1"
+	}
+	1176.1.1 = {
+		death = "1176.1.1"
+	}
+}
+223743 = {
+	name = "Marie"
+	# AKA: Marie
+	dna = 223743_maria_of_antioch
+	female = yes
+	dynasty_house = house_poitiers_antioch
+	martial = 6
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 8
+	religion = "catholic"
+	culture = poitevin
+	trait = arbitrary
+	trait = gregarious # "She was able to win over everybody by her radiant appearance, her pearly complexion, her even disposition, her straightforward intelligence and her charming address"
+	trait = lustful # "a nun with lovers"
+	trait = beauty_good_3 # "Outstanding in beauty; such beauty, the Constantinopolitans said, their age had never seen"
+	trait = education_diplomacy_3 # "an irresistable persuader with her charming manners"
+	father = 223740
+	mother = 223720
+	1145.1.1 = {
+		birth = "1145.1.1"
+	}
+	#1161 married Manuel I Komnenos
+	1161.1.1 = {
+		name = "Marie-Xena"
+	}
+	1182.8.27 = {
+		death = "1182.8.27"
+	}
+}
+223744 = {
+	name = "Philippa"
+	female = yes
+	dynasty_house = house_poitiers_antioch
+	martial = 4
+	diplomacy = 4
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = poitevin
+	trait = zealous
+	trait = stuttering
+	trait = education_diplomacy_2
+	father = 223740
+	mother = 223720
+	1148.1.1 = {
+		birth = "1148.1.1"
+	}
+	1178.1.1 = {
+		death = "1178.1.1"
+	}
+}
+223750 = {
+	name = "Bohemond" #Bohemond III
+	dynasty_house = house_poitiers_antioch
+	martial = 8
+	diplomacy = 8
+	intrigue = 6
+	stewardship = 8
+	religion = "catholic"
+	culture = poitevin
+	trait = lustful
+	trait = stuttering
+	trait = education_intrigue_2
+	father = 223740
+	mother = 223720
+	1144.1.1 = {
+		birth = "1144.1.1"
+	}
+	1168.1.1 = {
+		add_spouse = 223751 #Orgueilleuse de Harenc
+	}
+	1174.1.1 = {
+		remove_spouse = 223751
+	}
+	1175.1.1 = {
+		add_spouse = 223752 #Theodora Komnenos
+	}
+	1181.1.1 = {
+		remove_spouse = 223752
+	}
+	1182.1.1 = {
+		add_spouse = 223753 #Sybille Mansel
+	}
+	1186.1.1 = {
+		remove_spouse = 223753 #Sybille Mansel
+	}
+	1187.1.1 = {
+		add_spouse = 31015 #Isabelle Ledur
+	}
+	1201.3.20 = {
+		death = "1201.3.20"
+	}
+}
+223755 = {
+	name = "Bohemond" #Bohemond IV of Antioch
+	dynasty_house = house_poitiers_antioch
+	martial = 5
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = poitevin
+	trait = lustful
+	trait = education_martial_2
+	father = 223750
+	mother = 223751
+	1172.1.1 = {
+		birth = "1172.1.1"
+	}
+	1194.1.1 = {
+		add_spouse = 31022 #Plaisance Embracio
+	}
+	1218.1.1 = {
+		add_spouse = 30996 #Melisende de Lusignan
+	}
+	1233.3.1 = {
+		death = "1233.3.1"
+	}
+}
+223756 = {
+	name = "Manuel"
+	dynasty_house = house_poitiers_antioch
+	martial = 5
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = poitevin
+	trait = humble
+	trait = education_learning_2
+	father = 223750
+	mother = 223752
+	1176.1.2 = {
+		birth = "1176.1.2"
+	}
+	1226.1.2 = {
+		death = "1226.1.2"
+	}
+}
+223757 = {
+	name = "Alix"
+	female = yes
+	dynasty_house = house_poitiers_antioch
+	martial = 5
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 5
+	religion = "catholic"
+	culture = poitevin
+	father = 223750
+	mother = 223753
+	1183.1.1 = {
+		birth = "1183.1.1"
+	}
+	#married Guy I Embracio
+	
+	1233.1.1 = {
+		death = "1233.1.1"
+	}
+}
+31013 = {
+	name = "Constance"
+	female = yes
+	dynasty_house = house_poitiers_antioch
+	religion = "catholic"
+	culture = poitevin
+	
+	father = 223750
+	mother = 223752
+	1177.1.1 = {
+		birth = "1177.1.1"
+	}
+	1180.1.1 = {
+		death = "1180.1.1"
+	}
+}
+31014 = {
+	name = "Guillaume"
+	dynasty_house = house_poitiers_antioch
+	religion = "catholic"
+	culture = poitevin
+	trait = ill
+	father = 223750
+	mother = 223753
+	1185.1.1 = {
+		birth = "1185.1.1"
+	}
+	1194.1.1 = {
+		death = "1194.1.1"
+	}
+}
+31016 = {
+	name = "Bohemond"
+	dynasty_house = house_poitiers_antioch
+	religion = "catholic"
+	culture = poitevin
+	father = 223750
+	mother = 31015
+	1195.1.1 = {
+		birth = "1195.1.1"
+	}
+	1244.10.18 = {
+		death = "1244.10.18"
+	}
+}
+31017 = {
+	name = "Eschiva"
+	female = yes
+	dynasty_house = house_poitiers_antioch
+	religion = "catholic"
+	culture = poitevin
+	trait = ill
+	father = 223750
+	mother = 31015
+	1190.1.1 = {
+		birth = "1190.1.1"
+	}
+	1196.1.1 = {
+		death = "1196.1.1"
+	}
+}
+223740 = {
+	name = "Raimond"
+	dynasty = 413
+	martial = 6
+	diplomacy = 6
+	intrigue = 8
+	stewardship = 6
+	religion = "catholic"
+	culture = "poitevin"
+	trait = diligent
+	trait = bastard
+	trait = education_martial_2
+	father = 205733
+	mother = 127031
+	1104.1.1 = {
+		birth = "1104.1.1"
+	}
+	1136.4.1 = {
+		add_spouse = 223720 #Constance de Hauteville
+		dynasty_house = house_poitiers_antioch
+	}
+	1149.6.28 = {
+		death = "1149.6.28"
 	}
 }
 #######################################
@@ -2639,7 +2623,6 @@
 		birth = "1141.1.1"
 	}
 	# 1159.1.1 = {add_spouse = 205666}
-
 	1169.3.15 = {
 		death = "1169.3.15"
 	}

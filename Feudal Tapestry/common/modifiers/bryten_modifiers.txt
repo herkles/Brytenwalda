@@ -127,7 +127,6 @@ bryten_cluny_abbey_donation_large = {
 ##########################################
 # Mt Athos Donation
 ##########################################
-
 # Feudal
 bryten_mt_athos_donation_small_feudal = {
 	icon = piety_positive
@@ -436,3 +435,22 @@ bryten_ostsiedlung_long_term_assistance = {
 	monthly_county_control_growth_factor = 0.02
 	vassal_tax_contribution_mult = 0.02
 }
+
+##########################################
+# Book Artifacts
+##########################################
+bryten_artifact_prose_edda_christian_modifier = {
+	monthly_prestige = 0.3
+	rf_pagan_opinion = 05
+	direct_vassal_opinion = 3
+}
+bryten_artifact_prose_edda_pagan_modifier = {
+	monthly_piety = 0.3
+	clergy_opinion = 10
+	zealot_opinion = 10
+}
+
+
+
+
+
