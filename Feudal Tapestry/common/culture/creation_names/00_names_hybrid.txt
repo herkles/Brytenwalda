@@ -599,41 +599,6 @@ dobrujan = {
 	}
 	hybrid = yes
 }
-aromanian = {
-	trigger = {
-		OR = {
-			AND = {
-				scope:culture = {
-					OR = {
-						this = { has_cultural_pillar = heritage_vlach }
-						any_parent_culture_or_above = { this = { has_cultural_pillar = heritage_vlach } }
-					}
-				}
-				scope:other_culture = {
-					has_cultural_pillar = heritage_byzantine
-				}
-			}
-			AND = {
-				scope:culture = {
-					has_cultural_pillar = heritage_byzantine
-				}
-				scope:other_culture = {
-					OR = {
-						this = { has_cultural_pillar = heritage_vlach }
-						any_parent_culture_or_above = { this = { has_cultural_pillar = heritage_vlach } }
-					}
-				}
-			}
-		}
-		any_sub_realm_county = {
-			OR = {
-				culture = scope:culture
-				culture = scope:other_culture
-			}
-		}
-	}
-	hybrid = yes
-}
 parsi_hybrid = {
 	trigger = {
 		capital_county = {

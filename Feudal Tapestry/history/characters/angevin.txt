@@ -1,0 +1,643 @@
+﻿
+#######################################
+# Anjevin Dynasty
+#######################################
+127009 = {
+	name = "AdE_laI_s"	#Adélaïs d'Anjou
+	# AKA: Adelais	
+	dynasty = 723			
+	female = yes	
+	religion = "catholic"	
+	culture = angevin		
+	father = 370 #Foulques II d'Anjou
+	945.1.1 = {	
+		birth = "945.1.1"
+	}
+	#966 married Etienne II de gévaudan 40260
+	1026.5.29 = {	
+		death = "1026.5.29"
+	}
+}
+127016 = {
+	name = "Ermengarde"
+	dynasty = 723
+	female = yes
+	martial = 6
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = angevin
+	father = 380
+	1068.1.1 = {
+		birth = "1068.1.1"
+	}
+	1146.6.1 = {
+		death = "1146.6.1"
+	}
+}
+205955 = {
+	name = "Sybille"
+	female = yes
+	dynasty = 723
+	martial = 8
+	diplomacy = 6
+	intrigue = 8
+	stewardship = 5
+	religion = "catholic"
+	culture = angevin
+	trait = education_intrigue_2
+	father = 223525
+	mother = 232009
+	1112.1.2 = {
+		birth = "1112.1.2"
+	}
+	1165.1.5 = {
+		death = "1165.1.5"
+	}
+}
+223520 = {
+	name = "Amaury"
+	dynasty = 723
+	martial = 5
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 8
+	religion = "catholic"
+	culture = angevin
+	trait = education_learning_2
+	father = 223525
+	mother = 232006
+	1136.1.2 = {
+		birth = "1136.1.2"
+	}
+	1153.1.2 = {
+		add_spouse = 223521
+	}
+	1169.1.2 = {
+		remove_spouse = 223521
+	}
+	1170.1.2 = {
+		add_spouse = 215560
+	}
+	1173.1.2 = {
+		remove_spouse = 215560
+	}
+	1174.7.11 = {
+		death = "1174.7.11"
+	}
+}
+223523 = {
+	name = "Baudouin"
+	dna = "bookmark_sibylla_baudouin_223523"
+	dynasty = 723
+	martial = 7
+	diplomacy = 6
+	intrigue = 5
+	stewardship = 7
+	religion = "catholic"
+	culture = angevin
+	trait = brave
+	trait = diligent
+	trait = chaste
+	trait = education_martial_3
+	father = 223520
+	mother = 223521
+	1161.1.2 = {
+		birth = "1161.1.2"
+	}
+	1174.7.11 = {
+		give_nickname = nick_the_leper
+	}
+	1185.3.16 = {
+		death = "1185.3.16"
+	}
+}
+223525 = {
+	name = "Foulques"
+	dynasty = 723
+	martial = 5
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 4
+	religion = "catholic"
+	culture = angevin
+	trait = just
+	trait = education_martial_2
+	father = 380
+	mother = 91021 #Bertrade de Montfort
+	1092.1.2 = {
+		birth = "1092.1.2"
+	}
+	1110.1.2 = {
+		add_spouse = 232009
+	}
+	1129.6.2 = {
+		add_spouse = 232006 # Melisende de Rethel
+	}
+	1143.11.13 = {
+		death = "1143.11.13"
+	}
+}
+231067 = {
+	name = "Baudouin"
+	dynasty = 723
+	martial = 8
+	diplomacy = 7
+	intrigue = 4
+	stewardship = 8
+	religion = "catholic"
+	culture = angevin
+	trait = just
+	trait = calm
+	trait = education_martial_4
+	father = 223525
+	mother = 232006
+	1130.1.2 = {
+		birth = "1130.1.2"
+	}
+	1162.2.10 = {
+		death = "1162.2.10"
+	}
+}
+232010 = {
+	name = "Elias"
+	dynasty = 723
+	martial = 6
+	diplomacy = 4
+	intrigue = 5
+	stewardship = 7
+	religion = "catholic"
+	culture = angevin
+	trait = education_martial_2
+	father = 223525
+	mother = 232009
+	1115.1.2 = {
+		birth = "1115.1.2"
+	}
+	1151.1.16 = {
+		death = "1151.1.16"
+	}
+}
+232019 = {
+	name = "Matilda-Isabella"
+	# AKA: Matilda
+	female = yes
+	dynasty = 723
+	martial = 8
+	diplomacy = 6
+	intrigue = 8
+	stewardship = 5
+	religion = "catholic"
+	culture = angevin
+	trait = education_learning_3
+	father = 223525
+	mother = 232009
+	1107.1.2 = {
+		birth = "1107.1.2"
+	}
+	1154.1.2 = {
+		death = "1154.1.2"
+	}
+}
+370 = {
+	name = "Foulques"
+	dynasty = 723
+	martial = 4
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 6
+	religion = "catholic"
+	culture = angevin
+	trait = honest
+	trait = cynical
+	father = 1799
+	911.1.2 = {
+		birth = "911.1.2"
+	}
+	958.11.11 = {
+		death = "958.11.11"
+	}
+}
+371 = {
+	name = "Arsinde"
+	# AKA: Arsinde 'Blanca'
+	female = yes
+	dynasty = 723
+	martial = 5
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 8
+	religion = "catholic"
+	culture = angevin
+	trait = calm
+	trait = arrogant
+	trait = honest
+	trait = education_learning_2
+	father = 370
+	952.1.2 = {
+		birth = "952.1.2"
+	}
+	988.1.2 = {
+		death = "988.1.2"
+	}
+}
+372 = {
+	name = "Geoffroy"
+	dynasty = 723
+	martial = 4
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = angevin
+	trait = education_learning_2
+	father = 370
+	943.1.2 = {
+		birth = "948.1.2"
+	}
+	970.1.2 = {
+		add_spouse = 413
+	}
+	987.7.21 = {
+		death = "987.7.21"
+	}
+}
+374 = {
+	name = "Foulques"
+	dynasty = 723
+	martial = 5
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 4
+	religion = "catholic"
+	culture = angevin
+	trait = education_martial_3
+	father = 372
+	mother = 413
+	972.1.2 = {
+		birth = "972.1.2"
+	}
+	1040.7.21 = {
+		death = "1040.7.21"
+	}
+}
+375 = {
+	name = "Ermengarde"
+	female = yes
+	dynasty = 723
+	martial = 5
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 7
+	religion = "catholic"
+	culture = angevin
+	trait = education_learning_2
+	father = 374
+	1018.1.2 = {
+		birth = "1018.1.2"
+	}
+	1076.3.18 = {
+		death = "1076.3.18"
+	}
+}
+376 = {
+	name = "Geoffroy"
+	dynasty = 723
+	martial = 7
+	diplomacy = 7
+	intrigue = 6
+	stewardship = 4
+	religion = "catholic"
+	culture = angevin
+	trait = lazy
+	trait = arbitrary
+	trait = brave
+	trait = education_martial_2
+	father = 374
+	1020.1.2 = {
+		birth = "1020.1.2"
+	}
+	1060.1.1 = {
+		death = "1060.1.1"
+	}
+}
+378 = {
+	name = "Geoffroy"
+	# AKA: Geoffroy 'le Harbu'
+	dynasty = 723
+	martial = 4
+	diplomacy = 7
+	intrigue = 7
+	stewardship = 4
+	religion = "catholic"
+	culture = angevin
+	trait = chaste
+	trait = lazy
+	trait = arbitrary
+	trait = education_stewardship_1
+	father = 377
+	mother = 375
+	1040.1.1 = {
+		birth = "1040.1.1"
+	}
+	1065.1.1 = {
+		trait = excommunicated
+	}
+	1097.1.1 = {
+		death = "1097.1.1"
+	}
+}
+379 = {
+	name = "Ermengarde"
+	female = yes
+	dynasty = 723
+	martial = 4
+	diplomacy = 6
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = angevin
+	trait = education_intrigue_1
+	father = 370
+	950.1.2 = {
+		birth = "950.1.2"
+	}
+	1002.1.2 = {
+		death = "1002.1.2"
+	}
+}
+380 = {
+	name = "Foulques"
+	# AKA: Foulques 'le Rechin'
+	dynasty = 723
+	martial = 8
+	diplomacy = 5
+	intrigue = 6
+	stewardship = 6
+	religion = "catholic"
+	culture = angevin
+	trait = arbitrary
+	trait = greedy
+	trait = deceitful
+	trait = ambitious
+	trait = education_martial_3
+	father = 377
+	mother = 375
+	1043.1.1 = {
+		birth = "1043.1.1"
+	}
+	1060.1.1 = {
+		add_pressed_claim = title:d_anjou
+	}
+	1109.4.14 = {
+		death = "1109.4.14"
+	}
+}
+40097 = {
+	name = "Gerberge" #d'Anjou
+	female = yes
+	dynasty = 723
+	religion = "catholic"
+	culture = angevin
+	father = 372
+	mother = 413
+	971.1.1 = {
+		birth = yes
+	}
+	#980 married Guillaume IV Taillefer 40090
+	1040.4.1 = {
+		death = "1040.4.1" #was 1025.6.2
+	}
+}
+40461 = {
+	name = "AdE_le"
+	# AKA: Adele
+	female = yes
+	dynasty = 723
+	martial = 7
+	diplomacy = 8
+	intrigue = 8
+	stewardship = 7
+	religion = "catholic"
+	culture = angevin
+	father = 374
+	997.1.1 = {
+		birth = "997.1.1"
+	}
+	1034.1.1 = {
+		death = "1034.1.1"
+	}
+}
+41231 = {
+	name = "Susanna"
+	dynasty = 7239
+	female = yes
+	martial = 5
+	diplomacy = 5
+	intrigue = 7
+	stewardship = 5
+	religion = "catholic"
+	culture = angevin
+	trait = arrogant
+	trait = arbitrary
+	trait = greedy
+	trait = education_diplomacy_3
+	1022.1.1 = {
+		birth = "1022.1.1"
+	}
+	1072.1.1 = {
+		death = "1072.1.1"
+	}
+}
+90068 = {
+	name = "Hildegarde"	#Hildegarde Herou
+	female = yes
+	dynasty = 723
+	martial = 6
+	diplomacy = 5
+	intrigue = 7
+	stewardship = 4
+	religion = "catholic"
+	culture = angevin
+	trait = gluttonous
+	trait = education_intrigue_1
+	father = 377
+	mother = 375
+	1036.1.2 = {
+		birth = "1036.1.2"
+	}
+	1086.1.2 = {
+		death = "1086.1.2"
+	}
+}
+223522 = {
+	name = "Sibylla" #  Sibylla de Jerusalem
+	dna = "bookmark_sibylla_223522"
+
+	female = yes
+	dynasty = 723 #d'Anjou
+	religion = "catholic"
+	culture = angevin
+	father = 223520
+	mother = 223521
+	1160.1.1 = {
+		birth = "1160.1.1"
+	}
+	#1176 married William of Montferrat
+	#1177 son Baudoin V
+	#1180.4 married Guy de Lusignan
+	1190.10.1 = {
+		death = "1190.10.1"
+	}
+}
+223524 = {
+	name = "Isabelle" #Isabelle de Jerusalem/Anjou
+	female = yes
+	dynasty = 723
+	martial = 7
+	diplomacy = 6
+	intrigue = 4
+	stewardship = 6
+	religion = "catholic"
+	culture = angevin
+	trait = education_diplomacy_2
+	father = 223520
+	mother = 215560
+	1171.1.2 = {
+		birth = "1171.1.2"
+	}
+	1205.4.5 = {
+		death = "1205.4.5"
+	}
+}
+183345 = {
+	name = "Geoffroy"
+	# AKA: Geoffroy IV 'Martel'
+	dynasty = 723
+	religion = "catholic"
+	culture = angevin
+	trait = just
+	trait = zealous
+	trait = education_stewardship_4
+	father = 380
+	1070.1.2 = {
+		birth = "1070.1.2"
+	}
+	1100.1.1 = {
+		give_nickname = nick_the_hammer
+	}
+	1106.5.19 = {
+		death = "1106.5.19"
+	}
+}
+#######################################
+# Plantagenet Dynasty
+#######################################
+103000 = {
+	name = "Geoffroy"
+	dynasty_house = house_plantagenet
+	martial = 5
+	diplomacy = 5
+	intrigue = 7
+	stewardship = 7
+	religion = "catholic"
+	culture = angevin
+	trait = education_martial_1
+	trait = ambitious
+	father = 204506
+	mother = 202991
+	1134.6.1 = {
+		birth = "1134.6.1"
+	}
+	1158.7.27 = {
+		death = "1158.7.27"
+	}
+}
+204499 = {
+	name = "Emme" #Emme d'Anjou
+	female = yes
+	dynasty_house = house_plantagenet
+	religion = "catholic"
+	culture = angevin
+	trait = education_diplomacy_3
+	trait = bastard
+	father = 204506
+	1147.1.1 = {
+		birth = "1147.1.1"
+	}
+	#1174 married Dafydd ap Owain 214700
+	1214.1.1 = {
+		death = "1214.1.1"
+	}
+}
+204506 = {
+	name = "Geoffroy"
+	# AKA: Geoffrey the Handsome
+	dynasty_house = house_plantagenet
+	martial = 5
+	diplomacy = 8
+	intrigue = 7
+	stewardship = 4
+	religion = "catholic"
+	culture = angevin
+	trait = beauty_good_1
+	trait = deceitful
+	trait = lustful # should clash with Matilda being chaste
+	trait = wrathful
+	trait = education_martial_3
+	trait = bastard
+	father = 223525
+	mother = 232009
+	1113.8.24 = {
+		birth = "1113.8.24"
+	}
+	1130.1.2 = {
+		give_nickname = nick_the_handsome
+		add_spouse = 202991
+	}
+	1151.9.7 = {
+		death = "1151.9.7"
+	}
+}
+183009 = {
+	name = "Marie" #Marie de France
+	female = yes
+	dynasty_house = house_plantagenet
+	religion = "catholic"
+	culture = angevin
+	trait = bastard
+	trait = education_learning_4
+	father = 204506
+	1142.1.1 = {
+		birth = "1142.1.1"
+	}
+	1184.1.1 = {
+		death = "1184.1.1"
+	}
+}
+261392 = {
+	name = "HervE_"
+	dynasty_house = house_plantagenet
+	religion = catholic
+	culture = angevin
+	915.1.1 = {
+		birth = yes
+	}
+	934.1.1 = {
+		add_spouse = 261391
+	}
+	955.1.1 = {
+		death = yes
+	}
+}
+
+
+
+
+
+#######################################
+# Other Auvergnats
+#######################################
+
+#######################################

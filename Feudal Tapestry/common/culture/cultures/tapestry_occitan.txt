@@ -3,7 +3,7 @@
 #############################################
 occitan = {# Occitan
 	color = { 0.45 0.0 0.0 }
-	ethos = ethos_egalitarian
+	ethos = ethos_courtly
 	heritage = heritage_occitan
 	language = language_occitano_romance
 	martial_custom = martial_custom_male_only
@@ -60,7 +60,7 @@ gascon = {# Gascon
 }
 provancale = {# Provancale
 	color = { 0.6 0.05 0.05 }
-	ethos = ethos_egalitarian
+	ethos = ethos_stoic
 	heritage = heritage_occitan
 	language = language_occitano_romance
 	martial_custom = martial_custom_male_only
@@ -85,3 +85,33 @@ provancale = {# Provancale
 		35 = caucasian_dark_hair
 	}	
 }
+auvergnat = {# Auvergnat
+	color = { 150 0 24 }
+	ethos = ethos_courtly
+	heritage = heritage_occitan
+	language = language_occitano_romance
+	martial_custom = martial_custom_male_only
+	traditions = {
+		tradition_visigothic_codes
+		tradition_chivalry
+		tradition_troubadour
+		tradition_parochialism
+		tradition_forest_folk
+	}
+	
+	name_list = name_list_occitan
+
+	coa_gfx = { occitan_coa_gfx frankish_group_coa_gfx western_coa_gfx } 
+	building_gfx = { mediterranean_building_gfx } 
+	clothing_gfx = { french_clothing_gfx western_clothing_gfx } 
+	unit_gfx = { western_unit_gfx } 	
+
+	ethnicities = {
+		10 = caucasian_blond
+		5 = caucasian_ginger
+		45 = caucasian_brown_hair
+		35 = caucasian_dark_hair
+	}	
+}
+
+
