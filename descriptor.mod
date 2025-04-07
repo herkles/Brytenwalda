@@ -7,5 +7,5 @@ tags={
 }
 "Feudal tapestry - A European Overhaul"
 picture="thumbnail.png"
-supported_version="1.14.*"
+supported_version="1.15.*"
 path="C:/Users/Sean Zeitler/Documents/Paradox Interactive/Crusader Kings III/mod/Brytenwalda/Feudal Tapestry"
