@@ -49,7 +49,7 @@ yearly_global_pulse = {
 		else_if = {
 			limit = {
 				has_game_rule = random_mongol_invasion
-				NOT = { has_global_variable = mongols_have_appeared}
+				NOT = { has_global_variable = mongols_have_appeared }
 			}
 			random = {
 				chance = temujin_appearance_base_chance
@@ -86,6 +86,12 @@ yearly_global_pulse = {
 					current_date > 1180.1.1
 					current_date < 1250.1.1
 					NOT = { has_global_variable = mongols_have_appeared }
+					trigger_if = {
+						limit = {
+							game_start_date = 1178.10.1
+						}
+						years_from_game_start >= 20
+					}
 				}
 				debug_log = "Checking for chance of spawning mongols under historical settings"
 				random = {
@@ -101,6 +107,13 @@ yearly_global_pulse = {
 					modifier = {
 						add = 20
 						current_date > 1235.1.1
+					}
+					modifier = {
+						add = 20
+						exists = character:125501
+						character:125501 = {
+							is_physically_able_ai_adult = yes
+						}
 					}
 					set_global_variable = {
 						name = mongols_have_appeared
@@ -1883,6 +1896,16 @@ yearly_playable_pulse = {
 			ai_attempt_to_host_activity = activity_feast
 		}
 		
+		# Scalable Modifiers which needs to be reapplied
+		hidden_effect = {
+			if = {
+				limit = {
+					has_character_modifier = church_investment_modifier
+				}
+				remove_character_modifier = church_investment_modifier
+				add_character_modifier = church_investment_modifier
+			}
+		}
 		if = {
 			limit = {
 				has_perk = learn_on_the_job_perk
@@ -1991,13 +2014,12 @@ five_year_playable_pulse = {
 		if = {
 			limit = {
 				has_dlc_feature = legends
-				OR = {
-					has_trait = theologian
-					has_trait = sayyid
-				}
-				piety_level >=  very_high_piety_level
+				piety_level >= very_high_piety_level
 				NOT = { has_variable = saintly_deed_var }
-				NOT = { has_game_rule = historical_legends_only }
+				NOR = { 
+					has_game_rule = historical_legends_only 
+					has_personal_legend_seed = holy
+				}
 			}
 			random = {
 				chance = 10
@@ -2017,6 +2039,7 @@ five_year_playable_pulse = {
 			}
 		}
 			chance_for_random_nickname_effect = yes
+		ai_chance_to_switch_to_travel_focus_effect = yes
 			if = {
 				limit = {
 					has_royal_court = yes
@@ -2099,7 +2122,7 @@ five_year_playable_pulse = {
 								type = msg_court_inspiration
 									left_icon = scope:inspired_poet
 									title = poet_inspired_message
-									custom_tooltip = poet_inspired_effect
+								desc = poet_inspired_effect
 								}
 							}
 						}
@@ -2114,6 +2137,7 @@ five_year_playable_pulse = {
 						limit = {
 							is_physically_able_adult = yes
 							ep1_is_valid_character_for_inspiration_trigger = yes
+							NOT = { has_character_flag = regular_inspiration_block }
 						}
 						random = {
 							chance = {
@@ -2136,7 +2160,7 @@ five_year_playable_pulse = {
 								type = msg_court_inspiration
 									left_icon = scope:artificer
 									title = poet_inspired_message
-									custom_tooltip = court_artificer_inspired_effect
+									desc = court_artificer_inspired_effect
 								}
 							}
 						}
@@ -2199,6 +2223,7 @@ quarterly_playable_pulse = {
 		diplomacy_lifestyle_progress_pulse
 		martial_lifestyle_progress_pulse
 		learning_lifestyle_progress_pulse
+		wanderer_lifestyle_progress_pulse
 
 		# Relation pulses are spread out across the four quarterly pulses a year
 		lover_quarterly_pulse
@@ -2268,6 +2293,26 @@ random_yearly_playable_pulse = {
 				}
 			}
 		}
+		# Commander Trait Leveling for AI
+		if = {
+			limit = {
+				is_ai = yes
+				OR = {
+					has_commander_trait_trigger = yes
+					any_knight = {
+						has_commander_trait_trigger = yes
+					}
+				}
+			}
+			commander_trait_lvling_ai_effect = yes
+			every_knight = {
+				limit = {
+					is_ai = yes
+					has_commander_trait_trigger = yes
+				}
+				commander_trait_lvling_ai_effect = yes
+			}
+		}
 	}
 	on_actions = {
 		delay = { days = { 45 75 } }
@@ -2277,8 +2322,6 @@ random_yearly_playable_pulse = {
 		delay = { days = { 85 165 } }
 		bishop_ongoing
 		delay = { days = { 166 185 } }
-		jester_ongoing
-		delay = { days = { 186 205 } }
 		wet_nurse_pulse
 		delay = { days = { 51 180 } }
 		childhood_ongoing
@@ -2443,7 +2486,22 @@ three_year_pool_pulse = {
 	}
 	events = {
 		courtier_guest_management.2001 #"Develops" the character and gives those without location a location
-		courtier_guest_management.4001 # Wanderer becomes an adventurer
+	}
+	random_events = {
+		chance_to_happen = 25
+		chance_of_no_event = { # throttle wanderer Adventurers because they're simply less interesting
+			if = {
+				limit = {
+					has_global_variable_list = laamps_tally
+					global_variable_list_size = {
+						name = laamps_tally
+						value > seventyfive_percent_of_max_desired_laamps_value
+					}
+				}
+				value = 100
+			}
+		}
+		100 = courtier_guest_management.4001 # Wanderer becomes an adventurer
 	}
 }
 
@@ -3236,5 +3294,12 @@ on_yearly_events = {
 		250 = ep3_landless_admin.1030 # You get offered a hook on your liege
 		250 = ep3_landless_admin.1040 # Lie about a rival candidate
 		250 = ep3_landless_admin.1050 # There's something in your basement
+		
+		# EP3 - Eparch events
+		500 = ep3_eparch_event.0001
+		500 = ep3_eparch_event.0005
+		500 = ep3_eparch_event.0010
+		500 = ep3_eparch_event.0015
+		500 = ep3_eparch_event.0020
 	}
 }
