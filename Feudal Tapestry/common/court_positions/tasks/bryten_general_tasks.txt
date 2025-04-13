@@ -1,0 +1,365 @@
+﻿### Various Tasks ###
+
+bryten_task_flatter_dignitaries = {
+	court_position_types = { master_of_the_doorkeepers_position szekelyispan_court_position bearer_of_the_sword_court_position }
+
+	is_shown = {
+	}
+	is_valid_showing_failures_only = {
+	}
+
+	cost = {
+		round = no
+		prestige = {
+			add = {
+				value = monthly_court_position_task_cost
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
+		}
+	}
+
+	base_employer_modifier = {
+	}
+	
+	scaling_employer_modifiers = {
+		terrible = {
+		 	owned_personal_scheme_success_chance_max_add = 1
+			sway_scheme_phase_duration_add = -5
+			seduce_scheme_phase_duration_add = -5
+			courting_scheme_phase_duration_add = -5
+		}
+		poor = {
+		 	owned_personal_scheme_success_chance_max_add = 3
+			sway_scheme_phase_duration_add = -15
+			seduce_scheme_phase_duration_add = -15
+			courting_scheme_phase_duration_add = -15
+		}
+		average = {
+		 	owned_personal_scheme_success_chance_max_add = 5
+			sway_scheme_phase_duration_add = -30
+			seduce_scheme_phase_duration_add = -30
+			courting_scheme_phase_duration_add = -30
+		}
+		good = {
+		 	owned_personal_scheme_success_chance_max_add = 10
+			sway_scheme_phase_duration_add = -50
+			seduce_scheme_phase_duration_add = -50
+			courting_scheme_phase_duration_add = -50
+		}
+		excellent = {
+		 	owned_personal_scheme_success_chance_max_add = 20
+			sway_scheme_phase_duration_add = -75
+			seduce_scheme_phase_duration_add = -75
+			courting_scheme_phase_duration_add = -75
+		}
+	}
+	
+	on_start = {
+	}
+	on_end = { }
+
+	ai_will_do = {
+		value = {
+			add = 25
+			add = ai_sociability
+		}
+	}
+}
+bryten_support_troops = {
+	court_position_types = { szekelyispan_court_position horka_court_position bearer_of_the_sword_court_position }
+	
+	# When task is made available
+	is_shown = {
+	}
+	
+	# Monthly cost for the task
+	cost = {
+		round = no
+		gold = {
+			add = {
+				value = monthly_court_position_task_cost_double
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
+		}
+	}
+
+	scaling_employer_modifiers = {
+	}
+	on_start = {
+		remove_other_eparch_modifiers_effect = yes
+		scope:liege ?= {
+			capital_province = {
+				add_province_modifier = ep3_eparch_troops_modifier
+			}
+		}
+	}
+	on_end = {
+		scope:liege ?= {
+			# We check and scope to all counties to make sure we remove any stray modifiers in case the capital is moved, etc.
+			if = {
+				limit = {
+					any_realm_county = {
+						any_county_province = {
+							has_province_modifier = ep3_eparch_troops_modifier
+						}
+					}
+				}
+				every_realm_county = {
+					limit = {
+						any_county_province = {
+							has_province_modifier = ep3_eparch_troops_modifier
+						}
+					}
+					every_county_province = {
+						limit = {
+							has_province_modifier = ep3_eparch_troops_modifier
+						}
+						remove_province_modifier = ep3_eparch_troops_modifier
+					}
+				}
+			}
+		}
+	}
+	on_yearly = {
+	}
+
+	ai_will_do = {
+		value = 0
+		
+		# Personality
+		if = {
+			limit = { # Any martially inclined rulers
+				OR = {
+					has_trait = zealous
+					has_trait = brave
+					has_trait = wrathful
+				}
+			}
+			add = 20
+		}
+		if = {
+			limit = { # Warlike AI should be more likely
+				OR = {
+					ai_has_warlike_personality = yes
+					ai_has_conqueror_personality = yes
+				}
+			}
+			add = 20
+		}
+		
+		# Other
+		if = {
+			limit = { # Rulers with a martial educatino favors better troops
+				has_trait = education_martial
+			}
+			add = 25
+		}
+		if = {
+			limit = { # Rulers at war should wants better troops
+				is_at_war = yes
+			}
+			add = 50
+		}
+		
+		# Gold reasons
+		if = {
+			limit = { # Don't spend the extra gold if we can't afford it, assuming we are not greedy
+				NOT = { has_trait = greedy }
+				monthly_character_income_minus_expenses < { value = monthly_court_position_task_cost_double multiply = 2 }
+			}
+			multiply = 0
+		}
+		else_if = {
+			limit = { # Greedy character need to have a higher income
+				monthly_character_income_minus_expenses < { value = monthly_court_position_task_cost_double multiply = 4 }
+			}
+			multiply = 0
+		}
+	}
+}
+bryten_enforce_public_order = {
+	court_position_types = { horka_court_position }
+	
+	# When task is made available
+	is_shown = {
+	}
+	
+	# Monthly cost for the task
+	cost = {
+		round = no
+		gold = {
+			add = {
+				value = monthly_court_position_task_cost_double
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
+		}
+	}
+
+	scaling_employer_modifiers = {
+	}
+	on_start = {
+		remove_other_eparch_modifiers_effect = yes
+		scope:liege ?= {
+			capital_province = {
+				add_province_modifier = ep3_eparch_control_modifier
+			}
+		}
+	}
+	on_end = {
+		scope:liege ?= {
+			# We check and scope to all counties to make sure we remove any stray modifiers in case the capital is moved, etc.
+			if = {
+				limit = {
+					any_realm_county = {
+						any_county_province = {
+							has_province_modifier = ep3_eparch_control_modifier
+						}
+					}
+				}
+				every_realm_county = {
+					limit = {
+						any_county_province = {
+							has_province_modifier = ep3_eparch_control_modifier
+						}
+					}
+					every_county_province = {
+						limit = {
+							has_province_modifier = ep3_eparch_control_modifier
+						}
+						remove_province_modifier = ep3_eparch_control_modifier
+					}
+				}
+			}
+		}
+	}
+	on_yearly = {
+	}
+
+	ai_will_do = {
+		value = 0
+		
+		if = {
+			limit = { # Don't bother unless we need to increase control
+				capital_county ?= { county_control < 90 }
+			}
+			# Personality
+			if = {
+				limit = { # Any martial or domestically inclined rulers
+					OR = {
+						has_trait = diligent
+						has_trait = ambitious
+						has_trait = just
+					}
+				}
+				add = 20
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = greedy
+						has_trait = impatient
+					}
+				}
+				add = 10
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = wrathful
+						has_trait = impatient
+					}
+				}
+				add = 10
+			}
+			
+			# Other
+			if = {
+				limit = { # Stewardship rulers want high control to get more taxes
+					has_trait = education_stewardship
+				}
+				add = 25
+			}
+			if = {
+				limit = {
+					OR = {
+						has_trait = overseer
+						has_trait = administrator
+					}
+				}
+				add = 10
+			}
+			
+			# Gold reasons
+			if = {
+				limit = { # Don't spend the extra gold if we can't afford it, assuming we are not greedy
+					NOT = { has_trait = greedy }
+					monthly_character_income_minus_expenses < { value = monthly_court_position_task_cost_double multiply = 2 }
+				}
+				multiply = 0
+			}
+			else_if = {
+				limit = { # Greedy character need to have a higher income
+					monthly_character_income_minus_expenses < { value = monthly_court_position_task_cost_double multiply = 4 }
+				}
+				multiply = 0
+			}
+		}
+	}
+}
+bryten_terrify_court = {
+	court_position_types = { horka_court_position }
+
+	# Monthly cost for the task
+	cost = {
+		round = no
+		prestige = {
+			add = {
+				value = monthly_court_position_task_cost
+				desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+				format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+			}
+		}
+	}
+
+	is_shown = {
+		is_landed_or_landless_administrative = yes
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			courtier_and_guest_opinion = -1
+			dread_baseline_add = 1
+		}
+		poor = {
+			courtier_and_guest_opinion = -2
+			dread_baseline_add = 2
+		}
+		average = {
+			courtier_and_guest_opinion = -4
+			dread_baseline_add = 4
+		}
+		good = {
+			courtier_and_guest_opinion = -7
+			dread_baseline_add = 7
+		}
+		excellent = {
+			courtier_and_guest_opinion = -10
+			dread_baseline_add = 10
+		}
+	}
+
+	ai_will_do = {
+		value = {
+			add = ai_honor
+			multiply = -1
+		}
+	}
+}
+
+
+
+
+

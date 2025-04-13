@@ -1165,31 +1165,6 @@ bosnian = {
 #############################################
 # Hungarian Cultures			
 #############################################
-szekely = {
-	trigger = {
-		OR = {
-			capital_county = {
-				title:d_transylvania = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			capital_county = {
-				title:d_transylvanian_alps = {
-					is_de_jure_liege_or_above_target = prev
-				}
-			}
-			has_primary_title = title:d_transylvania
-			has_primary_title = title:d_transylvanian_alps
-		}
-		culture = culture:hungarian
-		any_sub_realm_county = {
-			culture = culture:hungarian
-			OR = {
-				duchy = title:d_transylvania
-				duchy = title:d_transylvanian_alps
-			}
-		}
-	}
-}
+
 
 

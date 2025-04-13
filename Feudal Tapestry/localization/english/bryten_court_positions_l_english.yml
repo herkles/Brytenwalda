@@ -1,0 +1,64 @@
+﻿l_english:
+
+#######################################
+# Hungarian Court Positions			
+#######################################
+  master_of_the_doorkeepers_position:0 "Master of the Doorkeepers"
+  master_of_the_doorkeepers_position_desc:1 "The $master_of_the_doorkeepers_position$ are the managers of the royal doorkeepers, guarding the doors and handling messengers for the King. The Master of the Doorkeepers gets to carry the king's Bloody sword and call people to meet with the king should they wish to speak with them."
+
+  szekelyispan_court_position:0 "Szekelyispan"
+  szekelyispan_court_position_desc:1 "The $szekelyispan_court_position$ also known as the Count of the Szekelys is the leader of the Szekelys people for the King of Hungary. As leaders of the Szekelys people it is their responsibility to gather them for war when the king calls for war and to lead them into battle."
+
+  bearer_of_the_sword_court_position:1 "The Bearer of the Sword"
+  bearer_of_the_sword_court_position_desc:1 "The $bearer_of_the_sword_court_position$ is a ceremonial court position, its duties include carrying the sword of the Hungarian King in court."
+
+  horka_court_position:0 "Horka"
+  horka_court_position_desc:1 "The $horka_court_position$ is one of the highest ranked warlords after the Kende and Gyula. thus subordinate to the two kings. As a warlord he is a commander of armies after the two kings."
+#######################################
+# Court Tasks
+#######################################
+ bryten_task_flatter_dignitaries: "Flatter Dignitaries"
+ bryten_task_flatter_dignitaries_desc: "This character will make sure that the cups of those you care for the most runneth over with vigor."
+
+ bryten_support_troops: "Support Troops"
+ bryten_support_troopsr_desc: ""This character will oversee the organization of the local garrisons and ensure an effective command."
+
+ bryten_enforce_public_order: "Enforce Public Order"
+ bryten_enforce_public_order_desc: "This character will have soldiers patrol the streets to keep the peace and secure public order no matter the cost."
+
+ bryten_terrify_court: "Terrify Court"
+ bryten_terrify_court_desc: "This character is paraded around in court to ensure that everyone knows that they are only one step away from the chopping block."
+
+
+
+#######################################
+# Court names
+#######################################
+# Master of Doorkeepers
+ court_position_master_of_the_doorkeeper:0 "[GetCourtPositionType('master_of_the_doorkeeper_court_position').GetName()]"
+
+ master_of_the_doorkeeper_aptitude_tooltip: "[candidate.GetHerHisMy|U] [aptitude|E] is [candidate.GetCourtPositionAptitude( GetCourtPositionType( 'master_of_the_doorkeeper_court_position' ) )]"
+ master_of_the_doorkeeper_old_holder_aptitude_tooltip: "[candidate.GetHerHisMy|U] [aptitude|E] is [candidate.GetCourtPositionAptitude( GetCourtPositionType( 'master_of_the_doorkeeper_court_position' ) )] #weak ([old_holder.GetFirstName] [old_holder.GetCourtPositionAptitude( GetCourtPositionType( 'master_of_the_doorkeeper_court_position' ) )])#!"
+ master_of_the_doorkeeper_salary_tooltip: "[GetCourtPositionType( 'master_of_the_doorkeeper_court_position' ).GetName()] has a monthly salary of [gold_i][SCOPE.ScriptValue('medium_court_position_salary')|2]"
+
+# Szeklyispan
+ court_position_szekelyispan:0 "[GetCourtPositionType('szekelyispan_court_position').GetName()]"
+
+ szekelyispan_aptitude_tooltip: "[candidate.GetHerHisMy|U] [aptitude|E] is [candidate.GetCourtPositionAptitude( GetCourtPositionType( 'szekelyispan_court_position' ) )]"
+ szekelyispan_old_holder_aptitude_tooltip: "[candidate.GetHerHisMy|U] [aptitude|E] is [candidate.GetCourtPositionAptitude( GetCourtPositionType( 'szekelyispan_court_position' ) )] #weak ([old_holder.GetFirstName] [old_holder.GetCourtPositionAptitude( GetCourtPositionType( 'szekelyispan_court_position' ) )])#!"
+ szekelyispan_salary_tooltip: "[GetCourtPositionType( 'szekelyispan_court_position' ).GetName()] has a monthly salary of [gold_i][SCOPE.ScriptValue('medium_court_position_salary')|2]"
+
+# Bearer of the Sword
+ court_position_bearer_of_the_sword:0 "[GetCourtPositionType('bearer_of_the_sword_court_position').GetName()]"
+
+ bearer_of_the_sword_aptitude_tooltip: "[candidate.GetHerHisMy|U] [aptitude|E] is [candidate.GetCourtPositionAptitude( GetCourtPositionType( 'bearer_of_the_sword_court_position' ) )]"
+ bearer_of_the_sword_old_holder_aptitude_tooltip: "[candidate.GetHerHisMy|U] [aptitude|E] is [candidate.GetCourtPositionAptitude( GetCourtPositionType( 'bearer_of_the_sword_court_position' ) )] #weak ([old_holder.GetFirstName] [old_holder.GetCourtPositionAptitude( GetCourtPositionType( 'bearer_of_the_sword_court_position' ) )])#!"
+ bearer_of_the_sword_salary_tooltip: "[GetCourtPositionType( 'bearer_of_the_sword_court_position' ).GetName()] has a monthly salary of [gold_i][SCOPE.ScriptValue('medium_court_position_salary')|2]"
+
+# Horka
+ court_position_horka:0 "[GetCourtPositionType('horka_court_position').GetName()]"
+
+ horka_aptitude_tooltip: "[candidate.GetHerHisMy|U] [aptitude|E] is [candidate.GetCourtPositionAptitude( GetCourtPositionType( 'horka_court_position' ) )]"
+ horka_old_holder_aptitude_tooltip: "[candidate.GetHerHisMy|U] [aptitude|E] is [candidate.GetCourtPositionAptitude( GetCourtPositionType( 'horka_court_position' ) )] #weak ([old_holder.GetFirstName] [old_holder.GetCourtPositionAptitude( GetCourtPositionType( 'horka_court_position' ) )])#!"
+ horka_salary_tooltip: "[GetCourtPositionType( 'horka_court_position' ).GetName()] has a monthly salary of [gold_i][SCOPE.ScriptValue('medium_court_position_salary')|2]"
+
