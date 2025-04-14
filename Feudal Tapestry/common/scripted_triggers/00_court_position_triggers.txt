@@ -124,7 +124,7 @@ can_appoint_char_to_any_court_position = {
 		can_appoint_char_to_court_position = { CHAR = $CHAR$ COURT_POS = bookmaker_court_position }
 		can_appoint_char_to_court_position = { CHAR = $CHAR$ COURT_POS = akolouthos_court_position }
 		# Hungarian Positions
-		can_appoint_char_to_court_position = { CHAR = $CHAR$ COURT_POS = master_of_the_doorkeepers_position }
+		can_appoint_char_to_court_position = { CHAR = $CHAR$ COURT_POS = master_of_the_doorkeepers_court_position }
 		can_appoint_char_to_court_position = { CHAR = $CHAR$ COURT_POS = szekelyispan_court_position }
 		can_appoint_char_to_court_position = { CHAR = $CHAR$ COURT_POS = bearer_of_the_sword_court_position }
 		can_appoint_char_to_court_position = { CHAR = $CHAR$ COURT_POS = horka_court_position }
@@ -765,28 +765,28 @@ court_brewmaster_validity_trigger = {
 master_of_the_doorkeepers_validity_trigger = {
 	base_court_position_validity_trigger = { EMPLOYER = $EMPLOYER$ }
 	OR = {# have to be hungarian or Szekelys
-		culture = culture:hungarian
-		culture = culture:szekely
+		has_culture = culture:hungarian
+		has_culture = culture:szekely
 	}
 }
-szekelyispan_court_validity_trigger = {
+szekelyispan_validity_trigger = {
 	base_court_position_validity_trigger = { EMPLOYER = $EMPLOYER$ }
 	is_knight = yes
 	can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = $EMPLOYER$ }
-	culture = culture:szekely
+	has_culture = culture:szekely
 }
-bearer_of_the_sword_court_validity_trigger = {
+bearer_of_the_sword_validity_trigger = {
 	base_court_position_validity_trigger = { EMPLOYER = $EMPLOYER$ }
 	OR = {# have to be hungarian or Szekelys
-		culture = culture:hungarian
-		culture = culture:szekely
+		has_culture = culture:hungarian
+		has_culture = culture:szekely
 	}
 }
-horka_court_validity_trigger = {
+horka_validity_trigger = {
 	base_court_position_validity_trigger = { EMPLOYER = $EMPLOYER$ }
 	is_knight = yes
 	can_be_combatant_based_on_gender_trigger = { ARMY_OWNER = $EMPLOYER$ }
-	culture = culture:mogyer
+	has_culture = culture:mogyer
 }
 
 

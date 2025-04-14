@@ -45,7 +45,7 @@
 #############################################
 # Hungarian Court Positions			
 #############################################
-master_of_the_doorkeepers_position = {# Master of Doorkeepers
+master_of_the_doorkeepers_court_position = {# Master of Doorkeepers
 	sort_order = 164
 	max_available_positions = 1
 	minimum_rank = kingdom # Should only be available for kings and emperors
@@ -127,6 +127,8 @@ master_of_the_doorkeepers_position = {# Master of Doorkeepers
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
+		has_title = title:k_hungary # Only for Hungary
+		culture = { has_innovation = innovation_court_officials }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -438,6 +440,8 @@ szekelyispan_court_position = {# Szeklyispan aka Count of the Szekelys
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
+		has_title = title:k_hungary # Only for Hungary
+		culture = { has_innovation = innovation_court_officials }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -694,7 +698,7 @@ szekelyispan_court_position = {# Szeklyispan aka Count of the Szekelys
 			}
 			add = 1000
 		}
-		add = court_position_szekelyispan_debt_considerations_value
+		add = court_position_debt_considerations_value
 	}
 }
 bearer_of_the_sword_court_position = {# Bearer of the Sword
@@ -781,6 +785,8 @@ bearer_of_the_sword_court_position = {# Bearer of the Sword
 
 	is_shown = {
 		is_landed_or_landless_administrative = yes
+		has_title = title:k_hungary # Only for Hungary
+		culture = { has_innovation = innovation_court_officials }
 		trigger_if = {
 			limit = {
 				is_ai = yes
@@ -983,11 +989,14 @@ horka_court_position = {# Horka, one of the Nomadic titles
 	# Is this an available position for this court? (root is court owner)
 	valid_position = {
 		is_landed_or_landless_administrative = yes
+		has_title = title:k_magyar # Only for the Hungarian Confederation
+
 	}
 
 	is_shown_character = {
 		scope:employee = {
 			is_imprisoned = no
+			has_culture = culture:mogyer
 		}
 	}
 
@@ -1227,7 +1236,13 @@ horka_court_position = {# Horka, one of the Nomadic titles
 			}
 			add = 1000
 		}
-		add = court_position_horka_debt_considerations_value
+		scope:liege = {# The Magyar confederation must have one
+			if = { # The Magyar confederation must have one
+				limit = { has_title = title:k_magyar }
+				add = 100
+			}
+		}
+		add = court_position_debt_considerations_value
 	}
 }
 #############################################
