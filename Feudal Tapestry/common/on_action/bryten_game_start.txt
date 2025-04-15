@@ -129,25 +129,77 @@ bryten_setup_after_game_start_on_actions = {
 			culture:anglo_saxon = {
 				change_cultural_acceptance = {
 					target = culture:swedish
-					value = 50
+					value = 30
 					desc = cultural_acceptance_historical_relations
 				}
 				change_cultural_acceptance = {
 					target = culture:norwegian
-					value = 50
+					value = 30
 					desc = cultural_acceptance_historical_relations
 				}
 				change_cultural_acceptance = {
 					target = culture:danish
-					value = 50
+					value = 30
 					desc = cultural_acceptance_historical_relations
 				}
+				change_cultural_acceptance = {
+					target = culture:gaet
+					value = 30
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:gute
+					value = 30
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:icelandic
+					value = 30
+					desc = cultural_acceptance_historical_relations
+				}												
 				change_cultural_acceptance = {
 					target = culture:anglo_norse
 					value = 50
 					desc = cultural_acceptance_historical_relations
 				}
 			}
+			culture:anglo_norse = {
+				change_cultural_acceptance = {
+					target = culture:swedish
+					value = 30
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:norwegian
+					value = 30
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:danish
+					value = 30
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:gaet
+					value = 30
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:gute
+					value = 30
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:icelandic
+					value = 30
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {
+					target = culture:anglo_saxon
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}			
 		}
 		if = {# Normans Don't like the Anglo Cultures
 			limit = { game_start_date >= 1066.1.1 }
@@ -191,6 +243,5382 @@ bryten_setup_after_game_start_on_actions = {
 					}
 				}
 				learn_language = language_french
+			}
+		}
+		if = {# slavic tribe views in 867 and 936
+			limit = { current_date <= 936.8.7 }
+			# West Slavic.
+			culture:pommeranian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+
+			}
+			culture:czech = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+
+			}
+			culture:polish = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+
+			}
+			culture:polabian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+
+			}
+			culture:slovien = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+
+			}
+			culture:carantanian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+
+			}
+			culture:vistulan = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:masovian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:silesian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:moravian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+
+			}
+			culture:nitran = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+
+			}
+			culture:sorbian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+
+			}
+			# South Slavic.
+			culture:croatian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:bosnian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}			
+			culture:serbian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:bulgarian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}		
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:draguvities = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:doclean = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}			
+			culture:neretanian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:sorbian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:zachlumian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			# East Slavic tribes
+			culture:ilmenian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:severian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:volhynian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:krivich = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:vyatichi = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:dregovich = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:drevlian = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:polyan = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:radimich = {
+				change_cultural_acceptance = {# pommeranian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polabian
+					target = culture:polabian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# slovien
+					target = culture:slovien
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# carantanian
+					target = culture:carantanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:silesian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# sorbian
+					target = culture:sorbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+		}		
+		if = {# Polish cultures like each other
+			limit = { current_date >= 1000.8.7 }
+			culture:polish = {# Polish
+				change_cultural_acceptance = {# polish
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}
+			culture:vistulan = {# vistulan
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}	
+			culture:masovian = {# masovian
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:polish
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}				
+			culture:silesian = {# Silesian
+				change_cultural_acceptance = {# vistulan
+					target = culture:vistulan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# masovian
+					target = culture:masovian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# silesian
+					target = culture:pommeranian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}			
+
+		}
+		if = {# Czechs, moravians, and slovaks like each other
+			limit = { current_date >= 1000.8.7 }
+			culture:czech = {
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}								
+			}
+			culture:moravian = {
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# Nitran
+					target = culture:nitran
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}								
+			}
+			culture:nitran = {
+				change_cultural_acceptance = {# czech
+					target = culture:czech
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# moravian
+					target = culture:moravian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}								
+			}
+		}	
+		if = {# South Slavic cultures like each other
+			limit = { current_date >= 1000.1.1 }
+			culture:croatian = {
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:bosnian = {
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:serbian = {
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:bulgarian = {
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:draguvities = {
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:doclean = {
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:neretanian = {
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# zachlumian
+					target = culture:zachlumian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:zachlumian = {
+				change_cultural_acceptance = {# croatian
+					target = culture:croatian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bosnian
+					target = culture:bosnian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# serbian
+					target = culture:serbian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# bulgarian
+					target = culture:bulgarian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# draguvities
+					target = culture:draguvities
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# doclean
+					target = culture:doclean
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# neretanian
+					target = culture:neretanian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+		}
+		if = {# Rus cultures like each other
+			limit = { current_date >= 1000.1.1 }
+			culture:novgorodian = {
+				change_cultural_acceptance = {# novgorodian
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ruthene
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# suzdalian
+					target = culture:suzdalian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:ruthene = {
+				change_cultural_acceptance = {# novgorodian
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# suzdalian
+					target = culture:suzdalian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:suzdalian = {
+				change_cultural_acceptance = {# novgorodian
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# ruthene
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+		}		
+		if = {# East slavic tribe views in 1000
+			limit = { current_date >= 1000.8.7 }
+			# East Slavic tribes
+			culture:ilmenian = {
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}
+			culture:severian = {
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}
+			culture:volhynian = {
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}
+			culture:krivich = {
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}
+			culture:vyatichi = {
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}
+			culture:dregovich = {
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}
+			culture:drevlian = {
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}
+			culture:polyan = {
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# radimich
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}
+			culture:radimich = {
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}				
+			}
+			culture:ruthene = {
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:novgorodian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:novgorodian = {
+				change_cultural_acceptance = {# ilmenian
+					target = culture:ilmenian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# severian
+					target = culture:severian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# volhynian
+					target = culture:volhynian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# krivich
+					target = culture:krivich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# vyatichi
+					target = culture:vyatichi
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# dregovich
+					target = culture:dregovich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# drevlian
+					target = culture:drevlian
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:polyan
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:radimich
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {# polyan
+					target = culture:ruthene
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}				
+		}	
+		if = {# Grikos and Greeks have great relations
+			limit = { game_start_date >= 800.1.1 }
+			culture:griko = {
+				change_cultural_acceptance = {
+					target = culture:greek
+					value = 50
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+		}	
+		if = {# Scandinvians like the Sami and the Finnish
+			limit = { game_start_date >= 800.1.1 }
+			culture:gaet = {
+				change_cultural_acceptance = {
+					target = culture:sami
+					value = 20
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:finnish
+					value = 20
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:gute = {
+				change_cultural_acceptance = {
+					target = culture:sami
+					value = 20
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:finnish
+					value = 20
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:icelandic = {
+				change_cultural_acceptance = {
+					target = culture:sami
+					value = 20
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:finnish
+					value = 20
+					desc = cultural_acceptance_historical_relations
+				}
+			}
+			culture:varangian = {
+				change_cultural_acceptance = {
+					target = culture:sami
+					value = 20
+					desc = cultural_acceptance_historical_relations
+				}
+				change_cultural_acceptance = {
+					target = culture:finnish
+					value = 20
+					desc = cultural_acceptance_historical_relations
+				}
 			}
 		}
 		# cultures formation dates
